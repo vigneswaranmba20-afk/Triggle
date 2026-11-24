@@ -599,21 +599,21 @@ Batch,Order,Question ID,Typography changed,Prompt restored,Tamil baseline flag,L
 6,598,g9-ch9-ex9.1-q8,1,,1,320 360 390,"Tamil textbook printed p315; prompt, numbered explanations and answer checked",,88f29bb0,88f29bb0
 6,599,g9-ch9-ex9.1-q9,1,,1,320 360 390,"Tamil textbook printed p316; prompt, numbered explanations and answer checked",,88f29bb0,88f29bb0
 6,600,g9-ch9-ex9.1-q10,1,,1,320 360 390,"Tamil textbook printed p316; prompt, numbered explanations and answer checked",,88f29bb0,88f29bb0
-7,601,g9-ch9-ex9.2-q1,1,,1,320 360 390,"Tamil textbook printed p318; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,602,g9-ch9-ex9.2-q2,1,,1,320 360 390,"Tamil textbook printed p318; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,603,g9-ch9-ex9.2-q3,1,,1,320 360 390,"Tamil textbook printed p318; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,604,g9-ch9-ex9.2-q4,1,,1,320 360 390,"Tamil textbook printed p318; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,605,g9-ch9-ex9.2-q5,1,,1,320 360 390,"Tamil textbook printed p318–319; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,606,g9-ch9-ex9.3-q1,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,607,g9-ch9-ex9.3-q2,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,608,g9-ch9-ex9.3-q3,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,609,g9-ch9-ex9.3-q4,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,610,g9-ch9-ex9.3-q5,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,611,g9-ch9-ex9.3-q6,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,612,g9-ch9-ex9.3-q7,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,613,g9-ch9-ex9.3-q8,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,614,g9-ch9-ex9.3-q9,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,615,g9-ch9-ex9.3-q10,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
+7,601,g9-ch9-ex9.2-q1,1,,1,320 360 390,"Tamil textbook printed p318; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,602,g9-ch9-ex9.2-q2,1,,1,320 360 390,"Tamil textbook printed p318; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,603,g9-ch9-ex9.2-q3,1,,1,320 360 390,"Tamil textbook printed p318; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,604,g9-ch9-ex9.2-q4,1,,1,320 360 390,"Tamil textbook printed p318; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,605,g9-ch9-ex9.2-q5,1,,1,320 360 390,"Tamil textbook printed p318–319; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,606,g9-ch9-ex9.3-q1,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,607,g9-ch9-ex9.3-q2,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,608,g9-ch9-ex9.3-q3,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,609,g9-ch9-ex9.3-q4,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,610,g9-ch9-ex9.3-q5,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,611,g9-ch9-ex9.3-q6,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,612,g9-ch9-ex9.3-q7,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,613,g9-ch9-ex9.3-q8,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,614,g9-ch9-ex9.3-q9,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
+7,615,g9-ch9-ex9.3-q10,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,75ff2336,75ff2336
 7,616,c10-1-1-2-q1,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF p16; prompt, worked instructions and answer checked",,pending,b9b1a071
 7,617,c10-1-1-2-q2,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF p16; prompt, worked instructions and answer checked",,pending,b9b1a071
 7,618,c10-1-1-2-q3,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF p16; prompt, worked instructions and answer checked",,pending,b9b1a071
@@ -720,85 +720,85 @@ Batch,Order,Question ID,Typography changed,Prompt restored,Tamil baseline flag,L
 8,719,c10-2-ex2-4-q4-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed p56; consecutive terms, powers and fractions checked on both language cards",,pending,b9b1a071
 8,720,c10-2-ex2-4-q5,1,,1,320 360 390,"Prescribed Tamil textbook printed p56; consecutive terms, powers and fractions checked on both language cards",,pending,b9b1a071
 8,721,c10-2-ex2-4-q6,1,,1,320 360 390,"Prescribed Tamil textbook printed p56; consecutive terms, powers and fractions checked on both language cards",,pending,b9b1a071
-8,722,c10-2-ex2-5-q1-i,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,723,c10-2-ex2-5-q1-ii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,724,c10-2-ex2-5-q1-iii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,725,c10-2-ex2-5-q1-iv,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,726,c10-2-ex2-5-q1-v,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,727,c10-2-ex2-5-q2-i,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,728,c10-2-ex2-5-q2-ii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,729,c10-2-ex2-5-q2-iii,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-8,730,c10-2-ex2-5-q3-i,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-8,731,c10-2-ex2-5-q3-ii,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-8,732,c10-2-ex2-5-q4,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,733,c10-2-ex2-5-q5,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,734,c10-2-ex2-5-q6,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,735,c10-2-ex2-5-q7,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,736,c10-2-ex2-5-q8,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-8,737,c10-2-ex2-5-q9,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,738,c10-2-ex2-5-q10,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,739,c10-2-ex2-5-q11,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,740,c10-2-ex2-5-q12,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,741,c10-2-ex2-5-q13,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,742,c10-2-ex2-5-q14,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,743,c10-2-ex2-6-q1,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,744,c10-2-ex2-6-q1-iii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,745,c10-2-ex2-6-q2,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,746,c10-2-ex2-6-q3,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,747,c10-2-ex2-6-q4,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,748,c10-2-ex2-6-q5,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,749,c10-2-ex2-6-q6,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,750,c10-2-ex2-6-q7,1,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-8,751,c10-2-ex2-6-q8,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,752,c10-2-ex2-6-q9,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,753,c10-2-ex2-6-q10,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,754,c10-2-ex2-6-q11,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,755,c10-2-ex2-6-q12,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,756,c10-2-ex2-7-q1-i,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,757,c10-2-ex2-7-q1-ii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,758,c10-2-ex2-7-q1-iii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,759,c10-2-ex2-7-q1-iv,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,760,c10-2-ex2-7-q1-v,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,761,c10-2-ex2-7-q1-vi,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,762,c10-2-ex2-7-q1-vii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,763,c10-2-ex2-7-q2,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,764,c10-2-ex2-7-q2-ii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,765,c10-2-ex2-7-q3,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,766,c10-2-ex2-7-q4,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,767,c10-2-ex2-7-q5,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,768,c10-2-ex2-7-q6,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,769,c10-2-ex2-7-q7,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,770,c10-2-ex2-7-q8,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,771,c10-2-ex2-7-q9,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,772,c10-2-ex2-7-q10,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,773,c10-2-ex2-7-q11,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,774,c10-2-ex2-7-q12,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,775,c10-2-ex2-8-q1-i,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,776,c10-2-ex2-8-q1-ii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,777,c10-2-ex2-8-q2,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,778,c10-2-ex2-8-q3,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,779,c10-2-ex2-8-q4,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,780,c10-2-ex2-8-q5,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,781,c10-2-ex2-8-q6-i,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,782,c10-2-ex2-8-q6-ii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,783,c10-2-ex2-8-q7,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,784,c10-2-ex2-8-q8,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,785,c10-2-ex2-8-q9,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,786,c10-2-ex2-8-q10,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,787,c10-2-ex2-9-q1-i,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,788,c10-2-ex2-9-q1-ii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,789,c10-2-ex2-9-q1-iii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,790,c10-2-ex2-9-q1-iv,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,791,c10-2-ex2-9-q1-v,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,792,c10-2-ex2-9-q1-vi,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,793,c10-2-ex2-9-q1-vii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,794,c10-2-ex2-9-q2,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,795,c10-2-ex2-9-q3,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,796,c10-2-ex2-9-q4,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,797,c10-2-ex2-9-q5,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,798,c10-2-ex2-9-q6,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
-8,799,c10-2-ex2-9-q7-i,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-8,800,c10-2-ex2-9-q7-ii,1,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
+8,722,c10-2-ex2-5-q1-i,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,723,c10-2-ex2-5-q1-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,724,c10-2-ex2-5-q1-iii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,725,c10-2-ex2-5-q1-iv,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,726,c10-2-ex2-5-q1-v,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,727,c10-2-ex2-5-q2-i,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,728,c10-2-ex2-5-q2-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,729,c10-2-ex2-5-q2-iii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,730,c10-2-ex2-5-q3-i,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,731,c10-2-ex2-5-q3-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,732,c10-2-ex2-5-q4,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,733,c10-2-ex2-5-q5,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,734,c10-2-ex2-5-q6,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,735,c10-2-ex2-5-q7,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,736,c10-2-ex2-5-q8,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,737,c10-2-ex2-5-q9,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,738,c10-2-ex2-5-q10,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,739,c10-2-ex2-5-q11,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,740,c10-2-ex2-5-q12,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,741,c10-2-ex2-5-q13,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,742,c10-2-ex2-5-q14,1,,1,320 360 390,"Prescribed Tamil textbook printed pp62–63; arithmetic progression prompt, numbered reasoning and answer checked",,pending,b9b1a071
+8,743,c10-2-ex2-6-q1,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,744,c10-2-ex2-6-q1-iii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,745,c10-2-ex2-6-q2,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,746,c10-2-ex2-6-q3,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,747,c10-2-ex2-6-q4,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,748,c10-2-ex2-6-q5,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,749,c10-2-ex2-6-q6,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,750,c10-2-ex2-6-q7,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,751,c10-2-ex2-6-q8,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,752,c10-2-ex2-6-q9,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,753,c10-2-ex2-6-q10,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,754,c10-2-ex2-6-q11,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,755,c10-2-ex2-6-q12,1,,1,320 360 390,"Prescribed Tamil textbook printed pp67–68; series, amounts, units, requested parts and answers checked",,pending,b9b1a071
+8,756,c10-2-ex2-7-q1-i,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,757,c10-2-ex2-7-q1-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,758,c10-2-ex2-7-q1-iii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,759,c10-2-ex2-7-q1-iv,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,760,c10-2-ex2-7-q1-v,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,761,c10-2-ex2-7-q1-vi,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,762,c10-2-ex2-7-q1-vii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,763,c10-2-ex2-7-q2,1,Both languages: aggregate Q2(ii) square roots and resulting three terms recovered from textbook,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,764,c10-2-ex2-7-q2-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,765,c10-2-ex2-7-q3,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,766,c10-2-ex2-7-q4,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,767,c10-2-ex2-7-q5,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,768,c10-2-ex2-7-q6,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,769,c10-2-ex2-7-q7,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,770,c10-2-ex2-7-q8,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,771,c10-2-ex2-7-q9,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,772,c10-2-ex2-7-q10,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,773,c10-2-ex2-7-q11,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,774,c10-2-ex2-7-q12,1,,1,320 360 390,"Prescribed Tamil textbook printed pp72–73; geometric progression prompt, numbered reasoning and answers checked",,pending,b9b1a071
+8,775,c10-2-ex2-8-q1-i,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,776,c10-2-ex2-8-q1-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,777,c10-2-ex2-8-q2,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,778,c10-2-ex2-8-q3,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,779,c10-2-ex2-8-q4,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,780,c10-2-ex2-8-q5,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,781,c10-2-ex2-8-q6-i,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,782,c10-2-ex2-8-q6-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,783,c10-2-ex2-8-q7,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,784,c10-2-ex2-8-q8,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,785,c10-2-ex2-8-q9,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,786,c10-2-ex2-8-q10,1,,1,320 360 390,"Prescribed Tamil textbook printed pp76–77; geometric sums, fractions and recurring decimal checked",,pending,b9b1a071
+8,787,c10-2-ex2-9-q1-i,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,788,c10-2-ex2-9-q1-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,789,c10-2-ex2-9-q1-iii,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,790,c10-2-ex2-9-q1-iv,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,791,c10-2-ex2-9-q1-v,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,792,c10-2-ex2-9-q1-vi,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,793,c10-2-ex2-9-q1-vii,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,794,c10-2-ex2-9-q2,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,795,c10-2-ex2-9-q3,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,796,c10-2-ex2-9-q4,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,797,c10-2-ex2-9-q5,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,798,c10-2-ex2-9-q6,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,799,c10-2-ex2-9-q7-i,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
+8,800,c10-2-ex2-9-q7-ii,1,,1,320 360 390,"Prescribed Tamil textbook printed p82; special series, units, numbered reasoning and answers checked",,pending,b9b1a071
 9,801,c10-2-ex2-10-q1,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
 9,802,c10-2-ex2-10-q2,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
 9,803,c10-2-ex2-10-q3,1,,1,390,"Check prompt, reasons 1 2 against prescribed textbook",,pending,b9b1a071
