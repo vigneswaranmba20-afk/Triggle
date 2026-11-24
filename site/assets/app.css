@@ -1134,3 +1134,7 @@ body.textbook-reader .question-top-nav .page-button{min-width:44px;min-height:44
 .p0-freq-table th,.p0-freq-table td{border:1px solid #cfd6d2;padding:5px 7px;text-align:center;white-space:nowrap}
 .p0-freq-table thead th{background:#e6efea;color:#181b20;font-weight:700}
 .p0-freq-table tfoot th{background:#eef3f0;font-weight:700}
+
+.p0-supplement-card[hidden]{display:none}
+.p0-supplement-card,.p0-supp-math{min-width:0;max-width:100%;box-sizing:border-box}
+.p0-supp-math .katex-display{margin:.4em 0;overflow-x:auto;overflow-y:hidden}
