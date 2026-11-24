@@ -200,6 +200,11 @@ jobs:
           # Chromium launches are headless without a named channel, so its full UI
           # binary is unnecessary. Keep WebKit on shards 0 and 2.
           if [ "${{ matrix.shard }}" = 0 ] || [ "${{ matrix.shard }}" = 2 ]; then
+            # Regional mirror downloads exhausted the entire job before WebKit could run.
+            for source in /etc/apt/sources.list /etc/apt/sources.list.d/ubuntu.sources; do
+              [ -f "$source" ] || continue
+              sudo sed -i 's|http://us-east-2\.ec2\.archive\.ubuntu\.com/ubuntu|https://archive.ubuntu.com/ubuntu|g' "$source"
+            done
             npx playwright install --with-deps --only-shell chromium webkit
           else
             npx playwright install --with-deps --only-shell chromium
