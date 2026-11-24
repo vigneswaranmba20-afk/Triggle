@@ -437,15 +437,26 @@ for(const [grade,data] of Object.entries(classes)){
    const bilingualGeometry=g9BilingualGeometry.records[item.id];
    assert.ok([trig,correction,extended,originalChoices,bilingualGeometry].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
    const algebra=require('../data/textbook-fidelity/g9-ch3-ex3-1-q10-q12-bilingual.json').records[item.id];
-   if(grade==='9' && item.chapter==='7' && ['7.1','7.2','7.3','7.4'].includes(item.exercise)){
+   if(grade==='9' && /^g9-ch(?:7-ex7\.[1-4]|8-ex8\.[1-4]|9-ex9\.1)-q\d+$/.test(item.id)){
     const original=JSON.parse(JSON.stringify(item));
     original.q.ta='English-language question; Tamil version pending. '+item.q.en;
+    for(const step of original.steps){
+     if(step.reasonMath){
+      step.reasonMath.ta=[...step.reasonMath.en];
+      step.reasonMath.ta[0]='English explanation (Tamil version pending): '+step.reasonMath.ta[0];
+     }
+    }
     original.topic.ta=item.topic.en+' (English version only)';
     original.label.ta=item.label.en+' (English only)';
     original.title.ta=item.title.en+' (English only)';
     for(const step of original.steps){step.ta='English explanation (Tamil version pending): '+step.en;delete step.mathTa;}
     if(item.exercise==='7.3'){
      original.sourceFidelity.taPdfPage=294;
+     delete original.sourceFidelity.taDriveId;
+    }else if(item.exercise==='9.1'){
+     original.sourceFidelity.taPdfPage+=10;
+     delete original.sourceFidelity.taDriveId;
+    }else if(item.chapter==='8'){
      delete original.sourceFidelity.taDriveId;
     }else{
      for(const key of ['taPdfPage','taPrintedPage','taDriveId']) delete original.sourceFidelity[key];
