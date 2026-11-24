@@ -205,7 +205,7 @@
    if(type==='class'){
      [9,10].forEach(g=>options.push({title:ui('class')+' '+g,meta:classes[g].items.length+' '+ui('lessons'),active:g===grade,choose:()=>changeGrade(g)}));
    }else if(type==='chapter'){
-     chapterList().forEach(c=>options.push({title:ui('chapter')+' '+c.number+' · '+tr(c.title),meta:ui(c.status)+' · '+chapterItems(c).length+' '+ui('existingQuestions'),active:c.id===selectedChapter()?.id,choose:()=>selectChapter(c)}));
+     chapterList().forEach(c=>options.push({title:ui('chapter')+' '+c.number+' · '+tr(c.title),meta:ui(c.status)+' · '+(window.TriggleChapterHub?.textbookExercises?window.TriggleChapterHub.textbookExercises(chapterItems(c)).length:chapterItems(c).length)+' '+ui('existingQuestions'),active:c.id===selectedChapter()?.id,choose:()=>selectChapter(c)}));
    }else{
      const chapter=chapterForItem(current);
      const navigable=chapter?textbookExerciseList(chapter):activeList();
@@ -245,8 +245,9 @@
    let visible=0;
    for(const chapter of chapterList()){
      const all=chapterItems(chapter);
+     const visibleExercises=window.TriggleChapterHub?.textbookExercises?window.TriggleChapterHub.textbookExercises(all):all;
      const hit=!!query&&[chapter.title.en,chapter.title.ta,String(chapter.number)].join(' ').toLocaleLowerCase().includes(query);
-     const found=query&&!hit?all.filter(matches):all;
+     const found=query&&!hit?visibleExercises.filter(matches):visibleExercises;
      if(query&&!hit&&!found.length)continue;
      visible++;
      const section=document.createElement('section');section.className='curriculum-chapter';
@@ -267,8 +268,7 @@
        chapter.id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:
        chapter.id==='g9-ch3'?window.TRIGGLE_ALGEBRA_PATH?.stages:null;
      const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
-     const visibleExercises=window.TriggleChapterHub?.textbookExercises?window.TriggleChapterHub.textbookExercises(all):all;
-     const practiceCount=visibleExercises.length;
+          const practiceCount=visibleExercises.length;
      const grade9Journey=chapter.id==='g9-ch1'||chapter.id==='g9-ch2'||chapter.id==='g9-ch9';
      meta.textContent=grade9Journey
        ?(interactiveCount?(lang==='ta'?interactiveCount+' செயல்வழிக் கருத்துகள்':interactiveCount+' interactive concepts')+' · ':'')+
@@ -287,7 +287,7 @@
        section.append(quick);
      }
      if(query){
-       const result=hit?all:found;
+       const result=hit?visibleExercises:found;
        const wrap=document.createElement('div');wrap.className='sidebar-search-results';
        for(const item of result.slice(0,40)){
          const b=document.createElement('button');b.type='button';b.className='exercise-question';

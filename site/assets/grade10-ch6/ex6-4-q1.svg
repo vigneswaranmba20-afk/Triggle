@@ -16,5 +16,5 @@
   <text x="60" y="155" transform="rotate(-90 60 155)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">13 m</text>
   <text x="250" y="155" transform="rotate(-90 250 155)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">13 m</text>
   <text x="250" y="78" transform="rotate(-90 250 78)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">h</text>
-  <text x="155" y="206" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#525B62">x = 13√3 m</text>
+  <text x="155" y="206" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#525B62">x = ?</text>
 </svg>

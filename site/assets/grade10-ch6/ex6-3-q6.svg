@@ -15,8 +15,8 @@
   <path d="M114.0,36.0 A36,36 0 0,1 104.8,60.0" fill="none" stroke="#6E2933" stroke-width="1.3"/>
   <path d="M124.0,138.0 A46,46 0 0,1 122.0,151.3" fill="none" stroke="#166353" stroke-width="1.3"/>
   <text x="62" y="87" transform="rotate(-90 62 87)" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#6E2933">90 ft (top)</text>
-  <text x="62" y="164" transform="rotate(-90 62 164)" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">30 ft</text>
-  <text x="164" y="206" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#181B20">30√3 ft</text>
+  <text x="62" y="164" transform="rotate(-90 62 164)" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">h = ?</text>
+  <text x="164" y="206" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#181B20">d = ?</text>
   <text x="124" y="52" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#6E2933">60°</text>
   <text x="146" y="153" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#166353">30°</text>
 </svg>

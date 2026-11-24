@@ -41,7 +41,8 @@ assert.equal(JSON.stringify([...pathData.stages.map(s=>s.id)]),JSON.stringify(ex
 
 const correctCounts=[0,0,0];
 const linkedPracticeIds=new Set();
-const class10Text=read('data/class-10.js');
+const {loadRuntime}=require('./curriculum_bulk.cjs');
+const class10Ids=new Set(loadRuntime().classes[10].items.map(i=>i.id));
 
 pathData.stages.forEach((stage,idx)=>{
   const prefix=`Concept ${idx+1} (${stage.id})`;
@@ -81,7 +82,8 @@ pathData.stages.forEach((stage,idx)=>{
   assert(stage.explainAfterAttempt===true,`${prefix}: must gate Why until attempt`);
   assert(stage.connect?.en&&stage.connect?.ta,`${prefix}: missing connect copy`);
   for(const pid of [stage.practiceId,stage.secondaryPracticeId,stage.tertiaryPracticeId].filter(Boolean)){
-    assert(class10Text.includes(`"id":"${pid}"`),`${prefix}: linked practiceId ${pid} missing in class-10.js`);
+    assert(class10Ids.has(pid),`${prefix}: linked practiceId ${pid} missing in Class 10 runtime`);
+    assert(!pid.startsWith('c10-6-6-'),`${prefix}: deprecated legacy ID ${pid} must not be linked`);
     linkedPracticeIds.add(pid);
   }
 });

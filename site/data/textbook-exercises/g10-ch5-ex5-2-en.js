@@ -638,23 +638,23 @@ const entries = [
     },
     "steps": [
       {
-        "en": "Quick Solution Plan: Show one pair of opposite sides is parallel (slope AB = slope CD = 0) while the non-parallel sides have unequal slopes (slope BC = 3/4 ≠ slope AD = −3/4).",
-        "eq": "m(AB) = m(CD) = 0 and m(BC) ≠ m(AD)",
-        "math": { "latex": "m_{AB}=m_{CD}=0\\quad\\text{and}\\quad m_{BC}\\ne m_{AD}", "fallback": "m(AB) = m(CD) = 0 and m(BC) ≠ m(AD)", "display": true }
+        "en": "Quick Solution Plan: Show one pair of opposite sides is parallel (slope AB = slope CD = 0). On y = −7, C(5, −7) lies left of D(7, −7), so the convex trapezium boundary legs in the plot are AC and BD (m_AC = −3/2 ≠ m_BD = 3/2), while cyclic pairs BC and AD also have unequal slopes (3/4 ≠ −3/4).",
+        "eq": "m(AB) = m(CD) = 0; m(AC) = −3/2 ≠ m(BD) = 3/2 (and m(BC) = 3/4 ≠ m(AD) = −3/4)",
+        "math": { "latex": "m_{AB}=m_{CD}=0\\quad\\text{and}\\quad m_{AC}=-\\dfrac{3}{2}\\ne m_{BD}=\\dfrac{3}{2}", "fallback": "m(AB) = m(CD) = 0; m(AC) = −3/2 ≠ m(BD) = 3/2 (and m(BC) = 3/4 ≠ m(AD) = −3/4)", "display": true }
       },
       {
-        "en": "Understand Deeply — Notice A and B both lie on horizontal line y = −4, while C and D both lie on horizontal line y = −7, making AB parallel to CD.",
+        "en": "Understand Deeply — Notice A(3, −4) and B(9, −4) both lie on horizontal line y = −4, while C(5, −7) and D(7, −7) both lie on horizontal line y = −7, making AB parallel to CD.",
         "eq": "m(AB) = (−4 − (−4))/(9 − 3) = 0/6 = 0; m(CD) = (−7 − (−7))/(7 − 5) = 0/2 = 0",
         "math": { "latex": "m_{AB}=\\dfrac{-4-(-4)}{9-3}=0,\\qquad m_{CD}=\\dfrac{-7-(-7)}{7-5}=0", "fallback": "m(AB) = (−4 − (−4))/(9 − 3) = 0/6 = 0; m(CD) = (−7 − (−7))/(7 − 5) = 0/2 = 0", "display": true }
       },
       {
-        "en": "Check the remaining sides joining these horizontal bases (namely BC and AD, or BD and AC on the boundary plot): their slopes are non-equal, so only one pair of sides is parallel, proving the figure is a trapezium.",
-        "eq": "m(BC) = (−7 − (−4))/(5 − 9) = (−3)/(−4) = 3/4; m(AD) = (−7 − (−4))/(7 − 3) = −3/4 ≠ 3/4",
-        "math": { "latex": "m_{BC}=\\dfrac{-7-(-4)}{5-9}=\\dfrac{3}{4},\\qquad m_{AD}=\\dfrac{-7-(-4)}{7-3}=-\\dfrac{3}{4}\\ne m_{BC}", "fallback": "m(BC) = (−7 − (−4))/(5 − 9) = (−3)/(−4) = 3/4; m(AD) = (−7 − (−4))/(7 − 3) = −3/4 ≠ 3/4", "display": true }
+        "en": "Check the non-parallel sides joining y = −4 to y = −7. Because C(5, −7) is left of D(7, −7), the convex boundary legs drawn in the figure are AC and BD (m_AC = −3/2 ≠ m_BD = 3/2), and the alphabetical cyclic segments BC and AD also have unequal slopes (3/4 ≠ −3/4). Since only one pair of sides is parallel, the figure is a trapezium.",
+        "eq": "m(AC) = (−7 − (−4))/(5 − 3) = −3/2, m(BD) = (−7 − (−4))/(7 − 9) = 3/2; m(BC) = 3/4 ≠ m(AD) = −3/4",
+        "math": { "latex": "\\begin{aligned}m_{AC}&=\\dfrac{-7-(-4)}{5-3}=-\\dfrac{3}{2},\\quad m_{BD}=\\dfrac{-7-(-4)}{7-9}=\\dfrac{3}{2}\\quad (m_{AC}\\ne m_{BD})\\\\ m_{BC}&=\\dfrac{-7-(-4)}{5-9}=\\dfrac{3}{4},\\quad m_{AD}=\\dfrac{-7-(-4)}{7-3}=-\\dfrac{3}{4}\\quad (m_{BC}\\ne m_{AD})\\end{aligned}", "fallback": "m(AC) = (−7 − (−4))/(5 − 3) = −3/2, m(BD) = (−7 − (−4))/(7 − 9) = 3/2; m(BC) = 3/4 ≠ m(AD) = −3/4", "display": true }
       }
     ],
-    "answer": "Proved trapezium (one pair of opposite sides parallel: AB ∥ CD, non-parallel sides unequal slopes)",
-    "answerMath": { "latex": "\\text{Proved trapezium }(AB\\parallel CD,\\; m_{BC}\\ne m_{AD})", "fallback": "Proved trapezium (one pair of opposite sides parallel: AB ∥ CD, non-parallel sides unequal slopes)", "display": true },
+    "answer": "Proved trapezium (AB ∥ CD with slope 0; non-parallel boundary legs AC, BD have slopes −3/2 ≠ 3/2 and cyclic pair BC, AD have 3/4 ≠ −3/4)",
+    "answerMath": { "latex": "\\text{Proved trapezium }(AB\\parallel CD,\\; m_{AC}=-\\dfrac{3}{2}\\ne m_{BD}=\\dfrac{3}{2})", "fallback": "Proved trapezium (AB ∥ CD with slope 0; non-parallel boundary legs AC, BD have slopes −3/2 ≠ 3/2 and cyclic pair BC, AD have 3/4 ≠ −3/4)", "display": true },
     "figureSrc": "assets/grade10-ch5/ex5-2-q12.svg",
     "figureAlt": {
       "en": "Coordinate plot showing parallel horizontal bases A(3,-4)-B(9,-4) and C(5,-7)-D(7,-7) forming a trapezium.",
