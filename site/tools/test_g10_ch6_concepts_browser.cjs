@@ -69,7 +69,7 @@ async function run(){
   const{srv,base}=await startServer();
   let browser;
   try{
-    browser=await chromium.launch({...(CHROMIUM?{executablePath:CHROMIUM}:{}),headless:true});
+    browser=await chromium.launch({...(CHROMIUM?{executablePath:CHROMIUM}:{}),headless:true,args:['--no-sandbox','--disable-dev-shm-usage']});
 
     /* 1. Discovery + Chapter Overview + Index + Keyboard + Deep Links + Practice Connect + Back */
     {
@@ -99,7 +99,7 @@ async function run(){
       await connectBtn.scrollIntoViewIfNeeded();
       await connectBtn.click();
       await page.waitForSelector('#lessonCard:not([hidden])');
-      assert.match(page.url(),/question=c10-6-6-4-10/);
+      assert.match(page.url(),/question=c10-6-ex6-4-q1/);
       await page.goBack();
       await page.waitForSelector('.g10ch4-studio');
       assert.equal(pageErrors.length,0,'No page errors: '+pageErrors.join('; '));

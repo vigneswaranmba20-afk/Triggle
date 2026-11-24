@@ -83,6 +83,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-3-q1.svg",
+    "figureAlt": { "en": "Angle of depression 30 degrees from rock height 50 root 3 m equals alternate elevation 30 degrees at car.", "ta": "கிடைமட்டக் கோட்டிலிருந்து அளக்கப்படும் இறக்கக்கோணப் படம்." },
+    "figureCaption": { "en": "Car viewed from top of 50 root 3 m rock at 30 degrees depression for Exercise 6.3 Q1", "ta": "இறக்கக்கோணம் — செங்கோண முக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -187,6 +189,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-3-q2.svg",
+    "figureAlt": { "en": "Second building is 120 m tall and first building roof is at 45 degrees depression across 70 m gap.", "ta": "கோபுர உச்சியிலிருந்து இறக்கக்கோணப் பார்வைக் கோடு படம்." },
+    "figureCaption": { "en": "Two buildings 70 m apart with 45 degrees depression for Exercise 6.3 Q2", "ta": "இறக்கக்கோணம் — கிடைமட்டத் தொலைவுப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -303,6 +307,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-3-q3.svg",
+    "figureAlt": { "en": "Tower height 60 m looks down at lamp post top (38 deg) and bottom (60 deg).", "ta": "60 மீ கோபுர உச்சியிலிருந்து விளக்குக் கம்பத்தின் உச்சி மற்றும் அடிக்கான இறக்கக்கோணப் படம்." },
+    "figureCaption": { "en": "Lamp post viewed at 38 and 60 degrees depression from 60 m tower for Exercise 6.3 Q3", "ta": "விளக்குக் கம்பம் — 38°, 60° இறக்கக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -419,6 +425,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-3-q4.svg",
+    "figureAlt": { "en": "Two boats on same side of vertical projection below plane at 1800 m seen at 60 and 30 degrees depression.", "ta": "1800 மீ உயர விமானத்திலிருந்து இரு படகுகளுக்கான 60°, 30° இறக்கக்கோணப் படம்." },
+    "figureCaption": { "en": "Aeroplane at 1800 m observing two boats at 60 and 30 degrees depression for Exercise 6.3 Q4", "ta": "விமானமும் இரு படகுகளும் — இறக்கக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -535,6 +543,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-3-q5.svg",
+    "figureAlt": { "en": "Two ships on opposite sides of lighthouse height h viewed at 30 and 60 degrees depression.", "ta": "கலங்கரை விளக்கத்திலிருந்து இரு கப்பல்களுக்கான இறக்கக்கோணப் படம்." },
+    "figureCaption": { "en": "Lighthouse of height h observing ships on opposite sides at 30 and 60 degrees for Exercise 6.3 Q5", "ta": "கலங்கரை விளக்கமும் கப்பல்களும் — இறக்கக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -651,6 +661,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-3-q6.svg",
+    "figureAlt": { "en": "Lift descends from 90 ft top to 30 ft in 2 minutes as depression angle to fountain 30 root 3 ft away goes from 60 to 30 degrees.", "ta": "90 அடி கட்டிடத்தில் இறங்கும் மின்தூக்கியிலிருந்து நீரூற்றுக்கான இறக்கக்கோணப் படம்." },
+    "figureCaption": { "en": "Descending glass lift in 90 ft building seeing fountain at 60 and 30 degrees for Exercise 6.3 Q6", "ta": "கண்ணாடி மின்தூக்கி — 60°, 30° இறக்கக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",

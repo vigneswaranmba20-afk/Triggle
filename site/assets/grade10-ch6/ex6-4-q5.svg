@@ -15,6 +15,6 @@
   <text x="152" y="142" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#166353">30°</text>
   <text x="48" y="158" transform="rotate(-90 48 158)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">66 m</text>
   <text x="254" y="158" transform="rotate(-90 254 158)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">66 m</text>
-  <text x="254" y="80" transform="rotate(-90 254 80)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">198 m</text>
-  <text x="159" y="206" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">114.31 m</text>
+  <text x="254" y="80" transform="rotate(-90 254 80)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#166353">h − 66 m</text>
+  <text x="159" y="206" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">d = ?</text>
 </svg>

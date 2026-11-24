@@ -116,6 +116,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-4-q1.svg",
+    "figureAlt": { "en": "Tree 1 of height 13 m facing taller Tree 2 across horizontal gap x; elevation 45 degrees to top and depression 30 degrees to bottom.", "ta": "13 மீ மரத்திலிருந்து மற்றொரு மரத்தின் உச்சி (45°) மற்றும் அடி (30°) பார்வைப் படம்." },
+    "figureCaption": { "en": "Two trees diagram for Exercise 6.4 Q1", "ta": "இரண்டு மரங்கள் — ஏற்ற மற்றும் இறக்கக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -241,6 +243,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-4-q2.svg",
+    "figureAlt": { "en": "Observer on ship deck 40 m above sea sees top of hill at 60 degrees elevation and base of hill at 30 degrees depression.", "ta": "50 மீ உயர மரமும் கட்டடமும் கொண்ட ஏற்ற-இறக்கக்கோணப் படம்." },
+    "figureCaption": { "en": "Ship and hill diagram for Exercise 6.4 Q2", "ta": "மரமும் கட்டடமும் — 60°, 30° கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -366,6 +370,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-4-q3.svg",
+    "figureAlt": { "en": "Observation point h metres above lake surface views cloud at angle theta1 above horizontal and reflection at depth h+x at angle theta2 below horizontal.", "ta": "ஏரி மட்டத்திற்கு h உயரத்திலிருந்து மேகம் மற்றும் அதன் பிம்பத்திற்கான θ₁, θ₂ கோணப் படம்." },
+    "figureCaption": { "en": "Cloud and lake reflection diagram for Exercise 6.4 Q3", "ta": "மேகமும் ஏரிப் பிம்பமும் — θ₁, θ₂ கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -491,6 +497,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-4-q4.svg",
+    "figureAlt": { "en": "From foot of 50 m apartment tower top has 60 degrees elevation; from top of apartment tower foot has 30 degrees depression.", "ta": "50 மீ கட்டடத்தின் அடி (60° ஏற்றம்) மற்றும் உச்சி (30° இறக்கம்) பார்வைப் படம்." },
+    "figureCaption": { "en": "Apartment and cell phone tower diagram for Exercise 6.4 Q4", "ta": "அடுக்குமாடிக் கட்டடமும் கோபுரமும் — 60°, 30° படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -595,6 +603,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-4-q5.svg",
+    "figureAlt": { "en": "From top of 66 m apartment, top of lamp post has elevation 60 degrees and bottom of lamp post has depression 30 degrees.", "ta": "66 மீ கட்டட உச்சியிலிருந்து விளக்குக் கம்ப உச்சி (60° ஏற்றம்) மற்றும் அடி (30° இறக்கம்) படம்." },
+    "figureCaption": { "en": "Apartment and lamp post diagram for Exercise 6.4 Q5", "ta": "அடுக்குமாடிக் கட்டடமும் விளக்குக் கம்பமும் — 60°, 30° படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -699,6 +709,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-4-q5.svg",
+    "figureAlt": { "en": "From top of 66 m apartment, top of lamp post has elevation 60 degrees and bottom of lamp post has depression 30 degrees.", "ta": "66 மீ கட்டட உச்சியிலிருந்து விளக்குக் கம்ப உச்சி (60° ஏற்றம்) மற்றும் அடி (30° இறக்கம்) படம்." },
+    "figureCaption": { "en": "Apartment and lamp post diagram for Exercise 6.4 Q5", "ta": "அடுக்குமாடிக் கட்டடமும் விளக்குக் கம்பமும் — 60°, 30° படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -815,6 +827,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-4-q5.svg",
+    "figureAlt": { "en": "From top of 66 m apartment, top of lamp post has elevation 60 degrees and bottom of lamp post has depression 30 degrees.", "ta": "66 மீ கட்டட உச்சியிலிருந்து விளக்குக் கம்ப உச்சி (60° ஏற்றம்) மற்றும் அடி (30° இறக்கம்) படம்." },
+    "figureCaption": { "en": "Apartment and lamp post diagram for Exercise 6.4 Q5", "ta": "அடுக்குமாடிக் கட்டடமும் விளக்குக் கம்பமும் — 60°, 30° படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -1099,6 +1113,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-4-q6.svg",
+    "figureAlt": { "en": "Villager B lies horizontally 8 km from A at depression 20 degrees from A, and 12 km from C at elevation 30 degrees to C.", "ta": "கலங்கரை விளக்கத்தின் இரு பக்கங்களில் உள்ள கப்பல்களுக்கான இறக்கக்கோணப் படம்." },
+    "figureCaption": { "en": "Three villagers across valley diagram for Exercise 6.4 Q6", "ta": "கலங்கரை விளக்கமும் இரண்டு கப்பல்களும் — 45°, 30° படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -1383,6 +1399,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-4-q6.svg",
+    "figureAlt": { "en": "Villager B lies horizontally 8 km from A at depression 20 degrees from A, and 12 km from C at elevation 30 degrees to C.", "ta": "கலங்கரை விளக்கத்தின் இரு பக்கங்களில் உள்ள கப்பல்களுக்கான இறக்கக்கோணப் படம்." },
+    "figureCaption": { "en": "Three villagers across valley diagram for Exercise 6.4 Q6", "ta": "கலங்கரை விளக்கமும் இரண்டு கப்பல்களும் — 45°, 30° படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
