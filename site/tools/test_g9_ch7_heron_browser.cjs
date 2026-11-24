@@ -108,6 +108,45 @@ async function main() {
         assert.match(await page.locator('.sp2-concept-heading').innerText(), /கனஅளவு/);
         await page.goBack();
         assert.equal(await page.locator('[data-index-view]').isVisible(), true);
+        // AUD10-02: all four separate chapter quizzes, hints do not expose worked answers.
+        for(const lang of ['en','ta']){
+          const recall=[];
+          for(let i=0;i<4;i++){
+            await page.goto(base+'/index.html?class=9&chapter=g9-ch7&section=concepts&concept='+i);
+            await page.locator(lang==='ta'?'#langTa':'#langEn').click();
+            await page.locator('.sp2-recall').waitFor({state:'visible'});
+            recall.push(await page.locator('.sp2-answers').getAttribute('aria-label'));
+            if(i===3){
+              assert.match(recall[i],/5/);
+              const correct=page.locator('.sp2-answers button').nth(2);
+              assert.match(await correct.innerText(),/125/);
+              await correct.tap();
+              assert.match(await page.locator('[data-feedback]').innerText(),lang==='en'?/Correct/:/சரி/);
+            }
+          }
+          await page.goto(base+'/index.html?class=9&chapter=g9-ch7&section=quizzes');
+          await page.locator(lang==='ta'?'#langTa':'#langEn').click();
+          const quizzes=page.locator('.hub-quiz-question');
+          await quizzes.first().waitFor({state:'visible'});
+          assert.equal(await quizzes.count(),4);
+          const expected=[84,96,72,216], indices=[1,1,0,2];
+          for(let i=0;i<4;i++){
+            const q=quizzes.nth(i), answers=q.locator('.hub-quiz-answers');
+            const label=await answers.getAttribute('aria-label');
+            assert.ok(!recall.includes(label),'Quiz duplicates a concept prompt');
+            const details=q.locator('.hub-quiz-help');
+            await details.locator('summary').tap();
+            assert.equal(await details.locator(':scope > div').isVisible(),false,'Worked answer visible before attempt');
+            assert.ok(!(await details.innerText()).includes(String(expected[i])),'Hint contains final number');
+            const correct=answers.locator('button').nth(indices[i]);
+            assert.match(await correct.innerText(),new RegExp(String(expected[i])));
+            await correct.tap();
+            assert.equal(await details.locator(':scope > div').isVisible(),true,'Worked answer hidden after attempt');
+            assert.match(await details.locator(':scope > div').innerText(),new RegExp(String(expected[i])));
+          }
+          assert.match(await page.locator('.hub-quiz-progress').innerText(),/4\s*\/\s*4/);
+          assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+        }
         assert.deepEqual(errors, [], 'No JS errors at width ' + width);
       } finally {
         await context.close();

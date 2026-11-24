@@ -55,7 +55,24 @@ const cuboid = (l,b,h) => ({
 assert.deepEqual(cuboid(4,3,2),{total:52,lateral:28,volume:24});
 assert.deepEqual(cuboid(3,3,3),{total:54,lateral:36,volume:27});
 assert.equal(cuboid(5,4,2).lateral,36,'four-wall transfer check');
-assert.equal(4*4*4,64,'volume transfer check');
+assert.equal(5**3,125,'volume transfer check');
+const expectedRecall=[unit.heron(5,12,13).area,2*unit.heron(13,13,10).area,cuboid(5,4,2).lateral,5**3];
+const expectedQuiz=[unit.heron(7,24,25).area,2*unit.heron(10,10,12).area,cuboid(6,3,4).lateral,6**3];
+for(let i=0;i<course.stages.length;i++){
+  const s=course.stages[i], q=s.quiz;
+  assert.ok(q,'AUD10-02: distinct chapter quiz required '+s.id);
+  for(const lang of ['en','ta']){
+    assert.notEqual(s.question[lang],q.question[lang]);
+    assert.equal(parseFloat(s.choices[s.correct][lang]),expectedRecall[i]);
+    assert.equal(parseFloat(q.choices[q.correct][lang]),expectedQuiz[i]);
+    assert.ok(q.hint[lang]&&q.why[lang]);
+    assert.ok(!q.hint[lang].includes(String(expectedQuiz[i])),'Hint leaks answer '+s.id);
+    assert.ok(q.why[lang].includes(String(expectedQuiz[i])));
+  }
+}
+assert.match(course.stages[3].whyMath.latex,/125/);
+assert.match(course.stages[3].why.en,/125/);
+assert.match(course.stages[3].why.ta,/125/);
 
 const hub=load('assets/chapter-hub.js'),html=load('index.html'),sw=load('service-worker.js');
 assert.match(hub,/chapter\.id==='g9-ch7'\?\(window\.TRIGGLE_MENSURATION_PATH\?\.stages\|\|\[\]\)/);
