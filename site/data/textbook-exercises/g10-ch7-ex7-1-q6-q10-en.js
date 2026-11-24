@@ -216,29 +216,29 @@ const entries=[
         }
       },
       {
-        "en": "A 25% increase makes the new radius 125% of the original, or 1.25r.",
-        "eq": "New radius = r + (25/100)r = 1.25r",
+        "en": "A 25% increase adds one quarter of the original radius. The new radius is five quarters of the original, or 1.25r.",
+        "eq": "New radius = r + r/4 = (5/4)r = 1.25r",
         "math": {
-          "latex": "r_{\\mathrm{new}}=\\left(1+\\dfrac{25}{100}\\right)r=1.25r",
-          "fallback": "New radius = r + (25/100)r = 1.25r",
+          "latex": "r_{\\mathrm{new}}=r+\\frac14r=\\frac54r=1.25r",
+          "fallback": "New radius = r + r/4 = (5/4)r = 1.25r",
           "display": true
         }
       },
       {
-        "en": "Substitute the new radius into the surface area formula and compare it with the old area.",
-        "eq": "A_new = 4π(1.25r)² = 1.5625 A",
+        "en": "Surface area is proportional to the square of the radius. Square the fraction before multiplying by the original area.",
+        "eq": "A_new = (5/4)²A = (25/16)A = 1.5625A",
         "math": {
-          "latex": "\\begin{aligned}A_{\\mathrm{new}}&=4\\pi(1.25r)^2\\\\&=1.5625(4\\pi r^2)\\\\&=1.5625A\\end{aligned}",
-          "fallback": "A_new = 4π(1.25r)² = 1.5625 A",
+          "latex": "\\begin{aligned}A_{\\mathrm{new}}&=4\\pi\\left(\\frac54r\\right)^2\\\\&=\\frac{25}{16}(4\\pi r^2)\\\\&=\\frac{25}{16}A=1.5625A\\end{aligned}",
+          "fallback": "A_new = (5/4)²A = (25/16)A = 1.5625A",
           "display": true
         }
       },
       {
-        "en": "The extra area is 0.5625 times the original area. Multiply by 100 to express this as a percentage.",
-        "eq": "Increase % = (1.5625 − 1)×100 = 56.25%",
+        "en": "Subtract the original area (one whole) from the new area. The increase is nine sixteenths of the original area. Multiply by 100 to express it as a percentage.",
+        "eq": "Increase % = (25/16 − 1) × 100 = (9/16) × 100 = 56.25%",
         "math": {
-          "latex": "\\begin{aligned}\\%\\text{ increase}&=0.5625\\times100\\\\&=56.25\\%\\end{aligned}",
-          "fallback": "Increase % = (1.5625 − 1)×100 = 56.25%",
+          "latex": "\\begin{aligned}\\frac{25}{16}-1&=\\frac9{16}\\\\\\%\\text{ increase}&=\\frac9{16}\\times100\\\\&=56.25\\%\\end{aligned}",
+          "fallback": "Increase % = (25/16 − 1) × 100 = (9/16) × 100 = 56.25%",
           "display": true
         }
       }

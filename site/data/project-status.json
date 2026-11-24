@@ -99,8 +99,8 @@
     "site/data/textbook-exercises/g10-ch6-ex6-4-en.js": "b110b8e05052973566f78ecbae0709509c4c5add057d19c062ad00aca4c118bc",
     "site/data/textbook-exercises/g10-ch6-ex6-5-en.js": "56cc8b304d06655b35a75f7b66a1fb8133314dc7ebaa0cf30fdb1694eee2fde9",
     "site/data/textbook-exercises/g10-ch6-ex6-unit-en.js": "9b2a63ea90365c079144c6610e2959512b8e72bfc055c3fcc5ab35546663b2e7",
-    "site/data/textbook-exercises/g10-ch7-ex7-1-q1-q5-en.js": "ac5efb6f901835d441003acc5dc93e6b243cb23ae52474ecdc9a8782e97ac5c6",
-    "site/data/textbook-exercises/g10-ch7-ex7-1-q6-q10-en.js": "69743c17fdc90516777f7da0395b116c452ce81f7920617afe15b4af49704d2e",
+    "site/data/textbook-exercises/g10-ch7-ex7-1-q1-q5-en.js": "e14bda18e74235a6db6247b67f13d27034b34f83e37a465fb8e9608cdb609018",
+    "site/data/textbook-exercises/g10-ch7-ex7-1-q6-q10-en.js": "2a78859d5cf6c50ea189f726596e21369a08f08dbac41aea4ecab380fa962f0f",
     "site/data/textbook-exercises/g10-ch7-ex7-2.js": "7e8f566de3332b0067e2e2fbc44c936aaef19d579c0637f0745994884ba44248",
     "site/data/textbook-exercises/g10-ch7-ex7-3.js": "d5fd89e5cc73196bfe0af3f63aa2336f65b00a6c3375cd2de4868503a0cbfb9d",
     "site/data/textbook-exercises/g10-ch8-ex8-1-q11-q15-en.js": "5e1aa75fdeb63f043e4e867354b008c3ac6b666cfa1c1bb783020081207fe5e5",
@@ -14633,7 +14633,7 @@
                   "url": "../index.html?class=10&question=c10-7-ex7-1-q5",
                   "englishAvailable": true,
                   "tamilAvailable": false,
-                  "recordSha256": "c011a6a2fdfcb261e0d49ee2ce8d865b65e6c4acae3fe4967b4796cdfde94567",
+                  "recordSha256": "f36e06ac4a1229f0f8d02229e5d91310da3871243826639239b2a9348b44186c",
                   "verified": false
                 },
                 {
@@ -14660,7 +14660,7 @@
                   "url": "../index.html?class=10&question=c10-7-ex7-1-q8",
                   "englishAvailable": true,
                   "tamilAvailable": false,
-                  "recordSha256": "41380976f283e413e0f6becccb00dcdbff85ba9d6c45ccbf0f15b7f2f818acfd",
+                  "recordSha256": "36bf97a269ca7e10df1317791b611fe5be0d4d3f4bb146afb34b80be770976d7",
                   "verified": false
                 },
                 {
