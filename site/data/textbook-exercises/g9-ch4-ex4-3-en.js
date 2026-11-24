@@ -26,7 +26,19 @@ const entries=[
       {
         "en": "The radius is half the diameter, and a perpendicular from the centre bisects the chord.",
         "ta": "ஆரம் விட்டத்தின் பாதி (26 செ.மீ) ஆகும்; வட்ட மையத்திலிருந்து நாணிற்கு வரையப்படும் செங்குத்து நாணை இருசமக்கூறிடும் (அரை நாண் = 10 செ.மீ).",
-        "eq": "r=52/2=26 cm; half-chord=20/2=10 cm"
+        "eq": "r=52/2=26 cm; half-chord=20/2=10 cm",
+        "mathTa": [
+          {
+            "latex": "r=\\dfrac{52}{2}=26",
+            "fallback": "r = 52/2 = 26"
+          },
+          " செ.மீ; நாணின் பாதி நீளம் = ",
+          {
+            "latex": "\\dfrac{20}{2}=10",
+            "fallback": "20/2 = 10"
+          },
+          " செ.மீ"
+        ]
       },
       {
         "en": "The radius, half-chord and perpendicular distance form a right triangle.",
@@ -101,7 +113,15 @@ const entries=[
       {
         "en": "A perpendicular from the centre to the chord bisects it.",
         "ta": "வட்ட மையத்திலிருந்து நாணிற்கு வரையப்படும் செங்குத்து நாணை இருசமக்கூறிடும் (அரை நாண் = 15 செ.மீ).",
-        "eq": "Half-chord=30/2=15 cm"
+        "eq": "Half-chord=30/2=15 cm",
+        "mathTa": [
+          "நாணின் பாதி நீளம் = ",
+          {
+            "latex": "\\dfrac{30}{2}=15",
+            "fallback": "30/2 = 15"
+          },
+          " செ.மீ"
+        ]
       },
       {
         "en": "The radius is the hypotenuse of the triangle with legs 15 cm and 8 cm.",
@@ -171,7 +191,14 @@ const entries=[
       {
         "en": "A perpendicular from the centre bisects the chord.",
         "ta": "வட்ட மையத்திலிருந்து வரையப்படும் செங்குத்து நாணை இருசமக்கூறிடும்; அரை நாண் நீளத்தை t என்க.",
-        "eq": "Half-chord = t"
+        "eq": "Half-chord = t",
+        "mathTa": [
+          "நாணின் பாதி நீளம் = ",
+          {
+            "latex": "t",
+            "fallback": "t"
+          }
+        ]
       },
       {
         "en": "Use the radius as hypotenuse in the right triangle.",
@@ -186,7 +213,15 @@ const entries=[
       {
         "en": "Double it to find the full chord.",
         "ta": "முழு நாணின் நீளத்தைக் காண 2-ஆல் பெருக்குக.",
-        "eq": "Chord length = 2×9=18 cm"
+        "eq": "Chord length = 2×9=18 cm",
+        "mathTa": [
+          "நாணின் நீளம் = ",
+          {
+            "latex": "2\\times9=18",
+            "fallback": "2 × 9 = 18"
+          },
+          " செ.மீ"
+        ]
       }
     ],
     "answer": "18 cm",
@@ -261,7 +296,19 @@ const entries=[
       {
         "en": "Find the half-chord and double it.",
         "ta": "அரை நாண் h = 3 செ.மீ எனக் கண்டு அதை இரண்டால் பெருக்கிப் பொது நாணின் நீளம் 6 செ.மீ எனக் காண்க.",
-        "eq": "h=√(25−4²)=3 cm; chord=2h=6 cm"
+        "eq": "h=√(25−4²)=3 cm; chord=2h=6 cm",
+        "mathTa": [
+          {
+            "latex": "h=\\sqrt{25-4^2}=3",
+            "fallback": "h = √(25 − 4²) = 3"
+          },
+          " செ.மீ; பொது நாணின் நீளம் = ",
+          {
+            "latex": "2h=6",
+            "fallback": "2h = 6"
+          },
+          " செ.மீ"
+        ]
       }
     ],
     "answer": "6 cm",

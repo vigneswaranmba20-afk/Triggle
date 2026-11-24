@@ -425,7 +425,8 @@
   if(englishInTamilReader(tr(s)))reason.lang='en';
   const equation=document.createElement('div');equation.className='step-equation';
   const fragments=String(s.eq||'').split(/\s+;\s+/);
-  if(s.math){equation.classList.add('structured-equation');equation.innerHTML=math(s.math);}
+  const stepMath=lang==='ta'&&s.mathTa?s.mathTa:s.math;
+  if(stepMath){equation.classList.add('structured-equation');equation.innerHTML=math(stepMath);}
   else if(fragments.length>1&&fragments.length<=8){equation.classList.add('step-equation-group');equation.innerHTML=fragments.map(x=>'<span class="math-part">'+math(x)+'</span>').join('');}
   else equation.innerHTML=math(s.eq);
   body.append(reason,equation);li.append(number,body);return li;

@@ -26,7 +26,14 @@ const entries=[
       {
         "en": "Represent the four angles by 2x, 4x, 5x and 7x.",
         "ta": "நாற்கரத்தின் நான்கு கோணங்களையும் 2x, 4x, 5x மற்றும் 7x எனக் கொள்க.",
-        "eq": "Angles = 2x, 4x, 5x, 7x"
+        "eq": "Angles = 2x, 4x, 5x, 7x",
+        "mathTa": [
+          "கோண அளவுகள் = ",
+          {
+            "latex": "2x,\\;4x,\\;5x,\\;7x",
+            "fallback": "2x, 4x, 5x, 7x"
+          }
+        ]
       },
       {
         "en": "The sum of interior angles of a quadrilateral is 360°.",
@@ -232,7 +239,20 @@ const entries=[
       {
         "en": "A rhombus has diagonals that bisect each other at right angles.",
         "ta": "சாய்சதுரத்தின் மூலைவிட்டங்கள் ஒன்றையொன்று செங்கோணத்தில் இருசமக்கூறிடும்; எனவே அரை மூலைவிட்டங்கள் 6 செ.மீ மற்றும் 8 செ.மீ ஆகும்.",
-        "eq": "Half-diagonals = 12/2=6 cm and 16/2=8 cm"
+        "eq": "Half-diagonals = 12/2=6 cm and 16/2=8 cm",
+        "mathTa": [
+          "மூலைவிட்டங்களின் பாதி நீளங்கள் ",
+          {
+            "latex": "\\dfrac{12}{2}=6",
+            "fallback": "12/2 = 6"
+          },
+          " செ.மீ மற்றும் ",
+          {
+            "latex": "\\dfrac{16}{2}=8",
+            "fallback": "16/2 = 8"
+          },
+          " செ.மீ"
+        ]
       },
       {
         "en": "Each side forms the hypotenuse of a right triangle.",
@@ -302,22 +322,56 @@ const entries=[
       {
         "en": "A common base gives the same base length b to both figures.",
         "ta": "பொதுவான அடிப்பக்கத்தில் அமைவதால் இரு வடிவங்களுக்கும் ஒரே அடிப்பக்க நீளம் b கிடைக்கும்.",
-        "eq": "Common base = b"
+        "eq": "Common base = b",
+        "mathTa": [
+          "பொது அடிப்பக்கத்தின் நீளம் = ",
+          {
+            "latex": "b",
+            "fallback": "b"
+          }
+        ]
       },
       {
         "en": "Lying between the same parallel lines gives the same perpendicular height h.",
         "ta": "ஒரே இணைகோடுகளுக்கு இடையில் அமைவதால் இரு வடிவங்களுக்கும் ஒரே செங்குத்து உயரம் h கிடைக்கும்.",
-        "eq": "Common height = h"
+        "eq": "Common height = h",
+        "mathTa": [
+          "பொதுவான செங்குத்து உயரம் = ",
+          {
+            "latex": "h",
+            "fallback": "h"
+          }
+        ]
       },
       {
         "en": "Use the standard area formulas for both figures.",
         "ta": "முக்கோணம் மற்றும் இணைகரத்தின் பரப்பளவுச் சூத்திரங்களை எழுதுக.",
-        "eq": "A(triangle)=[[1|2]]bh; A(parallelogram)=bh"
+        "eq": "A(triangle)=[[1|2]]bh; A(parallelogram)=bh",
+        "mathTa": [
+          "முக்கோணத்தின் பரப்பளவு = ",
+          {
+            "latex": "\\dfrac{1}{2}bh",
+            "fallback": "1/2 bh"
+          },
+          "; இணைகரத்தின் பரப்பளவு = ",
+          {
+            "latex": "bh",
+            "fallback": "bh"
+          }
+        ]
       },
       {
         "en": "Compare the areas directly.",
         "ta": "இரண்டிற்கும் ஒரே அடிப்பக்கமும் ஒரே உயரமும் உள்ளன. எனவே முக்கோணத்தின் பரப்பளவு இணைகரத்தின் பரப்பளவில் பாதி. ஆகவே அவற்றின் பரப்பளவுகளின் விகிதம் 1 : 2.",
-        "eq": "A(triangle)=[[1|2]]×A(parallelogram)"
+        "eq": "A(triangle)=[[1|2]]×A(parallelogram)",
+        "mathTa": [
+          "முக்கோணத்தின் பரப்பளவு = ",
+          {
+            "latex": "\\dfrac{1}{2}",
+            "fallback": "1/2"
+          },
+          " × இணைகரத்தின் பரப்பளவு"
+        ]
       }
     ],
     "answer": "Area of triangle = half the area of parallelogram",

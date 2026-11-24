@@ -26,7 +26,14 @@ const entries=[
       {
         "en": "Represent the three angles by x, 2x and 3x.",
         "ta": "முக்கோணத்தின் மூன்று கோணங்களையும் x, 2x மற்றும் 3x என எடுத்துக்கொள்க.",
-        "eq": "Angles = x, 2x, 3x"
+        "eq": "Angles = x, 2x, 3x",
+        "mathTa": [
+          "கோண அளவுகள் = ",
+          {
+            "latex": "x,\\;2x,\\;3x",
+            "fallback": "x, 2x, 3x"
+          }
+        ]
       },
       {
         "en": "The three interior angles of a triangle add to 180°.",

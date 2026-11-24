@@ -30,7 +30,7 @@
       },
       "originalRecordSha256": "b7eabdc2a63927cb312ac38284e5fcbeffd5b726af3d97a3c06248905da27869",
       "originalEnglishAndEquationsSha256": "65423623842111355ef8509ff3a64ea882d979aab7d8bd67033cb705664fffac",
-      "reviewedRecordSha256": "cd8cd418b9272d3cc0fc19099185c789269808c3db92e984565af8ca25dd7399"
+      "reviewedRecordSha256": "fc7292e27823db1fd5f83f58d7620726cfc3b92f149e9ac7b9ba6da86d1c0186"
     },
     "g9-ch4-ex4.1-q4": {
       "pages": {
@@ -68,7 +68,7 @@
       },
       "originalRecordSha256": "fa625fd91085a1d214ad568f676254284114238b32aa3a59e8f01981dd9107b3",
       "originalEnglishAndEquationsSha256": "42adb80d5301943119176e8e411847f9860325dda8bfee856d0425cee943e193",
-      "reviewedRecordSha256": "740e7dad5f1d1070fbe8b4c343b7694c34c56bb6d78cf238c8b7b868a86e6e79"
+      "reviewedRecordSha256": "bc68e8d841f5a1cbcb2a039c3795c2e4acf306e15bb579bb4300fc5d6a5cbd62"
     },
     "g9-ch4-ex4.2-q2": {
       "pages": {
@@ -125,7 +125,7 @@
       },
       "originalRecordSha256": "a8fa89fe2673382e93a291fb2877c463e58dcb99121aa6d129c139175f251541",
       "originalEnglishAndEquationsSha256": "0e515e7a34c7ff48049702426b26f76725d2e4a51069f386b86e3c0677f611ff",
-      "reviewedRecordSha256": "2c20f7db4911582c3bc66b9f1f7cbf8bdcac89481d01ea0cc6cab3aa67bd0d9a"
+      "reviewedRecordSha256": "e386413dea1f5012ee6c810263c0ed333a1e9258ad97431fadc3b6761d5533a5"
     },
     "g9-ch4-ex4.2-q6": {
       "pages": {
@@ -144,7 +144,7 @@
       },
       "originalRecordSha256": "4b713c3344094c5c778100e792de6c556a32dc56d83471668ed4deddf3e95445",
       "originalEnglishAndEquationsSha256": "19b1e7012c2bae12eed1f1da2181ef1aa04986a37bb5066cc1e8aab1c6aabe70",
-      "reviewedRecordSha256": "21f426ff78750aa7e172f6ecab450740d4b0d9aa4f93b9f97d5bef3bcb69a810"
+      "reviewedRecordSha256": "7e0c67d2258aa26c68056a6ba94151a4ea9f7ba14d4ce8ba73661193562e90a2"
     },
     "g9-ch4-ex4.3-q1": {
       "pages": {
@@ -163,7 +163,7 @@
       },
       "originalRecordSha256": "006b56ffd006f2ac02bbcea13b92e80dd6e3e97d33d5bd72cdb1bb4427a423ac",
       "originalEnglishAndEquationsSha256": "6478ba94ff3714784c500edc66fe838f8e9d9e9b30f3beba52be17518d6b05c5",
-      "reviewedRecordSha256": "8addb9b2727f8677378a9b6f35502907d3a66b0d9eb6aaf42b10b1b1eece7547"
+      "reviewedRecordSha256": "679c00d58f4ecec72594c80bda094093f9d875859fc4a85cb2dd289a8e701cc7"
     },
     "g9-ch4-ex4.3-q2": {
       "pages": {
@@ -182,7 +182,7 @@
       },
       "originalRecordSha256": "1012e6740ad4d26008c4c593c515227b741062cf6d9c61dd6ec585a4ec7cd64e",
       "originalEnglishAndEquationsSha256": "35439a75149b03c299d1295199655e8692dcae5b05045771f53a829991c55465",
-      "reviewedRecordSha256": "c4e721189a9b976e0f96c020ddc0fe726190f56364617e5a8477c9336a26e4a0"
+      "reviewedRecordSha256": "0e017cddbdd601f1a4aa77acf2c8ceb025a1924d07086caacfb6a00f81a9e1d2"
     },
     "g9-ch4-ex4.3-q4": {
       "pages": {
@@ -201,7 +201,7 @@
       },
       "originalRecordSha256": "e9643c5938ec4879510f6e7b7dc2f6af913bec7b47db6e416a941631a7404adf",
       "originalEnglishAndEquationsSha256": "44a410fdbd4cf42646e4ed3607121b115a2f74e61ece607f185c065905f79884",
-      "reviewedRecordSha256": "d5e0ce9714a8e9680de3e4b898fe3ad89b408ad592594d59ac1e01b661be2881"
+      "reviewedRecordSha256": "5bed61e62763baaa68ac62c52312c9d1601647cdf78e981d5a3e16a20f38b56e"
     },
     "g9-ch4-ex4.3-q6": {
       "pages": {
@@ -220,7 +220,7 @@
       },
       "originalRecordSha256": "bac12aa42ee73f1c6e99c984f879c0decfd34f99cc3a53589d9fe98124dc1948",
       "originalEnglishAndEquationsSha256": "979e6979c2570c62828acf42887bc6811781bfacf61c18c54a705adb6db9638d",
-      "reviewedRecordSha256": "a8def67d127c47e0bd75cad60dd07ce10ffe5d87e0610195152ba8026654bdd7"
+      "reviewedRecordSha256": "a30f0187efa091d1fac10e75178c0f183f6af20f423f4833310a0fa75ea8c25e"
     }
   }
 }
