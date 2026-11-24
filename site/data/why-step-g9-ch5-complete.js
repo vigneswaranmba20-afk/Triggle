@@ -176,7 +176,7 @@
     "step": 0,
     "expected": "Let the third vertex be C(x, y). Equate the centroid of (3, −2), (5, 2), and (x, y) to (4, −2).",
     "en": "Multiplying the centroid coordinates by three recovers the coordinate sums of all three vertices. Subtract the two known vertex coordinates to isolate the missing ones.",
-    "ta": "மையக்கோட்டு மையத்தின் ஆயத்தொலைவுகளை மூன்றால் பெருக்கினால் மூன்று உச்சிகளின் ஆயத்தொலைவுக் கூட்டுத்தொகை கிடைக்கும். தெரிந்த இரு உச்சிகளின் ஆயத்தொலைவுகளைக் கழித்துத் தெரியாதவற்றைக் காணலாம்.",
+    "ta": "நடுக்கோட்டு மையத்தின் ஆயத்தொலைவுகளை மூன்றால் பெருக்கினால் மூன்று உச்சிகளின் ஆயத்தொலைவுக் கூட்டுத்தொகை கிடைக்கும். தெரிந்த இரு உச்சிகளின் ஆயத்தொலைவுகளைக் கழித்துத் தெரியாதவற்றைக் காணலாம்.",
     "concept": "centroid"
   },
   "g9-ch5-ex5.5-q3": {
@@ -190,21 +190,21 @@
     "step": 0,
     "expected": "Equate the centroid of (1, 2), (h, −3), (−4, k) to (5, −1) to find h and k.",
     "en": "A centroid gives two separate averages, one for each coordinate direction. The unknown horizontal coordinate is determined from the horizontal sum and the unknown vertical coordinate from the vertical sum.",
-    "ta": "மையக்கோட்டு மையம் இரு திசைகளுக்கும் தனித்தனி சராசரியைத் தருகிறது. கிடைமட்டக் கூட்டுத்தொகையால் தெரியாத கிடைமட்ட ஆயத்தொலைவையும் செங்குத்துக் கூட்டுத்தொகையால் தெரியாத செங்குத்து ஆயத்தொலைவையும் காணலாம்.",
+    "ta": "நடுக்கோட்டு மையம் இரு திசைகளுக்கும் தனித்தனி சராசரியைத் தருகிறது. கிடைமட்டக் கூட்டுத்தொகையால் தெரியாத கிடைமட்ட ஆயத்தொலைவையும் செங்குத்துக் கூட்டுத்தொகையால் தெரியாத செங்குத்து ஆயத்தொலைவையும் காணலாம்.",
     "concept": "centroid"
   },
   "g9-ch5-ex5.5-q5": {
     "step": 0,
     "expected": "On the Euler line of a triangle, the centroid B divides the segment joining orthocentre A and circumcentre C internally in the ratio 2 : 1 (AB : BC = 2 : 1).",
     "en": "The Euler line connects the orthocentre, centroid and circumcentre. When they are distinct, the centroid lies between the other centres and is twice as far from the orthocentre as from the circumcentre; this relation gives the section formula.",
-    "ta": "ஆய்லர் கோடு செங்கோட்டு மையம், மையக்கோட்டு மையம், சுற்றுவட்ட மையம் ஆகியவற்றை இணைக்கிறது. இவை வேறுபட்ட புள்ளிகளாக இருந்தால் மையக்கோட்டு மையம் மற்ற இரண்டுக்கும் இடையில் இருக்கும்; செங்கோட்டு மையத்திலிருந்து அதன் தொலைவு சுற்றுவட்ட மையத்திலிருந்து உள்ளதைவிட இருமடங்கு. இதனால் பிரிப்பு வாய்ப்பாட்டைப் பயன்படுத்தலாம்.",
+    "ta": "ஆய்லர் கோடு செங்கோட்டு மையம், நடுக்கோட்டு மையம், சுற்றுவட்ட மையம் ஆகியவற்றை இணைக்கிறது. இவை வேறுபட்ட புள்ளிகளாக இருந்தால் நடுக்கோட்டு மையம் மற்ற இரண்டுக்கும் இடையில் இருக்கும்; செங்கோட்டு மையத்திலிருந்து அதன் தொலைவு சுற்றுவட்ட மையத்திலிருந்து உள்ளதைவிட இருமடங்கு. இதனால் பிரிப்பு வாய்ப்பாட்டைப் பயன்படுத்தலாம்.",
     "concept": "centroid"
   },
   "g9-ch5-ex5.5-q6": {
     "step": 0,
     "expected": "First find the centroid G of △ABC with vertices A(3, 4), B(−2, −1), C(5, 3).",
     "en": "The centroid is found by averaging the triangle vertices. In the parallelogram, opposite vertices then share a common diagonal midpoint, allowing the fourth vertex to be recovered.",
-    "ta": "முக்கோண உச்சிகளின் ஆயத்தொலைவுச் சராசரியால் மையக்கோட்டு மையம் கிடைக்கும். இணைகரத்தில் எதிரெதிர் உச்சிகளை இணைக்கும் மூலைவிட்டங்களுக்குப் பொதுவான நடுப்புள்ளி இருப்பதால் நான்காவது உச்சியைக் காணலாம்.",
+    "ta": "முக்கோண உச்சிகளின் ஆயத்தொலைவுச் சராசரியால் நடுக்கோட்டு மையம் கிடைக்கும். இணைகரத்தில் எதிரெதிர் உச்சிகளை இணைக்கும் மூலைவிட்டங்களுக்குப் பொதுவான நடுப்புள்ளி இருப்பதால் நான்காவது உச்சியைக் காணலாம்.",
     "concept": "centroid"
   },
   "g9-ch5-ex5.5-q7": {
