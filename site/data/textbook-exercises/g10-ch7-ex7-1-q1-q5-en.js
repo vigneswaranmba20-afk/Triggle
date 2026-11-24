@@ -392,11 +392,11 @@ const entries=[
         }
       },
       {
-        "en": "The floor is a circle. Set πr² = 88, then use π = 22/7 to calculate the square of the radius.",
-        "eq": "πr² = 88; r² = 88×7/22 = 28 m²",
+        "en": "The floor is a circle. Use π = 22/7 to find r², then take its positive square root. The radius is a length, so its unit is metres.",
+        "eq": "πr² = 88; r² = 28 m²; r = √28 = 2√7 m",
         "math": {
-          "latex": "\\pi r^2=88\\quad\\Rightarrow\\quad r^2=\\dfrac{88}{22/7}=28\\,\\mathrm{m}^2",
-          "fallback": "πr² = 88; r² = 88×7/22 = 28 m²",
+          "latex": "\\begin{aligned}\\pi r^2&=88\\\\r^2&=\\frac{88}{22/7}=28\\,\\mathrm{m}^2\\\\r&=\\sqrt{28}=2\\sqrt7\\,\\mathrm{m}\\end{aligned}",
+          "fallback": "πr² = 88; r² = 28 m²; r = √28 = 2√7 m",
           "display": true
         }
       },

@@ -85,6 +85,15 @@ const pi=22/7;const close=(a,b)=>Math.abs(a-b)<1e-10;
 const slant6=Math.hypot(5,12);assert.equal(slant6,13);assert.ok(close(5720/(pi*5*slant6),28));
 const ratio=(Math.sqrt(10))/(9*Math.sqrt(2));assert.ok(close(ratio,Math.sqrt(5)/9));
 assert.equal(((1.25)**2-1)*100,56.25);
+// AUD16-02: exact fractional derivation must be present in rendered maths and fallback.
+const audQ8=g.items.find(x=>x.id==='c10-7-ex7-1-q8');
+const audQ9=g.items.find(x=>x.id==='c10-7-ex7-1-q9');
+assert.ok(audQ8.steps[1].math.latex.includes('\\frac54'));
+assert.ok(audQ8.steps[2].math.latex.includes('\\frac{25}{16}'));
+assert.ok(audQ8.steps[3].math.latex.includes('\\frac9{16}'));
+assert.ok(audQ8.steps[3].math.fallback.includes('9/16'));
+assert.equal((25/16-1)*100,56.25);
+assert.ok(audQ9.steps[1].math.latex.includes('\\pi(3R^2+r^2)'));
 const area9=2*pi*14**2+2*pi*10**2+pi*(14**2-10**2);
 assert.ok(close(area9,688*pi));assert.ok(close(area9*0.14,302.72));
 const slant10=Math.hypot(8,12-6);assert.equal(slant10,10);

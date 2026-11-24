@@ -83,6 +83,15 @@ assert.equal(pq,12);
 const rotatedQR=pi*pq*20,rotatedPQ=pi*16*20;
 assert.ok(Math.abs(rotatedQR/rotatedPQ-3/4)<1e-12,'rotated-area ratio should be 3:4');
 assert.ok(rotatedPQ>rotatedQR);
+// AUD16-02: original symptom checks, not just correct final answers.
+const audQ3=grade.items.find(r=>r.id==='c10-7-ex7-1-q3');
+const audQ4=grade.items.find(r=>r.id==='c10-7-ex7-1-q4');
+const audQ5=grade.items.find(r=>r.id==='c10-7-ex7-1-q5');
+assert.ok(audQ3.steps[1].math.latex.includes('2\\pi(R+r)(R-r+h)'));
+assert.ok(audQ4.answerMath.fallback.includes('PQ is larger'));
+assert.ok(audQ5.steps[1].math.latex.includes('2\\sqrt7'));
+assert.ok(audQ5.steps[1].math.fallback.includes('2√7 m'));
+assert.ok(Math.abs(Math.sqrt(28)-2*Math.sqrt(7))<1e-12);
 const floorArea=4*22,rsq=floorArea/pi;
 assert.equal(rsq,28);
 assert.equal(Math.round(Math.sqrt(19**2-rsq)*100)/100,18.25);
