@@ -6,6 +6,7 @@ const katex=require('../assets/vendor/katex/katex.min.js');
 const tableAudit=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.json');
 const tableFollowup=require('../../docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json');
 const sourceChoices=require('../../docs/audit/AUD14_03_EX61_EX65_SOURCE_EVIDENCE.json');
+const bilingualGeometry=require('../data/textbook-fidelity/g9-ch4-bilingual-20261124.json');
 const root=path.resolve(__dirname,'..'),read=file=>fs.readFileSync(path.join(root,file),'utf8');
 assert.equal(read('data/g9-clear-math.js'),build(),'Reproducible presentation must track canonical content');
 const ctx={window:{katex}};vm.createContext(ctx);
@@ -55,9 +56,18 @@ assert.equal(JSON.stringify(items.slice(-57).map(q=>q.id)),JSON.stringify([...ne
 const preservation=items.filter(q=>!newIds.has(q.id)).map(q=>{
  const legacy=tableAudit.records[q.id]||tableFollowup.records[q.id];
  const questionOriginal=sourceChoices.records[q.id];
- const steps=legacy?.originalSteps||legacy?.originalRecord?.steps||q.steps;
+ // Check the current record before reconstructing its original Tamil placeholders
+ // for the old whole-grade digest. Original English, equations and order stay live inputs.
+ const bilingual=bilingualGeometry.records[q.id];
+ if(bilingual)assert.equal(createHash('sha256').update(JSON.stringify(q)).digest('hex'),bilingual.reviewedRecordSha256,'Exact bilingual geometry '+q.id);
+ let question=questionOriginal?.originalRecord?.q||q.q;
+ let steps=legacy?.originalSteps||legacy?.originalRecord?.steps||q.steps;
+ if(bilingual){
+  question={...q.q,ta:'English-language question; Tamil version not changed. '+q.q.en};
+  steps=q.steps.map(step=>({...step,ta:'English explanation (Tamil unchanged): '+step.en}));
+ }
  const answer=legacy?(legacy.originalFinalAnswer||legacy.unchangedFinalAnswer):q.answer;
- return [q.id,q.chapter,q.exercise,q.kind,questionOriginal?.originalRecord?.q||q.q,answer,
+ return [q.id,q.chapter,q.exercise,q.kind,question,answer,
   steps.filter((_,idx)=>!(q.id==='g9-ch9-ex9.2-q5'&&idx===3)).map(({en,ta,eq},index)=>revisedReasons[q.id]?.includes(index)?[null,null,eq]:[en,ta,eq])];
 });
 console.log('AUD13-02 G9_GRADE_PRESERVATION_SHA256 '+createHash('sha256').update(JSON.stringify(preservation)).digest('hex'));

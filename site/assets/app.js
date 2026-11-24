@@ -428,7 +428,8 @@
   if(englishInTamilReader(tr(s)))reason.lang='en';
   const equation=document.createElement('div');equation.className='step-equation';
   const fragments=String(s.eq||'').split(/\s+;\s+/);
-  if(s.math){equation.classList.add('structured-equation');equation.innerHTML=math(s.math);}
+  const stepMath=lang==='ta'&&s.mathTa?s.mathTa:s.math;
+  if(stepMath){equation.classList.add('structured-equation');equation.innerHTML=math(stepMath);}
   else if(fragments.length>1&&fragments.length<=8){equation.classList.add('step-equation-group');equation.innerHTML=fragments.map(x=>'<span class="math-part">'+math(x)+'</span>').join('');}
   else equation.innerHTML=math(s.eq);
   body.append(reason,equation);li.append(number,body);return li;
@@ -494,9 +495,8 @@
   appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
-  // Language switching and navigation replace formula nodes. Set Grade 9 keyboard state
-  // immediately and refresh all grades when layout, fonts, or viewport widths settle.
-  if(grade===9)prepareLessonMath();
+  // Set keyboard scrolling state immediately for all grades; refresh when layout or fonts settle.
+  prepareLessonMath();
   if(lessonMathObserver){
    for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
     lessonMathObserver.observe(formula);

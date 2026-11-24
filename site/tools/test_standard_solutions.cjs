@@ -8,6 +8,12 @@ const auditedG9Proofs=require('../../docs/audit/AUD13_02_CORRECTION_HASHES.json'
 const auditedG9TrigTable=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.json');
 const auditedG9TrigQ46=require('../../docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json');
 const auditedG9SourceChoices=require('../../docs/audit/AUD14_03_EX61_EX65_SOURCE_EVIDENCE.json');
+const g9BilingualGeometry=require('../data/textbook-fidelity/g9-ch4-bilingual-20261124.json');
+const expectedGeometryIds=[
+  '4.1-q2','4.1-q4','4.2-q1','4.2-q2','4.2-q3','4.2-q4',
+  '4.2-q6','4.3-q1','4.3-q2','4.3-q4','4.3-q6'
+].map(suffix=>'g9-ch4-ex'+suffix);
+assert.deepEqual(Object.keys(g9BilingualGeometry.records),expectedGeometryIds);
 assert.equal(auditedG9SourceChoices.auditId,'AUD14-03');
 assert.equal(Object.keys(auditedG9SourceChoices.records).length,9);
 assert.equal(auditedG9TrigQ46.auditId,'AUD14-02-Q4-Q6');
@@ -413,8 +419,17 @@ for(const [grade,data] of Object.entries(classes)){
    const trig=auditedG9TrigTable.records[item.id];
    const extended=auditedG9TrigQ46.records[item.id];
    const originalChoices=auditedG9SourceChoices.records[item.id];
-   assert.ok([!!trig,!!correction,!!extended,!!originalChoices].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
-   if(originalChoices){
+   const bilingualGeometry=g9BilingualGeometry.records[item.id];
+   assert.ok([trig,correction,extended,originalChoices,bilingualGeometry].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
+   if(bilingualGeometry){
+    assert.equal(grade,'9');
+    assert.equal(bilingualGeometry.originalRecordSha256,preserved.sha256[item.id],'Original geometry baseline '+item.id);
+    const englishDigest=crypto.createHash('sha256').update(JSON.stringify(m04EnglishProjection(item))).digest('hex');
+    assert.equal(englishDigest,bilingualGeometry.originalEnglishAndEquationsSha256,'Original English content and every shared equation '+item.id);
+    assert.equal(item.q.en,bilingualGeometry.prompt.en,'Source-checked English prompt '+item.id);
+    assert.equal(item.q.ta,bilingualGeometry.prompt.ta,'Source-checked Tamil prompt '+item.id);
+    assert.equal(hash,bilingualGeometry.reviewedRecordSha256,'Exact bilingual geometry record and source metadata '+item.id);
+   }else if(originalChoices){
     assert.equal(originalChoices.originalRecordSha256,preserved.sha256[item.id],'Pre-existing immutable source hash '+item.id);
     assert.equal(item.answer,originalChoices.originalFinalAnswer,'Original math answer unchanged '+item.id);
     assert.equal(item.steps.length,originalChoices.originalSteps,'Original worked step count unchanged '+item.id);

@@ -20286,12 +20286,12 @@ const records=[
         ", find the measure of each angle of the triangle."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. The angles of a triangle are in the ratio ",
+        "ஒரு முக்கோணத்தின் கோணங்களின் விகிதம் ",
         {
           "latex": "1 : 2 : 3",
-          "fallback": "1: 2 : 3"
+          "fallback": "1 : 2 : 3"
         },
-        ", find the measure of each angle of the triangle."
+        " எனில் முக்கோணத்தின் ஒவ்வொரு கோண அளவையும் காண்க."
       ]
     },
     "answerMath": {
@@ -20321,17 +20321,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Represent the three angles by ",
+            "முக்கோணத்தின் மூன்று கோணங்களையும் ",
             {
               "latex": "x, 2 x",
               "fallback": "x, 2x"
             },
-            " and ",
+            " மற்றும் ",
             {
               "latex": "3 x",
               "fallback": "3x"
             },
-            "."
+            " என எடுத்துக்கொள்க."
           ]
         }
       },
@@ -20350,12 +20350,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): The three interior angles of a triangle add to ",
+            "ஒரு முக்கோணத்தின் மூன்று உட்கோணங்களின் கூடுதல் ",
             {
               "latex": "180^{\\circ}",
               "fallback": "180°"
             },
-            "."
+            " ஆகும்."
           ]
         }
       },
@@ -20367,7 +20367,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Solve for the common multiplier.",
-          "ta": "English explanation (Tamil unchanged): Solve for the common multiplier."
+          "ta": [
+            "சமன்பாட்டைத் தீர்த்து பொதுக் காரணியான ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-இன் மதிப்பைக் காண்க."
+          ]
         }
       },
       {
@@ -20378,7 +20385,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Write all three angles and check their sum.",
-          "ta": "English explanation (Tamil unchanged): Write all three angles and check their sum."
+          "ta": [
+            "மூன்று கோண அளவுகளையும் எழுதி அவற்றின் கூடுதல் ",
+            {
+              "latex": "180^{\\circ}",
+              "fallback": "180°"
+            },
+            " எனச் சரிபார்க்க."
+          ]
         }
       }
     ]
@@ -20421,45 +20435,64 @@ const records=[
         ". Prove that the triangles are congruent."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. ",
+        "△",
         {
-          "latex": "\\triangle ABC",
-          "fallback": "ΔABC"
+          "latex": "ABC",
+          "fallback": "ABC"
         },
-        " and ",
+        " மற்றும் △",
         {
-          "latex": "\\triangle DEF",
-          "fallback": "ΔDEF"
+          "latex": "DEF",
+          "fallback": "DEF"
         },
-        " are two triangles in which ",
+        " இல் ",
         {
           "latex": "AB = DF",
-          "fallback": "AB=DF"
+          "fallback": "AB = DF"
         },
-        ",",
-        " ",
+        " மற்றும் ",
         {
           "latex": "\\angle ACB = 70^{\\circ}",
-          "fallback": "∠ACB=70°"
+          "fallback": "∠ACB = 70°"
         },
         ",",
         " ",
         {
-          "latex": "\\angle ABC = 60^{\\circ};\\quad \\angle DEF = 70^{\\circ}",
-          "fallback": "∠ABC=60°; ∠DEF=70°"
+          "latex": "\\angle ABC = 60^{\\circ}",
+          "fallback": "∠ABC = 60°"
         },
-        " and ",
+        ",",
+        " ",
+        {
+          "latex": "\\angle DEF = 70^{\\circ}",
+          "fallback": "∠DEF = 70°"
+        },
+        " மற்றும் ",
         {
           "latex": "\\angle EDF = 60^{\\circ}",
-          "fallback": "∠EDF=60°"
+          "fallback": "∠EDF = 60°"
         },
-        ". Prove that the triangles are congruent."
+        " எனில், முக்கோணங்கள் சர்வசமம் என நிறுவுக."
       ]
     },
     "answerMath": {
-      "latex": "\\triangle ABC \\cong \\triangle FDE \\left(ASA\\right)",
-      "fallback": "ΔABC ≅ ΔFDE (ASA)",
-      "display": true
+      "en": {
+        "latex": "\\triangle ABC \\cong \\triangle FDE \\left(ASA\\right)",
+        "fallback": "ΔABC ≅ ΔFDE (ASA)",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "\\triangle ABC \\cong \\triangle FDE",
+          "fallback": "ΔABC ≅ ΔFDE"
+        },
+        " (கோ-ப-கோ / ",
+        {
+          "latex": "ASA",
+          "fallback": "ASA"
+        },
+        ")"
+      ]
     },
     "steps": [
       {
@@ -20478,12 +20511,16 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Use the angle-sum property in ",
             {
               "latex": "\\triangle ABC",
               "fallback": "ΔABC"
             },
-            "."
+            "-இல் முக்கோணக் கோணக் கூடுதல் பண்பைப் பயன்படுத்தி ",
+            {
+              "latex": "\\angle BAC",
+              "fallback": "∠BAC"
+            },
+            " காண்க."
           ]
         }
       },
@@ -20503,12 +20540,16 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Find the remaining angle of ",
             {
               "latex": "\\triangle DEF",
               "fallback": "ΔDEF"
             },
-            "."
+            "-இல் மீதமுள்ள கோணம் ",
+            {
+              "latex": "\\angle DFE",
+              "fallback": "∠DFE"
+            },
+            " காண்க."
           ]
         }
       },
@@ -20520,7 +20561,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The corresponding angles and the included sides match.",
-          "ta": "English explanation (Tamil unchanged): The corresponding angles and the included sides match."
+          "ta": "ஒத்த கோணங்களும் அவற்றிற்கு இடைப்பட்ட பக்கங்களும் சமமாக உள்ளன."
         }
       },
       {
@@ -20539,12 +20580,12 @@ const records=[
             "–Angle congruence rule with matching vertex order."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Apply the Angle",
+            "ஒத்த உச்சி வரிசையுடன் கோணம்-பக்கம்-கோணம் (கோ-ப-கோ / ",
             {
-              "latex": "- \\text{Side}",
-              "fallback": "–Side"
+              "latex": "ASA",
+              "fallback": "ASA"
             },
-            "–Angle congruence rule with matching vertex order."
+            ") சர்வசம விதியைப் பயன்படுத்துக."
           ]
         }
       }
@@ -20562,12 +20603,12 @@ const records=[
         ". Find all the angles."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. The angles of a quadrilateral are in the ratio ",
+        "ஒரு நாற்கரத்தின் கோணங்களின் விகிதம் ",
         {
           "latex": "2 : 4 : 5 : 7",
           "fallback": "2 : 4 : 5 : 7"
         },
-        ". Find all the angles."
+        " எனில், அனைத்துக் கோண அளவுகளையும் காண்க."
       ]
     },
     "answerMath": {
@@ -20597,17 +20638,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Represent the four angles by ",
+            "நாற்கரத்தின் நான்கு கோணங்களையும் ",
             {
               "latex": "2 x, 4 x, 5 x",
               "fallback": "2x, 4x, 5x"
             },
-            " and ",
+            " மற்றும் ",
             {
               "latex": "7 x",
               "fallback": "7x"
             },
-            "."
+            " எனக் கொள்க."
           ]
         }
       },
@@ -20627,12 +20668,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): The sum of interior angles of a quadrilateral is ",
+            "ஒரு நாற்கரத்தின் நான்கு உட்கோணங்களின் கூடுதல் ",
             {
               "latex": "360^{\\circ}",
               "fallback": "360°"
             },
-            "."
+            " ஆகும்."
           ]
         }
       },
@@ -20644,7 +20685,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Find the common multiplier.",
-          "ta": "English explanation (Tamil unchanged): Find the common multiplier."
+          "ta": [
+            "சமன்பாட்டைத் தீர்த்து ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-இன் மதிப்பைக் காண்க."
+          ]
         }
       },
       {
@@ -20655,7 +20703,19 @@ const records=[
         },
         "reasonMath": {
           "en": "Multiply the ratio terms and verify the total.",
-          "ta": "English explanation (Tamil unchanged): Multiply the ratio terms and verify the total."
+          "ta": [
+            "விகித உறுப்புகளை ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-ஆல் பெருக்கி நான்கு கோணங்களையும் கண்டு அவற்றின் கூடுதல் ",
+            {
+              "latex": "360^{\\circ}",
+              "fallback": "360°"
+            },
+            " எனச் சரிபார்க்க."
+          ]
         }
       }
     ]
@@ -20697,43 +20757,63 @@ const records=[
         " and the measure of all the angles."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. In a quadrilateral ",
+        "நாற்கரம் ",
         {
-          "latex": "ABCD, \\angle A = 72^{\\circ}",
-          "fallback": "ABCD, ∠A = 72°"
+          "latex": "ABCD",
+          "fallback": "ABCD"
         },
-        " and ",
+        " இல் ",
+        {
+          "latex": "\\angle A = 72^{\\circ}",
+          "fallback": "∠A = 72°"
+        },
+        " மற்றும் ",
         {
           "latex": "\\angle C",
           "fallback": "∠C"
         },
-        " is the supplementary of ",
+        " ஆனது ",
         {
           "latex": "\\angle A",
           "fallback": "∠A"
         },
-        ". The other two angles are ",
+        " இன் மிகை நிரப்பி. மற்ற இரு கோணங்கள் ",
         {
-          "latex": "2 x - 10",
-          "fallback": "2x–10"
+          "latex": "\\left(2 x - 10\\right)^{\\circ}",
+          "fallback": "(2x − 10)°"
         },
-        " and ",
+        " மற்றும் ",
         {
-          "latex": "x + 4",
-          "fallback": "x + 4"
+          "latex": "\\left(x + 4\\right)^{\\circ}",
+          "fallback": "(x + 4)°"
         },
-        ". Find the value of ",
+        " எனில் ",
         {
           "latex": "x",
           "fallback": "x"
         },
-        " and the measure of all the angles."
+        " இன் மதிப்பையும் அனைத்துக் கோண அளவுகளையும் காண்க."
       ]
     },
     "answerMath": {
-      "latex": "\\begin{aligned}&x = 62 \\\\ &\\angle A = 72^{\\circ} \\\\ & \\angle B = 114^{\\circ} \\\\ & \\angle C = 108^{\\circ} \\\\ & \\angle D = 66^{\\circ}\\end{aligned}",
-      "fallback": "x=62; ∠A=72°, ∠B=114°, ∠C=108°, ∠D=66°",
-      "display": true
+      "en": {
+        "latex": "\\begin{aligned}&x = 62 \\\\ &\\angle A = 72^{\\circ} \\\\ & \\angle B = 114^{\\circ} \\\\ & \\angle C = 108^{\\circ} \\\\ & \\angle D = 66^{\\circ}\\end{aligned}",
+        "fallback": "x=62; ∠A=72°, ∠B=114°, ∠C=108°, ∠D=66°",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "\\begin{aligned}&x = 62 \\\\ &\\angle A = 72^{\\circ} \\\\ & \\angle C = 108^{\\circ}\\end{aligned}",
+          "fallback": "x = 62; ∠A = 72°, ∠C = 108°",
+          "display": true
+        },
+        ". மற்ற இரு கோணங்கள் ",
+        {
+          "latex": "114^{\\circ}, 66^{\\circ}",
+          "fallback": "114°, 66°"
+        },
+        "."
+      ]
     },
     "steps": [
       {
@@ -20752,12 +20832,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Supplementary angles sum to ",
+            "மிகை நிரப்புக் கோணங்களின் கூடுதல் ",
             {
               "latex": "180^{\\circ}",
               "fallback": "180°"
             },
-            "."
+            " என்பதால் ",
+            {
+              "latex": "\\angle C = 180^{\\circ} - 72^{\\circ} = 108^{\\circ}",
+              "fallback": "∠C = 180° − 72° = 108°"
+            },
+            " ஆகும்."
           ]
         }
       },
@@ -20777,10 +20862,19 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): All four interior angles of a quadrilateral ",
             {
-              "latex": "\\text{total} 360^{\\circ}",
-              "fallback": "total 360°"
+              "latex": "\\angle B = \\left(2 x - 10\\right)^{\\circ}",
+              "fallback": "∠B = (2x − 10)°"
+            },
+            " என்றும் ",
+            {
+              "latex": "\\angle D = \\left(x + 4\\right)^{\\circ}",
+              "fallback": "∠D = (x + 4)°"
+            },
+            " என்றும் எடுத்துக்கொள்வோம். நாற்கரத்தின் நான்கு உட்கோணங்களின் கூடுதல் ",
+            {
+              "latex": "360^{\\circ}",
+              "fallback": "360°"
             },
             "."
           ]
@@ -20794,7 +20888,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Combine terms and solve the equation.",
-          "ta": "English explanation (Tamil unchanged): Combine terms and solve the equation."
+          "ta": [
+            "ஒத்த உறுப்புகளைச் சேர்த்து சமன்பாட்டைத் தீர்த்து ",
+            {
+              "latex": "x = 62",
+              "fallback": "x = 62"
+            },
+            " எனக் காண்க."
+          ]
         }
       },
       {
@@ -20805,7 +20906,28 @@ const records=[
         },
         "reasonMath": {
           "en": "Evaluate the remaining two angles and check the total.",
-          "ta": "English explanation (Tamil unchanged): Evaluate the remaining two angles and check the total."
+          "ta": [
+            {
+              "latex": "x = 62",
+              "fallback": "x = 62"
+            },
+            " எனப் பிரதியிட்டால் மற்ற இரு கோணங்கள் ",
+            {
+              "latex": "114^{\\circ}, 66^{\\circ}",
+              "fallback": "114°, 66°"
+            },
+            ". எந்தக் கோணம் ",
+            {
+              "latex": "\\angle B",
+              "fallback": "∠B"
+            },
+            " என்று வினாவில் குறிப்பிடப்படாததால் ",
+            {
+              "latex": "\\angle B, \\angle D",
+              "fallback": "∠B, ∠D"
+            },
+            " ஆகியவற்றின் மதிப்புகளை மாற்றியும் எடுத்துக்கொள்ளலாம்."
+          ]
         }
       }
     ]
@@ -20845,36 +20967,37 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version not changed. ",
+        "செவ்வகம் ",
         {
           "latex": "ABCD",
           "fallback": "ABCD"
         },
-        " is a rectangle whose diagonals ",
+        " இல் மூலை விட்டங்கள் ",
         {
           "latex": "AC",
           "fallback": "AC"
         },
-        " and ",
+        " மற்றும் ",
         {
           "latex": "BD",
           "fallback": "BD"
         },
-        " intersect at ",
+        " ஆனது ",
         {
           "latex": "O",
           "fallback": "O"
         },
-        ". If ",
+        "வில் வெட்டிக் கொள்கின்றன. மேலும் ",
         {
           "latex": "\\angle OAB = 46^{\\circ}",
-          "fallback": "∠OAB =46°"
+          "fallback": "∠OAB = 46°"
         },
-        ", find ",
+        " எனில் ",
         {
           "latex": "\\angle OBC",
           "fallback": "∠OBC"
-        }
+        },
+        " காண்க."
       ]
     },
     "answerMath": {
@@ -20897,12 +21020,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): In a rectangle the diagonals are equal and bisect each other, hence ",
+            "செவ்வகத்தின் மூலைவிட்டங்கள் சமம் மற்றும் ஒன்றையொன்று இருசமக்கூறிடும்; எனவே ",
             {
               "latex": "OA = OB",
-              "fallback": "OA=OB"
+              "fallback": "OA = OB"
             },
-            "."
+            " ஆகும்."
           ]
         }
       },
@@ -20922,12 +21045,17 @@ const records=[
             " is isosceles: its two base angles are equal."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Therefore ",
+            "எனவே ",
             {
               "latex": "\\triangle AOB",
               "fallback": "ΔAOB"
             },
-            " is isosceles: its two base angles are equal."
+            " ஓர் இருசமபக்க முக்கோணம் ஆகும்; அதன் அடிப்புறக் கோணங்கள் சமம் ",
+            {
+              "latex": "\\left(\\angle ABO = \\angle OAB = 46^{\\circ}\\right)",
+              "fallback": "(∠ABO = ∠OAB = 46°)"
+            },
+            "."
           ]
         }
       },
@@ -20951,17 +21079,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): The angle at corner ",
-            {
-              "latex": "B",
-              "fallback": "B"
-            },
-            " of a rectangle is ",
+            "செவ்வகத்தின் ஒவ்வொரு மூலைக் கோணமும் ",
             {
               "latex": "90^{\\circ}",
               "fallback": "90°"
             },
-            "."
+            " என்பதால் ",
+            {
+              "latex": "\\angle ABC = 90^{\\circ}",
+              "fallback": "∠ABC = 90°"
+            },
+            " ஆகும்."
           ]
         }
       },
@@ -20986,17 +21114,21 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Subtract ",
-            {
-              "latex": "\\angle ABO",
-              "fallback": "∠ABO"
-            },
-            " from ",
             {
               "latex": "\\angle ABC",
               "fallback": "∠ABC"
             },
-            "."
+            "-லிருந்து ",
+            {
+              "latex": "\\angle ABO",
+              "fallback": "∠ABO"
+            },
+            "-ஐக் கழித்து ",
+            {
+              "latex": "\\angle OBC = 44^{\\circ}",
+              "fallback": "∠OBC = 44°"
+            },
+            " எனக் காண்க."
           ]
         }
       }
@@ -21019,22 +21151,31 @@ const records=[
         " . Find the side of the rhombus."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. The lengths of the diagonals of a Rhombus are ",
+        "சாய்சதுரத்தின் மூலை விட்டங்களின் நீளங்கள் ",
         {
-          "latex": "12\\,\\mathrm{cm}",
-          "fallback": "12 cm"
+          "latex": "12",
+          "fallback": "12"
         },
-        " and ",
+        " செ.மீ. மற்றும் ",
         {
-          "latex": "16\\,\\mathrm{cm}",
-          "fallback": "16 cm"
+          "latex": "16",
+          "fallback": "16"
         },
-        " . Find the side of the rhombus."
+        " செ.மீ. எனில், சாய்சதுரத்தின் பக்க அளவு காண்க."
       ]
     },
     "answerMath": {
-      "latex": "10\\,\\mathrm{cm}",
-      "fallback": "10 cm"
+      "en": {
+        "latex": "10\\,\\mathrm{cm}",
+        "fallback": "10 cm"
+      },
+      "ta": [
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        " செ.மீ"
+      ]
     },
     "steps": [
       {
@@ -21052,7 +21193,19 @@ const records=[
         ],
         "reasonMath": {
           "en": "A rhombus has diagonals that bisect each other at right angles.",
-          "ta": "English explanation (Tamil unchanged): A rhombus has diagonals that bisect each other at right angles."
+          "ta": [
+            "சாய்சதுரத்தின் மூலைவிட்டங்கள் ஒன்றையொன்று செங்கோணத்தில் இருசமக்கூறிடும்; எனவே அரை மூலைவிட்டங்கள் ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            " செ.மீ மற்றும் ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " செ.மீ ஆகும்."
+          ]
         }
       },
       {
@@ -21062,7 +21215,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Each side forms the hypotenuse of a right triangle.",
-          "ta": "English explanation (Tamil unchanged): Each side forms the hypotenuse of a right triangle."
+          "ta": "சாய்சதுரத்தின் ஒவ்வொரு பக்கமும் அச்செங்கோண முக்கோணத்தின் கர்ணமாக அமையும்."
         }
       },
       {
@@ -21073,7 +21226,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Use Pythagoras and take the positive length.",
-          "ta": "English explanation (Tamil unchanged): Use Pythagoras and take the positive length."
+          "ta": [
+            "பிதாகரஸ் தேற்றத்தைப் பயன்படுத்தி மிகை வர்க்கமூலம் எடுத்துப் பக்க அளவு ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            " செ.மீ எனக் காண்க."
+          ]
         }
       }
     ]
@@ -21082,9 +21242,26 @@ const records=[
     "id": "g9-ch4-ex4.2-q6",
     "questionMath": {
       "en": "If a triangle and a parallelogram lie on the same base and between the same parallels, then prove that the area of the triangle is equal to half of the area of parallelogram.",
-      "ta": "English-language question; Tamil version not changed. If a triangle and a parallelogram lie on the same base and between the same parallels, then prove that the area of the triangle is equal to half of the area of parallelogram."
+      "ta": [
+        "ஒரு பொதுவான அடிப்பக்கத்தையும் ஒரு சோடி இணைகோடுகளுக்கு இடையேயும் அமைந்துள்ள முக்கோணம் மற்றும் இணைகரத்தின் பரப்புகள் ",
+        {
+          "latex": "1 : 2",
+          "fallback": "1 : 2"
+        },
+        " என்ற விகிதத்தில் அமையும் என நிறுவுக."
+      ]
     },
-    "answerMath": "Area of triangle = half the area of parallelogram",
+    "answerMath": {
+      "en": "Area of triangle = half the area of parallelogram",
+      "ta": [
+        "முக்கோணத்தின் பரப்பளவு : இணைகரத்தின் பரப்பளவு = ",
+        {
+          "latex": "1:2",
+          "fallback": "1 : 2"
+        },
+        "."
+      ]
+    },
     "steps": [
       {
         "math": [
@@ -21104,12 +21281,12 @@ const records=[
             " to both figures."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): A common base gives the same base length ",
+            "பொதுவான அடிப்பக்கத்தில் அமைவதால் இரு வடிவங்களுக்கும் ஒரே அடிப்பக்க நீளம் ",
             {
               "latex": "b",
               "fallback": "b"
             },
-            " to both figures."
+            " கிடைக்கும்."
           ]
         }
       },
@@ -21131,12 +21308,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Lying between the same parallel lines gives the same perpendicular height ",
+            "ஒரே இணைகோடுகளுக்கு இடையில் அமைவதால் இரு வடிவங்களுக்கும் ஒரே செங்குத்து உயரம் ",
             {
               "latex": "h",
               "fallback": "h"
             },
-            "."
+            " கிடைக்கும்."
           ]
         }
       },
@@ -21148,7 +21325,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use the standard area formulas for both figures.",
-          "ta": "English explanation (Tamil unchanged): Use the standard area formulas for both figures."
+          "ta": "முக்கோணம் மற்றும் இணைகரத்தின் பரப்பளவுச் சூத்திரங்களை எழுதுக."
         }
       },
       {
@@ -21159,7 +21336,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Compare the areas directly.",
-          "ta": "English explanation (Tamil unchanged): Compare the areas directly."
+          "ta": [
+            "இரண்டிற்கும் ஒரே அடிப்பக்கமும் ஒரே உயரமும் உள்ளன. எனவே முக்கோணத்தின் பரப்பளவு இணைகரத்தின் பரப்பளவில் பாதி. ஆகவே அவற்றின் பரப்பளவுகளின் விகிதம் ",
+            {
+              "latex": "1 : 2",
+              "fallback": "1 : 2"
+            },
+            "."
+          ]
         }
       }
     ]
@@ -21181,22 +21365,31 @@ const records=[
         ". Find the distance of the chord from the centre."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. The diameter of the circle is ",
+        "வட்டத்தின் விட்டம் ",
         {
-          "latex": "52\\,\\mathrm{cm}",
-          "fallback": "52cm"
+          "latex": "52",
+          "fallback": "52"
         },
-        " and the length of one of its chord is ",
+        " செமீ மற்றும் ஒரு நாணின் நீளம் ",
         {
-          "latex": "20\\,\\mathrm{cm}",
-          "fallback": "20cm"
+          "latex": "20",
+          "fallback": "20"
         },
-        ". Find the distance of the chord from the centre."
+        " செமீ எனில், மையத்திலிருந்து நாணிற்கு உள்ள தூரம் காண்க."
       ]
     },
     "answerMath": {
-      "latex": "24\\,\\mathrm{cm}",
-      "fallback": "24 cm"
+      "en": {
+        "latex": "24\\,\\mathrm{cm}",
+        "fallback": "24 cm"
+      },
+      "ta": [
+        {
+          "latex": "24",
+          "fallback": "24"
+        },
+        " செ.மீ"
+      ]
     },
     "steps": [
       {
@@ -21214,7 +21407,19 @@ const records=[
         ],
         "reasonMath": {
           "en": "The radius is half the diameter, and a perpendicular from the centre bisects the chord.",
-          "ta": "English explanation (Tamil unchanged): The radius is half the diameter, and a perpendicular from the centre bisects the chord."
+          "ta": [
+            "ஆரம் விட்டத்தின் பாதி (",
+            {
+              "latex": "26",
+              "fallback": "26"
+            },
+            " செ.மீ) ஆகும்; வட்ட மையத்திலிருந்து நாணிற்கு வரையப்படும் செங்குத்து நாணை இருசமக்கூறிடும் (அரை நாண் = ",
+            {
+              "latex": "10",
+              "fallback": "10"
+            },
+            " செ.மீ)."
+          ]
         }
       },
       {
@@ -21224,7 +21429,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The radius, half-chord and perpendicular distance form a right triangle.",
-          "ta": "English explanation (Tamil unchanged): The radius, half-chord and perpendicular distance form a right triangle."
+          "ta": "ஆரம், அரை நாண் மற்றும் செங்குத்துத் தொலைவு ஆகியவை ஒரு செங்கோண முக்கோணத்தை உருவாக்குகின்றன."
         }
       },
       {
@@ -21235,7 +21440,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply Pythagoras.",
-          "ta": "English explanation (Tamil unchanged): Apply Pythagoras."
+          "ta": [
+            "பிதாகரஸ் தேற்றத்தைப் பயன்படுத்தி ",
+            {
+              "latex": "d^{2}",
+              "fallback": "d²"
+            },
+            " காண்க."
+          ]
         }
       },
       {
@@ -21245,7 +21457,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Take the nonnegative distance.",
-          "ta": "English explanation (Tamil unchanged): Take the nonnegative distance."
+          "ta": [
+            "மிகை வர்க்கமூலம் எடுத்துத் தொலைவு ",
+            {
+              "latex": "24",
+              "fallback": "24"
+            },
+            " செ.மீ எனக் காண்க."
+          ]
         }
       }
     ]
@@ -21267,22 +21486,31 @@ const records=[
         " from the centre of the circle. Find the radius of the circle"
       ],
       "ta": [
-        "English-language question; Tamil version not changed. The chord of ",
+        "வட்டத்தின் மையத்திலிருந்து ",
         {
-          "latex": "\\text{length} 30\\,\\mathrm{cm}",
-          "fallback": "length 30 cm"
+          "latex": "8",
+          "fallback": "8"
         },
-        " is drawn at the distance of ",
+        " செமீ தொலைவில் ",
         {
-          "latex": "8\\,\\mathrm{cm}",
-          "fallback": "8cm"
+          "latex": "30",
+          "fallback": "30"
         },
-        " from the centre of the circle. Find the radius of the circle"
+        " செமீ நீளமுள்ள நாண் வரையப்பட்டுள்ளது எனில், வட்டத்தின் ஆரம் காண்க."
       ]
     },
     "answerMath": {
-      "latex": "17\\,\\mathrm{cm}",
-      "fallback": "17 cm"
+      "en": {
+        "latex": "17\\,\\mathrm{cm}",
+        "fallback": "17 cm"
+      },
+      "ta": [
+        {
+          "latex": "17",
+          "fallback": "17"
+        },
+        " செ.மீ"
+      ]
     },
     "steps": [
       {
@@ -21296,7 +21524,14 @@ const records=[
         ],
         "reasonMath": {
           "en": "A perpendicular from the centre to the chord bisects it.",
-          "ta": "English explanation (Tamil unchanged): A perpendicular from the centre to the chord bisects it."
+          "ta": [
+            "வட்ட மையத்திலிருந்து நாணிற்கு வரையப்படும் செங்குத்து நாணை இருசமக்கூறிடும் (அரை நாண் = ",
+            {
+              "latex": "15",
+              "fallback": "15"
+            },
+            " செ.மீ)."
+          ]
         }
       },
       {
@@ -21319,17 +21554,16 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): The radius is the hypotenuse of the triangle with legs ",
             {
-              "latex": "15\\,\\mathrm{cm}",
-              "fallback": "15 cm"
+              "latex": "15",
+              "fallback": "15"
             },
-            " and ",
+            " செ.மீ மற்றும் ",
             {
-              "latex": "8\\,\\mathrm{cm}",
-              "fallback": "8 cm"
+              "latex": "8",
+              "fallback": "8"
             },
-            "."
+            " செ.மீ பக்கங்களைக் கொண்ட செங்கோண முக்கோணத்தின் கர்ணமே வட்டத்தின் ஆரம் ஆகும்."
           ]
         }
       },
@@ -21341,7 +21575,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Calculate and take the positive root.",
-          "ta": "English explanation (Tamil unchanged): Calculate and take the positive root."
+          "ta": [
+            "பிதாகரஸ் தேற்றத்தால் கணக்கிட்டு மிகை வர்க்கமூலம் எடுக்க ஆரம் ",
+            {
+              "latex": "17",
+              "fallback": "17"
+            },
+            " செ.மீ கிடைக்கும்."
+          ]
         }
       }
     ]
@@ -21363,22 +21604,31 @@ const records=[
         ". Find the length of the chord."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. A chord is ",
+        "ஆரம் ",
         {
-          "latex": "12\\,\\mathrm{cm}",
-          "fallback": "12cm"
+          "latex": "15",
+          "fallback": "15"
         },
-        " away from the centre of the circle of radius ",
+        " செமீ உள்ள வட்டத்தின் மையத்திலிருந்து ",
         {
-          "latex": "15\\,\\mathrm{cm}",
-          "fallback": "15cm"
+          "latex": "12",
+          "fallback": "12"
         },
-        ". Find the length of the chord."
+        " செமீ தொலைவில் அமைந்துள்ள நாணின் நீளம் காண்க."
       ]
     },
     "answerMath": {
-      "latex": "18\\,\\mathrm{cm}",
-      "fallback": "18 cm"
+      "en": {
+        "latex": "18\\,\\mathrm{cm}",
+        "fallback": "18 cm"
+      },
+      "ta": [
+        {
+          "latex": "18",
+          "fallback": "18"
+        },
+        " செ.மீ"
+      ]
     },
     "steps": [
       {
@@ -21391,7 +21641,14 @@ const records=[
         ],
         "reasonMath": {
           "en": "A perpendicular from the centre bisects the chord.",
-          "ta": "English explanation (Tamil unchanged): A perpendicular from the centre bisects the chord."
+          "ta": [
+            "வட்ட மையத்திலிருந்து வரையப்படும் செங்குத்து நாணை இருசமக்கூறிடும்; அரை நாண் நீளத்தை ",
+            {
+              "latex": "t",
+              "fallback": "t"
+            },
+            " என்க."
+          ]
         }
       },
       {
@@ -21401,7 +21658,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Use the radius as hypotenuse in the right triangle.",
-          "ta": "English explanation (Tamil unchanged): Use the radius as hypotenuse in the right triangle."
+          "ta": [
+            "செங்கோண முக்கோணத்தில் ஆரம் ",
+            {
+              "latex": "15",
+              "fallback": "15"
+            },
+            " செ.மீ-ஐக் கர்ணமாகக் கொண்டு பிதாகரஸ் தேற்றத்தைப் பயன்படுத்துக."
+          ]
         }
       },
       {
@@ -21412,7 +21676,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Calculate half of the chord.",
-          "ta": "English explanation (Tamil unchanged): Calculate half of the chord."
+          "ta": [
+            "அரை நாண் நீளம் ",
+            {
+              "latex": "t = 9",
+              "fallback": "t = 9"
+            },
+            " செ.மீ எனக் கணக்கிடுக."
+          ]
         }
       },
       {
@@ -21426,7 +21697,14 @@ const records=[
         ],
         "reasonMath": {
           "en": "Double it to find the full chord.",
-          "ta": "English explanation (Tamil unchanged): Double it to find the full chord."
+          "ta": [
+            "முழு நாணின் நீளத்தைக் காண ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "-ஆல் பெருக்குக."
+          ]
         }
       }
     ]
@@ -21453,27 +21731,35 @@ const records=[
         ". Find the length of the common chord."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. Two circles of radii ",
         {
-          "latex": "5\\,\\mathrm{cm}",
-          "fallback": "5 cm"
+          "latex": "5",
+          "fallback": "5"
         },
-        " and ",
+        " செமீ மற்றும் ",
         {
-          "latex": "3\\,\\mathrm{cm}",
-          "fallback": "3 cm"
+          "latex": "3",
+          "fallback": "3"
         },
-        " intersect at two points and the distance between their centres is ",
+        " செமீ ஆரமுள்ள இரு வட்டங்கள், இரண்டு புள்ளிகளில் வெட்டிக் கொள்கின்றன. மேலும், அவற்றின் மையங்களுக்கு இடைப்பட்ட தொலைவு ",
         {
-          "latex": "4\\,\\mathrm{cm}",
-          "fallback": "4 cm"
+          "latex": "4",
+          "fallback": "4"
         },
-        ". Find the length of the common chord."
+        " செமீ எனில், பொது நாணின் நீளத்தைக் காண்க."
       ]
     },
     "answerMath": {
-      "latex": "6\\,\\mathrm{cm}",
-      "fallback": "6 cm"
+      "en": {
+        "latex": "6\\,\\mathrm{cm}",
+        "fallback": "6 cm"
+      },
+      "ta": [
+        {
+          "latex": "6",
+          "fallback": "6"
+        },
+        " செ.மீ"
+      ]
     },
     "steps": [
       {
@@ -21517,37 +21803,37 @@ const records=[
             " on the line of centres."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Let ",
+            "இரு வட்டங்களின் மையங்களை ",
             {
               "latex": "O_{1}",
               "fallback": "O₁"
             },
-            " and ",
+            " மற்றும் ",
             {
               "latex": "O_{2}",
               "fallback": "O₂"
             },
-            " be the centres; place ",
+            " என்க; மையக்கோட்டில் ",
             {
               "latex": "O_{1}",
               "fallback": "O₁"
             },
-            " at ",
+            "-ஐ ",
             {
               "latex": "0",
               "fallback": "0"
             },
-            " and ",
+            "-இலும் ",
             {
               "latex": "O_{2}",
               "fallback": "O₂"
             },
-            " at ",
+            "-ஐ ",
             {
               "latex": "4",
               "fallback": "4"
             },
-            " on the line of centres."
+            "-இலும் அமைப்போம்."
           ]
         }
       },
@@ -21572,17 +21858,17 @@ const records=[
             ", subtract the two Pythagorean equations."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): The common chord is perpendicular to the line of centres. If its midpoint is distance ",
-            {
-              "latex": "t",
-              "fallback": "t"
-            },
-            " from ",
+            "பொது நாண் மையக்கோட்டிற்குச் செங்குத்தாக இருக்கும்; அதன் நடுப்புள்ளி ",
             {
               "latex": "O_{1}",
               "fallback": "O₁"
             },
-            ", subtract the two Pythagorean equations."
+            "-லிருந்து ",
+            {
+              "latex": "t",
+              "fallback": "t"
+            },
+            " தொலைவில் உள்ளதெனில் இரு பிதாகரஸ் சமன்பாடுகளை அமைக்க."
           ]
         }
       },
@@ -21594,7 +21880,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Subtract to find where the common chord crosses the line of centres.",
-          "ta": "English explanation (Tamil unchanged): Subtract to find where the common chord crosses the line of centres."
+          "ta": [
+            "இரு சமன்பாடுகளையும் கழித்து பொது நாண் மையக்கோட்டை வெட்டும் தொலைவு ",
+            {
+              "latex": "t = 4",
+              "fallback": "t = 4"
+            },
+            " எனக் காண்க."
+          ]
         }
       },
       {
@@ -21605,7 +21898,19 @@ const records=[
         },
         "reasonMath": {
           "en": "Find the half-chord and double it.",
-          "ta": "English explanation (Tamil unchanged): Find the half-chord and double it."
+          "ta": [
+            "அரை நாண் ",
+            {
+              "latex": "h = 3",
+              "fallback": "h = 3"
+            },
+            " செ.மீ எனக் கண்டு அதை இரண்டால் பெருக்கிப் பொது நாணின் நீளம் ",
+            {
+              "latex": "6",
+              "fallback": "6"
+            },
+            " செ.மீ எனக் காண்க."
+          ]
         }
       }
     ]

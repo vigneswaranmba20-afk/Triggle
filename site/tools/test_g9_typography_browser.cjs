@@ -19,7 +19,7 @@ async function inspect(page,q,lang){
    el.querySelectorAll('details,.triggle-mcq-choices,.triggle-mcq-feedback').forEach(d=>d.remove());return el.textContent;
   };
   const hint=document.querySelector('details.why-step-g9')?window.TriggleWhyStepG9.hints[q.id]:null;
-  const expected=count(hint?window.TriggleG9Math.text(hint[lang]||hint.en):null)+count(p.questionMath[lang]||p.questionMath.en)+count(p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s)=>n+count(s.math)+count(s.reasonMath?.[lang]||s.reasonMath?.en),0);
+  const expected=count(hint?window.TriggleG9Math.text(hint[lang]||hint.en):null)+count(p.questionMath[lang]||p.questionMath.en)+count(p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s,i)=>n+count((lang==='ta'&&(override||q).steps[i].mathTa)||s.math)+count(s.reasonMath?.[lang]||s.reasonMath?.en),0);
   const rendered=document.querySelectorAll('#questionText .katex,#stepsList .katex').length;
   const formulas=[...document.querySelectorAll('#questionText .triggle-tex,#stepsList .triggle-tex')].map(el=>{
    const visual=el.querySelector('.katex-html');
@@ -51,9 +51,16 @@ async function inspect(page,q,lang){
  assert.equal(state.errors,0,label+' no renderer fallback');
  assert.equal(state.rendered,state.expected,label+' every authored formula renders exactly once');
  assert.equal(normalize(state.question),normalize(refQ.q[lang]||refQ.q.en),label+' question wording');
- assert.equal(normalize(state.answer),normalize(refQ.answer?.[lang]||(lang==='ta'&&refQ.chapter==='5'?refQ.answerTa:null)||refQ.answer),label+' final answer');
+ assert.equal(normalize(state.answer),normalize(refQ.answer?.[lang]||(lang==='ta'&&(refQ.chapter==='5'||refQ.answerMath?.ta)?refQ.answerTa:null)||refQ.answer),label+' final answer');
  assert.equal(state.steps.length,refQ.steps.length,label+' all steps retained');
- state.steps.forEach((s,i)=>{assert.equal(normalize(s.reason),normalize(refQ.steps[i][lang]||refQ.steps[i].en),label+' reason '+i);assert.equal(normalize(s.eq),normalize(refQ.steps[i].eq),label+' equation '+i);});
+ state.steps.forEach((s,i)=>{
+  const step=refQ.steps[i];
+  const expectedEquation=lang==='ta'&&step.mathTa
+   ?step.mathTa.map(part=>typeof part==='string'?part:part.fallback).join('')
+   :step.eq;
+  assert.equal(normalize(s.reason),normalize(step[lang]||step.en),label+' reason '+i);
+  assert.equal(normalize(s.eq),normalize(expectedEquation),label+' equation '+i);
+ });
  assert.equal(state.width,page.viewportSize().width,label+' viewport stays at its requested mobile width');
  assert(state.pageWidth<=state.width+1,label+' no page overflow');
  for(const f of state.formulas){
