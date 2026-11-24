@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
   <title id="t">Trapezium ABCD with parallel bases AB and CD for Exercise 5.2 Q12</title>
-  <desc id="desc">Points A(3,-4), B(9,-4), C(5,-7), D(7,-7) where AB and CD have slope 0 while BC and AD are non-parallel.</desc>
+  <desc id="desc">Points A(3,-4), B(9,-4), C(5,-7), D(7,-7) where AB and CD have slope 0 while convex boundary legs AC (-3/2), BD (3/2) and cyclic pair BC (3/4), AD (-3/4) are non-parallel.</desc>
   <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
   <line x1="42.3" y1="18.0" x2="42.3" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>
   <line x1="73" y1="18.0" x2="73" y2="202.0" stroke="#E3E2DA" stroke-width="1"/>

@@ -554,6 +554,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-unit-q5.svg",
+    "figureAlt": { "en": "80 m tall tree with bird flying horizontally away; elevation drops from 45 degrees to 30 degrees after 2 seconds.", "ta": "80 மீ மர உச்சியிலிருந்து பறவை பறக்கும் போது 45°-லிருந்து 30° ஆக மாறும் ஏற்றக்கோணப் படம்." },
+    "figureCaption": { "en": "Flying bird diagram for Unit Exercise 6 Q5", "ta": "பறக்கும் பறவை — 45°, 30° ஏற்றக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -682,6 +684,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-unit-q6.svg",
+    "figureAlt": { "en": "Aeroplane flying at 600 m altitude approaches ground observer as elevation increases from 37 degrees to 53 degrees.", "ta": "600 மீ உயரத்தில் பறக்கும் விமானத்தின் ஏற்றக்கோண மாற்றப் படம்." },
+    "figureCaption": { "en": "Aeroplane angle change diagram for Unit Exercise 6 Q6", "ta": "விமானத்தின் கோண மாற்றம் — 53°, 37° படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -889,6 +893,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-unit-q7.svg",
+    "figureAlt": { "en": "Bird flies 30 km from A to B at 35 degrees West of North (55 degrees from W), then 32 km from B to C on bearing 48 degrees (42 degrees from E).", "ta": "30 கி.மீ மற்றும் 32 கி.மீ தூரங்களில் கப்பல் செல்லும் திசைக்கோண முக்கோணப் படம்." },
+    "figureCaption": { "en": "Two-leg flight bearing diagram for Unit Exercise 6 Q7", "ta": "கப்பலின் திசைக்கோணமும் பயணப் படமும்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -1095,6 +1101,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-unit-q7.svg",
+    "figureAlt": { "en": "Bird flies 30 km from A to B at 35 degrees West of North (55 degrees from W), then 32 km from B to C on bearing 48 degrees (42 degrees from E).", "ta": "30 கி.மீ மற்றும் 32 கி.மீ தூரங்களில் கப்பல் செல்லும் திசைக்கோண முக்கோணப் படம்." },
+    "figureCaption": { "en": "Two-leg flight bearing diagram for Unit Exercise 6 Q7", "ta": "கப்பலின் திசைக்கோணமும் பயணப் படமும்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -1301,6 +1309,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-unit-q7.svg",
+    "figureAlt": { "en": "Bird flies 30 km from A to B at 35 degrees West of North (55 degrees from W), then 32 km from B to C on bearing 48 degrees (42 degrees from E).", "ta": "30 கி.மீ மற்றும் 32 கி.மீ தூரங்களில் கப்பல் செல்லும் திசைக்கோண முக்கோணப் படம்." },
+    "figureCaption": { "en": "Two-leg flight bearing diagram for Unit Exercise 6 Q7", "ta": "கப்பலின் திசைக்கோணமும் பயணப் படமும்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -1507,6 +1517,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-unit-q7.svg",
+    "figureAlt": { "en": "Bird flies 30 km from A to B at 35 degrees West of North (55 degrees from W), then 32 km from B to C on bearing 48 degrees (42 degrees from E).", "ta": "30 கி.மீ மற்றும் 32 கி.மீ தூரங்களில் கப்பல் செல்லும் திசைக்கோண முக்கோணப் படம்." },
+    "figureCaption": { "en": "Two-leg flight bearing diagram for Unit Exercise 6 Q7", "ta": "கப்பலின் திசைக்கோணமும் பயணப் படமும்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -1611,6 +1623,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-unit-q8.svg",
+    "figureAlt": { "en": "Lighthouse of height h between two ships on opposite sides with depression angles 60 degrees and 45 degrees.", "ta": "கலங்கரை விளக்கத்திலிருந்து நகரும் கப்பலின் 30°, 60° இறக்கக்கோணப் படம்." },
+    "figureCaption": { "en": "Two ships and lighthouse diagram for Unit Exercise 6 Q8", "ta": "கலங்கரை விளக்கக் கப்பல் — 30°, 60° இறக்கக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -1727,6 +1741,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-unit-q9.svg",
+    "figureAlt": { "en": "Building and statue on opposite sides of 35 m street; from building roof elevation to statue top is 24 degrees and depression to base is 34 degrees.", "ta": "கட்டிடம் மற்றும் கோபுரத்திற்கு இடையிலான ஏற்ற-இறக்கக்கோணப் படம்." },
+    "figureCaption": { "en": "Building and statue diagram for Unit Exercise 6 Q9", "ta": "கட்டிடமும் கோபுரமும் — ஏற்ற-இறக்கக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",

@@ -121,7 +121,7 @@ window.TRIGGLE_G10_CH6_PATH={
         "en": "Before applying identities in Exercises 6.1 and 6.5, knowing exactly which pair of sides each ratio represents lets you spot cancellations and reciprocals on sight.",
         "ta": "பயிற்சி 6.1 மற்றும் 6.5 கணக்குகளில் முக்கோணவியல் விகிதங்களின் தலைகீழ் உறவுகள் உடனடியாகச் சுருக்க உதவுகின்றன."
       },
-      "practiceId": "c10-6-6-5-14",
+      "practiceId": "c10-6-ex6-5-q1",
       "relatedExercise": "6.1 & 6.5"
     },
     {
@@ -236,8 +236,8 @@ window.TRIGGLE_G10_CH6_PATH={
         "en": "Rewriting tan θ and cot θ in terms of sin θ and cos θ immediately unlocks Exercise 6.1 Q1(i) and Exercise 6.5 Q2.",
         "ta": "பயிற்சி 6.1 வினா 1(i) மற்றும் பயிற்சி 6.5 வினா 2 ஆகியவற்றில் sin θ, cos θ மாற்றம் நேரடித் தீர்வைத் தருகிறது."
       },
-      "practiceId": "c10-6-6-1-1",
-      "secondaryPracticeId": "c10-6-6-5-14",
+      "practiceId": "c10-6-ex6-1-q1-i",
+      "secondaryPracticeId": "c10-6-ex6-5-q2",
       "relatedExercise": "6.1 & 6.5"
     },
     {
@@ -352,7 +352,7 @@ window.TRIGGLE_G10_CH6_PATH={
         "en": "When sin θ = cos θ (as in Exercise 6.5 Q6), complementary symmetry shows θ = 90° − θ, immediately giving θ = 45°.",
         "ta": "பயிற்சி 6.5 வினா 6-இல் sin θ = cos θ எனில் நிரப்புக் கோணச் சமச்சீரால் θ = 45° என உடனே அறியலாம்."
       },
-      "practiceId": "c10-6-6-5-15",
+      "practiceId": "c10-6-ex6-5-q6",
       "relatedExercise": "6.1 & 6.5"
     },
     {
@@ -467,8 +467,8 @@ window.TRIGGLE_G10_CH6_PATH={
         "en": "Exact values for 30°, 45°, and 60° appear in every Heights and Distances calculation (Exercises 6.2–6.4) as well as Exercise 6.5 Q6.",
         "ta": "பயிற்சி 6.2–6.4 உயர-தொலைவு கணக்குகள் அனைத்திலும் 30°, 45°, 60° துல்லிய மதிப்புகளே பயன்படுகின்றன."
       },
-      "practiceId": "c10-6-6-5-15",
-      "secondaryPracticeId": "c10-6-6-2-4",
+      "practiceId": "c10-6-ex6-5-q7",
+      "secondaryPracticeId": "c10-6-ex6-2-q1",
       "relatedExercise": "6.1, 6.2 & 6.5"
     },
     {
@@ -578,8 +578,8 @@ window.TRIGGLE_G10_CH6_PATH={
         "en": "Replacing 1 − sin²θ with cos²θ (or 1 − cos²θ with sin²θ) drives both Exercise 6.1 Q2(ii) and Exercise 6.5 Q1.",
         "ta": "1 − sin²θ = cos²θ என்ற மாற்றமே பயிற்சி 6.1 வினா 2(ii) மற்றும் பயிற்சி 6.5 வினா 1-இன் அடித்தளம்."
       },
-      "practiceId": "c10-6-6-5-13",
-      "secondaryPracticeId": "c10-6-6-1-3",
+      "practiceId": "c10-6-ex6-5-q3",
+      "secondaryPracticeId": "c10-6-ex6-1-q2-ii",
       "relatedExercise": "6.1 & 6.5"
     },
     {
@@ -694,8 +694,8 @@ window.TRIGGLE_G10_CH6_PATH={
         "en": "This exact factoring move solves Exercise 6.1 Q1(ii), and sec²θ − tan²θ = 1 eliminates θ directly in Exercise 6.5 Q7.",
         "ta": "பயிற்சி 6.1 வினா 1(ii) மற்றும் பயிற்சி 6.5 வினா 7 (கோணம் நீக்குதல்) ஆகியவற்றில் இம்முறை நேரடியாகப் பயன்படுகிறது."
       },
-      "practiceId": "c10-6-6-1-2",
-      "secondaryPracticeId": "c10-6-6-5-16",
+      "practiceId": "c10-6-ex6-1-q1-ii",
+      "secondaryPracticeId": "c10-6-ex6-5-q4",
       "relatedExercise": "6.1 & 6.5"
     },
     {
@@ -805,9 +805,9 @@ window.TRIGGLE_G10_CH6_PATH={
         "en": "Master these three algebraic patterns to solve Exercise 6.1 Q1(i), Q2(ii), Q3(i) and Unit Exercise 6 Q1(ii) systematically.",
         "ta": "இம்மூன்று உத்திகளும் பயிற்சி 6.1 மற்றும் அலகுப் பயிற்சி 6-இன் அனைத்து நிரூபணக் கணக்குகளுக்கும் நேரடியாக உதவுகின்றன."
       },
-      "practiceId": "c10-6-6-1-1",
-      "secondaryPracticeId": "c10-6-6-1-3",
-      "tertiaryPracticeId": "c10-6-6-unit-17",
+      "practiceId": "c10-6-ex6-1-q1-i",
+      "secondaryPracticeId": "c10-6-ex6-1-q2-ii",
+      "tertiaryPracticeId": "c10-6-unit-q1-ii",
       "relatedExercise": "6.1 & Unit Ex 6"
     },
     {
@@ -922,9 +922,9 @@ window.TRIGGLE_G10_CH6_PATH={
         "en": "Applies directly to Exercise 6.2 Q1 (tower distance), Q2 (road midpoint), and Q3 (1.8 m observer looking at a window).",
         "ta": "பயிற்சி 6.2 வினாக்கள் 1, 2 மற்றும் 3 ஆகிய மூன்றையும் தீர்க்க இப்பயிற்சி நேரடியாக உதவுகிறது."
       },
-      "practiceId": "c10-6-6-2-4",
-      "secondaryPracticeId": "c10-6-6-2-5",
-      "tertiaryPracticeId": "c10-6-6-2-6",
+      "practiceId": "c10-6-ex6-2-q1",
+      "secondaryPracticeId": "c10-6-ex6-2-q2",
+      "tertiaryPracticeId": "c10-6-ex6-2-q3",
       "relatedExercise": "6.2"
     },
     {
@@ -1034,9 +1034,9 @@ window.TRIGGLE_G10_CH6_PATH={
         "en": "Direct match for Exercise 6.3 Q1 (car from a rock), Q2 (building height difference via horizontal bridge), and Q4 (two boats).",
         "ta": "பயிற்சி 6.3 வினாக்கள் 1, 2 மற்றும் 4 ஆகியவற்றில் இறக்கக்கோணத் தத்துவம் நேரடியாகப் பயன்படுகிறது."
       },
-      "practiceId": "c10-6-6-3-7",
-      "secondaryPracticeId": "c10-6-6-3-8",
-      "tertiaryPracticeId": "c10-6-6-3-9",
+      "practiceId": "c10-6-ex6-3-q1",
+      "secondaryPracticeId": "c10-6-ex6-3-q2",
+      "tertiaryPracticeId": "c10-6-ex6-3-q4",
       "relatedExercise": "6.3"
     },
     {
@@ -1173,9 +1173,9 @@ window.TRIGGLE_G10_CH6_PATH={
         "en": "Directly models Exercise 6.4 Q1 (two trees), Q2 (hill from ship deck), and Q4 (apartment to tower) plus two-boat Exercise 6.3 Q4.",
         "ta": "பயிற்சி 6.4 வினாக்கள் 1, 2, 4 மற்றும் பயிற்சி 6.3 வினா 4 ஆகிய அனைத்து இரு-முக்கோணக் கணக்குகளையும் இதன் மூலம் தீர்க்கலாம்."
       },
-      "practiceId": "c10-6-6-4-10",
-      "secondaryPracticeId": "c10-6-6-4-11",
-      "tertiaryPracticeId": "c10-6-6-4-12",
+      "practiceId": "c10-6-ex6-4-q1",
+      "secondaryPracticeId": "c10-6-ex6-4-q2",
+      "tertiaryPracticeId": "c10-6-ex6-4-q4",
       "relatedExercise": "6.3 & 6.4"
     }
   ]

@@ -83,6 +83,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-2-q1.svg",
+    "figureAlt": { "en": "Tower of height 10 root 3 metres viewed at angle theta from 30 metres away on level ground.", "ta": "கொடுக்கப்பட்ட ஏற்றக்கோணம் மற்றும் தொலைவுடன் கூடிய செங்கோண முக்கோணப் படம்." },
+    "figureCaption": { "en": "Right triangle for Exercise 6.2 Q1", "ta": "ஏற்றக்கோணம் — செங்கோண முக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -175,6 +177,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-2-q2.svg",
+    "figureAlt": { "en": "Pedestrian at the midpoint M of a road sees roof tops of two houses height 4 root 3 m at 30 degrees elevation.", "ta": "ஏற்றக்கோணமும் செங்குத்து உயரமும் காட்டும் முக்கோணப் படம்." },
+    "figureCaption": { "en": "Road flanked by two houses of height 4 root 3 metres for Exercise 6.2 Q2", "ta": "ஏற்றக்கோணம் — செங்கோண முக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -303,6 +307,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-2-q3.svg",
+    "figureAlt": { "en": "A 1.8 m man stands 5 m from a wall and looks at bottom and top of a window at 45 and 60 degrees.", "ta": "சன்னலின் அடி மற்றும் உச்சிக்கான 45°, 60° ஏற்றக்கோணப் படம்." },
+    "figureCaption": { "en": "Observer looking at bottom and top of a window for Exercise 6.2 Q3", "ta": "சன்னலின் உயரம் — ஏற்றக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -419,6 +425,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-2-q4.svg",
+    "figureAlt": { "en": "Point on ground sees top of pedestal at 40 degrees and top of 1.6 m statue at 60 degrees.", "ta": "பீடம் மற்றும் 1.6 மீ சிலைக்கான 40°, 60° ஏற்றக்கோணப் படம்." },
+    "figureCaption": { "en": "Statue 1.6 m tall standing on a pedestal for Exercise 6.2 Q4", "ta": "சிலையும் பீடமும் — ஏற்றக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -571,6 +579,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-2-q5.svg",
+    "figureAlt": { "en": "Hemispherical dome radius r topped by pole h. At 7 m from dome elevation to pole top is 45 degrees; 5 m further elevation to pole bottom is 30 degrees.", "ta": "கோபுரம் மற்றும் கொடிக்கம்பத்திற்கான 45°, 60° ஏற்றக்கோணப் படம்." },
+    "figureCaption": { "en": "Flag pole of height h on hemispherical dome of radius r for Exercise 6.2 Q5", "ta": "கொடிக்கம்பமும் கோபுரமும் — ஏற்றக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -723,6 +733,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-2-q5.svg",
+    "figureAlt": { "en": "Hemispherical dome radius r topped by pole h. At 7 m from dome elevation to pole top is 45 degrees; 5 m further elevation to pole bottom is 30 degrees.", "ta": "கோபுரம் மற்றும் கொடிக்கம்பத்திற்கான 45°, 60° ஏற்றக்கோணப் படம்." },
+    "figureCaption": { "en": "Flag pole of height h on hemispherical dome of radius r for Exercise 6.2 Q5", "ta": "கொடிக்கம்பமும் கோபுரமும் — ஏற்றக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
@@ -821,6 +833,8 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-2-q6.svg",
+    "figureAlt": { "en": "Angle of elevation of top of 15 m tower is 60 degrees from pole foot and 30 degrees from pole top.", "ta": "இரண்டு கோபுரங்களின் உயர வேறுபாடும் ஏற்றக்கோணமும் காட்டும் படம்." },
+    "figureCaption": { "en": "15 m high tower observed from bottom and top of electric pole for Exercise 6.2 Q6", "ta": "இரண்டு கோபுரங்கள் — ஏற்றக்கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
