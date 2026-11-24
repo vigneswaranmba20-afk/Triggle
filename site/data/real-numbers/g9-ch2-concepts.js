@@ -5,7 +5,7 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
     "section": "2.1–2.2",
     "page": {
       "en": 41,
-      "ta": null
+      "ta": 43
     },
     "title": {
       "en": "Rational numbers and number-line density",
@@ -43,20 +43,21 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
     ],
     "correct": 0,
     "hint": {
-      "en": "Multiply the top and bottom by √5. Remember that √5 × √5 = 5.",
-      "ta": "மேலேயும் கீழேயும் √5-ஆல் பெருக்குக. √5 × √5 = 5 என்பதை நினைவில் கொள்க."
+      "en": "Rewrite both fractions with denominator 12. Which numerator is between 6 and 8?",
+      "ta": "இரு பின்னங்களையும் பகுதி 12 ஆகுமாறு எழுதுக. 6-க்கும் 8-க்கும் இடையிலுள்ள தொகுதி எது?"
     },
     "why": {
       "en": "1/2=6/12 and 2/3=8/12, so 7/12 is in between.",
       "ta": "1/2=6/12, 2/3=8/12 என்பதால் 7/12 இடையில் உள்ளது."
-    }
+    },
+    "practiceId": "g9-ch2-ex1-q2"
   },
   {
     "id": "real2",
     "section": "2.3",
     "page": {
-      "en": 46,
-      "ta": null
+      "en": 45,
+      "ta": 48
     },
     "title": {
       "en": "Irrational numbers and decimal expansions",
@@ -100,14 +101,15 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
     "why": {
       "en": "3 is not a perfect square, so √3 is irrational.",
       "ta": "3 நிறைவர்க்கம் அல்ல; ஆகவே √3 விகிதமுறா."
-    }
+    },
+    "practiceId": "g9-ch2-ex2-q2"
   },
   {
     "id": "real3",
     "section": "2.4",
     "page": {
       "en": 55,
-      "ta": null
+      "ta": 59
     },
     "title": {
       "en": "Real-number line and successive magnification",
@@ -151,14 +153,15 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
     "why": {
       "en": "The thousandth 8 places 5.348 after 5.340 and before 5.350.",
       "ta": "5.348 என்பது 5.340-க்கு பின் 5.350-க்கு முன் உள்ளது."
-    }
+    },
+    "practiceId": "g9-ch2-ex4-q1-i"
   },
   {
     "id": "real4",
     "section": "2.5",
     "page": {
       "en": 57,
-      "ta": null
+      "ta": 62
     },
     "title": {
       "en": "Radicals and fractional indices",
@@ -202,14 +205,15 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
     "why": {
       "en": "3⁴=81, hence the positive fourth root is 3.",
       "ta": "3⁴=81; ஆகவே நேர்மறை நான்காம் மூலம் 3."
-    }
+    },
+    "practiceId": "g9-ch2-ex5-q1-iv"
   },
   {
     "id": "real5",
     "section": "2.6",
     "page": {
       "en": 60,
-      "ta": null
+      "ta": 64
     },
     "title": {
       "en": "Surds and their operations",
@@ -253,14 +257,15 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
     "why": {
       "en": "√12=2√3 and √27=3√3, so the sum is 5√3.",
       "ta": "√12=2√3, √27=3√3; கூட்டல் 5√3."
-    }
+    },
+    "practiceId": "g9-ch2-ex6-q1-iii"
   },
   {
     "id": "real6",
     "section": "2.7",
     "page": {
       "en": 68,
-      "ta": null
+      "ta": 73
     },
     "title": {
       "en": "Rationalisation and conjugates",
@@ -304,14 +309,15 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
     "why": {
       "en": "[[1|√5]] × [[√5|√5]] = [[√5|5]]. The denominator is now rational.",
       "ta": "[[1|√5]] × [[√5|√5]] = [[√5|5]]. இப்போது பகுதி விகிதமுறு எண்ணாக உள்ளது."
-    }
+    },
+    "practiceId": "g9-ch2-ex7-q1-i"
   },
   {
     "id": "real7",
     "section": "2.8",
     "page": {
       "en": 70,
-      "ta": null
+      "ta": 75
     },
     "title": {
       "en": "Scientific notation",
@@ -355,13 +361,14 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
     "why": {
       "en": "Moving the point right four places makes the coefficient 6.4, so the exponent is −4.",
       "ta": "புள்ளியை வலப்புறம் நான்கு இடங்கள் நகர்த்தினால் 6.4 கிடைக்கிறது; அடுக்கு −4."
-    }
+    },
+    "practiceId": "g9-ch2-ex8-q1-iii"
   },
   {
     "id": "real8",
-    "section": "2.9",
+    "section": "2.1–2.8",
     "page": {
-      "en": 74,
+      "en": null,
       "ta": null
     },
     "title": {
@@ -406,6 +413,7 @@ window.TRIGGLE_REAL_PATH={chapterId:'g9-ch2',stages:[
     "why": {
       "en": "The radical symbol means the principal (nonnegative) square root.",
       "ta": "√ குறியீடு எதிர்மறையற்ற முக்கிய வர்க்கமூலத்தைக் குறிக்கும்."
-    }
+    },
+    "practiceId": "g9-ch2-ex9-q1"
   }
 ]};

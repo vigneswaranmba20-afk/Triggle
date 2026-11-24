@@ -63051,6 +63051,22 @@ const texts={
     "latex": "1.8",
     "fallback": "1.8"
   },
+  "g9-ch1-ex1.1-q1-i": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    "-ex",
+    {
+      "latex": "1.1 - q 1 - i",
+      "fallback": "1.1-q1-i"
+    }
+  ],
   "1.1–1.2": {
     "latex": "1.1 - 1.2",
     "fallback": "1.1–1.2"
@@ -63116,6 +63132,22 @@ const texts={
       "fallback": "10"
     },
     "-ஐ விடச் சிறிய இரட்டைப்படை இயல் எண்களை ஒரு தெளிவான விதியால் கண்டறியலாம். 'அழகு', 'நல்ல' ஆகியவை கருத்தைப் பொறுத்தவை."
+  ],
+  "g9-ch1-ex1.1-q4-i": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    "-ex",
+    {
+      "latex": "1.1 - q 4 - i",
+      "fallback": "1.1-q4-i"
+    }
   ],
   "Let E be the positive even whole numbers below 10. Change the form; the members stay the same.": [
     "Let ",
@@ -63189,6 +63221,22 @@ const texts={
       "fallback": "30"
     },
     " நாட்களைக் கொண்ட மாதங்களின் கணத்தைச் சொற்களாலும் பட்டியல் முறையாலும் எழுதுக."
+  ],
+  "g9-ch1-ex1.2-q1-i": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "1",
+      "fallback": "1"
+    },
+    "-ex",
+    {
+      "latex": "1.2 - q 1 - i",
+      "fallback": "1.2-q1-i"
+    }
   ],
   "Distinct members determine a set's size. The empty set has zero members, a singleton has one, and subsets contain only members of a larger set. A power set P(A) collects every subset of A, including the empty set and A itself. For A={a,b}, P(A)={∅,{a},{b},{a,b}}: 4 subsets. Each of m elements is either included or excluded, so n(P(A))=2^m; proper subsets exclude A itself, leaving 2^m−1. Disjoint sets have no common elements; overlapping sets share at least one.": [
     "Distinct members determine a set's size. The empty set has zero members, a singleton has one, and subsets contain only members of a larger set. A power set ",
@@ -66071,31 +66119,41 @@ const texts={
     "latex": "\\dfrac{3}{4}",
     "fallback": "3/4"
   },
-  "Multiply the top and bottom by √5. Remember that √5 × √5 = 5.": [
-    "Multiply the top and bottom by ",
+  "Rewrite both fractions with denominator 12. Which numerator is between 6 and 8?": [
+    "Rewrite both fractions with denominator ",
     {
-      "latex": "\\sqrt{5}",
-      "fallback": "√5"
+      "latex": "12",
+      "fallback": "12"
     },
-    ". Remember that ",
+    ". Which numerator is between ",
     {
-      "latex": "\\sqrt{5} \\times \\sqrt{5} = 5",
-      "fallback": "√5 × √5 = 5"
+      "latex": "6",
+      "fallback": "6"
     },
-    "."
+    " and ",
+    {
+      "latex": "8",
+      "fallback": "8"
+    },
+    "?"
   ],
-  "மேலேயும் கீழேயும் √5-ஆல் பெருக்குக. √5 × √5 = 5 என்பதை நினைவில் கொள்க.": [
-    "மேலேயும் கீழேயும் ",
+  "இரு பின்னங்களையும் பகுதி 12 ஆகுமாறு எழுதுக. 6-க்கும் 8-க்கும் இடையிலுள்ள தொகுதி எது?": [
+    "இரு பின்னங்களையும் பகுதி ",
     {
-      "latex": "\\sqrt{5}",
-      "fallback": "√5"
+      "latex": "12",
+      "fallback": "12"
     },
-    "-ஆல் பெருக்குக. ",
+    " ஆகுமாறு எழுதுக. ",
     {
-      "latex": "\\sqrt{5} \\times \\sqrt{5} = 5",
-      "fallback": "√5 × √5 = 5"
+      "latex": "6",
+      "fallback": "6"
     },
-    " என்பதை நினைவில் கொள்க."
+    "-க்கும் ",
+    {
+      "latex": "8",
+      "fallback": "8"
+    },
+    "-க்கும் இடையிலுள்ள தொகுதி எது?"
   ],
   "1/2=6/12 and 2/3=8/12, so 7/12 is in between.": [
     {
@@ -66131,6 +66189,22 @@ const texts={
       "fallback": "7/12"
     },
     " இடையில் உள்ளது."
+  ],
+  "g9-ch2-ex1-q2": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "-ex",
+    {
+      "latex": "1 - q 2",
+      "fallback": "1-q2"
+    }
   ],
   "real2": [
     "real",
@@ -66245,6 +66319,22 @@ const texts={
       "fallback": "√3"
     },
     " விகிதமுறா."
+  ],
+  "g9-ch2-ex2-q2": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "-ex",
+    {
+      "latex": "2 - q 2",
+      "fallback": "2-q2"
+    }
   ],
   "real3": [
     "real",
@@ -66412,6 +66502,22 @@ const texts={
     },
     "-க்கு முன் உள்ளது."
   ],
+  "g9-ch2-ex4-q1-i": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "-ex",
+    {
+      "latex": "4 - q 1 - i",
+      "fallback": "4-q1-i"
+    }
+  ],
   "real4": [
     "real",
     {
@@ -66512,6 +66618,23 @@ const texts={
       "fallback": "3"
     },
     "."
+  ],
+  "g9-ch2-ex5-q1-iv": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "-ex",
+    {
+      "latex": "5 - q 1",
+      "fallback": "5-q1"
+    },
+    "-iv"
   ],
   "real5": [
     "real",
@@ -66628,6 +66751,23 @@ const texts={
     },
     "."
   ],
+  "g9-ch2-ex6-q1-iii": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "-ex",
+    {
+      "latex": "6 - q 1",
+      "fallback": "6-q1"
+    },
+    "-iii"
+  ],
   "real6": [
     "real",
     {
@@ -66722,6 +66862,22 @@ const texts={
       "fallback": "[[1|√5]] × [[√5|√5]] = [[√5|5]]"
     },
     ". இப்போது பகுதி விகிதமுறு எண்ணாக உள்ளது."
+  ],
+  "g9-ch2-ex7-q1-i": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "-ex",
+    {
+      "latex": "7 - q 1 - i",
+      "fallback": "7-q1-i"
+    }
   ],
   "real7": [
     "real",
@@ -66840,6 +66996,23 @@ const texts={
     },
     "."
   ],
+  "g9-ch2-ex8-q1-iii": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "-ex",
+    {
+      "latex": "8 - q 1",
+      "fallback": "8-q1"
+    },
+    "-iii"
+  ],
   "real8": [
     "real",
     {
@@ -66847,9 +67020,9 @@ const texts={
       "fallback": "8"
     }
   ],
-  "2.9": {
-    "latex": "2.9",
-    "fallback": "2.9"
+  "2.1–2.8": {
+    "latex": "2.1 - 2.8",
+    "fallback": "2.1–2.8"
   },
   "√25=5, but x²=25 has solutions x=±5.": [
     {
@@ -66921,6 +67094,22 @@ const texts={
     "latex": "\\sqrt{25} = - 5",
     "fallback": "√25=−5"
   },
+  "g9-ch2-ex9-q1": [
+    {
+      "latex": "g 9",
+      "fallback": "g9"
+    },
+    "-ch",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    "-ex",
+    {
+      "latex": "9 - q 1",
+      "fallback": "9-q1"
+    }
+  ],
   "Activity 1 · Everyday collections": [
     "Activity ",
     {

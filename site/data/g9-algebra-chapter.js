@@ -123,7 +123,7 @@
       freeze({
         id: 'g9-ch3-degree-standard-form',
         section: '3.2.1',
-        page: { en: 83, ta: 90 },
+        page: { en: 85, ta: 91 },
         title: {
           en: 'Degree, types, standard form and operations',
           ta: 'படி, வகைகள், திட்ட வடிவம் மற்றும் செயல்பாடுகள்'
@@ -144,8 +144,8 @@
             spokenTa: 'எக்ஸ் கழித்தல் ஒன்பது கூட்டல் வர்க்கமூலம் ஏழு எக்ஸ் கனம் கூட்டல் ஆறு எக்ஸ் வர்க்கம்',
             math: '\\sqrt{7}x^3 + 6x^2 + x - 9',
             chips: [
-              ['deg 3', 'cubic', 'முப்படி', true],
-              ['4 terms', 'standard form', 'திட்ட வடிவம்', true]
+              ['deg 3', 'cubic', 'முப்படி', true, 'படி 3'],
+              ['4 terms', 'standard form', 'திட்ட வடிவம்', true, '4 உறுப்புகள்']
             ],
             en: 'Standard form orders powers from highest to lowest: √7 x³ + 6x² + x − 9. Degree is 3 (cubic).',
             ta: 'திட்ட வடிவம் அடுக்குகளை இறங்கு வரிசையில் எழுதும்: √7 x³ + 6x² + x − 9. படி 3 (முப்படி).'
@@ -157,7 +157,7 @@
             math: 'x - x^2 + 6x^4 \\quad (x \\ne 0)',
             chips: [
               ['6x⁴ − x² + x', 'simplify first', 'முதலில் சுருக்கவும்', true],
-              ['deg 4', 'highest power 4', 'உயர் அடுக்கு 4', true]
+              ['deg 4', 'highest power 4', 'உயர் அடுக்கு 4', true, 'படி 4']
             ],
             en: 'For x ≠ 0, divide each term by x² to get 6x⁴ − x² + x. The highest power is 4, not 6.',
             ta: 'x ≠ 0 எனில் ஒவ்வொரு உறுப்பையும் x²-ஆல் வகுக்க 6x⁴ − x² + x கிடைக்கும். படி 4.'
@@ -168,8 +168,8 @@
             spokenTa: 'பி பெருக்கல் க்யூ-வின் படி சமம் பி-இன் படி கூட்டல் க்யூ-வின் படி',
             math: '\\deg(p \\cdot q) = \\deg(p) + \\deg(q)',
             chips: [
-              ['deg 1 × deg 2', '→ deg 3', '→ படி 3', true],
-              ['nonzero p, q', 'cubic product', 'முப்படிப் பெருக்கல்', true]
+              ['deg 1 × deg 2', '→ deg 3', '→ படி 3', true, 'படி 1 × படி 2'],
+              ['nonzero p, q', 'cubic product', 'முப்படிப் பெருக்கல்', true, 'p, q பூச்சியமற்றவை']
             ],
             en: 'Multiplying a degree-1 and degree-2 polynomial adds exponents: 1 + 2 = 3 (a cubic polynomial).',
             ta: 'படி 1 மற்றும் படி 2 கோவைகளைப் பெருக்க அடுக்குகள் கூடும்: 1 + 2 = 3 (முப்படி).'
@@ -226,6 +226,7 @@
         },
         math: {
           latex: 'p(a) = 0 \\iff a \\text{ is a zero of } p(x) \\iff a \\text{ is a root of } p(x) = 0',
+          latexTa: 'p(a) = 0 \\iff a \\text{ என்பது இதன் பூச்சியம் } p(x) \\iff a \\text{ என்பது இதன் மூலம் } p(x) = 0',
           fallback: 'p(a) = 0 ⇔ a is a zero of p(x) ⇔ a is a root of p(x) = 0'
         },
         lesson: 'interactive-explorer',
@@ -233,11 +234,11 @@
           {
             label: 'p(x) = 2x + 5',
             spoken: 'p of x equals two x plus five',
-            spokenTa: 'பி ஆஃப் எக்ஸ் சமம் இரண்டு எக்ஸ் கூட்டல் ஐந்து',
+            spokenTa: 'எக்ஸின் சார்பு பி, இரண்டு எக்ஸ் கூட்டல் ஐந்துக்குச் சமம்',
             math: '2x + 5 = 0 \\implies x = -\\dfrac{5}{2}',
             chips: [
               ['p(−5/2) = 0', 'zero is −5/2', 'பூச்சியம் −5/2', true],
-              ['1 x-intercept', 'linear graph', 'நேர்க்கோடு', true]
+              ['1 x-intercept', 'linear graph', 'நேர்க்கோடு', true, 'x-அச்சில் ஒரு வெட்டுப்புள்ளி']
             ],
             en: 'Set p(x) = 0 to find the zero: 2x + 5 = 0 gives x = −5/2. On the graph, the line crosses the x-axis once.',
             ta: 'பூச்சியம் காண p(x) = 0 என வைக்கவும்: 2x + 5 = 0 ⇒ x = −5/2. கோடு x-அச்சை ஒரு புள்ளியில் வெட்டும்.'
@@ -249,21 +250,22 @@
             math: 'x^2 - x - 2 = (x-2)(x+1) = 0 \\implies x = -1,\\; 2',
             chips: [
               ['x = −1, 2', '2 zeros', '2 பூச்சியங்கள்', true],
-              ['cuts x-axis twice', 'parabola', 'பரவளையம்', true]
+              ['cuts x-axis twice', 'parabola', 'பரவளையம்', true, 'x-அச்சை இருமுறை வெட்டும்']
             ],
             en: 'The curve crosses the x-axis at (−1, 0) and (2, 0), so it has 2 real zeros.',
             ta: 'வளைவரை x-அச்சை (−1, 0) மற்றும் (2, 0)-இல் வெட்டுகிறது; எனவே 2 பூச்சியங்கள் உள்ளன.'
           },
           {
             label: 'y = 7 (constant)',
+            labelTa: 'y = 7 (மாறிலி)',
             spoken: 'y equals seven, a nonzero constant',
             spokenTa: 'ஒய் சமம் ஏழு, பூச்சியமற்ற மாறிலி',
-            math: 'p(x) = 7 \\ne 0 \\text{ for all } x',
+            math: 'p(x) = 7 \\ne 0 \\quad (x\\in\\mathbb{R})',
             chips: [
-              ['0 zeros', 'never hits x-axis', 'x-அச்சை வெட்டாது', true]
+              ['0 zeros', 'never hits x-axis', 'x-அச்சை வெட்டாது', true, 'பூச்சியம் இல்லை']
             ],
             en: 'A nonzero constant polynomial has NO zero. (By convention, every real number is a zero of the zero polynomial 0.)',
-            ta: 'பூச்சியமற்ற மாறிலிப் பல்லுறுப்புக் கோவைக்குப் பூச்சியம் இல்லை.'
+            ta: 'பூச்சியமற்ற மாறிலிப் பல்லுறுப்புக் கோவைக்குப் பூச்சியம் இல்லை. 0 என்ற கோவைக்கு எல்லா மெய்யெண்களும் பூச்சியங்களாகும்.'
           }
         ],
         transfers: [
@@ -317,38 +319,42 @@
         },
         math: {
           latex: '\\begin{aligned}p(x) \\div (x - a) &\\implies \\text{Remainder} = p(a) \\\\ p(a) = 0 &\\iff (x - a) \\text{ is a factor of } p(x)\\end{aligned}',
+          latexTa: '\\begin{aligned}p(x) \\div (x - a) &\\implies \\text{மீதி} = p(a) \\\\ p(a) = 0 &\\iff (x - a) \\text{ என்பது இதன் காரணி } p(x)\\end{aligned}',
           fallback: 'p(x) ÷ (x − a) ⇒ Remainder = p(a); p(a) = 0 ⇔ (x − a) is a factor'
         },
         lesson: 'interactive-explorer',
         examples: [
           {
             label: 'Divisor (x − a)',
+            labelTa: 'வகுத்தி (x − a)',
             spoken: 'Divisor x minus a gives remainder p of a',
             spokenTa: 'வகுத்தி x கழித்தல் a எனில் மீதி p of a',
             math: 'x - 3 = 0 \\implies x = 3 \\implies R = p(3)',
             chips: [
               ['x − 3 → p(3)', 'flip sign!', 'குறியை மாற்று!', true],
-              ['p(3) = 0 → factor', 'exact divisor', 'மீதியின்றி வகுக்கும்', true]
+              ['p(3) = 0 → factor', 'exact divisor', 'மீதியின்றி வகுக்கும்', true, 'p(3) = 0 → காரணி']
             ],
             en: 'Always set the linear divisor to 0 first: x − 3 = 0 gives x = 3, so evaluate p(3).',
             ta: 'முதலில் வகுத்தியை 0-க்குச் சமப்படுத்தவும்: x − 3 = 0 ⇒ x = 3; எனவே p(3) காண்க.'
           },
           {
             label: 'Divisor (x + a)',
+            labelTa: 'வகுத்தி (x + a)',
             spoken: 'Divisor x plus a gives remainder p of negative a',
-            spokenTa: 'வகுத்தி x கூட்டல் a எனில் மீதி p of minus a',
+            spokenTa: 'வகுத்தி x கூட்டல் a எனில், மீதி p-இல் குறை a-ஐப் பிரதியிட்ட மதிப்பு',
             math: 'x + 3 = 0 \\implies x = -3 \\implies R = p(-3)',
             chips: [
               ['x + 3 → p(−3)', 'negative a', 'குறை மதிப்பு', true],
-              ['watch (−3)² = +9', 'even vs odd power', 'இரட்டை/ஒற்றை அடுக்கு', true]
+              ['watch (−3)² = +9', 'even vs odd power', 'இரட்டை/ஒற்றை அடுக்கு', true, '(−3)² = +9']
             ],
             en: 'For (x + 3), substitute x = −3. Be careful with signs: (−3)² = +9 while (−3)³ = −27.',
             ta: '(x + 3) எனில் x = −3 எனப் பிரதியிடவும். (−3)² = +9, (−3)³ = −27 எனக் குறியைக் கவனிக்கவும்.'
           },
           {
             label: 'Divisor (ax − b)',
+            labelTa: 'வகுத்தி (ax − b)',
             spoken: 'Divisor a x minus b gives remainder p of b over a',
-            spokenTa: 'வகுத்தி a x கழித்தல் b எனில் மீதி p of b by a',
+            spokenTa: 'வகுத்தி ax கழித்தல் b எனில், மீதி p-இல் b வகுத்தல் a-ஐப் பிரதியிட்ட மதிப்பு',
             math: '2x - 1 = 0 \\implies x = \\dfrac{1}{2} \\implies R = p\\!\\left(\\dfrac{1}{2}\\right)',
             chips: [
               ['2x − 1 → p(1/2)', 'fractional zero', 'பின்னப் பூச்சியம்', true]
@@ -359,7 +365,7 @@
         ],
         transfers: [
           {
-            math: 'p(x) = x^{2018} + 2018 \\div (x - 1)',
+            math: '(x^{2018} + 2018) \\div (x - 1)',
             fallback: 'What is the remainder when x²⁰¹⁸ + 2018 is divided by (x − 1)?',
             promptEn: 'When x²⁰¹⁸ + 2018 is divided by (x − 1), is the remainder 2019?',
             promptTa: 'x²⁰¹⁸ + 2018-ஐ (x − 1)-ஆல் வகுக்கக் கிடைக்கும் மீதி 2019 ஆகுமா?',
@@ -369,8 +375,8 @@
             ta: 'மீதித் தேற்றப்படி, மீதி = p(1) = 1²⁰¹⁸ + 2018 = 1 + 2018 = 2019.'
           },
           {
-            math: 'p(x) = 3x - 3,\\quad (x - 1)',
-            fallback: 'Is (x − 1) a factor of 3x − 3?',
+            math: 'p(x) = x^3 + 5x^2 - 10x + 4,\\quad (x - 1)',
+            fallback: 'Is (x − 1) a factor of x³ + 5x² − 10x + 4?',
             promptEn: 'Is (x − 1) a factor of p(x) = x³ + 5x² − 10x + 4?',
             promptTa: 'p(x) = x³ + 5x² − 10x + 4-க்கு (x − 1) ஒரு காரணியா?',
             yesEn: 'Yes, p(1) = 0', yesTa: 'ஆம், p(1) = 0', noEn: 'No, p(1) ≠ 0', noTa: 'இல்லை, p(1) ≠ 0',
@@ -418,8 +424,8 @@
             spokenTa: 'ஏ கூட்டல் பி கூட்டல் சி முழு வர்க்கம்',
             math: '(x + 2y + 3z)^2 = x^2 + 4y^2 + 9z^2 + 4xy + 12yz + 6xz',
             chips: [
-              ['3 squares', 'x² + 4y² + 9z²', 'மூன்று வர்க்கங்கள்', true],
-              ['3 cross terms', '2ab + 2bc + 2ca', 'இருமடங்கு பெருக்கல்', true]
+              ['3 squares', 'x² + 4y² + 9z²', 'மூன்று வர்க்கங்கள்', true, '3 வர்க்கங்கள்'],
+              ['3 cross terms', '2ab + 2bc + 2ca', 'இருமடங்கு பெருக்கல்', true, '3 கலப்பு உறுப்புகள்']
             ],
             en: 'Square each term, then add twice each pairwise product. Keep negative signs inside parentheses!',
             ta: 'ஒவ்வொரு உறுப்பையும் வர்க்கப்படுத்தி, இரு உறுப்புகளின் பெருக்கலின் இருமடங்கைக் கூட்டவும்.'
@@ -431,7 +437,7 @@
             math: '98^3 = (100 - 2)^3 = 100^3 - 2^3 - 3(100)(2)(98) = 941192',
             chips: [
               ['(100 − 2)³', 'mental arithmetic', 'எளிய கணக்கீடு', true],
-              ['alternating signs', '+ − + −', 'குறி மாற்றம்', true]
+              ['alternating signs', '+ − + −', 'குறி மாற்றம்', true, 'மாறி வரும் குறிகள்']
             ],
             en: 'Write 98 as (100 − 2) and apply (a − b)³ = a³ − b³ − 3ab(a − b) for fast exact calculation.',
             ta: '98 என்பதை (100 − 2) என எழுதி (a − b)³ முற்றொருமையைப் பயன்படுத்தலாம்.'
@@ -498,19 +504,20 @@
           ta: 'காரணிப்படுத்துதல் என்பது பெருக்கலின் திருப்புகை: கோவையைப் படிக் குறைந்த காரணிகளின் பெருக்கற்பலனாக எழுதுதல்.'
         },
         math: {
-          latex: 'ax^2 + bx + c = (kx + m)(lx + n) \\quad \\text{where } p+q = b,\\; p\\cdot q = ac',
+          latex: 'ax^2 + bx + c = (kx + m)(lx + n) \\quad p+q = b,\\; p\\cdot q = ac',
           fallback: 'ax² + bx + c: split b into p + q where p·q = a·c'
         },
         lesson: 'interactive-explorer',
         examples: [
           {
             label: 'Common factor + grouping',
+            labelTa: 'பொதுக் காரணியும் தொகுத்தலும்',
             spoken: 'Common factor and grouping',
             spokenTa: 'பொதுக் காரணி மற்றும் குழுவாக்கல்',
             math: 'ab - ac - mb + mc = a(b-c) - m(b-c) = (a-m)(b-c)',
             chips: [
-              ['take GCD out first', 'always check step 1', 'முதலில் பொதுக் காரணி', true],
-              ['group in pairs', 'matching bracket', 'இரு இணைகள்', true]
+              ['take GCD out first', 'always check step 1', 'முதலில் பொதுக் காரணி', true, 'முதலில் பொது வகுத்தியை வெளியே எடு'],
+              ['group in pairs', 'matching bracket', 'இரு இணைகள்', true, 'இணைகளாகத் தொகுக்கவும்']
             ],
             en: 'Always pull out any common factor first! For 4 terms, group in pairs to expose a shared binomial.',
             ta: 'முதலில் பொதுக் காரணியை வெளியே எடுக்கவும்! 4 உறுப்புகள் இருப்பின் ஈரிணையாகப் பிரித்துப் பார்க்கவும்.'
@@ -521,14 +528,15 @@
             spokenTa: 'எக்ஸ் வர்க்கம் கூட்டல் பத்து எக்ஸ் கூட்டல் இருபத்து நான்கு',
             math: 'x^2 + 10x + 24 = x^2 + 4x + 6x + 24 = (x+4)(x+6)',
             chips: [
-              ['sum = 10', '4 + 6 = 10', 'கூடுதல் = 10', true],
-              ['product = 24', '4 × 6 = 24', 'பெருக்கல் = 24', true]
+              ['sum = 10', '4 + 6 = 10', 'கூடுதல் = 10', true, 'கூடுதல் = 10'],
+              ['product = 24', '4 × 6 = 24', 'பெருக்கல் = 24', true, 'பெருக்கல் = 24']
             ],
             en: 'Find two numbers whose sum is b = 10 and product is ac = 24: 4 and 6. Split 10x = 4x + 6x and group.',
             ta: 'கூடுதல் 10 மற்றும் பெருக்கல் 24 தரும் எண்கள் 4, 6. நடு உறுப்பைப் பிரித்து (x+4)(x+6) எனப் பெறலாம்.'
           },
           {
             label: 'a³ ± b³ identities',
+            labelTa: 'a³ ± b³ முற்றொருமைகள்',
             spoken: 'sum and difference of cubes',
             spokenTa: 'கனங்களின் கூடுதல் மற்றும் வித்தியாசம்',
             math: '8x^3 + 125y^3 = (2x)^3 + (5y)^3 = (2x+5y)(4x^2 - 10xy + 25y^2)',
@@ -591,12 +599,14 @@
         },
         math: {
           latex: 'p(x) = d(x)\\,q(x) + r(x) \\quad (r(x)=0 \\text{ or } \\deg r < \\deg d)',
+          latexTa: 'p(x) = d(x)\\,q(x) + r(x) \\quad (r(x)=0 \\text{ அல்லது } \\deg r < \\deg d)',
           fallback: 'p(x) = d(x)·q(x) + r(x)'
         },
         lesson: 'interactive-explorer',
         examples: [
           {
             label: 'Standard form & 0-placeholders',
+            labelTa: 'திட்ட வடிவமும் பூச்சியக் கெழுக்களும்',
             spoken: 'Standard form with zero placeholders',
             spokenTa: 'திட்ட வடிவம் மற்றும் பூச்சியக் கெழுக்கள்',
             math: '8x^3 - 1 = 8x^3 + 0x^2 + 0x - 1',
@@ -608,24 +618,26 @@
           },
           {
             label: 'Dividing by (ax + b)',
+            labelTa: '(ax + b)-ஆல் வகுத்தல்',
             spoken: 'Dividing by a x plus b',
             spokenTa: 'a x கூட்டல் b-ஆல் வகுத்தல்',
             math: '(8x^4 - 2x^2 + 6x + 5) \\div (4x + 1) \\implies x = -\\dfrac{1}{4},\\; q(x) = \\dfrac{q_0(x)}{4}',
             chips: [
-              ['zero x = −1/4', 'divide quotient by 4', 'ஈவை 4-ஆல் வகுக்கவும்', true],
-              ['remainder stays same', 'do not divide R', 'மீதியை வகுக்காதே', true]
+              ['zero x = −1/4', 'divide quotient by 4', 'ஈவை 4-ஆல் வகுக்கவும்', true, 'பூச்சியம் x = −¼'],
+              ['remainder stays same', 'do not divide R', 'மீதியை வகுக்காதே', true, 'மீதி மாறாது']
             ],
-            en: 'When dividing by (ax + b) with a ≠ 1, use x = −b/a, then divide the synthetic quotient by a (keep the remainder unchanged!).',
-            ta: '(ax + b)-ஆல் வகுக்கும்போது, கிடைக்கும் ஈவை a-ஆல் வகுக்க வேண்டும்; ஆனால் மீதியை மாற்றக் கூடாது!'
+            en: 'For the linear divisor ax + b with a ≠ 0, use its zero. Divide the synthetic quotient by a. Keep the remainder unchanged.',
+            ta: 'a பூச்சியம் இல்லாத ax + b என்ற நேரிய வகுத்தியின் பூச்சியத்தைப் பயன்படுத்துங்கள். தொகுமுறையில் கிடைத்த ஈவை a-ஆல் வகுக்கவும். மீதி மாறாது.'
           },
           {
             label: 'Factoring cubics',
+            labelTa: 'முப்படிக் கோவையைக் காரணிப்படுத்துதல்',
             spoken: 'Factoring cubic polynomials using synthetic division',
             spokenTa: 'முப்படிப் பல்லுறுப்புக் கோவையைக் காரணிப்படுத்தல்',
             math: 'x^3 - 3x^2 - 10x + 24 = (x-2)(x^2 - x - 12) = (x-2)(x-4)(x+3)',
             chips: [
-              ['find 1 root', 'reduce to quadratic', 'இருபடி ஆகக் குறை', true],
-              ['factor quadratic', '3 linear factors', '3 நேரிய காரணிகள்', true]
+              ['find 1 root', 'reduce to quadratic', 'இருபடி ஆகக் குறை', true, 'ஒரு மூலம் காண்க'],
+              ['factor quadratic', '3 linear factors', '3 நேரிய காரணிகள்', true, 'இருபடியைக் காரணிப்படுத்துக']
             ],
             en: 'Find one linear factor (e.g. x − 2), use synthetic division to get the quadratic quotient, then factorise the quadratic.',
             ta: 'ஒரு காரணியைக் கண்டறிந்து, தொகுமுறை வகுத்தலால் இருபடி ஈவைப் பெற்று, அதையும் காரணிப்படுத்தவும்.'
@@ -633,7 +645,7 @@
         ],
         transfers: [
           {
-            math: 'x^3 - 7x + 6 \\text{ coefficients}',
+            math: 'x^3 - 7x + 6',
             fallback: 'In synthetic division of x³ − 7x + 6, should the coefficients be [1, 0, −7, 6]?',
             promptEn: 'In synthetic division of x³ − 7x + 6, must you write coefficients as [1, 0, −7, 6]?',
             promptTa: 'x³ − 7x + 6-ஐத் தொகுமுறை வகுத்தல் செய்ய கெழுக்களை [1, 0, −7, 6] என எழுத வேண்டுமா?',
@@ -689,9 +701,10 @@
             spoken: '64 x to the 8 and 240 x to the 6',
             spokenTa: '64 எக்ஸ் அடுக்கு 8 மற்றும் 240 எக்ஸ் அடுக்கு 6',
             math: '\\gcd(64, 240) = 16,\\; \\gcd(x^8, x^6) = x^6 \\implies \\text{GCD} = 16x^6',
+            mathTa: '\\gcd(64, 240) = 16,\\; \\gcd(x^8, x^6) = x^6 \\implies \\text{மீ.பொ.வ.} = 16x^6',
             chips: [
-              ['GCD(64,240) = 16', 'numeric GCD', 'எண்களின் மீ.பொ.வ', true],
-              ['min(8,6) = 6', 'lowest power x⁶', 'குறைந்த அடுக்கு x⁶', true]
+              ['GCD(64,240) = 16', 'numeric GCD', 'எண்களின் மீ.பொ.வ', true, '64, 240-இன் மீ.பொ.வ. 16'],
+              ['min(8,6) = 6', 'lowest power x⁶', 'குறைந்த அடுக்கு x⁶', true, '8, 6-இல் சிறியது 6']
             ],
             en: 'Find the GCD of the numerical coefficients (16) and multiply by the lowest common power of each variable (x⁶).',
             ta: 'எண் கெழுக்களின் மீ.பொ.வ (16) மற்றும் பொது மாறியின் குறைந்த அடுக்கு (x⁶) ஆகியவற்றைப் பெருக்கவும்.'
@@ -701,8 +714,9 @@
             spoken: '2 a squared plus a and 4 a squared minus 1',
             spokenTa: '2 a வர்க்கம் கூட்டல் a மற்றும் 4 a வர்க்கம் கழித்தல் 1',
             math: 'a(2a+1) \\text{ and } (2a+1)(2a-1) \\implies \\text{GCD} = 2a + 1',
+            mathTa: 'a(2a+1) \\text{ மற்றும் } (2a+1)(2a-1) \\implies \\text{மீ.பொ.வ.} = 2a + 1',
             chips: [
-              ['factor first', 'common factor (2a+1)', 'பொதுக் காரணி (2a+1)', true]
+              ['factor first', 'common factor (2a+1)', 'பொதுக் காரணி (2a+1)', true, 'முதலில் காரணிப்படுத்துக']
             ],
             en: 'Factorise each polynomial first: 2a² + a = a(2a + 1) and 4a² − 1 = (2a + 1)(2a − 1). Common factor is (2a + 1).',
             ta: '2a² + a = a(2a + 1), 4a² − 1 = (2a + 1)(2a − 1). பொதுக் காரணி (2a + 1).'
@@ -713,7 +727,7 @@
             spokenTa: '4 x கனம், y கனம், z கனம்',
             math: '\\gcd(4x^3, y^3, z^3) = 1',
             chips: [
-              ['no common variable', 'GCD = 1', 'மீ.பொ.வ = 1', true]
+              ['no common variable', 'GCD = 1', 'மீ.பொ.வ = 1', true, 'பொது மாறி இல்லை']
             ],
             en: 'When polynomials share no common prime or variable factor, their GCD is 1 (never 0!).',
             ta: 'பொதுக் காரணிகள் இல்லையெனில் மீ.பொ.வ 1 ஆகும் (0 அல்ல!).'
@@ -764,48 +778,51 @@
         },
         rule: {
           en: 'ax + by + c = 0 (a, b not both 0) graphs as a straight line; two lines can intersect, be parallel, or coincide.',
-          ta: 'ax + by + c = 0 (a, b இரண்டும் பூச்சியமல்ல) ஒரு நேர்க்கோட்டைக் குறிக்கும்; இரு கோடுகள் வெட்டலாம், இணையாகலாம் அல்லது ஒன்றலாம்.'
+          ta: 'ax + by + c = 0 (a, b இரண்டும் ஒரே நேரத்தில் பூச்சியம் ஆகாது) ஒரு நேர்க்கோட்டைக் குறிக்கும். இரு கோடுகள் வெட்டலாம், இணையாக அமையலாம் அல்லது ஒரே கோடாக அமையலாம்.'
         },
         math: {
-          latex: '\\begin{aligned} \\frac{a_1}{a_2} \\ne \\frac{b_1}{b_2} &\\implies \\text{Unique solution (Consistent)} \\\\ \\frac{a_1}{a_2} = \\frac{b_1}{b_2} = \\frac{c_1}{c_2} &\\implies \\text{Infinite solutions (Consistent)} \\\\ \\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\ne \\frac{c_1}{c_2} &\\implies \\text{No solution (Inconsistent)} \\end{aligned}',
-          fallback: 'a₁/a₂ ≠ b₁/b₂: unique; a₁/a₂ = b₁/b₂ = c₁/c₂: infinite; a₁/a₂ = b₁/b₂ ≠ c₁/c₂: no solution'
+          latex: '\\begin{aligned}D&=a_1b_2-a_2b_1\\\\D_x&=b_1c_2-b_2c_1\\\\D_y&=c_1a_2-c_2a_1\\end{aligned}',
+          fallback: 'D = a₁b₂ − a₂b₁; Dₓ = b₁c₂ − b₂c₁; Dᵧ = c₁a₂ − c₂a₁'
         },
         lesson: 'interactive-explorer',
         examples: [
           {
             label: 'Graphical & Substitution',
+            labelTa: 'வரைபட, பிரதியிடல் முறைகள்',
             spoken: 'Graphical and Substitution methods',
             spokenTa: 'வரைபட மற்றும் பிரதியிடல் முறைகள்',
             math: 'x+y=7,\\; x-y=3 \\implies (5, 2)',
             chips: [
               ['1/1 ≠ 1/(−1)', 'intersecting lines', 'வெட்டும் கோடுகள்', true],
-              ['unique (5, 2)', 'consistent', 'ஒருங்கமைவுடையது', true]
+              ['unique (5, 2)', 'consistent', 'ஒருங்கமைவுடையது', true, 'ஒரே தீர்வு (5, 2)']
             ],
             en: 'In substitution, express one variable from an equation (y = 7 − x) and substitute into the other.',
             ta: 'பிரதியிடல் முறையில் ஒரு மாறியை மற்றதன் வடிவில் எழுதி இரண்டாவது சமன்பாட்டில் பிரதியிடவும்.'
           },
           {
             label: 'Elimination & Cross-mult',
+            labelTa: 'நீக்கல், குறுக்குப் பெருக்கல் முறைகள்',
             spoken: 'Elimination and Cross multiplication',
             spokenTa: 'நீக்கல் மற்றும் குறுக்குப் பெருக்கல் முறைகள்',
-            math: '\\dfrac{x}{b_1 c_2 - b_2 c_1} = \\dfrac{y}{c_1 a_2 - c_2 a_1} = \\dfrac{1}{a_1 b_2 - a_2 b_1}',
+            math: '\\begin{aligned}x&=\\dfrac{D_x}{D}\\\\y&=\\dfrac{D_y}{D}\\quad(D\\ne0)\\end{aligned}',
             chips: [
-              ['standard form first', 'a₁x + b₁y + c₁ = 0', 'திட்ட வடிவம்', true],
+              ['standard form first', 'a₁x + b₁y + c₁ = 0', 'திட்ட வடிவம்', true, 'முதலில் திட்ட வடிவம்'],
               ['a₁b₂ − a₂b₁ ≠ 0', 'unique solution', 'ஒரே தீர்வு', true]
             ],
             en: 'For cross-multiplication, always rewrite both equations with = 0 on the right before reading a, b, c!',
-            ta: 'குறுக்குப் பெருக்கலுக்கு முன் சமன்பாடுகளை ax + by + c = 0 வடிவில் மாற்றவும்.'
+            ta: 'குறுக்குப் பெருக்கலுக்கு முன் சமன்பாடுகளை ax + by + c = 0 வடிவில் எழுதுங்கள். D பூச்சியம் இல்லை என்றால் மேலே காட்டியுள்ள இரண்டு பின்னங்கள் ஒரே தீர்வைத் தரும்.'
           },
           {
             label: 'Parallel vs Coinciding',
+            labelTa: 'இணை கோடுகளும் ஒன்றிய கோடுகளும்',
             spoken: 'Parallel versus coinciding lines',
             spokenTa: 'இணை கோடுகள் மற்றும் ஒன்றிய கோடுகள்',
             math: '3x+2y=4,\\; 9x+6y=12 \\implies \\dfrac{3}{9}=\\dfrac{2}{6}=\\dfrac{4}{12}',
             chips: [
-              ['all ratios equal', 'infinite solutions', 'எண்ணற்ற தீர்வுகள்', true]
+              ['all ratios equal', 'infinite solutions', 'எண்ணற்ற தீர்வுகள்', true, 'அனைத்து விகிதங்களும் சமம்']
             ],
-            en: 'If a₁/a₂ = b₁/b₂ = c₁/c₂, the two equations represent the exact same line (infinitely many solutions).',
-            ta: 'மூன்று விகிதங்களும் சமமெனில் அவை ஒரே நேர்க்கோடு (எண்ணற்ற தீர்வுகள்).'
+            en: 'The second equation is three times the first, so both describe the same line. Every point on that line solves both equations.',
+            ta: 'இரண்டாவது சமன்பாடு முதலாவதன் மூன்று மடங்கு. இரண்டும் ஒரே நேர்க்கோட்டைக் குறிக்கின்றன. அந்தக் கோட்டின் ஒவ்வொரு புள்ளியும் இரு சமன்பாடுகளுக்கும் தீர்வு.'
           }
         ],
         transfers: [
@@ -833,12 +850,16 @@
         deepDive: {
           en: [
             'A single linear equation in two variables (like 2x − y = 6) has infinitely many solutions.',
-            'For equations with 1/x and 1/y (like 4/x + 5y = 7), substitute u = 1/x (with x ≠ 0) to turn them into linear equations.',
+            'The subscripts 1 and 2 name the first and second equations in the form ax + by + c = 0. A nonzero D gives one solution. If D is zero, both lines coincide when Dₓ and Dᵧ are also zero. Otherwise the lines are distinct and parallel.',
+            'Add x + y = 7 and x − y = 3 to eliminate y. This gives 2x = 10, hence x = 5. Substitute into the first equation to get y = 2. On a graph, (5, 2) is the point common to both lines.',
+            'When a system is linear in the reciprocals of x and y, name those reciprocals u and v. Solve for u and v, then take their reciprocals to recover nonzero x and y. Check the original equations.',
             'Always check your solution (x, y) by substituting back into BOTH original equations.'
           ],
           ta: [
             'இரு மாறிகளில் அமைந்த ஒரு நேரிய சமன்பாட்டிற்கு எண்ணற்ற தீர்வுகள் உண்டு.',
-            '1/x, 1/y உள்ள சமன்பாடுகளில் u = 1/x எனப் பிரதியிட்டு நேரிய சமன்பாடுகளாக மாற்றவும்.',
+            'ax + by + c = 0 என்ற வடிவில் 1, 2 என்ற கீழ்க்குறிகள் முதல், இரண்டாம் சமன்பாடுகளைக் குறிக்கின்றன. D பூச்சியம் இல்லை என்றால் ஒரே தீர்வு. D, Dₓ, Dᵧ மூன்றும் பூச்சியம் எனில் இரண்டும் ஒரே கோடு. D மட்டும் பூச்சியம் ஆகி மற்றவற்றில் ஒன்று பூச்சியம் இல்லை என்றால் அவை வெவ்வேறு இணைகோடுகள்.',
+            'x + y = 7, x − y = 3 ஆகிய இரு சமன்பாடுகளையும் கூட்டினால் y நீங்கும். 2x = 10 என்பதால் x = 5. முதல் சமன்பாட்டில் பிரதியிட்டால் y = 2. வரைபடத்தில் (5, 2) என்பது இரு கோடுகளுக்கும் பொதுவான புள்ளி.',
+            'x, y ஆகியவற்றின் தலைகீழ் மதிப்புகளில் ஒரு சமன்பாட்டுத் தொகுப்பு நேரியதாக இருந்தால், அந்த மதிப்புகளை u, v எனக் குறிக்கவும். u, v-ஐக் கண்ட பின் அவற்றின் தலைகீழ் மதிப்புகளைக் கொண்டு பூச்சியமற்ற x, y-ஐக் காணலாம்.',
             'தீர்வு (x, y)-ஐ எப்போதும் இரு அசல் சமன்பாடுகளிலும் பிரதியிட்டுச் சரிபார்க்கவும்.'
           ]
         },

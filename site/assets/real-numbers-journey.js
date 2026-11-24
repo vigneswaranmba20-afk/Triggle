@@ -26,7 +26,7 @@ function numberLine(min,max,points,ta,divisions=4){
   '<text x="'+px+'" y="'+(i===0?'32':i%2?'49':'16')+'" font-weight="750" font-size="15" text-anchor="middle" fill="#5c3272">'+esc(p.label)+'</text>';});
  return out+'</svg>';
 }
-function mount(container,chapter,language,onBack,initialConcept=null,onConcept=null){
+function mount(container,chapter,language,onBack,initialConcept=null,onConcept=null,{onQuestion,chapterQuestions=[]}={}){
  if(!container||chapter?.id!=='g9-ch2')return false;
  const lang=language==='ta'?'ta':'en',ta=lang==='ta',t=words[lang],done=load(),root=document.createElement('section');
  const backLabel=ta?'கருத்துகளுக்குத் திரும்பு':'Back to concepts';
@@ -109,9 +109,9 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
  // an entire fraction chain until its numerators become unreadable.
  const equationFlow=(left,operator,right,label)=>
    '<div class="rnlab-equation-flow" role="group" aria-label="'+esc(label)+'">'+
-   displayMath(left,label+' first expression')+
+   displayMath(left,label+(ta?' — முதல் கோவை':' — first expression'))+
    '<span class="rnlab-equation-operator" aria-hidden="true">'+esc(operator)+'</span>'+
-   displayMath(right,label+' second expression')+'</div>';
+   displayMath(right,label+(ta?' — இரண்டாம் கோவை':' — second expression'))+'</div>';
  const sqrt=value=>tag('msqrt',mn(value));
  const pair=(rad,sign)=>mrow(sqrt(rad)+mo(sign)+mn('2'));
  const bracket=body=>mrow(mo('(')+body+mo(')'));
@@ -158,7 +158,7 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
        '<div class="rnlab-step-equation triggle-display-equation">'+displayed+'</div></div></li>';
    }).join('')+'</ol>'+
      '<div class="rnlab-rational-result"><strong>'+esc(label)+'</strong>'+
-     '<div class="triggle-display-equation">'+displayMath(finalAnswer,'square root of '+rad+' minus 2')+'</div></div>';
+     '<div class="triggle-display-equation">'+displayMath(finalAnswer,ta?rad+'-இன் வர்க்கமூலம் கழித்தல் 2':'square root of '+rad+' minus 2')+'</div></div>';
    panel.querySelector('.rnlab-source-note').textContent=ta?
      'இந்த விளக்கம் பாடநூலின் விகிதப்படுத்துதல் முறையை அடிப்படையாகக் கொண்டது.':
      'A step-by-step explanation of the textbook rationalisation method.';
@@ -292,7 +292,9 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
     });
   }else{
     controls(t.category,[['root','√25'],['equation','x²=25']],'root',key=>{
-      set('<div class="rnlab-big">'+notation(key==='root'?'√25 = 5':'x = −5 or x = 5')+'</div>',
+      set('<div class="rnlab-big">'+notation(key==='root'?'√25 = 5':[
+        {latex:'x=-5',fallback:'x = −5'},ta?' அல்லது ':' or ',{latex:'x=5',fallback:'x = 5'}
+      ])+'</div>',
       key==='root'?(ta?'√25 என்பது எதிர்மறையற்ற வர்க்கமூலம்.':'√25 means the principal nonnegative square root.'):
       (ta?'(−5)² = 25; 5² = 25.':'Both (−5)² and 5² equal 25.'));
     });
@@ -314,7 +316,9 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
    '<p class="sp2-example">'+notation(pick(stage.example,lang))+'</p>'+
    '<div class="sp2-formula">'+notation(pick(stage.rule,lang))+'</div>'+
    foundationMarkup(stage)+
-   '<small class="rnlab-source-note">'+esc(t.source)+' '+esc(stage.section)+(stage.page?.en?' · EN p.'+esc(stage.page.en):'')+'</small></div></details>'+
+   '<small class="rnlab-source-note">'+esc(t.source)+' '+esc(stage.section)+
+   (stage.page?.en?' · '+esc(ta?'ஆங்கிலம் ப. ':'English p. ')+esc(stage.page.en):'')+
+   (stage.page?.ta?' · '+esc(ta?'தமிழ் ப. ':'Tamil p. ')+esc(stage.page.ta):'')+'</small></div></details>'+
    '<div class="sp2-recall"><h5>'+esc(t.check)+'</h5><p>'+notation(pick(stage.question,lang))+'</p>'+
    '<div class="sp2-answers" data-answers role="group" aria-label="'+esc(pick(stage.question,lang))+'"></div>'+
    '<div class="sp2-recall-actions">'+
@@ -331,12 +335,20 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
     const correct=j===stage.correct;
     choices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
     if(correct){feedback.textContent=t.right;done.add(stage.id);save(done);update();explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=false;}
-    else{wrongAttempts++;const clue=wrongAttempts===2?' '+pick(stage.hint,lang):wrongAttempts>=3?' '+pick(stage.why,lang):'';
+    else{wrongAttempts++;const clue=' '+pick(wrongAttempts===1?stage.hint:stage.why,lang);
       feedback.innerHTML=notation(t.wrong+clue);}
    });choices.append(button);
   });
   panel.querySelector('[data-hint]').addEventListener('click',()=>{feedback.innerHTML=notation(pick(stage.hint,lang));});
   panel.querySelector('[data-why]').addEventListener('click',()=>{explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=!explanation.hidden;});
+  const related=chapterQuestions.find(question=>question.id===stage.practiceId);
+  if(related&&typeof onQuestion==='function'){
+   const button=document.createElement('button');
+   button.type='button';button.className='g10ch2-practice-link';
+   button.textContent=pick(related.label,lang)+' →';
+   button.addEventListener('click',()=>onQuestion(related));
+   panel.append(button);
+  }
   bindFoundation(stage);renderDemo(i);update();
   if(focus){root.scrollIntoView({behavior:'auto',block:'start'});panel.querySelector('.sp2-concept-heading')?.focus({preventScroll:true});}
  }

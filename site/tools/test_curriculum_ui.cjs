@@ -385,7 +385,7 @@ async function main() {
       assert.match(await chapter1.innerText(),/7 Interactive mini-lessons available/i);
       assert.match(await chapter2.innerText(),/8 Interactive mini-lessons available/i);
       assert.doesNotMatch(await chapter2.innerText(),/More lessons coming/i);
-      assert.match(await chapter3.innerText(),/More lessons coming/i);
+      assert.match(await chapter3.innerText(),/10 Interactive mini-lessons available/i);
       assert.match(await page.locator('#exerciseList [data-chapter-id="g9-ch2"] small').textContent(),/8 interactive concepts/);
       await page.locator('#langTa').click();
       assert.match(await chapter2.innerText(),/8 சிறு செயல்வழிப் பாடங்கள் உள்ளன/);
@@ -548,7 +548,7 @@ async function main() {
     }
      await check('Worked Examples is removed; exercises retain complete solutions',async()=>{
        const page=await visit(await context(390),'/index.html?class=9&chapter=g9-ch6');
-       assert.equal(await page.locator('.hub-section-card').count(),3);
+       assert.equal(await page.locator('.hub-section-card').count(),2);
        assert.equal(await page.locator('[data-hub-section="examples"]').count(),0);
        await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
       assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
@@ -560,38 +560,31 @@ async function main() {
       assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
       await page.goBack();
        assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch6');
-       assert.equal(await page.locator('.hub-section-card').count(),3);
+       assert.equal(await page.locator('.hub-section-card').count(),2);
        await page.locator('.hub-back-class').click();
        assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
      });
     for(const width of [320,390,1280]){
-      await check('Direct section first, honest unavailable states, single Home and correct Back at '+width+'px', async()=>{
+      await check('Direct section first, Trigonometry concepts, single Home and correct Back at '+width+'px', async()=>{
         const page=await visit(await context(width),'/index.html?class=9&chapter=g9-ch6');
-        assert.equal(await page.locator('.hub-section-card').count(),3);
+        assert.equal(await page.locator('.hub-section-card').count(),2);
         assert.equal(await page.locator('#homeBtn').count(),1);
         assert.equal(await page.locator('.hub-back-home').count(),0,'No duplicate Home inside chapter');
         assert.equal(await page.locator('.sidebar-foot a[href]').count(),0,'No second Home in sidebar footer');
-        await page.locator('.hub-section-card[data-hub-section="quizzes"]').click();
-        assert.equal(await page.locator('.hub-section-card').count(),0,'A selected section must hide all three menu cards');
-        assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Quizzes');
-        assert.equal(await page.locator('.hub-panel').count(),1);
-        assert.equal(await page.locator('.hub-quiz-question').count(),0);
-        assert.match(await page.locator('.hub-info').first().innerText(),/coming soon/);
-        assert.equal(await page.locator('.hub-next-section').count(),0,'No unrelated link to Exercises');
-        const box=await page.locator('.hub-panel').boundingBox();
-        assert(box && box.y < 840,'The chosen section should appear without scrolling through cards');
-        await noOverflow(page,'unavailable quiz at '+width+'px');
-        await page.locator('.hub-back-menu').click();
-        assert.equal(await page.locator('.hub-section-card').count(),3);
-        assert.equal(new URL(page.url()).searchParams.has('section'),false);
+        assert.equal(await page.locator('.hub-section-card[data-hub-section="quizzes"]').count(),0,
+          'The Trigonometry checks are inside the concepts');
         await page.locator('.hub-section-card[data-hub-section="concepts"]').click();
         assert.equal(await page.locator('.hub-section-card').count(),0);
         assert.equal(await page.locator('#chapterOverviewTitle').innerText(),'Concepts');
-        assert.match(await page.locator('.hub-info').first().innerText(),/coming soon/);
+        assert.equal(await page.locator('.sp2-nav-button').count(),4);
+        await page.locator('.sp2-nav-button').first().click();
+        assert.equal(await page.locator('.g9-investigation-check').isVisible(),true);
+        await noOverflow(page,'Trigonometry concept at '+width+'px');
+        await page.locator('[data-back-index]').click();
         assert.equal(await page.locator('.hub-next-section').count(),0);
         await page.locator('.hub-back-menu').click();
         assert.equal(await page.locator('.hub-section-card[data-hub-section="examples"]').count(),0);
-        assert.equal(await page.locator('.hub-section-card').count(),3);
+        assert.equal(await page.locator('.hub-section-card').count(),2);
         await page.locator('.hub-back-class').click();
         assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
         assert.equal(await page.locator('.discover-change').count(),0,'No duplicate Change class navigation');
