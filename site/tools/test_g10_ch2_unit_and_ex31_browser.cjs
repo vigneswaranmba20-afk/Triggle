@@ -68,6 +68,19 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
      assert.equal(new URL(page.url()).searchParams.get('question'),end,'Next follows textbook order '+start+' -> '+end);
     }
    }
+   for(const [locale,labels] of [['En',['(A)','(B)','(C)','(D)']],['Ta',['(அ)','(ஆ)','(இ)','(ஈ)']]]){
+    for(const q of [12,14]){
+     await page.goto(app.base+'/index.html?class=10&question=c10-2-ex2-10-q'+q);
+     await page.locator('#lang'+locale).click();
+     const prompt=await page.locator('#questionText').innerText();
+     for(const label of labels) assert(prompt.includes(label),'Visible option '+label+' on Q'+q);
+    }
+    await page.goto(app.base+'/index.html?class=10&question=c10-2-unit-q9');
+    const answer=page.locator('.final-answer-value');
+    assert(await answer.isVisible());
+    assert((await answer.innerText()).includes(locale==='Ta'?'அல்லது':' or '),'Both real ratios are represented');
+    assert.equal(await answer.locator('msqrt').count(),8);
+   }
    assert.deepEqual(errors,[],'No JS pageerror @'+width);
    await context.close();
   }
