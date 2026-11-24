@@ -36,7 +36,7 @@ assert.deepEqual([course.stages[0].page.en,course.stages[0].page.ta],[249,263]);
 assert.equal(course.stages.map(s=>s.section).join(','),'7.2,7.3,7.4,7.5');
 assert.match(course.stages[0].math.latex, /\\sqrt\{/);
 assert.match(course.stages[0].math.latex, /\\dfrac\{/);
-assert.match(course.stages[0].whyMath.latex, /12\\text\{ m\}\^\{2\}/);
+assert.match(course.stages[0].whyMath.latex, /30\\text\{ m\}\^\{2\}/);
 
 for (const [a,b,c,expected] of [[3,4,5,6],[5,5,6,12],[6,8,10,24],[5,12,13,30],[5,5,8,12],[13,13,10,60]]) {
   assert.equal(unit.isTriangle(a,b,c), true, 'valid triangle ' + [a,b,c].join(','));

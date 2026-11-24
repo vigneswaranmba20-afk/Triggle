@@ -163,6 +163,9 @@ const entries=[
       }
     ],
     "answer": "44°",
+    "figureSrc": "assets/grade9-ch4/ex4-2-q3.svg",
+    "figureAlt": { "en": "Rectangle ABCD with diagonals AC and BD intersecting at O, showing angle OAB = 46 deg and angle OBC to find.", "ta": "செவ்வக மூலைவிட்டங்கள் O-இல் சமமாக வெட்டும்" },
+    "figureCaption": { "en": "Rectangle diagonals bisect equally at O", "ta": "செவ்வக மூலைவிட்டங்கள் O-இல் சமமாக வெட்டும்" },
     "kind": "reference",
     "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 4.2, Q3 · printed p. 157; mathematical solutions original to Triggle; page-image fidelity review pending.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
@@ -217,6 +220,9 @@ const entries=[
       }
     ],
     "answer": "10 cm",
+    "figureSrc": "assets/grade9-ch4/ex4-2-q4.svg",
+    "figureAlt": { "en": "Rhombus with perpendicular diagonals bisecting into right triangle legs 6 cm and 8 cm.", "ta": "சாய்சதுர மூலைவிட்டங்கள் 90°-இல் இருசமக்கூறிடும்" },
+    "figureCaption": { "en": "Rhombus diagonals bisect at 90° (legs 6 cm, 8 cm)", "ta": "சாய்சதுர மூலைவிட்டங்கள் 90°-இல் இருசமக்கூறிடும்" },
     "kind": "reference",
     "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 4.2, Q4 · printed p. 157; mathematical solutions original to Triggle; page-image fidelity review pending.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
@@ -276,6 +282,9 @@ const entries=[
       }
     ],
     "answer": "Area of triangle = half the area of parallelogram",
+    "figureSrc": "assets/grade9-ch4/ex4-2-q6.svg",
+    "figureAlt": { "en": "Triangle ABP and parallelogram ABCD sharing base AB between parallel lines.", "ta": "ஒரே அடி AB மற்றும் இணைகோடுகளுக்கு இடைப்பட்ட முக்கோணமும் இணைகரமும்" },
+    "figureCaption": { "en": "Triangle and parallelogram on the same base AB between parallels", "ta": "ஒரே அடி AB மற்றும் இணைகோடுகளுக்கு இடைப்பட்ட முக்கோணமும் இணைகரமும்" },
     "kind": "reference",
     "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 4.2, Q6 · printed p. 157; mathematical solutions original to Triggle; page-image fidelity review pending.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",

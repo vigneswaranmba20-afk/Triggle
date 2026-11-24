@@ -45,6 +45,9 @@ const entries=[
       }
     ],
     "answer": "24 cm",
+    "figureSrc": "assets/grade9-ch4/ex4-3-q1.svg",
+    "figureAlt": { "en": "Circle centre O, radius OA = 26 cm, chord AB = 20 cm bisected at M (AM = 10 cm), perpendicular distance OM to find.", "ta": "ஆரம் 26 செ.மீ, அரை நாண் 10 செ.மீ, செங்குத்துத் தொலைவு d = ?" },
+    "figureCaption": { "en": "Radius 26 cm, half-chord 10 cm, perpendicular distance d = ?", "ta": "ஆரம் 26 செ.மீ, அரை நாண் 10 செ.மீ, செங்குத்துத் தொலைவு d = ?" },
     "kind": "reference",
     "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 4.3, Q1 · printed p. 169; mathematical solutions original to Triggle; page-image fidelity review pending.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
@@ -99,6 +102,9 @@ const entries=[
       }
     ],
     "answer": "17 cm",
+    "figureSrc": "assets/grade9-ch4/ex4-3-q2.svg",
+    "figureAlt": { "en": "Circle centre O, perpendicular OM = 8 cm to chord AB = 30 cm (AM = 15 cm), radius OA to find.", "ta": "அரை நாண் 15 செ.மீ, தொலைவு 8 செ.மீ, ஆரம் r = ?" },
+    "figureCaption": { "en": "Half-chord 15 cm, distance 8 cm, radius r = ?", "ta": "அரை நாண் 15 செ.மீ, தொலைவு 8 செ.மீ, ஆரம் r = ?" },
     "kind": "reference",
     "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 4.3, Q2 · printed p. 169; mathematical solutions original to Triggle; page-image fidelity review pending.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
@@ -158,6 +164,9 @@ const entries=[
       }
     ],
     "answer": "18 cm",
+    "figureSrc": "assets/grade9-ch4/ex4-3-q4.svg",
+    "figureAlt": { "en": "Circle centre O, radius 15 cm, perpendicular distance 12 cm to chord AB.", "ta": "ஆரம் 15 செ.மீ, தொலைவு 12 செ.மீ, நாண் நீளம் AB = ?" },
+    "figureCaption": { "en": "Radius 15 cm, distance 12 cm, full chord AB = ?", "ta": "ஆரம் 15 செ.மீ, தொலைவு 12 செ.மீ, நாண் நீளம் AB = ?" },
     "kind": "reference",
     "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 4.3, Q4 · printed p. 170; mathematical solutions original to Triggle; page-image fidelity review pending.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
@@ -217,6 +226,9 @@ const entries=[
       }
     ],
     "answer": "6 cm",
+    "figureSrc": "assets/grade9-ch4/ex4-3-q6.svg",
+    "figureAlt": { "en": "Two circles with centres O1 and O2 separated by 4 cm, radii 5 cm and 3 cm, showing common chord through O2.", "ta": "ஆரங்கள் 5 செ.மீ, 3 செ.மீ; மையத் தொலைவு 4 செ.மீ" },
+    "figureCaption": { "en": "Radii 5 cm and 3 cm, centre distance 4 cm (3-4-5 right triangle)", "ta": "ஆரங்கள் 5 செ.மீ, 3 செ.மீ; மையத் தொலைவு 4 செ.மீ" },
     "kind": "reference",
     "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 4.3, Q6 · printed p. 170; mathematical solutions original to Triggle; page-image fidelity review pending.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",

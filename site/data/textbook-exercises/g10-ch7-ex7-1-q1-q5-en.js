@@ -216,20 +216,20 @@ const entries=[
         }
       },
       {
-        "en": "A hollow log has an outer curved wall, an inner curved wall and two flat ring-shaped ends. Add all four exposed surfaces.",
-        "eq": "TSA = 2πRh + 2πrh + 2π(R² − r²)",
+        "en": "A hollow log has an outer curved wall, an inner curved wall and two flat ring-shaped ends. Factoring 2π(R + r) gives the canonical textbook formula TSA = 2π(R + r)(R − r + h).",
+        "eq": "TSA = 2πRh + 2πrh + 2π(R² − r²) = 2π(R + r)(R − r + h)",
         "math": {
-          "latex": "\\mathrm{TSA}=2\\pi Rh+2\\pi rh+2\\pi(R^2-r^2)",
-          "fallback": "TSA = 2πRh + 2πrh + 2π(R² − r²)",
+          "latex": "\\mathrm{TSA}=2\\pi Rh+2\\pi rh+2\\pi(R^2-r^2)=2\\pi(R+r)(R-r+h)",
+          "fallback": "TSA = 2πRh + 2πrh + 2π(R² − r²) = 2π(R + r)(R − r + h)",
           "display": true
         }
       },
       {
-        "en": "Substitute the measured radii and length, then simplify the bracket.",
-        "eq": "TSA = 2π[(16+12)×13 + (16²−12²)] = 2π(364+112)",
+        "en": "Substitute R = 16, r = 12, and h = 13 into the factored formula.",
+        "eq": "TSA = 2π(16+12)(16−12+13) = 2π(28)(17) = 952π",
         "math": {
-          "latex": "\\mathrm{TSA}=2\\pi\\left[(16+12)13+(16^2-12^2)\\right]=2\\pi(476)",
-          "fallback": "TSA = 2π[(16+12)×13 + (16²−12²)] = 2π(364+112)",
+          "latex": "\\mathrm{TSA}=2\\pi(16+12)(16-12+13)=2\\pi(28)(17)=952\\pi",
+          "fallback": "TSA = 2π(16+12)(16−12+13) = 2π(28)(17) = 952π",
           "display": true
         }
       },
@@ -332,10 +332,10 @@ const entries=[
         }
       }
     ],
-    "answer": "The cone formed by rotation about PQ has greater curved surface area (ratio QR : PQ = 3 : 4).",
+    "answer": "CSA_QR : CSA_PQ = 3 : 4 (CSA of the cone rotated about PQ is larger: 320π cm² > 240π cm²).",
     "answerMath": {
-      "latex": "\\boxed{\\mathrm{CSA}_{QR}:\\mathrm{CSA}_{PQ}=3:4}",
-      "fallback": "Rotation about PQ gives greater CSA; QR : PQ = 3 : 4.",
+      "latex": "\\boxed{\\mathrm{CSA}_{QR}:\\mathrm{CSA}_{PQ}=3:4\\;(\\text{CSA about }PQ\\text{ is larger})}",
+      "fallback": "CSA_QR : CSA_PQ = 3 : 4 (CSA of the cone rotated about PQ is larger: 320π cm² > 240π cm²).",
       "display": true
     },
     "figureSrc": "assets/grade10-ch7/ex7-1-q4.svg",

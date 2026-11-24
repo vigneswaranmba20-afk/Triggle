@@ -296,20 +296,20 @@ const entries=[
         }
       },
       {
-        "en": "Paint covers the outside curved hemisphere, the inside curved hemisphere, and the flat ring around the rim. There is no solid circular base.",
-        "eq": "Painted area = 2πR² + 2πr² + π(R² − r²)",
+        "en": "Paint covers the outside curved hemisphere (2πR²), the inside curved hemisphere (2πr²), and the flat rim ring π(R² − r²). Combining like terms gives the canonical textbook formula TSA = π(3R² + r²).",
+        "eq": "TSA = 2πR² + 2πr² + π(R² − r²) = π(3R² + r²)",
         "math": {
-          "latex": "\\begin{aligned}A&=2\\pi R^2+2\\pi r^2\\\\&+\\pi(R^2-r^2)\\end{aligned}",
-          "fallback": "Painted area = 2πR² + 2πr² + π(R² − r²)",
+          "latex": "\\mathrm{TSA}=2\\pi R^2+2\\pi r^2+\\pi(R^2-r^2)=\\pi(3R^2+r^2)",
+          "fallback": "TSA = 2πR² + 2πr² + π(R² − r²) = π(3R² + r²)",
           "display": true
         }
       },
       {
-        "en": "Insert the radii and simplify the total area. All three exposed surfaces matter.",
-        "eq": "A = 2π(14²) + 2π(10²) + π(14²−10²) = 688π cm²",
+        "en": "Substitute R = 14 and r = 10 into π(3R² + r²).",
+        "eq": "A = π(3×14² + 10²) = π(588 + 100) = 688π cm²",
         "math": {
-          "latex": "\\begin{aligned}A&=2\\pi(196)+2\\pi(100)\\\\&+\\pi(196-100)\\\\&=688\\pi\\,\\mathrm{cm}^2\\end{aligned}",
-          "fallback": "A = 2π(14²) + 2π(10²) + π(14²−10²) = 688π cm²",
+          "latex": "A=\\pi(3\\times14^2+10^2)=\\pi(588+100)=688\\pi\\,\\mathrm{cm}^2",
+          "fallback": "A = π(3×14² + 10²) = π(588 + 100) = 688π cm²",
           "display": true
         }
       },

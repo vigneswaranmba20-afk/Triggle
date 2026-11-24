@@ -247,8 +247,8 @@ const more = [
       }
     },
     "question": {
-      "en": "A cube-shaped tank has an inner side length of 4 cm. How much space does it hold?",
-      "ta": "ஒரு கனசதுர வடிவத் தொட்டியின் உள் பக்க நீளம் 4 செ.மீ. எனில் அதன் கனஅளவு என்ன?"
+      "en": "A cube-shaped tank has an inner side length of 5 cm. How much space does it hold?",
+      "ta": "ஒரு கனசதுர வடிவத் தொட்டியின் உள் பக்க நீளம் 5 செ.மீ. எனில் அதன் கனஅளவு என்ன?"
     },
     "choices": [
       {
@@ -266,8 +266,8 @@ const more = [
     ],
     "correct": 2,
     "hint": {
-      "en": "For a cube, V=a³. Multiply 4×4×4, not 3×4.",
-      "ta": "கனசதுரத்திற்கு V=a³. 4×4×4 என பெருக்குக; 3×4 அல்ல."
+      "en": "For a cube, V = a³. Multiply 5 × 5 × 5, not 3 × 5.",
+      "ta": "கனசதுரத்திற்கு V = a³. 5 × 5 × 5 என பெருக்குக; 3 × 5 அல்ல."
     },
     "why": {
       "en": "A cube with side 4 cm contains 4 rows, 4 columns and 4 layers of unit cubes: 4×4×4=64 cm³.",

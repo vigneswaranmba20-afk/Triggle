@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
+  <title id="t">Two intersecting circles of radii 5 cm and 3 cm for Exercise 4.3 Q6</title>
+  <desc id="desc">Two circles with centres O1 and O2 separated by 4 cm, radii 5 cm and 3 cm, showing common chord through O2.</desc>
+  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
+  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
+  <circle cx="118" cy="110" r="70" fill="#E6EFEA" fill-opacity="0.25" stroke="#181B20" stroke-width="2"/>
+  <circle cx="174" cy="110" r="42" fill="#166353" fill-opacity="0.14" stroke="#166353" stroke-width="2"/>
+  <line x1="174" y1="68" x2="174" y2="152" stroke="#6E2933" stroke-width="2.2"/>
+  <line x1="118" y1="110" x2="174" y2="110" stroke="#181B20" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <line x1="118" y1="110" x2="174" y2="68" stroke="#181B20" stroke-width="1.6"/>
+  <circle cx="118" cy="110" r="3" fill="#181B20"/>
+  <circle cx="174" cy="110" r="3" fill="#166353"/>
+  <text x="142" y="84" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="end" fill="#181B20">5 cm</text>
+  <text x="146" y="124" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#181B20">4 cm</text>
+  <text x="180" y="90" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6E2933">3 cm</text>
+</svg>

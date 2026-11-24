@@ -326,6 +326,15 @@ const entries=[
       }
     ],
     "answer": "240 cm²",
+    "figureSrc": "assets/grade9-ch7/ex7-1-q6.svg",
+    "figureAlt": {
+      "en": "Outer triangle ABC with BC = 42 cm and CA = 34 cm, containing shaded right triangle ABD with AD = 12 cm, BD = 16 cm, and right angle at D.",
+      "ta": "BC = 42 செ.மீ, CA = 34 செ.மீ கொண்ட முக்கோணம் ABC-க்குள் AD = 12 செ.மீ, BD = 16 செ.மீ மற்றும் D-இல் செங்கோணம் கொண்ட நிழலிடப்பட்ட முக்கோணம் ABD."
+    },
+    "figureCaption": {
+      "en": "Textbook Fig. 7.8: Shaded right triangle ABD inside ΔABC",
+      "ta": "பாடநூல் படம் 7.8: ΔABC-க்குள் நிழலிடப்பட்ட செங்கோண முக்கோணம் ABD"
+    },
     "kind": "reference",
     "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 7.1 · printed p. 252 / PDF p. 258; mathematical solutions by Triggle; original PDF page-image review required for diagrams and tables.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",

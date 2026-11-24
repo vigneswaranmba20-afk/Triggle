@@ -47,25 +47,45 @@
         }
       },
       question: {
-        en: 'A new triangular garden has side lengths 5 m, 5 m and 6 m. What is its area?',
-        ta: 'ஒரு முக்கோணத் தோட்டத்தின் பக்க நீளங்கள் 5 மீ., 5 மீ., 6 மீ. எனில் அதன் பரப்பளவு என்ன?'
+        en: 'A new triangular garden has side lengths 5 m, 12 m and 13 m. What is its area?',
+        ta: 'ஒரு முக்கோணத் தோட்டத்தின் பக்க நீளங்கள் 5 மீ., 12 மீ., 13 மீ. எனில் அதன் பரப்பளவு என்ன?'
       },
       choices: [
-        { en: '10 m²', ta: '10 மீ²', math: { latex: '10\\ \\mathrm{m}^{2}', fallback: '10 square metres' } },
-        { en: '12 m²', ta: '12 மீ²', math: { latex: '12\\ \\mathrm{m}^{2}', fallback: '12 square metres' } },
-        { en: '15 m²', ta: '15 மீ²', math: { latex: '15\\ \\mathrm{m}^{2}', fallback: '15 square metres' } }
+        { en: '25 m²', ta: '25 மீ²', math: { latex: '25\\ \\mathrm{m}^{2}', fallback: '25 square metres' } },
+        { en: '30 m²', ta: '30 மீ²', math: { latex: '30\\ \\mathrm{m}^{2}', fallback: '30 square metres' } },
+        { en: '36 m²', ta: '36 மீ²', math: { latex: '36\\ \\mathrm{m}^{2}', fallback: '36 square metres' } }
       ],
       correct: 1,
       hint: {
-        en: 'First find s = (5 + 5 + 6)/2 = 8. Then use 8, 8−5, 8−5 and 8−6 under the square root.',
-        ta: 'முதலில் s = (5 + 5 + 6)/2 = 8. பிறகு 8, 8−5, 8−5, 8−6 ஆகியவற்றைப் பயன்படுத்துக.'
+        en: 'First find half the perimeter s = (a + b + c)/2, then substitute s, s−a, s−b, and s−c under the square root.',
+        ta: 'முதலில் அரைச் சுற்றளவு s = (a + b + c)/2 காண்க; பின்னர் s, s−a, s−b, s−c மதிப்புகளை வர்க்கமூலத்திற்குள் இடுக.'
       },
       why: {
-        en: 'The semiperimeter is 8 m. Substituting all three sides gives the square root of 8 × 3 × 3 × 2, which is 12 m². The garden’s area is 12 square metres.',
-        ta: 'அரைச் சுற்றளவு 8 மீ. சூத்திரத்தில் மதிப்புகளைப் பதிலிடும்போது √(8 × 3 × 3 × 2) = 12 மீ². தோட்டத்தின் பரப்பளவு 12 சதுர மீட்டர்.'
+        en: 'The semiperimeter is s = (5 + 12 + 13)/2 = 15 m. Substituting into √(15 × 10 × 3 × 2) = √900 gives 30 m².',
+        ta: 'அரைச் சுற்றளவு s = 15 மீ. சூத்திரத்தில் மதிப்புகளைப் பதிலிடும்போது √(15 × 10 × 3 × 2) = √900 = 30 மீ².'
       },
-      whyMath: math('\\begin{aligned}s&=8\\text{ m}\\\\ A&=\\sqrt{8(8-5)(8-5)(8-6)}\\\\ &=\\sqrt{144}=12\\text{ m}^{2}\\end{aligned}', 's=8 m; area=sqrt(144)=12 square metres'),
-      explainAfterAttempt: false,
+      whyMath: math('\\begin{aligned}s&=15\\text{ m}\\\\ A&=\\sqrt{15(15-5)(15-12)(15-13)}\\\\ &=\\sqrt{900}=30\\text{ m}^{2}\\end{aligned}', 's=15 m; area=sqrt(900)=30 square metres'),
+      quiz: {
+        question: {
+          en: 'A triangular park has sides 7 m, 24 m and 25 m. What is its area?',
+          ta: 'ஒரு முக்கோணப் பூங்காவின் பக்கங்கள் 7 மீ., 24 மீ., 25 மீ. எனில் அதன் பரப்பளவு என்ன?'
+        },
+        choices: [
+          { en: '72 m²', ta: '72 மீ²', math: { latex: '72\\ \\mathrm{m}^{2}', fallback: '72 square metres' } },
+          { en: '84 m²', ta: '84 மீ²', math: { latex: '84\\ \\mathrm{m}^{2}', fallback: '84 square metres' } },
+          { en: '96 m²', ta: '96 மீ²', math: { latex: '96\\ \\mathrm{m}^{2}', fallback: '96 square metres' } }
+        ],
+        correct: 1,
+        hint: {
+          en: 'Compute s = (7 + 24 + 25)/2 first, then evaluate √[s(s−7)(s−24)(s−25)].',
+          ta: 'முதலில் s = (7 + 24 + 25)/2 காண்க; பின்னர் √[s(s−7)(s−24)(s−25)] கணக்கிடுக.'
+        },
+        why: {
+          en: 'Here s = 28 m, so A = √(28 × 21 × 4 × 3) = √7056 = 84 m².',
+          ta: 'இங்கு s = 28 மீ; A = √(28 × 21 × 4 × 3) = √7056 = 84 மீ².'
+        }
+      },
+      explainAfterAttempt: true,
       practiceId: 'g9-ch7-ex7.1-q1'
     }]
   });
