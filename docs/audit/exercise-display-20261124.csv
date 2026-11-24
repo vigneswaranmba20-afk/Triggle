@@ -614,21 +614,21 @@ Batch,Order,Question ID,Typography changed,Prompt restored,Tamil baseline flag,L
 7,613,g9-ch9-ex9.3-q8,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
 7,614,g9-ch9-ex9.3-q9,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
 7,615,g9-ch9-ex9.3-q10,1,,1,320 360 390,"Tamil textbook printed p319; prompt, numbered explanations and answer checked",,pending,b9b1a071
-7,616,c10-1-1-2-q1,0,,1,390,"Check prompt, reasons 1 2 3 4 5 against prescribed textbook",,pending,b9b1a071
-7,617,c10-1-1-2-q2,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-7,618,c10-1-1-2-q3,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-7,619,c10-1-1-2-q4,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-7,620,c10-1-1-2-q5,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-7,621,c10-1-1-3-q1,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-7,622,c10-1-1-3-q2,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-7,623,c10-1-1-3-q3,0,,1,390,"Check prompt, reasons 1 2 3 4 5 against prescribed textbook",,pending,b9b1a071
-7,624,c10-1-1-3-q4,0,,1,390,"Check prompt, reasons 1 2 3 4 5 against prescribed textbook",,pending,b9b1a071
-7,625,c10-1-1-3-q5,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-7,626,c10-1-1-3-q6,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-7,627,c10-1-1-3-q7,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-7,628,c10-1-1-3-q8,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-7,629,c10-1-1-3-q9,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-7,630,c10-1-1-3-q10,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
+7,616,c10-1-1-2-q1,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF p16; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,617,c10-1-1-2-q2,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF p16; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,618,c10-1-1-2-q3,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF p16; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,619,c10-1-1-2-q4,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF p16; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,620,c10-1-1-2-q5,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF p16; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,621,c10-1-1-3-q1,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF pp20–21; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,622,c10-1-1-3-q2,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF pp20–21; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,623,c10-1-1-3-q3,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF pp20–21; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,624,c10-1-1-3-q4,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF pp20–21; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,625,c10-1-1-3-q5,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF pp20–21; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,626,c10-1-1-3-q6,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF pp20–21; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,627,c10-1-1-3-q7,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF pp20–21; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,628,c10-1-1-3-q8,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF pp20–21; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,629,c10-1-1-3-q9,0,,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF pp20–21; prompt, worked instructions and answer checked",,pending,b9b1a071
+7,630,c10-1-1-3-q10,0,English and Tamil parts (iii) and (iv); newly identified,1,320 360 390,"Prescribed Grade 10 Tamil textbook PDF pp20–21; prompt, worked instructions and answer checked",,pending,b9b1a071
 7,631,c10-1-1-4-q1,0,,1,390,"Check prompt, reasons 1 2 3 4 5 against prescribed textbook",,pending,b9b1a071
 7,632,c10-1-1-4-q2,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
 7,633,c10-1-1-4-q3,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071

@@ -1670,7 +1670,9 @@ window.TriggleChapter1Math=Object.freeze({
   getStep(record,index){
     const entry=item(record?.id);if(!entry)return null;
     if(record.chapter!=='1'||record.classNum!==10)throw Error('Unexpected Chapter 1 maths target');
-    const source=record.steps[index];if(!source||!entry.steps[index])throw Error('Missing Chapter 1 step notation '+record.id+'/'+index);
+    const source=record.steps[index];
+    if(source?.math)return source.math;
+    if(!source||!entry.steps[index])throw Error('Missing Chapter 1 step notation '+record.id+'/'+index);
     const segments=matchingParts(entry.steps[index],source.eq,record.id+'/'+index);
     return segments.length===1?segments[0]:segments;
   },
