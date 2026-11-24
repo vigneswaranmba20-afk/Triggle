@@ -496,8 +496,8 @@
       latex:ta&&value.latexTa?value.latexTa:value.latex,
       fallback:ta&&value.fallbackTa?value.fallbackTa:value.fallback
     });
-    const pageSource=stage=>[stage.page?.en?(ta?'ஆங்கிலப் பக்கம் ':'EN p.')+stage.page.en:'',
-      stage.page?.ta?(ta?'தமிழ்ப் பக்கம் ':'TA p.')+stage.page.ta:''].filter(Boolean).join(' · ');
+    const pageSource=(stage,localized=ta)=>[stage.page?.en?(localized?'ஆங்கிலப் பக்கம் ':'EN p.')+stage.page.en:'',
+      stage.page?.ta?(localized?'தமிழ்ப் பக்கம் ':'TA p.')+stage.page.ta:''].filter(Boolean).join(' · ');
     const back=ta?'கருத்துகளுக்குத் திரும்பு':'Back to concepts';
     const nextLabel=ta?'அடுத்த கருத்து':'Next idea';
     const prevLabel=ta?'முந்தைய கருத்து':'Previous idea';
@@ -542,6 +542,7 @@
       if(notify)onConcept?.(i);
       const stage=stages[i],choices=Array.isArray(stage.choices)?stage.choices:[];
       const stageId=String(stage.id||'');
+      const sourcePages=pageSource(stage,ta&&stageId.startsWith('g9-'));
       const isCh3=stageId.startsWith('g10-ch3-');
       const isG9Mensuration=stageId.startsWith('g9-ch7-');
       const isStudio6=stageId.startsWith('g10-ch4-')||stageId.startsWith('g10-ch5-')||stageId.startsWith('g10-ch6-');
@@ -606,7 +607,7 @@
           '<p class="g10ch4-intro">'+typeset(pick(stage.understand?.intro))+'</p>'+
           '<ul class="g10ch4-symbol-list">'+symbolsHtml+'</ul>'+
           (stage.understand?.watchOut?'<p class="g10ch4-watchout">'+typeset(pick(stage.understand.watchOut))+'</p>':'')+
-          '<small class="sp2-stage-reference">'+e(labels.ref)+e(stage.section||'')+(pageSource(stage)?' · '+e(pageSource(stage)):'')+'</small></section>'+
+          '<small class="sp2-stage-reference">'+e(labels.ref)+e(stage.section||'')+(sourcePages?' · '+e(sourcePages):'')+'</small></section>'+
           '<section class="g10ch4-card" aria-label="'+e(labels.s4)+'"><div class="g10ch4-card-head"><span class="g10ch4-step-pill">4</span><h5 class="g10ch4-card-kicker">'+e(labels.s4)+'</h5></div>'+
           '<ol class="g10ch4-proof-list">'+proofHtml+'</ol></section>'+
           '<section class="g10ch4-card" aria-label="'+e(labels.s5)+'"><div class="g10ch4-card-head"><span class="g10ch4-step-pill">5</span><h5 class="g10ch4-card-kicker">'+e(labels.s5)+'</h5></div>'+
@@ -654,7 +655,7 @@
        '<p class="sp2-idea">'+typeset(pick(stage.idea))+'</p>'+
        '<p class="sp2-example">'+typeset(pick(stage.example))+'</p>'+
        (stage.exampleMath?'<div class="sp2-example-math">'+lessonMath(stage.exampleMath)+'</div>':'')+
-       '<small class="sp2-stage-reference">'+e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+(pageSource(stage)?' · '+e(pageSource(stage)):'')+'</small></div>'+
+       '<small class="sp2-stage-reference">'+e(ta?'பாடநூல் பகுதி ':'Textbook section ')+e(stage.section||'')+(sourcePages?' · '+e(sourcePages):'')+'</small></div>'+
        deepDiveHtml+
        (choices.length?'<div class="sp2-recall"><h5>'+e(ta?'நீங்களே முயற்சிக்கவும்':'Try it yourself')+'</h5>'+
        '<p>'+typeset(pick(stage.question))+'</p>'+
