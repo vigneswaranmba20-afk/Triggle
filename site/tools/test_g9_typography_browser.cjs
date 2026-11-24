@@ -56,7 +56,7 @@ async function inspect(page,q,lang){
  state.steps.forEach((s,i)=>{
   const step=refQ.steps[i];
   const expectedEquation=lang==='ta'&&step.mathTa
-   ?step.mathTa.map(part=>typeof part==='string'?part:part.fallback).join('')
+   ?[step.mathTa].flat().map(part=>typeof part==='string'?part:part.fallback).join('')
    :step.eq;
   assert.equal(normalize(s.reason),normalize(step[lang]||step.en),label+' reason '+i);
   assert.equal(normalize(s.eq),normalize(expectedEquation),label+' equation '+i);
