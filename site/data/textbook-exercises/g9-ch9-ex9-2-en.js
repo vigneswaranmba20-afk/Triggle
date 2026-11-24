@@ -11,35 +11,53 @@ const entries=[
     "exercise": "9.2",
     "topic": {
       "en": "Probability",
-      "ta": "Probability (English version only)"
+      "ta": "நிகழ்தகவு"
     },
     "label": {
       "en": "Exercise 9.2 · Q1",
-      "ta": "Exercise 9.2 · Q1 (English only)"
+      "ta": "பயிற்சி 9.2 · வினா 1"
     },
     "title": {
       "en": "Good laptops",
-      "ta": "Good laptops (English only)"
+      "ta": "குறைபாடில்லாத மடிக்கணினி"
     },
     "q": {
       "en": "A company manufactures 10000 Laptops in 6 months. Out of which 25 of them are found to be defective. When you choose one Laptop from the manufactured, what is the probability that selected Laptop is a good one.",
-      "ta": "English-language question; Tamil version pending. A company manufactures 10000 Laptops in 6 months. Out of which 25 of them are found to be defective. When you choose one Laptop from the manufactured, what is the probability that selected Laptop is a good one."
+      "ta": "ஒரு நிறுவனம் ஆறு மாதங்களில் 10000 மடிக்கணினிகளை உற்பத்தி செய்தது. அவற்றில் 25 மடிக்கணினிகள் குறைபாடு உடையனவாகக் கண்டறியப்பட்டன. சமவாய்ப்பு முறையில் ஒரு மடிக்கணினியைத் தேர்ந்தெடுக்கும்போது அது குறைபாடில்லாததாக இருக்க நிகழ்தகவு யாது?"
     },
     "steps": [
       {
         "en": "Count the laptops that are not defective.",
-        "ta": "English explanation (Tamil version pending): Count the laptops that are not defective.",
-        "eq": "Good laptops = 10000 − 25 = 9975"
+        "ta": "குறைபாடில்லாத மடிக்கணினிகளின் எண்ணிக்கையைக் காண்க.",
+        "eq": "Good laptops = 10000 − 25 = 9975",
+        "mathTa": [
+          "குறைபாடில்லாத மடிக்கணினிகள் = ",
+          {
+            "latex": "10000 - 25 = 9975",
+            "fallback": "10000 − 25 = 9975",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Use the ratio of good laptops to all manufactured laptops.",
-        "ta": "English explanation (Tamil version pending): Use the ratio of good laptops to all manufactured laptops.",
-        "eq": "P(good) = [[9975|10000]]"
+        "ta": "அந்த எண்ணிக்கையை உற்பத்தி செய்யப்பட்ட மொத்த மடிக்கணினிகளின் எண்ணிக்கையால் வகுக்கவும்.",
+        "eq": "P(good) = [[9975|10000]]",
+        "mathTa": {
+          "latex": "P\\left(\\text{குறைபாடில்லை}\\right) = \\dfrac{9975}{10000}",
+          "fallback": "P(குறைபாடில்லை) = [[9975|10000]]",
+          "display": true
+        }
       },
       {
         "en": "Simplify the fraction and convert to a decimal.",
-        "ta": "English explanation (Tamil version pending): Simplify the fraction and convert to a decimal.",
-        "eq": "P(good) = [[399|400]] = 0.9975"
+        "ta": "பின்னத்தைச் சுருக்கித் தசம எண்ணாகவும் எழுதுக.",
+        "eq": "P(good) = [[399|400]] = 0.9975",
+        "mathTa": {
+          "latex": "\\begin{aligned}&P\\left(\\text{குறைபாடில்லை}\\right) = \\dfrac{399}{400}  \\\\ &= 0.9975\\end{aligned}",
+          "fallback": "P(குறைபாடில்லை) = [[399|400]] = 0.9975",
+          "display": true
+        }
       }
     ],
     "answer": "[[399|400]] = 0.9975",
@@ -51,9 +69,10 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 307,
       "enPrintedPage": 301,
-      "taPdfPage": 334,
+      "taPdfPage": 324,
       "taPrintedPage": 318,
-      "tamilEditorial": "pending"
+      "tamilEditorial": "pending",
+      "taDriveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
     }
   },
   {
@@ -63,35 +82,55 @@ const entries=[
     "exercise": "9.2",
     "topic": {
       "en": "Probability",
-      "ta": "Probability (English version only)"
+      "ta": "நிகழ்தகவு"
     },
     "label": {
       "en": "Exercise 9.2 · Q2",
-      "ta": "Exercise 9.2 · Q2 (English only)"
+      "ta": "பயிற்சி 9.2 · வினா 2"
     },
     "title": {
       "en": "Youngsters without voter ID",
-      "ta": "Youngsters without voter ID (English only)"
+      "ta": "அடையாள அட்டை இல்லாதவர்"
     },
     "q": {
       "en": "In a survey of 400 youngsters aged 16-20 years, it was found that 191 have their voter ID card. If a youngster is selected at random, find the probability that the youngster does not have their voter ID card.",
-      "ta": "English-language question; Tamil version pending. In a survey of 400 youngsters aged 16-20 years, it was found that 191 have their voter ID card. If a youngster is selected at random, find the probability that the youngster does not have their voter ID card."
+      "ta": "16–20 வயதுக்குட்பட்ட 400 இளைஞர்களிடம் நடத்தப்பட்ட ஓர் ஆய்வில், 191 பேர் வாக்காளர் அடையாள அட்டை வைத்திருப்பதாகக் கண்டறியப்பட்டது. சமவாய்ப்பு முறையில் அவர்களில் ஒருவரைத் தேர்ந்தெடுக்கும்போது அவர் வாக்காளர் அடையாள அட்டை வைத்திருக்கும் நபராக இல்லாமல் இருக்க நிகழ்தகவு என்ன?"
     },
     "steps": [
       {
         "en": "Find how many surveyed youngsters do not have voter ID cards.",
-        "ta": "English explanation (Tamil version pending): Find how many surveyed youngsters do not have voter ID cards.",
-        "eq": "Without card = 400 − 191 = 209"
+        "ta": "அட்டை இல்லாத இளைஞர்களின் எண்ணிக்கையைக் காண்க.",
+        "eq": "Without card = 400 − 191 = 209",
+        "mathTa": [
+          "அட்டை இல்லாதவர்கள் = ",
+          {
+            "latex": "400 - 191 = 209",
+            "fallback": "400 − 191 = 209",
+            "display": true
+          }
+        ]
       },
       {
         "en": "Use all 400 surveyed youngsters as the total.",
-        "ta": "English explanation (Tamil version pending): Use all 400 surveyed youngsters as the total.",
-        "eq": "P(no voter ID) = [[209|400]]"
+        "ta": "ஆய்வில் பங்குபெற்ற 400 இளைஞர்களையும் மொத்த எண்ணிக்கையாக எடுத்துக்கொள்க.",
+        "eq": "P(no voter ID) = [[209|400]]",
+        "mathTa": {
+          "latex": "P\\left(\\text{வாக்காளர் அட்டை இல்லை}\\right) = \\dfrac{209}{400}",
+          "fallback": "P(வாக்காளர் அட்டை இல்லை) = [[209|400]]",
+          "display": true
+        }
       },
       {
         "en": "The numerator and denominator have no common factor greater than 1.",
-        "ta": "English explanation (Tamil version pending): The numerator and denominator have no common factor greater than 1.",
-        "eq": "Final answer = [[209|400]]"
+        "ta": "தொகுதி மற்றும் பகுதிக்கு 1 ஐ விடப் பெரிய பொதுக் காரணி இல்லை. எனவே பின்னம் ஏற்கெனவே சுருங்கிய வடிவில் உள்ளது.",
+        "eq": "Final answer = [[209|400]]",
+        "mathTa": [
+          "விடை = ",
+          {
+            "latex": "\\dfrac{209}{400}",
+            "fallback": "[[209|400]]"
+          }
+        ]
       }
     ],
     "answer": "[[209|400]]",
@@ -103,9 +142,10 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 307,
       "enPrintedPage": 301,
-      "taPdfPage": 334,
+      "taPdfPage": 324,
       "taPrintedPage": 318,
-      "tamilEditorial": "pending"
+      "tamilEditorial": "pending",
+      "taDriveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
     }
   },
   {
@@ -115,44 +155,44 @@ const entries=[
     "exercise": "9.2",
     "topic": {
       "en": "Probability",
-      "ta": "Probability (English version only)"
+      "ta": "நிகழ்தகவு"
     },
     "label": {
       "en": "Exercise 9.2 · Q3",
-      "ta": "Exercise 9.2 · Q3 (English only)"
+      "ta": "பயிற்சி 9.2 · வினா 3"
     },
     "title": {
       "en": "Complementary probabilities",
-      "ta": "Complementary probabilities (English only)"
+      "ta": "ஊகித்த விடையின் நிகழ்தகவு"
     },
     "q": {
       "en": "The probability of guessing the correct answer to a certain question is [[x|3]]. If the probability of not guessing the correct answer is [[x|5]], then find the value of x .",
-      "ta": "English-language question; Tamil version pending. The probability of guessing the correct answer to a certain question is [[x|3]]. If the probability of not guessing the correct answer is [[x|5]], then find the value of x ."
+      "ta": "ஒரு வினாவிற்கான சரியான விடையை ஊகிப்பதற்கான நிகழ்தகவு [[x|3]] என்க. சரியான விடையை ஊகிக்காமல் இருப்பதற்கான நிகழ்தகவு [[x|5]] எனில், x இன் மதிப்பு காண்க."
     },
     "steps": [
       {
         "en": "Correct and incorrect guesses are complementary, so their probabilities add to one.",
-        "ta": "English explanation (Tamil version pending): Correct and incorrect guesses are complementary, so their probabilities add to one.",
+        "ta": "சரியாக ஊகிப்பதும் சரியாக ஊகிக்காமல் இருப்பதும் நிரப்பு நிகழ்ச்சிகள். அவற்றின் நிகழ்தகவுகளின் கூடுதல் ஒன்று.",
         "eq": "[[x|3]] + [[x|5]] = 1"
       },
       {
         "en": "Use a common denominator of 15.",
-        "ta": "English explanation (Tamil version pending): Use a common denominator of 15.",
+        "ta": "இரண்டு பின்னங்களுக்கும் பொதுப் பகுதியாக 15 ஐ எடுத்துக்கொள்க.",
         "eq": "[[5x|15]] + [[3x|15]] = 1"
       },
       {
         "en": "Add the fractions and solve.",
-        "ta": "English explanation (Tamil version pending): Add the fractions and solve.",
+        "ta": "பின்னங்களைக் கூட்டிச் சமன்பாட்டை எளிமைப்படுத்துக.",
         "eq": "[[8x|15]] = 1  ⇒  8x = 15"
       },
       {
         "en": "Divide both sides by 8.",
-        "ta": "English explanation (Tamil version pending): Divide both sides by 8.",
+        "ta": "இரு பக்கங்களையும் 8 ஆல் வகுக்கவும்.",
         "eq": "x = [[15|8]]"
       },
       {
         "en": "Check that both probabilities are valid and add to one.",
-        "ta": "English explanation (Tamil version pending): Check that both probabilities are valid and add to one.",
+        "ta": "இரு நிகழ்தகவுகளும் 0 முதல் 1 வரை உள்ளனவா, அவற்றின் கூடுதல் ஒன்று ஆகிறதா எனச் சரிபார்க்கவும்.",
         "eq": "[[5|8]] + [[3|8]] = 1"
       }
     ],
@@ -165,9 +205,10 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 307,
       "enPrintedPage": 301,
-      "taPdfPage": 334,
+      "taPdfPage": 324,
       "taPrintedPage": 318,
-      "tamilEditorial": "pending"
+      "tamilEditorial": "pending",
+      "taDriveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
     }
   },
   {
@@ -177,35 +218,50 @@ const entries=[
     "exercise": "9.2",
     "topic": {
       "en": "Probability",
-      "ta": "Probability (English version only)"
+      "ta": "நிகழ்தகவு"
     },
     "label": {
       "en": "Exercise 9.2 · Q4",
-      "ta": "Exercise 9.2 · Q4 (English only)"
+      "ta": "பயிற்சி 9.2 · வினா 4"
     },
     "title": {
       "en": "Probability of losing",
-      "ta": "Probability of losing (English only)"
+      "ta": "தோல்விக்கான நிகழ்தகவு"
     },
     "q": {
       "en": "If a probability of a player winning a particular tennis match is 0.72. What is the probability of the player loosing the match?",
-      "ta": "English-language question; Tamil version pending. If a probability of a player winning a particular tennis match is 0.72. What is the probability of the player loosing the match?"
+      "ta": "ஒரு வரிப்பந்து (tennis) விளையாட்டு வீரர் ஒரு குறிப்பிட்ட ஆட்டத்தில் வெற்றி பெறுவதற்கான நிகழ்தகவு 0.72 எனில் அவர் அந்த விளையாட்டில் தோல்வியடைவதற்கான நிகழ்தகவு என்ன?"
     },
     "steps": [
       {
         "en": "Winning and losing are complementary outcomes for this match.",
-        "ta": "English explanation (Tamil version pending): Winning and losing are complementary outcomes for this match.",
-        "eq": "P(win) + P(lose) = 1"
+        "ta": "இந்த ஆட்டத்தில் வெற்றியும் தோல்வியும் நிரப்பு நிகழ்ச்சிகள்.",
+        "eq": "P(win) + P(lose) = 1",
+        "mathTa": {
+          "latex": "P\\left(\\text{வெற்றி}\\right) + P\\left(\\text{தோல்வி}\\right) = 1",
+          "fallback": "P(வெற்றி) + P(தோல்வி) = 1",
+          "display": true
+        }
       },
       {
         "en": "Subtract the winning probability from 1.",
-        "ta": "English explanation (Tamil version pending): Subtract the winning probability from 1.",
-        "eq": "P(lose) = 1 − 0.72"
+        "ta": "ஒன்றிலிருந்து வெற்றிக்கான நிகழ்தகவைக் கழிக்கவும்.",
+        "eq": "P(lose) = 1 − 0.72",
+        "mathTa": {
+          "latex": "P\\left(\\text{தோல்வி}\\right) = 1 - 0.72",
+          "fallback": "P(தோல்வி) = 1 − 0.72",
+          "display": true
+        }
       },
       {
         "en": "Evaluate.",
-        "ta": "English explanation (Tamil version pending): Evaluate.",
-        "eq": "P(lose) = 0.28"
+        "ta": "கழித்துத் தோல்விக்கான நிகழ்தகவைப் பெறுக.",
+        "eq": "P(lose) = 0.28",
+        "mathTa": {
+          "latex": "P\\left(\\text{தோல்வி}\\right) = 0.28",
+          "fallback": "P(தோல்வி) = 0.28",
+          "display": true
+        }
       }
     ],
     "answer": "0.28",
@@ -217,9 +273,10 @@ const entries=[
       "status": "pdf-text-checked-en-visual-pending",
       "enPdfPage": 308,
       "enPrintedPage": 302,
-      "taPdfPage": 335,
-      "taPrintedPage": 319,
-      "tamilEditorial": "pending"
+      "taPdfPage": 324,
+      "taPrintedPage": 318,
+      "tamilEditorial": "pending",
+      "taDriveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
     }
   }
 ];

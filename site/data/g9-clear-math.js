@@ -34652,22 +34652,17 @@ const records=[
         " of them are found to be defective. When you choose one Laptop from the manufactured, what is the probability that selected Laptop is a good one."
       ],
       "ta": [
-        "English-language question; Tamil version pending. A company manufactures ",
+        "ஒரு நிறுவனம் ஆறு மாதங்களில் ",
         {
           "latex": "10000",
           "fallback": "10000"
         },
-        " Laptops in ",
-        {
-          "latex": "6",
-          "fallback": "6"
-        },
-        " months. Out of which ",
+        " மடிக்கணினிகளை உற்பத்தி செய்தது. அவற்றில் ",
         {
           "latex": "25",
           "fallback": "25"
         },
-        " of them are found to be defective. When you choose one Laptop from the manufactured, what is the probability that selected Laptop is a good one."
+        " மடிக்கணினிகள் குறைபாடு உடையனவாகக் கண்டறியப்பட்டன. சமவாய்ப்பு முறையில் ஒரு மடிக்கணினியைத் தேர்ந்தெடுக்கும்போது அது குறைபாடில்லாததாக இருக்க நிகழ்தகவு யாது?"
       ]
     },
     "answerMath": {
@@ -34687,7 +34682,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Count the laptops that are not defective.",
-          "ta": "English explanation (Tamil version pending): Count the laptops that are not defective."
+          "ta": "குறைபாடில்லாத மடிக்கணினிகளின் எண்ணிக்கையைக் காண்க."
         }
       },
       {
@@ -34698,7 +34693,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Use the ratio of good laptops to all manufactured laptops.",
-          "ta": "English explanation (Tamil version pending): Use the ratio of good laptops to all manufactured laptops."
+          "ta": "அந்த எண்ணிக்கையை உற்பத்தி செய்யப்பட்ட மொத்த மடிக்கணினிகளின் எண்ணிக்கையால் வகுக்கவும்."
         }
       },
       {
@@ -34709,7 +34704,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Simplify the fraction and convert to a decimal.",
-          "ta": "English explanation (Tamil version pending): Simplify the fraction and convert to a decimal."
+          "ta": "பின்னத்தைச் சுருக்கித் தசம எண்ணாகவும் எழுதுக."
         }
       }
     ]
@@ -34746,32 +34741,21 @@ const records=[
         " card."
       ],
       "ta": [
-        "English-language question; Tamil version pending. In a survey of ",
+        {
+          "latex": "16 - 20",
+          "fallback": "16–20"
+        },
+        " வயதுக்குட்பட்ட ",
         {
           "latex": "400",
           "fallback": "400"
         },
-        " youngsters aged ",
-        {
-          "latex": "16 - 20",
-          "fallback": "16-20"
-        },
-        " years, it was found that ",
+        " இளைஞர்களிடம் நடத்தப்பட்ட ஓர் ஆய்வில், ",
         {
           "latex": "191",
           "fallback": "191"
         },
-        " have their voter ",
-        {
-          "latex": "ID",
-          "fallback": "ID"
-        },
-        " card. If a youngster is selected at random, find the probability that the youngster does not have their voter ",
-        {
-          "latex": "ID",
-          "fallback": "ID"
-        },
-        " card."
+        " பேர் வாக்காளர் அடையாள அட்டை வைத்திருப்பதாகக் கண்டறியப்பட்டது. சமவாய்ப்பு முறையில் அவர்களில் ஒருவரைத் தேர்ந்தெடுக்கும்போது அவர் வாக்காளர் அடையாள அட்டை வைத்திருக்கும் நபராக இல்லாமல் இருக்க நிகழ்தகவு என்ன?"
       ]
     },
     "answerMath": {
@@ -34797,14 +34781,7 @@ const records=[
             },
             " cards."
           ],
-          "ta": [
-            "English explanation (Tamil version pending): Find how many surveyed youngsters do not have voter ",
-            {
-              "latex": "ID",
-              "fallback": "ID"
-            },
-            " cards."
-          ]
+          "ta": "அட்டை இல்லாத இளைஞர்களின் எண்ணிக்கையைக் காண்க."
         }
       },
       {
@@ -34823,12 +34800,12 @@ const records=[
             " surveyed youngsters as the total."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Use all ",
+            "ஆய்வில் பங்குபெற்ற ",
             {
               "latex": "400",
               "fallback": "400"
             },
-            " surveyed youngsters as the total."
+            " இளைஞர்களையும் மொத்த எண்ணிக்கையாக எடுத்துக்கொள்க."
           ]
         }
       },
@@ -34850,12 +34827,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): The numerator and denominator have no common factor greater than ",
+            "தொகுதி மற்றும் பகுதிக்கு ",
             {
               "latex": "1",
               "fallback": "1"
             },
-            "."
+            " ஐ விடப் பெரிய பொதுக் காரணி இல்லை. எனவே பின்னம் ஏற்கெனவே சுருங்கிய வடிவில் உள்ளது."
           ]
         }
       }
@@ -34883,22 +34860,22 @@ const records=[
         " ."
       ],
       "ta": [
-        "English-language question; Tamil version pending. The probability of guessing the correct answer to a certain question is ",
+        "ஒரு வினாவிற்கான சரியான விடையை ஊகிப்பதற்கான நிகழ்தகவு ",
         {
           "latex": "\\dfrac{x}{3}",
           "fallback": "[[x|3]]"
         },
-        ". If the probability of not guessing the correct answer is ",
+        " என்க. சரியான விடையை ஊகிக்காமல் இருப்பதற்கான நிகழ்தகவு ",
         {
           "latex": "\\dfrac{x}{5}",
           "fallback": "[[x|5]]"
         },
-        ", then find the value of ",
+        " எனில், ",
         {
           "latex": "x",
           "fallback": "x"
         },
-        " ."
+        " இன் மதிப்பு காண்க."
       ]
     },
     "answerMath": {
@@ -34914,7 +34891,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Correct and incorrect guesses are complementary, so their probabilities add to one.",
-          "ta": "English explanation (Tamil version pending): Correct and incorrect guesses are complementary, so their probabilities add to one."
+          "ta": "சரியாக ஊகிப்பதும் சரியாக ஊகிக்காமல் இருப்பதும் நிரப்பு நிகழ்ச்சிகள். அவற்றின் நிகழ்தகவுகளின் கூடுதல் ஒன்று."
         }
       },
       {
@@ -34933,12 +34910,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Use a common denominator of ",
+            "இரண்டு பின்னங்களுக்கும் பொதுப் பகுதியாக ",
             {
               "latex": "15",
               "fallback": "15"
             },
-            "."
+            " ஐ எடுத்துக்கொள்க."
           ]
         }
       },
@@ -34950,7 +34927,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Add the fractions and solve.",
-          "ta": "English explanation (Tamil version pending): Add the fractions and solve."
+          "ta": "பின்னங்களைக் கூட்டிச் சமன்பாட்டை எளிமைப்படுத்துக."
         }
       },
       {
@@ -34968,12 +34945,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil version pending): Divide both sides by ",
+            "இரு பக்கங்களையும் ",
             {
               "latex": "8",
               "fallback": "8"
             },
-            "."
+            " ஆல் வகுக்கவும்."
           ]
         }
       },
@@ -34985,7 +34962,19 @@ const records=[
         },
         "reasonMath": {
           "en": "Check that both probabilities are valid and add to one.",
-          "ta": "English explanation (Tamil version pending): Check that both probabilities are valid and add to one."
+          "ta": [
+            "இரு நிகழ்தகவுகளும் ",
+            {
+              "latex": "0",
+              "fallback": "0"
+            },
+            " முதல் ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " வரை உள்ளனவா, அவற்றின் கூடுதல் ஒன்று ஆகிறதா எனச் சரிபார்க்கவும்."
+          ]
         }
       }
     ]
@@ -35002,12 +34991,12 @@ const records=[
         ". What is the probability of the player loosing the match?"
       ],
       "ta": [
-        "English-language question; Tamil version pending. If a probability of a player winning a particular tennis match is ",
+        "ஒரு வரிப்பந்து (tennis) விளையாட்டு வீரர் ஒரு குறிப்பிட்ட ஆட்டத்தில் வெற்றி பெறுவதற்கான நிகழ்தகவு ",
         {
           "latex": "0.72",
           "fallback": "0.72"
         },
-        ". What is the probability of the player loosing the match?"
+        " எனில் அவர் அந்த விளையாட்டில் தோல்வியடைவதற்கான நிகழ்தகவு என்ன?"
       ]
     },
     "answerMath": {
@@ -35023,7 +35012,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Winning and losing are complementary outcomes for this match.",
-          "ta": "English explanation (Tamil version pending): Winning and losing are complementary outcomes for this match."
+          "ta": "இந்த ஆட்டத்தில் வெற்றியும் தோல்வியும் நிரப்பு நிகழ்ச்சிகள்."
         }
       },
       {
@@ -35041,14 +35030,7 @@ const records=[
             },
             "."
           ],
-          "ta": [
-            "English explanation (Tamil version pending): Subtract the winning probability from ",
-            {
-              "latex": "1",
-              "fallback": "1"
-            },
-            "."
-          ]
+          "ta": "ஒன்றிலிருந்து வெற்றிக்கான நிகழ்தகவைக் கழிக்கவும்."
         }
       },
       {
@@ -35059,7 +35041,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Evaluate.",
-          "ta": "English explanation (Tamil version pending): Evaluate."
+          "ta": "கழித்துத் தோல்விக்கான நிகழ்தகவைப் பெறுக."
         }
       }
     ]
@@ -35090,46 +35072,64 @@ const records=[
         "\nA family is selected at random. Find the probability that the family selected has\n(i)Both types of maids (ii)Part time maids (iii)No maids"
       ],
       "ta": [
-        "English-language question; Tamil version pending. ",
         {
           "latex": "1500",
           "fallback": "1500"
         },
-        " families were surveyed and following data was recorded about their maids at homes\nType of maids           Only part time    Only full time    Both\nNumber of families      ",
+        " குடும்பங்களில் அவர்கள் வீட்டிலுள்ள பணிப்பெண்கள் பற்றிய தகவல்கள் திரட்டப்பட்டுப் பின்வருமாறு பதிவு செய்யப்பட்டுள்ளன.\nபணிப்பெண்கள் வகை: பகுதிநேரம் மட்டும் ",
         {
           "latex": "860",
           "fallback": "860"
         },
-        "               ",
+        ", முழுநேரம் மட்டும் ",
         {
           "latex": "370",
           "fallback": "370"
         },
-        "               ",
+        ", இரண்டு வகையும் ",
         {
           "latex": "250",
           "fallback": "250"
         },
-        "\nA family is selected at random. Find the probability that the family selected has\n(i)Both types of maids (ii)Part time maids (iii)No maids"
+        " குடும்பங்கள்.\nசமவாய்ப்பு முறையில் ஒரு குடும்பம் தேர்ந்தெடுக்கப்படும்போது, அக்குடும்பம் (i) இருவகைப் பணிப்பெண்களும் வைத்திருக்க (ii) பகுதி நேரப் பணிப்பெண் வைத்திருக்க (iii) பணிப்பெண் வைத்திருக்காமல் இருக்க நிகழ்தகவு காண்க."
       ]
     },
-    "answerMath": [
-      "(i) ",
-      {
-        "latex": "\\dfrac{1}{6}",
-        "fallback": "[[1|6]]"
-      },
-      " ; (ii) ",
-      {
-        "latex": "\\dfrac{43}{75}",
-        "fallback": "[[43|75]]"
-      },
-      " (textbook 'only part time' interpretation) ; (iii) ",
-      {
-        "latex": "\\dfrac{1}{75}",
-        "fallback": "[[1|75]]"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        "(i) ",
+        {
+          "latex": "\\dfrac{1}{6}",
+          "fallback": "[[1|6]]"
+        },
+        " ; (ii) ",
+        {
+          "latex": "\\dfrac{43}{75}",
+          "fallback": "[[43|75]]"
+        },
+        " (textbook 'only part time' interpretation) ; (iii) ",
+        {
+          "latex": "\\dfrac{1}{75}",
+          "fallback": "[[1|75]]"
+        }
+      ],
+      "ta": [
+        "(i) ",
+        {
+          "latex": "\\dfrac{1}{6}",
+          "fallback": "[[1|6]]"
+        },
+        " ; (ii) ",
+        {
+          "latex": "\\dfrac{43}{75}",
+          "fallback": "[[43|75]]"
+        },
+        " (பாடநூலின்படி பகுதிநேரம் மட்டும்) ; (iii) ",
+        {
+          "latex": "\\dfrac{1}{75}",
+          "fallback": "[[1|75]]"
+        }
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -35139,7 +35139,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The three recorded categories are mutually exclusive: only part time, only full time and both.",
-          "ta": "English explanation (Tamil version pending): The three recorded categories are mutually exclusive: only part time, only full time and both."
+          "ta": "பகுதிநேரம் மட்டும், முழுநேரம் மட்டும், இரு வகையும் ஆகிய மூன்று பிரிவுகளும் ஒன்றையொன்று விலக்குபவை."
         }
       },
       {
@@ -35150,7 +35150,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Count the families with both types of maids.",
-          "ta": "English explanation (Tamil version pending): Count the families with both types of maids."
+          "ta": "இரு வகைப் பணிப்பெண்களையும் வைத்துள்ள குடும்பங்களின் எண்ணிக்கையைப் பயன்படுத்துக."
         }
       },
       {
@@ -35174,17 +35174,17 @@ const records=[
             " 'Both' families also employ part-time maids."
           ],
           "ta": [
-            "English explanation (Tamil version pending): For part-time maids, the printed answer key uses the 'Only part time' category; use ",
+            "(ii) இல் பாடநூல் விடை பகுதிநேரம் மட்டும் என்ற பிரிவை எடுத்துக்கொள்கிறது. அதன் எண்ணிக்கை ",
             {
               "latex": "860",
               "fallback": "860"
             },
-            " families. The wording is ambiguous because the ",
+            ". இரு வகையும் உள்ள ",
             {
               "latex": "250",
               "fallback": "250"
             },
-            " 'Both' families also employ part-time maids."
+            " குடும்பங்களிலும் பகுதிநேரப் பணிப்பெண் இருப்பதால் வினாவிற்கு மற்றொரு பொருளும் உள்ளது."
           ]
         }
       },
@@ -35217,17 +35217,17 @@ const records=[
             " both-types families. This inclusive interpretation differs from the printed answer key for part (ii)."
           ],
           "ta": [
-            "English explanation (Tamil version pending): If part-time maids includes families who also employ full-time maids, add ",
+            "பகுதிநேரப் பணிப்பெண் உள்ள எல்லாக் குடும்பங்களையும் எடுத்தால், பகுதிநேரம் மட்டும் உள்ள ",
             {
               "latex": "860",
               "fallback": "860"
             },
-            " only-part-time and ",
+            " உடன் இரு வகையும் உள்ள ",
             {
               "latex": "250",
               "fallback": "250"
             },
-            " both-types families. This is an alternative interpretation, not the printed answer key."
+            " ஐக் கூட்ட வேண்டும். இது பாடநூல் விடையில் பயன்படுத்திய பொருளிலிருந்து வேறுபடும்."
           ]
         }
       },
@@ -35242,7 +35242,14 @@ const records=[
         ],
         "reasonMath": {
           "en": "Find households without maids by subtracting the recorded households from all surveyed households.",
-          "ta": "English explanation (Tamil version pending): Find households without maids by subtracting the recorded households from all surveyed households."
+          "ta": [
+            "பணிப்பெண் இல்லாத குடும்பங்களைக் காண மொத்தம் ",
+            {
+              "latex": "1500",
+              "fallback": "1500"
+            },
+            " இலிருந்து பதிவு செய்யப்பட்ட மூன்று பிரிவுகளின் கூடுதலைக் கழிக்கவும்."
+          ]
         }
       },
       {
@@ -35253,7 +35260,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide by the total to get the probability of no maids.",
-          "ta": "English explanation (Tamil version pending): Divide by the total to get the probability of no maids."
+          "ta": "மீதமுள்ள எண்ணிக்கையை மொத்தக் குடும்பங்களின் எண்ணிக்கையால் வகுத்து நிகழ்தகவைப் பெறுக."
         }
       }
     ]
@@ -35307,52 +35314,54 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. A number between ",
         {
           "latex": "0",
           "fallback": "0"
         },
-        " and ",
+        " க்கும் ",
         {
           "latex": "1",
           "fallback": "1"
         },
-        " that is used to measure uncertainty is called\n",
+        " க்கும் இடைப்பட்ட ஓர் எண்ணைக் கொண்டு உறுதியற்றவற்றை அளவிடுவது எவ்வாறு அழைக்கப்படுகிறது?\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            "Random variable"
+            "சமவாய்ப்பு மாறி"
           ],
-          "fallback": "(1) Random variable"
+          "fallback": "(1) சமவாய்ப்பு மாறி"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(2) ",
-            "Trial"
+            "முயற்சி"
           ],
-          "fallback": "(2) Trial"
+          "fallback": "(2) முயற்சி"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(3) ",
-            "Simple event"
+            "எளிய நிகழ்ச்சி"
           ],
-          "fallback": "(3) Simple event"
+          "fallback": "(3) எளிய நிகழ்ச்சி"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(4) ",
-            "Probability"
+            "நிகழ்தகவு"
           ],
-          "fallback": "(4) Probability"
+          "fallback": "(4) நிகழ்தகவு"
         }
       ]
     },
-    "answerMath": "(4) Probability",
+    "answerMath": {
+      "en": "(4) Probability",
+      "ta": "(4) நிகழ்தகவு"
+    },
     "steps": [
       {
         "math": [
@@ -35370,7 +35379,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Identify what the question is asking about.",
-          "ta": "English explanation (Tamil version pending): Identify what the question is asking about."
+          "ta": "வினாவில் குறிப்பிடப்பட்ட கருத்தை அடையாளம் காண்க."
         }
       },
       {
@@ -35380,14 +35389,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply the probability rule or definition.",
-          "ta": "English explanation (Tamil version pending): Apply the probability rule or definition."
+          "ta": "இந்த நிகழ்தகவுக்குரிய விதி அல்லது வரையறையைப் பயன்படுத்துக."
         }
       },
       {
         "math": "Correct option: (4) Probability",
         "reasonMath": {
           "en": "Select the matching option.",
-          "ta": "English explanation (Tamil version pending): Select the matching option."
+          "ta": "பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -35471,7 +35480,7 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Probability lies between\n",
+        "நிகழ்தகவு மதிப்பின் இடைவெளி\n",
         "",
         {
           "questionOption": [
@@ -35481,16 +35490,16 @@ const records=[
                 "latex": "- 1",
                 "fallback": "−1"
               },
-              " and ",
+              " மற்றும் ",
               {
                 "latex": "+ 1",
                 "fallback": "+1"
               }
             ]
           ],
-          "fallback": "(1) −1 and +1"
+          "fallback": "(1) −1 மற்றும் +1"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(2) ",
@@ -35499,16 +35508,16 @@ const records=[
                 "latex": "0",
                 "fallback": "0"
               },
-              " and ",
+              " மற்றும் ",
               {
                 "latex": "1",
                 "fallback": "1"
               }
             ]
           ],
-          "fallback": "(2) 0 and 1"
+          "fallback": "(2) 0 மற்றும் 1"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(3) ",
@@ -35517,16 +35526,16 @@ const records=[
                 "latex": "0",
                 "fallback": "0"
               },
-              " and ",
+              " மற்றும் ",
               {
                 "latex": "2",
                 "fallback": "2"
               }
             ]
           ],
-          "fallback": "(3) 0 and 2"
+          "fallback": "(3) 0 மற்றும் 2"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(4) ",
@@ -35535,29 +35544,43 @@ const records=[
                 "latex": "0",
                 "fallback": "0"
               },
-              " and ",
+              " மற்றும் ",
               {
                 "latex": "0.5",
                 "fallback": "0.5"
               }
             ]
           ],
-          "fallback": "(4) 0 and 0.5"
+          "fallback": "(4) 0 மற்றும் 0.5"
         }
       ]
     },
-    "answerMath": [
-      "(2) ",
-      {
-        "latex": "0",
-        "fallback": "0"
-      },
-      " and ",
-      {
-        "latex": "1",
-        "fallback": "1"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        "(2) ",
+        {
+          "latex": "0",
+          "fallback": "0"
+        },
+        " and ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        }
+      ],
+      "ta": [
+        "(2) ",
+        {
+          "latex": "0",
+          "fallback": "0"
+        },
+        " மற்றும் ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        }
+      ]
+    },
     "steps": [
       {
         "math": [
@@ -35570,7 +35593,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Identify what the question is asking about.",
-          "ta": "English explanation (Tamil version pending): Identify what the question is asking about."
+          "ta": "வினாவில் குறிப்பிடப்பட்ட கருத்தை அடையாளம் காண்க."
         }
       },
       {
@@ -35580,7 +35603,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply the probability rule or definition.",
-          "ta": "English explanation (Tamil version pending): Apply the probability rule or definition."
+          "ta": "இந்த நிகழ்தகவுக்குரிய விதி அல்லது வரையறையைப் பயன்படுத்துக."
         }
       },
       {
@@ -35598,7 +35621,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Select the matching option.",
-          "ta": "English explanation (Tamil version pending): Select the matching option."
+          "ta": "பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -35642,48 +35665,51 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The probability based on the concept of relative frequency theory is called\n",
+        "ஒப்பீட்டு நிகழ்வெண் கருத்தை அடிப்படையாகக் கொண்ட நிகழ்தகவு எவ்வாறு அழைக்கப்படுகிறது?\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            "Empirical probability"
+            "பட்டறி நிகழ்தகவு"
           ],
-          "fallback": "(1) Empirical probability"
+          "fallback": "(1) பட்டறி நிகழ்தகவு"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(2) ",
-            "Classical probability"
+            "தொன்மை நிகழ்தகவு"
           ],
-          "fallback": "(2) Classical probability"
+          "fallback": "(2) தொன்மை நிகழ்தகவு"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(3) ",
-            "Both (1) and (2)"
+            "(1) மற்றும் (2) இரண்டும்"
           ],
-          "fallback": "(3) Both (1) and (2)"
+          "fallback": "(3) (1) மற்றும் (2) இரண்டும்"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(4) ",
-            "Neither (1) nor (2)"
+            "(1) உம் அல்ல (2) உம் அல்ல"
           ],
-          "fallback": "(4) Neither (1) nor (2)"
+          "fallback": "(4) (1) உம் அல்ல (2) உம் அல்ல"
         }
       ]
     },
-    "answerMath": "(1) Empirical probability",
+    "answerMath": {
+      "en": "(1) Empirical probability",
+      "ta": "(1) பட்டறி நிகழ்தகவு"
+    },
     "steps": [
       {
         "math": "Empirical probability is estimated from observed frequencies over repeated trials.",
         "reasonMath": {
           "en": "Identify what the question is asking about.",
-          "ta": "English explanation (Tamil version pending): Identify what the question is asking about."
+          "ta": "வினாவில் குறிப்பிடப்பட்ட கருத்தை அடையாளம் காண்க."
         }
       },
       {
@@ -35694,14 +35720,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply the probability rule or definition.",
-          "ta": "English explanation (Tamil version pending): Apply the probability rule or definition."
+          "ta": "இந்த நிகழ்தகவுக்குரிய விதி அல்லது வரையறையைப் பயன்படுத்துக."
         }
       },
       {
         "math": "Correct option: (1) Empirical probability",
         "reasonMath": {
           "en": "Select the matching option.",
-          "ta": "English explanation (Tamil version pending): Select the matching option."
+          "ta": "பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -35745,42 +35771,51 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The probability of an event cannot be\n",
+        "ஒரு நிகழ்ச்சியின் நிகழ்தகவு எவ்வாறு இருக்க முடியாது?\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            "Equal to zero"
+            "பூச்சியத்திற்குச் சமம்"
           ],
-          "fallback": "(1) Equal to zero"
+          "fallback": "(1) பூச்சியத்திற்குச் சமம்"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(2) ",
-            "Greater than zero"
+            "பூச்சியத்தை விடப் பெரியது"
           ],
-          "fallback": "(2) Greater than zero"
+          "fallback": "(2) பூச்சியத்தை விடப் பெரியது"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(3) ",
-            "Equal to one"
+            [
+              {
+                "latex": "1",
+                "fallback": "1"
+              },
+              " க்குச் சமம்"
+            ]
           ],
-          "fallback": "(3) Equal to one"
+          "fallback": "(3) 1 க்குச் சமம்"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(4) ",
-            "Less than zero"
+            "பூச்சியத்தை விடச் சிறியது"
           ],
-          "fallback": "(4) Less than zero"
+          "fallback": "(4) பூச்சியத்தை விடச் சிறியது"
         }
       ]
     },
-    "answerMath": "(4) Less than zero",
+    "answerMath": {
+      "en": "(4) Less than zero",
+      "ta": "(4) பூச்சியத்தை விடச் சிறியது"
+    },
     "steps": [
       {
         "math": [
@@ -35808,7 +35843,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Identify what the question is asking about.",
-          "ta": "English explanation (Tamil version pending): Identify what the question is asking about."
+          "ta": "வினாவில் குறிப்பிடப்பட்ட கருத்தை அடையாளம் காண்க."
         }
       },
       {
@@ -35818,14 +35853,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply the probability rule or definition.",
-          "ta": "English explanation (Tamil version pending): Apply the probability rule or definition."
+          "ta": "இந்த நிகழ்தகவுக்குரிய விதி அல்லது வரையறையைப் பயன்படுத்துக."
         }
       },
       {
         "math": "Correct option: (4) Less than zero",
         "reasonMath": {
           "en": "Select the matching option.",
-          "ta": "English explanation (Tamil version pending): Select the matching option."
+          "ta": "பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -35869,42 +35904,54 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The probability of all possible outcomes of a random experiment is always equal to\n",
+        "ஒரு சமவாய்ப்புச் சோதனையில் வாய்ப்புள்ள அனைத்து விளைவுகளின் நிகழ்தகவு எப்பொழுதும் ",
+        {
+          "latex": "\\ldots\\ldots",
+          "fallback": "......"
+        },
+        {
+          "latex": "\\ldots\\ldots",
+          "fallback": "......"
+        },
+        " இக்குச் சமம்.\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            "One"
+            "ஒன்று"
           ],
-          "fallback": "(1) One"
+          "fallback": "(1) ஒன்று"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(2) ",
-            "Zero"
+            "பூச்சியம்"
           ],
-          "fallback": "(2) Zero"
+          "fallback": "(2) பூச்சியம்"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(3) ",
-            "Infinity"
+            "முடிவிலி"
           ],
-          "fallback": "(3) Infinity"
+          "fallback": "(3) முடிவிலி"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(4) ",
-            "Less than one"
+            "ஒன்றை விடக் குறைவு"
           ],
-          "fallback": "(4) Less than one"
+          "fallback": "(4) ஒன்றை விடக் குறைவு"
         }
       ]
     },
-    "answerMath": "(1) One",
+    "answerMath": {
+      "en": "(1) One",
+      "ta": "(1) ஒன்று"
+    },
     "steps": [
       {
         "math": [
@@ -35917,7 +35964,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Identify what the question is asking about.",
-          "ta": "English explanation (Tamil version pending): Identify what the question is asking about."
+          "ta": "வினாவில் குறிப்பிடப்பட்ட கருத்தை அடையாளம் காண்க."
         }
       },
       {
@@ -35927,14 +35974,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply the probability rule or definition.",
-          "ta": "English explanation (Tamil version pending): Apply the probability rule or definition."
+          "ta": "இந்த நிகழ்தகவுக்குரிய விதி அல்லது வரையறையைப் பயன்படுத்துக."
         }
       },
       {
         "math": "Correct option: (1) One",
         "reasonMath": {
           "en": "Select the matching option.",
-          "ta": "English explanation (Tamil version pending): Select the matching option."
+          "ta": "பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -36000,17 +36047,22 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. If A is any event in ",
+        "A என்பது ",
         {
           "latex": "S",
           "fallback": "S"
         },
-        " and its complement is A’ then, ",
+        " இன் ஏதேனும் ஒரு நிகழ்ச்சி மற்றும் ",
+        {
+          "latex": "A'",
+          "fallback": "A′"
+        },
+        " என்பது A இன் நிரப்பு நிகழ்ச்சி எனில் ",
         {
           "latex": "P\\left(A'\\right)",
           "fallback": "P(A′)"
         },
-        " is equal to\n",
+        " இன் மதிப்பு\n",
         "",
         {
           "questionOption": [
@@ -36022,7 +36074,7 @@ const records=[
           ],
           "fallback": "(1) 1"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(2) ",
@@ -36033,7 +36085,7 @@ const records=[
           ],
           "fallback": "(2) 0"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(3) ",
@@ -36044,7 +36096,7 @@ const records=[
           ],
           "fallback": "(3) 1−A"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(4) ",
@@ -36076,7 +36128,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Identify what the question is asking about.",
-          "ta": "English explanation (Tamil version pending): Identify what the question is asking about."
+          "ta": "வினாவில் குறிப்பிடப்பட்ட கருத்தை அடையாளம் காண்க."
         }
       },
       {
@@ -36087,7 +36139,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply the probability rule or definition.",
-          "ta": "English explanation (Tamil version pending): Apply the probability rule or definition."
+          "ta": "இந்த நிகழ்தகவுக்குரிய விதி அல்லது வரையறையைப் பயன்படுத்துக."
         }
       },
       {
@@ -36100,7 +36152,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Select the matching option.",
-          "ta": "English explanation (Tamil version pending): Select the matching option."
+          "ta": "பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -36156,7 +36208,7 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. Which of the following cannot be taken as probability of an event?\n",
+        "பின்வருவனவற்றுள் எது ஒரு நிகழ்ச்சியின் நிகழ்தகவாக இருக்க முடியாது?\n",
         "",
         {
           "questionOption": [
@@ -36168,7 +36220,7 @@ const records=[
           ],
           "fallback": "(1) 0"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(2) ",
@@ -36179,7 +36231,7 @@ const records=[
           ],
           "fallback": "(2) 0.5"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(3) ",
@@ -36190,7 +36242,7 @@ const records=[
           ],
           "fallback": "(3) 1"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(4) ",
@@ -36227,7 +36279,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Identify what the question is asking about.",
-          "ta": "English explanation (Tamil version pending): Identify what the question is asking about."
+          "ta": "வினாவில் குறிப்பிடப்பட்ட கருத்தை அடையாளம் காண்க."
         }
       },
       {
@@ -36238,7 +36290,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply the probability rule or definition.",
-          "ta": "English explanation (Tamil version pending): Apply the probability rule or definition."
+          "ta": "இந்த நிகழ்தகவுக்குரிய விதி அல்லது வரையறையைப் பயன்படுத்துக."
         }
       },
       {
@@ -36251,7 +36303,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Select the matching option.",
-          "ta": "English explanation (Tamil version pending): Select the matching option."
+          "ta": "பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -36295,62 +36347,65 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. A particular result of an experiment is called\n",
+        "ஒரு சோதனையின் குறிப்பிட்ட முடிவு எவ்வாறு அழைக்கப்படுகிறது?\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            "Trial"
+            "முயற்சி"
           ],
-          "fallback": "(1) Trial"
+          "fallback": "(1) முயற்சி"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(2) ",
-            "Simple event"
+            "எளிய நிகழ்ச்சி"
           ],
-          "fallback": "(2) Simple event"
+          "fallback": "(2) எளிய நிகழ்ச்சி"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(3) ",
-            "Compound event"
+            "கூட்டு நிகழ்ச்சி"
           ],
-          "fallback": "(3) Compound event"
+          "fallback": "(3) கூட்டு நிகழ்ச்சி"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(4) ",
-            "Outcome"
+            "விளைவு"
           ],
-          "fallback": "(4) Outcome"
+          "fallback": "(4) விளைவு"
         }
       ]
     },
-    "answerMath": "(4) Outcome",
+    "answerMath": {
+      "en": "(4) Outcome",
+      "ta": "(4) விளைவு"
+    },
     "steps": [
       {
         "math": "One specific result is an outcome; a trial is the experiment being performed.",
         "reasonMath": {
           "en": "Identify what the question is asking about.",
-          "ta": "English explanation (Tamil version pending): Identify what the question is asking about."
+          "ta": "வினாவில் குறிப்பிடப்பட்ட கருத்தை அடையாளம் காண்க."
         }
       },
       {
         "math": "Single result = outcome",
         "reasonMath": {
           "en": "Apply the probability rule or definition.",
-          "ta": "English explanation (Tamil version pending): Apply the probability rule or definition."
+          "ta": "இந்த நிகழ்தகவுக்குரிய விதி அல்லது வரையறையைப் பயன்படுத்துக."
         }
       },
       {
         "math": "Correct option: (4) Outcome",
         "reasonMath": {
           "en": "Select the matching option.",
-          "ta": "English explanation (Tamil version pending): Select the matching option."
+          "ta": "பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -36394,48 +36449,60 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. A collection of one or more outcomes of an experiment is called\n",
+        "ஒரு சோதனையின் ஒன்று அல்லது அதற்கு மேற்பட்ட விளைவுகளின் தொகுப்பு ",
+        {
+          "latex": "\\ldots\\ldots",
+          "fallback": "......"
+        },
+        {
+          "latex": "\\ldots\\ldots",
+          "fallback": "......"
+        },
+        " என அழைக்கப்படுகிறது.\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            "Event"
+            "நிகழ்ச்சி"
           ],
-          "fallback": "(1) Event"
+          "fallback": "(1) நிகழ்ச்சி"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(2) ",
-            "Outcome"
+            "விளைவு"
           ],
-          "fallback": "(2) Outcome"
+          "fallback": "(2) விளைவு"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(3) ",
-            "Sample point"
+            "கூறுபுள்ளி"
           ],
-          "fallback": "(3) Sample point"
+          "fallback": "(3) கூறுபுள்ளி"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(4) ",
-            "None of the above"
+            "மேற்கண்ட எதுவுமில்லை"
           ],
-          "fallback": "(4) None of the above"
+          "fallback": "(4) மேற்கண்ட எதுவுமில்லை"
         }
       ]
     },
-    "answerMath": "(1) Event",
+    "answerMath": {
+      "en": "(1) Event",
+      "ta": "(1) நிகழ்ச்சி"
+    },
     "steps": [
       {
         "math": "An event is a subset of the sample space containing one or more outcomes.",
         "reasonMath": {
           "en": "Identify what the question is asking about.",
-          "ta": "English explanation (Tamil version pending): Identify what the question is asking about."
+          "ta": "வினாவில் குறிப்பிடப்பட்ட கருத்தை அடையாளம் காண்க."
         }
       },
       {
@@ -36445,14 +36512,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply the probability rule or definition.",
-          "ta": "English explanation (Tamil version pending): Apply the probability rule or definition."
+          "ta": "இந்த நிகழ்தகவுக்குரிய விதி அல்லது வரையறையைப் பயன்படுத்துக."
         }
       },
       {
         "math": "Correct option: (1) Event",
         "reasonMath": {
           "en": "Select the matching option.",
-          "ta": "English explanation (Tamil version pending): Select the matching option."
+          "ta": "பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
@@ -36496,48 +36563,56 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version pending. The six faces of the dice are called equally likely if the dice is\n",
+        "ஒரு பகடையானது ",
+        {
+          "latex": "\\ldots\\ldots",
+          "fallback": "......"
+        },
+        ".. இருக்கும்போது, அதன் ஆறு முகங்களும் சமவாய்ப்புடையவை என அழைக்கப்படுகிறது.\n",
         "",
         {
           "questionOption": [
             "(1) ",
-            "Small"
+            "சிறியதாக"
           ],
-          "fallback": "(1) Small"
+          "fallback": "(1) சிறியதாக"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(2) ",
-            "Fair"
+            "சீரானதாக"
           ],
-          "fallback": "(2) Fair"
+          "fallback": "(2) சீரானதாக"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(3) ",
-            "Six-faced"
+            "ஆறு முகம் கொண்டதாக"
           ],
-          "fallback": "(3) Six-faced"
+          "fallback": "(3) ஆறு முகம் கொண்டதாக"
         },
-        "  ",
+        "   ",
         {
           "questionOption": [
             "(4) ",
-            "Round"
+            "வட்டமாக"
           ],
-          "fallback": "(4) Round"
+          "fallback": "(4) வட்டமாக"
         }
       ]
     },
-    "answerMath": "(2) Fair",
+    "answerMath": {
+      "en": "(2) Fair",
+      "ta": "(2) சீரானதாக"
+    },
     "steps": [
       {
         "math": "A fair six-faced die gives each face the same chance, one out of six.",
         "reasonMath": {
           "en": "Identify what the question is asking about.",
-          "ta": "English explanation (Tamil version pending): Identify what the question is asking about."
+          "ta": "வினாவில் குறிப்பிடப்பட்ட கருத்தை அடையாளம் காண்க."
         }
       },
       {
@@ -36548,14 +36623,14 @@ const records=[
         },
         "reasonMath": {
           "en": "Apply the probability rule or definition.",
-          "ta": "English explanation (Tamil version pending): Apply the probability rule or definition."
+          "ta": "இந்த நிகழ்தகவுக்குரிய விதி அல்லது வரையறையைப் பயன்படுத்துக."
         }
       },
       {
         "math": "Correct option: (2) Fair",
         "reasonMath": {
           "en": "Select the matching option.",
-          "ta": "English explanation (Tamil version pending): Select the matching option."
+          "ta": "பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
         }
       }
     ]
