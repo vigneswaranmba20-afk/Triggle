@@ -370,7 +370,7 @@ const entries = [
       "display": true
     },
     "figureSrc": "assets/grade10-ch6/ex6-4-q3.svg",
-    "figureAlt": { "en": "Observation point h metres above lake surface views cloud at angle theta1 above horizontal and reflection at depth h+x at angle theta2 below horizontal.", "ta": "ஏரி மட்டத்திற்கு h உயரத்திலிருந்து மேகம் மற்றும் அதன் பிம்பத்திற்கான θ₁, θ₂ கோணப் படம்." },
+    "figureAlt": { "en": "The observer is h metres above lake level; the cloud is x metres above eye level and its reflection is h + x metres below the lake. Elevation θ₁ and depression θ₂ are measured from the horizontal.", "ta": "ஏரியின் நீர் மட்டத்திலிருந்து h மீ உயரத்தில் பார்வையாளர் உள்ளார்; மேகம் பார்வையாளரின் கிடைமட்டக் கோட்டிற்கு x மீ மேலேயும் அதன் பிம்பம் நீர் மட்டத்திற்கு h + x மீ கீழேயும் உள்ளது. ஏற்றக்கோணம் θ₁, இறக்கக்கோணம் θ₂." },
     "figureCaption": { "en": "Cloud and lake reflection diagram for Exercise 6.4 Q3", "ta": "மேகமும் ஏரிப் பிம்பமும் — θ₁, θ₂ கோணப் படம்" },
     "kind": "textbook",
     "edition": "2025",
