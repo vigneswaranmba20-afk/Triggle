@@ -603,6 +603,7 @@
    const discovering=homeView||classIndex;
    document.body.classList.toggle('discovery-active',discovering);
    document.body.classList.toggle('home-active',homeView);
+   syncDrawer();
    if(homeView)$('homeBtn').setAttribute('aria-current','page');else $('homeBtn').removeAttribute('aria-current');
    $('discoveryView').setAttribute('aria-label',lang==='ta'?'டிரிகிள் முகப்பு மற்றும் அத்தியாயங்கள்':'Triggle Home and Chapters');
    $('discoveryView').hidden=!discovering;
@@ -721,9 +722,36 @@
   renderList();
   window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:current,lang,grade}}));
  }
- function openDrawer(){if(!mobile.matches){$('exerciseList').scrollTop=0;$('browseDirectory').focus();return}drawerOpen=true;document.body.classList.add('drawer-open');$('browseBtn').setAttribute('aria-expanded','true');$('sidebar').inert=false;$('sidebar').setAttribute('role','dialog');$('sidebar').setAttribute('aria-modal','true');setTimeout(()=>$('browseDirectory').focus({preventScroll:true}),180)}
- function closeDrawer(){if(!drawerOpen)return;drawerOpen=false;document.body.classList.remove('drawer-open');$('browseBtn').setAttribute('aria-expanded','false');$('sidebar').inert=true;$('sidebar').removeAttribute('role');$('sidebar').removeAttribute('aria-modal');$('browseBtn').focus({preventScroll:true})}
- function onBreakpoint(){if(mobile.matches){if(!drawerOpen)$('sidebar').inert=true}else{drawerOpen=false;document.body.classList.remove('drawer-open');$('sidebar').inert=false;$('sidebar').removeAttribute('role');$('sidebar').removeAttribute('aria-modal');$('browseBtn').setAttribute('aria-expanded','false')}}
+ function syncDrawer(){
+   const sidebar=$('sidebar');
+   const collapsible=homeView||mobile.matches;
+   if(!collapsible)drawerOpen=false;
+   const sidebarHadFocus=sidebar.contains(document.activeElement);
+   document.body.classList.toggle('drawer-open',drawerOpen);
+   document.querySelector('.workspace').inert=drawerOpen;
+   sidebar.inert=collapsible&&!drawerOpen;
+   $('browseBtn').setAttribute('aria-expanded',String(drawerOpen));
+   if(drawerOpen){
+     sidebar.setAttribute('role','dialog');
+     sidebar.setAttribute('aria-modal','true');
+   }else{
+     sidebar.removeAttribute('role');
+     sidebar.removeAttribute('aria-modal');
+     if(sidebar.inert&&sidebarHadFocus)$('browseBtn').focus({preventScroll:true});
+   }
+ }
+ function openDrawer(focusTarget=$('browseDirectory')){
+   drawerOpen=homeView||mobile.matches;
+   syncDrawer();
+   if(!drawerOpen)$('exerciseList').scrollTop=0;
+   focusTarget.focus({preventScroll:true});
+ }
+ function closeDrawer(){
+   if(!drawerOpen)return;
+   drawerOpen=false;
+   syncDrawer();
+   $('browseBtn').focus({preventScroll:true});
+ }
  function showDiagram(){
   if(!hasUsefulFigure(current))return;
   const context={item:current,lang,renderText:tr};
@@ -768,11 +796,11 @@
  function changeLanguage(v){lang=v;try{localStorage.setItem('triggle-language',v)}catch{}render()}
  window.addEventListener('keydown',e=>{
   if(e.key==='Escape'&&drawerOpen){closeDrawer();return}
-  if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&e.target.tagName!=='INPUT'&&e.target.tagName!=='TEXTAREA'){e.preventDefault();openDrawer();$('search').focus();return}
+  if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&e.target.tagName!=='INPUT'&&e.target.tagName!=='TEXTAREA'){e.preventDefault();openDrawer($('search'));return}
   if(drawerOpen&&e.key==='Tab'){const focusable=[...$('sidebar').querySelectorAll('button:not([disabled]),input:not([disabled]),a[href],summary')].filter(el=>el.getClientRects().length);if(focusable.length){const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}
   if(e.target.matches('input,textarea,select,button')||e.target.closest('.triggle-tex[tabindex="0"]')||$('figureDialog').open||$('pathDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
   if(e.key==='ArrowRight'){e.preventDefault();navMove(1)}else if(e.key==='ArrowLeft'){e.preventDefault();navMove(-1)}
  });
  window.addEventListener('popstate',()=>{let p=new URL(location.href).searchParams;if(restrictedRoute(p)){history.replaceState(null,'',location.pathname);p=new URL(location.href).searchParams;}const g=Number(p.get('class'));grade=publicGrade(g)&&classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;$('search').value='';render();closeDrawer();resetScroll()});
- mobile.addEventListener('change',onBreakpoint);onBreakpoint();remember();updateUrl(true);render();
+ mobile.addEventListener('change',syncDrawer);remember();updateUrl(true);render();
 })();

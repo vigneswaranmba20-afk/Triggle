@@ -28,7 +28,7 @@ async function serve() {
       const file = path.resolve(root, '.' + (pathname.endsWith('/') ? pathname + 'index.html' : pathname));
       if (!file.startsWith(root + path.sep)) throw Error('Outside site');
       const body = await fs.readFile(file);
-      const types = { '.js': 'application/javascript', '.html': 'text/html', '.css': 'text/css', '.json': 'application/json', '.webmanifest': 'application/manifest+json', '.png': 'image/png', '.svg': 'image/svg+xml', '.mp4': 'video/mp4', '.webm': 'video/webm' };
+      const types = { '.js': 'application/javascript', '.html': 'text/html', '.css': 'text/css', '.json': 'application/json', '.webmanifest': 'application/manifest+json', '.png': 'image/png', '.webp': 'image/webp', '.svg': 'image/svg+xml', '.mp4': 'video/mp4', '.webm': 'video/webm' };
       res.writeHead(200, { 'content-type': types[path.extname(file)] || 'application/octet-stream', 'cache-control': 'no-store' });
       res.end(body);
     } catch { res.writeHead(404); res.end(); }
@@ -97,7 +97,7 @@ async function main() {
     assert.ok(size.scroll <= size.width + 1, `${label}: document width ${size.scroll} exceeds viewport ${size.width}`);
   }
   async function openSidebar(page) {
-    if ((await page.viewportSize()).width <= 800 && !await page.locator('body').evaluate(el => el.classList.contains('drawer-open'))) await page.locator('#browseBtn').click();
+    if (await page.locator('#sidebar').evaluate(el => el.inert)) await page.locator('#browseBtn').click();
   }
   async function selectChapter(page, id) {
     // Direct chapter taps now intentionally begin Exercise N.1.
@@ -188,14 +188,17 @@ async function main() {
         const page=await visit(await context(width),'/index.html');
         await page.locator('#discoveryView').waitFor({state:'visible'});
         assert.equal(await page.locator('#lessonCard').isVisible(),false,'Home must not open an unrelated question');
-        assert.match(await page.locator('#homeBtn').innerText(), /Home/);
+        assert.equal(await page.locator('#homeBtn').getAttribute('aria-label'),'Home');
+        const logo=page.locator('#homeBtn img');
+        await logo.waitFor({state:'visible'});
+        assert.ok(await logo.evaluate(async img=>{await img.decode();return img.naturalWidth>0;}),'Brand image loads');
+        assert.equal(await page.getByText('© 2026 Very Labs',{exact:true}).isVisible(),true);
          assert.deepEqual(await page.locator('#sideClasses button b').allTextContents(),['9','10'],'Sidebar contains only active grades');
          assert.deepEqual(await page.locator('#classDock button strong').allTextContents(),['9','10'],'Grade dock contains only active grades');
         assert.deepEqual(await page.locator('.discover-grade-grid [data-grade]').evaluateAll(nodes=>nodes.map(n=>Number(n.dataset.grade))),[9,10]);
         assert.equal(await page.locator('a[href="./playground.html"]').count(),0,'Retire all Trigonometry Basics shortcuts');
         assert.equal(await page.locator('.discover-home-minimal > section').count(),2,
           'Student home must contain only recent question and class chooser');
-        assert.match(await page.locator('#discover-recent-title').innerText(),/Your last opened question/);
         assert.match(await page.locator('#discover-classes-title').innerText(),/Choose your class/);
         assert.deepEqual(await page.locator('.discover-grade-grid [data-grade]').evaluateAll(nodes=>nodes.map(n=>Number(n.dataset.grade))),[9,10]);
         assert.equal(await page.locator('.discover-hero,.discover-access,.discover-feature,.discover-method,.discover-find,.discover-actions').count(),0,
@@ -225,18 +228,59 @@ async function main() {
         await page.locator('#homeBtn').click();
         await page.locator('#langTa').click();
         assert.equal(await page.locator('html').getAttribute('lang'),'ta');
-        assert.match(await page.locator('#discover-recent-title').innerText(),/கடைசியாக/);
         assert.match(await page.locator('#discover-classes-title').innerText(),/வகுப்பை/);
         assert.equal(await page.locator('.discover-home-minimal > section').count(),2);
         await noOverflow(page,'Tamil Home '+width+'px');
       });
     }
+    await check('Desktop home chapter drawer supports keyboard, history and grade navigation',async()=>{
+      const page=await visit(await context(1280));
+      const menu=page.locator('#sidebar'),trigger=page.locator('#browseBtn');
+      assert.equal(await menu.isVisible(),false);
+      assert.equal(await menu.evaluate(el=>el.inert),true);
+      await trigger.focus();
+      await page.keyboard.press('Enter');
+      assert.equal(await trigger.getAttribute('aria-expanded'),'true');
+      assert.equal(await menu.getAttribute('aria-modal'),'true');
+      assert.equal(await menu.isVisible(),true);
+      assert.equal(await page.locator('.workspace').evaluate(el=>el.inert),true);
+      await page.locator('#search').focus();
+      await page.keyboard.press('Tab');
+      assert.equal(await page.locator('#sidebar .side-brand').evaluate(el=>el===document.activeElement),true);
+      await page.keyboard.press('Escape');
+      assert.equal(await trigger.getAttribute('aria-expanded'),'false');
+      assert.equal(await trigger.evaluate(el=>el===document.activeElement),true);
+      await openSidebar(page);
+      await page.locator('#backdrop').click();
+      assert.equal(await menu.evaluate(el=>el.inert),true);
+      await page.keyboard.press('/');
+      assert.equal(await page.locator('#search').evaluate(el=>el===document.activeElement),true);
+      await page.locator('#sideClasses button').first().click();
+      assert.equal(new URL(page.url()).searchParams.get('class'),'9');
+      assert.equal(await menu.isVisible(),true,'Desktop grade directory has its persistent sidebar');
+      assert.equal(await menu.evaluate(el=>el.inert),false);
+      assert.equal(await menu.getAttribute('role'),null);
+      await page.goBack();
+      assert.equal(await menu.evaluate(el=>el.inert),true,'Returning home collapses the drawer');
+      await openSidebar(page);
+      await page.locator('#exerciseList [data-chapter-id="g9-ch2"]').click();
+      assert.equal(new URL(page.url()).searchParams.get('chapter'),'g9-ch2');
+      assert.equal(await page.locator('.workspace').evaluate(el=>el.inert),false);
+      await page.setViewportSize({width:390,height:900});
+      await page.waitForFunction(()=>document.getElementById('sidebar').inert);
+      await openSidebar(page);
+      await page.setViewportSize({width:1280,height:900});
+      await page.waitForFunction(()=>!document.body.classList.contains('drawer-open'));
+      assert.equal(await menu.evaluate(el=>el.inert),false);
+    });
     for(const width of [320,390,1280]){
       await check('Minimal home remembers last question across classes at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html');
         assert.equal(await page.locator('.discover-home-minimal > section').count(),2);
         assert.equal(await page.locator('.discover-resume-card').count(),0,
           'Never invent a previously opened question for a new visitor');
+        assert.equal(await page.locator('.discover-home-recent').isVisible(),false,
+          'A first-time learner sees the class choices without a blank history panel');
         assert.match(await page.locator('.discover-no-recent').innerText(),/No question opened yet/);
         // Use real bundled IDs so the test does not depend on textbook counts.
         const ids=await page.evaluate(()=>({
@@ -246,6 +290,8 @@ async function main() {
         await gotoWithControls(page,url+'/index.html?class=10&question='+encodeURIComponent(ids.g10));
         await page.locator('#lessonCard').waitFor({state:'visible'});
         await page.locator('#homeBtn').click();
+        assert.equal(await page.locator('.discover-home-recent').isVisible(),true);
+        assert.match(await page.locator('#discover-recent-title').innerText(),/Your last opened question/);
         assert.match(await page.locator('.discover-resume-card').innerText(),/Class 10/);
         assert.equal(await page.locator('.discover-home-minimal > section').count(),2);
         await page.locator('.discover-resume-card').click();
@@ -781,6 +827,7 @@ async function main() {
       const cached=await page.evaluate(async()=>{const keys=await caches.keys();const all=await Promise.all(keys.map(async k=>(await (await caches.open(k)).keys()).map(r=>r.url)));return all.flat();});
       assert(cached.some(u=>u.endsWith('/assets/discovery.js')),'New Home logic must be precached');
       assert(cached.some(u=>u.endsWith('/assets/discovery.css')),'New Home styles must be precached');
+      assert(cached.some(u=>new URL(u).pathname.endsWith('/assets/home-studio.webp')),'Home artwork must be available offline');
       await ctx.setOffline(true);
       await page.reload();
       await page.locator('.discover-home-minimal').waitFor({state:'visible'});
@@ -794,6 +841,7 @@ async function main() {
       const expected = {9:9, 10:8};
       let total = 0;
       for (const [grade, amount] of Object.entries(expected)) {
+        await openSidebar(page);
         await page.locator('#sideClasses button').filter({ has: page.locator('b', { hasText: grade }) }).click();
         assert.equal(await page.locator('#exerciseList [data-chapter-id]').count(), amount, `Grade ${grade} chapter count`);
         const chapters = await page.evaluate(g => window.TRIGGLE_CURRICULUM.grades.find(row => row.grade === Number(g)).chapters.map(ch => ({ id:ch.id, title:ch.title.en })), grade);
