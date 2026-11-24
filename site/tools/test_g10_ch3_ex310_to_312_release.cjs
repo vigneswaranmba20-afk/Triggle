@@ -29,6 +29,34 @@ for(const fig of figureFiles){
   assert(svg.includes('<svg')&&svg.includes('<title'),fig+' must be a valid accessible SVG');
 }
 
+
+ // AUD26-01: guard actual question artwork, not merely the existence of SVGs.
+ const readFig=name=>fs.readFileSync('site/assets/grade10-ch3/'+name,'utf8');
+ for(const [name,baseline,expected] of [
+   ['ex3-12-q2-pathway.svg',98,[[58,91],[262,91],[171,45],[171,160]]],
+   ['ex3-12-q8-flowerbed.svg',99,[[99,92],[221,92],[171,42],[171,164]]]
+ ]){
+   const svg=readFig(name);
+   const labels=[...svg.matchAll(/<text x="(\d+)" y="(\d+)"([^>]*)>w<\/text>/g)];
+   assert.equal(labels.length,4,name+' four width labels');
+   assert.deepEqual(labels.map(m=>[Number(m[1]),Number(m[2])]),expected,name+' labels offset from dimension lines');
+   for(const [i,m] of labels.entries()){
+     assert(m[3].includes('paint-order="stroke"')&&m[3].includes('stroke="#ffffff"'),name+' width label halo');
+     assert(i<2?baseline-Number(m[2])>=7:Number(m[1])-160>=10,name+' label clearance');
+   }
+ }
+ const pole=readFig('ex3-12-q5-circle-gates.svg');
+ const vertex=pole.match(/<polygon points="86,112 234,112 ([\d.]+),([\d.]+)"/);
+ assert(vertex,'Q5 circle triangle vertices');
+ const rx=Number(vertex[1]),ry=Number(vertex[2]),pr=Math.hypot(rx-86,ry-112),qr=Math.hypot(rx-234,ry-112);
+ assert(Math.abs(pr-118.4)<0.2&&Math.abs(qr-88.8)<0.2&&pr>qr,'Q5 longer PR and shorter QR drawn to scale');
+ assert(Math.abs((rx-86)*(rx-234)+(ry-112)**2)<12,'Q5 angle at R approximately 90 degrees');
+ assert(pole.includes('(x + 4) m')&&pole.includes('>x m</text>'),'Q5 chord units');
+ const galleries=readFig('ex3-12-q7-galleries.svg');
+ assert(galleries.includes('Same sound intensity at P')&&!galleries.includes('4 / 9 =')&&!galleries.includes('x² /'),'Q7 artwork leaves derivation to worked steps');
+ const triangle=readFig('ex3-12-q9-triangle.svg');
+ assert(triangle.includes('Perimeter = 56 cm')&&triangle.includes('>y cm</text>')&&!triangle.includes('31 − x')&&!triangle.includes('Pythagoras theorem:'),'Q9 artwork leaves derivation to worked steps');
+
 const audit=JSON.parse(fs.readFileSync('docs/curriculum/grade-10/trace/g10-ch3-ex3-10-to-3-12-source-audit-20261119.json','utf8'));
 assert.equal(audit.numberedQuestions,14);
 assert.equal(audit.uniqueSubpartTasks,22);
