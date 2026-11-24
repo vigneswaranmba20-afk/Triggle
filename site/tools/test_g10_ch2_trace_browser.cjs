@@ -338,6 +338,13 @@ async function main(){
     assert(stepsQ8.includes('3640')&&stepsQ8.includes('35')&&stepsQ8.includes(language==='ta'?'பூச்சிய':'zero'),'Student sees LCM reasoning and zero-quotient caveat');
     assert.equal(new URL(page.url()).searchParams.get('question'),'c10-2-ex2-2-q8','Q8 remains deep-linkable');
     assert.equal(await page.locator('[data-math-error]').count(),0,'No malformed Q8 mathematical notation');
+    await page.goto(app.base+'/index.html?class=10&question=c10-2-ex2-7-q2');
+    const combinedPrompt=page.locator('#questionText');
+    assert.equal(await combinedPrompt.locator('msqrt').count(),2,'Both given quantities in part (ii) are square roots');
+    const combinedAnswer=page.locator('.final-answer-value');
+    assert(await combinedAnswer.isVisible());
+    assert.equal(await combinedAnswer.locator('msqrt').count(),2,'The first and third terms in part (ii) retain their radicals');
+    assert((await combinedAnswer.innerText()).includes('400'),'Part (iii) remains visible on the combined card');
     // Re-enter concepts and exercise the weakest redesigned lessons in both languages.
     await page.goto(url);
     await page.locator(language==='en'?'#langEn':'#langTa').click();
