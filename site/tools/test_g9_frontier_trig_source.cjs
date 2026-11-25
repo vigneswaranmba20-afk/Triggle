@@ -53,6 +53,7 @@ assert.equal(classicCard.prompt,card.q.en);
 assert.equal(classicCard.promptTa,card.q.ta);
 assert.equal(classicCard.final,card.answer);
 assert.equal(classicCard.finalTa,card.answerTa);
-assert.deepEqual(classicCard.sourcePages,{en:233,ta:247});
+const classicPages = JSON.parse(classic.match(/const sourcePages=(\{[^\n]+\});/)[1]);
+assert.deepEqual(classicPages[classicCard.id],{en:233,ta:247});
 for (const language of ['en','ta']) assert(classic.includes(books[language].driveId));
 console.log('Grade 9 Trigonometry source links, original prompts, signed counterexample and Classic route verified.');

@@ -776,5 +776,165 @@
         "page": 14
       }
     }
-  ]
+  ],
+  "classic": {
+    "records": [
+      {
+        "id": "exercise-6-1-q5",
+        "originalRecord": {
+          "id": "exercise-6-1-q5",
+          "ref": "Exercise 6.1 · Q5",
+          "type": "6.1",
+          "title": "Ratios in terms of x",
+          "prompt": "If cos A = [[2x|1 + x²]], find sin A and tan A. Assume A is acute, so x > 0 and x ≠ 1.",
+          "steps": [
+            {
+              "why": "In a right triangle, take adjacent = 2x and hypotenuse = 1+x².",
+              "eq": "cos A = [[2x|1+x²]]"
+            },
+            {
+              "why": "Calculate the opposite side using Pythagoras. A length cannot be negative.",
+              "eq": "√((1+x²)² − (2x)²) = √((1−x²)²) = |1−x²|"
+            },
+            {
+              "why": "Sine compares opposite and hypotenuse.",
+              "eq": "sin A = [[∣1−x²∣|1+x²]]"
+            },
+            {
+              "why": "Tangent compares opposite and adjacent.",
+              "eq": "tan A = [[∣1−x²∣|2x]]"
+            },
+            {
+              "why": "For 0<x<1, remove the absolute bars as 1−x². For x>1, use x²−1.",
+              "eq": "0<x<1: sin A = [[1−x²|1+x²]] ; tan A = [[1−x²|2x]]"
+            }
+          ],
+          "demo": {
+            "kind": "symbolic-x"
+          },
+          "page": 6,
+          "final": "sin A = [[∣1−x²∣|1+x²]] ; tan A = [[∣1−x²∣|2x]]",
+          "promptTa": "cos A = [[2x|1 + x²]] எனில் sin A, tan A-ஐ காண்க. A ஒரு குறுங்கோணம்; x > 0, x ≠ 1 என எடுத்துக்கொள்க.",
+          "stepsTa": [
+            "அடுத்துள்ள பக்கம் = 2x, கர்ணம் = 1+x² என எடுத்துக்கொள்க.",
+            "பிதாகரஸ் தேற்றத்தால் எதிர்ப்பக்கத்தைக் காண்க. பக்க நீளம் எதிர்மறையாக இருக்க முடியாது.",
+            "sin = எதிர்ப்பக்கம் / கர்ணம்.",
+            "tan = எதிர்ப்பக்கம் / அடுத்துள்ள பக்கம்.",
+            "0<x<1 எனில் தனி மதிப்புக் குறிகளை நீக்கலாம்; x>1 எனில் x²−1 பயன்படுத்துக."
+          ]
+        },
+        "reviewedSha256": "0cb3966172e8be931e2b2cf44d3a54473035f48eb8d2f1e2c4d51b1e5db5d647"
+      },
+      {
+        "id": "exercise-6-1-q6",
+        "originalRecord": {
+          "id": "exercise-6-1-q6",
+          "ref": "Exercise 6.1 · Q6",
+          "type": "6.1",
+          "title": "Prove the relation involving a and b",
+          "prompt": "Starting from sin θ = [[a|√(a² + b²)]], show that b sin θ = a cos θ.",
+          "steps": [
+            {
+              "why": "Choose a positive right triangle whose opposite side is a and adjacent side is b.",
+              "eq": "Hypotenuse = √(a² + b²)"
+            },
+            {
+              "why": "Write the adjacent-over-hypotenuse ratio.",
+              "eq": "cos θ = [[b|√(a² + b²)]]"
+            },
+            {
+              "why": "Multiply each ratio by the other side and compare.",
+              "eq": "b sin θ = [[ab|√(a² + b²)]]"
+            },
+            {
+              "why": "The expression on the right simplifies to the same fraction.",
+              "eq": "a cos θ = [[ab|√(a² + b²)]] = b sin θ"
+            }
+          ],
+          "demo": {
+            "kind": "symbolic"
+          },
+          "page": 6,
+          "final": "b sin θ = a cos θ",
+          "promptTa": "sin θ = [[a|√(a² + b²)]] எனில் b sin θ = a cos θ என்பதை நிரூபிக்கவும்.",
+          "stepsTa": [
+            "எதிர்ப்பக்கம் a, அடுத்துள்ள பக்கம் b கொண்ட செங்கோண முக்கோணத்தை எடுத்துக்கொள்க.",
+            "cos-க்கான அடுத்துள்ள / கர்ண விகிதத்தை எழுதுக.",
+            "இரு விகிதங்களையும் மற்றொரு பக்கத்தால் பெருக்கி ஒப்பிடுக.",
+            "வலப்பக்கமும் அதே பின்னமாக எளிமையாகிறது."
+          ]
+        },
+        "reviewedSha256": "7006e24ea9ed46f294d409739f212ef1225d252ddca62147760470f56329f190"
+      },
+      {
+        "id": "exercise-6-1-q9",
+        "originalRecord": {
+          "id": "exercise-6-1-q9",
+          "ref": "Exercise 6.1 · Q9",
+          "type": "6.1",
+          "title": "A larger triangle formed by two smaller ones",
+          "prompt": "The diagram has AD=9, DB=16, CD=12, AC=15 and BC=20. Prove θ+φ=90°, show ∠ACB=90°, and find sinα, cosβ and tanφ.",
+          "steps": [
+            {
+              "why": "Triangles ACD and BCD are right-angled at D. Their sides satisfy Pythagoras.",
+              "eq": "9² + 12² = 15² ; 16² + 12² = 20²"
+            },
+            {
+              "why": "The complete triangle ABC is also right angled at C, because its sides are 15, 20 and 25.",
+              "eq": "15² + 20² = 25² ; ∠ACB = 90°"
+            },
+            {
+              "why": "The angle at C is split by CD, so the two marked parts are complementary.",
+              "eq": "θ + φ = 90°"
+            },
+            {
+              "why": "For α in triangle ACD, opposite = CD = 12, hypotenuse = AC = 15.",
+              "eq": "sin α = [[12|15]] = [[4|5]]"
+            },
+            {
+              "why": "For β in triangle BCD, adjacent = DB = 16, hypotenuse = BC = 20.",
+              "eq": "cos β = [[16|20]] = [[4|5]]"
+            },
+            {
+              "why": "For φ at C in triangle BCD, opposite = DB = 16 and adjacent = CD = 12.",
+              "eq": "tan φ = [[16|12]] = [[4|3]]"
+            }
+          ],
+          "demo": {
+            "kind": "two-right"
+          },
+          "page": 6,
+          "final": "θ+φ = 90° ; ∠ACB = 90° ; sin α = [[4|5]] ; cos β = [[4|5]] ; tan φ = [[4|3]]",
+          "promptTa": "படத்தில் AD=9, DB=16, CD=12, AC=15, BC=20. θ+φ=90°, ∠ACB=90° என நிரூபித்து sinα, cosβ, tanφ காண்க.",
+          "stepsTa": [
+            "ACD, BCD ஆகியவை D-இல் செங்கோண முக்கோணங்கள்; பிதாகரஸ் தேற்றம் பொருந்தும்.",
+            "ABC-இல் பக்கங்கள் 15, 20, 25 என்பதால் C-இலும் செங்கோணம் உள்ளது.",
+            "C கோணம் CD மூலம் இரண்டாகப் பிரிகிறது; அவை நிரப்புக் கோணங்கள்.",
+            "ACD-இல் α-க்கு எதிர்ப்பக்கம் CD=12, கர்ணம் AC=15.",
+            "BCD-இல் β-க்கு அடுத்துள்ள பக்கம் DB=16, கர்ணம் BC=20.",
+            "C-இல் φ-க்கு எதிர்ப்பக்கம் DB=16, அடுத்துள்ள பக்கம் CD=12."
+          ]
+        },
+        "reviewedSha256": "1f7b020f361e8af9010667a4b5c7a40eab4c6de0e4d831119859d0745ebae821"
+      }
+    ],
+    "operations": [
+      {
+        "before": "",
+        "after": "\n  const sourceBooks={\"en\":\"https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view\",\"ta\":\"https://drive.google.com/file/d/1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj/view\"};\n  const sourcePages={\"exercise-6-1-q1\":{\"en\":233,\"ta\":247},\"exercise-6-1-q2\":{\"en\":233,\"ta\":247},\"exercise-6-1-q3\":{\"en\":233,\"ta\":247},\"exercise-6-1-q4\":{\"en\":233,\"ta\":247},\"exercise-6-1-q5\":{\"en\":233,\"ta\":247},\"exercise-6-1-q6\":{\"en\":233,\"ta\":247},\"exercise-6-1-q7\":{\"en\":233,\"ta\":247},\"exercise-6-1-q8\":{\"en\":233,\"ta\":248},\"exercise-6-1-q9\":{\"en\":233,\"ta\":248},\"exercise-6-1-q10\":{\"en\":234,\"ta\":248},\"exercise-6-2-q1-i\":{\"en\":238,\"ta\":252},\"exercise-6-2-q1-ii\":{\"en\":238,\"ta\":252},\"exercise-6-2-q1-iii\":{\"en\":238,\"ta\":252},\"exercise-6-2-q1-iv\":{\"en\":238,\"ta\":252},\"exercise-6-2-q2-i\":{\"en\":238,\"ta\":252},\"exercise-6-2-q2-ii\":{\"en\":238,\"ta\":253},\"exercise-6-2-q2-iii\":{\"en\":238,\"ta\":253},\"exercise-6-2-q3\":{\"en\":238,\"ta\":253},\"exercise-6-2-q4\":{\"en\":238,\"ta\":253},\"exercise-6-3-q-i\":{\"en\":241,\"ta\":255},\"exercise-6-3-q-ii\":{\"en\":241,\"ta\":255},\"exercise-6-3-q-iii\":{\"en\":241,\"ta\":255},\"exercise-6-3-q-iv\":{\"en\":241,\"ta\":255},\"exercise-6-4-q1-i\":{\"en\":245,\"ta\":259},\"exercise-6-4-q1-ii\":{\"en\":245,\"ta\":259},\"exercise-6-4-q1-iii\":{\"en\":245,\"ta\":259},\"exercise-6-4-q1-iv\":{\"en\":245,\"ta\":259},\"exercise-6-4-q1-v\":{\"en\":245,\"ta\":259},\"exercise-6-4-q1-vi\":{\"en\":245,\"ta\":259},\"exercise-6-4-q4\":{\"en\":245,\"ta\":259},\"exercise-6-4-q5\":{\"en\":245,\"ta\":259},\"exercise-6-4-q6\":{\"en\":245,\"ta\":260},\"exercise-6-5-q1\":{\"en\":245,\"ta\":259},\"exercise-6-5-q2\":{\"en\":245,\"ta\":259},\"exercise-6-5-q3\":{\"en\":245,\"ta\":259},\"exercise-6-5-q4\":{\"en\":245,\"ta\":259},\"exercise-6-5-q7\":{\"en\":246,\"ta\":259},\"exercise-6-5-q8\":{\"en\":246,\"ta\":259},\"exercise-6-5-q9\":{\"en\":246,\"ta\":259},\"exercise-6-5-q10\":{\"en\":246,\"ta\":259}};"
+      },
+      {
+        "before": "    $('sourceLink').href=sourceURL+'#page='+(q.page||6);",
+        "after": "    $('sourceLink').href=sourcePages[q.id] ? sourceBooks[lang]+'#page='+sourcePages[q.id][lang] : sourceURL+'#page='+(q.page||6);"
+      },
+      {
+        "before": "    $('resultMath').innerHTML=fmtMath(lang==='ta'?localEquation(q.final):q.final);",
+        "after": "    $('resultMath').innerHTML=fmtMath(lang==='ta'?(q.finalTa||localEquation(q.final)):q.final);"
+      },
+      {
+        "before": "lang==='ta'?localEquation(s.final||s.steps[s.steps.length-1].eq):s.final||s.steps[s.steps.length-1].eq",
+        "after": "lang==='ta'?(s.finalTa||localEquation(s.final||s.steps[s.steps.length-1].eq)):s.final||s.steps[s.steps.length-1].eq"
+      }
+    ]
+  }
 }
