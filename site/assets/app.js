@@ -268,6 +268,7 @@
        chapter.id==='g10-ch4'?window.TRIGGLE_G10_CH4_PATH?.stages:
        chapter.id==='g10-ch5'?window.TRIGGLE_G10_CH5_PATH?.stages:
        chapter.id==='g10-ch6'?window.TRIGGLE_G10_CH6_PATH?.stages:
+       chapter.id==='g10-ch7'?window.TRIGGLE_G10_CH7_PATH?.stages:
        chapter.id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:
        null);
      const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
