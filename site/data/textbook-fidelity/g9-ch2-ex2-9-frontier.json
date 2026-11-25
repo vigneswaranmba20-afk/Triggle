@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": 2,
+  "exercise": "2.9",
+  "edition": "2025 revised",
+  "sources": {
+    "en": {
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J"
+    },
+    "ta": {
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+    }
+  },
+  "items": [
+    {
+      "id": "g9-ch2-ex9-q1",
+      "question": 1,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 80,
+            "printed": 74
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 86,
+            "printed": 80
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 4
+    },
+    {
+      "id": "g9-ch2-ex9-q2",
+      "question": 2,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 80,
+            "printed": 74
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 86,
+            "printed": 80
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 3
+    },
+    {
+      "id": "g9-ch2-ex9-q3",
+      "question": 3,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 80,
+            "printed": 74
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 86,
+            "printed": 80
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 2
+    },
+    {
+      "id": "g9-ch2-ex9-q4",
+      "question": 4,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 80,
+            "printed": 74
+          },
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 86,
+            "printed": 80
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 1
+    },
+    {
+      "id": "g9-ch2-ex9-q5",
+      "question": 5,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 86,
+            "printed": 80
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 4
+    },
+    {
+      "id": "g9-ch2-ex9-q6",
+      "question": 6,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 86,
+            "printed": 80
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 2
+    },
+    {
+      "id": "g9-ch2-ex9-q7",
+      "question": 7,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 86,
+            "printed": 80
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 2
+    },
+    {
+      "id": "g9-ch2-ex9-q8",
+      "question": 8,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 86,
+            "printed": 80
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 2
+    },
+    {
+      "id": "g9-ch2-ex9-q9",
+      "question": 9,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 86,
+            "printed": 80
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 4
+    },
+    {
+      "id": "g9-ch2-ex9-q10",
+      "question": 10,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 87,
+            "printed": 81
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 1
+    },
+    {
+      "id": "g9-ch2-ex9-q11",
+      "question": 11,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 87,
+            "printed": 81
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 4
+    },
+    {
+      "id": "g9-ch2-ex9-q12",
+      "question": 12,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 87,
+            "printed": 81
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 4
+    },
+    {
+      "id": "g9-ch2-ex9-q13",
+      "question": 13,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 87,
+            "printed": 81
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 3
+    },
+    {
+      "id": "g9-ch2-ex9-q14",
+      "question": 14,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 87,
+            "printed": 81
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 2
+    },
+    {
+      "id": "g9-ch2-ex9-q15",
+      "question": 15,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 87,
+            "printed": 81
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 2
+    },
+    {
+      "id": "g9-ch2-ex9-q16",
+      "question": 16,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 81,
+            "printed": 75
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 87,
+            "printed": 81
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 3
+    },
+    {
+      "id": "g9-ch2-ex9-q17",
+      "question": 17,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 82,
+            "printed": 76
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 87,
+            "printed": 81
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 2
+    },
+    {
+      "id": "g9-ch2-ex9-q18",
+      "question": 18,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 82,
+            "printed": 76
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 87,
+            "printed": 81
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 4
+    },
+    {
+      "id": "g9-ch2-ex9-q19",
+      "question": 19,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 82,
+            "printed": 76
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 87,
+            "printed": 81
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 2
+    },
+    {
+      "id": "g9-ch2-ex9-q20",
+      "question": 20,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 82,
+            "printed": 76
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 87,
+            "printed": 81
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "independentlyCheckedCorrectOption": 3
+    }
+  ],
+  "discrepancies": [
+    {
+      "question": 7,
+      "issue": "The phrase smallest rational number is evaluated among the offered multipliers. The solution explicitly applies the MCQ scope."
+    },
+    {
+      "question": 11,
+      "issue": "Choice 1 uses square root colloquially for the two roots of x²=25. Choice 4 is false under the conventional principal radical notation. The working distinguishes the two senses."
+    },
+    {
+      "question": 15,
+      "issue": "The Tamil printing duplicates the terminal equals sign. The student card uses one equals sign without changing the expression or choices."
+    },
+    {
+      "question": 19,
+      "issue": "The Tamil printing includes English If together with Tamil எனில். The Tamil card retains எனில்."
+    }
+  ],
+  "editorialReview": {
+    "ta": "pending-independent-review",
+    "teacher": "pending"
+  }
+}
