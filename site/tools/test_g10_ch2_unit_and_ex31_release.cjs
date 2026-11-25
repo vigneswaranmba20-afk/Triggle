@@ -133,14 +133,14 @@ assert.throws(()=>vm.runInNewContext(fs.readFileSync(fileCh3,'utf8'),dupCtx,{tim
 // Verify TRACE Grade 10 complete inventory reconciliation:
 const inv=buildInventory();
 assert.equal(inv.totals.numberedQuestions,664);
-assert.equal(inv.totals.subpartTasks,935);
+assert.equal(inv.totals.subpartTasks,932);
 assert(inv.totals.questionsByStatus.COMPLETE>=207);
 assert(inv.totals.tasksByStatus.COMPLETE>=313);
 assert.equal(inv.totals.questionsByStatus.DUPLICATE,0);
-assert.equal(inv.totals.questionsByStatus.BLOCKED,2);
+assert.equal(inv.totals.questionsByStatus.BLOCKED,4);
 assert.equal(inv.chapterSummaries.find(ch=>ch.chapter===4).tasksByStatus.BLOCKED,4);
 assert.equal(inv.chapterSummaries[0].questionsByStatus.COMPLETE,69,'Chapter 1 100% complete');
 assert.equal(inv.chapterSummaries[1].questionsByStatus.COMPLETE,115,'Chapter 2 100% complete');
 assert.equal(inv.chapterSummaries[1].tasksByStatus.COMPLETE,161,'Chapter 2 all 161 tasks complete');
 
-console.log('PASS Grade 10 Ch 2 Ex 2.10 (15/15), Unit Ex 2 (12/12), Ch 3 Ex 3.1 (9/9) and TRACE inventory ('+inv.totals.questionsByStatus.COMPLETE+'/664 questions, '+inv.totals.tasksByStatus.COMPLETE+'/935 tasks; Ch 1 & Ch 2 100% complete)');
+console.log('PASS Grade 10 Ch 2 Ex 2.10 (15/15), Unit Ex 2 (12/12), Ch 3 Ex 3.1 (9/9) and TRACE inventory ('+inv.totals.questionsByStatus.COMPLETE+'/664 questions, '+inv.totals.tasksByStatus.COMPLETE+'/932 tasks; Ch 1 & Ch 2 100% complete)');

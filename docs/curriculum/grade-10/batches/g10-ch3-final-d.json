@@ -1,0 +1,3717 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g10-ch3-final-d",
+  "grade": 10,
+  "chapter": "3",
+  "module": "data/textbook-exercises/g10-ch3-final-d.js",
+  "tamilStatus": "pending",
+  "sources": [
+    {
+      "id": "g10-2025-en",
+      "grade": 10,
+      "language": "en",
+      "title": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "2025 revised",
+      "url": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    },
+    {
+      "id": "g10-2025-ta",
+      "grade": 10,
+      "language": "ta",
+      "title": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "2025 revised",
+      "url": "https://drive.google.com/file/d/1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC/view",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    }
+  ],
+  "inventory": {
+    "completeChapter": false,
+    "exercises": [
+      {
+        "id": "3.unit",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              156
+            ],
+            "pdfPages": [
+              162
+            ]
+          },
+          {
+            "number": "2",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              156
+            ],
+            "pdfPages": [
+              162
+            ]
+          },
+          {
+            "number": "3",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "4",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "5",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "6",
+            "parts": [
+              "i",
+              "ii"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "7",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "8",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "9",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "10",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "11",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "12",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "13",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "14",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "15",
+            "parts": [
+              "i",
+              "ii"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "16",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157
+            ],
+            "pdfPages": [
+              163
+            ]
+          },
+          {
+            "number": "17",
+            "parts": [
+              "i",
+              "ii"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              157,
+              158
+            ],
+            "pdfPages": [
+              163,
+              164
+            ]
+          },
+          {
+            "number": "18",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              158
+            ],
+            "pdfPages": [
+              164
+            ]
+          },
+          {
+            "number": "19",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              158
+            ],
+            "pdfPages": [
+              164
+            ]
+          },
+          {
+            "number": "20",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              158
+            ],
+            "pdfPages": [
+              164
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "c10-3-ex3-unit-q1",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q1",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 1"
+      },
+      "title": {
+        "en": "Solve a chain of equations",
+        "ta": "சமன்பாட்டுத் தொடரைத் தீர்த்தல்"
+      },
+      "q": {
+        "en": "1. Solve (1)/(3)(x+y−5)=y−z=2x−11=9−(x+2z)",
+        "ta": "1. தீர்க்க (1)/(3)(x+y−5)=y−z=2x−11=9−(x+2z)"
+      },
+      "questionMath": {
+        "en": [
+          "1. ",
+          "Solve ",
+          {
+            "latex": "\\dfrac13(x+y-5)=y-z=2x-11=9-(x+2z)",
+            "fallback": "(1)/(3)(x+y−5)=y−z=2x−11=9−(x+2z)",
+            "display": true
+          }
+        ],
+        "ta": [
+          "1. ",
+          "தீர்க்க ",
+          {
+            "latex": "\\dfrac13(x+y-5)=y-z=2x-11=9-(x+2z)",
+            "fallback": "(1)/(3)(x+y−5)=y−z=2x−11=9−(x+2z)",
+            "display": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Equate both middle expressions to obtain y in terms of x and z. Equate the last two expressions to get another equation.",
+          "ta": "நடுவிலுள்ள இரு கோவைகளையும் சமப்படுத்தி y-ஐ x, z வழியாக எழுதுக. கடைசி இரு கோவைகளையும் சமப்படுத்தி மற்றொரு சமன்பாட்டைப் பெறுக.",
+          "eq": "y=z+2x−11\n3x+2z=20",
+          "math": {
+            "latex": "\\begin{aligned}y&=z+2x-11\\\\3x+2z&=20\\end{aligned}",
+            "fallback": "y=z+2x−11\n3x+2z=20",
+            "display": true
+          },
+          "why": {
+            "en": "Equate the expressions in pairs to obtain three equations.",
+            "ta": "கோவைகளை இணை இணையாகச் சமப்படுத்தி மூன்று சமன்பாடுகளைப் பெறுக."
+          }
+        },
+        {
+          "en": "Equate the first expression to 2x − 11. Multiply by three and substitute the expression for y.",
+          "ta": "முதல் கோவையை 2x − 11 உடன் சமப்படுத்துக. மூன்றால் பெருக்கி y-க்கான கோவையைப் பிரதியிடுக.",
+          "eq": "x+y−5=6x−33\n3x+z−16=6x−33\nz=3x−17",
+          "math": {
+            "latex": "\\begin{aligned}x+y-5&=6x-33\\\\3x+z-16&=6x-33\\\\z&=3x-17\\end{aligned}",
+            "fallback": "x+y−5=6x−33\n3x+z−16=6x−33\nz=3x−17",
+            "display": true
+          }
+        },
+        {
+          "en": "Substitute into the equation relating x and z. Recover z and y, then check that every term in the original chain equals one.",
+          "ta": "x, z தொடர்புடைய சமன்பாட்டில் பிரதியிடுக. z, y மதிப்புகளைக் கண்டபின் கொடுக்கப்பட்ட தொடரின் எல்லாக் கோவைகளும் ஒன்று எனச் சரிபார்க்கவும்.",
+          "eq": "3x+2(3x−17)=20\n9x=54\nx=6,  z=1,  y=2",
+          "math": {
+            "latex": "\\begin{aligned}3x+2(3x-17)&=20\\\\9x&=54\\\\x&=6,\\quad z=1,\\quad y=2\\end{aligned}",
+            "fallback": "3x+2(3x−17)=20\n9x=54\nx=6,  z=1,  y=2",
+            "display": true
+          }
+        }
+      ],
+      "answer": "(x,y,z)=(6,2,1)",
+      "hint": {
+        "en": "Equate the expressions in pairs to obtain three equations.",
+        "ta": "கோவைகளை இணை இணையாகச் சமப்படுத்தி மூன்று சமன்பாடுகளைப் பெறுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 162; Tamil PDF 166.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{(x,y,z)=(6,2,1)}",
+        "fallback": "(x,y,z)=(6,2,1)",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            162
+          ],
+          "ta": [
+            166
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q2",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q2",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 2"
+      },
+      "title": {
+        "en": "Model the three enrolments",
+        "ta": "மூன்று பிரிவுகளின் மாணவர் எண்ணிக்கையைச் சமன்பாடாக்குதல்"
+      },
+      "q": {
+        "en": "2. One hundred and fifty students are admitted to a school. They are distrbuted over three sections A, B and C. If 6 students are shifted from section A to section C, the sections will have equal number of students. If 4 times of students of section C exceeds the number of students of section A by the number of students in section B, find the number of students in the three sections.",
+        "ta": "2. ஒரு பள்ளியில் A, B மற்றும் C என்ற மூன்று பிரிவுகளில் 150 மாணவர்கள் புதிதாகச் சேர்க்கப்படுகின்றனர். பிரிவு A–யிலிருந்து பிரிவு C–க்கு 6 மாணவர்கள் மாற்றப்பட்டால், இரு பிரிவுகளிலும் சமமான மாணவர்கள் இருப்பர். C பிரிவு மாணவர்களின் எண்ணிக்கையின் 4 மடங்கு மற்றும் A பிரிவு மாணவர்களின் எண்ணிக்கை இவற்றின் வித்தியாசம் B பிரிவு மாணவர்களின் எண்ணிக்கைக்குச் சமம் எனில், மூன்று பிரிவுகளில் உள்ள மாணவர்களின் எண்ணிக்கையைக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "2. ",
+          "One hundred and fifty students are admitted to a school. They are distrbuted over three sections A, B and C. If 6 students are shifted from section A to section C, the sections will have equal number of students. If 4 times of students of section C exceeds the number of students of section A by the number of students in section B, find the number of students in the three sections."
+        ],
+        "ta": [
+          "2. ",
+          "ஒரு பள்ளியில் A, B மற்றும் C என்ற மூன்று பிரிவுகளில் 150 மாணவர்கள் புதிதாகச் சேர்க்கப்படுகின்றனர். பிரிவு A–யிலிருந்து பிரிவு C–க்கு 6 மாணவர்கள் மாற்றப்பட்டால், இரு பிரிவுகளிலும் சமமான மாணவர்கள் இருப்பர். C பிரிவு மாணவர்களின் எண்ணிக்கையின் 4 மடங்கு மற்றும் A பிரிவு மாணவர்களின் எண்ணிக்கை இவற்றின் வித்தியாசம் B பிரிவு மாணவர்களின் எண்ணிக்கைக்குச் சமம் எனில், மூன்று பிரிவுகளில் உள்ள மாணவர்களின் எண்ணிக்கையைக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Let a, b and c be the original counts. The Tamil text specifies that the two affected sections, A and C, become equal. Use that reading of the English phrase “the sections”.",
+          "ta": "தொடக்க எண்ணிக்கைகள் a, b, c என்க. மாணவர் மாற்றத்தால் பாதிக்கப்படும் A, C ஆகிய இரு பிரிவுகளே சமம் எனத் தமிழ் வினா குறிப்பிடுகிறது.",
+          "eq": "a+b+c=150\na−6=c+6\n4c−a=b",
+          "math": {
+            "latex": "\\begin{aligned}a+b+c&=150\\\\a-6&=c+6\\\\4c-a&=b\\end{aligned}",
+            "fallback": "a+b+c=150\na−6=c+6\n4c−a=b",
+            "display": true
+          },
+          "why": {
+            "en": "Use the total and compare A and C after moving six students.",
+            "ta": "மொத்த மாணவர் எண்ணிக்கையையும் ஆறு மாணவர்களை மாற்றிய பின் A, C பிரிவுகளையும் ஒப்பிடுக."
+          }
+        },
+        {
+          "en": "Substitute a + b = 4c into the total to find c. Then use the transfer equation for a and the remaining count for b.",
+          "ta": "மொத்தத்திற்கான சமன்பாட்டில் a + b = 4c எனப் பிரதியிட்டு c-ஐக் காண்க. பின்னர் மாற்றத்திற்கான சமன்பாட்டிலிருந்து a-ஐயும் மீதியிலிருந்து b-ஐயும் காண்க.",
+          "eq": "5c=150,  c=30\na=30+12=42\nb=150−42−30=78",
+          "math": {
+            "latex": "\\begin{aligned}5c&=150,\\quad c=30\\\\a&=30+12=42\\\\b&=150-42-30=78\\end{aligned}",
+            "fallback": "5c=150,  c=30\na=30+12=42\nb=150−42−30=78",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the transfer and the original comparison. If the English phrase is read as requiring all three sections to be equal after the transfer, the conditions are inconsistent.",
+          "ta": "மாற்றிய பின் எண்ணிக்கைகளையும் அசல் ஒப்பீட்டையும் சரிபார்க்கவும். மாற்றத்திற்குப் பின் மூன்று பிரிவுகளும் சமம் என்று பொருள் கொண்டால் நிபந்தனைகள் ஒன்றுக்கொன்று முரணாகும்.",
+          "eq": "42−6=30+6=36\n4(30)−42=78",
+          "math": {
+            "latex": "\\begin{aligned}42-6&=30+6=36\\\\4(30)-42&=78\\end{aligned}",
+            "fallback": "42−6=30+6=36\n4(30)−42=78",
+            "display": true
+          }
+        }
+      ],
+      "answer": "(a,b,c)=(42,78,30)",
+      "hint": {
+        "en": "Use the total and compare A and C after moving six students.",
+        "ta": "மொத்த மாணவர் எண்ணிக்கையையும் ஆறு மாணவர்களை மாற்றிய பின் A, C பிரிவுகளையும் ஒப்பிடுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 162; Tamil PDF 166.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{(a,b,c)=(42,78,30)}",
+        "fallback": "(a,b,c)=(42,78,30)",
+        "display": true
+      },
+      "difficulty": "difficult",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            162
+          ],
+          "ta": [
+            166
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q3",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q3",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 3"
+      },
+      "title": {
+        "en": "Find the number from its digits",
+        "ta": "இலக்கங்களிலிருந்து எண்ணைக் காண்க"
+      },
+      "q": {
+        "en": "3. In a three-digit number, when the tens and the hundreds digit are interchanged the new number is 54 more than three times the original number. If 198 is added to the number, the digits are reversed. The tens digit exceeds the hundreds digit by twice as that of the tens digit exceeds the unit digit. Find the original number.",
+        "ta": "3. ஒரு மூன்றிலக்க எண்ணின், பத்தாம் இட மற்றும் நூறாம் இட இலக்கங்களை இடமாற்றுவதன் மூலம் கிடைக்கும் புதிய எண், கொடுக்கப்பட்ட எண்ணின் மும்மடங்கைவிட 54 அதிகம். கொடுக்கப்பட்ட எண்ணோடு 198–ஐக் கூட்டினால் இலக்கங்கள் இட–வலப்பக்கமாக வரிசை மாறும். ஒன்றாம் இட இலக்கத்தைவிட அதிகமுள்ள பத்தாம் இட இலக்கத்தின் இரு மடங்கு, நூறாம் இட இலக்கத்தை விட அதிகமுள்ள பத்தாம் இட இலக்கத்திற்குச் சமம் எனில், கொடுக்கப்பட்ட எண்ணைக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "3. ",
+          "In a three-digit number, when the tens and the hundreds digit are interchanged the new number is 54 more than three times the original number. If 198 is added to the number, the digits are reversed. The tens digit exceeds the hundreds digit by twice as that of the tens digit exceeds the unit digit. Find the original number."
+        ],
+        "ta": [
+          "3. ",
+          "ஒரு மூன்றிலக்க எண்ணின், பத்தாம் இட மற்றும் நூறாம் இட இலக்கங்களை இடமாற்றுவதன் மூலம் கிடைக்கும் புதிய எண், கொடுக்கப்பட்ட எண்ணின் மும்மடங்கைவிட 54 அதிகம். கொடுக்கப்பட்ட எண்ணோடு 198–ஐக் கூட்டினால் இலக்கங்கள் இட–வலப்பக்கமாக வரிசை மாறும். ஒன்றாம் இட இலக்கத்தைவிட அதிகமுள்ள பத்தாம் இட இலக்கத்தின் இரு மடங்கு, நூறாம் இட இலக்கத்தை விட அதிகமுள்ள பத்தாம் இட இலக்கத்திற்குச் சமம் எனில், கொடுக்கப்பட்ட எண்ணைக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Let h, t and u be the hundreds, tens and units digits. Subtracting the original number from its reversal eliminates the tens digit.",
+          "ta": "நூறு, பத்து, ஒன்று இட இலக்கங்கள் h, t, u என்க. இலக்கங்கள் வரிசை மாறிய எண்ணிலிருந்து அசல் எண்ணைக் கழிக்கும்போது பத்து இட இலக்கம் நீங்கும்.",
+          "eq": "99(u−h)=198\nu=h+2",
+          "math": {
+            "latex": "\\begin{aligned}99(u-h)&=198\\\\u&=h+2\\end{aligned}",
+            "fallback": "99(u−h)=198\nu=h+2",
+            "display": true
+          },
+          "why": {
+            "en": "Write the original number as 100h + 10t + u.",
+            "ta": "அசல் எண்ணை 100h + 10t + u என எழுதுக."
+          }
+        },
+        {
+          "en": "Use the comparison of digit differences to express the tens digit using the hundreds digit.",
+          "ta": "இலக்க வேறுபாடுகளின் ஒப்பீட்டைப் பயன்படுத்தி பத்து இட இலக்கத்தை நூறு இட இலக்கத்தின் மூலம் எழுதுக.",
+          "eq": "t−h=2(t−u)\nt=2u−h=h+4",
+          "math": {
+            "latex": "\\begin{aligned}t-h&=2(t-u)\\\\t&=2u-h=h+4\\end{aligned}",
+            "fallback": "t−h=2(t−u)\nt=2u−h=h+4",
+            "display": true
+          }
+        },
+        {
+          "en": "Use place values for the number formed by swapping the hundreds and tens digits. Substitute the expressions found above.",
+          "ta": "நூறு, பத்து இட இலக்கங்களை மாற்றிய எண்ணை இடமதிப்புகளைக் கொண்டு எழுதுக. மேலே கண்ட கோவைகளைப் பிரதியிடுக.",
+          "eq": "100t+10h+u=3(100h+10t+u)+54\n70t−290h−2u=54\n−222h+276=54\nh=1,  t=5,  u=3",
+          "math": {
+            "latex": "\\begin{aligned}100t+10h+u&=3(100h+10t+u)+54\\\\70t-290h-2u&=54\\\\-222h+276&=54\\\\h&=1,\\quad t=5,\\quad u=3\\end{aligned}",
+            "fallback": "100t+10h+u=3(100h+10t+u)+54\n70t−290h−2u=54\n−222h+276=54\nh=1,  t=5,  u=3",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the swap, reversal and digit differences on the resulting three-digit number.",
+          "ta": "கிடைத்த மூன்றிலக்க எண்ணில் இடமாற்றம், தலைகீழ் வரிசை, இலக்க வேறுபாடு மூன்றையும் சரிபார்க்கவும்.",
+          "eq": "513=3(153)+54\n351=153+198\n5−1=2(5−3)",
+          "math": {
+            "latex": "\\begin{aligned}513&=3(153)+54\\\\351&=153+198\\\\5-1&=2(5-3)\\end{aligned}",
+            "fallback": "513=3(153)+54\n351=153+198\n5−1=2(5−3)",
+            "display": true
+          }
+        }
+      ],
+      "answer": "153",
+      "hint": {
+        "en": "Write the original number as 100h + 10t + u.",
+        "ta": "அசல் எண்ணை 100h + 10t + u என எழுதுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 166.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{153}",
+        "fallback": "153",
+        "display": true
+      },
+      "difficulty": "difficult",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            166
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q4",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q4",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 4"
+      },
+      "title": {
+        "en": "Factor both polynomials to find the LCM",
+        "ta": "மீ.சி.ம. காண இரு கோவைகளையும் காரணிப்படுத்துதல்"
+      },
+      "q": {
+        "en": "4. Find the least common multiple of xy(k²+1)+k(x²+y²) and xy(k²−1)+k(x²−y²)",
+        "ta": "4. xy(k²+1)+k(x²+y²) மற்றும் xy(k²−1)+k(x²−y²) ஆகியவற்றின் மீ.சி.ம. காண்க"
+      },
+      "questionMath": {
+        "en": [
+          "4. ",
+          "Find the least common multiple of ",
+          {
+            "latex": "xy(k^2+1)+k(x^2+y^2)",
+            "fallback": "xy(k²+1)+k(x²+y²)",
+            "display": true
+          },
+          " and ",
+          {
+            "latex": "xy(k^2-1)+k(x^2-y^2)",
+            "fallback": "xy(k²−1)+k(x²−y²)",
+            "display": true
+          }
+        ],
+        "ta": [
+          "4. ",
+          {
+            "latex": "xy(k^2+1)+k(x^2+y^2)",
+            "fallback": "xy(k²+1)+k(x²+y²)",
+            "display": true
+          },
+          " மற்றும் ",
+          {
+            "latex": "xy(k^2-1)+k(x^2-y^2)",
+            "fallback": "xy(k²−1)+k(x²−y²)",
+            "display": true
+          },
+          " ஆகியவற்றின் மீ.சி.ம. காண்க"
+        ]
+      },
+      "steps": [
+        {
+          "en": "Expand the grouped terms and factor the first polynomial by grouping around x + ky.",
+          "ta": "அடைப்புக்குறிகளை விரித்து x + ky பொதுக் காரணியாக வருமாறு முதல் கோவையின் உறுப்புகளைத் தொகுக்கவும்.",
+          "eq": "xy(k²+1)+k(x²+y²)=kx(x+ky)+y(x+ky)\n=(x+ky)(kx+y)",
+          "math": {
+            "latex": "\\begin{aligned}xy(k^2+1)+k(x^2+y^2)&=kx(x+ky)+y(x+ky)\\\\&=(x+ky)(kx+y)\\end{aligned}",
+            "fallback": "xy(k²+1)+k(x²+y²)=kx(x+ky)+y(x+ky)\n=(x+ky)(kx+y)",
+            "display": true
+          },
+          "why": {
+            "en": "Look for the factor x + ky in both expressions.",
+            "ta": "இரு கோவைகளிலும் x + ky பொதுக் காரணியாக அமைகிறதா என்று பார்க்கவும்."
+          }
+        },
+        {
+          "en": "Use the same grouping on the second polynomial. The second factor has a minus sign.",
+          "ta": "இரண்டாவது கோவையையும் அதேபோல் தொகுக்கவும். இரண்டாவது காரணியில் கழித்தல் குறி வரும்.",
+          "eq": "xy(k²−1)+k(x²−y²)=kx(x+ky)−y(x+ky)\n=(x+ky)(kx−y)",
+          "math": {
+            "latex": "\\begin{aligned}xy(k^2-1)+k(x^2-y^2)&=kx(x+ky)-y(x+ky)\\\\&=(x+ky)(kx-y)\\end{aligned}",
+            "fallback": "xy(k²−1)+k(x²−y²)=kx(x+ky)−y(x+ky)\n=(x+ky)(kx−y)",
+            "display": true
+          }
+        },
+        {
+          "en": "Take the shared factor once and each of the other factors once. Multiply the conjugate factors using the difference of squares. This is the polynomial LCM with k treated as an indeterminate.",
+          "ta": "பொதுக் காரணியை ஒருமுறையும் மற்ற ஒவ்வொரு காரணியையும் ஒருமுறையும் எடுக்கவும். வர்க்கங்களின் வித்தியாச முற்றொருமையைப் பயன்படுத்துக. k-ஐ ஒரு மாறியாகக் கொண்ட கோவைகளுக்கான மீ.சி.ம. இது.",
+          "eq": "(x+ky)(kx+y)(kx−y)\n=(x+ky)(k²x²−y²)",
+          "math": {
+            "latex": "\\begin{aligned}(x+ky)(kx+y)(kx-y)\\\\=(x+ky)(k^2x^2-y^2)\\end{aligned}",
+            "fallback": "(x+ky)(kx+y)(kx−y)\n=(x+ky)(k²x²−y²)",
+            "display": true
+          }
+        }
+      ],
+      "answer": "(x+ky)(k²x²−y²)",
+      "hint": {
+        "en": "Look for the factor x + ky in both expressions.",
+        "ta": "இரு கோவைகளிலும் x + ky பொதுக் காரணியாக அமைகிறதா என்று பார்க்கவும்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 166.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{(x+ky)(k^2x^2-y^2)}",
+        "fallback": "(x+ky)(k²x²−y²)",
+        "display": true
+      },
+      "difficulty": "difficult",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            166
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q5",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q5",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 5"
+      },
+      "title": {
+        "en": "Use polynomial division to find the GCD",
+        "ta": "கோவைகளின் வகுத்தல் படிமுறையில் மீ.பெ.வ. காண்க"
+      },
+      "q": {
+        "en": "5. Find the GCD of the following by division algorithm\n2x⁴+13x³+27x²+23x+7x³+3x²+3x+1x²+2x+1",
+        "ta": "5. வகுத்தல் படிமுறையைப் பயன்படுத்தி 2x⁴+13x³+27x²+23x+7x³+3x²+3x+1x²+2x+1 ஆகியவற்றின் மீ.பெ.வ. காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "5. ",
+          "Find the GCD of the following by division algorithm\n",
+          {
+            "latex": "2x^4+13x^3+27x^2+23x+7",
+            "fallback": "2x⁴+13x³+27x²+23x+7",
+            "display": true
+          },
+          {
+            "latex": "x^3+3x^2+3x+1",
+            "fallback": "x³+3x²+3x+1",
+            "display": true
+          },
+          {
+            "latex": "x^2+2x+1",
+            "fallback": "x²+2x+1",
+            "display": true
+          }
+        ],
+        "ta": [
+          "5. ",
+          "வகுத்தல் படிமுறையைப் பயன்படுத்தி ",
+          {
+            "latex": "2x^4+13x^3+27x^2+23x+7",
+            "fallback": "2x⁴+13x³+27x²+23x+7",
+            "display": true
+          },
+          {
+            "latex": "x^3+3x^2+3x+1",
+            "fallback": "x³+3x²+3x+1",
+            "display": true
+          },
+          {
+            "latex": "x^2+2x+1",
+            "fallback": "x²+2x+1",
+            "display": true
+          },
+          " ஆகியவற்றின் மீ.பெ.வ. காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Call the polynomials P, Q and R in their given order. Divide P by Q. The leading terms give 2x first, then 7.",
+          "ta": "கொடுக்கப்பட்ட வரிசையில் கோவைகளை P, Q, R என்க. P-ஐ Q-ஆல் வகுக்கவும். தலைமையுறுப்புகளிலிருந்து முதலில் 2x, பின்னர் 7 கிடைக்கும்.",
+          "eq": "P−2xQ=7x³+21x²+21x+7\nP−(2x+7)Q=0",
+          "math": {
+            "latex": "\\begin{aligned}P-2xQ&=7x^3+21x^2+21x+7\\\\P-(2x+7)Q&=0\\end{aligned}",
+            "fallback": "P−2xQ=7x³+21x²+21x+7\nP−(2x+7)Q=0",
+            "display": true
+          },
+          "why": {
+            "en": "Divide the first two polynomials, then include the third.",
+            "ta": "முதல் இரு கோவைகளை வகுத்து, பின்னர் மூன்றாவதையும் சேர்க்கவும்."
+          }
+        },
+        {
+          "en": "The remainder is zero, so Q is the GCD of P and Q. Divide Q by R to include the third polynomial.",
+          "ta": "மீதி பூச்சியம் என்பதால் P, Q ஆகியவற்றின் மீ.பெ.வ. Q ஆகும். மூன்றாவது கோவையையும் சேர்க்க Q-ஐ R-ஆல் வகுக்கவும்.",
+          "eq": "Q−xR=x²+2x+1=R\nQ−(x+1)R=0",
+          "math": {
+            "latex": "\\begin{aligned}Q-xR&=x^2+2x+1=R\\\\Q-(x+1)R&=0\\end{aligned}",
+            "fallback": "Q−xR=x²+2x+1=R\nQ−(x+1)R=0",
+            "display": true
+          }
+        },
+        {
+          "en": "The second remainder is also zero. Consequently R is a divisor of all three and is their greatest common divisor.",
+          "ta": "இரண்டாவது வகுத்தலிலும் மீதி பூச்சியம். எனவே R மூன்று கோவைகளுக்கும் பொதுவகுத்தி; அதுவே அவற்றின் மீ.பெ.வ.",
+          "eq": "R=x²+2x+1",
+          "math": {
+            "latex": "R=x^2+2x+1",
+            "fallback": "R=x²+2x+1",
+            "display": true
+          }
+        }
+      ],
+      "answer": "x²+2x+1",
+      "hint": {
+        "en": "Divide the first two polynomials, then include the third.",
+        "ta": "முதல் இரு கோவைகளை வகுத்து, பின்னர் மூன்றாவதையும் சேர்க்கவும்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{x^2+2x+1}",
+        "fallback": "x²+2x+1",
+        "display": true
+      },
+      "difficulty": "difficult",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q6-i",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q6(i)",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 6(i)"
+      },
+      "title": {
+        "en": "Reduce a rational expression",
+        "ta": "விகிதமுறு கோவையைச் சுருக்குதல்"
+      },
+      "q": {
+        "en": "6. Reduce the given Rational expressions to its lowest form\n(i) (x^(3a)−8)/(x^(2a)+2x^a+4)",
+        "ta": "6. பின்வரும் விகிதமுறு கோவைகளை எளிய வடிவில் சுருக்குக.\n(i) (x^(3a)−8)/(x^(2a)+2x^a+4)"
+      },
+      "questionMath": {
+        "en": [
+          "6. ",
+          "Reduce the given Rational expressions to its lowest form\n",
+          "(i) ",
+          {
+            "latex": "\\dfrac{x^{3a}-8}{x^{2a}+2x^a+4}",
+            "fallback": "(x^(3a)−8)/(x^(2a)+2x^a+4)",
+            "display": true
+          }
+        ],
+        "ta": [
+          "6. ",
+          "பின்வரும் விகிதமுறு கோவைகளை எளிய வடிவில் சுருக்குக.\n",
+          "(i) ",
+          {
+            "latex": "\\dfrac{x^{3a}-8}{x^{2a}+2x^a+4}",
+            "fallback": "(x^(3a)−8)/(x^(2a)+2x^a+4)",
+            "display": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Set u equal to x raised to a wherever that real power is defined. The numerator is a difference of cubes.",
+          "ta": "x-இன் a-ஆம் அடுக்கு மெய்யெண்ணாக வரையறுக்கப்பட்ட இடங்களில் u = xᵃ என்க. தொகுதி இரு கனங்களின் வித்தியாசம்.",
+          "eq": "u=x^a\nu³−8=(u−2)(u²+2u+4)",
+          "math": {
+            "latex": "\\begin{aligned}u&=x^a\\\\u^3-8&=(u-2)(u^2+2u+4)\\end{aligned}",
+            "fallback": "u=x^a\nu³−8=(u−2)(u²+2u+4)",
+            "display": true
+          },
+          "why": {
+            "en": "Use the difference-of-cubes identity.",
+            "ta": "கனங்களின் வித்தியாச முற்றொருமையைப் பயன்படுத்துக."
+          }
+        },
+        {
+          "en": "The common factor is positive for all real u because it is a square plus three. Cancel it, keeping the domain of the original power.",
+          "ta": "பொதுக் காரணி ஒரு வர்க்கத்துடன் மூன்றைக் கூட்டிய வடிவில் இருப்பதால் எல்லா மெய் u மதிப்புகளுக்கும் நேர்மம். அதனை நீக்கலாம்; அசல் அடுக்கின் வரையறையைப் பேணுக.",
+          "eq": "u²+2u+4=(u+1)²+3\n(u³−8)/(u²+2u+4)=u−2=x^a−2",
+          "math": {
+            "latex": "\\begin{aligned}u^2+2u+4&=(u+1)^2+3\\\\\\dfrac{u^3-8}{u^2+2u+4}&=u-2=x^a-2\\end{aligned}",
+            "fallback": "u²+2u+4=(u+1)²+3\n(u³−8)/(u²+2u+4)=u−2=x^a−2",
+            "display": true
+          }
+        }
+      ],
+      "answer": "x^a−2",
+      "hint": {
+        "en": "Use the difference-of-cubes identity.",
+        "ta": "கனங்களின் வித்தியாச முற்றொருமையைப் பயன்படுத்துக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{x^a-2}",
+        "fallback": "x^a−2",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q6-ii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q6(ii)",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 6(ii)"
+      },
+      "title": {
+        "en": "Reduce a rational expression",
+        "ta": "விகிதமுறு கோவையைச் சுருக்குதல்"
+      },
+      "q": {
+        "en": "6. Reduce the given Rational expressions to its lowest form\n(ii) (10x³−25x²+4x−10)/(−4−10x²)",
+        "ta": "6. பின்வரும் விகிதமுறு கோவைகளை எளிய வடிவில் சுருக்குக.\n(ii) (10x³−25x²+4x−10)/(−4−10x²)"
+      },
+      "questionMath": {
+        "en": [
+          "6. ",
+          "Reduce the given Rational expressions to its lowest form\n",
+          "(ii) ",
+          {
+            "latex": "\\dfrac{10x^3-25x^2+4x-10}{-4-10x^2}",
+            "fallback": "(10x³−25x²+4x−10)/(−4−10x²)",
+            "display": true
+          }
+        ],
+        "ta": [
+          "6. ",
+          "பின்வரும் விகிதமுறு கோவைகளை எளிய வடிவில் சுருக்குக.\n",
+          "(ii) ",
+          {
+            "latex": "\\dfrac{10x^3-25x^2+4x-10}{-4-10x^2}",
+            "fallback": "(10x³−25x²+4x−10)/(−4−10x²)",
+            "display": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Group the cubic and quadratic terms together and the last two terms together. Factor each group.",
+          "ta": "கன, வர்க்க உறுப்புகளை ஒரு தொகுப்பாகவும் கடைசி இரு உறுப்புகளை மற்றொரு தொகுப்பாகவும் பிரித்துக் காரணிப்படுத்துக.",
+          "eq": "10x³−25x²+4x−10\n=5x²(2x−5)+2(2x−5)\n=(5x²+2)(2x−5)",
+          "math": {
+            "latex": "\\begin{aligned}10x^3-25x^2+4x-10\\\\=5x^2(2x-5)+2(2x-5)\\\\=(5x^2+2)(2x-5)\\end{aligned}",
+            "fallback": "10x³−25x²+4x−10\n=5x²(2x−5)+2(2x−5)\n=(5x²+2)(2x−5)",
+            "display": true
+          },
+          "why": {
+            "en": "Group the terms to reveal a common factor.",
+            "ta": "உறுப்புகளைத் தொகுத்துப் பொதுக் காரணியைக் காண்க."
+          }
+        },
+        {
+          "en": "Factor negative two from the denominator. The remaining factor is positive for every real x, so cancel it.",
+          "ta": "பகுதியிலிருந்து −2-ஐப் பொதுக் காரணியாக எடுக்கவும். மீதமுள்ள காரணி எல்லா மெய் x மதிப்புகளுக்கும் நேர்மம் என்பதால் நீக்கலாம்.",
+          "eq": "−4−10x²=−2(5x²+2)\n(2x−5)/(−2)=−x+(5)/(2)",
+          "math": {
+            "latex": "\\begin{aligned}-4-10x^2&=-2(5x^2+2)\\\\\\dfrac{2x-5}{-2}&=-x+\\dfrac52\\end{aligned}",
+            "fallback": "−4−10x²=−2(5x²+2)\n(2x−5)/(−2)=−x+(5)/(2)",
+            "display": true
+          }
+        }
+      ],
+      "answer": "−x+(5)/(2)",
+      "hint": {
+        "en": "Group the terms to reveal a common factor.",
+        "ta": "உறுப்புகளைத் தொகுத்துப் பொதுக் காரணியைக் காண்க."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{-x+\\dfrac52}",
+        "fallback": "−x+(5)/(2)",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q7",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q7",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 7"
+      },
+      "title": {
+        "en": "Simplify a product of rational expressions",
+        "ta": "விகிதமுறு கோவைகளின் பெருக்கலைச் சுருக்குதல்"
+      },
+      "q": {
+        "en": "7. Simplify ((1)/(p)+(1)/(q+r))/((1)/(p)−(1)/(q+r))×(1+(q²+r²−p²)/(2qr))",
+        "ta": "7. சுருக்குக ((1)/(p)+(1)/(q+r))/((1)/(p)−(1)/(q+r))×(1+(q²+r²−p²)/(2qr))"
+      },
+      "questionMath": {
+        "en": [
+          "7. ",
+          "Simplify ",
+          {
+            "latex": "\\dfrac{\\frac1p+\\frac1{q+r}}{\\frac1p-\\frac1{q+r}}\\times\\left(1+\\dfrac{q^2+r^2-p^2}{2qr}\\right)",
+            "fallback": "((1)/(p)+(1)/(q+r))/((1)/(p)−(1)/(q+r))×(1+(q²+r²−p²)/(2qr))",
+            "display": true
+          }
+        ],
+        "ta": [
+          "7. ",
+          "சுருக்குக ",
+          {
+            "latex": "\\dfrac{\\frac1p+\\frac1{q+r}}{\\frac1p-\\frac1{q+r}}\\times\\left(1+\\dfrac{q^2+r^2-p^2}{2qr}\\right)",
+            "fallback": "((1)/(p)+(1)/(q+r))/((1)/(p)−(1)/(q+r))×(1+(q²+r²−p²)/(2qr))",
+            "display": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Combine the two fractions in the numerator and the two in the denominator. The original expression requires p, q, r, q + r and q + r − p all to be nonzero.",
+          "ta": "தொகுதியிலுள்ள இரு பின்னங்களையும் பகுதியிலுள்ள இரு பின்னங்களையும் தனித்தனியாக இணைக்கவும். அசல் கோவையில் p, q, r, q + r, q + r − p அனைத்தும் பூச்சியமற்றவை.",
+          "eq": "(1)/(p)+(1)/(q+r)=(q+r+p)/(p(q+r))\n(1)/(p)−(1)/(q+r)=(q+r−p)/(p(q+r))",
+          "math": {
+            "latex": "\\begin{aligned}\\dfrac1p+\\dfrac1{q+r}&=\\dfrac{q+r+p}{p(q+r)}\\\\\\dfrac1p-\\dfrac1{q+r}&=\\dfrac{q+r-p}{p(q+r)}\\end{aligned}",
+            "fallback": "(1)/(p)+(1)/(q+r)=(q+r+p)/(p(q+r))\n(1)/(p)−(1)/(q+r)=(q+r−p)/(p(q+r))",
+            "display": true
+          },
+          "why": {
+            "en": "Use common denominators first and record which expressions cannot vanish.",
+            "ta": "முதலில் பொதுப் பகுதிகளைக் கண்டு பூச்சியமாகக் கூடாத கோவைகளைக் குறிக்கவும்."
+          }
+        },
+        {
+          "en": "Put the second factor over its common denominator, then factor the difference of squares.",
+          "ta": "இரண்டாம் காரணியில் பொதுப் பகுதியைப் பயன்படுத்துக. வர்க்கங்களின் வித்தியாசத்தைக் காரணிப்படுத்துக.",
+          "eq": "1+(q²+r²−p²)/(2qr)\n=((q+r)²−p²)/(2qr)\n=((q+r−p)(q+r+p))/(2qr)",
+          "math": {
+            "latex": "\\begin{aligned}1+\\dfrac{q^2+r^2-p^2}{2qr}\\\\=\\dfrac{(q+r)^2-p^2}{2qr}\\\\=\\dfrac{(q+r-p)(q+r+p)}{2qr}\\end{aligned}",
+            "fallback": "1+(q²+r²−p²)/(2qr)\n=((q+r)²−p²)/(2qr)\n=((q+r−p)(q+r+p))/(2qr)",
+            "display": true
+          }
+        },
+        {
+          "en": "Multiply the simplified factors and cancel the nonzero common factor. Keep the original exclusions.",
+          "ta": "சுருக்கிய காரணிகளைப் பெருக்கி, பூச்சியமற்ற பொதுக் காரணியை நீக்குக. அசல் விலக்கப்பட்ட மதிப்புகள் தொடர்ந்து பொருந்தும்.",
+          "eq": "(q+r+p)/(q+r−p)·((q+r−p)(q+r+p))/(2qr)\n=((p+q+r)²)/(2qr)",
+          "math": {
+            "latex": "\\begin{aligned}\\dfrac{q+r+p}{q+r-p}\\cdot\\dfrac{(q+r-p)(q+r+p)}{2qr}\\\\=\\dfrac{(p+q+r)^2}{2qr}\\end{aligned}",
+            "fallback": "(q+r+p)/(q+r−p)·((q+r−p)(q+r+p))/(2qr)\n=((p+q+r)²)/(2qr)",
+            "display": true
+          }
+        }
+      ],
+      "answer": "((p+q+r)²)/(2qr)",
+      "hint": {
+        "en": "Use common denominators first and record which expressions cannot vanish.",
+        "ta": "முதலில் பொதுப் பகுதிகளைக் கண்டு பூச்சியமாகக் கூடாத கோவைகளைக் குறிக்கவும்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{\\dfrac{(p+q+r)^2}{2qr}}",
+        "fallback": "((p+q+r)²)/(2qr)",
+        "display": true
+      },
+      "difficulty": "difficult",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q8",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q8",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 8"
+      },
+      "title": {
+        "en": "Add work rates",
+        "ta": "வேலை வீதங்களைக் கூட்டுதல்"
+      },
+      "q": {
+        "en": "8. Arul, Madan and Ram working together can clean a store in 6 hours. Working alone, Madan takes twice as long to clean the store as Arul does. Ram needs three times as long as Arul does. How long would it take each if they are working alone?",
+        "ta": "8. அருள், மதன் மற்றும் இராம் மூவரும் இணைந்து ஒரு கடையை 6 மணி நேரத்தில் சுத்தம் செய்கின்றனர். தனித்தனியாகச் சுத்தம் செய்தால் அருளைப் போல இருமடங்கு நேரம் மதன் எடுத்துக் கொள்கிறார். மேலும் இராம், அருளின் நேரத்தைப்போல மும்மடங்கு எடுத்துக்கொள்கிறார் எனில், மூவரும் தனித்தனியாக எவ்வளவு நேரம் எடுத்துக் கொள்வார்கள்?"
+      },
+      "questionMath": {
+        "en": [
+          "8. ",
+          "Arul, Madan and Ram working together can clean a store in 6 hours. Working alone, Madan takes twice as long to clean the store as Arul does. Ram needs three times as long as Arul does. How long would it take each if they are working alone?"
+        ],
+        "ta": [
+          "8. ",
+          "அருள், மதன் மற்றும் இராம் மூவரும் இணைந்து ஒரு கடையை 6 மணி நேரத்தில் சுத்தம் செய்கின்றனர். தனித்தனியாகச் சுத்தம் செய்தால் அருளைப் போல இருமடங்கு நேரம் மதன் எடுத்துக் கொள்கிறார். மேலும் இராம், அருளின் நேரத்தைப்போல மும்மடங்கு எடுத்துக்கொள்கிறார் எனில், மூவரும் தனித்தனியாக எவ்வளவு நேரம் எடுத்துக் கொள்வார்கள்?"
+        ]
+      },
+      "steps": [
+        {
+          "en": "Let Arul take h hours. The individual times are h, 2h and 3h. Take reciprocals to get the fraction of the store each cleans in one hour.",
+          "ta": "அருள் h மணி நேரம் எடுத்துக்கொள்கிறார் என்க. தனித்தனி நேரங்கள் h, 2h, 3h. தலைகீழ் மதிப்புகள் ஒவ்வொருவரும் ஒரு மணி நேரத்தில் முடிக்கும் வேலைப் பங்கைக் குறிக்கும்.",
+          "eq": "(1)/(h)+(1)/(2h)+(1)/(3h)=(1)/(6)",
+          "math": {
+            "latex": "\\dfrac1h+\\dfrac1{2h}+\\dfrac1{3h}=\\dfrac16",
+            "fallback": "(1)/(h)+(1)/(2h)+(1)/(3h)=(1)/(6)",
+            "display": true
+          },
+          "why": {
+            "en": "Add work done per hour instead of adding working times.",
+            "ta": "நேரங்களைச் சேர்ப்பதற்குப் பதிலாக ஒரு மணி நேரத்தில் செய்யும் வேலைப் பங்குகளைக் கூட்டுக."
+          }
+        },
+        {
+          "en": "Multiply the rate equation by 6h. The positive value of h gives all three times.",
+          "ta": "வேலை வீதச் சமன்பாட்டை 6h ஆல் பெருக்குக. h-இன் நேர்ம மதிப்பிலிருந்து மூன்று நேரங்களும் கிடைக்கும்.",
+          "eq": "6+3+2=h\n(h,2h,3h)=(11,22,33)",
+          "math": {
+            "latex": "\\begin{aligned}6+3+2&=h\\\\(h,2h,3h)&=(11,22,33)\\end{aligned}",
+            "fallback": "6+3+2=h\n(h,2h,3h)=(11,22,33)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the three rates together. In six hours, they complete one whole store.",
+          "ta": "மூவரின் வேலை வீதங்களையும் சேர்த்துச் சரிபார்க்கவும். ஆறு மணி நேரத்தில் கடை முழுவதையும் சுத்தம் செய்கின்றனர்.",
+          "eq": "6((1)/(11)+(1)/(22)+(1)/(33))=1",
+          "math": {
+            "latex": "6\\left(\\dfrac1{11}+\\dfrac1{22}+\\dfrac1{33}\\right)=1",
+            "fallback": "6((1)/(11)+(1)/(22)+(1)/(33))=1",
+            "display": true
+          }
+        }
+      ],
+      "answer": "11, 22 and 33 hours, respectively\n(11,22,33)",
+      "hint": {
+        "en": "Add work done per hour instead of adding working times.",
+        "ta": "நேரங்களைச் சேர்ப்பதற்குப் பதிலாக ஒரு மணி நேரத்தில் செய்யும் வேலைப் பங்குகளைக் கூட்டுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "en": [
+          "11, 22 and 33 hours, respectively\n",
+          {
+            "latex": "\\boxed{(11,22,33)}",
+            "fallback": "(11,22,33)",
+            "display": true
+          }
+        ],
+        "ta": [
+          "முறையே 11, 22, 33 மணி நேரம்\n",
+          {
+            "latex": "\\boxed{(11,22,33)}",
+            "fallback": "(11,22,33)",
+            "display": true
+          }
+        ]
+      },
+      "answerTa": "முறையே 11, 22, 33 மணி நேரம்\n(11,22,33)",
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q9",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q9",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 9"
+      },
+      "title": {
+        "en": "Recover the square root of the polynomial",
+        "ta": "கோவையின் வர்க்கமூலத்தைக் காண்க"
+      },
+      "q": {
+        "en": "9. Find the square root of 289x⁴−612x³+970x²−684x+361.",
+        "ta": "9. 289x⁴−612x³+970x²−684x+361–யின் வர்க்கமூலம் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "9. ",
+          "Find the square root of ",
+          {
+            "latex": "289x^4-612x^3+970x^2-684x+361",
+            "fallback": "289x⁴−612x³+970x²−684x+361",
+            "display": true
+          },
+          "."
+        ],
+        "ta": [
+          "9. ",
+          {
+            "latex": "289x^4-612x^3+970x^2-684x+361",
+            "fallback": "289x⁴−612x³+970x²−684x+361",
+            "display": true
+          },
+          "–யின் வர்க்கமூலம் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Start the square-root division with 17x², the square root of the leading term. After subtracting its square, divide the next leading term by twice 17x².",
+          "ta": "தலைமை உறுப்பின் வர்க்கமூலமான 17x²-இல் வர்க்கமூல வகுத்தலைத் தொடங்குக. அதன் வர்க்கத்தைக் கழித்த பின் அடுத்த தலைமை உறுப்பை 17x²-இன் இருமடங்கால் வகுக்கவும்.",
+          "eq": "√(289x⁴)=17x²\n(−612x³)/(34x²)=−18x",
+          "math": {
+            "latex": "\\begin{aligned}\\sqrt{289x^4}&=17x^2\\\\\\dfrac{-612x^3}{34x^2}&=-18x\\end{aligned}",
+            "fallback": "√(289x⁴)=17x²\n(−612x³)/(34x²)=−18x",
+            "display": true
+          },
+          "why": {
+            "en": "Start with the square root of the highest-degree term.",
+            "ta": "மிக உயர்ந்த படியுடைய உறுப்பின் வர்க்கமூலத்திலிருந்து தொடங்குக."
+          }
+        },
+        {
+          "en": "Subtract the square of the current partial root. Divide the leading remainder term by 34x² to find the last term.",
+          "ta": "இதுவரை கிடைத்த வர்க்கமூலத்தின் வர்க்கத்தைக் கழிக்கவும். மீதியின் தலைமையுறுப்பை 34x² ஆல் வகுத்துக் கடைசி உறுப்பைக் காண்க.",
+          "eq": "P−(17x²−18x)²\n=646x²−684x+361\n(646x²)/(34x²)=19",
+          "math": {
+            "latex": "\\begin{aligned}P-(17x^2-18x)^2\\\\=646x^2-684x+361\\\\\\dfrac{646x^2}{34x^2}=19\\end{aligned}",
+            "fallback": "P−(17x²−18x)²\n=646x²−684x+361\n(646x²)/(34x²)=19",
+            "display": true
+          }
+        },
+        {
+          "en": "Squaring the completed result restores the polynomial. Completing the square shows the result is positive, so it equals its absolute value.",
+          "ta": "கிடைத்த கோவையை வர்க்கப்படுத்தினால் அசல் கோவை கிடைக்கும். முழு வர்க்கமாக மாற்றும்போது விடை நேர்மம் எனத் தெரியும்; எனவே அது அதன் தனி மதிப்புக்குச் சமம்.",
+          "eq": "17x²−18x+19\n=17(x−(9)/(17))²+(242)/(17)>0",
+          "math": {
+            "latex": "\\begin{aligned}17x^2-18x+19\\\\=17\\left(x-\\dfrac9{17}\\right)^2+\\dfrac{242}{17}>0\\end{aligned}",
+            "fallback": "17x²−18x+19\n=17(x−(9)/(17))²+(242)/(17)>0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "17x²−18x+19",
+      "hint": {
+        "en": "Start with the square root of the highest-degree term.",
+        "ta": "மிக உயர்ந்த படியுடைய உறுப்பின் வர்க்கமூலத்திலிருந்து தொடங்குக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{17x^2-18x+19}",
+        "fallback": "17x²−18x+19",
+        "display": true
+      },
+      "difficulty": "difficult",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q10",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q10",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 10"
+      },
+      "title": {
+        "en": "Solve an equation with two radicals",
+        "ta": "இரு வர்க்கமூலங்கள் உள்ள சமன்பாட்டைத் தீர்த்தல்"
+      },
+      "q": {
+        "en": "10. Solve √(y+1)+√(2y−5)=3",
+        "ta": "10. தீர்க்க √(y+1)+√(2y−5)=3"
+      },
+      "questionMath": {
+        "en": [
+          "10. ",
+          "Solve ",
+          {
+            "latex": "\\sqrt{y+1}+\\sqrt{2y-5}=3",
+            "fallback": "√(y+1)+√(2y−5)=3",
+            "display": true
+          }
+        ],
+        "ta": [
+          "10. ",
+          "தீர்க்க ",
+          {
+            "latex": "\\sqrt{y+1}+\\sqrt{2y-5}=3",
+            "fallback": "√(y+1)+√(2y−5)=3",
+            "display": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Both radicands must be nonnegative. The second root cannot exceed three, since the other root is nonnegative.",
+          "ta": "இரு வர்க்கமூலங்களின் உள் கோவைகளும் எதிர்மமற்றவை. முதல் வர்க்கமூலம் எதிர்மமற்றதால் இரண்டாவது வர்க்கமூலம் மூன்றை மீறாது.",
+          "eq": "(5)/(2)≤ y≤7",
+          "math": {
+            "latex": "\\dfrac52\\le y\\le7",
+            "fallback": "(5)/(2)≤ y≤7",
+            "display": true
+          },
+          "why": {
+            "en": "Check candidates in the original radical equation after squaring.",
+            "ta": "வர்க்கப்படுத்திய பின் கிடைக்கும் மதிப்புகளை அசல் வர்க்கமூலச் சமன்பாட்டில் சரிபார்க்கவும்."
+          }
+        },
+        {
+          "en": "Isolate the first radical. Square both sides, then isolate the remaining radical.",
+          "ta": "முதல் வர்க்கமூலத்தைத் தனியாகப் பிரிக்கவும். இரு பக்கங்களையும் வர்க்கப்படுத்தி மீதமுள்ள வர்க்கமூலத்தைத் தனியாக்கவும்.",
+          "eq": "√(y+1)=3−√(2y−5)\ny+1=4+2y−6√(2y−5)\n6√(2y−5)=y+3",
+          "math": {
+            "latex": "\\begin{aligned}\\sqrt{y+1}&=3-\\sqrt{2y-5}\\\\y+1&=4+2y-6\\sqrt{2y-5}\\\\6\\sqrt{2y-5}&=y+3\\end{aligned}",
+            "fallback": "√(y+1)=3−√(2y−5)\ny+1=4+2y−6√(2y−5)\n6√(2y−5)=y+3",
+            "display": true
+          }
+        },
+        {
+          "en": "Square again and factor. Reject 63 because it is outside the original bounds. Substitution confirms 3.",
+          "ta": "மீண்டும் வர்க்கப்படுத்திக் காரணிப்படுத்துக. அசல் எல்லைக்கு வெளியே இருப்பதால் 63-ஐ விலக்குக. பிரதியிட்டால் 3 சமன்பாட்டை நிறைவு செய்கிறது.",
+          "eq": "36(2y−5)=(y+3)²\n(y−3)(y−63)=0\n√(4)+√(1)=3",
+          "math": {
+            "latex": "\\begin{aligned}36(2y-5)&=(y+3)^2\\\\(y-3)(y-63)&=0\\\\\\sqrt{4}+\\sqrt1&=3\\end{aligned}",
+            "fallback": "36(2y−5)=(y+3)²\n(y−3)(y−63)=0\n√(4)+√(1)=3",
+            "display": true
+          }
+        }
+      ],
+      "answer": "y=3",
+      "hint": {
+        "en": "Check candidates in the original radical equation after squaring.",
+        "ta": "வர்க்கப்படுத்திய பின் கிடைக்கும் மதிப்புகளை அசல் வர்க்கமூலச் சமன்பாட்டில் சரிபார்க்கவும்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{y=3}",
+        "fallback": "y=3",
+        "display": true
+      },
+      "difficulty": "difficult",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q11",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q11",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 11"
+      },
+      "title": {
+        "en": "Use upstream and downstream speeds",
+        "ta": "எதிரோட்ட, நீரோட்ட வேகங்களைப் பயன்படுத்துதல்"
+      },
+      "q": {
+        "en": "11. A boat takes 1.6 hours longer to go 36 kms up a river than down the river. If the speed of the water current is 4 km per hr, what is the speed of the boat in still water?",
+        "ta": "11. 36 கி.மீ தூரத்தை ஒரு படகு நீரோட்டத்தின் திசையில் கடக்கும் நேரத்தைவிட எதிர்த்திசையில் கடக்கும் நேரம் 1.6 மணி நேரம் அதிகமாக எடுத்துக்கொள்கிறது. நீரோட்டத்தின் வேகம் 4 கி.மீ/மணி எனில், அசைவற்ற நீரில் படகின் வேகம் என்ன?"
+      },
+      "questionMath": {
+        "en": [
+          "11. ",
+          "A boat takes 1.6 hours longer to go 36 kms up a river than down the river. If the speed of the water current is 4 km per hr, what is the speed of the boat in still water?"
+        ],
+        "ta": [
+          "11. ",
+          "36 கி.மீ தூரத்தை ஒரு படகு நீரோட்டத்தின் திசையில் கடக்கும் நேரத்தைவிட எதிர்த்திசையில் கடக்கும் நேரம் 1.6 மணி நேரம் அதிகமாக எடுத்துக்கொள்கிறது. நீரோட்டத்தின் வேகம் 4 கி.மீ/மணி எனில், அசைவற்ற நீரில் படகின் வேகம் என்ன?"
+        ]
+      },
+      "steps": [
+        {
+          "en": "Let v be the boat’s speed in still water. The upstream speed is v − 4 and must be positive. Divide distance by speed to express each travel time.",
+          "ta": "அசைவற்ற நீரில் படகின் வேகம் v என்க. எதிரோட்ட வேகம் v − 4 நேர்மமாக இருக்க வேண்டும். ஒவ்வொரு பயண நேரத்திற்கும் தூரத்தை வேகத்தால் வகுக்கவும்.",
+          "eq": "(36)/(v−4)−(36)/(v+4)=(8)/(5),  v>4",
+          "math": {
+            "latex": "\\dfrac{36}{v-4}-\\dfrac{36}{v+4}=\\dfrac85,\\quad v>4",
+            "fallback": "(36)/(v−4)−(36)/(v+4)=(8)/(5),  v>4",
+            "display": true
+          },
+          "why": {
+            "en": "Time is distance divided by speed.",
+            "ta": "பயண நேரம் என்பது தூரத்தை வேகத்தால் வகுத்த மதிப்பு."
+          }
+        },
+        {
+          "en": "Combine the fractions and clear the denominator. Take the positive root to satisfy the upstream restriction.",
+          "ta": "பின்னங்களை இணைத்துப் பகுதியை நீக்குக. எதிரோட்ட வேக நிபந்தனைக்காக நேர்ம மூலத்தை எடுக்கவும்.",
+          "eq": "(288)/(v²−16)=(8)/(5)\nv²−16=180\nv²=196\nv=14",
+          "math": {
+            "latex": "\\begin{aligned}\\dfrac{288}{v^2-16}&=\\dfrac85\\\\v^2-16&=180\\\\v^2&=196\\\\v&=14\\end{aligned}",
+            "fallback": "(288)/(v²−16)=(8)/(5)\nv²−16=180\nv²=196\nv=14",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the travel times. The upstream trip takes 3.6 hours and the downstream trip takes 2 hours.",
+          "ta": "பயண நேரங்களைச் சரிபார்க்கவும். எதிரோட்டப் பயணம் 3.6 மணி நேரமும் நீரோட்டப் பயணம் 2 மணி நேரமும் எடுக்கும்.",
+          "eq": "(36)/(10)−(36)/(18)=1.6",
+          "math": {
+            "latex": "\\dfrac{36}{10}-\\dfrac{36}{18}=1.6",
+            "fallback": "(36)/(10)−(36)/(18)=1.6",
+            "display": true
+          }
+        }
+      ],
+      "answer": "14 km/h",
+      "hint": {
+        "en": "Time is distance divided by speed.",
+        "ta": "பயண நேரம் என்பது தூரத்தை வேகத்தால் வகுத்த மதிப்பு."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{14\\,\\mathrm{km/h}}",
+        "fallback": "14 km/h",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q12",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q12",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 12"
+      },
+      "title": {
+        "en": "Find the dimensions of a rectangle",
+        "ta": "செவ்வகத்தின் நீளம், அகலம் காண்க"
+      },
+      "q": {
+        "en": "12. Is it possible to design a rectangular park of perimeter 320 m and area 4800 m²? If so find its length and breadth.",
+        "ta": "12. 320 மீ சுற்றளவும் 4800 ச.மீ பரப்பளவும் கொண்ட செவ்வக வடிவப் பூங்காவை அமைக்க முடியுமா? ஆம் எனில், அதன் நீளம், அகலம் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "12. ",
+          "Is it possible to design a rectangular park of perimeter 320 m and area ",
+          {
+            "latex": "4800\\,\\mathrm{m}^2",
+            "fallback": "4800 m²",
+            "display": false
+          },
+          "? If so find its length and breadth."
+        ],
+        "ta": [
+          "12. ",
+          "320 மீ சுற்றளவும் 4800 ச.மீ பரப்பளவும் கொண்ட செவ்வக வடிவப் பூங்காவை அமைக்க முடியுமா? ஆம் எனில், அதன் நீளம், அகலம் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Divide the perimeter by two to get the sum of the length L and breadth B. The area gives their product.",
+          "ta": "சுற்றளவை இரண்டால் வகுத்தால் நீளம் L மற்றும் அகலம் B ஆகியவற்றின் கூடுதல் கிடைக்கும். பரப்பளவு அவற்றின் பெருக்கல்.",
+          "eq": "L+B=160\nLB=4800",
+          "math": {
+            "latex": "\\begin{aligned}L+B&=160\\\\LB&=4800\\end{aligned}",
+            "fallback": "L+B=160\nLB=4800",
+            "display": true
+          },
+          "why": {
+            "en": "Use the perimeter for the sum and area for the product.",
+            "ta": "சுற்றளவில் இருந்து கூடுதலையும் பரப்பளவிலிருந்து பெருக்கலையும் காண்க."
+          }
+        },
+        {
+          "en": "Replace B by 160 − L in the area equation, then factor.",
+          "ta": "பரப்பளவுச் சமன்பாட்டில் B-க்குப் பதிலாக 160 − L-ஐப் பிரதியிட்டுக் காரணிப்படுத்துக.",
+          "eq": "L(160−L)=4800\n(L−120)(L−40)=0",
+          "math": {
+            "latex": "\\begin{aligned}L(160-L)&=4800\\\\(L-120)(L-40)&=0\\end{aligned}",
+            "fallback": "L(160−L)=4800\n(L−120)(L−40)=0",
+            "display": true
+          }
+        },
+        {
+          "en": "Both dimensions are positive. The longer side is 120 m, and the shorter side is 40 m. Their sum and product meet the requirements.",
+          "ta": "இரு அளவுகளும் நேர்மம். நீண்ட பக்கம் 120 மீ; குறுகிய பக்கம் 40 மீ. அவற்றின் கூடுதலும் பெருக்கலும் நிபந்தனைகளை நிறைவு செய்கின்றன.",
+          "eq": "2(120+40)=320\n120(40)=4800",
+          "math": {
+            "latex": "\\begin{aligned}2(120+40)&=320\\\\120(40)&=4800\\end{aligned}",
+            "fallback": "2(120+40)=320\n120(40)=4800",
+            "display": true
+          }
+        }
+      ],
+      "answer": "120 m, 40 m",
+      "hint": {
+        "en": "Use the perimeter for the sum and area for the product.",
+        "ta": "சுற்றளவில் இருந்து கூடுதலையும் பரப்பளவிலிருந்து பெருக்கலையும் காண்க."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{120\\,\\mathrm{m},\\quad40\\,\\mathrm{m}}",
+        "fallback": "120 m, 40 m",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q13",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q13",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 13"
+      },
+      "title": {
+        "en": "Model the remaining minutes",
+        "ta": "மீதமுள்ள நிமிடங்களைச் சமன்பாடாக்குதல்"
+      },
+      "q": {
+        "en": "13. At t minutes past 2 pm, the time needed to 3 pm is 3 minutes less than (t²)/(4). Find t.",
+        "ta": "13. ஒரு கடிகாரத்தில் பிற்பகல் 2 மணியிலிருந்து t நிமிடங்களுக்குப் பிறகு 3 மணியை அடைவதற்குரிய கால அளவானது (t²)/(4)–ஐ விட மூன்று நிமிடங்கள் குறைவு எனில், t–யின் மதிப்பைக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "13. ",
+          "At t minutes past 2 pm, the time needed to 3 pm is 3 minutes less than ",
+          {
+            "latex": "\\dfrac{t^2}{4}",
+            "fallback": "(t²)/(4)",
+            "display": false
+          },
+          ". Find t."
+        ],
+        "ta": [
+          "13. ",
+          "ஒரு கடிகாரத்தில் பிற்பகல் 2 மணியிலிருந்து t நிமிடங்களுக்குப் பிறகு 3 மணியை அடைவதற்குரிய கால அளவானது ",
+          {
+            "latex": "\\dfrac{t^2}{4}",
+            "fallback": "(t²)/(4)",
+            "display": false
+          },
+          "–ஐ விட மூன்று நிமிடங்கள் குறைவு எனில், t–யின் மதிப்பைக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "There are sixty minutes from 2 pm to 3 pm. After t minutes, the remaining time is 60 − t.",
+          "ta": "பிற்பகல் 2 முதல் 3 மணி வரை 60 நிமிடங்கள். t நிமிடங்கள் கடந்த பின் மீதமிருப்பது 60 − t நிமிடங்கள்.",
+          "eq": "60−t=(t²)/(4)−3,  0≤ t≤60",
+          "math": {
+            "latex": "60-t=\\dfrac{t^2}{4}-3,\\quad 0\\le t\\le60",
+            "fallback": "60−t=(t²)/(4)−3,  0≤ t≤60",
+            "display": true
+          },
+          "why": {
+            "en": "Write the remaining time in two ways.",
+            "ta": "மீத நேரத்தை இரு வழிகளில் எழுதுக."
+          }
+        },
+        {
+          "en": "Multiply by four and factor. The negative root cannot be a time elapsed after 2 pm.",
+          "ta": "நான்கால் பெருக்கிக் காரணிப்படுத்துக. எதிர்ம மூலம் 2 மணிக்குப் பின் கடந்த நேரமாக இருக்க முடியாது.",
+          "eq": "t²+4t−252=0\n(t−14)(t+18)=0\nt=14",
+          "math": {
+            "latex": "\\begin{aligned}t^2+4t-252&=0\\\\(t-14)(t+18)&=0\\\\t&=14\\end{aligned}",
+            "fallback": "t²+4t−252=0\n(t−14)(t+18)=0\nt=14",
+            "display": true
+          }
+        },
+        {
+          "en": "Check that both expressions give 46 minutes remaining.",
+          "ta": "இரு கோவைகளிலும் மீத நேரம் 46 நிமிடங்கள் எனச் சரிபார்க்கவும்.",
+          "eq": "60−14=46=(14²)/(4)−3",
+          "math": {
+            "latex": "60-14=46=\\dfrac{14^2}{4}-3",
+            "fallback": "60−14=46=(14²)/(4)−3",
+            "display": true
+          }
+        }
+      ],
+      "answer": "14 minutes\nt=14",
+      "hint": {
+        "en": "Write the remaining time in two ways.",
+        "ta": "மீத நேரத்தை இரு வழிகளில் எழுதுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "en": [
+          "14 minutes\n",
+          {
+            "latex": "\\boxed{t=14}",
+            "fallback": "t=14",
+            "display": true
+          }
+        ],
+        "ta": [
+          "14 நிமிடங்கள்\n",
+          {
+            "latex": "\\boxed{t=14}",
+            "fallback": "t=14",
+            "display": true
+          }
+        ]
+      },
+      "answerTa": "14 நிமிடங்கள்\nt=14",
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q14",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q14",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 14"
+      },
+      "title": {
+        "en": "Compare the two seat totals",
+        "ta": "இரு மொத்த இருக்கை எண்ணிக்கைகளை ஒப்பிடுதல்"
+      },
+      "q": {
+        "en": "14. The number of seats in a row is equal to the total number of rows in a hall. The total number of seats in the hall will increase by 375 if the number of rows is doubled and the number of seats in each row is reduced by 5. Find the number of rows in the hall at the beginning.",
+        "ta": "14. ஓர் அரங்கில், ஒரு வரிசையில் உள்ள இருக்கைகளின் எண்ணிக்கை அந்த அரங்கில் உள்ள மொத்த வரிசைகளின் எண்ணிக்கைக்குச் சமம். ஒவ்வொரு வரிசையில் உள்ள இருக்கைகளை 5 குறைத்து மொத்த வரிசைகளின் எண்ணிக்கையை இரட்டிப்பாக்கினால் அரங்கில் உள்ள இருக்கைகளின் எண்ணிக்கை முன்பைவிட 375 அதிகரிக்கும். அரங்கில் துவக்கத்தில் இருந்த வரிசைகளின் எண்ணிக்கையைக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "14. ",
+          "The number of seats in a row is equal to the total number of rows in a hall. The total number of seats in the hall will increase by 375 if the number of rows is doubled and the number of seats in each row is reduced by 5. Find the number of rows in the hall at the beginning."
+        ],
+        "ta": [
+          "14. ",
+          "ஓர் அரங்கில், ஒரு வரிசையில் உள்ள இருக்கைகளின் எண்ணிக்கை அந்த அரங்கில் உள்ள மொத்த வரிசைகளின் எண்ணிக்கைக்குச் சமம். ஒவ்வொரு வரிசையில் உள்ள இருக்கைகளை 5 குறைத்து மொத்த வரிசைகளின் எண்ணிக்கையை இரட்டிப்பாக்கினால் அரங்கில் உள்ள இருக்கைகளின் எண்ணிக்கை முன்பைவிட 375 அதிகரிக்கும். அரங்கில் துவக்கத்தில் இருந்த வரிசைகளின் எண்ணிக்கையைக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Let n be both the original row count and the number of seats in each row. The original total is n squared. After the change there are twice as many rows with five fewer seats in each.",
+          "ta": "தொடக்க நிரைகளின் எண்ணிக்கையையும் நிரை ஒன்றின் இருக்கைகளின் எண்ணிக்கையையும் n என்க. தொடக்க மொத்தம் n வர்க்கம். மாற்றத்திற்குப் பின் நிரைகள் இருமடங்கு; நிரை ஒன்றில் ஐந்து இருக்கைகள் குறையும்.",
+          "eq": "2n(n−5)−n²=375,quad n>5",
+          "math": {
+            "latex": "2n(n-5)-n^2=375,quad n>5",
+            "fallback": "2n(n−5)−n²=375,quad n>5",
+            "display": true
+          },
+          "why": {
+            "en": "Find the seat count before and after the change.",
+            "ta": "மாற்றத்திற்கு முன்னும் பின்னும் இருக்கைகளின் மொத்த எண்ணிக்கையைக் காண்க."
+          }
+        },
+        {
+          "en": "Expand, collect terms and factor. The negative root does not describe a row count.",
+          "ta": "விரித்து உறுப்புகளைத் தொகுத்துக் காரணிப்படுத்துக. எதிர்ம மூலம் நிரைகளின் எண்ணிக்கையாக இருக்க முடியாது.",
+          "eq": "n²−10n−375=0\n(n−25)(n+15)=0\nn=25",
+          "math": {
+            "latex": "\\begin{aligned}n^2-10n-375&=0\\\\(n-25)(n+15)&=0\\\\n&=25\\end{aligned}",
+            "fallback": "n²−10n−375=0\n(n−25)(n+15)=0\nn=25",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the new seating layout has 375 more seats than the original layout.",
+          "ta": "புதிய அமைப்பில் தொடக்கத்தைவிட 375 இருக்கைகள் கூடுதலாக உள்ளனவா எனச் சரிபார்க்கவும்.",
+          "eq": "50(20)−25²=375",
+          "math": {
+            "latex": "50(20)-25^2=375",
+            "fallback": "50(20)−25²=375",
+            "display": true
+          }
+        }
+      ],
+      "answer": "25 rows\nn=25",
+      "hint": {
+        "en": "Find the seat count before and after the change.",
+        "ta": "மாற்றத்திற்கு முன்னும் பின்னும் இருக்கைகளின் மொத்த எண்ணிக்கையைக் காண்க."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "en": [
+          "25 rows\n",
+          {
+            "latex": "\\boxed{n=25}",
+            "fallback": "n=25",
+            "display": true
+          }
+        ],
+        "ta": [
+          "25 வரிசைகள்\n",
+          {
+            "latex": "\\boxed{n=25}",
+            "fallback": "n=25",
+            "display": true
+          }
+        ]
+      },
+      "answerTa": "25 வரிசைகள்\nn=25",
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q15-i",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q15(i)",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 15(i)"
+      },
+      "title": {
+        "en": "Find a polynomial with transformed roots",
+        "ta": "மாற்றிய மூலங்களுக்கான பல்லுறுப்புக் கோவையைக் காண்க"
+      },
+      "q": {
+        "en": "15. If α and β are the roots of the polynomial f(x)=x²−2x+3, find the polynomial whose roots are (i) α+2, β+2",
+        "ta": "15. f(x)=x²−2x+3, என்ற பல்லுறுப்புக் கோவையின் மூலங்கள் α மற்றும் β எனில், கீழ்க்காண்பனவற்றை மூலங்களாகக் கொண்ட பல்லுறுப்புக் கோவையைக் காண்க. (i) α+2, β+2"
+      },
+      "questionMath": {
+        "en": [
+          "15. ",
+          "If α and β are the roots of the polynomial ",
+          {
+            "latex": "f(x)=x^2-2x+3",
+            "fallback": "f(x)=x²−2x+3",
+            "display": false
+          },
+          ", find the polynomial whose roots are (i) ",
+          {
+            "latex": "\\alpha+2,\\ \\beta+2",
+            "fallback": "α+2, β+2",
+            "display": true
+          }
+        ],
+        "ta": [
+          "15. ",
+          {
+            "latex": "f(x)=x^2-2x+3",
+            "fallback": "f(x)=x²−2x+3",
+            "display": false
+          },
+          ", என்ற பல்லுறுப்புக் கோவையின் மூலங்கள் α மற்றும் β எனில், கீழ்க்காண்பனவற்றை மூலங்களாகக் கொண்ட பல்லுறுப்புக் கோவையைக் காண்க. (i) ",
+          {
+            "latex": "\\alpha+2,\\ \\beta+2",
+            "fallback": "α+2, β+2",
+            "display": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "From the coefficients of the original polynomial, read the sum and product of its roots.",
+          "ta": "அசல் கோவையின் கெழுக்களிலிருந்து மூலங்களின் கூடுதலையும் பெருக்கற்பலனையும் காண்க.",
+          "eq": "α+β=2, αβ=3",
+          "math": {
+            "latex": "\\alpha+\\beta=2,\\quad\\alpha\\beta=3",
+            "fallback": "α+β=2, αβ=3",
+            "display": true
+          },
+          "why": {
+            "en": "Use the sum and product of the roots from the coefficients.",
+            "ta": "கெழுக்களிலிருந்து மூலங்களின் கூடுதல், பெருக்கற்பலனைக் காண்க."
+          }
+        },
+        {
+          "en": "Calculate the new sum S and product P. The quadratic formula is unnecessary because these expressions depend only on the original sum and product.",
+          "ta": "புதிய கூடுதல் S, பெருக்கற்பலன் P ஆகியவற்றைக் காண்க. இவை அசல் கூடுதல், பெருக்கற்பலனை மட்டுமே சார்ந்ததால் இருபடிச் சூத்திரம் தேவையில்லை.",
+          "eq": "S=(α+β)+4=6\nP=αβ+2(α+β)+4\n=3+4+4=11",
+          "math": {
+            "latex": "\\begin{aligned}S&=(\\alpha+\\beta)+4=6\\\\P&=\\alpha\\beta+2(\\alpha+\\beta)+4\\\\&=3+4+4=11\\end{aligned}",
+            "fallback": "S=(α+β)+4=6\nP=αβ+2(α+β)+4\n=3+4+4=11",
+            "display": true
+          }
+        },
+        {
+          "en": "Use the new sum and product to form the polynomial.",
+          "ta": "புதிய கூடுதல், பெருக்கற்பலன் மூலம் பல்லுறுப்புக் கோவையை அமைக்கவும்.",
+          "eq": "x²−Sx+P=x²−6x+11",
+          "math": {
+            "latex": "x^2-Sx+P=x^2-6x+11",
+            "fallback": "x²−Sx+P=x²−6x+11",
+            "display": true
+          }
+        }
+      ],
+      "answer": "x²−6x+11",
+      "hint": {
+        "en": "Use the sum and product of the roots from the coefficients.",
+        "ta": "கெழுக்களிலிருந்து மூலங்களின் கூடுதல், பெருக்கற்பலனைக் காண்க."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{x^2-6x+11}",
+        "fallback": "x²−6x+11",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q15-ii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q15(ii)",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 15(ii)"
+      },
+      "title": {
+        "en": "Find a polynomial with transformed roots",
+        "ta": "மாற்றிய மூலங்களுக்கான பல்லுறுப்புக் கோவையைக் காண்க"
+      },
+      "q": {
+        "en": "15. If α and β are the roots of the polynomial f(x)=x²−2x+3, find the polynomial whose roots are (ii) (α−1)/(α+1), (β−1)/(β+1)",
+        "ta": "15. f(x)=x²−2x+3, என்ற பல்லுறுப்புக் கோவையின் மூலங்கள் α மற்றும் β எனில், கீழ்க்காண்பனவற்றை மூலங்களாகக் கொண்ட பல்லுறுப்புக் கோவையைக் காண்க. (ii) (α−1)/(α+1), (β−1)/(β+1)"
+      },
+      "questionMath": {
+        "en": [
+          "15. ",
+          "If α and β are the roots of the polynomial ",
+          {
+            "latex": "f(x)=x^2-2x+3",
+            "fallback": "f(x)=x²−2x+3",
+            "display": false
+          },
+          ", find the polynomial whose roots are (ii) ",
+          {
+            "latex": "\\dfrac{\\alpha-1}{\\alpha+1},\\ \\dfrac{\\beta-1}{\\beta+1}",
+            "fallback": "(α−1)/(α+1), (β−1)/(β+1)",
+            "display": true
+          }
+        ],
+        "ta": [
+          "15. ",
+          {
+            "latex": "f(x)=x^2-2x+3",
+            "fallback": "f(x)=x²−2x+3",
+            "display": false
+          },
+          ", என்ற பல்லுறுப்புக் கோவையின் மூலங்கள் α மற்றும் β எனில், கீழ்க்காண்பனவற்றை மூலங்களாகக் கொண்ட பல்லுறுப்புக் கோவையைக் காண்க. (ii) ",
+          {
+            "latex": "\\dfrac{\\alpha-1}{\\alpha+1},\\ \\dfrac{\\beta-1}{\\beta+1}",
+            "fallback": "(α−1)/(α+1), (β−1)/(β+1)",
+            "display": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "From the coefficients of the original polynomial, read the sum and product of its roots.",
+          "ta": "அசல் கோவையின் கெழுக்களிலிருந்து மூலங்களின் கூடுதலையும் பெருக்கற்பலனையும் காண்க.",
+          "eq": "α+β=2, αβ=3",
+          "math": {
+            "latex": "\\alpha+\\beta=2,\\quad\\alpha\\beta=3",
+            "fallback": "α+β=2, αβ=3",
+            "display": true
+          },
+          "why": {
+            "en": "Use the sum and product of the roots from the coefficients.",
+            "ta": "கெழுக்களிலிருந்து மூலங்களின் கூடுதல், பெருக்கற்பலனைக் காண்க."
+          }
+        },
+        {
+          "en": "Calculate the new sum S and product P. The quadratic formula is unnecessary because these expressions depend only on the original sum and product.",
+          "ta": "புதிய கூடுதல் S, பெருக்கற்பலன் P ஆகியவற்றைக் காண்க. இவை அசல் கூடுதல், பெருக்கற்பலனை மட்டுமே சார்ந்ததால் இருபடிச் சூத்திரம் தேவையில்லை.",
+          "eq": "S=(2αβ−2)/(αβ+α+β+1)=(2)/(3)\nP=(αβ−α−β+1)/(αβ+α+β+1)=(1)/(3)",
+          "math": {
+            "latex": "\\begin{aligned}S&=\\dfrac{2\\alpha\\beta-2}{\\alpha\\beta+\\alpha+\\beta+1}=\\dfrac23\\\\P&=\\dfrac{\\alpha\\beta-\\alpha-\\beta+1}{\\alpha\\beta+\\alpha+\\beta+1}=\\dfrac13\\end{aligned}",
+            "fallback": "S=(2αβ−2)/(αβ+α+β+1)=(2)/(3)\nP=(αβ−α−β+1)/(αβ+α+β+1)=(1)/(3)",
+            "display": true
+          }
+        },
+        {
+          "en": "Use the new sum and product to form the polynomial. The common denominator of the root expressions is six, so neither denominator vanishes. Multiply the monic polynomial by three to clear its fractions.",
+          "ta": "புதிய கூடுதல், பெருக்கற்பலன் மூலம் பல்லுறுப்புக் கோவையை அமைக்கவும். மூலக் கோவைகளின் பொதுப் பகுதி ஆறு. எனவே எந்தப் பகுதியும் பூச்சியமல்ல. கோவையை மூன்றால் பெருக்கிப் பின்னங்களை நீக்குக.",
+          "eq": "3(x²−(2)/(3) x+(1)/(3))=3x²−2x+1",
+          "math": {
+            "latex": "3\\left(x^2-\\dfrac23 x+\\dfrac13\\right)=3x^2-2x+1",
+            "fallback": "3(x²−(2)/(3) x+(1)/(3))=3x²−2x+1",
+            "display": true
+          }
+        }
+      ],
+      "answer": "3x²−2x+1",
+      "hint": {
+        "en": "Use the sum and product of the roots from the coefficients.",
+        "ta": "கெழுக்களிலிருந்து மூலங்களின் கூடுதல், பெருக்கற்பலனைக் காண்க."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{3x^2-2x+1}",
+        "fallback": "3x²−2x+1",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q16",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q16",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 16"
+      },
+      "title": {
+        "en": "Use a given root and the discriminant",
+        "ta": "கொடுக்கப்பட்ட மூலத்தையும் மூலங்காண் குறியையும் பயன்படுத்துதல்"
+      },
+      "q": {
+        "en": "16. If −4 is a root of the equation x²+px−4=0 and if the equation x²+px+q=0 has equal roots, find the values of p and q.",
+        "ta": "16. x²+px−4=0 என்ற சமன்பாட்டின் மூலம் −4 மற்றும் x²+px+q=0–யின் மூலங்கள் சமம் எனில், p மற்றும் q-யின் மதிப்புக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "16. ",
+          "If −4 is a root of the equation ",
+          {
+            "latex": "x^2+px-4=0",
+            "fallback": "x²+px−4=0",
+            "display": false
+          },
+          " and if the equation ",
+          {
+            "latex": "x^2+px+q=0",
+            "fallback": "x²+px+q=0",
+            "display": false
+          },
+          " has equal roots, find the values of p and q."
+        ],
+        "ta": [
+          "16. ",
+          {
+            "latex": "x^2+px-4=0",
+            "fallback": "x²+px−4=0",
+            "display": false
+          },
+          " என்ற சமன்பாட்டின் மூலம் −4 மற்றும் ",
+          {
+            "latex": "x^2+px+q=0",
+            "fallback": "x²+px+q=0",
+            "display": false
+          },
+          "–யின் மூலங்கள் சமம் எனில், p மற்றும் q-யின் மதிப்புக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Substitute negative four into the first equation. Solve the resulting equation for p.",
+          "ta": "முதல் சமன்பாட்டில் −4-ஐப் பிரதியிடுக. கிடைக்கும் சமன்பாட்டில் p-ஐக் காண்க.",
+          "eq": "16−4p−4=0\np=3",
+          "math": {
+            "latex": "\\begin{aligned}16-4p-4&=0\\\\p&=3\\end{aligned}",
+            "fallback": "16−4p−4=0\np=3",
+            "display": true
+          },
+          "why": {
+            "en": "Equal quadratic roots correspond to a zero discriminant.",
+            "ta": "சமமான இருபடி மூலங்களுக்கு மூலங்காண் குறி பூச்சியம்."
+          }
+        },
+        {
+          "en": "Equal roots in the second equation require a zero discriminant. Substitute p into that condition.",
+          "ta": "இரண்டாம் சமன்பாட்டில் மூலங்கள் சமம் என்பதால் மூலங்காண் குறி பூச்சியம். அந்த நிபந்தனையில் p-ஐப் பிரதியிடுக.",
+          "eq": "p²−4q=0\nq=(9)/(4)",
+          "math": {
+            "latex": "\\begin{aligned}p^2-4q&=0\\\\q&=\\dfrac94\\end{aligned}",
+            "fallback": "p²−4q=0\nq=(9)/(4)",
+            "display": true
+          }
+        }
+      ],
+      "answer": "p=3,  q=(9)/(4)",
+      "hint": {
+        "en": "Equal quadratic roots correspond to a zero discriminant.",
+        "ta": "சமமான இருபடி மூலங்களுக்கு மூலங்காண் குறி பூச்சியம்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163; Tamil PDF 167.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{p=3,\\quad q=\\dfrac94}",
+        "fallback": "p=3,  q=(9)/(4)",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163
+          ],
+          "ta": [
+            167
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q17-i",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q17(i)",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 17(i)"
+      },
+      "title": {
+        "en": "Model crop sales with a matrix",
+        "ta": "தானிய விற்பனையை அணியில் அமைத்தல்"
+      },
+      "q": {
+        "en": "17. Two farmers Thilagan and Kausigan cultivates three varieties of grains namely rice, wheat and ragi. If the sale (in ₹) of three varieties of grains by both the farmers in the month of April is given by the matrix.\nApril sale in ₹\nColumns: rice, wheat, ragi. Rows: Thilagan, Kausigan. A=[500, 1000, 1500; 2500, 1500, 500]and the May month sale (in ₹) is exactly twice as that of the April month sale for each variety.\n(i) What is the average sales of the months April and May.",
+        "ta": "17. திலகன், கௌசிகன் என்ற இரு விவசாயிகள் அரிசி, கோதுமை மற்றும் கேழ்வரகு ஆகிய மூன்று தானியங்களைப் பயிரிட்டனர். ஏப்ரல் மாதத்தில் இருவருக்குமான தானியங்களின் விற்பனை விலை கீழ்க்காணும் அணியில் கொடுக்கப்பட்டுள்ளது.\nஏப்ரல் மாத விற்பனை (ரூபாயில்)\nநிரல்கள்: அரிசி, கோதுமை, கேழ்வரகு. நிரைகள்: திலகன், கௌசிகன். A=[500, 1000, 1500; 2500, 1500, 500]மேலும் மே மாத விலை ஏப்ரல் மாத விலையின் இருமடங்கு எனில், கீழ்க்காண்பனவற்றைக் காண்க.\n(i) ஏப்ரல், மே மாதங்களின் சராசரி விற்பனை யாது?"
+      },
+      "questionMath": {
+        "en": [
+          "17. ",
+          "Two farmers Thilagan and Kausigan cultivates three varieties of grains namely rice, wheat and ragi. If the sale (in ₹) of three varieties of grains by both the farmers in the month of April is given by the matrix.\nApril sale in ₹\nColumns: rice, wheat, ragi. Rows: Thilagan, Kausigan. ",
+          {
+            "latex": "A=\\begin{bmatrix}500&1000&1500\\\\2500&1500&500\\end{bmatrix}",
+            "fallback": "A=[500, 1000, 1500; 2500, 1500, 500]",
+            "display": true
+          },
+          "and the May month sale (in ₹) is exactly twice as that of the April month sale for each variety.",
+          "\n(i) ",
+          "What is the average sales of the months April and May."
+        ],
+        "ta": [
+          "17. ",
+          "திலகன், கௌசிகன் என்ற இரு விவசாயிகள் அரிசி, கோதுமை மற்றும் கேழ்வரகு ஆகிய மூன்று தானியங்களைப் பயிரிட்டனர். ஏப்ரல் மாதத்தில் இருவருக்குமான தானியங்களின் விற்பனை விலை கீழ்க்காணும் அணியில் கொடுக்கப்பட்டுள்ளது.\nஏப்ரல் மாத விற்பனை (ரூபாயில்)\nநிரல்கள்: அரிசி, கோதுமை, கேழ்வரகு. நிரைகள்: திலகன், கௌசிகன். ",
+          {
+            "latex": "A=\\begin{bmatrix}500&1000&1500\\\\2500&1500&500\\end{bmatrix}",
+            "fallback": "A=[500, 1000, 1500; 2500, 1500, 500]",
+            "display": true
+          },
+          "மேலும் மே மாத விலை ஏப்ரல் மாத விலையின் இருமடங்கு எனில், கீழ்க்காண்பனவற்றைக் காண்க.",
+          "\n(i) ",
+          "ஏப்ரல், மே மாதங்களின் சராசரி விற்பனை யாது?"
+        ]
+      },
+      "steps": [
+        {
+          "en": "Write the May sales as twice the April matrix. This doubles each entry independently.",
+          "ta": "மே மாத விற்பனையை ஏப்ரல் மாத அணியின் இருமடங்காக எழுதுக. ஒவ்வோர் உறுப்பும் தனித்தனியாக இருமடங்காகும்.",
+          "eq": "2A=[1000, 2000, 3000; 5000, 3000, 1000]",
+          "math": {
+            "latex": "2A=\\begin{bmatrix}1000&2000&3000\\\\5000&3000&1000\\end{bmatrix}",
+            "fallback": "2A=[1000, 2000, 3000; 5000, 3000, 1000]",
+            "display": true
+          },
+          "why": {
+            "en": "Treat the monthly change as scalar multiplication.",
+            "ta": "மாத விற்பனையின் மாற்றத்தைத் திசையிலிப் பெருக்கலாக எழுதுக."
+          }
+        },
+        {
+          "en": "Add the two months for each farmer and crop, then divide every entry by two.",
+          "ta": "ஒவ்வொரு விவசாயிக்கும் தானியத்திற்கும் இரு மாத விற்பனையைக் கூட்டி ஒவ்வோர் உறுப்பையும் இரண்டால் வகுக்கவும்.",
+          "eq": "(A+2A)/(2)=(3)/(2)A\n=[750, 1500, 2250; 3750, 2250, 750]",
+          "math": {
+            "latex": "\\begin{aligned}\\dfrac{A+2A}2&=\\dfrac32A\\\\&=\\begin{bmatrix}750&1500&2250\\\\3750&2250&750\\end{bmatrix}\\end{aligned}",
+            "fallback": "(A+2A)/(2)=(3)/(2)A\n=[750, 1500, 2250; 3750, 2250, 750]",
+            "display": true
+          }
+        }
+      ],
+      "answer": "[750, 1500, 2250; 3750, 2250, 750]",
+      "hint": {
+        "en": "Treat the monthly change as scalar multiplication.",
+        "ta": "மாத விற்பனையின் மாற்றத்தைத் திசையிலிப் பெருக்கலாக எழுதுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163, 164; Tamil PDF 168.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{\\begin{bmatrix}750&1500&2250\\\\3750&2250&750\\end{bmatrix}}",
+        "fallback": "[750, 1500, 2250; 3750, 2250, 750]",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163,
+            164
+          ],
+          "ta": [
+            168
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q17-ii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q17(ii)",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 17(ii)"
+      },
+      "title": {
+        "en": "Model crop sales with a matrix",
+        "ta": "தானிய விற்பனையை அணியில் அமைத்தல்"
+      },
+      "q": {
+        "en": "17. Two farmers Thilagan and Kausigan cultivates three varieties of grains namely rice, wheat and ragi. If the sale (in ₹) of three varieties of grains by both the farmers in the month of April is given by the matrix.\nApril sale in ₹\nColumns: rice, wheat, ragi. Rows: Thilagan, Kausigan. A=[500, 1000, 1500; 2500, 1500, 500]and the May month sale (in ₹) is exactly twice as that of the April month sale for each variety.\n(ii) If the sales continues to increase in the same way in the successive months, what will be sales in the month of August?",
+        "ta": "17. திலகன், கௌசிகன் என்ற இரு விவசாயிகள் அரிசி, கோதுமை மற்றும் கேழ்வரகு ஆகிய மூன்று தானியங்களைப் பயிரிட்டனர். ஏப்ரல் மாதத்தில் இருவருக்குமான தானியங்களின் விற்பனை விலை கீழ்க்காணும் அணியில் கொடுக்கப்பட்டுள்ளது.\nஏப்ரல் மாத விற்பனை (ரூபாயில்)\nநிரல்கள்: அரிசி, கோதுமை, கேழ்வரகு. நிரைகள்: திலகன், கௌசிகன். A=[500, 1000, 1500; 2500, 1500, 500]மேலும் மே மாத விலை ஏப்ரல் மாத விலையின் இருமடங்கு எனில், கீழ்க்காண்பனவற்றைக் காண்க.\n(ii) இதேபோல் விலை தொடர்ந்து வரும் மாதங்களில் ஏற்றமடைந்தால் ஆகஸ்ட் மாத விலையைக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "17. ",
+          "Two farmers Thilagan and Kausigan cultivates three varieties of grains namely rice, wheat and ragi. If the sale (in ₹) of three varieties of grains by both the farmers in the month of April is given by the matrix.\nApril sale in ₹\nColumns: rice, wheat, ragi. Rows: Thilagan, Kausigan. ",
+          {
+            "latex": "A=\\begin{bmatrix}500&1000&1500\\\\2500&1500&500\\end{bmatrix}",
+            "fallback": "A=[500, 1000, 1500; 2500, 1500, 500]",
+            "display": true
+          },
+          "and the May month sale (in ₹) is exactly twice as that of the April month sale for each variety.",
+          "\n(ii) ",
+          "If the sales continues to increase in the same way in the successive months, what will be sales in the month of August?"
+        ],
+        "ta": [
+          "17. ",
+          "திலகன், கௌசிகன் என்ற இரு விவசாயிகள் அரிசி, கோதுமை மற்றும் கேழ்வரகு ஆகிய மூன்று தானியங்களைப் பயிரிட்டனர். ஏப்ரல் மாதத்தில் இருவருக்குமான தானியங்களின் விற்பனை விலை கீழ்க்காணும் அணியில் கொடுக்கப்பட்டுள்ளது.\nஏப்ரல் மாத விற்பனை (ரூபாயில்)\nநிரல்கள்: அரிசி, கோதுமை, கேழ்வரகு. நிரைகள்: திலகன், கௌசிகன். ",
+          {
+            "latex": "A=\\begin{bmatrix}500&1000&1500\\\\2500&1500&500\\end{bmatrix}",
+            "fallback": "A=[500, 1000, 1500; 2500, 1500, 500]",
+            "display": true
+          },
+          "மேலும் மே மாத விலை ஏப்ரல் மாத விலையின் இருமடங்கு எனில், கீழ்க்காண்பனவற்றைக் காண்க.",
+          "\n(ii) ",
+          "இதேபோல் விலை தொடர்ந்து வரும் மாதங்களில் ஏற்றமடைந்தால் ஆகஸ்ட் மாத விலையைக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "The sale doubles from one month to the next. April to August includes four monthly changes.",
+          "ta": "ஒரு மாதத்திலிருந்து அடுத்த மாதத்திற்கு விற்பனை இருமடங்காகிறது. ஏப்ரலிலிருந்து ஆகஸ்ட் வரை நான்கு மாத மாற்றங்கள் உள்ளன.",
+          "eq": "A, 2A, 4A, 8A, 16A",
+          "math": {
+            "latex": "A,\\quad2A,\\quad4A,\\quad8A,\\quad16A",
+            "fallback": "A, 2A, 4A, 8A, 16A",
+            "display": true
+          },
+          "why": {
+            "en": "Treat the monthly change as scalar multiplication.",
+            "ta": "மாத விற்பனையின் மாற்றத்தைத் திசையிலிப் பெருக்கலாக எழுதுக."
+          }
+        },
+        {
+          "en": "Multiply every April entry by sixteen to obtain the corresponding August sale.",
+          "ta": "ஆகஸ்ட் மாத விற்பனையைப் பெற ஏப்ரல் மாத அணியின் ஒவ்வோர் உறுப்பையும் 16 ஆல் பெருக்குக.",
+          "eq": "16A=[8000, 16000, 24000; 40000, 24000, 8000]",
+          "math": {
+            "latex": "16A=\\begin{bmatrix}8000&16000&24000\\\\40000&24000&8000\\end{bmatrix}",
+            "fallback": "16A=[8000, 16000, 24000; 40000, 24000, 8000]",
+            "display": true
+          }
+        }
+      ],
+      "answer": "[8000, 16000, 24000; 40000, 24000, 8000]",
+      "hint": {
+        "en": "Treat the monthly change as scalar multiplication.",
+        "ta": "மாத விற்பனையின் மாற்றத்தைத் திசையிலிப் பெருக்கலாக எழுதுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 163, 164; Tamil PDF 168.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{\\begin{bmatrix}8000&16000&24000\\\\40000&24000&8000\\end{bmatrix}}",
+        "fallback": "[8000, 16000, 24000; 40000, 24000, 8000]",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            163,
+            164
+          ],
+          "ta": [
+            168
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q18",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q18",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 18"
+      },
+      "title": {
+        "en": "Solve a trigonometric matrix equation",
+        "ta": "முக்கோணவியல் அணிச் சமன்பாட்டைத் தீர்த்தல்"
+      },
+      "q": {
+        "en": "18. If cos θ[cos θ, sin θ; −sin θ, cos θ]+sin θ[x, −cos θ; cos θ, x]=I₂, find x.",
+        "ta": "18. cos θ[cos θ, sin θ; −sin θ, cos θ]+sin θ[x, −cos θ; cos θ, x]=I₂ எனில், x–ஐக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "18. ",
+          "If ",
+          {
+            "latex": "\\cos\\theta\\begin{bmatrix}\\cos\\theta&\\sin\\theta\\\\-\\sin\\theta&\\cos\\theta\\end{bmatrix}+\\sin\\theta\\begin{bmatrix}x&-\\cos\\theta\\\\\\cos\\theta&x\\end{bmatrix}=I_2",
+            "fallback": "cos θ[cos θ, sin θ; −sin θ, cos θ]+sin θ[x, −cos θ; cos θ, x]=I₂",
+            "display": true
+          },
+          ", find x."
+        ],
+        "ta": [
+          "18. ",
+          {
+            "latex": "\\cos\\theta\\begin{bmatrix}\\cos\\theta&\\sin\\theta\\\\-\\sin\\theta&\\cos\\theta\\end{bmatrix}+\\sin\\theta\\begin{bmatrix}x&-\\cos\\theta\\\\\\cos\\theta&x\\end{bmatrix}=I_2",
+            "fallback": "cos θ[cos θ, sin θ; −sin θ, cos θ]+sin θ[x, −cos θ; cos θ, x]=I₂",
+            "display": true
+          },
+          " எனில், x–ஐக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Multiply each matrix by its scalar and add corresponding entries. The off-diagonal terms cancel.",
+          "ta": "ஒவ்வோர் அணியையும் அதற்குரிய திசையிலியால் பெருக்கி ஒத்த உறுப்புகளைக் கூட்டுக. மூலைவிட்டம் அல்லாத உறுப்புகள் ஒன்றையொன்று நீக்குகின்றன.",
+          "eq": "[cos ²θ+xsin θ, 0; 0, cos ²θ+xsin θ]=I₂",
+          "math": {
+            "latex": "\\begin{bmatrix}\\cos^2\\theta+x\\sin\\theta&0\\\\0&\\cos^2\\theta+x\\sin\\theta\\end{bmatrix}=I_2",
+            "fallback": "[cos ²θ+xsin θ, 0; 0, cos ²θ+xsin θ]=I₂",
+            "display": true
+          },
+          "why": {
+            "en": "Before dividing by sine, address the case where it is zero.",
+            "ta": "சைனால் வகுப்பதற்கு முன் அது பூச்சியமான நிலையைக் கவனிக்கவும்."
+          }
+        },
+        {
+          "en": "Equate a diagonal entry to one and use the identity relating sine and cosine squares.",
+          "ta": "ஒரு மூலைவிட்ட உறுப்பை ஒன்றுக்குச் சமப்படுத்தி, சைன் மற்றும் கொசைன் வர்க்க முற்றொருமையைப் பயன்படுத்துக.",
+          "eq": "xsin θ=1−cos ²θ\n=sin ²θ\nsin θ(x−sin θ)=0",
+          "math": {
+            "latex": "\\begin{aligned}x\\sin\\theta&=1-\\cos^2\\theta\\\\&=\\sin^2\\theta\\\\\\sin\\theta(x-\\sin\\theta)&=0\\end{aligned}",
+            "fallback": "xsin θ=1−cos ²θ\n=sin ²θ\nsin θ(x−sin θ)=0",
+            "display": true
+          }
+        },
+        {
+          "en": "If sine is nonzero, divide by it. If sine is zero, the original diagonal entries are already one for every real x.",
+          "ta": "சைன் பூச்சியமற்றபோது அதனால் வகுக்கவும். சைன் பூச்சியமானால் எந்த மெய் x மதிப்பிற்கும் அசல் மூலைவிட்ட உறுப்புகள் ஒன்றாகவே இருக்கும்.",
+          "eq": "x=sin θ (sin θ≠0)\nx∈ℝ (sin θ=0)",
+          "math": {
+            "latex": "\\begin{aligned}x&=\\sin\\theta\\quad(\\sin\\theta\\ne0)\\\\x&\\in\\mathbb{R}\\quad(\\sin\\theta=0)\\end{aligned}",
+            "fallback": "x=sin θ (sin θ≠0)\nx∈ℝ (sin θ=0)",
+            "display": true
+          }
+        }
+      ],
+      "answer": "x=sin θ (sin θ≠0)\nx∈ℝ (sin θ=0)",
+      "hint": {
+        "en": "Before dividing by sine, address the case where it is zero.",
+        "ta": "சைனால் வகுப்பதற்கு முன் அது பூச்சியமான நிலையைக் கவனிக்கவும்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 164; Tamil PDF 168.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{\\begin{aligned}x&=\\sin\\theta\\quad(\\sin\\theta\\ne0)\\\\x&\\in\\mathbb{R}\\quad(\\sin\\theta=0)\\end{aligned}}",
+        "fallback": "x=sin θ (sin θ≠0)\nx∈ℝ (sin θ=0)",
+        "display": true
+      },
+      "difficulty": "difficult",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            164
+          ],
+          "ta": [
+            168
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q19",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q19",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 19"
+      },
+      "title": {
+        "en": "Work with matrices",
+        "ta": "அணிகளின் மீதான செயல்கள்"
+      },
+      "q": {
+        "en": "19. Given A=[p, 0; 0, 2], B=[0, − q; 1, 0], C=[2, −2; 2, 2] and if BA=C², find p and q.",
+        "ta": "19. A=[p, 0; 0, 2], B=[0, − q; 1, 0], C=[2, −2; 2, 2] மற்றும் BA=C² எனில், p, q–ஐக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "19. ",
+          "Given ",
+          {
+            "latex": "A=\\begin{bmatrix}p&0\\\\0&2\\end{bmatrix}",
+            "fallback": "A=[p, 0; 0, 2]",
+            "display": true
+          },
+          ", ",
+          {
+            "latex": "B=\\begin{bmatrix}0&- q\\\\1&0\\end{bmatrix}",
+            "fallback": "B=[0, − q; 1, 0]",
+            "display": true
+          },
+          ", ",
+          {
+            "latex": "C=\\begin{bmatrix}2&-2\\\\2&2\\end{bmatrix}",
+            "fallback": "C=[2, −2; 2, 2]",
+            "display": true
+          },
+          " and if ",
+          {
+            "latex": "BA=C^2",
+            "fallback": "BA=C²",
+            "display": false
+          },
+          ", find p and q."
+        ],
+        "ta": [
+          "19. ",
+          {
+            "latex": "A=\\begin{bmatrix}p&0\\\\0&2\\end{bmatrix}",
+            "fallback": "A=[p, 0; 0, 2]",
+            "display": true
+          },
+          ", ",
+          {
+            "latex": "B=\\begin{bmatrix}0&- q\\\\1&0\\end{bmatrix}",
+            "fallback": "B=[0, − q; 1, 0]",
+            "display": true
+          },
+          ", ",
+          {
+            "latex": "C=\\begin{bmatrix}2&-2\\\\2&2\\end{bmatrix}",
+            "fallback": "C=[2, −2; 2, 2]",
+            "display": true
+          },
+          " மற்றும் ",
+          {
+            "latex": "BA=C^2",
+            "fallback": "BA=C²",
+            "display": false
+          },
+          " எனில், p, q–ஐக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Multiply B by A in that order. Compute C squared by multiplying C by itself.",
+          "ta": "முதலில் B-யை A-ஆல் அந்த வரிசையில் பெருக்குக. பின்னர் C-யை C-ஆல் பெருக்கி C வர்க்கத்தைக் காண்க.",
+          "eq": "BA=[0, − 2 q; p, 0]\nC²=[0, −8; 8, 0]",
+          "math": {
+            "latex": "\\begin{aligned}BA&=\\begin{bmatrix}0&- 2 q\\\\p&0\\end{bmatrix}\\\\C^2&=\\begin{bmatrix}0&-8\\\\8&0\\end{bmatrix}\\end{aligned}",
+            "fallback": "BA=[0, − 2 q; p, 0]\nC²=[0, −8; 8, 0]",
+            "display": true
+          },
+          "why": {
+            "en": "Multiply a row of the left matrix by a column of the right matrix, then add those products.",
+            "ta": "இடப்புற அணியின் நிரையையும் வலப்புற அணியின் நிரலையும் உறுப்பு வாரியாகப் பெருக்கிப் பெருக்கல்களைக் கூட்டுக."
+          }
+        },
+        {
+          "en": "Compare the off-diagonal entries. The diagonal entries already agree.",
+          "ta": "மூலைவிட்டத்துக்கு வெளியே உள்ள உறுப்புகளை ஒப்பிடுக. மூலைவிட்ட உறுப்புகள் ஏற்கெனவே சமம்.",
+          "eq": "−2q=−8,  q=4\np=8",
+          "math": {
+            "latex": "\\begin{aligned}-2q&=-8,\\quad q=4\\\\p&=8\\end{aligned}",
+            "fallback": "−2q=−8,  q=4\np=8",
+            "display": true
+          }
+        }
+      ],
+      "answer": "p=8,  q=4",
+      "hint": {
+        "en": "Multiply a row of the left matrix by a column of the right matrix, then add those products.",
+        "ta": "இடப்புற அணியின் நிரையையும் வலப்புற அணியின் நிரலையும் உறுப்பு வாரியாகப் பெருக்கிப் பெருக்கல்களைக் கூட்டுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 164; Tamil PDF 168.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{p=8,\\quad q=4}",
+        "fallback": "p=8,  q=4",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            164
+          ],
+          "ta": [
+            168
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-unit-q20",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.unit",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Unit Exercise 3 · Q20",
+        "ta": "அலகுப் பயிற்சி 3 · வினா 20"
+      },
+      "title": {
+        "en": "Work with matrices",
+        "ta": "அணிகளின் மீதான செயல்கள்"
+      },
+      "q": {
+        "en": "20. A=[3, 0; 4, 5], B=[6, 3; 8, 5], C=[3, 6; 1, 1] find the matrix D, such that CD−AB=0",
+        "ta": "20. A=[3, 0; 4, 5], B=[6, 3; 8, 5], C=[3, 6; 1, 1] எனில், CD−AB=0 எனுமாறு அணி D–ஐக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "20. ",
+          {
+            "latex": "A=\\begin{bmatrix}3&0\\\\4&5\\end{bmatrix}",
+            "fallback": "A=[3, 0; 4, 5]",
+            "display": true
+          },
+          ", ",
+          {
+            "latex": "B=\\begin{bmatrix}6&3\\\\8&5\\end{bmatrix}",
+            "fallback": "B=[6, 3; 8, 5]",
+            "display": true
+          },
+          ", ",
+          {
+            "latex": "C=\\begin{bmatrix}3&6\\\\1&1\\end{bmatrix}",
+            "fallback": "C=[3, 6; 1, 1]",
+            "display": true
+          },
+          " find the matrix D, such that ",
+          {
+            "latex": "CD-AB=0",
+            "fallback": "CD−AB=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "20. ",
+          {
+            "latex": "A=\\begin{bmatrix}3&0\\\\4&5\\end{bmatrix}",
+            "fallback": "A=[3, 0; 4, 5]",
+            "display": true
+          },
+          ", ",
+          {
+            "latex": "B=\\begin{bmatrix}6&3\\\\8&5\\end{bmatrix}",
+            "fallback": "B=[6, 3; 8, 5]",
+            "display": true
+          },
+          ", ",
+          {
+            "latex": "C=\\begin{bmatrix}3&6\\\\1&1\\end{bmatrix}",
+            "fallback": "C=[3, 6; 1, 1]",
+            "display": true
+          },
+          " எனில், ",
+          {
+            "latex": "CD-AB=0",
+            "fallback": "CD−AB=0",
+            "display": false
+          },
+          " எனுமாறு அணி D–ஐக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Rewrite the equation as CD = AB. Multiply A by B and write the four unknown entries in D as a, b, c and d.",
+          "ta": "சமன்பாட்டை CD = AB என மாற்றுக. A-யை B-ஆல் பெருக்குக. D-யின் நான்கு தெரியாத உறுப்புகளை a, b, c, d என்க.",
+          "eq": "AB=[18, 9; 64, 37]\nCD=[3 a + 6 c, 3 b + 6 d; a + c, b + d]",
+          "math": {
+            "latex": "\\begin{aligned}AB&=\\begin{bmatrix}18&9\\\\64&37\\end{bmatrix}\\\\CD&=\\begin{bmatrix}3 a + 6 c&3 b + 6 d\\\\a + c&b + d\\end{bmatrix}\\end{aligned}",
+            "fallback": "AB=[18, 9; 64, 37]\nCD=[3 a + 6 c, 3 b + 6 d; a + c, b + d]",
+            "display": true
+          },
+          "why": {
+            "en": "Compare entries with the same row and column numbers.",
+            "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+          }
+        },
+        {
+          "en": "Compare the entries of the first column. Subtract three times the second equation from the first to find c, then solve for a.",
+          "ta": "முதல் நிரலில் ஒத்த உறுப்புகளை ஒப்பிடுக. முதல் சமன்பாட்டிலிருந்து இரண்டாம் சமன்பாட்டின் மும்மடங்கைக் கழித்து c-ஐக் காண்க. பின்னர் a-ஐக் காண்க.",
+          "eq": "3a+6c=18\na+c=64\n3c=−174\nc=−58,  a=122",
+          "math": {
+            "latex": "\\begin{aligned}3a+6c&=18\\\\a+c&=64\\\\3c&=-174\\\\c&=-58,\\quad a=122\\end{aligned}",
+            "fallback": "3a+6c=18\na+c=64\n3c=−174\nc=−58,  a=122",
+            "display": true
+          }
+        },
+        {
+          "en": "Apply the same subtraction for the second column. Multiplying C by the completed matrix D gives AB.",
+          "ta": "இரண்டாம் நிரலுக்கும் அதே கழித்தல் முறையைப் பயன்படுத்துக. கிடைத்த D-யைக் கொண்டு C-யைப் பெருக்கினால் AB கிடைக்கும்.",
+          "eq": "3b+6d=9\nb+d=37\n3d=−102\nd=−34,  b=71",
+          "math": {
+            "latex": "\\begin{aligned}3b+6d&=9\\\\b+d&=37\\\\3d&=-102\\\\d&=-34,\\quad b=71\\end{aligned}",
+            "fallback": "3b+6d=9\nb+d=37\n3d=−102\nd=−34,  b=71",
+            "display": true
+          }
+        }
+      ],
+      "answer": "D=[122, 71; −58, −34]",
+      "hint": {
+        "en": "Compare entries with the same row and column numbers.",
+        "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 164; Tamil PDF 168.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{D=\\begin{bmatrix}122&71\\\\-58&-34\\end{bmatrix}}",
+        "fallback": "D=[122, 71; −58, −34]",
+        "display": true
+      },
+      "difficulty": "difficult",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            164
+          ],
+          "ta": [
+            168
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    }
+  ],
+  "mapping": [
+    {
+      "recordId": "c10-3-ex3-unit-q1",
+      "exercise": "3.unit",
+      "question": "1",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "1. Solve (1)/(3)(x+y−5)=y−z=2x−11=9−(x+2z)",
+        "ta": "1. தீர்க்க (1)/(3)(x+y−5)=y−z=2x−11=9−(x+2z)"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        156
+      ],
+      "pdfPages": [
+        162
+      ],
+      "tamilPrintedPages": [
+        160
+      ],
+      "tamilPdfPages": [
+        166
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q2",
+      "exercise": "3.unit",
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "2. One hundred and fifty students are admitted to a school. They are distrbuted over three sections A, B and C. If 6 students are shifted from section A to section C, the sections will have equal number of students. If 4 times of students of section C exceeds the number of students of section A by the number of students in section B, find the number of students in the three sections.",
+        "ta": "2. ஒரு பள்ளியில் A, B மற்றும் C என்ற மூன்று பிரிவுகளில் 150 மாணவர்கள் புதிதாகச் சேர்க்கப்படுகின்றனர். பிரிவு A–யிலிருந்து பிரிவு C–க்கு 6 மாணவர்கள் மாற்றப்பட்டால், இரு பிரிவுகளிலும் சமமான மாணவர்கள் இருப்பர். C பிரிவு மாணவர்களின் எண்ணிக்கையின் 4 மடங்கு மற்றும் A பிரிவு மாணவர்களின் எண்ணிக்கை இவற்றின் வித்தியாசம் B பிரிவு மாணவர்களின் எண்ணிக்கைக்குச் சமம் எனில், மூன்று பிரிவுகளில் உள்ள மாணவர்களின் எண்ணிக்கையைக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        156
+      ],
+      "pdfPages": [
+        162
+      ],
+      "tamilPrintedPages": [
+        160
+      ],
+      "tamilPdfPages": [
+        166
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q3",
+      "exercise": "3.unit",
+      "question": "3",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "3. In a three-digit number, when the tens and the hundreds digit are interchanged the new number is 54 more than three times the original number. If 198 is added to the number, the digits are reversed. The tens digit exceeds the hundreds digit by twice as that of the tens digit exceeds the unit digit. Find the original number.",
+        "ta": "3. ஒரு மூன்றிலக்க எண்ணின், பத்தாம் இட மற்றும் நூறாம் இட இலக்கங்களை இடமாற்றுவதன் மூலம் கிடைக்கும் புதிய எண், கொடுக்கப்பட்ட எண்ணின் மும்மடங்கைவிட 54 அதிகம். கொடுக்கப்பட்ட எண்ணோடு 198–ஐக் கூட்டினால் இலக்கங்கள் இட–வலப்பக்கமாக வரிசை மாறும். ஒன்றாம் இட இலக்கத்தைவிட அதிகமுள்ள பத்தாம் இட இலக்கத்தின் இரு மடங்கு, நூறாம் இட இலக்கத்தை விட அதிகமுள்ள பத்தாம் இட இலக்கத்திற்குச் சமம் எனில், கொடுக்கப்பட்ட எண்ணைக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        160
+      ],
+      "tamilPdfPages": [
+        166
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q4",
+      "exercise": "3.unit",
+      "question": "4",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "4. Find the least common multiple of xy(k²+1)+k(x²+y²) and xy(k²−1)+k(x²−y²)",
+        "ta": "4. xy(k²+1)+k(x²+y²) மற்றும் xy(k²−1)+k(x²−y²) ஆகியவற்றின் மீ.சி.ம. காண்க"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        160
+      ],
+      "tamilPdfPages": [
+        166
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q5",
+      "exercise": "3.unit",
+      "question": "5",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "5. Find the GCD of the following by division algorithm\n2x⁴+13x³+27x²+23x+7x³+3x²+3x+1x²+2x+1",
+        "ta": "5. வகுத்தல் படிமுறையைப் பயன்படுத்தி 2x⁴+13x³+27x²+23x+7x³+3x²+3x+1x²+2x+1 ஆகியவற்றின் மீ.பெ.வ. காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q6-i",
+      "exercise": "3.unit",
+      "question": "6",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "6. Reduce the given Rational expressions to its lowest form\n(i) (x^(3a)−8)/(x^(2a)+2x^a+4)",
+        "ta": "6. பின்வரும் விகிதமுறு கோவைகளை எளிய வடிவில் சுருக்குக.\n(i) (x^(3a)−8)/(x^(2a)+2x^a+4)"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q6-ii",
+      "exercise": "3.unit",
+      "question": "6",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "6. Reduce the given Rational expressions to its lowest form\n(ii) (10x³−25x²+4x−10)/(−4−10x²)",
+        "ta": "6. பின்வரும் விகிதமுறு கோவைகளை எளிய வடிவில் சுருக்குக.\n(ii) (10x³−25x²+4x−10)/(−4−10x²)"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q7",
+      "exercise": "3.unit",
+      "question": "7",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "7. Simplify ((1)/(p)+(1)/(q+r))/((1)/(p)−(1)/(q+r))×(1+(q²+r²−p²)/(2qr))",
+        "ta": "7. சுருக்குக ((1)/(p)+(1)/(q+r))/((1)/(p)−(1)/(q+r))×(1+(q²+r²−p²)/(2qr))"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q8",
+      "exercise": "3.unit",
+      "question": "8",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "8. Arul, Madan and Ram working together can clean a store in 6 hours. Working alone, Madan takes twice as long to clean the store as Arul does. Ram needs three times as long as Arul does. How long would it take each if they are working alone?",
+        "ta": "8. அருள், மதன் மற்றும் இராம் மூவரும் இணைந்து ஒரு கடையை 6 மணி நேரத்தில் சுத்தம் செய்கின்றனர். தனித்தனியாகச் சுத்தம் செய்தால் அருளைப் போல இருமடங்கு நேரம் மதன் எடுத்துக் கொள்கிறார். மேலும் இராம், அருளின் நேரத்தைப்போல மும்மடங்கு எடுத்துக்கொள்கிறார் எனில், மூவரும் தனித்தனியாக எவ்வளவு நேரம் எடுத்துக் கொள்வார்கள்?"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q9",
+      "exercise": "3.unit",
+      "question": "9",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "9. Find the square root of 289x⁴−612x³+970x²−684x+361.",
+        "ta": "9. 289x⁴−612x³+970x²−684x+361–யின் வர்க்கமூலம் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q10",
+      "exercise": "3.unit",
+      "question": "10",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "10. Solve √(y+1)+√(2y−5)=3",
+        "ta": "10. தீர்க்க √(y+1)+√(2y−5)=3"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q11",
+      "exercise": "3.unit",
+      "question": "11",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "11. A boat takes 1.6 hours longer to go 36 kms up a river than down the river. If the speed of the water current is 4 km per hr, what is the speed of the boat in still water?",
+        "ta": "11. 36 கி.மீ தூரத்தை ஒரு படகு நீரோட்டத்தின் திசையில் கடக்கும் நேரத்தைவிட எதிர்த்திசையில் கடக்கும் நேரம் 1.6 மணி நேரம் அதிகமாக எடுத்துக்கொள்கிறது. நீரோட்டத்தின் வேகம் 4 கி.மீ/மணி எனில், அசைவற்ற நீரில் படகின் வேகம் என்ன?"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q12",
+      "exercise": "3.unit",
+      "question": "12",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "12. Is it possible to design a rectangular park of perimeter 320 m and area 4800 m²? If so find its length and breadth.",
+        "ta": "12. 320 மீ சுற்றளவும் 4800 ச.மீ பரப்பளவும் கொண்ட செவ்வக வடிவப் பூங்காவை அமைக்க முடியுமா? ஆம் எனில், அதன் நீளம், அகலம் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q13",
+      "exercise": "3.unit",
+      "question": "13",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "13. At t minutes past 2 pm, the time needed to 3 pm is 3 minutes less than (t²)/(4). Find t.",
+        "ta": "13. ஒரு கடிகாரத்தில் பிற்பகல் 2 மணியிலிருந்து t நிமிடங்களுக்குப் பிறகு 3 மணியை அடைவதற்குரிய கால அளவானது (t²)/(4)–ஐ விட மூன்று நிமிடங்கள் குறைவு எனில், t–யின் மதிப்பைக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q14",
+      "exercise": "3.unit",
+      "question": "14",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "14. The number of seats in a row is equal to the total number of rows in a hall. The total number of seats in the hall will increase by 375 if the number of rows is doubled and the number of seats in each row is reduced by 5. Find the number of rows in the hall at the beginning.",
+        "ta": "14. ஓர் அரங்கில், ஒரு வரிசையில் உள்ள இருக்கைகளின் எண்ணிக்கை அந்த அரங்கில் உள்ள மொத்த வரிசைகளின் எண்ணிக்கைக்குச் சமம். ஒவ்வொரு வரிசையில் உள்ள இருக்கைகளை 5 குறைத்து மொத்த வரிசைகளின் எண்ணிக்கையை இரட்டிப்பாக்கினால் அரங்கில் உள்ள இருக்கைகளின் எண்ணிக்கை முன்பைவிட 375 அதிகரிக்கும். அரங்கில் துவக்கத்தில் இருந்த வரிசைகளின் எண்ணிக்கையைக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q15-i",
+      "exercise": "3.unit",
+      "question": "15",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "15. If α and β are the roots of the polynomial f(x)=x²−2x+3, find the polynomial whose roots are (i) α+2, β+2",
+        "ta": "15. f(x)=x²−2x+3, என்ற பல்லுறுப்புக் கோவையின் மூலங்கள் α மற்றும் β எனில், கீழ்க்காண்பனவற்றை மூலங்களாகக் கொண்ட பல்லுறுப்புக் கோவையைக் காண்க. (i) α+2, β+2"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q15-ii",
+      "exercise": "3.unit",
+      "question": "15",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "15. If α and β are the roots of the polynomial f(x)=x²−2x+3, find the polynomial whose roots are (ii) (α−1)/(α+1), (β−1)/(β+1)",
+        "ta": "15. f(x)=x²−2x+3, என்ற பல்லுறுப்புக் கோவையின் மூலங்கள் α மற்றும் β எனில், கீழ்க்காண்பனவற்றை மூலங்களாகக் கொண்ட பல்லுறுப்புக் கோவையைக் காண்க. (ii) (α−1)/(α+1), (β−1)/(β+1)"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q16",
+      "exercise": "3.unit",
+      "question": "16",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "16. If −4 is a root of the equation x²+px−4=0 and if the equation x²+px+q=0 has equal roots, find the values of p and q.",
+        "ta": "16. x²+px−4=0 என்ற சமன்பாட்டின் மூலம் −4 மற்றும் x²+px+q=0–யின் மூலங்கள் சமம் எனில், p மற்றும் q-யின் மதிப்புக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157
+      ],
+      "pdfPages": [
+        163
+      ],
+      "tamilPrintedPages": [
+        161
+      ],
+      "tamilPdfPages": [
+        167
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q17-i",
+      "exercise": "3.unit",
+      "question": "17",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "17. Two farmers Thilagan and Kausigan cultivates three varieties of grains namely rice, wheat and ragi. If the sale (in ₹) of three varieties of grains by both the farmers in the month of April is given by the matrix.\nApril sale in ₹\nColumns: rice, wheat, ragi. Rows: Thilagan, Kausigan. A=[500, 1000, 1500; 2500, 1500, 500]and the May month sale (in ₹) is exactly twice as that of the April month sale for each variety.\n(i) What is the average sales of the months April and May.",
+        "ta": "17. திலகன், கௌசிகன் என்ற இரு விவசாயிகள் அரிசி, கோதுமை மற்றும் கேழ்வரகு ஆகிய மூன்று தானியங்களைப் பயிரிட்டனர். ஏப்ரல் மாதத்தில் இருவருக்குமான தானியங்களின் விற்பனை விலை கீழ்க்காணும் அணியில் கொடுக்கப்பட்டுள்ளது.\nஏப்ரல் மாத விற்பனை (ரூபாயில்)\nநிரல்கள்: அரிசி, கோதுமை, கேழ்வரகு. நிரைகள்: திலகன், கௌசிகன். A=[500, 1000, 1500; 2500, 1500, 500]மேலும் மே மாத விலை ஏப்ரல் மாத விலையின் இருமடங்கு எனில், கீழ்க்காண்பனவற்றைக் காண்க.\n(i) ஏப்ரல், மே மாதங்களின் சராசரி விற்பனை யாது?"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157,
+        158
+      ],
+      "pdfPages": [
+        163,
+        164
+      ],
+      "tamilPrintedPages": [
+        162
+      ],
+      "tamilPdfPages": [
+        168
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q17-ii",
+      "exercise": "3.unit",
+      "question": "17",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "17. Two farmers Thilagan and Kausigan cultivates three varieties of grains namely rice, wheat and ragi. If the sale (in ₹) of three varieties of grains by both the farmers in the month of April is given by the matrix.\nApril sale in ₹\nColumns: rice, wheat, ragi. Rows: Thilagan, Kausigan. A=[500, 1000, 1500; 2500, 1500, 500]and the May month sale (in ₹) is exactly twice as that of the April month sale for each variety.\n(ii) If the sales continues to increase in the same way in the successive months, what will be sales in the month of August?",
+        "ta": "17. திலகன், கௌசிகன் என்ற இரு விவசாயிகள் அரிசி, கோதுமை மற்றும் கேழ்வரகு ஆகிய மூன்று தானியங்களைப் பயிரிட்டனர். ஏப்ரல் மாதத்தில் இருவருக்குமான தானியங்களின் விற்பனை விலை கீழ்க்காணும் அணியில் கொடுக்கப்பட்டுள்ளது.\nஏப்ரல் மாத விற்பனை (ரூபாயில்)\nநிரல்கள்: அரிசி, கோதுமை, கேழ்வரகு. நிரைகள்: திலகன், கௌசிகன். A=[500, 1000, 1500; 2500, 1500, 500]மேலும் மே மாத விலை ஏப்ரல் மாத விலையின் இருமடங்கு எனில், கீழ்க்காண்பனவற்றைக் காண்க.\n(ii) இதேபோல் விலை தொடர்ந்து வரும் மாதங்களில் ஏற்றமடைந்தால் ஆகஸ்ட் மாத விலையைக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        157,
+        158
+      ],
+      "pdfPages": [
+        163,
+        164
+      ],
+      "tamilPrintedPages": [
+        162
+      ],
+      "tamilPdfPages": [
+        168
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q18",
+      "exercise": "3.unit",
+      "question": "18",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "18. If cos θ[cos θ, sin θ; −sin θ, cos θ]+sin θ[x, −cos θ; cos θ, x]=I₂, find x.",
+        "ta": "18. cos θ[cos θ, sin θ; −sin θ, cos θ]+sin θ[x, −cos θ; cos θ, x]=I₂ எனில், x–ஐக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        158
+      ],
+      "pdfPages": [
+        164
+      ],
+      "tamilPrintedPages": [
+        162
+      ],
+      "tamilPdfPages": [
+        168
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q19",
+      "exercise": "3.unit",
+      "question": "19",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "19. Given A=[p, 0; 0, 2], B=[0, − q; 1, 0], C=[2, −2; 2, 2] and if BA=C², find p and q.",
+        "ta": "19. A=[p, 0; 0, 2], B=[0, − q; 1, 0], C=[2, −2; 2, 2] மற்றும் BA=C² எனில், p, q–ஐக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        158
+      ],
+      "pdfPages": [
+        164
+      ],
+      "tamilPrintedPages": [
+        162
+      ],
+      "tamilPdfPages": [
+        168
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-unit-q20",
+      "exercise": "3.unit",
+      "question": "20",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "20. A=[3, 0; 4, 5], B=[6, 3; 8, 5], C=[3, 6; 1, 1] find the matrix D, such that CD−AB=0",
+        "ta": "20. A=[3, 0; 4, 5], B=[6, 3; 8, 5], C=[3, 6; 1, 1] எனில், CD−AB=0 எனுமாறு அணி D–ஐக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        158
+      ],
+      "pdfPages": [
+        164
+      ],
+      "tamilPrintedPages": [
+        162
+      ],
+      "tamilPdfPages": [
+        168
+      ]
+    }
+  ],
+  "verification": {
+    "script": "docs/curriculum/grade-10/tests/verify_algebra_batch.cjs"
+  }
+}

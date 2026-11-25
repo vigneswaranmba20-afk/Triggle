@@ -1,0 +1,751 @@
+{
+  "schemaVersion": 1,
+  "edition": "2025 revised",
+  "sources": [
+    {
+      "id": "g10-2025-en",
+      "grade": 10,
+      "language": "en",
+      "title": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "2025 revised",
+      "url": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    },
+    {
+      "id": "g10-2025-ta",
+      "grade": 10,
+      "language": "ta",
+      "title": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "2025 revised",
+      "url": "https://drive.google.com/file/d/1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC/view",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    }
+  ],
+  "items": [
+    {
+      "id": "c10-3-ex3-unit-q1",
+      "questionNumber": "1",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            162
+          ],
+          "printed": [
+            156
+          ]
+        },
+        "ta": {
+          "pdf": [
+            166
+          ],
+          "printed": [
+            160
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. Solve (1)/(3)(x+y−5)=y−z=2x−11=9−(x+2z)",
+        "ta": "1. தீர்க்க (1)/(3)(x+y−5)=y−z=2x−11=9−(x+2z)"
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q2",
+      "questionNumber": "2",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            162
+          ],
+          "printed": [
+            156
+          ]
+        },
+        "ta": {
+          "pdf": [
+            166
+          ],
+          "printed": [
+            160
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "2. One hundred and fifty students are admitted to a school. They are distrbuted over three sections A, B and C. If 6 students are shifted from section A to section C, the sections will have equal number of students. If 4 times of students of section C exceeds the number of students of section A by the number of students in section B, find the number of students in the three sections.",
+        "ta": "2. ஒரு பள்ளியில் A, B மற்றும் C என்ற மூன்று பிரிவுகளில் 150 மாணவர்கள் புதிதாகச் சேர்க்கப்படுகின்றனர். பிரிவு A–யிலிருந்து பிரிவு C–க்கு 6 மாணவர்கள் மாற்றப்பட்டால், இரு பிரிவுகளிலும் சமமான மாணவர்கள் இருப்பர். C பிரிவு மாணவர்களின் எண்ணிக்கையின் 4 மடங்கு மற்றும் A பிரிவு மாணவர்களின் எண்ணிக்கை இவற்றின் வித்தியாசம் B பிரிவு மாணவர்களின் எண்ணிக்கைக்குச் சமம் எனில், மூன்று பிரிவுகளில் உள்ள மாணவர்களின் எண்ணிக்கையைக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q3",
+      "questionNumber": "3",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            166
+          ],
+          "printed": [
+            160
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. In a three-digit number, when the tens and the hundreds digit are interchanged the new number is 54 more than three times the original number. If 198 is added to the number, the digits are reversed. The tens digit exceeds the hundreds digit by twice as that of the tens digit exceeds the unit digit. Find the original number.",
+        "ta": "3. ஒரு மூன்றிலக்க எண்ணின், பத்தாம் இட மற்றும் நூறாம் இட இலக்கங்களை இடமாற்றுவதன் மூலம் கிடைக்கும் புதிய எண், கொடுக்கப்பட்ட எண்ணின் மும்மடங்கைவிட 54 அதிகம். கொடுக்கப்பட்ட எண்ணோடு 198–ஐக் கூட்டினால் இலக்கங்கள் இட–வலப்பக்கமாக வரிசை மாறும். ஒன்றாம் இட இலக்கத்தைவிட அதிகமுள்ள பத்தாம் இட இலக்கத்தின் இரு மடங்கு, நூறாம் இட இலக்கத்தை விட அதிகமுள்ள பத்தாம் இட இலக்கத்திற்குச் சமம் எனில், கொடுக்கப்பட்ட எண்ணைக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q4",
+      "questionNumber": "4",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            166
+          ],
+          "printed": [
+            160
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. Find the least common multiple of xy(k²+1)+k(x²+y²) and xy(k²−1)+k(x²−y²)",
+        "ta": "4. xy(k²+1)+k(x²+y²) மற்றும் xy(k²−1)+k(x²−y²) ஆகியவற்றின் மீ.சி.ம. காண்க"
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q5",
+      "questionNumber": "5",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "5. Find the GCD of the following by division algorithm\n2x⁴+13x³+27x²+23x+7x³+3x²+3x+1x²+2x+1",
+        "ta": "5. வகுத்தல் படிமுறையைப் பயன்படுத்தி 2x⁴+13x³+27x²+23x+7x³+3x²+3x+1x²+2x+1 ஆகியவற்றின் மீ.பெ.வ. காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q6-i",
+      "questionNumber": "6",
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "6. Reduce the given Rational expressions to its lowest form\n(i) (x^(3a)−8)/(x^(2a)+2x^a+4)",
+        "ta": "6. பின்வரும் விகிதமுறு கோவைகளை எளிய வடிவில் சுருக்குக.\n(i) (x^(3a)−8)/(x^(2a)+2x^a+4)"
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q6-ii",
+      "questionNumber": "6",
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "6. Reduce the given Rational expressions to its lowest form\n(ii) (10x³−25x²+4x−10)/(−4−10x²)",
+        "ta": "6. பின்வரும் விகிதமுறு கோவைகளை எளிய வடிவில் சுருக்குக.\n(ii) (10x³−25x²+4x−10)/(−4−10x²)"
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q7",
+      "questionNumber": "7",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. Simplify ((1)/(p)+(1)/(q+r))/((1)/(p)−(1)/(q+r))×(1+(q²+r²−p²)/(2qr))",
+        "ta": "7. சுருக்குக ((1)/(p)+(1)/(q+r))/((1)/(p)−(1)/(q+r))×(1+(q²+r²−p²)/(2qr))"
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q8",
+      "questionNumber": "8",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "8. Arul, Madan and Ram working together can clean a store in 6 hours. Working alone, Madan takes twice as long to clean the store as Arul does. Ram needs three times as long as Arul does. How long would it take each if they are working alone?",
+        "ta": "8. அருள், மதன் மற்றும் இராம் மூவரும் இணைந்து ஒரு கடையை 6 மணி நேரத்தில் சுத்தம் செய்கின்றனர். தனித்தனியாகச் சுத்தம் செய்தால் அருளைப் போல இருமடங்கு நேரம் மதன் எடுத்துக் கொள்கிறார். மேலும் இராம், அருளின் நேரத்தைப்போல மும்மடங்கு எடுத்துக்கொள்கிறார் எனில், மூவரும் தனித்தனியாக எவ்வளவு நேரம் எடுத்துக் கொள்வார்கள்?"
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q9",
+      "questionNumber": "9",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "9. Find the square root of 289x⁴−612x³+970x²−684x+361.",
+        "ta": "9. 289x⁴−612x³+970x²−684x+361–யின் வர்க்கமூலம் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q10",
+      "questionNumber": "10",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "10. Solve √(y+1)+√(2y−5)=3",
+        "ta": "10. தீர்க்க √(y+1)+√(2y−5)=3"
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q11",
+      "questionNumber": "11",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "11. A boat takes 1.6 hours longer to go 36 kms up a river than down the river. If the speed of the water current is 4 km per hr, what is the speed of the boat in still water?",
+        "ta": "11. 36 கி.மீ தூரத்தை ஒரு படகு நீரோட்டத்தின் திசையில் கடக்கும் நேரத்தைவிட எதிர்த்திசையில் கடக்கும் நேரம் 1.6 மணி நேரம் அதிகமாக எடுத்துக்கொள்கிறது. நீரோட்டத்தின் வேகம் 4 கி.மீ/மணி எனில், அசைவற்ற நீரில் படகின் வேகம் என்ன?"
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q12",
+      "questionNumber": "12",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "12. Is it possible to design a rectangular park of perimeter 320 m and area 4800 m²? If so find its length and breadth.",
+        "ta": "12. 320 மீ சுற்றளவும் 4800 ச.மீ பரப்பளவும் கொண்ட செவ்வக வடிவப் பூங்காவை அமைக்க முடியுமா? ஆம் எனில், அதன் நீளம், அகலம் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q13",
+      "questionNumber": "13",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "13. At t minutes past 2 pm, the time needed to 3 pm is 3 minutes less than (t²)/(4). Find t.",
+        "ta": "13. ஒரு கடிகாரத்தில் பிற்பகல் 2 மணியிலிருந்து t நிமிடங்களுக்குப் பிறகு 3 மணியை அடைவதற்குரிய கால அளவானது (t²)/(4)–ஐ விட மூன்று நிமிடங்கள் குறைவு எனில், t–யின் மதிப்பைக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q14",
+      "questionNumber": "14",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "14. The number of seats in a row is equal to the total number of rows in a hall. The total number of seats in the hall will increase by 375 if the number of rows is doubled and the number of seats in each row is reduced by 5. Find the number of rows in the hall at the beginning.",
+        "ta": "14. ஓர் அரங்கில், ஒரு வரிசையில் உள்ள இருக்கைகளின் எண்ணிக்கை அந்த அரங்கில் உள்ள மொத்த வரிசைகளின் எண்ணிக்கைக்குச் சமம். ஒவ்வொரு வரிசையில் உள்ள இருக்கைகளை 5 குறைத்து மொத்த வரிசைகளின் எண்ணிக்கையை இரட்டிப்பாக்கினால் அரங்கில் உள்ள இருக்கைகளின் எண்ணிக்கை முன்பைவிட 375 அதிகரிக்கும். அரங்கில் துவக்கத்தில் இருந்த வரிசைகளின் எண்ணிக்கையைக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q15-i",
+      "questionNumber": "15",
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "15. If α and β are the roots of the polynomial f(x)=x²−2x+3, find the polynomial whose roots are (i) α+2, β+2",
+        "ta": "15. f(x)=x²−2x+3, என்ற பல்லுறுப்புக் கோவையின் மூலங்கள் α மற்றும் β எனில், கீழ்க்காண்பனவற்றை மூலங்களாகக் கொண்ட பல்லுறுப்புக் கோவையைக் காண்க. (i) α+2, β+2"
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q15-ii",
+      "questionNumber": "15",
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "15. If α and β are the roots of the polynomial f(x)=x²−2x+3, find the polynomial whose roots are (ii) (α−1)/(α+1), (β−1)/(β+1)",
+        "ta": "15. f(x)=x²−2x+3, என்ற பல்லுறுப்புக் கோவையின் மூலங்கள் α மற்றும் β எனில், கீழ்க்காண்பனவற்றை மூலங்களாகக் கொண்ட பல்லுறுப்புக் கோவையைக் காண்க. (ii) (α−1)/(α+1), (β−1)/(β+1)"
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q16",
+      "questionNumber": "16",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163
+          ],
+          "printed": [
+            157
+          ]
+        },
+        "ta": {
+          "pdf": [
+            167
+          ],
+          "printed": [
+            161
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "16. If −4 is a root of the equation x²+px−4=0 and if the equation x²+px+q=0 has equal roots, find the values of p and q.",
+        "ta": "16. x²+px−4=0 என்ற சமன்பாட்டின் மூலம் −4 மற்றும் x²+px+q=0–யின் மூலங்கள் சமம் எனில், p மற்றும் q-யின் மதிப்புக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q17-i",
+      "questionNumber": "17",
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163,
+            164
+          ],
+          "printed": [
+            157,
+            158
+          ]
+        },
+        "ta": {
+          "pdf": [
+            168
+          ],
+          "printed": [
+            162
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "17. Two farmers Thilagan and Kausigan cultivates three varieties of grains namely rice, wheat and ragi. If the sale (in ₹) of three varieties of grains by both the farmers in the month of April is given by the matrix.\nApril sale in ₹\nColumns: rice, wheat, ragi. Rows: Thilagan, Kausigan. A=[500, 1000, 1500; 2500, 1500, 500]and the May month sale (in ₹) is exactly twice as that of the April month sale for each variety.\n(i) What is the average sales of the months April and May.",
+        "ta": "17. திலகன், கௌசிகன் என்ற இரு விவசாயிகள் அரிசி, கோதுமை மற்றும் கேழ்வரகு ஆகிய மூன்று தானியங்களைப் பயிரிட்டனர். ஏப்ரல் மாதத்தில் இருவருக்குமான தானியங்களின் விற்பனை விலை கீழ்க்காணும் அணியில் கொடுக்கப்பட்டுள்ளது.\nஏப்ரல் மாத விற்பனை (ரூபாயில்)\nநிரல்கள்: அரிசி, கோதுமை, கேழ்வரகு. நிரைகள்: திலகன், கௌசிகன். A=[500, 1000, 1500; 2500, 1500, 500]மேலும் மே மாத விலை ஏப்ரல் மாத விலையின் இருமடங்கு எனில், கீழ்க்காண்பனவற்றைக் காண்க.\n(i) ஏப்ரல், மே மாதங்களின் சராசரி விற்பனை யாது?"
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q17-ii",
+      "questionNumber": "17",
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            163,
+            164
+          ],
+          "printed": [
+            157,
+            158
+          ]
+        },
+        "ta": {
+          "pdf": [
+            168
+          ],
+          "printed": [
+            162
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "17. Two farmers Thilagan and Kausigan cultivates three varieties of grains namely rice, wheat and ragi. If the sale (in ₹) of three varieties of grains by both the farmers in the month of April is given by the matrix.\nApril sale in ₹\nColumns: rice, wheat, ragi. Rows: Thilagan, Kausigan. A=[500, 1000, 1500; 2500, 1500, 500]and the May month sale (in ₹) is exactly twice as that of the April month sale for each variety.\n(ii) If the sales continues to increase in the same way in the successive months, what will be sales in the month of August?",
+        "ta": "17. திலகன், கௌசிகன் என்ற இரு விவசாயிகள் அரிசி, கோதுமை மற்றும் கேழ்வரகு ஆகிய மூன்று தானியங்களைப் பயிரிட்டனர். ஏப்ரல் மாதத்தில் இருவருக்குமான தானியங்களின் விற்பனை விலை கீழ்க்காணும் அணியில் கொடுக்கப்பட்டுள்ளது.\nஏப்ரல் மாத விற்பனை (ரூபாயில்)\nநிரல்கள்: அரிசி, கோதுமை, கேழ்வரகு. நிரைகள்: திலகன், கௌசிகன். A=[500, 1000, 1500; 2500, 1500, 500]மேலும் மே மாத விலை ஏப்ரல் மாத விலையின் இருமடங்கு எனில், கீழ்க்காண்பனவற்றைக் காண்க.\n(ii) இதேபோல் விலை தொடர்ந்து வரும் மாதங்களில் ஏற்றமடைந்தால் ஆகஸ்ட் மாத விலையைக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q18",
+      "questionNumber": "18",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            164
+          ],
+          "printed": [
+            158
+          ]
+        },
+        "ta": {
+          "pdf": [
+            168
+          ],
+          "printed": [
+            162
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "18. If cos θ[cos θ, sin θ; −sin θ, cos θ]+sin θ[x, −cos θ; cos θ, x]=I₂, find x.",
+        "ta": "18. cos θ[cos θ, sin θ; −sin θ, cos θ]+sin θ[x, −cos θ; cos θ, x]=I₂ எனில், x–ஐக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q19",
+      "questionNumber": "19",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            164
+          ],
+          "printed": [
+            158
+          ]
+        },
+        "ta": {
+          "pdf": [
+            168
+          ],
+          "printed": [
+            162
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "19. Given A=[p, 0; 0, 2], B=[0, − q; 1, 0], C=[2, −2; 2, 2] and if BA=C², find p and q.",
+        "ta": "19. A=[p, 0; 0, 2], B=[0, − q; 1, 0], C=[2, −2; 2, 2] மற்றும் BA=C² எனில், p, q–ஐக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-unit-q20",
+      "questionNumber": "20",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            164
+          ],
+          "printed": [
+            158
+          ]
+        },
+        "ta": {
+          "pdf": [
+            168
+          ],
+          "printed": [
+            162
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "20. A=[3, 0; 4, 5], B=[6, 3; 8, 5], C=[3, 6; 1, 1] find the matrix D, such that CD−AB=0",
+        "ta": "20. A=[3, 0; 4, 5], B=[6, 3; 8, 5], C=[3, 6; 1, 1] எனில், CD−AB=0 எனுமாறு அணி D–ஐக் காண்க."
+      }
+    }
+  ]
+}

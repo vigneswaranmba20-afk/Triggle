@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "baseline": "ee0732edae6d09bd922938570b720f3a7e80bef6",
+  "checkedOn": "2026-11-25",
+  "grade": 10,
+  "chapter": 3,
+  "edition": "TN SCERT 2025 Revised Edition",
+  "tamilEditorial": "pending",
+  "answerAppendix": {
+    "en": {
+      "pdf": [
+        345,
+        346
+      ],
+      "printed": [
+        339,
+        340
+      ]
+    },
+    "ta": {
+      "pdf": [
+        359,
+        360
+      ],
+      "printed": [
+        353,
+        354
+      ]
+    }
+  },
+  "sourcePageImageSha256": {
+    "en-2.png": "7b1613b656ffff9dac8187aa7135645c679c013241d22a088e79124877a9b6cd",
+    "en-143.png": "93403891e04e65480ca5659407f80462f1891b111a7132957917c0ca61fa0635",
+    "en-150.png": "3b5b5f5632b89910d1eda2fa67d504f8ba19036aeb45c21d4e40e0c49ed2a03e",
+    "en-154.png": "30866f4f411cca314528debe6698ded5f8416b9a0c863503936076405f5b102d",
+    "en-155.png": "950de54c47639cef92ba1ad7bbe0105778e7d7aa048c532eec894011641fefcd",
+    "en-159.png": "405f238890ea24e73b74cce90e4726fb0c09bb8a225f225c895439b59ddf049c",
+    "en-160.png": "3100ff650c8cc30ea280da5e5f1f43870b9b4388757dc3492ef84648c55141e0",
+    "en-161.png": "accd376d528774ec4060e4d87c923129a79ced86eb8e7336432d823799445974",
+    "en-162.png": "5ede669249958c00a670e314ef9b4b74ae0a4aeeca7f1e64ea7b6641b401ac83",
+    "en-163.png": "980bccb1a16d9ff95195e2351c9f5c5b39126b67e5203c0a94eb42a54e17cadf",
+    "en-164.png": "a831ba3e68ca8d02dd15c786c4d4b1084f9aace0b880f0877cfca5e9bb85a9eb",
+    "en-345.png": "85c98bc3a78d79643bfa9f432984c3a6924c1f7c010be07808e32ab909356ecf",
+    "en-346.png": "15e0534375aed56c1dd6bd23d92f7e652fd53fa7d6b7d230bd256068f3ec6015",
+    "ta-2.png": "328d7955f40e86f65f4bf4860a714a2bed60ff5e03363068ffe9484d23a471c2",
+    "ta-145.png": "13bde38b97dd5a3f7cf6605864d11ad7dcf506d170466968df5aff930ed7ac66",
+    "ta-152.png": "0e84d61d8a53dd738dd30eaf60e1deed593d10044b7f0aa150ab217f1765c9d9",
+    "ta-153.png": "ce17108f4969c92d0c52b26cf9bfa855d026b9375e92624b1e147987a38d48fd",
+    "ta-157.png": "37bfd1b32b612098db9d9e48585c4fba922921e1110faa0bb4d32469a42b6453",
+    "ta-158.png": "1145f284a6087c16288a4dbac016a559622f8d46c7ce3d4f171d6b3c05f7c0d2",
+    "ta-163.png": "b52d862ee118d4db14580304f67b083d5ceac27c4204eb28dc16cd2a994e41b6",
+    "ta-164.png": "fac46c4386c49834c7c19cca0f84021f49a20f8aa830cb81be27ff5573719308",
+    "ta-165.png": "2b1dbfa33b1fc13bad91fc7ef3e10905ec36e7186a3594799a67cf4a8a49f028",
+    "ta-166.png": "8a150a4bae326d91b9ee4c29ba1f7568179bc081ce92f5a7302735f4d0f5b368",
+    "ta-167.png": "8424694b7bc188372becff49f44ec661154d2193a8d5c261e1f076cd137de0c1",
+    "ta-168.png": "1853762a6799cdfeca6e1627ff7e820f06b1d04d6e66c4ce9395c62d25e96ff2",
+    "ta-359.png": "79cf7bc4e37e29a7dec46a02ae50f874543830a24e3c27686e0d15b6ed26ddba",
+    "ta-360.png": "22036b633a69b66726b690642507ed5d93126443284b5eab8819eff96ddfb2dc"
+  },
+  "scope": {
+    "questions": 76,
+    "tasks": 98
+  },
+  "records": {
+    "c10-3-ex3-16-q1-i": {
+      "key": "3.16/1/i",
+      "recordSha256": "6438b6b63d3a702b035f62e5e948a86bfe1036bee9886eb04cbfab546a87acfb",
+      "independentResult": "[4, 5]"
+    },
+    "c10-3-ex3-16-q1-ii": {
+      "key": "3.16/1/ii",
+      "recordSha256": "4b630ac5ff236571104b0e454cba52ebadf3e731c9f7b78da1045b774289f869",
+      "independentResult": "[2]"
+    },
+    "c10-3-ex3-16-q1-iii": {
+      "key": "3.16/1/iii",
+      "recordSha256": "ad67092bb930cd4779d15c55d873162024257e80645f0fc8448e78c8570a3ee9",
+      "independentResult": "[]"
+    },
+    "c10-3-ex3-16-q1-iv": {
+      "key": "3.16/1/iv",
+      "recordSha256": "3ed40a13e9a315a073edfb3641dbb3902eeb69db33069bbb9ced062c94199c8b",
+      "independentResult": "[-3, 3]"
+    },
+    "c10-3-ex3-16-q1-v": {
+      "key": "3.16/1/v",
+      "recordSha256": "f3119c9c38b912e1a577fe8adddd7b30e6332601cf46d5693225a3a3b161b562",
+      "independentResult": "[3]"
+    },
+    "c10-3-ex3-16-q1-vi": {
+      "key": "3.16/1/vi",
+      "recordSha256": "521b706de8f43603ebe84517cf316dd8cd725e77004dab65d0d574dc4570062d",
+      "independentResult": "[-2, 3/2]"
+    },
+    "c10-3-ex3-16-q2": {
+      "key": "3.16/2/whole",
+      "recordSha256": "f2101b4daae08cecff99d35957b301874e901d71438b62fb4670ac1a99e66cb4",
+      "independentResult": "[(-3, 5), (4, 12)]"
+    },
+    "c10-3-ex3-16-q3": {
+      "key": "3.16/3/whole",
+      "recordSha256": "754138642aeeab6dce4bd8a44b8014cd4a03e235fa9e4d1e9fdf111c1716d229",
+      "independentResult": "[]"
+    },
+    "c10-3-ex3-16-q4": {
+      "key": "3.16/4/whole",
+      "recordSha256": "dcaa434f71df452aec03302defb65fbf6e4a37c7d1918d1063b6c9ebbd12e833",
+      "independentResult": "[(-1, 0)]"
+    },
+    "c10-3-ex3-16-q5": {
+      "key": "3.16/5/whole",
+      "recordSha256": "feb811d734e193b84cd0bd4de9a12a851c4e1862a9ce9b540e902db8ed0a4ff1",
+      "independentResult": "[(-4, 0), (1, 0)]"
+    },
+    "c10-3-ex3-16-q6": {
+      "key": "3.16/6/whole",
+      "recordSha256": "b9a04a0f98ea4e50213e1b49245071498ad8278e2d55daf1e3646a4ec962c55e",
+      "independentResult": "[(-2, 8), (7, 8)]"
+    },
+    "c10-3-ex3-16-q7": {
+      "key": "3.16/7/whole",
+      "recordSha256": "a18e3816026caf5216c31552dc3d9f1f0c5bb5ab33306a325c3e9d569597d8d4",
+      "independentResult": "[(-1, 0), (3, 4)]"
+    },
+    "c10-3-ex3-16-q8": {
+      "key": "3.16/8/whole",
+      "recordSha256": "94aa1744bf44756964bfaa0df6ad2b8d01139d5894a28a42c2619a4ebf4a47c0",
+      "independentResult": "[(-2, -3), (3, 12)]"
+    },
+    "c10-3-ex3-17-q1-i": {
+      "key": "3.17/1/i",
+      "recordSha256": "25568ea5de1794a49ce16d202fa5c05da67bd1930fcae368378244c17745fee1",
+      "independentResult": "16"
+    },
+    "c10-3-ex3-17-q1-ii": {
+      "key": "3.17/1/ii",
+      "recordSha256": "86d38f948992144e216acc8f48f9314d1a5b93c222736b6a41b873754a9d72ef",
+      "independentResult": "(4, 4)"
+    },
+    "c10-3-ex3-17-q1-iii": {
+      "key": "3.17/1/iii",
+      "recordSha256": "24938a6488888f3799ba46e904dace70aab1d806be6c4c9ba6c654f5033c613c",
+      "independentResult": "[sqrt(7), sqrt(3)/2, 5, 0, -11, 1]"
+    },
+    "c10-3-ex3-17-q2": {
+      "key": "3.17/2/whole",
+      "recordSha256": "d91647a0d576be431b2bbe9c678d6a5684a3ec4a321ea26aff684699c1aa14c5",
+      "independentResult": "[[(1, 18), (2, 9), (3, 6), (6, 3), (9, 2), (18, 1)], [(1, 6), (2, 3), (3, 2), (6, 1)]]"
+    },
+    "c10-3-ex3-17-q3-i": {
+      "key": "3.17/3/i",
+      "recordSha256": "490489cfc0f3fe01f2c98ed621f8883ea232fb06e78899660951a93c86fcc42e",
+      "independentResult": "[[1, 3, 5], [0, 2, 4], [1, 1, 3]]"
+    },
+    "c10-3-ex3-17-q3-ii": {
+      "key": "3.17/3/ii",
+      "recordSha256": "5d592a109605a0595c6dea12ce550503a46fc2dce7cfe86fe81dd8d2284d473d",
+      "independentResult": "[[8/3, 9, 64/3], [9, 64/3, 125/3], [64/3, 125/3, 72]]"
+    },
+    "c10-3-ex3-17-q4": {
+      "key": "3.17/4/whole",
+      "recordSha256": "eca9de5ed799449d0afe3b28df8e2ac6ee89d249ba22de85ccd5ae2dd49b2222",
+      "independentResult": "[[5, 1, 3], [4, -7, 8], [3, 9, 2]]"
+    },
+    "c10-3-ex3-17-q5": {
+      "key": "3.17/5/whole",
+      "recordSha256": "f1a47bac0c1c17edd711c6cf2fb5d79f08fb3f0ae36dccc05e2c4d7743a610e5",
+      "independentResult": "[[-sqrt(7), sqrt(5), -sqrt(3)], [3, -2, 5]]"
+    },
+    "c10-3-ex3-17-q6": {
+      "key": "3.17/6/whole",
+      "recordSha256": "2cb7eb1f89fb5f90ccc1a4771779f34572c9e62a7a8416a94e1a65d24522adb1",
+      "independentResult": "[[5, 2, 2], [-sqrt(17), 7/10, 5/2], [8, 3, 1]]"
+    },
+    "c10-3-ex3-17-q7-i": {
+      "key": "3.17/7/i",
+      "recordSha256": "c9cc42b7fc3b2896f162eeba5cf364f6b1a7b89a05aed05fc9b3a96ee705bcac",
+      "independentResult": "[(3, 12, 3)]"
+    },
+    "c10-3-ex3-17-q7-ii": {
+      "key": "3.17/7/ii",
+      "recordSha256": "70372c855e5b4a2fab52f3c1b3eff027dbc13d53fa205f6694d932ad005be672",
+      "independentResult": "[(2, 4, 0), (4, 2, 0)]"
+    },
+    "c10-3-ex3-17-q7-iii": {
+      "key": "3.17/7/iii",
+      "recordSha256": "a78d7b18c5e3a2df2023ff8ca01866bb6a83631508b54dc599ed5ffe4ecfabaf",
+      "independentResult": "[(2, 4, 3)]"
+    },
+    "c10-3-ex3-18-q1-i": {
+      "key": "3.18/1/i",
+      "recordSha256": "56e2aecbbedaf3da78515d364a26a37d5dad524a5ba3662d9ff6a6a320b00f9f",
+      "independentResult": "[[6, 16], [6, 7], [9, -3]]"
+    },
+    "c10-3-ex3-18-q1-ii": {
+      "key": "3.18/1/ii",
+      "recordSha256": "bdb984e2786684f4474507a886a3b70f3f4c2a3ea2ba00b6388606e16799e78a",
+      "independentResult": "[[0, 0], [0, 0], [0, 0]]"
+    },
+    "c10-3-ex3-18-q2": {
+      "key": "3.18/2/whole",
+      "recordSha256": "04ad1095d5afcd786840995b3ab83dd96dd541a814df6a0551ddb89511e5bc2e",
+      "independentResult": "[[14, 9, 9], [4, 10, -3], [-4, 5, -6]]"
+    },
+    "c10-3-ex3-18-q3": {
+      "key": "3.18/3/whole",
+      "recordSha256": "15a424acbc28f2813487d902992f6cebede66e4de2d90e31439ecbd793a1f897",
+      "independentResult": "[[[5, 0], [3/2, 9/2]], [[2, 0], [3/2, 1/2]]]"
+    },
+    "c10-3-ex3-18-q4-i": {
+      "key": "3.18/4/i",
+      "recordSha256": "591c29e248d72cae301a4c440a736f7cf3cbffdfe083907376e62b210791d801",
+      "independentResult": "[[7, -17, -37], [-39, -11, -26]]"
+    },
+    "c10-3-ex3-18-q4-ii": {
+      "key": "3.18/4/ii",
+      "recordSha256": "ffa29269bbff5e5f7b69b81c01bd68b430c6b09c4268c5210fa6d7429b41200b",
+      "independentResult": "[[-63, -15, -45], [15, -27, -60]]"
+    },
+    "c10-3-ex3-18-q5-i": {
+      "key": "3.18/5/i",
+      "recordSha256": "2c09c09f58048705bebe315021f09e352782e5308a50300a802cebbface6623b",
+      "independentResult": "(4, -10, 12)"
+    },
+    "c10-3-ex3-18-q5-ii": {
+      "key": "3.18/5/ii",
+      "recordSha256": "6d986933b2156c6716d3941eb761a1b78697bf65f91444b6487dd9d991626d15",
+      "independentResult": "(-10, 14, 10)"
+    },
+    "c10-3-ex3-18-q6": {
+      "key": "3.18/6/whole",
+      "recordSha256": "b9ef41d7d03829f7cc412616c728bf227826473261361c70b34c1b24eb111c16",
+      "independentResult": "(4, 6)"
+    },
+    "c10-3-ex3-18-q7": {
+      "key": "3.18/7/whole",
+      "recordSha256": "c2d194f3683cb25ff925f71371d36ea2445b308434d1e4ee628489bfb5a698fb",
+      "independentResult": "4"
+    },
+    "c10-3-ex3-18-q8": {
+      "key": "3.18/8/whole",
+      "recordSha256": "13b469f856fe9f112f8cc9b5fc23fa10903087deeb7dc6fea898f9f5c4f940cd",
+      "independentResult": "[(-1, -2), (-1, 4), (5, -2), (5, 4)]"
+    },
+    "c10-3-ex3-19-q1-i": {
+      "key": "3.19/1/i",
+      "recordSha256": "ae0fe8deaa6430872c0d9199181f1baf1c88af391fdfbdfd7910c201566c1426",
+      "independentResult": "(3, 3)"
+    },
+    "c10-3-ex3-19-q1-ii": {
+      "key": "3.19/1/ii",
+      "recordSha256": "f544c6aa0421319ad03839a864e028e4fc6ab4a336958e5b9b9c96c15a76d458",
+      "independentResult": "(4, 2)"
+    },
+    "c10-3-ex3-19-q1-iii": {
+      "key": "3.19/1/iii",
+      "recordSha256": "17efc99dba29a64d22ac4ed0c9a082431df91558c3dccea71d7405315fafecd2",
+      "independentResult": "(4, 2)"
+    },
+    "c10-3-ex3-19-q1-iv": {
+      "key": "3.19/1/iv",
+      "recordSha256": "09542215429266a016c9f73f5c36e25dd028e289659aed83709a893a74d8fa99",
+      "independentResult": "(4, 1)"
+    },
+    "c10-3-ex3-19-q1-v": {
+      "key": "3.19/1/v",
+      "recordSha256": "3b5c3ff84c7789e164352c0c43a5886220da62ea8603cbe927b1e943d1e70030",
+      "independentResult": "(1, 3)"
+    },
+    "c10-3-ex3-19-q2": {
+      "key": "3.19/2/whole",
+      "recordSha256": "fea620debdcce1a6f298e7dee2b1031998ebf610953ce26d0bebe6de128899e4",
+      "independentResult": "AB: p×r. BA: q×q if r=p, otherwise undefined."
+    },
+    "c10-3-ex3-19-q3": {
+      "key": "3.19/3/whole",
+      "recordSha256": "7b068a912acffd2513e822004ad99b2bcdf3f7b2ead38f8ee03d8ef3f61dbf1b",
+      "independentResult": "(7, 10)"
+    },
+    "c10-3-ex3-19-q4": {
+      "key": "3.19/4/whole",
+      "recordSha256": "8dbb503ccd49eba8aba83439e4b8d7cf8ac74765f983a0b3854089b13462d103",
+      "independentResult": "[[[12, 19], [10, 3]], [[-10, -4], [24, 25]]]"
+    },
+    "c10-3-ex3-19-q6": {
+      "key": "3.19/6/whole",
+      "recordSha256": "db288eff13bdda32a1ea57cac7b15a744a0d560748f5dd31af979c5731b2c6f4",
+      "independentResult": "[[-5, 0], [0, -5]]"
+    },
+    "c10-3-ex3-19-q5": {
+      "key": "3.19/5/whole",
+      "recordSha256": "07d2464c97e865b71691e545735b08ad9a217c6234d415b27637d31f6e86cd87",
+      "independentResult": "[[-1, 20, 19], [11, 4, 15]]"
+    },
+    "c10-3-ex3-19-q7-i": {
+      "key": "3.19/7/i",
+      "recordSha256": "5ff2c742e936b49c2181af56f949982d6c3af87ad6ab01df4a96e6abe18c726a",
+      "independentResult": "[[22, 20], [29, 30]]"
+    },
+    "c10-3-ex3-19-q7-ii": {
+      "key": "3.19/7/ii",
+      "recordSha256": "d10e53150aefdf79b5b365285e8294df26cd1b3c89e366f200a4c8e2fe2a0944",
+      "independentResult": "[[-4, 4], [-2, -4]]"
+    },
+    "c10-3-ex3-19-q7-iii": {
+      "key": "3.19/7/iii",
+      "recordSha256": "37acc2b63b4b2a867f0b2b29d06624bc2c004f768a3537bd7d67955b9430cd18",
+      "independentResult": "[[-3, 0], [2, -2]]"
+    },
+    "c10-3-ex3-19-q8": {
+      "key": "3.19/8/whole",
+      "recordSha256": "248b5144968cae70faabc152218fd2da858fb228433dcdc43c84a8925553d92a",
+      "independentResult": "[[1, 0], [0, 1]]"
+    },
+    "c10-3-ex3-19-q9": {
+      "key": "3.19/9/whole",
+      "recordSha256": "92c7f1980bc1174a16ce80f094799acf2e643e4af9e955226b3535a447a934a9",
+      "independentResult": "[[1, 0], [0, 1]]"
+    },
+    "c10-3-ex3-19-q10": {
+      "key": "3.19/10/whole",
+      "recordSha256": "90e1eb801bfc9ef3c05b22e84b73d1fe9d6b7b985d364e07c61c77928add82eb",
+      "independentResult": "[[1, 0], [0, 1]]"
+    },
+    "c10-3-ex3-19-q11": {
+      "key": "3.19/11/whole",
+      "recordSha256": "9916cbbea17fba3f82e06d74721dc656b09e21e97f40b0c6ec1b84bb660f576d",
+      "independentResult": "symbolic identity"
+    },
+    "c10-3-ex3-19-q12": {
+      "key": "3.19/12/whole",
+      "recordSha256": "a1a83e6c110cdd353d2b50fe5add7a9946be2c7b11a84579d976da57a97b4ce1",
+      "independentResult": "[[52, 43], [30, 3]]"
+    },
+    "c10-3-ex3-19-q13": {
+      "key": "3.19/13/whole",
+      "recordSha256": "67b79c71d291de1bce370b7a26d2fc5ac6bfab67b6e3b713fcbc9662d021544d",
+      "independentResult": "[[0, 0], [0, 0]]"
+    },
+    "c10-3-ex3-20-q1": {
+      "key": "3.20/1/whole",
+      "recordSha256": "141362985f068c1c026efe229f0a870c73811809334747f08a2d0f3828d370b7",
+      "independentResult": "D"
+    },
+    "c10-3-ex3-20-q2": {
+      "key": "3.20/2/whole",
+      "recordSha256": "0aa53e11b05ce8e12c7f6947b33ea2c5f7c3d348fa3a2efb40110c10497e6d8d",
+      "independentResult": "A"
+    },
+    "c10-3-ex3-20-q3": {
+      "key": "3.20/3/whole",
+      "recordSha256": "fa1b7771e824f31c74509e43e897d7ce957fece95d837f86cc69a1f823c171dd",
+      "independentResult": "B"
+    },
+    "c10-3-ex3-20-q4": {
+      "key": "3.20/4/whole",
+      "recordSha256": "88c58a31c3fed216ca9dd1df6aa3d259fd43ca014f6b9087e348d481e78a0b19",
+      "independentResult": "A"
+    },
+    "c10-3-ex3-20-q5": {
+      "key": "3.20/5/whole",
+      "recordSha256": "775b2bd47ec21e9f390d1bca476dac68161a1125a4f1cc44784885e4b971753e",
+      "independentResult": "B"
+    },
+    "c10-3-ex3-20-q6": {
+      "key": "3.20/6/whole",
+      "recordSha256": "7b9778ca00fb423a21c5258440fb3745590300edf728f14ac723788f0d961b91",
+      "independentResult": "C"
+    },
+    "c10-3-ex3-20-q7": {
+      "key": "3.20/7/whole",
+      "recordSha256": "4764a63d593b17894268e9f207b58e285ec2dfde081db51f9a79d115e486a226",
+      "independentResult": "D"
+    },
+    "c10-3-ex3-20-q8": {
+      "key": "3.20/8/whole",
+      "recordSha256": "19dbdf3ea7ed20c9831911db26d4c1ea8b3a1482272f98160e858051630b54af",
+      "independentResult": "B"
+    },
+    "c10-3-ex3-20-q9": {
+      "key": "3.20/9/whole",
+      "recordSha256": "7e3948278d8c9f6a0b40518db111b970315460552ddd7ba556a04af24cae2130",
+      "independentResult": "C"
+    },
+    "c10-3-ex3-20-q10": {
+      "key": "3.20/10/whole",
+      "recordSha256": "b334f3109716ab2d594eacfd2f3588e33aa3191b89e44c059cdc241d305972a1",
+      "independentResult": "C"
+    },
+    "c10-3-ex3-20-q12": {
+      "key": "3.20/12/whole",
+      "recordSha256": "888db7e2f2f90eb0d3ffc2fff9940cd98a7360449fe3c0363a998fced0c10b75",
+      "independentResult": "A"
+    },
+    "c10-3-ex3-20-q13": {
+      "key": "3.20/13/whole",
+      "recordSha256": "cd1bfbb6a06e30d0922465ddba3901f4e6453584c65e584e7e3776317d6cd25a",
+      "independentResult": "B"
+    },
+    "c10-3-ex3-20-q14": {
+      "key": "3.20/14/whole",
+      "recordSha256": "1a19e9088bf8b846e25e92ae089302dcd0d41a3cc127575240c120a73f70f7d7",
+      "independentResult": "D"
+    },
+    "c10-3-ex3-20-q15": {
+      "key": "3.20/15/whole",
+      "recordSha256": "f34e1975b9c8ea5c9faec38ce917321a0d6fc94dd60ff3ccda9cf459b4c59255",
+      "independentResult": "B"
+    },
+    "c10-3-ex3-20-q16": {
+      "key": "3.20/16/whole",
+      "recordSha256": "cb19745fe7a68465fa39c65c832121504903057e54ae43d8c7483e8eadfcea38",
+      "independentResult": "B"
+    },
+    "c10-3-ex3-20-q17": {
+      "key": "3.20/17/whole",
+      "recordSha256": "774b15cb7fa1c06f7d43027a56f96d091adf51e79dacce244c980394eb92cd44",
+      "independentResult": "D"
+    },
+    "c10-3-ex3-20-q18": {
+      "key": "3.20/18/whole",
+      "recordSha256": "333f9270966478585522962e2eb48e6941da7f8061d9f0472e58377bf6783ed0",
+      "independentResult": "B"
+    },
+    "c10-3-ex3-20-q19": {
+      "key": "3.20/19/whole",
+      "recordSha256": "84bd4533a080ae98f24a84e7b7397435ca262a66ff23d5e4e090aee52e9723da",
+      "independentResult": "C"
+    },
+    "c10-3-ex3-20-q20": {
+      "key": "3.20/20/whole",
+      "recordSha256": "37359904fda18c5a8fe362bad7f8a769bc8b85389018ba578deca0290b72d615",
+      "independentResult": "A"
+    },
+    "c10-3-ex3-unit-q1": {
+      "key": "3.unit/1/whole",
+      "recordSha256": "29ef9accd644ab5c58f8a0b073d73d480cfcf498fa130152970ac0627bbd6796",
+      "independentResult": "(6, 2, 1)"
+    },
+    "c10-3-ex3-unit-q2": {
+      "key": "3.unit/2/whole",
+      "recordSha256": "7709dcac91838449b57d44f6c9ce78281edac74d9a55bd3d8c96c889bcd6be5b",
+      "independentResult": "(42, 78, 30)"
+    },
+    "c10-3-ex3-unit-q3": {
+      "key": "3.unit/3/whole",
+      "recordSha256": "cda67a3e293de33ae176df07d6a60c739f3725e01f81135c3b9b302c2043d615",
+      "independentResult": "153"
+    },
+    "c10-3-ex3-unit-q4": {
+      "key": "3.unit/4/whole",
+      "recordSha256": "073e58196c3139e99ddea2449dc7c170bf8d46d3170198c1fc61536a9fd8b9b8",
+      "independentResult": "(k*x - y)*(k*x + y)*(k*y + x)"
+    },
+    "c10-3-ex3-unit-q5": {
+      "key": "3.unit/5/whole",
+      "recordSha256": "b3523a1309ee35ef97d89a4f71fd48ed9257cb1827cdcc8663038a9c3ed9c1a9",
+      "independentResult": "x**2 + 2*x + 1"
+    },
+    "c10-3-ex3-unit-q6-i": {
+      "key": "3.unit/6/i",
+      "recordSha256": "7b67e950f8d5da04e874e322a0ffeb5dfbbea3495bf7d8175bda078ceca789d5",
+      "independentResult": "x^a - 2 on the domain of x^a"
+    },
+    "c10-3-ex3-unit-q6-ii": {
+      "key": "3.unit/6/ii",
+      "recordSha256": "8be46d2eb53a908e27a3f118ed0cfed71ecc378eaeb73ecac1348a3c4ae30924",
+      "independentResult": "5/2 - x"
+    },
+    "c10-3-ex3-unit-q7": {
+      "key": "3.unit/7/whole",
+      "recordSha256": "0134ec710665f0de247e68716b998fae6b935d377e2ad8e24218cd7ad80d2eeb",
+      "independentResult": "(p+q+r)^2/(2qr), pqr(q+r)(q+r-p) ≠ 0"
+    },
+    "c10-3-ex3-unit-q8": {
+      "key": "3.unit/8/whole",
+      "recordSha256": "f1f634b1428eb9466ac93a8e4bf69e6abc2e5d288d91d5f88bd27ab7a9d5806c",
+      "independentResult": "(11, 22, 33)"
+    },
+    "c10-3-ex3-unit-q9": {
+      "key": "3.unit/9/whole",
+      "recordSha256": "da5491d5377502ab12d30f58214db1c506b8ad83ecbbc9fc790b42fa5174db17",
+      "independentResult": "17*x**2 - 18*x + 19"
+    },
+    "c10-3-ex3-unit-q10": {
+      "key": "3.unit/10/whole",
+      "recordSha256": "1233ca7b02c07c2f356bf99db075e147a5bbf9fa12db770b1374641ab18d4f74",
+      "independentResult": "3"
+    },
+    "c10-3-ex3-unit-q11": {
+      "key": "3.unit/11/whole",
+      "recordSha256": "f00c1d7551cc6f859410bc7a0eda51c9c29f64d42493aff7c3900ee11c71ba8b",
+      "independentResult": "14"
+    },
+    "c10-3-ex3-unit-q12": {
+      "key": "3.unit/12/whole",
+      "recordSha256": "b6523e2dbf66446acec8f636ec324205571ff268d874116da900cf1c88bbd13f",
+      "independentResult": "(120, 40)"
+    },
+    "c10-3-ex3-unit-q13": {
+      "key": "3.unit/13/whole",
+      "recordSha256": "96fc9fa8205f0257fe7ef6c8cd38a1c2166a22ae947a3ff952ae1a58dc742752",
+      "independentResult": "14"
+    },
+    "c10-3-ex3-unit-q14": {
+      "key": "3.unit/14/whole",
+      "recordSha256": "f786aedb270ca6f4341438df78e225663cff74182a36bbcd1c7d7f69aa12fade",
+      "independentResult": "25"
+    },
+    "c10-3-ex3-unit-q15-i": {
+      "key": "3.unit/15/i",
+      "recordSha256": "3786823411ccdb367d2deeaf380fd3b488836e5596e18ebd09320a9afaf76a9d",
+      "independentResult": "x**2 - 6*x + 11"
+    },
+    "c10-3-ex3-unit-q15-ii": {
+      "key": "3.unit/15/ii",
+      "recordSha256": "46d3a6610e6917385d079fb6fdf4538e8098330f0ddd99280bb8f76ba689f8e6",
+      "independentResult": "x**2 - 2*x/3 + 1/3"
+    },
+    "c10-3-ex3-unit-q16": {
+      "key": "3.unit/16/whole",
+      "recordSha256": "c9024c09a39b4422044da674820cc10e8694f1559f59855c03bdb5214ff7d4f5",
+      "independentResult": "(3, 9/4)"
+    },
+    "c10-3-ex3-unit-q17-i": {
+      "key": "3.unit/17/i",
+      "recordSha256": "b7c84ee8179356ac3a45f46b59aff5a78e9c210a0cc7af7a7d88c9a369f96829",
+      "independentResult": "[[750, 1500, 2250], [3750, 2250, 750]]"
+    },
+    "c10-3-ex3-unit-q17-ii": {
+      "key": "3.unit/17/ii",
+      "recordSha256": "d39d562b678e3232c9da0490c07d247045d66ec8720144d4a0a9eb1881d74628",
+      "independentResult": "[[8000, 16000, 24000], [40000, 24000, 8000]]"
+    },
+    "c10-3-ex3-unit-q18": {
+      "key": "3.unit/18/whole",
+      "recordSha256": "4c0e60f8b9118ebaa0640ab4446f0615808ee00e5f23a8c186912200a47ac7c0",
+      "independentResult": "sin θ if sin θ ≠ 0; all real x otherwise"
+    },
+    "c10-3-ex3-unit-q19": {
+      "key": "3.unit/19/whole",
+      "recordSha256": "6836738f92455c82bfe624a3f302dd104a8714c9ff50b3416e67cba239c0e030",
+      "independentResult": "(8, 4)"
+    },
+    "c10-3-ex3-unit-q20": {
+      "key": "3.unit/20/whole",
+      "recordSha256": "53d3143535d18bddd565bbc7442d0e88f5d4ad96c09d332606ada524527c323a",
+      "independentResult": "[[122, 71], [-58, -34]]"
+    }
+  },
+  "quarantined": [
+    {
+      "exercise": "3.20",
+      "question": "11",
+      "part": "whole",
+      "reason": "The Tamil prompt reverses the English squared-roots premise. The keyed geometric progression does not follow from the Tamil premise.",
+      "sourcePages": {
+        "en": {
+          "pdf": 161,
+          "printed": 155
+        },
+        "ta": {
+          "pdf": 165,
+          "printed": 159
+        }
+      },
+      "tamilCounterexample": {
+        "q": 1,
+        "p": -1,
+        "r": 0,
+        "firstRoots": [
+          -1,
+          0
+        ],
+        "secondRoots": [
+          0,
+          1
+        ]
+      }
+    }
+  ],
+  "sources": [
+    {
+      "id": "g10-2025-en",
+      "grade": 10,
+      "language": "en",
+      "title": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "2025 revised",
+      "url": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    },
+    {
+      "id": "g10-2025-ta",
+      "grade": 10,
+      "language": "ta",
+      "title": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "2025 revised",
+      "url": "https://drive.google.com/file/d/1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC/view",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    }
+  ]
+}
