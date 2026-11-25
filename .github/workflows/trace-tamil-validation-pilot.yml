@@ -1,4 +1,4 @@
-name: TRACE Tamil validation pilot (read-only)
+name: TRACE Tamil validation V0.2 — CPU grammar experiment
 
 on:
   push:
@@ -14,7 +14,12 @@ jobs:
   benchmark:
     if: github.repository == 'vigneswaranmba20-afk/Triggle' && github.ref == 'refs/heads/trace/tamil-validation-pilot-20261125'
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 30
+    env:
+      HF_HUB_DISABLE_IMPLICIT_TOKEN: '1'
+      HF_HUB_DISABLE_TELEMETRY: '1'
+      TOKENIZERS_PARALLELISM: 'false'
+      OMP_NUM_THREADS: '4'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -23,11 +28,26 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Execute deterministic 60-case pilot without paid APIs
+      - name: Reproduce offline 60-case baseline
         run: node docs/trace/tamil-validation-pilot/run.cjs build/tamil-validation-pilot
-      - name: Preserve blind inputs, answer key and baseline report
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate scorer before inference
+        run: python docs/trace/tamil-validation-pilot/gec_experiment.py self-test
+      - name: Install pinned CPU inference dependencies
+        run: |
+          python -m pip install --disable-pip-version-check --index-url https://download.pytorch.org/whl/cpu torch==2.8.0
+          python -m pip install --disable-pip-version-check transformers==4.57.1 huggingface-hub==0.35.3 sentencepiece==0.2.1 safetensors==0.6.2
+      - name: Generate blind Tamil grammar suggestions locally on runner
+        run: python docs/trace/tamil-validation-pilot/gec_experiment.py infer
+      - name: Score suggestions separately against benchmark labels
+        run: python docs/trace/tamil-validation-pilot/gec_experiment.py score
+      - name: Preserve all available evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: tamil-validation-pilot
+          name: tamil-gec-pilot-${{ github.run_id }}-${{ github.run_attempt }}
           path: build/tamil-validation-pilot/
           retention-days: 7
+          if-no-files-found: error
