@@ -242,3 +242,25 @@ def test_v1_3_3_ch3_coverage_and_mutations():
     mut = run_ch3_mutation_suite(REPO_ROOT)
     assert mut["total"] >= 25
     assert mut["failed"] == 0, [c for c in mut["cases"] if not c["passed"]]
+
+
+def test_v1_3_4_reasoning_engine_and_mutations(tmp_path):
+    from mathguard.audit_chapters import run_all_3_chapters_audit
+    from mathguard.reasoning_mutation_tests import run_reasoning_mutation_tests
+
+    mut_results = run_reasoning_mutation_tests()
+    assert len(mut_results) >= 11
+    failed_muts = [r for r in mut_results if not r.passed]
+    assert not failed_muts, failed_muts
+
+    summary = run_all_3_chapters_audit(REPO_ROOT, tmp_path)
+    ch3_w = summary["chapters"]["ch3_algebra"]["workingVerificationCounts"]
+    ch5_w = summary["chapters"]["ch5_coord_geometry"]["workingVerificationCounts"]
+    ch7_w = summary["chapters"]["ch7_mensuration"]["workingVerificationCounts"]
+
+    total_pass = ch3_w.get("PASS", 0) + ch5_w.get("PASS", 0) + ch7_w.get("PASS", 0)
+    assert ch5_w.get("PASS", 0) >= 94, ch5_w
+    assert ch7_w.get("PASS", 0) >= 61, ch7_w
+    assert ch3_w.get("PASS", 0) >= 123, ch3_w
+    assert total_pass >= 286, f"Expected >= 286/334 PASS, got {total_pass}"
+

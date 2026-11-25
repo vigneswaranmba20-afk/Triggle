@@ -24,6 +24,7 @@ from .mcq import (
     parse_mcq_options_en,
 )
 from .parser import ParseError, parse_expression
+from .reasoning_engine import verify_complete_working
 from .reconcile import build_fidelity_index, reconcile_item
 from .rounding import check_numeric_match
 from .steps import extract_stem_assumptions, validate_steps
@@ -49,6 +50,7 @@ class AuditRecord:
     severity: str  # none | info | minor | major | critical
     classification: str  # Verified | Confirmed mathematical error | Mathematical notation error | Parser limitation | Missing mathematical context | Valid approximation | Requires independent review
     recommended_correction: str
+    working_status: str = ""
     supporting_evidence: Dict[str, Any] = field(default_factory=dict)
 
 
@@ -301,6 +303,7 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
         fig_alt = (item.get("figureAlt") or {}).get("en") or ""
         stem_env = extract_stem_assumptions(q_obj.get("en") or "", fig_alt)
         step_res = validate_steps(item.get("steps") or [], initial_env=stem_env)
+        work_res = verify_complete_working(item, is_concept=False, allow_positive_domain=True)
         ta_res = validate_en_ta_consistency(q_obj.get("en") or "", q_obj.get("ta"))
 
         # Combine into overall status while keeping sub-statuses strictly separate
@@ -367,6 +370,7 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
                 severity=sev,
                 classification=classification,
                 recommended_correction=corr,
+                working_status=work_res.status,
                 supporting_evidence={
                     "answerEvidence": ans_ev,
                     "stepChecks": {
@@ -375,6 +379,13 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
                         "failedChains": step_res.failed_chains,
                         "unparsedSteps": step_res.unparsed_steps,
                         "contextApplied": step_res.context_applied,
+                    },
+                    "claimChecks": {
+                        "totalClaims": work_res.total_claims,
+                        "verifiedClaims": work_res.verified_claims,
+                        "failedClaims": work_res.failed_claims,
+                        "unsupportedClaims": work_res.unsupported_claims,
+                        "assumptions": work_res.assumptions_used,
                     },
                     "tamilChecks": {
                         "flags": ta_res.flags,
@@ -396,6 +407,7 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
         step_res = validate_steps(
             [{"eq": "", "math": st.get("math")} for st in proof_steps]
         )
+        work_res = verify_complete_working(concept, is_concept=True, allow_positive_domain=True)
         q_obj = concept.get("question") or {}
         ta_res = validate_en_ta_consistency(q_obj.get("en") or "", q_obj.get("ta"))
 
@@ -444,6 +456,7 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
                 severity=sev,
                 classification=classification,
                 recommended_correction=corr,
+                working_status=work_res.status,
                 supporting_evidence={
                     "answerEvidence": ans_ev,
                     "stepChecks": {
@@ -452,6 +465,13 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
                         "failedChains": step_res.failed_chains,
                         "unparsedSteps": step_res.unparsed_steps,
                         "contextApplied": step_res.context_applied,
+                    },
+                    "claimChecks": {
+                        "totalClaims": work_res.total_claims,
+                        "verifiedClaims": work_res.verified_claims,
+                        "failedClaims": work_res.failed_claims,
+                        "unsupportedClaims": work_res.unsupported_claims,
+                        "assumptions": work_res.assumptions_used,
                     },
                     "tamilChecks": {"flags": ta_res.flags, "details": ta_res.details},
                 },
@@ -473,12 +493,15 @@ def _compute_summary(records: List[AuditRecord], counts: Dict[str, int]) -> Dict
     by_status: Dict[str, int] = {"PASS": 0, "FAIL": 0, "PARTIAL": 0, "UNVERIFIABLE": 0}
     by_answer: Dict[str, int] = {"PASS": 0, "FAIL": 0, "UNVERIFIABLE": 0}
     by_step: Dict[str, int] = {"PASS": 0, "FAIL": 0, "PARTIAL": 0, "UNVERIFIABLE": 0}
+    by_working: Dict[str, int] = {"PASS": 0, "FAIL": 0, "PARTIAL": 0, "UNVERIFIABLE": 0}
     by_tamil: Dict[str, int] = {"PASS": 0, "FAIL": 0, "PARTIAL": 0, "MISSING": 0}
 
     for r in records:
         by_status[r.status] = by_status.get(r.status, 0) + 1
         by_answer[r.answer_status] = by_answer.get(r.answer_status, 0) + 1
         by_step[r.step_status] = by_step.get(r.step_status, 0) + 1
+        if r.working_status:
+            by_working[r.working_status] = by_working.get(r.working_status, 0) + 1
         by_tamil[r.tamil_status] = by_tamil.get(r.tamil_status, 0) + 1
 
     return {
@@ -488,6 +511,7 @@ def _compute_summary(records: List[AuditRecord], counts: Dict[str, int]) -> Dict
         "overallStatusCounts": by_status,
         "answerVerificationCounts": by_answer,
         "intermediateStepCounts": by_step,
+        "workingVerificationCounts": by_working,
         "tamilValidationCounts": by_tamil,
     }
 

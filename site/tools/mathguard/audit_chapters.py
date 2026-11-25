@@ -14,6 +14,7 @@ from .ch5_verifier import verify_ch5_answer
 from .derivations_g10_ch3 import derive_ch3_for_item
 from .derivations_g10_ch5 import Ch5DerivedResult, derive_ch5_for_item
 from .engine import run_audit as run_ch7_audit
+from .reasoning_engine import verify_complete_working
 from .steps import extract_stem_assumptions, validate_steps
 from .tamil_consistency import validate_en_ta_consistency
 
@@ -45,6 +46,7 @@ def _audit_generic_chapter(
         q_ta = q_obj.get("ta")
         stem_env = extract_stem_assumptions(q_en)
         step_res = validate_steps(item.get("steps") or [], allow_positive_domain=allow_pos, initial_env=stem_env)
+        work_res = verify_complete_working(item, is_concept=False, allow_positive_domain=allow_pos)
         ta_res = validate_en_ta_consistency(q_en, q_ta)
 
         if mode == "algebra":
@@ -65,6 +67,7 @@ def _audit_generic_chapter(
                 "validation_method": deriv.method,
                 "answer_status": ans_status,
                 "step_status": step_res.status,
+                "working_status": work_res.status,
                 "tamil_status": ta_res.status,
                 "existing_result": ans_str,
                 "discrepancy": ans_disc or (f"Step={step_res.failed_chains}" if step_res.status == "FAIL" else ""),
@@ -73,6 +76,13 @@ def _audit_generic_chapter(
                     "passedChains": step_res.passed_chains,
                     "failedChains": step_res.failed_chains,
                     "unparsedSteps": step_res.unparsed_steps,
+                },
+                "claimChecks": {
+                    "totalClaims": work_res.total_claims,
+                    "verifiedClaims": work_res.verified_claims,
+                    "failedClaims": work_res.failed_claims,
+                    "unsupportedClaims": work_res.unsupported_claims,
+                    "assumptions": work_res.assumptions_used,
                 },
                 "tamilFlags": ta_res.flags,
             }
@@ -85,6 +95,7 @@ def _audit_generic_chapter(
         q_ta = q_obj.get("ta")
         proof_steps = (concept.get("proof") or {}).get("steps") or []
         step_res = validate_steps([{"eq": "", "math": st.get("math")} for st in proof_steps], allow_positive_domain=allow_pos)
+        work_res = verify_complete_working(concept, is_concept=True, allow_positive_domain=allow_pos)
         ta_res = validate_en_ta_consistency(q_en, q_ta)
 
         if mode == "algebra":
@@ -102,6 +113,7 @@ def _audit_generic_chapter(
                 "validation_method": deriv.method,
                 "answer_status": c_ans_status,
                 "step_status": step_res.status,
+                "working_status": work_res.status,
                 "tamil_status": ta_res.status,
                 "existing_result": f"choice[{concept.get('correct')}]",
                 "discrepancy": c_ans_disc or (f"Step={step_res.failed_chains}" if step_res.status == "FAIL" else ""),
@@ -110,6 +122,13 @@ def _audit_generic_chapter(
                     "passedChains": step_res.passed_chains,
                     "failedChains": step_res.failed_chains,
                     "unparsedSteps": step_res.unparsed_steps,
+                },
+                "claimChecks": {
+                    "totalClaims": work_res.total_claims,
+                    "verifiedClaims": work_res.verified_claims,
+                    "failedClaims": work_res.failed_claims,
+                    "unsupportedClaims": work_res.unsupported_claims,
+                    "assumptions": work_res.assumptions_used,
                 },
                 "tamilFlags": ta_res.flags,
             }
@@ -124,7 +143,7 @@ def _audit_generic_chapter(
 
     return {
         "schemaVersion": 1,
-        "engine": "TRACE MathGuard V1.3",
+        "engine": "TRACE MathGuard V1.3.4",
         "chapter": chapter_num,
         "name": chapter_data["name"],
         "counts": {
@@ -134,6 +153,7 @@ def _audit_generic_chapter(
         },
         "answerVerificationCounts": _counts("answer_status"),
         "intermediateStepCounts": _counts("step_status"),
+        "workingVerificationCounts": _counts("working_status"),
         "tamilValidationCounts": _counts("tamil_status"),
         "records": records,
     }
@@ -157,7 +177,7 @@ def run_all_3_chapters_audit(repo_root: Path, out_dir: Path) -> Dict[str, Any]:
 
     summary = {
         "schemaVersion": 1,
-        "engine": "TRACE MathGuard V1.3",
+        "engine": "TRACE MathGuard V1.3.4",
         "performance": {
             "totalExecutionTimeMs": elapsed_ms,
             "peakMemoryMB": round(peak_kb / 1024.0, 2),
@@ -167,12 +187,14 @@ def run_all_3_chapters_audit(repo_root: Path, out_dir: Path) -> Dict[str, Any]:
                 "counts": ch3_report["counts"],
                 "answerVerificationCounts": ch3_report["answerVerificationCounts"],
                 "intermediateStepCounts": ch3_report["intermediateStepCounts"],
+                "workingVerificationCounts": ch3_report["workingVerificationCounts"],
                 "tamilValidationCounts": ch3_report["tamilValidationCounts"],
             },
             "ch5_coord_geometry": {
                 "counts": ch5_report["counts"],
                 "answerVerificationCounts": ch5_report["answerVerificationCounts"],
                 "intermediateStepCounts": ch5_report["intermediateStepCounts"],
+                "workingVerificationCounts": ch5_report["workingVerificationCounts"],
                 "tamilValidationCounts": ch5_report["tamilValidationCounts"],
             },
             "ch7_mensuration": {
@@ -183,6 +205,7 @@ def run_all_3_chapters_audit(repo_root: Path, out_dir: Path) -> Dict[str, Any]:
                 },
                 "answerVerificationCounts": ch7_report["summary"]["answerVerificationCounts"],
                 "intermediateStepCounts": ch7_report["summary"]["intermediateStepCounts"],
+                "workingVerificationCounts": ch7_report["summary"]["workingVerificationCounts"],
                 "tamilValidationCounts": ch7_report["summary"]["tamilValidationCounts"],
             },
         },
