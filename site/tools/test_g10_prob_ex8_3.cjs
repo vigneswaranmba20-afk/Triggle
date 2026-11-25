@@ -51,7 +51,12 @@ for(const r of ex83){
   assert.equal(r.tamilWorkedSolutionReview,'pending',r.id);
   assert.ok(r.steps.length>=2,'steps for '+r.id);
   assert.ok(r.steps.every(s=>s.en&&s.ta&&/\p{Script=Tamil}/u.test(s.ta)&&s.math&&s.math.latex&&s.math.fallback===s.eq),'step math & TA for '+r.id);
-  assert.ok(r.answer?.en&&r.answer?.ta&&r.answerMath?.latex?.includes('boxed')&&r.answerMath.fallback===r.answer.en,'answerMath for '+r.id);
+  const englishAnswer=r.answerMath?.en??r.answerMath;
+  assert.ok(r.answer?.en&&r.answer?.ta&&englishAnswer?.latex?.includes('boxed')&&englishAnswer.fallback===r.answer.en,'answerMath for '+r.id);
+  if(r.answerMath.ta){
+   assert.equal(r.answerMath.ta.fallback,r.answer.ta,'Tamil answerMath fallback for '+r.id);
+   assert.match(r.answerMath.ta.latex,/\p{Script=Tamil}/u,'Tamil answerMath text for '+r.id);
+  }
   assert.equal(ch8.textbookQuestionIds.filter(x=>x===r.id).length,1,'chapter registration '+r.id);
   assert.equal(ctx.window.TriggleDifficulty.get(r).grade,10,'difficulty metadata '+r.id);
 }
