@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": 1,
+  "exercise": "1.4",
+  "edition": "2025 revised",
+  "sources": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037"
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303"
+    }
+  },
+  "items": [
+    {
+      "id": "g9-ch1-ex1.4-q1",
+      "question": 1,
+      "parts": [
+        "i",
+        "ii",
+        "iii"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 22,
+            "pdf": 28
+          }
+        ],
+        "ta": [
+          {
+            "printed": 24,
+            "pdf": 30
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. If P = {1,2,5,7,9}, Q = {2,3,5,9,11}, R = {3,4,5,7,9} and S = {2,3,4,5,8}, then find\n(i) (P∪Q)∪R   (ii) (P∩Q)∩S   (iii) (Q∩S)∩R",
+        "ta": "1. P = {1,2,5,7,9}, Q = {2,3,5,9,11}, R = {3,4,5,7,9} மற்றும் S = {2,3,4,5,8} எனில்,\n(i) (P∪Q)∪R   (ii) (P∩Q)∩S   (iii) (Q∩S)∩R ஆகியவற்றைக் காண்க."
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch1-ex1.4-q2",
+      "question": 2,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 22,
+            "pdf": 28
+          }
+        ],
+        "ta": [
+          {
+            "printed": 24,
+            "pdf": 30
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "2. Test for the commutative property of union and intersection of the sets\nP = {x : x is a real number between 2 and 7} and\nQ = {x : x is a rational number between 2 and 7}.",
+        "ta": "2. பின்வரும் கணங்களுக்குப் பரிமாற்றுப் பண்புகளைச் சோதிக்க.\nP = {x : x ஆனது 2 மற்றும் 7 –க்கு இடையே உள்ள ஒரு மெய்யெண்} மற்றும்\nQ = {x : x ஆனது 2 மற்றும் 7 –க்கு இடையே உள்ள ஒரு விகிதமுறு எண்}"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch1-ex1.4-q3",
+      "question": 3,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 22,
+            "pdf": 28
+          }
+        ],
+        "ta": [
+          {
+            "printed": 24,
+            "pdf": 30
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. If A = {p,q,r,s}, B = {m,n,q,s,t} and C = {m,n,p,q,s}, then verify the associative property of union of sets.",
+        "ta": "3. A = {p,q,r,s}, B = {m,n,q,s,t} மற்றும் C = {m,n,p,q,s} எனில், கணங்களின் சேர்ப்புக்கான சேர்ப்புப் பண்புகளைச் சரிபார்க்க."
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch1-ex1.4-q4",
+      "question": 4,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 22,
+            "pdf": 28
+          }
+        ],
+        "ta": [
+          {
+            "printed": 24,
+            "pdf": 30
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. Verify the associative property of intersection of sets for A = {−11,√2,√5,7},\nB = {√3,√5,6,13} and C = {√2,√3,√5,9}.",
+        "ta": "4. A = {−11,√2,√5,7}, B = {√3,√5,6,13} மற்றும் C = {√2,√3,√5,9} ஆகியவற்றிற்குக் கணங்களின் வெட்டுக்கான சேர்ப்புப் பண்பினைச் சரிபார்க்க."
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch1-ex1.4-q5",
+      "question": 5,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 22,
+            "pdf": 28
+          }
+        ],
+        "ta": [
+          {
+            "printed": 24,
+            "pdf": 30
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "5. If A={x : x = 2ⁿ, n ∈ W and n<4}, B={x : x = 2n, n ∈ N and n ≤ 4} and\nC = {0,1,2,5,6}, then verify the associative property of intersection of sets.",
+        "ta": "5. A={x : x = 2ⁿ, n ∈ W மற்றும் n<4}, B={x : x = 2n, n ∈ N மற்றும் n≤4} மற்றும் C = {0,1,2,5,6} எனில், கணங்களின் வெட்டுக்கான சேர்ப்புப் பண்பினைச் சரிபார்க்க."
+      },
+      "figureFiles": []
+    }
+  ],
+  "scope": {
+    "numberedQuestions": 5,
+    "canonicalTasks": 7,
+    "runtimeRecords": 5
+  },
+  "reusedEvidence": [
+    "8998e5da81c57469025652e0d9969a49ce71eac1",
+    "641ec1cb5cc75bf0b0c58cf9e42ce228e45f69bd",
+    "edb5231c91ce4c64161a2ee418463824f12b73c7"
+  ],
+  "editorialReview": {
+    "ta": "pending",
+    "teacher": "pending"
+  }
+}

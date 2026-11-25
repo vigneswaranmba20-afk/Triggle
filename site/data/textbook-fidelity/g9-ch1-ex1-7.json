@@ -1,0 +1,1047 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": 1,
+  "exercise": "1.7",
+  "edition": "2025 revised",
+  "sources": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037"
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303"
+    }
+  },
+  "items": [
+    {
+      "id": "g9-ch1-ex1.7-q1",
+      "question": 1,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 36,
+            "pdf": 42
+          }
+        ],
+        "ta": [
+          {
+            "printed": 39,
+            "pdf": 45
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. Which of the following is correct?",
+        "ta": "1. கீழ்க்காண்பனவற்றில் சரியானது எது?"
+      },
+      "textbookChoices": [
+        {
+          "en": "{7} ∈ {1,2,3,4,5,6,7,8,9,10}",
+          "ta": "{7} ∈ {1,2,3,4,5,6,7,8,9,10}"
+        },
+        {
+          "en": "7 ∈ {1,2,3,4,5,6,7,8,9,10}",
+          "ta": "7 ∈ {1,2,3,4,5,6,7,8,9,10}"
+        },
+        {
+          "en": "7 ∉ {1,2,3,4,5,6,7,8,9,10}",
+          "ta": "7 ∉ {1,2,3,4,5,6,7,8,9,10}"
+        },
+        {
+          "en": "{7} ⊈ {1,2,3,4,5,6,7,8,9,10}",
+          "ta": "{7} ⊈ {1,2,3,4,5,6,7,8,9,10}"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "set",
+      "correctIndex": 1
+    },
+    {
+      "id": "g9-ch1-ex1.7-q2",
+      "question": 2,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 36,
+            "pdf": 42
+          }
+        ],
+        "ta": [
+          {
+            "printed": 39,
+            "pdf": 45
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "2. The set P = {x | x ∈ Z, −1 < x < 1} is a",
+        "ta": "2. கணம் P = {x | x ∈ Z, −1 < x < 1} என்பது"
+      },
+      "textbookChoices": [
+        {
+          "en": "Singleton set",
+          "ta": "ஓருறுப்புக் கணம்"
+        },
+        {
+          "en": "Power set",
+          "ta": "அடுக்குக் கணம்"
+        },
+        {
+          "en": "Null set",
+          "ta": "வெற்றுக் கணம்"
+        },
+        {
+          "en": "Subset",
+          "ta": "உட்கணம்"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "types",
+      "correctIndex": 0
+    },
+    {
+      "id": "g9-ch1-ex1.7-q3",
+      "question": 3,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 36,
+            "pdf": 42
+          }
+        ],
+        "ta": [
+          {
+            "printed": 39,
+            "pdf": 45
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. If U = {x | x ∈ N, x < 10} and A = {x | x ∈ N, 2 ≤ x < 6} then (A′)′ is",
+        "ta": "3. U = {x | x ∈ N, x < 10} மற்றும் A = {x | x ∈ N, 2 ≤ x < 6} எனில் (A′)′ என்பது"
+      },
+      "textbookChoices": [
+        {
+          "en": "{1, 6, 7, 8, 9}",
+          "ta": "{1, 6, 7, 8, 9}"
+        },
+        {
+          "en": "{1, 2, 3, 4}",
+          "ta": "{1, 2, 3, 4}"
+        },
+        {
+          "en": "{2, 3, 4, 5}",
+          "ta": "{2, 3, 4, 5}"
+        },
+        {
+          "en": "{ }",
+          "ta": "{ }"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "operations",
+      "correctIndex": 2
+    },
+    {
+      "id": "g9-ch1-ex1.7-q4",
+      "question": 4,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 36,
+            "pdf": 42
+          }
+        ],
+        "ta": [
+          {
+            "printed": 39,
+            "pdf": 45
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. If B⊆ A then n(A∩B) is",
+        "ta": "4. B⊆ A எனில் n(A∩B) என்பது"
+      },
+      "textbookChoices": [
+        {
+          "en": "n(A−B)",
+          "ta": "n(A−B)"
+        },
+        {
+          "en": "n(B)",
+          "ta": "n(B)"
+        },
+        {
+          "en": "n(B−A)",
+          "ta": "n(B−A)"
+        },
+        {
+          "en": "n(A)",
+          "ta": "n(A)"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "operations",
+      "correctIndex": 1
+    },
+    {
+      "id": "g9-ch1-ex1.7-q5",
+      "question": 5,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 36,
+            "pdf": 42
+          }
+        ],
+        "ta": [
+          {
+            "printed": 39,
+            "pdf": 45
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "5. If A = {x, y, z} then the number of non- empty subsets of A is",
+        "ta": "5. கணம் A = {x, y, z} எனில், A இன் வெற்றுக் கணமல்லாத உட்கணங்களின் எண்ணிக்கை"
+      },
+      "textbookChoices": [
+        {
+          "en": "8",
+          "ta": "8"
+        },
+        {
+          "en": "5",
+          "ta": "5"
+        },
+        {
+          "en": "6",
+          "ta": "6"
+        },
+        {
+          "en": "7",
+          "ta": "7"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "types",
+      "correctIndex": 3
+    },
+    {
+      "id": "g9-ch1-ex1.7-q6",
+      "question": 6,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 39,
+            "pdf": 45
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "6. Which of the following is correct?",
+        "ta": "6. பின்வருவனவற்றுள் சரியானது எது?"
+      },
+      "textbookChoices": [
+        {
+          "en": "∅ ⊆ {a, b}",
+          "ta": "∅ ⊆ {a, b}"
+        },
+        {
+          "en": "∅ ∈ {a, b}",
+          "ta": "∅ ∈ {a, b}"
+        },
+        {
+          "en": "{a} ∈ {a, b}",
+          "ta": "{a} ∈ {a, b}"
+        },
+        {
+          "en": "a ⊆ {a, b}",
+          "ta": "a ⊆ {a, b}"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "types",
+      "correctIndex": 0
+    },
+    {
+      "id": "g9-ch1-ex1.7-q7",
+      "question": 7,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 39,
+            "pdf": 45
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. If A∪B = A∩B, then",
+        "ta": "7. A∪B = A∩B, எனில்"
+      },
+      "textbookChoices": [
+        {
+          "en": "A≠B",
+          "ta": "A≠B"
+        },
+        {
+          "en": "A = B",
+          "ta": "A = B"
+        },
+        {
+          "en": "A ⊂ B",
+          "ta": "A ⊂ B"
+        },
+        {
+          "en": "B ⊂ A",
+          "ta": "B ⊂ A"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "operations",
+      "correctIndex": 1
+    },
+    {
+      "id": "g9-ch1-ex1.7-q8",
+      "question": 8,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "8. If B − A is B, then A∩B is",
+        "ta": "8. B − A என்பது B, எனில் A∩B என்பது"
+      },
+      "textbookChoices": [
+        {
+          "en": "A",
+          "ta": "A"
+        },
+        {
+          "en": "B",
+          "ta": "B"
+        },
+        {
+          "en": "U",
+          "ta": "U"
+        },
+        {
+          "en": "∅",
+          "ta": "∅"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "operations",
+      "correctIndex": 3
+    },
+    {
+      "id": "g9-ch1-ex1.7-q9",
+      "question": 9,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "9. From the adjacent diagram n[P(A∆B)] is",
+        "ta": "9. அருகில் உள்ள படத்திலிருந்து n[P(A∆B)] ஐக் காண்க."
+      },
+      "textbookChoices": [
+        {
+          "en": "8",
+          "ta": "8"
+        },
+        {
+          "en": "16",
+          "ta": "16"
+        },
+        {
+          "en": "32",
+          "ta": "32"
+        },
+        {
+          "en": "64",
+          "ta": "64"
+        }
+      ],
+      "figureFiles": [
+        "./assets/grade9-ch1/ex1-7-q9.svg"
+      ],
+      "concept": "types",
+      "correctIndex": 2
+    },
+    {
+      "id": "g9-ch1-ex1.7-q10",
+      "question": 10,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "10. If n(A) = 10 and n(B) = 15, then the minimum and maximum number of elements in A∩B is",
+        "ta": "10. n(A) = 10 மற்றும் n(B) = 15, எனில் கணம் A∩B உள்ள குறைந்தபட்ச மற்றும் அதிகபட்ச உறுப்புகளின் எண்ணிக்கை"
+      },
+      "textbookChoices": [
+        {
+          "en": "10,15",
+          "ta": "10,15"
+        },
+        {
+          "en": "15,10",
+          "ta": "15,10"
+        },
+        {
+          "en": "10,0",
+          "ta": "10,0"
+        },
+        {
+          "en": "0,10",
+          "ta": "0,10"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "operations",
+      "correctIndex": 3
+    },
+    {
+      "id": "g9-ch1-ex1.7-q11",
+      "question": 11,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "11. Let A = {∅} and B = P(A), then A∩B is",
+        "ta": "11. A = {∅} மற்றும் B = P(A) எனில் A∩B ஆனது"
+      },
+      "textbookChoices": [
+        {
+          "en": "{ ∅, {∅} }",
+          "ta": "{ ∅, {∅} }"
+        },
+        {
+          "en": "{∅}",
+          "ta": "{∅}"
+        },
+        {
+          "en": "∅",
+          "ta": "∅"
+        },
+        {
+          "en": "{0}",
+          "ta": "{0}"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "types",
+      "correctIndex": 1
+    },
+    {
+      "id": "g9-ch1-ex1.7-q12",
+      "question": 12,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "12. In a class of 50 boys, 35 boys play Carrom and 20 boys play Chess then the number of boys play both games is\n(1) 5   (2) 30   (3) 15   (4) 10.",
+        "ta": "12. ஒரு வகுப்பில் உள்ள 50 மாணவர்களில் 35 பேர் சுண்டாட்டம் (carrom) விளையாடுபவர்கள் மற்றும் 20 பேர் சதுரங்கம் விளையாடுபவர்கள் எனில், இந்த இரண்டு விளையாட்டையும் விளையாடுபவர்களின் எண்ணிக்கை\n(1) 5   (2) 30   (3) 15   (4) 10."
+      },
+      "textbookChoices": [
+        {
+          "en": "5",
+          "ta": "5"
+        },
+        {
+          "en": "30",
+          "ta": "30"
+        },
+        {
+          "en": "15",
+          "ta": "15"
+        },
+        {
+          "en": "10.",
+          "ta": "10."
+        }
+      ],
+      "figureFiles": [],
+      "concept": "cardinality",
+      "sourceStatus": "SOURCE_BLOCKED"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q13",
+      "question": 13,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "13. If U = {x : x ∈ N and x < 10}, A = {1,2,3,5,8} and B = {2,5,6,7,9}, then n[(A∪B)′] is",
+        "ta": "13. U = {x : x ∈ N மற்றும் x < 10}, A = {1,2,3,5,8} மற்றும் B = {2,5,6,7,9} எனில், n[(A∪B)′] என்பது"
+      },
+      "textbookChoices": [
+        {
+          "en": "1",
+          "ta": "1"
+        },
+        {
+          "en": "2",
+          "ta": "2"
+        },
+        {
+          "en": "4",
+          "ta": "4"
+        },
+        {
+          "en": "8",
+          "ta": "8"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "operations",
+      "correctIndex": 0
+    },
+    {
+      "id": "g9-ch1-ex1.7-q14",
+      "question": 14,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "14. For any three sets P, Q and R, P − (Q∩R) is",
+        "ta": "14. P, Q மற்றும் R என்பன எவையேனும் மூன்று கணங்கள் எனில், P − (Q∩R) என்பது"
+      },
+      "textbookChoices": [
+        {
+          "en": "P − (Q∪R)",
+          "ta": "P − (Q∪R)"
+        },
+        {
+          "en": "(P∩Q) − R",
+          "ta": "(P∩Q) − R"
+        },
+        {
+          "en": "(P − Q)∪(P − R)",
+          "ta": "(P − Q)∪(P − R)"
+        },
+        {
+          "en": "(P − Q)∩(P − R)",
+          "ta": "(P − Q)∩(P − R)"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "demorgan",
+      "correctIndex": 2
+    },
+    {
+      "id": "g9-ch1-ex1.7-q15",
+      "question": 15,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "15. Which of the following is true?",
+        "ta": "15. கீழ்க்காண்பவற்றில் எது சரி?"
+      },
+      "textbookChoices": [
+        {
+          "en": "A − B = A∩B",
+          "ta": "A − B = A∩B"
+        },
+        {
+          "en": "A − B = B − A",
+          "ta": "A − B = B − A"
+        },
+        {
+          "en": "(A∪B)′ = A′∪B′",
+          "ta": "(A∪B)′ = A′∪B′"
+        },
+        {
+          "en": "(A∩B)′ = A′∪B′",
+          "ta": "(A∩B)′ = A′∪B′"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "demorgan",
+      "correctIndex": 3
+    },
+    {
+      "id": "g9-ch1-ex1.7-q16",
+      "question": 16,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "16. If n(A∪B∪C) = 100, n(A) = 4x, n(B) = 6x, n(C) = 5x, n(A∩B) = 20, n(B∩C) = 15, n(A∩C) = 25 and n(A∩B∩C) = 10, then the value of x is",
+        "ta": "16. n(A∪B∪C) = 100, n(A) = 4x, n(B) = 6x, n(C) = 5x, n(A∩B) = 20, n(B∩C) = 15, n(A∩C) = 25 மற்றும் n(A∩B∩C) = 10 எனில், x இன் மதிப்பு"
+      },
+      "textbookChoices": [
+        {
+          "en": "10",
+          "ta": "10"
+        },
+        {
+          "en": "15",
+          "ta": "15"
+        },
+        {
+          "en": "25",
+          "ta": "25"
+        },
+        {
+          "en": "30",
+          "ta": "30"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "cardinality",
+      "correctIndex": 0
+    },
+    {
+      "id": "g9-ch1-ex1.7-q17",
+      "question": 17,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 37,
+            "pdf": 43
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "17. For any three sets A, B and C, (A − B)∩(B − C) is equal to",
+        "ta": "17. A, B மற்றும் C என்பன எவையேனும் மூன்று கணங்கள் எனில், (A − B)∩(B − C) -க்குச் சமமானது."
+      },
+      "textbookChoices": [
+        {
+          "en": "A only",
+          "ta": "A மட்டும்"
+        },
+        {
+          "en": "B only",
+          "ta": "B மட்டும்"
+        },
+        {
+          "en": "C only",
+          "ta": "C மட்டும்"
+        },
+        {
+          "en": "φ",
+          "ta": "φ"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "operations",
+      "correctIndex": 3
+    },
+    {
+      "id": "g9-ch1-ex1.7-q18",
+      "question": 18,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 38,
+            "pdf": 44
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "18. If J = Set of three sided shapes, K = Set of shapes with two equal sides and L = Set of shapes with right angle, then J∩K∩L is",
+        "ta": "18. J என்பது மூன்று பக்கங்களைக் கொண்ட உருவங்களின் கணம், K என்பது ஏதேனும் இரண்டு பக்கங்கள் சமமாக உள்ள உருவங்களின் கணம் மற்றும் L என்பது ஒரு கோணம் செங்கோணமாக உள்ள உருவங்களின் கணம் எனில், J∩K∩L என்பது"
+      },
+      "textbookChoices": [
+        {
+          "en": "Set of isoceles triangles",
+          "ta": "இருசமபக்க முக்கோணங்களின் கணம்"
+        },
+        {
+          "en": "Set of equilateral triangles",
+          "ta": "சமபக்க முக்கோணங்களின் கணம்"
+        },
+        {
+          "en": "Set of isoceles right triangles",
+          "ta": "இருசமபக்கச் செங்கோண முக்கோணங்களின் கணம்"
+        },
+        {
+          "en": "Set of right angled triangles",
+          "ta": "செங்கோண முக்கோணங்களின் கணம்"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "operations",
+      "correctIndex": 2
+    },
+    {
+      "id": "g9-ch1-ex1.7-q19",
+      "question": 19,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 38,
+            "pdf": 44
+          }
+        ],
+        "ta": [
+          {
+            "printed": 40,
+            "pdf": 46
+          },
+          {
+            "printed": 41,
+            "pdf": 47
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "19. The shaded region in the Venn diagram is",
+        "ta": "19. கொடுக்கப்பட்ட வென்படத்தில் நிழலிடப்பட்ட பகுதியானது"
+      },
+      "textbookChoices": [
+        {
+          "en": "Z − (X∪Y)",
+          "ta": "Z − (X∪Y)"
+        },
+        {
+          "en": "(X∪Y)∩Z",
+          "ta": "(X∪Y)∩Z"
+        },
+        {
+          "en": "Z − (X∩Y)",
+          "ta": "Z − (X∩Y)"
+        },
+        {
+          "en": "Z∪(X∩Y)",
+          "ta": "Z∪(X∩Y)"
+        }
+      ],
+      "figureFiles": [
+        "./assets/grade9-ch1/ex1-7-q19.svg"
+      ],
+      "concept": "demorgan",
+      "correctIndex": 2
+    },
+    {
+      "id": "g9-ch1-ex1.7-q20",
+      "question": 20,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 38,
+            "pdf": 44
+          }
+        ],
+        "ta": [
+          {
+            "printed": 41,
+            "pdf": 47
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "20. In a city, 40% people like only one fruit, 35% people like only two fruits, 20% people like all the three fruits. How many percentage of people do not like any one of the above three fruits?",
+        "ta": "20. ஒரு நகரில், 40% மக்கள் ஒரு வகை பழத்தை மட்டும், 35% மக்கள் இரண்டு வகை பழங்களை மட்டும், 20% மக்கள் மூன்று வகை பழங்களையும் விரும்புகிறார்கள் எனில், மேற்கண்ட மூன்று வகை பழங்களையும் விரும்பாதவர்களின் சதவீதம் என்ன?"
+      },
+      "textbookChoices": [
+        {
+          "en": "5",
+          "ta": "5"
+        },
+        {
+          "en": "8",
+          "ta": "8"
+        },
+        {
+          "en": "10",
+          "ta": "10"
+        },
+        {
+          "en": "15",
+          "ta": "15"
+        }
+      ],
+      "figureFiles": [],
+      "concept": "cardinality",
+      "correctIndex": 0
+    }
+  ],
+  "scope": {
+    "numberedQuestions": 20,
+    "canonicalTasks": 20,
+    "runtimeRecords": 20,
+    "verifiedSolutions": 19,
+    "sourceBlocked": 1
+  },
+  "discrepancies": [
+    {
+      "question": 12,
+      "detail": "Neither medium states that every boy plays at least one game. The keyed 5 requires that additional assumption.",
+      "resolution": "Show the printed choices beside a bilingual explanation of the 5–20 possible overlap. Mark this task SOURCE_BLOCKED and do not score the choices."
+    }
+  ],
+  "editorialReview": {
+    "ta": "pending",
+    "teacher": "pending"
+  }
+}

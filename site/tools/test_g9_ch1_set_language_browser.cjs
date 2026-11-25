@@ -3,14 +3,20 @@
 const assert = require('node:assert/strict');
 const {chromium} = require('playwright');
 const {launchOptions, server} = require('./dashboard_test_support.cjs');
-const {items} = require('../data/textbook-fidelity/g9-ch1-ex1-3.json');
+const sections = [
+  {...require('../data/textbook-fidelity/g9-ch1-ex1-3.json'),concept:3,solutionFigures:[7],offlineFigure:6},
+  {...require('../data/textbook-fidelity/g9-ch1-ex1-4.json'),concept:4,solutionFigures:[],offlineFigure:4},
+  {...require('../data/textbook-fidelity/g9-ch1-ex1-5.json'),concept:5,solutionFigures:[4,9,11],offlineFigure:1},
+  {...require('../data/textbook-fidelity/g9-ch1-ex1-6.json'),concept:6,solutionFigures:[7,9,12],offlineFigure:11},
+  {...require('../data/textbook-fidelity/g9-ch1-ex1-7.json'),concept:5,solutionFigures:[],offlineFigure:19}
+];
 
 const index = '?class=9&chapter=g9-ch1&section=exercises';
 const route = id => '?class=9&question=' + encodeURIComponent(id);
 const currentId = page => new URL(page.url()).searchParams.get('question');
 const normalize = value => value.normalize('NFC').replace(/\s+/gu,'');
 
-async function checkReader(page, row, lang) {
+async function checkReader(page, row, lang, section) {
   await page.locator(lang === 'ta' ? '#langTa' : '#langEn').click();
   await page.evaluate(() => document.fonts.ready);
   const state = await page.locator('#lessonCard').evaluate(card => {
@@ -18,8 +24,10 @@ async function checkReader(page, row, lang) {
     for (const formula of question.querySelectorAll('[data-math-fallback]')) {
       formula.replaceWith(formula.getAttribute('data-math-fallback'));
     }
+    const choices=[...question.querySelectorAll('.triggle-mcq-btn')].map(node=>node.textContent);
+    for (const extra of question.querySelectorAll('.triggle-mcq-choices,.triggle-mcq-feedback')) extra.remove();
     return {
-      prompt:question.textContent, reasons:[...card.querySelectorAll('.step-reason')].map(node=>node.textContent),
+      choices,prompt:question.textContent, reasons:[...card.querySelectorAll('.step-reason')].map(node=>node.textContent),
       errors:card.querySelectorAll('[data-math-error="true"], .katex-error, .math-fallback').length,
       formulas:card.querySelectorAll('.katex').length,
       overflow:document.documentElement.scrollWidth > innerWidth + 1,
@@ -28,6 +36,15 @@ async function checkReader(page, row, lang) {
     };
   });
   assert.equal(normalize(state.prompt), normalize(row.textbookPrompt[lang]), row.id + ' source ' + lang);
+  const options=row.sourceStatus ? [] : row.textbookChoices||[];
+  assert.deepEqual(state.choices.map(normalize),options.map(choice=>normalize(choice[lang])),row.id+' choice fidelity');
+  if (options.length) {
+    const buttons=page.locator('.triggle-mcq-btn');
+    await buttons.nth((row.correctIndex+1)%4).click();
+    assert(await page.locator('.triggle-mcq-feedback.is-wrong').isVisible());
+    await buttons.nth(row.correctIndex).click();
+    assert(await page.locator('.triggle-mcq-feedback.is-correct').isVisible());
+  }
   assert.equal(state.errors, 0);
   assert(state.formulas > 1 && !state.overflow && !state.truncated, row.id + ' mathematical layout');
   if (lang === 'ta') assert(state.reasons.every(reason => /\p{Script=Tamil}/u.test(reason)), row.id + ' Tamil reasoning');
@@ -43,7 +60,7 @@ async function checkReader(page, row, lang) {
   if (row.figureFiles.length) {
     const expected = lang === 'ta' ? row.figureFiles.at(-1) : row.figureFiles[0];
     const inline = page.locator('#inlineFigure:not([hidden]) img');
-    if (row.question === 7) assert.equal(await inline.count(), 0, 'Construction figure remains part of the solution');
+    if (section.solutionFigures.includes(row.question)) assert.equal(await inline.count(), 0, 'Construction figure remains part of the solution');
     else {
       assert.equal(await inline.getAttribute('src'), expected);
       await inline.evaluate(node => node.decode());
@@ -63,35 +80,41 @@ async function run() {
   const base = (live || app.base) + '/index.html';
   const browser = await chromium.launch(launchOptions());
   try {
+   for (const section of sections.filter(s => !process.env.TRIGGLE_SET_EXERCISE || s.exercise === process.env.TRIGGLE_SET_EXERCISE)) {
+    const {items, exercise} = section;
     for (const width of live ? [390] : [320, 360, 390, 412]) {
-      const ctx = await browser.newContext({viewport:{width,height:844}, isMobile:true, hasTouch:true, serviceWorkers:'block'});
+      const ctx = await browser.newContext({viewport:{width,height:844}, isMobile:true, hasTouch:true, serviceWorkers:'block',ignoreHTTPSErrors:!!live});
       const page = await ctx.newPage();
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       await page.goto(base + index, {waitUntil:'domcontentloaded'});
-      await page.locator('.hub-exercise-link[data-exercise="1.3"]').click();
+      await page.locator('.hub-exercise-link[data-exercise="'+exercise+'"]').click();
       assert.equal(currentId(page), items[0].id);
-      assert(await page.locator('#previous').isDisabled(), 'Do not cross in from Exercise 1.2');
-      for (const [i, row] of items.entries()) {
+      assert(await page.locator('#previous').isDisabled(), 'Do not cross in from a different exercise');
+      const sample = width===390 ? items : items.filter((row,i)=>
+        i<2 || i===items.length-1 || row.sourceStatus || row.figureFiles.length ||
+        (exercise==='1.4' && row.question===4) || (exercise==='1.5' && [3,8].includes(row.question)));
+      for (const [i, row] of sample.entries()) {
+        if(currentId(page)!==row.id) await page.goto(base+route(row.id),{waitUntil:'domcontentloaded'});
         assert.equal(currentId(page), row.id);
-        await checkReader(page,row,'en');
-        await checkReader(page,row,'ta');
-        if (i < items.length - 1) await page.locator('#next').click();
+        await checkReader(page,row,'en',section);
+        await checkReader(page,row,'ta',section);
+        if (i===0 || (sample.length===items.length && i<items.length-1)) await page.locator('#next').click();
       }
       assert(await page.locator('#next').isDisabled(), 'Do not cross the final question');
       await page.locator('#previous').click();
-      assert.equal(currentId(page), items[5].id);
+      assert.equal(currentId(page), items.at(-2).id);
       await page.locator('#chapter8QuestionConcept').click();
       assert.equal(new URL(page.url()).searchParams.get('section'), 'concepts');
-      assert.equal(new URL(page.url()).searchParams.get('concept'), '3');
-      assert(await page.locator('.g10ch2-practice-link').filter({hasText:'1.3'}).isVisible());
+      assert.equal(new URL(page.url()).searchParams.get('concept'), String(section.concept));
+      assert(await page.locator('.g10ch2-practice-link').filter({hasText:exercise}).first().isVisible());
       await page.goBack();
-      assert.equal(currentId(page), items[5].id);
+      assert.equal(currentId(page), items.at(-2).id);
       await page.locator('#exerciseIndexLink').click();
       assert(await page.locator('.hub-exercise-link[data-exercise="1.2"]').isVisible());
       assert.deepEqual(errors, []);
       await ctx.close();
-      console.log('PASS Exercise 1.3 at ' + width + 'px: seven bilingual questions, figures, hints, and navigation');
+      console.log('PASS Exercise '+exercise+' at '+width+'px: '+sample.length+' bilingual questions, figures, hints, and navigation');
     }
 
     if (!live) {
@@ -111,12 +134,14 @@ async function run() {
       assert.equal(currentId(page), id);
       assert.equal(await page.locator('#markDone').getAttribute('aria-pressed'), 'true');
       assert.deepEqual(await page.evaluate(() => JSON.parse(localStorage.getItem('triggle.learned.v119'))), [legacyId, id]);
-      await checkReader(page,items[0],'ta');
-      await page.goto(base + route(items[5].id));
-      await checkReader(page,items[5],'ta');
+      await checkReader(page,items[0],'ta',section);
+      const figureRow = items.find(row=>row.question===section.offlineFigure);
+      await page.goto(base + route(figureRow.id));
+      await checkReader(page,figureRow,'ta',section);
       await ctx.close();
       console.log('PASS offline deep links, Tamil Venn diagrams and KaTeX, with student progress restored');
     }
+   }
   } finally {
     await browser.close();
     if (app) await app.close();

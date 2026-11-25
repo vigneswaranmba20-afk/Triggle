@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 332 222" width="332" height="222" role="img">
+  <title>X, Y, Z</title>
+  <rect x="4" y="4" width="324" height="214" rx="7" fill="white" stroke="#786787" stroke-width="2"/>
+  <defs>
+    <clipPath id="x"><circle cx="122" cy="92" r="66"/></clipPath>
+    <mask id="z-minus-both">
+      <circle cx="166" cy="145" r="66" fill="white"/>
+      <circle cx="210" cy="92" r="66" fill="black" clip-path="url(#x)"/>
+    </mask>
+  </defs>
+  <circle cx="166" cy="145" r="66" fill="#c9b5f0" mask="url(#z-minus-both)"/>
+  <g fill="none" stroke="#654294" stroke-width="2">
+    <circle cx="122" cy="92" r="66"/>
+    <circle cx="210" cy="92" r="66"/>
+    <circle cx="166" cy="145" r="66"/>
+  </g>
+  <g fill="#2b2145" font-family="system-ui, sans-serif" font-size="18" font-weight="600" text-anchor="middle">
+    <text x="52" y="36">X</text><text x="280" y="36">Y</text><text x="237" y="198">Z</text>
+  </g>
+</svg>

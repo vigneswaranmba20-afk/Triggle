@@ -13,7 +13,7 @@ for(const item of geometry) {
   assert(item.steps.every(step=>step.why?.en && /\p{Script=Tamil}/u.test(step.why.ta)),item.id);
 }
 const sets=rows.filter(q=>q.setConcept);
-assert.equal(sets.length,7,'Set Language explanations are authored alongside their corresponding steps');
+assert.equal(sets.length,56,'Set Language explanations are authored alongside their corresponding steps');
 for(const item of sets) {
   assert(item.steps.every(step=>step.why?.en && /\p{Script=Tamil}/u.test(step.why.ta)),item.id);
 }

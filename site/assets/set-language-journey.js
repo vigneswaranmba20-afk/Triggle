@@ -511,17 +511,25 @@
       window.TriggleLivingConcepts?.decorate(stage,panel,lang,htmlMath);
       extraPractice(stage);
       if(stage.id==='cardinality')hard();
-      const related=chapterQuestions.find(question=>question.id===stage.practiceId) ||
-        chapterQuestions.find(question=>question.setConcept===stage.id);
-      if(related&&typeof onQuestion==='function'){
-        const button=document.createElement('button');
-        button.type='button';button.className='g10ch2-practice-link';
-        const exerciseLabel=lang==='ta'&&!related.q?.ta
-          ?'பயிற்சி '+related.exercise+' (ஆங்கிலத்தில்)'
-          :pick(related.label,lang);
-        button.textContent=exerciseLabel+' →';
-        button.addEventListener('click',()=>onQuestion(related));
-        panel.append(button);
+      if(typeof onQuestion==='function'){
+        const related=new Map();
+        const pinned=chapterQuestions.find(question=>question.id===stage.practiceId);
+        if(pinned)related.set(pinned.exercise,pinned);
+        for(const question of chapterQuestions){
+          if(question.setConcept===stage.id&&!related.has(question.exercise)){
+            related.set(question.exercise,question);
+          }
+        }
+        for(const question of related.values()){
+          const button=document.createElement('button');
+          button.type='button';button.className='g10ch2-practice-link';
+          const exerciseLabel=lang==='ta'&&!question.q?.ta
+            ?'பயிற்சி '+question.exercise+' (ஆங்கிலத்தில்)'
+            :pick(question.label,lang);
+          button.textContent=exerciseLabel+' →';
+          button.addEventListener('click',()=>onQuestion(question));
+          panel.append(button);
+        }
       }
       updateProgress();
       if(focus){
