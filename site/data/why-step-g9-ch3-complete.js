@@ -900,9 +900,9 @@
   },
   "g9-ch3-ex3.15-q9": {
     "step": 0,
-    "expected": "Option (4) is correct.",
-    "en": "Option (4) is correct. (MCQ 9 · Factor Theorem definition: (4) factor)",
-    "ta": "p(a) = 0 எனில் (x − a) ஒரு காரணி; விருப்பம் (4). (வினா 9 · காரணித் தேற்றம்: (4) காரணி)"
+    "expected": "Divide by x − a. The remainder theorem gives p(a) as the remainder.",
+    "en": "A linear divisor leaves a constant remainder. Substituting x=a makes the divisor term zero, so only that remainder is left.",
+    "ta": "நேரிய கோவையால் வகுக்கும்போது மீதி ஒரு மாறிலி. x=a எனப் பிரதியிட்டால் வகுத்தியுள்ள உறுப்பு பூச்சியமாகும். மீதி மட்டும் எஞ்சும்."
   },
   "g9-ch3-ex3.15-q10": {
     "step": 0,
@@ -936,9 +936,9 @@
   },
   "g9-ch3-ex3.15-q15": {
     "step": 0,
-    "expected": "Expand and compare; option (3).",
-    "en": "Expand and compare; option (3). (MCQ 15 · Quadratic from factors: (3) 1, 2, −15)",
-    "ta": "விரித்தெழுத x² + 2x − 15 ⇒ 1, 2, −15; விருப்பம் (3). (வினா 15 · காரணிகளிலிருந்து கெழுக்கள்: (3) 1, 2, −15)"
+    "expected": "A quadratic with those factors is a nonzero multiple of their product.",
+    "en": "The product already has degree two. A nonzero constant multiplier keeps the same zeros and sets the leading coefficient.",
+    "ta": "இரு காரணிகளின் பெருக்கற்பலன் ஏற்கெனவே படி 2 கொண்டது. பூச்சியமற்ற மாறிலியால் பெருக்கினால் பூச்சியங்கள் மாறாது. அந்த மாறிலியே தலைமைக் கெழுவாகும்."
   },
   "g9-ch3-ex3.15-q16": {
     "step": 0,
@@ -948,9 +948,9 @@
   },
   "g9-ch3-ex3.15-q17": {
     "step": 0,
-    "expected": "Option (4) is correct (note: zero polynomial 0 has undefined degree).",
-    "en": "Option (4) is correct (note: zero polynomial 0 has undefined degree). (MCQ 17 · Degree of constant polynomial: (4) 0)",
-    "ta": "பூச்சியமற்ற மாறிலிக் கோவையின் படி 0; விருப்பம் (4). (வினா 17 · மாறிலிக் கோவையின் படி: (4) 0)"
+    "expected": "A nonzero constant has degree zero. The degree of the zero polynomial is undefined.",
+    "en": "Degree counts the largest exponent with a nonzero coefficient. Writing a nonzero constant as c times x⁰ makes that exponent visible.",
+    "ta": "பூச்சியமற்ற கெழுவுடன் வரும் மிகப்பெரிய அடுக்கே படி. மாறிலியை c பெருக்கல் x⁰ என எழுதும்போது அடுக்கு 0 என்பது தெரிகிறது."
   },
   "g9-ch3-ex3.15-q18": {
     "step": 0,
@@ -1014,9 +1014,9 @@
   },
   "g9-ch3-ex3.15-q28": {
     "step": 0,
-    "expected": "Option (3) is correct.",
-    "en": "Option (3) is correct. (MCQ 28 · GCD of two primes: (3) 1)",
-    "ta": "பகா எண்களின் பொது வகுத்தி 1; விருப்பம் (3). (வினா 28 · இரண்டு பகா எண்களின் மீ.பொ.வ: (3) 1)"
+    "expected": "Two different primes share only the divisor 1. This is the case intended by option (3).",
+    "en": "A prime has only two positive divisors, 1 and itself. Compare the two divisor lists and keep only their common members.",
+    "ta": "ஒரு பகா எண்ணுக்கு 1 மற்றும் அந்த எண்ணே நேர்ம வகுத்திகள். இரு வகுத்திப் பட்டியல்களையும் ஒப்பிட்டுப் பொதுவாக உள்ளவற்றை மட்டும் எடுத்துக்கொள்ளுங்கள்."
   },
   "g9-ch3-ex3.15-q29": {
     "step": 0,
