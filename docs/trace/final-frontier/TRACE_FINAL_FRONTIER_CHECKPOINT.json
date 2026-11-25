@@ -21,149 +21,711 @@
     "hashesMatchRegister": true,
     "grade10TamilId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC"
   },
-  "activeBatch": {
-    "grade": 9,
-    "chapter": 1,
-    "exercise": "1.3",
-    "status": "BILINGUAL_VERIFIED",
-    "numberedQuestions": 7,
-    "canonicalTasks": 42,
-    "runtimeRecords": 7,
-    "mathEvidence": [
-      {
-        "recordId": "g9-ch1-ex1.3-q1",
-        "parts": [
-          "i",
-          "ii",
-          "iii",
-          "iv",
-          "v",
-          "vi",
-          "vii",
-          "viii",
-          "ix"
-        ],
-        "recordSha256": "4ba44ef5aedf1b909894f27476cac417c3ccc739411e6f7977880f4959d7b906",
-        "passed": true,
-        "method": "Explicit partition of the original Venn regions"
-      },
-      {
-        "recordId": "g9-ch1-ex1.3-q2",
-        "parts": [
-          "i",
-          "ii",
-          "iii",
-          "iv"
-        ],
-        "recordSha256": "c1b568313c547acd4e1fbf53e2bb32dd9a9e6feac81a01a8fe2bf52f535ffe86",
-        "passed": true,
-        "method": "Independent roster enumeration and comparison with both-language source tasks"
-      },
-      {
-        "recordId": "g9-ch1-ex1.3-q3",
-        "parts": [
-          "i",
-          "ii",
-          "iii",
-          "iv",
-          "v",
-          "vi",
-          "vii",
-          "viii"
-        ],
-        "recordSha256": "28869c626b177e45c6e555efca028d0d3a706c15473f715dd81cec680cc2b2d7",
-        "passed": true,
-        "method": "Independent roster enumeration and comparison with both-language source tasks"
-      },
-      {
-        "recordId": "g9-ch1-ex1.3-q4",
-        "parts": [
-          "i",
-          "ii",
-          "iii",
-          "iv",
-          "v",
-          "vi",
-          "vii",
-          "viii"
-        ],
-        "recordSha256": "e03212f7bb694126447ed6e9a473b2b731ec09944da21c5f571df2497d504ef5",
-        "passed": true,
-        "method": "Independent roster enumeration and comparison with both-language source tasks"
-      },
-      {
-        "recordId": "g9-ch1-ex1.3-q5",
-        "parts": [
-          "i",
-          "ii",
-          "iii"
-        ],
-        "recordSha256": "35128e4192222a086e51383acee671330ecba42740fa8b79ef03ffa154fcb46a",
-        "passed": true,
-        "method": "Independent roster enumeration and comparison with both-language source tasks"
-      },
-      {
-        "recordId": "g9-ch1-ex1.3-q6",
-        "parts": [
-          "fig-1.26",
-          "fig-1.27",
-          "fig-1.28"
-        ],
-        "recordSha256": "becc79b8e460183214169f342f037d5406ea7b4066dba173744e7923828911d1",
-        "passed": true,
-        "method": "Evaluate the membership truth table of all four disjoint regions"
-      },
-      {
-        "recordId": "g9-ch1-ex1.3-q7",
-        "parts": [
-          "i",
-          "ii",
-          "iii",
-          "iv",
-          "v",
-          "vi",
-          "vii"
-        ],
-        "recordSha256": "7a03e66d69b058137401679e849851187e19dc45741e3fd60839d9f98eb03b16",
-        "passed": true,
-        "method": "Evaluate the membership truth table of all four disjoint regions"
-      }
-    ],
-    "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-3.json",
-    "release": {
-      "branch": "trace/final-frontier",
-      "pullRequest": null,
-      "mergedCommit": null,
-      "pagesRun": null,
-      "liveVerification": null
-    }
-  },
   "nextBatch": {
     "grade": 9,
-    "chapter": 1,
-    "exercise": "1.6",
-    "status": "MISSING",
-    "numberedQuestions": 13,
-    "canonicalTasks": 23,
+    "chapter": 2,
+    "exercise": "2.9",
+    "status": "IN_PROGRESS",
+    "numberedQuestions": 20,
+    "canonicalTasks": 20,
+    "branch": "trace/final-frontier-g9-real",
+    "base": "0d6e4e7eb407b8d93ed4af0ab183e06b58af6e8a",
+    "worktree": "/workspace/Triggle-real",
     "pdfPages": {
       "en": [
-        41,
-        42
+        80,
+        81,
+        82
       ],
       "ta": [
-        43,
-        44,
-        45
+        86,
+        87
       ]
     },
-    "reusableDrafts": [
-      "origin/bulk/grade9-ex1-6-cardinality-20261110-0302",
-      "origin/bulk/grade9-ex1-6-q9-q12-20261110-0404"
-    ]
+    "reproduction": "Review rendered source pages, preserve MCQ IDs, add bilingual answer and feedback, and run mathematical and mobile checks."
   },
-  "phase2": "Reconcile the freshly extracted question and subpart candidates for all 129 exercise sections against the actual registered browser runtime and prior source evidence.",
   "editorialReview": {
     "ta": "pending",
     "teacher": "pending"
-  }
+  },
+  "batches": [
+    {
+      "grade": 9,
+      "chapter": 1,
+      "exercise": "1.3",
+      "status": "MERGED",
+      "numberedQuestions": 7,
+      "canonicalTasks": 42,
+      "runtimeRecords": 7,
+      "mathEvidence": [
+        {
+          "recordId": "g9-ch1-ex1.3-q1",
+          "parts": [
+            "i",
+            "ii",
+            "iii",
+            "iv",
+            "v",
+            "vi",
+            "vii",
+            "viii",
+            "ix"
+          ],
+          "recordSha256": "4ba44ef5aedf1b909894f27476cac417c3ccc739411e6f7977880f4959d7b906",
+          "passed": true,
+          "method": "Explicit partition of the original Venn regions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.3-q2",
+          "parts": [
+            "i",
+            "ii",
+            "iii",
+            "iv"
+          ],
+          "recordSha256": "c1b568313c547acd4e1fbf53e2bb32dd9a9e6feac81a01a8fe2bf52f535ffe86",
+          "passed": true,
+          "method": "Independent roster enumeration and comparison with both-language source tasks"
+        },
+        {
+          "recordId": "g9-ch1-ex1.3-q3",
+          "parts": [
+            "i",
+            "ii",
+            "iii",
+            "iv",
+            "v",
+            "vi",
+            "vii",
+            "viii"
+          ],
+          "recordSha256": "28869c626b177e45c6e555efca028d0d3a706c15473f715dd81cec680cc2b2d7",
+          "passed": true,
+          "method": "Independent roster enumeration and comparison with both-language source tasks"
+        },
+        {
+          "recordId": "g9-ch1-ex1.3-q4",
+          "parts": [
+            "i",
+            "ii",
+            "iii",
+            "iv",
+            "v",
+            "vi",
+            "vii",
+            "viii"
+          ],
+          "recordSha256": "e03212f7bb694126447ed6e9a473b2b731ec09944da21c5f571df2497d504ef5",
+          "passed": true,
+          "method": "Independent roster enumeration and comparison with both-language source tasks"
+        },
+        {
+          "recordId": "g9-ch1-ex1.3-q5",
+          "parts": [
+            "i",
+            "ii",
+            "iii"
+          ],
+          "recordSha256": "35128e4192222a086e51383acee671330ecba42740fa8b79ef03ffa154fcb46a",
+          "passed": true,
+          "method": "Independent roster enumeration and comparison with both-language source tasks"
+        },
+        {
+          "recordId": "g9-ch1-ex1.3-q6",
+          "parts": [
+            "fig-1.26",
+            "fig-1.27",
+            "fig-1.28"
+          ],
+          "recordSha256": "becc79b8e460183214169f342f037d5406ea7b4066dba173744e7923828911d1",
+          "passed": true,
+          "method": "Evaluate the membership truth table of all four disjoint regions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.3-q7",
+          "parts": [
+            "i",
+            "ii",
+            "iii",
+            "iv",
+            "v",
+            "vi",
+            "vii"
+          ],
+          "recordSha256": "7a03e66d69b058137401679e849851187e19dc45741e3fd60839d9f98eb03b16",
+          "passed": true,
+          "method": "Evaluate the membership truth table of all four disjoint regions"
+        }
+      ],
+      "sourceBlocked": [],
+      "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-3.json",
+      "release": {
+        "status": "MERGED",
+        "pr": 432,
+        "head": "48da46bbdedd392ca654d6beadef2bfecb24dee8",
+        "merge": "0d6e4e7eb407b8d93ed4af0ab183e06b58af6e8a",
+        "prQualityRun": 45678186546,
+        "pagesRun": 45681691336,
+        "liveEvidence": null,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/432"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 1,
+      "exercise": "1.4",
+      "status": "TESTED",
+      "numberedQuestions": 5,
+      "canonicalTasks": 7,
+      "runtimeRecords": 5,
+      "mathEvidence": [
+        {
+          "recordId": "g9-ch1-ex1.4-q1",
+          "parts": [
+            "i",
+            "ii",
+            "iii"
+          ],
+          "passed": true,
+          "recordSha256": "0af2c3a29b8ee24108e9aa3a17bf1877173d126fc8d68acf21d8333d8789a0f9",
+          "method": "Independent roster enumeration and operation order"
+        },
+        {
+          "recordId": "g9-ch1-ex1.4-q2",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "2691d3d70437bfbb89081d9d84ee52f3b6c220f93511708c42c7f19419ad227b",
+          "method": "Ordered-subset membership truth table"
+        },
+        {
+          "recordId": "g9-ch1-ex1.4-q3",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "4153231d248b9893eee71e5b9c6571167ed1add6420529f103d5717cb1f9fea2",
+          "method": "Independent roster enumeration and operation order"
+        },
+        {
+          "recordId": "g9-ch1-ex1.4-q4",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "a02d059539827d11111d21ba1b0febc3b85cde76dbe0b4a795b55eb074afffb7",
+          "method": "Independent roster enumeration and operation order"
+        },
+        {
+          "recordId": "g9-ch1-ex1.4-q5",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "88c495df7300c4c8a2d47f422f5dd676880c00cd03cd5dc028222c901ce70c6b",
+          "method": "Independent roster enumeration and operation order"
+        }
+      ],
+      "sourceBlocked": [],
+      "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-4.json",
+      "release": {
+        "status": "TESTED",
+        "pr": 433,
+        "head": "f819d9cd4169f6540c24378b8137d9d44c43efab",
+        "prQualityRun": 45682881316,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 1,
+      "exercise": "1.5",
+      "status": "TESTED",
+      "numberedQuestions": 11,
+      "canonicalTasks": 20,
+      "runtimeRecords": 11,
+      "mathEvidence": [
+        {
+          "recordId": "g9-ch1-ex1.5-q1",
+          "parts": [
+            "i",
+            "ii",
+            "iii",
+            "iv",
+            "v",
+            "vi",
+            "vii"
+          ],
+          "passed": true,
+          "recordSha256": "7b30016d89e08abd4ffc82f3b80da4a72d521641af58eed6119792c6efe3c079",
+          "method": "Independent finite-set and exact rational roster comparison"
+        },
+        {
+          "recordId": "g9-ch1-ex1.5-q2",
+          "parts": [
+            "i",
+            "ii",
+            "iii",
+            "iv"
+          ],
+          "passed": true,
+          "recordSha256": "ae9907b7f91461954ca3312d9e20024c68feb74f563f842e12d67e9c2f15aa4d",
+          "method": "Independent finite-set and exact rational roster comparison"
+        },
+        {
+          "recordId": "g9-ch1-ex1.5-q3",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "5db4ba231b3542e78825297e89f020cb1766d8db7adf90ab2948f4552ed92133",
+          "method": "Independent finite-set and exact rational roster comparison"
+        },
+        {
+          "recordId": "g9-ch1-ex1.5-q4",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "468e20563b13ba36292e90bdccf510932c7b75b3d928b87d0c1f7ed3a0cd624c",
+          "method": "Truth-table equivalence of both shaded diagrams"
+        },
+        {
+          "recordId": "g9-ch1-ex1.5-q5",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "eb26cf88aaaa92cd69d0d5f574d8c47183cf834efe9e44674f0d25ee7bbaa316",
+          "method": "Independent finite-set and exact rational roster comparison"
+        },
+        {
+          "recordId": "g9-ch1-ex1.5-q6",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "b2fd167d6d10248b51e606802eb09c2eba89dc2d5e0491cf45f29be4a373846c",
+          "method": "Independent finite-set and exact rational roster comparison"
+        },
+        {
+          "recordId": "g9-ch1-ex1.5-q7",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "f14a533e8d095979bdff66907af718de4d5768dc46b840e201b5e8a74a169293",
+          "method": "Independent finite-set and exact rational roster comparison"
+        },
+        {
+          "recordId": "g9-ch1-ex1.5-q8",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "193b98ae4677961ab2f0e51b7f7a5db7df8aab66ad0e49592e32fa6647b46b91",
+          "method": "Independent finite-set and exact rational roster comparison"
+        },
+        {
+          "recordId": "g9-ch1-ex1.5-q9",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "1dd56986b62b9df7a694113569e40708bf6d0f7cff5a9f85226cdb8e979178f7",
+          "method": "Truth-table equivalence of both shaded diagrams"
+        },
+        {
+          "recordId": "g9-ch1-ex1.5-q10",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "779763574b0f045f97fbd8bca765d9fa8776fe5b90efb061127fbaaeb4155c35",
+          "method": "Independent finite-set and exact rational roster comparison"
+        },
+        {
+          "recordId": "g9-ch1-ex1.5-q11",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "8469c84c709c575ca7de3c25a3392d04a9a17f5ad9f680ee0be0bd59918fe246",
+          "method": "Truth-table equivalence of both shaded diagrams"
+        }
+      ],
+      "sourceBlocked": [],
+      "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-5.json",
+      "release": {
+        "status": "TESTED",
+        "pr": 433,
+        "head": "f819d9cd4169f6540c24378b8137d9d44c43efab",
+        "prQualityRun": 45682881316,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 1,
+      "exercise": "1.6",
+      "status": "TESTED",
+      "numberedQuestions": 13,
+      "canonicalTasks": 23,
+      "runtimeRecords": 13,
+      "mathEvidence": [
+        {
+          "recordId": "g9-ch1-ex1.6-q1",
+          "parts": [
+            "i",
+            "ii"
+          ],
+          "passed": true,
+          "recordSha256": "943c45ff3145825775cc00c0e0d33994bd34ac4c4074bf670fdf4b57e6598e9e",
+          "method": "Independently solve the finite-set region equations, then check intermediate counts and final results"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q2",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "9ebb1d41d34150ba1cdd598c57e7b8c7a2adeb32f42eff2e19284160adc1e7d0",
+          "method": "Enumerate the unions and intersections from the source rosters"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q3",
+          "parts": [
+            "i",
+            "ii"
+          ],
+          "passed": true,
+          "recordSha256": "03fd54828268de8aedc5e5d81bbe8deb8b1c844d8ef57eef36b40b4f20e1f957",
+          "method": "Enumerate the unions and intersections from the source rosters"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q4",
+          "parts": [
+            "i",
+            "ii",
+            "iii"
+          ],
+          "passed": true,
+          "recordSha256": "8505513877eccd1cf6adbbc5930dbf9d7ee7d3ac59d0cdb927cd7df32af38d4e",
+          "method": "Independently solve the finite-set region equations, then check intermediate counts and final results"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q5",
+          "parts": [
+            "i",
+            "ii",
+            "iii"
+          ],
+          "passed": true,
+          "recordSha256": "064a8c21e85c528bbc858380dd3c8074521a6bec823aa007ed2ba3d88a7af618",
+          "method": "Independently solve the finite-set region equations, then check intermediate counts and final results"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q6",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "eb1a482edf70f9a661dd66516b3ad7dcbf435b5622079135f089ed5a97dca6af",
+          "method": "Independently solve the finite-set region equations, then check intermediate counts and final results"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q7",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "2fd14c4c4dfdfb7a2c3658931e477df9b6268dc9fa1d00049d45a5f82c45964f",
+          "method": "Independently solve the finite-set region equations, then check intermediate counts and final results"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q8",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "8edbe8d3efbccfa49c9a2aae98c1910ad54f1fe6fc049d9991ab62972d010b94",
+          "method": "Independently solve the finite-set region equations, then check intermediate counts and final results"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q9",
+          "parts": [
+            "i",
+            "ii",
+            "iii"
+          ],
+          "passed": true,
+          "recordSha256": "1513a0abdc5d127dd53fcd6cb4a4596c42564c32fe7b901c5572f5be6269367f",
+          "method": "Independently solve the finite-set region equations, then check intermediate counts and final results"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q10",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "40ee198cd5b1f6be4a8687257a46178a67c8d3ce76b06fda3fdc491925561635",
+          "method": "Independently solve the finite-set region equations, then check intermediate counts and final results"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q11",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "e47259331f6da317265e0dec7c1470c9153522bb815d4dabe00d26a5e9e0b8a5",
+          "method": "Independently solve the finite-set region equations, then check intermediate counts and final results"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q12",
+          "parts": [
+            "i",
+            "ii",
+            "iii"
+          ],
+          "passed": true,
+          "recordSha256": "f962764c7e45ca8bf8b66281f213516d44f24238d42c343c5ceba932416db202",
+          "method": "Independently solve the finite-set region equations, then check intermediate counts and final results"
+        },
+        {
+          "recordId": "g9-ch1-ex1.6-q13",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "e2aca61b7e942898ec161cd5734fcdb79ddd3f4655e517a82877e3f4b483fe07",
+          "method": "Independently solve the finite-set region equations, then check intermediate counts and final results"
+        }
+      ],
+      "sourceBlocked": [],
+      "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-6.json",
+      "release": {
+        "status": "TESTED",
+        "pr": 433,
+        "head": "f819d9cd4169f6540c24378b8137d9d44c43efab",
+        "prQualityRun": 45682881316,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 1,
+      "exercise": "1.7",
+      "status": "TESTED",
+      "numberedQuestions": 20,
+      "canonicalTasks": 20,
+      "runtimeRecords": 20,
+      "mathEvidence": [
+        {
+          "recordId": "g9-ch1-ex1.7-q1",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "a959119607adea70a96916df268194060ec1527f2b031351073cca5efde91213",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q2",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "eed7f608e4d9f8524cdbfc50ad45b61f4938b1841ba70ca13530c2ab1766cbac",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q3",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "6f0e16def8027172839568391ec2de2325e74a1896ccd7816b7269fc04ee31e3",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q4",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "d7aee687c9bbf221acee691fd0a71ee412b9e746be2c3ce8a78f4d549ecaf36c",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q5",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "dd2e3a7e90cbc00765b0a150fab0ff6cf251b157b3ee61b2e673740a45388fae",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q6",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "04c1a9c361a4a999d735e14911959369e66663b05db1f310ffbd64b2afe5415b",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q7",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "ade3bb958fc855a57f82194eda120d3a3dd83e32024b7117a883a824370c2688",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q8",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "587a8b1fc1b24d99560d88f7748587f2789105b2a12ea40bb46191c2358e5c0b",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q9",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "3fca72a69ffcc9ccfedb4c80f14b51d18e9eb67d3308ee01c34edf3693f4951f",
+          "method": "Independent cardinality arithmetic and disjoint regions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q10",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "62edb9cc83720d82a72f26d45f8e049b6e8df71bd1ad4b8d680fec7c6ebd1cd3",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q11",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "fac957f2ced6bcec1eaa70cad0f98d111c6d2d81843c69d5406e4deaf564b438",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q13",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "2106b5f9700c313ced5e732705b3a3a013482575ff434f5ebf85b1e9fa358ee5",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q14",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "f51f0fec581c78b62c18b0bcfd4f0a98740acb2815fc0d02f9d196dd03f58c26",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q15",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "74b774a5451e985d3349fd3e6f9781be9c10eb4cf69f746877c752c7cfecf705",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q16",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "eaf00556aed759011e9ff38fdc32e9c79d7d1e482f054a899d589a1dbae2b275",
+          "method": "Independent cardinality arithmetic and disjoint regions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q17",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "48b24d35c0d49023570ea74b2860c86dfbff4ef2e2e74a0754979b2edd4ecc5f",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q18",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "c75afe4010f42be7dfe295ed44d4254946bcaa223b1a834236e6172b8d301bbf",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q19",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "474029d504cd2e3ed8a5b5ccd6b6a628d8be79c50b7f9b44126edbbf8a27e78f",
+          "method": "Check 2025 options against the set membership conditions"
+        },
+        {
+          "recordId": "g9-ch1-ex1.7-q20",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "bc2a8874adb55de0517e16f9088ff2f457e3b17cf12cce366cb19db80646c5b2",
+          "method": "Independent cardinality arithmetic and disjoint regions"
+        }
+      ],
+      "sourceBlocked": [
+        "g9-ch1-ex1.7-q12"
+      ],
+      "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-7.json",
+      "release": {
+        "status": "TESTED",
+        "pr": 433,
+        "head": "f819d9cd4169f6540c24378b8137d9d44c43efab",
+        "prQualityRun": 45682881316,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433"
+      }
+    }
+  ],
+  "latestMain": "0d6e4e7eb407b8d93ed4af0ab183e06b58af6e8a",
+  "workspace": {
+    "sourceCache": "/workspace/scratch/trace-sources",
+    "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
+    "batch2Runtime": "/workspace/scratch/trace-sources/batch2-browser-runtime.json",
+    "inventoryGenerator": "/workspace/scratch/trace-sources/build_frontier_inventory.py",
+    "grade9SetTests": {
+      "unit": "/workspace/scratch/trace-set-batch-npm-test.log",
+      "browser": "/workspace/scratch/trace-set-batch-browser.log"
+    },
+    "grade9SetWorktree": "/workspace/Triggle-ex16"
+  },
+  "openManagement": {
+    "mathguard": "https://github.com/vigneswaranmba20-afk/Triggle/pull/425",
+    "androidRecommendation": "NO-GO"
+  },
+  "resume": [
+    "Verify PR 432 Pages workflow 45681691336, compare deployed bytes against its merge, and run the live bilingual exercise smoke test.",
+    "Check PR 433 risk workflow 45682881316 and all other applicable checks. Re-fetch main, merge via normal workflow, then verify Pages and both languages.",
+    "Finish Ex 2.9 Tamil final answers and reasoning in the existing cards, including source questions and choices, focused math and browser checks and a separate release.",
+    "Reconcile the remaining per-task inventory candidates with original pages, runtime rendering, hints, figures and prior exact mathematical evidence. Repeat source-to-runtime reconciliation after each release."
+  ]
 }
