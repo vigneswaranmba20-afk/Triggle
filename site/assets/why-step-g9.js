@@ -74,7 +74,7 @@ function render(event){
  root.querySelectorAll('details.why-step-g9').forEach(x=>x.remove());
  if(data?.grade!==9||!data.item||!window.TriggleWhyStepG9?.hints)return;
  const item=data.item, geometry=window.TriggleGrade9Geometry?.preservedHints[item.id.slice(9)];
- const legacy=window.TriggleWhyStepG9.hints[item.id] ||
+ const legacy=window.TriggleG9FrontierHints?.[item.id] || window.TriggleWhyStepG9.hints[item.id] ||
   (item.id.startsWith('g9-ch4-ex') && geometry && {...geometry,step:0,expected:item.steps[0].en});
  const authored=item.steps.map((step,index)=>step.why&&{...step.why,step:index,expected:step.en}).filter(Boolean);
  const hints=item.geometryConcept !== undefined || item.realConcept !== undefined || item.setConcept
