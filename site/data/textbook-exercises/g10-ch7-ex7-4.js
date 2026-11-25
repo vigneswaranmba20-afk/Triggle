@@ -432,17 +432,17 @@ const entries=[
         }
       }
     ],
-    "answer": "1,812,000 cm³ ≈ 1,812 litres (using π ≈ 22/7).",
-    "answerTa": "1,812,000 கன செ.மீ அல்லது 1,812 லிட்டர் (தோராயமாக).",
+    "answer": "Approximately 1,812,000 cm³ = 1,812 litres (using π ≈ 22/7).",
+    "answerTa": "தோராயமாக 1,812,000 கன செ.மீ = 1,812 லிட்டர் (π ≈ 22/7).",
     "answerMath": {
       "en": {
-        "latex": "1812000\\,\\mathrm{cm}^3\\approx1812\\,\\mathrm{L}",
-        "fallback": "1,812,000 cm³ ≈ 1,812 litres (using π ≈ 22/7).",
+        "latex": "\\approx1812000\\,\\mathrm{cm}^3=1812\\,\\mathrm{L}",
+        "fallback": "Approximately 1,812,000 cm³ = 1,812 litres (using π ≈ 22/7).",
         "display": true
       },
       "ta": {
-        "latex": "1812000\\,\\mathrm{cm}^3\\approx1812\\,\\mathrm{L}",
-        "fallback": "1,812,000 கன செ.மீ அல்லது 1,812 லிட்டர் (தோராயமாக).",
+        "latex": "\\approx1812000\\,\\mathrm{cm}^3=1812\\,\\mathrm{L}",
+        "fallback": "தோராயமாக 1,812,000 கன செ.மீ = 1,812 லிட்டர் (π ≈ 22/7).",
         "display": true
       }
     },
