@@ -416,20 +416,23 @@
   // Do not probe the remote R2 asset on concept open: avoid wasting mobile data
   // and avoid holding up navigation/browser tests when the CDN is slow.
   function attachStageVideo(panel,stage,lang){
-    if(!stage?.video?.src)return;
-    const mensuration=stage.id?.startsWith('g10-ch7-');
+    const mensuration=stage?.id?.startsWith('g10-ch7-');
+    const media=stage?.localizedVideos?.[lang] ?? stage?.video;
+    if(!media?.src)return;
     if(!mensuration&&!['g9-ch5-distance-formula','g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch3-discriminant','g10-ch4-bpt-thales','g10-ch5-area-triangle'].includes(stage?.id))return;
-    if(mensuration&&stage.video.language!==lang)return;
-    let url;try{url=new URL(stage.video.src,document.baseURI);}catch{return;}
+    if(mensuration&&media.language!==lang)return;
+    let url;try{url=new URL(media.src,document.baseURI);}catch{return;}
     // Live media requires HTTPS. Permit same-origin loopback HTTP in local browser tests only.
     const loopback=location.origin===url.origin&&['localhost','127.0.0.1','[::1]'].includes(location.hostname);
     if((url.protocol!=='https:'&&!(loopback&&url.protocol==='http:'))||!url.pathname.toLowerCase().endsWith('.mp4'))return;
     if(url.origin!==location.origin&&url.hostname!=='pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev')return;
-    const ta=lang==='ta',button=document.createElement('button');
+    const ta=lang==='ta',tamilAudio=ta&&media.language==='ta',button=document.createElement('button');
     button.type='button';button.className='sp2-concept-video-button';
-    const seconds=Math.round(Number(stage.video.durationSeconds)||0);
+    const seconds=Math.round(Number(media.durationSeconds)||0);
     const durationLabel=seconds?Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0'):'';
-    button.textContent=ta?'▶ காணொளி விளக்கம் · ஆங்கிலக் குரல்':'▶ Watch video explanation'+(durationLabel?' · '+durationLabel:'');
+    const durationSuffix=durationLabel?' · '+durationLabel:'';
+    button.textContent=tamilAudio?'▶ காணொளி விளக்கம்'+durationSuffix:
+      (ta?'▶ காணொளி விளக்கம் · ஆங்கிலக் குரல்':'▶ Watch video explanation'+durationSuffix);
     const anchor=panel.querySelector('.sp2-recall') || panel.querySelector('.sp2-lesson-note');
     const studioHeading=panel.querySelector('.g10ch4-studio')&&panel.querySelector('.sp2-concept-heading');
     if(studioHeading)studioHeading.after(button);
@@ -444,7 +447,7 @@
        const thales=stage.id==='g10-ch4-bpt-thales';
        const area=stage.id==='g10-ch5-area-triangle';
        const distance=stage.id==='g9-ch5-distance-formula';
-       title.textContent=mensuration ? stage.title[lang] : distance
+       title.textContent=mensuration ? (media.title||stage.title[lang]) : distance
          ?(ta?'இரு புள்ளிகளுக்கு இடையேயான தொலைவு (ஆங்கிலக் குரல்)':'Why the distance formula works')
          :area
          ?(ta?'ஆயத்தொலைவுகள் மூலம் முக்கோணத்தின் பரப்பு (ஆங்கிலக் குரல்)':'Area of a triangle from coordinates')
@@ -460,7 +463,8 @@
       const video=document.createElement('video');video.controls=true;video.playsInline=true;
       video.preload='none';video.src=url.href;video.setAttribute('aria-label',title.textContent);
       const note=document.createElement('p');note.className='sp2-concept-video-note';
-      note.textContent=ta?'ஆங்கிலக் குரல் · சிந்திக்க வேண்டுமென்றால் இடைநிறுத்துங்கள்':'Pause whenever you need more thinking time.';
+      note.textContent=tamilAudio?'சிந்திக்க நேரம் வேண்டுமெனில் இடைநிறுத்துங்கள்.':
+        (ta?'ஆங்கிலக் குரல் · சிந்திக்க வேண்டுமென்றால் இடைநிறுத்துங்கள்':'Pause whenever you need more thinking time.');
       const error=document.createElement('p');error.className='sp2-concept-video-note';
       error.hidden=true;error.setAttribute('role','alert');
       error.textContent=ta?'தற்போது காணொளியை இயக்க முடியவில்லை. எழுத்து விளக்கம் தொடர்ந்து கிடைக்கும்.':'Video is temporarily unavailable. The written lesson still works.';

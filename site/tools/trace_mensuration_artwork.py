@@ -63,8 +63,11 @@ class Diagram:
         self.image = Image.new("RGB", (720, 1280), PAPER)
         self.draw = ImageDraw.Draw(self.image)
 
+    def typeface(self, text, size, bold):
+        return font(size, bold)
+
     def text(self, xy, text, size=32, color=INK, bold=False, anchor="mm"):
-        f = font(size, bold)
+        f = self.typeface(text, size, bold)
         bounds = self.draw.textbbox(xy, text, f, anchor=anchor)
         if bounds[0] < 28 or bounds[2] > 692 or bounds[1] < 26 or bounds[3] > 1248:
             raise ValueError(f"Text outside the safe area: {text!r} at {xy}")
@@ -154,7 +157,9 @@ class Diagram:
         self.line([(x, y-22), (x+side*22, y-22), (x+side*22, y)], MUTED, 3)
 
 
-def cylinder_scene(d, beat, stage, t):
+def cylinder_scene(d, beat, stage, t, *,
+                   show_length=True, show_height=True, show_circle_area=True,
+                   length_label="2πr", height_label="h", visible_discs=2):
     radius, height, x = 78, 230, 360
     width = 2*pi*radius
     if beat == 0:
@@ -172,7 +177,8 @@ def cylinder_scene(d, beat, stage, t):
         if not stage:
             d.cylinder(x,460,height,radius,BLUE)
             d.line([(x+radius-21,470),(x+radius-21,690)],GOLD,6)
-            d.dimension((629,460),(629,690),"h",(654,567),GOLD)
+            if show_height:
+                d.dimension((629,460),(629,690),height_label,(654,567),GOLD)
             return
         bend = 2*pi*(1-t) if stage else 2*pi
         if bend < .001:
@@ -191,9 +197,10 @@ def cylinder_scene(d, beat, stage, t):
         d.line(low, INDIGO, 5)
         d.line([arc[0],low[0]], GOLD, 6)
         d.line([arc[-1],low[-1]], GOLD, 6)
-        if t > .87:
-            d.dimension((x-width/2,744),(x+width/2,744),"2πr",(x,798),TEAL)
-        d.dimension((629,460),(629,690),"h",(654,567),GOLD)
+        if t > .87 and show_length:
+            d.dimension((x-width/2,744),(x+width/2,744),length_label,(x,798),TEAL)
+        if show_height:
+            d.dimension((629,460),(629,690),height_label,(654,567),GOLD)
         return
     if beat == 2:
         left = x - width/2
@@ -208,9 +215,10 @@ def cylinder_scene(d, beat, stage, t):
         cy = 603
         d.polygon([(x-width/2,cy-114),(x+width/2,cy-114),(x+width/2,cy+114),
                    (x-width/2,cy+114)], PALE)
-        for index, y in enumerate((cy-114-radius-24, cy+114+radius+24)):
+        for index, y in enumerate((cy-114-radius-24, cy+114+radius+24)[:visible_discs]):
             d.ellipse(x,y,radius,radius,SAND if stage >= index+1 else WHITE,GOLD)
-            d.text((x,y),"πr²",32,GOLD,True)
+            if show_circle_area:
+                d.text((x,y),"πr²",32,GOLD,True)
         return
     d.cylinder(212,480,208,73,BLUE,WHITE)
     d.cylinder(508,480,208,73,BLUE,SAND,SAND)
@@ -472,15 +480,15 @@ def conservation_scene(d, beat, stage, t):
 SCENES=(cylinder_scene,cone_scene,frustum_scene,compare_scene,combined_scene,conservation_scene)
 
 
-def artwork(lesson, beat, stage, progress, rows):
-    d = Diagram()
-    title, headings = TITLES[lesson]
+def artwork(lesson, beat, stage, progress, rows, *, diagram=None, titles=None, scene=None):
+    d = Diagram() if diagram is None else diagram
+    title, headings = TITLES[lesson] if titles is None else titles
     d.draw.rectangle((0,0,720,12),fill=INDIGO)
     d.text((48,87),title,32,INDIGO,True,"lm")
     d.line([(48,129),(672,129)],LINE,2)
     d.text((48,215),headings[beat],42,INK,True,"lm")
     d.draw.rounded_rectangle((40,289,680,928),radius=33,fill=WHITE,outline=LINE,width=2)
-    SCENES[lesson](d,beat,stage,ease(progress))
+    (SCENES[lesson] if scene is None else scene)(d,beat,stage,ease(progress))
     if rows:
         images=[formula(str(Path(p))) for p in rows]
         if any(im.width>616 for im in images) or sum(im.height for im in images)+24*(len(images)-1)>227:

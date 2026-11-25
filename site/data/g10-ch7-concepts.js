@@ -126,6 +126,7 @@ window.TRIGGLE_G10_CH7_PATH={
     },
     {
       "id": "g10-ch7-cylinder-surface-area",
+      "localizedVideos": {"ta": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch7-cylinder-surface-area/ta/47a73500d8475f6b01c0b0f39246eec7c603c1599a67750a1d6258c8d5657b99.mp4", "language": "ta", "title": "நேர் வட்ட உருளையின் புறப்பரப்பு", "durationSeconds": 70.25}},
       "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch7-cylinder-surface-area/eb43f9acdb47ccec08209731a0fcdeb9936b0f3152a1618b5c87c77bf884e033.mp4", "language": "en", "durationSeconds": 45.42},
       "section": "7.2.1–7.2.2",
       "page": { "en": "270–273", "ta": "278–281" },
