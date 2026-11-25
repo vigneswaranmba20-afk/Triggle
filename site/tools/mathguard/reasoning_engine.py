@@ -17,6 +17,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import sympy as sp
 
 from . import algebra_solver as alg
+from .context_extractor import extract_mathematical_context
 from .coordinate_parser import parse_all_points, parse_labeled_points
 from .parser import parse_expression
 from .rounding import check_numeric_match
@@ -70,6 +71,7 @@ class ReasoningGraph:
     assumptions: List[str] = field(default_factory=list)
     known_formulas: List[str] = field(default_factory=list)
     claims: List[MathClaim] = field(default_factory=list)
+    context_provenance: List[Dict[str, Any]] = field(default_factory=list)
 
 
 @dataclass
@@ -131,6 +133,7 @@ def _preprocess_math_line(raw: str) -> str:
     # Strip measurement units, rate units, & trailing %
     s = re.sub(r"\\(?:big|Big|bigg|Bigg)[lr]?", "", s)
     s = re.sub(r"\\mathrm\s*\{\s*(?:cm|km|mm|m|kgs?|g|s|hrs?|min|h)\s*\}(?:\^\d+)?(?:\s*/\s*\\mathrm\s*\{\s*(?:cm|km|mm|m|kgs?|g|s|hrs?|min|h)\s*\})?", "", s, flags=re.I)
+    s = re.sub(r"(\d+)\s*\\text\s*\{\s*hrs?\s*\}\s*(\d+)\s*\\text\s*\{\s*minutes?\s*\}", r"(\1 + (\2)/60)", s, flags=re.I)
     s = re.sub(r"\\text\s*\{\s*(?:sq\.?\s*units?|sq\.?\s*ft|cu\.?\s*units?|units?|hrs?|hours?|mins?|minutes?|seconds?|s|kgs?|years?|pipes?|days?|approx|minutes\s*\(approx\)|not defined|is not defined)\s*\}", "", s, flags=re.I)
     s = re.sub(r"\\text\s*\{\s*Rs\.?\s*\}", "", s, flags=re.I)
     s = re.sub(r"\(\s*approx\s*\)", "", s, flags=re.I)
@@ -138,7 +141,7 @@ def _preprocess_math_line(raw: str) -> str:
     s = re.sub(r"\(\s*\\text\s*\{\s*Option[^}]*\}\s*\)", "", s, flags=re.I)
     s = re.sub(r"(?<=\d)\s*\\%", "", s)
     s = re.sub(r"\\text\s*\{\s*(?:gives|so|hence|then|or|and|where|is vertical, so)\s*\}", ";", s, flags=re.I)
-    s = re.sub(r"\\text\s*\{[^}]*\bso\b[^}]*\}", ";", s, flags=re.I)
+    s = re.sub(r"\\text\s*\{[^}]*\b(?:so|gives)\b[^}]*\}", ";", s, flags=re.I)
     s = re.sub(r"\\text\s*\{\s*Area\s*\}\s*\(\\triangle\s*([A-Z]+)\)", r"Area_\1", s)
     s = re.sub(r"\\%\s*\\text\s*\{\s*increase\s*\}", "pct_increase", s, flags=re.I)
     s = re.sub(r"\\text\s*\{[^}]+\}(?=\s*(?:=|\\approx|≈))", "named_qty", s)
@@ -390,8 +393,8 @@ def _verify_gcd_lcm_call(pre: str) -> Optional[bool]:
     return expressions_equivalent(_norm_syms(derived), _norm_syms(rhs))
 
 
-def _check_named_formula_validity(var_name: str, rhs: sp.Expr, allow_positive_domain: bool = False) -> bool:
-    """Validate dimensional consistency for named Mensuration formulas (Volume=L^3, Area/CSA/TSA=L^2)."""
+def _check_named_formula_validity(var_name: str, rhs: sp.Expr, allow_positive_domain: bool = False, q_en: str = "") -> bool:
+    """Validate dimensional consistency AND solid-specific formula applicability for Mensuration formulas."""
     if not allow_positive_domain or not rhs.free_symbols:
         return True
     length_syms = {
@@ -411,10 +414,21 @@ def _check_named_formula_validity(var_name: str, rhs: sp.Expr, allow_positive_do
         for s in area_syms:
             subs[s] = s * (t**2)
         scaled = sp.simplify(rhs.subs(subs) / rhs)
-        if scaled.free_symbols == {t}:
-            return sp.simplify(scaled - t**expected_deg) == 0
+        if scaled.free_symbols == {t} and sp.simplify(scaled - t**expected_deg) != 0:
+            return False
     except Exception:
         pass
+    # Solid-specific formula applicability (e.g., single-solid cone volume cannot be pi*r^2*h)
+    if q_en and v_norm in ("V", "Volume"):
+        solids = {s.lower() for s in re.findall(r"\b(?:cylinder|cone|sphere|hemisphere|frustum)\b", q_en, flags=re.I)}
+        if solids == {"cone"} and {s.name for s in rhs.free_symbols} == {"r", "h"}:
+            r_s, h_s = sp.Symbol("r"), sp.Symbol("h")
+            if sp.simplify(rhs - sp.pi * r_s**2 * h_s) == 0:
+                return False
+        if solids == {"hemisphere"} and {s.name for s in rhs.free_symbols} == {"r"}:
+            r_s = sp.Symbol("r")
+            if sp.simplify(rhs - sp.Rational(4, 3) * sp.pi * r_s**3) == 0:
+                return False
     return True
 
 
@@ -445,20 +459,41 @@ def verify_complete_working(
     graph = ReasoningGraph()
     q_obj = (item.get("question") if is_concept else item.get("q")) or {}
     q_en = q_obj.get("en") or ""
-    stem_env = extract_stem_assumptions(q_en)
+    q_ta = q_obj.get("ta") or ""
+    ctx = extract_mathematical_context(q_en, q_ta, allow_positive_domain=allow_positive_domain)
     is_coord_eq_q = bool(re.search(r"\bequation\s+of\b", q_en, flags=re.I))
-    for k, v in stem_env.items():
-        if re.search(rf"[+\-*/]\s*{re.escape(k)}\s*=", q_en):
+    for prov in ctx.provenance:
+        if is_coord_eq_q and prov.symbol in ("x", "y"):
             continue
-        if is_coord_eq_q and k in ("x", "y"):
-            continue
-        graph.givens[k] = _norm_syms(v)
-        graph.variable_declarations[k] = _norm_syms(v)
+        graph.givens[prov.symbol] = _norm_syms(prov.expr)
+        graph.variable_declarations[prov.symbol] = _norm_syms(prov.expr)
+        graph.context_provenance.append({
+            "symbol": prov.symbol,
+            "value": str(prov.expr),
+            "source_span": prov.source_span,
+            "role": prov.role,
+            "unit": prov.unit,
+            "domain": prov.domain_constraint,
+            "object_id": prov.object_id,
+            "language": prov.language,
+        })
+    graph.domain_restrictions.extend(ctx.domain_constraints)
+
+    if not allow_positive_domain:
+        stem_env = extract_stem_assumptions(q_en)
+        for k, v in stem_env.items():
+            if re.search(rf"[+\-*/]\s*{re.escape(k)}\s*=", q_en):
+                continue
+            if is_coord_eq_q and k in ("x", "y"):
+                continue
+            if k not in graph.givens:
+                graph.givens[k] = _norm_syms(v)
+                graph.variable_declarations[k] = _norm_syms(v)
     for m_def in re.finditer(r"\b([AB])\s*=\s*([^,;]+?)(?=\s*(?:,|;|\bfind\b|\bprove\b|\bshow\b|$))", q_en):
         if re.search(rf"[+\-*/]\s*{re.escape(m_def.group(1))}\s*=", q_en):
             continue
         e_def = _safe_parse(m_def.group(2))
-        if e_def is not None:
+        if e_def is not None and m_def.group(1) not in graph.givens:
             graph.givens[m_def.group(1)] = e_def
             graph.variable_declarations[m_def.group(1)] = e_def
 
@@ -610,7 +645,8 @@ def verify_complete_working(
                 elif prev_chain_expr is not None:
                     e_cur = _safe_parse(rhs_s)
                     if e_cur is not None:
-                        ok, ev = _exprs_match(prev_chain_expr, e_cur, env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain)
+                        has_trunc = (r"\ldots" in ln or "…" in ln)
+                        ok, ev = _exprs_match(prev_chain_expr, e_cur, env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain, allow_numeric_tolerance=has_trunc)
                         if not ok and _sub_env(prev_chain_expr, env).free_symbols and not _sub_env(e_cur, env).free_symbols:
                             graph.claims.append(MathClaim(s_idx, ln, "substitution", "UNVERIFIED", evidence="missing_variable_bindings"))
                         else:
@@ -846,21 +882,14 @@ def verify_complete_working(
                             else:
                                 graph.claims.append(MathClaim(s_idx, ln, "equation", "FAILED", evidence="invalid_root_set"))
                                 continue
-                    if len(parts) == 3 and _is_named_lhs(parts[1]) is not None:
-                        v2 = _is_named_lhs(parts[1])
-                        rhs_e = _safe_parse(parts[2])
-                        if rhs_e is not None:
-                            val = _norm_syms(_sub_env(rhs_e, env, allow_positive_domain=allow_positive_domain))
-                            if (var_name in graph.givens and not expressions_equivalent(graph.givens[var_name], val)) or (v2 in graph.givens and not expressions_equivalent(graph.givens[v2], val)):
-                                graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="overwrites_established_given"))
-                                continue
-                            env[var_name] = val
-                            env[v2] = val
-                            graph.variable_declarations[var_name] = val
-                            graph.variable_declarations[v2] = val
-                            prev_chain_expr = val
-                            graph.claims.append(MathClaim(s_idx, ln, "definition", "VERIFIED", evidence="chained_variable_definition"))
-                            continue
+                    named_lhs_list = [var_name]
+                    idx_lhs = 1
+                    while idx_lhs < len(parts) - 1 and _is_named_lhs(parts[idx_lhs]) is not None:
+                        named_lhs_list.append(_is_named_lhs(parts[idx_lhs]))
+                        idx_lhs += 1
+                    if len(named_lhs_list) >= 2:
+                        parts = [named_lhs_list[-1]] + parts[idx_lhs:]
+                        var_name = named_lhs_list[-1]
                     if parts[-1].strip() == "RHS" and len(parts) >= 3:
                         parts = parts[:-1]
                     exprs = [_safe_parse(p) for p in parts[1:]]
@@ -869,18 +898,19 @@ def verify_complete_working(
                         continue
                     if len(exprs) == 1:
                         new_val = _norm_syms(_sub_env(exprs[0], env, allow_positive_domain=allow_positive_domain))
-                        if not _check_named_formula_validity(var_name, exprs[0], allow_positive_domain=allow_positive_domain):
+                        if not _check_named_formula_validity(var_name, exprs[0], allow_positive_domain=allow_positive_domain, q_en=q_en):
                             graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="invalid_formula_dimension"))
                             continue
                         if var_name in graph.givens and not new_val.free_symbols and not graph.givens[var_name].free_symbols and not expressions_equivalent(graph.givens[var_name], new_val):
                             graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="overwrites_established_given"))
                             continue
-                        env[var_name] = new_val
-                        graph.variable_declarations[var_name] = new_val
+                        for n_nm in named_lhs_list:
+                            env[n_nm] = new_val
+                            graph.variable_declarations[n_nm] = new_val
                         prev_chain_expr = new_val
-                        graph.claims.append(MathClaim(s_idx, ln, "definition", "VERIFIED", dependencies=list(env.keys()), evidence="variable_definition"))
+                        graph.claims.append(MathClaim(s_idx, ln, "definition", "VERIFIED", dependencies=list(env.keys()), evidence="chained_variable_definition" if len(named_lhs_list) > 1 else "variable_definition"))
                         continue
-                    if not _check_named_formula_validity(var_name, exprs[0], allow_positive_domain=allow_positive_domain):
+                    if not _check_named_formula_validity(var_name, exprs[0], allow_positive_domain=allow_positive_domain, q_en=q_en):
                         graph.claims.append(MathClaim(s_idx, ln, "substitution", "FAILED", evidence="invalid_formula_dimension"))
                         continue
                     all_ok = True
@@ -891,7 +921,7 @@ def verify_complete_working(
                         if not ok:
                             s_i_rem = _sub_env(exprs[i], env).free_symbols
                             s_nxt_rem = _sub_env(exprs[i + 1], env).free_symbols
-                            if s_i_rem and not s_nxt_rem:
+                            if (s_i_rem and not s_nxt_rem) or (s_i_rem and any(_is_named_formula_sym(sym) for sym in exprs[i].free_symbols)):
                                 has_unverified_binding = True
                             all_ok = False
                             break
@@ -899,10 +929,18 @@ def verify_complete_working(
                     if all_ok:
                         new_val = _norm_syms(_sub_env(exprs[-1], env, allow_positive_domain=allow_positive_domain))
                         if var_name in graph.givens and not new_val.free_symbols and not graph.givens[var_name].free_symbols and not expressions_equivalent(graph.givens[var_name], new_val):
-                            graph.claims.append(MathClaim(s_idx, ln, "substitution", "FAILED", evidence="overwrites_established_given"))
-                            continue
-                        env[var_name] = new_val
-                        graph.variable_declarations[var_name] = new_val
+                            # Check valid cm <-> m unit conversion (factor 100 or 1/100)
+                            is_unit_conv = (
+                                (r"\mathrm{m}" in ln or re.search(r"\bm\b", ln))
+                                and any(p.get("symbol") == var_name and p.get("unit") == "cm" for p in graph.context_provenance)
+                                and expressions_equivalent(graph.givens[var_name], new_val * 100)
+                            )
+                            if not is_unit_conv:
+                                graph.claims.append(MathClaim(s_idx, ln, "substitution", "FAILED", evidence="overwrites_established_given"))
+                                continue
+                        for n_nm in named_lhs_list:
+                            env[n_nm] = new_val
+                            graph.variable_declarations[n_nm] = new_val
                         prev_chain_expr = new_val
                         graph.claims.append(MathClaim(s_idx, ln, "substitution", "VERIFIED", evidence="+".join(ev_list)))
                     elif has_unverified_binding:

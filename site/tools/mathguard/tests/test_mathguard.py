@@ -275,3 +275,16 @@ def test_v1_3_4a_adversarial_hardening():
     assert res["passed"] == res["total"], [d for d in res["details"] if not d["passed"]]
 
 
+def test_v1_3_5_context_and_adversarial_suites():
+    from mathguard.adversarial_v1_3_5 import run_v1_3_5_adversarial_and_holdout
+
+    res = run_v1_3_5_adversarial_and_holdout()
+    for split in ("main", "holdout"):
+        s = res[split]
+        assert s["falseAcceptances"] == 0, (split, [d for d in s["details"] if not d["passed"]])
+        assert s["falseRejections"] == 0, (split, [d for d in s["details"] if not d["passed"]])
+        assert s["passed"] == s["total"], (split, [d for d in s["details"] if not d["passed"]])
+    assert res["main"]["total"] >= 100
+    assert res["holdout"]["total"] >= 25
+
+
