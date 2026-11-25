@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<circle cx="160" cy="104" r="85" fill="none" stroke="#3067b1"/>
+<path d="M 85.000 144.000 L 235.000 144.000" fill="none" stroke="#263755"/>
+<path d="M 160.000 104.000 L 160.000 144.000 L 160.000 189.000" fill="none" stroke="#263755"/>
+<path d="M 85.000 144.000 L 160.000 104.000" fill="none" stroke="#263755"/>
+<path d="M 160.000 135.000 L 169.000 135.000 L 169.000 144.000" fill="none" stroke="#973f19"/>
+<text x="160.000" y="91.000">O</text>
+<text x="72.000" y="149.000">P</text>
+<text x="248.000" y="149.000">Q</text>
+<text x="173.000" y="156.000">R</text>
+<text x="160.000" y="202.000">S</text>
+<text x="118.000" y="111.000">17</text>
+<text x="185.000" y="164.000">30</text>
+</g>
+</svg>

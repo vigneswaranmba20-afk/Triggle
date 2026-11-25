@@ -309,9 +309,74 @@ def construction_bases():
                  +text((160,93),str(length)))
 
 
+def exercise_47():
+    b,d=(51,112),(51+56*(1/sin(radians(54))*cos(radians(54))+1/sin(radians(21))*cos(radians(21))),112)
+    a=polar(b,56/sin(radians(54)),54)
+    c=(a[0],168)
+    p=dict(A=a,B=b,C=c,D=d)
+    save('7-q2',edges(p,'ABCDA')+ticks(a,b)+ticks(b,c)+ticks(a,d,2)+ticks(c,d,2)
+         +angle(a,b,c,'108°',18,39)+angle(a,d,c,'42°',24,56)
+         +labels(p,dict(A=(-3,-13),B=(-13,0),C=(-3,13),D=(13,0))))
+    p=dict(A=(93,177),B=(227,177),C=(227,43),D=(93,43),O=(160,110))
+    save('7-q3',edges(p,'ABCDA','AC','BD')+labels(p,dict(A=(-13,11),B=(13,11),C=(13,-11),D=(-13,-11),O=(0,17))))
+
+    d=(51,173)
+    a=polar(d,111,75)
+    b=crossing(d,polar(d,150,35),a,polar(a,150,5))
+    c=(b[0]+(d[1]-b[1])/sqrt(3),d[1])
+    e=polar(c,56,35)
+    p=dict(A=a,B=b,C=c,D=d,E=e)
+    save('7-q4',edges(p,'ABCDA','DB','CE')+arrows(d,b)+arrows(c,e)
+         +angle(d,a,b,'110°',14,36)+angle(a,b,d,'30°',23,60)
+         +angle(a,d,c,'75°',29,52)+angle(d,c,b,'60°',16,39)+angle(b,c,e,'x°',15,42)
+         +labels(p,dict(A=(-5,-12),B=(6,-12),C=(6,14),D=(-10,12),E=(11,-5))))
+
+    body=''
+    for left,names in [(35,'BCA'),(180,'EDF')]:
+        b,a=(left,166),(left+100,166)
+        c=polar(b,100*sin(radians(50))/sin(radians(60)),70)
+        body += (lines(a,b,c,a)+ticks(b,c)+angle(a,b,c,'70°',13,28)+angle(c,a,b,'50°',13,33)
+                 +angle(b,c,a,'60°',13,33)+text((b[0]-9,b[1]+13),names[0])
+                 +text((c[0]-1,c[1]-12),names[1])+text((a[0]+7,a[1]+13),names[2]))
+    save('7-q5',body)
+    round_figure('7-q13',dict(A=218,B=298,C=72),('ACB','AOB'),dict(A=(-13,7),B=(9,12),C=(5,-13),O=(7,-12)),
+        lambda p:angle(p['A'],p['C'],p['B'],'40°',18,40))
+    p=dict(A=(75,112),B=(245,112),O=(160,112),E=(211,112),D=(211,44),C=(211,180))
+    save('7-q15',circle(p['O'],85)+edges(p,'AB','CD')+ticks(p['D'],p['E'])+ticks(p['E'],p['C'])
+         +labels(p,dict(A=(-13,0),B=(13,1),O=(0,-13),E=(-13,13),D=(6,-11),C=(6,12))))
+
+    p,spt=(93,170),(93,54)
+    def chord_endpoint(a,o,angle_deg):
+        direction_vector = polar((0,0),1,angle_deg)
+        distance = 2*sum((o[i]-a[i])*direction_vector[i] for i in (0,1))
+        return polar(a,distance,angle_deg)
+    o1,o2=(107,112),(145,112)
+    r1,r2=hypot(o1[0]-p[0],58),hypot(o2[0]-p[0],58)
+    q,t=chord_endpoint(p,o1,10),chord_endpoint(p,o2,10)
+    r,v=chord_endpoint(spt,o1,-20),chord_endpoint(spt,o2,-20)
+    pts=dict(P=p,Q=q,R=r,S=spt,T=t,V=v)
+    save('7-q16',circle(o1,r1)+circle(o2,r2,ACCENT)+edges(pts,'PQTVRSP','QR')
+         +angle(q,r,spt,'',11)+text((81,91),'100°')+lines((102,93),(r[0]-10,r[1]-2),color=ACCENT)
+         +labels(pts,dict(P=(-10,14),Q=(0,16),R=(1,-13),S=(-10,-13),T=(13,1),V=(13,-1))))
+
+    def extend(p):
+        p['E']=polar(p['C'],51,direction(p['D'],p['C']))
+        p['F']=polar(p['C'],56,direction(p['A'],p['B']))
+        return (edges(p,'DCE','CF')+arrows(p['A'],p['B'])+arrows(p['C'],p['F'])
+                +angle(p['A'],p['D'],p['C'],'80°',17,35)+angle(p['A'],p['B'],p['C'],'100°',15,37)
+                +angle(p['E'],p['C'],p['F'],'20°',23,40)
+                +labels(p,dict(A=(-13,6),B=(1,13),C=(5,-14),D=(-11,-12),E=(8,-13),F=(10,10),O=(0,0))))
+    round_figure('7-q18',dict(A=220,B=270,C=20,D=150),('ABCDA',),{},extend,centre=(134,112),radius=80)
+    p=dict(O=(160,104),P=(85,144),Q=(235,144),R=(160,144),S=(160,189))
+    save('7-q20',circle(p['O'],85)+edges(p,'PQ','ORS','PO')+right(p['R'],p['O'],p['Q'])
+         +labels(p,dict(O=(0,-13),P=(-13,5),Q=(13,5),R=(13,12),S=(0,13)))
+         +text((118,111),'17')+text((185,164),'30'))
+
+
 if __name__ == '__main__':
     exercise_41()
     exercise_42()
     exercise_43()
     exercise_44()
     construction_bases()
+    exercise_47()
