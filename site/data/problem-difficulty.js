@@ -11,6 +11,14 @@ const metadata={
     "difficult": "Complex reasoning, proof, case analysis, multi-stage calculations or advanced connections."
   },
   "entries": {
+    "c10-7-ex7-4-q1": {"grade":10,"level":"easy","basis":"Equate two solid volumes and isolate height.","review":"implementation-audit"},
+    "c10-7-ex7-4-q2": {"grade":10,"level":"medium","basis":"Convert units and use volumetric flow rate.","review":"implementation-audit"},
+    "c10-7-ex7-4-q3": {"grade":10,"level":"medium","basis":"Use symbolic volume conservation and square the scaled radius.","review":"implementation-audit"},
+    "c10-7-ex7-4-q4": {"grade":10,"level":"medium","basis":"Use shell volume difference and recover diameter from the cube root.","review":"implementation-audit"},
+    "c10-7-ex7-4-q5": {"grade":10,"level":"medium","basis":"Convert lengths, subtract capacities and convert to litres.","review":"implementation-audit"},
+    "c10-7-ex7-4-q6": {"grade":10,"level":"medium","basis":"Subtract hemispherical volumes and divide by cylindrical base area.","review":"implementation-audit"},
+    "c10-7-ex7-4-q7": {"grade":10,"level":"medium","basis":"Use annular volume and positive radius to find wall thickness.","review":"implementation-audit"},
+    "c10-7-ex7-4-q8": {"grade":10,"level":"medium","basis":"Translate the percentage relation and compare symbolic capacities.","review":"implementation-audit"},
     "c9-exercise-6-4-q2-i": {"grade":9,"level":"medium","basis":"Reverse a natural trigonometric table with six-minute columns and mean differences","review":"implementation-audit"},
     "c9-exercise-6-4-q2-ii": {"grade":9,"level":"medium","basis":"Reverse a natural trigonometric table with six-minute columns and mean differences","review":"implementation-audit"},
     "c9-exercise-6-4-q2-iii": {"grade":9,"level":"medium","basis":"Reverse a natural trigonometric table with six-minute columns and mean differences","review":"implementation-audit"},
