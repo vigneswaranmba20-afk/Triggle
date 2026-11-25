@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "edition": "2025",
+  "grade": 9,
+  "chapter": 5,
+  "items": [
+    {
+      "id": "g9-ch5-ex5.1-q4",
+      "exercise": "5.1",
+      "question": 4,
+      "parts": ["i", "ii"],
+      "sourcePages": {
+        "en": {"pdfPages": [199], "printedPages": [193], "keyPdfPages": [321]},
+        "ta": {"pdfPages": [212], "printedPages": [206], "keyPdfPages": [337]}
+      },
+      "issue": "Both editions require joining the points in order and give a trapezium in the answer appendix. The printed order produces a crossed quadrilateral.",
+      "resolution": "Preserve the printed question. Give the exact crossed path and its intersection, then show the key's figure obtained by following the perimeter.",
+      "figure": "assets/grade9-ch5/ex5-1-q4.svg",
+      "square": [[0,0],[-4,0],[-4,-4],[0,-4]],
+      "orderedVertices": [[-3,3],[2,3],[-6,-1],[5,-1]],
+      "printedCycle": "ABCDA",
+      "printedIntersection": ["-1/2", "7/4"],
+      "perimeterCycle": "ABDCA",
+      "perimeterArea": 32,
+      "tamilEditorialReview": "pending"
+    }
+  ]
+}

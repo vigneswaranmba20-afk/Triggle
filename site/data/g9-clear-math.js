@@ -60183,13 +60183,13 @@ const records=[
     },
     "answerMath": {
       "en": {
-        "latex": "\\text{(i) Square};\\quad \\text{(ii) Trapezium}",
-        "fallback": "(i) Square; (ii) Trapezium",
+        "latex": "\\begin{gathered}\\text{(i) Square}\\\\\\text{(ii) }ABCDA:\\text{ sides cross}\\\\ABDCA:\\text{ trapezium}\\end{gathered}",
+        "fallback": "(i) Square. (ii) Self-crossing quadrilateral in the printed order ABCDA. The keyed trapezium uses ABDCA.",
         "display": true
       },
       "ta": {
-        "latex": "\\text{(i) சதுரம்};\\quad \\text{(ii) சரிவகம்}",
-        "fallback": "(i) சதுரம்; (ii) சரிவகம்",
+        "latex": "\\begin{gathered}\\text{(i) சதுரம்}\\\\\\text{(ii) }ABCDA:\\text{ பக்கங்கள் குறுக்கிடும்}\\\\ABDCA:\\text{ சரிவகம்}\\end{gathered}",
+        "fallback": "(i) சதுரம். (ii) ABCDA என்ற வரிசையில் பக்கங்கள் குறுக்கிடும் நாற்கரம். விடைக்குறிப்பின் சரிவகத்திற்கு ABDCA வரிசை தேவை.",
         "display": true
       }
     },
@@ -60286,76 +60286,171 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\text{One pair of opposite sides parallel } (y=3 \\parallel y=-1) \\implies \\text{Trapezium}",
-          "fallback": "y=3 ∥ y=−1, lengths 5 ≠ 11 ⇒ Trapezium",
+          "latex": "\\begin{aligned}2-8t&=-3+8t\\\\t&=\\dfrac{5}{16}\\in(0,1)\\\\BC\\cap AD&=\\left(-\\dfrac12,\\dfrac74\\right)\\end{aligned}",
+          "fallback": "2 − 8t = −3 + 8t ⇒ t = 5/16; BC and AD meet at (−1/2, 7/4)",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "(ii) Points ",
+            "(ii) Label the printed points ",
             {
-              "latex": "\\left(- 3, 3\\right)",
-              "fallback": "(−3, 3)"
+              "latex": "A, B, C",
+              "fallback": "A, B, C"
             },
             " and ",
             {
-              "latex": "\\left(2, 3\\right)",
-              "fallback": "(2, 3)"
+              "latex": "D",
+              "fallback": "D"
             },
-            " lie on the horizontal line ",
-            {
-              "latex": "y = 3 \\left(\\text{length} 5\\right)",
-              "fallback": "y = 3 (length 5)"
-            },
-            ". Points ",
-            {
-              "latex": "\\left(- 6, - 1\\right)",
-              "fallback": "(−6, −1)"
-            },
-            " and ",
-            {
-              "latex": "\\left(5, - 1\\right)",
-              "fallback": "(5, −1)"
-            },
-            " lie on the horizontal line ",
-            {
-              "latex": "y = - 1 \\left(\\text{length} 11\\right)",
-              "fallback": "y = −1 (length 11)"
-            },
-            ". Since one pair of opposite sides is parallel with unequal lengths, the quadrilateral is a trapezium."
-          ],
-          "ta": [
-            "(ii) ",
-            {
-              "latex": "\\left(- 3, 3\\right), \\left(2, 3\\right)",
-              "fallback": "(−3, 3), (2, 3)"
-            },
-            " ஆகியவை ",
+            ". As we move from ",
             {
               "latex": "y = 3",
               "fallback": "y = 3"
             },
-            " என்ற கிடைமட்டக் கோட்டிலும் (நீளம் ",
+            " down to ",
             {
-              "latex": "5",
-              "fallback": "5"
+              "latex": "y = - 1, BC",
+              "fallback": "y = −1, BC"
             },
-            "), ",
+            " moves left ",
             {
-              "latex": "\\left(- 6, - 1\\right), \\left(5, - 1\\right)",
-              "fallback": "(−6, −1), (5, −1)"
+              "latex": "8",
+              "fallback": "8"
             },
-            " ஆகியவை ",
+            " units and ",
+            {
+              "latex": "AD",
+              "fallback": "AD"
+            },
+            " moves right ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " units. The ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-coordinates become equal after travelling ",
+            {
+              "latex": "\\dfrac{5}{16}",
+              "fallback": "5/16"
+            },
+            " of the vertical drop. The two segments cross between their endpoints, so the printed order gives a self-crossing quadrilateral."
+          ],
+          "ta": [
+            "(ii) கொடுக்கப்பட்ட புள்ளிகளுக்கு முறையே ",
+            {
+              "latex": "A, B, C, D",
+              "fallback": "A, B, C, D"
+            },
+            " எனப் பெயரிடுவோம். ",
+            {
+              "latex": "y = 3",
+              "fallback": "y = 3"
+            },
+            " இலிருந்து ",
             {
               "latex": "y = - 1",
               "fallback": "y = −1"
             },
-            " என்ற கிடைமட்டக் கோட்டிலும் (நீளம் ",
+            " வரை கீழிறங்கும்போது ",
             {
-              "latex": "11",
-              "fallback": "11"
+              "latex": "BC",
+              "fallback": "BC"
             },
-            ") உள்ளன. ஒரு சோடி எதிர்ப்பக்கங்கள் இணையாகவும் சமமற்ற நீளமாகவும் உள்ளதால் இது ஒரு சரிவகம்."
+            " இடதுபுறம் ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " அலகுகளும் ",
+            {
+              "latex": "AD",
+              "fallback": "AD"
+            },
+            " வலதுபுறம் ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " அலகுகளும் நகர்கின்றன. செங்குத்துத் தொலைவில் ",
+            {
+              "latex": "\\dfrac{5}{16}",
+              "fallback": "5/16"
+            },
+            " பங்கு கீழிறங்கியதும் இரண்டின் ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-ஆயத்தொலைவுகள் சமமாகின்றன. இரு கோட்டுத்துண்டுகளும் முனைகளுக்கு இடையில் வெட்டிக்கொள்வதால், அச்சிட்ட வரிசையில் தன்னைத்தானே வெட்டிக்கொள்ளும் நாற்கரம் கிடைக்கிறது."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{gathered}AB\\parallel DC,\\quad AB=5,\\quad DC=11\\\\BD=CA=\\sqrt{3^2+4^2}=5\\end{gathered}",
+          "fallback": "AB ∥ DC; AB = 5, DC = 11; BD = CA = √(3² + 4²) = 5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "To get the figure named in both answer appendices, follow the outside A → ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " → ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " → ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            " → A. The top and bottom sides ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " and ",
+            {
+              "latex": "DC",
+              "fallback": "DC"
+            },
+            " are horizontal. The other two sides have the same length, so this order gives an isosceles trapezium."
+          ],
+          "ta": [
+            "இரு பாடநூல்களின் விடைக்குறிப்பிலும் கூறிய சரிவகம் கிடைக்க, சுற்றுப்புறமாக A → ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " → ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " → ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            " → A என இணைக்க வேண்டும். மேல் பக்கம் ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            ", கீழ்ப்பக்கம் ",
+            {
+              "latex": "DC",
+              "fallback": "DC"
+            },
+            " இரண்டும் கிடைமட்டமாக உள்ளன. மற்ற இரு பக்கங்களின் நீளம் சமம். எனவே இந்த வரிசையில் இருசமபக்கச் சரிவகம் கிடைக்கிறது."
           ]
         }
       }
@@ -88129,129 +88224,53 @@ const texts={
     },
     "-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு)"
   ],
-  "(i) Joining (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) gives two horizontal sides of length 4 and two vertical sides of length 4 meeting at 90° angles. Hence it is a square.": [
-    "(i) Joining ",
+  "(ii) Label the printed points A, B, C and D. As we move from y = 3 down to y = −1, BC moves left 8 units and AD moves right 8 units. The x-coordinates become equal after travelling 5/16 of the vertical drop. The two segments cross between their endpoints, so the printed order gives a self-crossing quadrilateral.": [
+    "(ii) Label the printed points ",
     {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
+      "latex": "A, B, C",
+      "fallback": "A, B, C"
     },
-    " → ",
+    " and ",
     {
-      "latex": "\\left(- 4, 0\\right)",
-      "fallback": "(−4,0)"
+      "latex": "D",
+      "fallback": "D"
     },
-    " → ",
+    ". As we move from ",
     {
-      "latex": "\\left(- 4, - 4\\right)",
-      "fallback": "(−4,−4)"
+      "latex": "y = 3",
+      "fallback": "y = 3"
     },
-    " → ",
+    " down to ",
     {
-      "latex": "\\left(0, - 4\\right)",
-      "fallback": "(0,−4)"
+      "latex": "y = - 1, BC",
+      "fallback": "y = −1, BC"
     },
-    " → ",
+    " moves left ",
     {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
+      "latex": "8",
+      "fallback": "8"
     },
-    " gives two horizontal sides of ",
+    " units and ",
     {
-      "latex": "\\text{length} 4",
-      "fallback": "length 4"
+      "latex": "AD",
+      "fallback": "AD"
     },
-    " and two vertical sides of ",
+    " moves right ",
     {
-      "latex": "\\text{length} 4",
-      "fallback": "length 4"
+      "latex": "8",
+      "fallback": "8"
     },
-    " meeting at ",
+    " units. The ",
     {
-      "latex": "90^{\\circ}",
-      "fallback": "90°"
+      "latex": "x",
+      "fallback": "x"
     },
-    " angles. Hence it is a square."
-  ],
-  "(i) Joining (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) gives two horizontal sides of length 4 and two vertical sides of length 4 meeting at 90° angles. Hence it is a square. (Identify shapes formed by plotted points: (i) Square; (ii) Trapezium)": [
-    "(i) Joining ",
+    "-coordinates become equal after travelling ",
     {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
+      "latex": "\\dfrac{5}{16}",
+      "fallback": "5/16"
     },
-    " → ",
-    {
-      "latex": "\\left(- 4, 0\\right)",
-      "fallback": "(−4,0)"
-    },
-    " → ",
-    {
-      "latex": "\\left(- 4, - 4\\right)",
-      "fallback": "(−4,−4)"
-    },
-    " → ",
-    {
-      "latex": "\\left(0, - 4\\right)",
-      "fallback": "(0,−4)"
-    },
-    " → ",
-    {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
-    },
-    " gives two horizontal sides of ",
-    {
-      "latex": "\\text{length} 4",
-      "fallback": "length 4"
-    },
-    " and two vertical sides of ",
-    {
-      "latex": "\\text{length} 4",
-      "fallback": "length 4"
-    },
-    " meeting at ",
-    {
-      "latex": "90^{\\circ}",
-      "fallback": "90°"
-    },
-    " angles. Hence it is a square. (Identify shapes formed by plotted points: (i) Square; (ii) Trapezium)"
-  ],
-  "(i) (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) என இணைக்கும்போது, 4 அலகு நீளமுள்ள செங்குத்து மற்றும் கிடைமட்டப் பக்கங்கள் 90° கோணத்தில் வெட்டுகின்றன. எனவே இது ஒரு சதுரம். (புள்ளிகளை இணைத்து உருவாகும் வடிவத்தைக் காணுதல்: (i) சதுரம்; (ii) சரிவகம்)": [
-    "(i) ",
-    {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
-    },
-    " → ",
-    {
-      "latex": "\\left(- 4, 0\\right)",
-      "fallback": "(−4,0)"
-    },
-    " → ",
-    {
-      "latex": "\\left(- 4, - 4\\right)",
-      "fallback": "(−4,−4)"
-    },
-    " → ",
-    {
-      "latex": "\\left(0, - 4\\right)",
-      "fallback": "(0,−4)"
-    },
-    " → ",
-    {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
-    },
-    " என இணைக்கும்போது, ",
-    {
-      "latex": "4",
-      "fallback": "4"
-    },
-    " அலகு நீளமுள்ள செங்குத்து மற்றும் கிடைமட்டப் பக்கங்கள் ",
-    {
-      "latex": "90^{\\circ}",
-      "fallback": "90°"
-    },
-    " கோணத்தில் வெட்டுகின்றன. எனவே இது ஒரு சதுரம். (புள்ளிகளை இணைத்து உருவாகும் வடிவத்தைக் காணுதல்: (i) சதுரம்; (ii) சரிவகம்)"
+    " of the vertical drop. The two segments cross between their endpoints, so the printed order gives a self-crossing quadrilateral."
   ],
   "Use the distance formula d = √[(x₂ − x₁)² + (y₂ − y₁)²].": [
     "Use the distance formula ",

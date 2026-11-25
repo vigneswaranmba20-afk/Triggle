@@ -1,102 +1,156 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 400" width="440" height="400" role="img" aria-label="Square in Quadrant III and Trapezium across Quadrants I-IV">
-  <rect width="440" height="400" rx="12" fill="#fbfaf7" stroke="#d8d5ce"/>
-  <line x1="34.0" y1="24" x2="34.0" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="61.3" y1="24" x2="61.3" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="88.6" y1="24" x2="88.6" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="115.9" y1="24" x2="115.9" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="143.1" y1="24" x2="143.1" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="170.4" y1="24" x2="170.4" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="197.7" y1="24" x2="197.7" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="225.0" y1="24" x2="225.0" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="252.3" y1="24" x2="252.3" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="279.6" y1="24" x2="279.6" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="306.9" y1="24" x2="306.9" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="334.1" y1="24" x2="334.1" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="361.4" y1="24" x2="361.4" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="388.7" y1="24" x2="388.7" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="416.0" y1="24" x2="416.0" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="370.0" x2="416" y2="370.0" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="335.4" x2="416" y2="335.4" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="300.8" x2="416" y2="300.8" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="266.2" x2="416" y2="266.2" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="231.6" x2="416" y2="231.6" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="197.0" x2="416" y2="197.0" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="162.4" x2="416" y2="162.4" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="127.8" x2="416" y2="127.8" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="93.2" x2="416" y2="93.2" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="58.6" x2="416" y2="58.6" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="24.0" x2="416" y2="24.0" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="225.0" y1="18" x2="225.0" y2="376" stroke="#1d3557" stroke-width="1.8"/>
-  <text x="231.0" y="30" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#1d3557">Y</text>
-  <text x="231.0" y="384" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#1d3557">Y′</text>
-  <line x1="28" y1="197.0" x2="422" y2="197.0" stroke="#1d3557" stroke-width="1.8"/>
-  <text x="424" y="201.0" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#1d3557">X</text>
-  <text x="16" y="201.0" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#1d3557">X′</text>
-  <line x1="34.0" y1="194.0" x2="34.0" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="34.0" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-7</text>
-  <line x1="61.3" y1="194.0" x2="61.3" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="61.3" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-6</text>
-  <line x1="88.6" y1="194.0" x2="88.6" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="88.6" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-5</text>
-  <line x1="115.9" y1="194.0" x2="115.9" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="115.9" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-4</text>
-  <line x1="143.1" y1="194.0" x2="143.1" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="143.1" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-3</text>
-  <line x1="170.4" y1="194.0" x2="170.4" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="170.4" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-2</text>
-  <line x1="197.7" y1="194.0" x2="197.7" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="197.7" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-1</text>
-  <line x1="252.3" y1="194.0" x2="252.3" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="252.3" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">1</text>
-  <line x1="279.6" y1="194.0" x2="279.6" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="279.6" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">2</text>
-  <line x1="306.9" y1="194.0" x2="306.9" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="306.9" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">3</text>
-  <line x1="334.1" y1="194.0" x2="334.1" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="334.1" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">4</text>
-  <line x1="361.4" y1="194.0" x2="361.4" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="361.4" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">5</text>
-  <line x1="388.7" y1="194.0" x2="388.7" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="388.7" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">6</text>
-  <line x1="416.0" y1="194.0" x2="416.0" y2="200.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="416.0" y="211.0" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">7</text>
-  <line x1="222.0" y1="370.0" x2="228.0" y2="370.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="219.0" y="373.0" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-5</text>
-  <line x1="222.0" y1="335.4" x2="228.0" y2="335.4" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="219.0" y="338.4" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-4</text>
-  <line x1="222.0" y1="300.8" x2="228.0" y2="300.8" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="219.0" y="303.8" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-3</text>
-  <line x1="222.0" y1="266.2" x2="228.0" y2="266.2" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="219.0" y="269.2" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-2</text>
-  <line x1="222.0" y1="231.6" x2="228.0" y2="231.6" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="219.0" y="234.6" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-1</text>
-  <line x1="222.0" y1="162.4" x2="228.0" y2="162.4" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="219.0" y="165.4" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">1</text>
-  <line x1="222.0" y1="127.8" x2="228.0" y2="127.8" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="219.0" y="130.8" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">2</text>
-  <line x1="222.0" y1="93.2" x2="228.0" y2="93.2" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="219.0" y="96.2" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">3</text>
-  <line x1="222.0" y1="58.6" x2="228.0" y2="58.6" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="219.0" y="61.6" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">4</text>
-  <line x1="222.0" y1="24.0" x2="228.0" y2="24.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="219.0" y="27.0" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">5</text>
-  <text x="219.0" y="210.0" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#1d3557">O</text>
-  <polygon points="225.0,197.0 115.9,197.0 115.9,335.4 225.0,335.4" fill="rgba(42,157,143,0.16)" stroke="#2a9d8f" stroke-width="2"/>
-  <circle cx="225.0" cy="197.0" r="4.5" fill="#2a9d8f" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="231.0" y="191.0" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#14213d">(0,0)</text>
-  <circle cx="115.9" cy="197.0" r="4.5" fill="#2a9d8f" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="89.9" y="191.0" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#14213d">(-4,0)</text>
-  <circle cx="115.9" cy="335.4" r="4.5" fill="#2a9d8f" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="89.9" y="349.4" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#14213d">(-4,-4)</text>
-  <circle cx="225.0" cy="335.4" r="4.5" fill="#2a9d8f" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="231.0" y="349.4" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#14213d">(0,-4)</text>
-  <polygon points="143.1,93.2 279.6,93.2 361.4,231.6 61.3,231.6" fill="rgba(231,111,81,0.16)" stroke="#e76f51" stroke-width="2"/>
-  <circle cx="143.1" cy="93.2" r="4.5" fill="#e76f51" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="115.1" y="86.2" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#14213d">(-3,3)</text>
-  <circle cx="279.6" cy="93.2" r="4.5" fill="#e76f51" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="285.6" y="86.2" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#14213d">(2,3)</text>
-  <circle cx="61.3" cy="231.6" r="4.5" fill="#e76f51" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="37.3" y="245.6" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#14213d">(-6,-1)</text>
-  <circle cx="361.4" cy="231.6" r="4.5" fill="#e76f51" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="367.4" y="245.6" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#14213d">(5,-1)</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 690" width="420" height="690" role="img" aria-labelledby="title">
+  <title id="title">Coordinate plots for PQRS, ABCDA and ABDCA</title>
+  <style>
+    text{font:13px system-ui,sans-serif;fill:#334155}
+    .heading{font-size:17px;font-weight:700;fill:#0f172a}
+    .grid{stroke:#dbe5ed;stroke-width:1}
+    .axis{stroke:#546579;stroke-width:1.5}
+    .outline{stroke:#2563a5;stroke-width:3;stroke-linejoin:round;fill:#d9edf9;fill-opacity:.72}
+    .crossed{stroke:#9c4310;stroke-width:3;stroke-linejoin:round;fill:none}
+    .point{fill:#172b43}
+    .label{font-weight:700}
+  </style>
+  <rect width="420" height="690" rx="14" fill="#fbfdff"/>
+  <g aria-label="(i) PQRS">
+    <rect x="17" y="9" width="386" height="218" rx="11" fill="white" stroke="#cbd7e6"/>
+    <text x="32" y="36" class="heading">(i) PQRS</text>
+    <line class="grid" x1="35" y1="54" x2="35" y2="204"/>
+    <line class="grid" x1="60" y1="54" x2="60" y2="204"/>
+    <text text-anchor="middle" x="60" y="220">−6</text>
+    <line class="grid" x1="85" y1="54" x2="85" y2="204"/>
+    <line class="grid" x1="110" y1="54" x2="110" y2="204"/>
+    <text text-anchor="middle" x="110" y="220">−4</text>
+    <line class="grid" x1="135" y1="54" x2="135" y2="204"/>
+    <line class="grid" x1="160" y1="54" x2="160" y2="204"/>
+    <text text-anchor="middle" x="160" y="220">−2</text>
+    <line class="grid" x1="185" y1="54" x2="185" y2="204"/>
+    <line class="axis" x1="210" y1="54" x2="210" y2="204"/>
+    <text text-anchor="middle" x="210" y="220">0</text>
+    <line class="grid" x1="235" y1="54" x2="235" y2="204"/>
+    <line class="grid" x1="260" y1="54" x2="260" y2="204"/>
+    <text text-anchor="middle" x="260" y="220">2</text>
+    <line class="grid" x1="285" y1="54" x2="285" y2="204"/>
+    <line class="grid" x1="310" y1="54" x2="310" y2="204"/>
+    <text text-anchor="middle" x="310" y="220">4</text>
+    <line class="grid" x1="335" y1="54" x2="335" y2="204"/>
+    <line class="grid" x1="360" y1="54" x2="360" y2="204"/>
+    <text text-anchor="middle" x="360" y="220">6</text>
+    <line class="grid" x1="385" y1="54" x2="385" y2="204"/>
+    <line class="grid" x1="35" y1="204" x2="385" y2="204"/>
+    <text text-anchor="end" x="30" y="208">−5</text>
+    <line class="grid" x1="35" y1="179" x2="385" y2="179"/>
+    <line class="grid" x1="35" y1="154" x2="385" y2="154"/>
+    <line class="grid" x1="35" y1="129" x2="385" y2="129"/>
+    <line class="grid" x1="35" y1="104" x2="385" y2="104"/>
+    <line class="axis" x1="35" y1="79" x2="385" y2="79"/>
+    <text text-anchor="end" x="30" y="83">0</text>
+    <line class="grid" x1="35" y1="54" x2="385" y2="54"/>
+    <text text-anchor="end" x="30" y="58">1</text>
+    <text x="390" y="83">x</text>
+    <text x="217" y="52">y</text>
+    <polygon id="order-PQRS" class="outline" points="210,79 110,79 110,179 210,179"/>
+    <circle class="point" cx="210" cy="79" r="3.8"/>
+    <text class="label" x="216" y="71">P</text>
+    <circle class="point" cx="110" cy="79" r="3.8"/>
+    <text class="label" x="116" y="71">Q</text>
+    <circle class="point" cx="110" cy="179" r="3.8"/>
+    <text class="label" x="116" y="169">R</text>
+    <circle class="point" cx="210" cy="179" r="3.8"/>
+    <text class="label" x="216" y="169">S</text>
+  </g>
+  <g aria-label="(ii) ABCDA">
+    <rect x="17" y="236" width="386" height="218" rx="11" fill="white" stroke="#cbd7e6"/>
+    <text x="32" y="263" class="heading">(ii) ABCDA</text>
+    <line class="grid" x1="35" y1="281" x2="35" y2="431"/>
+    <line class="grid" x1="60" y1="281" x2="60" y2="431"/>
+    <text text-anchor="middle" x="60" y="447">−6</text>
+    <line class="grid" x1="85" y1="281" x2="85" y2="431"/>
+    <line class="grid" x1="110" y1="281" x2="110" y2="431"/>
+    <text text-anchor="middle" x="110" y="447">−4</text>
+    <line class="grid" x1="135" y1="281" x2="135" y2="431"/>
+    <line class="grid" x1="160" y1="281" x2="160" y2="431"/>
+    <text text-anchor="middle" x="160" y="447">−2</text>
+    <line class="grid" x1="185" y1="281" x2="185" y2="431"/>
+    <line class="axis" x1="210" y1="281" x2="210" y2="431"/>
+    <text text-anchor="middle" x="210" y="447">0</text>
+    <line class="grid" x1="235" y1="281" x2="235" y2="431"/>
+    <line class="grid" x1="260" y1="281" x2="260" y2="431"/>
+    <text text-anchor="middle" x="260" y="447">2</text>
+    <line class="grid" x1="285" y1="281" x2="285" y2="431"/>
+    <line class="grid" x1="310" y1="281" x2="310" y2="431"/>
+    <text text-anchor="middle" x="310" y="447">4</text>
+    <line class="grid" x1="335" y1="281" x2="335" y2="431"/>
+    <line class="grid" x1="360" y1="281" x2="360" y2="431"/>
+    <text text-anchor="middle" x="360" y="447">6</text>
+    <line class="grid" x1="385" y1="281" x2="385" y2="431"/>
+    <line class="grid" x1="35" y1="431" x2="385" y2="431"/>
+    <text text-anchor="end" x="30" y="435">−2</text>
+    <line class="grid" x1="35" y1="406" x2="385" y2="406"/>
+    <line class="axis" x1="35" y1="381" x2="385" y2="381"/>
+    <text text-anchor="end" x="30" y="385">0</text>
+    <line class="grid" x1="35" y1="356" x2="385" y2="356"/>
+    <line class="grid" x1="35" y1="331" x2="385" y2="331"/>
+    <line class="grid" x1="35" y1="306" x2="385" y2="306"/>
+    <line class="grid" x1="35" y1="281" x2="385" y2="281"/>
+    <text text-anchor="end" x="30" y="285">4</text>
+    <text x="390" y="385">x</text>
+    <text x="217" y="279">y</text>
+    <polygon id="order-ABCD" class="crossed" points="135,306 260,306 60,406 335,406"/>
+    <circle class="point" cx="135" cy="306" r="3.8"/>
+    <text class="label" x="141" y="298">A</text>
+    <circle class="point" cx="260" cy="306" r="3.8"/>
+    <text class="label" x="266" y="298">B</text>
+    <circle class="point" cx="60" cy="406" r="3.8"/>
+    <text class="label" x="66" y="396">C</text>
+    <circle class="point" cx="335" cy="406" r="3.8"/>
+    <text class="label" x="341" y="396">D</text>
+    <circle id="intersection" cx="197.5" cy="337.25" r="4" fill="#9c4310" stroke="white"/>
+  </g>
+  <g aria-label="(ii) ABDCA">
+    <rect x="17" y="463" width="386" height="218" rx="11" fill="white" stroke="#cbd7e6"/>
+    <text x="32" y="490" class="heading">(ii) ABDCA</text>
+    <line class="grid" x1="35" y1="508" x2="35" y2="658"/>
+    <line class="grid" x1="60" y1="508" x2="60" y2="658"/>
+    <text text-anchor="middle" x="60" y="674">−6</text>
+    <line class="grid" x1="85" y1="508" x2="85" y2="658"/>
+    <line class="grid" x1="110" y1="508" x2="110" y2="658"/>
+    <text text-anchor="middle" x="110" y="674">−4</text>
+    <line class="grid" x1="135" y1="508" x2="135" y2="658"/>
+    <line class="grid" x1="160" y1="508" x2="160" y2="658"/>
+    <text text-anchor="middle" x="160" y="674">−2</text>
+    <line class="grid" x1="185" y1="508" x2="185" y2="658"/>
+    <line class="axis" x1="210" y1="508" x2="210" y2="658"/>
+    <text text-anchor="middle" x="210" y="674">0</text>
+    <line class="grid" x1="235" y1="508" x2="235" y2="658"/>
+    <line class="grid" x1="260" y1="508" x2="260" y2="658"/>
+    <text text-anchor="middle" x="260" y="674">2</text>
+    <line class="grid" x1="285" y1="508" x2="285" y2="658"/>
+    <line class="grid" x1="310" y1="508" x2="310" y2="658"/>
+    <text text-anchor="middle" x="310" y="674">4</text>
+    <line class="grid" x1="335" y1="508" x2="335" y2="658"/>
+    <line class="grid" x1="360" y1="508" x2="360" y2="658"/>
+    <text text-anchor="middle" x="360" y="674">6</text>
+    <line class="grid" x1="385" y1="508" x2="385" y2="658"/>
+    <line class="grid" x1="35" y1="658" x2="385" y2="658"/>
+    <text text-anchor="end" x="30" y="662">−2</text>
+    <line class="grid" x1="35" y1="633" x2="385" y2="633"/>
+    <line class="axis" x1="35" y1="608" x2="385" y2="608"/>
+    <text text-anchor="end" x="30" y="612">0</text>
+    <line class="grid" x1="35" y1="583" x2="385" y2="583"/>
+    <line class="grid" x1="35" y1="558" x2="385" y2="558"/>
+    <line class="grid" x1="35" y1="533" x2="385" y2="533"/>
+    <line class="grid" x1="35" y1="508" x2="385" y2="508"/>
+    <text text-anchor="end" x="30" y="512">4</text>
+    <text x="390" y="612">x</text>
+    <text x="217" y="506">y</text>
+    <polygon id="order-ABDC" class="outline" points="135,533 260,533 335,633 60,633"/>
+    <circle class="point" cx="135" cy="533" r="3.8"/>
+    <text class="label" x="141" y="525">A</text>
+    <circle class="point" cx="260" cy="533" r="3.8"/>
+    <text class="label" x="266" y="525">B</text>
+    <circle class="point" cx="60" cy="633" r="3.8"/>
+    <text class="label" x="66" y="623">C</text>
+    <circle class="point" cx="335" cy="633" r="3.8"/>
+    <text class="label" x="341" y="623">D</text>
+  </g>
 </svg>
