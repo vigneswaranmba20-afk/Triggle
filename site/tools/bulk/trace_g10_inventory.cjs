@@ -86,12 +86,18 @@ const TEXTBOOK_SPEC = [
   { chapter: 3, exercise: '3.13', enPdfPages: [125], enPrintedPages: [119], taPdfPages: [127], questions: qRange(1, 5, { 1: ['i', 'ii', 'iii', 'iv', 'v'], 2: ['i', 'ii'] }) },
   { chapter: 3, exercise: '3.14', enPdfPages: [128], enPrintedPages: [122], taPdfPages: [130], questions: qRange(1, 6, { 1: ['i', 'ii', 'iii', 'iv'], 2: ['i', 'ii', 'iii'], 3: ['i', 'ii', 'iii'] }) },
   { chapter: 3, exercise: '3.15', enPdfPages: [135, 136], enPrintedPages: [129, 130], taPdfPages: [137], questions: qRange(1, 6, { 1: ['i', 'ii'], 2: ['i', 'ii'], 3: ['i', 'ii'], 4: ['i', 'ii'], 5: ['i', 'ii'], 6: ['i', 'ii'] }) },
-  { chapter: 3, exercise: '3.16', enPdfPages: [143, 144], enPrintedPages: [137, 138], taPdfPages: [145], questions: qRange(1, 8, { 1: ['i', 'ii', 'iii', 'iv', 'v', 'vi'] }) },
-  { chapter: 3, exercise: '3.17', enPdfPages: [150, 151], enPrintedPages: [144, 145], taPdfPages: [153], questions: qRange(1, 7, { 1: ['i', 'ii', 'iii'], 3: ['i', 'ii'], 7: ['i', 'ii', 'iii'] }) },
-  { chapter: 3, exercise: '3.18', enPdfPages: [154, 155], enPrintedPages: [148, 149], taPdfPages: [157], questions: qRange(1, 8, { 1: ['i', 'ii'], 4: ['i', 'ii'], 5: ['i', 'ii'] }) },
-  { chapter: 3, exercise: '3.19', enPdfPages: [159, 160], enPrintedPages: [153, 154], taPdfPages: [162], questions: qRange(1, 13, { 1: ['i', 'ii', 'iii', 'iv', 'v'], 7: ['i', 'ii', 'iii'] }) },
-  { chapter: 3, exercise: '3.20', enPdfPages: [160, 161, 162], enPrintedPages: [154, 155, 156], taPdfPages: [164], questions: qRange(1, 20) },
-  { chapter: 3, exercise: '3.unit', enPdfPages: [162, 163, 164], enPrintedPages: [156, 157, 158], taPdfPages: [166, 167], questions: qRange(1, 20, { 1: ['i', 'ii'], 2: ['i', 'ii'], 5: ['i', 'ii'], 6: ['i', 'ii'], 17: ['i', 'ii', 'iii'] }) },
+  { chapter: 3, exercise: '3.16', enPdfPages: [143], enPrintedPages: [137], taPdfPages: [145], questions: qRange(1, 8, { 1: ['i', 'ii', 'iii', 'iv', 'v', 'vi'] }) },
+  { chapter: 3, exercise: '3.17', enPdfPages: [150], enPrintedPages: [144], taPdfPages: [152, 153], questions: qRange(1, 7, { 1: ['i', 'ii', 'iii'], 3: ['i', 'ii'], 7: ['i', 'ii', 'iii'] }) },
+  { chapter: 3, exercise: '3.18', enPdfPages: [154, 155], enPrintedPages: [148, 149], taPdfPages: [157, 158], questions: qRange(1, 8, { 1: ['i', 'ii'], 4: ['i', 'ii'], 5: ['i', 'ii'] }) },
+  { chapter: 3, exercise: '3.19', enPdfPages: [159, 160], enPrintedPages: [153, 154], taPdfPages: [163], questions: qRange(1, 13, { 1: ['i', 'ii', 'iii', 'iv', 'v'], 7: ['i', 'ii', 'iii'] }) },
+  {
+    chapter: 3, exercise: '3.20', enPdfPages: [160, 161, 162], enPrintedPages: [154, 155, 156], taPdfPages: [164, 165, 166],
+    questions: qRange(1, 20),
+    blockedTasks: {
+      '11/whole': 'The Tamil prompt reverses the English squared-roots premise. The keyed geometric progression does not follow from the Tamil premise.'
+    }
+  },
+  { chapter: 3, exercise: '3.unit', enPdfPages: [162, 163, 164], enPrintedPages: [156, 157, 158], taPdfPages: [166, 167, 168], questions: qRange(1, 20, { 6: ['i', 'ii'], 15: ['i', 'ii'], 17: ['i', 'ii'] }) },
 
   // Chapter 4: one task per printed subpart, or per question where unlettered.
   { chapter: 4, exercise: '4.1', enPdfPages: [176, 177], enPrintedPages: [170, 171], taPdfPages: [181, 182], questions: qRange(1, 13, { 1: ['i', 'ii'], 7: ['i', 'ii', 'iii', 'iv'] }) },
@@ -140,7 +146,13 @@ const TEXTBOOK_SPEC = [
   { chapter: 8, exercise: '8.2', enPdfPages: [322], enPrintedPages: [316], taPdfPages: [331], questions: qRange(1, 8) },
   { chapter: 8, exercise: '8.3', enPdfPages: [328, 329], enPrintedPages: [322, 323], taPdfPages: [340], questions: qRange(1, 13, { 3: ['i', 'ii'], 5: ['i', 'ii'], 6: ['i', 'ii'], 7: ['i', 'ii', 'iii', 'iv'], 8: ['i', 'ii', 'iii', 'iv'], 9: ['i', 'ii', 'iii', 'iv'], 12: ['i', 'ii', 'iii'], 13: ['i', 'ii', 'iii'] }) },
   { chapter: 8, exercise: '8.4', enPdfPages: [335], enPrintedPages: [329], taPdfPages: [347], questions: qRange(1, 13, { 2: ['i', 'ii', 'iii'] }), blockedTasks: { '1/whole': 'BILINGUAL_SOURCE_MATH_CONTRADICTION: Both English and Tamil 2025 editions print P(A)=2/3, P(B)=2/5, P(A∪B)=1/3, violating P(A∪B) >= P(A).' } },
-  { chapter: 8, exercise: '8.5', enPdfPages: [336, 337], enPrintedPages: [330, 331], taPdfPages: [349], questions: qRange(1, 15) },
+  {
+    chapter: 8, exercise: '8.5', enPdfPages: [336, 337], enPrintedPages: [330, 331], taPdfPages: [348, 349],
+    questions: qRange(1, 15),
+    blockedTasks: {
+      '11/whole': 'The question omits the number of pages. The English and Tamil keys disagree. See the Chapter 8 release report.'
+    }
+  },
   { chapter: 8, exercise: '8.unit', enPdfPages: [337, 338], enPrintedPages: [331, 332], taPdfPages: [350, 351], questions: qRange(1, 11) }
 ];
 
@@ -292,7 +304,7 @@ function buildInventory({ root = ROOT, deploymentStatus = 'merged-and-deployed-b
         if (blockedReason && (partMatches.length === 0 || spec.chapter === 4)) {
           status = 'BLOCKED';
           note = blockedReason;
-          if (spec.chapter === 4) {
+          if (spec.chapter === 3 || spec.chapter === 4) {
             sourceStatus = 'source-verified-2025';
             mathValidation = 'source-defect-confirmed';
             if (partMatches.length === 1) deployState = 'diagnostic-card-on-baseline';
@@ -302,10 +314,11 @@ function buildInventory({ root = ROOT, deploymentStatus = 'merged-and-deployed-b
           note = 'Multiple student records map to the same textbook part';
         } else if (partMatches.length === 1) {
           const { item } = partMatches[0];
-          const hasValidSteps = Array.isArray(item.steps) && (spec.chapter === 4
-            ? item.steps.length > 0 && item.steps.every(step => typeof step.en === 'string' && step.en.trim())
+          const hasValidSteps = Array.isArray(item.steps) && (spec.chapter === 3 || spec.chapter === 4
+            ? item.steps.length >= (spec.chapter === 3 ? 2 : 1) && item.steps.every(step => typeof step.en === 'string' && step.en.trim())
             : item.steps.length >= 2 && item.steps.every(step => step.en && step.eq));
-          const hasAnswer = typeof item.answer === 'string' && item.answer.trim().length > 0;
+          const answer = typeof item.answer === 'string' ? item.answer : item.answer?.en;
+          const hasAnswer = typeof answer === 'string' && answer.trim().length > 0;
           if (!hasValidSteps || !hasAnswer || isLegacyParaphrased(item)) {
             status = 'PARTIAL';
             sourceStatus = isLegacyParaphrased(item) ? 'legacy-paraphrased-prompt' : 'source-checked';
@@ -316,7 +329,8 @@ function buildInventory({ root = ROOT, deploymentStatus = 'merged-and-deployed-b
             status = 'COMPLETE';
             sourceStatus = item.traceStatus || 'source-verified-2025';
             mathValidation = 'independently-verified';
-            deployState = spec.chapter === 4 && ['4.4', '4.5', '4.unit'].includes(spec.exercise)
+            deployState = (spec.chapter === 3 && spec.enPdfPages[0] >= 143)
+              || (spec.chapter === 4 && ['4.4', '4.5', '4.unit'].includes(spec.exercise))
               ? 'integrated-pending-production-evidence' : deploymentStatus;
           }
         }
@@ -379,7 +393,7 @@ function buildInventory({ root = ROOT, deploymentStatus = 'merged-and-deployed-b
 
   return {
     schemaVersion: 1,
-    generatedOn: '2026-11-18',
+    generatedOn: '2026-11-25',
     grade: 10,
     edition: 'TN SCERT 2025 Revised Edition',
     sourceBooks: {

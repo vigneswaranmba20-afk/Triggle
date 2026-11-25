@@ -1,0 +1,809 @@
+{
+  "schemaVersion": 1,
+  "edition": "2025 revised",
+  "sources": [
+    {
+      "id": "g10-2025-en",
+      "grade": 10,
+      "language": "en",
+      "title": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "2025 revised",
+      "url": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    },
+    {
+      "id": "g10-2025-ta",
+      "grade": 10,
+      "language": "ta",
+      "title": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "2025 revised",
+      "url": "https://drive.google.com/file/d/1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC/view",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    }
+  ],
+  "items": [
+    {
+      "id": "c10-3-ex3-16-q1-i",
+      "questionNumber": "1",
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(i) x²−9x+20=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(i) x²−9x+20=0"
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q1-ii",
+      "questionNumber": "1",
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(ii) x²−4x+4=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(ii) x²−4x+4=0"
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q1-iii",
+      "questionNumber": "1",
+      "part": "iii",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(iii) x²+x+7=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(iii) x²+x+7=0"
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q1-iv",
+      "questionNumber": "1",
+      "part": "iv",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(iv) x²−9=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(iv) x²−9=0"
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q1-v",
+      "questionNumber": "1",
+      "part": "v",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(v) x²−6x+9=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(v) x²−6x+9=0"
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q1-vi",
+      "questionNumber": "1",
+      "part": "vi",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(vi) (2x−3)(x+2)=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(vi) (2x−3)(x+2)=0"
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q2",
+      "questionNumber": "2",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "2. Draw the graph of y=x²−4 and hence solve x²−x−12=0",
+        "ta": "2. y=x²−4 வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²−x−12=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q3",
+      "questionNumber": "3",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. Draw the graph of y=x²+x and hence solve x²+1=0",
+        "ta": "3. y=x²+x –யின் வரைபடம் வரைந்து, x²+1=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q4",
+      "questionNumber": "4",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. Draw the graph of y=x²+3x+2 and use it to solve x²+2x+1=0",
+        "ta": "4. y=x²+3x+2 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²+2x+1=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q5",
+      "questionNumber": "5",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "5. Draw the graph of y=x²+3x−4 and hence use it to solve x²+3x−4=0",
+        "ta": "5. y=x²+3x−4 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²+3x−4=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q6",
+      "questionNumber": "6",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "6. Draw the graph of y=x²−5x−6 and hence solve x²−5x−14=0",
+        "ta": "6. y=x²−5x−6 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²−5x−14=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q7",
+      "questionNumber": "7",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. Draw the graph of y=2x²−3x−5 and hence solve 2x²−4x−6=0",
+        "ta": "7. y=2x²−3x−5 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி 2x²−4x−6=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      }
+    },
+    {
+      "id": "c10-3-ex3-16-q8",
+      "questionNumber": "8",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            143
+          ],
+          "printed": [
+            137
+          ]
+        },
+        "ta": {
+          "pdf": [
+            145
+          ],
+          "printed": [
+            139
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "8. Draw the graph of y=(x−1)(x+3) and hence solve x²−x−6=0",
+        "ta": "8. y=(x−1)(x+3) –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²−x−6=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q1-i",
+      "questionNumber": "1",
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            152
+          ],
+          "printed": [
+            146
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. In the matrix A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1], write\n(i) The number of elements",
+        "ta": "1. A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1] என்ற அணியில்\n(i) உறுப்புகளின் எண்ணிக்கையைக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q1-ii",
+      "questionNumber": "1",
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            152
+          ],
+          "printed": [
+            146
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. In the matrix A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1], write\n(ii) The order of the matrix",
+        "ta": "1. A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1] என்ற அணியில்\n(ii) அணியின் வரிசையைக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q1-iii",
+      "questionNumber": "1",
+      "part": "iii",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            152
+          ],
+          "printed": [
+            146
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. In the matrix A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1], write\n(iii) Write the elements a₂₂, a₂₃, a₂₄, a₃₄, a₄₃, a₄₄",
+        "ta": "1. A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1] என்ற அணியில்\n(iii) a₂₂, a₂₃, a₂₄, a₃₄, a₄₃, a₄₄ஆகிய உறுப்புகளை எழுதுக."
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q2",
+      "questionNumber": "2",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            153
+          ],
+          "printed": [
+            147
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "2. If a matrix has 18 elements, what are the possible orders it can have? What if it has 6 elements?",
+        "ta": "2. 18 உறுப்புகளைக் கொண்ட ஓர் அணிக்கு எவ்வகை வரிசைகள் இருக்க இயலும்? ஓர் அணியின் உறுப்புகளின் எண்ணிக்கை 6 எனில், எவ்வகை வரிசைகள் இருக்க இயலும்?"
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q3-i",
+      "questionNumber": "3",
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            153
+          ],
+          "printed": [
+            147
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. Construct a 3×3 matrix whose elements are given by\n(i) a_(ij)=|i−2j|",
+        "ta": "3. பின்வருவனவற்றைக் கொண்டு 3×3 வரிசையைக் கொண்ட அணி A=[a_(ij)]–யினைக் காண்க.\n(i) a_(ij)=|i−2j|"
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q3-ii",
+      "questionNumber": "3",
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            153
+          ],
+          "printed": [
+            147
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. Construct a 3×3 matrix whose elements are given by\n(ii) a_(ij)=((i+j)³)/(3)",
+        "ta": "3. பின்வருவனவற்றைக் கொண்டு 3×3 வரிசையைக் கொண்ட அணி A=[a_(ij)]–யினைக் காண்க.\n(ii) a_(ij)=((i+j)³)/(3)"
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q4",
+      "questionNumber": "4",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            153
+          ],
+          "printed": [
+            147
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. If A=[5, 4, 3; 1, −7, 9; 3, 8, 2] then find the transpose of A.",
+        "ta": "4. A=[5, 4, 3; 1, −7, 9; 3, 8, 2] எனில், A–யின் நிரை நிரல் மாற்று அணியைக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q5",
+      "questionNumber": "5",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            153
+          ],
+          "printed": [
+            147
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "5. If A=[√(7), −3; − √(5), 2; √(3), −5] then find the transpose of −A.",
+        "ta": "5. A=[√(7), −3; − √(5), 2; √(3), −5] எனில், −A–யின் நிரை நிரல் மாற்று அணியைக் காண்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q6",
+      "questionNumber": "6",
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            153
+          ],
+          "printed": [
+            147
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "6. If A=[5, 2, 2; −√(17), 0.7, (5)/(2); 8, 3, 1] then verify (Aᵀ)ᵀ=A",
+        "ta": "6. A=[5, 2, 2; −√(17), 0.7, (5)/(2); 8, 3, 1] எனில், (Aᵀ)ᵀ=A என்பதைச் சரிபார்க்க."
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q7-i",
+      "questionNumber": "7",
+      "part": "i",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            153
+          ],
+          "printed": [
+            147
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. Find the values of x, y and z from the following equations\n(i) [12, 3; x, 5]=[y, z; 3, 5]",
+        "ta": "7. கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n(i) [12, 3; x, 5]=[y, z; 3, 5]"
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q7-ii",
+      "questionNumber": "7",
+      "part": "ii",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            153
+          ],
+          "printed": [
+            147
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. Find the values of x, y and z from the following equations\n(ii) [x + y, 2; z + 5, x y]=[6, 2; 5, 8]",
+        "ta": "7. கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n(ii) [x + y, 2; z + 5, x y]=[6, 2; 5, 8]"
+      }
+    },
+    {
+      "id": "c10-3-ex3-17-q7-iii",
+      "questionNumber": "7",
+      "part": "iii",
+      "sourcePages": {
+        "en": {
+          "pdf": [
+            150
+          ],
+          "printed": [
+            144
+          ]
+        },
+        "ta": {
+          "pdf": [
+            153
+          ],
+          "printed": [
+            147
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. Find the values of x, y and z from the following equations\n(iii) [x + y + z; x + z; y + z]=[9; 5; 7]",
+        "ta": "7. கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n(iii) [x + y + z; x + z; y + z]=[9; 5; 7]"
+      }
+    }
+  ]
+}

@@ -74,7 +74,8 @@ assert.deepEqual(linked,[
   'c10-3-ex3-4-q1-i','c10-3-ex3-5-q1-i','c10-3-ex3-6-q1-i',
   'c10-3-ex3-7-q1-i','c10-3-ex3-8-q1-i','c10-3-ex3-9-q1-i',
   'c10-3-ex3-10-q1-i','c10-3-ex3-11-q1-i','c10-3-ex3-12-q1',
-  'c10-3-ex3-13-q1-i','c10-3-ex3-14-q1-i'
+  'c10-3-ex3-13-q1-i','c10-3-ex3-14-q1-i','c10-3-ex3-15-q1-i','c10-3-ex3-16-q1-i',
+  'c10-3-ex3-17-q1-i','c10-3-ex3-18-q1-i','c10-3-ex3-19-q1-i','c10-3-ex3-20-q20'
 ]);
 for(const id of linked)assert(g10Ids.has(id),'Linked exercise ID missing: '+id);
 

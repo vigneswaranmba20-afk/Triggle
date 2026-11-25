@@ -854,6 +854,7 @@ window.TRIGGLE_G10_CH3_PATH={
       "id": "g10-ch3-variations",
       "section": "3.7",
       "relatedExercise": "3.15",
+      "practiceId": "c10-3-ex3-15-q1-i",
       "title": {
         "en": "Graphs of direct and inverse variations",
         "ta": "நேர் மற்றும் எதிர் மாறுபாடுகளின் வரைபடங்கள்"
@@ -937,6 +938,7 @@ window.TRIGGLE_G10_CH3_PATH={
       "id": "g10-ch3-quad-graphs",
       "section": "3.8",
       "relatedExercise": "3.16",
+      "practiceId": "c10-3-ex3-16-q1-i",
       "title": {
         "en": "Quadratic graphs: parabolas & solving by intersection",
         "ta": "இருபடிச் சமன்பாடுகளின் வரைபடங்கள்: பரவளையம் & வெட்டுக் கோடுகள்"
@@ -1020,6 +1022,7 @@ window.TRIGGLE_G10_CH3_PATH={
       "id": "g10-ch3-matrix-types",
       "section": "3.9.1–3.9.2",
       "relatedExercise": "3.17",
+      "practiceId": "c10-3-ex3-17-q1-i",
       "title": {
         "en": "Order, elements, types & transpose of a matrix",
         "ta": "அணியின் வரிசை, உறுப்புகள், வகைகள் மற்றும் நிரை நிரல் மாற்று அணி"
@@ -1103,6 +1106,9 @@ window.TRIGGLE_G10_CH3_PATH={
       "id": "g10-ch3-matrix-ops",
       "section": "3.9.3",
       "relatedExercise": "3.18–3.20",
+      "practiceId": "c10-3-ex3-18-q1-i",
+      "secondaryPracticeId": "c10-3-ex3-19-q1-i",
+      "tertiaryPracticeId": "c10-3-ex3-20-q20",
       "title": {
         "en": "Operations on matrices (+, −, scalar & multiplication)",
         "ta": "அணிகளின் மீதான செயல்கள் (+, −, திசையிலி & அணிப் பெருக்கல்)"
