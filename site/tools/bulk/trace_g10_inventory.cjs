@@ -107,7 +107,7 @@ const TEXTBOOK_SPEC = [
     blockedTasks: {
       '6/i': 'Both editions omit the required order of E and D. With E on the C side of D, the ax term in the formula for b² has the opposite sign.',
       '6/ii': 'Both editions omit the required order of E and D. With E on the C side of D, the ax term in the formula for c² has the opposite sign.',
-      '10/whole': 'Neither edition says D, E and F are collinear or specifies their placement. CF is undetermined as printed.'
+      '10/whole': 'Neither edition links F to D and E. The appendix value 6 would follow from Ceva if all three points were internal and CD, AE and BF were concurrent.'
     }
   },
 

@@ -10686,7 +10686,7 @@
               "sourceVerificationStatus": "source-verified-2025",
               "mathematicalValidationStatus": "source-defect-confirmed",
               "deploymentStatus": "not-implemented",
-              "note": "Neither edition says D, E and F are collinear or specifies their placement. CF is undetermined as printed."
+              "note": "Neither edition links F to D and E. The appendix value 6 would follow from Ceva if all three points were internal and CD, AE and BF were concurrent."
             }
           ]
         }

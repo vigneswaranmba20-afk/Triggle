@@ -124,5 +124,9 @@ for (const t of [-8,-1,0,2,7]) {
 // Because the source omits the orientation, the two separate Unit Q6 identities can fail.
 assert.notEqual(3**2+(5-2)**2,3**2+2**2+10*2+25);
 assert.notEqual(3**2+(5+2)**2,3**2+2**2-10*2+25);
+// Unit Q10 does not constrain F. Compare the distinct conditional results.
+const ratio=1/((5/3)*(3/2));
+near(21*ratio/(1+ratio),6);  // Ceva: concurrent cevians, F internal.
+near(21*ratio/(1-ratio),14); // Menelaus: collinear points, F beyond C.
 for (const id of ['c10-4-unit-q6-i','c10-4-unit-q6-ii','c10-4-unit-q10']) assert.ok(!byId.has(id),id);
 console.log('PASS Grade 10 Geometry: 85 unique records, 41 new bilingual prompts and solutions, 15 MCQ answers, 17 original figures and deterministic checks.');

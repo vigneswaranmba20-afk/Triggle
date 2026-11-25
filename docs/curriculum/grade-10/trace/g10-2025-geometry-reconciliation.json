@@ -28,7 +28,7 @@
     },
     {
       "exercise": "4.unit", "question": "10", "enPdf": 207, "taPdf": 214,
-      "evidence": "For A = (0, 0), B = (8, 0) and C = (0, 21), the data give D = (5, 0) and E = (16/5, 63/5). F = (0, 20) or F = (0, 19) both satisfy the stated conditions, giving different lengths. The appendix value 6 follows if D and E are internal and F is the intersection of line DE and extension AC beyond C. Neither edition specifies these conditions."
+      "evidence": "For A = (0, 0), B = (8, 0) and C = (0, 21), the data give D = (5, 0) and E = (16/5, 63/5). F = (0, 20) or F = (0, 19) both satisfy the stated conditions, giving different lengths. The appendix value 6 would follow if D, E and F were all internal and CD, AE and BF were concurrent. Then Ceva gives CF/FA = 2/5, so CF = 6 and FA = 15. Assuming D, E and F collinear instead would give 14 for an external F beyond C. Neither condition appears in either edition."
     }
   ],
   "sourceDiscrepancies": [
