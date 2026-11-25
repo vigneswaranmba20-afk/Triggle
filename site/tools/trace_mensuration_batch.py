@@ -6,6 +6,7 @@ under that directory. The source WAV and exports stay outside of git.
 """
 import argparse
 from concurrent.futures import ProcessPoolExecutor
+from functools import partial
 import json
 import math
 from pathlib import Path
@@ -115,27 +116,40 @@ def render_lesson(root, lesson, timing, formulas, pilot):
         raise ValueError(f"Prepared narration does not match timing manifest for {lesson['id']}")
     beats = timing["beats"][:1] if pilot else timing["beats"]
     target = root / "videos" / ("pilot.mp4" if pilot else lesson["files"]["en"]["video"])
+    math_path = root / "math"
+    paths = [
+        [tuple(math_path / (formulas[row]+".png") for row in rows if row)
+         for rows in [DEFAULT_ROWS.get((index, beat), ()),
+                      *(entry[2:] for entry in CUES[index][beat])]]
+        for beat in range(len(beats))
+    ]
+    return render_timed_lesson(root, lesson["id"], audio, target, beats, paths,
+                               partial(artwork, index))
+
+
+def render_timed_lesson(root, lesson_id, audio, target, beats, paths, build_artwork,
+                        *, pad_audio=True, fade_out_seconds=0):
     frames = math.ceil(beats[-1]["videoEnd"] * FPS - 1e-8)
+    filters = ["-af", "apad"] if pad_audio else []
+    if fade_out_seconds:
+        filters += ["-vf", f"fade=t=out:st={frames/FPS-fade_out_seconds:.6f}"
+                            f":d={fade_out_seconds:.6f}:color=0xf7f9fd"]
     command = [
         "ffmpeg", "-y", "-v", "error", "-threads", "1", "-filter_threads", "1",
         "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{WIDTH}x{HEIGHT}", "-framerate",
-        str(FPS), "-i", "pipe:0", "-i", str(audio), "-af", "apad",
+        str(FPS), "-i", "pipe:0", "-i", str(audio), *filters,
         "-t", f"{frames/FPS:.6f}", "-c:v", "libx264", "-threads", "2",
         "-preset", "veryfast", "-crf", "18", "-pix_fmt", "yuv420p",
         "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709",
         "-c:a", "aac", "-ar", "48000", "-b:a", "112k", "-movflags", "+faststart", str(target)
     ]
     console = root / "evidence" / (target.stem + "-render.log")
-    math_path = root / "math"
     with console.open("w") as log:
         process = subprocess.Popen(command, stdin=subprocess.PIPE, stderr=log)
         try:
             frame = 0
             for beat, info in enumerate(beats):
                 changes = info["cues"]
-                paths = [tuple(math_path / (formulas[row]+".png") for row in rows if row)
-                         for rows in [DEFAULT_ROWS.get((index, beat), ()),
-                                      *(entry[2:] for entry in CUES[index][beat])]]
                 previous = None
                 while frame < math.ceil(info["videoEnd"] * FPS - 1e-8):
                     timestamp = frame / FPS
@@ -147,7 +161,7 @@ def render_lesson(root, lesson, timing, formulas, pilot):
                     # Reuse held frames byte for byte across narration pauses.
                     state = (stage, progress)
                     if state != previous:
-                        image = artwork(index, beat, stage, progress, paths[stage])
+                        image = build_artwork(beat, stage, progress, paths[beat][stage])
                         if beat and timestamp-info["videoStart"] < .16:
                             from PIL import Image
                             blend = max(0, min(1, (timestamp-info["videoStart"])/.16))
@@ -164,7 +178,7 @@ def render_lesson(root, lesson, timing, formulas, pilot):
     if status:
         raise RuntimeError(console.read_text())
     data = verify_video(target, WIDTH, HEIGHT)
-    result = {"id": lesson["id"], "file": target.name, "sha256": sha256(target),
+    result = {"id": lesson_id, "file": target.name, "sha256": sha256(target),
               "durationSeconds": float(data["format"]["duration"]),
               "bytes": target.stat().st_size}
     (root / "evidence" / (target.stem + "-result.json")).write_text(json.dumps(result, indent=2)+"\n")
