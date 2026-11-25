@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "fdf128f9090d66fc318fd6816819863ef68d020a",
-  "updatedAt": "2026-11-25T21:50:30Z",
+  "sourceCommit": "1e74863e7459c4ea6e90cbac8fe3e69623c21380",
+  "updatedAt": "2026-11-25T22:01:25Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -47,7 +47,7 @@
     "site/data/g10-relations-concepts.js": "ebf12612d7aaabff56a529b4866b707f69043abd8009c22350799162e74d04fa",
     "site/data/g9-algebra-chapter.js": "13b62ccfd65b6d0e48d1b2cb0e50dfd0220e5c0572e9a7a81a5cafd6749bbbb9",
     "site/data/g9-ch5-distance-concept.js": "a275ff38a7230ce3e3010cc2d2f66a0fe835435706e34a03094a6ce0e4b4ee12",
-    "site/data/g9-clear-math.js": "4518d031bdeeb3d302262039f01a206289bd185759a85867e33f15192fcf59c1",
+    "site/data/g9-clear-math.js": "c1a021d4972e97283025d52c11a95a99f148c81f16e2fe4f4d0e894361f19d01",
     "site/data/g9-coordinates-concepts.js": "3332cf001ed529d624f33e388ea6426ab5210daae394d0ab35370726e7a5a1ed",
     "site/data/g9-geometry-concepts.js": "d830ca80742ce4f9e78ced05e6db197b0169d5c33ec4c60c47d3b6b4f56a1e1f",
     "site/data/g9-mensuration-chapter.js": "6fd6136c6a2de67eacfc51c320ea1df0364612839a173707e6319128bc51cef9",
@@ -193,7 +193,7 @@
     "site/data/textbook-exercises/g9-ch7-ex7-1-en.js": "1cf2a1ec1d40f676f136b5fcbb3453106ab56eae8521cbe9221cda8f38345647",
     "site/data/textbook-exercises/g9-ch7-ex7-2-en.js": "98257ddd4c6e8e373403d6fcf95bfbfbec10105978b61119efce05e7b02b56f1",
     "site/data/textbook-exercises/g9-ch7-ex7-3-en.js": "74e8370320e973b6e5e4393b9d69d83683b60f0cdb9b10071b1bbd87c36619c0",
-    "site/data/textbook-exercises/g9-ch7-ex7-4-en.js": "6c242918e278fd6ea7c8bfd697fecdf4a7f70b220024c34908f893c367d07e3e",
+    "site/data/textbook-exercises/g9-ch7-ex7-4-en.js": "99dedde2567f2d8f4fbb14d4e21fc81efc16e46c9f528182dd85459a8b5cf3e6",
     "site/data/textbook-exercises/g9-ch8-ex8-1-en.js": "220f6a29bf3a06c04388d8b699c49e03176695ef73fb0da94c9d437521863b2d",
     "site/data/textbook-exercises/g9-ch8-ex8-4-en.js": "7a10a5d9ad77b26bdca8bf1c510c6697ea8820acf66cb7ffc31aa634326f7573",
     "site/data/textbook-exercises/g9-ch8-ex8.2-en.js": "e8f55dffea8901a851cca5d258b391ff0d85ca05478a9f759179e33f4f5bf277",
@@ -219,8 +219,8 @@
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9-frontier.js": "d598f9622e04022df11638a56ece19ad5136657d26f6f341356ddd7092ce6ce8",
-    "site/data/why-step-g9.js": "8307f31932077111e3c993e463b677a850ad755a80b271d35fbb169f01fb402a",
-    "site/index.html": "632305a38e134593e0dcc8a04e07daad81e02e5cd36f6556e4572816ce7e81c5",
+    "site/data/why-step-g9.js": "2f50c267f609b46b57ce74320e92f440713b14a04e63bef1f63c2838076df127",
+    "site/index.html": "fe5a2215842b74abb7bcd826fdb50119f158245ccb53b3b3a2f8db5c1630b670",
     "site/tools/test_g9_geometry_completion.cjs": "f943394ba001f2aea4d80444997d4cbb7e96e457c3679d1838d9446a5ed3af6b",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
@@ -9746,7 +9746,7 @@
                   "url": "../index.html?class=9&question=g9-ch7-ex7.4-q7",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "418e19da07442d06615c9a13a653bcd57950c31b135d8f01d08a066de1232bf9",
+                  "recordSha256": "409c5392bb8beb134f3a0e4a1a7f3a3e8ba40e2fe0abde27305f682f027ecb48",
                   "verified": false
                 },
                 {
