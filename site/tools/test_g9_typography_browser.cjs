@@ -26,7 +26,7 @@ async function inspect(page,q,lang){
    if(sourcePrompt)el.querySelector('.triggle-table-wrap')?.replaceWith(' ');
    return el.textContent;
   };
-  const legacyHint=window.TriggleWhyStepG9.hints[q.id];
+  const legacyHint=window.TriggleG9FrontierHints?.[q.id]||window.TriggleWhyStepG9.hints[q.id];
   const hints=[...document.querySelectorAll('#stepsList details.why-step-g9')].map(detail=>{
    const step=q.steps[Number(detail.dataset.step)-1];
    return q.geometryConcept!==undefined||q.realConcept!==undefined?step?.why:
