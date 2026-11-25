@@ -44,6 +44,12 @@
     'c10-8-unit-q5':['சராசரி ',tex(String.raw`\dfrac{31}{6}`,'31/6'),'. திட்ட விலக்கம் ',
       tex(String.raw`\sigma=\dfrac{\sqrt{85}}6\approx1.54`,'σ = √85/6 ≈ 1.54'),'.']
   };
+  const tamilEquations = {
+    'c10-6-ex6-1-q8-ii':{0:tex(String.raw`\begin{gathered}x=\dfrac{1}{\sin\theta\cos\theta}\\y=\dfrac{\sin^2\theta}{\cos\theta}\end{gathered}`,
+      'x = 1/(sin θ cos θ), y = sin² θ/cos θ')},
+    'c10-8-unit-q1':{2:tex(String.raw`\begin{aligned}30f_1+70f_2&=1080\\600+40f_2&=1080\\f_2&=12,\quad f_1=8\end{aligned}`,
+      '30f₁ + 70f₂ = 1080 ⇒ 600 + 40f₂ = 1080 ⇒ f₂ = 12, f₁ = 8')}
+  };
   window.TriggleG10FrontierTamilAnswers = items => {
     for(const item of items) {
       const ta=answers[item.id];
@@ -57,6 +63,8 @@
         item.answer?.en||item.answer;
       item.answerTa=flat(ta);
       item.answerMath={en,ta};
+      const equations=tamilEquations[item.id];
+      if(equations)item.steps=item.steps.map((step,i)=>equations[i]?{...step,mathTa:equations[i]}:step);
     }
   };
 })();

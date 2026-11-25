@@ -31,7 +31,7 @@ function verify(){
  w.TriggleG10AlgebraTamil?.(items);
  w.TriggleG10GeometryTamil?.(items);
  const current=new Map(items.map(q=>[q.id,q]));
- const preserve=q=>JSON.stringify({q:q.q,steps:q.steps,answer:q.answer});
+ const preserve=q=>JSON.stringify({q:q.q,steps:q.steps.map(({mathTa,...step})=>step),answer:q.answer});
  const originals=new Map(items.map(q=>[q.id,preserve(q)]));
  w.TriggleG10FrontierTamilAnswers(items);
  assert.equal(manifest.items.length,19);
@@ -105,6 +105,11 @@ function verify(){
   assert.equal(item.answerTa,fallback(item.answerMath.ta));
   assert.doesNotMatch(item.answerTa,/\b(?:True|Verified|both sides|proved|where|Mean|and|term)\b/);
   render(item.answerMath.ta);
+  if(['c10-6-ex6-1-q8-ii','c10-8-unit-q1'].includes(row.id)){
+    const step=item.steps.find(s=>s.mathTa);
+    assert(step,row.id+' Tamil equation explicitly authored');
+    render(step.mathTa);
+  }
   return {recordId:row.id,passed:true,recordSha256:createHash('sha256').update(JSON.stringify(item)).digest('hex')};
  });
  assert(read('service-worker.js').includes('./data/textbook-exercises/g10-frontier-tamil-answers.js'));

@@ -16,6 +16,7 @@ async function check(page,id){
   assert(enText.trim());
   await page.locator('#langTa').click();
   assert.doesNotMatch(await result.innerText(),untranslated);
+  for(const equation of await page.locator('.step-equation').allInnerTexts())assert.doesNotMatch(equation,/\band\b/i);
   const plain=await result.evaluate(el=>{
     const copy=el.cloneNode(true);
     for(const math of copy.querySelectorAll('.triggle-tex'))math.replaceWith(document.createTextNode(math.dataset.mathFallback));
