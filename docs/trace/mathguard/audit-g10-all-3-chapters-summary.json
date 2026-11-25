@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.3",
+  "performance": {
+    "totalExecutionTimeMs": 27538.84,
+    "peakMemoryMB": 63.49
+  },
+  "chapters": {
+    "ch3_algebra": {
+      "counts": {
+        "exercises": 139,
+        "concepts": 14,
+        "total": 153
+      },
+      "answerVerificationCounts": {
+        "PASS": 1,
+        "UNVERIFIABLE": 152
+      },
+      "intermediateStepCounts": {
+        "FAIL": 52,
+        "PASS": 43,
+        "UNVERIFIABLE": 29,
+        "PARTIAL": 29
+      },
+      "tamilValidationCounts": {
+        "PASS": 140,
+        "MISSING": 9,
+        "PARTIAL": 2,
+        "FAIL": 2
+      }
+    },
+    "ch5_coord_geometry": {
+      "counts": {
+        "exercises": 98,
+        "concepts": 12,
+        "total": 110
+      },
+      "answerVerificationCounts": {
+        "PASS": 1,
+        "UNVERIFIABLE": 109
+      },
+      "intermediateStepCounts": {
+        "PASS": 9,
+        "FAIL": 83,
+        "UNVERIFIABLE": 15,
+        "PARTIAL": 3
+      },
+      "tamilValidationCounts": {
+        "PASS": 108,
+        "PARTIAL": 1,
+        "FAIL": 1
+      }
+    },
+    "ch7_mensuration": {
+      "counts": {
+        "exercises": 62,
+        "concepts": 9,
+        "total": 71
+      },
+      "answerVerificationCounts": {
+        "PASS": 70,
+        "FAIL": 0,
+        "UNVERIFIABLE": 1
+      },
+      "intermediateStepCounts": {
+        "PASS": 41,
+        "FAIL": 2,
+        "PARTIAL": 12,
+        "UNVERIFIABLE": 16
+      },
+      "tamilValidationCounts": {
+        "PASS": 50,
+        "FAIL": 1,
+        "PARTIAL": 10,
+        "MISSING": 10
+      }
+    }
+  },
+  "totalAuditedItems": 334
+}

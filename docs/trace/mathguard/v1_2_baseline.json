@@ -1,0 +1,43 @@
+{
+  "audit_summary": {
+    "totalItems": 71,
+    "exercises": 62,
+    "concepts": 9,
+    "overallStatusCounts": {
+      "PASS": 24,
+      "FAIL": 1,
+      "PARTIAL": 45,
+      "UNVERIFIABLE": 1
+    },
+    "answerVerificationCounts": {
+      "PASS": 70,
+      "FAIL": 0,
+      "UNVERIFIABLE": 1
+    },
+    "intermediateStepCounts": {
+      "PASS": 29,
+      "FAIL": 0,
+      "PARTIAL": 22,
+      "UNVERIFIABLE": 20
+    },
+    "tamilValidationCounts": {
+      "PASS": 50,
+      "FAIL": 1,
+      "PARTIAL": 10,
+      "MISSING": 10
+    }
+  },
+  "benchmark_v1_2": {
+    "total": 300,
+    "tp": 240,
+    "fp": 0,
+    "fn": 0,
+    "tn": 60,
+    "precision": 1.0,
+    "recall": 1.0,
+    "falsePositives": 0,
+    "falseNegatives": 0,
+    "criticalMissedErrors": 0,
+    "executionTimeMs": 3222.68
+  }
+}

@@ -38,7 +38,6 @@ _SUPERSCRIPTS = {
 
 _UNIT_WORDS = {
     "cm",
-    "m",
     "mm",
     "km",
     "sq",
@@ -49,7 +48,6 @@ _UNIT_WORDS = {
     "unit",
     "litres",
     "litre",
-    "l",
     "ml",
     "rs",
     "minutes",
@@ -59,7 +57,6 @@ _UNIT_WORDS = {
     "hour",
     "hr",
     "hrs",
-    "s",
     "sec",
     "words",
     "coins",
@@ -71,7 +68,8 @@ _UNIT_WORDS = {
 def preprocess_math_text(text: str) -> str:
     """Normalize Unicode math symbols and strip benign formatting wrappers."""
     s = str(text or "").strip()
-    # Strip LaTeX spacing/sizing commands BEFORE replacing \implies/\Rightarrow with ';'
+    # Strip LaTeX spacing/sizing/environment commands BEFORE replacing \implies/\Rightarrow with ';'
+    s = re.sub(r"\\(?:begin|end)\{aligned\}", " ", s)
     s = re.sub(r"\\(left|right|big|Big|bigg|Bigg)\b", "", s)
     s = re.sub(r"\\[,;:! ]", " ", s)
     s = re.sub(r"\\quad\b|\\qquad\b", " ", s)
@@ -80,8 +78,8 @@ def preprocess_math_text(text: str) -> str:
     s = s.replace("×", "*").replace("·", "*").replace("÷", "/")
     s = s.replace("π", r"\pi ").replace("ℓ", "l")
     s = s.replace("√", r"\sqrt ")
-    s = s.replace("≈", "=")
-    s = s.replace("⇒", ";").replace("=>", ";").replace(r"\Rightarrow", ";").replace(r"\implies", ";")
+    s = s.replace("≈", "=").replace(r"\approx", "=")
+    s = s.replace("⇒", ";").replace("=>", ";").replace(r"\Rightarrow", ";").replace(r"\Longrightarrow", ";").replace(r"\implies", ";")
     # Expand LaTeX shorthand fractions like \dfrac43 or \frac13 -> \dfrac{4}{3}
     s = re.sub(r"\\(d?frac|tfrac)\s*([0-9A-Za-z])\s*([0-9A-Za-z])", r"\\\1{\2}{\3}", s)
     # Strip thousands commas inside numbers like 1,812,000
@@ -102,10 +100,14 @@ def preprocess_math_text(text: str) -> str:
     s = re.sub(r"\\boxed\s*\{", "{", s)
     # Strip \text{...}, \mathrm{...}, \operatorname{...} when they hold units/labels
     s = re.sub(r"\\(?:text|mathrm|mathbf|operatorname)\s*\{([^}]*)\}", r" \1 ", s)
-    # Strip compound rate units like m^3/h or m³/h or km/h
-    s = re.sub(r"\b(?:m\^\{?3\}?|cm\^\{?3\}?|km|m|l|litres?)\s*/\s*(?:h|hr|min|s|sec)\b", " ", s, flags=re.I)
-    # Strip trailing standalone 'h' (hours) or 'L' (litres) only when preceded by a space+number NOT after '^'
-    s = re.sub(r"(?:^|(?<=[\s=;(]))(\d+(?:\.\d+)?)\s+(?:h|L)(?=\s|$|[;=\)])", r"\1", s)
+    # Strip leading prose label before ':' when followed by an assignment (e.g. "Axis QR: r = 12")
+    s = re.sub(r"^(?:[A-Za-z]+\s+[A-Z]{2})\s*:\s*", "", s)
+    # Strip compound rate units like m^3/h or cm^3/L or km/h
+    s = re.sub(r"\b(?:m\s*\^\{?3\}?|cm\s*\^\{?3\}?|km|m|l|litres?)\s*/\s*(?:h|hr|min|s|sec|L)\b", " ", s, flags=re.I)
+    # Strip standalone single-letter units (m, h, L, s) and m^2/m^3 ONLY when preceded by a number/fraction
+    s = re.sub(r"(?:^|(?<=[\s=;(}]))(\d+(?:\.\d+|/\d+)?|\})\s+(?:m\s*\^\s*\{?[23]\}?|m|h|L|s)(?=\s|$|[;=\)])", r"\1", s)
+    # Strip trailing standalone 'L' after '1000' or '1000 ' in unit ratios
+    s = re.sub(r"\b1\s+(?:m\s*\^\s*\{?3\}?)", "1", s)
     # Strip trailing period after unit abbreviations like "sq. units."
     s = re.sub(r"\b(sq|cu)\.\s*", r"\1 ", s, flags=re.IGNORECASE)
     # Strip [ and ] used as grouping brackets in plain-text eqs like √[8²+(12-6)²]
@@ -198,7 +200,11 @@ def tokenize(text: str) -> List[Token]:
                         j = k
                 i = j
                 continue
-            tokens.append(Token("ID", word))
+            if "_" in word or len(word) == 1 or word == "pi" or (len(word) == 2 and word.isupper()):
+                tokens.append(Token("ID", word))
+            else:
+                for ch_id in word:
+                    tokens.append(Token("ID", ch_id))
             i = j
             continue
         if ch in "+-*/^=:":
@@ -275,7 +281,7 @@ class _Parser:
         left = self.parse_unary()
         while True:
             tok = self.peek()
-            if tok.kind == "OP" and tok.value in ("*", "/"):
+            if tok.kind == "OP" and tok.value in ("*", "/", ":"):
                 op = self.consume().value
                 right = self.parse_unary()
                 left = left * right if op == "*" else left / right
@@ -378,15 +384,35 @@ def parse_expression(text: str) -> sp.Expr:
 
 
 def split_equation_chain(text: str) -> List[str]:
-    """Split an aligned or chained equation into individual equality parts."""
+    """Split an aligned, semicolon-, or comma-separated equation block into individual lines."""
     s = preprocess_math_text(text)
-    # Split on LaTeX line breaks \\ or semicolons
     lines = re.split(r"\\\\|;", s)
     parts: List[str] = []
     for line in lines:
         line = line.replace("&", "").strip()
         if not line:
             continue
+        # Split comma-separated assignments/equations when commas sit at depth 0 between '=' clauses
+        if "," in line and line.count("=") >= 2:
+            depth = 0
+            chunks: List[str] = []
+            start = 0
+            for idx, ch in enumerate(line):
+                if ch in "({":
+                    depth += 1
+                elif ch in ")}":
+                    depth = max(0, depth - 1)
+                elif ch == "," and depth == 0:
+                    seg = line[start:idx].strip()
+                    if "=" in seg:
+                        chunks.append(seg)
+                        start = idx + 1
+            tail = line[start:].strip()
+            if tail:
+                chunks.append(tail)
+            if len(chunks) > 1:
+                parts.extend(chunks)
+                continue
         parts.append(line)
     return parts
 

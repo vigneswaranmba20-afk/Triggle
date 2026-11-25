@@ -10,9 +10,12 @@ import sympy as sp
 
 from mathguard import geometry as geo
 from mathguard.arithmetic import exact_fractions_equal, parse_ratio, ratios_equivalent, to_exact_fraction
+from mathguard.algebra import quadratic_discriminant, try_derive_algebra_from_prompt
 from mathguard.benchmark import run_benchmark
 from mathguard.benchmark_v1_1 import run_v1_1_benchmark
 from mathguard.benchmark_v1_2 import run_v1_2_benchmark
+from mathguard.benchmark_v1_3_adversarial import run_adversarial_benchmark
+from mathguard.coord_geometry import are_collinear, distance, midpoint, slope, triangle_area
 from mathguard.corrector import propose_and_verify_correction
 from mathguard.derivations_g10_ch7 import DerivedResult
 from mathguard.engine import run_audit
@@ -168,6 +171,29 @@ def test_v1_2_300_case_benchmark():
     s = res["summary"]
     assert s["total"] == 300
     assert s["criticalMissedErrors"] == 0
+    assert s["falsePositives"] == 0
+    assert s["precision"] >= 0.98
+    assert s["recall"] >= 0.98
+
+
+def test_v1_3_algebra_and_coord_geometry():
+    assert quadratic_discriminant(sp.Integer(1), sp.Integer(-5), sp.Integer(6)) == sp.Integer(1)
+    d = try_derive_algebra_from_prompt("Solve x^2 - 5x + 6 = 0.")
+    assert d.verifiable and set(d.value) == {sp.Integer(2), sp.Integer(3)}
+
+    p1 = (sp.Integer(2), sp.Integer(4))
+    p2 = (sp.Integer(8), sp.Integer(10))
+    assert midpoint(p1, p2) == (sp.Integer(5), sp.Integer(7))
+    assert distance((sp.Integer(0), sp.Integer(0)), (sp.Integer(3), sp.Integer(4))) == sp.Integer(5)
+    assert slope(p1, p2) == sp.Integer(1)
+    assert are_collinear((sp.Integer(0), sp.Integer(0)), (sp.Integer(1), sp.Integer(2)), (sp.Integer(2), sp.Integer(4)))
+    assert triangle_area((sp.Integer(0), sp.Integer(0)), (sp.Integer(4), sp.Integer(0)), (sp.Integer(0), sp.Integer(3))) == sp.Integer(6)
+
+
+def test_v1_3_186_case_adversarial_benchmark():
+    res = run_adversarial_benchmark()
+    s = res["summary"]
+    assert s["total"] == 186
     assert s["falsePositives"] == 0
     assert s["precision"] >= 0.98
     assert s["recall"] >= 0.98

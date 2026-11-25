@@ -16,7 +16,7 @@ from .units import are_unit_converted_equivalent
 PHYSICAL_POSITIVE_SYMBOLS = {
     "r", "R", "r_1", "r_2", "R_1", "R_2",
     "h", "H", "h_1", "h_2", "h_cone", "h_cyl",
-    "l", "k", "x", "a", "b", "d", "t", "w",
+    "l", "k", "a", "b", "d", "t", "w",
     "PQ", "QR", "PR", "AB", "BC", "AC",
 }
 
@@ -34,7 +34,7 @@ class StepValidationResult:
     context_applied: List[str] = field(default_factory=list)
 
 
-def _numeric_close(a: sp.Expr, b: sp.Expr, line_text: str, tol: float = 0.025) -> bool:
+def _numeric_close(a: sp.Expr, b: sp.Expr, line_text: str, tol: float = 0.025, r_rhs: str = "") -> bool:
     """Check if two constant expressions are numerically close ONLY when approximation is indicated."""
     if a.free_symbols or b.free_symbols:
         return False
@@ -47,6 +47,7 @@ def _numeric_close(a: sp.Expr, b: sp.Expr, line_text: str, tol: float = 0.025) -
     )
     if not is_approx:
         return False
+    rhs_has_decimal = bool(re.search(r"\d+\.\d+", r_rhs))
     for pi_sub in (PI_22_7, PI_3_14, sp.pi):
         try:
             va = complex(a.subs(sp.pi, pi_sub).evalf(25))
@@ -54,8 +55,8 @@ def _numeric_close(a: sp.Expr, b: sp.Expr, line_text: str, tol: float = 0.025) -
             if abs(va.imag) < 1e-12 and abs(vb.imag) < 1e-12:
                 if abs(va.real - vb.real) <= tol:
                     return True
-                # Allow integer rounding when decimal is rounded to nearest integer (e.g. 26.74 min = 27 min)
-                if vb.real == int(vb.real) and abs(round(va.real) - vb.real) == 0 and abs(va.real - vb.real) <= 0.5:
+                # Allow integer rounding ONLY when RHS is an integer (no decimal point like .00)
+                if not rhs_has_decimal and vb.real == int(vb.real) and abs(round(va.real) - vb.real) == 0 and abs(va.real - vb.real) <= 0.5:
                     return True
         except Exception:
             continue
@@ -72,8 +73,8 @@ def _is_named_quantity_lhs(lhs: sp.Expr, rhs: sp.Expr, lhs_raw: str) -> bool:
     # Subscripted/named label like TSA, CSA, PQ, V_displaced, A_new
     if re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*", s) and lhs.free_symbols and not (lhs.free_symbols & rhs.free_symbols):
         return True
-    # Multi-word English prose label like "Area of one cap" or "New radius"
-    if len(s.split()) >= 2 and re.fullmatch(r"[A-Za-z][A-Za-z0-9\s_]*", s):
+    # Multi-word English prose label like "Area of one cap", "New radius", "Area (i)"
+    if len(s.split()) >= 2 and re.fullmatch(r"[A-Za-z][A-Za-z0-9\s_()-]*", s):
         return True
     return False
 
@@ -126,7 +127,7 @@ def _check_pair_equivalent(
         except Exception:
             pass
 
-    if _numeric_close(lhs, rhs, full_line):
+    if _numeric_close(lhs, rhs, full_line, r_rhs=rhs_raw):
         return True, "numeric_approx"
 
     return False, None
@@ -202,7 +203,7 @@ def validate_steps(
             unparsed.append(idx)
             continue
 
-        if "=" not in target and "≈" not in target:
+        if "=" not in target and "≈" not in target and r"\approx" not in target:
             continue
 
         cleaned = re.sub(r"\([^)]*nearest[^)]*\)", "", target, flags=re.IGNORECASE)
@@ -252,11 +253,11 @@ def validate_steps(
                     env_num[exprs[0]] = exprs[1]
 
             # If e0 is a named quantity/prose label, or a named-quantity ratio/sum not yet fully bound in env_sym,
-            # or a constant LHS with algebraic e1==e2, e0=e1 is definitional/stated; check e1=e2=...
+            # or a constant/unknown-power LHS with matching e1==e2 (e.g. 1540 = 44h, r^2 = 308/(44/7) = 49),
+            # e0=e1 is definitional/stated; check e1=e2=...
             is_stated_eq_chain = (
                 len(exprs) >= 3
-                and not exprs[0].free_symbols
-                and exprs[1].free_symbols
+                and (not exprs[0].free_symbols or (len(exprs[0].free_symbols) == 1 and not exprs[1].free_symbols and not (exprs[0].free_symbols <= set(env_sym.keys()))))
                 and exprs[1].free_symbols == exprs[2].free_symbols
             )
             is_named_expr_def = (
@@ -278,10 +279,25 @@ def validate_steps(
                 if "%" in lhs_raw and "%" in r_rhs and not rhs.free_symbols:
                     rhs = rhs * sp.Integer(100)
 
-                # Skip definitional assignment, named-quantity formula expansion, or stated 2-side equation when symbols differ
+                # Skip 3-part ratio statements like V_1:V_2:V_3 = 3:1:2
+                if r_lhs.count(":") >= 2 and r_rhs.count(":") >= 2:
+                    continue
+                # Skip definitional assignment, named-quantity formula expansion, or stated 2-side equation
+                # (when lhs is a single symbol/constant, OR both sides have unique variables like (1/3)pi r^2 h = pi(xr)^2 H,
+                #  OR 2+ distinct symbols equal to a constant like r/h = 5/7)
+                is_simple_lhs = isinstance(lhs, sp.Symbol) or not lhs.free_symbols
+                is_disjoint_or_new_var_eq = bool(
+                    lhs.free_symbols
+                    and rhs.free_symbols
+                    and (lhs.free_symbols - rhs.free_symbols)
+                    and (rhs.free_symbols - lhs.free_symbols)
+                )
+                is_multi_sym_ratio = len(lhs.free_symbols) >= 2 and not rhs.free_symbols
                 if j == 0 and len(exprs) == 2 and (
                     _is_named_quantity_lhs(lhs, rhs, lhs_raw)
-                    or lhs.free_symbols != rhs.free_symbols
+                    or is_disjoint_or_new_var_eq
+                    or is_multi_sym_ratio
+                    or (is_simple_lhs and lhs.free_symbols != rhs.free_symbols)
                 ):
                     continue
                 if _is_named_quantity_expr(lhs) and not _is_named_quantity_expr(rhs) and not (lhs.free_symbols <= set(env_sym.keys())):
@@ -297,13 +313,24 @@ def validate_steps(
                         context_applied.append(reason)
                 else:
                     # Check if lhs is a symbolic formula and rhs is its numeric substitution
-                    if lhs.free_symbols and not rhs.free_symbols:
+                    # (skip rational cancellation claims like (x+2)/x = 2 where lhs has a non-constant denominator)
+                    if lhs.free_symbols and not rhs.free_symbols and lhs.as_numer_denom()[1].free_symbols == set():
                         l_sub = _apply_env_subs(lhs, env_num if env_num else env_sym)
                         if not l_sub.free_symbols:
                             ok_sub, _ = _check_pair_equivalent(l_sub, rhs, r_lhs, r_rhs, target, env_sym)
                             if ok_sub:
                                 passed += 1
                                 continue
+                            # All symbols WERE bound in env, yet l_sub != rhs -> confirmed contradiction!
+                            failed.append(
+                                {
+                                    "stepIndex": idx,
+                                    "line": line,
+                                    "lhs": str(l_sub),
+                                    "rhs": str(rhs),
+                                }
+                            )
+                            continue
                         # Missing variable bindings -> cannot verify substitution
                         unparsed.append(idx)
                         checked -= 1
@@ -329,6 +356,18 @@ def validate_steps(
                     try:
                         sol1 = sp.solve(sp.Eq(a1, b1), sym)
                         sol2 = sp.solve(sp.Eq(a2, b2), sym)
+                        # If eq1 has NO solution (e.g. sqrt(x+2) = -3) but eq2 claims a root, that's an extraneous root!
+                        if not sol1 and sol2:
+                            checked += 1
+                            failed.append(
+                                {
+                                    "stepIndex": idx,
+                                    "line": f"{l1} => {l2}",
+                                    "lhs": f"{sym}=[] (no real solution)",
+                                    "rhs": f"{sym}={sol2}",
+                                }
+                            )
+                            continue
                         if not sol1 or not sol2:
                             continue
                         checked += 1
@@ -337,6 +376,7 @@ def validate_steps(
                         # Check exact solution set match
                         if s1_set == s2_set:
                             passed += 1
+                            unparsed = [u for u in unparsed if u != idx]
                             continue
                         # Check pi = 22/7 or 3.14 equivalence between eq1 and eq2
                         pi_ok = False
@@ -348,6 +388,7 @@ def validate_steps(
                                 break
                         if pi_ok:
                             passed += 1
+                            unparsed = [u for u in unparsed if u != idx]
                             if "pi_substitution_implication" not in context_applied:
                                 context_applied.append("pi_substitution_implication")
                             continue
@@ -360,6 +401,7 @@ def validate_steps(
                             and any(val.is_real and val <= 0 for val in s1_set - s2_set)
                         ):
                             passed += 1
+                            unparsed = [u for u in unparsed if u != idx]
                             if "positive_physical_domain" not in context_applied:
                                 context_applied.append("positive_physical_domain")
                             continue
