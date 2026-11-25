@@ -83,8 +83,13 @@ assert.equal(2 + 1, 3); assert.equal(3 * 2 + 1, 7); // Q15
 // Q1: midpoints A(-1,1.5), B(2,4), C(5,1.5), D(2,-1) => equal sides, AC!=BD
 assert.equal(Math.hypot(3, 2.5), Math.hypot(-3, 2.5));
 assert.notEqual(6, 5);
-// Q2: area of (2,1),(3,-2),(7/2,13/2)
-close(0.5 * Math.abs((2 * (-2) + 3 * 6.5 + 3.5 * 1) - (1 * 3 + (-2) * 3.5 + 6.5 * 2)), 5);
+// Both orientations satisfy the original unsigned area and the given line.
+const thirdVertices = [[7 / 2, 13 / 2], [-3 / 2, 3 / 2]];
+for (const [x, y] of thirdVertices) {
+  close(y, x + 3);
+  close(Math.abs(3 * x + y - 7) / 2, 5);
+}
+assert.equal(byId.get('c10-5-unit-q2').answerMath.fallback, '(7/2, 13/2), (−3/2, 3/2)');
 // Q3: concurrency at (1,-1)
 assert.equal(3 * 1 + (-1) - 2, 0);
 assert.equal(5 * 1 + 2 * (-1) - 3, 0);
