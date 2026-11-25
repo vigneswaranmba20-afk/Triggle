@@ -40,3 +40,7 @@ Printed page numbers are six less than the PDF page numbers. Both answer appendi
 - The figures include 62 new SVG assets, including 16 construction starting views, and seven corrected existing SVGs. The Figure dialog draws each construction sequence from the given measurements.
 - Independent Tamil editorial certification, teacher approval and equivalence to a later prescribed printing remain pending.
 - The generated Grade 9 project inventory records all 69 questions and 86 tasks. Its next Grade 9 reconciliation priority is Chapter 1, Set Language. The runtime contains Exercises 1.1 and 1.2, and the remaining chapter denominator and exact first missing task require source reconciliation.
+
+## Batch E release checkpoint
+
+The focused Chromium suite passed 298 bilingual reader views at 320, 360, 390 and 412 px. It checked all 86 tasks at 390 px, all seven exercise routes at each width, the construction-stage controls, figure and notation bounds, concept links, and offline reload. The existing concept tests also passed for Geometry, Coordinate Geometry and Trigonometry. PR #430 carries the release. GitHub's required quality gate and post-merge Pages verification determine deployment status.
