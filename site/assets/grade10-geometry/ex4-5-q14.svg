@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Three tangents</title>
+  <desc id="desc">The vertical tangent at R intersects CP at A and CQ at B.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="111" cy="110" r="91.913" stroke="#326688"/><path d="M163.522 34.5714 L271.848 110 L163.522 185.429" stroke="#403876"/><path d="M202.913 62 L202.913 158" stroke="#326688"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="101" y="115">O</text><text x="209.913" y="115">R</text><text x="279.848" y="115">C</text><text x="147.522" y="27.5714">P</text><text x="146.522" y="202.429">Q</text><text x="207.913" y="56">A</text><text x="208.913" y="172">B</text></g>
+</svg>

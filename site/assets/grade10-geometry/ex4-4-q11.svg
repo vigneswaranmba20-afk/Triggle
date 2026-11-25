@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Circle and marked point</title>
+  <desc id="desc">The marked point is on the circle before the tangent is constructed.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="146" cy="109" r="70" stroke="#326688"/><circle cx="146" cy="109" r="2" stroke="#326688"/><circle cx="216" cy="109" r="2" stroke="#326688"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="127" y="127">P</text><text x="223" y="115">R</text></g>
+</svg>

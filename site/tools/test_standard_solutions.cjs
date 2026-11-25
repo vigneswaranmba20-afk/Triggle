@@ -181,7 +181,15 @@ const ex315Ids=ex315Records.map(r=>r.id);
 assert.equal(ex315Records.length,12,'Twelve source-reviewed Exercise 3.15 parts');
 const geometry=require('../data/textbook-fidelity/g10-ch4-ex4-1-to-4-2.json');
 const geometryEx43=require('../data/textbook-fidelity/g10-ch4-ex4-3.json');
-const geometryById=new Map([...geometry.items,...geometryEx43.items].map(item=>[item.id,item]));
+const geometryCompletion=[
+  require('../data/textbook-fidelity/g10-ch4-ex4-4.json'),
+  require('../data/textbook-fidelity/g10-ch4-ex4-5.json'),
+  require('../data/textbook-fidelity/g10-ch4-unit.json')
+].flatMap(exercise=>exercise.items);
+const geometryCompletionIds=geometryCompletion.map(item=>item.id);
+assert.equal(geometryCompletionIds.length,41,'Forty-one source-indexed Geometry additions');
+assert.equal(new Set(geometryCompletionIds).size,41);
+const geometryById=new Map([...geometry.items,...geometryEx43.items,...geometryCompletion].map(item=>[item.id,item]));
 const geometryNewIds=geometry.items.filter(item=>!item.wasAvailableOnMain).map(item=>item.id);
 assert.equal(geometryNewIds.length,32);
 const geometryEx43NewIds=geometryEx43.items.map(item=>item.id);
@@ -305,7 +313,7 @@ const ch8PublishedRows = ch8PublishedEvidence.flatMap(exercise => exercise.items
 const ch8PublishedById = new Map(ch8PublishedRows.map(row => [row.id, row]));
 assert.equal(ch8PublishedById.size, ch8PublishedRows.length);
 const ch8PublishedIds = [...ch8PublishedById.keys()];
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ch8Ex83Ids,...ch8PublishedIds,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...ex315Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds,...ch7Ex72Ids,...ch7Ex73Ids,...mensurationIds];
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ch8Ex83Ids,...ch8PublishedIds,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...ex315Ids,...geometryNewIds,...geometryEx43NewIds,...geometryCompletionIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds,...ch7Ex72Ids,...ch7Ex73Ids,...mensurationIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');

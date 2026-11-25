@@ -1,0 +1,411 @@
+{
+  "edition": "2025 revised",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "pages": [
+        {
+          "pdfPage": 204,
+          "printedPage": 198,
+          "visualChecked": true,
+          "imageSha256": "332e92cad0119eb462965ba759554b0d50590cb1a14765705c70ddba78b8be2a"
+        },
+        {
+          "pdfPage": 205,
+          "printedPage": 199,
+          "visualChecked": true,
+          "imageSha256": "b83063bf97648e6d3f973577b67a68e4aee7a5b3624671d68ef8fdfa44dae911"
+        }
+      ]
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "pages": [
+        {
+          "pdfPage": 211,
+          "printedPage": 205,
+          "visualChecked": true,
+          "imageSha256": "b32a7062038a0353676fe89ded499933654ddf41f75d35b0ea8f762f4d0e8128"
+        },
+        {
+          "pdfPage": 212,
+          "printedPage": 206,
+          "visualChecked": true,
+          "imageSha256": "97dc74a73424d3a1d4734823d3c6d453d838c67a9c55c818c32f10f5cf3012f0"
+        }
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "c10-4-ex4-4-q1",
+      "questionNumber": "1",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "1. The length of the tangent to a circle from a point P, which is 25 cm away from the centre is 24 cm. What is the radius of the circle?",
+        "ta": "1. வட்டத்தின் மையத்திலிருந்து 25 செ.மீ தொலைவில் உள்ள P என்ற புள்ளியிலிருந்து வட்டத்திற்கு வரையப்பட்ட தொடுகோட்டின் நீளம் 24 செ.மீ எனில், வட்டத்தின் ஆரம் என்ன?"
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q2",
+      "questionNumber": "2",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "2. △LMN is a right angled triangle with ∠L = 90°. A circle is inscribed in it. The lengths of the sides containing the right angle are 6 cm and 8 cm. Find the radius of the circle.",
+        "ta": "2. செங்கோண முக்கோணம் LMN-யில் ∠L = 90° ஆகும். ஒரு வட்டமானது செங்கோண முக்கோணத்தின் உள்ளே அதன் பக்கங்களைத் தொடுமாறு வரையப்படுகிறது. செங்கோணத்தைத் தாங்கும் பக்கங்களின் நீளங்கள் 6 செ.மீ மற்றும் 8 செ.மீ எனில், வட்டத்தின் ஆரம் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q3",
+      "questionNumber": "3",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "3. A circle is inscribed in △ABC having sides 8 cm, 10 cm and 12 cm as shown in figure, Find AD, BE and CF.",
+        "ta": "3. படத்தில் காட்டியுள்ளபடி, 8 செ.மீ, 10 செ.மீ மற்றும் 12 செ.மீ பக்கங்கள் உடைய முக்கோணத்தினுள் ஒரு வட்டம் அமைந்துள்ளது எனில், AD, BE மற்றும் CF ஐக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q4",
+      "questionNumber": "4",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "4. PQ is a tangent drawn from a point P to a circle with centre O and QOR is a diameter of the circle such that ∠POR = 120°. Find ∠OPQ.",
+        "ta": "4. O-வை மையமாக உடைய வட்டத்திற்கு P-யிலிருந்து வரையப்பட்ட தொடுகோடு PQ. QOR ஆனது விட்டம் ஆகும். வட்டத்தில் ∠POR = 120° எனில், ∠OPQ-ஐக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q5",
+      "questionNumber": "5",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "5. A tangent ST to a circle touches it at B. AB is a chord such that ∠ABT = 65°. Find ∠AOB, where “O” is the centre of the circle.",
+        "ta": "5. தொடுகோடு ST வட்டத்தினை B என்ற புள்ளியில் தொடுகிறது. ∠ABT = 65°. AB என்பது ஒரு நாண் எனில், ∠AOB-ஐக் காண்க. இதில் ‘O’ என்பது வட்டத்தின் மையம் ஆகும்."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q6",
+      "questionNumber": "6",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "6. In figure, O is the centre of the circle with radius 5 cm. T is a point such that OT = 13 cm and OT intersects the circle E, if AB is the tangent to the circle at E, find the lenght of AB.",
+        "ta": "6. கொடுக்கப்பட்ட படத்தில் O-வை மையமாக உடைய வட்டத்தின் ஆரம் 5 செ.மீ ஆகும். T-யானது OT = 13 செ.மீ என அமைந்த ஒரு புள்ளி மற்றும் OT-யானது வட்டத்தை E-யில் வெட்டுகிறது. வட்டத்தில் E என்ற புள்ளியின் வழியாகச் செல்லும் ஒரு தொடுகோடு AB எனில், AB-யின் நீளம் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q7",
+      "questionNumber": "7",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "7. In two concentric circles, a chord of length 16 cm of larger circle becomes a tangent to the smaller circle whose radius is 6 cm. Find the radius of the larger circle.",
+        "ta": "7. இரண்டு பொது மைய வட்டங்களில், 16 செ.மீ நீளமுடைய பெரிய வட்டத்தின் நாணானது 6 செ.மீ ஆரமுள்ள சிறிய வட்டத்திற்குத் தொடுகோடாக அமைந்தால், பெரிய வட்டத்தின் ஆரம் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q8",
+      "questionNumber": "8",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "8. Two circles with centres O and O′ of radii 3 cm and 4 cm, respectively intersect at two points P and Q, such that OP and O′P are tangents to the two circles. Find the length of the common chord PQ.",
+        "ta": "8. O மற்றும் O′-ஐ மையப் புள்ளிகளாகக் கொண்ட இரு வட்டங்களின் ஆரங்கள் முறையே 3 செ.மீ மற்றும் 4 செ.மீ ஆகும். இவை இரண்டும் P, Q என்ற புள்ளிகளில் வெட்டிக்கொள்கின்றன. OP மற்றும் O′P ஆகியவை வட்டங்களின் இரு தொடுகோடுகள் எனில், பொது நாண் PQ-யின் நீளம் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q9",
+      "questionNumber": "9",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "9. Show that the angle bisectors of a triangle are concurrent.",
+        "ta": "9. ஒரு முக்கோணத்தின் கோண இருசம வெட்டிகள் ஒரு புள்ளியின் வழியாகச் செல்லும் எனக் காட்டுக."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q10",
+      "questionNumber": "10",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "10. An artist has created a triangular stained glass window and has one strip of small length left before completing the window. She needs to figure out the length of left out portion based on the lengths of the other sides as shown in the figure.",
+        "ta": "10. படத்தில் உள்ளவாறு ஒரு முக்கோண வடிவக் கண்ணாடி ஜன்னலை முழுமையாக உருவாக்க ஒரு சிறிய கண்ணாடித் துண்டு ஒரு கலை நிபுணருக்குத் தேவைப்படும். மற்ற கண்ணாடி துண்டுகளின் நீளங்களைப் பொருத்து அவருக்குத் தேவையான கண்ணாடித் துண்டின் நீளத்தைக் கணக்கிடவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q11",
+      "questionNumber": "11",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "11. Draw a tangent at any point R on the circle of radius 3.4 cm and centre at P?",
+        "ta": "11. P ஐ மையமாகக் கொண்ட 3.4 செ.மீ ஆரமுள்ள ஒரு வட்டத்திற்கு R என்ற புள்ளியில் தொடுகோடு வரைக."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q12",
+      "questionNumber": "12",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "12. Draw a circle of radius 4.5 cm. Take a point on the circle. Draw the tangent at that point using the alternate segment theorem.",
+        "ta": "12. 4.5 செ.மீ ஆரமுள்ள வட்டம் வரைக. வட்டத்தின் மீது ஏதேனும் ஒரு புள்ளிக்கு மாற்று வட்டத்துண்டு தேற்றத்தினைப் பயன்படுத்தித் தொடுகோடு வரைக."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q13",
+      "questionNumber": "13",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "13. Draw the two tangents from a point which is 10 cm away from the centre of a circle of radius 5 cm. Also, measure the lengths of the tangents.",
+        "ta": "13. 5 செ.மீ ஆரமுள்ள வட்டத்தின் மையத்திலிருந்து 10 செ.மீ தொலைவிலுள்ள புள்ளியிலிருந்து வட்டத்திற்குத் தொடுகோடுகள் வரையவும். மேலும் தொடுகோட்டின் நீளங்களைக் கணக்கிடுக."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q14",
+      "questionNumber": "14",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "14. Take a point which is 11 cm away from the centre of a circle of radius 4 cm and draw the two tangents to the circle from that point.",
+        "ta": "14. 4 செ.மீ ஆரமுள்ள வட்டம் வரைந்து அதன் மையத்திலிருந்து 11 செ.மீ தொலைவிலுள்ள ஒரு புள்ளியைக் குறித்து, அப்புள்ளியிலிருந்து வட்டத்திற்கு இரண்டு தொடுகோடுகள் வரைக."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 211,
+          "printed": 205
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q15",
+      "questionNumber": "15",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "15. Draw the two tangents from a point which is 5 cm away from the centre of a circle of diameter 6 cm. Also, measure the lengths of the tangents.",
+        "ta": "15. 6 செ.மீ விட்டமுள்ள வட்டம் வரைந்து வட்டத்தின் மையத்திலிருந்து 5 செ.மீ தொலைவிலுள்ள ஒரு புள்ளியைக் குறிக்கவும். அப்புள்ளியிலிருந்து வட்டத்திற்குத் தொடுகோடுகள் வரைந்து, தொடுகோட்டின் நீளங்களைக் கணக்கிடுக."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 204,
+          "printed": 198
+        },
+        "ta": {
+          "pdf": 212,
+          "printed": 206
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-4-q16",
+      "questionNumber": "16",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "16. Draw a tangent to the circle from the point P having radius 3.6 cm, and centre at O. Point P is at a distance 7.2 cm from the centre.",
+        "ta": "16. O-வை மையமாகக் கொண்ட 3.6 செ.மீ ஆரமுள்ள வட்டம் வரைக. வட்டத்தின் மையத்திலிருந்து 7.2 செ.மீ தொலைவிலுள்ள P என்ற புள்ளியைக் குறித்து அப்புள்ளியிலிருந்து வட்டத்திற்குத் தொடுகோடுகள் வரைக."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 205,
+          "printed": 199
+        },
+        "ta": {
+          "pdf": 212,
+          "printed": 206
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    }
+  ]
+}

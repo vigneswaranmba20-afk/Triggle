@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Three tangent lines</title>
+  <desc id="desc">Tangents TP and TQ intersect AB at A and B. AB touches the circle at E.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="105" cy="112" r="65" stroke="#326688"/><path d="M130 52 L274 112 L130 172" stroke="#403876"/><path d="M170 68.6667 L170 155.333" stroke="#326688"/><path d="M105 112 L274 112" stroke="#326688"/><path d="M105 112 L130 52" stroke="#326688"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="86" y="129">O</text><text x="123" y="44">P</text><text x="124" y="190">Q</text><text x="175" y="106">E</text><text x="174" y="66">A</text><text x="175" y="172">B</text><text x="280" y="118">T</text><text x="103" y="76">5</text><text x="197" y="130">13 cm</text></g>
+</svg>

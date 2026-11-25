@@ -93,13 +93,23 @@ const TEXTBOOK_SPEC = [
   { chapter: 3, exercise: '3.20', enPdfPages: [160, 161, 162], enPrintedPages: [154, 155, 156], taPdfPages: [164], questions: qRange(1, 20) },
   { chapter: 3, exercise: '3.unit', enPdfPages: [162, 163, 164], enPrintedPages: [156, 157, 158], taPdfPages: [166, 167], questions: qRange(1, 20, { 1: ['i', 'ii'], 2: ['i', 'ii'], 5: ['i', 'ii'], 6: ['i', 'ii'], 17: ['i', 'ii', 'iii'] }) },
 
-  // Chapter 4: Geometry
-  { chapter: 4, exercise: '4.1', enPdfPages: [176, 177, 178], enPrintedPages: [170, 171, 172], taPdfPages: [179], questions: qRange(1, 13, { 1: ['i', 'ii'], 7: ['i', 'ii', 'iii'] }) },
-  { chapter: 4, exercise: '4.2', enPdfPages: [187, 188, 189], enPrintedPages: [181, 182, 183], taPdfPages: [190], questions: qRange(1, 16, { 1: ['i', 'ii'], 2: ['i', 'ii'], 3: ['i', 'ii'], 4: ['i', 'ii'], 8: ['i', 'ii'], 9: ['i', 'ii'] }) },
-  { chapter: 4, exercise: '4.3', enPdfPages: [193, 194], enPrintedPages: [187, 188], taPdfPages: [196], questions: qRange(1, 8, { 8: ['i', 'ii'] }) },
-  { chapter: 4, exercise: '4.4', enPdfPages: [204, 205], enPrintedPages: [198, 199], taPdfPages: [207], questions: qRange(1, 16) },
-  { chapter: 4, exercise: '4.5', enPdfPages: [205, 206], enPrintedPages: [199, 200], taPdfPages: [209], questions: qRange(1, 15) },
-  { chapter: 4, exercise: '4.unit', enPdfPages: [206, 207], enPrintedPages: [200, 201], taPdfPages: [210, 211], questions: qRange(1, 10, { 1: ['i', 'ii'], 2: ['i', 'ii'], 4: ['i', 'ii'], 6: ['i', 'ii', 'iii'] }) },
+  // Chapter 4: one task per printed subpart, or per question where unlettered.
+  { chapter: 4, exercise: '4.1', enPdfPages: [176, 177], enPrintedPages: [170, 171], taPdfPages: [181, 182], questions: qRange(1, 13, { 1: ['i', 'ii'], 7: ['i', 'ii', 'iii', 'iv'] }) },
+  { chapter: 4, exercise: '4.2', enPdfPages: [187, 188, 189], enPrintedPages: [181, 182, 183], taPdfPages: [193, 194, 195], questions: qRange(1, 16, { 1: ['i', 'ii'], 4: ['i', 'ii'], 8: ['i', 'ii'] }),
+    blockedTasks: {'8/i': 'AB + BD + DC = AC in both editions. The existing student card explains the collinearity and is retained for bookmarks and progress.'}
+  },
+  { chapter: 4, exercise: '4.3', enPdfPages: [193, 194], enPrintedPages: [187, 188], taPdfPages: [199, 200], questions: qRange(1, 8) },
+  { chapter: 4, exercise: '4.4', enPdfPages: [204, 205], enPrintedPages: [198, 199], taPdfPages: [211, 212], questions: qRange(1, 16) },
+  { chapter: 4, exercise: '4.5', enPdfPages: [205, 206], enPrintedPages: [199, 200], taPdfPages: [212, 213], questions: qRange(1, 15) },
+  {
+    chapter: 4, exercise: '4.unit', enPdfPages: [206, 207], enPrintedPages: [200, 201], taPdfPages: [213, 214],
+    questions: qRange(1, 10, { 1: ['i', 'ii'], 6: ['i', 'ii', 'iii'] }),
+    blockedTasks: {
+      '6/i': 'Both editions omit the required order of E and D. With E on the C side of D, the ax term in the formula for b² has the opposite sign.',
+      '6/ii': 'Both editions omit the required order of E and D. With E on the C side of D, the ax term in the formula for c² has the opposite sign.',
+      '10/whole': 'Neither edition links F to D and E. The appendix value 6 would follow from Ceva if all three points were internal and CD, AE and BF were concurrent.'
+    }
+  },
 
   // Chapter 5: Coordinate Geometry
   { chapter: 5, exercise: '5.1', enPdfPages: [217, 218], enPrintedPages: [211, 212], taPdfPages: [220], questions: qRange(1, 11, { 1: ['i', 'ii'], 2: ['i', 'ii'], 3: ['i', 'ii'], 4: ['i', 'ii'], 5: ['i', 'ii'], 11: ['i', 'ii', 'iii'] }) },
@@ -279,15 +289,22 @@ function buildInventory({ root = ROOT, deploymentStatus = 'merged-and-deployed-b
         let deployState = 'not-implemented';
         let note = null;
 
-        if (blockedReason && partMatches.length === 0) {
+        if (blockedReason && (partMatches.length === 0 || spec.chapter === 4)) {
           status = 'BLOCKED';
           note = blockedReason;
+          if (spec.chapter === 4) {
+            sourceStatus = 'source-verified-2025';
+            mathValidation = 'source-defect-confirmed';
+            if (partMatches.length === 1) deployState = 'diagnostic-card-on-baseline';
+          }
         } else if (partMatches.length > 1 || partMatches.some(m => (idCounts.get(m.item.id) || 0) > 1)) {
           status = 'DUPLICATE';
           note = 'Multiple student records map to the same textbook part';
         } else if (partMatches.length === 1) {
           const { item } = partMatches[0];
-          const hasValidSteps = Array.isArray(item.steps) && item.steps.length >= 2 && item.steps.every(s => s.en && s.eq);
+          const hasValidSteps = Array.isArray(item.steps) && (spec.chapter === 4
+            ? item.steps.length > 0 && item.steps.every(step => typeof step.en === 'string' && step.en.trim())
+            : item.steps.length >= 2 && item.steps.every(step => step.en && step.eq));
           const hasAnswer = typeof item.answer === 'string' && item.answer.trim().length > 0;
           if (!hasValidSteps || !hasAnswer || isLegacyParaphrased(item)) {
             status = 'PARTIAL';
@@ -299,7 +316,8 @@ function buildInventory({ root = ROOT, deploymentStatus = 'merged-and-deployed-b
             status = 'COMPLETE';
             sourceStatus = item.traceStatus || 'source-verified-2025';
             mathValidation = 'independently-verified';
-            deployState = deploymentStatus;
+            deployState = spec.chapter === 4 && ['4.4', '4.5', '4.unit'].includes(spec.exercise)
+              ? 'integrated-pending-production-evidence' : deploymentStatus;
           }
         }
 
