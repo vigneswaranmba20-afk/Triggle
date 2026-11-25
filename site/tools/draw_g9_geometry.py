@@ -370,7 +370,7 @@ def exercise_47():
     p=dict(O=(160,104),P=(85,144),Q=(235,144),R=(160,144),S=(160,189))
     save('7-q20',circle(p['O'],85)+edges(p,'PQ','ORS','PO')+right(p['R'],p['O'],p['Q'])
          +labels(p,dict(O=(0,-13),P=(-13,5),Q=(13,5),R=(13,12),S=(0,13)))
-         +text((118,111),'17')+text((185,164),'30'))
+         +text((118,111),'17')+text((202,167),'30'))
 
 
 def preserved_figures():
