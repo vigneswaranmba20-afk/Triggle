@@ -278,10 +278,10 @@ const entries = [
         }
       }
     ],
-    "answer": "(7/2, 13/2)",
+    "answer": "(7/2, 13/2), (−3/2, 3/2)",
     "answerMath": {
-      "latex": "\\left(\\dfrac{7}{2},\\;\\dfrac{13}{2}\\right)",
-      "fallback": "(7/2, 13/2)",
+      "latex": "\\left(\\dfrac{7}{2},\\;\\dfrac{13}{2}\\right),\\quad\\left(-\\dfrac{3}{2},\\;\\dfrac{3}{2}\\right)",
+      "fallback": "(7/2, 13/2), (−3/2, 3/2)",
       "display": true
     },
     "kind": "textbook",
