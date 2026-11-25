@@ -27,6 +27,7 @@ const entries=[
       "ta": "1. மூன்று நாணயங்கள் சுண்டப்படும்பொழுது கிடைக்கும் கூறுவெளியை மர வரைபடத்தைப் பயன்படுத்தி எழுதுக."
     },
     "figureSrc": "assets/grade10-ch8/ex8-3-q1-tree.svg",
+    "figureSrcTa": "assets/grade10-ch8/ta/ex8-3-q1-tree.svg",
     "figureAlt": {
       "en": "Tree diagram for tossing three fair coins: 1st coin branches to H or T, 2nd coin branches to H or T, 3rd coin branches to H or T, yielding 8 outcomes from HHH to TTT.",
       "ta": "மூன்று நாணயங்களைச் சுண்டும் மர வரைபடம்: முதல், இரண்டாம், மூன்றாம் நாணயங்கள் ஒவ்வொன்றும் H அல்லது T எனக் கிளைத்து HHH முதல் TTT வரை 8 விளைவுகளைத் தருகிறது."
@@ -106,6 +107,7 @@ const entries=[
       "ta": "2. ஒரு பையிலுள்ள 1 முதல் 6 வரை எண்கள் குறிக்கப்பட்ட 6 பந்துகளிலிருந்து, ஒரே நேரத்தில் இரண்டு பந்துகள் எடுப்பதற்கான கூறுவெளியை மர வரைபடம் மூலமாகக் குறிப்பிடுக."
     },
     "figureSrc": "assets/grade10-ch8/ex8-3-q2-tree.svg",
+    "figureSrcTa": "assets/grade10-ch8/ta/ex8-3-q2-tree.svg",
     "figureAlt": {
       "en": "Tree diagram with 6 first-pick branches (1 to 6) and 5 second-pick branches each (excluding the first ball), showing 30 ordered pairs.",
       "ta": "முதல் தேர்வில் 1 முதல் 6 வரை 6 கிளைகளும், ஒவ்வொன்றிலிருந்தும் மீதமுள்ள 5 பந்துகளுக்கான கிளைகளும் கொண்ட மர வரைபடம்; மொத்தம் 30 வரிசைச் சோடிகள்."

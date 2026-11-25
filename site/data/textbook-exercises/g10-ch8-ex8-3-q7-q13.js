@@ -490,6 +490,7 @@ const entries=[
       "ta": "11. மாணவர்கள் விளையாடும் ஒரு விளையாட்டில் அவர்களால் எறியப்படும் கல்லானது வட்டப்பரிதிக்குள் விழுந்தால் அதை வெற்றியாகவும், வட்டப்பரிதிக்கு வெளியே செவ்வகத்திற்குள் விழுந்தால் அதைத் தோல்வியாகவும் கருதப்படுகிறது. விளையாட்டில் வெற்றி கொள்வதற்கான நிகழ்தகவு என்ன? (π = 3.14)"
     },
     "figureSrc": "assets/grade10-ch8/ex8-3-q11-target.svg",
+    "figureSrcTa": "assets/grade10-ch8/ta/ex8-3-q11-target.svg",
     "figureAlt": {
       "en": "A 4 feet by 3 feet rectangular target region containing a centered circular winning region of radius 1 foot.",
       "ta": "4 அடி நீளமும் 3 அடி அகலமும் கொண்ட செவ்வகப் பகுதியின் உள்ளே 1 அடி ஆரமுள்ள வட்ட வெற்றிப் பகுதி."
@@ -541,10 +542,10 @@ const entries=[
     },
     "steps": [
       {
-        "en": "There are 6 days from Monday to Saturday. Since Priya and Amuthan each choose one of the 6 days independently, n(S) = 6 × 6 = 36.",
+        "en": "There are six days from Monday to Saturday. Use the textbook answer’s model: each customer chooses one day uniformly and independently of the other. Then all 36 ordered pairs are equally likely.",
         "eq": "n(S) = 6 × 6 = 36",
         "math": {"latex": "n(S)=6\\times 6=36", "display": true, "fallback": "n(S) = 6 × 6 = 36"},
-        "ta": "திங்கள் முதல் சனி வரை 6 நாட்கள் உள்ளன. இருவரும் 6 நாட்களில் எதையும் தேர்ந்தெடுக்கலாம் என்பதால் n(S) = 6 × 6 = 36."
+        "ta": "திங்கள் முதல் சனி வரை ஆறு நாட்கள் உள்ளன. பாடநூல் விடையின் மாதிரிப்படி இருவரும் ஒருவரை ஒருவர் சாராமல் சமவாய்ப்பில் ஒரு நாளைத் தேர்ந்தெடுக்கிறார்கள் எனக் கொள்க. எனவே 36 வரிசைச் சோடிகளும் சமவாய்ப்புடையவை."
       },
       {
         "en": "Both visit on the same day in 6 ways: {(Mon, Mon), (Tue, Tue), (Wed, Wed), (Thu, Thu), (Fri, Fri), (Sat, Sat)}, so n(A) = 6.",
@@ -578,10 +579,10 @@ const entries=[
     },
     "steps": [
       {
-        "en": "Visiting on different days is the complement of visiting on the same day. From part (i), P(same day) = 1/6.",
+        "en": "Visiting on different days is the complement of visiting on the same day. Use the independent and equally likely day choices from part (i), which give P(same day) = 1/6.",
         "eq": "P(same day) = 1/6",
         "math": {"latex": "P(\\text{same day})=\\dfrac{1}{6}", "display": true, "fallback": "P(same day) = 1/6"},
-        "ta": "வெவ்வேறு நாட்களில் செல்வது ஒரே நாளில் செல்வதன் நிரப்பு நிகழ்ச்சியாகும். பகுதி (i)-லிருந்து P(ஒரே நாள்) = 1/6."
+        "ta": "வெவ்வேறு நாட்களில் செல்வது ஒரே நாளில் செல்வதன் நிரப்பு நிகழ்ச்சி. பகுதி (i)-இல் பயன்படுத்திய சாராத சமவாய்ப்புத் தேர்வுகளின்படி ஒரே நாளில் செல்வதற்கான நிகழ்தகவு 1/6."
       },
       {
         "en": "Compute P(different days) = 1 − 1/6 = 5/6.",
@@ -609,10 +610,10 @@ const entries=[
     },
     "steps": [
       {
-        "en": "Total ordered pairs for Monday–Saturday are n(S) = 6 × 6 = 36.",
+        "en": "With independent, equally likely choices from Monday through Saturday as in part (i), the 36 ordered pairs all have equal probability.",
         "eq": "n(S) = 36",
         "math": {"latex": "n(S)=36", "display": true, "fallback": "n(S) = 36"},
-        "ta": "மொத்த வாய்ப்புகள் n(S) = 6 × 6 = 36."
+        "ta": "பகுதி (i)-இல் போலத் திங்கள் முதல் சனி வரை ஒவ்வொரு நாளையும் இருவரும் சாராமல் சமவாய்ப்பில் தேர்ந்தெடுப்பதாகக் கொண்டால், 36 வரிசைச் சோடிகளும் சமவாய்ப்புடையவை."
       },
       {
         "en": "List the 5 adjacent-day pairs in forward order (Mon–Tue, Tue–Wed, Wed–Thu, Thu–Fri, Fri–Sat) and the 5 in reverse order (Tue–Mon, Wed–Tue, Thu–Wed, Fri–Thu, Sat–Fri), giving 10 ordered pairs.",
