@@ -20,7 +20,19 @@ if not all(os.environ.get(name) for name in ("AWS_ACCESS_KEY_ID", "AWS_SECRET_AC
 
 client = boto3.client("s3", endpoint_url=f"https://{account}.r2.cloudflarestorage.com",
                       region_name="auto", config=Config(signature_version="s3v4", s3={"addressing_style":"path"}))
-rows = release_records(json.loads(Path(sys.argv[1]).read_text()))
+document = json.loads(Path(sys.argv[1]).read_text())
+tamil_pilot = "g10-ch7-cylinder-surface-area"
+if isinstance(document, dict):
+    # This one-off path authorizes precisely the reviewed Tamil cylinder asset.
+    row = document
+    if (row["id"] != tamil_pilot or row["language"] != "ta" or
+        row["file"] != f"{tamil_pilot}-ta.mp4" or row["durationSeconds"] != 70.25 or
+        type(row["bytes"]) is not int or not 1024 <= row["bytes"] <= 32*1024*1024 or
+        not re.fullmatch(r"[a-f0-9]{64}", row["sha256"])):
+        raise SystemExit("The upload request is outside the Tamil cylinder pilot scope.")
+    rows = {tamil_pilot: row}
+else:
+    rows = release_records(document)
 upload = []
 for lesson, row in rows.items():
     if not re.fullmatch(r"[A-Za-z0-9+/]{22}==", row["contentMd5"]):
@@ -28,8 +40,9 @@ for lesson, row in rows.items():
     headers = {"Content-Type":"video/mp4", "Content-Length":str(row["bytes"]),
                "Cache-Control":"public,max-age=31536000,immutable", "If-None-Match":"*",
                "Content-MD5":row["contentMd5"]}
+    language_path = "/ta" if isinstance(document, dict) else ""
     url = client.generate_presigned_url("put_object", Params={
-        "Bucket":bucket, "Key":f"trace-videos/{lesson}/{row['sha256']}.mp4",
+        "Bucket":bucket, "Key":f"trace-videos/{lesson}{language_path}/{row['sha256']}.mp4",
         "ContentType":headers["Content-Type"], "ContentLength":row["bytes"],
         "CacheControl":headers["Cache-Control"], "IfNoneMatch":headers["If-None-Match"],
         "ContentMD5":headers["Content-MD5"],
