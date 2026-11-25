@@ -23,6 +23,7 @@
  window.TriggleG10AlgebraTamil?.(classes[10].items);
  window.TriggleG10GeometryTamil?.(classes[10].items);
  window.TriggleG10FrontierTamilAnswers?.(classes[10].items);
+ window.TriggleG9RealFrontier?.(classes[9].items);
  const curriculum=window.TRIGGLE_CURRICULUM;
  if(!curriculum?.grades)throw Error('Missing curriculum metadata');
  const chapterList=()=>curriculum.grades.find(g=>g.grade===grade)?.chapters||[];
@@ -53,6 +54,7 @@
  const mobile=matchMedia('(max-width:800px)');
  function esc(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  const plainMath=value=>Array.isArray(value)?value.map(plainMath).join(''):(value?.fallback??value);
+ const grade9Presentation=item=>item.notationSource==='authored'?undefined:window.TriggleG9Math?.get(item);
  const isG9GeometryExercise=item=>item.classNum===9&&item.chapter==='4'&&/^4\.[1-7]$/.test(item.exercise);
  const isG10GeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2','4.3','4.4','4.5','4.unit'].includes(item.exercise);
  const isGeometryExercise=item=>isG9GeometryExercise(item)||isG10GeometryExercise(item);
@@ -426,7 +428,7 @@
   }container.append(references);
  }
  function buildStep(s,index){
-  s={...s,...window.TriggleG9Math?.get(current)?.steps[index]};
+  s={...s,...grade9Presentation(current)?.steps[index]};
   const chapter1Math=window.TriggleChapter1Math?.getStep?.(current,index);
   if(chapter1Math)s={...s,math:chapter1Math};
   if(!s.math&&!isGeometryExercise(current)){
@@ -497,8 +499,9 @@
   }
   all.forEach((s,i)=>ul.append(buildStep(s,i)));
   const localizedAnswer=tr(lang==='ta'&&current.answerTa?current.answerTa:current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
-  const grade9Answer=window.TriggleG9Math?.get(current)?.answerMath;
-  const possibleAnswerMath=(grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getAnswer?.(current))||window.TriggleG10Ch2FractionMath?.getAnswer?.(current);
+  const grade9Answer=grade9Presentation(current)?.answerMath;
+  const possibleAnswerMath=(grade===9&&current.answerMath?.[lang])||
+    (grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getAnswer?.(current))||window.TriggleG10Ch2FractionMath?.getAnswer?.(current);
   const answerMath=possibleAnswerMath?.[lang]||possibleAnswerMath?.en||possibleAnswerMath;
   const canGrid=!answerMath&&parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
@@ -651,7 +654,7 @@
   $('gradeTotal').textContent=list.length+' '+ui('lessons');$('questionLabel').textContent=labelForGroup(current.exercise).toUpperCase();$('itemPosition').textContent=num(position)+' / '+num(list.length);
   $('questionTitle').textContent=tr(current.topic);$('questionHead').textContent=tr(current.label);
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
-  const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getQuestion?.(current,lang));
+  const questionMath=grade9Presentation(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getQuestion?.(current,lang));
   const renderDataTableHtml=dt=>{
     if(lang==='ta'&&dt?.ta)dt={...dt,...dt.ta};
     if(!dt||!Array.isArray(dt.headers)||!Array.isArray(dt.rows))return '';
@@ -703,8 +706,9 @@
   if(lang==='ta'&&!current.q?.ta)$('kindBadge').textContent+=' · தமிழ் மொழிபெயர்ப்பு நிலுவையில்';
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
   const setPath = grade === 9 && current.setConcept && window.TRIGGLE_SET_PATH;
-  const conceptPath = setPath || (isG10GeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH);
-  let conceptIndexForQuestion = setPath ? setPath.stages.findIndex(stage => stage.id === current.setConcept) : isG10GeometryExercise(current)
+  const realPath = grade === 9 && Number.isInteger(current.realConcept) && window.TRIGGLE_REAL_PATH;
+  const conceptPath = setPath || realPath || (isG10GeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH);
+  let conceptIndexForQuestion = setPath ? setPath.stages.findIndex(stage => stage.id === current.setConcept) : realPath ? current.realConcept : isG10GeometryExercise(current)
     ? (conceptPath?.stages.findIndex(stage => stage.id === current.conceptId ||
         [stage.practiceId, stage.secondaryPracticeId, stage.tertiaryPracticeId].includes(current.id)) ?? -1)
     : (conceptPath?.conceptForQuestion(current) ?? -1);
@@ -714,7 +718,7 @@
       ({'4.1':1, '4.2':2, '4.3':4}[current.exercise] ?? -1);
   }
   const hintPanel = $('g9GeometryHint');
-  const textbookHint = isTextbookExercise && (setPath ? current.hint : isG9GeometryExercise(current) &&
+  const textbookHint = isTextbookExercise && ((setPath || realPath) ? current.hint : isG9GeometryExercise(current) &&
     (current.hint || window.TriggleGrade9Geometry?.preservedHints[current.id.slice(9)]));
   hintPanel.hidden = !textbookHint;
   hintPanel.open = false;

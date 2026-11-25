@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": 5,
+  "exercise": "5.2",
+  "edition": "2025 revised",
+  "sources": {
+    "en": {
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J"
+    },
+    "ta": {
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+    }
+  },
+  "items": [
+    {
+      "id": "g9-ch5-ex5.2-q1",
+      "question": 1,
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 208,
+            "printed": 202
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 221,
+            "printed": 215
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch5-ex5.2-q2",
+      "question": 2,
+      "parts": [
+        "i",
+        "ii"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 202,
+            "pdf": 208
+          }
+        ],
+        "ta": [
+          {
+            "printed": 215,
+            "pdf": 221
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch5-ex5.2-q3",
+      "question": 3,
+      "parts": [
+        "i",
+        "ii"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 202,
+            "pdf": 208
+          }
+        ],
+        "ta": [
+          {
+            "printed": 216,
+            "pdf": 222
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": [
+        "./assets/grade9-ch5/ex5-2-q3-checked.svg"
+      ]
+    },
+    {
+      "id": "g9-ch5-ex5.2-q4",
+      "question": 4,
+      "parts": [
+        "i",
+        "ii"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 209,
+            "printed": 203
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 222,
+            "printed": 216
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch5-ex5.2-q5",
+      "question": 5,
+      "parts": [
+        "i",
+        "ii"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 203,
+            "pdf": 209
+          }
+        ],
+        "ta": [
+          {
+            "printed": 216,
+            "pdf": 222
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": [
+        "./assets/grade9-ch5/ex5-2-q5-checked.svg"
+      ]
+    },
+    {
+      "id": "g9-ch5-ex5.2-q6",
+      "question": 6,
+      "parts": [
+        "i",
+        "ii"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 203,
+            "pdf": 209
+          }
+        ],
+        "ta": [
+          {
+            "printed": 216,
+            "pdf": 222
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": [
+        "./assets/grade9-ch5/ex5-2-q6-checked.svg"
+      ]
+    },
+    {
+      "id": "g9-ch5-ex5.2-q7",
+      "question": 7,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 203,
+            "pdf": 209
+          }
+        ],
+        "ta": [
+          {
+            "printed": 216,
+            "pdf": 222
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch5-ex5.2-q8",
+      "question": 8,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 203,
+            "pdf": 209
+          }
+        ],
+        "ta": [
+          {
+            "printed": 216,
+            "pdf": 222
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch5-ex5.2-q9",
+      "question": 9,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 203,
+            "pdf": 209
+          }
+        ],
+        "ta": [
+          {
+            "printed": 216,
+            "pdf": 222
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch5-ex5.2-q10",
+      "question": 10,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 209,
+            "printed": 203
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 222,
+            "printed": 216
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch5-ex5.2-q11",
+      "question": 11,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "printed": 203,
+            "pdf": 209
+          }
+        ],
+        "ta": [
+          {
+            "printed": 216,
+            "pdf": 222
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": [
+        "./assets/grade9-ch5/ex5-2-q11-checked.svg"
+      ]
+    },
+    {
+      "id": "g9-ch5-ex5.2-q12",
+      "question": 12,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 209,
+            "printed": 203
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 222,
+            "printed": 216
+          }
+        ]
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "figureFiles": []
+    }
+  ],
+  "discrepancies": [
+    {
+      "question": 1,
+      "pages": {
+        "en": 208,
+        "ta": 221
+      },
+      "issue": "The English page labels the third expression (ii) a second time. Tamil correctly prints (iii). There are four canonically distinct subparts, all present in the existing Q1 card.",
+      "resolution": "Preserve the canonical label (iii) and display the unconditional distance |c−a|. The unqualified key expression c−a is valid only when c≥a."
+    }
+  ],
+  "editorialReview": {
+    "ta": "pending-independent-review",
+    "teacher": "pending"
+  }
+}
