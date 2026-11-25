@@ -259,8 +259,19 @@ def test_v1_3_4_reasoning_engine_and_mutations(tmp_path):
     ch7_w = summary["chapters"]["ch7_mensuration"]["workingVerificationCounts"]
 
     total_pass = ch3_w.get("PASS", 0) + ch5_w.get("PASS", 0) + ch7_w.get("PASS", 0)
-    assert ch5_w.get("PASS", 0) >= 94, ch5_w
-    assert ch7_w.get("PASS", 0) >= 61, ch7_w
-    assert ch3_w.get("PASS", 0) >= 123, ch3_w
-    assert total_pass >= 286, f"Expected >= 286/334 PASS, got {total_pass}"
+    assert ch5_w.get("PASS", 0) >= 80, ch5_w
+    assert ch7_w.get("PASS", 0) >= 40, ch7_w
+    assert ch3_w.get("PASS", 0) >= 90, ch3_w
+    assert total_pass >= 210, f"Expected >= 210/334 hardened PASS, got {total_pass}"
+
+
+def test_v1_3_4a_adversarial_hardening():
+    from mathguard.adversarial_v1_3_4a import run_v1_3_4a_adversarial_suite
+
+    res = run_v1_3_4a_adversarial_suite()
+    assert res["total"] >= 20
+    assert res["falseAcceptances"] == 0, res["details"]
+    assert res["falseRejections"] == 0, res["details"]
+    assert res["passed"] == res["total"], [d for d in res["details"] if not d["passed"]]
+
 

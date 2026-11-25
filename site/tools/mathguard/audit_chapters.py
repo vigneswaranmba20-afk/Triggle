@@ -143,7 +143,7 @@ def _audit_generic_chapter(
 
     return {
         "schemaVersion": 1,
-        "engine": "TRACE MathGuard V1.3.4",
+        "engine": "TRACE MathGuard V1.3.4a",
         "chapter": chapter_num,
         "name": chapter_data["name"],
         "counts": {
@@ -177,7 +177,7 @@ def run_all_3_chapters_audit(repo_root: Path, out_dir: Path) -> Dict[str, Any]:
 
     summary = {
         "schemaVersion": 1,
-        "engine": "TRACE MathGuard V1.3.4",
+        "engine": "TRACE MathGuard V1.3.4a",
         "performance": {
             "totalExecutionTimeMs": elapsed_ms,
             "peakMemoryMB": round(peak_kb / 1024.0, 2),
