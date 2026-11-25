@@ -127,7 +127,16 @@ async function main(){
      const option=lab.locator('[data-answers] button').nth(idx);
      await option.click();const first=(await lab.locator('[data-feedback]').innerText()).trim();
      await option.click();const second=(await lab.locator('[data-feedback]').innerText()).trim();
-     assert.ok(second.length>first.length,JSON.stringify({first,second}));
+     if(config.chapter==='g9-ch2'){
+       assert.match(first,/6.*8/,'The first hint identifies the numerator bounds');
+       assert.notEqual(second,first,'The second hint must advance the reasoning');
+       const explanation=second.replace(/\s+/g,'');
+       for(const equality of ['1/2=6/12','2/3=8/12','7/12']){
+         assert.ok(explanation.includes(equality),JSON.stringify({equality,first,second}));
+       }
+     }else{
+       assert.ok(second.length>first.length,JSON.stringify({first,second}));
+     }
     });
     await check(c,'No browser JavaScript exceptions','stability',async()=>assert.deepEqual(errors,[]));
     await check(c,'No document-width overflow','reflow',async()=>{
@@ -177,14 +186,33 @@ async function main(){
        if(lang==='en')assert.deepEqual(labels,['Descriptive Form','Roster Form','Set-Builder Form']);
        else assert(labels.every(x=>/[\u0B80-\u0BFF]/.test(x)),JSON.stringify(labels));
       });
-      await check(c,'Venn lab opens once without repeating Phase 2','learning',async()=>{
+      await check(c,'All five inline Venn operations update a single accessible diagram','learning',async()=>{
        await selectStage(3);
+       const diagram=lab.locator('.sp2-venn-svg');
+       assert.equal(await diagram.count(),1);
+       assert.equal(await diagram.getAttribute('role'),'img');
+       assert.equal(await diagram.locator('desc').count(),1);
        assert.equal(await lab.locator('.p2-lab').count(),0);
-       await lab.locator('[data-demo-mode="go"]').click();
-       assert.equal(await lab.locator('.p2-lab').count(),1);
-       assert.ok(!(await lab.locator('.p2-kicker').innerText()).includes('PHASE 2'));
-       await lab.locator('[data-demo-mode="go"]').click();
-       assert.equal(await lab.locator('.p2-lab').count(),1);
+       const operations=[
+         ['union','{1,2,3,4,5,6}',['a','both','b']],
+         ['intersection','{3,5}',['both']],
+         ['difference','{1,2}',['a']],
+         ['complement','{4,6,7}',['b','outside']],
+         ['symmetric','{1,2,4,6}',['a','b']]
+       ];
+       assert.equal(await lab.locator('.sp2-venn-controls button').count(),operations.length);
+       for(const [key,members,regions] of operations){
+         const control=lab.locator('[data-demo-mode="'+key+'"]');
+         await control.click();
+         assert.equal(await control.getAttribute('aria-pressed'),'true');
+         const output=(await lab.locator('[data-demo-output]').innerText()).replace(/\s+/g,'');
+         assert.ok(output.includes(members),key+' gives '+output);
+         const highlighted=await diagram.locator('[data-venn-region][fill="#c4ecd9"]').evaluateAll(nodes=>
+           nodes.map(node=>node.dataset.vennRegion).sort());
+         assert.deepEqual(highlighted,[...regions].sort(),key);
+       }
+       assert.equal(await diagram.count(),1);
+       assert.equal(await lab.locator('.p2-lab').count(),0);
       });
       await check(c,'Common-member slider recalculates visibly','interactivity',async()=>{
        await selectStage(6);

@@ -181,7 +181,15 @@ const ex315Ids=ex315Records.map(r=>r.id);
 assert.equal(ex315Records.length,12,'Twelve source-reviewed Exercise 3.15 parts');
 const geometry=require('../data/textbook-fidelity/g10-ch4-ex4-1-to-4-2.json');
 const geometryEx43=require('../data/textbook-fidelity/g10-ch4-ex4-3.json');
-const geometryById=new Map([...geometry.items,...geometryEx43.items].map(item=>[item.id,item]));
+const geometryCompletion=[
+  require('../data/textbook-fidelity/g10-ch4-ex4-4.json'),
+  require('../data/textbook-fidelity/g10-ch4-ex4-5.json'),
+  require('../data/textbook-fidelity/g10-ch4-unit.json')
+].flatMap(exercise=>exercise.items);
+const geometryCompletionIds=geometryCompletion.map(item=>item.id);
+assert.equal(geometryCompletionIds.length,41,'Forty-one source-indexed Geometry additions');
+assert.equal(new Set(geometryCompletionIds).size,41);
+const geometryById=new Map([...geometry.items,...geometryEx43.items,...geometryCompletion].map(item=>[item.id,item]));
 const geometryNewIds=geometry.items.filter(item=>!item.wasAvailableOnMain).map(item=>item.id);
 assert.equal(geometryNewIds.length,32);
 const geometryEx43NewIds=geometryEx43.items.map(item=>item.id);
@@ -296,7 +304,17 @@ vm.runInNewContext(read('data/textbook-exercises/g10-ch8-ex8-3-q1-q6.js'),ch8Ex8
 vm.runInNewContext(read('data/textbook-exercises/g10-ch8-ex8-3-q7-q13.js'),ch8Ex83Context,{filename:'g10-ch8-ex8-3-q7-q13.js'});
 const ch8Ex83Records=ch8Ex83Context.window.TRIGGLE_CLASSES[10].items;
 const ch8Ex83Ids=ch8Ex83Inv.questions.flatMap(q=>q.parts.length===1&&q.parts[0]==='whole'?['c10-8-ex8-3-q'+q.question]:q.parts.map(p=>'c10-8-ex8-3-q'+q.question+'-'+p));
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ch8Ex83Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...ex315Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds,...ch7Ex72Ids,...ch7Ex73Ids,...mensurationIds];
+const ch8PublishedEvidence = [
+  require('../data/textbook-fidelity/g10-ch8-ex8-4.json'),
+  require('../data/textbook-fidelity/g10-ch8-ex8-5.json'),
+  require('../data/textbook-fidelity/g10-ch8-unit.json')
+];
+const ch8PublishedRows = ch8PublishedEvidence.flatMap(exercise => exercise.items);
+const ch8PublishedById = new Map(ch8PublishedRows.map(row => [row.id, row]));
+assert.equal(ch8PublishedById.size, ch8PublishedRows.length);
+const ch8PublishedIds = [...ch8PublishedById.keys()];
+const finalAlgebra = ['a','b','c','d'].flatMap(letter => require('../../docs/curriculum/grade-10/batches/g10-ch3-final-'+letter+'.json').records);
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ch8Ex83Ids,...ch8PublishedIds,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...ex315Ids,...geometryNewIds,...geometryEx43NewIds,...geometryCompletionIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds,...ch7Ex72Ids,...ch7Ex73Ids,...mensurationIds,...finalAlgebra.map(record=>record.id)];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -317,8 +335,11 @@ const g9Ch3CompleteNewIds=classes[9].items.filter(it=>/^g9-ch3-ex3\.(?:[3-9]|1[0
 assert.equal(g9Ch3CompleteNewIds.length,170,'170 new G9 Ch3 Ex 3.3–3.15 records');
 const g9Ch5CompleteNewIds=classes[9].items.filter(it=>/^g9-ch5-ex5\.[1-6]\b/.test(it.id)&&!Object.hasOwn(preserved.sha256,it.id)).map(it=>it.id);
 assert.equal(g9Ch5CompleteNewIds.length,50,'50 new G9 Ch5 Ex 5.1–5.6 records');
-const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ch3CompleteNewIds,...g9Ex64NewIds,...g9Ch5CompleteNewIds];
-assert.equal(approvedG9Ids.length,311);
+const g9GeometryEvidence=require('../data/textbook-fidelity/g9-ch4-geometry-2025.json').records;
+const g9GeometryNewIds=Object.keys(g9GeometryEvidence).filter(id=>!g9GeometryEvidence[id].preservedReviewedSha256);
+assert.equal(g9GeometryNewIds.length,75,'75 source-indexed new Grade 9 Geometry tasks');
+const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ch3CompleteNewIds,...g9Ex64NewIds,...g9Ch5CompleteNewIds,...g9GeometryNewIds];
+assert.equal(approvedG9Ids.length,386);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.deepEqual(approvedBatch.records.map(r=>r.id),approvedEx22);
@@ -643,6 +664,10 @@ for(const [grade,data] of Object.entries(classes)){
        }
        assert.equal(item.releaseStatus,'english-preview');
        assert(item.q.ta&&item.steps.every(step=>step.ta),'Tamil Exercise 1.2 prompt and explanations '+item.id);
+     }else if(g9GeometryNewIds.includes(item.id)){
+       assert.equal(JSON.stringify(item.q),JSON.stringify(g9GeometryEvidence[item.id].textbookPrompt));
+       assert.equal(item.translationReview,'pending');
+       assert(item.steps.every(step=>step.en&&step.ta&&step.why.en&&step.why.ta));
      }else if(g9Ch3CompleteNewIds.includes(item.id)||g9Ch5CompleteNewIds.includes(item.id)){
        assert.ok(item.q?.en&&item.q?.ta,'G9 bilingual prompt '+item.id);
        assert.ok(item.steps.length>=1&&item.steps.every(s=>s.en&&s.ta&&s.math?.latex),'G9 bilingual steps '+item.id);
@@ -659,6 +684,13 @@ for(const [grade,data] of Object.entries(classes)){
        assert.equal(item.releaseStatus,'english-preview');
        assert(item.q.ta&&item.steps.every(step=>step.ta),'Tamil Exercise 1.2 prompt and explanations '+item.id);
      }
+   }else if (ch8PublishedById.has(item.id)) {
+     const evidence = ch8PublishedById.get(item.id);
+     assert.deepEqual({...item.q}, evidence.textbookPrompt, 'Chapter 8 checked prompt ' + item.id);
+     assert.equal(item.sourceFidelity.status, 'page-visual-checked');
+     assert.equal(item.translationReview, 'pending');
+     assert.ok(item.answer.en && item.answer.ta);
+     assert.ok(item.steps.every(step => step.en && step.ta));
    }else{
      const trace=traceSourceGate.records.find(r=>r.id===item.id);
      if(trace){
@@ -668,7 +700,7 @@ for(const [grade,data] of Object.entries(classes)){
        assert.equal(item.edition,'2025','TRACE source edition '+item.id);
        assert.equal(item.translationReview,'pending','Do not invent Tamil teacher approval '+item.id);
      }else{
-       const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||statisticsEx82Batch.records.find(r=>r.id===item.id)||statisticsEx82FollowupBatch.records.find(r=>r.id===item.id)||ch8Ex83Records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id)||ex25Records.find(r=>r.id===item.id)||ex26Records.find(r=>r.id===item.id)||ex27Records.find(r=>r.id===item.id)||ex28Records.find(r=>r.id===item.id)||ex29Records.find(r=>r.id===item.id)||ex210UnitRecords.find(r=>r.id===item.id)||ex31Records.find(r=>r.id===item.id)||ex32Records.find(r=>r.id===item.id)||ex33Records.find(r=>r.id===item.id)||ex34Records.find(r=>r.id===item.id)||ex35Records.find(r=>r.id===item.id)||ex36Records.find(r=>r.id===item.id)||ex37Records.find(r=>r.id===item.id)||ex38Records.find(r=>r.id===item.id)||ex39Records.find(r=>r.id===item.id)||ex310Records.find(r=>r.id===item.id)||ex311Records.find(r=>r.id===item.id)||ex312Records.find(r=>r.id===item.id)||ex313Records.find(r=>r.id===item.id)||ex314Records.find(r=>r.id===item.id)||ex315Records.find(r=>r.id===item.id);
+       const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||statisticsEx82Batch.records.find(r=>r.id===item.id)||statisticsEx82FollowupBatch.records.find(r=>r.id===item.id)||ch8Ex83Records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id)||ex25Records.find(r=>r.id===item.id)||ex26Records.find(r=>r.id===item.id)||ex27Records.find(r=>r.id===item.id)||ex28Records.find(r=>r.id===item.id)||ex29Records.find(r=>r.id===item.id)||ex210UnitRecords.find(r=>r.id===item.id)||ex31Records.find(r=>r.id===item.id)||ex32Records.find(r=>r.id===item.id)||ex33Records.find(r=>r.id===item.id)||ex34Records.find(r=>r.id===item.id)||ex35Records.find(r=>r.id===item.id)||ex36Records.find(r=>r.id===item.id)||ex37Records.find(r=>r.id===item.id)||ex38Records.find(r=>r.id===item.id)||ex39Records.find(r=>r.id===item.id)||ex310Records.find(r=>r.id===item.id)||ex311Records.find(r=>r.id===item.id)||ex312Records.find(r=>r.id===item.id)||ex313Records.find(r=>r.id===item.id)||ex314Records.find(r=>r.id===item.id)||ex315Records.find(r=>r.id===item.id)||finalAlgebra.find(r=>r.id===item.id);
        assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'New content exactly matches source-verified batch '+item.id);
      }
    }

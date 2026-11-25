@@ -18,8 +18,14 @@ async function inspect(page,q,lang){
    el.querySelectorAll('sup').forEach(sup=>sup.replaceWith(document.createTextNode([...sup.textContent].map(c=>raised[c]||c).join(''))));
    el.querySelectorAll('details,.triggle-mcq-choices,.triggle-mcq-feedback').forEach(d=>d.remove());return el.textContent;
   };
-  const hint=document.querySelector('details.why-step-g9')?window.TriggleWhyStepG9.hints[q.id]:null;
-  const expected=count(hint?window.TriggleG9Math.text(hint[lang]||hint.en):null)+count(p.questionMath[lang]||p.questionMath.en)+count(p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s,i)=>n+count((lang==='ta'&&(override||q).steps[i].mathTa)||s.math)+count(s.reasonMath?.[lang]||s.reasonMath?.en),0);
+  const legacyHint=window.TriggleWhyStepG9.hints[q.id];
+  const hints=[...document.querySelectorAll('#stepsList details.why-step-g9')].map(detail=>
+   q.geometryConcept===undefined?legacyHint:q.steps[Number(detail.dataset.step)-1]?.why);
+  const hintCount=hints.reduce((n,hint)=>n+count(hint?window.TriggleG9Math.text(hint[lang]||hint.en):null),0);
+  const choices=q.choices?.reduce((n,choice)=>n+count(choice[lang]||choice.en),0)||0;
+  const expected=hintCount+choices+count(p.questionMath?.[lang]||p.questionMath?.en)+
+   count(p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s,i)=>n+
+   count((lang==='ta'&&(override||q).steps[i].mathTa)||s.math)+count(s.reasonMath?.[lang]||s.reasonMath?.en),0);
   const rendered=document.querySelectorAll('#questionText .katex,#stepsList .katex').length;
   const formulas=[...document.querySelectorAll('#questionText .triggle-tex,#stepsList .triggle-tex')].map(el=>{
    const visual=el.querySelector('.katex-html');

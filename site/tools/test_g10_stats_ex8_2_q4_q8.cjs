@@ -26,7 +26,11 @@ for(let i=0;i<records.length;i++){
    assert(st.ta&&/\p{Script=Tamil}/u.test(st.ta),'Tamil worked-step missing '+r.id);
  }
 }
-assert.match(records[0].questionMath.latex,/\\bar\{x\}/);
+for(const lang of ['en','ta']){
+  const structured=records[0].questionMath[lang];
+  assert.match(structured[1].latex,/\\bar\{x\}/);
+  assert.equal(structured.map(x=>typeof x==='string'?x:x.fallback).join(''),records[0].q[lang]);
+}
 assert.deepEqual(records[4].dataTable.rows,[['Mathematics',56,12],['Science',65,14],['Social Science',60,10]]);
 assert.equal(records[4].dataTable.headers.join(','),'Subject,Mean,SD');
 assert.deepEqual(records[4].dataTable.ta.rows,[['கணிதம்',56,12],['அறிவியல்',65,14],['சமூக அறிவியல்',60,10]]);

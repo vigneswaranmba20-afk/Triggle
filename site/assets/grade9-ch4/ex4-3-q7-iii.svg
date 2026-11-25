@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<circle cx="160" cy="112" r="84" fill="none" stroke="#3067b1"/>
+<path d="M 76.000 112.000 L 160.000 112.000 L 188.730 33.066" fill="none" stroke="#263755"/>
+<path d="M 160.000 112.000 L 244.000 112.000 L 188.730 33.066" fill="none" stroke="#263755"/>
+<path d="M 76.000 112.000 L 188.730 33.066" fill="none" stroke="#263755"/>
+<text x="63.000" y="112.000">M</text>
+<text x="257.000" y="112.000">N</text>
+<text x="192.730" y="19.066">P</text>
+<text x="155.000" y="127.000">O</text>
+<path d="M 165.130 97.905 A 15 15 0 0 1 175.000 112.000" fill="none" stroke="#973f19"/>
+<text x="192.766" y="89.057">70°</text>
+<path d="M 183.257 48.101 A 16 16 0 0 0 197.907 46.172" fill="none" stroke="#973f19"/>
+<text x="193.820" y="71.732">x°</text>
+</g>
+</svg>

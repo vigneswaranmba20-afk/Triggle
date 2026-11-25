@@ -12,3 +12,7 @@
 #stepsList .why-step-g9-figure svg{width:100%;height:auto;display:block;max-height:185px}
 @media(max-width:360px){#stepsList .why-step-g9 .why-step-panel{padding:8px 10px}}
 @media(prefers-reduced-motion:reduce){#stepsList .why-step-g9 *,#stepsList .why-step-g9{animation:none!important;transition:none!important}}
+
+.geometry-question-hint { margin-block:4px 8px; color:#45366d; }
+.geometry-question-hint summary { width:fit-content; min-height:32px; cursor:pointer; }
+.geometry-question-hint p { margin-block:4px 8px; }

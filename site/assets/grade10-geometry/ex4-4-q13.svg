@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Circle and external point</title>
+  <desc id="desc">The circle and the exterior point are shown before the tangents are constructed.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="104" cy="110" r="70" stroke="#326688"/><circle cx="104" cy="110" r="2" stroke="#326688"/><circle cx="244" cy="110" r="2" stroke="#326688"/><path d="M104 110 L244 110" stroke="#403876" stroke-dasharray="5 4"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="93" y="132">O</text><text x="249" y="127">P</text></g>
+</svg>

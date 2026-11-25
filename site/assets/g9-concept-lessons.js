@@ -107,11 +107,12 @@
     check.append(checkActions, feedback);
     body.append(check);
 
-    if (exercise && typeof onQuestion === 'function') {
-      const medium = ta && !exercise.q?.ta ? ' (ஆங்கிலத்தில் மட்டும்)' : '';
-      const link = element('button', copy.exercise + ' ' + exercise.exercise + medium + ' →', 'g10ch2-practice-link');
+    for (const item of [].concat(exercise || [])) {
+      if (typeof onQuestion !== 'function') break;
+      const medium = ta && !item.q?.ta ? ' (ஆங்கிலத்தில் மட்டும்)' : '';
+      const link = element('button', copy.exercise + ' ' + item.exercise + medium + ' →', 'g10ch2-practice-link');
       link.type = 'button';
-      link.addEventListener('click', () => onQuestion(exercise));
+      link.addEventListener('click', () => onQuestion(item));
       body.append(link);
     }
     const pages = lesson.pages?.[lang];

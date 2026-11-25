@@ -6,7 +6,13 @@ const html=read('site/index.html'),sw=read('site/service-worker.js');
 const scripts=[...html.matchAll(/<script src="\.\/(data\/[^?"']+)(?:\?[^"']*)?"[^>]*><\/script>/g)].map(m=>'site/'+m[1]);
 const context={window:{},console};vm.createContext(context);
 for(const f of scripts)vm.runInContext(read(f),context,{filename:f,timeout:20000});
-const all=context.window.TRIGGLE_CLASSES?.[9]?.items||[],source=new Map(all.map(q=>[q.id,q]));
+const rows=context.window.TRIGGLE_CLASSES?.[9]?.items||[];
+const geometry=rows.filter(q=>q.geometryConcept!==undefined);
+assert.equal(geometry.length,75,'Geometry explanations are authored alongside their corresponding steps');
+for(const item of geometry) {
+  assert(item.steps.every(step=>step.why?.en && /\p{Script=Tamil}/u.test(step.why.ta)),item.id);
+}
+const all=rows.filter(q=>q.geometryConcept===undefined),source=new Map(all.map(q=>[q.id,q]));
 const db=context.window.TriggleWhyStepG9;
 assert.ok(db&&db.grade===9,'Grade 9 source data loaded in the app');
 const hints=db.hints,ids=Object.keys(hints);

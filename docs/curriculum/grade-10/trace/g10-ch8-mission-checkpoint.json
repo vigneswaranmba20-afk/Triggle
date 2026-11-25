@@ -1,0 +1,2222 @@
+{
+  "repository": "vigneswaranmba20-afk/Triggle",
+  "branch": "codex/grade-10-chapter-8-completion",
+  "plannedBranch": "codex/grade-10-chapter-8-completion",
+  "commitSha": "a54f458183cd0bf1fef033f58355c179b08a1c8a",
+  "inventory": {
+    "verification": "Reconciled 75 questions and 94 source tasks against the repository inventory. Its historical statuses are retained separately from current runtime validation.",
+    "numberedQuestions": 75,
+    "canonicalTasks": 94,
+    "exercises": [
+      {
+        "exercise": "8.1",
+        "questions": 15,
+        "tasks": 16,
+        "textbookExerciseId": "8.1",
+        "recordedBaselineTasksByStatus": {
+          "COMPLETE": 16,
+          "PARTIAL": 0,
+          "MISSING": 0,
+          "DUPLICATE": 0,
+          "BLOCKED": 0
+        },
+        "sourcePages": {
+          "enPdf": [
+            319,
+            320
+          ],
+          "enPrinted": [
+            313,
+            314
+          ],
+          "taPdf": [
+            330
+          ]
+        },
+        "items": [
+          {
+            "question": "1",
+            "status": "COMPLETE",
+            "partCount": 2,
+            "tasks": [
+              {
+                "part": "i",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q1-i"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q1-i",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q1-i"
+                ]
+              },
+              {
+                "part": "ii",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q1-ii"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q1-ii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q1-ii"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "2",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q2"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q2",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q2"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "3",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q3"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q3",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q3"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "4",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q4"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q4",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q4"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "5",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q5"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q5",
+                "runtimeStatus": "english_complete_tamil_conditional",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q5"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "6",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q6"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q6",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q6"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "7",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q7"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q7",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q7"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "8",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q8"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q8",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q8"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "9",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q9"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q9",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q9"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "10",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q10"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q10",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q10"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "11",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q11"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q11",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q11"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "12",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q12"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q12",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q12"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "13",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q13"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q13",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q13"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "14",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q14"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q14",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q14"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "15",
+            "status": "COMPLETE",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "COMPLETE",
+                "studentRecordIds": [
+                  "c10-8-ex8-1-q15"
+                ],
+                "sourceVerificationStatus": "source-verified-2025",
+                "mathematicalValidationStatus": "independently-verified",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "canonicalId": "c10-8-ex8-1-q15",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-1-q15"
+                ]
+              }
+            ]
+          }
+        ],
+        "initialRuntime": {
+          "englishTasks": 16,
+          "bilingualWorkingTasks": 16,
+          "sourceFaithfulEligibleTamilTasks": null,
+          "notes": "Tamil content appears via an application startup overlay. Several stems are reworded and the Q5 overlay omits the printed count discrepancy."
+        },
+        "currentBranchRuntime": {
+          "englishTasks": 16,
+          "unconditionalTamilTasks": 15,
+          "conditionalTamilTasks": 1,
+          "quarantinedTasks": 0
+        }
+      },
+      {
+        "exercise": "8.2",
+        "questions": 8,
+        "tasks": 8,
+        "textbookExerciseId": "8.2",
+        "recordedBaselineTasksByStatus": {
+          "COMPLETE": 0,
+          "PARTIAL": 8,
+          "MISSING": 0,
+          "DUPLICATE": 0,
+          "BLOCKED": 0
+        },
+        "sourcePages": {
+          "enPdf": [
+            322
+          ],
+          "enPrinted": [
+            316
+          ],
+          "taPdf": [
+            331
+          ]
+        },
+        "items": [
+          {
+            "question": "1",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-2-q1"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-2-q1",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-2-q1"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "2",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-2-q2"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-2-q2",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-2-q2"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "3",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-2-q3"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-2-q3",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-2-q3"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "4",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-2-q4"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-2-q4",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-2-q4"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "5",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-2-q5"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-2-q5",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-2-q5"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "6",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-2-q6"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-2-q6",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-2-q6"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "7",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-2-q7"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-2-q7",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-2-q7"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "8",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-2-q8"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-2-q8",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-2-q8"
+                ]
+              }
+            ]
+          }
+        ],
+        "initialRuntime": {
+          "englishTasks": 8,
+          "bilingualWorkingTasks": 8
+        },
+        "currentBranchRuntime": {
+          "englishTasks": 8,
+          "unconditionalTamilTasks": 8,
+          "conditionalTamilTasks": 0,
+          "quarantinedTasks": 0
+        }
+      },
+      {
+        "exercise": "8.3",
+        "questions": 13,
+        "tasks": 29,
+        "textbookExerciseId": "8.3",
+        "recordedBaselineTasksByStatus": {
+          "COMPLETE": 0,
+          "PARTIAL": 29,
+          "MISSING": 0,
+          "DUPLICATE": 0,
+          "BLOCKED": 0
+        },
+        "sourcePages": {
+          "enPdf": [
+            328,
+            329
+          ],
+          "enPrinted": [
+            322,
+            323
+          ],
+          "taPdf": [
+            340
+          ]
+        },
+        "items": [
+          {
+            "question": "1",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q1"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q1",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q1"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "2",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q2"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q2",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q2"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "3",
+            "status": "PARTIAL",
+            "partCount": 2,
+            "tasks": [
+              {
+                "part": "i",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q3-i"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q3-i",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q3-i"
+                ]
+              },
+              {
+                "part": "ii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q3-ii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q3-ii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q3-ii"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "4",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q4"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q4",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q4"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "5",
+            "status": "PARTIAL",
+            "partCount": 2,
+            "tasks": [
+              {
+                "part": "i",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q5-i"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q5-i",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q5-i"
+                ]
+              },
+              {
+                "part": "ii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q5-ii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q5-ii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q5-ii"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "6",
+            "status": "PARTIAL",
+            "partCount": 2,
+            "tasks": [
+              {
+                "part": "i",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q6-i"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q6-i",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q6-i"
+                ]
+              },
+              {
+                "part": "ii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q6-ii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q6-ii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q6-ii"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "7",
+            "status": "PARTIAL",
+            "partCount": 4,
+            "tasks": [
+              {
+                "part": "i",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q7-i"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q7-i",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q7-i"
+                ]
+              },
+              {
+                "part": "ii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q7-ii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q7-ii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q7-ii"
+                ]
+              },
+              {
+                "part": "iii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q7-iii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q7-iii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q7-iii"
+                ]
+              },
+              {
+                "part": "iv",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q7-iv"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q7-iv",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q7-iv"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "8",
+            "status": "PARTIAL",
+            "partCount": 4,
+            "tasks": [
+              {
+                "part": "i",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q8-i"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q8-i",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q8-i"
+                ]
+              },
+              {
+                "part": "ii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q8-ii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q8-ii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q8-ii"
+                ]
+              },
+              {
+                "part": "iii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q8-iii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q8-iii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q8-iii"
+                ]
+              },
+              {
+                "part": "iv",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q8-iv"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q8-iv",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q8-iv"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "9",
+            "status": "PARTIAL",
+            "partCount": 4,
+            "tasks": [
+              {
+                "part": "i",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q9-i"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q9-i",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q9-i"
+                ]
+              },
+              {
+                "part": "ii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q9-ii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q9-ii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q9-ii"
+                ]
+              },
+              {
+                "part": "iii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q9-iii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q9-iii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q9-iii"
+                ]
+              },
+              {
+                "part": "iv",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q9-iv"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q9-iv",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q9-iv"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "10",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q10"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q10",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q10"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "11",
+            "status": "PARTIAL",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q11"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q11",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q11"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "12",
+            "status": "PARTIAL",
+            "partCount": 3,
+            "tasks": [
+              {
+                "part": "i",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q12-i"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q12-i",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q12-i"
+                ]
+              },
+              {
+                "part": "ii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q12-ii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q12-ii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q12-ii"
+                ]
+              },
+              {
+                "part": "iii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q12-iii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q12-iii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q12-iii"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "13",
+            "status": "PARTIAL",
+            "partCount": 3,
+            "tasks": [
+              {
+                "part": "i",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q13-i"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q13-i",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q13-i"
+                ]
+              },
+              {
+                "part": "ii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q13-ii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q13-ii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q13-ii"
+                ]
+              },
+              {
+                "part": "iii",
+                "status": "PARTIAL",
+                "studentRecordIds": [
+                  "c10-8-ex8-3-q13-iii"
+                ],
+                "sourceVerificationStatus": "source-checked",
+                "mathematicalValidationStatus": "incomplete-steps",
+                "deploymentStatus": "merged-and-deployed-baseline",
+                "note": "Incomplete solution steps",
+                "canonicalId": "c10-8-ex8-3-q13-iii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-3-q13-iii"
+                ]
+              }
+            ]
+          }
+        ],
+        "initialRuntime": {
+          "englishTasks": 29,
+          "bilingualWorkingTasks": 29
+        },
+        "currentBranchRuntime": {
+          "englishTasks": 29,
+          "unconditionalTamilTasks": 29,
+          "conditionalTamilTasks": 0,
+          "quarantinedTasks": 0
+        }
+      },
+      {
+        "exercise": "8.4",
+        "questions": 13,
+        "tasks": 15,
+        "textbookExerciseId": "8.4",
+        "recordedBaselineTasksByStatus": {
+          "COMPLETE": 0,
+          "PARTIAL": 0,
+          "MISSING": 14,
+          "DUPLICATE": 0,
+          "BLOCKED": 1
+        },
+        "sourcePages": {
+          "enPdf": [
+            335
+          ],
+          "enPrinted": [
+            329
+          ],
+          "taPdf": [
+            347
+          ]
+        },
+        "items": [
+          {
+            "question": "1",
+            "status": "BLOCKED",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "BLOCKED",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "note": "BILINGUAL_SOURCE_MATH_CONTRADICTION: Both English and Tamil 2025 editions print P(A)=2/3, P(B)=2/5, P(A∪B)=1/3, violating P(A∪B) >= P(A).",
+                "canonicalId": "c10-8-ex8-4-q1",
+                "runtimeStatus": "source_blocked",
+                "currentRuntimeRecordIds": []
+              }
+            ]
+          },
+          {
+            "question": "2",
+            "status": "MISSING",
+            "partCount": 3,
+            "tasks": [
+              {
+                "part": "i",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q2-i",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q2-i"
+                ]
+              },
+              {
+                "part": "ii",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q2-ii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q2-ii"
+                ]
+              },
+              {
+                "part": "iii",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q2-iii",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q2-iii"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "3",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q3",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q3"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "4",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q4",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q4"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "5",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q5",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q5"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "6",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q6",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q6"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "7",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q7",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q7"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "8",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q8",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q8"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "9",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q9",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q9"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "10",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q10",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q10"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "11",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q11",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q11"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "12",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q12",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q12"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "13",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-4-q13",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-4-q13"
+                ]
+              }
+            ]
+          }
+        ],
+        "initialRuntime": {
+          "englishTasks": 0,
+          "bilingualWorkingTasks": 0
+        },
+        "currentBranchRuntime": {
+          "englishTasks": 14,
+          "unconditionalTamilTasks": 14,
+          "conditionalTamilTasks": 0,
+          "quarantinedTasks": 1
+        }
+      },
+      {
+        "exercise": "8.5",
+        "questions": 15,
+        "tasks": 15,
+        "textbookExerciseId": "8.5",
+        "recordedBaselineTasksByStatus": {
+          "COMPLETE": 0,
+          "PARTIAL": 0,
+          "MISSING": 15,
+          "DUPLICATE": 0,
+          "BLOCKED": 0
+        },
+        "sourcePages": {
+          "enPdf": [
+            336,
+            337
+          ],
+          "enPrinted": [
+            330,
+            331
+          ],
+          "taPdf": [
+            349
+          ]
+        },
+        "items": [
+          {
+            "question": "1",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q1",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q1"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "2",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q2",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q2"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "3",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q3",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q3"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "4",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q4",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q4"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "5",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q5",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q5"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "6",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q6",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q6"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "7",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q7",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q7"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "8",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q8",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q8"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "9",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q9",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q9"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "10",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q10",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q10"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "11",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q11",
+                "runtimeStatus": "source_blocked",
+                "currentRuntimeRecordIds": []
+              }
+            ]
+          },
+          {
+            "question": "12",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q12",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q12"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "13",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q13",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q13"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "14",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q14",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q14"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "15",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-ex8-5-q15",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-ex8-5-q15"
+                ]
+              }
+            ]
+          }
+        ],
+        "initialRuntime": {
+          "englishTasks": 0,
+          "bilingualWorkingTasks": 0
+        },
+        "currentBranchRuntime": {
+          "englishTasks": 14,
+          "unconditionalTamilTasks": 14,
+          "conditionalTamilTasks": 0,
+          "quarantinedTasks": 1
+        }
+      },
+      {
+        "exercise": "Unit Exercise 8",
+        "questions": 11,
+        "tasks": 11,
+        "textbookExerciseId": "8.unit",
+        "recordedBaselineTasksByStatus": {
+          "COMPLETE": 0,
+          "PARTIAL": 0,
+          "MISSING": 11,
+          "DUPLICATE": 0,
+          "BLOCKED": 0
+        },
+        "sourcePages": {
+          "enPdf": [
+            337,
+            338
+          ],
+          "enPrinted": [
+            331,
+            332
+          ],
+          "taPdf": [
+            350,
+            351
+          ]
+        },
+        "items": [
+          {
+            "question": "1",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-unit-q1",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-unit-q1"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "2",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-unit-q2",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-unit-q2"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "3",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-unit-q3",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-unit-q3"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "4",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-unit-q4",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-unit-q4"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "5",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-unit-q5",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-unit-q5"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "6",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-unit-q6",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-unit-q6"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "7",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-unit-q7",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-unit-q7"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "8",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-unit-q8",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-unit-q8"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "9",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-unit-q9",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-unit-q9"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "10",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-unit-q10",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-unit-q10"
+                ]
+              }
+            ]
+          },
+          {
+            "question": "11",
+            "status": "MISSING",
+            "partCount": 1,
+            "tasks": [
+              {
+                "part": "whole",
+                "status": "MISSING",
+                "studentRecordIds": [],
+                "sourceVerificationStatus": "textbook-heading-and-page-located",
+                "mathematicalValidationStatus": "pending",
+                "deploymentStatus": "not-implemented",
+                "canonicalId": "c10-8-unit-q11",
+                "runtimeStatus": "bilingual",
+                "currentRuntimeRecordIds": [
+                  "c10-8-unit-q11"
+                ]
+              }
+            ]
+          }
+        ],
+        "initialRuntime": {
+          "englishTasks": 0,
+          "bilingualWorkingTasks": 0
+        },
+        "currentBranchRuntime": {
+          "englishTasks": 11,
+          "unconditionalTamilTasks": 11,
+          "conditionalTamilTasks": 0,
+          "quarantinedTasks": 0
+        }
+      }
+    ],
+    "currentRuntimeTotals": {
+      "numberedQuestionsInRuntime": 73,
+      "englishTasks": 92,
+      "unconditionalTamilTasks": 91,
+      "conditionalTamilTasks": 1,
+      "sourceBlockedTasks": 2
+    }
+  },
+  "pending": [
+    "Full release verification",
+    "Merge and deploy",
+    "Live route verification"
+  ],
+  "completed": [
+    "Created persistent mission checkpoint",
+    "Cloned current main and created the dedicated local development branch",
+    "Confirmed canonical scope against repository source inventories",
+    "Located both matching 2025 Drive books by ID",
+    "Downloaded and matched SHA-256 for both 2025 Drive textbooks",
+    "Visually checked Exercise 8.4 English PDF page 335 and Tamil PDF pages 347–348",
+    "Reconciled all 94 source tasks against the initial runtime",
+    "Authored all 14 solvable Exercise 8.4 tasks in English and Tamil",
+    "Pushed Exercise 8.4 to the dedicated GitHub branch",
+    "Visually checked Exercise 8.5 English PDF pages 336–337 and Tamil PDF pages 348–349",
+    "Authored all 14 determinate Exercise 8.5 tasks with exact bilingual choices and interactive feedback",
+    "Checked the original Unit Exercise 8 source pages and both answer keys",
+    "Authored all 11 Unit Exercise 8 items in both languages with four source tables",
+    "Recorded additional disagreements with the printed answer keys",
+    "Restored exact Exercise 8.1 display wording and five original tables",
+    "Made the Tamil Exercise 8.1 Q5 solution conditional on the nine printed wages",
+    "Recovered all 2026-11-12 historical fixture objects required by TRACE regression",
+    "Opened draft PR #428",
+    "Rechecked the Exercise 8.2 and 8.3 source exercise pages and their existing independent arithmetic tests",
+    "Integrated the 15 bilingual concept lessons with eight interactive lab modes and reciprocal exercise links",
+    "Localised the three Exercise 8.3 figures and stated the independent model for Q12",
+    "Corrected both chapter PDF locators and structured the bilingual Exercise 8.2 Q4 question formula"
+  ],
+  "validated": [
+    "Repository source inventory accounts for 75 questions and 94 tasks",
+    "Exercise 8.4 source wording, 14 independent answers, bilingual steps, KaTeX rendering, mobile routes and dice-grid figure",
+    "Exercise 8.5 source wording and choices, independent arithmetic, KaTeX, feedback, and mobile navigation",
+    "Unit Exercise 8 independent calculations, source and table fidelity, KaTeX, previous/next and mobile layouts",
+    "Exercise 8.1 bilingual mobile browser and table checks at 320, 390 and 412px",
+    "Historical TRACE reconciliation fixture and all six groups",
+    "All 15 concept lessons and lab arithmetic, English and Tamil viewport layout, correct-answer feedback and linked routes"
+  ],
+  "blocked": [
+    {
+      "id": "c10-8-ex8-4-q1",
+      "reason": "Both original pages give a union smaller than P(A). Existing release quarantine requires authorized source clarification. The wording and bilingual proof are in the fidelity record."
+    },
+    {
+      "id": "c10-8-ex8-5-q11",
+      "reason": "Both editions omit the page count. The printed answer 7/10 requires a stated assumption and cannot be accepted unconditionally."
+    },
+    {
+      "id": "c10-8-ex8-1-q5",
+      "reason": "The existing bilingual discrepancy record identifies ten workers in the Tamil stem with only nine wages. English states nine workers and has a runtime solution."
+    }
+  ],
+  "latestSuccessfulTests": [
+    "node site/tools/test_g10_ch8_ex8_4.cjs",
+    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_ex8_4_browser.cjs",
+    "node site/tools/test_exact_textbook_fidelity.cjs",
+    "node site/tools/test_g10_prob_ex8_3.cjs",
+    "node site/tools/test_g10_stats_ex8_2_q1_q3.cjs",
+    "node site/tools/test_g10_stats_ex8_2_q4_q8.cjs",
+    "node site/tools/test_standard_solutions.cjs",
+    "node site/tools/test_g10_ch8_ex8_5.cjs",
+    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_ex8_5_browser.cjs",
+    "node site/tools/test_g10_ch8_unit.cjs",
+    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_unit_browser.cjs",
+    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_ex8_1_bilingual_browser.cjs",
+    "node site/tools/bulk/test_trace_reconcile.cjs",
+    "node site/tools/test_project_status.cjs",
+    "node site/tools/test_g10_ch8_concepts.cjs",
+    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_concepts_browser.cjs",
+    "node site/tools/test_g10_stats_ex8_2_q4_q8.cjs"
+  ],
+  "deployment": {
+    "status": "development_branch_only",
+    "branchUrl": "https://github.com/vigneswaranmba20-afk/Triggle/tree/codex/grade-10-chapter-8-completion",
+    "pullRequest": "https://github.com/vigneswaranmba20-afk/Triggle/pull/428"
+  },
+  "nextExecutableTask": "Verify the integrated branch through the full local suites and the current PR quality gates, then merge and verify Pages on the merged commit.",
+  "baseSha": "327ec4de48264c5358c5e7b351afc49d6158f229",
+  "latestFullTestAttempt": {
+    "suite": "npm test",
+    "result": "historic object recovered and fixture now passes",
+    "evidence": "Read-only historical snapshot heads are pinned under refs/triggle-fixtures."
+  },
+  "concepts": {
+    "english": 15,
+    "tamil": 15,
+    "independentTamilEditorialApproval": false
+  }
+}

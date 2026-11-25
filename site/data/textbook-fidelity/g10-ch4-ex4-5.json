@@ -1,0 +1,598 @@
+{
+  "edition": "2025 revised",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "pages": [
+        {
+          "pdfPage": 205,
+          "printedPage": 199,
+          "visualChecked": true,
+          "imageSha256": "b83063bf97648e6d3f973577b67a68e4aee7a5b3624671d68ef8fdfa44dae911"
+        },
+        {
+          "pdfPage": 206,
+          "printedPage": 200,
+          "visualChecked": true,
+          "imageSha256": "702a59712ba120ffe294f6269733f55dcacee105c7fbb7cc3b06f9267ab113f3"
+        }
+      ]
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "pages": [
+        {
+          "pdfPage": 212,
+          "printedPage": 206,
+          "visualChecked": true,
+          "imageSha256": "97dc74a73424d3a1d4734823d3c6d453d838c67a9c55c818c32f10f5cf3012f0"
+        },
+        {
+          "pdfPage": 213,
+          "printedPage": 207,
+          "visualChecked": true,
+          "imageSha256": "30df74d63d39e027ec4cb847cbb07465faa9392e36d082b8e19e8c8effbf92a7"
+        }
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "c10-4-ex4-5-q1",
+      "questionNumber": "1",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "1. If in triangles ABC and EDF, AB/DE = BC/FD then they will be similar, when",
+        "ta": "1. AB/DE = BC/FD எனில், ABC மற்றும் EDF எப்பொழுது வடிவொத்தவையாக அமையும்."
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) ∠B = ∠E",
+          "(B) ∠A = ∠D",
+          "(C) ∠B = ∠D",
+          "(D) ∠A = ∠F"
+        ],
+        "ta": [
+          "(அ) ∠B = ∠E",
+          "(ஆ) ∠A = ∠D",
+          "(இ) ∠B = ∠D",
+          "(ஈ) ∠A = ∠F"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 205,
+          "printed": 199
+        },
+        "ta": {
+          "pdf": 212,
+          "printed": 206
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q2",
+      "questionNumber": "2",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "2. In △LMN, ∠L = 60°, ∠M = 50°. If △LMN ∼ △PQR then the value of ∠R is",
+        "ta": "2. △LMN-யில் ∠L = 60°, ∠M = 50° மேலும், △LMN ∼ △PQR எனில், ∠R-யின் மதிப்பு"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) 40°",
+          "(B) 70°",
+          "(C) 30°",
+          "(D) 110°"
+        ],
+        "ta": [
+          "(அ) 40°",
+          "(ஆ) 70°",
+          "(இ) 30°",
+          "(ஈ) 110°"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 205,
+          "printed": 199
+        },
+        "ta": {
+          "pdf": 212,
+          "printed": 206
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q3",
+      "questionNumber": "3",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "3. If △ABC is an isosceles triangle with ∠C = 90° and AC = 5 cm, then AB is",
+        "ta": "3. இருசமபக்க முக்கோணம் △ABC-யில் ∠C = 90° மற்றும் AC = 5 செ.மீ, எனில் AB ஆனது"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) 2.5 cm",
+          "(B) 5 cm",
+          "(C) 10 cm",
+          "(D) 5√2 cm"
+        ],
+        "ta": [
+          "(அ) 2.5 செ.மீ",
+          "(ஆ) 5 செ.மீ",
+          "(இ) 10 செ.மீ",
+          "(ஈ) 5√2 செ.மீ"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 205,
+          "printed": 199
+        },
+        "ta": {
+          "pdf": 212,
+          "printed": 206
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q4",
+      "questionNumber": "4",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "4. In a given figure ST ∥ QR, PS = 2 cm and SQ = 3 cm. Then the ratio of the area of △PQR to the area of △PST is",
+        "ta": "4. கொடுக்கப்பட்ட படத்தில் ST ∥ QR, PS = 2 செ.மீ மற்றும் SQ = 3 செ.மீ. எனில், △PQR-யின் பரப்பளவுக்கும் △PST-யின் பரப்பளவுக்கும் உள்ள விகிதம்"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) 25 : 4",
+          "(B) 25 : 7",
+          "(C) 25 : 11",
+          "(D) 25 : 13"
+        ],
+        "ta": [
+          "(அ) 25 : 4",
+          "(ஆ) 25 : 7",
+          "(இ) 25 : 11",
+          "(ஈ) 25 : 13"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 205,
+          "printed": 199
+        },
+        "ta": {
+          "pdf": 212,
+          "printed": 206
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q5",
+      "questionNumber": "5",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "5. The perimeters of two similar triangles △ABC and △PQR are 36 cm and 24 cm respectively. If PQ = 10 cm, then the length of AB is",
+        "ta": "5. இரு வடிவொத்த முக்கோணங்கள் △ABC மற்றும் △PQR-யின் சுற்றளவுகள் முறையே 36 செ.மீ மற்றும் 24 செ.மீ ஆகும். PQ = 10 செ.மீ எனில், AB-யின் நீளம்"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) 6 2/3 cm",
+          "(B) 10√6/3 cm",
+          "(C) 66 2/3 cm",
+          "(D) 15 cm"
+        ],
+        "ta": [
+          "(அ) 6 2/3 செ.மீ",
+          "(ஆ) 10√6/3 செ.மீ",
+          "(இ) 66 2/3 செ.மீ",
+          "(ஈ) 15 செ.மீ"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 205,
+          "printed": 199
+        },
+        "ta": {
+          "pdf": 212,
+          "printed": 206
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q6",
+      "questionNumber": "6",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "6. If in △ABC, DE ∥ BC. AB = 3.6 cm, AC = 2.4 cm and AD = 2.1 cm then the length of AE is",
+        "ta": "6. △ABC-யில் DE ∥ BC. AB = 3.6 செ.மீ, AC = 2.4 செ.மீ மற்றும் AD = 2.1 செ.மீ எனில், AE-யின் நீளம்"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) 1.4 cm",
+          "(B) 1.8 cm",
+          "(C) 1.2 cm",
+          "(D) 1.05 cm"
+        ],
+        "ta": [
+          "(அ) 1.4 செ.மீ",
+          "(ஆ) 1.8 செ.மீ",
+          "(இ) 1.2 செ.மீ",
+          "(ஈ) 1.05 செ.மீ"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 205,
+          "printed": 199
+        },
+        "ta": {
+          "pdf": 212,
+          "printed": 206
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q7",
+      "questionNumber": "7",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "7. In a △ABC, AD is the bisector of ∠BAC. If AB = 8 cm, BD = 6 cm and DC = 3 cm. The length of the side AC is",
+        "ta": "7. △ABC-யில் AD ஆனது, ∠BAC-யின் இருசமவெட்டி. AB = 8 செ.மீ, BD = 6 செ.மீ மற்றும் DC = 3 செ.மீ எனில், பக்கம் AC-யின் நீளம்"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) 6 cm",
+          "(B) 4 cm",
+          "(C) 3 cm",
+          "(D) 8 cm"
+        ],
+        "ta": [
+          "(அ) 6 செ.மீ",
+          "(ஆ) 4 செ.மீ",
+          "(இ) 3 செ.மீ",
+          "(ஈ) 8 செ.மீ"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 205,
+          "printed": 199
+        },
+        "ta": {
+          "pdf": 212,
+          "printed": 206
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q8",
+      "questionNumber": "8",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "8. In the adjacent figure ∠BAC = 90° and AD ⟂ BC then",
+        "ta": "8. கொடுக்கப்பட்ட படத்தில் ∠BAC = 90° மற்றும் AD ⟂ BC எனில்,"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) BD · CD = BC²",
+          "(B) AB·AC = BC²",
+          "(C) BD · CD = AD²",
+          "(D) AB · AC = AD²"
+        ],
+        "ta": [
+          "(அ) BD · CD = BC²",
+          "(ஆ) AB·AC = BC²",
+          "(இ) BD · CD = AD²",
+          "(ஈ) AB · AC = AD²"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 205,
+          "printed": 199
+        },
+        "ta": {
+          "pdf": 212,
+          "printed": 206
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q9",
+      "questionNumber": "9",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "9. Two poles of heights 6 m and 11 m stand vertically on a plane ground. If the distance between their feet is 12 m, what is the distance between their tops?",
+        "ta": "9. 6 மீ மற்றும் 11 மீ உயரமுள்ள இரு கம்பங்கள் சமதளத் தரையில் செங்குத்தாக உள்ளன. அவற்றின் அடிகளுக்கு இடையேயுள்ள தொலைவு 12 மீ எனில் அவற்றின் உச்சிகளுக்கு இடையே உள்ள தொலைவு என்ன?"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) 13 m",
+          "(B) 14 m",
+          "(C) 15 m",
+          "(D) 12.8 m"
+        ],
+        "ta": [
+          "(அ) 13 மீ",
+          "(ஆ) 14 மீ",
+          "(இ) 15 மீ",
+          "(ஈ) 12.8 மீ"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 205,
+          "printed": 199
+        },
+        "ta": {
+          "pdf": 212,
+          "printed": 206
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q10",
+      "questionNumber": "10",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "10. In the given figure, PR = 26 cm, QR = 24 cm, ∠PAQ = 90°, PA = 6 cm and QA = 8 cm. Find ∠PQR",
+        "ta": "10. கொடுக்கப்பட்ட படத்தில், PR = 26 செ.மீ, QR = 24 செ.மீ, ∠PAQ = 90°, PA = 6 செ.மீ மற்றும் QA = 8 செ.மீ எனில் ∠PQR-ஐக் காண்க."
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) 80°",
+          "(B) 85°",
+          "(C) 75°",
+          "(D) 90°"
+        ],
+        "ta": [
+          "(அ) 80°",
+          "(ஆ) 85°",
+          "(இ) 75°",
+          "(ஈ) 90°"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 205,
+          "printed": 199
+        },
+        "ta": {
+          "pdf": 213,
+          "printed": 207
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q11",
+      "questionNumber": "11",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "11. A tangent is perpendicular to the radius at the",
+        "ta": "11. வட்டத்தின் தொடுகோடும் அதன் ஆரமும் செங்குத்தாக அமையும் இடம்"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) centre",
+          "(B) point of contact",
+          "(C) infinity",
+          "(D) chord"
+        ],
+        "ta": [
+          "(அ) மையம்",
+          "(ஆ) தொடு புள்ளி",
+          "(இ) முடிவிலி",
+          "(ஈ) நாண்"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 206,
+          "printed": 200
+        },
+        "ta": {
+          "pdf": 213,
+          "printed": 207
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q12",
+      "questionNumber": "12",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "12. How many tangents can be drawn to the circle from an exterior point?",
+        "ta": "12. வட்டத்தின் வெளிப்புறப் புள்ளியிலிருந்து வட்டத்திற்கு எத்தனை தொடுகோடுகள் வரையலாம்?"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) one",
+          "(B) two",
+          "(C) infinite",
+          "(D) zero"
+        ],
+        "ta": [
+          "(அ) ஒன்று",
+          "(ஆ) இரண்டு",
+          "(இ) முடிவற்ற எண்ணிக்கை",
+          "(ஈ) பூஜ்ஜியம்"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 206,
+          "printed": 200
+        },
+        "ta": {
+          "pdf": 213,
+          "printed": 207
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q13",
+      "questionNumber": "13",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "13. The two tangents from an external points P to a circle with centre at O are PA and PB. If ∠APB = 70° then the value of ∠AOB is",
+        "ta": "13. O-வை மையமாக உடைய வட்டத்திற்கு, வெளியேயுள்ள புள்ளி P-யிலிருந்து வரையப்பட்ட தொடுகோடுகள் PA மற்றும் PB ஆகும். ∠APB = 70° எனில், ∠AOB-யின் மதிப்பு"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) 100°",
+          "(B) 110°",
+          "(C) 120°",
+          "(D) 130°"
+        ],
+        "ta": [
+          "(அ) 100°",
+          "(ஆ) 110°",
+          "(இ) 120°",
+          "(ஈ) 130°"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 206,
+          "printed": 200
+        },
+        "ta": {
+          "pdf": 213,
+          "printed": 207
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q14",
+      "questionNumber": "14",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "14. In figure CP and CQ are tangents to a circle with centre at O. ARB is another tangent touching the circle at R. If CP = 11 cm and BC = 7 cm, then the length of BR is",
+        "ta": "14. படத்தில் O-வை மையமாக உடைய வட்டத்தின் தொடுகோடுகள் CP மற்றும் CQ ஆகும். ARB ஆனது வட்டத்தின் மீதுள்ள புள்ளி R வழியாகச் செல்லும் மற்றொரு தொடுகோடு ஆகும். CP = 11 செ.மீ மற்றும் BC = 7 செ.மீ எனில் BR-யின் நீளம்"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) 6 cm",
+          "(B) 5 cm",
+          "(C) 8 cm",
+          "(D) 4 cm"
+        ],
+        "ta": [
+          "(அ) 6 செ.மீ",
+          "(ஆ) 5 செ.மீ",
+          "(இ) 8 செ.மீ",
+          "(ஈ) 4 செ.மீ"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 206,
+          "printed": 200
+        },
+        "ta": {
+          "pdf": 213,
+          "printed": 207
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-ex4-5-q15",
+      "questionNumber": "15",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "15. In figure if PR is tangent to the circle at P and O is the centre of the circle, then ∠POQ is",
+        "ta": "15. படத்தில் உள்ளவாறு O-வை மையமாகக் கொண்ட வட்டத்தின் தொடுகோடு PR எனில், ∠POQ ஆனது"
+      },
+      "textbookChoices": {
+        "en": [
+          "(A) 120°",
+          "(B) 100°",
+          "(C) 110°",
+          "(D) 90°"
+        ],
+        "ta": [
+          "(அ) 120°",
+          "(ஆ) 100°",
+          "(இ) 110°",
+          "(ஈ) 90°"
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 206,
+          "printed": 200
+        },
+        "ta": {
+          "pdf": 213,
+          "printed": 207
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    }
+  ]
+}

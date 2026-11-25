@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Two triangles with shared side PQ</title>
+  <desc id="desc">PA and QA meet at a right angle inside PQR.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 167 L270 67 L270 167 Z" stroke="#403876"/><path d="M270 67 L222 103 L270 167" stroke="#403876"/><path d="M230 97 L236 105 L228 111" stroke="#403876"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="16" y="188">R</text><text x="275" y="61">P</text><text x="275" y="188">Q</text><text x="206" y="107">A</text><text x="243" y="98">6</text><text x="232" y="144">8</text></g>
+</svg>

@@ -153,10 +153,10 @@ for(const f of moduleFiles){
   assert.throws(()=>vm.runInNewContext(fs.readFileSync('site/data/textbook-exercises/'+f,'utf8'),dupCtx,{timeout:5000}),/Duplicate Grade 10 Exercise 3\.[7-9] student ID/);
 }
 
-// Verify TRACE Grade 10 inventory shows Exercises 3.7-3.9 100% complete and 940 total tasks:
+// Verify TRACE Grade 10 inventory shows Exercises 3.7-3.9 100% complete and 932 total tasks:
 const inv=buildInventory();
 assert.equal(inv.totals.numberedQuestions,664);
-assert.equal(inv.totals.subpartTasks,940);
+assert.equal(inv.totals.subpartTasks,932);
 assert(inv.totals.questionsByStatus.COMPLETE>=235);
 assert(inv.totals.tasksByStatus.COMPLETE>=385);
 assert(inv.chapterSummaries[2].questionsByStatus.COMPLETE>=33,'Chapter 3 has at least 33 complete numbered questions (Ex 3.1-3.9)');
@@ -167,4 +167,4 @@ for(const ex of ['3.7','3.8','3.9']){
   assert(rec&&rec.tasksByStatus.COMPLETE===rec.subpartTaskCount&&rec.tasksByStatus.MISSING===0&&rec.tasksByStatus.PARTIAL===0,'Exercise '+ex+' must be 100% complete in TRACE inventory');
 }
 
-console.log('PASS Grade 10 Ch 3 Exercises 3.7–3.9 release gate: 23/23 tasks across 7 numbered questions verified (KaTeX, source audit, math identities, duplicate guards, and TRACE inventory '+inv.totals.questionsByStatus.COMPLETE+'/664 questions, '+inv.totals.tasksByStatus.COMPLETE+'/940 tasks).');
+console.log('PASS Grade 10 Ch 3 Exercises 3.7–3.9 release gate: 23/23 tasks across 7 numbered questions verified (KaTeX, source audit, math identities, duplicate guards, and TRACE inventory '+inv.totals.questionsByStatus.COMPLETE+'/664 questions, '+inv.totals.tasksByStatus.COMPLETE+'/932 tasks).');

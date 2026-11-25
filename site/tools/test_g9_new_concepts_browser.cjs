@@ -21,7 +21,7 @@ async function checkChapter(page, base, chapter, width, lang) {
   const items = index.locator('.sp2-nav-button');
   assert.equal(await items.count(), chapter.count);
   const data = await page.evaluate(name => window[name].map(lesson => ({
-    title: lesson.title, section: lesson.section, exercise: lesson.exercise,
+    title: lesson.title, section: lesson.section, exercise: lesson.exercise, additionalExercises: lesson.additionalExercises || [],
     diagram: Boolean(lesson.activity.options[1].diagram),
     optionCount: lesson.activity.options.length,
     math: Boolean(lesson.math || lesson.activity.options[1].math || lesson.details?.some(entry => entry.math)),
@@ -85,9 +85,12 @@ async function checkChapter(page, base, chapter, width, lang) {
       assert.equal(await options.nth(0).getAttribute('aria-pressed'), 'true', label);
       assert.equal(await feedback.innerText(), '', label);
       assert.equal(await panel.locator('.katex-error, [data-math-error]').count(), 0, label);
-      if (source.exercise) {
-        await panel.locator('.g10ch2-practice-link').click();
-        assert.equal(new URL(page.url()).searchParams.get('question'), source.exercise, label);
+      const expectedExercises=[source.exercise,...source.additionalExercises].filter(Boolean);
+      const practiceLinks=panel.locator('.g10ch2-practice-link');
+      assert.equal(await practiceLinks.count(),expectedExercises.length,label);
+      for(const [linkIndex,exerciseId] of expectedExercises.entries()){
+        await practiceLinks.nth(linkIndex).click();
+        assert.equal(new URL(page.url()).searchParams.get('question'),exerciseId,label);
         await page.goBack();
         await panel.locator('.g9-investigation-check').waitFor({state: 'visible'});
       }

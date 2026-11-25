@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 4,
+  "baselineCommit": "213e207ca8047e20ca188229ee584074a4ebf626",
+  "basis": "2025 revised TN SCERT English and Tamil PDFs from the connected Drive. Original solutions and SVG redrawings; no scans for redistribution.",
+  "answerAppendix": {"en": {"pdf": 346, "printed": 340}, "ta": {"pdf": 360, "printed": 354}},
+  "countingRule": "One task for each printed subpart or unlettered question. Multiple results in an unlettered question are checked within its one task.",
+  "baselineRecords": 44,
+  "expectedNumberedQuestions": 78,
+  "expectedTasks": 88,
+  "newScope": {"numberedQuestions": 41, "tasks": 44, "solvedBilingual": 41, "quarantinedTasks": 3, "newFigures": 17},
+  "geometryTotals": {"bilingualRecords": 85, "standardSolvedTasks": 84, "diagnosticRecords": 1, "quarantinedTasks": 4},
+  "inventoryCorrections": [
+    "4.1 Q7 includes a previously omitted part (iv); its student record already exists.",
+    "4.2 Q2, Q3 and Q9 are unlettered single tasks.",
+    "4.3 Q8 asks for one identity.",
+    "Unit Exercise 4 Q2 requests two lengths in one unlettered task. Q4 requests one proof."
+  ],
+  "quarantine": [
+    {
+      "exercise": "4.2", "question": "8(i)", "enPdf": 188, "taPdf": 194,
+      "evidence": "The printed lengths imply BC = 1.5 + 3.5 = 5 and AB + BC = 5 + 5 = AC. No non-degenerate triangle fits. The existing bilingual diagnostic card stays available for progress and bookmarks."
+    },
+    {
+      "exercise": "4.unit", "question": "6(i)–(ii)", "enPdf": 207, "taPdf": 214,
+      "evidence": "Take B = (−5, 0), D = (0, 0), C = (5, 0), E = (2, 0) and A = (2, 3). Then a = 10, x = 2 and p² = 13. The actual squares b² = 18 and c² = 58 exchange the printed right-hand sides. Both equations require the foot E on the B side of D or a signed x measured positively from E toward D along BC. Part (iii) is valid in either orientation and is published separately."
+    },
+    {
+      "exercise": "4.unit", "question": "10", "enPdf": 207, "taPdf": 214,
+      "evidence": "For A = (0, 0), B = (8, 0) and C = (0, 21), the data give D = (5, 0) and E = (16/5, 63/5). F = (0, 20) or F = (0, 19) both satisfy the stated conditions, giving different lengths. The appendix value 6 would follow if D, E and F were all internal and CD, AE and BF were concurrent. Then Ceva gives CF/FA = 2/5, so CF = 6 and FA = 15. Assuming D, E and F collinear instead would give 14 for an external F beyond C. Neither condition appears in either edition."
+    }
+  ],
+  "sourceDiscrepancies": [
+    {"exercise": "4.2", "question": "12", "explanation": "Both keys print 2.1 cm. Existing working gives (4.4² − 2.5²)/(5 tan 50°) cm ≈ 2.20 cm."},
+    {"exercise": "4.3", "question": "3", "explanation": "The keys give 21.74 m. The English stem requests the nearest metre, 22 m. Existing working includes both."},
+    {"exercise": "4.4", "question": "14", "explanation": "Both keys print 10.3 cm. Exact tangent length √105 cm is about 10.247 cm, or 10.2 cm to the nearest tenth."},
+    {"exercise": "4.4", "question": "16", "explanation": "English requests one tangent and Tamil requests tangents. Both keys print 6.3 cm. Exact length 3.6√3 cm is about 6.235 cm, or 6.2 cm to the nearest tenth."},
+    {"exercise": "4.unit", "question": "7", "explanation": "English gives eye level; Tamil gives the man's height and specifies collinear ground points. Working uses 2 m as eye level in the reflection model."},
+    {"exercise": "4.unit", "question": "8", "explanation": "The key's relation s = 4d/11 assumes the point light lies at the top of the pillar. Both worked solutions state that model explicitly."}
+  ],
+  "independentTamilEditorialReview": "pending",
+  "teacherCertification": "pending"
+}

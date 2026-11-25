@@ -1,0 +1,5389 @@
+{
+  "schemaVersion": 1,
+  "batchId": "g10-ch3-final-a",
+  "grade": 10,
+  "chapter": "3",
+  "module": "data/textbook-exercises/g10-ch3-final-a.js",
+  "tamilStatus": "pending",
+  "sources": [
+    {
+      "id": "g10-2025-en",
+      "grade": 10,
+      "language": "en",
+      "title": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "2025 revised",
+      "url": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    },
+    {
+      "id": "g10-2025-ta",
+      "grade": 10,
+      "language": "ta",
+      "title": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "edition": "2025 revised",
+      "url": "https://drive.google.com/file/d/1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC/view",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "verification": "verified",
+      "imprintPdfPage": 2,
+      "imprintVisualChecked": true
+    }
+  ],
+  "inventory": {
+    "completeChapter": false,
+    "exercises": [
+      {
+        "id": "3.16",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii",
+              "iii",
+              "iv",
+              "v",
+              "vi"
+            ],
+            "requiredFigures": [
+              "./assets/grade10-ch3/ex3-16-q1-i.svg",
+              "./assets/grade10-ch3/ex3-16-q1-ii.svg",
+              "./assets/grade10-ch3/ex3-16-q1-iii.svg",
+              "./assets/grade10-ch3/ex3-16-q1-iv.svg",
+              "./assets/grade10-ch3/ex3-16-q1-v.svg",
+              "./assets/grade10-ch3/ex3-16-q1-vi.svg"
+            ],
+            "tables": [],
+            "graphs": [
+              "./assets/grade10-ch3/ex3-16-q1-i.svg",
+              "./assets/grade10-ch3/ex3-16-q1-ii.svg",
+              "./assets/grade10-ch3/ex3-16-q1-iii.svg",
+              "./assets/grade10-ch3/ex3-16-q1-iv.svg",
+              "./assets/grade10-ch3/ex3-16-q1-v.svg",
+              "./assets/grade10-ch3/ex3-16-q1-vi.svg"
+            ],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              137
+            ],
+            "pdfPages": [
+              143
+            ]
+          },
+          {
+            "number": "2",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [
+              "./assets/grade10-ch3/ex3-16-q2.svg"
+            ],
+            "tables": [],
+            "graphs": [
+              "./assets/grade10-ch3/ex3-16-q2.svg"
+            ],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              137
+            ],
+            "pdfPages": [
+              143
+            ]
+          },
+          {
+            "number": "3",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [
+              "./assets/grade10-ch3/ex3-16-q3.svg"
+            ],
+            "tables": [],
+            "graphs": [
+              "./assets/grade10-ch3/ex3-16-q3.svg"
+            ],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              137
+            ],
+            "pdfPages": [
+              143
+            ]
+          },
+          {
+            "number": "4",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [
+              "./assets/grade10-ch3/ex3-16-q4.svg"
+            ],
+            "tables": [],
+            "graphs": [
+              "./assets/grade10-ch3/ex3-16-q4.svg"
+            ],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              137
+            ],
+            "pdfPages": [
+              143
+            ]
+          },
+          {
+            "number": "5",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [
+              "./assets/grade10-ch3/ex3-16-q5.svg"
+            ],
+            "tables": [],
+            "graphs": [
+              "./assets/grade10-ch3/ex3-16-q5.svg"
+            ],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              137
+            ],
+            "pdfPages": [
+              143
+            ]
+          },
+          {
+            "number": "6",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [
+              "./assets/grade10-ch3/ex3-16-q6.svg"
+            ],
+            "tables": [],
+            "graphs": [
+              "./assets/grade10-ch3/ex3-16-q6.svg"
+            ],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              137
+            ],
+            "pdfPages": [
+              143
+            ]
+          },
+          {
+            "number": "7",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [
+              "./assets/grade10-ch3/ex3-16-q7.svg"
+            ],
+            "tables": [],
+            "graphs": [
+              "./assets/grade10-ch3/ex3-16-q7.svg"
+            ],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              137
+            ],
+            "pdfPages": [
+              143
+            ]
+          },
+          {
+            "number": "8",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [
+              "./assets/grade10-ch3/ex3-16-q8.svg"
+            ],
+            "tables": [],
+            "graphs": [
+              "./assets/grade10-ch3/ex3-16-q8.svg"
+            ],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              137
+            ],
+            "pdfPages": [
+              143
+            ]
+          }
+        ]
+      },
+      {
+        "id": "3.17",
+        "complete": true,
+        "questions": [
+          {
+            "number": "1",
+            "parts": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              144
+            ],
+            "pdfPages": [
+              150
+            ]
+          },
+          {
+            "number": "2",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              144
+            ],
+            "pdfPages": [
+              150
+            ]
+          },
+          {
+            "number": "3",
+            "parts": [
+              "i",
+              "ii"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              144
+            ],
+            "pdfPages": [
+              150
+            ]
+          },
+          {
+            "number": "4",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              144
+            ],
+            "pdfPages": [
+              150
+            ]
+          },
+          {
+            "number": "5",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              144
+            ],
+            "pdfPages": [
+              150
+            ]
+          },
+          {
+            "number": "6",
+            "parts": [
+              "whole"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              144
+            ],
+            "pdfPages": [
+              150
+            ]
+          },
+          {
+            "number": "7",
+            "parts": [
+              "i",
+              "ii",
+              "iii"
+            ],
+            "requiredFigures": [],
+            "tables": [],
+            "graphs": [],
+            "mcq": false,
+            "answerKey": null,
+            "sourceId": "g10-2025-en",
+            "visualChecked": true,
+            "printedPages": [
+              144
+            ],
+            "pdfPages": [
+              150
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "c10-3-ex3-16-q1-i",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q1(i)",
+        "ta": "பயிற்சி 3.16 · வினா 1(i)"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(i) x²−9x+20=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(i) x²−9x+20=0"
+      },
+      "questionMath": {
+        "en": [
+          "1. ",
+          "Graph the following quadratic equations and state their nature of solutions.\n",
+          "(i) ",
+          {
+            "latex": "x^2-9x+20=0",
+            "fallback": "x²−9x+20=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "1. ",
+          "கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n",
+          "(i) ",
+          {
+            "latex": "x^2-9x+20=0",
+            "fallback": "x²−9x+20=0",
+            "display": false
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=x²−9x+20\nx_v=(9)/(2)",
+          "math": {
+            "latex": "\\begin{aligned}y&=x^2-9x+20\\\\x_{\\mathrm{v}}&=\\frac{9}{2}\\end{aligned}",
+            "fallback": "y=x²−9x+20\nx_v=(9)/(2)",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "A root is an x-coordinate where the curve meets the horizontal axis, because the y-coordinate is zero there.",
+          "ta": "பரவளையம் கிடை அச்சைச் சந்திக்கும் இடத்தில் y மதிப்பு பூச்சியம். எனவே அப்புள்ளியின் x ஆயம் ஒரு மூலம்.",
+          "eq": "y=0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y=0",
+            "display": true
+          }
+        },
+        {
+          "en": "The two intersections give distinct real roots. Read the x-coordinates at the marked points.",
+          "ta": "இரு சந்திப்புப் புள்ளிகள் இருப்பதால் மெய் மூலங்கள் வேறுபட்டவை. குறித்த புள்ளிகளின் x ஆயங்களைப் படிக்கவும்.",
+          "eq": "(4,0), (5,0)",
+          "math": {
+            "latex": "\\left(4,0\\right),\\ \\left(5,0\\right)",
+            "fallback": "(4,0), (5,0)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the intersections by factoring the target polynomial.",
+          "ta": "தீர்க்க வேண்டிய கோவையைக் காரணிப்படுத்தி, சந்திப்புப் புள்ளிகளின் x ஆயங்களைச் சரிபார்க்கவும்.",
+          "eq": "(x − 5) (x − 4)=0",
+          "math": {
+            "latex": "\\left(x - 5\\right) \\left(x - 4\\right)=0",
+            "fallback": "(x − 5) (x − 4)=0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "Distinct real roots: 4, 5\nx=4, 5",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "en": [
+          "Distinct real roots: 4, 5\n",
+          {
+            "latex": "\\boxed{x=4,\\ 5}",
+            "fallback": "x=4, 5",
+            "display": true
+          }
+        ],
+        "ta": [
+          "சமமற்ற மெய் மூலங்கள்: 4, 5\n",
+          {
+            "latex": "\\boxed{x=4,\\ 5}",
+            "fallback": "x=4, 5",
+            "display": true
+          }
+        ]
+      },
+      "answerTa": "சமமற்ற மெய் மூலங்கள்: 4, 5\nx=4, 5",
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q1-i.svg",
+      "figureAlt": {
+        "en": "Graph of y = x²-9x+20 and y = 0.",
+        "ta": "y = x²-9x+20, y = 0 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = 0.",
+        "ta": "நீலப் பரவளையமும் y = 0 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "3",
+            "2",
+            "0"
+          ],
+          [
+            "4",
+            "0",
+            "0"
+          ],
+          [
+            "9/2",
+            "-1/4",
+            "0"
+          ],
+          [
+            "5",
+            "0",
+            "0"
+          ],
+          [
+            "6",
+            "2",
+            "0"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "3",
+              "2",
+              "0"
+            ],
+            [
+              "4",
+              "0",
+              "0"
+            ],
+            [
+              "9/2",
+              "-1/4",
+              "0"
+            ],
+            [
+              "5",
+              "0",
+              "0"
+            ],
+            [
+              "6",
+              "2",
+              "0"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q1-ii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q1(ii)",
+        "ta": "பயிற்சி 3.16 · வினா 1(ii)"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(ii) x²−4x+4=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(ii) x²−4x+4=0"
+      },
+      "questionMath": {
+        "en": [
+          "1. ",
+          "Graph the following quadratic equations and state their nature of solutions.\n",
+          "(ii) ",
+          {
+            "latex": "x^2-4x+4=0",
+            "fallback": "x²−4x+4=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "1. ",
+          "கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n",
+          "(ii) ",
+          {
+            "latex": "x^2-4x+4=0",
+            "fallback": "x²−4x+4=0",
+            "display": false
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=x²−4x+4\nx_v=2",
+          "math": {
+            "latex": "\\begin{aligned}y&=x^2-4x+4\\\\x_{\\mathrm{v}}&=2\\end{aligned}",
+            "fallback": "y=x²−4x+4\nx_v=2",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "A root is an x-coordinate where the curve meets the horizontal axis, because the y-coordinate is zero there.",
+          "ta": "பரவளையம் கிடை அச்சைச் சந்திக்கும் இடத்தில் y மதிப்பு பூச்சியம். எனவே அப்புள்ளியின் x ஆயம் ஒரு மூலம்.",
+          "eq": "y=0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y=0",
+            "display": true
+          }
+        },
+        {
+          "en": "The graphs touch once, so there is a repeated real root. Read the x-coordinates at the marked points.",
+          "ta": "ஒரே புள்ளியில் தொடுவதால் மெய் மூலங்கள் சமமானவை. குறித்த புள்ளிகளின் x ஆயங்களைப் படிக்கவும்.",
+          "eq": "(2,0)",
+          "math": {
+            "latex": "\\left(2,0\\right)",
+            "fallback": "(2,0)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the intersections by factoring the target polynomial.",
+          "ta": "தீர்க்க வேண்டிய கோவையைக் காரணிப்படுத்தி, சந்திப்புப் புள்ளிகளின் x ஆயங்களைச் சரிபார்க்கவும்.",
+          "eq": "(x − 2)²=0",
+          "math": {
+            "latex": "\\left(x - 2\\right)^{2}=0",
+            "fallback": "(x − 2)²=0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "Repeated real root: 2\nx=2",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "en": [
+          "Repeated real root: 2\n",
+          {
+            "latex": "\\boxed{x=2}",
+            "fallback": "x=2",
+            "display": true
+          }
+        ],
+        "ta": [
+          "சமமான மெய் மூலங்கள்: 2\n",
+          {
+            "latex": "\\boxed{x=2}",
+            "fallback": "x=2",
+            "display": true
+          }
+        ]
+      },
+      "answerTa": "சமமான மெய் மூலங்கள்: 2\nx=2",
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q1-ii.svg",
+      "figureAlt": {
+        "en": "Graph of y = x²-4x+4 and y = 0.",
+        "ta": "y = x²-4x+4, y = 0 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = 0.",
+        "ta": "நீலப் பரவளையமும் y = 0 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "1",
+            "1",
+            "0"
+          ],
+          [
+            "2",
+            "0",
+            "0"
+          ],
+          [
+            "3",
+            "1",
+            "0"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "1",
+              "1",
+              "0"
+            ],
+            [
+              "2",
+              "0",
+              "0"
+            ],
+            [
+              "3",
+              "1",
+              "0"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q1-iii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q1(iii)",
+        "ta": "பயிற்சி 3.16 · வினா 1(iii)"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(iii) x²+x+7=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(iii) x²+x+7=0"
+      },
+      "questionMath": {
+        "en": [
+          "1. ",
+          "Graph the following quadratic equations and state their nature of solutions.\n",
+          "(iii) ",
+          {
+            "latex": "x^2+x+7=0",
+            "fallback": "x²+x+7=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "1. ",
+          "கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n",
+          "(iii) ",
+          {
+            "latex": "x^2+x+7=0",
+            "fallback": "x²+x+7=0",
+            "display": false
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=x²+x+7\nx_v=− (1)/(2)",
+          "math": {
+            "latex": "\\begin{aligned}y&=x^2+x+7\\\\x_{\\mathrm{v}}&=- \\frac{1}{2}\\end{aligned}",
+            "fallback": "y=x²+x+7\nx_v=− (1)/(2)",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "A root is an x-coordinate where the curve meets the horizontal axis, because the y-coordinate is zero there.",
+          "ta": "பரவளையம் கிடை அச்சைச் சந்திக்கும் இடத்தில் y மதிப்பு பூச்சியம். எனவே அப்புள்ளியின் x ஆயம் ஒரு மூலம்.",
+          "eq": "y=0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y=0",
+            "display": true
+          }
+        },
+        {
+          "en": "The graphs have no real intersection. Completing the square shows the vertical difference is always positive.",
+          "ta": "மெய்யெண் ஆயத்தளத்தில் வரைபடங்கள் சந்திக்கவில்லை. முழு வர்க்கமாக மாற்றினால் அவற்றின் செங்குத்து இடைவெளி எப்போதும் நேர்மம் எனத் தெரியும்.",
+          "eq": "(x + (1)/(2))² + (27)/(4)>0",
+          "math": {
+            "latex": "\\left(x + \\frac{1}{2}\\right)^{2} + \\frac{27}{4}>0",
+            "fallback": "(x + (1)/(2))² + (27)/(4)>0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "No real roots\n∅",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "en": [
+          "No real roots\n",
+          {
+            "latex": "\\boxed{\\varnothing}",
+            "fallback": "∅",
+            "display": true
+          }
+        ],
+        "ta": [
+          "மெய் மூலங்கள் இல்லை\n",
+          {
+            "latex": "\\boxed{\\varnothing}",
+            "fallback": "∅",
+            "display": true
+          }
+        ]
+      },
+      "answerTa": "மெய் மூலங்கள் இல்லை\n∅",
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q1-iii.svg",
+      "figureAlt": {
+        "en": "Graph of y = x²+x+7 and y = 0.",
+        "ta": "y = x²+x+7, y = 0 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = 0.",
+        "ta": "நீலப் பரவளையமும் y = 0 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "-2",
+            "9",
+            "0"
+          ],
+          [
+            "-1",
+            "7",
+            "0"
+          ],
+          [
+            "-1/2",
+            "27/4",
+            "0"
+          ],
+          [
+            "0",
+            "7",
+            "0"
+          ],
+          [
+            "1",
+            "9",
+            "0"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "-2",
+              "9",
+              "0"
+            ],
+            [
+              "-1",
+              "7",
+              "0"
+            ],
+            [
+              "-1/2",
+              "27/4",
+              "0"
+            ],
+            [
+              "0",
+              "7",
+              "0"
+            ],
+            [
+              "1",
+              "9",
+              "0"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q1-iv",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q1(iv)",
+        "ta": "பயிற்சி 3.16 · வினா 1(iv)"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(iv) x²−9=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(iv) x²−9=0"
+      },
+      "questionMath": {
+        "en": [
+          "1. ",
+          "Graph the following quadratic equations and state their nature of solutions.\n",
+          "(iv) ",
+          {
+            "latex": "x^2-9=0",
+            "fallback": "x²−9=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "1. ",
+          "கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n",
+          "(iv) ",
+          {
+            "latex": "x^2-9=0",
+            "fallback": "x²−9=0",
+            "display": false
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=x²−9\nx_v=0",
+          "math": {
+            "latex": "\\begin{aligned}y&=x^2-9\\\\x_{\\mathrm{v}}&=0\\end{aligned}",
+            "fallback": "y=x²−9\nx_v=0",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "A root is an x-coordinate where the curve meets the horizontal axis, because the y-coordinate is zero there.",
+          "ta": "பரவளையம் கிடை அச்சைச் சந்திக்கும் இடத்தில் y மதிப்பு பூச்சியம். எனவே அப்புள்ளியின் x ஆயம் ஒரு மூலம்.",
+          "eq": "y=0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y=0",
+            "display": true
+          }
+        },
+        {
+          "en": "The two intersections give distinct real roots. Read the x-coordinates at the marked points.",
+          "ta": "இரு சந்திப்புப் புள்ளிகள் இருப்பதால் மெய் மூலங்கள் வேறுபட்டவை. குறித்த புள்ளிகளின் x ஆயங்களைப் படிக்கவும்.",
+          "eq": "(−3,0), (3,0)",
+          "math": {
+            "latex": "\\left(-3,0\\right),\\ \\left(3,0\\right)",
+            "fallback": "(−3,0), (3,0)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the intersections by factoring the target polynomial.",
+          "ta": "தீர்க்க வேண்டிய கோவையைக் காரணிப்படுத்தி, சந்திப்புப் புள்ளிகளின் x ஆயங்களைச் சரிபார்க்கவும்.",
+          "eq": "(x − 3) (x + 3)=0",
+          "math": {
+            "latex": "\\left(x - 3\\right) \\left(x + 3\\right)=0",
+            "fallback": "(x − 3) (x + 3)=0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "Distinct real roots: -3, 3\nx=−3, 3",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "en": [
+          "Distinct real roots: -3, 3\n",
+          {
+            "latex": "\\boxed{x=-3,\\ 3}",
+            "fallback": "x=−3, 3",
+            "display": true
+          }
+        ],
+        "ta": [
+          "சமமற்ற மெய் மூலங்கள்: -3, 3\n",
+          {
+            "latex": "\\boxed{x=-3,\\ 3}",
+            "fallback": "x=−3, 3",
+            "display": true
+          }
+        ]
+      },
+      "answerTa": "சமமற்ற மெய் மூலங்கள்: -3, 3\nx=−3, 3",
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q1-iv.svg",
+      "figureAlt": {
+        "en": "Graph of y = x²-9 and y = 0.",
+        "ta": "y = x²-9, y = 0 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = 0.",
+        "ta": "நீலப் பரவளையமும் y = 0 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "-4",
+            "7",
+            "0"
+          ],
+          [
+            "-3",
+            "0",
+            "0"
+          ],
+          [
+            "-2",
+            "-5",
+            "0"
+          ],
+          [
+            "-1",
+            "-8",
+            "0"
+          ],
+          [
+            "0",
+            "-9",
+            "0"
+          ],
+          [
+            "1",
+            "-8",
+            "0"
+          ],
+          [
+            "2",
+            "-5",
+            "0"
+          ],
+          [
+            "3",
+            "0",
+            "0"
+          ],
+          [
+            "4",
+            "7",
+            "0"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "-4",
+              "7",
+              "0"
+            ],
+            [
+              "-3",
+              "0",
+              "0"
+            ],
+            [
+              "-2",
+              "-5",
+              "0"
+            ],
+            [
+              "-1",
+              "-8",
+              "0"
+            ],
+            [
+              "0",
+              "-9",
+              "0"
+            ],
+            [
+              "1",
+              "-8",
+              "0"
+            ],
+            [
+              "2",
+              "-5",
+              "0"
+            ],
+            [
+              "3",
+              "0",
+              "0"
+            ],
+            [
+              "4",
+              "7",
+              "0"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q1-v",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q1(v)",
+        "ta": "பயிற்சி 3.16 · வினா 1(v)"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(v) x²−6x+9=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(v) x²−6x+9=0"
+      },
+      "questionMath": {
+        "en": [
+          "1. ",
+          "Graph the following quadratic equations and state their nature of solutions.\n",
+          "(v) ",
+          {
+            "latex": "x^2-6x+9=0",
+            "fallback": "x²−6x+9=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "1. ",
+          "கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n",
+          "(v) ",
+          {
+            "latex": "x^2-6x+9=0",
+            "fallback": "x²−6x+9=0",
+            "display": false
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=x²−6x+9\nx_v=3",
+          "math": {
+            "latex": "\\begin{aligned}y&=x^2-6x+9\\\\x_{\\mathrm{v}}&=3\\end{aligned}",
+            "fallback": "y=x²−6x+9\nx_v=3",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "A root is an x-coordinate where the curve meets the horizontal axis, because the y-coordinate is zero there.",
+          "ta": "பரவளையம் கிடை அச்சைச் சந்திக்கும் இடத்தில் y மதிப்பு பூச்சியம். எனவே அப்புள்ளியின் x ஆயம் ஒரு மூலம்.",
+          "eq": "y=0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y=0",
+            "display": true
+          }
+        },
+        {
+          "en": "The graphs touch once, so there is a repeated real root. Read the x-coordinates at the marked points.",
+          "ta": "ஒரே புள்ளியில் தொடுவதால் மெய் மூலங்கள் சமமானவை. குறித்த புள்ளிகளின் x ஆயங்களைப் படிக்கவும்.",
+          "eq": "(3,0)",
+          "math": {
+            "latex": "\\left(3,0\\right)",
+            "fallback": "(3,0)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the intersections by factoring the target polynomial.",
+          "ta": "தீர்க்க வேண்டிய கோவையைக் காரணிப்படுத்தி, சந்திப்புப் புள்ளிகளின் x ஆயங்களைச் சரிபார்க்கவும்.",
+          "eq": "(x − 3)²=0",
+          "math": {
+            "latex": "\\left(x - 3\\right)^{2}=0",
+            "fallback": "(x − 3)²=0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "Repeated real root: 3\nx=3",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "en": [
+          "Repeated real root: 3\n",
+          {
+            "latex": "\\boxed{x=3}",
+            "fallback": "x=3",
+            "display": true
+          }
+        ],
+        "ta": [
+          "சமமான மெய் மூலங்கள்: 3\n",
+          {
+            "latex": "\\boxed{x=3}",
+            "fallback": "x=3",
+            "display": true
+          }
+        ]
+      },
+      "answerTa": "சமமான மெய் மூலங்கள்: 3\nx=3",
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q1-v.svg",
+      "figureAlt": {
+        "en": "Graph of y = x²-6x+9 and y = 0.",
+        "ta": "y = x²-6x+9, y = 0 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = 0.",
+        "ta": "நீலப் பரவளையமும் y = 0 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "2",
+            "1",
+            "0"
+          ],
+          [
+            "3",
+            "0",
+            "0"
+          ],
+          [
+            "4",
+            "1",
+            "0"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "2",
+              "1",
+              "0"
+            ],
+            [
+              "3",
+              "0",
+              "0"
+            ],
+            [
+              "4",
+              "1",
+              "0"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q1-vi",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q1(vi)",
+        "ta": "பயிற்சி 3.16 · வினா 1(vi)"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(vi) (2x−3)(x+2)=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(vi) (2x−3)(x+2)=0"
+      },
+      "questionMath": {
+        "en": [
+          "1. ",
+          "Graph the following quadratic equations and state their nature of solutions.\n",
+          "(vi) ",
+          {
+            "latex": "(2x-3)(x+2)=0",
+            "fallback": "(2x−3)(x+2)=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "1. ",
+          "கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n",
+          "(vi) ",
+          {
+            "latex": "(2x-3)(x+2)=0",
+            "fallback": "(2x−3)(x+2)=0",
+            "display": false
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=(2x−3)(x+2)\nx_v=− (1)/(4)",
+          "math": {
+            "latex": "\\begin{aligned}y&=(2x-3)(x+2)\\\\x_{\\mathrm{v}}&=- \\frac{1}{4}\\end{aligned}",
+            "fallback": "y=(2x−3)(x+2)\nx_v=− (1)/(4)",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "A root is an x-coordinate where the curve meets the horizontal axis, because the y-coordinate is zero there.",
+          "ta": "பரவளையம் கிடை அச்சைச் சந்திக்கும் இடத்தில் y மதிப்பு பூச்சியம். எனவே அப்புள்ளியின் x ஆயம் ஒரு மூலம்.",
+          "eq": "y=0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y=0",
+            "display": true
+          }
+        },
+        {
+          "en": "The two intersections give distinct real roots. Read the x-coordinates at the marked points.",
+          "ta": "இரு சந்திப்புப் புள்ளிகள் இருப்பதால் மெய் மூலங்கள் வேறுபட்டவை. குறித்த புள்ளிகளின் x ஆயங்களைப் படிக்கவும்.",
+          "eq": "(−2,0), ((3)/(2),0)",
+          "math": {
+            "latex": "\\left(-2,0\\right),\\ \\left(\\frac{3}{2},0\\right)",
+            "fallback": "(−2,0), ((3)/(2),0)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the intersections by factoring the target polynomial.",
+          "ta": "தீர்க்க வேண்டிய கோவையைக் காரணிப்படுத்தி, சந்திப்புப் புள்ளிகளின் x ஆயங்களைச் சரிபார்க்கவும்.",
+          "eq": "(x + 2) (2 x − 3)=0",
+          "math": {
+            "latex": "\\left(x + 2\\right) \\left(2 x - 3\\right)=0",
+            "fallback": "(x + 2) (2 x − 3)=0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "Distinct real roots: -2, 3/2\nx=−2, (3)/(2)",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "en": [
+          "Distinct real roots: -2, 3/2\n",
+          {
+            "latex": "\\boxed{x=-2,\\ \\frac{3}{2}}",
+            "fallback": "x=−2, (3)/(2)",
+            "display": true
+          }
+        ],
+        "ta": [
+          "சமமற்ற மெய் மூலங்கள்: -2, 3/2\n",
+          {
+            "latex": "\\boxed{x=-2,\\ \\frac{3}{2}}",
+            "fallback": "x=−2, (3)/(2)",
+            "display": true
+          }
+        ]
+      },
+      "answerTa": "சமமற்ற மெய் மூலங்கள்: -2, 3/2\nx=−2, (3)/(2)",
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q1-vi.svg",
+      "figureAlt": {
+        "en": "Graph of y = (2x-3)(x+2) and y = 0.",
+        "ta": "y = (2x-3)(x+2), y = 0 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = 0.",
+        "ta": "நீலப் பரவளையமும் y = 0 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "-3",
+            "9",
+            "0"
+          ],
+          [
+            "-2",
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "-5",
+            "0"
+          ],
+          [
+            "-1/4",
+            "-49/8",
+            "0"
+          ],
+          [
+            "0",
+            "-6",
+            "0"
+          ],
+          [
+            "1",
+            "-3",
+            "0"
+          ],
+          [
+            "3/2",
+            "0",
+            "0"
+          ],
+          [
+            "2",
+            "4",
+            "0"
+          ],
+          [
+            "3",
+            "15",
+            "0"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "-3",
+              "9",
+              "0"
+            ],
+            [
+              "-2",
+              "0",
+              "0"
+            ],
+            [
+              "-1",
+              "-5",
+              "0"
+            ],
+            [
+              "-1/4",
+              "-49/8",
+              "0"
+            ],
+            [
+              "0",
+              "-6",
+              "0"
+            ],
+            [
+              "1",
+              "-3",
+              "0"
+            ],
+            [
+              "3/2",
+              "0",
+              "0"
+            ],
+            [
+              "2",
+              "4",
+              "0"
+            ],
+            [
+              "3",
+              "15",
+              "0"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q2",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q2",
+        "ta": "பயிற்சி 3.16 · வினா 2"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "2. Draw the graph of y=x²−4 and hence solve x²−x−12=0",
+        "ta": "2. y=x²−4 வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²−x−12=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "questionMath": {
+        "en": [
+          "2. ",
+          "Draw the graph of ",
+          {
+            "latex": "y=x^2-4",
+            "fallback": "y=x²−4",
+            "display": false
+          },
+          " and hence solve ",
+          {
+            "latex": "x^2-x-12=0",
+            "fallback": "x²−x−12=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "2. ",
+          {
+            "latex": "y=x^2-4",
+            "fallback": "y=x²−4",
+            "display": false
+          },
+          " வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி ",
+          {
+            "latex": "x^2-x-12=0",
+            "fallback": "x²−x−12=0",
+            "display": false
+          },
+          " என்ற சமன்பாட்டைத் தீர்க்கவும்."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=x²−4\nx_v=0",
+          "math": {
+            "latex": "\\begin{aligned}y&=x^2-4\\\\x_{\\mathrm{v}}&=0\\end{aligned}",
+            "fallback": "y=x²−4\nx_v=0",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "Rewrite the target equation as an equality between the given curve and a line. Plot the line on the same axes.",
+          "ta": "தீர்க்க வேண்டிய சமன்பாட்டைக் கொடுக்கப்பட்ட பரவளையமும் ஒரு நேர்க்கோடும் சமமாகும் வடிவில் எழுதுக. அதே அச்சுகளில் நேர்க்கோட்டை வரைக.",
+          "eq": "x²−x−12=0\nx²−4=x + 8",
+          "math": {
+            "latex": "\\begin{aligned}x^2-x-12&=0\\\\x^2-4&=x + 8\\end{aligned}",
+            "fallback": "x²−x−12=0\nx²−4=x + 8",
+            "display": true
+          }
+        },
+        {
+          "en": "The two intersections give distinct real roots. Read the x-coordinates at the marked points.",
+          "ta": "இரு சந்திப்புப் புள்ளிகள் இருப்பதால் மெய் மூலங்கள் வேறுபட்டவை. குறித்த புள்ளிகளின் x ஆயங்களைப் படிக்கவும்.",
+          "eq": "(−3,5), (4,12)",
+          "math": {
+            "latex": "\\left(-3,5\\right),\\ \\left(4,12\\right)",
+            "fallback": "(−3,5), (4,12)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the intersections by factoring the target polynomial.",
+          "ta": "தீர்க்க வேண்டிய கோவையைக் காரணிப்படுத்தி, சந்திப்புப் புள்ளிகளின் x ஆயங்களைச் சரிபார்க்கவும்.",
+          "eq": "(x − 4) (x + 3)=0",
+          "math": {
+            "latex": "\\left(x - 4\\right) \\left(x + 3\\right)=0",
+            "fallback": "(x − 4) (x + 3)=0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "x=−3, 4",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{x=-3,\\ 4}",
+        "fallback": "x=−3, 4",
+        "display": true
+      },
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q2.svg",
+      "figureAlt": {
+        "en": "Graph of y = x²-4 and y = x + 8.",
+        "ta": "y = x²-4, y = x + 8 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = x + 8.",
+        "ta": "நீலப் பரவளையமும் y = x + 8 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "-4",
+            "12",
+            "4"
+          ],
+          [
+            "-3",
+            "5",
+            "5"
+          ],
+          [
+            "-2",
+            "0",
+            "6"
+          ],
+          [
+            "-1",
+            "-3",
+            "7"
+          ],
+          [
+            "0",
+            "-4",
+            "8"
+          ],
+          [
+            "1",
+            "-3",
+            "9"
+          ],
+          [
+            "2",
+            "0",
+            "10"
+          ],
+          [
+            "3",
+            "5",
+            "11"
+          ],
+          [
+            "4",
+            "12",
+            "12"
+          ],
+          [
+            "5",
+            "21",
+            "13"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "-4",
+              "12",
+              "4"
+            ],
+            [
+              "-3",
+              "5",
+              "5"
+            ],
+            [
+              "-2",
+              "0",
+              "6"
+            ],
+            [
+              "-1",
+              "-3",
+              "7"
+            ],
+            [
+              "0",
+              "-4",
+              "8"
+            ],
+            [
+              "1",
+              "-3",
+              "9"
+            ],
+            [
+              "2",
+              "0",
+              "10"
+            ],
+            [
+              "3",
+              "5",
+              "11"
+            ],
+            [
+              "4",
+              "12",
+              "12"
+            ],
+            [
+              "5",
+              "21",
+              "13"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q3",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q3",
+        "ta": "பயிற்சி 3.16 · வினா 3"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "3. Draw the graph of y=x²+x and hence solve x²+1=0",
+        "ta": "3. y=x²+x –யின் வரைபடம் வரைந்து, x²+1=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "questionMath": {
+        "en": [
+          "3. ",
+          "Draw the graph of ",
+          {
+            "latex": "y=x^2+x",
+            "fallback": "y=x²+x",
+            "display": false
+          },
+          " and hence solve ",
+          {
+            "latex": "x^2+1=0",
+            "fallback": "x²+1=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "3. ",
+          {
+            "latex": "y=x^2+x",
+            "fallback": "y=x²+x",
+            "display": false
+          },
+          " –யின் வரைபடம் வரைந்து, ",
+          {
+            "latex": "x^2+1=0",
+            "fallback": "x²+1=0",
+            "display": false
+          },
+          " என்ற சமன்பாட்டைத் தீர்க்கவும்."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=x²+x\nx_v=− (1)/(2)",
+          "math": {
+            "latex": "\\begin{aligned}y&=x^2+x\\\\x_{\\mathrm{v}}&=- \\frac{1}{2}\\end{aligned}",
+            "fallback": "y=x²+x\nx_v=− (1)/(2)",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "Rewrite the target equation as an equality between the given curve and a line. Plot the line on the same axes.",
+          "ta": "தீர்க்க வேண்டிய சமன்பாட்டைக் கொடுக்கப்பட்ட பரவளையமும் ஒரு நேர்க்கோடும் சமமாகும் வடிவில் எழுதுக. அதே அச்சுகளில் நேர்க்கோட்டை வரைக.",
+          "eq": "x²+1=0\nx²+x=x − 1",
+          "math": {
+            "latex": "\\begin{aligned}x^2+1&=0\\\\x^2+x&=x - 1\\end{aligned}",
+            "fallback": "x²+1=0\nx²+x=x − 1",
+            "display": true
+          }
+        },
+        {
+          "en": "The graphs have no real intersection. Completing the square shows the vertical difference is always positive.",
+          "ta": "மெய்யெண் ஆயத்தளத்தில் வரைபடங்கள் சந்திக்கவில்லை. முழு வர்க்கமாக மாற்றினால் அவற்றின் செங்குத்து இடைவெளி எப்போதும் நேர்மம் எனத் தெரியும்.",
+          "eq": "x² + 1>0",
+          "math": {
+            "latex": "x^{2} + 1>0",
+            "fallback": "x² + 1>0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "No real roots\n∅",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "en": [
+          "No real roots\n",
+          {
+            "latex": "\\boxed{\\varnothing}",
+            "fallback": "∅",
+            "display": true
+          }
+        ],
+        "ta": [
+          "மெய் மூலங்கள் இல்லை\n",
+          {
+            "latex": "\\boxed{\\varnothing}",
+            "fallback": "∅",
+            "display": true
+          }
+        ]
+      },
+      "answerTa": "மெய் மூலங்கள் இல்லை\n∅",
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q3.svg",
+      "figureAlt": {
+        "en": "Graph of y = x²+x and y = x − 1.",
+        "ta": "y = x²+x, y = x − 1 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = x − 1.",
+        "ta": "நீலப் பரவளையமும் y = x − 1 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "-2",
+            "2",
+            "-3"
+          ],
+          [
+            "-1",
+            "0",
+            "-2"
+          ],
+          [
+            "-1/2",
+            "-1/4",
+            "-3/2"
+          ],
+          [
+            "0",
+            "0",
+            "-1"
+          ],
+          [
+            "1",
+            "2",
+            "0"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "-2",
+              "2",
+              "-3"
+            ],
+            [
+              "-1",
+              "0",
+              "-2"
+            ],
+            [
+              "-1/2",
+              "-1/4",
+              "-3/2"
+            ],
+            [
+              "0",
+              "0",
+              "-1"
+            ],
+            [
+              "1",
+              "2",
+              "0"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q4",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q4",
+        "ta": "பயிற்சி 3.16 · வினா 4"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "4. Draw the graph of y=x²+3x+2 and use it to solve x²+2x+1=0",
+        "ta": "4. y=x²+3x+2 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²+2x+1=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "questionMath": {
+        "en": [
+          "4. ",
+          "Draw the graph of ",
+          {
+            "latex": "y=x^2+3x+2",
+            "fallback": "y=x²+3x+2",
+            "display": false
+          },
+          " and use it to solve ",
+          {
+            "latex": "x^2+2x+1=0",
+            "fallback": "x²+2x+1=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "4. ",
+          {
+            "latex": "y=x^2+3x+2",
+            "fallback": "y=x²+3x+2",
+            "display": false
+          },
+          " –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி ",
+          {
+            "latex": "x^2+2x+1=0",
+            "fallback": "x²+2x+1=0",
+            "display": false
+          },
+          " என்ற சமன்பாட்டைத் தீர்க்கவும்."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=x²+3x+2\nx_v=− (3)/(2)",
+          "math": {
+            "latex": "\\begin{aligned}y&=x^2+3x+2\\\\x_{\\mathrm{v}}&=- \\frac{3}{2}\\end{aligned}",
+            "fallback": "y=x²+3x+2\nx_v=− (3)/(2)",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "Rewrite the target equation as an equality between the given curve and a line. Plot the line on the same axes.",
+          "ta": "தீர்க்க வேண்டிய சமன்பாட்டைக் கொடுக்கப்பட்ட பரவளையமும் ஒரு நேர்க்கோடும் சமமாகும் வடிவில் எழுதுக. அதே அச்சுகளில் நேர்க்கோட்டை வரைக.",
+          "eq": "x²+2x+1=0\nx²+3x+2=x + 1",
+          "math": {
+            "latex": "\\begin{aligned}x^2+2x+1&=0\\\\x^2+3x+2&=x + 1\\end{aligned}",
+            "fallback": "x²+2x+1=0\nx²+3x+2=x + 1",
+            "display": true
+          }
+        },
+        {
+          "en": "The graphs touch once, so there is a repeated real root. Read the x-coordinates at the marked points.",
+          "ta": "ஒரே புள்ளியில் தொடுவதால் மெய் மூலங்கள் சமமானவை. குறித்த புள்ளிகளின் x ஆயங்களைப் படிக்கவும்.",
+          "eq": "(−1,0)",
+          "math": {
+            "latex": "\\left(-1,0\\right)",
+            "fallback": "(−1,0)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the intersections by factoring the target polynomial.",
+          "ta": "தீர்க்க வேண்டிய கோவையைக் காரணிப்படுத்தி, சந்திப்புப் புள்ளிகளின் x ஆயங்களைச் சரிபார்க்கவும்.",
+          "eq": "(x + 1)²=0",
+          "math": {
+            "latex": "\\left(x + 1\\right)^{2}=0",
+            "fallback": "(x + 1)²=0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "x=−1",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{x=-1}",
+        "fallback": "x=−1",
+        "display": true
+      },
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q4.svg",
+      "figureAlt": {
+        "en": "Graph of y = x²+3x+2 and y = x + 1.",
+        "ta": "y = x²+3x+2, y = x + 1 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = x + 1.",
+        "ta": "நீலப் பரவளையமும் y = x + 1 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "-3",
+            "2",
+            "-2"
+          ],
+          [
+            "-2",
+            "0",
+            "-1"
+          ],
+          [
+            "-3/2",
+            "-1/4",
+            "-1/2"
+          ],
+          [
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "2",
+            "1"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "-3",
+              "2",
+              "-2"
+            ],
+            [
+              "-2",
+              "0",
+              "-1"
+            ],
+            [
+              "-3/2",
+              "-1/4",
+              "-1/2"
+            ],
+            [
+              "-1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "2",
+              "1"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q5",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q5",
+        "ta": "பயிற்சி 3.16 · வினா 5"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "5. Draw the graph of y=x²+3x−4 and hence use it to solve x²+3x−4=0",
+        "ta": "5. y=x²+3x−4 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²+3x−4=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "questionMath": {
+        "en": [
+          "5. ",
+          "Draw the graph of ",
+          {
+            "latex": "y=x^2+3x-4",
+            "fallback": "y=x²+3x−4",
+            "display": false
+          },
+          " and hence use it to solve ",
+          {
+            "latex": "x^2+3x-4=0",
+            "fallback": "x²+3x−4=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "5. ",
+          {
+            "latex": "y=x^2+3x-4",
+            "fallback": "y=x²+3x−4",
+            "display": false
+          },
+          " –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி ",
+          {
+            "latex": "x^2+3x-4=0",
+            "fallback": "x²+3x−4=0",
+            "display": false
+          },
+          " என்ற சமன்பாட்டைத் தீர்க்கவும்."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=x²+3x−4\nx_v=− (3)/(2)",
+          "math": {
+            "latex": "\\begin{aligned}y&=x^2+3x-4\\\\x_{\\mathrm{v}}&=- \\frac{3}{2}\\end{aligned}",
+            "fallback": "y=x²+3x−4\nx_v=− (3)/(2)",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "A root is an x-coordinate where the curve meets the horizontal axis, because the y-coordinate is zero there.",
+          "ta": "பரவளையம் கிடை அச்சைச் சந்திக்கும் இடத்தில் y மதிப்பு பூச்சியம். எனவே அப்புள்ளியின் x ஆயம் ஒரு மூலம்.",
+          "eq": "y=0",
+          "math": {
+            "latex": "y=0",
+            "fallback": "y=0",
+            "display": true
+          }
+        },
+        {
+          "en": "The two intersections give distinct real roots. Read the x-coordinates at the marked points.",
+          "ta": "இரு சந்திப்புப் புள்ளிகள் இருப்பதால் மெய் மூலங்கள் வேறுபட்டவை. குறித்த புள்ளிகளின் x ஆயங்களைப் படிக்கவும்.",
+          "eq": "(−4,0), (1,0)",
+          "math": {
+            "latex": "\\left(-4,0\\right),\\ \\left(1,0\\right)",
+            "fallback": "(−4,0), (1,0)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the intersections by factoring the target polynomial.",
+          "ta": "தீர்க்க வேண்டிய கோவையைக் காரணிப்படுத்தி, சந்திப்புப் புள்ளிகளின் x ஆயங்களைச் சரிபார்க்கவும்.",
+          "eq": "(x − 1) (x + 4)=0",
+          "math": {
+            "latex": "\\left(x - 1\\right) \\left(x + 4\\right)=0",
+            "fallback": "(x − 1) (x + 4)=0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "x=−4, 1",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{x=-4,\\ 1}",
+        "fallback": "x=−4, 1",
+        "display": true
+      },
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q5.svg",
+      "figureAlt": {
+        "en": "Graph of y = x²+3x-4 and y = 0.",
+        "ta": "y = x²+3x-4, y = 0 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = 0.",
+        "ta": "நீலப் பரவளையமும் y = 0 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "-5",
+            "6",
+            "0"
+          ],
+          [
+            "-4",
+            "0",
+            "0"
+          ],
+          [
+            "-3",
+            "-4",
+            "0"
+          ],
+          [
+            "-2",
+            "-6",
+            "0"
+          ],
+          [
+            "-3/2",
+            "-25/4",
+            "0"
+          ],
+          [
+            "-1",
+            "-6",
+            "0"
+          ],
+          [
+            "0",
+            "-4",
+            "0"
+          ],
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "2",
+            "6",
+            "0"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "-5",
+              "6",
+              "0"
+            ],
+            [
+              "-4",
+              "0",
+              "0"
+            ],
+            [
+              "-3",
+              "-4",
+              "0"
+            ],
+            [
+              "-2",
+              "-6",
+              "0"
+            ],
+            [
+              "-3/2",
+              "-25/4",
+              "0"
+            ],
+            [
+              "-1",
+              "-6",
+              "0"
+            ],
+            [
+              "0",
+              "-4",
+              "0"
+            ],
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "2",
+              "6",
+              "0"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q6",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q6",
+        "ta": "பயிற்சி 3.16 · வினா 6"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "6. Draw the graph of y=x²−5x−6 and hence solve x²−5x−14=0",
+        "ta": "6. y=x²−5x−6 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²−5x−14=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "questionMath": {
+        "en": [
+          "6. ",
+          "Draw the graph of ",
+          {
+            "latex": "y=x^2-5x-6",
+            "fallback": "y=x²−5x−6",
+            "display": false
+          },
+          " and hence solve ",
+          {
+            "latex": "x^2-5x-14=0",
+            "fallback": "x²−5x−14=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "6. ",
+          {
+            "latex": "y=x^2-5x-6",
+            "fallback": "y=x²−5x−6",
+            "display": false
+          },
+          " –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி ",
+          {
+            "latex": "x^2-5x-14=0",
+            "fallback": "x²−5x−14=0",
+            "display": false
+          },
+          " என்ற சமன்பாட்டைத் தீர்க்கவும்."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=x²−5x−6\nx_v=(5)/(2)",
+          "math": {
+            "latex": "\\begin{aligned}y&=x^2-5x-6\\\\x_{\\mathrm{v}}&=\\frac{5}{2}\\end{aligned}",
+            "fallback": "y=x²−5x−6\nx_v=(5)/(2)",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "Rewrite the target equation as an equality between the given curve and a line. Plot the line on the same axes.",
+          "ta": "தீர்க்க வேண்டிய சமன்பாட்டைக் கொடுக்கப்பட்ட பரவளையமும் ஒரு நேர்க்கோடும் சமமாகும் வடிவில் எழுதுக. அதே அச்சுகளில் நேர்க்கோட்டை வரைக.",
+          "eq": "x²−5x−14=0\nx²−5x−6=8",
+          "math": {
+            "latex": "\\begin{aligned}x^2-5x-14&=0\\\\x^2-5x-6&=8\\end{aligned}",
+            "fallback": "x²−5x−14=0\nx²−5x−6=8",
+            "display": true
+          }
+        },
+        {
+          "en": "The two intersections give distinct real roots. Read the x-coordinates at the marked points.",
+          "ta": "இரு சந்திப்புப் புள்ளிகள் இருப்பதால் மெய் மூலங்கள் வேறுபட்டவை. குறித்த புள்ளிகளின் x ஆயங்களைப் படிக்கவும்.",
+          "eq": "(−2,8), (7,8)",
+          "math": {
+            "latex": "\\left(-2,8\\right),\\ \\left(7,8\\right)",
+            "fallback": "(−2,8), (7,8)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the intersections by factoring the target polynomial.",
+          "ta": "தீர்க்க வேண்டிய கோவையைக் காரணிப்படுத்தி, சந்திப்புப் புள்ளிகளின் x ஆயங்களைச் சரிபார்க்கவும்.",
+          "eq": "(x − 7) (x + 2)=0",
+          "math": {
+            "latex": "\\left(x - 7\\right) \\left(x + 2\\right)=0",
+            "fallback": "(x − 7) (x + 2)=0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "x=−2, 7",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{x=-2,\\ 7}",
+        "fallback": "x=−2, 7",
+        "display": true
+      },
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q6.svg",
+      "figureAlt": {
+        "en": "Graph of y = x²-5x-6 and y = 8.",
+        "ta": "y = x²-5x-6, y = 8 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = 8.",
+        "ta": "நீலப் பரவளையமும் y = 8 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "-3",
+            "18",
+            "8"
+          ],
+          [
+            "-2",
+            "8",
+            "8"
+          ],
+          [
+            "-1",
+            "0",
+            "8"
+          ],
+          [
+            "0",
+            "-6",
+            "8"
+          ],
+          [
+            "1",
+            "-10",
+            "8"
+          ],
+          [
+            "2",
+            "-12",
+            "8"
+          ],
+          [
+            "5/2",
+            "-49/4",
+            "8"
+          ],
+          [
+            "3",
+            "-12",
+            "8"
+          ],
+          [
+            "4",
+            "-10",
+            "8"
+          ],
+          [
+            "5",
+            "-6",
+            "8"
+          ],
+          [
+            "6",
+            "0",
+            "8"
+          ],
+          [
+            "7",
+            "8",
+            "8"
+          ],
+          [
+            "8",
+            "18",
+            "8"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "-3",
+              "18",
+              "8"
+            ],
+            [
+              "-2",
+              "8",
+              "8"
+            ],
+            [
+              "-1",
+              "0",
+              "8"
+            ],
+            [
+              "0",
+              "-6",
+              "8"
+            ],
+            [
+              "1",
+              "-10",
+              "8"
+            ],
+            [
+              "2",
+              "-12",
+              "8"
+            ],
+            [
+              "5/2",
+              "-49/4",
+              "8"
+            ],
+            [
+              "3",
+              "-12",
+              "8"
+            ],
+            [
+              "4",
+              "-10",
+              "8"
+            ],
+            [
+              "5",
+              "-6",
+              "8"
+            ],
+            [
+              "6",
+              "0",
+              "8"
+            ],
+            [
+              "7",
+              "8",
+              "8"
+            ],
+            [
+              "8",
+              "18",
+              "8"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q7",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q7",
+        "ta": "பயிற்சி 3.16 · வினா 7"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "7. Draw the graph of y=2x²−3x−5 and hence solve 2x²−4x−6=0",
+        "ta": "7. y=2x²−3x−5 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி 2x²−4x−6=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "questionMath": {
+        "en": [
+          "7. ",
+          "Draw the graph of ",
+          {
+            "latex": "y=2x^2-3x-5",
+            "fallback": "y=2x²−3x−5",
+            "display": false
+          },
+          " and hence solve ",
+          {
+            "latex": "2x^2-4x-6=0",
+            "fallback": "2x²−4x−6=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "7. ",
+          {
+            "latex": "y=2x^2-3x-5",
+            "fallback": "y=2x²−3x−5",
+            "display": false
+          },
+          " –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி ",
+          {
+            "latex": "2x^2-4x-6=0",
+            "fallback": "2x²−4x−6=0",
+            "display": false
+          },
+          " என்ற சமன்பாட்டைத் தீர்க்கவும்."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=2x²−3x−5\nx_v=(3)/(4)",
+          "math": {
+            "latex": "\\begin{aligned}y&=2x^2-3x-5\\\\x_{\\mathrm{v}}&=\\frac{3}{4}\\end{aligned}",
+            "fallback": "y=2x²−3x−5\nx_v=(3)/(4)",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "Rewrite the target equation as an equality between the given curve and a line. Plot the line on the same axes.",
+          "ta": "தீர்க்க வேண்டிய சமன்பாட்டைக் கொடுக்கப்பட்ட பரவளையமும் ஒரு நேர்க்கோடும் சமமாகும் வடிவில் எழுதுக. அதே அச்சுகளில் நேர்க்கோட்டை வரைக.",
+          "eq": "2x²−4x−6=0\n2x²−3x−5=x + 1",
+          "math": {
+            "latex": "\\begin{aligned}2x^2-4x-6&=0\\\\2x^2-3x-5&=x + 1\\end{aligned}",
+            "fallback": "2x²−4x−6=0\n2x²−3x−5=x + 1",
+            "display": true
+          }
+        },
+        {
+          "en": "The two intersections give distinct real roots. Read the x-coordinates at the marked points.",
+          "ta": "இரு சந்திப்புப் புள்ளிகள் இருப்பதால் மெய் மூலங்கள் வேறுபட்டவை. குறித்த புள்ளிகளின் x ஆயங்களைப் படிக்கவும்.",
+          "eq": "(−1,0), (3,4)",
+          "math": {
+            "latex": "\\left(-1,0\\right),\\ \\left(3,4\\right)",
+            "fallback": "(−1,0), (3,4)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the intersections by factoring the target polynomial.",
+          "ta": "தீர்க்க வேண்டிய கோவையைக் காரணிப்படுத்தி, சந்திப்புப் புள்ளிகளின் x ஆயங்களைச் சரிபார்க்கவும்.",
+          "eq": "2 (x − 3) (x + 1)=0",
+          "math": {
+            "latex": "2 \\left(x - 3\\right) \\left(x + 1\\right)=0",
+            "fallback": "2 (x − 3) (x + 1)=0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "x=−1, 3",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{x=-1,\\ 3}",
+        "fallback": "x=−1, 3",
+        "display": true
+      },
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q7.svg",
+      "figureAlt": {
+        "en": "Graph of y = 2x²-3x-5 and y = x + 1.",
+        "ta": "y = 2x²-3x-5, y = x + 1 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = x + 1.",
+        "ta": "நீலப் பரவளையமும் y = x + 1 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "-2",
+            "9",
+            "-1"
+          ],
+          [
+            "-1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "-5",
+            "1"
+          ],
+          [
+            "3/4",
+            "-49/8",
+            "7/4"
+          ],
+          [
+            "1",
+            "-6",
+            "2"
+          ],
+          [
+            "2",
+            "-3",
+            "3"
+          ],
+          [
+            "3",
+            "4",
+            "4"
+          ],
+          [
+            "4",
+            "15",
+            "5"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "-2",
+              "9",
+              "-1"
+            ],
+            [
+              "-1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "-5",
+              "1"
+            ],
+            [
+              "3/4",
+              "-49/8",
+              "7/4"
+            ],
+            [
+              "1",
+              "-6",
+              "2"
+            ],
+            [
+              "2",
+              "-3",
+              "3"
+            ],
+            [
+              "3",
+              "4",
+              "4"
+            ],
+            [
+              "4",
+              "15",
+              "5"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-16-q8",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.16",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.16 · Q8",
+        "ta": "பயிற்சி 3.16 · வினா 8"
+      },
+      "title": {
+        "en": "Read the roots from a graph",
+        "ta": "வரைபடத்திலிருந்து மூலங்களைக் காண்க"
+      },
+      "q": {
+        "en": "8. Draw the graph of y=(x−1)(x+3) and hence solve x²−x−6=0",
+        "ta": "8. y=(x−1)(x+3) –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²−x−6=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "questionMath": {
+        "en": [
+          "8. ",
+          "Draw the graph of ",
+          {
+            "latex": "y=(x-1)(x+3)",
+            "fallback": "y=(x−1)(x+3)",
+            "display": false
+          },
+          " and hence solve ",
+          {
+            "latex": "x^2-x-6=0",
+            "fallback": "x²−x−6=0",
+            "display": false
+          }
+        ],
+        "ta": [
+          "8. ",
+          {
+            "latex": "y=(x-1)(x+3)",
+            "fallback": "y=(x−1)(x+3)",
+            "display": false
+          },
+          " –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி ",
+          {
+            "latex": "x^2-x-6=0",
+            "fallback": "x²−x−6=0",
+            "display": false
+          },
+          " என்ற சமன்பாட்டைத் தீர்க்கவும்."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the table to plot the points. Include the vertex and join the points with a smooth parabola.",
+          "ta": "அட்டவணையிலுள்ள புள்ளிகளையும் உச்சிப் புள்ளியையும் குறித்து, அவற்றை மென்மையான பரவளையமாக இணைக்கவும்.",
+          "eq": "y=(x−1)(x+3)\nx_v=−1",
+          "math": {
+            "latex": "\\begin{aligned}y&=(x-1)(x+3)\\\\x_{\\mathrm{v}}&=-1\\end{aligned}",
+            "fallback": "y=(x−1)(x+3)\nx_v=−1",
+            "display": true
+          },
+          "why": {
+            "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+            "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+          }
+        },
+        {
+          "en": "Rewrite the target equation as an equality between the given curve and a line. Plot the line on the same axes.",
+          "ta": "தீர்க்க வேண்டிய சமன்பாட்டைக் கொடுக்கப்பட்ட பரவளையமும் ஒரு நேர்க்கோடும் சமமாகும் வடிவில் எழுதுக. அதே அச்சுகளில் நேர்க்கோட்டை வரைக.",
+          "eq": "x²−x−6=0\n(x−1)(x+3)=3 x + 3",
+          "math": {
+            "latex": "\\begin{aligned}x^2-x-6&=0\\\\(x-1)(x+3)&=3 x + 3\\end{aligned}",
+            "fallback": "x²−x−6=0\n(x−1)(x+3)=3 x + 3",
+            "display": true
+          }
+        },
+        {
+          "en": "The two intersections give distinct real roots. Read the x-coordinates at the marked points.",
+          "ta": "இரு சந்திப்புப் புள்ளிகள் இருப்பதால் மெய் மூலங்கள் வேறுபட்டவை. குறித்த புள்ளிகளின் x ஆயங்களைப் படிக்கவும்.",
+          "eq": "(−2,−3), (3,12)",
+          "math": {
+            "latex": "\\left(-2,-3\\right),\\ \\left(3,12\\right)",
+            "fallback": "(−2,−3), (3,12)",
+            "display": true
+          }
+        },
+        {
+          "en": "Check the intersections by factoring the target polynomial.",
+          "ta": "தீர்க்க வேண்டிய கோவையைக் காரணிப்படுத்தி, சந்திப்புப் புள்ளிகளின் x ஆயங்களைச் சரிபார்க்கவும்.",
+          "eq": "(x − 3) (x + 2)=0",
+          "math": {
+            "latex": "\\left(x - 3\\right) \\left(x + 2\\right)=0",
+            "fallback": "(x − 3) (x + 2)=0",
+            "display": true
+          }
+        }
+      ],
+      "answer": "x=−2, 3",
+      "hint": {
+        "en": "The roots are the x-coordinates where the two plotted graphs meet.",
+        "ta": "இரு வரைபடங்களும் சந்திக்கும் புள்ளிகளின் x ஆயங்களே மூலங்கள்."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 143; Tamil PDF 145.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{x=-2,\\ 3}",
+        "fallback": "x=−2, 3",
+        "display": true
+      },
+      "difficulty": "medium",
+      "figureSrc": "./assets/grade10-ch3/ex3-16-q8.svg",
+      "figureAlt": {
+        "en": "Graph of y = (x-1)(x+3) and y = 3 x + 3.",
+        "ta": "y = (x-1)(x+3), y = 3 x + 3 ஆகியவற்றின் வரைபடம்."
+      },
+      "figureCaption": {
+        "en": "Blue curve and dashed line y = 3 x + 3.",
+        "ta": "நீலப் பரவளையமும் y = 3 x + 3 என்ற இடைக்கோடும்."
+      },
+      "dataTable": {
+        "headers": [
+          "x",
+          "Curve y",
+          "Line y"
+        ],
+        "rows": [
+          [
+            "-3",
+            "0",
+            "-6"
+          ],
+          [
+            "-2",
+            "-3",
+            "-3"
+          ],
+          [
+            "-1",
+            "-4",
+            "0"
+          ],
+          [
+            "0",
+            "-3",
+            "3"
+          ],
+          [
+            "1",
+            "0",
+            "6"
+          ],
+          [
+            "2",
+            "5",
+            "9"
+          ],
+          [
+            "3",
+            "12",
+            "12"
+          ],
+          [
+            "4",
+            "21",
+            "15"
+          ]
+        ],
+        "ta": {
+          "headers": [
+            "x",
+            "பரவளையம் y",
+            "நேர்க்கோடு y"
+          ],
+          "rows": [
+            [
+              "-3",
+              "0",
+              "-6"
+            ],
+            [
+              "-2",
+              "-3",
+              "-3"
+            ],
+            [
+              "-1",
+              "-4",
+              "0"
+            ],
+            [
+              "0",
+              "-3",
+              "3"
+            ],
+            [
+              "1",
+              "0",
+              "6"
+            ],
+            [
+              "2",
+              "5",
+              "9"
+            ],
+            [
+              "3",
+              "12",
+              "12"
+            ],
+            [
+              "4",
+              "21",
+              "15"
+            ]
+          ]
+        }
+      },
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            143
+          ],
+          "ta": [
+            145
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q1-i",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q1(i)",
+        "ta": "பயிற்சி 3.17 · வினா 1(i)"
+      },
+      "title": {
+        "en": "Read matrix entries",
+        "ta": "அணியின் உறுப்புகளைப் படித்தல்"
+      },
+      "q": {
+        "en": "1. In the matrix A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1], write\n(i) The number of elements",
+        "ta": "1. A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1] என்ற அணியில்\n(i) உறுப்புகளின் எண்ணிக்கையைக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "1. ",
+          "In the matrix ",
+          {
+            "latex": "A=\\begin{bmatrix}8&9&4&3\\\\-1&\\sqrt{7}&\\frac{\\sqrt{3}}{2}&5\\\\1&4&3&0\\\\6&8&-11&1\\end{bmatrix}",
+            "fallback": "A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1]",
+            "display": true
+          },
+          ", write\n(i) ",
+          "The number of elements"
+        ],
+        "ta": [
+          "1. ",
+          {
+            "latex": "A=\\begin{bmatrix}8&9&4&3\\\\-1&\\sqrt{7}&\\frac{\\sqrt{3}}{2}&5\\\\1&4&3&0\\\\6&8&-11&1\\end{bmatrix}",
+            "fallback": "A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1]",
+            "display": true
+          },
+          " என்ற அணியில்\n(i) ",
+          "உறுப்புகளின் எண்ணிக்கையைக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Count the rows and columns. There are four rows and four entries in each row.",
+          "ta": "நிரைகளையும் நிரல்களையும் எண்ணுக. நான்கு நிரைகள் உள்ளன. ஒவ்வொரு நிரையிலும் நான்கு உறுப்புகள் உள்ளன.",
+          "eq": "4 rows,  4 columns",
+          "math": {
+            "latex": "4\\text{ rows},\\quad 4\\text{ columns}",
+            "fallback": "4 rows,  4 columns",
+            "display": true
+          },
+          "why": {
+            "en": "Compare entries with the same row and column numbers.",
+            "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+          }
+        },
+        {
+          "en": "Multiply the number of rows by the number of entries in each row.",
+          "ta": "நிரைகளின் எண்ணிக்கையை ஒவ்வொரு நிரையிலும் உள்ள உறுப்புகளின் எண்ணிக்கையால் பெருக்குக.",
+          "eq": "4×4=16",
+          "math": {
+            "latex": "4\\times4=16",
+            "fallback": "4×4=16",
+            "display": true
+          }
+        }
+      ],
+      "answer": "16",
+      "hint": {
+        "en": "Compare entries with the same row and column numbers.",
+        "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 152.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{16}",
+        "fallback": "16",
+        "display": true
+      },
+      "difficulty": "easy",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            152
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q1-ii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q1(ii)",
+        "ta": "பயிற்சி 3.17 · வினா 1(ii)"
+      },
+      "title": {
+        "en": "Read matrix entries",
+        "ta": "அணியின் உறுப்புகளைப் படித்தல்"
+      },
+      "q": {
+        "en": "1. In the matrix A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1], write\n(ii) The order of the matrix",
+        "ta": "1. A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1] என்ற அணியில்\n(ii) அணியின் வரிசையைக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "1. ",
+          "In the matrix ",
+          {
+            "latex": "A=\\begin{bmatrix}8&9&4&3\\\\-1&\\sqrt{7}&\\frac{\\sqrt{3}}{2}&5\\\\1&4&3&0\\\\6&8&-11&1\\end{bmatrix}",
+            "fallback": "A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1]",
+            "display": true
+          },
+          ", write\n(ii) ",
+          "The order of the matrix"
+        ],
+        "ta": [
+          "1. ",
+          {
+            "latex": "A=\\begin{bmatrix}8&9&4&3\\\\-1&\\sqrt{7}&\\frac{\\sqrt{3}}{2}&5\\\\1&4&3&0\\\\6&8&-11&1\\end{bmatrix}",
+            "fallback": "A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1]",
+            "display": true
+          },
+          " என்ற அணியில்\n(ii) ",
+          "அணியின் வரிசையைக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Count the horizontal rows from top to bottom, then count the vertical columns from left to right.",
+          "ta": "மேலிருந்து கீழாகக் கிடைமட்ட நிரைகளையும் இடமிருந்து வலமாகச் செங்குத்து நிரல்களையும் எண்ணுக.",
+          "eq": "m=4,  n=4",
+          "math": {
+            "latex": "m=4,\\quad n=4",
+            "fallback": "m=4,  n=4",
+            "display": true
+          },
+          "why": {
+            "en": "Compare entries with the same row and column numbers.",
+            "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+          }
+        },
+        {
+          "en": "Write the row count before the column count in the order of a matrix.",
+          "ta": "அணியின் வரிசையை எழுதும்போது முதலில் நிரைகளின் எண்ணிக்கையையும் பின்னர் நிரல்களின் எண்ணிக்கையையும் எழுதுக.",
+          "eq": "m× n=4×4",
+          "math": {
+            "latex": "m\\times n=4\\times4",
+            "fallback": "m× n=4×4",
+            "display": true
+          }
+        }
+      ],
+      "answer": "4×4",
+      "hint": {
+        "en": "Compare entries with the same row and column numbers.",
+        "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 152.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{4\\times4}",
+        "fallback": "4×4",
+        "display": true
+      },
+      "difficulty": "easy",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            152
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q1-iii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q1(iii)",
+        "ta": "பயிற்சி 3.17 · வினா 1(iii)"
+      },
+      "title": {
+        "en": "Read matrix entries",
+        "ta": "அணியின் உறுப்புகளைப் படித்தல்"
+      },
+      "q": {
+        "en": "1. In the matrix A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1], write\n(iii) Write the elements a₂₂, a₂₃, a₂₄, a₃₄, a₄₃, a₄₄",
+        "ta": "1. A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1] என்ற அணியில்\n(iii) a₂₂, a₂₃, a₂₄, a₃₄, a₄₃, a₄₄ஆகிய உறுப்புகளை எழுதுக."
+      },
+      "questionMath": {
+        "en": [
+          "1. ",
+          "In the matrix ",
+          {
+            "latex": "A=\\begin{bmatrix}8&9&4&3\\\\-1&\\sqrt{7}&\\frac{\\sqrt{3}}{2}&5\\\\1&4&3&0\\\\6&8&-11&1\\end{bmatrix}",
+            "fallback": "A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1]",
+            "display": true
+          },
+          ", write\n(iii) ",
+          "Write the elements ",
+          {
+            "latex": "a_{22}, a_{23}, a_{24}, a_{34}, a_{43}, a_{44}",
+            "fallback": "a₂₂, a₂₃, a₂₄, a₃₄, a₄₃, a₄₄",
+            "display": false
+          }
+        ],
+        "ta": [
+          "1. ",
+          {
+            "latex": "A=\\begin{bmatrix}8&9&4&3\\\\-1&\\sqrt{7}&\\frac{\\sqrt{3}}{2}&5\\\\1&4&3&0\\\\6&8&-11&1\\end{bmatrix}",
+            "fallback": "A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1]",
+            "display": true
+          },
+          " என்ற அணியில்\n(iii) ",
+          {
+            "latex": "a_{22}, a_{23}, a_{24}, a_{34}, a_{43}, a_{44}",
+            "fallback": "a₂₂, a₂₃, a₂₄, a₃₄, a₄₃, a₄₄",
+            "display": false
+          },
+          "ஆகிய உறுப்புகளை எழுதுக."
+        ]
+      },
+      "steps": [
+        {
+          "en": "The first subscript gives the row. The second gives the column.",
+          "ta": "முதல் கீழ்க்குறியீடு நிரையையும் இரண்டாவது கீழ்க்குறியீடு நிரலையும் குறிக்கிறது.",
+          "eq": "a_(ij):  i, j",
+          "math": {
+            "latex": "a_{ij}:\\quad i,\\ j",
+            "fallback": "a_(ij):  i, j",
+            "display": true
+          },
+          "why": {
+            "en": "Compare entries with the same row and column numbers.",
+            "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+          }
+        },
+        {
+          "en": "Read each requested entry at the crossing of its row and column.",
+          "ta": "கேட்கப்பட்ட ஒவ்வோர் உறுப்பையும் அதன் நிரையும் நிரலும் சந்திக்கும் இடத்தில் படிக்கவும்.",
+          "eq": "a₂₂=√(7)\na₂₃=(√(3))/(2)\na₂₄=5\na₃₄=0\na₄₃=−11\na₄₄=1",
+          "math": {
+            "latex": "\\begin{aligned}a_{22}&=\\sqrt{7}\\\\a_{23}&=\\frac{\\sqrt{3}}{2}\\\\a_{24}&=5\\\\a_{34}&=0\\\\a_{43}&=-11\\\\a_{44}&=1\\end{aligned}",
+            "fallback": "a₂₂=√(7)\na₂₃=(√(3))/(2)\na₂₄=5\na₃₄=0\na₄₃=−11\na₄₄=1",
+            "display": true
+          }
+        }
+      ],
+      "answer": "a₂₂=√(7)\na₂₃=(√(3))/(2)\na₂₄=5\na₃₄=0\na₄₃=−11\na₄₄=1",
+      "hint": {
+        "en": "Compare entries with the same row and column numbers.",
+        "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 152.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{\\begin{aligned}a_{22}&=\\sqrt{7}\\\\a_{23}&=\\frac{\\sqrt{3}}{2}\\\\a_{24}&=5\\\\a_{34}&=0\\\\a_{43}&=-11\\\\a_{44}&=1\\end{aligned}}",
+        "fallback": "a₂₂=√(7)\na₂₃=(√(3))/(2)\na₂₄=5\na₃₄=0\na₄₃=−11\na₄₄=1",
+        "display": true
+      },
+      "difficulty": "easy",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            152
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q2",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q2",
+        "ta": "பயிற்சி 3.17 · வினா 2"
+      },
+      "title": {
+        "en": "Find all matrix orders",
+        "ta": "அணியின் எல்லா வரிசைகளையும் காண்க"
+      },
+      "q": {
+        "en": "2. If a matrix has 18 elements, what are the possible orders it can have? What if it has 6 elements?",
+        "ta": "2. 18 உறுப்புகளைக் கொண்ட ஓர் அணிக்கு எவ்வகை வரிசைகள் இருக்க இயலும்? ஓர் அணியின் உறுப்புகளின் எண்ணிக்கை 6 எனில், எவ்வகை வரிசைகள் இருக்க இயலும்?"
+      },
+      "questionMath": {
+        "en": [
+          "2. ",
+          "If a matrix has 18 elements, what are the possible orders it can have? What if it has 6 elements?"
+        ],
+        "ta": [
+          "2. ",
+          "18 உறுப்புகளைக் கொண்ட ஓர் அணிக்கு எவ்வகை வரிசைகள் இருக்க இயலும்? ஓர் அணியின் உறுப்புகளின் எண்ணிக்கை 6 எனில், எவ்வகை வரிசைகள் இருக்க இயலும்?"
+        ]
+      },
+      "steps": [
+        {
+          "en": "The product of the row count and column count equals the total number of entries.",
+          "ta": "நிரைகள் மற்றும் நிரல்களின் எண்ணிக்கைகளைப் பெருக்கினால் மொத்த உறுப்புகளின் எண்ணிக்கை கிடைக்கும்.",
+          "eq": "mn=18 or  mn=6",
+          "math": {
+            "latex": "mn=18\\quad\\text{or}\\quad mn=6",
+            "fallback": "mn=18 or  mn=6",
+            "display": true
+          },
+          "why": {
+            "en": "Start with the factors of 18 and 6.",
+            "ta": "18 மற்றும் 6-இன் காரணிகளிலிருந்து தொடங்குக."
+          }
+        },
+        {
+          "en": "List the positive factor pairs and include their reversals, because rows and columns have different roles.",
+          "ta": "நேர்மக் காரணி இணைகளையும் அவற்றின் இடமாற்றங்களையும் எழுதுக. நிரைகளும் நிரல்களும் வெவ்வேறு இடங்களைக் குறிக்கின்றன.",
+          "eq": "18: 1× 18, 2× 9, 3× 6\n  6× 3, 9× 2, 18× 1\n6: 1× 6, 2× 3, 3× 2, 6× 1",
+          "math": {
+            "latex": "\\begin{aligned}18&:\\ 1\\times 18,\\ 2\\times 9,\\ 3\\times 6\\\\&\\quad 6\\times 3,\\ 9\\times 2,\\ 18\\times 1\\\\6&:\\ 1\\times 6,\\ 2\\times 3,\\ 3\\times 2,\\ 6\\times 1\\end{aligned}",
+            "fallback": "18: 1× 18, 2× 9, 3× 6\n  6× 3, 9× 2, 18× 1\n6: 1× 6, 2× 3, 3× 2, 6× 1",
+            "display": true
+          }
+        }
+      ],
+      "answer": "18: 1× 18, 2× 9, 3× 6\n  6× 3, 9× 2, 18× 1\n6: 1× 6, 2× 3, 3× 2, 6× 1",
+      "hint": {
+        "en": "Start with the factors of 18 and 6.",
+        "ta": "18 மற்றும் 6-இன் காரணிகளிலிருந்து தொடங்குக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 153.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{\\begin{aligned}18&:\\ 1\\times 18,\\ 2\\times 9,\\ 3\\times 6\\\\&\\quad 6\\times 3,\\ 9\\times 2,\\ 18\\times 1\\\\6&:\\ 1\\times 6,\\ 2\\times 3,\\ 3\\times 2,\\ 6\\times 1\\end{aligned}}",
+        "fallback": "18: 1× 18, 2× 9, 3× 6\n  6× 3, 9× 2, 18× 1\n6: 1× 6, 2× 3, 3× 2, 6× 1",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            153
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q3-i",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q3(i)",
+        "ta": "பயிற்சி 3.17 · வினா 3(i)"
+      },
+      "title": {
+        "en": "Construct a matrix from an entry rule",
+        "ta": "உறுப்பு விதியிலிருந்து அணி அமைத்தல்"
+      },
+      "q": {
+        "en": "3. Construct a 3×3 matrix whose elements are given by\n(i) a_(ij)=|i−2j|",
+        "ta": "3. பின்வருவனவற்றைக் கொண்டு 3×3 வரிசையைக் கொண்ட அணி A=[a_(ij)]–யினைக் காண்க.\n(i) a_(ij)=|i−2j|"
+      },
+      "questionMath": {
+        "en": [
+          "3. ",
+          "Construct a ",
+          {
+            "latex": "3\\times3",
+            "fallback": "3×3",
+            "display": false
+          },
+          " matrix whose elements are given by\n(i) ",
+          {
+            "latex": "a_{ij}=|i-2j|",
+            "fallback": "a_(ij)=|i−2j|",
+            "display": false
+          }
+        ],
+        "ta": [
+          "3. ",
+          "பின்வருவனவற்றைக் கொண்டு ",
+          {
+            "latex": "3\\times3",
+            "fallback": "3×3",
+            "display": false
+          },
+          " வரிசையைக் கொண்ட அணி ",
+          {
+            "latex": "A=[a_{ij}]",
+            "fallback": "A=[a_(ij)]",
+            "display": false
+          },
+          "–யினைக் காண்க.\n(i) ",
+          {
+            "latex": "a_{ij}=|i-2j|",
+            "fallback": "a_(ij)=|i−2j|",
+            "display": false
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the row number for the first index and the column number for the second. Start with two entries in the first row.",
+          "ta": "முதல் குறியீட்டுக்கு நிரை எண்ணையும் இரண்டாவது குறியீட்டுக்கு நிரல் எண்ணையும் இடுக. முதல் நிரையின் முதல் இரு உறுப்புகளைக் காண்க.",
+          "eq": "a₁₁=|1−2(1)|=1\na₁₂=|1−2(2)|=3",
+          "math": {
+            "latex": "\\begin{aligned}a_{11}&=|1-2(1)|=1\\\\a_{12}&=|1-2(2)|=3\\end{aligned}",
+            "fallback": "a₁₁=|1−2(1)|=1\na₁₂=|1−2(2)|=3",
+            "display": true
+          },
+          "why": {
+            "en": "Compare entries with the same row and column numbers.",
+            "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+          }
+        },
+        {
+          "en": "Use the same rule at every position and keep the entries in row order.",
+          "ta": "ஒவ்வோர் இடத்திலும் அதே விதியைப் பயன்படுத்தி, உறுப்புகளை நிரை வாரியாக எழுதுக.",
+          "eq": "A=[1, 3, 5; 0, 2, 4; 1, 1, 3]",
+          "math": {
+            "latex": "A=\\begin{bmatrix}1&3&5\\\\0&2&4\\\\1&1&3\\end{bmatrix}",
+            "fallback": "A=[1, 3, 5; 0, 2, 4; 1, 1, 3]",
+            "display": true
+          }
+        }
+      ],
+      "answer": "A=[1, 3, 5; 0, 2, 4; 1, 1, 3]",
+      "hint": {
+        "en": "Compare entries with the same row and column numbers.",
+        "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 153.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{A=\\begin{bmatrix}1&3&5\\\\0&2&4\\\\1&1&3\\end{bmatrix}}",
+        "fallback": "A=[1, 3, 5; 0, 2, 4; 1, 1, 3]",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            153
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q3-ii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q3(ii)",
+        "ta": "பயிற்சி 3.17 · வினா 3(ii)"
+      },
+      "title": {
+        "en": "Construct a matrix from an entry rule",
+        "ta": "உறுப்பு விதியிலிருந்து அணி அமைத்தல்"
+      },
+      "q": {
+        "en": "3. Construct a 3×3 matrix whose elements are given by\n(ii) a_(ij)=((i+j)³)/(3)",
+        "ta": "3. பின்வருவனவற்றைக் கொண்டு 3×3 வரிசையைக் கொண்ட அணி A=[a_(ij)]–யினைக் காண்க.\n(ii) a_(ij)=((i+j)³)/(3)"
+      },
+      "questionMath": {
+        "en": [
+          "3. ",
+          "Construct a ",
+          {
+            "latex": "3\\times3",
+            "fallback": "3×3",
+            "display": false
+          },
+          " matrix whose elements are given by\n(ii) ",
+          {
+            "latex": "a_{ij}=\\dfrac{(i+j)^3}{3}",
+            "fallback": "a_(ij)=((i+j)³)/(3)",
+            "display": false
+          }
+        ],
+        "ta": [
+          "3. ",
+          "பின்வருவனவற்றைக் கொண்டு ",
+          {
+            "latex": "3\\times3",
+            "fallback": "3×3",
+            "display": false
+          },
+          " வரிசையைக் கொண்ட அணி ",
+          {
+            "latex": "A=[a_{ij}]",
+            "fallback": "A=[a_(ij)]",
+            "display": false
+          },
+          "–யினைக் காண்க.\n(ii) ",
+          {
+            "latex": "a_{ij}=\\dfrac{(i+j)^3}{3}",
+            "fallback": "a_(ij)=((i+j)³)/(3)",
+            "display": false
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Use the row number for the first index and the column number for the second. Start with two entries in the first row.",
+          "ta": "முதல் குறியீட்டுக்கு நிரை எண்ணையும் இரண்டாவது குறியீட்டுக்கு நிரல் எண்ணையும் இடுக. முதல் நிரையின் முதல் இரு உறுப்புகளைக் காண்க.",
+          "eq": "a₁₁=((1+1)³)/(3)=(8)/(3)\na₁₂=((1+2)³)/(3)=9",
+          "math": {
+            "latex": "\\begin{aligned}a_{11}&=\\dfrac{(1+1)^3}{3}=\\dfrac83\\\\a_{12}&=\\dfrac{(1+2)^3}{3}=9\\end{aligned}",
+            "fallback": "a₁₁=((1+1)³)/(3)=(8)/(3)\na₁₂=((1+2)³)/(3)=9",
+            "display": true
+          },
+          "why": {
+            "en": "Compare entries with the same row and column numbers.",
+            "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+          }
+        },
+        {
+          "en": "Use the same rule at every position and keep the entries in row order.",
+          "ta": "ஒவ்வோர் இடத்திலும் அதே விதியைப் பயன்படுத்தி, உறுப்புகளை நிரை வாரியாக எழுதுக.",
+          "eq": "A=[(8)/(3), 9, (64)/(3); 9, (64)/(3), (125)/(3); (64)/(3), (125)/(3), 72]",
+          "math": {
+            "latex": "A=\\begin{bmatrix}\\frac{8}{3}&9&\\frac{64}{3}\\\\9&\\frac{64}{3}&\\frac{125}{3}\\\\\\frac{64}{3}&\\frac{125}{3}&72\\end{bmatrix}",
+            "fallback": "A=[(8)/(3), 9, (64)/(3); 9, (64)/(3), (125)/(3); (64)/(3), (125)/(3), 72]",
+            "display": true
+          }
+        }
+      ],
+      "answer": "A=[(8)/(3), 9, (64)/(3); 9, (64)/(3), (125)/(3); (64)/(3), (125)/(3), 72]",
+      "hint": {
+        "en": "Compare entries with the same row and column numbers.",
+        "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 153.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{A=\\begin{bmatrix}\\frac{8}{3}&9&\\frac{64}{3}\\\\9&\\frac{64}{3}&\\frac{125}{3}\\\\\\frac{64}{3}&\\frac{125}{3}&72\\end{bmatrix}}",
+        "fallback": "A=[(8)/(3), 9, (64)/(3); 9, (64)/(3), (125)/(3); (64)/(3), (125)/(3), 72]",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            153
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q4",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q4",
+        "ta": "பயிற்சி 3.17 · வினா 4"
+      },
+      "title": {
+        "en": "Work with matrices",
+        "ta": "அணிகளின் மீதான செயல்கள்"
+      },
+      "q": {
+        "en": "4. If A=[5, 4, 3; 1, −7, 9; 3, 8, 2] then find the transpose of A.",
+        "ta": "4. A=[5, 4, 3; 1, −7, 9; 3, 8, 2] எனில், A–யின் நிரை நிரல் மாற்று அணியைக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "4. ",
+          "If ",
+          {
+            "latex": "A=\\begin{bmatrix}5&4&3\\\\1&-7&9\\\\3&8&2\\end{bmatrix}",
+            "fallback": "A=[5, 4, 3; 1, −7, 9; 3, 8, 2]",
+            "display": true
+          },
+          " then find the transpose of A."
+        ],
+        "ta": [
+          "4. ",
+          {
+            "latex": "A=\\begin{bmatrix}5&4&3\\\\1&-7&9\\\\3&8&2\\end{bmatrix}",
+            "fallback": "A=[5, 4, 3; 1, −7, 9; 3, 8, 2]",
+            "display": true
+          },
+          " எனில், A–யின் நிரை நிரல் மாற்று அணியைக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "The first row becomes the first column.",
+          "ta": "முதல் நிரை முதல் நிரலாக மாறும்.",
+          "eq": "[5, 4, 3] →  [5; 4; 3]",
+          "math": {
+            "latex": "\\begin{bmatrix}5&4&3\\end{bmatrix}\\longmapsto \\begin{bmatrix}5\\\\4\\\\3\\end{bmatrix}",
+            "fallback": "[5, 4, 3] →  [5; 4; 3]",
+            "display": true
+          },
+          "why": {
+            "en": "Write each row as a column in the same order.",
+            "ta": "ஒவ்வொரு நிரையையும் அதே வரிசையில் ஒரு நிரலாக எழுதுக."
+          }
+        },
+        {
+          "en": "Turn the second and third rows into columns in the same way.",
+          "ta": "அதே முறையில் இரண்டாம், மூன்றாம் நிரைகளை நிரல்களாக மாற்றுக.",
+          "eq": "Aᵀ=[5, 1, 3; 4, −7, 8; 3, 9, 2]",
+          "math": {
+            "latex": "A^T=\\begin{bmatrix}5&1&3\\\\4&-7&8\\\\3&9&2\\end{bmatrix}",
+            "fallback": "Aᵀ=[5, 1, 3; 4, −7, 8; 3, 9, 2]",
+            "display": true
+          }
+        }
+      ],
+      "answer": "Aᵀ=[5, 1, 3; 4, −7, 8; 3, 9, 2]",
+      "hint": {
+        "en": "Write each row as a column in the same order.",
+        "ta": "ஒவ்வொரு நிரையையும் அதே வரிசையில் ஒரு நிரலாக எழுதுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 153.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{A^T=\\begin{bmatrix}5&1&3\\\\4&-7&8\\\\3&9&2\\end{bmatrix}}",
+        "fallback": "Aᵀ=[5, 1, 3; 4, −7, 8; 3, 9, 2]",
+        "display": true
+      },
+      "difficulty": "easy",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            153
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q5",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q5",
+        "ta": "பயிற்சி 3.17 · வினா 5"
+      },
+      "title": {
+        "en": "Work with matrices",
+        "ta": "அணிகளின் மீதான செயல்கள்"
+      },
+      "q": {
+        "en": "5. If A=[√(7), −3; − √(5), 2; √(3), −5] then find the transpose of −A.",
+        "ta": "5. A=[√(7), −3; − √(5), 2; √(3), −5] எனில், −A–யின் நிரை நிரல் மாற்று அணியைக் காண்க."
+      },
+      "questionMath": {
+        "en": [
+          "5. ",
+          "If ",
+          {
+            "latex": "A=\\begin{bmatrix}\\sqrt{7}&-3\\\\- \\sqrt{5}&2\\\\\\sqrt{3}&-5\\end{bmatrix}",
+            "fallback": "A=[√(7), −3; − √(5), 2; √(3), −5]",
+            "display": true
+          },
+          " then find the transpose of ",
+          {
+            "latex": "-A",
+            "fallback": "−A",
+            "display": false
+          },
+          "."
+        ],
+        "ta": [
+          "5. ",
+          {
+            "latex": "A=\\begin{bmatrix}\\sqrt{7}&-3\\\\- \\sqrt{5}&2\\\\\\sqrt{3}&-5\\end{bmatrix}",
+            "fallback": "A=[√(7), −3; − √(5), 2; √(3), −5]",
+            "display": true
+          },
+          " எனில், ",
+          {
+            "latex": "-A",
+            "fallback": "−A",
+            "display": false
+          },
+          "–யின் நிரை நிரல் மாற்று அணியைக் காண்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Multiply every entry by negative one, including entries already negative.",
+          "ta": "எதிர்க்குறியுள்ள உறுப்புகள் உட்பட எல்லா உறுப்புகளையும் −1 ஆல் பெருக்குக.",
+          "eq": "−A=[− √(7), 3; √(5), −2; − √(3), 5]",
+          "math": {
+            "latex": "-A=\\begin{bmatrix}- \\sqrt{7}&3\\\\\\sqrt{5}&-2\\\\- \\sqrt{3}&5\\end{bmatrix}",
+            "fallback": "−A=[− √(7), 3; √(5), −2; − √(3), 5]",
+            "display": true
+          },
+          "why": {
+            "en": "Write each row as a column in the same order.",
+            "ta": "ஒவ்வொரு நிரையையும் அதே வரிசையில் ஒரு நிரலாக எழுதுக."
+          }
+        },
+        {
+          "en": "Write the columns of the result as rows.",
+          "ta": "கிடைத்த அணியின் நிரல்களை நிரைகளாக எழுதுக.",
+          "eq": "(−A)ᵀ=[− √(7), √(5), − √(3); 3, −2, 5]",
+          "math": {
+            "latex": "(-A)^T=\\begin{bmatrix}- \\sqrt{7}&\\sqrt{5}&- \\sqrt{3}\\\\3&-2&5\\end{bmatrix}",
+            "fallback": "(−A)ᵀ=[− √(7), √(5), − √(3); 3, −2, 5]",
+            "display": true
+          }
+        }
+      ],
+      "answer": "(−A)ᵀ=[− √(7), √(5), − √(3); 3, −2, 5]",
+      "hint": {
+        "en": "Write each row as a column in the same order.",
+        "ta": "ஒவ்வொரு நிரையையும் அதே வரிசையில் ஒரு நிரலாக எழுதுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 153.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{(-A)^T=\\begin{bmatrix}- \\sqrt{7}&\\sqrt{5}&- \\sqrt{3}\\\\3&-2&5\\end{bmatrix}}",
+        "fallback": "(−A)ᵀ=[− √(7), √(5), − √(3); 3, −2, 5]",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            153
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q6",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q6",
+        "ta": "பயிற்சி 3.17 · வினா 6"
+      },
+      "title": {
+        "en": "Transpose twice",
+        "ta": "இருமுறை நிரை நிரல் மாற்றுதல்"
+      },
+      "q": {
+        "en": "6. If A=[5, 2, 2; −√(17), 0.7, (5)/(2); 8, 3, 1] then verify (Aᵀ)ᵀ=A",
+        "ta": "6. A=[5, 2, 2; −√(17), 0.7, (5)/(2); 8, 3, 1] எனில், (Aᵀ)ᵀ=A என்பதைச் சரிபார்க்க."
+      },
+      "questionMath": {
+        "en": [
+          "6. ",
+          "If ",
+          {
+            "latex": "A=\\begin{bmatrix}5&2&2\\\\-\\sqrt{17}&0.7&\\frac{5}{2}\\\\8&3&1\\end{bmatrix}",
+            "fallback": "A=[5, 2, 2; −√(17), 0.7, (5)/(2); 8, 3, 1]",
+            "display": true
+          },
+          " then verify ",
+          {
+            "latex": "(A^T)^T=A",
+            "fallback": "(Aᵀ)ᵀ=A",
+            "display": false
+          }
+        ],
+        "ta": [
+          "6. ",
+          {
+            "latex": "A=\\begin{bmatrix}5&2&2\\\\-\\sqrt{17}&0.7&\\frac{5}{2}\\\\8&3&1\\end{bmatrix}",
+            "fallback": "A=[5, 2, 2; −√(17), 0.7, (5)/(2); 8, 3, 1]",
+            "display": true
+          },
+          " எனில், ",
+          {
+            "latex": "(A^T)^T=A",
+            "fallback": "(Aᵀ)ᵀ=A",
+            "display": false
+          },
+          " என்பதைச் சரிபார்க்க."
+        ]
+      },
+      "steps": [
+        {
+          "en": "Turn the rows of the given matrix into columns to obtain its transpose.",
+          "ta": "கொடுக்கப்பட்ட அணியின் நிரைகளை நிரல்களாக மாற்றி, நிரை நிரல் மாற்று அணியைப் பெறுக.",
+          "eq": "Aᵀ=[5, −√(17), 8; 2, 0.7, 3; 2, (5)/(2), 1]",
+          "math": {
+            "latex": "A^T=\\begin{bmatrix}5&-\\sqrt{17}&8\\\\2&0.7&3\\\\2&\\frac{5}{2}&1\\end{bmatrix}",
+            "fallback": "Aᵀ=[5, −√(17), 8; 2, 0.7, 3; 2, (5)/(2), 1]",
+            "display": true
+          },
+          "why": {
+            "en": "Write each row as a column in the same order.",
+            "ta": "ஒவ்வொரு நிரையையும் அதே வரிசையில் ஒரு நிரலாக எழுதுக."
+          }
+        },
+        {
+          "en": "Transpose a second time. Each entry returns to its starting position.",
+          "ta": "மீண்டும் நிரை நிரல் மாற்றுக. ஒவ்வோர் உறுப்பும் தொடக்கத்தில் இருந்த இடத்திற்கே திரும்பும்.",
+          "eq": "(Aᵀ)ᵀ=[5, 2, 2; −√(17), 0.7, (5)/(2); 8, 3, 1]=A",
+          "math": {
+            "latex": "(A^T)^T=\\begin{bmatrix}5&2&2\\\\-\\sqrt{17}&0.7&\\frac{5}{2}\\\\8&3&1\\end{bmatrix}=A",
+            "fallback": "(Aᵀ)ᵀ=[5, 2, 2; −√(17), 0.7, (5)/(2); 8, 3, 1]=A",
+            "display": true
+          }
+        }
+      ],
+      "answer": "(Aᵀ)ᵀ=A",
+      "hint": {
+        "en": "Write each row as a column in the same order.",
+        "ta": "ஒவ்வொரு நிரையையும் அதே வரிசையில் ஒரு நிரலாக எழுதுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 153.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{(A^T)^T=A}",
+        "fallback": "(Aᵀ)ᵀ=A",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            153
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q7-i",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q7(i)",
+        "ta": "பயிற்சி 3.17 · வினா 7(i)"
+      },
+      "title": {
+        "en": "Solve a matrix equation",
+        "ta": "அணிச் சமன்பாட்டைத் தீர்த்தல்"
+      },
+      "q": {
+        "en": "7. Find the values of x, y and z from the following equations\n(i) [12, 3; x, 5]=[y, z; 3, 5]",
+        "ta": "7. கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n(i) [12, 3; x, 5]=[y, z; 3, 5]"
+      },
+      "questionMath": {
+        "en": [
+          "7. ",
+          "Find the values of x, y and z from the following equations\n",
+          "(i) ",
+          {
+            "latex": "\\begin{bmatrix}12&3\\\\x&5\\end{bmatrix}=\\begin{bmatrix}y&z\\\\3&5\\end{bmatrix}",
+            "fallback": "[12, 3; x, 5]=[y, z; 3, 5]",
+            "display": true
+          }
+        ],
+        "ta": [
+          "7. ",
+          "கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n",
+          "(i) ",
+          {
+            "latex": "\\begin{bmatrix}12&3\\\\x&5\\end{bmatrix}=\\begin{bmatrix}y&z\\\\3&5\\end{bmatrix}",
+            "fallback": "[12, 3; x, 5]=[y, z; 3, 5]",
+            "display": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Match the first-row entries and the first entry of the second row.",
+          "ta": "முதல் நிரையின் இரு உறுப்புகளையும் இரண்டாம் நிரையின் முதல் உறுப்பையும் ஒப்பிடுக.",
+          "eq": "12=y, 3=z,  x=3",
+          "math": {
+            "latex": "12=y,\\quad3=z,\\quad x=3",
+            "fallback": "12=y, 3=z,  x=3",
+            "display": true
+          },
+          "why": {
+            "en": "Compare entries with the same row and column numbers.",
+            "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+          }
+        },
+        {
+          "en": "The two remaining entries are both five, so the values satisfy the entire matrix equation.",
+          "ta": "மீதமுள்ள இரு உறுப்புகளும் 5. எனவே கிடைத்த மதிப்புகள் முழு அணிச் சமன்பாட்டையும் நிறைவு செய்கின்றன.",
+          "eq": "(x,y,z)=(3,12,3)",
+          "math": {
+            "latex": "(x,y,z)=(3,12,3)",
+            "fallback": "(x,y,z)=(3,12,3)",
+            "display": true
+          }
+        }
+      ],
+      "answer": "(x,y,z)=(3,12,3)",
+      "hint": {
+        "en": "Compare entries with the same row and column numbers.",
+        "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 153.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{(x,y,z)=(3,12,3)}",
+        "fallback": "(x,y,z)=(3,12,3)",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            153
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q7-ii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q7(ii)",
+        "ta": "பயிற்சி 3.17 · வினா 7(ii)"
+      },
+      "title": {
+        "en": "Solve a matrix equation",
+        "ta": "அணிச் சமன்பாட்டைத் தீர்த்தல்"
+      },
+      "q": {
+        "en": "7. Find the values of x, y and z from the following equations\n(ii) [x + y, 2; z + 5, x y]=[6, 2; 5, 8]",
+        "ta": "7. கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n(ii) [x + y, 2; z + 5, x y]=[6, 2; 5, 8]"
+      },
+      "questionMath": {
+        "en": [
+          "7. ",
+          "Find the values of x, y and z from the following equations\n",
+          "(ii) ",
+          {
+            "latex": "\\begin{bmatrix}x + y&2\\\\z + 5&x y\\end{bmatrix}=\\begin{bmatrix}6&2\\\\5&8\\end{bmatrix}",
+            "fallback": "[x + y, 2; z + 5, x y]=[6, 2; 5, 8]",
+            "display": true
+          }
+        ],
+        "ta": [
+          "7. ",
+          "கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n",
+          "(ii) ",
+          {
+            "latex": "\\begin{bmatrix}x + y&2\\\\z + 5&x y\\end{bmatrix}=\\begin{bmatrix}6&2\\\\5&8\\end{bmatrix}",
+            "fallback": "[x + y, 2; z + 5, x y]=[6, 2; 5, 8]",
+            "display": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Compare the varying entries in both matrices.",
+          "ta": "இரு அணிகளிலும் மாறி உள்ள இடங்களில் உறுப்புகளை ஒப்பிடுக.",
+          "eq": "x+y=6,  xy=8,  5+z=5",
+          "math": {
+            "latex": "x+y=6,\\quad xy=8,\\quad 5+z=5",
+            "fallback": "x+y=6,  xy=8,  5+z=5",
+            "display": true
+          },
+          "why": {
+            "en": "Compare entries with the same row and column numbers.",
+            "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+          }
+        },
+        {
+          "en": "Use the sum to replace y in the product equation, then factor to find the two possible x values.",
+          "ta": "கூடுதல் சமன்பாட்டிலிருந்து y-ஐப் பெருக்கல் சமன்பாட்டில் பிரதியிடுக. பின்னர் காரணிப்படுத்தி x-இன் இரு மதிப்புகளைக் காண்க.",
+          "eq": "x(6−x)=8\nx²−6x+8=0\n(x−2)(x−4)=0",
+          "math": {
+            "latex": "\\begin{aligned}x(6-x)&=8\\\\x^2-6x+8&=0\\\\(x-2)(x-4)&=0\\end{aligned}",
+            "fallback": "x(6−x)=8\nx²−6x+8=0\n(x−2)(x−4)=0",
+            "display": true
+          }
+        },
+        {
+          "en": "Use the sum to find the corresponding y for each x. The lower-left entries give z equal to zero.",
+          "ta": "ஒவ்வோர் x மதிப்புக்கும் கூடுதல் சமன்பாட்டிலிருந்து y-ஐக் காண்க. கீழ் இடப்புற உறுப்புகளிலிருந்து z பூச்சியம் எனக் கிடைக்கிறது.",
+          "eq": "(x,y,z)=(2,4,0)\n or (4,2,0)",
+          "math": {
+            "latex": "\\begin{aligned}(x,y,z)&=(2,4,0)\\\\&\\quad\\text{or }(4,2,0)\\end{aligned}",
+            "fallback": "(x,y,z)=(2,4,0)\n or (4,2,0)",
+            "display": true
+          }
+        }
+      ],
+      "answer": "(2,4,0), (4,2,0)",
+      "hint": {
+        "en": "Compare entries with the same row and column numbers.",
+        "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 153.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{(2,4,0),\\ (4,2,0)}",
+        "fallback": "(2,4,0), (4,2,0)",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            153
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    },
+    {
+      "id": "c10-3-ex3-17-q7-iii",
+      "classNum": 10,
+      "chapter": "3",
+      "exercise": "3.17",
+      "kind": "textbook",
+      "edition": "2025",
+      "topic": {
+        "en": "Algebra",
+        "ta": "இயற்கணிதம்"
+      },
+      "label": {
+        "en": "Exercise 3.17 · Q7(iii)",
+        "ta": "பயிற்சி 3.17 · வினா 7(iii)"
+      },
+      "title": {
+        "en": "Solve a matrix equation",
+        "ta": "அணிச் சமன்பாட்டைத் தீர்த்தல்"
+      },
+      "q": {
+        "en": "7. Find the values of x, y and z from the following equations\n(iii) [x + y + z; x + z; y + z]=[9; 5; 7]",
+        "ta": "7. கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n(iii) [x + y + z; x + z; y + z]=[9; 5; 7]"
+      },
+      "questionMath": {
+        "en": [
+          "7. ",
+          "Find the values of x, y and z from the following equations\n",
+          "(iii) ",
+          {
+            "latex": "\\begin{bmatrix}x + y + z\\\\x + z\\\\y + z\\end{bmatrix}=\\begin{bmatrix}9\\\\5\\\\7\\end{bmatrix}",
+            "fallback": "[x + y + z; x + z; y + z]=[9; 5; 7]",
+            "display": true
+          }
+        ],
+        "ta": [
+          "7. ",
+          "கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n",
+          "(iii) ",
+          {
+            "latex": "\\begin{bmatrix}x + y + z\\\\x + z\\\\y + z\\end{bmatrix}=\\begin{bmatrix}9\\\\5\\\\7\\end{bmatrix}",
+            "fallback": "[x + y + z; x + z; y + z]=[9; 5; 7]",
+            "display": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "en": "Match the three rows to obtain three scalar equations.",
+          "ta": "மூன்று நிரைகளையும் ஒப்பிட்டு மூன்று சமன்பாடுகளைக் காண்க.",
+          "eq": "x+y+z=9\nx+z=5\ny+z=7",
+          "math": {
+            "latex": "\\begin{aligned}x+y+z&=9\\\\x+z&=5\\\\y+z&=7\\end{aligned}",
+            "fallback": "x+y+z=9\nx+z=5\ny+z=7",
+            "display": true
+          },
+          "why": {
+            "en": "Compare entries with the same row and column numbers.",
+            "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+          }
+        },
+        {
+          "en": "Subtract the second equation from the first to find y. Then use the third equation to find z and the second to find x.",
+          "ta": "முதல் சமன்பாட்டிலிருந்து இரண்டாவது சமன்பாட்டைக் கழித்து y-ஐக் காண்க. பின்னர் மூன்றாவது சமன்பாட்டில் z-ஐயும் இரண்டாவதில் x-ஐயும் காண்க.",
+          "eq": "y=9−5=4\nz=7−4=3\nx=5−3=2",
+          "math": {
+            "latex": "\\begin{aligned}y&=9-5=4\\\\z&=7-4=3\\\\x&=5-3=2\\end{aligned}",
+            "fallback": "y=9−5=4\nz=7−4=3\nx=5−3=2",
+            "display": true
+          }
+        }
+      ],
+      "answer": "(x,y,z)=(2,4,3)",
+      "hint": {
+        "en": "Compare entries with the same row and column numbers.",
+        "ta": "ஒரே நிரை, நிரல் எண்களைக் கொண்ட உறுப்புகளை ஒப்பிடுக."
+      },
+      "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
+      "reference": "TN SCERT Grade 10, revised 2025. English PDF 150; Tamil PDF 153.",
+      "translationReview": "pending",
+      "tamilQuestionSourceVerified": true,
+      "tamilWorkedSolutionReview": "pending",
+      "answerMath": {
+        "latex": "\\boxed{(x,y,z)=(2,4,3)}",
+        "fallback": "(x,y,z)=(2,4,3)",
+        "display": true
+      },
+      "difficulty": "medium",
+      "sourceFidelity": {
+        "status": "page-visual-checked",
+        "sourcePdfPage": {
+          "en": [
+            150
+          ],
+          "ta": [
+            153
+          ]
+        }
+      },
+      "traceStatus": "source-verified-2025"
+    }
+  ],
+  "mapping": [
+    {
+      "recordId": "c10-3-ex3-16-q1-i",
+      "exercise": "3.16",
+      "question": "1",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(i) x²−9x+20=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(i) x²−9x+20=0"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q1-ii",
+      "exercise": "3.16",
+      "question": "1",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(ii) x²−4x+4=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(ii) x²−4x+4=0"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q1-iii",
+      "exercise": "3.16",
+      "question": "1",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(iii) x²+x+7=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(iii) x²+x+7=0"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q1-iv",
+      "exercise": "3.16",
+      "question": "1",
+      "parts": [
+        "iv"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(iv) x²−9=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(iv) x²−9=0"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q1-v",
+      "exercise": "3.16",
+      "question": "1",
+      "parts": [
+        "v"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(v) x²−6x+9=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(v) x²−6x+9=0"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q1-vi",
+      "exercise": "3.16",
+      "question": "1",
+      "parts": [
+        "vi"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "1. Graph the following quadratic equations and state their nature of solutions.\n(vi) (2x−3)(x+2)=0",
+        "ta": "1. கொடுக்கப்பட்ட இருபடிச் சமன்பாடுகளின் வரைபடம் வரைக. அவற்றின் தீர்வுகளின் தன்மையைக் கூறுக.\n(vi) (2x−3)(x+2)=0"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q2",
+      "exercise": "3.16",
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "2. Draw the graph of y=x²−4 and hence solve x²−x−12=0",
+        "ta": "2. y=x²−4 வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²−x−12=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q3",
+      "exercise": "3.16",
+      "question": "3",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "3. Draw the graph of y=x²+x and hence solve x²+1=0",
+        "ta": "3. y=x²+x –யின் வரைபடம் வரைந்து, x²+1=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q4",
+      "exercise": "3.16",
+      "question": "4",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "4. Draw the graph of y=x²+3x+2 and use it to solve x²+2x+1=0",
+        "ta": "4. y=x²+3x+2 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²+2x+1=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q5",
+      "exercise": "3.16",
+      "question": "5",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "5. Draw the graph of y=x²+3x−4 and hence use it to solve x²+3x−4=0",
+        "ta": "5. y=x²+3x−4 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²+3x−4=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q6",
+      "exercise": "3.16",
+      "question": "6",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "6. Draw the graph of y=x²−5x−6 and hence solve x²−5x−14=0",
+        "ta": "6. y=x²−5x−6 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²−5x−14=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q7",
+      "exercise": "3.16",
+      "question": "7",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "7. Draw the graph of y=2x²−3x−5 and hence solve 2x²−4x−6=0",
+        "ta": "7. y=2x²−3x−5 –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி 2x²−4x−6=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-16-q8",
+      "exercise": "3.16",
+      "question": "8",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "8. Draw the graph of y=(x−1)(x+3) and hence solve x²−x−6=0",
+        "ta": "8. y=(x−1)(x+3) –யின் வரைபடம் வரைந்து, அதனைப் பயன்படுத்தி x²−x−6=0 என்ற சமன்பாட்டைத் தீர்க்கவும்."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        137
+      ],
+      "pdfPages": [
+        143
+      ],
+      "tamilPrintedPages": [
+        139
+      ],
+      "tamilPdfPages": [
+        145
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q1-i",
+      "exercise": "3.17",
+      "question": "1",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "1. In the matrix A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1], write\n(i) The number of elements",
+        "ta": "1. A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1] என்ற அணியில்\n(i) உறுப்புகளின் எண்ணிக்கையைக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        146
+      ],
+      "tamilPdfPages": [
+        152
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q1-ii",
+      "exercise": "3.17",
+      "question": "1",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "1. In the matrix A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1], write\n(ii) The order of the matrix",
+        "ta": "1. A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1] என்ற அணியில்\n(ii) அணியின் வரிசையைக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        146
+      ],
+      "tamilPdfPages": [
+        152
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q1-iii",
+      "exercise": "3.17",
+      "question": "1",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "1. In the matrix A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1], write\n(iii) Write the elements a₂₂, a₂₃, a₂₄, a₃₄, a₄₃, a₄₄",
+        "ta": "1. A=[8, 9, 4, 3; −1, √(7), (√(3))/(2), 5; 1, 4, 3, 0; 6, 8, −11, 1] என்ற அணியில்\n(iii) a₂₂, a₂₃, a₂₄, a₃₄, a₄₃, a₄₄ஆகிய உறுப்புகளை எழுதுக."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        146
+      ],
+      "tamilPdfPages": [
+        152
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q2",
+      "exercise": "3.17",
+      "question": "2",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "2. If a matrix has 18 elements, what are the possible orders it can have? What if it has 6 elements?",
+        "ta": "2. 18 உறுப்புகளைக் கொண்ட ஓர் அணிக்கு எவ்வகை வரிசைகள் இருக்க இயலும்? ஓர் அணியின் உறுப்புகளின் எண்ணிக்கை 6 எனில், எவ்வகை வரிசைகள் இருக்க இயலும்?"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        147
+      ],
+      "tamilPdfPages": [
+        153
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q3-i",
+      "exercise": "3.17",
+      "question": "3",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "3. Construct a 3×3 matrix whose elements are given by\n(i) a_(ij)=|i−2j|",
+        "ta": "3. பின்வருவனவற்றைக் கொண்டு 3×3 வரிசையைக் கொண்ட அணி A=[a_(ij)]–யினைக் காண்க.\n(i) a_(ij)=|i−2j|"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        147
+      ],
+      "tamilPdfPages": [
+        153
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q3-ii",
+      "exercise": "3.17",
+      "question": "3",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "3. Construct a 3×3 matrix whose elements are given by\n(ii) a_(ij)=((i+j)³)/(3)",
+        "ta": "3. பின்வருவனவற்றைக் கொண்டு 3×3 வரிசையைக் கொண்ட அணி A=[a_(ij)]–யினைக் காண்க.\n(ii) a_(ij)=((i+j)³)/(3)"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        147
+      ],
+      "tamilPdfPages": [
+        153
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q4",
+      "exercise": "3.17",
+      "question": "4",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "4. If A=[5, 4, 3; 1, −7, 9; 3, 8, 2] then find the transpose of A.",
+        "ta": "4. A=[5, 4, 3; 1, −7, 9; 3, 8, 2] எனில், A–யின் நிரை நிரல் மாற்று அணியைக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        147
+      ],
+      "tamilPdfPages": [
+        153
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q5",
+      "exercise": "3.17",
+      "question": "5",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "5. If A=[√(7), −3; − √(5), 2; √(3), −5] then find the transpose of −A.",
+        "ta": "5. A=[√(7), −3; − √(5), 2; √(3), −5] எனில், −A–யின் நிரை நிரல் மாற்று அணியைக் காண்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        147
+      ],
+      "tamilPdfPages": [
+        153
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q6",
+      "exercise": "3.17",
+      "question": "6",
+      "parts": [
+        "whole"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "6. If A=[5, 2, 2; −√(17), 0.7, (5)/(2); 8, 3, 1] then verify (Aᵀ)ᵀ=A",
+        "ta": "6. A=[5, 2, 2; −√(17), 0.7, (5)/(2); 8, 3, 1] எனில், (Aᵀ)ᵀ=A என்பதைச் சரிபார்க்க."
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        147
+      ],
+      "tamilPdfPages": [
+        153
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q7-i",
+      "exercise": "3.17",
+      "question": "7",
+      "parts": [
+        "i"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "7. Find the values of x, y and z from the following equations\n(i) [12, 3; x, 5]=[y, z; 3, 5]",
+        "ta": "7. கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n(i) [12, 3; x, 5]=[y, z; 3, 5]"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        147
+      ],
+      "tamilPdfPages": [
+        153
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q7-ii",
+      "exercise": "3.17",
+      "question": "7",
+      "parts": [
+        "ii"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "7. Find the values of x, y and z from the following equations\n(ii) [x + y, 2; z + 5, x y]=[6, 2; 5, 8]",
+        "ta": "7. கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n(ii) [x + y, 2; z + 5, x y]=[6, 2; 5, 8]"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        147
+      ],
+      "tamilPdfPages": [
+        153
+      ]
+    },
+    {
+      "recordId": "c10-3-ex3-17-q7-iii",
+      "exercise": "3.17",
+      "question": "7",
+      "parts": [
+        "iii"
+      ],
+      "sourceId": "g10-2025-en",
+      "tamilSourceId": "g10-2025-ta",
+      "sourceText": {
+        "en": "7. Find the values of x, y and z from the following equations\n(iii) [x + y + z; x + z; y + z]=[9; 5; 7]",
+        "ta": "7. கீழ்க்காணும் சமன்பாடுகளில் இருந்து x, y மற்றும் z–யின் மதிப்பைக் காண்க.\n(iii) [x + y + z; x + z; y + z]=[9; 5; 7]"
+      },
+      "visualChecked": {
+        "en": true,
+        "ta": true
+      },
+      "printedPages": [
+        144
+      ],
+      "pdfPages": [
+        150
+      ],
+      "tamilPrintedPages": [
+        147
+      ],
+      "tamilPdfPages": [
+        153
+      ]
+    }
+  ],
+  "verification": {
+    "script": "docs/curriculum/grade-10/tests/verify_algebra_batch.cjs"
+  }
+}

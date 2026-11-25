@@ -126,6 +126,35 @@ async function run(){
       await ctx.close();
     }
 
+    /* The cylinder selects the matching video without requesting media on page open. */
+    {
+      const ctx=await browser.newContext({viewport:{width:390,height:844},serviceWorkers:'block'});
+      const page=await ctx.newPage();
+      const requests=[];
+      page.on('request',request=>{if(request.url().includes('/trace-videos/'))requests.push(request.url());});
+      const dialog=page.locator('.sp2-concept-video-dialog');
+      const video=dialog.locator('video');
+      await page.goto(base+'/index.html?class=10&chapter=g10-ch7&section=concepts&concept=1');
+      await page.getByRole('button',{name:/Watch video explanation/}).click();
+      assert.equal(await video.getAttribute('src'),'https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch7-cylinder-surface-area/eb43f9acdb47ccec08209731a0fcdeb9936b0f3152a1618b5c87c77bf884e033.mp4');
+      await dialog.getByRole('button',{name:'Close visual lesson'}).click();
+      await page.locator('#langTa').click();
+      const tamilButton=page.getByRole('button',{name:/காணொளி விளக்கம்/});
+      await tamilButton.click();
+      assert.match(await video.getAttribute('src'),/\/trace-videos\/g10-ch7-cylinder-surface-area\/ta\/[a-f0-9]{64}\.mp4$/);
+      assert.equal(await dialog.getByRole('heading').innerText(),'நேர் வட்ட உருளையின் புறப்பரப்பு');
+      assert.equal(await video.evaluate(v=>v.controls&&v.playsInline&&v.paused&&!v.autoplay),true);
+      await page.setViewportSize({width:844,height:390});
+      assert.equal(await dialog.evaluate(d=>d.clientWidth>=d.scrollWidth),true,'Landscape dialog has no horizontal overflow');
+      await dialog.getByRole('button',{name:'காணொளியை மூடு'}).click();
+      assert.equal(await tamilButton.evaluate(b=>document.activeElement===b),true);
+      assert.deepEqual(requests,[],'The lesson only streams on play');
+      await page.goto(base+'/index.html?class=10&chapter=g10-ch7&section=concepts&concept=2');
+      await page.locator('.g10ch4-studio').waitFor();
+      assert.equal(await page.locator('.sp2-concept-video-button').count(),0,'English-only concept has no Tamil player');
+      await ctx.close();
+    }
+
     /* 3. Interactive Labs + Try-It-Yourself MCQ + Offline SW Reload + Saved Progress */
     {
       const ctx=await browser.newContext({viewport:{width:390,height:844}});

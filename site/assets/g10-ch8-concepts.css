@@ -1,0 +1,78 @@
+.g10ch8-lab {
+  display: grid;
+  gap: .55rem;
+  min-width: 0;
+}
+.g10ch8-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .4rem .6rem;
+  margin: .3rem 0;
+}
+.g10ch8-control select {
+  min-height: 2.75rem;
+  max-width: 100%;
+  padding: .3rem .5rem;
+  border: 1px solid #64748b;
+  border-radius: .45rem;
+  background: #fff;
+  color: #172554;
+  font: inherit;
+}
+.g10ch8-graphic {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin-inline: auto;
+  color: #172554;
+  font-size: 12px;
+}
+.g10ch8-axis, .g10ch8-circle, .g10ch8-tree-active {
+  stroke: #334155;
+  fill: none;
+  stroke-width: 1.5;
+}
+.g10ch8-mean {
+  stroke: #7c2d12;
+  stroke-width: 1.5;
+  stroke-dasharray: 4 3;
+}
+.g10ch8-mean-label { fill: #7c2d12; }
+.g10ch8-point { fill: #3730a3; }
+.g10ch8-tree-muted { stroke: #cbd5e1; stroke-width: 1.5; }
+.g10ch8-region { fill: #fff; stroke: #64748b; }
+.g10ch8-region.is-selected { fill: #c7d2fe; }
+.g10ch8-result, .g10ch8-legend { margin: 0; }
+.g10ch8-outcomes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.g10ch8-outcomes li {
+  min-width: 2.4rem;
+  padding: .35rem .45rem;
+  border: 1px solid #64748b;
+  border-radius: .35rem;
+  text-align: center;
+}
+.g10ch8-outcomes .g10ch8-favourable {
+  border: 2px solid #3730a3;
+  background: #e0e7ff;
+  color: #172554;
+}
+.g10ch8-concept-link {
+  align-self: flex-start;
+  margin-top: .35rem;
+  padding: .45rem .65rem;
+  border: 1px solid #c7d2fe;
+  border-radius: .6rem;
+  background: #f5f7ff;
+  color: #312e81;
+  font: inherit;
+  text-align: start;
+  cursor: pointer;
+}

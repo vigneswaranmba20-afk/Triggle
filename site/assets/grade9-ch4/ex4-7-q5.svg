@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<path d="M 135.000 166.000 L 35.000 166.000 L 65.253 82.879 L 135.000 166.000" fill="none" stroke="#263755"/>
+<path d="M 54.825 126.150 L 45.428 122.730" fill="none" stroke="#973f19"/>
+<path d="M 48.000 166.000 A 13 13 0 0 0 39.446 153.784" fill="none" stroke="#973f19"/>
+<text x="57.936" y="149.940">70°</text>
+<path d="M 126.644 156.041 A 13 13 0 0 0 122.000 166.000" fill="none" stroke="#973f19"/>
+<text x="105.092" y="152.054">50°</text>
+<path d="M 60.807 95.095 A 13 13 0 0 0 73.610 92.838" fill="none" stroke="#973f19"/>
+<text x="70.984" y="115.378">60°</text>
+<text x="26.000" y="179.000">B</text>
+<text x="64.253" y="70.879">C</text>
+<text x="142.000" y="179.000">A</text>
+<path d="M 280.000 166.000 L 180.000 166.000 L 210.253 82.879 L 280.000 166.000" fill="none" stroke="#263755"/>
+<path d="M 199.825 126.150 L 190.428 122.730" fill="none" stroke="#973f19"/>
+<path d="M 193.000 166.000 A 13 13 0 0 0 184.446 153.784" fill="none" stroke="#973f19"/>
+<text x="202.936" y="149.940">70°</text>
+<path d="M 271.644 156.041 A 13 13 0 0 0 267.000 166.000" fill="none" stroke="#973f19"/>
+<text x="250.092" y="152.054">50°</text>
+<path d="M 205.807 95.095 A 13 13 0 0 0 218.610 92.838" fill="none" stroke="#973f19"/>
+<text x="215.984" y="115.378">60°</text>
+<text x="171.000" y="179.000">E</text>
+<text x="209.253" y="70.879">D</text>
+<text x="287.000" y="179.000">F</text>
+</g>
+</svg>

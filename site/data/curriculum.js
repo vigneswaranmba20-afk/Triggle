@@ -872,14 +872,14 @@ window.TRIGGLE_CURRICULUM = {
           "sourceRefs": [
             {
               "sourceId": "tn-g10-en-2025-drive",
-              "locator": "Chapter 8 Statistics and Probability, printed pp. 301–335 (PDF pp. 309–343); Exercises 8.1–8.5 and Unit Exercise 8"
+              "locator": "Chapter 8 Statistics and Probability, printed pp. 301–333 (PDF pp. 307–339); Exercises 8.1–8.5 and Unit Exercise 8"
             },
             {
               "sourceId": "tn-g10-ta-2025-drive",
-              "locator": "அத்தியாயம் 8 புள்ளியியலும் நிகழ்தகவும், அச்சுப் பக்கங்கள் 309–345 (PDF pp. 317–353); பயிற்சிகள் 8.1–8.5 மற்றும் அலகுப் பயிற்சி 8"
+              "locator": "அத்தியாயம் 8 புள்ளியியலும் நிகழ்தகவும், அச்சுப் பக்கங்கள் 309–346 (PDF pp. 315–352); பயிற்சிகள் 8.1–8.5 மற்றும் அலகுப் பயிற்சி 8"
             }
           ],
-          "status": "planned",
+          "status": "drafting",
           "legacyQuestionIds": [],
           "concepts": [],
           "prerequisites": [],
@@ -889,8 +889,8 @@ window.TRIGGLE_CURRICULUM = {
           "review": {
             "state": "unreviewed",
             "notes": {
-              "en": "Full chapter coverage and prescribed-edition alignment need review. Existing questions are retained separately.",
-              "ta": "முழு அத்தியாய உள்ளடக்கமும் பரிந்துரைக்கப்பட்ட பாடநூல் பதிப்புடனான பொருத்தமும் மீளாய்வு செய்யப்பட வேண்டும். ஏற்கெனவே உள்ள வினாக்கள் தனியாகப் பாதுகாக்கப்பட்டுள்ளன."
+              "en": "The 2025 source inventory includes 75 numbered questions and 94 tasks. Exercise 8.4 Q1 has contradictory givens. Exercise 8.5 Q11 needs a page count. The Tamil Exercise 8.1 Q5 provides nine of the ten wages it specifies. Independent Tamil editorial review is pending.",
+              "ta": "2025 பாடநூலில் 75 வினாக்களும் 94 வினா மற்றும் துணைவினாப் பகுதிகளும் உள்ளன. பயிற்சி 8.4 வினா 1-இல் கொடுக்கப்பட்ட நிகழ்தகவுகள் ஒன்றுக்கொன்று முரண்படுகின்றன. பயிற்சி 8.5 வினா 11-க்குப் பக்க எண்ணிக்கை தேவை. பயிற்சி 8.1 தமிழ் வினா 5-இல் பத்து ஊதியங்களில் ஒன்பது மட்டுமே தரப்பட்டுள்ளன. தனித்த தமிழ் மொழி மீளாய்வு நிலுவையில் உள்ளது."
             }
           }
         }

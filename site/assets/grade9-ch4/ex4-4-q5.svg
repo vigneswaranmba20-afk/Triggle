@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<circle cx="160" cy="105" r="85" fill="none" stroke="#3067b1"/>
+<path d="M 92.000 54.000 L 228.000 54.000" fill="none" stroke="#263755"/>
+<path d="M 109.000 173.000 L 211.000 173.000" fill="none" stroke="#263755"/>
+<path d="M 160.000 54.000 L 160.000 173.000" fill="none" stroke="#973f19" stroke-dasharray="5 4"/>
+<path d="M 151.000 54.000 L 151.000 63.000 L 160.000 63.000" fill="none" stroke="#973f19"/>
+<path d="M 151.000 173.000 L 151.000 164.000 L 160.000 164.000" fill="none" stroke="#973f19"/>
+<path d="M 154.266 49.985 L 160.000 54.000 L 154.266 58.015" fill="none" stroke="#3067b1"/>
+<path d="M 165.734 177.015 L 160.000 173.000 L 165.734 168.985" fill="none" stroke="#3067b1"/>
+<text x="79.000" y="50.000">A</text>
+<text x="241.000" y="50.000">B</text>
+<text x="96.000" y="178.000">C</text>
+<text x="224.000" y="178.000">D</text>
+<text x="147.000" y="105.000">O</text>
+<text x="173.000" y="43.000">M</text>
+<text x="174.000" y="161.000">L</text>
+<text x="157.000" y="37.000">8</text>
+<text x="158.000" y="191.000">6</text>
+<text x="186.000" y="115.000">7</text>
+</g>
+</svg>

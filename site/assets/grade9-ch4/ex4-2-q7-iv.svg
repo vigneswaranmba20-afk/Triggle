@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<path d="M 240.000 45.000 L 275.369 177.000" fill="none" stroke="#263755"/>
+<path d="M 137.631 45.000 L 173.000 177.000" fill="none" stroke="#263755"/>
+<path d="M 173.000 45.000 L 137.631 177.000" fill="none" stroke="#263755"/>
+<path d="M 82.000 45.000 L 46.631 177.000" fill="none" stroke="#263755"/>
+<path d="M 25.000 45.000 L 297.000 45.000" fill="none" stroke="#263755"/>
+<path d="M 25.000 177.000 L 297.000 177.000" fill="none" stroke="#263755"/>
+<text x="271.685" y="112.000">a</text>
+<text x="172.315" y="129.000">b</text>
+<text x="168.315" y="92.000">c</text>
+<text x="51.315" y="111.000">d</text>
+<text x="106.000" y="32.000">e</text>
+<text x="106.000" y="190.000">f</text>
+<path d="M 161.000 45.000 A 12 12 0 0 0 169.894 56.591" fill="none" stroke="#973f19"/>
+<text x="153.166" y="60.219">75°</text>
+<path d="M 160.751 131.284 A 21 21 0 0 1 149.880 131.284" fill="none" stroke="#973f19"/>
+<text x="155.315" y="154.000">30°</text>
+<path d="M 119.631 177.000 A 18 18 0 0 1 142.289 159.613" fill="none" stroke="#973f19"/>
+<text x="116.324" y="149.233">x°</text>
+</g>
+</svg>

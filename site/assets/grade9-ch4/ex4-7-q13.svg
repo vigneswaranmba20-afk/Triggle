@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<circle cx="160" cy="112" r="84" fill="none" stroke="#3067b1"/>
+<path d="M 93.807 163.716 L 185.957 32.111 L 199.436 186.168" fill="none" stroke="#263755"/>
+<path d="M 93.807 163.716 L 160.000 112.000 L 199.436 186.168" fill="none" stroke="#263755"/>
+<text x="80.807" y="170.716">A</text>
+<text x="208.436" y="198.168">B</text>
+<text x="190.957" y="19.111">C</text>
+<text x="167.000" y="100.000">O</text>
+<path d="M 175.633 46.856 A 18 18 0 0 0 187.526 50.043" fill="none" stroke="#973f19"/>
+<text x="175.605" y="70.748">40°</text>
+</g>
+</svg>
