@@ -1,0 +1,6 @@
+# Grade 10 Mensuration Exercise 7.5 — draft integration
+
+- 15 numbered MCQs, four options each, 60 choices per language; original question and option order checked on English printed pp.297–298/PDF 303–304 and Tamil printed pp.305–306/PDF 311–312. Both answer keys checked (EN printed p.342/PDF348 and TA printed p.356/PDF362). Normalized typography and source fingerprints recorded in the source manifest. Q11 is a verbal shape-identification question without a printed figure.
+- Independent arithmetic matches all 15 keys, including 3328π cm³ for Q10 and 3:1:2 for Q15. No new exercise-specific images or videos. Tamil editorial and teacher review pending.
+- Bilingual worked steps, structured option and answer math, stable IDs, independent difficulty metadata, registration and offline cache added. Unit and 90-view browser tests registered, not claimed executed. No public deployment.
+- Stacked on pending Exercise 7.4 PR #418. Do not merge until #418 is reconciled with Codex, the combined branch is based on settled main, `npm run status:build` regenerates the source projection, and required unit, browser, security and actual live checks succeed. Do not hand-edit generated status. Separate from current Codex work.
