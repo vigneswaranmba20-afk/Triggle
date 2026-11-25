@@ -1,0 +1,66 @@
+{
+  "audit_summary": {
+    "totalItems": 71,
+    "exercises": 62,
+    "concepts": 9,
+    "overallStatusCounts": {
+      "PASS": 34,
+      "FAIL": 22,
+      "PARTIAL": 14,
+      "UNVERIFIABLE": 1
+    },
+    "answerVerificationCounts": {
+      "PASS": 70,
+      "FAIL": 0,
+      "UNVERIFIABLE": 1
+    },
+    "intermediateStepCounts": {
+      "PASS": 31,
+      "FAIL": 21,
+      "PARTIAL": 11,
+      "UNVERIFIABLE": 8
+    },
+    "tamilValidationCounts": {
+      "PASS": 50,
+      "FAIL": 1,
+      "PARTIAL": 10,
+      "MISSING": 10
+    }
+  },
+  "benchmark_summary": {
+    "total": 120,
+    "tp": 96,
+    "fp": 0,
+    "fn": 0,
+    "tn": 24,
+    "precision": 1.0,
+    "recall": 1.0,
+    "falsePositives": 0,
+    "unresolved": 0,
+    "criticalMissedErrors": 0,
+    "dev": {
+      "total": 60,
+      "tp": 48,
+      "fp": 0,
+      "fn": 0,
+      "tn": 12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "falsePositives": 0,
+      "unresolved": 0,
+      "criticalMissedErrors": 0
+    },
+    "held_out": {
+      "total": 60,
+      "tp": 48,
+      "fp": 0,
+      "fn": 0,
+      "tn": 12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "falsePositives": 0,
+      "unresolved": 0,
+      "criticalMissedErrors": 0
+    }
+  }
+}

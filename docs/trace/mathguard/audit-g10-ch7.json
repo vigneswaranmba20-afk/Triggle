@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "engine": "TRACE MathGuard V1.0",
+  "engine": "TRACE MathGuard V1.1",
   "scope": "Grade 10 Chapter 7 — Mensuration",
   "inventoryCounts": {
     "exercises": 62,
@@ -11,9 +11,9 @@
     "exercises": 62,
     "concepts": 9,
     "overallStatusCounts": {
-      "PASS": 34,
-      "FAIL": 22,
-      "PARTIAL": 14,
+      "PASS": 22,
+      "FAIL": 8,
+      "PARTIAL": 40,
       "UNVERIFIABLE": 1
     },
     "answerVerificationCounts": {
@@ -22,10 +22,10 @@
       "UNVERIFIABLE": 1
     },
     "intermediateStepCounts": {
-      "PASS": 31,
-      "FAIL": 21,
-      "PARTIAL": 11,
-      "UNVERIFIABLE": 8
+      "PASS": 27,
+      "FAIL": 7,
+      "PARTIAL": 18,
+      "UNVERIFIABLE": 19
     },
     "tamilValidationCounts": {
       "PASS": 50,
@@ -43,13 +43,14 @@
       "validation_method": "sympy_solve_cylinder_csa_ratio",
       "independently_derived_result": "25, 35",
       "existing_result": "Radius = 25 cm; height = 35 cm.",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "MISSING",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': '220k^2=5500 => k=5', 'lhs': 'k=[-5, 5]', 'rhs': 'k=[5]'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [0]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "observedNumbers": [
@@ -63,17 +64,13 @@
         },
         "stepChecks": {
           "checkedChains": 4,
-          "passedChains": 3,
-          "failedChains": [
-            {
-              "stepIndex": 2,
-              "line": "220k^2=5500 => k=5",
-              "lhs": "k=[-5, 5]",
-              "rhs": "k=[5]"
-            }
-          ],
+          "passedChains": 4,
+          "failedChains": [],
           "unparsedSteps": [
             0
+          ],
+          "contextApplied": [
+            "positive_physical_domain"
           ]
         },
         "tamilChecks": {
@@ -101,13 +98,14 @@
       "validation_method": "sympy_solve_cylinder_tsa_csa",
       "independently_derived_result": "7, 35",
       "existing_result": "Radius = 7 cm; height = 35 cm.",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "MISSING",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 3, 'line': '1540=2\\\\times\\\\dfrac{22}{7}\\\\times7h=44h', 'lhs': '1540', 'rhs': '44*h'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [1, 2]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "observedNumbers": [
@@ -120,17 +118,16 @@
           ]
         },
         "stepChecks": {
-          "checkedChains": 9,
+          "checkedChains": 8,
           "passedChains": 8,
-          "failedChains": [
-            {
-              "stepIndex": 3,
-              "line": "1540=2\\times\\dfrac{22}{7}\\times7h=44h",
-              "lhs": "1540",
-              "rhs": "44*h"
-            }
+          "failedChains": [],
+          "unparsedSteps": [
+            1,
+            2
           ],
-          "unparsedSteps": []
+          "contextApplied": [
+            "positive_physical_domain"
+          ]
         },
         "tamilChecks": {
           "flags": [
@@ -159,11 +156,12 @@
       "existing_result": "Total surface area = 2992 cm².",
       "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PASS",
+      "step_status": "PARTIAL",
       "tamil_status": "MISSING",
-      "discrepancy": "Tamil prompt missing in student data module",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [0]",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -180,6 +178,9 @@
           "failedChains": [],
           "unparsedSteps": [
             0
+          ],
+          "contextApplied": [
+            "pi=22/7"
           ]
         },
         "tamilChecks": {
@@ -207,39 +208,30 @@
       "validation_method": "cone_rotation_csa_ratio",
       "independently_derived_result": "240*pi : 320*pi (simplified ratio 3/4)",
       "existing_result": "CSA_QR : CSA_PQ = 3 : 4 (CSA of the cone rotated about PQ is larger: 320π cm² > 240π cm²).",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "MISSING",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 0, 'line': 'PQ=\\\\sqrt{PR^2-QR^2}=\\\\sqrt{20^2-16^2}=12  cm', 'lhs': 'P*Q', 'rhs': 'sqrt(P**2*R**2 - Q**2*R**2)'}, {'stepIndex': 2, 'line': 'CSA _{QR}=\\\\pi r\\\\ell=\\\\pi(12)(20)=240\\\\pi  cm ^2', 'lhs': 'A*C*Q*R*S*_', 'rhs': 'pi*l*r'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [0, 1, 2, 3, 4]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "ratioMatched": "3 : 4 "
         },
         "stepChecks": {
-          "checkedChains": 6,
-          "passedChains": 4,
-          "failedChains": [
-            {
-              "stepIndex": 0,
-              "line": "PQ=\\sqrt{PR^2-QR^2}=\\sqrt{20^2-16^2}=12  cm",
-              "lhs": "P*Q",
-              "rhs": "sqrt(P**2*R**2 - Q**2*R**2)"
-            },
-            {
-              "stepIndex": 2,
-              "line": "CSA _{QR}=\\pi r\\ell=\\pi(12)(20)=240\\pi  cm ^2",
-              "lhs": "A*C*Q*R*S*_",
-              "rhs": "pi*l*r"
-            }
-          ],
+          "checkedChains": 2,
+          "passedChains": 2,
+          "failedChains": [],
           "unparsedSteps": [
+            0,
             1,
+            2,
             3,
             4
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -268,11 +260,12 @@
       "existing_result": "Height of the tent ≈ 18.25 m.",
       "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PASS",
+      "step_status": "PARTIAL",
       "tamil_status": "MISSING",
-      "discrepancy": "Tamil prompt missing in student data module",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [1, 2]",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -284,10 +277,17 @@
           "observedDimension": "length"
         },
         "stepChecks": {
-          "checkedChains": 7,
-          "passedChains": 7,
+          "checkedChains": 5,
+          "passedChains": 5,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [
+            1,
+            2
+          ],
+          "contextApplied": [
+            "pi_substitution_implication",
+            "env_numeric_approx"
+          ]
         },
         "tamilChecks": {
           "flags": [
@@ -314,13 +314,14 @@
       "validation_method": "cone_csa_count_from_sheet",
       "independently_derived_result": "28",
       "existing_result": "28 birthday caps.",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "MISSING",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'Area of one cap = \\\\pi rl = \\\\pi *5*13 = 65\\\\pi  cm^{2}', 'lhs': 'A*a**2*c*e**2*f*n*o**2*p*r', 'rhs': 'pi*l*r'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [1]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -332,17 +333,13 @@
           "observedDimension": null
         },
         "stepChecks": {
-          "checkedChains": 4,
-          "passedChains": 3,
-          "failedChains": [
-            {
-              "stepIndex": 1,
-              "line": "Area of one cap = \\pi rl = \\pi *5*13 = 65\\pi  cm^{2}",
-              "lhs": "A*a**2*c*e**2*f*n*o**2*p*r",
-              "rhs": "pi*l*r"
-            }
+          "checkedChains": 2,
+          "passedChains": 2,
+          "failedChains": [],
+          "unparsedSteps": [
+            1
           ],
-          "unparsedSteps": []
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -371,11 +368,12 @@
       "existing_result": "Curved surface area ratio = √5 : 9.",
       "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "MISSING",
-      "discrepancy": "Tamil prompt missing in student data module; Unparsed step indices: [0, 3, 4]",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Intermediate steps have no verifiable equality chains",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "ratioMatched": "√5 : 9"
@@ -388,7 +386,8 @@
             0,
             3,
             4
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -415,13 +414,14 @@
       "validation_method": "sphere_sa_scaling_percentage",
       "independently_derived_result": "225/4",
       "existing_result": "The sphere's surface area increases by 56.25%.",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "MISSING",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'New radius = r + (25/100)r = 1.25r', 'lhs': 'N*a*d*e*i*r*s*u*w', 'rhs': '5*r/4'}, {'stepIndex': 2, 'line': 'A_new = 4\\\\pi (1.25r)^{2} = 1.5625 A', 'lhs': '25*pi*r**2/4', 'rhs': '25*A/16'}, {'stepIndex': 3, 'line': 'Increase % = (1.5625 - 1)*100 = 56.25%', 'lhs': '225/4', 'rhs': '9/16'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [3]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -433,29 +433,15 @@
           "observedDimension": "percentage"
         },
         "stepChecks": {
-          "checkedChains": 5,
-          "passedChains": 2,
-          "failedChains": [
-            {
-              "stepIndex": 1,
-              "line": "New radius = r + (25/100)r = 1.25r",
-              "lhs": "N*a*d*e*i*r*s*u*w",
-              "rhs": "5*r/4"
-            },
-            {
-              "stepIndex": 2,
-              "line": "A_new = 4\\pi (1.25r)^{2} = 1.5625 A",
-              "lhs": "25*pi*r**2/4",
-              "rhs": "25*A/16"
-            },
-            {
-              "stepIndex": 3,
-              "line": "Increase % = (1.5625 - 1)*100 = 56.25%",
-              "lhs": "225/4",
-              "rhs": "9/16"
-            }
+          "checkedChains": 3,
+          "passedChains": 3,
+          "failedChains": [],
+          "unparsedSteps": [
+            3
           ],
-          "unparsedSteps": []
+          "contextApplied": [
+            "env_substitution"
+          ]
         },
         "tamilChecks": {
           "flags": [
@@ -486,9 +472,10 @@
       "answer_status": "PASS",
       "step_status": "PASS",
       "tamil_status": "MISSING",
-      "discrepancy": "Tamil prompt missing in student data module",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator)",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -503,7 +490,8 @@
           "checkedChains": 5,
           "passedChains": 5,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -532,11 +520,12 @@
       "existing_result": "Total cost = ₹1357.72 (using the textbook's intermediate-area rounding).",
       "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PASS",
+      "step_status": "PARTIAL",
       "tamil_status": "MISSING",
-      "discrepancy": "Tamil prompt missing in student data module",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [0]",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -553,6 +542,9 @@
           "failedChains": [],
           "unparsedSteps": [
             0
+          ],
+          "contextApplied": [
+            "env_numeric_approx"
           ]
         },
         "tamilChecks": {
@@ -580,13 +572,14 @@
       "validation_method": "well_embankment_volume_conservation",
       "independently_derived_result": "14/3",
       "existing_result": "Height of the embankment = 4.67 m.",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PASS",
       "tamil_status": "PARTIAL",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 3, 'line': '75\\\\pi  * H = \\\\pi  * 25 * 14 => H = 350/75 = 14/3 m = 4.67 m', 'lhs': '350*pi', 'rhs': 'H'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -598,17 +591,13 @@
           "observedDimension": "length"
         },
         "stepChecks": {
-          "checkedChains": 9,
-          "passedChains": 8,
-          "failedChains": [
-            {
-              "stepIndex": 3,
-              "line": "75\\pi  * H = \\pi  * 25 * 14 => H = 350/75 = 14/3 m = 4.67 m",
-              "lhs": "350*pi",
-              "rhs": "H"
-            }
-          ],
-          "unparsedSteps": []
+          "checkedChains": 7,
+          "passedChains": 7,
+          "failedChains": [],
+          "unparsedSteps": [],
+          "contextApplied": [
+            "env_numeric_approx"
+          ]
         },
         "tamilChecks": {
           "flags": [
@@ -637,24 +626,26 @@
       "validation_method": "water_displacement_cylinder",
       "independently_derived_result": "1",
       "existing_result": "Raise of the water in the glass = 1 cm.",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PASS",
+      "step_status": "PARTIAL",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Unparsed step indices: [0]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 2,
-          "passedChains": 2,
+          "checkedChains": 3,
+          "passedChains": 3,
           "failedChains": [],
           "unparsedSteps": [
             0
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -677,29 +668,26 @@
       "validation_method": "cone_volume_from_circumference",
       "independently_derived_result": "652190",
       "existing_result": "Volume of the conical wooden piece = 652190 cm³.",
-      "status": "FAIL",
+      "status": "PASS",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PASS",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 0, 'line': '\\\\begin{aligned}2\\\\pi r=484 => 2\\\\times\\\\dfrac{22}{7}\\\\times r=484', 'lhs': 'r=[242/pi]', 'rhs': 'r=[77]'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "",
+      "severity": "none",
+      "classification": "Verified",
+      "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 2,
-          "passedChains": 1,
-          "failedChains": [
-            {
-              "stepIndex": 0,
-              "line": "\\begin{aligned}2\\pi r=484 => 2\\times\\dfrac{22}{7}\\times r=484",
-              "lhs": "r=[242/pi]",
-              "rhs": "r=[77]"
-            }
-          ],
-          "unparsedSteps": []
+          "checkedChains": 3,
+          "passedChains": 3,
+          "failedChains": [],
+          "unparsedSteps": [],
+          "contextApplied": [
+            "pi_substitution_implication"
+          ]
         },
         "tamilChecks": {
           "flags": [],
@@ -728,6 +716,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Valid approximation",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -743,7 +732,10 @@
           "checkedChains": 4,
           "passedChains": 4,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": [
+            "env_numeric_approx"
+          ]
         },
         "tamilChecks": {
           "flags": [],
@@ -766,13 +758,14 @@
       "validation_method": "right_triangle_cone_volumes_diff",
       "independently_derived_result": "32*pi (≈ 100.5714 with pi=22/7)",
       "existing_result": "Difference in volumes = 100.58 cm³.",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PASS",
+      "step_status": "PARTIAL",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Unparsed step indices: [3]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -784,11 +777,14 @@
           "observedDimension": "volume"
         },
         "stepChecks": {
-          "checkedChains": 11,
-          "passedChains": 11,
+          "checkedChains": 9,
+          "passedChains": 9,
           "failedChains": [],
           "unparsedSteps": [
             3
+          ],
+          "contextApplied": [
+            "env_numeric_approx"
           ]
         },
         "tamilChecks": {
@@ -818,14 +814,15 @@
       "tamil_status": "PARTIAL",
       "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': '\\\\dfrac{V_1}{V_2}=\\\\dfrac{\\\\tfrac{1}{3}\\\\pi r^2 h_1}{\\\\tfrac{1}{3}\\\\pi r^2 h_2}=\\\\dfrac{h_1}{h_2}=\\\\dfrac{3600}{5040}', 'lhs': 'V_1/V_2', 'rhs': 'h_1/h_2'}]",
       "severity": "major",
+      "classification": "Confirmed mathematical error",
       "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
       "supporting_evidence": {
         "answerEvidence": {
           "ratioMatched": "5 : 7"
         },
         "stepChecks": {
-          "checkedChains": 5,
-          "passedChains": 4,
+          "checkedChains": 2,
+          "passedChains": 1,
           "failedChains": [
             {
               "stepIndex": 1,
@@ -835,8 +832,11 @@
             }
           ],
           "unparsedSteps": [
+            0,
+            1,
             2
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -871,6 +871,7 @@
       "tamil_status": "PARTIAL",
       "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': '\\\\dfrac{V_1}{V_2}=\\\\dfrac{\\\\tfrac{4}{3}\\\\pi r_1^3}{\\\\tfrac{4}{3}\\\\pi r_2^3}=(\\\\dfrac{r_1}{r_2})^3', 'lhs': 'V_1/V_2', 'rhs': 'r_1**3/r_2**3'}]",
       "severity": "major",
+      "classification": "Confirmed mathematical error",
       "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
       "supporting_evidence": {
         "answerEvidence": {
@@ -889,7 +890,8 @@
           ],
           "unparsedSteps": [
             2
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -924,6 +926,7 @@
       "tamil_status": "PASS",
       "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': 'V_sphere / V_hemisphere = ((4/3)\\\\pi R^{3}) / ((2/3)\\\\pi r^{3}) = 2(R/r)^{3}', 'lhs': 'V_sphere/V_hemisphere', 'rhs': '2*R**3/r**3'}]",
       "severity": "major",
+      "classification": "Confirmed mathematical error",
       "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
       "supporting_evidence": {
         "answerEvidence": {
@@ -942,7 +945,8 @@
           ],
           "unparsedSteps": [
             3
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -965,13 +969,14 @@
       "validation_method": "hollow_sphere_volume_from_areas",
       "independently_derived_result": "1332*pi (≈ 4186.2857 with pi=22/7)",
       "existing_result": "Volume of the material required = 4186.29 cm³.",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "PARTIAL",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 0, 'line': '\\\\begin{aligned}4\\\\pi R^2=576\\\\pi => R=12  cm \\\\end{aligned}', 'lhs': 'R=[-12, 12]', 'rhs': 'R=[12]'}, {'stepIndex': 1, 'line': '\\\\begin{aligned}4\\\\pi r^2=324\\\\pi => r=9  cm \\\\end{aligned}', 'lhs': 'r=[-9, 9]', 'rhs': 'r=[9]'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']; Unparsed step indices: [0, 1]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -984,22 +989,16 @@
         },
         "stepChecks": {
           "checkedChains": 9,
-          "passedChains": 7,
-          "failedChains": [
-            {
-              "stepIndex": 0,
-              "line": "\\begin{aligned}4\\pi R^2=576\\pi => R=12  cm \\end{aligned}",
-              "lhs": "R=[-12, 12]",
-              "rhs": "R=[12]"
-            },
-            {
-              "stepIndex": 1,
-              "line": "\\begin{aligned}4\\pi r^2=324\\pi => r=9  cm \\end{aligned}",
-              "lhs": "r=[-9, 9]",
-              "rhs": "r=[9]"
-            }
+          "passedChains": 9,
+          "failedChains": [],
+          "unparsedSteps": [
+            0,
+            1
           ],
-          "unparsedSteps": []
+          "contextApplied": [
+            "positive_physical_domain",
+            "env_numeric_approx"
+          ]
         },
         "tamilChecks": {
           "flags": [
@@ -1028,13 +1027,14 @@
       "validation_method": "frustum_milk_cost",
       "independently_derived_result": "3328*pi/25 (≈ 418.3771 with pi=22/7)",
       "existing_result": "Cost of milk = ₹418.36.",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': 'V = 73216/7 = 10459.43 cm^{3} = 10.4594... L = 10.459 L', 'lhs': '1045943/100', 'rhs': '52297/5000'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Unparsed step indices: [0, 3]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -1047,18 +1047,15 @@
         },
         "stepChecks": {
           "checkedChains": 3,
-          "passedChains": 2,
-          "failedChains": [
-            {
-              "stepIndex": 2,
-              "line": "V = 73216/7 = 10459.43 cm^{3} = 10.4594... L = 10.459 L",
-              "lhs": "1045943/100",
-              "rhs": "52297/5000"
-            }
-          ],
+          "passedChains": 3,
+          "failedChains": [],
           "unparsedSteps": [
             0,
             3
+          ],
+          "contextApplied": [
+            "env_numeric_approx",
+            "unit_conversion"
           ]
         },
         "tamilChecks": {
@@ -1088,6 +1085,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Valid approximation",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -1103,7 +1101,10 @@
           "checkedChains": 5,
           "passedChains": 5,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": [
+            "env_numeric_approx"
+          ]
         },
         "tamilChecks": {
           "flags": [],
@@ -1126,13 +1127,14 @@
       "validation_method": "cylinder_plus_two_cones_volume",
       "independently_derived_result": "21*pi (≈ 66.0000 with pi=22/7)",
       "existing_result": "Volume of the model = 66 cm³.",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PASS",
+      "step_status": "PARTIAL",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Unparsed step indices: [0]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -1149,7 +1151,8 @@
           "failedChains": [],
           "unparsedSteps": [
             0
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -1178,6 +1181,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -1193,7 +1197,8 @@
           "checkedChains": 3,
           "passedChains": 3,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -1222,6 +1227,7 @@
       "tamil_status": "PASS",
       "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'V_displaced = V_cone + V_hemisphere = (1/3)\\\\pi r^{2}h_cone + (2/3)\\\\pi r^{3}', 'lhs': 'V_cone + V_hemisphere', 'rhs': 'pi*h_cone*r**2/3 + 2*pi*r**3/3'}]",
       "severity": "major",
+      "classification": "Confirmed mathematical error",
       "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
       "supporting_evidence": {
         "answerEvidence": {
@@ -1246,6 +1252,9 @@
           ],
           "unparsedSteps": [
             0
+          ],
+          "contextApplied": [
+            "env_numeric_approx"
           ]
         },
         "tamilChecks": {
@@ -1273,9 +1282,10 @@
       "answer_status": "PASS",
       "step_status": "PASS",
       "tamil_status": "PARTIAL",
-      "discrepancy": "Tamil consistency flags: ['en_ta_terminology_mismatch']",
+      "discrepancy": "Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -1290,7 +1300,8 @@
           "checkedChains": 3,
           "passedChains": 3,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -1326,6 +1337,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -1341,7 +1353,8 @@
           "checkedChains": 2,
           "passedChains": 2,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -1364,13 +1377,14 @@
       "validation_method": "enclosed_sphere_sa",
       "independently_derived_result": "4*pi*r**2",
       "existing_result": "4πr² sq. units.",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
       "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Intermediate steps have no verifiable equality chains",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "matchType": "symbolic_latex"
@@ -1379,7 +1393,8 @@
           "checkedChains": 0,
           "passedChains": 0,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -1402,13 +1417,14 @@
       "validation_method": "enclosing_cylinder_csa",
       "independently_derived_result": "4*pi*r**2",
       "existing_result": "4πr² sq. units.",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
       "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Intermediate steps have no verifiable equality chains",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "matchType": "symbolic_latex"
@@ -1417,7 +1433,8 @@
           "checkedChains": 0,
           "passedChains": 0,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -1442,11 +1459,12 @@
       "existing_result": "1 : 1.",
       "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "Unparsed step indices: [1]",
+      "discrepancy": "Intermediate steps have no verifiable equality chains",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "ratioMatched": "1 : 1"
@@ -1457,7 +1475,8 @@
           "failedChains": [],
           "unparsedSteps": [
             1
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -1486,6 +1505,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -1495,7 +1515,8 @@
           "checkedChains": 3,
           "passedChains": 3,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -1518,13 +1539,14 @@
       "validation_method": "pipe_flow_tank_fill_time",
       "independently_derived_result": "2",
       "existing_result": "Approximately 2 hours (using π ≈ 22/7).",
-      "status": "FAIL",
+      "status": "PASS",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PASS",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': 'Q = \\\\pi  * 0.07^{2} * 15000 = 231 m^{3}/h', 'lhs': '147*pi/2', 'rhs': '231/h'}, {'stepIndex': 3, 'line': 't = 462/231 = 2 h', 'lhs': '2', 'rhs': '2*h'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "",
+      "severity": "none",
+      "classification": "Valid approximation",
+      "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -1537,22 +1559,12 @@
         },
         "stepChecks": {
           "checkedChains": 4,
-          "passedChains": 2,
-          "failedChains": [
-            {
-              "stepIndex": 2,
-              "line": "Q = \\pi  * 0.07^{2} * 15000 = 231 m^{3}/h",
-              "lhs": "147*pi/2",
-              "rhs": "231/h"
-            },
-            {
-              "stepIndex": 3,
-              "line": "t = 462/231 = 2 h",
-              "lhs": "2",
-              "rhs": "2*h"
-            }
-          ],
-          "unparsedSteps": []
+          "passedChains": 4,
+          "failedChains": [],
+          "unparsedSteps": [],
+          "contextApplied": [
+            "env_numeric_approx"
+          ]
         },
         "tamilChecks": {
           "flags": [],
@@ -1581,6 +1593,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -1590,7 +1603,8 @@
           "checkedChains": 1,
           "passedChains": 1,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -1619,6 +1633,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -1628,7 +1643,8 @@
           "checkedChains": 5,
           "passedChains": 5,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -1657,6 +1673,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Valid approximation",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -1669,10 +1686,13 @@
           "observedDimension": "volume"
         },
         "stepChecks": {
-          "checkedChains": 4,
-          "passedChains": 4,
+          "checkedChains": 3,
+          "passedChains": 3,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": [
+            "env_numeric_approx"
+          ]
         },
         "tamilChecks": {
           "flags": [],
@@ -1701,6 +1721,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Valid approximation",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -1716,7 +1737,10 @@
           "checkedChains": 2,
           "passedChains": 2,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": [
+            "env_numeric_approx"
+          ]
         },
         "tamilChecks": {
           "flags": [],
@@ -1739,29 +1763,26 @@
       "validation_method": "sphere_to_hollow_cylinder_thickness",
       "independently_derived_result": "1",
       "existing_result": "1 cm",
-      "status": "FAIL",
+      "status": "PASS",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PASS",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': 'r^2=16 => r=4', 'lhs': 'r=[-4, 4]', 'rhs': 'r=[4]'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "",
+      "severity": "none",
+      "classification": "Verified",
+      "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
           "checkedChains": 4,
-          "passedChains": 3,
-          "failedChains": [
-            {
-              "stepIndex": 2,
-              "line": "r^2=16 => r=4",
-              "lhs": "r=[-4, 4]",
-              "rhs": "r=[4]"
-            }
-          ],
-          "unparsedSteps": []
+          "passedChains": 4,
+          "failedChains": [],
+          "unparsedSteps": [],
+          "contextApplied": [
+            "positive_physical_domain"
+          ]
         },
         "tamilChecks": {
           "flags": [],
@@ -1784,13 +1805,14 @@
       "validation_method": "hemisphere_to_cylinder_percentage",
       "independently_derived_result": "100",
       "existing_result": "100%",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
       "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Intermediate steps have no verifiable equality chains",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -1805,7 +1827,8 @@
           "checkedChains": 0,
           "passedChains": 0,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -1834,6 +1857,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -1846,7 +1870,10 @@
           "checkedChains": 4,
           "passedChains": 4,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": [
+            "env_substitution"
+          ]
         },
         "tamilChecks": {
           "flags": [],
@@ -1873,9 +1900,10 @@
       "answer_status": "PASS",
       "step_status": "PASS",
       "tamil_status": "PARTIAL",
-      "discrepancy": "Tamil consistency flags: ['en_ta_terminology_mismatch']",
+      "discrepancy": "Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "mcqSelected": "A",
@@ -1887,7 +1915,8 @@
           "checkedChains": 1,
           "passedChains": 1,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -1922,6 +1951,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -1934,7 +1964,8 @@
           "checkedChains": 1,
           "passedChains": 1,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -1959,11 +1990,12 @@
       "existing_result": "(B) 1:4",
       "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "Unparsed step indices: [1]",
+      "discrepancy": "Intermediate steps have no verifiable equality chains",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "mcqSelected": "B",
@@ -1977,7 +2009,8 @@
           "failedChains": [],
           "unparsedSteps": [
             1
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2004,8 +2037,9 @@
       "answer_status": "PASS",
       "step_status": "UNVERIFIABLE",
       "tamil_status": "FAIL",
-      "discrepancy": "English-Tamil consistency failure: ['en_ta_number_mismatch']",
+      "discrepancy": "English-Tamil consistency failure (recorded for TRACE Tamil Validator): ['en_ta_number_mismatch']",
       "severity": "major",
+      "classification": "Requires independent review",
       "recommended_correction": "Align Tamil prompt numbers/terminology with English prompt.",
       "supporting_evidence": {
         "answerEvidence": {
@@ -2018,7 +2052,8 @@
           "checkedChains": 0,
           "passedChains": 0,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -2064,13 +2099,14 @@
       "validation_method": "mcq_hollow_cylinder_volume",
       "independently_derived_result": "1120*pi (≈ 3518.5838 with pi=exact)",
       "existing_result": "(B) 1120π cm³",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
       "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Intermediate steps have no verifiable equality chains",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "mcqSelected": "B",
@@ -2082,7 +2118,8 @@
           "checkedChains": 0,
           "passedChains": 0,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2111,6 +2148,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -2123,7 +2161,10 @@
           "checkedChains": 2,
           "passedChains": 2,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": [
+            "env_substitution"
+          ]
         },
         "tamilChecks": {
           "flags": [],
@@ -2152,6 +2193,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -2164,7 +2206,8 @@
           "checkedChains": 1,
           "passedChains": 1,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2187,13 +2230,14 @@
       "validation_method": "mcq_sphere_to_cone_height",
       "independently_derived_result": "4*x",
       "existing_result": "(C) 4x cm",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
       "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Intermediate steps have no verifiable equality chains",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "mcqSelected": "C",
@@ -2205,7 +2249,8 @@
           "checkedChains": 0,
           "passedChains": 0,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2228,13 +2273,14 @@
       "validation_method": "mcq_frustum_volume",
       "independently_derived_result": "3328*pi (≈ 10455.2204 with pi=exact)",
       "existing_result": "(A) 3328π cm³",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
       "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Intermediate steps have no verifiable equality chains",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "mcqSelected": "A",
@@ -2246,7 +2292,8 @@
           "checkedChains": 0,
           "passedChains": 0,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2271,10 +2318,11 @@
       "existing_result": "(D) frustum of a cone and a hemisphere",
       "status": "UNVERIFIABLE",
       "answer_status": "UNVERIFIABLE",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
       "discrepancy": "Shuttlecock shape recognition is qualitative/non-numerical and cannot be derived from stated quantities.",
       "severity": "info",
+      "classification": "Requires independent review",
       "recommended_correction": "Manual/qualitative verification required (non-numerical item).",
       "supporting_evidence": {
         "answerEvidence": {},
@@ -2284,7 +2332,8 @@
           "failedChains": [],
           "unparsedSteps": [
             0
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2309,11 +2358,12 @@
       "existing_result": "(A) 2:1",
       "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "Unparsed step indices: [1]",
+      "discrepancy": "Intermediate steps have no verifiable equality chains",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "mcqSelected": "A",
@@ -2327,7 +2377,8 @@
           "failedChains": [],
           "unparsedSteps": [
             1
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2350,13 +2401,14 @@
       "validation_method": "mcq_greatest_sphere_in_cylinder",
       "independently_derived_result": "4*pi/3 (≈ 4.1888 with pi=exact)",
       "existing_result": "(A) (4/3)π",
-      "status": "FAIL",
+      "status": "PASS",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PASS",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'V=\\\\dfrac43\\\\pi(1)^3=\\\\dfrac{4\\\\pi}{3}  cm ^3', 'lhs': '43/pi', 'rhs': '4*pi/3'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "",
+      "severity": "none",
+      "classification": "Verified",
+      "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
           "mcqSelected": "A",
@@ -2366,16 +2418,10 @@
         },
         "stepChecks": {
           "checkedChains": 1,
-          "passedChains": 0,
-          "failedChains": [
-            {
-              "stepIndex": 1,
-              "line": "V=\\dfrac43\\pi(1)^3=\\dfrac{4\\pi}{3}  cm ^3",
-              "lhs": "43/pi",
-              "rhs": "4*pi/3"
-            }
-          ],
-          "unparsedSteps": []
+          "passedChains": 1,
+          "failedChains": [],
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2402,8 +2448,9 @@
       "answer_status": "PASS",
       "step_status": "FAIL",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 0, 'line': 'h_1-h_2=h_1-\\\\dfrac{h_1}{2}=\\\\dfrac{h_1}{2}', 'lhs': 'h_1 - h_2', 'rhs': 'h_1/2'}]",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 0, 'line': 'h_1-h_2=h_1-\\\\dfrac{h_1}{2}=\\\\dfrac{h_1}{2}', 'lhs': 'h_1 - h_2', 'rhs': 'h_1/2'}, {'stepIndex': 1, 'line': '\\\\dfrac{r_2}{r_1}=\\\\dfrac{h_1-h_2}{h_1}=\\\\dfrac{1}{2}', 'lhs': 'r_2/r_1', 'rhs': '(h_1 - h_2)/h_1'}]",
       "severity": "major",
+      "classification": "Confirmed mathematical error",
       "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
       "supporting_evidence": {
         "answerEvidence": {
@@ -2413,7 +2460,7 @@
           ]
         },
         "stepChecks": {
-          "checkedChains": 2,
+          "checkedChains": 3,
           "passedChains": 1,
           "failedChains": [
             {
@@ -2421,11 +2468,18 @@
               "line": "h_1-h_2=h_1-\\dfrac{h_1}{2}=\\dfrac{h_1}{2}",
               "lhs": "h_1 - h_2",
               "rhs": "h_1/2"
+            },
+            {
+              "stepIndex": 1,
+              "line": "\\dfrac{r_2}{r_1}=\\dfrac{h_1-h_2}{h_1}=\\dfrac{1}{2}",
+              "lhs": "r_2/r_1",
+              "rhs": "(h_1 - h_2)/h_1"
             }
           ],
           "unparsedSteps": [
             1
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2448,13 +2502,14 @@
       "validation_method": "mcq_cylinder_cone_sphere_volume_ratio",
       "independently_derived_result": "2*pi*r**3 : 2*pi*r**3/3 : 4*pi*r**3/3",
       "existing_result": "(D) 3:1:2",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'V_2=\\\\dfrac13\\\\pi r^2(2r)=\\\\dfrac23\\\\pi r^3', 'lhs': '26*r**3/pi', 'rhs': '23*r**3/pi'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Unparsed step indices: [2]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "mcqSelected": "D",
@@ -2464,18 +2519,12 @@
         },
         "stepChecks": {
           "checkedChains": 2,
-          "passedChains": 1,
-          "failedChains": [
-            {
-              "stepIndex": 1,
-              "line": "V_2=\\dfrac13\\pi r^2(2r)=\\dfrac23\\pi r^3",
-              "lhs": "26*r**3/pi",
-              "rhs": "23*r**3/pi"
-            }
-          ],
+          "passedChains": 2,
+          "failedChains": [],
           "unparsedSteps": [
             2
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2502,18 +2551,20 @@
       "answer_status": "PASS",
       "step_status": "PASS",
       "tamil_status": "PARTIAL",
-      "discrepancy": "Tamil consistency flags: ['en_ta_unit_mismatch']",
+      "discrepancy": "Tamil consistency flags (TRACE Tamil Validator): ['en_ta_unit_mismatch']",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 1,
-          "passedChains": 1,
+          "checkedChains": 3,
+          "passedChains": 3,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -2542,13 +2593,14 @@
       "validation_method": "hemisphere_tank_empty_time",
       "independently_derived_result": "1925/72",
       "existing_result": "Approximately 27 minutes",
-      "status": "FAIL",
+      "status": "PASS",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PASS",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': 't = 26.74 min = 27 min', 'lhs': '1337/50', 'rhs': '27'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "",
+      "severity": "none",
+      "classification": "Valid approximation",
+      "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -2561,16 +2613,12 @@
         },
         "stepChecks": {
           "checkedChains": 1,
-          "passedChains": 0,
-          "failedChains": [
-            {
-              "stepIndex": 2,
-              "line": "t = 26.74 min = 27 min",
-              "lhs": "1337/50",
-              "rhs": "27"
-            }
-          ],
-          "unparsedSteps": []
+          "passedChains": 1,
+          "failedChains": [],
+          "unparsedSteps": [],
+          "contextApplied": [
+            "env_numeric_approx"
+          ]
         },
         "tamilChecks": {
           "flags": [],
@@ -2597,9 +2645,10 @@
       "answer_status": "PASS",
       "step_status": "UNVERIFIABLE",
       "tamil_status": "PARTIAL",
-      "discrepancy": "Tamil consistency flags: ['en_ta_terminology_mismatch']",
+      "discrepancy": "Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']; Intermediate steps have no verifiable equality chains",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "matchType": "symbolic_latex"
@@ -2608,7 +2657,8 @@
           "checkedChains": 0,
           "passedChains": 0,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -2644,6 +2694,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -2659,7 +2710,8 @@
           "checkedChains": 1,
           "passedChains": 1,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2688,6 +2740,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -2697,7 +2750,8 @@
           "checkedChains": 1,
           "passedChains": 1,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2720,13 +2774,14 @@
       "validation_method": "hollow_to_solid_cylinder_diameter",
       "independently_derived_result": "24/5",
       "existing_result": "4.8 cm",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PASS",
+      "step_status": "PARTIAL",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Unparsed step indices: [1]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "matchType": "symbolic_latex"
@@ -2735,7 +2790,10 @@
           "checkedChains": 4,
           "passedChains": 4,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [
+            1
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2760,20 +2818,24 @@
       "existing_result": "₹6,800",
       "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PASS",
+      "step_status": "PARTIAL",
       "tamil_status": "PARTIAL",
-      "discrepancy": "Tamil consistency flags: ['en_ta_terminology_mismatch']",
+      "discrepancy": "Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']; Unparsed step indices: [0]",
       "severity": "minor",
-      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 3,
-          "passedChains": 3,
+          "checkedChains": 2,
+          "passedChains": 2,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [
+            0
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -2808,6 +2870,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -2817,7 +2880,8 @@
           "checkedChains": 4,
           "passedChains": 4,
           "failedChains": [],
-          "unparsedSteps": []
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2840,13 +2904,14 @@
       "validation_method": "cone_slant_from_vol_base_area",
       "independently_derived_result": "17",
       "existing_result": "Approximately 17 cm (π ≈ 22/7)",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PASS",
+      "step_status": "PARTIAL",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Unparsed step indices: [3]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "matchType": "symbolic_latex"
@@ -2857,7 +2922,8 @@
           "failedChains": [],
           "unparsedSteps": [
             3
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2880,13 +2946,14 @@
       "validation_method": "sector_to_cone_volume",
       "independently_derived_result": "111132*pi/125 (≈ 2794.1760 with pi=22/7)",
       "existing_result": "Approximately 2794.18 cm³",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'r=\\\\dfrac35(21)=12.6  cm \\\\end{aligned}', 'lhs': '5/3', 'rhs': '63/5'}]",
-      "severity": "major",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Unparsed step indices: [0]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -2898,19 +2965,13 @@
           "observedDimension": "volume"
         },
         "stepChecks": {
-          "checkedChains": 2,
-          "passedChains": 1,
-          "failedChains": [
-            {
-              "stepIndex": 1,
-              "line": "r=\\dfrac35(21)=12.6  cm \\end{aligned}",
-              "lhs": "5/3",
-              "rhs": "63/5"
-            }
-          ],
+          "checkedChains": 3,
+          "passedChains": 3,
+          "failedChains": [],
           "unparsedSteps": [
             0
-          ]
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2933,19 +2994,30 @@
       "validation_method": "concept_m3_to_litres",
       "independently_derived_result": "2500",
       "existing_result": "choice[0]: 2500 litres",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Proof step status=UNVERIFIABLE (unverified=[0, 1])",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Review Tamil terminology/units or proof step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "correctIndex": 0,
           "matchedIndices": [
             0
           ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": [
+            0,
+            1
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2967,6 +3039,7 @@
       "tamil_status": "PASS",
       "discrepancy": "",
       "severity": "none",
+      "classification": "Verified",
       "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
@@ -2974,6 +3047,13 @@
           "matchedIndices": [
             1
           ]
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 1,
+          "failedChains": [],
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2989,19 +3069,30 @@
       "validation_method": "concept_cone_csa",
       "independently_derived_result": "175*pi (≈ 550.0000 with pi=22/7)",
       "existing_result": "choice[2]: 550 m²",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Proof step status=UNVERIFIABLE (unverified=[0, 1])",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Review Tamil terminology/units or proof step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "correctIndex": 2,
           "matchedIndices": [
             2
           ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": [
+            0,
+            1
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -3017,19 +3108,29 @@
       "validation_method": "concept_hollow_hemisphere_tsa",
       "independently_derived_result": "84*pi (≈ 263.8938 with pi=exact)",
       "existing_result": "choice[0]: 84π m²",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Proof step status=UNVERIFIABLE (unverified=[0])",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Review Tamil terminology/units or proof step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "correctIndex": 0,
           "matchedIndices": [
             0
           ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": [
+            0
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -3045,19 +3146,29 @@
       "validation_method": "concept_frustum_slant",
       "independently_derived_result": "5",
       "existing_result": "choice[1]: 5 cm",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Proof step status=UNVERIFIABLE (unverified=[0])",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Review Tamil terminology/units or proof step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "correctIndex": 1,
           "matchedIndices": [
             1
           ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": [
+            0
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -3073,19 +3184,30 @@
       "validation_method": "concept_cone_double_radius_scaling",
       "independently_derived_result": "4",
       "existing_result": "choice[2]: 4 times",
-      "status": "PASS",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Proof step status=UNVERIFIABLE (unverified=[0, 1])",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Review Tamil terminology/units or proof step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "correctIndex": 2,
           "matchedIndices": [
             2
           ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": [
+            0,
+            1
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -3103,17 +3225,28 @@
       "existing_result": "choice[0]: 8 : 27",
       "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PARTIAL",
-      "discrepancy": "Tamil editorial check flags: ['en_ta_terminology_mismatch']",
+      "discrepancy": "Tamil editorial check flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']; Proof step status=UNVERIFIABLE (unverified=[0, 1])",
       "severity": "minor",
-      "recommended_correction": "Review Tamil terminology/units in concept prompt.",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Review Tamil terminology/units or proof step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "correctIndex": 0,
           "matchedIndices": [
             0
           ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": [
+            0,
+            1
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -3135,19 +3268,34 @@
       "validation_method": "concept_cube_minus_hemisphere_sa",
       "independently_derived_result": "6*a**2 + pi*r**2",
       "existing_result": "choice[1]: 6a² + πr²",
-      "status": "PASS",
+      "status": "FAIL",
       "answer_status": "PASS",
-      "step_status": "PASS",
+      "step_status": "FAIL",
       "tamil_status": "PASS",
-      "discrepancy": "",
-      "severity": "none",
-      "recommended_correction": "",
+      "discrepancy": "Step=FAIL ([{'stepIndex': 1, 'line': 'V=\\\\pi r^2 h-\\\\dfrac{1}{3}\\\\pi r^2 =\\\\dfrac{2}{3}\\\\pi r^2 h\\\\end{aligned}', 'lhs': 'pi*h*r**2 - pi*r**2/3', 'rhs': '2*pi*h*r**2/3'}]), Tamil=[]",
+      "severity": "major",
+      "classification": "Confirmed mathematical error",
+      "recommended_correction": "Review concept question/choice/proof/Tamil alignment.",
       "supporting_evidence": {
         "answerEvidence": {
           "correctIndex": 1,
           "matchedIndices": [
             1
           ]
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 0,
+          "failedChains": [
+            {
+              "stepIndex": 1,
+              "line": "V=\\pi r^2 h-\\dfrac{1}{3}\\pi r^2 =\\dfrac{2}{3}\\pi r^2 h\\end{aligned}",
+              "lhs": "pi*h*r**2 - pi*r**2/3",
+              "rhs": "2*pi*h*r**2/3"
+            }
+          ],
+          "unparsedSteps": [],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -3167,8 +3315,9 @@
       "answer_status": "PASS",
       "step_status": "FAIL",
       "tamil_status": "PASS",
-      "discrepancy": "Step=FAIL, Tamil=[]",
+      "discrepancy": "Step=FAIL ([{'stepIndex': 0, 'line': '\\\\begin{aligned}\\\\dfrac{4}{3}\\\\pi R^3=\\\\pi r^2 H\\\\  H=\\\\dfrac{4R^3}{3r^2}\\\\end{aligned}', 'lhs': '4*pi*R**3/3', 'rhs': 'pi*H**2*r**2'}, {'stepIndex': 0, 'line': '\\\\begin{aligned}\\\\dfrac{4}{3}\\\\pi R^3=\\\\pi r^2 H\\\\  H=\\\\dfrac{4R^3}{3r^2}\\\\end{aligned}', 'lhs': 'pi*H**2*r**2', 'rhs': '4*R**3/(3*r**2)'}]), Tamil=[]",
       "severity": "major",
+      "classification": "Confirmed mathematical error",
       "recommended_correction": "Review concept question/choice/proof/Tamil alignment.",
       "supporting_evidence": {
         "answerEvidence": {
@@ -3176,6 +3325,28 @@
           "matchedIndices": [
             2
           ]
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 0,
+          "failedChains": [
+            {
+              "stepIndex": 0,
+              "line": "\\begin{aligned}\\dfrac{4}{3}\\pi R^3=\\pi r^2 H\\  H=\\dfrac{4R^3}{3r^2}\\end{aligned}",
+              "lhs": "4*pi*R**3/3",
+              "rhs": "pi*H**2*r**2"
+            },
+            {
+              "stepIndex": 0,
+              "line": "\\begin{aligned}\\dfrac{4}{3}\\pi R^3=\\pi r^2 H\\  H=\\dfrac{4R^3}{3r^2}\\end{aligned}",
+              "lhs": "pi*H**2*r**2",
+              "rhs": "4*R**3/(3*r**2)"
+            }
+          ],
+          "unparsedSteps": [
+            1
+          ],
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],

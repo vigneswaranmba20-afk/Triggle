@@ -11,6 +11,7 @@ import sympy as sp
 from mathguard import geometry as geo
 from mathguard.arithmetic import exact_fractions_equal, parse_ratio, ratios_equivalent, to_exact_fraction
 from mathguard.benchmark import run_benchmark
+from mathguard.benchmark_v1_1 import run_v1_1_benchmark
 from mathguard.engine import run_audit
 from mathguard.mcq import extract_selected_option_label, option_matches_derived, parse_mcq_options_en
 from mathguard.parser import ParseError, parse_expression
@@ -119,3 +120,27 @@ def test_120_case_mutation_benchmark():
     assert s["falsePositives"] == 0
     assert s["recall"] == 1.0
     assert s["precision"] == 1.0
+
+
+def test_v1_1_context_domain_and_non_silent_unverified():
+    # Physical positive domain allows r^2=16 => r=4
+    ok_phys = validate_steps([{"eq": "", "math": {"latex": r"r^2=16 \Rightarrow r=4"}}], allow_positive_domain=True)
+    assert ok_phys.status == "PASS"
+
+    # Unrestricted algebraic variable MUST flag x^2=16 => x=4
+    bad_alg = validate_steps([{"eq": "", "math": {"latex": r"x^2=16 \Rightarrow x=4"}}], allow_positive_domain=False)
+    assert bad_alg.status == "FAIL"
+
+    # Unverified substitution without env bindings MUST NOT silently PASS
+    unver = validate_steps([{"eq": "", "math": {"latex": r"V=\pi r^2 h=154"}}])
+    assert unver.status != "PASS"
+
+
+def test_v1_1_108_case_benchmark():
+    res = run_v1_1_benchmark()
+    s = res["summary"]
+    assert s["total"] == 108
+    assert s["criticalMissedErrors"] == 0
+    assert s["falsePositives"] == 0
+    assert s["precision"] >= 0.98
+    assert s["recall"] >= 0.98

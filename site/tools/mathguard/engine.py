@@ -47,6 +47,7 @@ class AuditRecord:
     tamil_status: str
     discrepancy: str
     severity: str  # none | info | minor | major | critical
+    classification: str  # Verified | Confirmed mathematical error | Mathematical notation error | Parser limitation | Missing mathematical context | Valid approximation | Requires independent review
     recommended_correction: str
     supporting_evidence: Dict[str, Any] = field(default_factory=dict)
 
@@ -301,41 +302,50 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
         ta_res = validate_en_ta_consistency(q_obj.get("en") or "", q_obj.get("ta"))
 
         # Combine into overall status while keeping sub-statuses strictly separate
+        # Never allow unsupported/unverified steps to silently receive a full PASS
         if ans_status == "FAIL" or step_res.status == "FAIL" or ta_res.status == "FAIL":
             overall = "FAIL"
             if ans_status == "FAIL":
                 sev = ans_sev
                 disc = ans_disc
+                classification = "Confirmed mathematical error"
                 corr = "Correct mathematical derivation/answer to match first-principles calculation."
             elif step_res.status == "FAIL":
                 sev = "major"
                 disc = f"Intermediate step equality failure: {step_res.failed_chains}"
+                classification = step_res.classification
                 corr = "Fix invalid intermediate equation transformation in steps."
             else:
                 sev = "major"
-                disc = f"English-Tamil consistency failure: {ta_res.flags}"
+                disc = f"English-Tamil consistency failure (recorded for TRACE Tamil Validator): {ta_res.flags}"
+                classification = "Requires independent review"
                 corr = "Align Tamil prompt numbers/terminology with English prompt."
         elif ans_status == "UNVERIFIABLE":
             overall = "UNVERIFIABLE"
             sev = "info"
             disc = ans_disc
+            classification = "Requires independent review"
             corr = "Manual/qualitative verification required (non-numerical item)."
-        elif ta_res.status in ("MISSING", "PARTIAL") or step_res.status == "PARTIAL":
+        elif ta_res.status in ("MISSING", "PARTIAL") or step_res.status in ("PARTIAL", "UNVERIFIABLE"):
             overall = "PARTIAL"
             sev = "minor"
             parts = []
             if ta_res.status == "MISSING":
-                parts.append("Tamil prompt missing in student data module")
+                parts.append("Tamil prompt missing in student data module (TRACE Tamil Validator)")
             elif ta_res.status == "PARTIAL":
-                parts.append(f"Tamil consistency flags: {ta_res.flags}")
+                parts.append(f"Tamil consistency flags (TRACE Tamil Validator): {ta_res.flags}")
             if step_res.status == "PARTIAL":
                 parts.append(f"Unparsed step indices: {step_res.unparsed_steps}")
+            elif step_res.status == "UNVERIFIABLE":
+                parts.append("Intermediate steps have no verifiable equality chains")
             disc = "; ".join(parts)
-            corr = "Populate/review Tamil prompt or simplify non-standard step notation."
+            classification = step_res.classification if step_res.status in ("PARTIAL", "UNVERIFIABLE") else "Missing mathematical context"
+            corr = "Populate/review Tamil prompt or provide explicit verifiable step equalities."
         else:
             overall = "PASS"
             sev = "none"
             disc = ""
+            classification = "Valid approximation" if any("approx" in c for c in step_res.context_applied) else "Verified"
             corr = ""
 
         records.append(
@@ -353,6 +363,7 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
                 tamil_status=ta_res.status,
                 discrepancy=disc,
                 severity=sev,
+                classification=classification,
                 recommended_correction=corr,
                 supporting_evidence={
                     "answerEvidence": ans_ev,
@@ -361,6 +372,7 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
                         "passedChains": step_res.passed_chains,
                         "failedChains": step_res.failed_chains,
                         "unparsedSteps": step_res.unparsed_steps,
+                        "contextApplied": step_res.context_applied,
                     },
                     "tamilChecks": {
                         "flags": ta_res.flags,
@@ -388,17 +400,25 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
         if ans_status == "FAIL" or step_res.status == "FAIL" or ta_res.status == "FAIL":
             overall = "FAIL"
             sev = ans_sev if ans_status == "FAIL" else "major"
-            disc = ans_disc or f"Step={step_res.status}, Tamil={ta_res.flags}"
+            disc = ans_disc or f"Step={step_res.status} ({step_res.failed_chains}), Tamil={ta_res.flags}"
+            classification = "Confirmed mathematical error" if ans_status == "FAIL" or step_res.status == "FAIL" else "Requires independent review"
             corr = "Review concept question/choice/proof/Tamil alignment."
-        elif ta_res.status in ("MISSING", "PARTIAL"):
+        elif ta_res.status in ("MISSING", "PARTIAL") or step_res.status in ("PARTIAL", "UNVERIFIABLE"):
             overall = "PARTIAL"
             sev = "minor"
-            disc = f"Tamil editorial check flags: {ta_res.flags}"
-            corr = "Review Tamil terminology/units in concept prompt."
+            parts = []
+            if ta_res.status in ("MISSING", "PARTIAL"):
+                parts.append(f"Tamil editorial check flags (TRACE Tamil Validator): {ta_res.flags}")
+            if step_res.status in ("PARTIAL", "UNVERIFIABLE"):
+                parts.append(f"Proof step status={step_res.status} (unverified={step_res.unparsed_steps})")
+            disc = "; ".join(parts)
+            classification = step_res.classification if step_res.status in ("PARTIAL", "UNVERIFIABLE") else "Requires independent review"
+            corr = "Review Tamil terminology/units or proof step equalities."
         else:
             overall = "PASS"
             sev = "none"
             disc = ""
+            classification = "Verified"
             corr = ""
 
         choices = concept.get("choices") or []
@@ -420,9 +440,17 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
                 tamil_status=ta_res.status,
                 discrepancy=disc,
                 severity=sev,
+                classification=classification,
                 recommended_correction=corr,
                 supporting_evidence={
                     "answerEvidence": ans_ev,
+                    "stepChecks": {
+                        "checkedChains": step_res.checked_chains,
+                        "passedChains": step_res.passed_chains,
+                        "failedChains": step_res.failed_chains,
+                        "unparsedSteps": step_res.unparsed_steps,
+                        "contextApplied": step_res.context_applied,
+                    },
                     "tamilChecks": {"flags": ta_res.flags, "details": ta_res.details},
                 },
             )
@@ -431,7 +459,7 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
     summary = _compute_summary(records, bundle["counts"])
     return {
         "schemaVersion": 1,
-        "engine": "TRACE MathGuard V1.0",
+        "engine": "TRACE MathGuard V1.1",
         "scope": "Grade 10 Chapter 7 — Mensuration",
         "inventoryCounts": bundle["counts"],
         "summary": summary,

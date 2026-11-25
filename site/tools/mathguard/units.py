@@ -83,3 +83,57 @@ def detect_answer_dimension(text: str) -> Optional[str]:
     if re.search(r"(\bcm\b|\bm\b|\bmm\b|\bkm\b|\bunits\b|செ\.?\s*மீ|மீட்டர்|அலகு)", s):
         return "length"
     return None
+
+
+def extract_segment_unit(text: str) -> Optional[str]:
+    """Extract canonical unit from an equation segment (e.g. '10459.43 cm^3' -> 'cm3')."""
+    s = str(text or "")
+    s = re.sub(r"\\(?:text|mathrm|mathbf)\s*\{([^}]*)\}", r" \1 ", s)
+    if re.search(r"(?<![a-zA-Z])(cm\s*\^\s*\{?3\}?|cm³|cu\.?\s*cm)", s, re.I):
+        return "cm3"
+    if re.search(r"(?<![a-zA-Z])(m\s*\^\s*\{?3\}?|m³|cu\.?\s*m)", s, re.I):
+        return "m3"
+    if re.search(r"(?<![a-zA-Z])(mm\s*\^\s*\{?3\}?|mm³)", s, re.I):
+        return "mm3"
+    if re.search(r"(\blitres?\b|\bL\b)", s):
+        return "litre"
+    if re.search(r"(?<![a-zA-Z])(m\s*\^\s*\{?2\}?|m²|sq\.?\s*m)", s, re.I):
+        return "m2"
+    if re.search(r"(?<![a-zA-Z])(cm\s*\^\s*\{?2\}?|cm²|sq\.?\s*cm)", s, re.I):
+        return "cm2"
+    if re.search(r"(?<![a-zA-Z])km\b", s, re.I):
+        return "km"
+    if re.search(r"(?<![a-zA-Z])m\b", s, re.I):
+        return "m"
+    if re.search(r"(?<![a-zA-Z])cm\b", s, re.I):
+        return "cm"
+    if re.search(r"(?<![a-zA-Z])mm\b", s, re.I):
+        return "mm"
+    return None
+
+
+def are_unit_converted_equivalent(
+    lhs_raw: str,
+    lhs_val: float,
+    rhs_raw: str,
+    rhs_val: float,
+    tol: float = 0.02,
+) -> bool:
+    """Return True if lhs_val in lhs_unit converts to rhs_val in rhs_unit."""
+    u1 = extract_segment_unit(lhs_raw)
+    u2 = extract_segment_unit(rhs_raw)
+    if not u1 or not u2 or u1 == u2:
+        return False
+    try:
+        if u1 in VOLUME_TO_CM3 and u2 in VOLUME_TO_CM3:
+            converted = lhs_val * float(VOLUME_TO_CM3[u1] / VOLUME_TO_CM3[u2])
+            return abs(converted - rhs_val) <= tol
+        if u1 in AREA_TO_CM2 and u2 in AREA_TO_CM2:
+            converted = lhs_val * float(AREA_TO_CM2[u1] / AREA_TO_CM2[u2])
+            return abs(converted - rhs_val) <= tol
+        if u1 in LENGTH_TO_CM and u2 in LENGTH_TO_CM:
+            converted = lhs_val * float(LENGTH_TO_CM[u1] / LENGTH_TO_CM[u2])
+            return abs(converted - rhs_val) <= tol
+    except Exception:
+        return False
+    return False

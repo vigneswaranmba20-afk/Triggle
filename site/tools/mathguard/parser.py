@@ -77,7 +77,9 @@ def preprocess_math_text(text: str) -> str:
     s = s.replace("π", r"\pi ").replace("ℓ", "l")
     s = s.replace("√", r"\sqrt ")
     s = s.replace("≈", "=")
-    s = s.replace("⇒", ";").replace(r"\Rightarrow", ";").replace(r"\implies", ";")
+    s = s.replace("⇒", ";").replace("=>", ";").replace(r"\Rightarrow", ";").replace(r"\implies", ";")
+    # Expand LaTeX shorthand fractions like \dfrac43 or \frac13 -> \dfrac{4}{3}
+    s = re.sub(r"\\(d?frac|tfrac)\s*([0-9A-Za-z])\s*([0-9A-Za-z])", r"\\\1{\2}{\3}", s)
     # Strip thousands commas inside numbers like 1,812,000
     s = re.sub(r"(?<=\d),(?=\d{3}\b)", "", s)
     # Convert Unicode superscripts like r² or cm³ -> ^2, ^3
@@ -86,8 +88,12 @@ def preprocess_math_text(text: str) -> str:
         return f"^{{{digits}}}"
 
     s = re.sub(r"[⁰¹²³⁴⁵⁶⁷⁸⁹]+", _sup_repl, s)
-    # Collapse subscripted identifiers like A_{ cap } -> A_cap
-    s = re.sub(r"([A-Za-z])_\{\s*([^}]+?)\s*\}", lambda m: f"{m.group(1)}_{re.sub(r'[^A-Za-z0-9]', '', m.group(2))}", s)
+    # Collapse subscripted identifiers like A_{ cap } or CSA _{QR} -> A_cap, CSA_QR
+    s = re.sub(
+        r"([A-Za-z]+)\s*_\{\s*([^}]+?)\s*\}",
+        lambda m: f"{m.group(1)}_{re.sub(r'[^A-Za-z0-9]', '', m.group(2))}",
+        s,
+    )
     # Strip LaTeX spacing/sizing/text commands
     s = re.sub(r"\\(left|right|big|Big|bigg|Bigg)\b", "", s)
     s = re.sub(r"\\[,;:! ]", " ", s)
@@ -96,6 +102,10 @@ def preprocess_math_text(text: str) -> str:
     s = re.sub(r"\\boxed\s*\{", "{", s)
     # Strip \text{...}, \mathrm{...}, \operatorname{...} when they hold units/labels
     s = re.sub(r"\\(?:text|mathrm|mathbf|operatorname)\s*\{([^}]*)\}", r" \1 ", s)
+    # Strip compound rate units like m^3/h or m³/h or km/h
+    s = re.sub(r"\b(?:m\^\{?3\}?|cm\^\{?3\}?|km|m|l|litres?)\s*/\s*(?:h|hr|min|s|sec)\b", " ", s, flags=re.I)
+    # Strip trailing standalone 'h' (hours) or 'L' (litres) only when preceded by a space+number NOT after '^'
+    s = re.sub(r"(?:^|(?<=[\s=;(]))(\d+(?:\.\d+)?)\s+(?:h|L)(?=\s|$|[;=\)])", r"\1", s)
     # Strip trailing period after unit abbreviations like "sq. units."
     s = re.sub(r"\b(sq|cu)\.\s*", r"\1 ", s, flags=re.IGNORECASE)
     # Strip [ and ] used as grouping brackets in plain-text eqs like √[8²+(12-6)²]
@@ -115,6 +125,8 @@ def tokenize(text: str) -> List[Token]:
         if ch.isspace():
             i += 1
             continue
+        if ch in ("'", '"', "`", "$"):
+            raise ParseError(f"Disallowed character {ch!r} in math expression")
         if ch == "\\":
             j = i + 1
             while j < n and s[j].isalpha():
@@ -137,21 +149,16 @@ def tokenize(text: str) -> List[Token]:
             elif cmd == "percentage" or cmd == "%":
                 tokens.append(Token("OP", "%"))
             elif cmd in ("begin", "end"):
-                # Skip \begin{aligned} / \end{aligned}
                 if j < n and s[j] == "{":
                     end_b = s.find("}", j)
                     if end_b != -1:
                         j = end_b + 1
             elif cmd == "":
-                # Escaped symbol like \\ or \%
                 if j < n and s[j] == "\\":
                     j += 1
                 elif j < n and s[j] == "%":
                     tokens.append(Token("OP", "%"))
                     j += 1
-            else:
-                # Ignore unknown formatting commands
-                pass
             i = j
             continue
         if ch.isdigit() or (ch == "." and i + 1 < n and s[i + 1].isdigit()):
@@ -171,10 +178,7 @@ def tokenize(text: str) -> List[Token]:
             word = s[i:j]
             if word.startswith("__"):
                 raise ParseError(f"Disallowed identifier {word!r}")
-            # Handle subscripts like r_1 -> r_1, V_rem -> V_rem
             if word.lower() in _UNIT_WORDS:
-                # Skip trailing unit words so "5500 cm^2" parses as 5500
-                # Check if followed by ^2 or ^3 and skip that unit exponent too
                 k = j
                 while k < n and s[k].isspace():
                     k += 1
@@ -223,7 +227,6 @@ def tokenize(text: str) -> List[Token]:
             tokens.append(Token("COMMA", ","))
             i += 1
             continue
-        # Skip unrecognized punctuation like ₹, &, ;, …
         if ch == "₹" or ch in "&;…":
             i += 1
             continue
@@ -314,9 +317,8 @@ class _Parser:
             self.consume()
             if tok.value == "pi":
                 return sp.pi
-            # Split multi-char algebraic products like "rh" or "rR" if all single letters
-            # EXCEPT known subscripted names like r_1, V_1, CSA_QR
-            if "_" in tok.value or len(tok.value) == 1:
+            # Keep subscripted names (r_1, V_rem) and 2-letter uppercase line segments (PQ, QR, PR) as single symbols
+            if "_" in tok.value or len(tok.value) == 1 or (len(tok.value) == 2 and tok.value.isupper()):
                 return sp.Symbol(tok.value, real=True)
             # If it's e.g. "rh" or "rR", treat as product of single-letter symbols
             expr = sp.Integer(1)
