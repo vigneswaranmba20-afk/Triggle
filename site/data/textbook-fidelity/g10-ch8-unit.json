@@ -1,0 +1,450 @@
+{
+  "edition": "2025 revised",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d"
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f"
+    }
+  },
+  "items": [
+    {
+      "id": "c10-8-unit-q1",
+      "questionNumber": "1",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "1. The mean of the following frequency distribution is 62.8 and the sum of all frequencies is 50. Compute the missing frequencies f₁ and f₂.",
+        "ta": "1. பின்வரும் நிகழ்வெண் பரவலின் சராசரியானது 62.8 மற்றும் அனைத்து நிகழ்வெண்களின் கூடுதல் 50. விடுபட்ட நிகழ்வெண்கள் f₁ மற்றும் f₂ -ஐக் கணக்கிடுக."
+      },
+      "textbookTable": {
+        "en": [
+          [
+            "Class Interval",
+            "0-20",
+            "20-40",
+            "40-60",
+            "60-80",
+            "80-100",
+            "100-120"
+          ],
+          [
+            "Frequency",
+            5,
+            "f₁",
+            10,
+            "f₂",
+            7,
+            8
+          ]
+        ],
+        "ta": [
+          [
+            "பிரிவு இடைவெளி",
+            "0-20",
+            "20-40",
+            "40-60",
+            "60-80",
+            "80-100",
+            "100-120"
+          ],
+          [
+            "நிகழ்வெண்",
+            5,
+            "f₁",
+            10,
+            "f₂",
+            7,
+            8
+          ]
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 337,
+          "printed": 331
+        },
+        "ta": {
+          "pdf": 350,
+          "printed": 344
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-8-unit-q2",
+      "questionNumber": "2",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "2. The diameter of circles (in mm) drawn in a design are given below.\nCalculate the standard deviation.",
+        "ta": "2. ஒரு வடிவமைப்பில் வரையப்பட்ட வட்டங்களின் விட்ட அளவுகள் (மி.மீ-ல்) கீழே கொடுக்கப்பட்டுள்ளன.\nதிட்டவிலக்கத்தைக் கணக்கிடுக."
+      },
+      "textbookTable": {
+        "en": [
+          [
+            "Diameters",
+            "33-36",
+            "37-40",
+            "41-44",
+            "45-48",
+            "49-52"
+          ],
+          [
+            "Number of circles",
+            15,
+            17,
+            21,
+            22,
+            25
+          ]
+        ],
+        "ta": [
+          [
+            "விட்டங்கள்",
+            "33-36",
+            "37-40",
+            "41-44",
+            "45-48",
+            "49-52"
+          ],
+          [
+            "வட்டங்களின் எண்ணிக்கை",
+            15,
+            17,
+            21,
+            22,
+            25
+          ]
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 337,
+          "printed": 331
+        },
+        "ta": {
+          "pdf": 350,
+          "printed": 344
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-8-unit-q3",
+      "questionNumber": "3",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "3. The frequency distribution is given below.\nIn the table, k is a positive integer, has a variance of 160. Determine the value of k.",
+        "ta": "3. ஒரு நிகழ்வெண் பரவல் கீழே கொடுக்கப்பட்டுள்ளது.\nஅட்டவணையில், k ஒரு மிகை முழு. விலக்க வர்க்கச் சராசரியானது 160 எனில், k -ன் மதிப்பைக் காண்க."
+      },
+      "textbookTable": {
+        "en": [
+          [
+            "x",
+            "k",
+            "2 k",
+            "3 k",
+            "4 k",
+            "5 k",
+            "6 k"
+          ],
+          [
+            "f",
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ],
+        "ta": [
+          [
+            "x",
+            "k",
+            "2 k",
+            "3 k",
+            "4 k",
+            "5 k",
+            "6 k"
+          ],
+          [
+            "f",
+            2,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 337,
+          "printed": 331
+        },
+        "ta": {
+          "pdf": 350,
+          "printed": 344
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-8-unit-q4",
+      "questionNumber": "4",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "4. The standard deviation of some temperature data in degree celsius (°C) is 5. If the data were converted into degree Farenheit (°F) then what is the variance?",
+        "ta": "4. செல்சியஸில் குறிக்கப்பட்ட வெப்பநிலை தரவின் திட்டவிலக்கமானது 5. இந்த வெப்பநிலை தரவை ஃபாரன்ஹீட் ஆக மாற்றும்பொழுது கிடைக்கும் தரவின் விலக்க வர்க்கச் சராசரியைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 337,
+          "printed": 331
+        },
+        "ta": {
+          "pdf": 350,
+          "printed": 344
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-8-unit-q5",
+      "questionNumber": "5",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "5. If for a distribution, ∑(x − 5) = 3, ∑(x − 5)² = 43, and total number of observations is 18, find the mean and standard deviation.",
+        "ta": "5. ஒரு பரவலில் ∑(x − 5) = 3, ∑(x − 5)² = 43, மற்றும் மொத்த தரவுப் புள்ளிகளின் எண்ணிக்கை 18 எனில் சராசரி, திட்ட விலக்கத்தைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 337,
+          "printed": 331
+        },
+        "ta": {
+          "pdf": 350,
+          "printed": 344
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-8-unit-q6",
+      "questionNumber": "6",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "6. Prices of peanut packets in various places of two cities are given below. In which city, prices were more stable?",
+        "ta": "6. இரண்டு நகரங்களின் பல்வேறு இடங்களில் விற்பனை செய்யும் நிலக்கடலை பொட்டலங்களின் விலைகள் கொடுக்கப்பட்டுள்ளன. எந்த நகரத்தில் விலைகளானது மிகவும் நிலையானதாக உள்ளது?"
+      },
+      "textbookTable": {
+        "en": [
+          [
+            "Prices in city A",
+            20,
+            22,
+            19,
+            23,
+            16
+          ],
+          [
+            "Prices in city B",
+            10,
+            20,
+            18,
+            12,
+            15
+          ]
+        ],
+        "ta": [
+          [
+            "நகரம் A-ன் விலைகள்",
+            20,
+            22,
+            19,
+            23,
+            16
+          ],
+          [
+            "நகரம் B-ன் விலைகள்",
+            10,
+            20,
+            18,
+            12,
+            15
+          ]
+        ]
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 337,
+          "printed": 331
+        },
+        "ta": {
+          "pdf": 350,
+          "printed": 344
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-8-unit-q7",
+      "questionNumber": "7",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "7. If the range and coefficient of range of the data are 20 and 0.2 respectively, then find the largest and smallest values of the data.",
+        "ta": "7. ஒரு புள்ளி விவரத்தின் வீச்சு மற்றும் வீச்சுக்கெழு முறையே 20 மற்றும் 0.2 எனில், விவரங்களின் மிகப்பெரிய மதிப்பு மற்றும் மிகச்சிறிய மதிப்புகளைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 337,
+          "printed": 331
+        },
+        "ta": {
+          "pdf": 350,
+          "printed": 344
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-8-unit-q8",
+      "questionNumber": "8",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "8. If two dice are rolled, then find the probability of getting the product of face value 6 or the difference of face values 5.",
+        "ta": "8. இரண்டு முறையான பகடைகள் உருட்டப்படும் பொழுது, முக மதிப்புகளின் பெருக்கல் 6 ஆகவோ அல்லது முக மதிப்புகளின் வித்தியாசம் 5 ஆகவோ இருப்பதற்கான நிகழ்தகவைக் காண்க?"
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 338,
+          "printed": 332
+        },
+        "ta": {
+          "pdf": 350,
+          "printed": 344
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-8-unit-q9",
+      "questionNumber": "9",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "9. In a two children family, find the probability that there is at least one girl in a family.",
+        "ta": "9. இரண்டு குழந்தைகள் உள்ள ஒரு குடும்பத்தில், குறைந்தது ஒரு பெண் குழந்தையாவது இருப்பதற்கான நிகழ்தகவைக் காண்க?"
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 338,
+          "printed": 332
+        },
+        "ta": {
+          "pdf": 350,
+          "printed": 344
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-8-unit-q10",
+      "questionNumber": "10",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "10. A bag contains 5 white and some black balls. If the probability of drawing a black ball from the bag is twice the probability of drawing a white ball then find the number of black balls.",
+        "ta": "10. ஒரு பையில் 5 வெள்ளை மற்றும் சில கருப்பு பந்துகள் உள்ளன. பையிலிருந்து கருப்பு பந்து கிடைப்பதற்கான நிகழ்தகவானது வெள்ளைப் பந்து கிடைப்பதற்கான நிகழ்தகவைப்போல் இரு மடங்கு எனில், கருப்புப் பந்துகளின் எண்ணிக்கையைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 338,
+          "printed": 332
+        },
+        "ta": {
+          "pdf": 350,
+          "printed": 344
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-8-unit-q11",
+      "questionNumber": "11",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "11. The probability that a student will pass the final examination in both English and Tamil is 0.5 and the probability of passing neither is 0.1. If the probability of passing the English examination is 0.75, what is the probability of passing the Tamil examination?",
+        "ta": "11. ஒரு மாணவன் இறுதித் தேர்வில் ஆங்கிலம் மற்றும் தமிழில் தேர்ச்சி பெறுவதற்கான நிகழ்தகவு 0.5, ஒன்றிலும் தேர்ச்சி அடையாமல் இருப்பதற்கான நிகழ்தகவு 0.1 ஆங்கிலத் தேர்வில் தேர்ச்சி அடைவதற்கான நிகழ்தகவு 0.75 எனில், தமிழ்த் தேர்வில் தேர்ச்சி பெறுவதற்கான நிகழ்தகவு என்ன?"
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 338,
+          "printed": 332
+        },
+        "ta": {
+          "pdf": 350,
+          "printed": 344
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    }
+  ],
+  "discrepancies": [
+    {
+      "id": "c10-8-unit-q5",
+      "type": "ANSWER_KEY_ROUNDING",
+      "answerKeyEnglish": "5.17, 1.53",
+      "exactMean": "31/6",
+      "exactStandardDeviation": "√85/6",
+      "roundedStandardDeviation": "1.54",
+      "explanation": "Both keys give 1.53. The exact standard deviation is approximately 1.53659 and rounds to 1.54 to two decimal places.",
+      "answerKeyTamil": "5.17, 1.53"
+    }
+  ],
+  "answerKeyPages": {
+    "en": {
+      "pdf": 348,
+      "printed": 342
+    },
+    "ta": {
+      "pdf": 363,
+      "printed": 357
+    }
+  }
+}

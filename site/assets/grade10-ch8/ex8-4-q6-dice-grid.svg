@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 318 318" role="img" aria-labelledby="title"><title id="title">Ordered dice outcomes</title>
+<rect width="318" height="318" fill="#fff"/>
+<g fill="#dbeafe">
+<rect x="39" y="83" width="264" height="44"/>
+<rect x="39" y="171" width="264" height="44"/>
+<rect x="39" y="259" width="264" height="44"/>
+</g><path d="M39 39v264 M39 39h264 M83 39v264 M39 83h264 M127 39v264 M39 127h264 M171 39v264 M39 171h264 M215 39v264 M39 215h264 M259 39v264 M39 259h264 M303 39v264 M39 303h264" stroke="#64748b" fill="none"/>
+<g fill="none" stroke="#4338ca" stroke-width="3">
+<rect x="262" y="86" width="38" height="38" rx="5"/>
+<rect x="218" y="130" width="38" height="38" rx="5"/>
+<rect x="174" y="174" width="38" height="38" rx="5"/>
+<rect x="130" y="218" width="38" height="38" rx="5"/>
+<rect x="86" y="262" width="38" height="38" rx="5"/>
+</g><g fill="#172554" font-family="system-ui, sans-serif" font-size="18" font-weight="600" text-anchor="middle">
+<text x="61" y="28">1</text><text x="24" y="67">1</text>
+<text x="105" y="28">2</text><text x="24" y="111">2</text>
+<text x="149" y="28">3</text><text x="24" y="155">3</text>
+<text x="193" y="28">4</text><text x="24" y="199">4</text>
+<text x="237" y="28">5</text><text x="24" y="243">5</text>
+<text x="281" y="28">6</text><text x="24" y="287">6</text>
+</g></svg>

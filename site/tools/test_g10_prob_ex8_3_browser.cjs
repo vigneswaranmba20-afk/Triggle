@@ -52,6 +52,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
           if(id==='c10-8-ex8-3-q1'||id==='c10-8-ex8-3-q2'||id==='c10-8-ex8-3-q11'){
             assert.equal(s.inlineFigHidden,false,'inline figure visible '+id);
             assert.ok(s.inlineImgSrc.includes('grade10-ch8'),'inline SVG src '+id);
+            if(lang==='ta')assert.ok(s.inlineImgSrc.includes('grade10-ch8/ta/'),'Tamil SVG src '+id);
           }
         }
       }

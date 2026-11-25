@@ -92,9 +92,24 @@ const entries=[
       "fallback": "The coefficient of variation is 180.28%."
     },
     "questionMath": {
-      "latex": "\\text{4. If }n=5,\\ \\bar{x}=6,\\ \\sum x^2=765,\\ \\text{then calculate the coefficient of variation.}",
-      "display": true,
-      "fallback": "4. If n = 5, x̄ = 6, Σx² = 765, then calculate the coefficient of variation."
+      "en": [
+        "4. If ",
+        {
+          "latex": "n=5,\\quad\\bar{x}=6,\\quad\\sum x^2=765",
+          "display": false,
+          "fallback": "n = 5, x̄ = 6, Σx² = 765"
+        },
+        ", then calculate the coefficient of variation."
+      ],
+      "ta": [
+        "4. ",
+        {
+          "latex": "n=5,\\quad\\bar{x}=6,\\quad\\sum x^2=765",
+          "display": false,
+          "fallback": "n = 5, x̄ = 6, Σx² = 765"
+        },
+        " எனில், மாறுபாட்டுக் கெழுவைக் காண்க."
+      ]
     },
     "tamilQuestionSourceVerified": true,
     "tamilWorkedSolutionReview": "pending"

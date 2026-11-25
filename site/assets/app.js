@@ -183,6 +183,7 @@
 
  function renderBreadcrumb(chapter){
    const nav=$('crumb');nav.replaceChildren();
+   nav.classList.toggle('grade10-statistics-crumb', grade === 10 && !chapterOverview && current.chapter === '8');
    const choices=[{text:ui('class')+' '+grade,type:'class'}];
    // On chapter menus, the main heading already names the chapter.
    // Keep Class as a visible, usable switcher without repeating that title.
@@ -190,6 +191,9 @@
    choices.forEach((c,i)=>{
      if(i){const sep=document.createElement('span');sep.className='crumb-sep';sep.textContent='›';sep.setAttribute('aria-hidden','true');nav.append(sep)}
      const b=document.createElement('button');b.type='button';b.className='crumb-link';b.innerHTML=esc(c.text)+' <span aria-hidden="true">⌄</span>';
+     if(nav.classList.contains('grade10-statistics-crumb')){
+       b.innerHTML='<span class="grade10-statistics-crumb-label">'+esc(c.text)+'</span><span aria-hidden="true">⌄</span>';
+     }
      b.title=c.type==='chapter'
        ?(lang==='ta'?'வகுப்பு '+grade+' அத்தியாயங்களைத் தேர்ந்தெடுக்கவும்':'Choose a Class '+grade+' chapter')
        :(lang==='ta'?'தேர்வு':'Choose')+' '+c.text;
@@ -269,6 +273,7 @@
        chapter.id==='g10-ch5'?window.TRIGGLE_G10_CH5_PATH?.stages:
        chapter.id==='g10-ch6'?window.TRIGGLE_G10_CH6_PATH?.stages:
        chapter.id==='g10-ch7'?window.TRIGGLE_G10_CH7_PATH?.stages:
+       chapter.id==='g10-ch8'?window.TRIGGLE_G10_CH8_PATH?.stages:
        chapter.id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:
        null);
      const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
@@ -543,7 +548,7 @@
  };
  const resolveFigureSpec=item=>item&&ch1SvgFigures[item.id]
   ?{src:ch1SvgFigures[item.id].src,alt:{en:ch1SvgFigures[item.id].alt,ta:ch1SvgFigures[item.id].altTa||ch1SvgFigures[item.id].alt},caption:{en:ch1SvgFigures[item.id].caption,ta:ch1SvgFigures[item.id].captionTa||ch1SvgFigures[item.id].caption}}
-  :(item?.figureSrc?{src:item.figureSrc,alt:item.figureAlt,caption:item.figureCaption}:null);
+  :(item?.figureSrc?{src:lang==='ta'&&item.figureSrcTa?item.figureSrcTa:item.figureSrc,alt:item.figureAlt,caption:item.figureCaption}:null);
  function isQuestionFigure(item){
   if(resolveFigureSpec(item))return true;
   // The Figure button already opens a full Venn: no duplicate mini preview.
@@ -652,9 +657,8 @@
     return '<div class="triggle-table-wrap"><table class="triggle-data-table"'+(dt.caption?' aria-label="'+esc(dt.caption)+'"':'')+'><thead><tr>'+ths+'</tr></thead><tbody>'+trs+'</tbody></table></div> ';
   };
   const ex82TamilPrompt=lang==='ta'&&grade===10&&current.chapter==='8'&&current.exercise==='8.2'&&!!current.q?.ta;
-  // Ex8.2's source-verified Tamil text takes precedence over its English-only
-  // authored questionMath; equations in the worked solution remain unchanged.
-  $('questionText').innerHTML=ex82TamilPrompt?math(current.q.ta):(workedDisplay?.question||math(questionMath?.[lang]||current.q?.[lang]||questionMath?.en||tr(current.q)));
+  // Ex8.2 uses its structured Tamil prompt when present, then the exact Tamil text.
+  $('questionText').innerHTML=ex82TamilPrompt?math(questionMath?.ta||current.q.ta):(workedDisplay?.question||math(questionMath?.[lang]||current.q?.[lang]||questionMath?.en||tr(current.q)));
   if(Array.isArray(current.choices)&&typeof current.correctIndex==='number'){
     const mcqWrap=document.createElement('div');mcqWrap.className='triggle-mcq-choices';mcqWrap.setAttribute('role','group');
     mcqWrap.setAttribute('aria-label',lang==='ta'?'விருப்பங்களைத் தேர்ந்தெடுக்கவும்':'Choose an option');
@@ -695,6 +699,15 @@
   $('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   if(lang==='ta'&&!current.q?.ta)$('kindBadge').textContent+=' · தமிழ் மொழிபெயர்ப்பு நிலுவையில்';
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
+  const conceptPath = window.TRIGGLE_G10_CH8_PATH;
+  const conceptIndexForQuestion = conceptPath?.conceptForQuestion(current) ?? -1;
+  const relatedConcept = $('chapter8QuestionConcept');
+  relatedConcept.hidden = conceptIndexForQuestion < 0;
+  if (conceptIndexForQuestion >= 0) {
+    const stage = conceptPath.stages[conceptIndexForQuestion];
+    relatedConcept.textContent = (lang === 'ta' ? 'கருத்து · ' : 'Concept · ') + tr(stage.title);
+    relatedConcept.onclick = () => openChapterSection('concepts', chapterForItem(current), conceptIndexForQuestion);
+  }
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';
 
   $('figureBtn').hidden=!hasUsefulFigure(current);

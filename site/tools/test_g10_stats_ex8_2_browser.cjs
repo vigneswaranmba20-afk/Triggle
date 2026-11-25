@@ -28,6 +28,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert.equal(s.steps,s.expected);assert.ok(s.reg);assert.ok(s.katex>=s.expected,'KaTeX rendered '+id);
     assert.equal(s.clipped,0,'clipped KaTeX '+JSON.stringify(s));assert.ok(s.width<=s.vw+1,'overflow '+JSON.stringify(s));
     assert.equal(s.diff,n<=3?'easy':'medium');
+    if(n===4)assert.equal(await page.locator('#questionText .katex-mathml math').count(),1,'Q4 source formula typesets in English');
     if(n===8)assert.equal(s.tableRows,3,'Q8 source table must render as a native accessible table');
     if(n===6)assert.ok(s.stepsText.includes('10.07')&&s.stepsText.includes('10.06'),'explain exact vs textbook rounding');
    }
@@ -37,6 +38,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
   // remains in Tamil at all supported Android widths. No English-only label.
   await page.goto(app.base+'/index.html?class=10&question=c10-8-ex8-2-q4');
   await page.locator('#langTa').click();
+  assert.equal(await page.locator('#questionText .katex-mathml math').count(),1,'Q4 source formula typesets in Tamil');
   assert.equal(await page.locator('#langTa').getAttribute('aria-pressed'),'true');
   for(const width of [320,360,390,412]){
    await page.setViewportSize({width,height:780});
@@ -71,8 +73,10 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
   await page.locator('#stepsList .worked-step').first().waitFor();
   assert.doesNotMatch(await page.locator('#kindBadge').innerText(),/தமிழ் மொழிபெயர்ப்பு நிலுவையில்/);
   const prompt=await page.locator('#questionText').innerText();
-  assert.match(prompt,/வைரஸ் காய்ச்சலால்/);
-  assert.match(prompt,/3, 5, 16, 18, 12, 7, 4/);
+  assert.match(prompt,/வைரஸ் காய்ச்சலைப் பற்றிய கருத்துக் கணிப்பில்/);
+  const frequencies=await page.locator('#questionText .triggle-data-table tbody td').evaluateAll(cells =>
+    cells.map(cell => Number(cell.querySelector('[data-math-fallback]').dataset.mathFallback)));
+  assert.deepEqual(frequencies,[3, 5, 16, 18, 12, 7, 4]);
   const reasons=await page.locator('#stepsList .step-reason').allInnerTexts();
   assert.ok(reasons.length>=7 && reasons.every(text=>/\p{Script=Tamil}/u.test(text)));
   await page.locator('#langEn').click();
