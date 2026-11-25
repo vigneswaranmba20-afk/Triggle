@@ -24,13 +24,13 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g9.statistics",
+      "key": "g10.tables",
       "status": "MERGED",
-      "pr": 438,
-      "head": "1d4a7a96876a6588fb3aaf4048d4ac6350c6fdbe",
-      "prQualityRun": 45698197473,
-      "merge": "b513503e43674f013a0b0962704540374c6e4c4f",
-      "pagesRun": 45706213331
+      "pr": 439,
+      "head": "891f046ccbeb26d7dda668bc25eb9daf56c452ba",
+      "prQualityRun": 45698184974,
+      "merge": "39a62ac5c27b54d119fa3dc295c139e401c02bd0",
+      "pagesRun": 45709137731
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -1522,7 +1522,7 @@
       "chapter": 8,
       "scope": "Statistics source tables and edition-specific solutions",
       "canonicalTasks": 11,
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "recordIds": [
         "g9-ch8-ex8.1-q4",
         "g9-ch8-ex8.1-q5",
@@ -1536,7 +1536,7 @@
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch8-frontier-tables.json",
       "release": {
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "numberedQuestions": 9,
         "canonicalTasks": 11,
         "pr": 438,
@@ -1548,6 +1548,36 @@
         "scope": "Grade 9 Statistics data tables and edition-specific summary measures",
         "merge": "b513503e43674f013a0b0962704540374c6e4c4f",
         "pagesRun": 45706213331,
+        "liveEvidence": {
+          "pr": 438,
+          "merge": "b513503e43674f013a0b0962704540374c6e4c4f",
+          "head": "1d4a7a96876a6588fb3aaf4048d4ac6350c6fdbe",
+          "slug": "g9-statistics",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch8-ex8.3-q6",
+          "pagesRun": 45706213331,
+          "deploymentId": 8070472048,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45706213331/job/139537642310",
+          "deploymentCompletedAt": "2026-11-25T21:57:06Z",
+          "versionMatched": "b513503e43674f013a0b0962704540374c6e4c4f",
+          "sha256": {
+            "assets/app.js": "c8db357825ccd392215b4b57fdda0a0d690cf312fdf0791eacc7a7d8d2ad7595",
+            "assets/why-step-g9.js": "09eaa166f844294afd4e2a5aece243fc62365e907cced42738bfd930e2a8034e",
+            "data/project-status.json": "c56118c9b54c551c8aa6b9ee992dac978a7748875bb54d010dd80067f9bc7a17",
+            "data/textbook-exercises/g9-ch8-frontier-tables.js": "d73ba4292d395225e047be70f6c42532d3e04793d6a07edc353c61a92063ee93",
+            "data/textbook-fidelity/g9-ch8-frontier-tables.json": "3d7939038328116015ff5ca2778a42f79a22a5e58e766cd1d44114ed9fb43b79",
+            "index.html": "2731ff96db1bbc252989faeef01420739d42bcf266c1e2102865158b69137054",
+            "service-worker.js": "2f53e3fcc65dbe3e2c63f5138a8948e755413c13a1017172929d1970c6c13c96"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 9 Statistics: nine exact tables and bilingual mean, median and mode at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/438"
       }
     },
@@ -1563,9 +1593,9 @@
         "c10-3-ex3-3-q4-ii"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g10-frontier-source-tables.json",
-      "status": "TESTED",
+      "status": "MERGED",
       "release": {
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 439,
         "head": "891f046ccbeb26d7dda668bc25eb9daf56c452ba",
         "prQualityRun": 45698184974,
@@ -1573,6 +1603,8 @@
         "chapter": null,
         "runtimeRecords": 6,
         "scope": "Grade 10 Relations and Functions and Algebra tables and figures",
+        "merge": "39a62ac5c27b54d119fa3dc295c139e401c02bd0",
+        "pagesRun": 45709137731,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/439"
       }
     },
@@ -1784,13 +1816,36 @@
         "scope": "Exercise order and boundaries for Grade 9 Exercises 1.1 and 6.4 and Grade 10 Exercise 3.19",
         "status": "TESTED",
         "pr": 449,
-        "head": "fdf128f9090d66fc318fd6816819863ef68d020a",
-        "prQualityRun": 45708013496,
+        "head": "6cbce2e270f210868f1d028d7ce812ac72ba41e6",
+        "prQualityRun": 45709619107,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/449"
+      }
+    },
+    {
+      "key": "g9.mensuration",
+      "grade": 9,
+      "chapter": 7,
+      "scope": "Equivalent ratio choices in Exercise 7.4 and independent checks across Mensuration",
+      "canonicalTasks": 1,
+      "recordIds": [
+        "g9-ch7-ex7.4-q7"
+      ],
+      "sourceEvidence": "site/data/textbook-fidelity/g9-ch7-frontier-ratio.json",
+      "status": "TESTED",
+      "release": {
+        "grade": 9,
+        "chapter": 7,
+        "runtimeRecords": 1,
+        "scope": "Equivalent ratio choices in Exercise 7.4 and independent Mensuration mathematics",
+        "status": "TESTED",
+        "pr": 450,
+        "head": "b74d61af7b1f6117cb56af1152e5e63e32526cc3",
+        "prQualityRun": 45710849546,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/450"
       }
     }
   ],
-  "latestMain": "b513503e43674f013a0b0962704540374c6e4c4f",
+  "latestMain": "39a62ac5c27b54d119fa3dc295c139e401c02bd0",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -1801,7 +1856,7 @@
       "browser": "/workspace/scratch/trace-set-batch-browser.log"
     },
     "grade9SetWorktree": "/workspace/Triggle-ex16",
-    "currentRuntime": "/workspace/scratch/trace-sources/batch11-browser-runtime.json",
+    "currentRuntime": "/workspace/scratch/trace-sources/batch12-browser-runtime.json",
     "coordinateRuntime": "/workspace/scratch/trace-sources/batch4-browser-runtime.json",
     "liveSetLogs": [
       "/workspace/scratch/trace-sources/live-ex13-browser.log",
@@ -1825,23 +1880,16 @@
     "Check the question-level source, mathematical and Tamil evidence still lacking one or more independent checks. Preserve edition-specific task IDs and source locators.",
     "Run the assembled reader and navigation checks against the final Pages revision, and refresh and publish the report."
   ],
-  "latestVerifiedProduction": "32ee7cb58e78ed8cf7dbb32995fad82b4fa1d122",
+  "latestVerifiedProduction": "b513503e43674f013a0b0962704540374c6e4c4f",
   "openReleaseOrder": [
     {
-      "key": "g9.statistics",
-      "status": "MERGED",
-      "pr": 438,
-      "head": "1d4a7a96876a6588fb3aaf4048d4ac6350c6fdbe",
-      "prQualityRun": 45698197473,
-      "merge": "b513503e43674f013a0b0962704540374c6e4c4f",
-      "pagesRun": 45706213331
-    },
-    {
       "key": "g10.tables",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 439,
       "head": "891f046ccbeb26d7dda668bc25eb9daf56c452ba",
-      "prQualityRun": 45698184974
+      "prQualityRun": 45698184974,
+      "merge": "39a62ac5c27b54d119fa3dc295c139e401c02bd0",
+      "pagesRun": 45709137731
     },
     {
       "key": "g9.graphs",
@@ -1910,8 +1958,15 @@
       "key": "navigation",
       "status": "TESTED",
       "pr": 449,
-      "head": "fdf128f9090d66fc318fd6816819863ef68d020a",
-      "prQualityRun": 45708013496
+      "head": "6cbce2e270f210868f1d028d7ce812ac72ba41e6",
+      "prQualityRun": 45709619107
+    },
+    {
+      "key": "g9.mensuration",
+      "status": "TESTED",
+      "pr": 450,
+      "head": "b74d61af7b1f6117cb56af1152e5e63e32526cc3",
+      "prQualityRun": 45710849546
     }
   ]
 }
