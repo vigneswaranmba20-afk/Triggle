@@ -1,6 +1,6 @@
 # TRACE Final Frontier
 
-**Mission in progress. Android release preparation is NO-GO.** The first source-to-runtime reconciliation covers all 17 chapters and 129 textbook exercise sections. It identified five completely absent sections, all in Grade 9 Set Language. Exercises 1.3–1.7 are live. They add 56 cards covering 112 canonical tasks, with 111 checked bilingual solutions and one unscored source ambiguity. Exercise 2.9 is also live, adding production verification for 20 existing Real Numbers cards. Coordinate Geometry Exercise 5.2 is also live. The latest verified production revision is `b513503e43674f013a0b0962704540374c6e4c4f`. The checkpoint lists the staged releases and remaining evidence.
+**Mission in progress. Android release preparation is NO-GO.** The first source-to-runtime reconciliation covers all 17 chapters and 129 textbook exercise sections. It identified five completely absent sections, all in Grade 9 Set Language. Exercises 1.3–1.7 are live. They add 56 cards covering 112 canonical tasks, with 111 checked bilingual solutions and one unscored source ambiguity. Exercise 2.9 is also live, adding production verification for 20 existing Real Numbers cards. Coordinate Geometry Exercise 5.2 is also live. The latest verified production revision is `7521c845cc87913f7ffcba2aac4ec4ad9c471964`. The checkpoint lists the staged releases and remaining evidence.
 
 - [Machine-readable inventory](TRACE_FINAL_FRONTIER_INVENTORY.json)
 - [One row per candidate canonical task](TRACE_FINAL_FRONTIER_INVENTORY.csv)
@@ -16,8 +16,8 @@ The numbers below reflect the current reconciliation. Fresh source-text extracti
 
 | Grade | Exercise sections | Numbered questions | Canonical tasks | Registered records before → candidate | Missing eligible before → candidate | Partial before → candidate | Source blocked | Math evidence | Live verified |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 9 | 60 | 482 | 843 | 690 → 746 | 111 → 0 | 45 → 0 | 4 | 448 | 184 |
-| 10 | 69 | 664 | 931 | 881 → 881 | 0 → 0 | 26 → 0 | 11 | 542 | 19 |
+| 9 | 60 | 482 | 843 | 690 → 746 | 111 → 0 | 45 → 0 | 4 | 488 | 196 |
+| 10 | 69 | 664 | 931 | 881 → 881 | 0 → 0 | 28 → 0 | 11 | 545 | 25 |
 
 ## Chapter reconciliation
 
@@ -25,16 +25,16 @@ The numbers below reflect the current reconciliation. Fresh source-text extracti
 |---|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | 9 | 1 | Set Language | 7 | 72 | 176 | 111 → 0 | 0 → 0 | 1 | 145 | 111 |
 | 9 | 2 | Real Numbers | 9 | 53 | 120 | 0 → 0 | 40 → 0 | 0 | 56 | 40 |
-| 9 | 3 | Algebra | 15 | 109 | 227 | 0 → 0 | 2 → 0 | 0 | 67 | 2 |
+| 9 | 3 | Algebra | 15 | 109 | 227 | 0 → 0 | 2 → 0 | 0 | 67 | 13 |
 | 9 | 4 | Geometry | 7 | 69 | 86 | 0 → 0 | 0 → 0 | 0 | 86 | 0 |
-| 9 | 5 | Coordinate Geometry | 6 | 58 | 75 | 0 → 0 | 1 → 0 | 0 | 21 | 20 |
+| 9 | 5 | Coordinate Geometry | 6 | 58 | 75 | 0 → 0 | 1 → 0 | 0 | 21 | 21 |
 | 9 | 6 | Trigonometry | 5 | 30 | 54 | 0 → 0 | 0 → 0 | 2 | 9 | 0 |
 | 9 | 7 | Mensuration | 4 | 36 | 42 | 0 → 0 | 0 → 0 | 1 | 41 | 0 |
-| 9 | 8 | Statistics | 4 | 30 | 32 | 0 → 0 | 2 → 0 | 0 | 11 | 11 |
-| 9 | 9 | Probability | 3 | 25 | 31 | 0 → 0 | 0 → 0 | 0 | 12 | 0 |
-| 10 | 1 | Relations and Functions | 7 | 69 | 124 | 0 → 0 | 6 → 0 | 0 | 10 | 6 |
+| 9 | 8 | Statistics | 4 | 30 | 32 | 0 → 0 | 2 → 0 | 0 | 32 | 11 |
+| 9 | 9 | Probability | 3 | 25 | 31 | 0 → 0 | 0 → 0 | 0 | 31 | 0 |
+| 10 | 1 | Relations and Functions | 7 | 69 | 124 | 0 → 0 | 8 → 0 | 0 | 13 | 10 |
 | 10 | 2 | Numbers and Sequences | 11 | 115 | 161 | 0 → 0 | 8 → 0 | 1 | 8 | 5 |
-| 10 | 3 | Algebra | 21 | 140 | 236 | 0 → 0 | 0 → 0 | 1 | 214 | 0 |
+| 10 | 3 | Algebra | 21 | 140 | 236 | 0 → 0 | 0 → 0 | 1 | 214 | 2 |
 | 10 | 4 | Geometry | 6 | 78 | 88 | 0 → 0 | 0 → 0 | 4 | 76 | 0 |
 | 10 | 5 | Coordinate Geometry | 6 | 75 | 97 | 0 → 0 | 4 → 0 | 1 | 96 | 0 |
 | 10 | 6 | Trigonometry | 6 | 52 | 69 | 0 → 0 | 6 → 0 | 2 | 66 | 6 |
@@ -46,7 +46,7 @@ The numbers below reflect the current reconciliation. Fresh source-text extracti
 | Grade | Eligible tasks | English reader content | Tamil reader content | Both languages | Independently confirmed complete in both |
 |---|---:|---:|---:|---:|---:|
 | 9 | 839 | 839 | 839 | 839 | 282 |
-| 10 | 920 | 920 | 920 | 920 | 427 |
+| 10 | 920 | 920 | 920 | 920 | 430 |
 
 The reader columns measure visible question, solution and final-answer content on registered tasks. The independently confirmed column requires matching source and mathematical evidence in addition. The JSON and CSV preserve the evidence at task level.
 
@@ -73,8 +73,8 @@ The reader columns measure visible question, solution and final-answer content o
 - **Grade 10 Tamil displays** · `LIVE_VERIFIED`. Corrected 19 Grade 10 Tamil final answers and two worked equations. Deterministic checks preserved the English displays, and all four mobile widths and offline progress passed locally. Revision `03e716eb769366748217c51b09009c2d8a7f6a38`. [PR #436](https://github.com/vigneswaranmba20-afk/Triggle/pull/436) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45696488927) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45699947516/job/139514826451) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-1-ex1-1-q5)
 - **Grade 9 Tamil working** · `LIVE_VERIFIED`. Localized the remaining equation labels across 20 Real Numbers cards and added Tamil conclusions for Algebra Exercise 3.1 Q11 and Q12. Focused bilingual checks at four mobile widths and offline progress passed. Revision `32ee7cb58e78ed8cf7dbb32995fad82b4fa1d122`. [PR #437](https://github.com/vigneswaranmba20-afk/Triggle/pull/437) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45698190245) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45702720071/job/139527764589) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch3-ex3.1-q11)
 - **Grade 9 Statistics** · `LIVE_VERIFIED`. Restored nine printed tables. Exercise 8.3 Q6 now gives a mean of 55.9 kg, median of 793/14 kg (about 56.64 kg), and mode of 58.5 kg. Independent arithmetic, four mobile widths, offline operation and retained progress passed. Revision `b513503e43674f013a0b0962704540374c6e4c4f`. [PR #438](https://github.com/vigneswaranmba20-afk/Triggle/pull/438) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45698197473) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45706213331/job/139537642310) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch8-ex8.3-q6)
-- **Grade 10 source tables and figures** · `MERGED`. Restored Grade 10 Exercise 1.3 Q10 and Exercise 3.3 Q4(i) and (ii) as accessible tables. The Relations and Functions full-screen figures also have Tamil labels. Independent arithmetic, the Relations and Functions typography suite, Algebra smoke checks, and four-width bilingual and offline verification passed. Revision `39a62ac5c27b54d119fa3dc295c139e401c02bd0`. [PR #439](https://github.com/vigneswaranmba20-afk/Triggle/pull/439) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45698184974) · [Pages run](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45709137731)
-- **Grade 9 graphs** · `TESTED`. Added all 11 Grade 9 Algebra Exercise 3.10 solution plots and the quadrant plot for Coordinate Geometry Exercise 5.6 Q4. Exact line endpoints and intersections, bilingual Figure view, four mobile widths, offline operation and the full Grade 9 typography suite passed. Revision `bd7777f5ef2f49db9baa59ddb97be270ed2185dd`. [PR #440](https://github.com/vigneswaranmba20-afk/Triggle/pull/440) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45698510313)
+- **Grade 10 source tables and figures** · `LIVE_VERIFIED`. Restored Grade 10 Exercise 1.3 Q10 and Exercise 3.3 Q4(i) and (ii) as accessible tables. The Relations and Functions full-screen figures also have Tamil labels. Independent arithmetic, the Relations and Functions typography suite, Algebra smoke checks, and four-width bilingual and offline verification passed. Revision `39a62ac5c27b54d119fa3dc295c139e401c02bd0`. [PR #439](https://github.com/vigneswaranmba20-afk/Triggle/pull/439) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45698184974) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45709137731/job/139546614980) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-1-1-3-q10)
+- **Grade 9 graphs** · `LIVE_VERIFIED`. Added all 11 Grade 9 Algebra Exercise 3.10 solution plots and the quadrant plot for Coordinate Geometry Exercise 5.6 Q4. Exact line endpoints and intersections, bilingual Figure view, four mobile widths, offline operation and the full Grade 9 typography suite passed. Revision `7521c845cc87913f7ffcba2aac4ec4ad9c471964`. [PR #440](https://github.com/vigneswaranmba20-afk/Triggle/pull/440) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45698510313) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45711670694/job/139554939977) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch3-ex3.10-q2-ii)
 - **Grade 9 step explanations** · `TESTED`. Added source-matched explanations to 14 Algebra and seven Coordinate Geometry cards. Revision `9422df6e0ffbfb3f5ab2f17e40c3527c13afe325`. [PR #441](https://github.com/vigneswaranmba20-afk/Triggle/pull/441) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45700509362)
 - **Grade 10 Numbers and Sequences explanations** · `TESTED`. Adds 123 explanations, corrects two finite-sum arguments and clarifies the domain of two other proofs. The independent checks and all four mobile widths passed. Revision `27b91cdef8812cbda4e2d3a81c10a75d3ce9c908`. [PR #442](https://github.com/vigneswaranmba20-afk/Triggle/pull/442) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45701636311)
 - **Grade 10 Coordinate Geometry** · `TESTED`. Adds 97 bilingual explanations and corrects five signed-area or vertex-order arguments. Two triangle cards show both valid roots and label the anticlockwise key convention. Exercise 5.2 Q12 shows the crossed ABCD order and the trapezium ABDC. Exact area, intersections, bilingual mobile, navigation and offline checks passed. Revision `fe1ba8ab609cdd0df82770c63571bfc39f70bfb4`. [PR #443](https://github.com/vigneswaranmba20-afk/Triggle/pull/443) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45703862944)
@@ -85,6 +85,7 @@ The reader columns measure visible question, solution and final-answer content o
 - **Grade 10 Algebra step explanations** · `TESTED`. Adds 12 bilingual Algebra explanations and localizes the difficulty labels. All four mobile widths and offline checks passed. Revision `d5e1b7e375618b5a8911a9ffeebd3821f8ff14b6`. [PR #448](https://github.com/vigneswaranmba20-afk/Triggle/pull/448) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45707428910)
 - **Grade 9 and 10 exercise navigation and concept links** · `TESTED`. Restores source order for 65 affected cards and tests 16 Grade 10 concept paths with matching textbook destinations. All four mobile widths passed in English and Tamil, with progress preserved. The full local sweep found zero order or boundary differences. Revision `6cbce2e270f210868f1d028d7ce812ac72ba41e6`. [PR #449](https://github.com/vigneswaranmba20-afk/Triggle/pull/449) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45709619107)
 - **Grade 9 Mensuration** · `TESTED`. Both editions list two equivalent choices in Exercise 7.4 Q7. The reader explains both and preserves the simplest form used in the key. All 42 chapter tasks were checked independently, including the ambiguous item, which remains outside unconditional completion. Revision `b74d61af7b1f6117cb56af1152e5e63e32526cc3`. [PR #450](https://github.com/vigneswaranmba20-afk/Triggle/pull/450) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45710849546)
+- **Grade 10 Relations and Functions compositions** · `TESTED`. Derives the domains and general ranges in Exercise 1.5 Q1(ii) and Q5. Both answer appendices reverse Q1(iii), whose displayed formulas are correct. Independent checks cover 2,592 compatible finite subset pairs and the special case in the keys. Both languages and all four mobile widths passed. Revision `65db9687ca86d30b2e4c0170ef3bb76ad2c19772`. [PR #451](https://github.com/vigneswaranmba20-afk/Triggle/pull/451) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45712867978)
 
 ## Source differences and remaining work
 
@@ -95,6 +96,7 @@ The reader columns measure visible question, solution and final-answer content o
 - **Grade 9 Exercise 7.4 Q7, EN PDF p. 270 and TA p. 285.** Both answer appendices key (2), which is the simplest form, but (4) is equivalent. The bilingual reader explains both while the ledger records the single-answer ambiguity.
 - **Grade 9 Exercise 8.3 Q6, EN PDF p. 293 and TA p. 311.** The Tamil question asks for mean and median as well as mode. Both answer appendices show the mode. The candidate preserves the edition-specific prompts and provides all three solutions in both languages.
 - **Grade 10 Exercise 2.7 Q12, EN and TA PDF p. 79.** Arbitrary real exponents require positive bases for this proof. The reader gives the positive-base proof and an undefined negative-base example.
+- **Grade 10 Exercise 1.5 Q1 and Q5, EN PDF p. 37 and TA pp. 38–39.** Both answer appendices reverse the order of the formulas in Q1(iii). Q5 uses natural-number subsets while the answer keys assume full natural-number inputs. The reader derives the results for the stated domains.
 - **Grade 10 Exercise 5.2 Q12, EN PDF p. 227 and TA p. 234.** The claimed vertex order crosses. The conditional explanation and figure distinguish the printed order ABCD from the convex trapezium ABDC.
 - **Grade 10 source limitations.** The inventory lists every known source-blocked task with the exact canonical ID, evidence and proposed resolution. Exercise 6.1 Q7(i) has an impossible real-angle premise. In Q7(ii), the given value makes both sides undefined. The figures and final totals leave those cards outside verified completion.
 - **Teacher and Tamil editorial reviews.** Both are pending. Independent mathematical evidence is linked where available. Complete source and instructional verification across all 17 chapters still requires the open releases and the remaining question-level evidence. [MathGuard PR #425](https://github.com/vigneswaranmba20-afk/Triggle/pull/425)
@@ -102,3 +104,4 @@ The reader columns measure visible question, solution and final-answer content o
 - **Navigation reconciliation.** The assembled candidate traversed 1,610 cards within 129 exercise boundaries. The final sweep found 0 differences from the source sequence.
 - **Figures.** The assembled candidate opened 310 full-screen Figure views in both languages at 390 px. It found 0 load or description failures.
 - **Concept links.** The local reader audit inspected 155 concept stages and resolved 223 explicit textbook links. The one other link opens the existing Midpoint practice activity.
+- **Full production reader check.** At revision `39a62ac5c27b54d119fa3dc295c139e401c02bd0`, Chromium opened all 1,610 catalogue cards in both languages at 390 px. The deployed reader had 0 core-content and rendering failures. It was still missing 499 of the added bilingual explanations at that revision.

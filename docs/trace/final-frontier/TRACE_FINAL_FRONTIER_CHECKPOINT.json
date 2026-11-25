@@ -24,13 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g10.tables",
-      "status": "MERGED",
-      "pr": 439,
-      "head": "891f046ccbeb26d7dda668bc25eb9daf56c452ba",
-      "prQualityRun": 45698184974,
-      "merge": "39a62ac5c27b54d119fa3dc295c139e401c02bd0",
-      "pagesRun": 45709137731
+      "key": "g9.hints",
+      "status": "TESTED",
+      "pr": 441,
+      "head": "9422df6e0ffbfb3f5ab2f17e40c3527c13afe325",
+      "prQualityRun": 45700509362
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -1593,9 +1591,9 @@
         "c10-3-ex3-3-q4-ii"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g10-frontier-source-tables.json",
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "release": {
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 439,
         "head": "891f046ccbeb26d7dda668bc25eb9daf56c452ba",
         "prQualityRun": 45698184974,
@@ -1605,6 +1603,38 @@
         "scope": "Grade 10 Relations and Functions and Algebra tables and figures",
         "merge": "39a62ac5c27b54d119fa3dc295c139e401c02bd0",
         "pagesRun": 45709137731,
+        "liveEvidence": {
+          "pr": 439,
+          "merge": "39a62ac5c27b54d119fa3dc295c139e401c02bd0",
+          "head": "891f046ccbeb26d7dda668bc25eb9daf56c452ba",
+          "slug": "g10-tables",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-1-1-3-q10",
+          "pagesRun": 45709137731,
+          "deploymentId": 8070815324,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45709137731/job/139546614980",
+          "deploymentCompletedAt": "2026-11-25T22:14:57Z",
+          "versionMatched": "39a62ac5c27b54d119fa3dc295c139e401c02bd0",
+          "sha256": {
+            "assets/app.js": "b71634ad4adb598cd87b1c27a42b054efae862194bd66f03504a9e22356674ad",
+            "assets/grade10-ch1/ex1-3-q10-ta.svg": "7d53559b2a7735476658e3307c4b0ccad062e00164418734e440f8088743d73d",
+            "assets/grade10-ch1/ex1-4-q2-ta.svg": "d998486a7ca64b3af72115d5be939e15518cacebb5d484fd804699c6bd9f6694",
+            "assets/grade10-ch1/ex1-4-q3-ta.svg": "66ba12553ee03a79b7f14bd50888dd69ba7b086fc8ab80f1048def763817d199",
+            "data/project-status.json": "59f100834a94b657d1deac9b2057bb4c802959e56deb417a97129ea0f411d004",
+            "data/textbook-exercises/g10-frontier-source-tables.js": "32736170d1e1707a143627256bda042a7040a8cdf043388f149bd8631fc2e640",
+            "data/textbook-fidelity/g10-frontier-source-tables.json": "e156d9cbfb85faf49464094fe7c1b2afeae6854828955aa085b200e9ac052eeb",
+            "index.html": "180737be4239a9fcf4864f7f4242d95d5bb9a34e185dae31e0311a6ff001fe22",
+            "service-worker.js": "940e3f06013d17a6b5887a72e604ee0670898587cacbbb5020427f23b82a4dae"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 10 source tables: all three bilingual cards at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/439"
       }
     },
@@ -1629,9 +1659,9 @@
         "g9-ch5-ex5.6-q4"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g9-frontier-graphs.json",
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "release": {
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 440,
         "head": "bd7777f5ef2f49db9baa59ddb97be270ed2185dd",
         "prQualityRun": 45698510313,
@@ -1639,6 +1669,50 @@
         "chapter": null,
         "runtimeRecords": 12,
         "scope": "Grade 9 graphical solutions and coordinate plot",
+        "merge": "7521c845cc87913f7ffcba2aac4ec4ad9c471964",
+        "pagesRun": 45711670694,
+        "liveEvidence": {
+          "pr": 440,
+          "merge": "7521c845cc87913f7ffcba2aac4ec4ad9c471964",
+          "head": "bd7777f5ef2f49db9baa59ddb97be270ed2185dd",
+          "slug": "g9-graphs",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch3-ex3.10-q2-ii",
+          "pagesRun": 45711670694,
+          "deploymentId": 8071137596,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45711670694/job/139554939977",
+          "deploymentCompletedAt": "2026-11-25T22:32:00Z",
+          "versionMatched": "7521c845cc87913f7ffcba2aac4ec4ad9c471964",
+          "sha256": {
+            "assets/app.js": "3dfc338b1507fa440070a5ea5a803db0e055cda2781f83bf0cf6d15f3c963483",
+            "assets/grade9-ch3/ex3-10-q1-i.svg": "495a65ad64564ff912662b5084869bef7b48803096a3de76085744ac211f0c4e",
+            "assets/grade9-ch3/ex3-10-q1-ii.svg": "70232a53582f58bc03ff361308d00cee48a253cba6a6991a347ca9ec50bcd319",
+            "assets/grade9-ch3/ex3-10-q1-iii.svg": "e0734ec2eacce0e103d9fa290cdb60c5b58c706dc3039691c4d6f69ed079f640",
+            "assets/grade9-ch3/ex3-10-q1-iv.svg": "4d35370d4b86f61380f577c5467cf38da12fd6d099da4319932385f6e46b32fd",
+            "assets/grade9-ch3/ex3-10-q2-i.svg": "72d8076eb8e07f4cbaa81b7ad8571857d0a288d5dd1e2b7baa1e65536cf8ef23",
+            "assets/grade9-ch3/ex3-10-q2-ii.svg": "9e97d3cb7bcf64a91b8c747d608b269a7f7bef3b22cea3b6189a656e05366824",
+            "assets/grade9-ch3/ex3-10-q2-iii.svg": "ef9cbf927363b294177d266e26af204d39862e8239414e2e2588f722668669ef",
+            "assets/grade9-ch3/ex3-10-q2-iv.svg": "113baaa4ec6f1bba841b2c86457f34abe7aa33b6c2de69ae57e2de129e8c387f",
+            "assets/grade9-ch3/ex3-10-q2-v.svg": "fa2431a5473317f7323ae8ea14e247bc08b1ccb34f7aeaad45e1e795cd20edc7",
+            "assets/grade9-ch3/ex3-10-q2-vi.svg": "16b8df09aab5ec2bf2fa81657847fec173c9fac3dbf700900683ecb007b0e007",
+            "assets/grade9-ch3/ex3-10-q3.svg": "8368849e4de2572a0390f50a57cf4378efa9ca11428d8605f6ca3269e16079c8",
+            "assets/grade9-ch5/ex5-6-q4.svg": "b046c7ed907ec0825225a2b693ad8a30cc20f2336ae47874d98978530aec9430",
+            "assets/why-step-g9.js": "d21020ed87f3e371f40c4545a84f7ee99cc621d9b33950f087a581191037816d",
+            "data/project-status.json": "8fc0af0d29ed4d3ca7670b4d79e7c6b756a33e1c41d970a8f1e20c8d9c1a805e",
+            "data/textbook-exercises/g9-frontier-graphs.js": "b1e84cfd99e5106153f0f387db034a8996a196b0ab15ba182b60f94420891e5c",
+            "data/textbook-fidelity/g9-frontier-graphs.json": "313a5526e68d32a0be6cec8ed71080319ea62df5b8d5b9cbacd33a13c3102880",
+            "index.html": "da92f7f5239d3390e79df1d5bb3d92872fc10b20a80d617cda0bce23e17c6362",
+            "service-worker.js": "a00a7c6abdbf5abeec52980a0025f15c49d734c6e5da68e2fb915a02a3df3f08"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 9 graphical solutions: all 12 figures and why-step hints in both languages at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/440"
       }
     },
@@ -1843,9 +1917,33 @@
         "prQualityRun": 45710849546,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/450"
       }
+    },
+    {
+      "key": "g10.compositions",
+      "grade": 10,
+      "chapter": 1,
+      "scope": "Composition domain, ranges and appendix order in Exercise 1.5",
+      "canonicalTasks": 3,
+      "recordIds": [
+        "c10-1-1-5-q1",
+        "c10-1-1-5-q5"
+      ],
+      "sourceEvidence": "site/data/textbook-fidelity/g10-frontier-compositions.json",
+      "status": "TESTED",
+      "release": {
+        "grade": 10,
+        "chapter": 1,
+        "runtimeRecords": 2,
+        "scope": "Composition domains, ranges and answer-key order in Exercise 1.5",
+        "status": "TESTED",
+        "pr": 451,
+        "head": "65db9687ca86d30b2e4c0170ef3bb76ad2c19772",
+        "prQualityRun": 45712867978,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/451"
+      }
     }
   ],
-  "latestMain": "39a62ac5c27b54d119fa3dc295c139e401c02bd0",
+  "latestMain": "7521c845cc87913f7ffcba2aac4ec4ad9c471964",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -1856,7 +1954,7 @@
       "browser": "/workspace/scratch/trace-set-batch-browser.log"
     },
     "grade9SetWorktree": "/workspace/Triggle-ex16",
-    "currentRuntime": "/workspace/scratch/trace-sources/batch12-browser-runtime.json",
+    "currentRuntime": "/workspace/scratch/trace-sources/batch13-browser-runtime.json",
     "coordinateRuntime": "/workspace/scratch/trace-sources/batch4-browser-runtime.json",
     "liveSetLogs": [
       "/workspace/scratch/trace-sources/live-ex13-browser.log",
@@ -1880,24 +1978,8 @@
     "Check the question-level source, mathematical and Tamil evidence still lacking one or more independent checks. Preserve edition-specific task IDs and source locators.",
     "Run the assembled reader and navigation checks against the final Pages revision, and refresh and publish the report."
   ],
-  "latestVerifiedProduction": "b513503e43674f013a0b0962704540374c6e4c4f",
+  "latestVerifiedProduction": "7521c845cc87913f7ffcba2aac4ec4ad9c471964",
   "openReleaseOrder": [
-    {
-      "key": "g10.tables",
-      "status": "MERGED",
-      "pr": 439,
-      "head": "891f046ccbeb26d7dda668bc25eb9daf56c452ba",
-      "prQualityRun": 45698184974,
-      "merge": "39a62ac5c27b54d119fa3dc295c139e401c02bd0",
-      "pagesRun": 45709137731
-    },
-    {
-      "key": "g9.graphs",
-      "status": "TESTED",
-      "pr": 440,
-      "head": "bd7777f5ef2f49db9baa59ddb97be270ed2185dd",
-      "prQualityRun": 45698510313
-    },
     {
       "key": "g9.hints",
       "status": "TESTED",
@@ -1967,6 +2049,13 @@
       "pr": 450,
       "head": "b74d61af7b1f6117cb56af1152e5e63e32526cc3",
       "prQualityRun": 45710849546
+    },
+    {
+      "key": "g10.compositions",
+      "status": "TESTED",
+      "pr": 451,
+      "head": "65db9687ca86d30b2e4c0170ef3bb76ad2c19772",
+      "prQualityRun": 45712867978
     }
   ]
 }
