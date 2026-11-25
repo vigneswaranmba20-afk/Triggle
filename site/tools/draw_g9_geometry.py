@@ -262,10 +262,10 @@ def exercise_44():
             +angle(p['A'],p['D'],p['E'],'30°',20,47))
     round_figure('4-q3',dict(A=220,B=320,C=60,D=88),('ABCDA',),
         dict(A=(-13,7),B=(14,7),C=(14,-9),D=(-10,-12)),lambda p:
-        angle(p['D'],p['A'],p['B'],'',14)+text((144,150),'(2y+4)°')
-        +angle(p['A'],p['B'],p['C'],'',14)+text((191,146),'(6x−4)°')
-        +angle(p['B'],p['C'],p['D'],'',14)+text((202,72),'(4y−4)°')
-        +angle(p['C'],p['D'],p['A'],'',14)+text((148,53),'(7x+2)°'))
+        angle(p['D'],p['A'],p['B'],'',14)+text((128,152),'(2y+4)°')
+        +angle(p['A'],p['B'],p['C'],'',14)+text((191,128),'(6x−4)°')
+        +angle(p['B'],p['C'],p['D'],'',14)+text((197,84),'(4y−4)°')
+        +angle(p['C'],p['D'],p['A'],'',14)+text((146,58),'(7x+2)°'))
     for part in ('i','ii'):
         def mark(p):
             P=crossing(p['A'],p['C'],p['B'],p['D'])
