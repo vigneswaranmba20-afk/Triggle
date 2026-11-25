@@ -33,7 +33,7 @@
           ['விடை '+(correct+1)+' · ', ...[].concat(solutionChoice.ta)]
         ) : both([answer && fallback ? answer+' ' : answer, ...math], [answerTa && fallback ? answerTa+' ' : answerTa, ...math]),
         ...(questionMath ? {questionMath: both(...questionMath)} : {}),
-        geometryConcept: related, hint: steps[0].why, translationReview: 'pending',
+        geometryConcept: related, notationSource: 'authored', hint: steps[0].why, translationReview: 'pending',
         edition: '2025', tamilQuestionSourceVerified: true, tamilWorkedSolutionReview: 'pending',
         source: enSource, page: pages[0], reference: 'TN SCERT Grade 9 Mathematics, revised 2025. EN printed p. ' + (pages[0]-6) + ' / PDF p. ' + pages[0] + '. TA printed p. ' + (pages[1]-6) + ' / PDF p. ' + pages[1] + '.',
         sourceFidelity: {status: 'page-images-checked-en-ta', enPrintedPage: pages[0]-6, enPdfPage: pages[0],
