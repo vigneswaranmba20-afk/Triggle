@@ -16,8 +16,8 @@ The numbers below reflect the current reconciliation. Fresh source-text extracti
 
 | Grade | Exercise sections | Numbered questions | Canonical tasks | Registered records before → candidate | Missing eligible before → candidate | Partial before → candidate | Source blocked | Math evidence | Live verified |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 9 | 60 | 482 | 843 | 690 → 746 | 111 → 0 | 45 → 14 | 3 | 282 | 151 |
-| 10 | 69 | 664 | 931 | 881 → 881 | 0 → 0 | 19 → 471 | 9 | 540 | 0 |
+| 9 | 60 | 482 | 843 | 690 → 746 | 111 → 0 | 45 → 0 | 3 | 282 | 151 |
+| 10 | 69 | 664 | 931 | 881 → 881 | 0 → 0 | 22 → 344 | 10 | 543 | 0 |
 
 ## Chapter reconciliation
 
@@ -25,7 +25,7 @@ The numbers below reflect the current reconciliation. Fresh source-text extracti
 |---|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | 9 | 1 | Set Language | 7 | 72 | 176 | 111 → 0 | 0 → 0 | 1 | 111 | 111 |
 | 9 | 2 | Real Numbers | 9 | 53 | 120 | 0 → 0 | 40 → 0 | 0 | 40 | 20 |
-| 9 | 3 | Algebra | 15 | 109 | 227 | 0 → 0 | 2 → 14 | 0 | 13 | 0 |
+| 9 | 3 | Algebra | 15 | 109 | 227 | 0 → 0 | 2 → 0 | 0 | 13 | 0 |
 | 9 | 4 | Geometry | 7 | 69 | 86 | 0 → 0 | 0 → 0 | 0 | 86 | 0 |
 | 9 | 5 | Coordinate Geometry | 6 | 58 | 75 | 0 → 0 | 1 → 0 | 0 | 21 | 20 |
 | 9 | 6 | Trigonometry | 5 | 30 | 54 | 0 → 0 | 0 → 0 | 2 | 0 | 0 |
@@ -33,7 +33,7 @@ The numbers below reflect the current reconciliation. Fresh source-text extracti
 | 9 | 8 | Statistics | 4 | 30 | 32 | 0 → 0 | 2 → 0 | 0 | 11 | 0 |
 | 9 | 9 | Probability | 3 | 25 | 31 | 0 → 0 | 0 → 0 | 0 | 0 | 0 |
 | 10 | 1 | Relations and Functions | 7 | 69 | 124 | 0 → 0 | 6 → 0 | 0 | 10 | 0 |
-| 10 | 2 | Numbers and Sequences | 11 | 115 | 161 | 0 → 0 | 5 → 127 | 0 | 5 | 0 |
+| 10 | 2 | Numbers and Sequences | 11 | 115 | 161 | 0 → 0 | 8 → 0 | 1 | 8 | 0 |
 | 10 | 3 | Algebra | 21 | 140 | 236 | 0 → 0 | 0 → 12 | 1 | 214 | 0 |
 | 10 | 4 | Geometry | 6 | 78 | 88 | 0 → 0 | 0 → 39 | 4 | 76 | 0 |
 | 10 | 5 | Coordinate Geometry | 6 | 75 | 97 | 0 → 0 | 0 → 97 | 0 | 97 | 0 |
@@ -65,6 +65,8 @@ The numbers below reflect the current reconciliation. Fresh source-text extracti
 - **Grade 9 Statistics** · `TESTED`. Restored nine printed tables. Exercise 8.3 Q6 now gives a mean of 55.9 kg, median of 793/14 kg (about 56.64 kg), and mode of 58.5 kg. Independent arithmetic, four mobile widths, offline operation and retained progress passed. Revision `1d4a7a96876a6588fb3aaf4048d4ac6350c6fdbe`. [PR #438](https://github.com/vigneswaranmba20-afk/Triggle/pull/438) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45698197473)
 - **Grade 10 source tables and figures** · `TESTED`. Restored Grade 10 Exercise 1.3 Q10 and Exercise 3.3 Q4(i) and (ii) as accessible tables. The Relations and Functions full-screen figures also have Tamil labels. Independent arithmetic, the Relations and Functions typography suite, Algebra smoke checks, and four-width bilingual and offline verification passed. Revision `891f046ccbeb26d7dda668bc25eb9daf56c452ba`. [PR #439](https://github.com/vigneswaranmba20-afk/Triggle/pull/439) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45698184974)
 - **Grade 9 graphs** · `TESTED`. Added all 11 Grade 9 Algebra Exercise 3.10 solution plots and the quadrant plot for Coordinate Geometry Exercise 5.6 Q4. Exact line endpoints and intersections, bilingual Figure view, four mobile widths, offline operation and the full Grade 9 typography suite passed. Revision `bd7777f5ef2f49db9baa59ddb97be270ed2185dd`. [PR #440](https://github.com/vigneswaranmba20-afk/Triggle/pull/440) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45698510313)
+- **Grade 9 step explanations** · `TESTED`. Added source-matched explanations to 14 Algebra and seven Coordinate Geometry cards. Revision `9422df6e0ffbfb3f5ab2f17e40c3527c13afe325`. [PR #441](https://github.com/vigneswaranmba20-afk/Triggle/pull/441) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45700509362)
+- **Grade 10 Numbers and Sequences explanations** · `TESTED`. Addresses the 123 Grade 10 Numbers and Sequences cards that lacked a visible explanatory hint. Revision `27b91cdef8812cbda4e2d3a81c10a75d3ce9c908`. [PR #442](https://github.com/vigneswaranmba20-afk/Triggle/pull/442) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45701636311)
 
 ## Source differences and remaining work
 
@@ -75,4 +77,4 @@ The numbers below reflect the current reconciliation. Fresh source-text extracti
 - **Grade 9 Exercise 8.3 Q6, EN PDF p. 293 and TA p. 311.** The Tamil question asks for mean and median as well as mode. Both answer appendices show the mode. The candidate preserves the edition-specific prompts and provides all three solutions in both languages.
 - **Grade 10 source limitations.** The inventory lists every known source-blocked task with the exact canonical ID, evidence and proposed resolution. Exercise 6.1 Q7(i) has an impossible real-angle premise. In Q7(ii), the given value makes both sides undefined. The figures and final totals leave those cards outside verified completion.
 - **Teacher and Tamil editorial reviews.** Both are pending. Independent mathematical evidence is linked where available. Complete source and instructional verification across all 17 chapters still requires the open releases and the remaining question-level evidence. [MathGuard PR #425](https://github.com/vigneswaranmba20-afk/Triggle/pull/425)
-- **Reader reconciliation.** The reviewed local candidate opened 1,610 catalogue cards in English and Tamil at 390 px. Each had the question, worked steps and final answer. Chromium found zero KaTeX errors and zero page overflows. The ledger identifies 21 Grade 9 and 478 Grade 10 cards still requiring a visible bilingual step explanation at this checkpoint.
+- **Reader reconciliation.** The reviewed local candidate opened 1,610 catalogue cards in English and Tamil at 390 px. Each had the question, worked steps and final answer. Chromium found zero KaTeX errors and zero page overflows. The ledger identifies 0 Grade 9 and 355 Grade 10 cards still requiring a visible bilingual step explanation at this checkpoint.

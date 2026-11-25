@@ -24,7 +24,7 @@
   "nextBatch": {
     "grade": 10,
     "chapter": 2,
-    "status": "IN_PROGRESS",
+    "status": "TESTED",
     "scope": "Add source-matched bilingual why-step explanations to 123 Numbers and Sequences cards. Review finite sum conditions and the domain of the arbitrary-exponent identity."
   },
   "editorialReview": {
@@ -1523,6 +1523,43 @@
         "prQualityRun": 45698510313,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/440"
       }
+    },
+    {
+      "key": "g9.hints",
+      "grade": 9,
+      "chapter": null,
+      "scope": "Bilingual Algebra and Coordinate Geometry why-step explanations",
+      "runtimeRecords": 21,
+      "status": "TESTED",
+      "release": {
+        "grade": 9,
+        "scope": "Bilingual Algebra and Coordinate Geometry why-step explanations",
+        "runtimeRecords": 21,
+        "status": "TESTED",
+        "pr": 441,
+        "head": "9422df6e0ffbfb3f5ab2f17e40c3527c13afe325",
+        "prQualityRun": 45700509362,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/441"
+      }
+    },
+    {
+      "key": "g10.numbers.hints",
+      "grade": 10,
+      "chapter": 2,
+      "scope": "Bilingual Numbers and Sequences why-step explanations and mathematical domain corrections",
+      "runtimeRecords": 123,
+      "status": "TESTED",
+      "release": {
+        "grade": 10,
+        "chapter": 2,
+        "scope": "Bilingual Numbers and Sequences why-step explanations and mathematical domain corrections",
+        "runtimeRecords": 123,
+        "status": "TESTED",
+        "pr": 442,
+        "head": "27b91cdef8812cbda4e2d3a81c10a75d3ce9c908",
+        "prQualityRun": 45701636311,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/442"
+      }
     }
   ],
   "latestMain": "03e716eb769366748217c51b09009c2d8a7f6a38",
@@ -1595,6 +1632,20 @@
       "pr": 440,
       "head": "bd7777f5ef2f49db9baa59ddb97be270ed2185dd",
       "prQualityRun": 45698510313
+    },
+    {
+      "key": "g9.hints",
+      "status": "TESTED",
+      "pr": 441,
+      "head": "9422df6e0ffbfb3f5ab2f17e40c3527c13afe325",
+      "prQualityRun": 45700509362
+    },
+    {
+      "key": "g10.numbers.hints",
+      "status": "TESTED",
+      "pr": 442,
+      "head": "27b91cdef8812cbda4e2d3a81c10a75d3ce9c908",
+      "prQualityRun": 45701636311
     }
   ]
 }
