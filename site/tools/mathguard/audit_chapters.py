@@ -19,7 +19,7 @@ from .steps import extract_stem_assumptions, validate_steps
 from .tamil_consistency import validate_en_ta_consistency
 
 
-def load_all_3_chapters(repo_root: Path) -> Dict[str, Any]:
+def load_all_3_chapters(repo_root: Path, frozen_benchmark_only: bool = True) -> Dict[str, Any]:
     extractor = repo_root / "site" / "tools" / "mathguard" / "extractor_all.cjs"
     proc = subprocess.run(
         ["node", str(extractor)],
@@ -28,7 +28,15 @@ def load_all_3_chapters(repo_root: Path) -> Dict[str, Any]:
         text=True,
         check=True,
     )
-    return json.loads(proc.stdout)
+    bundle = json.loads(proc.stdout)
+    if frozen_benchmark_only:
+        frozen_path = repo_root / "docs" / "trace" / "mathguard" / "v1_3_5_frozen_dataset.json"
+        if frozen_path.exists():
+            frozen_ids = {e["id"] for e in json.loads(frozen_path.read_text(encoding="utf-8")).get("items", [])}
+            for ch_k, ch_v in (bundle.get("chapters") or {}).items():
+                ch_v["exercises"] = [x for x in ch_v.get("exercises", []) if x.get("id") in frozen_ids]
+                ch_v["concepts"] = [x for x in ch_v.get("concepts", []) if x.get("id") in frozen_ids]
+    return bundle
 
 
 def _audit_generic_chapter(
