@@ -9,6 +9,7 @@ const auditedG9TrigTable=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EV
 const auditedG9TrigQ46=require('../../docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json');
 const auditedG9SourceChoices=require('../../docs/audit/AUD14_03_EX61_EX65_SOURCE_EVIDENCE.json');
 const [mensurationRatio]=require('../data/textbook-fidelity/g9-ch7-frontier-ratio.json').items;
+const [salaryProof]=require('../data/textbook-fidelity/g10-ch2-frontier-salary.json').items;
 const frontierTrigonometry=new Map(require('../data/textbook-fidelity/g9-ch6-frontier-source.json').items.filter(item=>item.originalReaderFields).map(item=>[item.id,item]));
 const compositionEvidence=new Map(require('../data/textbook-fidelity/g10-frontier-compositions.json').items.map(item=>[item.id,item]));
 const g9BilingualGeometry=require('../data/textbook-fidelity/g9-ch4-bilingual-20261124.json');
@@ -731,9 +732,16 @@ for(const [grade,data] of Object.entries(classes)){
    }else{
      const trace=traceSourceGate.records.find(r=>r.id===item.id);
      if(trace){
-       assert.equal(hash,trace.recordSha256,'Immutable Grade 10 Chapter 2 source record '+item.id);
-       assert.equal(item.q.en,trace.question,'Textbook question wording frozen '+item.id);
-       assert.equal(item.answer,trace.answer,'Authored answer frozen '+item.id);
+       const salaryCorrection=item.id===salaryProof.id;
+       const reviewedBefore=salaryCorrection?{...item,...salaryProof.previousEnglishFields}:item;
+       const reviewedDigest=salaryCorrection?crypto.createHash('sha256').update(JSON.stringify(reviewedBefore)).digest('hex'):hash;
+       assert.equal(reviewedDigest,trace.recordSha256,'Immutable Grade 10 Chapter 2 source record '+item.id);
+       assert.equal(reviewedBefore.q.en,trace.question,'Textbook question wording frozen '+item.id);
+       assert.equal(reviewedBefore.answer,trace.answer,'Authored answer frozen '+item.id);
+       if(salaryCorrection){
+         assert.equal(item.q.en,salaryProof.publishedPrompt.en);
+         assert.match(item.answer,/₹24,039\.99.*₹219\.67/);
+       }
        assert.equal(item.edition,'2025','TRACE source edition '+item.id);
        assert.equal(item.translationReview,'pending','Do not invent Tamil teacher approval '+item.id);
      }else{
