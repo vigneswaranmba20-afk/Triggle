@@ -12,7 +12,12 @@ assert.equal(geometry.length,75,'Geometry explanations are authored alongside th
 for(const item of geometry) {
   assert(item.steps.every(step=>step.why?.en && /\p{Script=Tamil}/u.test(step.why.ta)),item.id);
 }
-const all=rows.filter(q=>q.geometryConcept===undefined),source=new Map(all.map(q=>[q.id,q]));
+const sets=rows.filter(q=>q.setConcept);
+assert.equal(sets.length,7,'Set Language explanations are authored alongside their corresponding steps');
+for(const item of sets) {
+  assert(item.steps.every(step=>step.why?.en && /\p{Script=Tamil}/u.test(step.why.ta)),item.id);
+}
+const all=rows.filter(q=>q.geometryConcept===undefined&&!q.setConcept),source=new Map(all.map(q=>[q.id,q]));
 const db=context.window.TriggleWhyStepG9;
 assert.ok(db&&db.grade===9,'Grade 9 source data loaded in the app');
 const hints=db.hints,ids=Object.keys(hints);
