@@ -126,6 +126,7 @@ window.TRIGGLE_G10_CH7_PATH={
     },
     {
       "id": "g10-ch7-cylinder-surface-area",
+      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch7-cylinder-surface-area/2f0bd4ce83cdd25d949c67aa9a9863e5cd171612ef0121df287429b3930d9614.mp4", "language": "en", "durationSeconds": 51.42},
       "section": "7.2.1–7.2.2",
       "page": { "en": "270–273", "ta": "278–281" },
       "title": {
@@ -242,6 +243,7 @@ window.TRIGGLE_G10_CH7_PATH={
     },
     {
       "id": "g10-ch7-cone-slant-surface",
+      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch7-cone-slant-surface/e56b6001bace3ef40b81b3232633791f2af4edb053f6e19b0775f442c781e073.mp4", "language": "en", "durationSeconds": 64.79},
       "section": "7.2.3",
       "page": { "en": "273–276", "ta": "281–284" },
       "title": {
@@ -473,6 +475,7 @@ window.TRIGGLE_G10_CH7_PATH={
     },
     {
       "id": "g10-ch7-frustum-surface-volume",
+      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch7-frustum-surface-volume/4004b85de0bb00d154ddf7cef3c187679482b770dbc0f9438e39441e42d43e09.mp4", "language": "en", "durationSeconds": 62.42},
       "section": "7.2.7 & 7.3.8",
       "page": { "en": "280–281, 289–290", "ta": "288–290, 297–298" },
       "title": {
@@ -588,6 +591,7 @@ window.TRIGGLE_G10_CH7_PATH={
     },
     {
       "id": "g10-ch7-volumes-cylinder-cone",
+      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch7-volumes-cylinder-cone/31b84e51fbf20f9803eef5f90606d37bff2c7b44e999a046d7f4779cf9d767f4.mp4", "language": "en", "durationSeconds": 46.29},
       "section": "7.3.1–7.3.3",
       "page": { "en": "282–286", "ta": "290–294" },
       "title": {
@@ -820,6 +824,7 @@ window.TRIGGLE_G10_CH7_PATH={
     },
     {
       "id": "g10-ch7-combined-solids",
+      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch7-combined-solids/9461df191252d72c5b2a0bb82a3379dc8ac34a1dee74c0df72a31afc0cba8845.mp4", "language": "en", "durationSeconds": 50.58},
       "section": "7.4",
       "page": { "en": "290–294", "ta": "299–302" },
       "title": {
@@ -936,6 +941,7 @@ window.TRIGGLE_G10_CH7_PATH={
     },
     {
       "id": "g10-ch7-conversion-volume-conservation",
+      "video": {"src": "https://pub-ed71b86e97a64b428086e292b26fb7a2.r2.dev/trace-videos/g10-ch7-conversion-volume-conservation/8fbd10a22a0a6805536818d9aed160b5d4df3489a9bafbefd97affe8b0c8875f.mp4", "language": "en", "durationSeconds": 53.21},
       "section": "7.5",
       "page": { "en": "295–297", "ta": "303–305" },
       "title": {
