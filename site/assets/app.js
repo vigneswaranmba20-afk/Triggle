@@ -25,6 +25,7 @@
  window.TriggleG10FrontierTamilAnswers?.(classes[10].items);
  window.TriggleG9RealFrontier?.(classes[9].items);
  window.TriggleG9AlgebraTamilAnswers?.(classes[9].items);
+ window.TriggleG9StatisticsTables?.(classes[9].items);
  const curriculum=window.TRIGGLE_CURRICULUM;
  if(!curriculum?.grades)throw Error('Missing curriculum metadata');
  const chapterList=()=>curriculum.grades.find(g=>g.grade===grade)?.chapters||[];
@@ -660,7 +661,7 @@
     if(lang==='ta'&&dt?.ta)dt={...dt,...dt.ta};
     if(!dt||!Array.isArray(dt.headers)||!Array.isArray(dt.rows))return '';
     const ths=dt.headers.map(h=>'<th scope="col">'+esc(h)+' </th>').join('');
-    const trs=dt.rows.map(r=>'<tr>'+r.map((cell,c)=>{const body=/^\d+(?:\.\d+)?$/.test(String(cell).trim())?math({latex:String(cell).trim(),fallback:String(cell).trim()}):esc(cell);return c===0?'<th scope="row">'+body+' </th>':'<td>'+body+' </td>';}).join('')+'</tr>').join('');
+    const trs=dt.rows.map(r=>'<tr>'+r.map((cell,c)=>{const body=cell?.latex?math(cell):/^\d+(?:\.\d+)?$/.test(String(cell).trim())?math({latex:String(cell).trim(),fallback:String(cell).trim()}):esc(cell);return c===0?'<th scope="row">'+body+' </th>':'<td>'+body+' </td>';}).join('')+'</tr>').join('');
     return '<div class="triggle-table-wrap"><table class="triggle-data-table"'+(dt.caption?' aria-label="'+esc(dt.caption)+'"':'')+'><thead><tr>'+ths+'</tr></thead><tbody>'+trs+'</tbody></table></div> ';
   };
   const ex82TamilPrompt=lang==='ta'&&grade===10&&current.chapter==='8'&&current.exercise==='8.2'&&!!current.q?.ta;
@@ -688,9 +689,12 @@
   }
   if(current.dataTable){
     const tableHtml=renderDataTableHtml(current.dataTable);
+    const sourcePrompt=current.dataTable.sourcePrompt?.[lang];
     const rawQ=tr(current.q);
     const tableSplit=lang==='ta'&&current.dataTable.replaceRegexTa?current.dataTable.replaceRegexTa:current.dataTable.replaceRegex;
-    if(tableSplit){
+    if(sourcePrompt){
+      $('questionText').innerHTML=math(sourcePrompt.before)+tableHtml+math(sourcePrompt.after||'');
+    }else if(tableSplit){
       const rx=new RegExp(tableSplit);
       if(rx.test(rawQ)){
         const [before='',after='']=rawQ.split(rx);
