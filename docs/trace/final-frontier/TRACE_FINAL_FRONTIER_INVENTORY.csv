@@ -175,16 +175,16 @@ g9/ch1/ex1.7/q17/whole,9,1,1.7,17,whole,43,46,MISSING,LIVE_VERIFIED,,g9-ch1-ex1.
 g9/ch1/ex1.7/q18/whole,9,1,1.7,18,whole,44,46,MISSING,LIVE_VERIFIED,,g9-ch1-ex1.7-q18,True,True,True,True,True,site/data/textbook-fidelity/g9-ch1-ex1-7.json,,,,
 g9/ch1/ex1.7/q19/whole,9,1,1.7,19,whole,44,46|47,MISSING,LIVE_VERIFIED,,g9-ch1-ex1.7-q19,True,True,True,True,True,site/data/textbook-fidelity/g9-ch1-ex1-7.json,,,,
 g9/ch1/ex1.7/q20/whole,9,1,1.7,20,whole,44,47,MISSING,LIVE_VERIFIED,,g9-ch1-ex1.7-q20,True,True,True,True,True,site/data/textbook-fidelity/g9-ch1-ex1-7.json,,,,
-g9/ch2/ex2.1/q1/whole,9,2,2.1,1,whole,51,53,PARTIAL,TESTED,g9-ch2-ex1-q1,g9-ch2-ex1-q1,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.1/q1/whole,9,2,2.1,1,whole,51,53,PARTIAL,MERGED,g9-ch2-ex1-q1,g9-ch2-ex1-q1,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
 g9/ch2/ex2.1/q2/whole,9,2,2.1,2,whole,51,54,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex1-q2,g9-ch2-ex1-q2,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.1/q3/i,9,2,2.1,3,i,51,54,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex1-q3-i,g9-ch2-ex1-q3-i,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.1/q3/ii,9,2,2.1,3,ii,51,54,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex1-q3-ii,g9-ch2-ex1-q3-ii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.1/q3/iii,9,2,2.1,3,iii,51,54,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex1-q3-iii,g9-ch2-ex1-q3-iii,True,True,False,False,False,fresh PDF extraction candidate,,,,
-g9/ch2/ex2.2/q1/i,9,2,2.2,1,i,57,61,PARTIAL,TESTED,g9-ch2-ex2-q1-i,g9-ch2-ex2-q1-i,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.2/q1/ii,9,2,2.2,1,ii,57,61,PARTIAL,TESTED,g9-ch2-ex2-q1-ii,g9-ch2-ex2-q1-ii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.2/q1/iii,9,2,2.2,1,iii,57,61,PARTIAL,TESTED,g9-ch2-ex2-q1-iii,g9-ch2-ex2-q1-iii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.2/q1/iv,9,2,2.2,1,iv,57,61,PARTIAL,TESTED,g9-ch2-ex2-q1-iv,g9-ch2-ex2-q1-iv,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.2/q2/whole,9,2,2.2,2,whole,57,61,PARTIAL,TESTED,g9-ch2-ex2-q2,g9-ch2-ex2-q2,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.2/q1/i,9,2,2.2,1,i,57,61,PARTIAL,MERGED,g9-ch2-ex2-q1-i,g9-ch2-ex2-q1-i,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.2/q1/ii,9,2,2.2,1,ii,57,61,PARTIAL,MERGED,g9-ch2-ex2-q1-ii,g9-ch2-ex2-q1-ii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.2/q1/iii,9,2,2.2,1,iii,57,61,PARTIAL,MERGED,g9-ch2-ex2-q1-iii,g9-ch2-ex2-q1-iii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.2/q1/iv,9,2,2.2,1,iv,57,61,PARTIAL,MERGED,g9-ch2-ex2-q1-iv,g9-ch2-ex2-q1-iv,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.2/q2/whole,9,2,2.2,2,whole,57,61,PARTIAL,MERGED,g9-ch2-ex2-q2,g9-ch2-ex2-q2,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
 g9/ch2/ex2.2/q3/whole,9,2,2.2,3,whole,58,61,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex2-q3,g9-ch2-ex2-q3,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.2/q4/i,9,2,2.2,4,i,58,61,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex2-q4-i,g9-ch2-ex2-q4-i,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.2/q4/ii,9,2,2.2,4,ii,58,61,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex2-q4-ii,g9-ch2-ex2-q4-ii,True,True,False,False,False,fresh PDF extraction candidate,,,,
@@ -192,16 +192,16 @@ g9/ch2/ex2.2/q4/iii,9,2,2.2,4,iii,58,61,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex2-q4-ii
 g9/ch2/ex2.2/q4/iv,9,2,2.2,4,iv,58,61,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex2-q4-iv,g9-ch2-ex2-q4-iv,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.2/q4/v,9,2,2.2,4,v,58,61,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex2-q4-v,g9-ch2-ex2-q4-v,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.2/q4/vi,9,2,2.2,4,vi,58,61,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex2-q4-vi,g9-ch2-ex2-q4-vi,True,True,False,False,False,fresh PDF extraction candidate,,,,
-g9/ch2/ex2.2/q5/i,9,2,2.2,5,i,58,61,PARTIAL,TESTED,g9-ch2-ex2-q5-i,g9-ch2-ex2-q5-i,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.2/q5/ii,9,2,2.2,5,ii,58,61,PARTIAL,TESTED,g9-ch2-ex2-q5-ii,g9-ch2-ex2-q5-ii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.2/q5/iii,9,2,2.2,5,iii,58,61,PARTIAL,TESTED,g9-ch2-ex2-q5-iii,g9-ch2-ex2-q5-iii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.2/q5/iv,9,2,2.2,5,iv,58,61,PARTIAL,TESTED,g9-ch2-ex2-q5-iv,g9-ch2-ex2-q5-iv,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.2/q5/i,9,2,2.2,5,i,58,61,PARTIAL,MERGED,g9-ch2-ex2-q5-i,g9-ch2-ex2-q5-i,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.2/q5/ii,9,2,2.2,5,ii,58,61,PARTIAL,MERGED,g9-ch2-ex2-q5-ii,g9-ch2-ex2-q5-ii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.2/q5/iii,9,2,2.2,5,iii,58,61,PARTIAL,MERGED,g9-ch2-ex2-q5-iii,g9-ch2-ex2-q5-iii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.2/q5/iv,9,2,2.2,5,iv,58,61,PARTIAL,MERGED,g9-ch2-ex2-q5-iv,g9-ch2-ex2-q5-iv,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
 g9/ch2/ex2.3/q1/i,9,2,2.3,1,i,61,65,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex3-q1-i,g9-ch2-ex3-q1-i,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.3/q1/ii,9,2,2.3,1,ii,61,65,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex3-q1-ii,g9-ch2-ex3-q1-ii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.3/q1/iii,9,2,2.3,1,iii,61,65,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex3-q1-iii,g9-ch2-ex3-q1-iii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.3/q2/i,9,2,2.3,2,i,61,65,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex3-q2-i,g9-ch2-ex3-q2-i,True,True,False,False,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.3/q2/ii,9,2,2.3,2,ii,61,65,PARTIAL,TESTED,g9-ch2-ex3-q2-ii,g9-ch2-ex3-q2-ii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.3/q2/iii,9,2,2.3,2,iii,61,65,PARTIAL,TESTED,g9-ch2-ex3-q2-iii,g9-ch2-ex3-q2-iii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.3/q2/ii,9,2,2.3,2,ii,61,65,PARTIAL,MERGED,g9-ch2-ex3-q2-ii,g9-ch2-ex3-q2-ii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.3/q2/iii,9,2,2.3,2,iii,61,65,PARTIAL,MERGED,g9-ch2-ex3-q2-iii,g9-ch2-ex3-q2-iii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
 g9/ch2/ex2.3/q3/whole,9,2,2.3,3,whole,61,65,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex3-q3,g9-ch2-ex3-q3,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.4/q1/i,9,2,2.4,1,i,63,67,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex4-q1-i,g9-ch2-ex4-q1-i,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.4/q1/ii,9,2,2.4,1,ii,63,67,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex4-q1-ii,g9-ch2-ex4-q1-ii,True,True,False,False,False,fresh PDF extraction candidate,,,,
@@ -238,14 +238,14 @@ g9/ch2/ex2.6/q3/i,9,2,2.6,3,i,74,79,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex6-q3-i,g9-c
 g9/ch2/ex2.6/q3/ii,9,2,2.6,3,ii,74,79,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex6-q3-ii,g9-ch2-ex6-q3-ii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.6/q4/i,9,2,2.6,4,i,74,79,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex6-q4-i,g9-ch2-ex6-q4-i,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.6/q4/ii,9,2,2.6,4,ii,74,79,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex6-q4-ii,g9-ch2-ex6-q4-ii,True,True,False,False,False,fresh PDF extraction candidate,,,,
-g9/ch2/ex2.6/q5/i,9,2,2.6,5,i,74,79,PARTIAL,TESTED,g9-ch2-ex6-q5-i,g9-ch2-ex6-q5-i,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.6/q5/ii,9,2,2.6,5,ii,74,79,PARTIAL,TESTED,g9-ch2-ex6-q5-ii,g9-ch2-ex6-q5-ii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.6/q5/iii,9,2,2.6,5,iii,74,79,PARTIAL,TESTED,g9-ch2-ex6-q5-iii,g9-ch2-ex6-q5-iii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.6/q5/iv,9,2,2.6,5,iv,74,79,PARTIAL,TESTED,g9-ch2-ex6-q5-iv,g9-ch2-ex6-q5-iv,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.6/q6/i,9,2,2.6,6,i,74,79,PARTIAL,TESTED,g9-ch2-ex6-q6-i,g9-ch2-ex6-q6-i,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.6/q6/ii,9,2,2.6,6,ii,74,79,PARTIAL,TESTED,g9-ch2-ex6-q6-ii,g9-ch2-ex6-q6-ii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.6/q6/iii,9,2,2.6,6,iii,74,79,PARTIAL,TESTED,g9-ch2-ex6-q6-iii,g9-ch2-ex6-q6-iii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch2/ex2.6/q6/iv,9,2,2.6,6,iv,74,79,PARTIAL,TESTED,g9-ch2-ex6-q6-iv,g9-ch2-ex6-q6-iv,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.6/q5/i,9,2,2.6,5,i,74,79,PARTIAL,MERGED,g9-ch2-ex6-q5-i,g9-ch2-ex6-q5-i,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.6/q5/ii,9,2,2.6,5,ii,74,79,PARTIAL,MERGED,g9-ch2-ex6-q5-ii,g9-ch2-ex6-q5-ii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.6/q5/iii,9,2,2.6,5,iii,74,79,PARTIAL,MERGED,g9-ch2-ex6-q5-iii,g9-ch2-ex6-q5-iii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.6/q5/iv,9,2,2.6,5,iv,74,79,PARTIAL,MERGED,g9-ch2-ex6-q5-iv,g9-ch2-ex6-q5-iv,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.6/q6/i,9,2,2.6,6,i,74,79,PARTIAL,MERGED,g9-ch2-ex6-q6-i,g9-ch2-ex6-q6-i,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.6/q6/ii,9,2,2.6,6,ii,74,79,PARTIAL,MERGED,g9-ch2-ex6-q6-ii,g9-ch2-ex6-q6-ii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.6/q6/iii,9,2,2.6,6,iii,74,79,PARTIAL,MERGED,g9-ch2-ex6-q6-iii,g9-ch2-ex6-q6-iii,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch2/ex2.6/q6/iv,9,2,2.6,6,iv,74,79,PARTIAL,MERGED,g9-ch2-ex6-q6-iv,g9-ch2-ex6-q6-iv,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
 g9/ch2/ex2.7/q1/i,9,2,2.7,1,i,76,81,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex7-q1-i,g9-ch2-ex7-q1-i,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.7/q1/ii,9,2,2.7,1,ii,76,81,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex7-q1-ii,g9-ch2-ex7-q1-ii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch2/ex2.7/q1/iii,9,2,2.7,1,iii,76,81,IMPLEMENTED,IMPLEMENTED,g9-ch2-ex7-q1-iii,g9-ch2-ex7-q1-iii,True,True,False,False,False,fresh PDF extraction candidate,,,,
@@ -327,8 +327,8 @@ g9/ch3/ex3.1/q9/i,9,3,3.1,9,i,94,101,IMPLEMENTED,IMPLEMENTED,g9-ch3-ex3.1-q9-i,g
 g9/ch3/ex3.1/q9/ii,9,3,3.1,9,ii,94,101,IMPLEMENTED,IMPLEMENTED,g9-ch3-ex3.1-q9-ii,g9-ch3-ex3.1-q9-ii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch3/ex3.1/q9/iii,9,3,3.1,9,iii,94,101,IMPLEMENTED,IMPLEMENTED,g9-ch3-ex3.1-q9-iii,g9-ch3-ex3.1-q9-iii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch3/ex3.1/q10/whole,9,3,3.1,10,whole,94,101,IMPLEMENTED,IMPLEMENTED,g9-ch3-ex3.1-q10,g9-ch3-ex3.1-q10,True,True,False,False,False,fresh PDF extraction candidate,,,,
-g9/ch3/ex3.1/q11/whole,9,3,3.1,11,whole,94,101,PARTIAL,TESTED,g9-ch3-ex3.1-q11,g9-ch3-ex3.1-q11,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
-g9/ch3/ex3.1/q12/whole,9,3,3.1,12,whole,94,101,PARTIAL,TESTED,g9-ch3-ex3.1-q12,g9-ch3-ex3.1-q12,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch3/ex3.1/q11/whole,9,3,3.1,11,whole,94,101,PARTIAL,MERGED,g9-ch3-ex3.1-q11,g9-ch3-ex3.1-q11,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
+g9/ch3/ex3.1/q12/whole,9,3,3.1,12,whole,94,101,PARTIAL,MERGED,g9-ch3-ex3.1-q12,g9-ch3-ex3.1-q12,True,True,True,True,False,site/data/textbook-fidelity/g9-frontier-tamil-working.json,,,,
 g9/ch3/ex3.2/q1/i,9,3,3.2,1,i,97,105,IMPLEMENTED,IMPLEMENTED,g9-ch3-ex3.2-q1-i,g9-ch3-ex3.2-q1-i,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch3/ex3.2/q1/ii,9,3,3.2,1,ii,97,105,IMPLEMENTED,IMPLEMENTED,g9-ch3-ex3.2-q1-ii,g9-ch3-ex3.2-q1-ii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g9/ch3/ex3.2/q1/iii,9,3,3.2,1,iii,97,105,IMPLEMENTED,IMPLEMENTED,g9-ch3-ex3.2-q1-iii,g9-ch3-ex3.2-q1-iii,True,True,False,False,False,fresh PDF extraction candidate,,,,
@@ -848,12 +848,12 @@ g10/ch1/ex1.1/q1/iii,10,1,1.1,1,iii,12,12,IMPLEMENTED,IMPLEMENTED,c10-1-ex1-1-q1
 g10/ch1/ex1.1/q2/whole,10,1,1.1,2,whole,12,12,IMPLEMENTED,IMPLEMENTED,c10-1-ex1-1-q2,c10-1-ex1-1-q2,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch1/ex1.1/q3/whole,10,1,1.1,3,whole,12,12,IMPLEMENTED,IMPLEMENTED,c10-1-ex1-1-q3,c10-1-ex1-1-q3,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch1/ex1.1/q4/whole,10,1,1.1,4,whole,12,12,IMPLEMENTED,IMPLEMENTED,c10-1-ex1-1-q4,c10-1-ex1-1-q4,True,True,False,False,False,fresh PDF extraction candidate,,,,
-g10/ch1/ex1.1/q5/whole,10,1,1.1,5,whole,12,12,PARTIAL,MERGED,c10-1-ex1-1-q5,c10-1-ex1-1-q5,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
-g10/ch1/ex1.1/q6/i,10,1,1.1,6,i,12,12,PARTIAL,MERGED,c10-1-ex1-1-q6-i,c10-1-ex1-1-q6-i,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
-g10/ch1/ex1.1/q6/ii,10,1,1.1,6,ii,12,12,PARTIAL,MERGED,c10-1-ex1-1-q6-ii,c10-1-ex1-1-q6-ii,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
-g10/ch1/ex1.1/q6/iii,10,1,1.1,6,iii,12,12,PARTIAL,MERGED,c10-1-ex1-1-q6-iii,c10-1-ex1-1-q6-iii,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
-g10/ch1/ex1.1/q7/i,10,1,1.1,7,i,12,12,PARTIAL,MERGED,c10-1-ex1-1-q7-i,c10-1-ex1-1-q7-i,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
-g10/ch1/ex1.1/q7/ii,10,1,1.1,7,ii,12,12,PARTIAL,MERGED,c10-1-ex1-1-q7-ii,c10-1-ex1-1-q7-ii,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
+g10/ch1/ex1.1/q5/whole,10,1,1.1,5,whole,12,12,PARTIAL,LIVE_VERIFIED,c10-1-ex1-1-q5,c10-1-ex1-1-q5,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
+g10/ch1/ex1.1/q6/i,10,1,1.1,6,i,12,12,PARTIAL,LIVE_VERIFIED,c10-1-ex1-1-q6-i,c10-1-ex1-1-q6-i,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
+g10/ch1/ex1.1/q6/ii,10,1,1.1,6,ii,12,12,PARTIAL,LIVE_VERIFIED,c10-1-ex1-1-q6-ii,c10-1-ex1-1-q6-ii,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
+g10/ch1/ex1.1/q6/iii,10,1,1.1,6,iii,12,12,PARTIAL,LIVE_VERIFIED,c10-1-ex1-1-q6-iii,c10-1-ex1-1-q6-iii,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
+g10/ch1/ex1.1/q7/i,10,1,1.1,7,i,12,12,PARTIAL,LIVE_VERIFIED,c10-1-ex1-1-q7-i,c10-1-ex1-1-q7-i,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
+g10/ch1/ex1.1/q7/ii,10,1,1.1,7,ii,12,12,PARTIAL,LIVE_VERIFIED,c10-1-ex1-1-q7-ii,c10-1-ex1-1-q7-ii,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
 g10/ch1/ex1.2/q1/i,10,1,1.2,1,i,15,16,IMPLEMENTED,IMPLEMENTED,c10-1-1-2-q1,c10-1-1-2-q1,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch1/ex1.2/q1/ii,10,1,1.2,1,ii,15,16,IMPLEMENTED,IMPLEMENTED,c10-1-1-2-q1,c10-1-1-2-q1,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch1/ex1.2/q1/iii,10,1,1.2,1,iii,15,16,IMPLEMENTED,IMPLEMENTED,c10-1-1-2-q1,c10-1-1-2-q1,True,True,False,False,False,fresh PDF extraction candidate,,,,
@@ -993,7 +993,7 @@ g10/ch2/ex2.3/q1/ii,10,2,2.3,1,ii,57,58,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-3-q1-i
 g10/ch2/ex2.3/q1/iii,10,2,2.3,1,iii,57,58,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-3-q1-iii,c10-2-ex2-3-q1-iii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.3/q1/iv,10,2,2.3,1,iv,57,58,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-3-q1-iv,c10-2-ex2-3-q1-iv,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.3/q1/v,10,2,2.3,1,v,57,58,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-3-q1-v,c10-2-ex2-3-q1-v,True,True,False,False,False,fresh PDF extraction candidate,,,,
-g10/ch2/ex2.3/q2/whole,10,2,2.3,2,whole,57,58,PARTIAL,MERGED,c10-2-ex2-3-q2,c10-2-ex2-3-q2,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
+g10/ch2/ex2.3/q2/whole,10,2,2.3,2,whole,57,58,PARTIAL,LIVE_VERIFIED,c10-2-ex2-3-q2,c10-2-ex2-3-q2,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
 g10/ch2/ex2.3/q3/whole,10,2,2.3,3,whole,57,58,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-3-q3,c10-2-ex2-3-q3,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.3/q4/whole,10,2,2.3,4,whole,57,58,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-3-q4,c10-2-ex2-3-q4,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.3/q5/whole,10,2,2.3,5,whole,57,58,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-3-q5,c10-2-ex2-3-q5,True,True,False,False,False,fresh PDF extraction candidate,,,,
@@ -1026,7 +1026,7 @@ g10/ch2/ex2.5/q2/iii,10,2,2.5,2,iii,67,68,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-5-q2
 g10/ch2/ex2.5/q3/i,10,2,2.5,3,i,68,68,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-5-q3-i,c10-2-ex2-5-q3-i,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.5/q3/ii,10,2,2.5,3,ii,68,68,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-5-q3-ii,c10-2-ex2-5-q3-ii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.5/q4/whole,10,2,2.5,4,whole,68,68,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-5-q4,c10-2-ex2-5-q4,True,True,False,False,False,fresh PDF extraction candidate,,,,
-g10/ch2/ex2.5/q5/whole,10,2,2.5,5,whole,68,68,PARTIAL,MERGED,c10-2-ex2-5-q5,c10-2-ex2-5-q5,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
+g10/ch2/ex2.5/q5/whole,10,2,2.5,5,whole,68,68,PARTIAL,LIVE_VERIFIED,c10-2-ex2-5-q5,c10-2-ex2-5-q5,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
 g10/ch2/ex2.5/q6/whole,10,2,2.5,6,whole,68,68,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-5-q6,c10-2-ex2-5-q6,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.5/q7/whole,10,2,2.5,7,whole,68,68,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-5-q7,c10-2-ex2-5-q7,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.5/q8/whole,10,2,2.5,8,whole,68,68,IMPLEMENTED,IMPLEMENTED,c10-2-ex2-5-q8,c10-2-ex2-5-q8,True,True,False,False,False,fresh PDF extraction candidate,,,,
@@ -1120,10 +1120,10 @@ g10/ch2/ex2.unit/q2/i,10,2,2.unit,2,i,89,89,IMPLEMENTED,IMPLEMENTED,c10-2-unit-q
 g10/ch2/ex2.unit/q2/ii,10,2,2.unit,2,ii,89,89,IMPLEMENTED,IMPLEMENTED,c10-2-unit-q2-ii,c10-2-unit-q2-ii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.unit/q2/iii,10,2,2.unit,2,iii,89,89,IMPLEMENTED,IMPLEMENTED,c10-2-unit-q2-iii,c10-2-unit-q2-iii,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.unit/q3/whole,10,2,2.unit,3,whole,89,89,IMPLEMENTED,IMPLEMENTED,c10-2-unit-q3,c10-2-unit-q3,True,True,False,False,False,fresh PDF extraction candidate,,,,
-g10/ch2/ex2.unit/q4/whole,10,2,2.unit,4,whole,89,89,PARTIAL,MERGED,c10-2-unit-q4,c10-2-unit-q4,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
-g10/ch2/ex2.unit/q5/whole,10,2,2.unit,5,whole,89,89,PARTIAL,MERGED,c10-2-unit-q5,c10-2-unit-q5,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
+g10/ch2/ex2.unit/q4/whole,10,2,2.unit,4,whole,89,89,PARTIAL,LIVE_VERIFIED,c10-2-unit-q4,c10-2-unit-q4,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
+g10/ch2/ex2.unit/q5/whole,10,2,2.unit,5,whole,89,89,PARTIAL,LIVE_VERIFIED,c10-2-unit-q5,c10-2-unit-q5,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
 g10/ch2/ex2.unit/q6/whole,10,2,2.unit,6,whole,89,89,IMPLEMENTED,IMPLEMENTED,c10-2-unit-q6,c10-2-unit-q6,True,True,False,False,False,fresh PDF extraction candidate,,,,
-g10/ch2/ex2.unit/q7/whole,10,2,2.unit,7,whole,89,90,PARTIAL,MERGED,c10-2-unit-q7,c10-2-unit-q7,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
+g10/ch2/ex2.unit/q7/whole,10,2,2.unit,7,whole,89,90,PARTIAL,LIVE_VERIFIED,c10-2-unit-q7,c10-2-unit-q7,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,
 g10/ch2/ex2.unit/q8/whole,10,2,2.unit,8,whole,89,90,IMPLEMENTED,IMPLEMENTED,c10-2-unit-q8,c10-2-unit-q8,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.unit/q9/whole,10,2,2.unit,9,whole,89,90,IMPLEMENTED,IMPLEMENTED,c10-2-unit-q9,c10-2-unit-q9,True,True,False,False,False,fresh PDF extraction candidate,,,,
 g10/ch2/ex2.unit/q10/whole,10,2,2.unit,10,whole,89,90,IMPLEMENTED,IMPLEMENTED,c10-2-unit-q10,c10-2-unit-q10,True,True,False,False,False,fresh PDF extraction candidate,,,,
@@ -1554,7 +1554,7 @@ g10/ch6/ex6.1/q2/i,10,6,6.1,2,i,255,264,IMPLEMENTED,IMPLEMENTED,c10-6-ex6-1-q2-i
 g10/ch6/ex6.1/q2/ii,10,6,6.1,2,ii,255,264,BILINGUAL_VERIFIED,PARTIAL,c10-6-6-1-3|c10-6-ex6-1-q2-ii,c10-6-6-1-3|c10-6-ex6-1-q2-ii,True,True,True,True,False,site/data/textbook-fidelity/g10-ch6-ex6-1.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch6/ex6.1/q3/i,10,6,6.1,3,i,256,264,BILINGUAL_VERIFIED,PARTIAL,c10-6-ex6-1-q3-i,c10-6-ex6-1-q3-i,True,True,True,True,False,site/data/textbook-fidelity/g10-ch6-ex6-1.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch6/ex6.1/q3/ii,10,6,6.1,3,ii,256,264,BILINGUAL_VERIFIED,PARTIAL,c10-6-ex6-1-q3-ii,c10-6-ex6-1-q3-ii,True,True,True,True,False,site/data/textbook-fidelity/g10-ch6-ex6-1.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
-g10/ch6/ex6.1/q4/i,10,6,6.1,4,i,256,264,PARTIAL,MERGED,c10-6-ex6-1-q4-i,c10-6-ex6-1-q4-i,True,True,True,True,False,site/data/textbook-fidelity/g10-ch6-ex6-1.json,,,,Add a source-matched Why this step explanation in both languages.
+g10/ch6/ex6.1/q4/i,10,6,6.1,4,i,256,264,PARTIAL,LIVE_VERIFIED,c10-6-ex6-1-q4-i,c10-6-ex6-1-q4-i,True,True,True,True,True,site/data/textbook-fidelity/g10-ch6-ex6-1.json,,,,Add a source-matched Why this step explanation in both languages.
 g10/ch6/ex6.1/q4/ii,10,6,6.1,4,ii,256,264,BILINGUAL_VERIFIED,PARTIAL,c10-6-ex6-1-q4-ii,c10-6-ex6-1-q4-ii,True,True,True,True,False,site/data/textbook-fidelity/g10-ch6-ex6-1.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch6/ex6.1/q5/i,10,6,6.1,5,i,256,264,BILINGUAL_VERIFIED,PARTIAL,c10-6-ex6-1-q5-i,c10-6-ex6-1-q5-i,True,True,True,True,False,site/data/textbook-fidelity/g10-ch6-ex6-1.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch6/ex6.1/q5/ii,10,6,6.1,5,ii,256,264,BILINGUAL_VERIFIED,PARTIAL,c10-6-ex6-1-q5-ii,c10-6-ex6-1-q5-ii,True,True,True,True,False,site/data/textbook-fidelity/g10-ch6-ex6-1.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
@@ -1562,11 +1562,11 @@ g10/ch6/ex6.1/q6/i,10,6,6.1,6,i,256,264,BILINGUAL_VERIFIED,PARTIAL,c10-6-ex6-1-q
 g10/ch6/ex6.1/q6/ii,10,6,6.1,6,ii,256,264,BILINGUAL_VERIFIED,PARTIAL,c10-6-ex6-1-q6-ii,c10-6-ex6-1-q6-ii,True,True,True,True,False,site/data/textbook-fidelity/g10-ch6-ex6-1.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch6/ex6.1/q7/i,10,6,6.1,7,i,256,264,SOURCE_BLOCKED,SOURCE_BLOCKED,c10-6-ex6-1-q7-i,c10-6-ex6-1-q7-i,True,True,False,False,False,site/data/textbook-fidelity/g10-ch6-ex6-1.json,The square of sin θ + cos θ would have to be 3. For real θ its square is at most 2. The existing bilingual card explains the impossible premise and the formal consequence.,The square of sin θ + cos θ would have to be 3. For real θ its square is at most 2. The existing bilingual card explains the impossible premise and the formal consequence.,,
 g10/ch6/ex6.1/q7/ii,10,6,6.1,7,ii,256,264,SOURCE_BLOCKED,SOURCE_BLOCKED,c10-6-ex6-1-q7-ii,c10-6-ex6-1-q7-ii,True,True,False,False,False,site/data/textbook-fidelity/g10-ch6-ex6-1.json,"The premise forces tan θ = 1/√3, so tan(3θ) and the right-hand ratio are both undefined. The existing bilingual card explains the domain restriction.","The premise forces tan θ = 1/√3, so tan(3θ) and the right-hand ratio are both undefined. The existing bilingual card explains the domain restriction.",,
-g10/ch6/ex6.1/q8/i,10,6,6.1,8,i,256,264,PARTIAL,MERGED,c10-6-ex6-1-q8-i,c10-6-ex6-1-q8-i,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
-g10/ch6/ex6.1/q8/ii,10,6,6.1,8,ii,256,264,PARTIAL,MERGED,c10-6-ex6-1-q8-ii,c10-6-ex6-1-q8-ii,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
-g10/ch6/ex6.1/q9/i,10,6,6.1,9,i,256,264,PARTIAL,MERGED,c10-6-ex6-1-q9-i,c10-6-ex6-1-q9-i,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
-g10/ch6/ex6.1/q9/ii,10,6,6.1,9,ii,256,264,PARTIAL,MERGED,c10-6-ex6-1-q9-ii,c10-6-ex6-1-q9-ii,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
-g10/ch6/ex6.1/q10/whole,10,6,6.1,10,whole,256,264,PARTIAL,MERGED,c10-6-ex6-1-q10,c10-6-ex6-1-q10,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
+g10/ch6/ex6.1/q8/i,10,6,6.1,8,i,256,264,PARTIAL,LIVE_VERIFIED,c10-6-ex6-1-q8-i,c10-6-ex6-1-q8-i,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
+g10/ch6/ex6.1/q8/ii,10,6,6.1,8,ii,256,264,PARTIAL,LIVE_VERIFIED,c10-6-ex6-1-q8-ii,c10-6-ex6-1-q8-ii,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
+g10/ch6/ex6.1/q9/i,10,6,6.1,9,i,256,264,PARTIAL,LIVE_VERIFIED,c10-6-ex6-1-q9-i,c10-6-ex6-1-q9-i,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
+g10/ch6/ex6.1/q9/ii,10,6,6.1,9,ii,256,264,PARTIAL,LIVE_VERIFIED,c10-6-ex6-1-q9-ii,c10-6-ex6-1-q9-ii,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
+g10/ch6/ex6.1/q10/whole,10,6,6.1,10,whole,256,264,PARTIAL,LIVE_VERIFIED,c10-6-ex6-1-q10,c10-6-ex6-1-q10,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
 g10/ch6/ex6.2/q1/whole,10,6,6.2,1,whole,263,271,BILINGUAL_VERIFIED,PARTIAL,c10-6-6-2-4|c10-6-ex6-2-q1,c10-6-6-2-4|c10-6-ex6-2-q1,True,True,True,True,False,site/data/textbook-fidelity/g10-ch6-ex6-2.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch6/ex6.2/q2/whole,10,6,6.2,2,whole,263,271,BILINGUAL_VERIFIED,PARTIAL,c10-6-6-2-5|c10-6-ex6-2-q2,c10-6-6-2-5|c10-6-ex6-2-q2,True,True,True,True,False,site/data/textbook-fidelity/g10-ch6-ex6-2.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch6/ex6.2/q3/whole,10,6,6.2,3,whole,263,272,BILINGUAL_VERIFIED,PARTIAL,c10-6-6-2-6|c10-6-ex6-2-q3,c10-6-6-2-6|c10-6-ex6-2-q3,True,True,True,True,False,site/data/textbook-fidelity/g10-ch6-ex6-2.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
@@ -1762,11 +1762,11 @@ g10/ch8/ex8.5/q12/whole,10,8,8.5,12,whole,336,349,BILINGUAL_VERIFIED,PARTIAL,c10
 g10/ch8/ex8.5/q13/whole,10,8,8.5,13,whole,337,349,BILINGUAL_VERIFIED,PARTIAL,c10-8-ex8-5-q13,c10-8-ex8-5-q13,True,True,True,True,False,site/data/textbook-fidelity/g10-ch8-ex8-5.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch8/ex8.5/q14/whole,10,8,8.5,14,whole,337,349,BILINGUAL_VERIFIED,PARTIAL,c10-8-ex8-5-q14,c10-8-ex8-5-q14,True,True,True,True,False,site/data/textbook-fidelity/g10-ch8-ex8-5.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch8/ex8.5/q15/whole,10,8,8.5,15,whole,337,349,BILINGUAL_VERIFIED,PARTIAL,c10-8-ex8-5-q15,c10-8-ex8-5-q15,True,True,True,True,False,site/data/textbook-fidelity/g10-ch8-ex8-5.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
-g10/ch8/ex8.unit/q1/whole,10,8,8.unit,1,whole,337,350,PARTIAL,MERGED,c10-8-unit-q1,c10-8-unit-q1,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
+g10/ch8/ex8.unit/q1/whole,10,8,8.unit,1,whole,337,350,PARTIAL,LIVE_VERIFIED,c10-8-unit-q1,c10-8-unit-q1,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
 g10/ch8/ex8.unit/q2/whole,10,8,8.unit,2,whole,337,350,BILINGUAL_VERIFIED,PARTIAL,c10-8-unit-q2,c10-8-unit-q2,True,True,True,True,False,site/data/textbook-fidelity/g10-ch8-unit.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch8/ex8.unit/q3/whole,10,8,8.unit,3,whole,337,350,BILINGUAL_VERIFIED,PARTIAL,c10-8-unit-q3,c10-8-unit-q3,True,True,True,True,False,site/data/textbook-fidelity/g10-ch8-unit.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch8/ex8.unit/q4/whole,10,8,8.unit,4,whole,337,350,BILINGUAL_VERIFIED,PARTIAL,c10-8-unit-q4,c10-8-unit-q4,True,True,True,True,False,site/data/textbook-fidelity/g10-ch8-unit.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
-g10/ch8/ex8.unit/q5/whole,10,8,8.unit,5,whole,337,350,PARTIAL,MERGED,c10-8-unit-q5,c10-8-unit-q5,True,True,True,True,False,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
+g10/ch8/ex8.unit/q5/whole,10,8,8.unit,5,whole,337,350,PARTIAL,LIVE_VERIFIED,c10-8-unit-q5,c10-8-unit-q5,True,True,True,True,True,site/data/textbook-fidelity/g10-frontier-tamil-answers.json,,,,Add a source-matched Why this step explanation in both languages.
 g10/ch8/ex8.unit/q6/whole,10,8,8.unit,6,whole,337,350,BILINGUAL_VERIFIED,PARTIAL,c10-8-unit-q6,c10-8-unit-q6,True,True,True,True,False,site/data/textbook-fidelity/g10-ch8-unit.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch8/ex8.unit/q7/whole,10,8,8.unit,7,whole,337,350,BILINGUAL_VERIFIED,PARTIAL,c10-8-unit-q7,c10-8-unit-q7,True,True,True,True,False,site/data/textbook-fidelity/g10-ch8-unit.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.
 g10/ch8/ex8.unit/q8/whole,10,8,8.unit,8,whole,338,350,BILINGUAL_VERIFIED,PARTIAL,c10-8-unit-q8,c10-8-unit-q8,True,True,True,True,False,site/data/textbook-fidelity/g10-ch8-unit.json,,Add a source-matched Why this step explanation in both languages.,,Add a source-matched Why this step explanation in both languages.

@@ -1371,7 +1371,7 @@
       "chapter": null,
       "scope": "Tamil final answers and two equation labels",
       "canonicalTasks": 19,
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "recordIds": [
         "c10-1-ex1-1-q5",
         "c10-1-ex1-1-q6-i",
@@ -1395,12 +1395,41 @@
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g10-frontier-tamil-answers.json",
       "release": {
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 436,
         "head": "82490b8b8b1bdb86dca9760fc3db15fe01165815",
         "prQualityRun": 45696488927,
         "merge": "03e716eb769366748217c51b09009c2d8a7f6a38",
         "pagesRun": 45699947516,
+        "liveEvidence": {
+          "pr": 436,
+          "merge": "03e716eb769366748217c51b09009c2d8a7f6a38",
+          "head": "82490b8b8b1bdb86dca9760fc3db15fe01165815",
+          "slug": "g10-tamil",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-1-ex1-1-q5",
+          "pagesRun": 45699947516,
+          "deploymentId": 8069591766,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45699947516/job/139514826451",
+          "deploymentCompletedAt": "2026-11-25T21:13:21Z",
+          "versionMatched": "03e716eb769366748217c51b09009c2d8a7f6a38",
+          "sha256": {
+            "assets/app.js": "eacdd63f5b939389b1afc7a402dc88d605ba4179418a551a2a031668ede9c45d",
+            "data/project-status.json": "db391d3d96e54c2daec34e628632457c536a6f9eabe75ddc7118dc5461c70d44",
+            "data/textbook-exercises/g10-frontier-tamil-answers.js": "d73cda954d617c68658792089541e910b384aec6b6ccc9d3ea1c3971786be433",
+            "data/textbook-fidelity/g10-frontier-tamil-answers.json": "bdcbb20ed2966e3727f963383d28435f4ebdfac3b704f6f0ac5672ccb8803aa6",
+            "index.html": "13cb0d394ad9251bdf21a6a3b493867c9a01c6c2485c9926330c648c58478916",
+            "service-worker.js": "4893787fe755dc796e24485cf65c4a596eca325c066c1204990b35a9b4f9839b"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "all19Cards": true
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/436"
       }
     },
@@ -1410,7 +1439,7 @@
       "chapter": null,
       "scope": "Real Numbers equations and Algebra final answers",
       "canonicalTasks": 22,
-      "status": "TESTED",
+      "status": "MERGED",
       "recordIds": [
         "g9-ch2-ex1-q1",
         "g9-ch2-ex2-q1-i",
@@ -1437,10 +1466,12 @@
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g9-frontier-tamil-working.json",
       "release": {
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 437,
         "head": "006098d4cbcaf09d0ad86cae525530fa5e20f06c",
         "prQualityRun": 45698190245,
+        "merge": "32ee7cb58e78ed8cf7dbb32995fad82b4fa1d122",
+        "pagesRun": 45702720071,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/437"
       }
     },
@@ -1562,7 +1593,7 @@
       }
     }
   ],
-  "latestMain": "03e716eb769366748217c51b09009c2d8a7f6a38",
+  "latestMain": "32ee7cb58e78ed8cf7dbb32995fad82b4fa1d122",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -1594,23 +1625,16 @@
     "Finish the remaining Grade 10 teaching explanations by chapter, using the exact reader candidates and stable IDs in the inventory.",
     "Finish the independent source-to-reader review and reuse verified mathematical evidence. Record visual and domain differences at the canonical task level and refresh the report."
   ],
-  "latestVerifiedProduction": "56635d458a0332ed085fd2c5d34e1b6423c47219",
+  "latestVerifiedProduction": "03e716eb769366748217c51b09009c2d8a7f6a38",
   "openReleaseOrder": [
     {
-      "key": "g10.tamil",
-      "status": "MERGED",
-      "pr": 436,
-      "head": "82490b8b8b1bdb86dca9760fc3db15fe01165815",
-      "prQualityRun": 45696488927,
-      "merge": "03e716eb769366748217c51b09009c2d8a7f6a38",
-      "pagesRun": 45699947516
-    },
-    {
       "key": "g9.tamil",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 437,
       "head": "006098d4cbcaf09d0ad86cae525530fa5e20f06c",
-      "prQualityRun": 45698190245
+      "prQualityRun": 45698190245,
+      "merge": "32ee7cb58e78ed8cf7dbb32995fad82b4fa1d122",
+      "pagesRun": 45702720071
     },
     {
       "key": "g9.statistics",
