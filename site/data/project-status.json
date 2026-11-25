@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "3c45741c0b046198986b0d54d615a51bf1c0b8b4",
-  "updatedAt": "2026-11-25T00:16:40Z",
+  "sourceCommit": "d0771b55ba0ab5f4be242482cb9649cd4b78e0f8",
+  "updatedAt": "2026-11-25T00:21:17Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -98,7 +98,7 @@
     "site/data/textbook-exercises/g10-ch5-ex5-4-en.js": "2e8cf567d4ad999724d44eebe9bbc5c2febed2fdbcdb66b82b9443072c509667",
     "site/data/textbook-exercises/g10-ch5-ex5-5-en.js": "bcc2ce6fb996da78d7f80e650debdc611e4f99a7e2895bcc0c860bc391efabda",
     "site/data/textbook-exercises/g10-ch5-ex5-unit-en.js": "400b4bb445825210434db721a8528a07c5e611637436971ce1b887258cdc801e",
-    "site/data/textbook-exercises/g10-ch6-ex6-1-en.js": "b808769b4599e30767f53b2594a33f8bffcf031e313f8cf29f16170c8bc07854",
+    "site/data/textbook-exercises/g10-ch6-ex6-1-en.js": "1be24cdd6ae681a8578b92e1610b80a20f1719c421ebaa0ff0c79910f139f3e6",
     "site/data/textbook-exercises/g10-ch6-ex6-2-en.js": "ee58f99ee7c0ea94d8410851744e43a29902e7a8f55f93172dc964fccafdea5c",
     "site/data/textbook-exercises/g10-ch6-ex6-3-en.js": "926ed9e35156d890cb18de401983ea4f6a5ccdb0543e50bb2837bbc2ac38cc65",
     "site/data/textbook-exercises/g10-ch6-ex6-4-en.js": "b110b8e05052973566f78ecbae0709509c4c5add057d19c062ad00aca4c118bc",
@@ -115,7 +115,7 @@
     "site/data/textbook-exercises/g10-ch8-ex8-3-q1-q6.js": "7ec9ad23b88d8d0b92df3849caaf5107bfb05f2295ce01bbc02622b487a9cdef",
     "site/data/textbook-exercises/g10-ch8-ex8-3-q7-q13.js": "b9a34e59dfbe6028476798a5930b92daa40ae0e4d6fa18ecad27f21b334ade10",
     "site/data/textbook-exercises/g10-checkpoint-20261110-en.js": "30ec65b4e2f007ae25fcde957dd6bf933c5b9ea3c26536b827c835a15c20c309",
-    "site/data/textbook-exercises/g10-geometry-worked-tamil.js": "31bfa7762e83f1295ed5b842653de2c88f24fe0b3c31d25205a31c82ef0dc364",
+    "site/data/textbook-exercises/g10-geometry-worked-tamil.js": "5de2a5bf54f1b25994ac9e6d8494f4afc4a3f5fb3b61b5d916d5dd5c366cff3c",
     "site/data/textbook-exercises/g10-seven-recovery-20261113-en.js": "b3a704bf15e5c250c05318af8eb9c1fce16b55ec8c0dcf4977f76ce74ee3621b",
     "site/data/textbook-exercises/g12-ch1-ex1-1-en.js": "d979dd28edcd293771fcad174ade5ac4690781330306583cf437c025f617ed26",
     "site/data/textbook-exercises/g12-ch1-ex1-2-en.js": "06805b9f72e3097ca24a148ea792253135fa83596f3c66607bf1eff3f4fb8557",
@@ -174,7 +174,7 @@
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9.js": "8307f31932077111e3c993e463b677a850ad755a80b271d35fbb169f01fb402a",
-    "site/index.html": "1f21a18bf7728840f767d257052db07b358938a4fe12e771829f7a4702e8c674",
+    "site/index.html": "9c2b29bffbef99b6b5b8f2b93726a71cb32e39d135ec20af53168575a7f8d49c",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
   "policy": {
@@ -13922,7 +13922,7 @@
                   "url": "../index.html?class=10&question=c10-6-ex6-1-q7-i",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "4e713b28d6afe8dce242009353c9fb0b749b7e1ed9170c95325604f488e9f6d3",
+                  "recordSha256": "0a9e1abf253bae980747d877e6a0237d2130d2b7848e38687d6096672edccc9a",
                   "verified": false
                 },
                 {
@@ -13931,7 +13931,7 @@
                   "url": "../index.html?class=10&question=c10-6-ex6-1-q7-ii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "f659fca2b305b20feb31e165a5f8b16199901adfe0d4eabc4216839b3c65b972",
+                  "recordSha256": "1de4c5d32875769fc1915c4a4f7289aeb1f3a042593bf338eaf4d426eca07278",
                   "verified": false
                 },
                 {
