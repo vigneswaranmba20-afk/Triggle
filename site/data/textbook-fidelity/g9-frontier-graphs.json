@@ -1,0 +1,706 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "edition": "2025 revised",
+  "sources": {
+    "en": {
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J"
+    },
+    "ta": {
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+    }
+  },
+  "items": [
+    {
+      "id": "g9-ch3-ex3.10-q1-i",
+      "exercise": "3.10",
+      "question": 1,
+      "parts": [
+        "i"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 130,
+            "printed": 124
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 139,
+            "printed": 133
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch3/ex3-10-q1-i.svg"
+      ],
+      "description": {
+        "en": "The line rises by two units every time x increases by one.",
+        "ta": "x ஒரு அலகு அதிகரிக்கும்போதெல்லாம் y இரண்டு அலகு அதிகரிக்கிறது."
+      },
+      "equations": [
+        [
+          2,
+          -1,
+          0
+        ]
+      ],
+      "points": [
+        [
+          -1,
+          -2
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "intersection": null
+    },
+    {
+      "id": "g9-ch3-ex3.10-q1-ii",
+      "exercise": "3.10",
+      "question": 1,
+      "parts": [
+        "ii"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 130,
+            "printed": 124
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 139,
+            "printed": 133
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch3/ex3-10-q1-ii.svg"
+      ],
+      "description": {
+        "en": "The line crosses the vertical axis at −1 and rises four units for every unit to the right.",
+        "ta": "நேர்க்கோடு y அச்சை −1-இல் வெட்டுகிறது. வலப்புறம் ஓர் அலகு நகர்ந்தால் நான்கு அலகு மேலே செல்கிறது."
+      },
+      "equations": [
+        [
+          4,
+          -1,
+          1
+        ]
+      ],
+      "points": [
+        [
+          0,
+          -1
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          7
+        ]
+      ],
+      "intersection": null
+    },
+    {
+      "id": "g9-ch3-ex3.10-q1-iii",
+      "exercise": "3.10",
+      "question": 1,
+      "parts": [
+        "iii"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 130,
+            "printed": 124
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 139,
+            "printed": 133
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch3/ex3-10-q1-iii.svg"
+      ],
+      "description": {
+        "en": "The line crosses the horizontal axis at −2 and the vertical axis at 3.",
+        "ta": "நேர்க்கோடு x அச்சை −2-இலும் y அச்சை 3-இலும் வெட்டுகிறது."
+      },
+      "equations": [
+        [
+          3,
+          -2,
+          -6
+        ]
+      ],
+      "points": [
+        [
+          -2,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "intersection": null
+    },
+    {
+      "id": "g9-ch3-ex3.10-q1-iv",
+      "exercise": "3.10",
+      "question": 1,
+      "parts": [
+        "iv"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 130,
+            "printed": 124
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 139,
+            "printed": 133
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch3/ex3-10-q1-iv.svg"
+      ],
+      "description": {
+        "en": "The line slopes downward through the three plotted points.",
+        "ta": "குறிக்கப்பட்ட மூன்று புள்ளிகள் வழியாக நேர்க்கோடு இறங்குகிறது."
+      },
+      "equations": [
+        [
+          3,
+          2,
+          14
+        ]
+      ],
+      "points": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "intersection": null
+    },
+    {
+      "id": "g9-ch3-ex3.10-q2-i",
+      "exercise": "3.10",
+      "question": 2,
+      "parts": [
+        "i"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 130,
+            "printed": 124
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 139,
+            "printed": 133
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch3/ex3-10-q2-i.svg"
+      ],
+      "description": {
+        "en": "The two lines cross once, at (5, 2).",
+        "ta": "இரண்டு நேர்க்கோடுகளும் (5, 2) என்ற ஒரே புள்ளியில் வெட்டுகின்றன."
+      },
+      "equations": [
+        [
+          1,
+          1,
+          7
+        ],
+        [
+          1,
+          -1,
+          3
+        ]
+      ],
+      "points": [
+        [
+          0,
+          7
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          0,
+          -3
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "intersection": [
+        5,
+        2
+      ]
+    },
+    {
+      "id": "g9-ch3-ex3.10-q2-ii",
+      "exercise": "3.10",
+      "question": 2,
+      "parts": [
+        "ii"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 130,
+            "printed": 124
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 139,
+            "printed": 133
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch3/ex3-10-q2-ii.svg"
+      ],
+      "description": {
+        "en": "A dashed line lies directly on the solid line. Every point on the shared line satisfies both equations.",
+        "ta": "இடைவெளியிட்ட கோடு திடக்கோட்டின் மீதே அமைகிறது. அந்த ஒரே நேர்க்கோட்டில் உள்ள ஒவ்வொரு புள்ளியும் இரு சமன்பாடுகளுக்கும் பொருந்துகிறது."
+      },
+      "equations": [
+        [
+          3,
+          2,
+          4
+        ],
+        [
+          9,
+          6,
+          12
+        ]
+      ],
+      "points": [
+        [
+          0,
+          2
+        ],
+        [
+          2,
+          -1
+        ]
+      ],
+      "intersection": null
+    },
+    {
+      "id": "g9-ch3-ex3.10-q2-iii",
+      "exercise": "3.10",
+      "question": 2,
+      "parts": [
+        "iii"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 130,
+            "printed": 124
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 139,
+            "printed": 133
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch3/ex3-10-q2-iii.svg"
+      ],
+      "description": {
+        "en": "The two parallel lines have different vertical intercepts and never cross.",
+        "ta": "இணையான இரண்டு நேர்க்கோடுகள் y அச்சை வெவ்வேறு புள்ளிகளில் வெட்டுகின்றன. அவை ஒன்றையொன்று வெட்டுவதில்லை."
+      },
+      "equations": [
+        [
+          2,
+          1,
+          4
+        ],
+        [
+          2,
+          1,
+          8
+        ]
+      ],
+      "points": [
+        [
+          0,
+          4
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "intersection": null
+    },
+    {
+      "id": "g9-ch3-ex3.10-q2-iv",
+      "exercise": "3.10",
+      "question": 2,
+      "parts": [
+        "iv"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 130,
+            "printed": 124
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 139,
+            "printed": 133
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch3/ex3-10-q2-iv.svg"
+      ],
+      "description": {
+        "en": "The diagonal and horizontal lines cross at (−3, −3).",
+        "ta": "சாய்வுக்கோடும் கிடைக்கோடும் (−3, −3)-இல் வெட்டுகின்றன."
+      },
+      "equations": [
+        [
+          1,
+          -1,
+          0
+        ],
+        [
+          0,
+          1,
+          -3
+        ]
+      ],
+      "points": [
+        [
+          0,
+          0
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          -3
+        ],
+        [
+          3,
+          -3
+        ]
+      ],
+      "intersection": [
+        -3,
+        -3
+      ]
+    },
+    {
+      "id": "g9-ch3-ex3.10-q2-v",
+      "exercise": "3.10",
+      "question": 2,
+      "parts": [
+        "v"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 130,
+            "printed": 124
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 139,
+            "printed": 133
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch3/ex3-10-q2-v.svg"
+      ],
+      "description": {
+        "en": "The rising and falling lines cross at (1, 3).",
+        "ta": "ஏறுமுக நேர்க்கோடும் இறங்குமுக நேர்க்கோடும் (1, 3)-இல் வெட்டுகின்றன."
+      },
+      "equations": [
+        [
+          -2,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          6
+        ]
+      ],
+      "points": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "intersection": [
+        1,
+        3
+      ]
+    },
+    {
+      "id": "g9-ch3-ex3.10-q2-vi",
+      "exercise": "3.10",
+      "question": 2,
+      "parts": [
+        "vi"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 130,
+            "printed": 124
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 139,
+            "printed": 133
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch3/ex3-10-q2-vi.svg"
+      ],
+      "description": {
+        "en": "The vertical and horizontal lines cross at (−3, 3).",
+        "ta": "குத்துக்கோடும் கிடைக்கோடும் (−3, 3)-இல் வெட்டுகின்றன."
+      },
+      "equations": [
+        [
+          1,
+          0,
+          -3
+        ],
+        [
+          0,
+          1,
+          3
+        ]
+      ],
+      "points": [
+        [
+          -3,
+          0
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "intersection": [
+        -3,
+        3
+      ]
+    },
+    {
+      "id": "g9-ch3-ex3.10-q3",
+      "exercise": "3.10",
+      "question": 3,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 130,
+            "printed": 124
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 139,
+            "printed": 133
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch3/ex3-10-q3.svg"
+      ],
+      "description": {
+        "en": "The speed equations cross at (75, 25). Both axes measure miles per hour.",
+        "ta": "வேகச் சமன்பாடுகளின் நேர்க்கோடுகள் (75, 25)-இல் வெட்டுகின்றன. இரு அச்சுகளிலும் அலகு மைல்/மணி."
+      },
+      "equations": [
+        [
+          1,
+          1,
+          100
+        ],
+        [
+          1,
+          -1,
+          50
+        ]
+      ],
+      "points": [
+        [
+          0,
+          100
+        ],
+        [
+          100,
+          0
+        ],
+        [
+          50,
+          0
+        ],
+        [
+          100,
+          50
+        ]
+      ],
+      "intersection": [
+        75,
+        25
+      ]
+    },
+    {
+      "id": "g9-ch5-ex5.6-q4",
+      "exercise": "5.6",
+      "question": 4,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 224,
+            "printed": 218
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 238,
+            "printed": 232
+          }
+        ]
+      },
+      "figureFiles": [
+        "./assets/grade9-ch5/ex5-6-q4.svg"
+      ],
+      "description": {
+        "en": "P and T are in quadrant II. S is in quadrant III. Q and R are in quadrant IV.",
+        "ta": "P மற்றும் T இரண்டாம் காற்பகுதியிலும், S மூன்றாம் காற்பகுதியிலும், Q மற்றும் R நான்காம் காற்பகுதியிலும் உள்ளன."
+      },
+      "equations": [],
+      "points": [
+        [
+          -1,
+          1
+        ],
+        [
+          3,
+          -4
+        ],
+        [
+          1,
+          -1
+        ],
+        [
+          -2,
+          -3
+        ],
+        [
+          -4,
+          4
+        ]
+      ],
+      "intersection": null
+    }
+  ],
+  "editorialReview": {
+    "ta": "pending-independent-review",
+    "teacher": "pending"
+  },
+  "sourceNotes": [
+    "Grade 9 Exercise 5.6 Q4 choice 3 in Tamil has a stray மற்றும் in both the reproduced source page and print. The English edition says only S. Correct choice Q and R is the same."
+  ]
+}

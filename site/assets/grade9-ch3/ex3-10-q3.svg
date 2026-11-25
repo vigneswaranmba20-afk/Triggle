@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 370" role="img" aria-labelledby="title" font-family="system-ui, sans-serif">
+<title id="title">x + y = 100, x − y = 50</title>
+<style>.grid{stroke:#e7e2f0}.axis{stroke:#504765;stroke-width:1.8}.a{stroke:#6839a4;stroke-width:3}.b{stroke:#157767;stroke-width:2.4;stroke-dasharray:6 4}text{font-size:12px;fill:#292342}.value{font-size:13px;font-weight:700;paint-order:stroke;stroke:white;stroke-width:3px}.symbol{font-size:15px;font-weight:700}.legend{font-size:14px;font-weight:700}</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#504765"/></marker></defs>
+<rect x="1" y="1" width="358" height="368" rx="13" fill="#fdfcff" stroke="#ded6ea"/>
+<line x1="104.36" y1="299.00" x2="104.36" y2="29.00" class="grid"/>
+<text class="" x="104.36" y="315.00" text-anchor="middle">25</text>
+<line x1="165.73" y1="299.00" x2="165.73" y2="29.00" class="grid"/>
+<text class="" x="165.73" y="315.00" text-anchor="middle">50</text>
+<line x1="227.09" y1="299.00" x2="227.09" y2="29.00" class="grid"/>
+<text class="" x="227.09" y="315.00" text-anchor="middle">75</text>
+<line x1="288.45" y1="299.00" x2="288.45" y2="29.00" class="grid"/>
+<text class="" x="288.45" y="315.00" text-anchor="middle">100</text>
+<line x1="43.00" y1="237.64" x2="313.00" y2="237.64" class="grid"/>
+<text class="" x="34.00" y="241.64" text-anchor="end">25</text>
+<line x1="43.00" y1="176.27" x2="313.00" y2="176.27" class="grid"/>
+<text class="" x="34.00" y="180.27" text-anchor="end">50</text>
+<line x1="43.00" y1="114.91" x2="313.00" y2="114.91" class="grid"/>
+<text class="" x="34.00" y="118.91" text-anchor="end">75</text>
+<line x1="43.00" y1="53.55" x2="313.00" y2="53.55" class="grid"/>
+<text class="" x="34.00" y="57.55" text-anchor="end">100</text>
+<line x1="43.00" y1="299.00" x2="313.00" y2="299.00" class="axis" marker-end="url(#arrow)"/>
+<line x1="43.00" y1="299.00" x2="43.00" y2="29.00" class="axis" marker-end="url(#arrow)"/>
+<text class="symbol" x="325.00" y="292.00" text-anchor="middle">x</text>
+<text class="symbol" x="55.00" y="32.00" text-anchor="middle">y</text>
+<text class="" x="36.00" y="314.00" text-anchor="end">0</text>
+<line x1="43.00" y1="53.55" x2="288.45" y2="299.00" class="a" data-line="1,1,100" data-start="0,100" data-end="100,0"/>
+<line x1="26" y1="326" x2="51" y2="326" class="a"/>
+<text class="legend" x="60.00" y="330.00" text-anchor="start">x + y = 100</text>
+<line x1="165.73" y1="299.00" x2="313.00" y2="151.73" class="b" data-line="1,-1,50" data-start="50,0" data-end="110,60"/>
+<line x1="26" y1="348" x2="51" y2="348" class="b"/>
+<text class="legend" x="60.00" y="352.00" text-anchor="start">x − y = 50</text>
+<circle cx="43.00" cy="53.55" r="3.6" fill="#453372" stroke="white" stroke-width="1.3" data-point="0,100"/>
+<circle cx="288.45" cy="299.00" r="3.6" fill="#453372" stroke="white" stroke-width="1.3" data-point="100,0"/>
+<circle cx="165.73" cy="299.00" r="3.6" fill="#453372" stroke="white" stroke-width="1.3" data-point="50,0"/>
+<circle cx="288.45" cy="176.27" r="3.6" fill="#453372" stroke="white" stroke-width="1.3" data-point="100,50"/>
+<line x1="227.09" y1="299.00" x2="227.09" y2="237.64" class="grid" stroke-dasharray="4 3"/>
+<line x1="43.00" y1="237.64" x2="227.09" y2="237.64" class="grid" stroke-dasharray="4 3"/>
+<circle cx="227.09" cy="237.64" r="5" fill="#9c420b" stroke="white" stroke-width="1.3" data-point="75,25" data-intersection="true"/>
+<text class="value" x="234.09" y="229.64" text-anchor="start">(75, 25)</text>
+</svg>
