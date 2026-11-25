@@ -52,7 +52,9 @@
  const mobile=matchMedia('(max-width:800px)');
  function esc(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  const plainMath=value=>Array.isArray(value)?value.map(plainMath).join(''):(value?.fallback??value);
- const isGeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2','4.3','4.4','4.5','4.unit'].includes(item.exercise);
+ const isG9GeometryExercise=item=>item.classNum===9&&item.chapter==='4'&&/^4\.[1-7]$/.test(item.exercise);
+ const isG10GeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2','4.3','4.4','4.5','4.unit'].includes(item.exercise);
+ const isGeometryExercise=item=>isG9GeometryExercise(item)||isG10GeometryExercise(item);
  const englishInTamilReader=text=>lang==='ta'&&/[a-z]{2}/i.test(text)&&!/\p{Script=Tamil}/u.test(text);
  function math(str){
   // Local typesetting: accessible group exponents and no cloud requests.
@@ -64,7 +66,7 @@
  // current exercise by activeList(), consistently for all Classes 9–12.
  const textbookExerciseList=chapter=>{
    const items=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
-   const sourceBatches=(grade===10&&['2','4','6'].includes(String(chapter?.number)))||(grade===9&&['1','3'].includes(String(chapter?.number)));
+   const sourceBatches=(grade===10&&['2','4','6'].includes(String(chapter?.number)))||(grade===9&&['1','3','4'].includes(String(chapter?.number)));
    if(!sourceBatches)return items;
    // Source-verified Grade 9 and Grade 10 exercise parts
    // arrive in independent batches. Sort only their navigation lists, preserving
@@ -699,15 +701,20 @@
   $('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   if(lang==='ta'&&!current.q?.ta)$('kindBadge').textContent+=' · தமிழ் மொழிபெயர்ப்பு நிலுவையில்';
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
-  const conceptPath = isGeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH;
-  const conceptIndexForQuestion = isGeometryExercise(current)
+  const conceptPath = isG10GeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH;
+  let conceptIndexForQuestion = isG10GeometryExercise(current)
     ? (conceptPath?.stages.findIndex(stage => stage.id === current.conceptId ||
         [stage.practiceId, stage.secondaryPracticeId, stage.tertiaryPracticeId].includes(current.id)) ?? -1)
     : (conceptPath?.conceptForQuestion(current) ?? -1);
+  const geometryLessons = window.TRIGGLE_GEOMETRY_LESSONS;
+  if (isG9GeometryExercise(current)) {
+    conceptIndexForQuestion = current.geometryConcept ??
+      ({'4.1':1, '4.2':2, '4.3':4}[current.exercise] ?? -1);
+  }
   const relatedConcept = $('chapter8QuestionConcept');
   relatedConcept.hidden = conceptIndexForQuestion < 0;
   if (conceptIndexForQuestion >= 0) {
-    const stage = conceptPath.stages[conceptIndexForQuestion];
+    const stage = isG9GeometryExercise(current) ? geometryLessons[conceptIndexForQuestion] : conceptPath.stages[conceptIndexForQuestion];
     relatedConcept.textContent = (lang === 'ta' ? 'கருத்து · ' : 'Concept · ') + tr(stage.title);
     relatedConcept.onclick = () => openChapterSection('concepts', chapterForItem(current), conceptIndexForQuestion);
   }

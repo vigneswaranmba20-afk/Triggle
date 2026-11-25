@@ -5769,6 +5769,9 @@ const metadata={
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
   }
 };
+for (const [id, level] of Object.entries(window.TriggleGrade9Geometry?.difficulty || {})) {
+  metadata.entries[id] = {grade: 9, level, basis: 'Grade 9 Geometry exercise reconciliation', review: 'implementation-audit'};
+}
 for(const entry of Object.values(metadata.entries))Object.freeze(entry);
 window.TriggleDifficulty=Object.freeze({
  entries:Object.freeze(metadata.entries),criteria:Object.freeze(metadata.criteria),

@@ -22,4 +22,7 @@ Printed page numbers are six less than the PDF page numbers. Both answer appendi
 
 ## Checkpoints
 
-- Source inventory complete. Batches A–E are pending.
+- Source inventory complete.
+- Batch A authoring checkpoint. Exercises 4.1–4.3 now contain 38 canonical records, including the 11 preserved records. Focused structure, KaTeX, asset and source-fidelity checks passed. Full browser and release checks are pending.
+- Exercise 4.2 Q5 omits the distinct-intersection condition. A rhombus is a counterexample to the universal claim. The solution gives the corrected theorem and the rhombus case.
+- Exercise 4.3 Q5 gives no side-of-centre condition. Both chords can lie on opposite sides (14 cm, as in both keys) or on the same side (2 cm). The solution gives both configurations.
