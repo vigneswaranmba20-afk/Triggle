@@ -1,0 +1,3187 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.0",
+  "scope": "Grade 10 Chapter 7 — Mensuration",
+  "inventoryCounts": {
+    "exercises": 62,
+    "concepts": 9
+  },
+  "summary": {
+    "totalItems": 71,
+    "exercises": 62,
+    "concepts": 9,
+    "overallStatusCounts": {
+      "PASS": 34,
+      "FAIL": 22,
+      "PARTIAL": 14,
+      "UNVERIFIABLE": 1
+    },
+    "answerVerificationCounts": {
+      "PASS": 70,
+      "FAIL": 0,
+      "UNVERIFIABLE": 1
+    },
+    "intermediateStepCounts": {
+      "PASS": 31,
+      "FAIL": 21,
+      "PARTIAL": 11,
+      "UNVERIFIABLE": 8
+    },
+    "tamilValidationCounts": {
+      "PASS": 50,
+      "FAIL": 1,
+      "PARTIAL": 10,
+      "MISSING": 10
+    }
+  },
+  "records": [
+    {
+      "id": "c10-7-ex7-1-q1",
+      "item_type": "exercise",
+      "section": "7.1",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
+      "validation_method": "sympy_solve_cylinder_csa_ratio",
+      "independently_derived_result": "25, 35",
+      "existing_result": "Radius = 25 cm; height = 35 cm.",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "MISSING",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': '220k^2=5500 => k=5', 'lhs': 'k=[-5, 5]', 'rhs': 'k=[5]'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "observedNumbers": [
+            25.0,
+            35.0
+          ],
+          "expectedNumbers": [
+            25.0,
+            35.0
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 4,
+          "passedChains": 3,
+          "failedChains": [
+            {
+              "stepIndex": 2,
+              "line": "220k^2=5500 => k=5",
+              "lhs": "k=[-5, 5]",
+              "rhs": "k=[5]"
+            }
+          ],
+          "unparsedSteps": [
+            0
+          ]
+        },
+        "tamilChecks": {
+          "flags": [
+            "missing_tamil_prompt"
+          ],
+          "details": {
+            "reason": "Tamil prompt text is absent in student data item."
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "verified",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q2",
+      "item_type": "exercise",
+      "section": "7.1",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
+      "validation_method": "sympy_solve_cylinder_tsa_csa",
+      "independently_derived_result": "7, 35",
+      "existing_result": "Radius = 7 cm; height = 35 cm.",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "MISSING",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 3, 'line': '1540=2\\\\times\\\\dfrac{22}{7}\\\\times7h=44h', 'lhs': '1540', 'rhs': '44*h'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "observedNumbers": [
+            7.0,
+            35.0
+          ],
+          "expectedNumbers": [
+            7.0,
+            35.0
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 9,
+          "passedChains": 8,
+          "failedChains": [
+            {
+              "stepIndex": 3,
+              "line": "1540=2\\times\\dfrac{22}{7}\\times7h=44h",
+              "lhs": "1540",
+              "rhs": "44*h"
+            }
+          ],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "missing_tamil_prompt"
+          ],
+          "details": {
+            "reason": "Tamil prompt text is absent in student data item."
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "verified",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q3",
+      "item_type": "exercise",
+      "section": "7.1",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
+      "validation_method": "hollow_cylinder_tsa",
+      "independently_derived_result": "952*pi (≈ 2992.0000 with pi=22/7)",
+      "existing_result": "Total surface area = 2992 cm².",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "MISSING",
+      "discrepancy": "Tamil prompt missing in student data module",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 2992.0,
+            "abs_diff": 0.0
+          },
+          "observedDimension": "area"
+        },
+        "stepChecks": {
+          "checkedChains": 5,
+          "passedChains": 5,
+          "failedChains": [],
+          "unparsedSteps": [
+            0
+          ]
+        },
+        "tamilChecks": {
+          "flags": [
+            "missing_tamil_prompt"
+          ],
+          "details": {
+            "reason": "Tamil prompt text is absent in student data item."
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "verified",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q4",
+      "item_type": "exercise",
+      "section": "7.1",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
+      "validation_method": "cone_rotation_csa_ratio",
+      "independently_derived_result": "240*pi : 320*pi (simplified ratio 3/4)",
+      "existing_result": "CSA_QR : CSA_PQ = 3 : 4 (CSA of the cone rotated about PQ is larger: 320π cm² > 240π cm²).",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "MISSING",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 0, 'line': 'PQ=\\\\sqrt{PR^2-QR^2}=\\\\sqrt{20^2-16^2}=12  cm', 'lhs': 'P*Q', 'rhs': 'sqrt(P**2*R**2 - Q**2*R**2)'}, {'stepIndex': 2, 'line': 'CSA _{QR}=\\\\pi r\\\\ell=\\\\pi(12)(20)=240\\\\pi  cm ^2', 'lhs': 'A*C*Q*R*S*_', 'rhs': 'pi*l*r'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "ratioMatched": "3 : 4 "
+        },
+        "stepChecks": {
+          "checkedChains": 6,
+          "passedChains": 4,
+          "failedChains": [
+            {
+              "stepIndex": 0,
+              "line": "PQ=\\sqrt{PR^2-QR^2}=\\sqrt{20^2-16^2}=12  cm",
+              "lhs": "P*Q",
+              "rhs": "sqrt(P**2*R**2 - Q**2*R**2)"
+            },
+            {
+              "stepIndex": 2,
+              "line": "CSA _{QR}=\\pi r\\ell=\\pi(12)(20)=240\\pi  cm ^2",
+              "lhs": "A*C*Q*R*S*_",
+              "rhs": "pi*l*r"
+            }
+          ],
+          "unparsedSteps": [
+            1,
+            3,
+            4
+          ]
+        },
+        "tamilChecks": {
+          "flags": [
+            "missing_tamil_prompt"
+          ],
+          "details": {
+            "reason": "Tamil prompt text is absent in student data item."
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "verified",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q5",
+      "item_type": "exercise",
+      "section": "7.1",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
+      "validation_method": "cone_height_from_base_area_slant",
+      "independently_derived_result": "3*sqrt(37)",
+      "existing_result": "Height of the tent ≈ 18.25 m.",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "MISSING",
+      "discrepancy": "Tamil prompt missing in student data module",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 18.24828759089466,
+            "abs_diff": 0.001712409105341095
+          },
+          "observedDimension": "length"
+        },
+        "stepChecks": {
+          "checkedChains": 7,
+          "passedChains": 7,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "missing_tamil_prompt"
+          ],
+          "details": {
+            "reason": "Tamil prompt text is absent in student data item."
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.1, printed p.282 / PDF p.288; Tamil Exercise 7.1, printed p.290 / PDF p.296. Both 2025 question and answer-key page images inspected; independent Neon blind mathematics 5/5 PASS. Tamil authored teaching review pending.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "verified",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q6",
+      "item_type": "exercise",
+      "section": "7.1",
+      "source_reference": "Tamil Nadu SCERT Standard Ten Mathematics, revised 2025. English Exercise 7.1 printed p.282/PDF p.288, Tamil printed p.290/PDF p.296; answer keys EN printed p.341/PDF p.347, TA printed p.356/PDF p.362. Original textbook question, figure and answer page images checked; Tamil authored teaching copy pending.",
+      "validation_method": "cone_csa_count_from_sheet",
+      "independently_derived_result": "28",
+      "existing_result": "28 birthday caps.",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "MISSING",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'Area of one cap = \\\\pi rl = \\\\pi *5*13 = 65\\\\pi  cm^{2}', 'lhs': 'A*a**2*c*e**2*f*n*o**2*p*r', 'rhs': 'pi*l*r'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 28.0,
+            "abs_diff": 0.0
+          },
+          "observedDimension": null
+        },
+        "stepChecks": {
+          "checkedChains": 4,
+          "passedChains": 3,
+          "failedChains": [
+            {
+              "stepIndex": 1,
+              "line": "Area of one cap = \\pi rl = \\pi *5*13 = 65\\pi  cm^{2}",
+              "lhs": "A*a**2*c*e**2*f*n*o**2*p*r",
+              "rhs": "pi*l*r"
+            }
+          ],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "missing_tamil_prompt"
+          ],
+          "details": {
+            "reason": "Tamil prompt text is absent in student data item."
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "Tamil Nadu SCERT Standard Ten Mathematics, revised 2025. English Exercise 7.1 printed p.282/PDF p.288, Tamil printed p.290/PDF p.296; answer keys EN printed p.341/PDF p.347, TA printed p.356/PDF p.362. Original textbook question, figure and answer page images checked; Tamil authored teaching copy pending.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q7",
+      "item_type": "exercise",
+      "section": "7.1",
+      "source_reference": "Tamil Nadu SCERT Standard Ten Mathematics, revised 2025. English Exercise 7.1 printed p.282/PDF p.288, Tamil printed p.290/PDF p.296; answer keys EN printed p.341/PDF p.347, TA printed p.356/PDF p.362. Original textbook question, figure and answer page images checked; Tamil authored teaching copy pending.",
+      "validation_method": "cone_csa_ratio_symbolic",
+      "independently_derived_result": "sqrt(10) : 9*sqrt(2) (simplified ratio sqrt(5)/9)",
+      "existing_result": "Curved surface area ratio = √5 : 9.",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "tamil_status": "MISSING",
+      "discrepancy": "Tamil prompt missing in student data module; Unparsed step indices: [0, 3, 4]",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "ratioMatched": "√5 : 9"
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": [
+            0,
+            3,
+            4
+          ]
+        },
+        "tamilChecks": {
+          "flags": [
+            "missing_tamil_prompt"
+          ],
+          "details": {
+            "reason": "Tamil prompt text is absent in student data item."
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "Tamil Nadu SCERT Standard Ten Mathematics, revised 2025. English Exercise 7.1 printed p.282/PDF p.288, Tamil printed p.290/PDF p.296; answer keys EN printed p.341/PDF p.347, TA printed p.356/PDF p.362. Original textbook question, figure and answer page images checked; Tamil authored teaching copy pending.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q8",
+      "item_type": "exercise",
+      "section": "7.1",
+      "source_reference": "Tamil Nadu SCERT Standard Ten Mathematics, revised 2025. English Exercise 7.1 printed p.282/PDF p.288, Tamil printed p.290/PDF p.296; answer keys EN printed p.341/PDF p.347, TA printed p.356/PDF p.362. Original textbook question, figure and answer page images checked; Tamil authored teaching copy pending.",
+      "validation_method": "sphere_sa_scaling_percentage",
+      "independently_derived_result": "225/4",
+      "existing_result": "The sphere's surface area increases by 56.25%.",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "MISSING",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'New radius = r + (25/100)r = 1.25r', 'lhs': 'N*a*d*e*i*r*s*u*w', 'rhs': '5*r/4'}, {'stepIndex': 2, 'line': 'A_new = 4\\\\pi (1.25r)^{2} = 1.5625 A', 'lhs': '25*pi*r**2/4', 'rhs': '25*A/16'}, {'stepIndex': 3, 'line': 'Increase % = (1.5625 - 1)*100 = 56.25%', 'lhs': '225/4', 'rhs': '9/16'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "exact",
+            "derived_value": 56.25,
+            "abs_diff": 0.0
+          },
+          "observedDimension": "percentage"
+        },
+        "stepChecks": {
+          "checkedChains": 5,
+          "passedChains": 2,
+          "failedChains": [
+            {
+              "stepIndex": 1,
+              "line": "New radius = r + (25/100)r = 1.25r",
+              "lhs": "N*a*d*e*i*r*s*u*w",
+              "rhs": "5*r/4"
+            },
+            {
+              "stepIndex": 2,
+              "line": "A_new = 4\\pi (1.25r)^{2} = 1.5625 A",
+              "lhs": "25*pi*r**2/4",
+              "rhs": "25*A/16"
+            },
+            {
+              "stepIndex": 3,
+              "line": "Increase % = (1.5625 - 1)*100 = 56.25%",
+              "lhs": "225/4",
+              "rhs": "9/16"
+            }
+          ],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "missing_tamil_prompt"
+          ],
+          "details": {
+            "reason": "Tamil prompt text is absent in student data item."
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "Tamil Nadu SCERT Standard Ten Mathematics, revised 2025. English Exercise 7.1 printed p.282/PDF p.288, Tamil printed p.290/PDF p.296; answer keys EN printed p.341/PDF p.347, TA printed p.356/PDF p.362. Original textbook question, figure and answer page images checked; Tamil authored teaching copy pending.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q9",
+      "item_type": "exercise",
+      "section": "7.1",
+      "source_reference": "Tamil Nadu SCERT Standard Ten Mathematics, revised 2025. English Exercise 7.1 printed p.282/PDF p.288, Tamil printed p.290/PDF p.296; answer keys EN printed p.341/PDF p.347, TA printed p.356/PDF p.362. Original textbook question, figure and answer page images checked; Tamil authored teaching copy pending.",
+      "validation_method": "hollow_hemisphere_tsa_painting_cost",
+      "independently_derived_result": "2408*pi/25 (≈ 302.7200 with pi=22/7)",
+      "existing_result": "Total painting cost = ₹302.72.",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "MISSING",
+      "discrepancy": "Tamil prompt missing in student data module",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 302.72,
+            "abs_diff": 0.0
+          },
+          "observedDimension": "currency"
+        },
+        "stepChecks": {
+          "checkedChains": 5,
+          "passedChains": 5,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "missing_tamil_prompt"
+          ],
+          "details": {
+            "reason": "Tamil prompt text is absent in student data item."
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "Tamil Nadu SCERT Standard Ten Mathematics, revised 2025. English Exercise 7.1 printed p.282/PDF p.288, Tamil printed p.290/PDF p.296; answer keys EN printed p.341/PDF p.347, TA printed p.356/PDF p.362. Original textbook question, figure and answer page images checked; Tamil authored teaching copy pending.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q10",
+      "item_type": "exercise",
+      "section": "7.1",
+      "source_reference": "Tamil Nadu SCERT Standard Ten Mathematics, revised 2025. English Exercise 7.1 printed p.282/PDF p.288, Tamil printed p.290/PDF p.296; answer keys EN printed p.341/PDF p.347, TA printed p.356/PDF p.362. Original textbook question, figure and answer page images checked; Tamil authored teaching copy pending.",
+      "validation_method": "frustum_outer_plus_top_cost",
+      "independently_derived_result": "432*pi (≈ 1357.7143 with pi=22/7)",
+      "existing_result": "Total cost = ₹1357.72 (using the textbook's intermediate-area rounding).",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "MISSING",
+      "discrepancy": "Tamil prompt missing in student data module",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 1357.7142857142858,
+            "abs_diff": 0.005714285714248035
+          },
+          "observedDimension": "currency"
+        },
+        "stepChecks": {
+          "checkedChains": 3,
+          "passedChains": 3,
+          "failedChains": [],
+          "unparsedSteps": [
+            0
+          ]
+        },
+        "tamilChecks": {
+          "flags": [
+            "missing_tamil_prompt"
+          ],
+          "details": {
+            "reason": "Tamil prompt text is absent in student data item."
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "Tamil Nadu SCERT Standard Ten Mathematics, revised 2025. English Exercise 7.1 printed p.282/PDF p.288, Tamil printed p.290/PDF p.296; answer keys EN printed p.341/PDF p.347, TA printed p.356/PDF p.362. Original textbook question, figure and answer page images checked; Tamil authored teaching copy pending.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q1",
+      "item_type": "exercise",
+      "section": "7.2",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+      "validation_method": "well_embankment_volume_conservation",
+      "independently_derived_result": "14/3",
+      "existing_result": "Height of the embankment = 4.67 m.",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PARTIAL",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 3, 'line': '75\\\\pi  * H = \\\\pi  * 25 * 14 => H = 350/75 = 14/3 m = 4.67 m', 'lhs': '350*pi', 'rhs': 'H'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "exact",
+            "derived_value": 4.666666666666667,
+            "abs_diff": 0.0033333333333329662
+          },
+          "observedDimension": "length"
+        },
+        "stepChecks": {
+          "checkedChains": 9,
+          "passedChains": 8,
+          "failedChains": [
+            {
+              "stepIndex": 3,
+              "line": "75\\pi  * H = \\pi  * 25 * 14 => H = 350/75 = 14/3 m = 4.67 m",
+              "lhs": "350*pi",
+              "rhs": "H"
+            }
+          ],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "en_ta_terminology_mismatch"
+          ],
+          "details": {
+            "term_mismatches": [
+              "cylinder(en=False,ta=True)"
+            ]
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q2",
+      "item_type": "exercise",
+      "section": "7.2",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+      "validation_method": "water_displacement_cylinder",
+      "independently_derived_result": "1",
+      "existing_result": "Raise of the water in the glass = 1 cm.",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 2,
+          "failedChains": [],
+          "unparsedSteps": [
+            0
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q3",
+      "item_type": "exercise",
+      "section": "7.2",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+      "validation_method": "cone_volume_from_circumference",
+      "independently_derived_result": "652190",
+      "existing_result": "Volume of the conical wooden piece = 652190 cm³.",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 0, 'line': '\\\\begin{aligned}2\\\\pi r=484 => 2\\\\times\\\\dfrac{22}{7}\\\\times r=484', 'lhs': 'r=[242/pi]', 'rhs': 'r=[77]'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 1,
+          "failedChains": [
+            {
+              "stepIndex": 0,
+              "line": "\\begin{aligned}2\\pi r=484 => 2\\times\\dfrac{22}{7}\\times r=484",
+              "lhs": "r=[242/pi]",
+              "rhs": "r=[77]"
+            }
+          ],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q4",
+      "item_type": "exercise",
+      "section": "7.2",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+      "validation_method": "cone_emptying_time",
+      "independently_derived_result": "20*pi (≈ 62.8571 with pi=22/7)",
+      "existing_result": "63 minutes (approx).",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 62.857142857142854,
+            "abs_diff": 0.1428571428571459
+          },
+          "observedDimension": "time"
+        },
+        "stepChecks": {
+          "checkedChains": 4,
+          "passedChains": 4,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q5",
+      "item_type": "exercise",
+      "section": "7.2",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+      "validation_method": "right_triangle_cone_volumes_diff",
+      "independently_derived_result": "32*pi (≈ 100.5714 with pi=22/7)",
+      "existing_result": "Difference in volumes = 100.58 cm³.",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 100.57142857142857,
+            "abs_diff": 0.008571428571428896
+          },
+          "observedDimension": "volume"
+        },
+        "stepChecks": {
+          "checkedChains": 11,
+          "passedChains": 11,
+          "failedChains": [],
+          "unparsedSteps": [
+            3
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q6",
+      "item_type": "exercise",
+      "section": "7.2",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+      "validation_method": "cone_height_ratio_from_volumes",
+      "independently_derived_result": "3600 : 5040 (simplified ratio 5/7)",
+      "existing_result": "Ratio of heights = 5 : 7.",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PARTIAL",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': '\\\\dfrac{V_1}{V_2}=\\\\dfrac{\\\\tfrac{1}{3}\\\\pi r^2 h_1}{\\\\tfrac{1}{3}\\\\pi r^2 h_2}=\\\\dfrac{h_1}{h_2}=\\\\dfrac{3600}{5040}', 'lhs': 'V_1/V_2', 'rhs': 'h_1/h_2'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "ratioMatched": "5 : 7"
+        },
+        "stepChecks": {
+          "checkedChains": 5,
+          "passedChains": 4,
+          "failedChains": [
+            {
+              "stepIndex": 1,
+              "line": "\\dfrac{V_1}{V_2}=\\dfrac{\\tfrac{1}{3}\\pi r^2 h_1}{\\tfrac{1}{3}\\pi r^2 h_2}=\\dfrac{h_1}{h_2}=\\dfrac{3600}{5040}",
+              "lhs": "V_1/V_2",
+              "rhs": "h_1/h_2"
+            }
+          ],
+          "unparsedSteps": [
+            2
+          ]
+        },
+        "tamilChecks": {
+          "flags": [
+            "en_ta_terminology_mismatch"
+          ],
+          "details": {
+            "term_mismatches": [
+              "cone(en=False,ta=True)"
+            ]
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q7",
+      "item_type": "exercise",
+      "section": "7.2",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+      "validation_method": "sphere_volume_ratio_from_radii",
+      "independently_derived_result": "64 : 343 (simplified ratio 64/343)",
+      "existing_result": "Ratio of their volumes = 64 : 343.",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PARTIAL",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': '\\\\dfrac{V_1}{V_2}=\\\\dfrac{\\\\tfrac{4}{3}\\\\pi r_1^3}{\\\\tfrac{4}{3}\\\\pi r_2^3}=(\\\\dfrac{r_1}{r_2})^3', 'lhs': 'V_1/V_2', 'rhs': 'r_1**3/r_2**3'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "ratioMatched": "64 : 343"
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 1,
+          "failedChains": [
+            {
+              "stepIndex": 1,
+              "line": "\\dfrac{V_1}{V_2}=\\dfrac{\\tfrac{4}{3}\\pi r_1^3}{\\tfrac{4}{3}\\pi r_2^3}=(\\dfrac{r_1}{r_2})^3",
+              "lhs": "V_1/V_2",
+              "rhs": "r_1**3/r_2**3"
+            }
+          ],
+          "unparsedSteps": [
+            2
+          ]
+        },
+        "tamilChecks": {
+          "flags": [
+            "en_ta_terminology_mismatch"
+          ],
+          "details": {
+            "term_mismatches": [
+              "sphere(en=False,ta=True)"
+            ]
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q8",
+      "item_type": "exercise",
+      "section": "7.2",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+      "validation_method": "sphere_hemisphere_equal_tsa_volume_ratio",
+      "independently_derived_result": "3*sqrt(3) : 4 (simplified ratio 3*sqrt(3)/4)",
+      "existing_result": "Ratio of their volumes = 3√3 : 4 (Proved).",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': 'V_sphere / V_hemisphere = ((4/3)\\\\pi R^{3}) / ((2/3)\\\\pi r^{3}) = 2(R/r)^{3}', 'lhs': 'V_sphere/V_hemisphere', 'rhs': '2*R**3/r**3'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "ratioMatched": "3√3 : 4 "
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 1,
+          "failedChains": [
+            {
+              "stepIndex": 2,
+              "line": "V_sphere / V_hemisphere = ((4/3)\\pi R^{3}) / ((2/3)\\pi r^{3}) = 2(R/r)^{3}",
+              "lhs": "V_sphere/V_hemisphere",
+              "rhs": "2*R**3/r**3"
+            }
+          ],
+          "unparsedSteps": [
+            3
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q9",
+      "item_type": "exercise",
+      "section": "7.2",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+      "validation_method": "hollow_sphere_volume_from_areas",
+      "independently_derived_result": "1332*pi (≈ 4186.2857 with pi=22/7)",
+      "existing_result": "Volume of the material required = 4186.29 cm³.",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PARTIAL",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 0, 'line': '\\\\begin{aligned}4\\\\pi R^2=576\\\\pi => R=12  cm \\\\end{aligned}', 'lhs': 'R=[-12, 12]', 'rhs': 'R=[12]'}, {'stepIndex': 1, 'line': '\\\\begin{aligned}4\\\\pi r^2=324\\\\pi => r=9  cm \\\\end{aligned}', 'lhs': 'r=[-9, 9]', 'rhs': 'r=[9]'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 4186.285714285715,
+            "abs_diff": 0.0042857142852881225
+          },
+          "observedDimension": "volume"
+        },
+        "stepChecks": {
+          "checkedChains": 9,
+          "passedChains": 7,
+          "failedChains": [
+            {
+              "stepIndex": 0,
+              "line": "\\begin{aligned}4\\pi R^2=576\\pi => R=12  cm \\end{aligned}",
+              "lhs": "R=[-12, 12]",
+              "rhs": "R=[12]"
+            },
+            {
+              "stepIndex": 1,
+              "line": "\\begin{aligned}4\\pi r^2=324\\pi => r=9  cm \\end{aligned}",
+              "lhs": "r=[-9, 9]",
+              "rhs": "r=[9]"
+            }
+          ],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "en_ta_terminology_mismatch"
+          ],
+          "details": {
+            "term_mismatches": [
+              "hollow(en=False,ta=True)"
+            ]
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q10",
+      "item_type": "exercise",
+      "section": "7.2",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+      "validation_method": "frustum_milk_cost",
+      "independently_derived_result": "3328*pi/25 (≈ 418.3771 with pi=22/7)",
+      "existing_result": "Cost of milk = ₹418.36.",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': 'V = 73216/7 = 10459.43 cm^{3} = 10.4594... L = 10.459 L', 'lhs': '1045943/100', 'rhs': '52297/5000'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 418.37714285714287,
+            "abs_diff": 0.017142857142857792
+          },
+          "observedDimension": "currency"
+        },
+        "stepChecks": {
+          "checkedChains": 3,
+          "passedChains": 2,
+          "failedChains": [
+            {
+              "stepIndex": 2,
+              "line": "V = 73216/7 = 10459.43 cm^{3} = 10.4594... L = 10.459 L",
+              "lhs": "1045943/100",
+              "rhs": "52297/5000"
+            }
+          ],
+          "unparsedSteps": [
+            0,
+            3
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.2, printed p.290 / PDF p.296 (answers printed p.341 / PDF p347); Tamil Exercise 7.2, printed p.298 / PDF p.304 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-3-q1",
+      "item_type": "exercise",
+      "section": "7.3",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+      "validation_method": "hemisphere_plus_cylinder_volume",
+      "independently_derived_result": "1568*pi/3 (≈ 1642.6667 with pi=22/7)",
+      "existing_result": "Capacity of the vessel ≈ 1642.67 cm³ (exact 4928/3 cm³).",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 1642.6666666666667,
+            "abs_diff": 0.0033333333333303017
+          },
+          "observedDimension": "volume"
+        },
+        "stepChecks": {
+          "checkedChains": 5,
+          "passedChains": 5,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-3-q2",
+      "item_type": "exercise",
+      "section": "7.3",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+      "validation_method": "cylinder_plus_two_cones_volume",
+      "independently_derived_result": "21*pi (≈ 66.0000 with pi=22/7)",
+      "existing_result": "Volume of the model = 66 cm³.",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 66.0,
+            "abs_diff": 0.0
+          },
+          "observedDimension": "volume"
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 2,
+          "failedChains": [],
+          "unparsedSteps": [
+            0
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-3-q3",
+      "item_type": "exercise",
+      "section": "7.3",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+      "validation_method": "cylinder_minus_cone_volume",
+      "independently_derived_result": "98*pi/125 (≈ 2.4640 with pi=22/7)",
+      "existing_result": "2.46 cm³ (2025 textbook key; 2 cm³ if rounded to the nearest whole cm³).",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 2.464,
+            "abs_diff": 0.0040000000000000036
+          },
+          "observedDimension": "volume"
+        },
+        "stepChecks": {
+          "checkedChains": 3,
+          "passedChains": 3,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-3-q4",
+      "item_type": "exercise",
+      "section": "7.3",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+      "validation_method": "cone_on_hemisphere_displacement",
+      "independently_derived_result": "288*pi (≈ 905.1429 with pi=22/7)",
+      "existing_result": "Volume of water displaced ≈ 905.14 cm³ (exact 288π cm³).",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'V_displaced = V_cone + V_hemisphere = (1/3)\\\\pi r^{2}h_cone + (2/3)\\\\pi r^{3}', 'lhs': 'V_cone + V_hemisphere', 'rhs': 'pi*h_cone*r**2/3 + 2*pi*r**3/3'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 905.1428571428571,
+            "abs_diff": 0.0028571428571240176
+          },
+          "observedDimension": "volume"
+        },
+        "stepChecks": {
+          "checkedChains": 5,
+          "passedChains": 4,
+          "failedChains": [
+            {
+              "stepIndex": 1,
+              "line": "V_displaced = V_cone + V_hemisphere = (1/3)\\pi r^{2}h_cone + (2/3)\\pi r^{3}",
+              "lhs": "V_cone + V_hemisphere",
+              "rhs": "pi*h_cone*r**2/3 + 2*pi*r**3/3"
+            }
+          ],
+          "unparsedSteps": [
+            0
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-3-q5",
+      "item_type": "exercise",
+      "section": "7.3",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+      "validation_method": "capsule_cylinder_plus_two_hemispheres",
+      "independently_derived_result": "99*pi/4 (≈ 77.7857 with pi=22/7)",
+      "existing_result": "77.78 mm³ of medicine (exact 1089/14 mm³).",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PARTIAL",
+      "discrepancy": "Tamil consistency flags: ['en_ta_terminology_mismatch']",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 77.78571428571429,
+            "abs_diff": 0.005714285714290668
+          },
+          "observedDimension": "volume"
+        },
+        "stepChecks": {
+          "checkedChains": 3,
+          "passedChains": 3,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "en_ta_terminology_mismatch"
+          ],
+          "details": {
+            "term_mismatches": [
+              "hemisphere(en=True,ta=False)",
+              "sphere(en=False,ta=True)"
+            ]
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-3-q6",
+      "item_type": "exercise",
+      "section": "7.3",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+      "validation_method": "cube_surmounted_by_hemisphere_sa",
+      "independently_derived_result": "49*pi/4 + 294 (≈ 332.5000 with pi=22/7)",
+      "existing_result": "Surface area of the solid = 332.5 cm².",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 332.5,
+            "abs_diff": 0.0
+          },
+          "observedDimension": "area"
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 2,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-3-q7-i",
+      "item_type": "exercise",
+      "section": "7.3",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+      "validation_method": "enclosed_sphere_sa",
+      "independently_derived_result": "4*pi*r**2",
+      "existing_result": "4πr² sq. units.",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-3-q7-ii",
+      "item_type": "exercise",
+      "section": "7.3",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+      "validation_method": "enclosing_cylinder_csa",
+      "independently_derived_result": "4*pi*r**2",
+      "existing_result": "4πr² sq. units.",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-3-q7-iii",
+      "item_type": "exercise",
+      "section": "7.3",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+      "validation_method": "sphere_vs_enclosing_cylinder_ratio",
+      "independently_derived_result": "4*pi*r**2 : 4*pi*r**2 (simplified ratio 1)",
+      "existing_result": "1 : 1.",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "discrepancy": "Unparsed step indices: [1]",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "ratioMatched": "1 : 1"
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": [
+            1
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; English Exercise 7.3, printed p.294 / PDF p.300 (answers printed p.341 / PDF p.347); Tamil Exercise 7.3, printed p.302 / PDF p.308 (answers printed p.356 / PDF p.362).",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": null,
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-4-q1",
+      "item_type": "exercise",
+      "section": "7.4",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q1, EN printed p.296/PDF p.302; TA printed p.304/PDF p.310; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+      "validation_method": "sphere_to_cylinder_volume_conservation",
+      "independently_derived_result": "36",
+      "existing_result": "36 cm",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 3,
+          "passedChains": 3,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q1, EN printed p.296/PDF p.302; TA printed p.304/PDF p.310; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "36 cm",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-4-q2",
+      "item_type": "exercise",
+      "section": "7.4",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q2, EN printed p.296/PDF p.302; TA printed p.304/PDF p.310; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+      "validation_method": "pipe_flow_tank_fill_time",
+      "independently_derived_result": "2",
+      "existing_result": "Approximately 2 hours (using π ≈ 22/7).",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': 'Q = \\\\pi  * 0.07^{2} * 15000 = 231 m^{3}/h', 'lhs': '147*pi/2', 'rhs': '231/h'}, {'stepIndex': 3, 'line': 't = 462/231 = 2 h', 'lhs': '2', 'rhs': '2*h'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 2.0,
+            "abs_diff": 0.0
+          },
+          "observedDimension": "time"
+        },
+        "stepChecks": {
+          "checkedChains": 4,
+          "passedChains": 2,
+          "failedChains": [
+            {
+              "stepIndex": 2,
+              "line": "Q = \\pi  * 0.07^{2} * 15000 = 231 m^{3}/h",
+              "lhs": "147*pi/2",
+              "rhs": "231/h"
+            },
+            {
+              "stepIndex": 3,
+              "line": "t = 462/231 = 2 h",
+              "lhs": "2",
+              "rhs": "2*h"
+            }
+          ],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q2, EN printed p.296/PDF p.302; TA printed p.304/PDF p.310; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "2 hrs",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-4-q3",
+      "item_type": "exercise",
+      "section": "7.4",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q3, EN printed p.296/PDF p.302; TA printed p.304/PDF p.310; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+      "validation_method": "cone_to_cylinder_symbolic_height",
+      "independently_derived_result": "h/(3*x**2)",
+      "existing_result": "h/(3x²) units",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 1,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q3, EN printed p.296/PDF p.302; TA printed p.304/PDF p.310; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "h/(3x²)",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-4-q4",
+      "item_type": "exercise",
+      "section": "7.4",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q4, EN printed p.297/PDF p.303; TA printed p.305/PDF p.311; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+      "validation_method": "cone_to_hollow_sphere_internal_diameter",
+      "independently_derived_result": "6",
+      "existing_result": "6 cm",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 5,
+          "passedChains": 5,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q4, EN printed p.297/PDF p.303; TA printed p.305/PDF p.311; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "6 cm",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-4-q5",
+      "item_type": "exercise",
+      "section": "7.4",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q5, EN printed p.297/PDF p.303; TA printed p.305/PDF p.311; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+      "validation_method": "sump_minus_overhead_tank_volume",
+      "independently_derived_result": "3000000 - 378000*pi (≈ 1812000.0000 with pi=22/7)",
+      "existing_result": "Approximately 1,812,000 cm³ = 1,812 litres (using π ≈ 22/7).",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 1812000.0,
+            "abs_diff": 0.0
+          },
+          "observedDimension": "volume"
+        },
+        "stepChecks": {
+          "checkedChains": 4,
+          "passedChains": 4,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q5, EN printed p.297/PDF p.303; TA printed p.305/PDF p.311; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "1812000 cm³ / 1812 litre",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-4-q6",
+      "item_type": "exercise",
+      "section": "7.4",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q6, EN printed p.297/PDF p.303; TA printed p.305/PDF p.311; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+      "validation_method": "hollow_hemisphere_to_cylinder_height",
+      "independently_derived_result": "4/3",
+      "existing_result": "4/3 cm ≈ 1.33 cm",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 1.3333333333333333,
+            "abs_diff": 0.0
+          },
+          "observedDimension": "length"
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 2,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q6, EN printed p.297/PDF p.303; TA printed p.305/PDF p.311; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "1.33 cm",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-4-q7",
+      "item_type": "exercise",
+      "section": "7.4",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q7, EN printed p.297/PDF p.303; TA printed p.305/PDF p.311; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+      "validation_method": "sphere_to_hollow_cylinder_thickness",
+      "independently_derived_result": "1",
+      "existing_result": "1 cm",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': 'r^2=16 => r=4', 'lhs': 'r=[-4, 4]', 'rhs': 'r=[4]'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 4,
+          "passedChains": 3,
+          "failedChains": [
+            {
+              "stepIndex": 2,
+              "line": "r^2=16 => r=4",
+              "lhs": "r=[-4, 4]",
+              "rhs": "r=[4]"
+            }
+          ],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q7, EN printed p.297/PDF p.303; TA printed p.305/PDF p.311; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "1 cm",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-4-q8",
+      "item_type": "exercise",
+      "section": "7.4",
+      "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q8, EN printed p.297/PDF p.303; TA printed p.305/PDF p.311; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+      "validation_method": "hemisphere_to_cylinder_percentage",
+      "independently_derived_result": "100",
+      "existing_result": "100%",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 100.0,
+            "abs_diff": 0.0
+          },
+          "observedDimension": "percentage"
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics, revised 2025; Exercise 7.4 Q8, EN printed p.297/PDF p.303; TA printed p.305/PDF p.311; key EN printed p.342/PDF348, TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "100%",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q1",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q1. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_cone_csa",
+      "independently_derived_result": "136*pi (≈ 427.2566 with pi=exact)",
+      "existing_result": "(D) 136π cm²",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "D",
+          "mcqMatched": [
+            "D"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 4,
+          "passedChains": 4,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q1. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'D', 'ta': 'ஈ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q2",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q2. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_two_hemispheres_csa",
+      "independently_derived_result": "4*pi*r**2",
+      "existing_result": "(A) 4πr² sq. units",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PARTIAL",
+      "discrepancy": "Tamil consistency flags: ['en_ta_terminology_mismatch']",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "A",
+          "mcqMatched": [
+            "A"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 1,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "en_ta_terminology_mismatch"
+          ],
+          "details": {
+            "term_mismatches": [
+              "hemisphere(en=False,ta=True)"
+            ]
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q2. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'A', 'ta': 'அ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q3",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q3. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_cone_height",
+      "independently_derived_result": "12",
+      "existing_result": "(A) 12 cm",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "A",
+          "mcqMatched": [
+            "A"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 1,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q3. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'A', 'ta': 'அ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q4",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q4. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_cylinder_halved_radius_ratio",
+      "independently_derived_result": "pi*h*r**2/4 : pi*h*r**2 (simplified ratio 1/4)",
+      "existing_result": "(B) 1:4",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "discrepancy": "Unparsed step indices: [1]",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "B",
+          "mcqMatched": [
+            "B"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": [
+            1
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q4. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'B', 'ta': 'ஆ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q5",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q5. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_cylinder_tsa_r_one_third_h",
+      "independently_derived_result": "8*pi*h**2/9",
+      "existing_result": "(C) 8πh²/9 sq.units",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "tamil_status": "FAIL",
+      "discrepancy": "English-Tamil consistency failure: ['en_ta_number_mismatch']",
+      "severity": "major",
+      "recommended_correction": "Align Tamil prompt numbers/terminology with English prompt.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "C",
+          "mcqMatched": [
+            "C"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "en_ta_number_mismatch"
+          ],
+          "details": {
+            "en_nums": [
+              "1",
+              "3",
+              "9",
+              "8",
+              "24",
+              "8",
+              "9",
+              "56",
+              "9"
+            ],
+            "ta_nums": [
+              "9",
+              "8",
+              "24",
+              "8",
+              "9",
+              "56",
+              "9"
+            ]
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q5. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'C', 'ta': 'இ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q6",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q6. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_hollow_cylinder_volume",
+      "independently_derived_result": "1120*pi (≈ 3518.5838 with pi=exact)",
+      "existing_result": "(B) 1120π cm³",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "B",
+          "mcqMatched": [
+            "B"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q6. EN printed p.297 (PDF 303); TA printed p.305 (PDF 311); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'B', 'ta': 'ஆ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q7",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q7. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_cone_scaling_factor",
+      "independently_derived_result": "18",
+      "existing_result": "(B) made 18 times",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "B",
+          "mcqMatched": [
+            "B"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 2,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q7. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'B', 'ta': 'ஆ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q8",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q8. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_hemisphere_tsa_over_r2",
+      "independently_derived_result": "3*pi (≈ 9.4248 with pi=exact)",
+      "existing_result": "(C) 3π",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "C",
+          "mcqMatched": [
+            "C"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 1,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q8. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'C', 'ta': 'இ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q9",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q9. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_sphere_to_cone_height",
+      "independently_derived_result": "4*x",
+      "existing_result": "(C) 4x cm",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "C",
+          "mcqMatched": [
+            "C"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q9. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'C', 'ta': 'இ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q10",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q10. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_frustum_volume",
+      "independently_derived_result": "3328*pi (≈ 10455.2204 with pi=exact)",
+      "existing_result": "(A) 3328π cm³",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "A",
+          "mcqMatched": [
+            "A"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q10. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'A', 'ta': 'அ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q11",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q11. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "qualitative_shape_recognition",
+      "independently_derived_result": "UNVERIFIABLE",
+      "existing_result": "(D) frustum of a cone and a hemisphere",
+      "status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "step_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "discrepancy": "Shuttlecock shape recognition is qualitative/non-numerical and cannot be derived from stated quantities.",
+      "severity": "info",
+      "recommended_correction": "Manual/qualitative verification required (non-numerical item).",
+      "supporting_evidence": {
+        "answerEvidence": {},
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": [
+            0
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q11. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'D', 'ta': 'ஈ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q12",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q12. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_sphere_8_balls_ratio",
+      "independently_derived_result": "2 : 1 (simplified ratio 2)",
+      "existing_result": "(A) 2:1",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "discrepancy": "Unparsed step indices: [1]",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "A",
+          "mcqMatched": [
+            "A"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": [
+            1
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q12. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'A', 'ta': 'அ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q13",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q13. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_greatest_sphere_in_cylinder",
+      "independently_derived_result": "4*pi/3 (≈ 4.1888 with pi=exact)",
+      "existing_result": "(A) (4/3)π",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'V=\\\\dfrac43\\\\pi(1)^3=\\\\dfrac{4\\\\pi}{3}  cm ^3', 'lhs': '43/pi', 'rhs': '4*pi/3'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "A",
+          "mcqMatched": [
+            "A"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 0,
+          "failedChains": [
+            {
+              "stepIndex": 1,
+              "line": "V=\\dfrac43\\pi(1)^3=\\dfrac{4\\pi}{3}  cm ^3",
+              "lhs": "43/pi",
+              "rhs": "4*pi/3"
+            }
+          ],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q13. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'A', 'ta': 'அ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q14",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q14. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_similar_cones_ratio",
+      "independently_derived_result": "1 : 2 (simplified ratio 1/2)",
+      "existing_result": "(B) 1:2",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 0, 'line': 'h_1-h_2=h_1-\\\\dfrac{h_1}{2}=\\\\dfrac{h_1}{2}', 'lhs': 'h_1 - h_2', 'rhs': 'h_1/2'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "B",
+          "mcqMatched": [
+            "B"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 1,
+          "failedChains": [
+            {
+              "stepIndex": 0,
+              "line": "h_1-h_2=h_1-\\dfrac{h_1}{2}=\\dfrac{h_1}{2}",
+              "lhs": "h_1 - h_2",
+              "rhs": "h_1/2"
+            }
+          ],
+          "unparsedSteps": [
+            1
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q14. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'B', 'ta': 'ஆ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q15",
+      "item_type": "exercise",
+      "section": "7.5",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q15. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+      "validation_method": "mcq_cylinder_cone_sphere_volume_ratio",
+      "independently_derived_result": "2*pi*r**3 : 2*pi*r**3/3 : 4*pi*r**3/3",
+      "existing_result": "(D) 3:1:2",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'V_2=\\\\dfrac13\\\\pi r^2(2r)=\\\\dfrac23\\\\pi r^3', 'lhs': '26*r**3/pi', 'rhs': '23*r**3/pi'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "mcqSelected": "D",
+          "mcqMatched": [
+            "D"
+          ]
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 1,
+          "failedChains": [
+            {
+              "stepIndex": 1,
+              "line": "V_2=\\dfrac13\\pi r^2(2r)=\\dfrac23\\pi r^3",
+              "lhs": "26*r**3/pi",
+              "rhs": "23*r**3/pi"
+            }
+          ],
+          "unparsedSteps": [
+            2
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Exercise 7.5 Q15. EN printed p.298 (PDF 304); TA printed p.306 (PDF 312); answer keys EN printed p.342/PDF348 and TA printed p.356/PDF362.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "{'en': 'D', 'ta': 'ஈ'}",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q1",
+      "item_type": "exercise",
+      "section": "7.unit",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q1. EN printed 298 / PDF 304; TA printed 306 / PDF 312; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+      "validation_method": "fountain_pen_words",
+      "independently_derived_result": "48000",
+      "existing_result": "Approximately 48,000 words",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PARTIAL",
+      "discrepancy": "Tamil consistency flags: ['en_ta_unit_mismatch']",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 1,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "en_ta_unit_mismatch"
+          ],
+          "details": {
+            "unit_mismatches": [
+              "litre(en=True,ta=False)"
+            ]
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q1. EN printed 298 / PDF 304; TA printed 306 / PDF 312; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "48000 words",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q2",
+      "item_type": "exercise",
+      "section": "7.unit",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q2. EN printed 298 / PDF 304; TA printed 306 / PDF 312; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+      "validation_method": "hemisphere_tank_empty_time",
+      "independently_derived_result": "1925/72",
+      "existing_result": "Approximately 27 minutes",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': 't = 26.74 min = 27 min', 'lhs': '1337/50', 'rhs': '27'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 26.73611111111111,
+            "abs_diff": 0.2638888888888893
+          },
+          "observedDimension": "time"
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 0,
+          "failedChains": [
+            {
+              "stepIndex": 2,
+              "line": "t = 26.74 min = 27 min",
+              "lhs": "1337/50",
+              "rhs": "27"
+            }
+          ],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q2. EN printed 298 / PDF 304; TA printed 306 / PDF 312; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "27 minutes (approx.)",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q3",
+      "item_type": "exercise",
+      "section": "7.unit",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q3. EN printed 298 / PDF 304; TA printed 306 / PDF 312; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+      "validation_method": "max_cone_in_hemisphere",
+      "independently_derived_result": "pi*r**3/3",
+      "existing_result": "πr³/3 cubic units",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "tamil_status": "PARTIAL",
+      "discrepancy": "Tamil consistency flags: ['en_ta_terminology_mismatch']",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 0,
+          "passedChains": 0,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "en_ta_terminology_mismatch"
+          ],
+          "details": {
+            "term_mismatches": [
+              "hemisphere(en=True,ta=False)",
+              "sphere(en=False,ta=True)"
+            ]
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q3. EN printed 298 / PDF 304; TA printed 306 / PDF 312; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "πr³/3 cubic units",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q4",
+      "item_type": "exercise",
+      "section": "7.unit",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q4. EN printed 298–299 / PDF 304–305; TA printed 306 / PDF 312; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+      "validation_method": "funnel_tin_area",
+      "independently_derived_result": "249*pi (≈ 782.5714 with pi=22/7)",
+      "existing_result": "249π cm² ≈ 782.57 cm²",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 782.5714285714286,
+            "abs_diff": 0.0014285714285051654
+          },
+          "observedDimension": "area"
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 1,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q4. EN printed 298–299 / PDF 304–305; TA printed 306 / PDF 312; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "782.57 cm²",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q5",
+      "item_type": "exercise",
+      "section": "7.unit",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q5. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+      "validation_method": "coins_to_cylinder_count",
+      "independently_derived_result": "450",
+      "existing_result": "450 coins",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 1,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q5. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "450 coins",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q6",
+      "item_type": "exercise",
+      "section": "7.unit",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q6. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+      "validation_method": "hollow_to_solid_cylinder_diameter",
+      "independently_derived_result": "24/5",
+      "existing_result": "4.8 cm",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 4,
+          "passedChains": 4,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q6. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "4.8 cm",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q7",
+      "item_type": "exercise",
+      "section": "7.unit",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q7. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+      "validation_method": "frustum_csa_from_perimeters_cost",
+      "independently_derived_result": "6800",
+      "existing_result": "₹6,800",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PARTIAL",
+      "discrepancy": "Tamil consistency flags: ['en_ta_terminology_mismatch']",
+      "severity": "minor",
+      "recommended_correction": "Populate/review Tamil prompt or simplify non-standard step notation.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 3,
+          "passedChains": 3,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [
+            "en_ta_terminology_mismatch"
+          ],
+          "details": {
+            "term_mismatches": [
+              "cone(en=True,ta=False)"
+            ]
+          }
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q7. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "₹6800",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q8",
+      "item_type": "exercise",
+      "section": "7.unit",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q8. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+      "validation_method": "hollow_hemisphere_thickness",
+      "independently_derived_result": "2",
+      "existing_result": "2 cm",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 4,
+          "passedChains": 4,
+          "failedChains": [],
+          "unparsedSteps": []
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q8. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "2 cm",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q9",
+      "item_type": "exercise",
+      "section": "7.unit",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q9. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+      "validation_method": "cone_slant_from_vol_base_area",
+      "independently_derived_result": "17",
+      "existing_result": "Approximately 17 cm (π ≈ 22/7)",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "matchType": "symbolic_latex"
+        },
+        "stepChecks": {
+          "checkedChains": 1,
+          "passedChains": 1,
+          "failedChains": [],
+          "unparsedSteps": [
+            3
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q9. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "17 cm",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q10",
+      "item_type": "exercise",
+      "section": "7.unit",
+      "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q10. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+      "validation_method": "sector_to_cone_volume",
+      "independently_derived_result": "111132*pi/125 (≈ 2794.1760 with pi=22/7)",
+      "existing_result": "Approximately 2794.18 cm³",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'r=\\\\dfrac35(21)=12.6  cm \\\\end{aligned}', 'lhs': '5/3', 'rhs': '63/5'}]",
+      "severity": "major",
+      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "numericMatch": {
+            "matched": true,
+            "mode": "22/7",
+            "derived_value": 2794.176,
+            "abs_diff": 0.0039999999999054126
+          },
+          "observedDimension": "volume"
+        },
+        "stepChecks": {
+          "checkedChains": 2,
+          "passedChains": 1,
+          "failedChains": [
+            {
+              "stepIndex": 1,
+              "line": "r=\\dfrac35(21)=12.6  cm \\end{aligned}",
+              "lhs": "5/3",
+              "rhs": "63/5"
+            }
+          ],
+          "unparsedSteps": [
+            0
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        },
+        "fidelity": {
+          "has_fidelity_record": true,
+          "source_reference": "TN SCERT Standard Ten Mathematics revised 2025, Unit Exercise 7 Q10. EN printed 299 / PDF 305; TA printed 307 / PDF 313; keys EN printed 342/PDF 348, TA printed 357/PDF 363.",
+          "fidelity_status": "page-visual-checked",
+          "textbook_answer_key": "2794.18 cm³",
+          "notes": ""
+        }
+      }
+    },
+    {
+      "id": "g10-ch7-solids-and-units",
+      "item_type": "concept",
+      "section": "7.1",
+      "source_reference": "site/data/g10-ch7-concepts.js",
+      "validation_method": "concept_m3_to_litres",
+      "independently_derived_result": "2500",
+      "existing_result": "choice[0]: 2500 litres",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "correctIndex": 0,
+          "matchedIndices": [
+            0
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        }
+      }
+    },
+    {
+      "id": "g10-ch7-cylinder-surface-area",
+      "item_type": "concept",
+      "section": "7.2.1–7.2.2",
+      "source_reference": "site/data/g10-ch7-concepts.js",
+      "validation_method": "concept_hollow_cylinder_csa",
+      "independently_derived_result": "160*pi (≈ 502.6548 with pi=exact)",
+      "existing_result": "choice[1]: 160π cm²",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "correctIndex": 1,
+          "matchedIndices": [
+            1
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        }
+      }
+    },
+    {
+      "id": "g10-ch7-cone-slant-surface",
+      "item_type": "concept",
+      "section": "7.2.3",
+      "source_reference": "site/data/g10-ch7-concepts.js",
+      "validation_method": "concept_cone_csa",
+      "independently_derived_result": "175*pi (≈ 550.0000 with pi=22/7)",
+      "existing_result": "choice[2]: 550 m²",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "correctIndex": 2,
+          "matchedIndices": [
+            2
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        }
+      }
+    },
+    {
+      "id": "g10-ch7-sphere-hemisphere-surface",
+      "item_type": "concept",
+      "section": "7.2.4–7.2.6",
+      "source_reference": "site/data/g10-ch7-concepts.js",
+      "validation_method": "concept_hollow_hemisphere_tsa",
+      "independently_derived_result": "84*pi (≈ 263.8938 with pi=exact)",
+      "existing_result": "choice[0]: 84π m²",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "correctIndex": 0,
+          "matchedIndices": [
+            0
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        }
+      }
+    },
+    {
+      "id": "g10-ch7-frustum-surface-volume",
+      "item_type": "concept",
+      "section": "7.2.7 & 7.3.8",
+      "source_reference": "site/data/g10-ch7-concepts.js",
+      "validation_method": "concept_frustum_slant",
+      "independently_derived_result": "5",
+      "existing_result": "choice[1]: 5 cm",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "correctIndex": 1,
+          "matchedIndices": [
+            1
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        }
+      }
+    },
+    {
+      "id": "g10-ch7-volumes-cylinder-cone",
+      "item_type": "concept",
+      "section": "7.3.1–7.3.3",
+      "source_reference": "site/data/g10-ch7-concepts.js",
+      "validation_method": "concept_cone_double_radius_scaling",
+      "independently_derived_result": "4",
+      "existing_result": "choice[2]: 4 times",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "correctIndex": 2,
+          "matchedIndices": [
+            2
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        }
+      }
+    },
+    {
+      "id": "g10-ch7-volumes-sphere-hemisphere",
+      "item_type": "concept",
+      "section": "7.3.4–7.3.7",
+      "source_reference": "site/data/g10-ch7-concepts.js",
+      "validation_method": "concept_sphere_volume_ratio",
+      "independently_derived_result": "8 : 27 (simplified ratio 8/27)",
+      "existing_result": "choice[0]: 8 : 27",
+      "status": "PARTIAL",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "tamil_status": "PARTIAL",
+      "discrepancy": "Tamil editorial check flags: ['en_ta_terminology_mismatch']",
+      "severity": "minor",
+      "recommended_correction": "Review Tamil terminology/units in concept prompt.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "correctIndex": 0,
+          "matchedIndices": [
+            0
+          ]
+        },
+        "tamilChecks": {
+          "flags": [
+            "en_ta_terminology_mismatch"
+          ],
+          "details": {
+            "term_mismatches": [
+              "sphere(en=False,ta=True)"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "g10-ch7-combined-solids",
+      "item_type": "concept",
+      "section": "7.4",
+      "source_reference": "site/data/g10-ch7-concepts.js",
+      "validation_method": "concept_cube_minus_hemisphere_sa",
+      "independently_derived_result": "6*a**2 + pi*r**2",
+      "existing_result": "choice[1]: 6a² + πr²",
+      "status": "PASS",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "tamil_status": "PASS",
+      "discrepancy": "",
+      "severity": "none",
+      "recommended_correction": "",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "correctIndex": 1,
+          "matchedIndices": [
+            1
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        }
+      }
+    },
+    {
+      "id": "g10-ch7-conversion-volume-conservation",
+      "item_type": "concept",
+      "section": "7.5",
+      "source_reference": "site/data/g10-ch7-concepts.js",
+      "validation_method": "concept_sphere_recast_count",
+      "independently_derived_result": "27",
+      "existing_result": "choice[2]: 27 small spheres",
+      "status": "FAIL",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "tamil_status": "PASS",
+      "discrepancy": "Step=FAIL, Tamil=[]",
+      "severity": "major",
+      "recommended_correction": "Review concept question/choice/proof/Tamil alignment.",
+      "supporting_evidence": {
+        "answerEvidence": {
+          "correctIndex": 2,
+          "matchedIndices": [
+            2
+          ]
+        },
+        "tamilChecks": {
+          "flags": [],
+          "details": {}
+        }
+      }
+    }
+  ]
+}
