@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 220" width="352" height="220" role="img">
+  <title>A, B</title>
+  <rect x="4" y="4" width="344" height="212" fill="#fff" stroke="#887da0" stroke-width="2" rx="10"/>
+  <g fill="none" stroke="#6351a0" stroke-width="2.5">
+    <circle cx="128" cy="111" r="74"/>
+    <circle cx="224" cy="111" r="74"/>
+  </g>
+  <g fill="#2b2145" font-family="system-ui, sans-serif" font-size="18" font-weight="600" text-anchor="middle">
+    <text x="75" y="47">A</text>
+    <text x="277" y="47">B</text>
+    <text x="110" y="119">32 + x</text>
+    <text x="176" y="119">x</text>
+    <text x="242" y="119">5x</text>
+  </g>
+</svg>

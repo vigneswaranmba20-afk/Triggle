@@ -27,7 +27,7 @@ function check(value,original,id){
  }
 }
 const authored=load().filter(q=>q.notationSource==='authored');
-assert.equal(authored.length,82);
+assert.equal(authored.length,131);
 for(const item of authored) assert.equal(get(item),undefined,item.id+' uses source-authored notation');
 const items=load({legacyNotationOnly:true});assert.equal(items.length,624);
 assert.equal(new Set(items.map(q=>q.id)).size,624,'Student-facing IDs must be unique');
