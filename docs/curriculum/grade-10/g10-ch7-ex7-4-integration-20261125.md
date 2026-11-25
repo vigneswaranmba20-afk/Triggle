@@ -1,0 +1,6 @@
+# Grade 10 Mensuration Exercise 7.4 — draft integration
+
+- Eight numbered whole questions, no subparts. EN printed 296–297/PDF 302–303; TA printed 304–305/PDF 310–311. Both answer-key pages visually checked (EN 342/PDF 348; TA 356/PDF 362). PDF and rendered-page SHA-256 evidence in site/data/textbook-fidelity/g10-ch7-ex7-4.json.
+- All eight answers independently checked using rational arithmetic, including h/(3x²) (positive x/r), 4/3 cm exact = 1.33 cm rounded, and 1812 litres with π≈22/7. 7.4 has no printed question-specific diagram.
+- Eight complete EN/TA worked solutions with authored KaTeX, fallback strings, IDs and independent difficulty metadata. Registered in the student HTML and offline cache. Tamil editorial and teacher certification remain pending.
+- Unit and browser regression tests registered. Existing main branch not modified. **Do not merge** until generated project status has been rebuilt on the rebased branch with `npm run status:build`, all required source/unit/browser/security checks pass and the live student routes are verified after release. The generated snapshot has intentionally not been hand-edited. Browser/CI tests have not yet been executed in a full checkout. No claim of deployment. Avoid conflicts with active Codex exercise-display batches; rebase on final settled main.
