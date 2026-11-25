@@ -883,7 +883,7 @@ const entries = [
         },
         ", then prove that ",
         {
-          "latex": "\\tan\\theta + \\cot\\theta = 1",
+          "latex": "\\tan\\theta+\\cot\\theta=1\\quad(\\text{No real angle})",
           "fallback": "tan θ + cot θ = 1",
           "display": false
         },
@@ -925,10 +925,10 @@ const entries = [
         }
       }
     ],
-    "answer": "tan θ + cot θ = 1 (from sin θ cos θ = 1)",
+    "answer": "Formal result 1. No real angle satisfies the given condition.",
     "answerMath": {
       "latex": "\\tan\\theta + \\cot\\theta = 1",
-      "fallback": "tan θ + cot θ = 1 (from sin θ cos θ = 1)",
+      "fallback": "Formal result 1. No real angle satisfies the given condition.",
       "display": true
     },
     "kind": "textbook",
@@ -1006,7 +1006,7 @@ const entries = [
         }
       },
       {
-        "en": "Understand Deeply — Carefully evaluate both sides at θ = 30°: on LHS, tan(3×30°) = tan 90°, which divides by cos 90° = 0 and is not defined; on RHS, 1 − 3 tan²30° = 1 − 3(1/3) = 0, so the denominator is also zero. Thus both sides match as not defined (while the formula itself holds as an identity whenever 3θ ≠ 90° + 180°k).",
+        "en": "Understand Deeply — Carefully evaluate both sides at θ = 30°: on LHS, tan(3×30°) = tan 90°, which divides by cos 90° = 0 and is not defined; on RHS, 1 − 3 tan²30° = 1 − 3(1/3) = 0, so the denominator is also zero. Since neither side has a value, substitution at this angle cannot verify equality. The triple-angle identity applies when its terms are defined.",
         "eq": "LHS = tan 90° (not defined); RHS denominator = 1 − 3(1/√3)² = 1 − 1 = 0 (not defined)",
         "math": {
           "latex": "\\begin{aligned} \\mathrm{LHS} &= \\tan 3(30^\\circ) = \\tan 90^\\circ \\quad(\\text{not defined}) \\\\ \\mathrm{RHS} &= \\dfrac{3\\left(\\frac{1}{\\sqrt{3}}\\right) - \\left(\\frac{1}{\\sqrt{3}}\\right)^3}{1 - 3\\left(\\frac{1}{\\sqrt{3}}\\right)^2} = \\dfrac{\\sqrt{3} - \\frac{1}{3\\sqrt{3}}}{1 - 1} = \\dfrac{8/(3\\sqrt{3})}{0} \\quad(\\text{not defined}) \\end{aligned}",
@@ -1015,10 +1015,10 @@ const entries = [
         }
       }
     ],
-    "answer": "Both LHS = tan 90° and RHS (with denominator 1 − 3(1/3) = 0) are not defined at θ = 30°, so both sides agree.",
+    "answer": "At θ = 30°, neither side has a value. Equality cannot be checked at this angle.",
     "answerMath": {
-      "latex": "\\mathrm{LHS} = \\mathrm{RHS}\\quad(\\text{both not defined at }\\theta=30^\\circ)",
-      "fallback": "Both LHS = tan 90° and RHS (with denominator 1 − 3(1/3) = 0) are not defined at θ = 30°, so both sides agree.",
+      "latex": "\\theta=30^\\circ:\\quad\\text{both expressions have no value}",
+      "fallback": "At θ = 30°, neither side has a value. Equality cannot be checked at this angle.",
       "display": true
     },
     "kind": "textbook",

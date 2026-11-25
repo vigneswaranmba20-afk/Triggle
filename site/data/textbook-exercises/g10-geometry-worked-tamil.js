@@ -766,6 +766,7 @@
       answer: [{"latex": "\\text{இ.ப.} = \\text{வ.ப.} = \\sec^4\\theta - \\sec^2\\theta", "fallback": "இடப்புறம் = வலப்புறம் = sec⁴θ − sec²θ", "display": true}]
     },
     "c10-6-ex6-1-q2-i": {
+      label: "பயிற்சி 6.1 · வினா 2(i)",
       title: "முக்கோணவியல் முற்றொருமைகள்",
       reasons: ["நிரூபிக்க வேண்டிய சமன்பாட்டின் இடப்புறத்திலிருந்து தொடங்குக.", "cot²θ = 1/tan²θ என எழுதிப் பகுதியில் ஒரே பொதுப் பகுதியைப் பெறுக.", "பின்னத்தால் வகுப்பதற்குப் பதிலாக அதன் தலைகீழியால் பெருக்குக.", "பூச்சியமில்லாத பொதுக் காரணி 1 − tan²θ ஐ நீக்கினால் வலப்புறமான tan²θ கிடைக்கிறது.", "θ = 30° எனப் பிரதியிட்டால் இருபுறமும் 1/3. இது ஒரு மதிப்புக்கான சரிபார்ப்பு.", "மூலக் கோவையில் sin θ, cos θ இரண்டும் பூச்சியமாகக் கூடாது. மேலும் cot²θ − 1 பூச்சியமாகக் கூடாது என்பதால் tan²θ ≠ 1."],
       equations: {"3": {"latex": "=\\tan^2\\theta=\\text{வ.ப.}", "display": true, "fallback": "=tan⁡^(2)θ=வ.ப."}, "4": {"latex": "\\begin{aligned}\\text{இ.ப.}&=\\dfrac{1-\\frac13}{3-1}=\\dfrac13\\\\\\text{வ.ப.}&=\\tan^2 30^\\circ=\\dfrac13\\end{aligned}", "display": true, "fallback": "இ.ப.=(1−(1)/(3))/(3−1)=(1)/(3) ; வ.ப.=tan⁡^(2)30^(∘)=(1)/(3)"}},
@@ -790,6 +791,571 @@
       equations: {"0": {"latex": "\\text{இ.ப.} = \\sqrt{\\dfrac{(1+\\sin\\theta)^2}{\\cos^2\\theta}} + \\sqrt{\\dfrac{(1-\\sin\\theta)^2}{\\cos^2\\theta}}", "fallback": "இ.ப.=√(((1+sin⁡θ)^(2))/(cos⁡^(2)θ))+√(((1−sin⁡θ)^(2))/(cos⁡^(2)θ))", "display": true}, "1": {"latex": "\\begin{aligned} &= \\dfrac{1+\\sin\\theta}{\\cos\\theta} + \\dfrac{1-\\sin\\theta}{\\cos\\theta} \\\\ &= \\dfrac{(1+\\sin\\theta)+(1-\\sin\\theta)}{\\cos\\theta} = \\dfrac{2}{\\cos\\theta} = 2\\sec\\theta = \\text{வ.ப.} \\end{aligned}", "fallback": "=(1+sin⁡θ)/(cos⁡θ)+(1−sin⁡θ)/(cos⁡θ) ; =((1+sin⁡θ)+(1−sin⁡θ))/(cos⁡θ)=(2)/(cos⁡θ)=2sec⁡θ=வ.ப.", "display": true}},
       answer: [{"latex": "\\text{இ.ப.} = \\text{வ.ப.} = 2\\sec\\theta", "fallback": "இடப்புறம் = வலப்புறம் = 2 sec θ", "display": true}]
     },
+    "c10-6-ex6-1-q4-i": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["sec²θ − tan²θ = 1 என்ற முற்றொருமையின் இருபுறங்களையும் முப்படியாக்கி வேறுபாட்டின் கனச் சூத்திரத்தைப் பயன்படுத்துக.", "பெருக்கற்பலனில் உள்ள sec²θ − tan²θ க்கு 1 எனப் பிரதியிட்டு மற்ற உறுப்புகளை வலப்புறத்திற்கு மாற்றுக."]
+    },
+    "c10-6-ex6-1-q4-ii": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["இடப்புறத்தில் உள்ள இரு வர்க்கங்களை விரித்து ஒத்த உறுப்புகளைச் சேர்க்க. sin²θ + cos²θ = 1.", "மீதமுள்ள குறுக்குப் பெருக்கற்பலனை ஒரே பகுதிக்குக் கொண்டுவந்தால் 2 sec θ cosec θ கிடைக்கிறது. முழுவர்க்கமாகத் தொகுக்க."],
+      equations: {"0": {"latex": "\\begin{aligned} \\text{இ.ப.} &= (\\sin^2\\theta + 2\\sin\\theta\\sec\\theta + \\sec^2\\theta) + (\\cos^2\\theta + 2\\cos\\theta\\operatorname{cosec}\\theta + \\operatorname{cosec}^2\\theta) \\\\ &= (\\sin^2\\theta + \\cos^2\\theta) + \\sec^2\\theta + \\operatorname{cosec}^2\\theta + 2\\left(\\dfrac{\\sin\\theta}{\\cos\\theta} + \\dfrac{\\cos\\theta}{\\sin\\theta}\\right) \\end{aligned}", "fallback": "இ.ப.=(sin⁡^(2)θ+2sin⁡θsec⁡θ+sec⁡^(2)θ)+(cos⁡^(2)θ+2cos⁡θcosec⁡θ+cosec⁡^(2)θ) ; =(sin⁡^(2)θ+cos⁡^(2)θ)+sec⁡^(2)θ+cosec⁡^(2)θ+2((sin⁡θ)/(cos⁡θ)+(cos⁡θ)/(sin⁡θ))", "display": true}, "1": {"latex": "\\begin{aligned} &= 1 + \\sec^2\\theta + \\operatorname{cosec}^2\\theta + 2\\left(\\dfrac{1}{\\sin\\theta\\cos\\theta}\\right) \\\\ &= 1 + (\\sec^2\\theta + 2\\sec\\theta\\operatorname{cosec}\\theta + \\operatorname{cosec}^2\\theta) \\\\ &= 1 + (\\sec\\theta + \\operatorname{cosec}\\theta)^2 = \\text{வ.ப.} \\end{aligned}", "fallback": "=1+sec⁡^(2)θ+cosec⁡^(2)θ+2((1)/(sin⁡θcos⁡θ)) ; =1+(sec⁡^(2)θ+2sec⁡θcosec⁡θ+cosec⁡^(2)θ) ; =1+(sec⁡θ+cosec⁡θ)^(2)=வ.ப.", "display": true}},
+      answer: [{"latex": "\\text{இ.ப.} = \\text{வ.ப.} = 1 + (\\sec\\theta + \\operatorname{cosec}\\theta)^2", "fallback": "இ.ப.=வ.ப.=1+(sec⁡θ+cosec⁡θ)^(2)", "display": true}]
+    },
+    "c10-6-ex6-1-q5-i": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["1 − sin⁴θ ஐ வர்க்கங்களின் வேறுபாடாகப் பிரித்து 1 − sin²θ = cos²θ என்பதைப் பயன்படுத்துக.", "பொதுப் பகுதி cos²θ இல் உறுப்புகளைச் சேர்க்க. தொகுதியும் cos²θ ஆவதால் cos θ ≠ 0 எனில் மதிப்பு 1."],
+      equations: {"0": {"latex": "\\text{இ.ப.} = \\dfrac{1}{\\cos^4\\theta}(1-\\sin^2\\theta)(1+\\sin^2\\theta) - \\dfrac{2\\sin^2\\theta}{\\cos^2\\theta}", "fallback": "இ.ப.=(1)/(cos⁡^(4)θ)(1−sin⁡^(2)θ)(1+sin⁡^(2)θ)−(2sin⁡^(2)θ)/(cos⁡^(2)θ)", "display": true}, "1": {"latex": "\\begin{aligned} &= \\dfrac{\\cos^2\\theta(1+\\sin^2\\theta)}{\\cos^4\\theta} - \\dfrac{2\\sin^2\\theta}{\\cos^2\\theta} = \\dfrac{1+\\sin^2\\theta - 2\\sin^2\\theta}{\\cos^2\\theta} \\\\ &= \\dfrac{1-\\sin^2\\theta}{\\cos^2\\theta} = \\dfrac{\\cos^2\\theta}{\\cos^2\\theta} = 1 = \\text{வ.ப.} \\end{aligned}", "fallback": "=(cos⁡^(2)θ(1+sin⁡^(2)θ))/(cos⁡^(4)θ)−(2sin⁡^(2)θ)/(cos⁡^(2)θ)=(1+sin⁡^(2)θ−2sin⁡^(2)θ)/(cos⁡^(2)θ) ; =(1−sin⁡^(2)θ)/(cos⁡^(2)θ)=(cos⁡^(2)θ)/(cos⁡^(2)θ)=1=வ.ப.", "display": true}},
+      answer: [{"latex": "\\text{இ.ப.} = \\text{வ.ப.} = 1", "fallback": "இ.ப.=வ.ப.=1", "display": true}]
+    },
+    "c10-6-ex6-1-q5-ii": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["cot θ ஐ cos θ / sin θ என எழுதி தொகுதியிலும் பகுதியிலும் cos θ ஐப் பொதுக் காரணியாக எடுக்க.", "பொதுக் காரணியை நீக்கி 1/sin θ = cosec θ என மாற்றினால் வேண்டிய பின்னம் கிடைக்கிறது."],
+      equations: {"0": {"latex": "\\text{இ.ப.} = \\dfrac{\\dfrac{\\cos\\theta}{\\sin\\theta} - \\cos\\theta}{\\dfrac{\\cos\\theta}{\\sin\\theta} + \\cos\\theta} = \\dfrac{\\cos\\theta\\left(\\dfrac{1}{\\sin\\theta} - 1\\right)}{\\cos\\theta\\left(\\dfrac{1}{\\sin\\theta} + 1\\right)}", "fallback": "இ.ப.=((cos⁡θ)/(sin⁡θ)−cos⁡θ)/((cos⁡θ)/(sin⁡θ)+cos⁡θ)=(cos⁡θ((1)/(sin⁡θ)−1))/(cos⁡θ((1)/(sin⁡θ)+1))", "display": true}, "1": {"latex": "= \\dfrac{\\operatorname{cosec}\\theta - 1}{\\operatorname{cosec}\\theta + 1} = \\text{வ.ப.}", "fallback": "=(cosec⁡θ−1)/(cosec⁡θ+1)=வ.ப.", "display": true}},
+      answer: [{"latex": "\\text{இ.ப.} = \\text{வ.ப.} = \\dfrac{\\operatorname{cosec}\\theta - 1}{\\operatorname{cosec}\\theta + 1}", "fallback": "இ.ப.=வ.ப.=(cosec⁡θ−1)/(cosec⁡θ+1)", "display": true}]
+    },
+    "c10-6-ex6-1-q6-i": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["இரு பின்னங்களையும் பொதுப் பகுதிக்குக் கொண்டுவருக. தொகுதியில் உள்ள இணைக் காரணிகளை வர்க்கங்களின் வேறுபாடாக மாற்றுக.", "A இன் வர்க்கங்களையும் B இன் வர்க்கங்களையும் தொகுக்க. இரண்டின் கூட்டுத்தொகைகளும் 1 என்பதால் அவற்றின் வேறுபாடு பூச்சியம்."],
+      equations: {"0": {"latex": "\\text{இ.ப.} = \\dfrac{(\\sin A - \\sin B)(\\sin A + \\sin B) + (\\cos A - \\cos B)(\\cos A + \\cos B)}{(\\cos A + \\cos B)(\\sin A + \\sin B)}", "fallback": "இ.ப.=((sin⁡A−sin⁡B)(sin⁡A+sin⁡B)+(cos⁡A−cos⁡B)(cos⁡A+cos⁡B))/((cos⁡A+cos⁡B)(sin⁡A+sin⁡B))", "display": true}, "1": {"latex": "\\begin{aligned} &= \\dfrac{(\\sin^2 A - \\sin^2 B) + (\\cos^2 A - \\cos^2 B)}{(\\cos A + \\cos B)(\\sin A + \\sin B)} \\\\ &= \\dfrac{(\\sin^2 A + \\cos^2 A) - (\\sin^2 B + \\cos^2 B)}{(\\cos A + \\cos B)(\\sin A + \\sin B)} = \\dfrac{1 - 1}{(\\cos A + \\cos B)(\\sin A + \\sin B)} = 0 = \\text{வ.ப.} \\end{aligned}", "fallback": "=((sin⁡^(2)A−sin⁡^(2)B)+(cos⁡^(2)A−cos⁡^(2)B))/((cos⁡A+cos⁡B)(sin⁡A+sin⁡B)) ; =((sin⁡^(2)A+cos⁡^(2)A)−(sin⁡^(2)B+cos⁡^(2)B))/((cos⁡A+cos⁡B)(sin⁡A+sin⁡B))=(1−1)/((cos⁡A+cos⁡B)(sin⁡A+sin⁡B))=0=வ.ப.", "display": true}},
+      answer: [{"latex": "\\text{இ.ப.} = \\text{வ.ப.} = 0", "fallback": "இ.ப.=வ.ப.=0", "display": true}]
+    },
+    "c10-6-ex6-1-q6-ii": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["sin³A மற்றும் cos³A இன் கூடுதல், வேறுபாடு ஆகியவற்றைக் கனக் காரணிப்படுத்தல் சூத்திரங்களால் பிரிக்க.", "பகுதிகளுடன் பொதுக் காரணிகளை நீக்கியபின் sin²A + cos²A = 1. எதிர்க்குறியுள்ள பெருக்கல் உறுப்புகள் நீங்கிக் கூடுதல் 2 ஆகிறது."],
+      equations: {"0": {"latex": "\\text{இ.ப.} = \\dfrac{(\\sin A+\\cos A)(\\sin^2 A - \\sin A\\cos A + \\cos^2 A)}{\\sin A+\\cos A} + \\dfrac{(\\sin A-\\cos A)(\\sin^2 A + \\sin A\\cos A + \\cos^2 A)}{\\sin A-\\cos A}", "fallback": "இ.ப.=((sin⁡A+cos⁡A)(sin⁡^(2)A−sin⁡Acos⁡A+cos⁡^(2)A))/(sin⁡A+cos⁡A)+((sin⁡A−cos⁡A)(sin⁡^(2)A+sin⁡Acos⁡A+cos⁡^(2)A))/(sin⁡A−cos⁡A)", "display": true}, "1": {"latex": "\\begin{aligned} &= (\\sin^2 A + \\cos^2 A - \\sin A\\cos A) + (\\sin^2 A + \\cos^2 A + \\sin A\\cos A) \\\\ &= (1 - \\sin A\\cos A) + (1 + \\sin A\\cos A) = 2 = \\text{வ.ப.} \\end{aligned}", "fallback": "=(sin⁡^(2)A+cos⁡^(2)A−sin⁡Acos⁡A)+(sin⁡^(2)A+cos⁡^(2)A+sin⁡Acos⁡A) ; =(1−sin⁡Acos⁡A)+(1+sin⁡Acos⁡A)=2=வ.ப.", "display": true}},
+      answer: [{"latex": "\\text{இ.ப.} = \\text{வ.ப.} = 2", "fallback": "இ.ப.=வ.ப.=2", "display": true}]
+    },
+    "c10-6-ex6-1-q7-i": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["வினாவில் கொடுத்த சமன்பாட்டை வர்க்கமாக்கினால் sin θ cos θ = 1 எனக் கிடைக்கிறது.", "மெய்க்கோணத்திற்கு |sin θ cos θ| ≤ 1/2. எனவே வினாவின் நிபந்தனையை நிறைவு செய்யும் மெய்க்கோணம் இல்லை. நிபந்தனையை மட்டும் பயன்படுத்தும் இயற்கணிதக் கணக்கில் மதிப்பு 1 வருகிறது."],
+      equations: {"0": {"latex": "\\begin{aligned} (\\sin\\theta + \\cos\\theta)^2 &= (\\sqrt{3})^2 \\\\ \\sin^2\\theta + \\cos^2\\theta + 2\\sin\\theta\\cos\\theta &= 3 \\\\ 1 + 2\\sin\\theta\\cos\\theta &= 3\\quad\\text{எனவே}\\quad \\sin\\theta\\cos\\theta = 1 \\end{aligned}", "fallback": "(sin⁡θ+cos⁡θ)^(2)=(√(3))^(2) ; sin⁡^(2)θ+cos⁡^(2)θ+2sin⁡θcos⁡θ=3 ; 1+2sin⁡θcos⁡θ=3 எனவே sin⁡θcos⁡θ=1", "display": true}},
+      answer: [{"latex": "\\tan\\theta+\\cot\\theta=1\\quad(\\text{மெய்க்கோணம் இல்லை})", "fallback": "tan⁡θ+cot⁡θ=1 (மெய்க்கோணம் இல்லை)", "display": true}]
+    },
+    "c10-6-ex6-1-q7-ii": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["சமன்பாட்டிலிருந்து tan θ = 1/√3. குறுங்கோணமாக எடுத்தால் θ = 30°, எனவே 3θ = 90°.", "tan 90° வரையறுக்கப்படவில்லை. வலப்புறத்தின் பகுதியும் பூச்சியம். எனவே இந்தக் கோணத்தில் இரு மதிப்புகளின் சமத்துவத்தைச் சரிபார்க்க இயலாது."],
+      equations: {"0": {"latex": "\\sqrt{3}\\sin\\theta = \\cos\\theta\\quad\\text{எனவே}\\quad \\tan\\theta = \\dfrac{\\sin\\theta}{\\cos\\theta} = \\dfrac{1}{\\sqrt{3}}\\quad\\text{எனவே}\\quad \\theta = 30^\\circ", "fallback": "√(3)sin⁡θ=cos⁡θ எனவே tan⁡θ=(sin⁡θ)/(cos⁡θ)=(1)/(√(3)) எனவே θ=30^(∘)", "display": true}, "1": {"latex": "\\begin{aligned} \\text{இ.ப.} &= \\tan 3(30^\\circ) = \\tan 90^\\circ \\quad(\\text{வரையறுக்கப்படவில்லை}) \\\\ \\text{வ.ப.} &= \\dfrac{3\\left(\\frac{1}{\\sqrt{3}}\\right) - \\left(\\frac{1}{\\sqrt{3}}\\right)^3}{1 - 3\\left(\\frac{1}{\\sqrt{3}}\\right)^2} = \\dfrac{\\sqrt{3} - \\frac{1}{3\\sqrt{3}}}{1 - 1} = \\dfrac{8/(3\\sqrt{3})}{0} \\quad(\\text{வரையறுக்கப்படவில்லை}) \\end{aligned}", "fallback": "இ.ப.=tan⁡3(30^(∘))=tan⁡90^(∘) (வரையறுக்கப்படவில்லை) ; வ.ப.=(3((1)/(√(3)))−((1)/(√(3)))^(3))/(1−3((1)/(√(3)))^(2))=(√(3)−(1)/(3√(3)))/(1−1)=(8/(3√(3)))/(0) (வரையறுக்கப்படவில்லை)", "display": true}},
+      answer: [{"latex": "\\theta=30^\\circ:\\quad\\text{இரு கோவைகளுக்கும் மதிப்பு இல்லை}", "fallback": "θ=30^(∘): இரு கோவைகளுக்கும் மதிப்பு இல்லை", "display": true}]
+    },
+    "c10-6-ex6-1-q8-i": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["கொடுக்கப்பட்ட விகிதங்களிலிருந்து m, n இன் மதிப்புகளைப் பிரதியிட்டு cos²α ஐப் பொதுக் காரணியாக எடுக்க.", "பின்னங்களைச் சேர்க்கும்போது sin²β + cos²β = 1. cos²β ஐச் சுருக்கினால் cos²α/sin²β = n²."],
+      equations: {"0": {"latex": "\\text{இ.ப.} = (m^2 + n^2)\\cos^2\\beta = \\left(\\dfrac{\\cos^2\\alpha}{\\cos^2\\beta} + \\dfrac{\\cos^2\\alpha}{\\sin^2\\beta}\\right)\\cos^2\\beta", "fallback": "இ.ப.=(m^(2)+n^(2))cos⁡^(2)β=((cos⁡^(2)α)/(cos⁡^(2)β)+(cos⁡^(2)α)/(sin⁡^(2)β))cos⁡^(2)β", "display": true}, "1": {"latex": "\\begin{aligned} &= \\cos^2\\alpha\\left(\\dfrac{\\sin^2\\beta + \\cos^2\\beta}{\\cos^2\\beta\\sin^2\\beta}\\right)\\cos^2\\beta \\\\ &= \\dfrac{\\cos^2\\alpha\\cdot 1}{\\sin^2\\beta} = \\left(\\dfrac{\\cos\\alpha}{\\sin\\beta}\\right)^2 = n^2 = \\text{வ.ப.} \\end{aligned}", "fallback": "=cos⁡^(2)α((sin⁡^(2)β+cos⁡^(2)β)/(cos⁡^(2)βsin⁡^(2)β))cos⁡^(2)β ; =(cos⁡^(2)α⋅1)/(sin⁡^(2)β)=((cos⁡α)/(sin⁡β))^(2)=n^(2)=வ.ப.", "display": true}}
+    },
+    "c10-6-ex6-1-q8-ii": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["x, y ஐ sin θ, cos θ மூலம் எழுதிச் சுருக்குக. x = 1/(sin θ cos θ), y = sin²θ/cos θ.", "பெருக்கற்பலன்களைச் சுருக்கினால் x²y = sec³θ, xy² = tan³θ. கனமூலம் எடுத்து வர்க்கமாக்கினால் வேறுபாடு sec²θ − tan²θ = 1."],
+      equations: {"1": {"latex": "\\begin{aligned} x^2y &= \\dfrac{1}{\\sin^2\\theta\\cos^2\\theta}\\cdot\\dfrac{\\sin^2\\theta}{\\cos\\theta} = \\dfrac{1}{\\cos^3\\theta} = \\sec^3\\theta \\\\ xy^2 &= \\dfrac{1}{\\sin\\theta\\cos\\theta}\\cdot\\dfrac{\\sin^4\\theta}{\\cos^2\\theta} = \\dfrac{\\sin^3\\theta}{\\cos^3\\theta} = \\tan^3\\theta \\\\ \\text{இ.ப.} &= (\\sec^3\\theta)^{\\frac{2}{3}} - (\\tan^3\\theta)^{\\frac{2}{3}} = \\sec^2\\theta - \\tan^2\\theta = 1 = \\text{வ.ப.} \\end{aligned}", "fallback": "x^(2)y=(1)/(sin⁡^(2)θcos⁡^(2)θ)⋅(sin⁡^(2)θ)/(cos⁡θ)=(1)/(cos⁡^(3)θ)=sec⁡^(3)θ ; xy^(2)=(1)/(sin⁡θcos⁡θ)⋅(sin⁡^(4)θ)/(cos⁡^(2)θ)=(sin⁡^(3)θ)/(cos⁡^(3)θ)=tan⁡^(3)θ ; இ.ப.=(sec⁡^(3)θ)^((2)/(3))−(tan⁡^(3)θ)^((2)/(3))=sec⁡^(2)θ−tan⁡^(2)θ=1=வ.ப.", "display": true}}
+    },
+    "c10-6-ex6-1-q9-i": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["p ஐ வர்க்கமாக்கி sin²θ + cos²θ = 1 ஐப் பயன்படுத்துக. q இன் இரு உறுப்புகளையும் பொதுப் பகுதிக்கு மாற்றுக.", "q மற்றும் p² − 1 ஐப் பெருக்கும்போது sin θ cos θ நீங்குவதால் 2p கிடைக்கிறது."],
+      equations: {"1": {"latex": "q(p^2 - 1) = \\left(\\dfrac{p}{\\sin\\theta\\cos\\theta}\\right)(2\\sin\\theta\\cos\\theta) = 2p = \\text{வ.ப.}", "fallback": "q(p^(2)−1)=((p)/(sin⁡θcos⁡θ))(2sin⁡θcos⁡θ)=2p=வ.ப.", "display": true}}
+    },
+    "c10-6-ex6-1-q9-ii": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["கொடுத்த உறவை sin θ(2 − cos²θ) = cos²θ என மாற்றி இருபுறமும் வர்க்கமாக்குக. sin²θ ஐ 1 − cos²θ என மாற்றுக.", "அடைப்புக்குறிகளை விரித்து ஒத்த அடுக்குகளைச் சேர்க்க. உறுப்புகளை மாற்றியமைத்தால் வேண்டிய சமன்பாடு கிடைக்கிறது."]
+    },
+    "c10-6-ex6-1-q10": {
+      title: "முக்கோணவியல் முற்றொருமைகள்",
+      reasons: ["a ஐ sin θ, cos θ மூலம் எழுதி வர்க்கமாக்குக. cos²θ = (1 − sin θ)(1 + sin θ) எனக் காரணிப்படுத்திச் சுருக்குக.", "a² இன் மதிப்பைப் பிரதியிட்டுப் பொதுப் பகுதிகளை நீக்குக. தொகுதி 2 sin θ, பகுதி 2 என்பதால் விகிதம் sin θ."],
+      equations: {"1": {"latex": "\\begin{aligned} \\dfrac{a^2 - 1}{a^2 + 1} &= \\dfrac{\\dfrac{1+\\sin\\theta}{1-\\sin\\theta} - 1}{\\dfrac{1+\\sin\\theta}{1-\\sin\\theta} + 1} = \\dfrac{(1+\\sin\\theta)-(1-\\sin\\theta)}{(1+\\sin\\theta)+(1-\\sin\\theta)} \\\\ &= \\dfrac{2\\sin\\theta}{2} = \\sin\\theta = \\text{வ.ப.} \\end{aligned}", "fallback": "(a^(2)−1)/(a^(2)+1)=((1+sin⁡θ)/(1−sin⁡θ)−1)/((1+sin⁡θ)/(1−sin⁡θ)+1)=((1+sin⁡θ)−(1−sin⁡θ))/((1+sin⁡θ)+(1−sin⁡θ)) ; =(2sin⁡θ)/(2)=sin⁡θ=வ.ப.", "display": true}}
+    },
+    "c10-6-ex6-2-q1": {
+      title: "ஏற்றக்கோணம்",
+      reasons: ["கோபுர உயரம் எதிர்ப்பக்கம், அடியிலிருந்து பார்வையாளருக்கான தூரம் அடுத்துள்ள பக்கம். அவற்றின் விகிதம் tan θ.", "சாய்வு 1/√3 என்பதால் அதற்குரிய குறுங்கோணம் 30°."],
+      equations: {"0": {"latex": "\\tan\\theta = \\dfrac{\\text{எதிர்ப்பக்கம்}}{\\text{அடுத்துள்ள பக்கம்}} = \\dfrac{10\\sqrt{3}}{30} = \\dfrac{\\sqrt{3}}{3}", "fallback": "tan⁡θ=(எதிர்ப்பக்கம்)/(அடுத்துள்ள பக்கம்)=(10√(3))/(30)=(√(3))/(3)", "display": true}, "1": {"latex": "\\tan\\theta = \\dfrac{1}{\\sqrt{3}} = \\tan 30^\\circ\\quad\\text{எனவே}\\quad \\theta = 30^\\circ", "fallback": "tan⁡θ=(1)/(√(3))=tan⁡30^(∘) எனவே θ=30^(∘)", "display": true}}
+    },
+    "c10-6-ex6-2-q2": {
+      title: "ஏற்றக்கோணம்",
+      reasons: ["சாலையின் மையத்திலிருந்து ஒரு பக்கத்திற்கான தொலைவை x என்க. வீட்டு உயரத்தையும் ஏற்றக்கோணத்தையும் கொண்டு tan 30° க்குச் சமன்பாடு அமைக்க.", "சாலையின் பாதி அகலம் 12 மீட்டர். இருபுறங்களையும் சேர்க்க இருமடங்காக்குக."],
+      equations: {"0": {"latex": "\\tan 30^\\circ = \\dfrac{4\\sqrt{3}}{x}\\quad\\text{எனவே}\\quad \\dfrac{1}{\\sqrt{3}} = \\dfrac{4\\sqrt{3}}{x},\\quad x = 4\\sqrt{3}\\times\\sqrt{3} = 12\\text{ மீ}", "fallback": "tan⁡30^(∘)=(4√(3))/(x) எனவே (1)/(√(3))=(4√(3))/(x), x=4√(3)×√(3)=12 மீ", "display": true}, "1": {"latex": "\\text{சாலையின் அகலம்} = 2x = 2(12) = 24\\text{ மீ}", "fallback": "சாலையின் அகலம்=2x=2(12)=24 மீ", "display": true}},
+      answer: [{"latex": "24\\text{ மீ}", "fallback": "24 மீ", "display": true}]
+    },
+    "c10-6-ex6-2-q3": {
+      title: "ஏற்றக்கோணம்",
+      reasons: ["சன்னலின் கீழ் மற்றும் மேல் விளிம்புகளுக்கான உயரங்களை ஒரே 5 மீட்டர் கிடைமட்டத் தொலைவிலிருந்து tan 45°, tan 60° கொண்டு காண்க.", "மேல் விளிம்பின் உயரத்திலிருந்து கீழ் விளிம்பின் உயரத்தைக் கழிக்க. √3 ≈ 1.732 எனில் சன்னலின் உயரம் சுமார் 3.66 மீட்டர்."],
+      equations: {"0": {"latex": "\\begin{aligned} x_1 &= 5\\tan 45^\\circ = 5(1) = 5\\text{ மீ} \\\\ x_2 &= 5\\tan 60^\\circ = 5\\sqrt{3}\\text{ மீ} \\end{aligned}", "fallback": "x_1=5tan⁡45^(∘)=5(1)=5 மீ ; x_2=5tan⁡60^(∘)=5√(3) மீ", "display": true}, "1": {"latex": "\\begin{aligned} \\text{சன்னலின் உயரம்} &= x_2 - x_1 = 5(\\sqrt{3} - 1) \\\\ &= 5(1.732 - 1) = 5(0.732) = 3.66\\text{ மீ} \\end{aligned}", "fallback": "சன்னலின் உயரம்=x_2−x_1=5(√(3)−1) ; =5(1.732−1)=5(0.732)=3.66 மீ", "display": true}},
+      answer: [{"latex": "3.66\\text{ மீ}", "fallback": "3.66 மீ", "display": true}]
+    },
+    "c10-6-ex6-2-q4": {
+      title: "ஏற்றக்கோணம்",
+      reasons: ["பீடத்தின் உயரம் h, கிடைமட்டத் தொலைவு d என்க. சிலையின் அடிக்கும் உச்சிக்கும் உயரங்கள் முறையே h, h + 1.6.", "இரு tan சமன்பாடுகளிலிருந்தும் d ஐ நீக்குக. h உள்ள உறுப்புகளை ஒன்றாகச் சேர்த்து வகுத்தால் பீடத்தின் உயரம் சுமார் 1.5 மீட்டர்."],
+      equations: {"0": {"latex": "\\tan 40^\\circ = \\dfrac{h}{d}\\;\\text{எனவே}\\; d = \\dfrac{h}{0.8391},\\qquad \\tan 60^\\circ = \\dfrac{h+1.6}{d}\\;\\text{எனவே}\\; d = \\dfrac{h+1.6}{\\sqrt{3}}", "fallback": "tan⁡40^(∘)=(h)/(d)  எனவே  d=(h)/(0.8391), tan⁡60^(∘)=(h+1.6)/(d)  எனவே  d=(h+1.6)/(√(3))", "display": true}, "1": {"latex": "\\begin{aligned} \\dfrac{h}{0.8391} &= \\dfrac{h + 1.6}{1.732} \\\\ 1.732h &= 0.8391h + 1.34256 \\\\ (1.732 - 0.8391)h &= 1.34256 \\\\ h &= \\dfrac{1.34256}{0.8929} \\approx 1.5\\text{ மீ} \\end{aligned}", "fallback": "(h)/(0.8391)=(h+1.6)/(1.732) ; 1.732h=0.8391h+1.34256 ; (1.732−0.8391)h=1.34256 ; h=(1.34256)/(0.8929)≈1.5 மீ", "display": true}},
+      answer: [{"latex": "1.5\\text{ மீ}", "fallback": "1.5 மீ", "display": true}]
+    },
+    "c10-6-ex6-2-q5-i": {
+      title: "ஏற்றக்கோணம்",
+      reasons: ["குவிமாடத்தின் மையத்திலிருந்து பார்வையாளருக்கு கிடைமட்டத் தொலைவு r + 7. கொடிக்கம்பத்தின் உச்சி தரையிலிருந்து r + h உயரத்தில் உள்ளது.", "tan 45° = 1 என்பதால் r + h = r + 7. இருபுறமும் r ஐக் கழித்தால் கொடிக்கம்பத்தின் உயரம் 7 மீட்டர்."],
+      equations: {"1": {"latex": "\\begin{aligned} 1 &= \\dfrac{r + h}{r + 7} \\\\ r + h &= r + 7 \\\\ h &= 7\\text{ மீ} \\end{aligned}", "fallback": "1=(r+h)/(r+7) ; r+h=r+7 ; h=7 மீ", "display": true}},
+      answer: [{"latex": "7\\text{ மீ}", "fallback": "7 மீ", "display": true}]
+    },
+    "c10-6-ex6-2-q5-ii": {
+      title: "ஏற்றக்கோணம்",
+      reasons: ["மேலும் 5 மீட்டர் விலகியதும் கிடைமட்டத் தொலைவு r + 12. குவிமாடத்தின் உச்சிக்கு உயரம் r என்பதால் tan 30° ஐப் பயன்படுத்துக.", "r(√3 − 1) = 12. இணைச் சுரடியால் பெருக்கிப் பகுதியை விகிதமுறுவாக்கினால் ஆரம் சுமார் 16.39 மீட்டர்."],
+      equations: {"0": {"latex": "\\tan 30^\\circ = \\dfrac{r}{r + 12}\\quad\\text{எனவே}\\quad \\dfrac{1}{\\sqrt{3}} = \\dfrac{r}{r + 12}", "fallback": "tan⁡30^(∘)=(r)/(r+12) எனவே (1)/(√(3))=(r)/(r+12)", "display": true}, "1": {"latex": "\\begin{aligned} (\\sqrt{3} - 1)r &= 12 \\\\ r &= \\dfrac{12}{\\sqrt{3}-1}\\times\\dfrac{\\sqrt{3}+1}{\\sqrt{3}+1} = \\dfrac{12(\\sqrt{3}+1)}{2} \\\\ &= 6(1.732 + 1) = 16.392 \\approx 16.39\\text{ மீ} \\end{aligned}", "fallback": "(√(3)−1)r=12 ; r=(12)/(√(3)−1)×(√(3)+1)/(√(3)+1)=(12(√(3)+1))/(2) ; =6(1.732+1)=16.392≈16.39 மீ", "display": true}},
+      answer: [{"latex": "16.39\\text{ மீ}", "fallback": "16.39 மீ", "display": true}]
+    },
+    "c10-6-ex6-2-q6": {
+      title: "ஏற்றக்கோணம்",
+      reasons: ["கோபுரத்தின் 15 மீட்டர் உயரத்தையும் 60° கோணத்தையும் கொண்டு கோபுரம், கம்பம் இடையேயுள்ள கிடைமட்டத் தொலைவைக் காண்க.", "இரு உச்சிகளின் உயர வேறுபாடு 15 − h. அதனுடன் tan 30° ஐப் பயன்படுத்தினால் வேறுபாடு 5 மீட்டர். கம்பத்தின் உயரம் 10 மீட்டர்."],
+      equations: {"0": {"latex": "\\tan 60^\\circ = \\dfrac{15}{d}\\quad\\text{எனவே}\\quad d = \\dfrac{15}{\\sqrt{3}} = 5\\sqrt{3}\\text{ மீ}", "fallback": "tan⁡60^(∘)=(15)/(d) எனவே d=(15)/(√(3))=5√(3) மீ", "display": true}, "1": {"latex": "\\begin{aligned} \\tan 30^\\circ &= \\dfrac{15 - h}{d} \\\\ \\dfrac{1}{\\sqrt{3}} &= \\dfrac{15 - h}{5\\sqrt{3}} \\\\ 15 - h &= 5\\quad\\text{எனவே}\\quad h = 10\\text{ மீ} \\end{aligned}", "fallback": "tan⁡30^(∘)=(15−h)/(d) ; (1)/(√(3))=(15−h)/(5√(3)) ; 15−h=5 எனவே h=10 மீ", "display": true}},
+      answer: [{"latex": "10\\text{ மீ}", "fallback": "10 மீ", "display": true}]
+    },
+    "c10-6-ex6-3-q1": {
+      title: "இறக்கக்கோணம்",
+      reasons: ["இணையான கிடைமட்டக் கோடுகளால் காரிலிருந்து பாறையின் உச்சிக்கான ஏற்றக்கோணமும் 30°. உயரம் மற்றும் கிடைமட்டத் தொலைவின் விகிதத்தை எழுதுக.", "50√3 ஐ tan 30° ஆல் வகுக்க. √3 × √3 = 3 என்பதால் தொலைவு 150 மீட்டர்."],
+      equations: {"0": {"latex": "\\tan 30^\\circ = \\dfrac{50\\sqrt{3}}{d}\\quad\\text{எனவே}\\quad \\dfrac{1}{\\sqrt{3}} = \\dfrac{50\\sqrt{3}}{d}", "fallback": "tan⁡30^(∘)=(50√(3))/(d) எனவே (1)/(√(3))=(50√(3))/(d)", "display": true}, "1": {"latex": "d = 50\\sqrt{3}\\times\\sqrt{3} = 50\\times 3 = 150\\text{ மீ}", "fallback": "d=50√(3)×√(3)=50×3=150 மீ", "display": true}},
+      answer: [{"latex": "150\\text{ மீ}", "fallback": "150 மீ", "display": true}]
+    },
+    "c10-6-ex6-3-q2": {
+      title: "இறக்கக்கோணம்",
+      reasons: ["கட்டடங்களுக்கு இடையே கிடைமட்டத் தொலைவு 70 மீட்டர். அவற்றின் உயர வேறுபாடு 120 − h. இவற்றை tan 45° உடன் தொடர்புபடுத்துக.", "tan 45° = 1 என்பதால் உயர வேறுபாடு 70 மீட்டர். எனவே சிறிய கட்டடத்தின் உயரம் 50 மீட்டர்."],
+      equations: {"0": {"latex": "\\tan 45^\\circ = \\dfrac{120 - h}{70}\\quad\\text{எனவே}\\quad 1 = \\dfrac{120 - h}{70}", "fallback": "tan⁡45^(∘)=(120−h)/(70) எனவே 1=(120−h)/(70)", "display": true}, "1": {"latex": "120 - h = 70\\quad\\text{எனவே}\\quad h = 120 - 70 = 50\\text{ மீ}", "fallback": "120−h=70 எனவே h=120−70=50 மீ", "display": true}},
+      answer: [{"latex": "50\\text{ மீ}", "fallback": "50 மீ", "display": true}]
+    },
+    "c10-6-ex6-3-q3": {
+      title: "இறக்கக்கோணம்",
+      reasons: ["கோபுரத்தின் 60 மீட்டர் உயரத்தையும் கம்பத்தின் அடிக்கான 60° இறக்கக்கோணத்தையும் கொண்டு கிடைமட்டத் தொலைவைக் காண்க.", "அதே கிடைமட்டத் தொலைவிற்குக் கம்பத்தின் உச்சிவரையுள்ள உயர வேறுபாட்டைக் காண்க. அந்த வேறுபாட்டை 60 இலிருந்து கழிக்க."],
+      equations: {"0": {"latex": "\\tan 60^\\circ = \\dfrac{60}{d}\\quad\\text{எனவே}\\quad d = \\dfrac{60}{\\sqrt{3}} = \\dfrac{60}{1.732} = 34.642\\text{ மீ}", "fallback": "tan⁡60^(∘)=(60)/(d) எனவே d=(60)/(√(3))=(60)/(1.732)=34.642 மீ", "display": true}, "1": {"latex": "\\begin{aligned} 60 - h &= d\\tan 38^\\circ = \\dfrac{60}{1.732}\\times 0.7813 \\approx 27.07\\text{ மீ} \\\\ h &= 60 - 27.07 = 32.93\\text{ மீ} \\end{aligned}", "fallback": "60−h=dtan⁡38^(∘)=(60)/(1.732)×0.7813≈27.07 மீ ; h=60−27.07=32.93 மீ", "display": true}},
+      answer: [{"latex": "32.93\\text{ மீ}", "fallback": "32.93 மீ", "display": true}]
+    },
+    "c10-6-ex6-3-q4": {
+      title: "இறக்கக்கோணம்",
+      reasons: ["விமானத்திலிருந்து தரைக்குச் செங்குத்தாக உள்ள புள்ளியிலிருந்து ஒவ்வொரு படகிற்கும் கிடைமட்டத் தொலைவைக் காண்க. அதிக இறக்கக்கோணம் அருகிலுள்ள படகிற்குரியது.", "படகுகள் ஒரே பக்கத்தில் இருப்பதால் தொலைவுகளைக் கழிக்க. 1200√3 மீட்டர் என்பது சுமார் 2078.4 மீட்டர்."],
+      equations: {"0": {"latex": "\\begin{aligned} d_1 &= \\dfrac{1800}{\\tan 60^\\circ} = \\dfrac{1800}{\\sqrt{3}} = 600\\sqrt{3}\\text{ மீ} \\\\ d_2 &= \\dfrac{1800}{\\tan 30^\\circ} = \\dfrac{1800}{1/\\sqrt{3}} = 1800\\sqrt{3}\\text{ மீ} \\end{aligned}", "fallback": "d_1=(1800)/(tan⁡60^(∘))=(1800)/(√(3))=600√(3) மீ ; d_2=(1800)/(tan⁡30^(∘))=(1800)/(1/√(3))=1800√(3) மீ", "display": true}, "1": {"latex": "\\text{தொலைவு} = 1800\\sqrt{3} - 600\\sqrt{3} = 1200\\sqrt{3} = 1200\\times 1.732 = 2078.4\\text{ மீ}", "fallback": "தொலைவு=1800√(3)−600√(3)=1200√(3)=1200×1.732=2078.4 மீ", "display": true}},
+      answer: [{"latex": "2078.4\\text{ மீ}", "fallback": "2078.4 மீ", "display": true}]
+    },
+    "c10-6-ex6-3-q5": {
+      title: "இறக்கக்கோணம்",
+      reasons: ["கலங்கரை விளக்கின் உயரம் h. ஒவ்வொரு கப்பலின் கிடைமட்டத் தொலைவையும் அந்தந்தக் கோணத்தின் tan மதிப்பால் h ஐ வகுத்துக் காண்க.", "கப்பல்கள் எதிரெதிர்ப் பக்கங்களில் இருப்பதால் இரண்டு தொலைவுகளையும் கூட்டுக. ஒரே பகுதிக்குக் கொண்டுவந்தால் 4h/√3 மீட்டர்."],
+      equations: {"1": {"latex": "\\text{கப்பல்களுக்கு இடையேயான தொலைவு} = d_1 + d_2 = h\\sqrt{3} + \\dfrac{h}{\\sqrt{3}} = \\dfrac{3h + h}{\\sqrt{3}} = \\dfrac{4h}{\\sqrt{3}}\\text{ மீ}", "fallback": "கப்பல்களுக்கு இடையேயான தொலைவு=d_1+d_2=h√(3)+(h)/(√(3))=(3h+h)/(√(3))=(4h)/(√(3)) மீ", "display": true}},
+      answer: [{"latex": "\\dfrac{4h}{\\sqrt{3}}\\text{ மீ}", "fallback": "(4h)/(√(3)) மீ", "display": true}]
+    },
+    "c10-6-ex6-3-q6": {
+      title: "இறக்கக்கோணம்",
+      reasons: ["தொடக்க உயரம் 90 அடி. இரண்டு நிமிடங்களுக்குப் பின் கிடைமட்டத் தொலைவையும் tan 30° ஐயும் பயன்படுத்தி உயரம் 30 அடி எனக் காண்க.", "இறங்கிய தூரம் 90 − 30 = 60 அடி. இரண்டு நிமிடங்களால் வகுத்தால் சராசரி வேகம் நிமிடத்திற்கு 30 அடி."],
+      equations: {"0": {"latex": "\\begin{aligned} h_1 &= 30\\sqrt{3}\\tan 60^\\circ = 30\\sqrt{3}(\\sqrt{3}) = 90\\text{ அடி} \\\\ h_2 &= 30\\sqrt{3}\\tan 30^\\circ = 30\\sqrt{3}\\left(\\dfrac{1}{\\sqrt{3}}\\right) = 30\\text{ அடி} \\end{aligned}", "fallback": "h_1=30√(3)tan⁡60^(∘)=30√(3)(√(3))=90 அடி ; h_2=30√(3)tan⁡30^(∘)=30√(3)((1)/(√(3)))=30 அடி", "display": true}, "1": {"latex": "\\begin{aligned} \\text{இறங்கிய தொலைவு} &= 90 - 30 = 60\\text{ அடி} \\\\ \\text{வேகம்} &= \\dfrac{60\\text{ அடி}}{2\\text{ நிமிடம்}} = 30\\text{ அடி/நிமிடம்} \\end{aligned}", "fallback": "இறங்கிய தொலைவு=90−30=60 அடி ; வேகம்=(60 அடி)/(2 நிமிடம்)=30 அடி/நிமிடம்", "display": true}},
+      answer: [{"latex": "30\\text{ அடி/நிமிடம்}", "fallback": "30 அடி/நிமிடம்", "display": true}]
+    },
+    "c10-6-ex6-4-q1": {
+      title: "உயரங்களும் தொலைவுகளும்",
+      reasons: ["முதல் மரத்தின் உச்சி வழியே கிடைமட்டக் கோடு வரைக. இரு மரங்களின் அடிகளுக்கு இடையேயான தொலைவை x என்க.", "30° இறக்கக்கோணத்தைப் பயன்படுத்தினால் x = 13√3. 45° ஏற்றக்கோணத்தால் உச்சிகளின் உயர வேறுபாடும் x.", "முதல் மரத்தின் உயரத்துடன் உயர வேறுபாட்டைக் கூட்டுக. இரண்டாம் மரத்தின் உயரம் சுமார் 35.52 மீட்டர்."],
+      equations: {"0": {"latex": "\\tan 30^\\circ = \\dfrac{13}{x} \\quad\\text{மற்றும்}\\quad \\tan 45^\\circ = \\dfrac{h}{x}", "fallback": "tan⁡30^(∘)=(13)/(x) மற்றும் tan⁡45^(∘)=(h)/(x)", "display": true}, "1": {"latex": "\\dfrac{1}{\\sqrt{3}} = \\dfrac{13}{x} \\quad\\text{எனவே}\\quad x = 13\\sqrt{3}\\text{ மீ}", "fallback": "(1)/(√(3))=(13)/(x) எனவே x=13√(3) மீ", "display": true}, "2": {"latex": "\\begin{aligned} h &= x\\tan 45^\\circ = 13\\sqrt{3}\\text{ மீ} \\\\[4pt] \\text{உயரம்} &= 13 + 13\\sqrt{3} = 13(1 + 1.732) = 13(2.732) = 35.516 \\approx 35.52\\text{ மீ} \\end{aligned}", "fallback": "h=xtan⁡45^(∘)=13√(3) மீ ; உயரம்=13+13√(3)=13(1+1.732)=13(2.732)=35.516≈35.52 மீ", "display": true}},
+      answer: [{"latex": "35.52\\text{ மீ}", "fallback": "35.52 மீ", "display": true}]
+    },
+    "c10-6-ex6-4-q2": {
+      title: "உயரங்களும் தொலைவுகளும்",
+      reasons: ["கப்பல் தளம் நீர்மட்டத்திலிருந்து 40 மீட்டர் உயரம். மலையின் அடிக்கான இறக்கக்கோணத்தையும் உச்சிக்கான ஏற்றக்கோணத்தையும் ஒரே கிடைமட்டத் தொலைவுடன் தொடர்புபடுத்துக.", "tan 30° மூலம் கிடைமட்டத் தொலைவு 40√3 மீட்டர் எனக் காண்க.", "தளத்திலிருந்து உச்சிக்கான உயரம் 40√3 × tan 60° = 120 மீட்டர். நீர்மட்டத்திலிருந்து மொத்த உயரம் 160 மீட்டர்."],
+      equations: {"1": {"latex": "d = \\dfrac{40}{\\tan 30^\\circ} = 40\\sqrt{3} = 40(1.732) = 69.28\\text{ மீ}", "fallback": "d=(40)/(tan⁡30^(∘))=40√(3)=40(1.732)=69.28 மீ", "display": true}, "2": {"latex": "\\begin{aligned} h &= d\\tan 60^\\circ = (40\\sqrt{3})(\\sqrt{3}) = 40 \\times 3 = 120\\text{ மீ} \\\\[4pt] \\text{மலையின் உயரம்} &= 40 + 120 = 160\\text{ மீ} \\end{aligned}", "fallback": "h=dtan⁡60^(∘)=(40√(3))(√(3))=40×3=120 மீ ; மலையின் உயரம்=40+120=160 மீ", "display": true}},
+      answer: [{"latex": "69.28\\text{ மீ},\\; 160\\text{ மீ}", "fallback": "69.28 மீ,  160 மீ", "display": true}]
+    },
+    "c10-6-ex6-4-q3": {
+      title: "உயரங்களும் தொலைவுகளும்",
+      reasons: ["பார்வையாளருக்கு மேல் மேகத்தின் உயரம் x எனில் நீர்மட்டத்திற்கு மேல் அதன் உயரம் h + x. பிம்பம் நீருக்குக் கீழே அதே தொலைவில் உள்ளது.", "கிடைமட்டத் தொலைவை d என்க. மேகத்திற்கு உயர வேறுபாடு x, பிம்பத்திற்கு 2h + x. இரண்டு tan சமன்பாடுகளிலிருந்து d ஐ நீக்குக.", "x ஐக் கண்டு h உடன் கூட்டி ஒரே பகுதிக்குக் கொண்டுவருக. கிடைப்பது நீர்மட்டத்திலிருந்து மேகத்தின் உயரம்."]
+    },
+    "c10-6-ex6-4-q4": {
+      title: "உயரங்களும் தொலைவுகளும்",
+      reasons: ["குடியிருப்பின் 50 மீட்டர் உயரம், 30° இறக்கக்கோணம் ஆகியவற்றிலிருந்து முதலில் கிடைமட்டத் தொலைவைக் காண்க.", "50 ஐ tan 30° ஆல் வகுத்தால் இரு அடிகளுக்கும் இடையே 50√3 மீட்டர்.", "இந்தத் தொலைவை tan 60° ஆல் பெருக்கினால் கோபுர உயரம் 150 மீட்டர். இது வினாவில் குறிப்பிட்ட 120 மீட்டரை விட அதிகம்."],
+      equations: {"1": {"latex": "d = \\dfrac{50}{1/\\sqrt{3}} = 50\\sqrt{3}\\text{ மீ}", "fallback": "d=(50)/(1/√(3))=50√(3) மீ", "display": true}, "2": {"latex": "H = 50\\sqrt{3}\\cdot\\sqrt{3} = 50 \\times 3 = 150\\text{ மீ} > 120\\text{ மீ} \\;(\\text{ஆம்})", "fallback": "H=50√(3)⋅√(3)=50×3=150 மீ>120 மீ  (ஆம்)", "display": true}},
+      answer: [{"latex": "150\\text{ மீ},\\; \\text{ஆம்}", "fallback": "150 மீ,  ஆம்", "display": true}]
+    },
+    "c10-6-ex6-4-q5-i": {
+      title: "உயரங்களும் தொலைவுகளும்",
+      reasons: ["கட்டட உயரம் 66 மீட்டர். விளக்குக் கம்பத்தின் அடிக்கான 30° இறக்கக்கோணத்திலிருந்து கிடைமட்டத் தொலைவைக் காண்க.", "கம்பத்தின் உச்சி கட்டடத்தை விட 66√3 × tan 60° = 198 மீட்டர் உயரத்தில் உள்ளது. 66 ஐக் கூட்டி மொத்த உயரத்தைக் காண்க."],
+      equations: {"0": {"latex": "d = \\dfrac{66}{\\tan 30^\\circ} = 66\\sqrt{3}\\text{ மீ}", "fallback": "d=(66)/(tan⁡30^(∘))=66√(3) மீ", "display": true}, "1": {"latex": "\\begin{aligned} h &= (66\\sqrt{3})\\tan 60^\\circ = 66 \\times 3 = 198\\text{ மீ} \\\\[4pt] \\text{விளக்குக் கம்பத்தின் உயரம்} &= 66 + 198 = 264\\text{ மீ} \\end{aligned}", "fallback": "h=(66√(3))tan⁡60^(∘)=66×3=198 மீ ; விளக்குக் கம்பத்தின் உயரம்=66+198=264 மீ", "display": true}},
+      answer: [{"latex": "264\\text{ மீ}", "fallback": "264 மீ", "display": true}]
+    },
+    "c10-6-ex6-4-q5-ii": {
+      title: "உயரங்களும் தொலைவுகளும்",
+      reasons: ["உச்சிகளுக்கான உயர வேறுபாடு என்பது கிடைமட்டத் தொலைவுக்கும் tan 60° க்கும் உள்ள பெருக்கற்பலன்.", "முழு உயரங்களிலிருந்து சரிபார்க்க. 264 மீட்டரிலிருந்து 66 மீட்டரைக் கழித்தால் வேறுபாடு 198 மீட்டர்."],
+      equations: {"0": {"latex": "h = d\\tan 60^\\circ = (66\\sqrt{3})(\\sqrt{3}) = 198\\text{ மீ}", "fallback": "h=dtan⁡60^(∘)=(66√(3))(√(3))=198 மீ", "display": true}, "1": {"latex": "264 - 66 = 198\\text{ மீ}", "fallback": "264−66=198 மீ", "display": true}},
+      answer: [{"latex": "198\\text{ மீ}", "fallback": "198 மீ", "display": true}]
+    },
+    "c10-6-ex6-4-q5-iii": {
+      title: "உயரங்களும் தொலைவுகளும்",
+      reasons: ["கம்பத்தின் அடிக்கும் கட்டட உச்சிக்கும் உயர வேறுபாடு 66 மீட்டர். கிடைமட்டத் தொலைவைக் காண tan 30° ஆல் வகுக்க.", "66√3 இல் √3 ≈ 1.732 எனப் பிரதியிட்டு இரண்டு தசம இடங்களுக்கு முழுமையாக்குக."],
+      equations: {"0": {"latex": "d = \\dfrac{66}{\\tan 30^\\circ} = 66\\sqrt{3}\\text{ மீ}", "fallback": "d=(66)/(tan⁡30^(∘))=66√(3) மீ", "display": true}, "1": {"latex": "d = 66 \\times 1.732 = 114.312 \\approx 114.31\\text{ மீ}", "fallback": "d=66×1.732=114.312≈114.31 மீ", "display": true}},
+      answer: [{"latex": "114.31\\text{ மீ}", "fallback": "114.31 மீ", "display": true}]
+    },
+    "c10-6-ex6-4-q6-i": {
+      title: "உயரங்களும் தொலைவுகளும்",
+      reasons: ["A, B இடையே கிடைமட்டத் தொலைவு 8 கிமீ. 20° இறக்கக்கோணத்தின் tan மதிப்பு உயர வேறுபாட்டை 8 ஆல் வகுத்ததற்குச் சமம்.", "8 ஐ tan 20° ஆல் பெருக்கி இரண்டு தசம இடங்களுக்கு முழுமையாக்கினால் சுமார் 2.91 கிமீ."],
+      equations: {"1": {"latex": "h_1 = 8 \\times 0.3640 = 2.912 \\approx 2.91\\text{ கிமீ}", "fallback": "h_1=8×0.3640=2.912≈2.91 கிமீ", "display": true}},
+      answer: [{"latex": "2.91\\text{ கிமீ}", "fallback": "2.91 கிமீ", "display": true}]
+    },
+    "c10-6-ex6-4-q6-ii": {
+      title: "உயரங்களும் தொலைவுகளும்",
+      reasons: ["B, C இடையே கிடைமட்டத் தொலைவு 12 கிமீ, ஏற்றக்கோணம் 30°. உயர வேறுபாட்டிற்கு 12 ஐ tan 30° ஆல் பெருக்குக.", "12/√3 = 4√3. இரண்டு தசம இடங்களுக்கு உயர வேறுபாடு சுமார் 6.93 கிமீ."],
+      equations: {"1": {"latex": "h_2 = \\dfrac{12\\sqrt{3}}{3} = 4\\sqrt{3} = 4(1.732) = 6.928 \\approx 6.93\\text{ கிமீ}", "fallback": "h_2=(12√(3))/(3)=4√(3)=4(1.732)=6.928≈6.93 கிமீ", "display": true}},
+      answer: [{"latex": "6.93\\text{ கிமீ}", "fallback": "6.93 கிமீ", "display": true}]
+    },
+    "c10-6-ex6-5-q1": {
+      title: "முக்கோணவியல்",
+      reasons: ["1 + tan²θ = sec²θ எனப் பிரதியிட்டு அதன் தலைகீழியை cos²θ என எழுதுக.", "sin²θ + cos²θ = 1 என்பதால் சரியான விடை 1."],
+      equations: {"1": {"latex": "\\sin^2\\theta + \\cos^2\\theta = 1\\quad\\text{விடை (ஆ)}", "fallback": "sin⁡^(2)θ+cos⁡^(2)θ=1 விடை (ஆ)", "display": true}},
+      answer: [{"latex": "\\text{(ஆ)}\\; 1", "fallback": "(ஆ)  1", "display": true}]
+    },
+    "c10-6-ex6-5-q2": {
+      title: "முக்கோணவியல்",
+      reasons: ["cosec²θ − 1 ஐ cot²θ என மாற்றுக.", "tan θ என்பது cot θ இன் தலைகீழி என்பதால் பொதுக் காரணியை நீக்கினால் cot θ கிடைக்கிறது."],
+      equations: {"1": {"latex": "\\dfrac{1}{\\cot\\theta}\\cdot\\cot^2\\theta = \\cot\\theta\\quad\\text{விடை (ஈ)}", "fallback": "(1)/(cot⁡θ)⋅cot⁡^(2)θ=cot⁡θ விடை (ஈ)", "display": true}},
+      answer: [{"latex": "\\text{(ஈ)}\\; \\cot\\theta", "fallback": "(ஈ)  cot⁡θ", "display": true}]
+    },
+    "c10-6-ex6-5-q3": {
+      title: "முக்கோணவியல்",
+      reasons: ["இரண்டு வர்க்கங்களையும் விரிக்க. sin α cosec α மற்றும் cos α sec α ஆகிய இரு பெருக்கற்பலன்களும் 1.", "sin²α + cos²α = 1. cosec²α, sec²α ஐ முறையே 1 + cot²α, 1 + tan²α என மாற்றி மாறிலிகளைச் சேர்த்தால் k = 7."],
+      equations: {"1": {"latex": "7 + \\tan^2\\alpha + \\cot^2\\alpha = k + \\tan^2\\alpha + \\cot^2\\alpha \\text{எனவே}\\; k = 7", "fallback": "7+tan⁡^(2)α+cot⁡^(2)α=k+tan⁡^(2)α+cot⁡^(2)αஎனவே  k=7", "display": true}},
+      answer: [{"latex": "\\text{(ஆ)}\\; 7", "fallback": "(ஆ)  7", "display": true}]
+    },
+    "c10-6-ex6-5-q4": {
+      title: "முக்கோணவியல்",
+      reasons: ["sin θ + cos θ = a ஐ வர்க்கமாக்கி 1 ஐக் கழித்தால் 2 sin θ cos θ கிடைக்கிறது.", "b ஐ ஒரே பகுதிக்குக் கொண்டுவந்தால் a/(sin θ cos θ). இரண்டையும் பெருக்கினால் 2a."],
+      equations: {"1": {"latex": "b(a^2 - 1) = \\left(\\dfrac{\\sin\\theta + \\cos\\theta}{\\sin\\theta\\cos\\theta}\\right)(2\\sin\\theta\\cos\\theta) = \\dfrac{a}{\\sin\\theta\\cos\\theta}\\cdot 2\\sin\\theta\\cos\\theta = 2a\\quad\\text{விடை (அ)}", "fallback": "b(a^(2)−1)=((sin⁡θ+cos⁡θ)/(sin⁡θcos⁡θ))(2sin⁡θcos⁡θ)=(a)/(sin⁡θcos⁡θ)⋅2sin⁡θcos⁡θ=2a விடை (அ)", "display": true}},
+      answer: [{"latex": "\\text{(அ)}\\; 2a", "fallback": "(அ)  2a", "display": true}]
+    },
+    "c10-6-ex6-5-q5": {
+      title: "முக்கோணவியல்",
+      reasons: ["sec²θ − tan²θ = 1 இல் கொடுக்கப்பட்ட 5x, 5/y ஆகியவற்றைப் பிரதியிடுக.", "இரு உறுப்புகளிலும் 25 பொதுக் காரணி. இருபுறமும் 25 ஆல் வகுத்தால் வேண்டிய வேறுபாடு 1/25."],
+      equations: {"1": {"latex": "25\\left(x^2 - \\dfrac{1}{y^2}\\right) = 1 \\quad\\text{எனவே}\\quad x^2 - \\dfrac{1}{y^2} = \\dfrac{1}{25}\\quad\\text{விடை (ஆ)}", "fallback": "25(x^(2)−(1)/(y^(2)))=1 எனவே x^(2)−(1)/(y^(2))=(1)/(25) விடை (ஆ)", "display": true}},
+      answer: [{"latex": "\\text{(ஆ)}\\; \\dfrac{1}{25}", "fallback": "(ஆ)  (1)/(25)", "display": true}]
+    },
+    "c10-6-ex6-5-q6": {
+      title: "முக்கோணவியல்",
+      reasons: ["sin θ = cos θ என்பதால் tan θ = 1. இரு வர்க்கங்களின் கூடுதல் 1 என்பதால் sin²θ = 1/2.", "இந்த மதிப்புகளைத் தரப்பட்ட கோவையில் பிரதியிட்டு உறுப்புகளைச் சேர்க்க."],
+      equations: {"0": {"latex": "\\sin\\theta = \\cos\\theta \\quad\\text{எனவே}\\quad \\tan\\theta = 1\\; (\\theta = 45^\\circ),\\quad \\sin^2\\theta = \\dfrac{1}{2}", "fallback": "sin⁡θ=cos⁡θ எனவே tan⁡θ=1  (θ=45^(∘)), sin⁡^(2)θ=(1)/(2)", "display": true}, "1": {"latex": "2(1)^2 + \\left(\\dfrac{1}{\\sqrt{2}}\\right)^2 - 1 = 2 + \\dfrac{1}{2} - 1 = \\dfrac{3}{2}\\quad\\text{விடை (ஆ)}", "fallback": "2(1)^(2)+((1)/(√(2)))^(2)−1=2+(1)/(2)−1=(3)/(2) விடை (ஆ)", "display": true}},
+      answer: [{"latex": "\\text{(ஆ)}\\; \\dfrac{3}{2}", "fallback": "(ஆ)  (3)/(2)", "display": true}]
+    },
+    "c10-6-ex6-5-q7": {
+      title: "முக்கோணவியல்",
+      reasons: ["கொடுக்கப்பட்ட உறவுகளிலிருந்து tan θ = x/a, sec θ = y/b என எழுதுக.", "sec²θ − tan²θ = 1 இல் பிரதியிட்டு சரியான சமன்பாட்டைத் தேர்ந்தெடுக்க."],
+      equations: {"1": {"latex": "\\sec^2\\theta - \\tan^2\\theta = 1 \\quad\\text{எனவே}\\quad \\dfrac{y^2}{b^2} - \\dfrac{x^2}{a^2} = 1\\quad\\text{விடை (அ)}", "fallback": "sec⁡^(2)θ−tan⁡^(2)θ=1 எனவே (y^(2))/(b^(2))−(x^(2))/(a^(2))=1 விடை (அ)", "display": true}},
+      answer: [{"latex": "\\text{(அ)}\\; \\dfrac{y^2}{b^2} - \\dfrac{x^2}{a^2} = 1", "fallback": "(அ)  (y^(2))/(b^(2))−(x^(2))/(a^(2))=1", "display": true}]
+    },
+    "c10-6-ex6-5-q8": {
+      title: "முக்கோணவியல்",
+      reasons: ["ஒவ்வொரு காரணியையும் sin θ மற்றும் cos θ மூலம் எழுதி ஒரே பகுதிக்குக் கொண்டுவருக.", "தொகுதிகளைப் பெருக்கிச் சுருக்கும்போது 2 sin θ cos θ கிடைக்கும். பொதுக் காரணியை நீக்கினால் 2."],
+      equations: {"1": {"latex": "\\begin{aligned} &= \\dfrac{(\\sin\\theta + \\cos\\theta + 1)(\\sin\\theta + \\cos\\theta - 1)}{\\sin\\theta\\cos\\theta} \\\\[4pt] &= \\dfrac{(\\sin\\theta + \\cos\\theta)^2 - 1}{\\sin\\theta\\cos\\theta} = \\dfrac{1 + 2\\sin\\theta\\cos\\theta - 1}{\\sin\\theta\\cos\\theta} = 2\\quad\\text{விடை (இ)} \\end{aligned}", "fallback": "=((sin⁡θ+cos⁡θ+1)(sin⁡θ+cos⁡θ−1))/(sin⁡θcos⁡θ) ; =((sin⁡θ+cos⁡θ)^(2)−1)/(sin⁡θcos⁡θ)=(1+2sin⁡θcos⁡θ−1)/(sin⁡θcos⁡θ)=2 விடை (இ)", "display": true}},
+      answer: [{"latex": "\\text{(இ)}\\; 2", "fallback": "(இ)  2", "display": true}]
+    },
+    "c10-6-ex6-5-q9": {
+      title: "முக்கோணவியல்",
+      reasons: ["p மற்றும் q இன் வர்க்கங்களை விரித்துக் கழிக்க. இரண்டிலும் உள்ள குறுக்குப் பெருக்கல் உறுப்புகள் நீங்கும்.", "a², b² இன் உறுப்புகளைத் தனியே சேர்த்து cosec²θ − cot²θ = 1 ஐப் பயன்படுத்துக."],
+      equations: {"1": {"latex": "p^2 - q^2 = b^2(\\csc^2\\theta - \\cot^2\\theta) - a^2(\\csc^2\\theta - \\cot^2\\theta) = (b^2 - a^2)(1) = b^2 - a^2\\quad\\text{விடை (ஆ)}", "fallback": "p^(2)−q^(2)=b^(2)(csc⁡^(2)θ−cot⁡^(2)θ)−a^(2)(csc⁡^(2)θ−cot⁡^(2)θ)=(b^(2)−a^(2))(1)=b^(2)−a^(2) விடை (ஆ)", "display": true}},
+      answer: [{"latex": "\\text{(ஆ)}\\; b^2 - a^2", "fallback": "(ஆ)  b^(2)−a^(2)", "display": true}]
+    },
+    "c10-6-ex6-5-q10": {
+      title: "முக்கோணவியல்",
+      reasons: ["சூரியனின் ஏற்றக்கோணத்திற்கு எதிர்ப்பக்கம் கோபுர உயரம், அடுத்துள்ள பக்கம் நிழலின் நீளம். அவற்றின் விகிதம் √3.", "tan 60° = √3 என்பதால் ஏற்றக்கோணம் 60°."],
+      equations: {"0": {"latex": "\\tan\\theta = \\dfrac{\\text{உயரம்}}{\\text{நிழல்}} = \\dfrac{\\sqrt{3}}{1} = \\sqrt{3}", "fallback": "tan⁡θ=(உயரம்)/(நிழல்)=(√(3))/(1)=√(3)", "display": true}, "1": {"latex": "\\theta = 60^\\circ\\quad\\text{விடை (ஈ)}", "fallback": "θ=60^(∘) விடை (ஈ)", "display": true}},
+      answer: [{"latex": "\\text{(ஈ)}\\; 60^\\circ", "fallback": "(ஈ)  60^(∘)", "display": true}]
+    },
+    "c10-6-ex6-5-q11": {
+      title: "முக்கோணவியல்",
+      reasons: ["மேலுள்ள புள்ளியிலிருந்து அடிக்கான இறக்கக்கோணம் 60°. கிடைமட்டத் தொலைவு b/tan 60° = b/√3.", "முதல் புள்ளியிலிருந்து உச்சிக்கான ஏற்றக்கோணம் 30°. கிடைமட்டத் தொலைவை tan 30° ஆல் பெருக்கினால் கம்ப உயரம் b/3."],
+      equations: {"1": {"latex": "h = \\dfrac{b}{\\sqrt{3}}\\cdot\\dfrac{1}{\\sqrt{3}} = \\dfrac{b}{3}\\quad\\text{விடை (ஆ)}", "fallback": "h=(b)/(√(3))⋅(1)/(√(3))=(b)/(3) விடை (ஆ)", "display": true}},
+      answer: [{"latex": "\\text{(ஆ)}\\; \\dfrac{b}{3}", "fallback": "(ஆ)  (b)/(3)", "display": true}]
+    },
+    "c10-6-ex6-5-q12": {
+      title: "முக்கோணவியல்",
+      reasons: ["60 மீட்டர் உயரத்தை முதலில் tan 30° ஆலும் பின் tan 45° ஆலும் வகுத்து இரண்டு நிழல்களின் நீளங்களைக் காண்க.", "பழைய நீளத்திலிருந்து புதிய நீளத்தைக் கழிக்க. 60(√3 − 1) என்பது சுமார் 43.92 மீட்டர்."],
+      equations: {"1": {"latex": "x = 60(1.732 - 1) = 60(0.732) = 43.92\\text{ மீ}\\quad\\text{விடை (ஆ)}", "fallback": "x=60(1.732−1)=60(0.732)=43.92 மீ விடை (ஆ)", "display": true}},
+      answer: [{"latex": "\\text{(ஆ)}\\; 43.92\\text{ மீ}", "fallback": "(ஆ)  43.92 மீ", "display": true}]
+    },
+    "c10-6-ex6-5-q13": {
+      title: "முக்கோணவியல்",
+      reasons: ["கிடைமட்டத் தொலைவு d, உயர்ந்த கட்டடத்தின் உயரம் H என்க. குறுகிய கட்டடத்தின் உச்சிக்கும் அடிக்கும் உயர வேறுபாடுகள் முறையே H − 20, H.", "இரண்டு tan சமன்பாடுகளையும் தீர்த்தால் d = 10√3 மீட்டர், H = 30 மீட்டர். வினா கேட்ட வரிசையில் எழுதுக."],
+      equations: {"1": {"latex": "\\begin{aligned} d\\sqrt{3} - \\dfrac{d}{\\sqrt{3}} = 20 \\quad&\\text{எனவே}\\quad \\dfrac{2d}{\\sqrt{3}} = 20 \\text{எனவே}\\; d = 10\\sqrt{3}\\text{ மீ} \\\\[4pt] H &= (10\\sqrt{3})\\sqrt{3} = 30\\text{ மீ}\\quad\\text{விடை (ஈ)} \\end{aligned}", "fallback": "d√(3)−(d)/(√(3))=20 எனவே (2d)/(√(3))=20எனவே  d=10√(3) மீ ; H=(10√(3))√(3)=30 மீ விடை (ஈ)", "display": true}},
+      answer: [{"latex": "\\text{(ஈ)}\\; 30,\\; 10\\sqrt{3}", "fallback": "(ஈ)  30,  10√(3)", "display": true}]
+    },
+    "c10-6-ex6-5-q14": {
+      title: "முக்கோணவியல்",
+      reasons: ["நடுப்புள்ளியிலிருந்து இருவருக்கும் கிடைமட்டத் தொலைவு x/2. உயரங்கள் 2h, h என்க. நிரப்புக்கோணங்களின் tan மதிப்புகள் ஒன்றுக்கொன்று தலைகீழிகள்.", "இரு விகிதங்களையும் பெருக்கினால் 8h² = x². உயரம் நேர்மம் என்பதால் நேர்ம வர்க்கமூலத்தை எடுக்க."],
+      equations: {"1": {"latex": "\\dfrac{4h}{x}\\cdot\\dfrac{2h}{x} = 1 \\quad\\text{எனவே}\\quad 8h^2 = x^2 \\quad\\text{எனவே}\\quad h = \\dfrac{x}{2\\sqrt{2}}\\quad\\text{விடை (ஆ)}", "fallback": "(4h)/(x)⋅(2h)/(x)=1 எனவே 8h^(2)=x^(2) எனவே h=(x)/(2√(2)) விடை (ஆ)", "display": true}},
+      answer: [{"latex": "\\text{(ஆ)}\\; \\dfrac{x}{2\\sqrt{2}}", "fallback": "(ஆ)  (x)/(2√(2))", "display": true}]
+    },
+    "c10-6-ex6-5-q15": {
+      title: "முக்கோணவியல்",
+      reasons: ["மேகத்திற்கான ஏற்றக்கோணமும் அதன் பிம்பத்திற்கான இறக்கக்கோணமும் ஒரே கிடைமட்டத் தொலைவைக் கொண்டவை. அவற்றின் tan மதிப்புகளால் மேக உயரத்தை எழுதுக.", "இறக்கக்கோணம் 45° என்பதால் tan 45° = 1 எனப் பிரதியிட்டுச் சுருக்குக."],
+      equations: {"1": {"latex": "\\tan\\beta = \\dfrac{H - h}{H + h} \\quad\\text{எனவே}\\quad H = \\dfrac{h(1 + \\tan\\beta)}{1 - \\tan\\beta}\\quad\\text{விடை (அ)}", "fallback": "tan⁡β=(H−h)/(H+h) எனவே H=(h(1+tan⁡β))/(1−tan⁡β) விடை (அ)", "display": true}},
+      answer: [{"latex": "\\text{(அ)}\\; \\dfrac{h(1 + \\tan\\beta)}{1 - \\tan\\beta}", "fallback": "(அ)  (h(1+tan⁡β))/(1−tan⁡β)", "display": true}]
+    },
+    "c10-6-unit-q1-i": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["இடப்புறத்தில் இரு பின்னங்களையும் ஒரே பகுதிக்குக் கொண்டுவந்து தொகுதியில் வர்க்கங்களின் வேறுபாடுகளை எழுதுக.", "sec²A − 1 = tan²A, sin²A − 1 = −cos²A. பெருக்கிச் சுருக்கினால் தொகுதி 1 − 1 = 0."],
+      equations: {"0": {"latex": "\\text{இடப்புறம்} = \\dfrac{\\cot^2 A(\\sec^2 A - 1) + \\sec^2 A(\\sin^2 A - 1)}{(1 + \\sin A)(1 + \\sec A)}", "fallback": "இடப்புறம்=(cot⁡^(2)A(sec⁡^(2)A−1)+sec⁡^(2)A(sin⁡^(2)A−1))/((1+sin⁡A)(1+sec⁡A))", "display": true}, "1": {"latex": "\\text{இடப்புறம்} = \\dfrac{\\cot^2 A\\tan^2 A - \\sec^2 A\\cos^2 A}{(1 + \\sin A)(1 + \\sec A)} = \\dfrac{1 - 1}{(1 + \\sin A)(1 + \\sec A)} = 0 = \\text{வலப்புறம்}", "fallback": "இடப்புறம்=(cot⁡^(2)Atan⁡^(2)A−sec⁡^(2)Acos⁡^(2)A)/((1+sin⁡A)(1+sec⁡A))=(1−1)/((1+sin⁡A)(1+sec⁡A))=0=வலப்புறம்", "display": true}}
+    },
+    "c10-6-unit-q1-ii": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["tan²θ ஐ sin²θ/cos²θ எனவும் 1 + tan²θ ஐ 1/cos²θ எனவும் எழுதி இடப்புறத்தைச் சுருக்குக.", "sin²θ − cos²θ இல் sin²θ = 1 − cos²θ எனப் பிரதியிட்டால் 1 − 2 cos²θ."],
+      equations: {"0": {"latex": "\\text{இடப்புறம்} = \\dfrac{\\dfrac{\\sin^2\\theta}{\\cos^2\\theta} - 1}{\\dfrac{1}{\\cos^2\\theta}}", "fallback": "இடப்புறம்=((sin⁡^(2)θ)/(cos⁡^(2)θ)−1)/((1)/(cos⁡^(2)θ))", "display": true}, "1": {"latex": "\\text{இடப்புறம்} = \\sin^2\\theta - \\cos^2\\theta = (1 - \\cos^2\\theta) - \\cos^2\\theta = 1 - 2\\cos^2\\theta = \\text{வலப்புறம்}", "fallback": "இடப்புறம்=sin⁡^(2)θ−cos⁡^(2)θ=(1−cos⁡^(2)θ)−cos⁡^(2)θ=1−2cos⁡^(2)θ=வலப்புறம்", "display": true}}
+    },
+    "c10-6-unit-q2": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["தொகுதியின் வர்க்கத்தை விரிக்க. sin²θ + cos²θ = 1 ஐப் பயன்படுத்தி 2(1 + sin θ)(1 − cos θ) எனக் காரணிப்படுத்துக.", "பகுதியின் வர்க்கத்தையும் விரிக்க. இங்கு cos θ இன் குறி நேர்மம் என்பதால் இறுதிக் காரணி 1 + cos θ.", "பகுதி பூச்சியமில்லாதபோது 2(1 + sin θ) என்ற பொதுக் காரணியை நீக்கினால் வலப்புறம் கிடைக்கும்."],
+      equations: {"0": {"latex": "\\begin{aligned} &\\text{தொகுதி } (1 + \\sin\\theta - \\cos\\theta)^2 \\\\[4pt] &= (1 + \\sin\\theta)^2 - 2\\cos\\theta(1 + \\sin\\theta) \\\\[2pt] &\\quad + \\cos^2\\theta \\\\[4pt] &= 1 + 2\\sin\\theta + (\\sin^2\\theta + \\cos^2\\theta) \\\\[2pt] &\\quad - 2\\cos\\theta(1 + \\sin\\theta) \\\\[4pt] &= 2(1 + \\sin\\theta) - 2\\cos\\theta(1 + \\sin\\theta) \\\\[4pt] &= 2(1 + \\sin\\theta)(1 - \\cos\\theta) \\end{aligned}", "fallback": "தொகுதி (1+sin⁡θ−cos⁡θ)^(2) ; =(1+sin⁡θ)^(2)−2cos⁡θ(1+sin⁡θ) ;  +cos⁡^(2)θ ; =1+2sin⁡θ+(sin⁡^(2)θ+cos⁡^(2)θ) ;  −2cos⁡θ(1+sin⁡θ) ; =2(1+sin⁡θ)−2cos⁡θ(1+sin⁡θ) ; =2(1+sin⁡θ)(1−cos⁡θ)", "display": true}, "1": {"latex": "\\begin{aligned} &\\text{பகுதி } (1 + \\sin\\theta + \\cos\\theta)^2 \\\\[4pt] &= (1 + \\sin\\theta)^2 + 2\\cos\\theta(1 + \\sin\\theta) \\\\[2pt] &\\quad + \\cos^2\\theta \\\\[4pt] &= 2(1 + \\sin\\theta) + 2\\cos\\theta(1 + \\sin\\theta) \\\\[4pt] &= 2(1 + \\sin\\theta)(1 + \\cos\\theta) \\end{aligned}", "fallback": "பகுதி (1+sin⁡θ+cos⁡θ)^(2) ; =(1+sin⁡θ)^(2)+2cos⁡θ(1+sin⁡θ) ;  +cos⁡^(2)θ ; =2(1+sin⁡θ)+2cos⁡θ(1+sin⁡θ) ; =2(1+sin⁡θ)(1+cos⁡θ)", "display": true}, "2": {"latex": "\\begin{aligned} \\text{இடப்புறம்} &= \\dfrac{2(1 + \\sin\\theta)(1 - \\cos\\theta)}{2(1 + \\sin\\theta)(1 + \\cos\\theta)} \\\\[6pt] &= \\dfrac{1 - \\cos\\theta}{1 + \\cos\\theta} = \\text{வலப்புறம்} \\end{aligned}", "fallback": "இடப்புறம்=(2(1+sin⁡θ)(1−cos⁡θ))/(2(1+sin⁡θ)(1+cos⁡θ)) ; =(1−cos⁡θ)/(1+cos⁡θ)=வலப்புறம்", "display": true}}
+    },
+    "c10-6-unit-q3": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["y cos θ ஐ x sin θ என மாற்றி x sin θ ஐப் பொதுக் காரணியாக எடுக்க. வர்க்கங்களின் கூடுதல் 1.", "sin θ, cos θ இரண்டும் பூச்சியமில்லாதபோது x = cos θ, y = sin θ. எனவே x² + y² = 1."],
+      equations: {"1": {"latex": "\\begin{aligned} x\\sin\\theta(\\sin^2\\theta + \\cos^2\\theta) &= \\sin\\theta\\cos\\theta \\quad\\text{எனவே}\\quad x = \\cos\\theta \\\\[4pt] (\\cos\\theta)\\sin\\theta = y\\cos\\theta \\quad&\\text{எனவே}\\quad y = \\sin\\theta \\\\[4pt] x^2 + y^2 &= \\cos^2\\theta + \\sin^2\\theta = 1 \\end{aligned}", "fallback": "xsin⁡θ(sin⁡^(2)θ+cos⁡^(2)θ)=sin⁡θcos⁡θ எனவே x=cos⁡θ ; (cos⁡θ)sin⁡θ=ycos⁡θ எனவே y=sin⁡θ ; x^(2)+y^(2)=cos⁡^(2)θ+sin⁡^(2)θ=1", "display": true}}
+    },
+    "c10-6-unit-q4": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["இரு கோவைகளையும் வர்க்கமாக்கிக் கூட்டுக. குறுக்குப் பெருக்கல் உறுப்புகள் எதிர்க்குறிகளுடன் வருவதால் நீங்குகின்றன.", "வர்க்கங்களின் கூடுதலைச் சுருக்கி c² ஐக் கழிக்க. வர்க்கமூலம் எடுக்கும்போது நேர்ம, எதிர்ம ஆகிய இரண்டு குறிகளையும் சேர்க்க."]
+    },
+    "c10-6-unit-q5": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["பறவை 80 மீட்டர் உயரத்தில் கிடைமட்டமாகப் பறக்கிறது. 45°, 30° ஏற்றக்கோணங்களிலிருந்து ஆரம்ப மற்றும் இறுதிக் கிடைமட்டத் தொலைவுகளைக் காண்க.", "இரண்டு தொலைவுகளின் வேறுபாடு 80(√3 − 1) மீட்டர். 2 வினாடிகளால் வகுத்தால் வேகம் வினாடிக்கு 29.28 மீட்டர்."],
+      equations: {"0": {"latex": "d_1 = \\dfrac{80}{\\tan 45^\\circ} = 80\\text{ மீ},\\qquad d_2 = \\dfrac{80}{\\tan 30^\\circ} = 80\\sqrt{3}\\text{ மீ}", "fallback": "d_1=(80)/(tan⁡45^(∘))=80 மீ, d_2=(80)/(tan⁡30^(∘))=80√(3) மீ", "display": true}, "1": {"latex": "\\text{வேகம்} = \\dfrac{80(\\sqrt{3} - 1)}{2} = 40(1.732 - 1) = 40(0.732) = 29.28\\text{ மீ/வி}", "fallback": "வேகம்=(80(√(3)−1))/(2)=40(1.732−1)=40(0.732)=29.28 மீ/வி", "display": true}},
+      answer: [{"latex": "29.28\\text{ மீ/வி}", "fallback": "29.28 மீ/வி", "display": true}]
+    },
+    "c10-6-unit-q6": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["600 மீட்டர் உயரத்தை tan 37°, tan 53° ஆகியவற்றால் தனித்தனியாக வகுத்து இரண்டு கிடைமட்டத் தொலைவுகளைக் காண்க.", "விமானம் நெருங்குவதால் தொலைவுகளைக் கழிக்க. பயணித்த சுமார் 344.03 மீட்டரை வேகம் 175 மீ/வி ஆல் வகுக்க."],
+      equations: {"0": {"latex": "d_1 = \\dfrac{600}{0.7536} \\approx 796.18\\text{ மீ},\\qquad d_2 = \\dfrac{600}{1.3270} \\approx 452.15\\text{ மீ}", "fallback": "d_1=(600)/(0.7536)≈796.18 மீ, d_2=(600)/(1.3270)≈452.15 மீ", "display": true}, "1": {"latex": "\\text{நேரம்} = \\dfrac{796.18 - 452.15}{175} = \\dfrac{344.03}{175} \\approx 1.97\\text{ வினாடிகள் (சுமார்)}", "fallback": "நேரம்=(796.18−452.15)/(175)=(344.03)/(175)≈1.97 வினாடிகள் (சுமார்)", "display": true}},
+      answer: [{"latex": "1.97\\text{ வினாடிகள் (சுமார்)}", "fallback": "1.97 வினாடிகள் (சுமார்)", "display": true}]
+    },
+    "c10-6-unit-q7-i": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["AB என்ற 30 கிமீ பயணத்தின் வடக்குக் கூறைக் காண்க. தரப்பட்ட படத்தின்படி கிடைமட்டத்துடனான கோணம் 55°.", "30 ஐ sin 55° ஆல் பெருக்கி இரண்டு தசம இடங்களுக்கு முழுமையாக்குக."],
+      equations: {"0": {"latex": "\\text{வடக்குத் தொலைவு} = 30\\sin 55^\\circ = 30 \\times 0.8192", "fallback": "வடக்குத் தொலைவு=30sin⁡55^(∘)=30×0.8192", "display": true}, "1": {"latex": "30 \\times 0.8192 = 24.576 \\approx 24.58\\text{ கிமீ (சுமார்)}", "fallback": "30×0.8192=24.576≈24.58 கிமீ (சுமார்)", "display": true}},
+      answer: [{"latex": "24.58\\text{ கிமீ (சுமார்)}", "fallback": "24.58 கிமீ (சுமார்)", "display": true}]
+    },
+    "c10-6-unit-q7-ii": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["AB இன் மேற்குக் கூறு 55° கோணத்திற்கு அடுத்துள்ள பக்கம். எனவே 30 ஐ cos 55° ஆல் பெருக்குக.", "cos 55° ≈ 0.5736 எனப் பிரதியிட்டால் B ஆனது A இலிருந்து மேற்கே சுமார் 17.21 கிமீ."],
+      equations: {"0": {"latex": "\\text{மேற்குத் தொலைவு} = 30\\cos 55^\\circ = 30 \\times 0.5736", "fallback": "மேற்குத் தொலைவு=30cos⁡55^(∘)=30×0.5736", "display": true}, "1": {"latex": "30 \\times 0.5736 = 17.208 \\approx 17.21\\text{ கிமீ (சுமார்)}", "fallback": "30×0.5736=17.208≈17.21 கிமீ (சுமார்)", "display": true}},
+      answer: [{"latex": "17.21\\text{ கிமீ (சுமார்)}", "fallback": "17.21 கிமீ (சுமார்)", "display": true}]
+    },
+    "c10-6-unit-q7-iii": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["BC இன் திசைக்கோணம் வடக்கிலிருந்து 48°. எனவே கிழக்குக் கிடைமட்டத்திலிருந்து 42°. வடக்குக் கூறு 32 sin 42°.", "32 ஐ 0.6691 ஆல் பெருக்குக. C ஆனது B இலிருந்து வடக்கே சுமார் 21.41 கிமீ."],
+      equations: {"0": {"latex": "\\text{வடக்குத் தொலைவு} = 32\\sin 42^\\circ = 32 \\times 0.6691", "fallback": "வடக்குத் தொலைவு=32sin⁡42^(∘)=32×0.6691", "display": true}, "1": {"latex": "32 \\times 0.6691 = 21.4112 \\approx 21.41\\text{ கிமீ (சுமார்)}", "fallback": "32×0.6691=21.4112≈21.41 கிமீ (சுமார்)", "display": true}},
+      answer: [{"latex": "21.41\\text{ கிமீ (சுமார்)}", "fallback": "21.41 கிமீ (சுமார்)", "display": true}]
+    },
+    "c10-6-unit-q7-iv": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["BC இன் கிழக்குக் கூறு 42° கோணத்திற்கு அடுத்துள்ள பக்கம். எனவே 32 cos 42° ஐக் கணக்கிடுக.", "32 ஐ 0.7431 ஆல் பெருக்கினால் கிழக்கே சுமார் 23.78 கிமீ."],
+      equations: {"0": {"latex": "\\text{கிழக்குத் தொலைவு} = 32\\cos 42^\\circ = 32 \\times 0.7431", "fallback": "கிழக்குத் தொலைவு=32cos⁡42^(∘)=32×0.7431", "display": true}, "1": {"latex": "32 \\times 0.7431 = 23.7792 \\approx 23.78\\text{ கிமீ (சுமார்)}", "fallback": "32×0.7431=23.7792≈23.78 கிமீ (சுமார்)", "display": true}},
+      answer: [{"latex": "23.78\\text{ கிமீ (சுமார்)}", "fallback": "23.78 கிமீ (சுமார்)", "display": true}]
+    },
+    "c10-6-unit-q8": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["கலங்கரை விளக்கின் உயரம் h என்க. கப்பல்கள் எதிரெதிர்ப் பக்கங்களில் இருப்பதால் h/tan 60° மற்றும் h/tan 45° ஆகிய தொலைவுகளைக் கூட்டுக.", "கூட்டுத்தொகையைக் கொடுக்கப்பட்ட இடைவெளிக்குச் சமப்படுத்தி பொதுக் காரணி (√3 + 1)/√3 ஐ நீக்குக."],
+      equations: {"1": {"latex": "h\\left(\\dfrac{\\sqrt{3} + 1}{\\sqrt{3}}\\right) = 200\\left(\\dfrac{\\sqrt{3} + 1}{\\sqrt{3}}\\right) \\quad\\text{எனவே}\\quad h = 200\\text{ மீ}", "fallback": "h((√(3)+1)/(√(3)))=200((√(3)+1)/(√(3))) எனவே h=200 மீ", "display": true}},
+      answer: [{"latex": "200\\text{ மீ}", "fallback": "200 மீ", "display": true}]
+    },
+    "c10-6-unit-q9": {
+      title: "முக்கோணவியல் – தொகுப்புப் பயிற்சி",
+      reasons: ["தெருவின் அகலம் 35 மீட்டர். கூரையிலிருந்து சிலையின் உச்சிக்கான உயர வேறுபாடு 35 tan 24°, அடிக்கான உயர வேறுபாடு 35 tan 34°.", "உச்சி மேலாகவும் அடி கீழாகவும் இருப்பதால் இரு உயர வேறுபாடுகளையும் கூட்டுக. சிலையின் உயரம் சுமார் 39.19 மீட்டர்."],
+      equations: {"0": {"latex": "h_{\\text{உச்சி}} = 35\\tan 24^\\circ = 35(0.4452) = 15.582\\text{ மீ},\\qquad h_{\\text{அடி}} = 35\\tan 34^\\circ = 35(0.6745) = 23.6075\\text{ மீ}", "fallback": "h_உச்சி=35tan⁡24^(∘)=35(0.4452)=15.582 மீ, h_அடி=35tan⁡34^(∘)=35(0.6745)=23.6075 மீ", "display": true}, "1": {"latex": "H = 15.582 + 23.6075 = 39.1895 \\approx 39.19\\text{ மீ}", "fallback": "H=15.582+23.6075=39.1895≈39.19 மீ", "display": true}},
+      answer: [{"latex": "39.19\\text{ மீ}", "fallback": "39.19 மீ", "display": true}]
+    },
+    "c10-7-ex7-1-q1": {
+      title: "அளவியல்",
+      reasons: ["விகிதத்தின் பொதுக் காரணி k எனில் ஆரம் 5k, உயரம் 7k.", "உருளையின் வளைபரப்பு 2πrh. கொடுக்கப்பட்ட பரப்பையும் r, h இன் மதிப்புகளையும் பிரதியிடுக.", "π = 22/7 எனக் கொண்டு சுருக்கினால் k² = 25. நீளம் நேர்மம் என்பதால் k = 5.", "5k, 7k இல் k = 5 ஐப் பிரதியிட்டு ஆரம் மற்றும் உயரத்தைச் சென்டிமீட்டரில் எழுதுக."],
+      prompt: ["1. ஓர் உருளையின் ஆரம் மற்றும் உயரத்தின் விகிதம் 5 : 7. அதன் வளைபரப்பு 5500 ச.செ.மீ எனில், உருளையின் ஆரம் மற்றும் உயரம் காண்க."],
+      label: "பயிற்சி 7.1 · வினா 1",
+      equations: {"3": {"latex": "r=5(5)=25\\,\\text{செ.மீ},\\quad h=7(5)=35\\,\\text{செ.மீ}", "fallback": "r=5(5)=25 செ.மீ, h=7(5)=35 செ.மீ", "display": true}},
+      answer: [{"latex": "\\boxed{r=25\\,\\text{செ.மீ},\\quad h=35\\,\\text{செ.மீ}}", "fallback": "r=25 செ.மீ, h=35 செ.மீ", "display": true}]
+    },
+    "c10-7-ex7-1-q2": {
+      title: "அளவியல்",
+      reasons: ["மொத்தப் புறப்பரப்பை 5/6 ஆல் பெருக்கி வளைபரப்பைக் காண்க.", "மொத்தப் புறப்பரப்பிலிருந்து வளைபரப்பைக் கழித்தால் இரு வட்ட அடிகளின் பரப்பு 2πr² கிடைக்கும்.", "2π ஆல் வகுத்து நேர்ம வர்க்கமூலத்தை எடுத்தால் ஆரம் 7 செ.மீ.", "வளைபரப்பு 1540 இலும் r = 7 இலும் இருந்து 2πrh = 1540 ஐத் தீர்த்து உயரத்தைக் காண்க.", "r = 7, h = 35 ஐ மொத்தப் புறப்பரப்புச் சூத்திரத்தில் பிரதியிட்டு 1848 கிடைக்கிறதா எனச் சரிபார்க்க."],
+      prompt: ["2. ஒரு திண்ம இரும்பு உருளையின் மொத்தப் புறப்பரப்பு 1848 ச.செ.மீ. அதன் வளைபரப்பு மொத்தப் புறப்பரப்பில் ஆறில் ஐந்து பங்கு எனில், ஆரம் மற்றும் உயரம் காண்க."],
+      label: "பயிற்சி 7.1 · வினா 2",
+      equations: {"0": {"latex": "\\text{வளைபரப்பு}=\\dfrac{5}{6}\\times1848=1540\\,\\text{செ.மீ}^2", "fallback": "வளைபரப்பு=(5)/(6)×1848=1540 செ.மீ^(2)", "display": true}, "2": {"latex": "r^2=\\dfrac{308}{2\\times\\frac{22}{7}}=49\\quad\\Rightarrow\\quad r=7\\,\\text{செ.மீ}", "fallback": "r^(2)=(308)/(2×(22)/(7))=49 ⇒ r=7 செ.மீ", "display": true}, "3": {"latex": "1540=2\\times\\dfrac{22}{7}\\times7h=44h\\quad\\Rightarrow\\quad h=35\\,\\text{செ.மீ}", "fallback": "1540=2×(22)/(7)×7h=44h ⇒ h=35 செ.மீ", "display": true}},
+      answer: [{"latex": "\\boxed{r=7\\,\\text{செ.மீ},\\quad h=35\\,\\text{செ.மீ}}", "fallback": "r=7 செ.மீ, h=35 செ.மீ", "display": true}]
+    },
+    "c10-7-ex7-1-q3": {
+      title: "அளவியல்",
+      reasons: ["வெளி ஆரத்திலிருந்து தடிமனைக் கழிக்க. உள் ஆரம் 12 செ.மீ.", "உள், வெளி வளைபரப்புகளுடன் இரு முனைகளின் வட்ட வளையப் பரப்புகளையும் கூட்டுக.", "R = 16, r = 12, h = 13 எனப் பிரதியிட்டுப் பொதுக் காரணிகளைத் தொகுக்க.", "952π இல் π = 22/7 எனப் பிரதியிட்டு பரப்பைச் சதுர சென்டிமீட்டரில் எழுதுக."],
+      prompt: ["3. ஓர் உள்ளீடற்ற மர உருளையின் வெளிப்புற ஆரம் 16 செ.மீ, நீளம் 13 செ.மீ, தடிமன் 4 செ.மீ. அதன் மொத்தப் புறப்பரப்பு எவ்வளவு?"],
+      label: "பயிற்சி 7.1 · வினா 3",
+      equations: {"0": {"latex": "R=16\\,\\text{செ.மீ},\\quad r=12\\,\\text{செ.மீ},\\quad h=13\\,\\text{செ.மீ}", "fallback": "R=16 செ.மீ, r=12 செ.மீ, h=13 செ.மீ", "display": true}, "1": {"latex": "\\text{மொத்தப் புறப்பரப்பு}=2\\pi Rh+2\\pi rh+2\\pi(R^2-r^2)=2\\pi(R+r)(R-r+h)", "fallback": "மொத்தப் புறப்பரப்பு=2πRh+2πrh+2π(R^(2)−r^(2))=2π(R+r)(R−r+h)", "display": true}, "2": {"latex": "\\text{மொத்தப் புறப்பரப்பு}=2\\pi(16+12)(16-12+13)=2\\pi(28)(17)=952\\pi", "fallback": "மொத்தப் புறப்பரப்பு=2π(16+12)(16−12+13)=2π(28)(17)=952π", "display": true}, "3": {"latex": "\\text{மொத்தப் புறப்பரப்பு}=952\\pi=952\\times\\dfrac{22}{7}=2992\\,\\text{செ.மீ}^2", "fallback": "மொத்தப் புறப்பரப்பு=952π=952×(22)/(7)=2992 செ.மீ^(2)", "display": true}},
+      answer: [{"latex": "\\boxed{\\text{மொத்தப் புறப்பரப்பு}=2992\\,\\text{செ.மீ}^2}", "fallback": "மொத்தப் புறப்பரப்பு=2992 செ.மீ^(2)", "display": true}]
+    },
+    "c10-7-ex7-1-q4": {
+      title: "அளவியல்",
+      reasons: ["பித்தகோரஸ் தேற்றத்தால் PQ² = PR² − QR². நேர்ம வர்க்கமூலத்தை எடுக்க.", "QR ஐச் சுற்றிச் சுழற்றினால் PQ ஆரம், QR உயரம், PR சாயுயரம்.", "முதல் கூம்பின் வளைபரப்பை πrℓ மூலம் காண்க.", "PQ ஐச் சுற்றிச் சுழற்றினால் QR ஆரமாகவும் PQ உயரமாகவும் மாறும். சாயுயரம் தொடர்ந்து 20 செ.மீ.", "இரண்டாம் வளைபரப்பைக் கணக்கிட்டு முதலாவதுடன் ஒப்பிடுக. விகிதம் 3 : 4 என்பதால் PQ ஐச் சுற்றிய கூம்பின் வளைபரப்பு பெரியது."],
+      prompt: ["4. PQR என்ற செங்கோண முக்கோணத்தில் ∠Q = 90°, QR = 16 செ.மீ, PR = 20 செ.மீ. QR மற்றும் PQ ஐத் தனித்தனியே மைய அச்சாகக் கொண்டு சுழற்றும்போது உருவாகும் நேர்வட்டக் கூம்புகளின் வளைபரப்புகளை ஒப்பிடுக."],
+      label: "பயிற்சி 7.1 · வினா 4",
+      equations: {"0": {"latex": "PQ=\\sqrt{PR^2-QR^2}=\\sqrt{20^2-16^2}=12\\,\\text{செ.மீ}", "fallback": "PQ=√(PR^(2)−QR^(2))=√(20^(2)−16^(2))=12 செ.மீ", "display": true}, "1": {"latex": "\\text{அச்சு }QR:\\quad r=12,\\ h=16,\\ \\ell=20", "fallback": "அச்சு QR: r=12, h=16, ℓ=20", "display": true}, "2": {"latex": "\\text{வளைபரப்பு}_{QR}=\\pi r\\ell=\\pi(12)(20)=240\\pi\\,\\text{செ.மீ}^2", "fallback": "வளைபரப்பு_QR=πrℓ=π(12)(20)=240π செ.மீ^(2)", "display": true}, "3": {"latex": "\\text{அச்சு }PQ:\\quad r=16,\\ h=12,\\ \\ell=20", "fallback": "அச்சு PQ: r=16, h=12, ℓ=20", "display": true}, "4": {"latex": "\\text{வளைபரப்பு}_{PQ}=320\\pi\\,\\text{செ.மீ}^2,\\quad \\text{வளைபரப்பு}_{QR}:\\text{வளைபரப்பு}_{PQ}=3:4", "fallback": "வளைபரப்பு_PQ=320π செ.மீ^(2), வளைபரப்பு_QR:வளைபரப்பு_PQ=3:4", "display": true}},
+      answer: [{"latex": "\\boxed{\\text{வளைபரப்பு}_{QR}:\\text{வளைபரப்பு}_{PQ}=3:4\\;(\\text{வளைபரப்பு, அச்சு }PQ\\text{ பெரியது})}", "fallback": "வளைபரப்பு_QR:வளைபரப்பு_PQ=3:4  (வளைபரப்பு, அச்சு PQ பெரியது)", "display": true}]
+    },
+    "c10-7-ex7-1-q5": {
+      title: "அளவியல்",
+      reasons: ["ஒருவருக்குத் தேவையான தரைப்பரப்பை 4 ஆல் பெருக்கி வட்ட அடியின் பரப்பைக் காண்க.", "πr² = 88 என்பதிலிருந்து r² ஐக் காண்க.", "செங்கோண முக்கோணத்தில் சாயுயரம் கர்ணம். எனவே h² = ℓ² − r².", "333 இன் நேர்ம வர்க்கமூலத்தை எடுத்து இரண்டு தசம இடங்களுக்கு முழுமையாக்குக."],
+      prompt: ["5. சாயுயரம் 19 மீட்டர் கொண்ட கூம்பு வடிவக் கூடாரத்தில் நான்கு பேர் உள்ளனர். ஒருவருக்கு 22 சதுர மீட்டர் தரைப்பரப்பு தேவை எனில் கூடாரத்தின் உயரம் காண்க."],
+      label: "பயிற்சி 7.1 · வினா 5",
+      equations: {"0": {"latex": "A_{\\text{அடி}}=4\\times22=88\\,\\text{மீ}^2", "fallback": "A_அடி=4×22=88 மீ^(2)", "display": true}, "1": {"latex": "\\pi r^2=88\\quad\\Rightarrow\\quad r^2=\\dfrac{88}{22/7}=28\\,\\text{மீ}^2", "fallback": "πr^(2)=88 ⇒ r^(2)=(88)/(22/7)=28 மீ^(2)", "display": true}, "3": {"latex": "h=\\sqrt{333}\\approx18.25\\,\\text{மீ}", "fallback": "h=√(333)≈18.25 மீ", "display": true}},
+      answer: [{"latex": "\\boxed{h=\\sqrt{333}\\,\\text{மீ}\\approx18.25\\,\\text{மீ}}", "fallback": "h=√(333) மீ≈18.25 மீ", "display": true}]
+    },
+    "c10-7-ex7-1-q6": {
+      title: "அளவியல்",
+      reasons: ["ஆரத்தையும் உயரத்தையும் கொண்டு பித்தகோரஸ் தேற்றத்தால் சாயுயரம் 13 செ.மீ எனக் காண்க.", "தொப்பியின் அடிப்பகுதி திறந்துள்ளது. ஒரு தொப்பிக்குத் தேவையான காகிதம் வளைபரப்பு πrℓ.", "மொத்தக் காகிதப் பரப்பை ஒரு தொப்பியின் வளைபரப்பால் வகுக்க.", "π = 22/7 எனப் பிரதியிட்டால் 28 முழுத் தொப்பிகள் கிடைக்கும்."],
+      prompt: ["6. ஒரு சிறுமி தனது பிறந்தநாள் விழாவிற்கு 5720 ச.செ.மீ பரப்புள்ள காகிதத்தால் நேர்வட்டக் கூம்பு வடிவத் தொப்பிகள் செய்ய விரும்புகிறாள். ஆரம் 5 செ.மீ, உயரம் 12 செ.மீ கொண்ட எத்தனை தொப்பிகள் செய்யலாம்?"],
+      label: "பயிற்சி 7.1 · வினா 6",
+      equations: {"0": {"latex": "\\begin{aligned}\\ell&=\\sqrt{r^2+h^2}\\\\&=\\sqrt{5^2+12^2}\\\\&=13\\,\\text{செ.மீ}\\end{aligned}", "fallback": "ℓ=√(r^(2)+h^(2)) ; =√(5^(2)+12^(2)) ; =13 செ.மீ", "display": true}, "1": {"latex": "\\begin{aligned}A_{\\text{தொப்பி}}&=\\pi r\\ell\\\\&=\\pi(5)(13)\\\\&=65\\pi\\,\\text{செ.மீ}^2\\end{aligned}", "fallback": "A_தொப்பி=πrℓ ; =π(5)(13) ; =65π செ.மீ^(2)", "display": true}},
+      answer: [{"latex": "\\boxed{28\\text{ பிறந்தநாள் தொப்பிகள்}}", "fallback": "28 பிறந்தநாள் தொப்பிகள்", "display": true}]
+    },
+    "c10-7-ex7-1-q7": {
+      title: "அளவியல்",
+      reasons: ["ஆரங்கள் x, 3x எனில் இரு கூம்புகளின் உயரமும் 3x.", "சிறிய கூம்பின் சாயுயரத்தை அதன் ஆரம், உயரம் மூலம் காண்க.", "பெரிய கூம்பின் சாயுயரத்திற்கும் பித்தகோரஸ் தேற்றத்தைப் பயன்படுத்துக.", "இரு கூம்புகளுக்கும் πrℓ எழுதி விகிதத்தில் பொதுக் காரணிகளான π, x² ஐ நீக்குக.", "இருபுறத்தையும் √2 ஆல் வகுத்தால் வளைபரப்புகளின் விகிதம் √5 : 9."],
+      prompt: ["7. சம உயரமுள்ள இரண்டு நேர்வட்டக் கூம்புகளின் ஆரங்கள் 1 : 3 என்ற விகிதத்தில் உள்ளன. ஒவ்வொன்றின் உயரமும் சிறிய கூம்பின் ஆரத்தைப் போல மூன்று மடங்கு எனில், வளைபரப்புகளின் விகிதம் காண்க."],
+      label: "பயிற்சி 7.1 · வினா 7",
+      answer: [{"latex": "\\boxed{\\sqrt5:9}", "fallback": "√(5):9", "display": true}]
+    },
+    "c10-7-ex7-1-q8": {
+      title: "அளவியல்",
+      reasons: ["தொடக்க ஆரம் r எனில் கோளத்தின் புறப்பரப்பு 4πr².", "ஆரம் 25% அதிகரித்தால் புதிய ஆரம் பழைய ஆரத்தின் 1.25 மடங்கு.", "புறப்பரப்பு ஆரத்தின் வர்க்கத்திற்கு நேர்விகிதம். புதிய பரப்பு பழைய பரப்பின் 1.5625 மடங்கு.", "புதிய விகிதத்திலிருந்து 1 ஐக் கழித்து 100 ஆல் பெருக்கினால் அதிகரிப்பு 56.25%."],
+      prompt: ["8. ஒரு கோளத்தின் ஆரம் 25% அதிகரிக்கும்போது அதன் புறப்பரப்பு எத்தனை சதவீதம் அதிகரிக்கும்?"],
+      label: "பயிற்சி 7.1 · வினா 8",
+      equations: {"1": {"latex": "r_{\\text{புதிய}}=\\left(1+\\dfrac{25}{100}\\right)r=1.25r", "fallback": "r_புதிய=(1+(25)/(100))r=1.25r", "display": true}, "2": {"latex": "\\begin{aligned}A_{\\text{புதிய}}&=4\\pi(1.25r)^2\\\\&=1.5625(4\\pi r^2)\\\\&=1.5625A\\end{aligned}", "fallback": "A_புதிய=4π(1.25r)^(2) ; =1.5625(4πr^(2)) ; =1.5625A", "display": true}, "3": {"latex": "\\begin{aligned}\\%\\text{ அதிகரிப்பு}&=0.5625\\times100\\\\&=56.25\\%\\end{aligned}", "fallback": "% அதிகரிப்பு=0.5625×100 ; =56.25%", "display": true}},
+      answer: [{"latex": "\\boxed{56.25\\%\\text{ அதிகரிப்பு}}", "fallback": "56.25% அதிகரிப்பு", "display": true}]
+    },
+    "c10-7-ex7-1-q9": {
+      title: "அளவியல்",
+      reasons: ["இரு விட்டங்களையும் பாதியாக்கி உள் ஆரம் 10, வெளி ஆரம் 14 எனக் காண்க.", "உள் மற்றும் வெளி அரைக்கோள வளைபரப்புகளுடன் விளிம்பின் வட்ட வளையப் பரப்பையும் கூட்டுக.", "ஆரங்களைப் பிரதியிட்டுச் சுருக்கினால் வண்ணம் பூசும் பரப்பு 688π ச.செ.மீ.", "ஒரு ச.செ.மீக்கான கட்டணம் ₹0.14. பரப்பால் பெருக்கிச் செலவைக் காண்க."],
+      prompt: ["9. உள்ளீடற்ற ஓர் அரைக்கோளக் கிண்ணத்தின் உட்புற, வெளிப்புற விட்டங்கள் முறையே 20 செ.மீ, 28 செ.மீ. ஒரு சதுர சென்டிமீட்டருக்கு ₹0.14 வீதம் கிண்ணம் முழுவதும் வண்ணம் பூச எவ்வளவு செலவாகும்?"],
+      label: "பயிற்சி 7.1 · வினா 9",
+      equations: {"0": {"latex": "\\begin{aligned}r&=\\frac{20}{2}=10\\,\\text{செ.மீ}\\\\R&=\\frac{28}{2}=14\\,\\text{செ.மீ}\\end{aligned}", "fallback": "r=(20)/(2)=10 செ.மீ ; R=(28)/(2)=14 செ.மீ", "display": true}, "1": {"latex": "\\text{மொத்தப் புறப்பரப்பு}=2\\pi R^2+2\\pi r^2+\\pi(R^2-r^2)=\\pi(3R^2+r^2)", "fallback": "மொத்தப் புறப்பரப்பு=2πR^(2)+2πr^(2)+π(R^(2)−r^(2))=π(3R^(2)+r^(2))", "display": true}, "2": {"latex": "A=\\pi(3\\times14^2+10^2)=\\pi(588+100)=688\\pi\\,\\text{செ.மீ}^2", "fallback": "A=π(3×14^(2)+10^(2))=π(588+100)=688π செ.மீ^(2)", "display": true}, "3": {"latex": "\\begin{aligned}C&=0.14\\times688\\times\\frac{22}{7}\\\\&=\\text{ரூ.}\\,302.72\\end{aligned}", "fallback": "C=0.14×688×(22)/(7) ; =ரூ. 302.72", "display": true}},
+      answer: [{"latex": "\\boxed{\\text{ரூ.}\\,302.72}", "fallback": "ரூ. 302.72", "display": true}]
+    },
+    "c10-7-ex7-1-q10": {
+      title: "அளவியல்",
+      reasons: ["படத்தின்படி மேல் ஆரம் 6 செ.மீ, கீழ் ஆரம் 12 செ.மீ, செங்குத்து உயரம் 8 செ.மீ.", "இரு ஆரங்களின் வேறுபாட்டையும் உயரத்தையும் கொண்டு சாயுயரம் 10 செ.மீ எனக் காண்க.", "இடைக்கண்டத்தின் வளைபரப்புடன் சிறிய மேல்வட்டத்தின் பரப்பைக் கூட்டுக.", "பரப்புச் சூத்திரத்தில் மதிப்புகளைப் பிரதியிட்டால் 216π ச.செ.மீ.", "பாடநூல் கணக்குப்படி π = 22/7 என எடுத்து முதலில் பரப்பை இரண்டு தசம இடங்களுக்கு முழுமையாக்குக.", "678.86 ச.செ.மீ ஐ ஒரு ச.செ.மீக்கான கட்டணம் ₹2 ஆல் பெருக்குக."],
+      prompt: ["10. படத்தில் உள்ள மேசை விளக்கின் இடைக்கண்ட வடிவ வெளிப்புறத்திற்கும் மேல்வட்டத்திற்கும் வண்ணம் பூச வேண்டும். ஒரு ச.செ.மீக்கு ₹2 எனில் மொத்தச் செலவு எவ்வளவு?"],
+      label: "பயிற்சி 7.1 · வினா 10",
+      equations: {"0": {"latex": "\\begin{aligned}r&=6\\,\\text{செ.மீ},\\ R=12\\,\\text{செ.மீ}\\\\h&=8\\,\\text{செ.மீ}\\end{aligned}", "fallback": "r=6 செ.மீ, R=12 செ.மீ ; h=8 செ.மீ", "display": true}, "1": {"latex": "\\begin{aligned}\\ell&=\\sqrt{8^2+(12-6)^2}\\\\&=\\sqrt{100}=10\\,\\text{செ.மீ}\\end{aligned}", "fallback": "ℓ=√(8^(2)+(12−6)^(2)) ; =√(100)=10 செ.மீ", "display": true}, "3": {"latex": "\\begin{aligned}A&=\\pi(18)(10)+\\pi(36)\\\\&=180\\pi+36\\pi\\\\&=216\\pi\\,\\text{செ.மீ}^2\\end{aligned}", "fallback": "A=π(18)(10)+π(36) ; =180π+36π ; =216π செ.மீ^(2)", "display": true}, "4": {"latex": "\\begin{aligned}A&=216\\times\\frac{22}{7}\\\\&=678.857\\ldots\\\\&\\approx678.86\\,\\text{செ.மீ}^2\\end{aligned}", "fallback": "A=216×(22)/(7) ; =678.857… ; ≈678.86 செ.மீ^(2)", "display": true}, "5": {"latex": "\\begin{aligned}C&=678.86\\times2\\\\&=\\text{ரூ.}\\,1357.72\\end{aligned}", "fallback": "C=678.86×2 ; =ரூ. 1357.72", "display": true}},
+      answer: [{"latex": "\\boxed{\\text{ரூ.}\\,1357.72}", "fallback": "ரூ. 1357.72", "display": true}]
+    },
+    "c10-8-ex8-1-q1-i": {
+      title: "புள்ளியியல்",
+      reasons: ["தரவின் மிகப்பெரிய மதிப்பு L = 125, மிகச்சிறிய மதிப்பு S = 63.", "பெரிய மதிப்பிலிருந்து சிறிய மதிப்பைக் கழித்தால் வீச்சு 62.", "வீச்சை L + S ஆல் வகுத்து பின்னத்தைச் சுருக்குக. இதுவே அலகற்ற வீச்சுக் கெழு."],
+      prompt: ["1. கீழ்க்காணும் தரவுகளுக்கு வீச்சு மற்றும் வீச்சுக் கெழுவைக் காண்க. (i) 63, 89, 98, 125, 79, 108, 117, 68."],
+      label: "பயிற்சி 8.1 · வினா 1(i)",
+      equations: {"0": {"latex": "L=125,\\quad S=63", "display": true, "fallback": "L=125, S=63"}, "1": {"latex": "\\text{வீச்சு}=125-63=62", "display": true, "fallback": "வீச்சு=125−63=62"}, "2": {"latex": "\\dfrac{L-S}{L+S}=\\dfrac{62}{125+63}=\\dfrac{31}{94}", "display": true, "fallback": "(L−S)/(L+S)=(62)/(125+63)=(31)/(94)"}},
+      answer: [{"latex": "\\begin{aligned}\\text{வீச்சு}&=62\\\\\\text{வீச்சுக் கெழு}&=\\dfrac{31}{94}\\approx0.329787\\end{aligned}", "fallback": "வீச்சு=62 ; வீச்சுக் கெழு=(31)/(94)≈0.329787", "display": true}]
+    },
+    "c10-8-ex8-1-q1-ii": {
+      title: "புள்ளியியல்",
+      reasons: ["தரவின் மிகப்பெரிய மதிப்பு L = 61.4, மிகச்சிறிய மதிப்பு S = 13.6.", "பெரிய மதிப்பிலிருந்து சிறிய மதிப்பைக் கழித்தால் வீச்சு 47.8.", "வீச்சை L + S ஆல் வகுத்து பின்னத்தைச் சுருக்குக. இதுவே அலகற்ற வீச்சுக் கெழு."],
+      prompt: ["1. கீழ்க்காணும் தரவுகளுக்கு வீச்சு மற்றும் வீச்சுக் கெழுவைக் காண்க. (ii) 43.5, 13.6, 18.9, 38.4, 61.4, 29.8."],
+      label: "பயிற்சி 8.1 · வினா 1(ii)",
+      equations: {"0": {"latex": "L=61.4,\\quad S=13.6", "display": true, "fallback": "L=61.4, S=13.6"}, "1": {"latex": "\\text{வீச்சு}=61.4-13.6=47.8", "display": true, "fallback": "வீச்சு=61.4−13.6=47.8"}, "2": {"latex": "\\dfrac{L-S}{L+S}=\\dfrac{47.8}{61.4+13.6}=\\dfrac{239}{375}", "display": true, "fallback": "(L−S)/(L+S)=(47.8)/(61.4+13.6)=(239)/(375)"}},
+      answer: [{"latex": "\\begin{aligned}\\text{வீச்சு}&=47.8\\\\\\text{வீச்சுக் கெழு}&=\\dfrac{239}{375}\\approx0.637333\\end{aligned}", "fallback": "வீச்சு=47.8 ; வீச்சுக் கெழு=(239)/(375)≈0.637333", "display": true}]
+    },
+    "c10-8-ex8-1-q2": {
+      title: "புள்ளியியல்",
+      reasons: ["வீச்சு என்பது மிகப்பெரிய மதிப்பிலிருந்து மிகச்சிறிய மதிப்பைக் கழித்துக் கிடைப்பது.", "மிகப்பெரிய மதிப்பைப் பெற வீச்சுடன் மிகச்சிறிய மதிப்பைக் கூட்டுக.", "36.8 + 13.4 = 50.2. அதிலிருந்து 13.4 ஐக் கழித்து வீச்சைச் சரிபார்க்க."],
+      prompt: ["2. ஒரு தரவின் வீச்சும் மிகச்சிறிய மதிப்பும் முறையே 36.8 மற்றும் 13.4 எனில் மிகப்பெரிய மதிப்பைக் காண்க."],
+      label: "பயிற்சி 8.1 · வினா 2",
+      equations: {"0": {"latex": "R=L-S", "display": true, "fallback": "R=L−S"}, "1": {"latex": "L=R+S", "display": true, "fallback": "L=R+S"}, "2": {"latex": "L=36.8+13.4=50.2", "display": true, "fallback": "L=36.8+13.4=50.2"}},
+      answer: [{"latex": "\\text{மிகப்பெரிய மதிப்பு}=50.2", "fallback": "மிகப்பெரிய மதிப்பு=50.2", "display": true}]
+    },
+    "c10-8-ex8-1-q3": {
+      title: "புள்ளியியல்",
+      reasons: ["முதல் பிரிவின் கீழ் எல்லை 400. கடைசிப் பிரிவின் மேல் எல்லை 650.", "தொகுக்கப்பட்ட தரவிற்கு வெளிப்புற வகுப்பு எல்லைகளின் வேறுபாட்டைப் பயன்படுத்துக.", "650 இலிருந்து 400 ஐக் கழித்தால் வீச்சு 250.", "முதல் மற்றும் கடைசி வருமானப் பிரிவுகளிலிருந்து எல்லைகளைச் சரிபார்க்க. இந்தக் கணக்கிற்கு ஊழியர்களின் எண்ணிக்கையைப் பெருக்க வேண்டியதில்லை."],
+      prompt: ["3. கொடுக்கப்பட்ட தரவின் வீச்சைக் காண்க. வருமானப் பிரிவுகள் 400–450, 450–500, 500–550, 550–600, 600–650. ஊழியர்களின் எண்ணிக்கைகள் முறையே 8, 12, 30, 21, 6."],
+      label: "பயிற்சி 8.1 · வினா 3",
+      equations: {"0": {"latex": "\\begin{aligned}\\text{கீழ் எல்லை}&=400\\\\\\text{மேல் எல்லை}&=650\\end{aligned}", "display": true, "fallback": "கீழ் எல்லை=400 ; மேல் எல்லை=650"}, "1": {"latex": "\\text{வீச்சு}=\\text{அதிக}-\\text{குறைந்த}", "display": true, "fallback": "வீச்சு=அதிக−குறைந்த"}, "2": {"latex": "\\text{வீச்சு}=650-400=250", "display": true, "fallback": "வீச்சு=650−400=250"}, "3": {"latex": "\\begin{aligned}\\text{முதல் பிரிவு}&:\\ 400\\text{–}450\\\\\\text{கடைசிப் பிரிவு}&:\\ 600\\text{–}650\\\\\\text{வேறுபாடு}&=250\\end{aligned}", "display": true, "fallback": "முதல் பிரிவு: 400–450 ; கடைசிப் பிரிவு: 600–650 ; வேறுபாடு=250"}},
+      answer: [{"latex": "\\text{வீச்சு}=250", "display": true, "fallback": "வீச்சு=250"}]
+    },
+    "c10-8-ex8-1-q4": {
+      title: "புள்ளியியல்",
+      reasons: ["மாணவர்களின் எட்டு மதிப்புகளையும் கூட்டி மொத்தப் பக்கங்களைக் காண்க.", "மொத்தம் 275 ஐ 8 ஆல் வகுத்தால் சராசரி 34.375.", "ஒவ்வொரு மதிப்பையும் தனித்தனியே வர்க்கமாக்கிக் கூட்டுக.", "வர்க்கங்களின் சராசரியிலிருந்து சராசரியின் வர்க்கத்தைக் கழித்தால் விலக்க வர்க்கச் சராசரி கிடைக்கும்.", "அதன் நேர்ம வர்க்கமூலமே திட்ட விலக்கம். இரண்டு தசம இடங்களுக்கு 2.34 பக்கங்கள்.", "ஒவ்வொரு மதிப்பிலிருந்தும் 34.375 ஐக் கழித்து விலக்கங்களின் வர்க்கங்களைச் சேர்க்க. 8 ஆல் வகுத்து முந்தைய மதிப்பைச் சரிபார்க்க."],
+      prompt: ["4. ஒரு ஆசிரியர் செய்முறைப் பதிவேட்டில் 60 பக்கங்களை நிறைவு செய்யுமாறு கூறினார். எட்டு மாணவர்கள் முறையே 32, 35, 37, 30, 33, 36, 35, 37 பக்கங்களை நிறைவு செய்தனர். அவர்கள் நிறைவு செய்த பக்கங்களின் திட்ட விலக்கம் காண்க."],
+      label: "பயிற்சி 8.1 · வினா 4",
+      equations: {"4": {"latex": "\\begin{aligned}\\sigma&=\\dfrac{\\sqrt{351}}8=\\dfrac{3\\sqrt{39}}8\\\\&\\approx2.34\\ \\text{பக்கங்கள்}\\end{aligned}", "display": true, "fallback": "σ=(√(351))/(8)=(3√(39))/(8) ; ≈2.34 பக்கங்கள்"}},
+      answer: [{"latex": "\\sigma\\approx2.34\\ \\text{பக்கங்கள்}", "display": true, "fallback": "σ≈2.34 பக்கங்கள்"}]
+    },
+    "c10-8-ex8-1-q5": {
+      title: "புள்ளியியல்",
+      reasons: ["பட்டியலில் உள்ள ஒன்பது ஊதியங்களையும் எடுத்துக்கொள்க.", "மொத்த ஊதியமான ₹2700 ஐ 9 ஆல் வகுத்தால் சராசரி ₹300.", "ஒவ்வொரு ஊதியத்திலிருந்தும் சராசரி ₹300 ஐக் கழித்து விலக்கங்களை எழுதுக.", "ஒவ்வொரு விலக்கத்தையும் வர்க்கமாக்கிக் கூட்டினால் 2000.", "விலக்கங்களின் வர்க்கக் கூட்டுத்தொகையை 9 ஆல் வகுக்க. இதன் அலகு ரூபாய் வர்க்கம்.", "விலக்க வர்க்கச் சராசரியின் வர்க்கமூலத்தை எடுத்தால் திட்ட விலக்கம் சுமார் ₹14.91."],
+      prompt: ["5. கீழே கொடுக்கப்பட்டுள்ள ஊதியங்களின் விலக்க வர்க்கச் சராசரி மற்றும் திட்ட விலக்கம் காண்க. ₹310, ₹290, ₹320, ₹280, ₹300, ₹290, ₹320, ₹310, ₹280."],
+      label: "பயிற்சி 8.1 · வினா 5",
+      equations: {"0": {"latex": "\\begin{aligned}n&=9\\\\\\text{ஊதியங்கள்}&:\\ 310,290,320,280,300,\\\\&\\qquad 290,320,310,280\\end{aligned}", "display": true, "fallback": "n=9 ; ஊதியங்கள்: 310,290,320,280,300, ;  290,320,310,280"}, "4": {"latex": "\\begin{aligned}\\text{விலக்க வர்க்கச் சராசரி }\\sigma^2&=\\dfrac{2000}{9}\\\\&\\approx222.22\\ \\text{\\char\"20B9}^2\\end{aligned}", "display": true, "fallback": "விலக்க வர்க்கச் சராசரி σ^(2)=(2000)/(9) ; ≈222.22 ₹^(2)"}, "5": {"latex": "\\begin{aligned}\\sigma&=\\sqrt{\\dfrac{2000}{9}}\\\\&=\\dfrac{20\\sqrt5}{3}\\approx\\text{\\char\"20B9}14.91\\\\\\text{சரிபார்ப்பு }\\sigma^2&=\\dfrac{812000}{9}-300^2\\\\&=\\dfrac{2000}{9}\\end{aligned}", "display": true, "fallback": "σ=√((2000)/(9)) ; =(20√(5))/(3)≈₹14.91 ; சரிபார்ப்பு σ^(2)=(812000)/(9)−300^(2) ; =(2000)/(9)"}},
+      answer: [{"latex": "\\begin{aligned}\\text{விலக்க வர்க்கச் சராசரி}&=\\dfrac{2000}{9}\\\\&\\approx222.22\\ \\text{\\char\"20B9}^2\\\\\\text{திட்ட விலக்கம்}&=\\dfrac{20\\sqrt5}{3}\\\\&\\approx\\text{\\char\"20B9}14.91\\end{aligned}", "display": true, "fallback": "விலக்க வர்க்கச் சராசரி=(2000)/(9) ; ≈222.22 ₹^(2) ; திட்ட விலக்கம்=(20√(5))/(3) ; ≈₹14.91"}]
+    },
+    "c10-8-ex8-1-q6": {
+      title: "புள்ளியியல்",
+      reasons: ["ஒரு நாளில் 1 முதல் 12 வரையுள்ள எண்ணிக்கைகள் இரண்டு முறை வருகின்றன. எனவே 24 மதிப்புகள்.", "1 முதல் 12 வரை கூடுதல் 78. இரண்டு சுற்றுகளுக்கு மொத்தம் 156 ஒலிகள்.", "156 ஐ 24 ஆல் வகுத்து ஒரு மணிநேரத்திற்கான சராசரியைக் காண்க.", "1 முதல் 12 வரையுள்ள எண்களின் வர்க்கக் கூட்டுத்தொகையை இருமடங்காக்குக.", "வர்க்கங்களின் சராசரியிலிருந்து 6.5 இன் வர்க்கத்தைக் கழிக்க.", "வர்க்கமூலத்தை எடுத்தால் மணிநேர ஒலி எண்ணிக்கையின் திட்ட விலக்கம் சுமார் 3.45. நாளின் மொத்தம் 156."],
+      prompt: ["6. ஒரு சுவர்க்கடிகாரம் ஒரு மணிக்கு ஒரு முறையும் இரண்டு மணிக்கு இருமுறையும் மூன்று மணிக்கு மூன்று முறையும் இவ்வாறே ஒலி எழுப்புகிறது. ஒரு நாளில் மொத்தம் எத்தனை முறை ஒலி எழுப்பும்? ஒரு மணிநேரத்திற்கு எழுப்பும் ஒலிகளின் எண்ணிக்கைகளின் திட்ட விலக்கம் காண்க."],
+      label: "பயிற்சி 8.1 · வினா 6",
+      equations: {"0": {"latex": "\\begin{aligned}\\text{ஒரு சுற்று}&:\\ 1,2,\\ldots,12\\\\n&=24\\quad(\\text{இரு சுற்றுகள்})\\end{aligned}", "display": true, "fallback": "ஒரு சுற்று: 1,2,…,12 ; n=24 (இரு சுற்றுகள்)"}, "1": {"latex": "\\text{மொத்த ஒலிகள்}=2\\times78=156", "display": true, "fallback": "மொத்த ஒலிகள்=2×78=156"}, "5": {"latex": "\\begin{aligned}\\sigma&=\\sqrt{\\dfrac{143}{12}}\\approx3.45\\\\\\text{மொத்த ஒலிகள்}&=156\\end{aligned}", "display": true, "fallback": "σ=√((143)/(12))≈3.45 ; மொத்த ஒலிகள்=156"}},
+      answer: [{"latex": "\\begin{aligned}\\text{மொத்த ஒலிகள்}&=156\\\\\\sigma&=\\sqrt{\\dfrac{143}{12}}\\approx3.45\\end{aligned}", "display": true, "fallback": "மொத்த ஒலிகள்=156 ; σ=√((143)/(12))≈3.45"}]
+    },
+    "c10-8-ex8-1-q7": {
+      title: "புள்ளியியல்",
+      reasons: ["1 முதல் 21 வரை உள்ள எல்லா இயல் எண்களையும் எடுத்துக்கொள்க.", "சம இடைவெளியுள்ள இத்தரவின் சராசரி முதல் மற்றும் கடைசி மதிப்புகளின் சராசரியான 11.", "முதல் n இயல் எண்களின் வர்க்கக் கூட்டுத்தொகைச் சூத்திரத்தில் n = 21 எனப் பிரதியிடுக.", "3311 ஐ 21 ஆல் வகுத்து சராசரியின் வர்க்கமான 121 ஐக் கழிக்க.", "விலக்க வர்க்கச் சராசரியின் வர்க்கமூலத்தை எடுத்தால் திட்ட விலக்கம் சுமார் 6.06.", "முதல் n இயல் எண்களுக்கான (n² − 1)/12 என்ற சூத்திரத்தாலும் விலக்க வர்க்கச் சராசரியைச் சரிபார்க்க."],
+      prompt: ["7. முதல் 21 இயல் எண்களின் திட்ட விலக்கத்தைக் காண்க."],
+      label: "பயிற்சி 8.1 · வினா 7",
+      answer: [{"latex": "\\sigma=\\sqrt{\\dfrac{110}{3}}\\approx6.06", "display": true, "fallback": "σ=√((110)/(3))≈6.06"}]
+    },
+    "c10-8-ex8-1-q8": {
+      title: "புள்ளியியல்",
+      reasons: ["புதிய மதிப்பை y = x − 5 என எழுதுக.", "அனைத்து மதிப்புகளும் 5 குறைவதால் சராசரியும் 5 குறையும்.", "புதிய சராசரியிலிருந்து உள்ள விலக்கில் இரு −5 உறுப்புகளும் நீங்கும்.", "ஒவ்வொரு விலக்கமும் மாறாததால் விலக்க வர்க்கச் சராசரியும் மாறாது.", "அதன் வர்க்கமூலமான திட்ட விலக்கமும் 4.5 ஆகவே இருக்கும்."],
+      prompt: ["8. ஒரு தரவின் திட்ட விலக்கம் 4.5. ஒவ்வொரு மதிப்பிலிருந்தும் 5 ஐக் கழித்தால் புதிய தரவின் திட்ட விலக்கத்தைக் காண்க."],
+      label: "பயிற்சி 8.1 · வினா 8",
+      answer: [{"latex": "\\text{புதிய திட்ட விலக்கம்}=4.5", "display": true, "fallback": "புதிய திட்ட விலக்கம்=4.5"}]
+    },
+    "c10-8-ex8-1-q9": {
+      title: "புள்ளியியல்",
+      reasons: ["மதிப்பையும் சராசரியையும் 3 ஆல் வகுப்பதால் ஒவ்வொரு விலக்கமும் மூன்றில் ஒரு பங்காகும்.", "புதிய திட்ட விலக்கம் 3.6/3 = 1.2.", "புதிய திட்ட விலக்கத்தை வர்க்கமாக்கினால் விலக்க வர்க்கச் சராசரி 1.44.", "பழைய விலக்க வர்க்கச் சராசரியை 3² ஆல் வகுத்தும் இதைச் சரிபார்க்க."],
+      prompt: ["9. ஒரு தரவின் திட்ட விலக்கம் 3.6. ஒவ்வொரு மதிப்பையும் 3 ஆல் வகுத்தால் புதிய விலக்க வர்க்கச் சராசரி மற்றும் திட்ட விலக்கம் காண்க."],
+      label: "பயிற்சி 8.1 · வினா 9",
+      equations: {"3": {"latex": "\\begin{aligned}\\text{பழைய விலக்க வர்க்கச் சராசரி}&=(3.6)^2=12.96\\\\\\text{புதிய விலக்க வர்க்கச் சராசரி}&=\\dfrac{12.96}{9}=1.44\\end{aligned}", "display": true, "fallback": "பழைய விலக்க வர்க்கச் சராசரி=(3.6)^(2)=12.96 ; புதிய விலக்க வர்க்கச் சராசரி=(12.96)/(9)=1.44"}},
+      answer: [{"latex": "\\begin{aligned}\\text{புதிய விலக்க வர்க்கச் சராசரி}&=1.44\\\\\\text{புதிய திட்ட விலக்கம்}&=1.2\\end{aligned}", "display": true, "fallback": "புதிய விலக்க வர்க்கச் சராசரி=1.44 ; புதிய திட்ட விலக்கம்=1.2"}]
+    },
+    "c10-8-ex8-1-q10": {
+      title: "புள்ளியியல்",
+      reasons: ["ஒவ்வொரு மழையளவையும் x என்றும் அதைப் பதிவு செய்த இடங்களின் எண்ணிக்கையை f என்றும் எடுத்துக்கொள்க.", "நிகழ்வெண்களைக் கூட்டி மொத்த எண்ணிக்கை 40 எனக் காண்க.", "ஒவ்வொரு x மதிப்பையும் அதன் நிகழ்வெண் f ஆல் பெருக்கிக் கூட்டுக.", "Σfx ஐ மொத்த நிகழ்வெண்ணால் வகுத்தால் சராசரி 56 மி.மீ.", "ஒவ்வொரு x மதிப்பின் வர்க்கத்தை அதன் நிகழ்வெண்ணால் பெருக்கி Σfx² ஐக் காண்க.", "Σfx²/N இலிருந்து சராசரியின் வர்க்கத்தைக் கழித்து விலக்க வர்க்கச் சராசரியைக் காண்க.", "அதன் நேர்ம வர்க்கமூலத்தை எடுக்க. திட்ட விலக்கத்தைத் தொடக்க அளவின் அலகில் எழுதுக."],
+      prompt: ["10. ஐந்து மாவட்டங்களில் வெவ்வேறு இடங்களில் ஒரு வாரத்தில் பெய்த மழையளவின் திட்ட விலக்கம் காண்க. மழையளவு (மி.மீ) 45, 50, 55, 60, 65, 70. இடங்களின் எண்ணிக்கை முறையே 5, 13, 4, 9, 5, 4."],
+      label: "பயிற்சி 8.1 · வினா 10",
+      equations: {"3": {"latex": "\\bar{x}=\\dfrac{\\sum fx}{N}=\\dfrac{2240}{40}=56\\ \\text{மி.மீ}", "display": true, "fallback": "xˉ=(∑fx)/(N)=(2240)/(40)=56 மி.மீ"}, "5": {"latex": "\\begin{aligned}\\sigma^2&=\\dfrac{\\sum fx^2}{N}-\\bar{x}^2\\\\&=\\dfrac{127850}{40}-56^2\\\\&=\\dfrac{241}{4}=60.25\\ \\text{மி.மீ}^2\\end{aligned}", "display": true, "fallback": "σ^(2)=(∑fx^(2))/(N)−xˉ^(2) ; =(127850)/(40)−56^(2) ; =(241)/(4)=60.25 மி.மீ^(2)"}, "6": {"latex": "\\begin{aligned}\\sigma&=\\sqrt{\\dfrac{241}{4}}=\\dfrac{\\sqrt{241}}2\\\\&\\approx7.76\\ \\text{மி.மீ}\\end{aligned}", "display": true, "fallback": "σ=√((241)/(4))=(√(241))/(2) ; ≈7.76 மி.மீ"}},
+      answer: [{"latex": "\\sigma=\\dfrac{\\sqrt{241}}2\\approx7.76\\ \\text{மி.மீ}", "display": true, "fallback": "σ=(√(241))/(2)≈7.76 மி.மீ"}]
+    },
+    "c10-8-ex8-1-q11": {
+      title: "புள்ளியியல்",
+      reasons: ["வயதுப் பிரிவுகளின் நடுப்புள்ளிகள் 5, 15, 25, 35, 45, 55, 65. ஒவ்வொன்றுக்கும் அதன் நிகழ்வெண்ணை இணைக்க.", "நிகழ்வெண்களைக் கூட்டி மொத்த எண்ணிக்கை 65 எனக் காண்க.", "ஒவ்வொரு x மதிப்பையும் அதன் நிகழ்வெண் f ஆல் பெருக்கிக் கூட்டுக.", "Σfx ஐ மொத்த நிகழ்வெண்ணால் வகுத்தால் சராசரி சுமார் 35.46 ஆண்டுகள்.", "ஒவ்வொரு x மதிப்பின் வர்க்கத்தை அதன் நிகழ்வெண்ணால் பெருக்கி Σfx² ஐக் காண்க.", "Σfx²/N இலிருந்து சராசரியின் வர்க்கத்தைக் கழித்து விலக்க வர்க்கச் சராசரியைக் காண்க.", "அதன் நேர்ம வர்க்கமூலத்தை எடுக்க. திட்ட விலக்கத்தைத் தொடக்க அளவின் அலகில் எழுதுக."],
+      prompt: ["11. ஒரு நகரில் வைரஸ் காய்ச்சலால் பாதிக்கப்பட்டவர்களின் வயதுத் தரவின் திட்ட விலக்கம் காண்க. வயதுப் பிரிவுகள் (ஆண்டுகள்) 0–10, 10–20, 20–30, 30–40, 40–50, 50–60, 60–70. பாதிக்கப்பட்டவர்களின் எண்ணிக்கை முறையே 3, 5, 16, 18, 12, 7, 4."],
+      label: "பயிற்சி 8.1 · வினா 11",
+      answer: [{"latex": "\\sigma=\\sqrt{\\dfrac{36104}{169}}\\approx14.6\\ \\text{ஆண்டுகள்}", "display": true, "fallback": "σ=√((36104)/(169))≈14.6 ஆண்டுகள்"}]
+    },
+    "c10-8-ex8-1-q12": {
+      title: "புள்ளியியல்",
+      reasons: ["ஒவ்வொரு பிரிவின் இரு முனைகளின் சராசரியை எடுக்க. நடுப்புள்ளிகள் 22.5, 26.5, 30.5, 34.5, 38.5, 42.5.", "நிகழ்வெண்களைக் கூட்டி மொத்த எண்ணிக்கை 84 எனக் காண்க.", "ஒவ்வொரு x மதிப்பையும் அதன் நிகழ்வெண் f ஆல் பெருக்கிக் கூட்டுக.", "Σfx ஐ மொத்த நிகழ்வெண்ணால் வகுத்தால் சராசரி சுமார் 30.74 செ.மீ.", "ஒவ்வொரு x மதிப்பின் வர்க்கத்தை அதன் நிகழ்வெண்ணால் பெருக்கி Σfx² ஐக் காண்க.", "Σfx²/N இலிருந்து சராசரியின் வர்க்கத்தைக் கழித்து விலக்க வர்க்கச் சராசரியைக் காண்க.", "அதன் நேர்ம வர்க்கமூலத்தை எடுக்க. திட்ட விலக்கத்தைத் தொடக்க அளவின் அலகில் எழுதுக."],
+      prompt: ["12. ஒரு தொழிற்சாலையில் தயாரிக்கப்பட்ட தட்டுகளின் விட்டங்களுக்கான திட்ட விலக்கம் காண்க. விட்டப் பிரிவுகள் (செ.மீ) 21–24, 25–28, 29–32, 33–36, 37–40, 41–44. தட்டுகளின் எண்ணிக்கை முறையே 15, 18, 20, 16, 8, 7."],
+      label: "பயிற்சி 8.1 · வினா 12",
+      equations: {"3": {"latex": "\\bar{x}=\\dfrac{2582}{84}=\\dfrac{1291}{42}\\approx30.74\\ \\text{செ.மீ}", "display": true, "fallback": "xˉ=(2582)/(84)=(1291)/(42)≈30.74 செ.மீ"}, "5": {"latex": "\\begin{aligned}\\sigma^2&=\\dfrac{82385}{84}-\\left(\\dfrac{2582}{84}\\right)^2\\\\&=\\dfrac{15851}{441}\\approx35.94\\ \\text{செ.மீ}^2\\end{aligned}", "display": true, "fallback": "σ^(2)=(82385)/(84)−((2582)/(84))^(2) ; =(15851)/(441)≈35.94 செ.மீ^(2)"}, "6": {"latex": "\\sigma=\\sqrt{\\dfrac{15851}{441}}\\approx5.995\\approx6\\ \\text{செ.மீ}", "display": true, "fallback": "σ=√((15851)/(441))≈5.995≈6 செ.மீ"}},
+      answer: [{"latex": "\\sigma=\\sqrt{\\dfrac{15851}{441}}\\approx6\\ \\text{செ.மீ}", "display": true, "fallback": "σ=√((15851)/(441))≈6 செ.மீ"}]
+    },
+    "c10-8-ex8-1-q13": {
+      title: "புள்ளியியல்",
+      reasons: ["நேரப் பிரிவுகளின் நடுப்புள்ளிகள் 9, 10, 11, 12, 13 வினாடிகள். அவற்றுக்கு உரிய நிகழ்வெண்களைப் பயன்படுத்துக.", "நிகழ்வெண்களைக் கூட்டி மொத்த எண்ணிக்கை 50 எனக் காண்க.", "ஒவ்வொரு x மதிப்பையும் அதன் நிகழ்வெண் f ஆல் பெருக்கிக் கூட்டுக.", "Σfx ஐ மொத்த நிகழ்வெண்ணால் வகுத்தால் சராசரி 11.16 வினாடிகள்.", "ஒவ்வொரு x மதிப்பின் வர்க்கத்தை அதன் நிகழ்வெண்ணால் பெருக்கி Σfx² ஐக் காண்க.", "Σfx²/N இலிருந்து சராசரியின் வர்க்கத்தைக் கழித்து விலக்க வர்க்கச் சராசரியைக் காண்க.", "அதன் நேர்ம வர்க்கமூலத்தை எடுக்க. திட்ட விலக்கத்தைத் தொடக்க அளவின் அலகில் எழுதுக."],
+      prompt: ["13. 50 மாணவர்கள் 100 மீட்டர் தூரத்தைக் கடக்க எடுத்துக்கொண்ட நேரங்களின் திட்ட விலக்கம் காண்க. நேரப் பிரிவுகள் (வினாடிகள்) 8.5–9.5, 9.5–10.5, 10.5–11.5, 11.5–12.5, 12.5–13.5. மாணவர்களின் எண்ணிக்கை முறையே 6, 8, 17, 10, 9."],
+      label: "பயிற்சி 8.1 · வினா 13",
+      equations: {"3": {"latex": "\\bar{x}=\\dfrac{558}{50}=11.16\\ \\text{வி}", "display": true, "fallback": "xˉ=(558)/(50)=11.16 வி"}, "5": {"latex": "\\sigma^2=\\dfrac{6304}{50}-(11.16)^2=1.5344\\ \\text{வி}^2", "display": true, "fallback": "σ^(2)=(6304)/(50)−(11.16)^(2)=1.5344 வி^(2)"}, "6": {"latex": "\\sigma=\\sqrt{1.5344}\\approx1.2387\\approx1.24\\ \\text{வி}", "display": true, "fallback": "σ=√(1.5344)≈1.2387≈1.24 வி"}},
+      answer: [{"latex": "\\sigma=\\sqrt{1.5344}\\approx1.24\\ \\text{வி}", "display": true, "fallback": "σ=√(1.5344)≈1.24 வி"}]
+    },
+    "c10-8-ex8-1-q14": {
+      title: "புள்ளியியல்",
+      reasons: ["பழைய சராசரி 60 ஐ 100 ஆல் பெருக்கி முந்தைய மொத்த மதிப்பெண்ணைக் காண்க.", "பழைய மொத்தத்திலிருந்து தவறான 40, 27 ஐக் கழித்துச் சரியான 45, 72 ஐக் கூட்டுக.", "திருத்தப்பட்ட மொத்தம் 6050 ஐ 100 ஆல் வகுத்தால் சராசரி 60.5.", "பழைய திட்ட விலக்கத்தையும் சராசரியையும் கொண்டு பழைய வர்க்கக் கூட்டுத்தொகையைக் காண்க.", "தவறான இரண்டு மதிப்புகளின் வர்க்கங்களைக் கழித்துச் சரியான மதிப்புகளின் வர்க்கங்களைக் கூட்டுக.", "திருத்தப்பட்ட வர்க்கக் கூட்டுத்தொகையை 100 ஆல் வகுத்துப் புதிய சராசரியின் வர்க்கத்தைக் கழிக்க.", "213.55 இன் வர்க்கமூலத்தை எடுத்தால் திருத்தப்பட்ட திட்ட விலக்கம் சுமார் 14.61 மதிப்பெண்கள்."],
+      prompt: ["14. 100 மாணவர்களின் மதிப்பெண்களின் சராசரியும் திட்ட விலக்கமும் முறையே 60 மற்றும் 15 எனக் கணக்கிடப்பட்டன. 45 மற்றும் 72 ஆகிய மதிப்பெண்களுக்குப் பதிலாக முறையே 40 மற்றும் 27 எனத் தவறாகப் பதிவு செய்யப்பட்டிருந்தன. சரியான சராசரி மற்றும் திட்ட விலக்கம் காண்க."],
+      label: "பயிற்சி 8.1 · வினா 14",
+      equations: {"0": {"latex": "\\sum x_{\\text{பழைய}}=100\\times60=6000", "display": true, "fallback": "∑x_பழைய=100×60=6000"}, "1": {"latex": "\\begin{aligned}\\sum x_{\\text{புதிய}}&=6000-40-27+45+72\\\\&=6050\\end{aligned}", "display": true, "fallback": "∑x_புதிய=6000−40−27+45+72 ; =6050"}, "2": {"latex": "\\bar{x}_{\\text{புதிய}}=\\dfrac{6050}{100}=60.5", "display": true, "fallback": "xˉ_புதிய=(6050)/(100)=60.5"}, "3": {"latex": "\\begin{aligned}\\sum x_{\\text{பழைய}}^2&=100\\bigl(15^2+60^2\\bigr)\\\\&=382500\\end{aligned}", "display": true, "fallback": "∑xபழைய2=100(15^(2)+60^(2)) ; =382500"}, "4": {"latex": "\\begin{aligned}\\sum x_{\\text{புதிய}}^2&=382500-40^2-27^2\\\\&\\quad+45^2+72^2\\\\&=387380\\end{aligned}", "display": true, "fallback": "∑xபுதிய2=382500−40^(2)−27^(2) ;  +45^(2)+72^(2) ; =387380"}, "5": {"latex": "\\begin{aligned}\\sigma_{\\text{புதிய}}^2&=\\dfrac{387380}{100}-(60.5)^2\\\\&=213.55\\end{aligned}", "display": true, "fallback": "σபுதிய2=(387380)/(100)−(60.5)^(2) ; =213.55"}, "6": {"latex": "\\sigma_{\\text{புதிய}}=\\sqrt{213.55}\\approx14.61", "display": true, "fallback": "σ_புதிய=√(213.55)≈14.61"}},
+      answer: [{"latex": "\\begin{aligned}\\bar{x}_{\\text{புதிய}}&=60.5\\\\\\sigma_{\\text{புதிய}}&\\approx14.61\\end{aligned}", "display": true, "fallback": "xˉ_புதிய=60.5 ; σ_புதிய≈14.61"}]
+    },
+    "c10-8-ex8-1-q15": {
+      title: "புள்ளியியல்",
+      reasons: ["ஏழு மதிப்புகளின் மொத்தம் 7 × 8 = 56.", "தெரிந்த ஐந்து மதிப்புகளின் கூடுதலைக் கழித்தால் மீதமுள்ள இரண்டின் கூடுதல் 14.", "விலக்க வர்க்கச் சராசரிச் சூத்திரத்திலிருந்து ஏழு மதிப்புகளின் வர்க்கக் கூட்டுத்தொகையைக் காண்க.", "அதிலிருந்து ஐந்து தெரிந்த வர்க்கங்களைக் கழித்தால் a² + b² = 100.", "(a + b)² = a² + 2ab + b² என்பதால் ab = 48.", "கூடுதல் 14, பெருக்கற்பலன் 48 கொண்ட இருபடிச் சமன்பாட்டைக் காரணிப்படுத்துக.", "6 மற்றும் 8 ஐத் தெரிந்த ஐந்து மதிப்புகளுடன் சேர்த்துச் சராசரியும் விலக்க வர்க்கச் சராசரியும் கொடுத்தபடி வருகிறதா எனச் சரிபார்க்க."],
+      prompt: ["15. ஏழு தரவு மதிப்புகளின் சராசரியும் விலக்க வர்க்கச் சராசரியும் முறையே 8 மற்றும் 16. அவற்றில் ஐந்து மதிப்புகள் 2, 4, 10, 12, 14 எனில் மீதமுள்ள இரண்டு மதிப்புகளைக் காண்க."],
+      label: "பயிற்சி 8.1 · வினா 15",
+      equations: {"5": {"latex": "\\begin{aligned}t^2-14t+48&=0\\\\(t-6)(t-8)&=0\\\\t&=6\\ \\text{அல்லது}\\ 8\\end{aligned}", "display": true, "fallback": "t^(2)−14t+48=0 ; (t−6)(t−8)=0 ; t=6 அல்லது 8"}},
+      answer: [{"latex": "\\boxed{6\\ \\text{மற்றும்}\\ 8}", "display": true, "fallback": "6 மற்றும் 8"}]
+    },
   };
   window.TriggleG10GeometryTamil = function applyGeometryTamil(items) {
     for (const item of items) {
@@ -799,7 +1365,7 @@
         const english = item.questionMath?.en || window.TriggleG10RemainingMath?.getQuestion?.(item, 'en')?.en || item.q.en;
         item.questionMath = {en: english, ta: solution.prompt};
         item.q.ta = solution.prompt.map(part => typeof part === 'string' ? part : part.fallback).join('');
-        item.label.ta = 'பயிற்சி 6.1 · வினா 2(i)';
+        item.label.ta = solution.label;
       }
       item.title.ta = solution.title;
       item.label.ta = item.label.ta.replace(/ · ஆங்கிலத் தீர்வு$/, '');
@@ -808,7 +1374,7 @@
         if (solution.equations?.[index]) step.mathTa = solution.equations[index];
       });
       if (solution.answer) {
-        item.answerMath = {en: item.answerMath?.en || item.answerMath || item.answer, ta: solution.answer};
+        item.answerMath = {en: item.answerMath?.en || item.answerMath || window.TriggleG10RemainingMath?.getAnswer?.(item) || item.answer, ta: solution.answer};
         item.answerTa = solution.answer.map(part => typeof part === 'string' ? part : part.fallback).join('');
       }
     }

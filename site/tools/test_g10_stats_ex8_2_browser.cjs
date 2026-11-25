@@ -66,10 +66,15 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     }
    }
   }
-  // English fallback is clearly labelled wherever Tamil is not yet available.
+  // Switching exercises retains Tamil and shows the grouped age data on the card.
   await page.goto(app.base+'/index.html?class=10&question=c10-8-ex8-1-q11');
   await page.locator('#stepsList .worked-step').first().waitFor();
-  assert.ok((await page.locator('#kindBadge').textContent()).includes('தமிழ் மொழிபெயர்ப்பு நிலுவையில்'),'Missing Tamil must be labelled as English fallback');
+  assert.doesNotMatch(await page.locator('#kindBadge').innerText(),/தமிழ் மொழிபெயர்ப்பு நிலுவையில்/);
+  const prompt=await page.locator('#questionText').innerText();
+  assert.match(prompt,/வைரஸ் காய்ச்சலால்/);
+  assert.match(prompt,/3, 5, 16, 18, 12, 7, 4/);
+  const reasons=await page.locator('#stepsList .step-reason').allInnerTexts();
+  assert.ok(reasons.length>=7 && reasons.every(text=>/\p{Script=Tamil}/u.test(text)));
   await page.locator('#langEn').click();
 
   // Regression: neighbouring Chapter 8 records still render
