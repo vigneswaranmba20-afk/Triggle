@@ -1,0 +1,47 @@
+name: Transfer verified TRACE Mensuration batch to R2
+
+on:
+  push:
+    branches: [video/trace-mensuration-batch-01-r2]
+    paths: ['.github/trace-mensuration/approved-package.json']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trace-mensuration-batch-01-r2
+  cancel-in-progress: false
+
+jobs:
+  transfer:
+    if: github.repository == 'vigneswaranmba20-afk/Triggle'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Fetch exact approved transfer package
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          input=.github/trace-mensuration/approved-package.json
+          asset="$(jq -er '.assetId | strings | select(test("^[0-9]+$"))' "$input")"
+          digest="$(jq -er '.sha256 | strings | select(test("^[a-f0-9]{64}$"))' "$input")"
+          gh api "repos/$GITHUB_REPOSITORY/releases/assets/$asset" \
+            -H 'Accept: application/octet-stream' > "$RUNNER_TEMP/trace-mensuration.zip"
+          printf '%s  %s\n' "$digest" "$RUNNER_TEMP/trace-mensuration.zip" | sha256sum --check -
+      - name: Verify full batch and publish hash-versioned R2 objects
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+          R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: auto
+        run: |
+          set -euo pipefail
+          digest="$(jq -er '.sha256' .github/trace-mensuration/approved-package.json)"
+          python .github/trace-mensuration/upload.py "$RUNNER_TEMP/trace-mensuration.zip" "$digest" \
+            "$RUNNER_TEMP/trace-mensuration" | tee -a "$GITHUB_STEP_SUMMARY"
