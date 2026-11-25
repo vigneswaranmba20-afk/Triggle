@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "c5eda31ad5207930571f815e4746fa9bd1b10322",
+  "scope": "Grade 10 Mensuration: 10 existing source-manifest question records, 60 synthetic cases; not teacher-certified",
+  "sourceFiles": [
+    {
+      "path": "site/data/textbook-fidelity/g10-ch7-ex7-4.json",
+      "blobSha": "d6f85f5704354d3546cb50a055105e5a61137463"
+    },
+    {
+      "path": "site/data/textbook-fidelity/g10-ch7-unit7.json",
+      "blobSha": "64325175d542897b9ed700641bd14da956d2e448"
+    }
+  ],
+  "labels": {
+    "clean": "unchanged source control, not editorial certification",
+    "format": "benign Unicode NFC and whitespace variation",
+    "quantity": "changed numerical value",
+    "terminology": "changed mathematical term",
+    "meaning": "changed task, assumption, relation or ordering",
+    "grammar": "synthetic subject–verb agreement error"
+  },
+  "recipes": [
+    {
+      "id": "c10-7-ex7-4-q1",
+      "mutations": {
+        "quantity": [
+          "12 செ.மீ",
+          "13 செ.மீ"
+        ],
+        "terminology": [
+          "12 செ.மீ ஆரமுள்ள",
+          "12 செ.மீ விட்டமுள்ள"
+        ],
+        "meaning": [
+          "உருளையின் உயரம் காண்க.",
+          "உருளையின் உயரம் காண வேண்டாம்."
+        ],
+        "grammar": [
+          "மாற்றப்படுகிறது.",
+          "மாற்றப்படுகிறார்கள்."
+        ]
+      },
+      "sourcePath": "site/data/textbook-fidelity/g10-ch7-ex7-4.json"
+    },
+    {
+      "id": "c10-7-ex7-4-q2",
+      "mutations": {
+        "quantity": [
+          "15 கி.மீ",
+          "16 கி.மீ"
+        ],
+        "terminology": [
+          "14 செ.மீ விட்டமுள்ள",
+          "14 செ.மீ ஆரமுள்ள"
+        ],
+        "meaning": [
+          "21 செ.மீ-க்கு உயரும்.",
+          "21 செ.மீ-க்கு குறையும்."
+        ],
+        "grammar": [
+          "பாய்கிறது.",
+          "பாய்கிறார்கள்."
+        ]
+      },
+      "sourcePath": "site/data/textbook-fidelity/g10-ch7-ex7-4.json"
+    },
+    {
+      "id": "c10-7-ex7-4-q4",
+      "mutations": {
+        "quantity": [
+          "விட்டம் 14",
+          "விட்டம் 15"
+        ],
+        "terminology": [
+          "உள்விட்டத்தைக்",
+          "உள் ஆரத்தைக்"
+        ],
+        "meaning": [
+          "உள்விட்டத்தைக் காண்க.",
+          "உள்விட்டத்தைக் காண வேண்டாம்."
+        ],
+        "grammar": [
+          "உருமாற்றப்படுகிறது.",
+          "உருமாற்றப்படுகிறார்கள்."
+        ]
+      },
+      "sourcePath": "site/data/textbook-fidelity/g10-ch7-ex7-4.json"
+    },
+    {
+      "id": "c10-7-ex7-4-q5",
+      "mutations": {
+        "quantity": [
+          "உயரம் 105",
+          "உயரம் 106"
+        ],
+        "terminology": [
+          "ஆரம் 60",
+          "விட்டம் 60"
+        ],
+        "meaning": [
+          "மீதமுள்ள நீரின்",
+          "தொடக்கத்தில் இருந்த நீரின்"
+        ],
+        "grammar": [
+          "உள்ளது.",
+          "உள்ளார்கள்."
+        ]
+      },
+      "sourcePath": "site/data/textbook-fidelity/g10-ch7-ex7-4.json"
+    },
+    {
+      "id": "c10-7-ex7-4-q6",
+      "mutations": {
+        "quantity": [
+          "முறையே 6 செ.மீ",
+          "முறையே 7 செ.மீ"
+        ],
+        "terminology": [
+          "உட்புற மற்றும் வெளிப்புற விட்டங்கள்",
+          "உட்புற மற்றும் வெளிப்புற ஆரங்கள்"
+        ],
+        "meaning": [
+          "முறையே 6 செ.மீ மற்றும் 10 செ.மீ",
+          "முறையே 10 செ.மீ மற்றும் 6 செ.மீ"
+        ],
+        "grammar": [
+          "ஆகும்.",
+          "ஆகின்றனர்."
+        ]
+      },
+      "sourcePath": "site/data/textbook-fidelity/g10-ch7-ex7-4.json"
+    },
+    {
+      "id": "c10-7-ex7-4-q7",
+      "mutations": {
+        "quantity": [
+          "உயரம் 32",
+          "உயரம் 33"
+        ],
+        "terminology": [
+          "வெளி ஆரம்",
+          "வெளி விட்டம்"
+        ],
+        "meaning": [
+          "சீரான தடிமனுள்ள",
+          "சீரற்ற தடிமனுள்ள"
+        ],
+        "grammar": [
+          "மாற்றப்படுகிறது.",
+          "மாற்றப்படுகிறார்கள்."
+        ]
+      },
+      "sourcePath": "site/data/textbook-fidelity/g10-ch7-ex7-4.json"
+    },
+    {
+      "id": "c10-7-ex7-4-q8",
+      "mutations": {
+        "quantity": [
+          "50%",
+          "60%"
+        ],
+        "terminology": [
+          "விட்டங்கள் சமமானால்",
+          "உயரங்கள் சமமானால்"
+        ],
+        "meaning": [
+          "50% அதிக ஆரம்",
+          "50% குறைந்த ஆரம்"
+        ],
+        "grammar": [
+          "நிரம்பியுள்ளது.",
+          "நிரம்பியுள்ளனர்."
+        ]
+      },
+      "sourcePath": "site/data/textbook-fidelity/g10-ch7-ex7-4.json"
+    },
+    {
+      "id": "c10-7-unit-q2",
+      "mutations": {
+        "quantity": [
+          "ஆரம் 1.75",
+          "ஆரம் 1.57"
+        ],
+        "terminology": [
+          "ஆரம் 1.75",
+          "விட்டம் 1.75"
+        ],
+        "meaning": [
+          "நீர் வெளியேற்றப்படுமானால்",
+          "நீர் நிரப்பப்படுமானால்"
+        ],
+        "grammar": [
+          "நிரப்பப்பட்டுள்ளது.",
+          "நிரப்பப்பட்டுள்ளனர்."
+        ]
+      },
+      "sourcePath": "site/data/textbook-fidelity/g10-ch7-unit7.json"
+    },
+    {
+      "id": "c10-7-unit-q7",
+      "mutations": {
+        "quantity": [
+          "₹ 100",
+          "₹ 120"
+        ],
+        "terminology": [
+          "சாயுயரம்",
+          "உயரம்"
+        ],
+        "meaning": [
+          "ஒரு சதுர மீட்டருக்கு",
+          "மொத்தப் பரப்பிற்கு"
+        ],
+        "grammar": [
+          "ஆகும்.",
+          "ஆகின்றனர்."
+        ]
+      },
+      "sourcePath": "site/data/textbook-fidelity/g10-ch7-unit7.json"
+    },
+    {
+      "id": "c10-7-unit-q10",
+      "mutations": {
+        "quantity": [
+          "216°",
+          "261°"
+        ],
+        "terminology": [
+          "கன அளவைக்",
+          "வளைபரப்பைக்"
+        ],
+        "meaning": [
+          "ஆரங்களை இணைத்து",
+          "ஆரங்களை இணைக்காமல்"
+        ],
+        "grammar": [
+          "ஆகும்.",
+          "ஆகின்றனர்."
+        ]
+      },
+      "sourcePath": "site/data/textbook-fidelity/g10-ch7-unit7.json"
+    }
+  ]
+}

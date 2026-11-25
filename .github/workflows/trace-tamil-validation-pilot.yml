@@ -1,0 +1,33 @@
+name: TRACE Tamil validation pilot (read-only)
+
+on:
+  push:
+    branches: [trace/tamil-validation-pilot-20261125]
+    paths:
+      - 'docs/trace/tamil-validation-pilot/**'
+      - '.github/workflows/trace-tamil-validation-pilot.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  benchmark:
+    if: github.repository == 'vigneswaranmba20-afk/Triggle' && github.ref == 'refs/heads/trace/tamil-validation-pilot-20261125'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Execute deterministic 60-case pilot without paid APIs
+        run: node docs/trace/tamil-validation-pilot/run.cjs build/tamil-validation-pilot
+      - name: Preserve blind inputs, answer key and baseline report
+        uses: actions/upload-artifact@v4
+        with:
+          name: tamil-validation-pilot
+          path: build/tamil-validation-pilot/
+          retention-days: 7
