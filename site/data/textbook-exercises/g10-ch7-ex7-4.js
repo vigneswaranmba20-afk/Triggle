@@ -177,7 +177,7 @@ const entries=[
         "display": true
       },
       "ta": {
-        "latex": "2\\,\\mathrm{h}\\ \\text{(approx.)}",
+        "latex": "\\text{தோராயமாக }2\\text{ மணி நேரம் }(\\pi\\approx\\tfrac{22}{7})",
         "fallback": "தோராயமாக 2 மணி நேரம் (π ≈ 22/7).",
         "display": true
       }

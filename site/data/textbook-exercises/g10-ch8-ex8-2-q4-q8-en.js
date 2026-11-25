@@ -289,9 +289,16 @@ const entries=[
     "translationReview": "pending",
     "checkpoint": "2026-11-21",
     "answerMath": {
-      "latex": "\\boxed{\\text{C.V.}\\approx10.07\\%\\ \\text{(textbook rounding)}}",
-      "display": true,
-      "fallback": "Textbook convention: 10.07%; retaining full precision until the final step gives 10.06%."
+      "en": {
+        "latex": "\\begin{gathered}10.07\\%\\ \\text{(textbook rounding)}\\\\10.06\\%\\ \\text{(rounded at the end)}\\end{gathered}",
+        "display": true,
+        "fallback": "Textbook convention: 10.07%; retaining full precision until the final step gives 10.06%."
+      },
+      "ta": {
+        "latex": "\\begin{gathered}10.07\\%\\ \\text{(பாடநூல் விடை)}\\\\10.06\\%\\ \\text{(இறுதியில் சுற்றினால்)}\\end{gathered}",
+        "display": true,
+        "fallback": "பாடநூல் விடை 10.07%; முழுத் துல்லியத்துடன் இறுதியில் சுற்றினால் 10.06%."
+      }
     },
     "tamilQuestionSourceVerified": true,
     "tamilWorkedSolutionReview": "pending"

@@ -205,7 +205,7 @@
       answerTa: '(i) x-அச்சிற்கு இணையான நேர்க்கோடு; (ii) y-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு',
       answerMath: {
         en: tex('\\text{(i) Parallel to }x\\text{-axis};\\quad \\text{(ii) Lies on }y\\text{-axis}', '(i) Straight line parallel to x-axis; (ii) Straight line which lies on y-axis', true),
-        ta: tex('\\text{(i) Parallel to }x\\text{-axis};\\quad \\text{(ii) Lies on }y\\text{-axis}', '(i) x-அச்சிற்கு இணையான நேர்க்கோடு; (ii) y-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு', true)
+        ta: tex('\\begin{gathered}\\text{(i) }x\\text{-அச்சிற்கு இணையான நேர்க்கோடு}\\\\\\text{(ii) }y\\text{-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு}\\end{gathered}', '(i) x-அச்சிற்கு இணையான நேர்க்கோடு; (ii) y-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு', true)
       },
       sourceFidelity: {
         status: 'page-visual-checked',
@@ -272,7 +272,7 @@
       answerTa: '(i) சதுரம்; (ii) சரிவகம்',
       answerMath: {
         en: tex('\\text{(i) Square};\\quad \\text{(ii) Trapezium}', '(i) Square; (ii) Trapezium', true),
-        ta: tex('\\text{(i) Square};\\quad \\text{(ii) Trapezium}', '(i) சதுரம்; (ii) சரிவகம்', true)
+        ta: tex('\\text{(i) சதுரம்};\\quad \\text{(ii) சரிவகம்}', '(i) சதுரம்; (ii) சரிவகம்', true)
       },
       sourceFidelity: {
         status: 'page-visual-checked',

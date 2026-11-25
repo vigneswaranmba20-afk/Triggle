@@ -2,9 +2,11 @@
 """Offline exact Discriminant release adapter contract and regression checks."""
 import hashlib
 from pathlib import Path
+import re
 import sys
 import tempfile
 import unittest
+from urllib.parse import parse_qs, urlsplit
 
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/"site"/"tools"))
@@ -84,7 +86,16 @@ class DiscriminantReleaseTests(unittest.TestCase):
         html2=bump_player(bump_loader(html))
         sw2=bump_sw(sw)
         self.assertIn("&discriminant-fola=4c692aa7",html2)
-        self.assertIn("g10-ch3-concepts.js?v=g10-ch3-concepts-20261119-1&discriminant-fola=4c692aa7",html2)
+        data_loader = r'<script src="(\./data/g10-ch3-concepts\.js\?[^"]+)"></script>'
+        for page in (html2, (ROOT/"site/index.html").read_text(encoding="utf-8")):
+            loaders = re.findall(data_loader, page)
+            self.assertEqual(len(loaders), 1)
+            query = parse_qs(urlsplit(loaders[0]).query)
+            self.assertEqual(query["v"], ["g10-ch3-concepts-20261119-1"])
+            if page == html2 or "&discriminant-fola=" in page:
+                self.assertEqual(query["discriminant-fola"], ["4c692aa7"])
+        self.assertEqual(re.findall(data_loader, html)[0].split("?", 1)[1],
+                         re.findall(data_loader, html2)[0].split("?", 1)[1].removesuffix("&discriminant-fola=4c692aa7"))
         self.assertIn("-"+TAG,sw2)
         self.assertIn("gpfola-v2-fa50e19c",sw2)
         self.assertTrue(sw2.startswith("const CACHE='triggle-"))
