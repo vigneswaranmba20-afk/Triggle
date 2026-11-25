@@ -7,7 +7,8 @@ const {load}=require('./build_g9_math.cjs');
 const {applyReviewedRealNumbers}=require('./test_g9_ch2_frontier.cjs');
 const {applyReviewedAlgebra}=require('./test_g9_tamil_working.cjs');
 const {applyStatisticsTables}=require('./test_g9_statistics_frontier.cjs');
-const records=applyStatisticsTables(applyReviewedAlgebra(applyReviewedRealNumbers(load()))),widths=[320,360,393,430],samples=new Map(records.map(q=>[q.chapter,q.id]));
+const {applyFrontierGraphs}=require('./test_g9_frontier_graphs.cjs');
+const records=applyFrontierGraphs(applyStatisticsTables(applyReviewedAlgebra(applyReviewedRealNumbers(load())))),widths=[320,360,393,430],samples=new Map(records.map(q=>[q.chapter,q.id]));
 const normalize=s=>String(s??'').replace(/\s+/g,' ').trim();
 const plain=value=>Array.isArray(value)?value.map(plain).join(''):value?.fallback??value;
 async function inspect(page,q,lang){
@@ -28,7 +29,8 @@ async function inspect(page,q,lang){
   const legacyHint=window.TriggleWhyStepG9.hints[q.id];
   const hints=[...document.querySelectorAll('#stepsList details.why-step-g9')].map(detail=>{
    const step=q.steps[Number(detail.dataset.step)-1];
-   return q.geometryConcept!==undefined||q.realConcept!==undefined?step?.why:sourcePrompt?(step?.why||legacyHint):legacyHint;
+   return q.geometryConcept!==undefined||q.realConcept!==undefined?step?.why:
+    (sourcePrompt||q.graphSolution)&&legacyHint?.step!==Number(detail.dataset.step)-1?step?.why:legacyHint;
   });
   const hintCount=hints.reduce((n,hint)=>n+count(hint?window.TriggleG9Math.text(hint[lang]||hint.en):null),0);
   const choices=q.choices?.reduce((n,choice)=>n+count(choice[lang]||choice.en),0)||0;

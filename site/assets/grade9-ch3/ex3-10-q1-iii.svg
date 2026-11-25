@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 370" role="img" aria-labelledby="title" font-family="system-ui, sans-serif">
+<title id="title">y = 3x/2 + 3</title>
+<style>.grid{stroke:#e7e2f0}.axis{stroke:#504765;stroke-width:1.8}.a{stroke:#6839a4;stroke-width:3}.b{stroke:#157767;stroke-width:2.4;stroke-dasharray:6 4}text{font-size:12px;fill:#292342}.value{font-size:13px;font-weight:700;paint-order:stroke;stroke:white;stroke-width:3px}.symbol{font-size:15px;font-weight:700}.legend{font-size:14px;font-weight:700}</style>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#504765"/></marker></defs>
+<rect x="1" y="1" width="358" height="368" rx="13" fill="#fdfcff" stroke="#ded6ea"/>
+<line x1="79.82" y1="299.00" x2="79.82" y2="29.00" class="grid"/>
+<text class="" x="79.82" y="315.00" text-anchor="middle">−4</text>
+<line x1="104.36" y1="299.00" x2="104.36" y2="29.00" class="grid"/>
+<text class="" x="104.36" y="315.00" text-anchor="middle">−3</text>
+<line x1="128.91" y1="299.00" x2="128.91" y2="29.00" class="grid"/>
+<text class="" x="128.91" y="315.00" text-anchor="middle">−2</text>
+<line x1="153.45" y1="299.00" x2="153.45" y2="29.00" class="grid"/>
+<text class="" x="153.45" y="315.00" text-anchor="middle">−1</text>
+<line x1="202.55" y1="299.00" x2="202.55" y2="29.00" class="grid"/>
+<text class="" x="202.55" y="315.00" text-anchor="middle">1</text>
+<line x1="227.09" y1="299.00" x2="227.09" y2="29.00" class="grid"/>
+<text class="" x="227.09" y="315.00" text-anchor="middle">2</text>
+<line x1="251.64" y1="299.00" x2="251.64" y2="29.00" class="grid"/>
+<text class="" x="251.64" y="315.00" text-anchor="middle">3</text>
+<line x1="276.18" y1="299.00" x2="276.18" y2="29.00" class="grid"/>
+<text class="" x="276.18" y="315.00" text-anchor="middle">4</text>
+<line x1="79.82" y1="299.00" x2="276.18" y2="299.00" class="grid"/>
+<text class="" x="70.82" y="303.00" text-anchor="end">−3</text>
+<line x1="79.82" y1="274.45" x2="276.18" y2="274.45" class="grid"/>
+<text class="" x="70.82" y="278.45" text-anchor="end">−2</text>
+<line x1="79.82" y1="249.91" x2="276.18" y2="249.91" class="grid"/>
+<text class="" x="70.82" y="253.91" text-anchor="end">−1</text>
+<line x1="79.82" y1="200.82" x2="276.18" y2="200.82" class="grid"/>
+<text class="" x="70.82" y="204.82" text-anchor="end">1</text>
+<line x1="79.82" y1="176.27" x2="276.18" y2="176.27" class="grid"/>
+<text class="" x="70.82" y="180.27" text-anchor="end">2</text>
+<line x1="79.82" y1="151.73" x2="276.18" y2="151.73" class="grid"/>
+<text class="" x="70.82" y="155.73" text-anchor="end">3</text>
+<line x1="79.82" y1="127.18" x2="276.18" y2="127.18" class="grid"/>
+<text class="" x="70.82" y="131.18" text-anchor="end">4</text>
+<line x1="79.82" y1="102.64" x2="276.18" y2="102.64" class="grid"/>
+<text class="" x="70.82" y="106.64" text-anchor="end">5</text>
+<line x1="79.82" y1="78.09" x2="276.18" y2="78.09" class="grid"/>
+<text class="" x="70.82" y="82.09" text-anchor="end">6</text>
+<line x1="79.82" y1="53.55" x2="276.18" y2="53.55" class="grid"/>
+<text class="" x="70.82" y="57.55" text-anchor="end">7</text>
+<line x1="79.82" y1="29.00" x2="276.18" y2="29.00" class="grid"/>
+<text class="" x="70.82" y="33.00" text-anchor="end">8</text>
+<line x1="79.82" y1="225.36" x2="276.18" y2="225.36" class="axis" marker-end="url(#arrow)"/>
+<line x1="178.00" y1="299.00" x2="178.00" y2="29.00" class="axis" marker-end="url(#arrow)"/>
+<text class="symbol" x="288.18" y="218.36" text-anchor="middle">x</text>
+<text class="symbol" x="190.00" y="32.00" text-anchor="middle">y</text>
+<text class="" x="171.00" y="240.36" text-anchor="end">0</text>
+<line x1="79.82" y1="299.00" x2="259.82" y2="29.00" class="a" data-line="3,-2,-6" data-start="-4,-3" data-end="10/3,8"/>
+<line x1="26" y1="326" x2="51" y2="326" class="a"/>
+<text class="legend" x="60.00" y="330.00" text-anchor="start">y = 3x/2 + 3</text>
+<circle cx="128.91" cy="225.36" r="3.6" fill="#453372" stroke="white" stroke-width="1.3" data-point="-2,0"/>
+<text class="value" x="135.91" y="217.36" text-anchor="start">(−2, 0)</text>
+<circle cx="178.00" cy="151.73" r="3.6" fill="#453372" stroke="white" stroke-width="1.3" data-point="0,3"/>
+<text class="value" x="185.00" y="143.73" text-anchor="start">(0, 3)</text>
+<circle cx="227.09" cy="78.09" r="3.6" fill="#453372" stroke="white" stroke-width="1.3" data-point="2,6"/>
+<text class="value" x="234.09" y="70.09" text-anchor="start">(2, 6)</text>
+</svg>

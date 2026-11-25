@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "0a44b5e51a322c845dba57b4f4d8644f227fa799",
-  "updatedAt": "2026-11-25T20:29:18Z",
+  "sourceCommit": "69eb1a60ebb007faaefc793f273715a1c7afa131",
+  "updatedAt": "2026-11-25T20:37:57Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -195,6 +195,7 @@
     "site/data/textbook-exercises/g9-ch9-ex9-1-q9-q10-and-examples-en.js": "a89e4c17bb009ad5f5b099158893e61d013ed53bbdc63f82669f737a73930faa",
     "site/data/textbook-exercises/g9-ch9-ex9-2-en.js": "270e718c8ac1a701c82842f51e9a078fee87c85b97b049a78c3ea2a6cea96757",
     "site/data/textbook-exercises/g9-ch9-ex9-2-q5-ex9-3-en.js": "390ec7434ca7877d3197874e349f60341ae10bcfea68f2765f743bfb80aa0108",
+    "site/data/textbook-exercises/g9-frontier-graphs.js": "b1e84cfd99e5106153f0f387db034a8996a196b0ab15ba182b60f94420891e5c",
     "site/data/textbook-fidelity/g9-ch4-geometry-2025.json": "b2fe8ad1e9d4d645d10746ccc9add2cd69e6aba7c69d833db5d585a5453553e7",
     "site/data/why-step-g10-coverage.js": "65ab772325c0b4ef7f3a66230988a971395fd8bbf78d5d8a71b81bada1b6dbde",
     "site/data/why-step-g10-ex2-3.js": "6a58b8243fc411e725a83a87a22b5f64ddfe84589f828428d38866f153e0f914",
@@ -210,7 +211,7 @@
     "site/data/why-step-g9-ex3-1-q3-q9.js": "f86e7bb56a93e6e6f2b32afe725894fb6713acfcc37b120e481ee3fdf2607059",
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9.js": "8307f31932077111e3c993e463b677a850ad755a80b271d35fbb169f01fb402a",
-    "site/index.html": "180737be4239a9fcf4864f7f4242d95d5bb9a34e185dae31e0311a6ff001fe22",
+    "site/index.html": "da92f7f5239d3390e79df1d5bb3d92872fc10b20a80d617cda0bce23e17c6362",
     "site/tools/test_g9_geometry_completion.cjs": "f943394ba001f2aea4d80444997d4cbb7e96e457c3679d1838d9446a5ed3af6b",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
