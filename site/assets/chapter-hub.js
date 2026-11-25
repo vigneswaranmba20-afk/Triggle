@@ -418,8 +418,8 @@
   function attachStageVideo(panel,stage,lang){
     if(!stage?.video?.src)return;
     const mensuration=stage.id?.startsWith('g10-ch7-');
-    if(mensuration ? stage.video.language!==lang :
-      !['g9-ch5-distance-formula','g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch3-discriminant','g10-ch4-bpt-thales','g10-ch5-area-triangle'].includes(stage.id))return;
+    if(!mensuration&&!['g9-ch5-distance-formula','g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch3-discriminant','g10-ch4-bpt-thales','g10-ch5-area-triangle'].includes(stage?.id))return;
+    if(mensuration&&stage.video.language!==lang)return;
     let url;try{url=new URL(stage.video.src,document.baseURI);}catch{return;}
     // Live media requires HTTPS. Permit same-origin loopback HTTP in local browser tests only.
     const loopback=location.origin===url.origin&&['localhost','127.0.0.1','[::1]'].includes(location.hostname);
