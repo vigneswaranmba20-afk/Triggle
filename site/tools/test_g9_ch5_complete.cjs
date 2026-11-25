@@ -61,6 +61,8 @@ for (let i = 1; i <= 12; i++) {
   assert.equal(ex52Ids[i - 1], `g9-ch5-ex5.2-q${i}`, `Ex 5.2 position ${i} must be Q${i}`);
 }
 
+const authoredAnswer = value => Array.isArray(value)
+  ? value.length>0 && value.every(authoredAnswer) : Boolean(value?.latex || (typeof value==='string' && value.trim()));
 // Verify bilingual parity, KaTeX math, sourceFidelity, and SVG assets
 for (const item of ch5Items) {
   assert.equal(item.preferItemMath, true, `${item.id} must set preferItemMath: true`);
@@ -68,7 +70,7 @@ for (const item of ch5Items) {
   assert(item.q?.en && item.q?.ta, `${item.id} must have EN and TA question text`);
   assert(!/English-language question|English only|Tamil version not changed/i.test(item.q.ta), `${item.id} must not have untranslated TA placeholder`);
   assert(item.answer && item.answerTa, `${item.id} must have EN and TA answer`);
-  assert(item.answerMath?.latex || (item.answerMath?.en?.latex && item.answerMath?.ta?.latex), `${item.id} must have answerMath`);
+  assert(item.answerMath?.latex || (item.answerMath?.en?.latex && authoredAnswer(item.answerMath?.ta)), `${item.id} must have answerMath`);
   assert(Array.isArray(item.steps) && item.steps.length >= 1, `${item.id} must have worked steps`);
   for (const st of item.steps) {
     assert(st.en && st.ta && st.eq, `${item.id} step must have en, ta, eq`);
