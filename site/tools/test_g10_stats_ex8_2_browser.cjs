@@ -71,8 +71,10 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
   await page.locator('#stepsList .worked-step').first().waitFor();
   assert.doesNotMatch(await page.locator('#kindBadge').innerText(),/தமிழ் மொழிபெயர்ப்பு நிலுவையில்/);
   const prompt=await page.locator('#questionText').innerText();
-  assert.match(prompt,/வைரஸ் காய்ச்சலால்/);
-  assert.match(prompt,/3, 5, 16, 18, 12, 7, 4/);
+  assert.match(prompt,/வைரஸ் காய்ச்சலைப் பற்றிய கருத்துக் கணிப்பில்/);
+  const frequencies=await page.locator('#questionText .triggle-data-table tbody td').evaluateAll(cells =>
+    cells.map(cell => Number(cell.querySelector('[data-math-fallback]').dataset.mathFallback)));
+  assert.deepEqual(frequencies,[3, 5, 16, 18, 12, 7, 4]);
   const reasons=await page.locator('#stepsList .step-reason').allInnerTexts();
   assert.ok(reasons.length>=7 && reasons.every(text=>/\p{Script=Tamil}/u.test(text)));
   await page.locator('#langEn').click();

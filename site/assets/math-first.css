@@ -351,3 +351,17 @@ body.textbook-reader .inline-figure:has(.g9-venn-svg){display:none!important}
   max-height:min(46dvh,470px)!important
  }
 }
+
+body.textbook-reader .grade10-statistics-crumb .grade10-statistics-crumb-label {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: inherit;
+  font: inherit;
+}
+
+/* Keep the visually hidden KaTeX MathML inside each table's scroll container. */
+body.textbook-reader .triggle-table-wrap {
+  position: relative;
+}

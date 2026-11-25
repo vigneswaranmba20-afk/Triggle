@@ -2,7 +2,7 @@
   "repository": "vigneswaranmba20-afk/Triggle",
   "branch": "codex/grade-10-chapter-8-completion",
   "plannedBranch": "codex/grade-10-chapter-8-completion",
-  "commitSha": "78e1e8b68403a8ee088fd44778eef6a1471ce213",
+  "commitSha": "8d30582d7fdbacb159c3c5ee778db373c991c8e0",
   "inventory": {
     "verification": "Reconciled 75 questions and 94 source tasks against the repository inventory. Its historical statuses are retained separately from current runtime validation.",
     "numberedQuestions": 75,
@@ -309,8 +309,8 @@
         "currentBranchRuntime": {
           "englishTasks": 16,
           "bilingualWorkingTasks": 16,
-          "sourceFaithfulEligibleTamilTasks": null,
-          "notes": "Tamil content appears via an application startup overlay. Several stems are reworded and the Q5 overlay omits the printed count discrepancy."
+          "unconditionalBilingualTasks": 15,
+          "sourceBlockedTamilTasks": 1
         }
       },
       {
@@ -1651,7 +1651,6 @@
     ]
   },
   "pending": [
-    "Exercises 8.1–8.3 gaps",
     "Bilingual concept studio",
     "Full release verification",
     "Merge and deploy",
@@ -1671,13 +1670,20 @@
     "Authored all 14 determinate Exercise 8.5 tasks with exact bilingual choices and interactive feedback",
     "Checked the original Unit Exercise 8 source pages and both answer keys",
     "Authored all 11 Unit Exercise 8 items in both languages with four source tables",
-    "Recorded additional disagreements with the printed answer keys"
+    "Recorded additional disagreements with the printed answer keys",
+    "Restored exact Exercise 8.1 display wording and five original tables",
+    "Made the Tamil Exercise 8.1 Q5 solution conditional on the nine printed wages",
+    "Recovered all 2026-11-12 historical fixture objects required by TRACE regression",
+    "Opened draft PR #428",
+    "Rechecked the Exercise 8.2 and 8.3 source exercise pages and their existing independent arithmetic tests"
   ],
   "validated": [
     "Repository source inventory accounts for 75 questions and 94 tasks",
     "Exercise 8.4 source wording, 14 independent answers, bilingual steps, KaTeX rendering, mobile routes and dice-grid figure",
     "Exercise 8.5 source wording and choices, independent arithmetic, KaTeX, feedback, and mobile navigation",
-    "Unit Exercise 8 independent calculations, source and table fidelity, KaTeX, previous/next and mobile layouts"
+    "Unit Exercise 8 independent calculations, source and table fidelity, KaTeX, previous/next and mobile layouts",
+    "Exercise 8.1 bilingual mobile browser and table checks at 320, 390 and 412px",
+    "Historical TRACE reconciliation fixture and all six groups"
   ],
   "blocked": [
     {
@@ -1704,17 +1710,21 @@
     "node site/tools/test_g10_ch8_ex8_5.cjs",
     "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_ex8_5_browser.cjs",
     "node site/tools/test_g10_ch8_unit.cjs",
-    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_unit_browser.cjs"
+    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_unit_browser.cjs",
+    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_ex8_1_bilingual_browser.cjs",
+    "node site/tools/bulk/test_trace_reconcile.cjs",
+    "node site/tools/test_project_status.cjs"
   ],
   "deployment": {
     "status": "development_branch_only",
-    "branchUrl": "https://github.com/vigneswaranmba20-afk/Triggle/tree/codex/grade-10-chapter-8-completion"
+    "branchUrl": "https://github.com/vigneswaranmba20-afk/Triggle/tree/codex/grade-10-chapter-8-completion",
+    "pullRequest": "https://github.com/vigneswaranmba20-afk/Triggle/pull/428"
   },
-  "nextExecutableTask": "Repair Exercise 8.1 exact student-facing stems and tables, document source/answer-key discrepancies, and recheck remaining Exercise 8.2 and 8.3 items.",
+  "nextExecutableTask": "Integrate and validate the 15 bilingual Chapter 8 concept lessons, their visualizations and question links.",
   "baseSha": "327ec4de48264c5358c5e7b351afc49d6158f229",
   "latestFullTestAttempt": {
     "suite": "npm test",
-    "result": "requires historic PR objects outside main history",
-    "evidence": "test_trace_reconcile.cjs references historic SHA 65a6f21258497f9df2370db60945328843366d69; fetching verified snapshot objects separately"
+    "result": "historic object recovered and fixture now passes",
+    "evidence": "Read-only historical snapshot heads are pinned under refs/triggle-fixtures."
   }
 }

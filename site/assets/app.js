@@ -183,6 +183,7 @@
 
  function renderBreadcrumb(chapter){
    const nav=$('crumb');nav.replaceChildren();
+   nav.classList.toggle('grade10-statistics-crumb', grade === 10 && !chapterOverview && current.chapter === '8');
    const choices=[{text:ui('class')+' '+grade,type:'class'}];
    // On chapter menus, the main heading already names the chapter.
    // Keep Class as a visible, usable switcher without repeating that title.
@@ -190,6 +191,9 @@
    choices.forEach((c,i)=>{
      if(i){const sep=document.createElement('span');sep.className='crumb-sep';sep.textContent='›';sep.setAttribute('aria-hidden','true');nav.append(sep)}
      const b=document.createElement('button');b.type='button';b.className='crumb-link';b.innerHTML=esc(c.text)+' <span aria-hidden="true">⌄</span>';
+     if(nav.classList.contains('grade10-statistics-crumb')){
+       b.innerHTML='<span class="grade10-statistics-crumb-label">'+esc(c.text)+'</span><span aria-hidden="true">⌄</span>';
+     }
      b.title=c.type==='chapter'
        ?(lang==='ta'?'வகுப்பு '+grade+' அத்தியாயங்களைத் தேர்ந்தெடுக்கவும்':'Choose a Class '+grade+' chapter')
        :(lang==='ta'?'தேர்வு':'Choose')+' '+c.text;
