@@ -6,27 +6,35 @@ const {chromium}=require('playwright'),{server,launchOptions}=require('./dashboa
 const {load}=require('./build_g9_math.cjs');
 const {applyReviewedRealNumbers}=require('./test_g9_ch2_frontier.cjs');
 const {applyReviewedAlgebra}=require('./test_g9_tamil_working.cjs');
-const records=applyReviewedAlgebra(applyReviewedRealNumbers(load())),widths=[320,360,393,430],samples=new Map(records.map(q=>[q.chapter,q.id]));
+const {applyStatisticsTables}=require('./test_g9_statistics_frontier.cjs');
+const records=applyStatisticsTables(applyReviewedAlgebra(applyReviewedRealNumbers(load()))),widths=[320,360,393,430],samples=new Map(records.map(q=>[q.chapter,q.id]));
 const normalize=s=>String(s??'').replace(/\s+/g,' ').trim();
 const plain=value=>Array.isArray(value)?value.map(plain).join(''):value?.fallback??value;
 async function inspect(page,q,lang){
  const state=await page.evaluate(({q,lang})=>{
   const override=window.TriggleG9Ch5Overrides?.get(q.id)||null;
   const p=override||(q.notationSource==='authored'?q:window.TriggleG9Math.get(q))||q;
+  const sourcePrompt=q.dataTable?.sourcePrompt?.[lang];
   const count=v=>Array.isArray(v)?v.reduce((n,x)=>n+count(x),0):v?.questionOption?count(v.questionOption):v?.latex?1:0;
   const fallback=selector=>{const el=document.querySelector(selector)?.cloneNode(true);if(!el)return null;
    el.querySelectorAll('.triggle-tex').forEach(math=>math.replaceWith(document.createTextNode(math.dataset.mathFallback)));
    el.querySelectorAll('math.triggle-math[aria-label]').forEach(math=>math.replaceWith(document.createTextNode(math.getAttribute('aria-label'))));
    const raised={'0':'⁰','1':'¹','2':'²','3':'³','4':'⁴','5':'⁵','6':'⁶','7':'⁷','8':'⁸','9':'⁹','n':'ⁿ','k':'ᵏ'};
    el.querySelectorAll('sup').forEach(sup=>sup.replaceWith(document.createTextNode([...sup.textContent].map(c=>raised[c]||c).join(''))));
-   el.querySelectorAll('details,.triggle-mcq-choices,.triggle-mcq-feedback').forEach(d=>d.remove());return el.textContent;
+   el.querySelectorAll('details,.triggle-mcq-choices,.triggle-mcq-feedback').forEach(d=>d.remove());
+   if(sourcePrompt)el.querySelector('.triggle-table-wrap')?.replaceWith(' ');
+   return el.textContent;
   };
   const legacyHint=window.TriggleWhyStepG9.hints[q.id];
-  const hints=[...document.querySelectorAll('#stepsList details.why-step-g9')].map(detail=>
-   q.geometryConcept===undefined&&q.realConcept===undefined?legacyHint:q.steps[Number(detail.dataset.step)-1]?.why);
+  const hints=[...document.querySelectorAll('#stepsList details.why-step-g9')].map(detail=>{
+   const step=q.steps[Number(detail.dataset.step)-1];
+   return q.geometryConcept!==undefined||q.realConcept!==undefined?step?.why:sourcePrompt?(step?.why||legacyHint):legacyHint;
+  });
   const hintCount=hints.reduce((n,hint)=>n+count(hint?window.TriggleG9Math.text(hint[lang]||hint.en):null),0);
   const choices=q.choices?.reduce((n,choice)=>n+count(choice[lang]||choice.en),0)||0;
-  const expected=hintCount+choices+count(p.questionMath?.[lang]||p.questionMath?.en)+
+  const question=sourcePrompt?count(sourcePrompt.before)+count(sourcePrompt.after):count(p.questionMath?.[lang]||p.questionMath?.en);
+  const tableCount=sourcePrompt?q.dataTable.rows.flat().reduce((total,cell)=>total+Number(!!cell?.latex||/^\d+(?:\.\d+)?$/.test(String(cell))),0):0;
+  const expected=hintCount+choices+question+tableCount+
    count(q.answerMath?.[lang]||p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s,i)=>n+
    count((lang==='ta'&&(override||q).steps[i].mathTa)||s.math)+count(s.reasonMath?.[lang]||s.reasonMath?.en),0);
   const rendered=document.querySelectorAll('#questionText .katex,#stepsList .katex').length;
@@ -59,8 +67,10 @@ async function inspect(page,q,lang){
  const label=q.id+' '+lang+' '+state.width;
  assert.equal(state.errors,0,label+' no renderer fallback');
  assert.equal(state.rendered,state.expected,label+' every authored formula renders exactly once');
- assert.equal(normalize(state.question),normalize(refQ.q[lang]||refQ.q.en),label+' question wording');
- const reviewedAnswer=refQ.chapter==='2'&&refQ.answerMath?.[lang];
+ const sourcePrompt=refQ.dataTable?.sourcePrompt?.[lang];
+ const question=sourcePrompt?[sourcePrompt.before,sourcePrompt.after].map(plain).join(' '):refQ.q[lang]||refQ.q.en;
+ assert.equal(normalize(state.question),normalize(question),label+' question wording');
+ const reviewedAnswer=(refQ.chapter==='2'||sourcePrompt)&&refQ.answerMath?.[lang];
  assert.equal(normalize(state.answer),normalize(reviewedAnswer?plain(reviewedAnswer):
   refQ.answer?.[lang]||(lang==='ta'&&(refQ.chapter==='5'||refQ.answerMath?.ta)?refQ.answerTa:null)||refQ.answer),label+' final answer');
  assert.equal(state.steps.length,refQ.steps.length,label+' all steps retained');
