@@ -1,0 +1,500 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 7,
+  "exercise": "7.5",
+  "questionParts": 15,
+  "optionCount": 60,
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3PrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "keyPrinted": 342,
+      "keyPdf": 348
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "keyPrinted": 356,
+      "keyPdf": 362
+    }
+  },
+  "sourceImages": {
+    "en303": "643d8d1f0032f0cf5d3768fa070bb8f98ec568abaf76ab04ab643bb4cbff4f2e",
+    "en304": "d5520afae1a147b0d6dc180fa3a20d4a177e3a847df0892efec1b540a50d40b9",
+    "ta311": "b823d464c06693fda8dfcb7670fe40267740ff0e5592e6382c03a7bed771f5ba",
+    "ta312": "26b89abc925ede9fd027be7c289928f59c6f0007a1306e8cd6db77397af35664",
+    "keyEn348": "5b8bf46a999b68cbd3b659eaff4db543c07b5cfec2d94118e3e4a7f9e9cd1e62",
+    "keyTa362": "f63021e91db5d9764564df780667f62b772d03f45674850ada19024efa10e1d2"
+  },
+  "notes": "Source pages visually inspected, normalized spacing and Unicode mathematical notation; no exercise-specific printed figures. Q11 is a verbal shape-identification item. Teacher and professional Tamil editorial review pending.",
+  "items": [
+    {
+      "id": "c10-7-ex7-5-q1",
+      "questionNumber": 1,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 297,
+          "pdf": 303
+        },
+        "ta": {
+          "printed": 305,
+          "pdf": 311
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. The curved surface area of a right circular cone of height 15 cm and base diameter 16 cm is\n(A) 60π cm²\n(B) 68π cm²\n(C) 120π cm²\n(D) 136π cm²",
+        "ta": "1. 15 செ.மீ உயரமும் 16 செ.மீ விட்டமும் கொண்ட ஒரு நேர்வட்டக் கூம்பின் வளைபரப்பு\n(அ) 60π ச.செ.மீ\n(ஆ) 68π ச.செ.மீ\n(இ) 120π ச.செ.மீ\n(ஈ) 136π ச.செ.மீ"
+      },
+      "answerKey": {
+        "en": "D",
+        "ta": "ஈ"
+      },
+      "answerValue": {
+        "en": "(D) 136π cm²",
+        "ta": "(ஈ) 136π ச.செ.மீ"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q2",
+      "questionNumber": 2,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 297,
+          "pdf": 303
+        },
+        "ta": {
+          "printed": 305,
+          "pdf": 311
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "2. If two solid hemispheres of same base radius r units are joined together along their bases, then curved surface area of this new solid is\n(A) 4πr² sq. units\n(B) 6πr² sq. units\n(C) 3πr² sq. units\n(D) 8πr² sq. units",
+        "ta": "2. r அலகுகள் ஆரம் உடைய இரு சம அரைக்கோளங்களின் அடிப்பகுதிகள் இணைக்கப்படும் போது உருவாகும் திண்மத்தின் புறப்பரப்பு\n(அ) 4πr² ச. அ\n(ஆ) 6πr² ச. அ\n(இ) 3πr² ச. அ\n(ஈ) 8πr² ச. அ"
+      },
+      "answerKey": {
+        "en": "A",
+        "ta": "அ"
+      },
+      "answerValue": {
+        "en": "(A) 4πr² sq. units",
+        "ta": "(அ) 4πr² ச. அ"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q3",
+      "questionNumber": 3,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 297,
+          "pdf": 303
+        },
+        "ta": {
+          "printed": 305,
+          "pdf": 311
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. The height of a right circular cone whose radius is 5 cm and slant height is 13 cm will be\n(A) 12 cm\n(B) 10 cm\n(C) 13 cm\n(D) 5 cm",
+        "ta": "3. ஆரம் 5 செ.மீ மற்றும் சாயுயரம் 13 செ.மீ உடைய நேர்வட்டக் கூம்பின் உயரம்\n(அ) 12 செ.மீ\n(ஆ) 10 செ.மீ\n(இ) 13 செ.மீ\n(ஈ) 5 செ.மீ"
+      },
+      "answerKey": {
+        "en": "A",
+        "ta": "அ"
+      },
+      "answerValue": {
+        "en": "(A) 12 cm",
+        "ta": "(அ) 12 செ.மீ"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q4",
+      "questionNumber": 4,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 297,
+          "pdf": 303
+        },
+        "ta": {
+          "printed": 305,
+          "pdf": 311
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. If the radius of the base of a right circular cylinder is halved keeping the same height, then the ratio of the volume of the cylinder thus obtained to the volume of original cylinder is\n(A) 1:2\n(B) 1:4\n(C) 1:6\n(D) 1:8",
+        "ta": "4. ஓர் உருளையின் உயரத்தை மாற்றாமல் அதன் ஆரத்தைப் பாதியாகக் கொண்டு புதிய உருளை உருவாக்கப்படுகிறது. புதிய மற்றும் முந்தைய உருளைகளின் கன அளவுகளின் விகிதம்\n(அ) 1:2\n(ஆ) 1:4\n(இ) 1:6\n(ஈ) 1:8"
+      },
+      "answerKey": {
+        "en": "B",
+        "ta": "ஆ"
+      },
+      "answerValue": {
+        "en": "(B) 1:4",
+        "ta": "(ஆ) 1:4"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q5",
+      "questionNumber": 5,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 297,
+          "pdf": 303
+        },
+        "ta": {
+          "printed": 305,
+          "pdf": 311
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "5. The total surface area of a cylinder whose radius is 1/3 of its height is\n(A) 9πh²/8 sq.units\n(B) 24πh² sq.units\n(C) 8πh²/9 sq.units\n(D) 56πh²/9 sq.units",
+        "ta": "5. ஓர் உருளையின் ஆரம் அதன் உயரத்தில் மூன்றில் ஒரு பங்கு எனில், அதன் மொத்தப் புறப்பரப்பு\n(அ) 9πh²/8 ச. அ\n(ஆ) 24πh² ச. அ\n(இ) 8πh²/9 ச. அ\n(ஈ) 56πh²/9 ச. அ"
+      },
+      "answerKey": {
+        "en": "C",
+        "ta": "இ"
+      },
+      "answerValue": {
+        "en": "(C) 8πh²/9 sq.units",
+        "ta": "(இ) 8πh²/9 ச. அ"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q6",
+      "questionNumber": 6,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 297,
+          "pdf": 303
+        },
+        "ta": {
+          "printed": 305,
+          "pdf": 311
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "6. In a hollow cylinder, the sum of the external and internal radii is 14 cm and the width is 4 cm. If its height is 20 cm, the volume of the material in it is\n(A) 5600π cm³\n(B) 1120π cm³\n(C) 56π cm³\n(D) 3600π cm³",
+        "ta": "6. ஓர் உள்ளீடற்ற உருளையின் வெளிப்புற மற்றும் உட்புற ஆரங்களின் கூடுதல் 14 செ.மீ மற்றும் அதன் தடிமன் 4 செ.மீ ஆகும். உருளையின் உயரம் 20 செ.மீ எனில், அதனை உருவாக்கப் பயன்பட்ட பொருளின் கன அளவு\n(அ) 5600π க. செ.மீ\n(ஆ) 1120π க. செ.மீ\n(இ) 56π க. செ.மீ\n(ஈ) 3600π க. செ.மீ"
+      },
+      "answerKey": {
+        "en": "B",
+        "ta": "ஆ"
+      },
+      "answerValue": {
+        "en": "(B) 1120π cm³",
+        "ta": "(ஆ) 1120π க. செ.மீ"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q7",
+      "questionNumber": 7,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 298,
+          "pdf": 304
+        },
+        "ta": {
+          "printed": 306,
+          "pdf": 312
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. If the radius of the base of a cone is tripled and the height is doubled then the volume is\n(A) made 6 times\n(B) made 18 times\n(C) made 12 times\n(D) unchanged",
+        "ta": "7. ஒரு கூம்பின் அடிப்புற ஆரம் மும்மடங்காகவும் உயரம் இரு மடங்காகவும் மாறினால் கன அளவு எத்தனை மடங்காக மாறும்?\n(அ) 6 மடங்கு\n(ஆ) 18 மடங்கு\n(இ) 12 மடங்கு\n(ஈ) மாற்றமில்லை"
+      },
+      "answerKey": {
+        "en": "B",
+        "ta": "ஆ"
+      },
+      "answerValue": {
+        "en": "(B) made 18 times",
+        "ta": "(ஆ) 18 மடங்கு"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q8",
+      "questionNumber": 8,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 298,
+          "pdf": 304
+        },
+        "ta": {
+          "printed": 306,
+          "pdf": 312
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "8. The total surface area of a hemi-sphere is how much times the square of its radius.\n(A) π\n(B) 4π\n(C) 3π\n(D) 2π",
+        "ta": "8. ஓர் அரைக்கோளத்தின் மொத்தப் பரப்பு அதன் ஆரத்தினுடைய வர்க்கத்தின் ____மடங்காகும்.\n(அ) π\n(ஆ) 4π\n(இ) 3π\n(ஈ) 2π"
+      },
+      "answerKey": {
+        "en": "C",
+        "ta": "இ"
+      },
+      "answerValue": {
+        "en": "(C) 3π",
+        "ta": "(இ) 3π"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q9",
+      "questionNumber": 9,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 298,
+          "pdf": 304
+        },
+        "ta": {
+          "printed": 306,
+          "pdf": 312
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "9. A solid sphere of radius x cm is melted and cast into a shape of a solid cone of same radius. The height of the cone is\n(A) 3x cm\n(B) x cm\n(C) 4x cm\n(D) 2x cm",
+        "ta": "9. x செ.மீ ஆரமுள்ள ஒரு திண்மக் கோளம் அதே ஆரமுள்ள ஒரு கூம்பாக மாற்றப்படுகிறது எனில், கூம்பின் உயரம்\n(அ) 3x செ.மீ\n(ஆ) x செ.மீ\n(இ) 4x செ.மீ\n(ஈ) 2x செ.மீ"
+      },
+      "answerKey": {
+        "en": "C",
+        "ta": "இ"
+      },
+      "answerValue": {
+        "en": "(C) 4x cm",
+        "ta": "(இ) 4x செ.மீ"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q10",
+      "questionNumber": 10,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 298,
+          "pdf": 304
+        },
+        "ta": {
+          "printed": 306,
+          "pdf": 312
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "10. A frustum of a right circular cone is of height 16cm with radii of its ends as 8cm and 20cm. Then, the volume of the frustum is\n(A) 3328π cm³\n(B) 3228π cm³\n(C) 3240π cm³\n(D) 3340π cm³",
+        "ta": "10. 16 செ.மீ உயரமுள்ள ஒரு நேர்வட்டக் கூம்பின் இடைக்கண்ட ஆரங்கள் 8 செ.மீ மற்றும் 20 செ.மீ எனில், அதன் கன அளவு\n(அ) 3328π க. செ.மீ\n(ஆ) 3228π க. செ.மீ\n(இ) 3240π க. செ.மீ\n(ஈ) 3340π க. செ.மீ"
+      },
+      "answerKey": {
+        "en": "A",
+        "ta": "அ"
+      },
+      "answerValue": {
+        "en": "(A) 3328π cm³",
+        "ta": "(அ) 3328π க. செ.மீ"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q11",
+      "questionNumber": 11,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 298,
+          "pdf": 304
+        },
+        "ta": {
+          "printed": 306,
+          "pdf": 312
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "11. A shuttle cock used for playing badminton has the shape of the combination of\n(A) a cylinder and a sphere\n(B) a hemisphere and a cone\n(C) a sphere and a cone\n(D) frustum of a cone and a hemisphere",
+        "ta": "11. கீழ்க்காணும் எந்த இரு உருவங்களை இணைத்தால் ஓர் இறகுபந்தின் வடிவம் கிடைக்கும்.\n(அ) உருளை மற்றும் கோளம்\n(ஆ) அரைக்கோளம் மற்றும் கூம்பு\n(இ) கோளம் மற்றும் கூம்பு\n(ஈ) கூம்பின் இடைக்கண்டம் மற்றும் அரைக்கோளம்"
+      },
+      "answerKey": {
+        "en": "D",
+        "ta": "ஈ"
+      },
+      "answerValue": {
+        "en": "(D) frustum of a cone and a hemisphere",
+        "ta": "(ஈ) கூம்பின் இடைக்கண்டம் மற்றும் அரைக்கோளம்"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q12",
+      "questionNumber": 12,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 298,
+          "pdf": 304
+        },
+        "ta": {
+          "printed": 306,
+          "pdf": 312
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "12. A spherical ball of radius r₁ units is melted to make 8 new identical balls each of radius r₂ units. Then r₁ : r₂ is\n(A) 2:1\n(B) 1:2\n(C) 4:1\n(D) 1:4",
+        "ta": "12. r₁ அலகுகள் ஆரமுள்ள ஒரு கோளப்பந்து உருக்கப்பட்டு r₂ அலகுகள் ஆரமுடைய 8 சமகோள பந்துகளாக ஆக்கப்படுகிறது எனில், r₁ : r₂\n(அ) 2:1\n(ஆ) 1:2\n(இ) 4:1\n(ஈ) 1:4"
+      },
+      "answerKey": {
+        "en": "A",
+        "ta": "அ"
+      },
+      "answerValue": {
+        "en": "(A) 2:1",
+        "ta": "(அ) 2:1"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q13",
+      "questionNumber": 13,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 298,
+          "pdf": 304
+        },
+        "ta": {
+          "printed": 306,
+          "pdf": 312
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "13. The volume (in cm³) of the greatest sphere that can be cut off from a cylindrical log of wood of base radius 1 cm and height 5 cm is\n(A) (4/3)π\n(B) (10/3)π\n(C) 5π\n(D) (20/3)π",
+        "ta": "13. 1 செ.மீ ஆரமும் 5 செ.மீ உயரமும் கொண்ட ஒரு மர உருளையிலிருந்து அதிகபட்சக் கன அளவு கொண்ட கோளம் வெட்டி எடுக்கப்படுகிறது எனில், அதன் கன அளவு (க. செ.மீ-ல்)\n(அ) (4/3)π\n(ஆ) (10/3)π\n(இ) 5π\n(ஈ) (20/3)π"
+      },
+      "answerKey": {
+        "en": "A",
+        "ta": "அ"
+      },
+      "answerValue": {
+        "en": "(A) (4/3)π",
+        "ta": "(அ) (4/3)π"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q14",
+      "questionNumber": 14,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 298,
+          "pdf": 304
+        },
+        "ta": {
+          "printed": 306,
+          "pdf": 312
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "14. The height and radius of the cone of which the frustum is a part are h₁ units and r₁ units respectively. Height of the frustum is h₂ units and radius of the smaller base is r₂ units. If h₂ : h₁ = 1 : 2 then r₂ : r₁ is\n(A) 1:3\n(B) 1:2\n(C) 2:1\n(D) 3:1",
+        "ta": "14. இடைக்கண்டத்தை ஒரு பகுதியாகக் கொண்ட ஒரு கூம்பின் உயரம் மற்றும் ஆரம் முறையே h₁ அலகுகள் மற்றும் r₁ அலகுகள் ஆகும். இடைக்கண்டத்தின் உயரம் மற்றும் சிறிய பக்க ஆரம் முறையே h₂ அலகுகள் மற்றும் r₂ அலகுகள் மற்றும் h₂ : h₁ = 1 : 2 எனில், r₂ : r₁-ன் மதிப்பு\n(அ) 1:3\n(ஆ) 1:2\n(இ) 2:1\n(ஈ) 3:1"
+      },
+      "answerKey": {
+        "en": "B",
+        "ta": "ஆ"
+      },
+      "answerValue": {
+        "en": "(B) 1:2",
+        "ta": "(ஆ) 1:2"
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q15",
+      "questionNumber": 15,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 298,
+          "pdf": 304
+        },
+        "ta": {
+          "printed": 306,
+          "pdf": 312
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "15. The ratio of the volumes of a cylinder, a cone and a sphere, if each has the same diameter and same height is\n(A) 1:2:3\n(B) 2:1:3\n(C) 1:3:2\n(D) 3:1:2",
+        "ta": "15. சமமான விட்டம் மற்றும் உயரம் உடைய ஓர் உருளை, ஒரு கூம்பு மற்றும் ஒரு கோளத்தின் கன அளவுகளின் விகிதம்\n(அ) 1:2:3\n(ஆ) 2:1:3\n(இ) 1:3:2\n(ஈ) 3:1:2"
+      },
+      "answerKey": {
+        "en": "D",
+        "ta": "ஈ"
+      },
+      "answerValue": {
+        "en": "(D) 3:1:2",
+        "ta": "(ஈ) 3:1:2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "edition": "2025 revised",
+  "exercise": "7.4",
+  "grade": 10,
+  "chapter": 7,
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3PrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "keyPrinted": 342,
+      "keyPdf": 348
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "keyPrinted": 356,
+      "keyPdf": 362
+    }
+  },
+  "sourceImages": {
+    "en302": "805295b357c825540ff213eeea5b8c26e97e24e25e9b010b4e505efdc4ae3643",
+    "en303": "286667d473f2874b4336f54d42fa68764a2f90b8e6bc09d2aca27a355b3dcf5f",
+    "ta310": "4e264ce2d164eebb6ebb4b3432ed4a8562fce0ed6bcd94fdc6a67b01978513e6",
+    "ta311": "da8913a50b1c8d376317f41a1813cb30e3616e08399a6c7d139aba22d4d23489",
+    "keyEn348": "5b8bf46a999b68cbd3b659eaff4db543c07b5cfec2d94118e3e4a7f9e9cd1e62",
+    "keyTa362": "f63021e91db5d9764564df780667f62b772d03f45674850ada19024efa10e1d2"
+  },
+  "imageRendering": "pdftoppm PNG, source pages max dimension 1700px, answer keys 1900px; images not redistributed",
+  "questionParts": 8,
+  "figureNotes": "No exercise-specific printed figures. Fig 7.43 belongs to Activity 5, not Ex7.4.",
+  "items": [
+    {
+      "id": "c10-7-ex7-4-q1",
+      "questionNumber": 1,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 296,
+          "pdf": 302
+        },
+        "ta": {
+          "printed": 304,
+          "pdf": 310
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. An aluminium sphere of radius 12 cm is melted to make a cylinder of radius 8 cm. Find the height of the cylinder.",
+        "ta": "1. 12 செ.மீ ஆரமுள்ள ஓர் அலுமினியக் கோளம் உருக்கப்பட்டு 8 செ.மீ ஆரமுள்ள ஓர் உருளையாக மாற்றப்படுகிறது. உருளையின் உயரம் காண்க."
+      },
+      "answerKey": "36 cm"
+    },
+    {
+      "id": "c10-7-ex7-4-q2",
+      "questionNumber": 2,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 296,
+          "pdf": 302
+        },
+        "ta": {
+          "printed": 304,
+          "pdf": 310
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "2. Water is flowing at the rate of 15 km per hour through a pipe of diameter 14 cm into a rectangular tank which is 50 m long and 44 m wide. Find the time in which the level of water in the tanks will rise by 21 cm.",
+        "ta": "2. 14 செ.மீ விட்டமுள்ள குழாயிலிருந்து 15 கி.மீ / மணி என்ற வேகத்தில் 50 மீ நீளம் மற்றும் 44 மீ அகலம் கொண்ட ஒரு செவ்வக வடிவத் தொட்டியினுள் தண்ணீர் பாய்கிறது. எவ்வளவு நேரத்தில் தண்ணீரின் மட்டம் 21 செ.மீ-க்கு உயரும்."
+      },
+      "answerKey": "2 hrs"
+    },
+    {
+      "id": "c10-7-ex7-4-q3",
+      "questionNumber": 3,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 296,
+          "pdf": 302
+        },
+        "ta": {
+          "printed": 304,
+          "pdf": 310
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. A conical flask is full of water. The flask has base radius r units and height h units, the water is poured into a cylindrical flask of base radius xr units. Find the height of water in the cylindrical flask.",
+        "ta": "3. முழுமையாக நீரால் நிரம்பியுள்ள ஒரு கூம்பு வடிவக் குடுவையின் ஆரம் r அலகுகள் மற்றும் உயரம் h அலகுகள் ஆகும். நீரானது xr அலகுகள் ஆரமுள்ள மற்றொரு உருளை வடிவக் குடுவைக்கு மாற்றப்பட்டால் நீரின் உயரம் காண்க."
+      },
+      "answerKey": "h/(3x²)"
+    },
+    {
+      "id": "c10-7-ex7-4-q4",
+      "questionNumber": 4,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 297,
+          "pdf": 303
+        },
+        "ta": {
+          "printed": 305,
+          "pdf": 311
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. A solid right circular cone of diameter 14 cm and height 8 cm is melted to form a hollow sphere. If the external diameter of the sphere is 10 cm, find the internal diameter.",
+        "ta": "4. விட்டம் 14 செ.மீ, உயரம் 8 செ.மீ உடைய ஒரு திண்ம நேர்வட்டக் கூம்பு, ஓர் உள்ளீடற்ற கோளமாக உருமாற்றப்படுகிறது. கோளத்தின் வெளிவிட்டம் 10 செ.மீ எனில், உள்விட்டத்தைக் காண்க."
+      },
+      "answerKey": "6 cm"
+    },
+    {
+      "id": "c10-7-ex7-4-q5",
+      "questionNumber": 5,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 297,
+          "pdf": 303
+        },
+        "ta": {
+          "printed": 305,
+          "pdf": 311
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "5. Seenu’s house has an overhead tank in the shape of a cylinder. This is filled by pumping water from a sump (underground tank) which is in the shape of a cuboid. The sump has dimensions 2 m × 1.5 m × 1 m. The overhead tank has its radius of 60 cm and height 105 cm. Find the volume of the water left in the sump after the overhead tank has been completely filled with water from the sump which has been full, initially.",
+        "ta": "5. சீனு வீட்டின் மேல்நிலை நீர்த்தொட்டி உருளை வடிவில் உள்ளது. அதன் ஆரம் 60 செ.மீ மற்றும் உயரம் 105 செ.மீ. 2 மீ × 1.5 மீ × 1 மீ பரிமாணங்களை உடைய ஒரு கனச்செவ்வகக் கீழ்நிலை நீர் தொட்டியிலிருந்து நீர் உந்தப்பட்டு மேலேயுள்ள உருளை வடிவத் தொட்டி முழுமையாக நிரப்பப்படுகிறது. தொடக்கத்தில் கீழ்த் தொட்டியில் நீர் முழுமையாக இருப்பதாகக் கருதுக. மேல் தொட்டிக்கு நீர் ஏற்றிய பிறகு மீதமுள்ள நீரின் கனஅளவைக் காண்க."
+      },
+      "answerKey": "1812000 cm³ / 1812 litre"
+    },
+    {
+      "id": "c10-7-ex7-4-q6",
+      "questionNumber": 6,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 297,
+          "pdf": 303
+        },
+        "ta": {
+          "printed": 305,
+          "pdf": 311
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "6. The internal and external diameter of a hollow hemispherical shell are 6 cm and 10 cm respectively. If it is melted and recast into a solid cylinder of diameter 14 cm, then find the height of the cylinder.",
+        "ta": "6. ஓர் உள்ளீடற்ற அரைக்கோள ஓட்டின் உட்புற மற்றும் வெளிப்புற விட்டங்கள் முறையே 6 செ.மீ மற்றும் 10 செ.மீ ஆகும். அது உருக்கப்பட்டு 14 செ.மீ விட்டமுள்ள ஒரு திண்ம உருளையாக்கப்பட்டால், அவ்வுருளையின் உயரம் காண்க."
+      },
+      "answerKey": "1.33 cm"
+    },
+    {
+      "id": "c10-7-ex7-4-q7",
+      "questionNumber": 7,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 297,
+          "pdf": 303
+        },
+        "ta": {
+          "printed": 305,
+          "pdf": 311
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. A solid sphere of radius 6 cm is melted into a hollow cylinder of uniform thickness. If the external radius of the base of the cylinder is 5 cm and its height is 32 cm, then find the thickness of the cylinder.",
+        "ta": "7. 6 செ.மீ ஆரமுள்ள ஒரு திண்மக் கோளம் உருக்கப்பட்டுச் சீரான தடிமனுள்ள ஓர் உள்ளீடற்ற உருளையாக மாற்றப்படுகிறது. உருளையின் வெளி ஆரம் 5 செ.மீ மற்றும் உயரம் 32 செ.மீ எனில், உருளையின் தடிமனைக் காண்க."
+      },
+      "answerKey": "1 cm"
+    },
+    {
+      "id": "c10-7-ex7-4-q8",
+      "questionNumber": 8,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": 297,
+          "pdf": 303
+        },
+        "ta": {
+          "printed": 305,
+          "pdf": 311
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "8. A hemispherical bowl is filled to the brim with juice. The juice is poured into a cylindrical vessel whose radius is 50% more than its height. If the diameter is same for both the bowl and the cylinder then find the percentage of juice that can be transferred from the bowl into the cylindrical vessel.",
+        "ta": "8. ஓர் அரைக்கோள வடிவக் கிண்ணத்தின் விளிம்பு வரையில் பழச்சாறு நிரம்பியுள்ளது. உயரத்தைவிட 50% அதிக ஆரம் கொண்ட உருளை வடிவப் பாத்திரத்திற்குப் பழச்சாறு மாற்றப்படுகிறது. அரைக்கோளம் மற்றும் உருளை ஆகியவற்றின் விட்டங்கள் சமமானால் கிண்ணத்திலிருந்து எவ்வளவு சதவீதப் பழச்சாறு உருளை வடிவ பாத்திரத்திற்கு மாற்றப்படும்?"
+      },
+      "answerKey": "100%"
+    }
+  ]
+}

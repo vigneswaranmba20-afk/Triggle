@@ -262,6 +262,33 @@ const ch7Ex72Ids=ch7Ex72Inv.questions.map(q=>'c10-7-ex7-2-q'+q.question);
 const ch7Ex73Inv=require('../../docs/trace/source-inventories/g10-ch7-ex7-3.json');
 assert.equal(ch7Ex73Inv.questionParts,9,'Nine source-indexed Ch7 Ex7.3 parts');
 const ch7Ex73Ids=ch7Ex73Inv.questions.flatMap(q=>q.parts.length===1&&q.parts[0]==='whole'?['c10-7-ex7-3-q'+q.question]:q.parts.map(p=>'c10-7-ex7-3-q'+q.question+'-'+p));
+// The new Mensuration records are admitted only through frozen textbook manifests.
+// Keep the global exact-ID ordering and immutable baseline checks intact.
+const mensurationBatches=[
+ {manifest:require('../data/textbook-fidelity/g10-ch7-ex7-4.json'),exercise:'7.4',prefix:'c10-7-ex7-4-q',count:8},
+ {manifest:require('../data/textbook-fidelity/g10-ch7-ex7-5.json'),exercise:'7.5',prefix:'c10-7-ex7-5-q',count:15},
+ {manifest:require('../data/textbook-fidelity/g10-ch7-unit7.json'),exercise:'7.unit',prefix:'c10-7-unit-q',count:10}
+];
+const mensurationById=new Map(),mensurationIds=[];
+for(const {manifest,exercise,prefix,count} of mensurationBatches){
+ assert.equal(manifest.grade,10);assert.equal(manifest.chapter,7);
+ assert.equal(manifest.exercise,exercise);assert.equal(manifest.questionParts,count);
+ assert.deepEqual(manifest.items.map(e=>e.id),Array.from({length:count},(_,i)=>prefix+(i+1)));
+ for(const e of manifest.items){
+  assert(!mensurationById.has(e.id),'Unique source-indexed Mensuration ID '+e.id);
+  assert.equal(e.part,'whole');
+  for(const lang of ['en','ta']){
+   assert.equal(e.visualStatus[lang],'page-checked');
+   assert.ok(e.textbookPrompt[lang]);
+   const pages=[e.sourcePages[lang].pdf].flat(),printed=[e.sourcePages[lang].printed].flat();
+   assert.ok(pages.length&&pages.every(Number.isInteger));
+   assert.deepEqual(pages.map(n=>n-6),printed);
+  }
+  assert.ok(e.answerKey,'Textbook answer key '+e.id);
+  mensurationById.set(e.id,{e,exercise});mensurationIds.push(e.id);
+ }
+}
+assert.equal(mensurationById.size,33);
 const ch8Ex83Inv=require('../../docs/trace/source-inventories/g10-ch8-ex8-3.json');
 assert.equal(ch8Ex83Inv.questionParts,29,'Twenty-nine source-indexed Ch8 Ex8.3 parts');
 const ch8Ex83Context={window:{TRIGGLE_CLASSES:{10:{items:[]}},TRIGGLE_CURRICULUM:{grades:[{grade:10,chapters:[{number:8,textbookQuestionIds:[]}]}]}}};
@@ -269,7 +296,7 @@ vm.runInNewContext(read('data/textbook-exercises/g10-ch8-ex8-3-q1-q6.js'),ch8Ex8
 vm.runInNewContext(read('data/textbook-exercises/g10-ch8-ex8-3-q7-q13.js'),ch8Ex83Context,{filename:'g10-ch8-ex8-3-q7-q13.js'});
 const ch8Ex83Records=ch8Ex83Context.window.TRIGGLE_CLASSES[10].items;
 const ch8Ex83Ids=ch8Ex83Inv.questions.flatMap(q=>q.parts.length===1&&q.parts[0]==='whole'?['c10-8-ex8-3-q'+q.question]:q.parts.map(p=>'c10-8-ex8-3-q'+q.question+'-'+p));
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ch8Ex83Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...ex315Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds,...ch7Ex72Ids,...ch7Ex73Ids];
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ch8Ex83Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...ex315Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds,...ch7Ex72Ids,...ch7Ex73Ids,...mensurationIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -391,6 +418,28 @@ for(const [grade,data] of Object.entries(classes)){
    assert.equal(item.translationReview,'2025-tamil-pdf-checked-teacher-review-pending');
    assert.ok(item.q?.en&&item.q?.ta,'Bilingual 2025 source question '+item.id);
    assert.ok(item.answer&&item.answerTa,'Bilingual answer '+item.id);
+  }else if(grade==='10'&&mensurationById.has(item.id)){
+   const {e,exercise}=mensurationById.get(item.id);
+   assert.equal(item.classNum,10);assert.equal(item.chapter,'7');assert.equal(item.exercise,exercise);
+   assert.equal(item.edition,'2025');assert.equal(item.kind,'textbook');
+   assert.equal(item.sourceFidelity?.status,'page-visual-checked');
+   assert.equal(item.translationReview,'2025-tamil-pdf-checked-teacher-review-pending');
+   assert.equal(item.review.tamilEditorial,'pending');assert.equal(item.review.teacher,'pending');
+   for(const lang of ['en','ta']){
+    assert.equal(item.q[lang],e.textbookPrompt[lang],'Mensuration exact source wording '+item.id+' '+lang);
+    const pdf=[e.sourcePages[lang].pdf].flat(),printed=[e.sourcePages[lang].printed].flat();
+    assert.equal(item.sourceFidelity.sourcePdfPage[lang],pdf[0]);
+    assert.equal(item.sourceFidelity.sourcePrintedPage[lang],printed[0]);
+    if(exercise==='7.unit'){
+     assert.equal(JSON.stringify(item.sourceFidelity.sourcePdfPages[lang]),JSON.stringify(pdf));
+     assert.equal(JSON.stringify(item.sourceFidelity.sourcePrintedPages[lang]),JSON.stringify(printed));
+    }
+    const answer=lang==='en'?item.answer:item.answerTa;
+    assert.ok(answer,'Bilingual final answer '+item.id);
+    if(e.answerValue)assert.equal(answer,e.answerValue[lang],'Source-indexed answer '+item.id+' '+lang);
+    if(exercise==='7.5')assert.equal(item.correctOption[lang],e.answerKey[lang]);
+   }
+   assert(item.steps.length&&item.steps.every(step=>step.en&&step.ta),'All bilingual reasoning retained '+item.id);
   }else if(grade==='9'&&g9Ex64Release.records[item.id]){
    const proof=g9Ex64Release.records[item.id];
    const english=JSON.parse(JSON.stringify(item));
