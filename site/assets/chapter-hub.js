@@ -546,7 +546,7 @@
       const sourcePages=pageSource(stage,ta&&stageId.startsWith('g9-'));
       const isCh3=stageId.startsWith('g10-ch3-');
       const isG9Mensuration=stageId.startsWith('g9-ch7-');
-      const isStudio6=stageId.startsWith('g10-ch4-')||stageId.startsWith('g10-ch5-')||stageId.startsWith('g10-ch6-');
+      const isStudio6=stageId.startsWith('g10-ch4-')||stageId.startsWith('g10-ch5-')||stageId.startsWith('g10-ch6-')||stageId.startsWith('g10-ch7-');
       if(stage.activity?.options&&stage.check){
         const related=chapterQuestions.find(question=>question.id===stage.exercise);
         window.TriggleG9ConceptLessons.mount(panel,stage,lang,related,onQuestion);
@@ -573,7 +573,7 @@
           panel.append(row);
         }
       }else if(isStudio6){
-        const labEngine=stageId.startsWith('g10-ch5-')?window.TriggleG10Ch5Labs:stageId.startsWith('g10-ch6-')?window.TriggleG10Ch6Labs:window.TriggleG10Ch4Labs;
+        const labEngine=stageId.startsWith('g10-ch5-')?window.TriggleG10Ch5Labs:stageId.startsWith('g10-ch6-')?window.TriggleG10Ch6Labs:stageId.startsWith('g10-ch7-')?window.TriggleG10Ch7Labs:window.TriggleG10Ch4Labs;
         const labels=ta?{
           badge:'தமிழ் வரைவு · 2025 பாடநூல் கலைச்சொற்களுடன் உருவாக்கப்பட்டது (ஆசிரியர் மீளாய்வு நிலுவையில்)',
           s1:'முதல் பார்வை',s2:'கண்டுபிடியுங்கள்',s3:'புரிந்துகொள்ளுங்கள்',s4:'ஏன் இது உண்மை?',s5:'நீங்களே முயற்சிக்கவும்',s6:'பாடநூலுடன் இணைப்பு',
@@ -749,12 +749,12 @@
     const grade9Concepts=grade9Stages(chapter.id);
     const statistics=chapter.id==='g9-ch8'&&window.TriggleStatisticsConcepts;
     const inlineChecks=conceptChecksOnly(chapter.id);
-    const stages=grade9Concepts??(chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):chapter.id==='g10-ch3'?(window.TRIGGLE_G10_CH3_PATH?.stages||[]):chapter.id==='g10-ch4'?(window.TRIGGLE_G10_CH4_PATH?.stages||[]):chapter.id==='g10-ch5'?(window.TRIGGLE_G10_CH5_PATH?.stages||[]):chapter.id==='g10-ch6'?(window.TRIGGLE_G10_CH6_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[]);
+    const stages=grade9Concepts??(chapter.id==='g9-ch1'?(window.TRIGGLE_SET_PATH?.stages||[]):chapter.id==='g9-ch2'?(window.TRIGGLE_REAL_PATH?.stages||[]):chapter.id==='g9-ch9'?(window.TRIGGLE_PROB_PATH?.stages||[]):chapter.id==='g10-ch2'?(window.TRIGGLE_G10_CH2_PATH?.stages||[]):chapter.id==='g10-ch3'?(window.TRIGGLE_G10_CH3_PATH?.stages||[]):chapter.id==='g10-ch4'?(window.TRIGGLE_G10_CH4_PATH?.stages||[]):chapter.id==='g10-ch5'?(window.TRIGGLE_G10_CH5_PATH?.stages||[]):chapter.id==='g10-ch6'?(window.TRIGGLE_G10_CH6_PATH?.stages||[]):chapter.id==='g10-ch7'?(window.TRIGGLE_G10_CH7_PATH?.stages||[]):matrixConcepts?matrixConcepts.scenes:[]);
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
     const chapterKinds=inlineChecks?baseKinds.filter(kind=>kind!=='quizzes'):baseKinds;
     const kinds=activityEntries.length?[...chapterKinds,'activities']:chapterKinds;
     const quizStages=stages.filter(stage=>!(stage.activity?.options&&stage.check));
-    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(inlineChecks||matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'||chapter.id==='g9-ch3')?0:quizStages.length,activities:activityEntries.length};
+    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(inlineChecks||matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'||chapter.id==='g10-ch7'||chapter.id==='g9-ch3')?0:quizStages.length,activities:activityEntries.length};
     const symbols={concepts:'◇',examples:'∑',exercises:'✎',quizzes:'✓',activities:'💡'};
     const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0,activities:counts.activities>0};
     const labelFor=kind=>({concepts:t.concepts,examples:t.examples,exercises:t.exercises,quizzes:t.quizzes,activities:t.activities})[kind];
