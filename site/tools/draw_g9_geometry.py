@@ -244,7 +244,61 @@ def exercise_43():
          +angle(p['C'],p['A'],p['B'],'25°',21,48)+labels(p,dict(O=(-2,12),A=(-12,0),B=(12,0),C=(4,-12),D=(4,13),P=(10,13))))
 
 
+def crossing(a,b,c,d):
+    ux,uy = b[0]-a[0],b[1]-a[1]
+    vx,vy = d[0]-c[0],d[1]-c[1]
+    t = ((c[0]-a[0])*vy-(c[1]-a[1])*vx)/(ux*vy-uy*vx)
+    return a[0]+t*ux,a[1]+t*uy
+
+
+def exercise_44():
+    round_figure('4-q1',dict(A=180,B=0,C=60,D=120),('AOB','ADCBA','AC'),
+        dict(A=(-13,0),B=(13,0),C=(12,-10),D=(-9,-12),O=(0,14)),lambda p:
+        angle(p['A'],p['D'],p['C'],'120°',14,33)+angle(p['B'],p['A'],p['C'],'x°',24,48))
+    for part in ('i','ii','iii'):
+        round_figure('4-q2-'+part,dict(A=180,C=0,D=70,E=120,B=280),('AOC','AEDCBA','AD'),
+            dict(A=(-13,0),C=(13,0),D=(10,-12),E=(-8,-12),B=(2,13),O=(0,13)),lambda p:
+            angle(p['C'],p['A'],p['D'],'35°',19,48)+angle(p['B'],p['A'],p['C'],'40°',20,47)
+            +angle(p['A'],p['D'],p['E'],'30°',20,47))
+    round_figure('4-q3',dict(A=220,B=320,C=60,D=88),('ABCDA',),
+        dict(A=(-13,7),B=(14,7),C=(14,-9),D=(-10,-12)),lambda p:
+        angle(p['D'],p['A'],p['B'],'',14)+text((144,150),'(2y+4)°')
+        +angle(p['A'],p['B'],p['C'],'',14)+text((191,146),'(6x−4)°')
+        +angle(p['B'],p['C'],p['D'],'',14)+text((191,65),'(4y−4)°')
+        +angle(p['C'],p['D'],p['A'],'',14)+text((148,53),'(7x+2)°'))
+    for part in ('i','ii'):
+        def mark(p):
+            P=crossing(p['A'],p['C'],p['B'],p['D'])
+            return (text((P[0]+13,P[1]+8),'P')+angle(p['C'],p['B'],p['D'],'40°',15,42)
+                    +angle(p['C'],p['A'],p['B'],'60°',15,38))
+        round_figure('4-q4-'+part,dict(A=230,B=350,C=110,D=190),('ABCDA','AC','BD'),
+            dict(A=(-10,12),B=(12,7),C=(0,-12),D=(-13,-3)),mark)
+
+    p=dict(O=(160,105),A=(92,54),B=(228,54),C=(109,173),D=(211,173),M=(160,54),L=(160,173))
+    save('4-q5',circle(p['O'],85)+edges(p,'AB','CD')+lines(p['M'],p['L'],color=ACCENT,dash=True)
+         +right(p['M'],p['A'],p['O'])+right(p['L'],p['C'],p['O'])+arrows(p['A'],p['B'])+arrows(p['D'],p['C'])
+         +labels(p,dict(A=(-13,-4),B=(13,-4),C=(-13,5),D=(13,5),O=(-13,0),M=(13,-11),L=(14,-12)))
+         +text((157,37),'8')+text((158,191),'6')+text((186,115),'7'))
+
+    a,b,c,d,o=(58,136),(262,136),(160,68),(160,136),(160,178.5)
+    save('4-q6',arc(o,110.5,direction(o,b),direction(o,a)-direction(o,b))+lines(a,b)+lines(c,d,dash=True)
+         +right(d,a,c)+labels(dict(A=a,B=b,C=c,D=d),dict(A=(-13,3),B=(13,3),C=(0,-13),D=(0,16)))
+         +text((172,107),'2')+text((160,181),'6')+lines((58,165),(262,165),color=BLUE)+lines((58,159),(58,171),color=BLUE)+lines((262,159),(262,171),color=BLUE))
+    round_figure('4-q7',dict(A=210,B=275,C=330),('ABCA','AOC'),
+        dict(A=(-13,4),B=(4,14),C=(13,5),O=(0,-13)),lambda p:angle(p['A'],p['B'],p['C'],'120°',13,34))
+
+    o=(160,112)
+    u,v=sqrt(11)*14,sqrt(20)*14
+    p=dict(O=o,P=(160+u,112-v),A=(104,112-v),B=(216,112-v),C=(160+u,42),D=(160+u,182))
+    save('4-q8',circle(o,84)+edges(p,'AB','CD')+right(p['P'],p['A'],p['C'])
+         +labels(p,dict(O=(-11,11),P=(-14,14),A=(-13,-7),B=(13,-7),C=(3,-13),D=(6,14))))
+    round_figure('4-q9',dict(P=230,Q=330,R=170),('PQRP','POQ'),
+        dict(P=(-12,11),Q=(12,9),R=(-13,-6),O=(0,-13)),lambda p:
+        angle(p['P'],p['O'],p['Q'],'100°',17,33)+angle(p['P'],p['Q'],p['R'],'30°',24,51))
+
+
 if __name__ == '__main__':
     exercise_41()
     exercise_42()
     exercise_43()
+    exercise_44()

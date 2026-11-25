@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<circle cx="160" cy="112" r="84" fill="none" stroke="#3067b1"/>
+<path d="M 104.000 49.390 L 216.000 49.390" fill="none" stroke="#263755"/>
+<path d="M 206.433 42.000 L 206.433 182.000" fill="none" stroke="#263755"/>
+<path d="M 197.433 49.390 L 197.433 40.390 L 206.433 40.390" fill="none" stroke="#973f19"/>
+<text x="149.000" y="123.000">O</text>
+<text x="192.433" y="63.390">P</text>
+<text x="91.000" y="42.390">A</text>
+<text x="229.000" y="42.390">B</text>
+<text x="209.433" y="29.000">C</text>
+<text x="212.433" y="196.000">D</text>
+</g>
+</svg>

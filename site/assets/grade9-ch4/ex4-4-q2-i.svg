@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<circle cx="160" cy="112" r="84" fill="none" stroke="#3067b1"/>
+<path d="M 76.000 112.000 L 160.000 112.000 L 244.000 112.000" fill="none" stroke="#263755"/>
+<path d="M 76.000 112.000 L 118.000 39.254 L 188.730 33.066 L 244.000 112.000 L 174.586 194.724 L 76.000 112.000" fill="none" stroke="#263755"/>
+<path d="M 76.000 112.000 L 188.730 33.066" fill="none" stroke="#263755"/>
+<text x="63.000" y="112.000">A</text>
+<text x="257.000" y="112.000">C</text>
+<text x="198.730" y="21.066">D</text>
+<text x="110.000" y="27.254">E</text>
+<text x="176.586" y="207.724">B</text>
+<text x="160.000" y="125.000">O</text>
+<path d="M 95.000 112.000 A 19 19 0 0 0 91.564 101.102" fill="none" stroke="#973f19"/>
+<text x="121.778" y="97.566">35°</text>
+<path d="M 91.321 124.856 A 20 20 0 0 0 96.000 112.000" fill="none" stroke="#973f19"/>
+<text x="120.166" y="128.075">40°</text>
+<path d="M 172.347 44.537 A 20 20 0 0 1 168.806 34.809" fill="none" stroke="#973f19"/>
+<text x="144.564" y="49.141">30°</text>
+</g>
+</svg>
