@@ -9,6 +9,7 @@ const auditedG9TrigTable=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EV
 const auditedG9TrigQ46=require('../../docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json');
 const auditedG9SourceChoices=require('../../docs/audit/AUD14_03_EX61_EX65_SOURCE_EVIDENCE.json');
 const [mensurationRatio]=require('../data/textbook-fidelity/g9-ch7-frontier-ratio.json').items;
+const compositionEvidence=new Map(require('../data/textbook-fidelity/g10-frontier-compositions.json').items.map(item=>[item.id,item]));
 const g9BilingualGeometry=require('../data/textbook-fidelity/g9-ch4-bilingual-20261124.json');
 const expectedGeometryIds=[
   '4.1-q2','4.1-q4','4.2-q1','4.2-q2','4.2-q3','4.2-q4',
@@ -526,6 +527,11 @@ for(const [grade,data] of Object.entries(classes)){
     original.steps=original.steps.slice(0,4);
     original.q.en=original.q.en.split(' (iii) Find the height')[0];
     original.answer=original.answer.split('; (iii) 60.5 inches')[0];
+   }
+   if(compositionEvidence.has(item.id)){
+    const previous=compositionEvidence.get(item.id).previousEnglish;
+    if(item.id==='c10-1-1-5-q1')original.steps[2]=previous.steps[2];
+    else Object.assign(original,previous);
    }
    assert.equal(crypto.createHash('sha256').update(JSON.stringify(original)).digest('hex'),preserved.sha256[item.id]);
    assert.match(item.q.ta,/\p{Script=Tamil}/u);

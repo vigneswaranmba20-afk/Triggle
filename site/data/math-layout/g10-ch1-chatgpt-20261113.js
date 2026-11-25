@@ -1693,6 +1693,7 @@ window.TriggleChapter1Math=Object.freeze({
   },
   getAnswer(record){
     const entry=item(record?.id);if(!entry)return null;
+    if(record.answerMath?.en)return record.answerMath.en;
     const segments=matchingParts(entry.answer,record.answer,record.id+'/answer');
     return segments.length===1?segments[0]:segments;
   }
