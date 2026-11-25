@@ -1095,7 +1095,7 @@ Batch,Order,Question ID,Typography changed,Prompt restored,Tamil baseline flag,L
 11,1094,c10-5-unit-q10,0,,1,320 360 390,"Bilingual 2025 Unit Exercise 5; two valid third vertices checked against the absolute area, and units reviewed",,pending,b9b1a071
 11,1095,c10-6-ex6-1-q1-i,0,,1,320 360 390,2025 Tamil PDF 264 / English PDF 255. Identity proofs and domains reviewed; restored visible Tamil Q2(i) prompt,,pending,b9b1a071
 11,1096,c10-6-ex6-1-q1-ii,0,,1,320 360 390,2025 Tamil PDF 264 / English PDF 255. Identity proofs and domains reviewed; restored visible Tamil Q2(i) prompt,,pending,b9b1a071
-11,1097,c10-6-ex6-1-q2-i,0,,1,320 360 390,2025 Tamil PDF 264 / English PDF 255. Identity proofs and domains reviewed; restored visible Tamil Q2(i) prompt,,pending,b9b1a071
+11,1097,c10-6-ex6-1-q2-i,0,Tamil proof instruction and formatted identity,1,320 360 390,2025 Tamil PDF 264 / English PDF 255. Identity proofs and domains reviewed; restored visible Tamil Q2(i) prompt,,pending,b9b1a071
 11,1098,c10-6-ex6-1-q2-ii,0,,1,320 360 390,2025 Tamil PDF 264 / English PDF 255. Identity proofs and domains reviewed; restored visible Tamil Q2(i) prompt,,pending,b9b1a071
 11,1099,c10-6-ex6-1-q3-i,0,,1,320 360 390,2025 Tamil PDF 264 / English PDF 255. Identity proofs and domains reviewed; restored visible Tamil Q2(i) prompt,,pending,b9b1a071
 11,1100,c10-6-ex6-1-q3-ii,0,,1,320 360 390,2025 Tamil PDF 264 / English PDF 255. Identity proofs and domains reviewed; restored visible Tamil Q2(i) prompt,,pending,b9b1a071
@@ -1162,29 +1162,29 @@ Batch,Order,Question ID,Typography changed,Prompt restored,Tamil baseline flag,L
 12,1161,c10-6-unit-q7-iv,0,,1,320 360 390,"2025 bilingual Unit Exercise 6; conditional identities, bearings, height and speed units reviewed",,pending,b9b1a071
 12,1162,c10-6-unit-q8,0,,1,320 360 390,"2025 bilingual Unit Exercise 6; conditional identities, bearings, height and speed units reviewed",,pending,b9b1a071
 12,1163,c10-6-unit-q9,0,,1,320 360 390,"2025 bilingual Unit Exercise 6; conditional identities, bearings, height and speed units reviewed",,pending,b9b1a071
-12,1164,c10-7-ex7-1-q1,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-12,1165,c10-7-ex7-1-q2,0,,1,390,"Check prompt, reasons 1 2 3 4 5 against prescribed textbook",,pending,b9b1a071
-12,1166,c10-7-ex7-1-q3,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-12,1167,c10-7-ex7-1-q4,0,,1,390,"Check prompt, reasons 1 2 3 4 5 against prescribed textbook",,pending,b9b1a071
-12,1168,c10-7-ex7-1-q5,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-12,1169,c10-7-ex7-1-q6,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-12,1170,c10-7-ex7-1-q7,0,,1,390,"Check prompt, reasons 1 2 3 4 5 against prescribed textbook",,pending,b9b1a071
-12,1171,c10-7-ex7-1-q8,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-12,1172,c10-7-ex7-1-q9,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-12,1173,c10-7-ex7-1-q10,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 against prescribed textbook",,pending,b9b1a071
-12,1174,c10-8-ex8-1-q1-i,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-12,1175,c10-8-ex8-1-q1-ii,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-12,1176,c10-8-ex8-1-q2,0,,1,390,"Check prompt, reasons 1 2 3 against prescribed textbook",,pending,b9b1a071
-12,1177,c10-8-ex8-1-q3,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-12,1178,c10-8-ex8-1-q4,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 against prescribed textbook",,pending,b9b1a071
-12,1179,c10-8-ex8-1-q5,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 against prescribed textbook",,pending,b9b1a071
-12,1180,c10-8-ex8-1-q6,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 against prescribed textbook",,pending,b9b1a071
-12,1181,c10-8-ex8-1-q7,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 against prescribed textbook",,pending,b9b1a071
-12,1182,c10-8-ex8-1-q8,0,,1,390,"Check prompt, reasons 1 2 3 4 5 against prescribed textbook",,pending,b9b1a071
-12,1183,c10-8-ex8-1-q9,0,,1,390,"Check prompt, reasons 1 2 3 4 against prescribed textbook",,pending,b9b1a071
-12,1184,c10-8-ex8-1-q10,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 7 against prescribed textbook",,pending,b9b1a071
-12,1185,c10-8-ex8-1-q11,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 7 against prescribed textbook",,pending,b9b1a071
-12,1186,c10-8-ex8-1-q12,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 7 against prescribed textbook",,pending,b9b1a071
-12,1187,c10-8-ex8-1-q13,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 7 against prescribed textbook",,pending,b9b1a071
-12,1188,c10-8-ex8-1-q14,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 7 against prescribed textbook",,pending,b9b1a071
-12,1189,c10-8-ex8-1-q15,0,,1,390,"Check prompt, reasons 1 2 3 4 5 6 7 against prescribed textbook",,pending,b9b1a071
+12,1164,c10-7-ex7-1-q1,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 296, English PDF 288; authored Tamil prompts, worked surface area arguments, radii, units and rounding verified",,pending,b9b1a071
+12,1165,c10-7-ex7-1-q2,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 296, English PDF 288; authored Tamil prompts, worked surface area arguments, radii, units and rounding verified",,pending,b9b1a071
+12,1166,c10-7-ex7-1-q3,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 296, English PDF 288; authored Tamil prompts, worked surface area arguments, radii, units and rounding verified",,pending,b9b1a071
+12,1167,c10-7-ex7-1-q4,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 296, English PDF 288; authored Tamil prompts, worked surface area arguments, radii, units and rounding verified",,pending,b9b1a071
+12,1168,c10-7-ex7-1-q5,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 296, English PDF 288; authored Tamil prompts, worked surface area arguments, radii, units and rounding verified",,pending,b9b1a071
+12,1169,c10-7-ex7-1-q6,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 296, English PDF 288; authored Tamil prompts, worked surface area arguments, radii, units and rounding verified",,pending,b9b1a071
+12,1170,c10-7-ex7-1-q7,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 296, English PDF 288; authored Tamil prompts, worked surface area arguments, radii, units and rounding verified",,pending,b9b1a071
+12,1171,c10-7-ex7-1-q8,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 296, English PDF 288; authored Tamil prompts, worked surface area arguments, radii, units and rounding verified",,pending,b9b1a071
+12,1172,c10-7-ex7-1-q9,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 296, English PDF 288; authored Tamil prompts, worked surface area arguments, radii, units and rounding verified",,pending,b9b1a071
+12,1173,c10-7-ex7-1-q10,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 296, English PDF 288; authored Tamil prompts, worked surface area arguments, radii, units and rounding verified",,pending,b9b1a071
+12,1174,c10-8-ex8-1-q1-i,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1175,c10-8-ex8-1-q1-ii,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1176,c10-8-ex8-1-q2,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1177,c10-8-ex8-1-q3,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1178,c10-8-ex8-1-q4,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1179,c10-8-ex8-1-q5,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked; TA Q5 says ten but lists nine wages; EN lists nine and says nine. Used all nine supplied amounts.",,pending,b9b1a071
+12,1180,c10-8-ex8-1-q6,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1181,c10-8-ex8-1-q7,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1182,c10-8-ex8-1-q8,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1183,c10-8-ex8-1-q9,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1184,c10-8-ex8-1-q10,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1185,c10-8-ex8-1-q11,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1186,c10-8-ex8-1-q12,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1187,c10-8-ex8-1-q13,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1188,c10-8-ex8-1-q14,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
+12,1189,c10-8-ex8-1-q15,0,Tamil question authored from 2025 textbook; English quantities and Tamil numerals checked,1,320 360 390,"Tamil PDF 328–329, English PDF 319–320; authored Tamil prompts, data series, frequencies, worked dispersion and units checked",,pending,b9b1a071
