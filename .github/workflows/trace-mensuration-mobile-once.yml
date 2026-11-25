@@ -1,9 +1,9 @@
-name: TRACE Mensuration focused mobile preflight
+name: TRACE Mensuration mobile preflight — native exponent verification
 
 on:
   push:
     branches: [trace/g10-mensuration-consolidated-20261125]
-    paths: [.github/workflows/trace-mensuration-mobile-once.yml]
+    paths: [.github/workflows/trace-mensuration-mobile-once.yml, site/tools/test_g10_ch7_ex75_browser.cjs]
 
 permissions:
   contents: read
