@@ -11,7 +11,7 @@ from typing import Any, Dict, List
 
 from .algebra import try_derive_algebra_from_prompt, verify_algebra_answer
 from .ch5_verifier import verify_ch5_answer
-from .derivations_g10_ch5 import CH5_DERIVATION_REGISTRY, Ch5DerivedResult
+from .derivations_g10_ch5 import Ch5DerivedResult, derive_ch5_for_item
 from .engine import run_audit as run_ch7_audit
 from .steps import extract_stem_assumptions, validate_steps
 from .tamil_consistency import validate_en_ta_consistency
@@ -50,8 +50,7 @@ def _audit_generic_chapter(
             deriv = try_derive_algebra_from_prompt(q_en)
             ans_status, ans_disc = verify_algebra_answer(item, deriv)
         else:
-            fn = CH5_DERIVATION_REGISTRY.get(qid)
-            deriv = fn() if fn else Ch5DerivedResult(False, "unregistered", "none", notes="No Ch5 derivation.")
+            deriv = derive_ch5_for_item(qid, item, is_concept=False)
             ans_status, ans_disc = verify_ch5_answer(item, deriv, is_concept=False)
 
         ans_raw = item.get("answer")
@@ -91,8 +90,7 @@ def _audit_generic_chapter(
             deriv = try_derive_algebra_from_prompt(q_en)
             c_ans_status, c_ans_disc = "UNVERIFIABLE", ""
         else:
-            fn = CH5_DERIVATION_REGISTRY.get(cid)
-            deriv = fn() if fn else Ch5DerivedResult(False, "unregistered", "none", notes="No Ch5 derivation.")
+            deriv = derive_ch5_for_item(cid, concept, is_concept=True)
             c_ans_status, c_ans_disc = verify_ch5_answer(concept, deriv, is_concept=True)
 
         records.append(

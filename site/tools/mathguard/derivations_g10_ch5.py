@@ -7,8 +7,12 @@ never reading existing answers or worked steps.
 
 from __future__ import annotations
 
+import hashlib
+import json
 import math
-from dataclasses import dataclass, field
+import re
+from dataclasses import dataclass
+from pathlib import Path
 from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import sympy as sp
@@ -21,11 +25,45 @@ from .coordinate_geometry import LineABC, Point
 class Ch5DerivedResult:
     verifiable: bool
     method: str
-    result_type: str  # "scalar" | "scalar_set" | "point" | "point_list" | "line" | "line_list" | "bool" | "label" | "pair_dict" | "none"
+    result_type: str  # "scalar" | "scalar_set" | "ordered_list" | "point" | "point_list" | "line" | "line_list" | "bool" | "label" | "pair_dict" | "multi_part" | "none"
     value: Any = None
     tolerance: float = 0.02
     figure_sourced: bool = False
+    expected_unit: str = ""
     notes: str = ""
+
+
+_FP_PATH = Path(__file__).resolve().parent / "ch5_source_fingerprints.json"
+CH5_SOURCE_FINGERPRINTS: Dict[str, str] = (
+    json.loads(_FP_PATH.read_text(encoding="utf-8")) if _FP_PATH.exists() else {}
+)
+
+
+def fingerprint_ch5_item(item: Dict[str, Any], is_concept: bool = False) -> str:
+    """Compute a deterministic SHA-256 fingerprint of question text and diagram only (never answers/steps)."""
+    q = (item.get("question") if is_concept else item.get("q")) or {}
+    q_en = re.sub(r"\s+", " ", str(q.get("en") or "")).strip()
+    fig = item.get("figure") or item.get("diagram") or ""
+    payload = json.dumps({"q_en": q_en, "fig": fig}, sort_keys=True, ensure_ascii=False)
+    return hashlib.sha256(payload.encode("utf-8")).hexdigest()[:16]
+
+
+def derive_ch5_for_item(qid: str, item: Dict[str, Any], is_concept: bool = False) -> Ch5DerivedResult:
+    """Derive Ch5 result only after verifying source fingerprint matches current question/diagram."""
+    fn = CH5_DERIVATION_REGISTRY.get(qid)
+    if not fn:
+        return Ch5DerivedResult(False, "unregistered", "none", notes="No Ch5 derivation.")
+    expected_fp = CH5_SOURCE_FINGERPRINTS.get(qid)
+    if expected_fp:
+        actual_fp = fingerprint_ch5_item(item, is_concept=is_concept)
+        if actual_fp != expected_fp:
+            return Ch5DerivedResult(
+                False,
+                "stale_derivation_invalidated",
+                "none",
+                notes=f"Source question/diagram changed (expected fp {expected_fp}, got {actual_fp}); cached derivation invalidated.",
+            )
+    return fn()
 
 
 def P(x: Any, y: Any) -> Point:
@@ -43,11 +81,11 @@ def _d_practice_20() -> Ch5DerivedResult:
 
 
 def _d_5_1_q1_i() -> Ch5DerivedResult:
-    return Ch5DerivedResult(True, "cg_triangle_area", "scalar", cg.polygon_area([P(1, -1), P(-4, 6), P(-3, -5)]))
+    return Ch5DerivedResult(True, "cg_triangle_area", "scalar", cg.polygon_area([P(1, -1), P(-4, 6), P(-3, -5)]), expected_unit="area")
 
 
 def _d_5_1_q1_ii() -> Ch5DerivedResult:
-    return Ch5DerivedResult(True, "cg_triangle_area", "scalar", cg.polygon_area([P(-10, -4), P(-8, -1), P(-3, -5)]))
+    return Ch5DerivedResult(True, "cg_triangle_area", "scalar", cg.polygon_area([P(-10, -4), P(-8, -1), P(-3, -5)]), expected_unit="area")
 
 
 def _d_5_1_q2_i() -> Ch5DerivedResult:
@@ -61,17 +99,18 @@ def _d_5_1_q2_ii() -> Ch5DerivedResult:
 
 def _d_5_1_q3_i() -> Ch5DerivedResult:
     p = sp.Symbol("p", real=True)
+    # "Vertices ... are taken in order" -> positive CCW signed area
     area = cg.signed_polygon_area([P(0, 0), (p, sp.Integer(8)), P(6, 2)])
-    sols = sp.solve(sp.Eq(area, 20), p) + sp.solve(sp.Eq(area, -20), p)
-    # Textbook takes positive signed orientation (vertices taken in order -> 2p - 48 = 40 -> p = 44)
-    return Ch5DerivedResult(True, "cg_triangle_area_solve_p", "scalar_set", [sp.Integer(44), sp.Integer(4)])
+    sols = sp.solve(sp.Eq(area, 20), p)
+    return Ch5DerivedResult(True, "cg_triangle_area_solve_p_ccw", "scalar", sols[0])
 
 
 def _d_5_1_q3_ii() -> Ch5DerivedResult:
     p = sp.Symbol("p", real=True)
+    # "Vertices ... are taken in order" -> positive CCW signed area
     area = cg.signed_polygon_area([(p, p), P(5, 6), P(5, -2)])
-    sols = sp.solve(sp.Eq(area, 32), p) + sp.solve(sp.Eq(area, -32), p)
-    return Ch5DerivedResult(True, "cg_triangle_area_solve_p", "scalar_set", sols)
+    sols = sp.solve(sp.Eq(area, 32), p)
+    return Ch5DerivedResult(True, "cg_triangle_area_solve_p_ccw", "scalar", sols[0])
 
 
 def _d_5_1_q4_i() -> Ch5DerivedResult:
@@ -88,18 +127,19 @@ def _d_5_1_q4_ii() -> Ch5DerivedResult:
 
 def _d_5_1_q5_i() -> Ch5DerivedResult:
     pts = cg.order_polygon_ccw([P(-9, -2), P(-8, -4), P(2, 2), P(1, -3)])
-    return Ch5DerivedResult(True, "cg_quad_area_ccw", "scalar", cg.polygon_area(pts))
+    return Ch5DerivedResult(True, "cg_quad_area_ccw", "scalar", cg.polygon_area(pts), expected_unit="area")
 
 
 def _d_5_1_q5_ii() -> Ch5DerivedResult:
-    return Ch5DerivedResult(True, "cg_quad_area", "scalar", cg.polygon_area([P(-9, 0), P(-8, 6), P(-1, -2), P(-6, -3)]))
+    return Ch5DerivedResult(True, "cg_quad_area", "scalar", cg.polygon_area([P(-9, 0), P(-8, 6), P(-1, -2), P(-6, -3)]), expected_unit="area")
 
 
 def _d_5_1_q6() -> Ch5DerivedResult:
     k = sp.Symbol("k", real=True)
+    # "vertices are taken in the order" -> positive CCW signed area
     area = cg.signed_polygon_area([P(-4, -2), (sp.Integer(-3), k), P(3, -2), P(2, 3)])
-    sols = sp.solve(sp.Eq(area, 28), k) + sp.solve(sp.Eq(area, -28), k)
-    return Ch5DerivedResult(True, "cg_quad_area_solve_k", "scalar_set", sols)
+    sols = sp.solve(sp.Eq(area, 28), k)
+    return Ch5DerivedResult(True, "cg_quad_area_solve_k_ccw", "scalar", sols[0])
 
 
 def _d_5_1_q7() -> Ch5DerivedResult:
@@ -117,7 +157,13 @@ def _d_5_1_q8() -> Ch5DerivedResult:
     B = (Pm[0] + Qm[0] - Rm[0], Pm[1] + Qm[1] - Rm[1])
     C = (Qm[0] + Rm[0] - Pm[0], Qm[1] + Rm[1] - Pm[1])
     area_abc = cg.polygon_area([A, B, C])
-    return Ch5DerivedResult(True, "cg_midpoints_triangle_area", "point_list", [A, B, C], notes=f"Area(ABC)={area_abc}")
+    area_pqr = cg.polygon_area([Pm, Qm, Rm])
+    return Ch5DerivedResult(
+        True,
+        "cg_midpoints_triangle_area_multipart",
+        "multi_part",
+        {"labeled_points": {"A": A, "B": B, "C": C}, "area_abc": area_abc, "area_ratio": sp.simplify(area_abc / area_pqr)},
+    )
 
 
 def _d_5_1_q9() -> Ch5DerivedResult:
@@ -246,7 +292,12 @@ def _d_5_3_q1_ii() -> Ch5DerivedResult:
 
 def _d_5_3_q2() -> Ch5DerivedResult:
     props = cg.line_properties(L(2, -2, 5))
-    return Ch5DerivedResult(True, "cg_line_props", "pair_dict", {"slope": props["slope"], "y_intercept": props["y_intercept"]})
+    return Ch5DerivedResult(
+        True,
+        "cg_line_props",
+        "pair_dict",
+        {"slope": props["slope"], "inclination": cg.angle_from_slope(props["slope"]), "y_intercept": props["y_intercept"]},
+    )
 
 
 def _d_5_3_q3() -> Ch5DerivedResult:
@@ -319,12 +370,12 @@ def _d_5_3_q12_ii() -> Ch5DerivedResult:
 
 def _d_5_3_q13_i() -> Ch5DerivedResult:
     p = cg.line_properties(L(3, -2, -6))
-    return Ch5DerivedResult(True, "cg_find_intercepts", "scalar_set", [p["x_intercept"], p["y_intercept"]])
+    return Ch5DerivedResult(True, "cg_find_intercepts", "ordered_list", [p["x_intercept"], p["y_intercept"]])
 
 
 def _d_5_3_q13_ii() -> Ch5DerivedResult:
     p = cg.line_properties(L(4, 3, 12))
-    return Ch5DerivedResult(True, "cg_find_intercepts", "scalar_set", [p["x_intercept"], p["y_intercept"]])
+    return Ch5DerivedResult(True, "cg_find_intercepts", "ordered_list", [p["x_intercept"], p["y_intercept"]])
 
 
 def _d_5_3_q14_i() -> Ch5DerivedResult:
@@ -515,9 +566,10 @@ def _d_unit_q3() -> Ch5DerivedResult:
 
 def _d_unit_q4() -> Ch5DerivedResult:
     k = sp.Symbol("k", real=True)
+    # Cyclic ABCD orientation -> positive CCW signed area
     area = cg.signed_polygon_area([P(-5, 7), (sp.Integer(-4), k), P(-1, -6), P(4, 5)])
-    sols = sp.solve(sp.Eq(area, 72), k) + sp.solve(sp.Eq(area, -72), k)
-    return Ch5DerivedResult(True, "cg_quad_area_solve_k", "scalar_set", sols)
+    sols = sp.solve(sp.Eq(area, 72), k)
+    return Ch5DerivedResult(True, "cg_quad_area_solve_k_ccw", "scalar", sols[0])
 
 
 def _d_unit_q5() -> Ch5DerivedResult:

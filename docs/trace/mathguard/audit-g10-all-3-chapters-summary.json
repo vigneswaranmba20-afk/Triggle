@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "engine": "TRACE MathGuard V1.3",
   "performance": {
-    "totalExecutionTimeMs": 30101.56,
-    "peakMemoryMB": 63.4
+    "totalExecutionTimeMs": 31489.75,
+    "peakMemoryMB": 65.21
   },
   "chapters": {
     "ch3_algebra": {

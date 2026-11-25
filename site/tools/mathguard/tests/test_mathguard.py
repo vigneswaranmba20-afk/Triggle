@@ -219,3 +219,11 @@ def test_v1_3_2_ch5_coverage():
     assert ch5_rep["counts"]["total"] == 110
     assert ch5_rep["answerVerificationCounts"]["PASS"] >= 105
     assert ch5_rep["answerVerificationCounts"].get("FAIL", 0) == 0
+
+
+def test_v1_3_2a_ch5_hardening_and_mutations():
+    from mathguard.ch5_mutation_tests import run_ch5_mutation_suite
+
+    res = run_ch5_mutation_suite(REPO_ROOT)
+    assert res["total"] >= 25
+    assert res["failed"] == 0, [c for c in res["cases"] if not c["passed"]]
