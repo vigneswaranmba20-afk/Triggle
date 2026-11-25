@@ -41,4 +41,6 @@ Independent Tamil editorial certification and teacher sign-off remain pending. T
 
 The consolidated release follows the repository's risk-based CI and GitHub Pages workflow. The mobile browser gate tests 320, 360, 390 and 412 px, both languages, readable KaTeX and graphs, navigation, correct and incorrect option feedback, and an offline reload.
 
+The manual Grade 9 release audit now exercises all five existing inline Venn operations and checks the fractions in the second Real Numbers explanation. These assertions replace the retired Venn launch control and the feedback-length heuristic.
+
 `site/tools/test_g10_ch3_final_release.cjs` checks all 97 new records. `TRIGGLE_ALGEBRA_EXHAUSTIVE=1` expands the browser gate from representative questions to every new record. The same suite can target the deployed site through `TRIGGLE_ALGEBRA_LIVE`.
