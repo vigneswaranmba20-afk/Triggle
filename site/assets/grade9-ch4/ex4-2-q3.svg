@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
-  <title id="t">Rectangle ABCD with intersecting diagonals for Exercise 4.2 Q3</title>
-  <desc id="desc">Rectangle ABCD with diagonals AC and BD intersecting at O, showing angle OAB = 46 deg and angle OBC to find.</desc>
-  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
-  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
-  <rect x="58" y="48" width="204" height="124" fill="#E6EFEA" fill-opacity="0.35" stroke="#181B20" stroke-width="2.2"/>
-  <line x1="58" y1="48" x2="262" y2="172" stroke="#166353" stroke-width="1.8"/>
-  <line x1="58" y1="172" x2="262" y2="48" stroke="#6E2933" stroke-width="1.8"/>
-  <circle cx="160" cy="110" r="3.2" fill="#181B20"/>
-  <text x="48" y="180" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="end" fill="#181B20">A</text>
-  <text x="270" y="180" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="start" fill="#181B20">B</text>
-  <text x="270" y="45" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="start" fill="#181B20">C</text>
-  <text x="48" y="45" font-family="system-ui,sans-serif" font-size="10.5" font-weight="700" text-anchor="end" fill="#181B20">D</text>
-  <text x="160" y="96" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">O</text>
-  <text x="92" y="164" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" fill="#6E2933">46°</text>
-  <text x="252" y="138" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="end" fill="#166353">∠OBC = ?</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<path d="M 90.470 187.000 L 229.530 187.000 L 229.530 43.000 L 90.470 43.000 L 90.470 187.000" fill="none" stroke="#263755"/>
+<path d="M 90.470 187.000 L 229.530 43.000" fill="none" stroke="#263755"/>
+<path d="M 229.530 187.000 L 90.470 43.000" fill="none" stroke="#263755"/>
+<path d="M 220.530 187.000 L 220.530 178.000 L 229.530 178.000" fill="none" stroke="#973f19"/>
+<path d="M 112.470 187.000 A 22 22 0 0 0 105.753 171.175" fill="none" stroke="#973f19"/>
+<text x="130.973" y="169.808">46°</text>
+<path d="M 214.247 171.175 A 22 22 0 0 1 229.530 165.000" fill="none" stroke="#973f19"/>
+<text x="213.047" y="146.204">?</text>
+<text x="79.470" y="199.000">A</text>
+<text x="240.530" y="199.000">B</text>
+<text x="240.530" y="31.000">C</text>
+<text x="79.470" y="31.000">D</text>
+<text x="160.000" y="100.000">O</text>
+</g>
 </svg>

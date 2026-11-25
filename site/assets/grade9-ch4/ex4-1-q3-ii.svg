@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<path d="M 70.000 172.000 L 250.000 172.000 L 250.000 52.000 L 70.000 52.000 L 70.000 172.000" fill="none" stroke="#263755"/>
+<path d="M 70.000 52.000 L 250.000 172.000" fill="none" stroke="#263755"/>
+<text x="59.000" y="186.000">A</text>
+<text x="261.000" y="186.000">B</text>
+<text x="261.000" y="38.000">C</text>
+<text x="59.000" y="38.000">D</text>
+<path d="M 75.000 112.000 L 65.000 112.000" fill="none" stroke="#973f19"/>
+<path d="M 255.000 112.000 L 245.000 112.000" fill="none" stroke="#973f19"/>
+<path d="M 157.000 177.000 L 157.000 167.000" fill="none" stroke="#973f19"/>
+<path d="M 163.000 177.000 L 163.000 167.000" fill="none" stroke="#973f19"/>
+<path d="M 157.000 57.000 L 157.000 47.000" fill="none" stroke="#973f19"/>
+<path d="M 163.000 57.000 L 163.000 47.000" fill="none" stroke="#973f19"/>
+</g>
+</svg>

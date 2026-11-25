@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<path d="M 91.686 56.000 L 51.000 112.000 L 91.686 168.000 L 237.571 112.000 L 91.686 56.000" fill="none" stroke="#263755"/>
+<path d="M 67.298 81.061 L 75.388 86.939" fill="none" stroke="#973f19"/>
+<path d="M 67.298 142.939 L 75.388 137.061" fill="none" stroke="#973f19"/>
+<path d="M 160.036 87.593 L 163.620 78.257" fill="none" stroke="#973f19"/>
+<path d="M 165.638 89.743 L 169.221 80.407" fill="none" stroke="#973f19"/>
+<path d="M 163.620 145.743 L 160.036 136.407" fill="none" stroke="#973f19"/>
+<path d="M 169.221 143.593 L 165.638 134.257" fill="none" stroke="#973f19"/>
+<path d="M 61.580 97.438 A 18 18 0 0 1 61.580 126.562" fill="none" stroke="#973f19"/>
+<text x="90.000" y="112.000">108°</text>
+<path d="M 215.165 103.399 A 24 24 0 0 0 215.165 120.601" fill="none" stroke="#973f19"/>
+<text x="181.571" y="112.000">42°</text>
+<text x="88.686" y="43.000">A</text>
+<text x="38.000" y="112.000">B</text>
+<text x="88.686" y="181.000">C</text>
+<text x="250.571" y="112.000">D</text>
+</g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
+<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
+<path d="M 45.000 62.603 L 144.883 62.603 L 86.000 128.000 L 186.490 172.741 L 45.000 172.741" fill="none" stroke="#263755"/>
+<path d="M 100.676 66.618 L 94.942 62.603 L 100.676 58.588" fill="none" stroke="#3067b1"/>
+<path d="M 121.479 176.756 L 115.745 172.741 L 121.479 168.726" fill="none" stroke="#3067b1"/>
+<text x="144.883" y="47.603">B</text>
+<text x="186.490" y="187.741">D</text>
+<text x="45.000" y="47.603">A</text>
+<text x="45.000" y="187.741">C</text>
+<text x="69.000" y="143.000">
+</text>
+<path d="M 125.883 62.603 A 19 19 0 0 0 132.170 76.723" fill="none" stroke="#973f19"/>
+<text x="108.342" y="78.873">48°</text>
+<path d="M 170.046 165.420 A 18 18 0 0 0 168.490 172.741" fill="none" stroke="#973f19"/>
+<text x="145.408" y="164.009">24°</text>
+<path d="M 100.052 112.394 A 21 21 0 1 0 105.184 136.541" fill="none" stroke="#973f19"/>
+<text x="47.852" y="136.109">x°</text>
+</g>
+</svg>

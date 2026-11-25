@@ -334,8 +334,11 @@ const g9Ch3CompleteNewIds=classes[9].items.filter(it=>/^g9-ch3-ex3\.(?:[3-9]|1[0
 assert.equal(g9Ch3CompleteNewIds.length,170,'170 new G9 Ch3 Ex 3.3–3.15 records');
 const g9Ch5CompleteNewIds=classes[9].items.filter(it=>/^g9-ch5-ex5\.[1-6]\b/.test(it.id)&&!Object.hasOwn(preserved.sha256,it.id)).map(it=>it.id);
 assert.equal(g9Ch5CompleteNewIds.length,50,'50 new G9 Ch5 Ex 5.1–5.6 records');
-const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ch3CompleteNewIds,...g9Ex64NewIds,...g9Ch5CompleteNewIds];
-assert.equal(approvedG9Ids.length,311);
+const g9GeometryEvidence=require('../data/textbook-fidelity/g9-ch4-geometry-2025.json').records;
+const g9GeometryNewIds=Object.keys(g9GeometryEvidence).filter(id=>!g9GeometryEvidence[id].preservedReviewedSha256);
+assert.equal(g9GeometryNewIds.length,75,'75 source-indexed new Grade 9 Geometry tasks');
+const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ch3CompleteNewIds,...g9Ex64NewIds,...g9Ch5CompleteNewIds,...g9GeometryNewIds];
+assert.equal(approvedG9Ids.length,386);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.deepEqual(approvedBatch.records.map(r=>r.id),approvedEx22);
@@ -660,6 +663,10 @@ for(const [grade,data] of Object.entries(classes)){
        }
        assert.equal(item.releaseStatus,'english-preview');
        assert(item.q.ta&&item.steps.every(step=>step.ta),'Tamil Exercise 1.2 prompt and explanations '+item.id);
+     }else if(g9GeometryNewIds.includes(item.id)){
+       assert.equal(JSON.stringify(item.q),JSON.stringify(g9GeometryEvidence[item.id].textbookPrompt));
+       assert.equal(item.translationReview,'pending');
+       assert(item.steps.every(step=>step.en&&step.ta&&step.why.en&&step.why.ta));
      }else if(g9Ch3CompleteNewIds.includes(item.id)||g9Ch5CompleteNewIds.includes(item.id)){
        assert.ok(item.q?.en&&item.q?.ta,'G9 bilingual prompt '+item.id);
        assert.ok(item.steps.length>=1&&item.steps.every(s=>s.en&&s.ta&&s.math?.latex),'G9 bilingual steps '+item.id);

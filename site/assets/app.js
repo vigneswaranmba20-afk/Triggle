@@ -52,7 +52,9 @@
  const mobile=matchMedia('(max-width:800px)');
  function esc(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  const plainMath=value=>Array.isArray(value)?value.map(plainMath).join(''):(value?.fallback??value);
- const isGeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2','4.3','4.4','4.5','4.unit'].includes(item.exercise);
+ const isG9GeometryExercise=item=>item.classNum===9&&item.chapter==='4'&&/^4\.[1-7]$/.test(item.exercise);
+ const isG10GeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2','4.3','4.4','4.5','4.unit'].includes(item.exercise);
+ const isGeometryExercise=item=>isG9GeometryExercise(item)||isG10GeometryExercise(item);
  const englishInTamilReader=text=>lang==='ta'&&/[a-z]{2}/i.test(text)&&!/\p{Script=Tamil}/u.test(text);
  function math(str){
   // Local typesetting: accessible group exponents and no cloud requests.
@@ -64,7 +66,7 @@
  // current exercise by activeList(), consistently for all Classes 9–12.
  const textbookExerciseList=chapter=>{
    const items=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
-   const sourceBatches=(grade===10&&['2','4','6'].includes(String(chapter?.number)))||(grade===9&&['1','3'].includes(String(chapter?.number)));
+   const sourceBatches=(grade===10&&['2','4','6'].includes(String(chapter?.number)))||(grade===9&&['1','3'].includes(String(chapter?.number)))||chapter?.id==='g9-ch4';
    if(!sourceBatches)return items;
    // Source-verified Grade 9 and Grade 10 exercise parts
    // arrive in independent batches. Sort only their navigation lists, preserving
@@ -537,12 +539,12 @@
   'c10-1-1-4-q2':{src:'./assets/grade10-ch1/ex1-4-q2.svg',alt:'Arrow diagram, table and graph of f(x) = x/2 - 1 from A to B with 9 unmapped',altTa:'f(x) = x/2 - 1 சார்பிற்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம் (பயிற்சி 1.4 வினா 2)',caption:'Original arrow diagram, table and plot for Exercise 1.4 Q2.',captionTa:'பயிற்சி 1.4 வினா 2-க்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம்.'},
   'c10-1-1-4-q3':{src:'./assets/grade10-ch1/ex1-4-q3.svg',alt:'Many-to-one arrow diagram, table and graph for f = {(1,2),(2,2),(3,2),(4,3),(5,4)}',altTa:'f = {(1,2),(2,2),(3,2),(4,3),(5,4)} சார்பிற்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம் (பயிற்சி 1.4 வினா 3)',caption:'Original arrow diagram, table and graph for Exercise 1.4 Q3.',captionTa:'பயிற்சி 1.4 வினா 3-க்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம்.'},
   'g9-ch7-ex7.1-q6':{src:'./assets/grade9-ch7/ex7-1-q6.svg',alt:'Outer triangle ABC with BC = 42 cm and CA = 34 cm, containing shaded right triangle ABD with AD = 12 cm, BD = 16 cm, and right angle at D.',altTa:'BC = 42 செ.மீ, CA = 34 செ.மீ கொண்ட முக்கோணம் ABC-க்குள் AD = 12 செ.மீ, BD = 16 செ.மீ மற்றும் D-இல் செங்கோணம் கொண்ட நிழலிடப்பட்ட முக்கோணம் ABD.',caption:'Textbook Fig. 7.8: Shaded right triangle ABD inside ΔABC',captionTa:'பாடநூல் படம் 7.8: ΔABC-க்குள் நிழலிடப்பட்ட செங்கோண முக்கோணம் ABD'},
-  'g9-ch4-ex4.1-q4':{src:'./assets/grade9-ch4/ex4-1-q4.svg',alt:'Two triangles ABC and FDE showing corresponding equal angles 60 and 70 deg with AB=DF.',altTa:'ΔABC ≅ ΔFDE (கோ-ப-கோ சர்வசமம்)',caption:'ΔABC ≅ ΔFDE (ASA congruence)',captionTa:'ΔABC ≅ ΔFDE (கோ-ப-கோ சர்வசமம்)'},
+  'g9-ch4-ex4.1-q4':{src:'./assets/grade9-ch4/ex4-1-q4.svg',alt:'Two triangles ABC and FDE showing corresponding equal angles 60 and 70 deg with AB=DF.',altTa:'ABC, DEF முக்கோணங்களில் AB = DF. B, D இல் 60°; C, E இல் 70°.',caption:'Triangles ABC and DEF with the given angles and equal sides.',captionTa:'கொடுக்கப்பட்ட கோணங்களும் சமப் பக்கங்களும் உள்ள ABC, DEF முக்கோணங்கள்.'},
   'g9-ch4-ex4.2-q3':{src:'./assets/grade9-ch4/ex4-2-q3.svg',alt:'Rectangle ABCD with diagonals AC and BD intersecting at O, showing angle OAB = 46 deg.',altTa:'செவ்வக மூலைவிட்டங்கள் O-இல் சமமாக வெட்டும்',caption:'Rectangle diagonals bisect equally at O',captionTa:'செவ்வக மூலைவிட்டங்கள் O-இல் சமமாக வெட்டும்'},
   'g9-ch4-ex4.2-q4':{src:'./assets/grade9-ch4/ex4-2-q4.svg',alt:'Rhombus with perpendicular diagonals bisecting into right triangle legs 6 cm and 8 cm.',altTa:'சாய்சதுர மூலைவிட்டங்கள் 90°-இல் இருசமக்கூறிடும்',caption:'Rhombus diagonals bisect at 90° (legs 6 cm, 8 cm)',captionTa:'சாய்சதுர மூலைவிட்டங்கள் 90°-இல் இருசமக்கூறிடும்'},
   'g9-ch4-ex4.2-q6':{src:'./assets/grade9-ch4/ex4-2-q6.svg',alt:'Triangle ABP and parallelogram ABCD sharing base AB between parallel lines.',altTa:'ஒரே அடி AB மற்றும் இணைகோடுகளுக்கு இடைப்பட்ட முக்கோணமும் இணைகரமும்',caption:'Triangle and parallelogram on the same base AB between parallels',captionTa:'ஒரே அடி AB மற்றும் இணைகோடுகளுக்கு இடைப்பட்ட முக்கோணமும் இணைகரமும்'},
-  'g9-ch4-ex4.3-q1':{src:'./assets/grade9-ch4/ex4-3-q1.svg',alt:'Circle centre O, radius 26 cm, half-chord 10 cm, perpendicular distance d to find.',altTa:'ஆரம் 26 செ.மீ, அரை நாண் 10 செ.மீ, செங்குத்துத் தொலைவு d = ?',caption:'Radius 26 cm, half-chord 10 cm, perpendicular distance d = ?',captionTa:'ஆரம் 26 செ.மீ, அரை நாண் 10 செ.மீ, செங்குத்துத் தொலைவு d = ?'},
-  'g9-ch4-ex4.3-q2':{src:'./assets/grade9-ch4/ex4-3-q2.svg',alt:'Circle centre O, distance 8 cm to chord 30 cm, radius r to find.',altTa:'அரை நாண் 15 செ.மீ, தொலைவு 8 செ.மீ, ஆரம் r = ?',caption:'Half-chord 15 cm, distance 8 cm, radius r = ?',captionTa:'அரை நாண் 15 செ.மீ, தொலைவு 8 செ.மீ, ஆரம் r = ?'},
+  'g9-ch4-ex4.3-q1':{src:'./assets/grade9-ch4/ex4-3-q1.svg',alt:'Circle with diameter 52 cm and chord 20 cm. A perpendicular from O meets the chord.',altTa:'52 செமீ விட்டமும் 20 செமீ நாணும் உள்ள வட்டம். O இலிருந்து நாணுக்குச் செங்குத்து வரையப்பட்டுள்ளது.',caption:'Diameter 52 cm and chord 20 cm.',captionTa:'விட்டம் 52 செமீ, நாண் 20 செமீ.'},
+  'g9-ch4-ex4.3-q2':{src:'./assets/grade9-ch4/ex4-3-q2.svg',alt:'Circle centre O, distance 8 cm to chord 30 cm, radius r to find.',altTa:'அரை நாண் 15 செ.மீ, தொலைவு 8 செ.மீ, ஆரம் r = ?',caption:'Chord 30 cm, perpendicular distance 8 cm.',captionTa:'நாண் 30 செமீ, செங்குத்துத் தொலைவு 8 செமீ.'},
   'g9-ch4-ex4.3-q4':{src:'./assets/grade9-ch4/ex4-3-q4.svg',alt:'Circle centre O, radius 15 cm, perpendicular distance 12 cm to chord AB.',altTa:'ஆரம் 15 செ.மீ, தொலைவு 12 செ.மீ, நாண் நீளம் AB = ?',caption:'Radius 15 cm, distance 12 cm, full chord AB = ?',captionTa:'ஆரம் 15 செ.மீ, தொலைவு 12 செ.மீ, நாண் நீளம் AB = ?'},
   'g9-ch4-ex4.3-q6':{src:'./assets/grade9-ch4/ex4-3-q6.svg',alt:'Two intersecting circles of radii 5 cm and 3 cm with centre distance 4 cm.',altTa:'ஆரங்கள் 5 செ.மீ, 3 செ.மீ; மையத் தொலைவு 4 செ.மீ',caption:'Radii 5 cm and 3 cm, centre distance 4 cm (3-4-5 right triangle)',captionTa:'ஆரங்கள் 5 செ.மீ, 3 செ.மீ; மையத் தொலைவு 4 செ.மீ'}
  };
@@ -699,15 +701,29 @@
   $('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   if(lang==='ta'&&!current.q?.ta)$('kindBadge').textContent+=' · தமிழ் மொழிபெயர்ப்பு நிலுவையில்';
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
-  const conceptPath = isGeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH;
-  const conceptIndexForQuestion = isGeometryExercise(current)
+  const conceptPath = isG10GeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH;
+  let conceptIndexForQuestion = isG10GeometryExercise(current)
     ? (conceptPath?.stages.findIndex(stage => stage.id === current.conceptId ||
         [stage.practiceId, stage.secondaryPracticeId, stage.tertiaryPracticeId].includes(current.id)) ?? -1)
     : (conceptPath?.conceptForQuestion(current) ?? -1);
+  const geometryLessons = window.TRIGGLE_GEOMETRY_LESSONS;
+  if (isG9GeometryExercise(current) && isTextbookExercise) {
+    conceptIndexForQuestion = current.geometryConcept ??
+      ({'4.1':1, '4.2':2, '4.3':4}[current.exercise] ?? -1);
+  }
+  const hintPanel = $('g9GeometryHint');
+  const geometryHint = isG9GeometryExercise(current) && isTextbookExercise &&
+    (current.hint || window.TriggleGrade9Geometry?.preservedHints[current.id.slice(9)]);
+  hintPanel.hidden = !geometryHint;
+  hintPanel.open = false;
+  if (geometryHint) {
+    hintPanel.querySelector('summary').textContent = lang === 'ta' ? 'குறிப்பு' : 'Hint';
+    hintPanel.querySelector('p').textContent = tr(geometryHint);
+  }
   const relatedConcept = $('chapter8QuestionConcept');
   relatedConcept.hidden = conceptIndexForQuestion < 0;
   if (conceptIndexForQuestion >= 0) {
-    const stage = conceptPath.stages[conceptIndexForQuestion];
+    const stage = isG9GeometryExercise(current) ? geometryLessons[conceptIndexForQuestion] : conceptPath.stages[conceptIndexForQuestion];
     relatedConcept.textContent = (lang === 'ta' ? 'கருத்து · ' : 'Concept · ') + tr(stage.title);
     relatedConcept.onclick = () => openChapterSection('concepts', chapterForItem(current), conceptIndexForQuestion);
   }
@@ -782,8 +798,12 @@
   let graphic=figSpec?{html:textbookFigureImage(current,78),caption:tr(figSpec.caption)||'2025 textbook figure.'}:(window.TriggleSetVenn?.render(current,lang)||window.TriggleConcept?.render(context));
   if(!graphic){let svg='';if(current.diagram&&typeof current.diagram==='object')svg=window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)});else svg=window.TriggleDraw.drawSimple(current.diagram||'identity');graphic={html:svg,caption:lang==='ta'?'படம் விளக்கத்திற்காக மட்டுமே; அளவுப்படி இல்லாமல் இருக்கலாம்.':'Original conceptual illustration; not necessarily drawn to scale.'}}
   $('diagramContent').innerHTML=graphic.html;
+  if(current.geometryConstruction) {
+   window.TriggleGeometryConstruction.mount($('diagramContent'),current.geometryConstruction,current.steps,lang);
+  }
   $('visualTitle').textContent=tr(figSpec?.caption)||tr(current.title);
   // Same final answer inside glass viewer lets students compare regions to result.
+  $('diagramCompare').hidden=isG9GeometryExercise(current);
   $('diagramCompareAnswer').innerHTML=$('answerText').innerHTML;
   $('diagramCompareLabel').textContent=ui('finalAnswer');
   $('figureDialog').showModal();

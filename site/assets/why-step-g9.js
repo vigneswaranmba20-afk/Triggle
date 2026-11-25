@@ -73,14 +73,21 @@ function render(event){
  if(!root)return;
  root.querySelectorAll('details.why-step-g9').forEach(x=>x.remove());
  if(data?.grade!==9||!data.item||!window.TriggleWhyStepG9?.hints)return;
- const item=data.item,hint=window.TriggleWhyStepG9.hints[item.id];
+ const item=data.item, geometry=window.TriggleGrade9Geometry?.preservedHints[item.id.slice(9)];
+ const legacy=window.TriggleWhyStepG9.hints[item.id] ||
+  (item.id.startsWith('g9-ch4-ex') && geometry && {...geometry,step:0,expected:item.steps[0].en});
+ const hints=item.geometryConcept === undefined ? [legacy] : item.steps.map((step,index) =>
+  step.why && {...step.why,step:index,expected:step.en});
+ const list=root.querySelectorAll('li.worked-step:not(.final-answer-step)');
+ const lang=data.lang==='ta'?'ta':'en';
+ for(const hint of hints) appendHint(item,hint,list,lang);
+}
+function appendHint(item,hint,list,lang){
  if(!hint||!Number.isInteger(hint.step)||hint.step<0)return;
  const original=item.steps?.[hint.step];
  if(typeof original?.en!=='string'||typeof hint.expected!=='string'||!original.en.includes(hint.expected))return;
- const list=root.querySelectorAll('li.worked-step:not(.final-answer-step)');
  const li=list[hint.step],body=li?.children[1];
- if(!body||!body.querySelector('.step-equation')||li.classList.contains('twd-worked-step'))return;
- const lang=data.lang==='ta'?'ta':'en';
+ if(!body||(!original.why&&!item.id.startsWith('g9-ch4-ex')&&!body.querySelector('.step-equation'))||li.classList.contains('twd-worked-step'))return;
  const details=el('details','why-step-g9');
  details.dataset.question=item.id;details.dataset.step=String(hint.step+1);
  const summary=el('summary',null,lang==='ta'?'ஏன் இந்தப் படி?':'Why this step?');

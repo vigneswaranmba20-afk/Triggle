@@ -149,7 +149,7 @@ function loadContext(){const context={window:{}};vm.createContext(context);
   if(m[1].startsWith('data/')&&!m[1].endsWith('g9-clear-math.js'))vm.runInContext(fs.readFileSync(path.join(root,m[1]),'utf8'),context,{filename:m[1]});
  }return context.window;
 }
-function load(){return loadContext().TRIGGLE_CLASSES[9].items.filter(q=>q.kind!=='textbook-example'&&!/(?:^|[-_])(?:worked[-_])?examples?(?:[-_]|$)/i.test(q.id)&&!/^\s*(?:Worked\s+)?Example\b/i.test(q.label?.en||''));}
+function load({legacyNotationOnly=false}={}){return loadContext().TRIGGLE_CLASSES[9].items.filter(q=>(!legacyNotationOnly||q.notationSource!=='authored')&&q.kind!=='textbook-example'&&!/(?:^|[-_])(?:worked[-_])?examples?(?:[-_]|$)/i.test(q.id)&&!/^\s*(?:Worked\s+)?Example\b/i.test(q.label?.en||''));}
 
 // Split the four numbered choices before compiling formulas. In these source
 // records, choices start on a new line and are separated by a row break or
@@ -168,7 +168,7 @@ function compileQuestion(text, compile) {
 }
 
 function build(){
- const extended=require('./g9_math_compiler.cjs'),items=load();
+ const extended=require('./g9_math_compiler.cjs'),items=load({legacyNotationOnly:true});
  const authored=JSON.parse(fs.readFileSync(path.join(root,'data/math-layout/g9-authored-math.json'),'utf8'));
  const records=items.map(q=>{
   const overrides=authored[q.id];
