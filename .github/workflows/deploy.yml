@@ -85,33 +85,41 @@ jobs:
       - name: Upload website
         uses: actions/upload-pages-artifact@v4
         with:
+          name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
           path: _pages
 
-      # GitHub's artifact listing can lag the successful upload, causing deploy-pages
-      # to see zero artifacts; failed-job reruns may create duplicate names.
-      # On a fresh workflow run, verify a single indexed Pages artifact before deploy.
+      # Give the Actions artifact service and the Pages deployment lookup time
+      # to converge. Run-attempt-specific names avoid collisions on job reruns.
       - name: Wait for Pages artifact indexing
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
+          PAGES_ARTIFACT: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
         run: |
           set -euo pipefail
-          for attempt in $(seq 1 12); do
-            count=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts" \
-              --jq '[.artifacts[] | select(.name == "github-pages" and .expired == false)] | length')
-            if [[ "$count" == "1" ]]; then
-              echo "PASS: exactly one GitHub Pages artifact indexed"
+          last_id=""
+          for attempt in $(seq 1 18); do
+            ids=$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts" \
+              --jq '[.artifacts[] | select(.name == "'"${PAGES_ARTIFACT}"'" and .expired == false and .size_in_bytes > 0) | .id] | join(",")')
+            if [[ "$ids" =~ ^[0-9]+$ && "$ids" == "$last_id" ]]; then
+              echo "PASS: a single stable Pages artifact indexed: $ids"
+              # A successful REST lookup alone was not sufficient on run 45527962080.
+              # Allow the separate deploy-pages artifact lookup to catch up.
+              sleep 20
               exit 0
             fi
-            echo "::notice::Indexed Pages artifacts: $count (attempt $attempt/12)"
+            last_id="$ids"
+            echo "::notice::Waiting for stable Pages artifact (attempt $attempt/18)"
             sleep 5
           done
-          echo "::error::Pages artifact indexing did not settle to exactly one item" >&2
+          echo "::error::Pages artifact indexing did not settle to one stable item" >&2
           exit 1
 
       - name: Publish website
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages-${{ github.run_id }}-${{ github.run_attempt }}
 
       - name: Verify freshly deployed Pages source
         shell: bash
@@ -126,6 +134,9 @@ jobs:
             data/class-9.js
             data/textbook-exercises/g9-ch6-ex6-4-q2-q3-en.js
             data/g9-clear-math.js
+            data/textbook-exercises/g10-ch7-ex7-4.js
+            data/textbook-exercises/g10-ch7-ex7-5.js
+            data/textbook-exercises/g10-ch7-unit7.js
             assets/app.js
           )
           for attempt in $(seq 1 18); do
@@ -141,7 +152,7 @@ jobs:
               fi
             done
             if (( matching )); then
-              echo "PASS: Pages HTML, SW, G9 source/exercise extension/math layout, and app JS match tested commit $GITHUB_SHA"
+              echo "PASS: Pages HTML, SW, G9 source/math layout, all three new G10 Mensuration exercise files, and app JS match tested commit $GITHUB_SHA"
               exit 0
             fi
             sleep 10
