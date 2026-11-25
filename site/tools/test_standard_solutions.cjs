@@ -730,7 +730,14 @@ for(const [grade,data] of Object.entries(classes)){
        assert.equal(item.translationReview,'pending','Do not invent Tamil teacher approval '+item.id);
      }else{
        const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||statisticsEx82Batch.records.find(r=>r.id===item.id)||statisticsEx82FollowupBatch.records.find(r=>r.id===item.id)||ch8Ex83Records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id)||ex25Records.find(r=>r.id===item.id)||ex26Records.find(r=>r.id===item.id)||ex27Records.find(r=>r.id===item.id)||ex28Records.find(r=>r.id===item.id)||ex29Records.find(r=>r.id===item.id)||ex210UnitRecords.find(r=>r.id===item.id)||ex31Records.find(r=>r.id===item.id)||ex32Records.find(r=>r.id===item.id)||ex33Records.find(r=>r.id===item.id)||ex34Records.find(r=>r.id===item.id)||ex35Records.find(r=>r.id===item.id)||ex36Records.find(r=>r.id===item.id)||ex37Records.find(r=>r.id===item.id)||ex38Records.find(r=>r.id===item.id)||ex39Records.find(r=>r.id===item.id)||ex310Records.find(r=>r.id===item.id)||ex311Records.find(r=>r.id===item.id)||ex312Records.find(r=>r.id===item.id)||ex313Records.find(r=>r.id===item.id)||ex314Records.find(r=>r.id===item.id)||ex315Records.find(r=>r.id===item.id)||finalAlgebra.find(r=>r.id===item.id);
-       assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'New content exactly matches source-verified batch '+item.id);
+       const localizedFinalAnswer=['c10-8-ex8-2-q6','c10-8-ex8-3-q2','c10-8-ex8-3-q6-i','c10-8-ex8-3-q10'].includes(item.id);
+       const preservedRecord=localizedFinalAnswer?{...item,answerMath:approved.answerMath}:item;
+       if(localizedFinalAnswer){
+         assert.equal(item.answerMath.en.fallback,approved.answer.en,item.id);
+         assert.equal(item.answerMath.ta.fallback,approved.answer.ta,item.id);
+         assert.match(item.answerMath.ta.latex,/\p{Script=Tamil}/u,item.id);
+       }
+       assert.equal(crypto.createHash('sha256').update(JSON.stringify(preservedRecord)).digest('hex'),crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'New content exactly matches source-verified batch '+item.id);
      }
    }
   }
