@@ -24,6 +24,7 @@
  window.TriggleG10GeometryTamil?.(classes[10].items);
  window.TriggleG10FrontierTamilAnswers?.(classes[10].items);
  window.TriggleG10SourceTables?.(classes[10].items);
+ window.TriggleG10CoordinateFrontier?.(classes[10].items);
  window.TriggleG9RealFrontier?.(classes[9].items);
  window.TriggleG9AlgebraTamilAnswers?.(classes[9].items);
  window.TriggleG9StatisticsTables?.(classes[9].items);
