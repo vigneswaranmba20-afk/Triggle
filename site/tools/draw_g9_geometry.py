@@ -297,8 +297,21 @@ def exercise_44():
         angle(p['P'],p['O'],p['Q'],'100°',17,33)+angle(p['P'],p['Q'],p['R'],'30°',24,51))
 
 
+def construction_bases():
+    names = ['LMN','ABC','ABC','PQR','PQR','ABC','ABC','PQR']
+    lengths = [7.5,4,6,5,7,6.5,6,4.5]
+    more_names = ['ABC','PQR','ABC','QRP','ABC','ABC','ABC','ABC']
+    more_lengths = [8,4.5,5,7,6.5,8,9,6]
+    for section, vertices, bases in [(5,names,lengths),(6,more_names,more_lengths)]:
+        for n,(v,length) in enumerate(zip(vertices,bases),start=1):
+            a,b = (160-11*length,112),(160+11*length,112)
+            save(f'{section}-q{n}',lines(a,b)+text((a[0]-12,112),v[0])+text((b[0]+12,112),v[1])
+                 +text((160,93),str(length)))
+
+
 if __name__ == '__main__':
     exercise_41()
     exercise_42()
     exercise_43()
     exercise_44()
+    construction_bases()

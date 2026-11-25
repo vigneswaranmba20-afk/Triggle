@@ -789,6 +789,9 @@
   let graphic=figSpec?{html:textbookFigureImage(current,78),caption:tr(figSpec.caption)||'2025 textbook figure.'}:(window.TriggleSetVenn?.render(current,lang)||window.TriggleConcept?.render(context));
   if(!graphic){let svg='';if(current.diagram&&typeof current.diagram==='object')svg=window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)});else svg=window.TriggleDraw.drawSimple(current.diagram||'identity');graphic={html:svg,caption:lang==='ta'?'படம் விளக்கத்திற்காக மட்டுமே; அளவுப்படி இல்லாமல் இருக்கலாம்.':'Original conceptual illustration; not necessarily drawn to scale.'}}
   $('diagramContent').innerHTML=graphic.html;
+  if(current.geometryConstruction) {
+   window.TriggleGeometryConstruction.mount($('diagramContent'),current.geometryConstruction,current.steps,lang);
+  }
   $('visualTitle').textContent=tr(figSpec?.caption)||tr(current.title);
   // Same final answer inside glass viewer lets students compare regions to result.
   $('diagramCompareAnswer').innerHTML=$('answerText').innerHTML;
