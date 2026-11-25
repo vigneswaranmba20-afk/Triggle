@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "engine": "TRACE MathGuard V1.3",
   "performance": {
-    "totalExecutionTimeMs": 35333.54,
-    "peakMemoryMB": 65.77
+    "totalExecutionTimeMs": 36988.31,
+    "peakMemoryMB": 66.03
   },
   "chapters": {
     "ch3_algebra": {
@@ -13,7 +13,8 @@
         "total": 153
       },
       "answerVerificationCounts": {
-        "PASS": 153
+        "PASS": 149,
+        "UNVERIFIABLE": 4
       },
       "intermediateStepCounts": {
         "UNVERIFIABLE": 34,

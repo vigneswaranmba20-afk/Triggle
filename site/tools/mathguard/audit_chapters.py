@@ -153,6 +153,7 @@ def run_all_3_chapters_audit(repo_root: Path, out_dir: Path) -> Dict[str, Any]:
     out_dir.mkdir(parents=True, exist_ok=True)
     (out_dir / "audit-g10-ch3.json").write_text(json.dumps(ch3_report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     (out_dir / "audit-g10-ch5.json").write_text(json.dumps(ch5_report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    (out_dir / "audit-g10-ch7.json").write_text(json.dumps(ch7_report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
     summary = {
         "schemaVersion": 1,

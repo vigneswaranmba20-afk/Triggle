@@ -121,5 +121,29 @@ def run_ch3_mutation_suite(repo_root: Path) -> Dict[str, Any]:
     _check_ans("ch3-ctrl-quad-mult", "c10-3-ex3-9-q1-ii", "equivalent_quad_multiple", "6x² − 10x + 24 = 0", ("PASS",))
     _check_ans("ch3-ctrl-sqrt-neg", "c10-3-ex3-7-q2-i", "equivalent_abs_sqrt", "|−2x − 5|", ("PASS",))
 
+    # 11. V1.3.3a Hardening: proof conclusions, principal sqrt sign, singularities, units, tuple labels, ragged matrices
+    _check_ans("ch3-mut-proof-negated", "c10-3-ex3-13-q3", "negated_proof", "Not proved: b, a, c are not in arithmetic progression.", ("FAIL",))
+    _check_ans("ch3-mut-proof-wrong-conc", "c10-3-ex3-13-q4", "contradictory_proof_conclusion", "Hence proved: the roots are real and equal.", ("FAIL",))
+    _check_ans("ch3-mut-proof-incomplete", "c10-3-ex3-6-q6", "incomplete_proof_conclusion", "Hence proved.", ("FAIL",))
+
+    _check_ans("ch3-mut-sqrt-neg-outer", "c10-3-ex3-7-q2-i", "negative_outer_sqrt", "−|2x + 5|", ("FAIL",))
+    _check_ans("ch3-mut-sqrt-no-bars", "c10-3-ex3-7-q2-i", "missing_abs_bars", "2x + 5", ("FAIL",))
+
+    _check_ans("ch3-mut-new-singularity", "c10-3-ex3-4-q1-i", "new_singularity", "((x − 1)(x − 5))/(x(x − 5))", ("FAIL",))
+
+    _check_ans("ch3-mut-wrong-unit-speed", "c10-3-ex3-12-q3", "dimensional_mismatch", "45 kg", ("FAIL",))
+    _check_ans("ch3-mut-wrong-unit-area", "c10-3-ex3-12-q2", "dimensional_mismatch", "1.5 m²", ("FAIL",))
+    _check_ans("ch3-ctrl-unit-cm-to-m", "c10-3-ex3-12-q2", "valid_unit_conversion", "150 cm", ("PASS",))
+
+    _check_ans("ch3-mut-tuple-labels", "c10-3-ex3-1-q1-i", "swapped_tuple_labels", "(y, x, z) = (2, −1, 4)", ("FAIL",))
+    _check_ans("ch3-mut-contradict-nature", "c10-3-ex3-13-q1-i", "contradictory_classification", "Real and unequal and real and equal", ("UNVERIFIABLE", "FAIL"))
+
+    from .algebra_parser import parse_matrix
+    ragged = parse_matrix("[[1, 2], [3]]")
+    cases.append({
+        "caseId": "ch3-mut-ragged-matrix", "qid": "algebra_parser", "category": "malformed_matrix",
+        "expected": ["None"], "observed": str(ragged), "passed": ragged is None, "reason": "",
+    })
+
     passed = sum(1 for c in cases if c["passed"])
     return {"total": len(cases), "passed": passed, "failed": len(cases) - passed, "cases": cases}

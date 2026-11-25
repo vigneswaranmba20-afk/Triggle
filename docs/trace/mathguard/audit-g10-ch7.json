@@ -12,8 +12,8 @@
     "concepts": 9,
     "overallStatusCounts": {
       "PASS": 23,
-      "FAIL": 4,
-      "PARTIAL": 43,
+      "FAIL": 3,
+      "PARTIAL": 44,
       "UNVERIFIABLE": 1
     },
     "answerVerificationCounts": {
@@ -22,10 +22,10 @@
       "UNVERIFIABLE": 1
     },
     "intermediateStepCounts": {
-      "PASS": 33,
-      "FAIL": 3,
-      "PARTIAL": 20,
-      "UNVERIFIABLE": 15
+      "PASS": 34,
+      "FAIL": 2,
+      "PARTIAL": 19,
+      "UNVERIFIABLE": 16
     },
     "tamilValidationCounts": {
       "PASS": 50,
@@ -47,7 +47,7 @@
       "answer_status": "PASS",
       "step_status": "PARTIAL",
       "tamil_status": "MISSING",
-      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [1, 2]",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [1]",
       "severity": "minor",
       "classification": "Parser limitation",
       "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
@@ -67,8 +67,7 @@
           "passedChains": 4,
           "failedChains": [],
           "unparsedSteps": [
-            1,
-            2
+            1
           ],
           "contextApplied": [
             "positive_physical_domain"
@@ -252,11 +251,11 @@
       "existing_result": "Height of the tent ≈ 18.25 m.",
       "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "PARTIAL",
+      "step_status": "PASS",
       "tamil_status": "MISSING",
-      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [1]",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator)",
       "severity": "minor",
-      "classification": "Parser limitation",
+      "classification": "Missing mathematical context",
       "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
@@ -272,9 +271,7 @@
           "checkedChains": 5,
           "passedChains": 5,
           "failedChains": [],
-          "unparsedSteps": [
-            1
-          ],
+          "unparsedSteps": [],
           "contextApplied": [
             "pi_substitution_implication",
             "env_numeric_approx"
@@ -574,8 +571,8 @@
           "observedDimension": "length"
         },
         "stepChecks": {
-          "checkedChains": 5,
-          "passedChains": 4,
+          "checkedChains": 4,
+          "passedChains": 3,
           "failedChains": [
             {
               "stepIndex": 3,
@@ -629,8 +626,8 @@
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 4,
-          "passedChains": 4,
+          "checkedChains": 2,
+          "passedChains": 2,
           "failedChains": [],
           "unparsedSteps": [
             2
@@ -671,15 +668,13 @@
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 3,
-          "passedChains": 3,
+          "checkedChains": 1,
+          "passedChains": 1,
           "failedChains": [],
           "unparsedSteps": [
             0
           ],
-          "contextApplied": [
-            "pi_substitution_implication"
-          ]
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -958,16 +953,14 @@
           "observedDimension": "volume"
         },
         "stepChecks": {
-          "checkedChains": 7,
-          "passedChains": 7,
+          "checkedChains": 3,
+          "passedChains": 3,
           "failedChains": [],
           "unparsedSteps": [
             0,
             1
           ],
-          "contextApplied": [
-            "positive_physical_domain"
-          ]
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [
@@ -1000,7 +993,7 @@
       "answer_status": "PASS",
       "step_status": "PARTIAL",
       "tamil_status": "PASS",
-      "discrepancy": "Unparsed step indices: [2, 3]",
+      "discrepancy": "Unparsed step indices: [2]",
       "severity": "minor",
       "classification": "Parser limitation",
       "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
@@ -1019,8 +1012,7 @@
           "passedChains": 2,
           "failedChains": [],
           "unparsedSteps": [
-            2,
-            3
+            2
           ],
           "contextApplied": []
         },
@@ -1414,29 +1406,22 @@
       "validation_method": "sphere_vs_enclosing_cylinder_ratio",
       "independently_derived_result": "4*pi*r**2 : 4*pi*r**2 (simplified ratio 1)",
       "existing_result": "1 : 1.",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 0, 'line': '\\\\begin{aligned} Area (i) =4\\\\pi r^2', 'lhs': 'A*a*e*i*r', 'rhs': '4*pi*r**2'}]",
-      "severity": "major",
-      "classification": "Confirmed mathematical error",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Intermediate steps have no verifiable equality chains",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "ratioMatched": "1 : 1"
         },
         "stepChecks": {
-          "checkedChains": 1,
+          "checkedChains": 0,
           "passedChains": 0,
-          "failedChains": [
-            {
-              "stepIndex": 0,
-              "line": "\\begin{aligned} Area (i) =4\\pi r^2",
-              "lhs": "A*a*e*i*r",
-              "rhs": "4*pi*r**2"
-            }
-          ],
+          "failedChains": [],
           "unparsedSteps": [],
           "contextApplied": []
         },
@@ -1474,8 +1459,8 @@
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 3,
-          "passedChains": 3,
+          "checkedChains": 2,
+          "passedChains": 2,
           "failedChains": [],
           "unparsedSteps": [
             1
@@ -1602,8 +1587,8 @@
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 5,
-          "passedChains": 5,
+          "checkedChains": 3,
+          "passedChains": 3,
           "failedChains": [],
           "unparsedSteps": [
             2
@@ -1740,16 +1725,14 @@
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 4,
-          "passedChains": 4,
+          "checkedChains": 2,
+          "passedChains": 2,
           "failedChains": [],
           "unparsedSteps": [
             1,
             2
           ],
-          "contextApplied": [
-            "positive_physical_domain"
-          ]
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2083,7 +2066,9 @@
           "checkedChains": 0,
           "passedChains": 0,
           "failedChains": [],
-          "unparsedSteps": [],
+          "unparsedSteps": [
+            0
+          ],
           "contextApplied": []
         },
         "tamilChecks": {
@@ -2742,8 +2727,8 @@
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 4,
-          "passedChains": 4,
+          "checkedChains": 3,
+          "passedChains": 3,
           "failedChains": [],
           "unparsedSteps": [
             1
@@ -2832,8 +2817,8 @@
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 4,
-          "passedChains": 4,
+          "checkedChains": 2,
+          "passedChains": 2,
           "failedChains": [],
           "unparsedSteps": [
             1,
@@ -2875,13 +2860,11 @@
           "matchType": "symbolic_latex"
         },
         "stepChecks": {
-          "checkedChains": 3,
-          "passedChains": 3,
+          "checkedChains": 2,
+          "passedChains": 2,
           "failedChains": [],
           "unparsedSteps": [],
-          "contextApplied": [
-            "positive_physical_domain"
-          ]
+          "contextApplied": []
         },
         "tamilChecks": {
           "flags": [],
@@ -2923,8 +2906,8 @@
           "observedDimension": "volume"
         },
         "stepChecks": {
-          "checkedChains": 3,
-          "passedChains": 3,
+          "checkedChains": 2,
+          "passedChains": 2,
           "failedChains": [],
           "unparsedSteps": [
             1
@@ -2968,13 +2951,15 @@
           ]
         },
         "stepChecks": {
-          "checkedChains": 1,
-          "passedChains": 1,
+          "checkedChains": 2,
+          "passedChains": 2,
           "failedChains": [],
           "unparsedSteps": [
             0
           ],
-          "contextApplied": []
+          "contextApplied": [
+            "unit_conversion"
+          ]
         },
         "tamilChecks": {
           "flags": [],

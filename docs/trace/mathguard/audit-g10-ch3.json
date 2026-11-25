@@ -9,7 +9,8 @@
     "total": 153
   },
   "answerVerificationCounts": {
-    "PASS": 153
+    "PASS": 149,
+    "UNVERIFIABLE": 4
   },
   "intermediateStepCounts": {
     "UNVERIFIABLE": 34,
@@ -1227,11 +1228,11 @@
       "item_type": "exercise",
       "section": "3.6",
       "validation_method": "alg_rational_proof",
-      "answer_status": "PASS",
+      "answer_status": "UNVERIFIABLE",
       "step_status": "FAIL",
       "tamil_status": "PASS",
       "existing_result": "Hence proved: [(A + B)² + (A − B)²]/(A ÷ B) = 2(x² + 1)/[x(x + 1)²]",
-      "discrepancy": "Step=[{'stepIndex': 0, 'line': 'A\\\\div B=\\\\dfrac{x}{x+1}\\\\times\\\\dfrac{x+1}{1}=x', 'lhs': 'A/B', 'rhs': 'x'}, {'stepIndex': 1, 'line': '(A+B)^2+(A-B)^2=1+\\\\dfrac{(x-1)^2}{(x+1)^2}=\\\\dfrac{(x+1)^2+(x-1)^2}{(x+1)^2}=\\\\dfrac{2(x^2+1)}{(x+1)^2}', 'lhs': '(A - B)**2 + (A + B)**2', 'rhs': '(x - 1)**2/(x + 1)**2 + 1'}, {'stepIndex': 2, 'line': 'LHS =\\\\dfrac{2(x^2+1)}{(x+1)^2}\\\\div x=\\\\dfrac{2(x^2+1)}{x(x+1)^2}= RHS', 'lhs': '(2*x**2 + 2)/(x*(x + 1)**2)', 'rhs': 'H*R*S'}]",
+      "discrepancy": "Proposition=TRUE; Conclusion=PASS; ProofSteps=FAIL (separate statuses)",
       "stepChecks": {
         "checkedChains": 8,
         "passedChains": 5,
@@ -2721,11 +2722,11 @@
       "item_type": "exercise",
       "section": "3.13",
       "validation_method": "alg_discriminant_ap_proof",
-      "answer_status": "PASS",
+      "answer_status": "UNVERIFIABLE",
       "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
       "existing_result": "Hence proved: b, a, c are in arithmetic progression.",
-      "discrepancy": "",
+      "discrepancy": "Proposition=TRUE; Conclusion=PASS; ProofSteps=UNVERIFIABLE (separate statuses)",
       "stepChecks": {
         "checkedChains": 0,
         "passedChains": 0,
@@ -2743,11 +2744,11 @@
       "item_type": "exercise",
       "section": "3.13",
       "validation_method": "alg_discriminant_pos_proof",
-      "answer_status": "PASS",
+      "answer_status": "UNVERIFIABLE",
       "step_status": "PARTIAL",
       "tamil_status": "PASS",
       "existing_result": "Hence proved: the roots are real and unequal.",
-      "discrepancy": "",
+      "discrepancy": "Proposition=TRUE; Conclusion=PASS; ProofSteps=PARTIAL (separate statuses)",
       "stepChecks": {
         "checkedChains": 1,
         "passedChains": 1,
@@ -2763,11 +2764,11 @@
       "item_type": "exercise",
       "section": "3.13",
       "validation_method": "alg_discriminant_cubic_proof",
-      "answer_status": "PASS",
+      "answer_status": "UNVERIFIABLE",
       "step_status": "FAIL",
       "tamil_status": "PASS",
       "existing_result": "Hence proved: either a = 0 or a³ + b³ + c³ = 3abc.",
-      "discrepancy": "Step=[{'stepIndex': 3, 'line': 'a^3+b^3+c^3=3abc', 'lhs': 'a**3 + b**3 + c**3', 'rhs': '3*a*b*c'}]",
+      "discrepancy": "Proposition=TRUE; Conclusion=PASS; ProofSteps=FAIL (separate statuses)",
       "stepChecks": {
         "checkedChains": 6,
         "passedChains": 5,

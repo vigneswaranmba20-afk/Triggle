@@ -42,15 +42,16 @@ def derive_ch3_for_item(qid: str, item: Dict[str, Any], is_concept: bool = False
     if not fn:
         return Ch3DerivedResult(False, "unregistered", "none", notes="No Ch3 derivation.")
     expected_fp = CH3_SOURCE_FINGERPRINTS.get(qid)
-    if expected_fp:
-        actual_fp = fingerprint_ch3_item(item, is_concept=is_concept)
-        if actual_fp != expected_fp:
-            return Ch3DerivedResult(
-                False,
-                "stale_derivation_invalidated",
-                "none",
-                notes=f"Source question/table/diagram changed (expected fp {expected_fp}, got {actual_fp}); cached derivation invalidated.",
-            )
+    if not expected_fp:
+        return Ch3DerivedResult(False, "missing_source_fingerprint", "none", notes=f"No source fingerprint registered for {qid}.")
+    actual_fp = fingerprint_ch3_item(item, is_concept=is_concept)
+    if actual_fp != expected_fp:
+        return Ch3DerivedResult(
+            False,
+            "stale_derivation_invalidated",
+            "none",
+            notes=f"Source question/table/diagram changed (expected fp {expected_fp}, got {actual_fp}); cached derivation invalidated.",
+        )
     return fn(item)
 
 
@@ -66,13 +67,13 @@ def _d_practice_18(_item: Dict[str, Any]) -> Ch3DerivedResult:
 # --- 3.1 Simultaneous Linear Equations in 3 Variables ---
 def _d_3_1_q1_i(_item: Dict[str, Any]) -> Ch3DerivedResult:
     sol = alg.solve_linear_system([sp.Eq(x + y + z, 5), sp.Eq(2 * x - y + z, 9), sp.Eq(x - 2 * y + 3 * z, 16)], [x, y, z])
-    return Ch3DerivedResult(True, "alg_linear_3x3", "ordered_tuple", list(sol))
+    return Ch3DerivedResult(True, "alg_linear_3x3", "ordered_tuple", list(sol), expected_labels=["x", "y", "z"])
 
 
 def _d_3_1_q1_ii(_item: Dict[str, Any]) -> Ch3DerivedResult:
     u, v, w = sp.symbols("u v w")
     sol = alg.solve_linear_system([sp.Eq(u - 2 * v + 4, 0), sp.Eq(v - w + 1, 0), sp.Eq(2 * w + 3 * u, 14)], [u, v, w])
-    return Ch3DerivedResult(True, "alg_linear_3x3_recip", "ordered_tuple", [1 / s for s in sol])
+    return Ch3DerivedResult(True, "alg_linear_3x3_recip", "ordered_tuple", [1 / s for s in sol], expected_labels=["x", "y", "z"])
 
 
 def _d_3_1_q1_iii(_item: Dict[str, Any]) -> Ch3DerivedResult:
@@ -82,7 +83,7 @@ def _d_3_1_q1_iii(_item: Dict[str, Any]) -> Ch3DerivedResult:
         sp.Eq(2 * z + 5, 110 - (y + z)),
     ]
     sol = alg.solve_linear_system(eqs, [x, y, z])
-    return Ch3DerivedResult(True, "alg_linear_3x3", "ordered_tuple", list(sol))
+    return Ch3DerivedResult(True, "alg_linear_3x3", "ordered_tuple", list(sol), expected_labels=["x", "y", "z"])
 
 
 def _d_3_1_q2_i(_item: Dict[str, Any]) -> Ch3DerivedResult:
@@ -109,7 +110,7 @@ def _d_3_1_q3(_item: Dict[str, Any]) -> Ch3DerivedResult:
         sp.Eq(z - 4, 4 * (x - 4)),
     ]
     sol = alg.solve_linear_system(eqs, [x, y, z])
-    return Ch3DerivedResult(True, "alg_word_ages_3x3", "ordered_pair", list(sol))
+    return Ch3DerivedResult(True, "alg_word_ages_3x3", "ordered_pair", list(sol), expected_unit="time_yr")
 
 
 def _d_3_1_q4(_item: Dict[str, Any]) -> Ch3DerivedResult:
@@ -335,18 +336,27 @@ def _d_3_6_q6(_item: Dict[str, Any]) -> Ch3DerivedResult:
     B = 1 / (x + 1)
     lhs = ((A + B) ** 2 + (A - B) ** 2) / (A / B)
     rhs = 2 * (x**2 + 1) / (x * (x + 1) ** 2)
-    return Ch3DerivedResult(True, "alg_rational_proof", "identity_proof", sp.simplify(lhs - rhs) == 0)
+    return Ch3DerivedResult(
+        True,
+        "alg_rational_proof",
+        "identity_proof",
+        {
+            "truth": sp.simplify(lhs - rhs) == 0,
+            "required_patterns": (r"2\(x²\s*\+\s*1\)", r"x\(x\s*\+\s*1\)²"),
+            "forbidden_patterns": (r"≠",),
+        },
+    )
 
 
 def _d_3_6_q7(_item: Dict[str, Any]) -> Ch3DerivedResult:
     # 1/4 + 1/6 = 1/t
-    return Ch3DerivedResult(True, "alg_work_rate", "scalar", sp.solve(sp.Eq(sp.Rational(1, 4) + sp.Rational(1, 6), 1 / t), t)[0])
+    return Ch3DerivedResult(True, "alg_work_rate", "scalar", sp.solve(sp.Eq(sp.Rational(1, 4) + sp.Rational(1, 6), 1 / t), t)[0], expected_unit="time_hr")
 
 
 def _d_3_6_q8(_item: Dict[str, Any]) -> Ch3DerivedResult:
     # apples x kg, bananas (50-x) kg; price per kg: 1800/x = 2 * 600/(50-x)
     ax = sp.solve(sp.Eq(1800 / x, 2 * 600 / (50 - x)), x)[0]
-    return Ch3DerivedResult(True, "alg_word_fruits", "ordered_pair", [ax, 50 - ax])
+    return Ch3DerivedResult(True, "alg_word_fruits", "ordered_pair", [ax, 50 - ax], expected_unit="mass")
 
 
 # --- 3.7 Square Root by Factorisation ---
@@ -503,7 +513,7 @@ def _d_3_11_q2_iv(_item: Dict[str, Any]) -> Ch3DerivedResult:
 
 def _d_3_11_q3(_item: Dict[str, Any]) -> Ch3DerivedResult:
     sols = [r for r in alg.solve_quadratic_verified(sp.Eq(t**2 - sp.Rational(3, 4) * t, sp.Rational(45, 4)), t) if r > 0]
-    return Ch3DerivedResult(True, "alg_word_ball_slope", "scalar", sols[0])
+    return Ch3DerivedResult(True, "alg_word_ball_slope", "scalar", sols[0], expected_unit="time_sec")
 
 
 # --- 3.12 Quadratic Word Problems ---
@@ -514,25 +524,25 @@ def _d_3_12_q1(_item: Dict[str, Any]) -> Ch3DerivedResult:
 def _d_3_12_q2(_item: Dict[str, Any]) -> Ch3DerivedResult:
     w = sp.Symbol("w", real=True)
     sols = [r for r in alg.solve_quadratic_verified(sp.Eq((12 + 2 * w) * (16 + 2 * w), 285), w) if r > 0]
-    return Ch3DerivedResult(True, "alg_word_pathway", "scalar", sols[0])
+    return Ch3DerivedResult(True, "alg_word_pathway", "scalar", sols[0], expected_unit="length")
 
 
 def _d_3_12_q3(_item: Dict[str, Any]) -> Ch3DerivedResult:
     v = sp.Symbol("v", real=True)
     sols = [r for r in alg.solve_quadratic_verified(sp.Eq(90 / v - 90 / (v + 15), sp.Rational(1, 2)), v) if r > 0]
-    return Ch3DerivedResult(True, "alg_word_bus_speed", "scalar", sols[0])
+    return Ch3DerivedResult(True, "alg_word_bus_speed", "scalar", sols[0], expected_unit="speed")
 
 
 def _d_3_12_q4(_item: Dict[str, Any]) -> Ch3DerivedResult:
     s = sp.Symbol("s", real=True)
     sv = [r for r in alg.solve_quadratic_verified(sp.Eq((2 * s + 5) * (s + 5), 375), s) if r > 0][0]
-    return Ch3DerivedResult(True, "alg_word_ages_quad", "ordered_pair", [2 * sv, sv])
+    return Ch3DerivedResult(True, "alg_word_ages_quad", "ordered_pair", [2 * sv, sv], expected_unit="time_yr")
 
 
 def _d_3_12_q5(_item: Dict[str, Any]) -> Ch3DerivedResult:
     d = sp.Symbol("d", real=True)
     sols = [r for r in alg.solve_quadratic_verified(sp.Eq(d**2 + (d + 4) ** 2, 20**2), d) if r > 0]
-    return Ch3DerivedResult(True, "alg_word_circle_pole", "multi_part", {"kind": "yes_and_pair", "pair": [sols[0], sols[0] + 4]})
+    return Ch3DerivedResult(True, "alg_word_circle_pole", "multi_part", {"kind": "yes_and_pair", "pair": [sols[0], sols[0] + 4]}, expected_unit="length")
 
 
 def _d_3_12_q6(_item: Dict[str, Any]) -> Ch3DerivedResult:
@@ -546,7 +556,7 @@ def _d_3_12_q7(_item: Dict[str, Any]) -> Ch3DerivedResult:
     # 9/4 = ((70 - d)/d)^2
     sols = [r for r in alg.solve_quadratic_verified(sp.Eq(4 * (70 - d) ** 2, 9 * d**2), d) if 0 < r < 70]
     d1 = sols[0]
-    return Ch3DerivedResult(True, "alg_word_sound_intensity", "ordered_pair", [d1, 70 - d1])
+    return Ch3DerivedResult(True, "alg_word_sound_intensity", "ordered_pair", [d1, 70 - d1], expected_unit="length")
 
 
 def _d_3_12_q8(_item: Dict[str, Any]) -> Ch3DerivedResult:
@@ -554,13 +564,13 @@ def _d_3_12_q8(_item: Dict[str, Any]) -> Ch3DerivedResult:
     # Flower bed side = 10 - 2w; gravel path area = 100 - (10 - 2w)^2
     eq = sp.Eq(3 * (10 - 2 * w) ** 2 + 4 * (100 - (10 - 2 * w) ** 2), 364)
     sols = [r for r in alg.solve_quadratic_verified(eq, w) if 0 < r < 5]
-    return Ch3DerivedResult(True, "alg_word_gravel_path", "scalar", sols[0])
+    return Ch3DerivedResult(True, "alg_word_gravel_path", "scalar", sols[0], expected_unit="length")
 
 
 def _d_3_12_q9(_item: Dict[str, Any]) -> Ch3DerivedResult:
     # a + b = 56 - 25 = 31, a^2 + b^2 = 625
     sols = [r for r in alg.solve_quadratic_verified(sp.Eq(x**2 + (31 - x) ** 2, 625), x) if r > 0]
-    return Ch3DerivedResult(True, "alg_word_right_tri", "scalar", min(sols))
+    return Ch3DerivedResult(True, "alg_word_right_tri", "scalar", min(sols), expected_unit="length_cm")
 
 
 # --- 3.13 Nature of Roots & Discriminant ---
@@ -598,17 +608,44 @@ def _d_3_13_q2_ii(_item: Dict[str, Any]) -> Ch3DerivedResult:
 
 def _d_3_13_q3(_item: Dict[str, Any]) -> Ch3DerivedResult:
     disc, _ = alg.discriminant_and_nature(a - b, b - c, c - a)
-    return Ch3DerivedResult(True, "alg_discriminant_ap_proof", "identity_proof", sp.expand(disc - (b + c - 2 * a) ** 2) == 0)
+    return Ch3DerivedResult(
+        True,
+        "alg_discriminant_ap_proof",
+        "identity_proof",
+        {
+            "truth": sp.expand(disc - (b + c - 2 * a) ** 2) == 0,
+            "required_patterns": (r"arithmetic\s+progression",),
+            "forbidden_patterns": (r"not\s+in\s+arithmetic", r"not\s+an?\s+arithmetic"),
+        },
+    )
 
 
 def _d_3_13_q4(_item: Dict[str, Any]) -> Ch3DerivedResult:
     disc, _ = alg.discriminant_and_nature(a - b, -6 * (a + b), -9 * (a - b))
-    return Ch3DerivedResult(True, "alg_discriminant_pos_proof", "identity_proof", sp.expand(disc - 72 * (a**2 + b**2)) == 0)
+    return Ch3DerivedResult(
+        True,
+        "alg_discriminant_pos_proof",
+        "identity_proof",
+        {
+            "truth": sp.expand(disc - 72 * (a**2 + b**2)) == 0,
+            "required_patterns": (r"real\s+and\s+unequal",),
+            "forbidden_patterns": (r"not\s+real", r"real\s+and\s+equal"),
+        },
+    )
 
 
 def _d_3_13_q5(_item: Dict[str, Any]) -> Ch3DerivedResult:
     disc, _ = alg.discriminant_and_nature(c**2 - a * b, -2 * (a**2 - b * c), b**2 - a * c)
-    return Ch3DerivedResult(True, "alg_discriminant_cubic_proof", "identity_proof", sp.expand(disc - 4 * a * (a**3 + b**3 + c**3 - 3 * a * b * c)) == 0)
+    return Ch3DerivedResult(
+        True,
+        "alg_discriminant_cubic_proof",
+        "identity_proof",
+        {
+            "truth": sp.expand(disc - 4 * a * (a**3 + b**3 + c**3 - 3 * a * b * c)) == 0,
+            "required_patterns": (r"a\s*=\s*0", r"a³\s*\+\s*b³\s*\+\s*c³\s*=\s*3abc"),
+            "forbidden_patterns": (r"a\s*≠\s*0", r"≠\s*3abc"),
+        },
+    )
 
 
 # --- 3.14 Roots & Coefficients ---

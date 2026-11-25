@@ -54,15 +54,16 @@ def derive_ch5_for_item(qid: str, item: Dict[str, Any], is_concept: bool = False
     if not fn:
         return Ch5DerivedResult(False, "unregistered", "none", notes="No Ch5 derivation.")
     expected_fp = CH5_SOURCE_FINGERPRINTS.get(qid)
-    if expected_fp:
-        actual_fp = fingerprint_ch5_item(item, is_concept=is_concept)
-        if actual_fp != expected_fp:
-            return Ch5DerivedResult(
-                False,
-                "stale_derivation_invalidated",
-                "none",
-                notes=f"Source question/diagram changed (expected fp {expected_fp}, got {actual_fp}); cached derivation invalidated.",
-            )
+    if not expected_fp:
+        return Ch5DerivedResult(False, "missing_source_fingerprint", "none", notes=f"No source fingerprint registered for {qid}.")
+    actual_fp = fingerprint_ch5_item(item, is_concept=is_concept)
+    if actual_fp != expected_fp:
+        return Ch5DerivedResult(
+            False,
+            "stale_derivation_invalidated",
+            "none",
+            notes=f"Source question/diagram changed (expected fp {expected_fp}, got {actual_fp}); cached derivation invalidated.",
+        )
     return fn()
 
 
