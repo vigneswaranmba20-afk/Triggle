@@ -17,6 +17,60 @@
     eq,
     math: tex(latex || eq, eq, true)
   });
+  const formula = (latex, fallback) => tex(latex, fallback, true);
+  const plain = value => Array.isArray(value)?value.map(plain).join(''):value?.fallback??value;
+  const tamilDisplay = {
+    1:{steps:{
+      1:formula('d_1=\\sqrt{9+1}=\\sqrt{10}','d₁ = √(9 + 1) = √10'),
+      2:formula('d_2=\\sqrt{100+4}=2\\sqrt{26}','d₂ = √(100 + 4) = 2√26'),
+      3:formula('d_3=\\sqrt{(c-a)^2}=|c-a|','d₃ = √((c−a)²) = |c−a|'),
+      4:formula('d_4=\\sqrt{25+144}=13','d₄ = √(25 + 144) = 13')
+    }},
+    2:{steps:{
+      2:formula('AB+BC=\\sqrt{13}+\\sqrt{13}=AC','AB + BC = √13 + √13 = AC'),
+      4:formula('BC+CA=3+2=5=AB','BC + CA = 3 + 2 = 5 = AB')
+    },answer:'(i) கோடமையும் புள்ளிகள். (ii) கோடமையும் புள்ளிகள்.'},
+    3:{steps:{
+      2:formula('AB=BC=5','AB = BC = 5'),
+      4:formula('BC=CA=2\\sqrt{53}','BC = CA = 2√53')
+    }},
+    4:{steps:{
+      1:formula('AB=BC=CA=4\\sqrt2','AB = BC = CA = 4√2'),
+      3:formula('AB=BC=CA=2','AB = BC = CA = 2')
+    }},
+    5:{steps:{
+      0:formula('AB=CD,\\quad BC=DA','AB = CD, BC = DA'),
+      2:formula('AB=CD,\\quad BC=DA','AB = CD, BC = DA'),
+      4:formula('AB=CD,\\quad BC=DA','AB = CD, BC = DA')
+    },answer:'(i) இணைகரம். (ii) இணைகரம்.'},
+    6:{steps:{
+      2:formula('AB=BC=CD=DA=4\\sqrt5,\\quad AC\\ne BD','AB = BC = CD = DA = 4√5, AC ≠ BD'),
+      3:formula('AB=BC=CD=DA=1,\\quad AC=BD=\\sqrt2','AB = BC = CD = DA = 1, AC = BD = √2')
+    },answer:['(i) சாய்சதுரம், பக்க நீளம் ',tex('4\\sqrt5','4√5'),' அலகுகள். (ii) சதுரம், பக்க நீளம் 1 அலகு.']},
+    7:{steps:{2:formula('a-3=\\pm2\\Rightarrow a=5,\\ 1','a − 3 = ±2 ⇒ a = 5, 1')},
+      answer:[tex('a=5','a = 5'),' அல்லது ',tex('a=1','a = 1')]},
+    8:{steps:{2:formula('\\begin{gathered}(x-9)(x+5)=0\\\\x=9,\\ -5\\end{gathered}','(x − 9)(x + 5) = 0, x = 9, −5')},
+      answer:[tex('(9,9)','(9, 9)'),' அல்லது ',tex('(-5,-5)','(−5, −5)')]},
+    11:{steps:{
+      0:formula('CP=CQ=CR','CP = CQ = CR'),
+      2:formula('CP=CQ=CR=10,\\quad r=10','CP = CQ = CR = 10, r = 10')
+    },answer:['மையம் ',tex('(11,2)','(11, 2)'),'. ஆரம் 10 அலகுகள்.']},
+    12:{steps:{
+      0:formula('(30,0),\\ (-30,0),\\ (0,30),\\ (0,-30)','(30, 0), (−30, 0), (0, 30), (0, −30)'),
+      1:formula('d=\\sqrt{900+900}=30\\sqrt2','d = √1800 = 30√2')
+    },answer:['அச்சு வெட்டுப்புள்ளிகள் ',tex('(30,0),\\ (-30,0),\\ (0,30),\\ (0,-30)','(30, 0), (−30, 0), (0, 30), (0, −30)'),
+      '. அடுத்தடுத்த புள்ளிகளின் தொலைவு ',tex('30\\sqrt2','30√2'),' அலகுகள். எதிரெதிர் புள்ளிகளின் தொலைவு 60 அலகுகள்.']}
+  };
+  const figures={
+    3:{en:'In (i), sides AB and BC of the triangle are equal. In (ii), BC and CA are equal.',
+      ta:'(i)-இல் AB, BC பக்கங்கள் சமம். (ii)-இல் BC, CA பக்கங்கள் சமம்.'},
+    5:{en:'Each plot joins A, B, C and D in order. Each pair of opposite sides has equal lengths.',
+      ta:'இரு படங்களிலும் A, B, C, D என்ற வரிசையில் புள்ளிகள் இணைக்கப்பட்டுள்ளன. இரு சோடி எதிர்ப்பக்கங்களின் நீளங்களும் முறையே சமம்.'},
+    6:{en:'Part (i) is a rhombus with unequal diagonals. Part (ii) is a one-unit square with equal diagonals.',
+      ta:'(i) சமமற்ற மூலைவிட்டங்களுடைய சாய்சதுரம். (ii) சம மூலைவிட்டங்களும் ஓர் அலகு பக்கமும் கொண்ட சதுரம்.'},
+    11:{en:'Circle with centre C at (11, 2). P(1, 2), Q(3, −4), and R(5, −6) are all 10 units from C.',
+      ta:'மையம் C(11, 2) கொண்ட வட்டம். P(1, 2), Q(3, −4), R(5, −6) ஆகிய புள்ளிகள் C-இலிருந்து 10 அலகு தொலைவில் உள்ளன.'}
+  };
 
   const makeEntry = (qNum, titleEn, titleTa, qEn, qTa, qMathEn, qMathTa, steps, ansEn, ansTa, ansLatex, extra = {}) => ({
     id: `g9-ch5-ex5.2-q${qNum}`,
@@ -34,10 +88,13 @@
     title: { en: titleEn, ta: titleTa },
     q: { en: qEn, ta: qTa },
     questionMath: { en: qMathEn, ta: qMathTa },
-    steps,
+    steps: steps.map((row,index)=>tamilDisplay[qNum]?.steps[index]
+      ? {...row,mathTa:tamilDisplay[qNum].steps[index]} : row),
     answer: ansEn,
-    answerTa: ansTa,
-    answerMath: { en: tex(ansLatex, ansEn, true), ta: tex(ansLatex, ansTa, true) },
+    answerTa: plain(tamilDisplay[qNum]?.answer??ansTa),
+    answerMath: { en: tex(ansLatex, ansEn, true), ta: tamilDisplay[qNum]?.answer??tex(ansLatex, ansTa, true) },
+    ...(figures[qNum]&&{figureSrc:'./assets/grade9-ch5/ex5-2-q'+qNum+'-checked.svg',
+      figureAlt:figures[qNum],figureCaption:figures[qNum],figureInSolution:true}),
     sourceFidelity: {
       status: 'page-visual-checked',
       sourcePdfPage: { en: extra.enPdf || 209, ta: extra.taPdf || 222 },
@@ -88,9 +145,9 @@
           'd_4 = \\sqrt{(-2-3)^2+(3-(-9))^2} = \\sqrt{25+144} = \\sqrt{169} = 13\\text{ units}'
         )
       ],
-      '(i) √10 units; (ii) 2√26 units; (iii) |c − a| (c − a); (iv) 13 units',
-      '(i) √10 அலகுகள்; (ii) 2√26 அலகுகள்; (iii) |c − a| (c − a); (iv) 13 அலகுகள்',
-      '\\begin{aligned}\\text{(i) }\\sqrt{10},&\\quad \\text{(ii) }2\\sqrt{26}\\\\\\text{(iii) }c-a,&\\quad \\text{(iv) }13\\end{aligned}',
+      '(i) √10 units; (ii) 2√26 units; (iii) |c − a|; (iv) 13 units',
+      '(i) √10 அலகுகள்; (ii) 2√26 அலகுகள்; (iii) |c − a|; (iv) 13 அலகுகள்',
+      '\\begin{aligned}\\text{(i) }\\sqrt{10},&\\quad \\text{(ii) }2\\sqrt{26}\\\\\\text{(iii) }|c-a|,&\\quad \\text{(iv) }13\\end{aligned}',
       { enPdf: 208, taPdf: 221, enPrint: 202, taPrint: 215, notes: ['2025 English PDF p.208 prints (i),(ii),(ii),(iv); Tamil PDF p.221 prints (i),(ii),(iii),(iv). Canonicalized as (iii).'] }
     ),
 
