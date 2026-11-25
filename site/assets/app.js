@@ -21,6 +21,7 @@
  }
  window.TriggleG10NumbersTamil?.(classes[10].items);
  window.TriggleG10AlgebraTamil?.(classes[10].items);
+ window.TriggleG10GeometryTamil?.(classes[10].items);
  const curriculum=window.TRIGGLE_CURRICULUM;
  if(!curriculum?.grades)throw Error('Missing curriculum metadata');
  const chapterList=()=>curriculum.grades.find(g=>g.grade===grade)?.chapters||[];
@@ -708,7 +709,7 @@
     $(id).setAttribute('aria-label',label);
     $(id).title=label;
   }
-  if(geometryExercise&&lang==='ta')$('stepsList').lang='en';
+  if(geometryExercise&&lang==='ta')$('stepsList').lang=current.steps.some(step=>step.ta)?'ta':'en';
   else $('stepsList').removeAttribute('lang');
   $('previous').innerHTML='← '+esc(ui('previous'));
   $('next').innerHTML=isTextbookExercise&&n===list.length-1

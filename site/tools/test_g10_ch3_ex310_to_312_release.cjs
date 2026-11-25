@@ -70,7 +70,7 @@ const render=notation.window.TriggleNotation.render;
 for(const row of allEx310To312){
   assert.equal(row.edition,'2025',row.id+' edition');
   assert.equal(row.translationReview,'pending',row.id+' translationReview');
-  assert(!row.q.ta,row.id+' must not invent unreviewed Tamil text');
+  assert(/[அ-ஹ]/.test(row.q.ta)&&row.steps.every(s=>/[அ-ஹ]/.test(s.ta)),row.id+' reviewed Tamil prompt and reasons');
   assert(row.q.en.length>15,row.id+' question length');
   assert(row.steps.length>=3,row.id+' step count');
   assert(row.steps.every(s=>s.math?.latex&&s.math?.fallback===s.eq),row.id+' step math fallback matches eq');
@@ -78,9 +78,11 @@ for(const row of allEx310To312){
     const out=render(s.math);
     assert(!out.includes('data-math-error')&&out.includes('<math')&&out.includes('katex-html'),row.id+' valid step KaTeX');
   }
-  const ansOut=render(row.answerMath);
+  const english=row.answerMath.en || row.answerMath;
+  const ansOut=render(english);
+  if(row.answerMath.ta){const tamil=render(row.answerMath.ta);assert(tamil.includes('<math')&&!tamil.includes('data-math-error'),row.id+' Tamil answer KaTeX');}
   assert(!ansOut.includes('data-math-error')&&ansOut.includes('<math')&&ansOut.includes('katex-html'),row.id+' valid answer KaTeX');
-  assert.equal(row.answerMath.fallback,row.answer,row.id+' answerMath fallback matches answer');
+  assert.equal(english.fallback,row.answer,row.id+' answerMath fallback matches answer');
   for(const seg of (row.questionMath?.en||[])){
     if(typeof seg==='object'&&seg){
       const qOut=render(seg);

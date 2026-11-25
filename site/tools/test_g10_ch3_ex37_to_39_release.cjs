@@ -48,11 +48,7 @@ const render=notation.window.TriggleNotation.render;
 for(const row of allEx37To39){
   assert.equal(row.edition,'2025',row.id+' edition');
   assert.equal(row.translationReview,'pending',row.id+' translationReview');
-  if(['3.7','3.8'].includes(row.exercise)){
-    assert(/[அ-ஹ]/.test(row.q.ta)&&row.steps.every(s=>/[அ-ஹ]/.test(s.ta)),row.id+' reviewed Tamil question and reasons');
-  }else{
-    assert(!row.q.ta,row.id+' no unreviewed Tamil question');
-  }
+  assert(/[அ-ஹ]/.test(row.q.ta)&&row.steps.every(s=>/[அ-ஹ]/.test(s.ta)),row.id+' reviewed Tamil prompt and reasons');
   assert(row.q.en.length>15,row.id+' question length');
   assert(row.steps.length>=2,row.id+' step count');
   assert(row.steps.every(s=>s.math?.latex&&s.math?.fallback===s.eq),row.id+' step math fallback matches eq');
