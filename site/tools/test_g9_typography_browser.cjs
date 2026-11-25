@@ -4,12 +4,14 @@
 const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path');
 const {chromium}=require('playwright'),{server,launchOptions}=require('./dashboard_test_support.cjs');
 const {load}=require('./build_g9_math.cjs');
-const records=load(),widths=[320,360,393,430],samples=new Map(records.map(q=>[q.chapter,q.id]));
+const {applyReviewedRealNumbers}=require('./test_g9_ch2_frontier.cjs');
+const records=applyReviewedRealNumbers(load()),widths=[320,360,393,430],samples=new Map(records.map(q=>[q.chapter,q.id]));
 const normalize=s=>String(s??'').replace(/\s+/g,' ').trim();
+const plain=value=>Array.isArray(value)?value.map(plain).join(''):value?.fallback??value;
 async function inspect(page,q,lang){
  const state=await page.evaluate(({q,lang})=>{
   const override=window.TriggleG9Ch5Overrides?.get(q.id)||null;
-  const p=override||window.TriggleG9Math.get(q)||q;
+  const p=override||(q.notationSource==='authored'?q:window.TriggleG9Math.get(q))||q;
   const count=v=>Array.isArray(v)?v.reduce((n,x)=>n+count(x),0):v?.questionOption?count(v.questionOption):v?.latex?1:0;
   const fallback=selector=>{const el=document.querySelector(selector)?.cloneNode(true);if(!el)return null;
    el.querySelectorAll('.triggle-tex').forEach(math=>math.replaceWith(document.createTextNode(math.dataset.mathFallback)));
@@ -20,11 +22,11 @@ async function inspect(page,q,lang){
   };
   const legacyHint=window.TriggleWhyStepG9.hints[q.id];
   const hints=[...document.querySelectorAll('#stepsList details.why-step-g9')].map(detail=>
-   q.geometryConcept===undefined?legacyHint:q.steps[Number(detail.dataset.step)-1]?.why);
+   q.geometryConcept===undefined&&q.realConcept===undefined?legacyHint:q.steps[Number(detail.dataset.step)-1]?.why);
   const hintCount=hints.reduce((n,hint)=>n+count(hint?window.TriggleG9Math.text(hint[lang]||hint.en):null),0);
   const choices=q.choices?.reduce((n,choice)=>n+count(choice[lang]||choice.en),0)||0;
   const expected=hintCount+choices+count(p.questionMath?.[lang]||p.questionMath?.en)+
-   count(p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s,i)=>n+
+   count(q.answerMath?.[lang]||p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s,i)=>n+
    count((lang==='ta'&&(override||q).steps[i].mathTa)||s.math)+count(s.reasonMath?.[lang]||s.reasonMath?.en),0);
   const rendered=document.querySelectorAll('#questionText .katex,#stepsList .katex').length;
   const formulas=[...document.querySelectorAll('#questionText .triggle-tex,#stepsList .triggle-tex')].map(el=>{
@@ -57,7 +59,9 @@ async function inspect(page,q,lang){
  assert.equal(state.errors,0,label+' no renderer fallback');
  assert.equal(state.rendered,state.expected,label+' every authored formula renders exactly once');
  assert.equal(normalize(state.question),normalize(refQ.q[lang]||refQ.q.en),label+' question wording');
- assert.equal(normalize(state.answer),normalize(refQ.answer?.[lang]||(lang==='ta'&&(refQ.chapter==='5'||refQ.answerMath?.ta)?refQ.answerTa:null)||refQ.answer),label+' final answer');
+ const reviewedAnswer=refQ.chapter==='2'&&refQ.answerMath?.[lang];
+ assert.equal(normalize(state.answer),normalize(reviewedAnswer?plain(reviewedAnswer):
+  refQ.answer?.[lang]||(lang==='ta'&&(refQ.chapter==='5'||refQ.answerMath?.ta)?refQ.answerTa:null)||refQ.answer),label+' final answer');
  assert.equal(state.steps.length,refQ.steps.length,label+' all steps retained');
  state.steps.forEach((s,i)=>{
   const step=refQ.steps[i];

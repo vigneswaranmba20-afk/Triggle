@@ -42,13 +42,18 @@ const one = values => {
   return values.findIndex(Boolean)+1;
 };
 
-function verify() {
-  const all=load();
-  const originals=new Map(all.map(q=>[q.id,JSON.stringify(q)]));
+function applyReviewedRealNumbers(items) {
   const context={window:{}};
   vm.runInNewContext(read('data/why-step-g9.js'),context);
   vm.runInNewContext(read('data/real-numbers/g9-ch2-frontier.js'),context);
-  context.window.TriggleG9RealFrontier(all);
+  context.window.TriggleG9RealFrontier(items);
+  return items;
+}
+
+function verify() {
+  const all=load();
+  const originals=new Map(all.map(q=>[q.id,JSON.stringify(q)]));
+  applyReviewedRealNumbers(all);
   const front=all.filter(item=>item.chapter==='2'&&item.answerTa);
   assert.equal(front.length,40);
   assert.equal(new Set(front.map(item=>item.id)).size,40);
@@ -157,4 +162,4 @@ function verify() {
 }
 
 if (require.main===module) verify();
-module.exports={verify};
+module.exports={verify,applyReviewedRealNumbers};
