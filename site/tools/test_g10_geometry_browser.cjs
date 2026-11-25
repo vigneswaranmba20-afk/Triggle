@@ -101,7 +101,14 @@ async function checkLayout(page, id, width) {
           }
           await page.locator('#langTa').tap();
           assert.equal(await recoveredText(page.locator('#questionText')), textbookPrompt.ta);
-          assert.equal(await page.locator('#stepsList').getAttribute('lang'), 'en');
+          assert.equal(await page.locator('#stepsList').getAttribute('lang'), 'ta');
+          const reasons = await page.locator('#stepsList .worked-step:not(.final-answer-step) .step-reason').allInnerTexts();
+          assert.ok(reasons.length && reasons.every(text => /[அ-ஹ]/.test(text)), id + ' visible Tamil working');
+          if (i === 0 && item.figure.inTextbooks) {
+            await page.locator('#figureBtn').tap();
+            await page.locator('#diagramContent img').evaluate(img => img.decode());
+            await page.locator('#closeDiagram').tap();
+          }
           await checkLayout(page, id, width);
           await page.locator('#langEn').tap();
           if (i < group.length - 1) await page.locator('#next').tap();
