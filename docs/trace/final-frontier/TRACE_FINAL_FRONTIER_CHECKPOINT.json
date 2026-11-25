@@ -22,27 +22,11 @@
     "grade10TamilId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC"
   },
   "nextBatch": {
-    "grade": 9,
-    "chapter": 2,
-    "exercise": "2.9",
+    "grade": 10,
+    "chapter": 1,
     "status": "IN_PROGRESS",
-    "numberedQuestions": 20,
-    "canonicalTasks": 20,
-    "branch": "trace/final-frontier-g9-real",
-    "base": "0d6e4e7eb407b8d93ed4af0ab183e06b58af6e8a",
-    "worktree": "/workspace/Triggle-real",
-    "pdfPages": {
-      "en": [
-        80,
-        81,
-        82
-      ],
-      "ta": [
-        86,
-        87
-      ]
-    },
-    "reproduction": "Review rendered source pages, preserve MCQ IDs, add bilingual answer and feedback, and run mathematical and mobile checks."
+    "exercise": "1.1",
+    "scope": "Verify the remaining Tamil final-answer rendering candidates against the actual browser and 2025 source. Use the existing stable IDs."
   },
   "editorialReview": {
     "ta": "pending",
@@ -53,7 +37,7 @@
       "grade": 9,
       "chapter": 1,
       "exercise": "1.3",
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "numberedQuestions": 7,
       "canonicalTasks": 42,
       "runtimeRecords": 7,
@@ -160,13 +144,49 @@
       "sourceBlocked": [],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-3.json",
       "release": {
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 432,
         "head": "48da46bbdedd392ca654d6beadef2bfecb24dee8",
         "merge": "0d6e4e7eb407b8d93ed4af0ab183e06b58af6e8a",
         "prQualityRun": 45678186546,
         "pagesRun": 45681691336,
-        "liveEvidence": null,
+        "liveEvidence": {
+          "deploymentId": 8067212137,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45681691336/job/139452144134",
+          "deploymentCompletedAt": "2026-11-25T19:20:53Z",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch1-ex1.3-q1",
+          "versionMatched": "0d6e4e7eb407b8d93ed4af0ab183e06b58af6e8a",
+          "sha256": {
+            "assets/app.js": "aafec5040a8660b2be9625583cc02593e8e9f1716af9f39c0a36cc2a61e3e92f",
+            "assets/grade9-ch1/ex1-3-q1.svg": "3329706f9de69580736ddebfc74b962b7f710f07700750f8d0a5efc274ecc197",
+            "assets/grade9-ch1/ex1-3-q6-en.svg": "18ba3b6b0fc59a86574aae765fac634492c11e5f82a298ed8927bf4bcfd28e56",
+            "assets/grade9-ch1/ex1-3-q6-ta.svg": "a5d9d72f31342983f13d5011955ce9e2fcf64da75e55ba0630778b88ef14862c",
+            "assets/grade9-ch1/ex1-3-q7.svg": "a4fa47871678fb4947c450845c82e51c3eecf192f3106d14758a9488ef4bef9b",
+            "assets/set-language-journey.js": "90bafc1978bc170bfaf16b5e18514374b86433721a2044c60f2ade3ecca1f4ef",
+            "assets/why-step-g9.js": "761a5547d96bcbd148dae70567cb3909394a4398071bcbbf9d6d0428d1bba4ae",
+            "data/problem-difficulty.js": "664c9bd455699dea8c9444ec6fc6e7c687e89301b6e7052f5e0ba414a0b4f133",
+            "data/project-status.json": "6b38a4f9cd72d9460e3396bcb8ea82e64db321f47bd4d04376beb1648490ab96",
+            "data/textbook-exercises/g9-ch1-ex1-3.js": "14f7da86febdffec81a35071a842c943cece72819aaf92a34c94d29646a2033a",
+            "data/textbook-fidelity/g9-ch1-ex1-3.json": "a035d881826dd07fcc454c17b4a063c656cd6ded5f301539a2af7889d63f7079",
+            "index.html": "72a5a8d7ba9fe10ee8a19d0a900ff1564ef79db777470f1a4a1321c3712ce9e9",
+            "service-worker.js": "b391d90e4b5a313242d93f5f1cca7a4d3566626f689068372b1720306c8e2b50"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "testedAllSeven": true,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "checks": [
+              "exercise index and boundaries",
+              "question text and both Q6 figure labels",
+              "worked solutions and KaTeX",
+              "hints and figure reader"
+            ]
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/432"
       }
     },
@@ -174,7 +194,7 @@
       "grade": 9,
       "chapter": 1,
       "exercise": "1.4",
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "numberedQuestions": 5,
       "canonicalTasks": 7,
       "runtimeRecords": 5,
@@ -230,18 +250,61 @@
       "sourceBlocked": [],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-4.json",
       "release": {
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 433,
         "head": "f819d9cd4169f6540c24378b8137d9d44c43efab",
         "prQualityRun": 45682881316,
-        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433"
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433",
+        "merge": "452540614a3043c1a1a7b7b85f58e9ff7107f9be",
+        "pagesRun": 45685647834,
+        "liveEvidence": {
+          "deploymentId": 8067774101,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45685647834/job/139467154560",
+          "deploymentCompletedAt": "2026-11-25T19:46:59Z",
+          "versionMatched": "452540614a3043c1a1a7b7b85f58e9ff7107f9be",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch1-ex1.4-q1",
+          "sha256": {
+            "assets/grade9-ch1/ex1-5-q1.svg": "a4c808746484ec15d69a70034820f657be999706a1790d0f133c16a881ff2c00",
+            "assets/grade9-ch1/ex1-5-q11.svg": "bc908c4c5b1ae69ac98d9f6f35b454a0c7e275d6caf76eb3e9faae0cba6ca50a",
+            "assets/grade9-ch1/ex1-5-q4.svg": "c0e4094f0b8b5721687668915386548b762f51f7d98cdc4cdafc74ada41d1976",
+            "assets/grade9-ch1/ex1-5-q9.svg": "88492124bc2bda4e1d10a69146f8c75dbaf0575eb4efd55086bd32499655eb33",
+            "assets/grade9-ch1/ex1-6-q11.svg": "38d615e892117a54f841e868232aa3bd0b3dd5b680e08590c4d6fb75b683f59e",
+            "assets/grade9-ch1/ex1-6-q12.svg": "db0a76213dcd0141ff7d1517ff6da9e07a577e96c62285db017ceb945f6ede60",
+            "assets/grade9-ch1/ex1-6-q7.svg": "42eee4d10ba7cc32185a90d50121de2041bdbf9a04b4a43790b33b253936ae7b",
+            "assets/grade9-ch1/ex1-6-q9.svg": "a3b2452b88b3fd4ee44219a88ad63e7976c1d66481d36234520835eae442082b",
+            "assets/grade9-ch1/ex1-7-q19.svg": "6935e19b21d2c219953907b61f66700b9744362dd7a332c33a5bf007e4b3e407",
+            "assets/grade9-ch1/ex1-7-q9.svg": "cb77a7042b8b6d71bb5e889a0067cfed7dcc316c557444d7d18775ee75d42689",
+            "assets/set-language-journey.js": "561f6445126e3d3d772f541dfebbfddc807ab41b789f3b4470878067e162af02",
+            "data/problem-difficulty.js": "27eee520e779bd0ac68114d7bd9e8b0c7b7c9ad7334a0ab2477e82cb8adb87e8",
+            "data/project-status.json": "458e07874201ff35da02cb2b4c5177fcc725c2f17b82d0fef7f38260fd3af6bb",
+            "data/textbook-exercises/g9-ch1-ex1-4.js": "72bb8367a4e1e3f11297cca3360aecf8cc2fe2ff07e34bff2f9fe7c7e4411e4f",
+            "data/textbook-exercises/g9-ch1-ex1-5.js": "bf5e2bab0d019e500583eb564f39dac5e52c2d74b0dac8318c6bde81d5a72610",
+            "data/textbook-exercises/g9-ch1-ex1-6.js": "8a751a17bddd23477f02450326f5db9c2b519f74049fdf4e5165339f528d7b3b",
+            "data/textbook-exercises/g9-ch1-ex1-7.js": "1427fe8576c6e5126bf8fd67db7a6f79b127ef965fddf0b52a2e01d0b63c0d53",
+            "data/textbook-fidelity/g9-ch1-ex1-4.json": "d2a09fe0ef3e3ad5f6b5bbb566de511f3838ddd191808c9019dc3ddf0cb3b22e",
+            "data/textbook-fidelity/g9-ch1-ex1-5.json": "be1d187c274fe567bfa20b1eeed625d99e9c198b2bda9501adf064ac5444168a",
+            "data/textbook-fidelity/g9-ch1-ex1-6.json": "8c0ff3a10a3cfcd25625e1db16730d52405b4c70fe02d0dfdc18efc03e178f74",
+            "data/textbook-fidelity/g9-ch1-ex1-7.json": "183313a60e485f65f9529394ecdd58d96e32559f66166a85cbb0af4b2ac8ff0a",
+            "index.html": "136acda37da3dc4c24d64732ce903279904beadea68d9167b1b0568ad474243f",
+            "service-worker.js": "f0a613c3022da4fc1d7d693383793ba8d792b6a767811d27782226fe5bcbefb1"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "allCardsTested": true
+          }
+        }
       }
     },
     {
       "grade": 9,
       "chapter": 1,
       "exercise": "1.5",
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "numberedQuestions": 11,
       "canonicalTasks": 20,
       "runtimeRecords": 11,
@@ -358,18 +421,44 @@
       "sourceBlocked": [],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-5.json",
       "release": {
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 433,
         "head": "f819d9cd4169f6540c24378b8137d9d44c43efab",
         "prQualityRun": 45682881316,
-        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433"
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433",
+        "merge": "452540614a3043c1a1a7b7b85f58e9ff7107f9be",
+        "pagesRun": 45685647834,
+        "liveEvidence": {
+          "deploymentId": 8067774101,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45685647834/job/139467154560",
+          "deploymentCompletedAt": "2026-11-25T19:46:59Z",
+          "versionMatched": "452540614a3043c1a1a7b7b85f58e9ff7107f9be",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch1-ex1.5-q1",
+          "sha256": {
+            "assets/grade9-ch1/ex1-5-q1.svg": "a4c808746484ec15d69a70034820f657be999706a1790d0f133c16a881ff2c00",
+            "assets/grade9-ch1/ex1-5-q11.svg": "bc908c4c5b1ae69ac98d9f6f35b454a0c7e275d6caf76eb3e9faae0cba6ca50a",
+            "assets/grade9-ch1/ex1-5-q4.svg": "c0e4094f0b8b5721687668915386548b762f51f7d98cdc4cdafc74ada41d1976",
+            "assets/grade9-ch1/ex1-5-q9.svg": "88492124bc2bda4e1d10a69146f8c75dbaf0575eb4efd55086bd32499655eb33",
+            "data/textbook-exercises/g9-ch1-ex1-5.js": "bf5e2bab0d019e500583eb564f39dac5e52c2d74b0dac8318c6bde81d5a72610",
+            "data/textbook-fidelity/g9-ch1-ex1-5.json": "be1d187c274fe567bfa20b1eeed625d99e9c198b2bda9501adf064ac5444168a"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "allCardsTested": true
+          }
+        }
       }
     },
     {
       "grade": 9,
       "chapter": 1,
       "exercise": "1.6",
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "numberedQuestions": 13,
       "canonicalTasks": 23,
       "runtimeRecords": 13,
@@ -505,18 +594,44 @@
       "sourceBlocked": [],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-6.json",
       "release": {
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 433,
         "head": "f819d9cd4169f6540c24378b8137d9d44c43efab",
         "prQualityRun": 45682881316,
-        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433"
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433",
+        "merge": "452540614a3043c1a1a7b7b85f58e9ff7107f9be",
+        "pagesRun": 45685647834,
+        "liveEvidence": {
+          "deploymentId": 8067774101,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45685647834/job/139467154560",
+          "deploymentCompletedAt": "2026-11-25T19:46:59Z",
+          "versionMatched": "452540614a3043c1a1a7b7b85f58e9ff7107f9be",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch1-ex1.6-q1",
+          "sha256": {
+            "assets/grade9-ch1/ex1-6-q11.svg": "38d615e892117a54f841e868232aa3bd0b3dd5b680e08590c4d6fb75b683f59e",
+            "assets/grade9-ch1/ex1-6-q12.svg": "db0a76213dcd0141ff7d1517ff6da9e07a577e96c62285db017ceb945f6ede60",
+            "assets/grade9-ch1/ex1-6-q7.svg": "42eee4d10ba7cc32185a90d50121de2041bdbf9a04b4a43790b33b253936ae7b",
+            "assets/grade9-ch1/ex1-6-q9.svg": "a3b2452b88b3fd4ee44219a88ad63e7976c1d66481d36234520835eae442082b",
+            "data/textbook-exercises/g9-ch1-ex1-6.js": "8a751a17bddd23477f02450326f5db9c2b519f74049fdf4e5165339f528d7b3b",
+            "data/textbook-fidelity/g9-ch1-ex1-6.json": "8c0ff3a10a3cfcd25625e1db16730d52405b4c70fe02d0dfdc18efc03e178f74"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "allCardsTested": true
+          }
+        }
       }
     },
     {
       "grade": 9,
       "chapter": 1,
       "exercise": "1.7",
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "numberedQuestions": 20,
       "canonicalTasks": 20,
       "runtimeRecords": 20,
@@ -698,15 +813,505 @@
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-7.json",
       "release": {
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 433,
         "head": "f819d9cd4169f6540c24378b8137d9d44c43efab",
         "prQualityRun": 45682881316,
-        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433"
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/433",
+        "merge": "452540614a3043c1a1a7b7b85f58e9ff7107f9be",
+        "pagesRun": 45685647834,
+        "liveEvidence": {
+          "deploymentId": 8067774101,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45685647834/job/139467154560",
+          "deploymentCompletedAt": "2026-11-25T19:46:59Z",
+          "versionMatched": "452540614a3043c1a1a7b7b85f58e9ff7107f9be",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch1-ex1.7-q1",
+          "sha256": {
+            "assets/grade9-ch1/ex1-7-q19.svg": "6935e19b21d2c219953907b61f66700b9744362dd7a332c33a5bf007e4b3e407",
+            "assets/grade9-ch1/ex1-7-q9.svg": "cb77a7042b8b6d71bb5e889a0067cfed7dcc316c557444d7d18775ee75d42689",
+            "data/textbook-exercises/g9-ch1-ex1-7.js": "1427fe8576c6e5126bf8fd67db7a6f79b127ef965fddf0b52a2e01d0b63c0d53",
+            "data/textbook-fidelity/g9-ch1-ex1-7.json": "183313a60e485f65f9529394ecdd58d96e32559f66166a85cbb0af4b2ac8ff0a"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "allCardsTested": true
+          }
+        }
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 2,
+      "exercise": "2.9",
+      "status": "TESTED",
+      "canonicalTasks": 20,
+      "existingCardsReviewed": 20,
+      "localizedFinalAnswerOnly": 20,
+      "mathEvidence": [
+        {
+          "recordId": "g9-ch2-ex1-q1",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "4e87e64d8d570cb16a652f3cf0d304af4ff16bf2c6ee552512f607cbd58f8878"
+        },
+        {
+          "recordId": "g9-ch2-ex2-q1-i",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "1c2432e7ba066718adfd43315ee019267973116ef1db528feb0e0e954776374d"
+        },
+        {
+          "recordId": "g9-ch2-ex2-q1-ii",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "2ec9ca5b664bd0723afe69a3699646f247a05bea2d1efec920c90480bcf6c638"
+        },
+        {
+          "recordId": "g9-ch2-ex2-q1-iii",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "515cf76fe2b76164b0dd9d92a88d5efeb6fb4883d629b86ed2d743e5420172d0"
+        },
+        {
+          "recordId": "g9-ch2-ex2-q1-iv",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "904cd24c2b72b569a885bdfc553299a2f61dfd85f47ca287b4bc65ee50969603"
+        },
+        {
+          "recordId": "g9-ch2-ex2-q2",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "9c8ec17f5894b63750ac5e2d3003b17b67cc3128e22091509c623368eb8a1155"
+        },
+        {
+          "recordId": "g9-ch2-ex2-q5-i",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "8b38994d5fbd5e99af2b050fe8505de155debaf58f16fa282083053627fb3c00"
+        },
+        {
+          "recordId": "g9-ch2-ex2-q5-ii",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "ba281706436b8e70b8343446d5cf8cf8de0e4af56a70b1b2c20ba8491a7c1121"
+        },
+        {
+          "recordId": "g9-ch2-ex2-q5-iii",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "0ed84dde1649f83bd5ae2848c54b73cc6549231ce5487f11748ee9b45c5efacf"
+        },
+        {
+          "recordId": "g9-ch2-ex2-q5-iv",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "98ff8513d6794b941413d218e4ebea6c0e02b583d5b1522744a7daf9dc5370de"
+        },
+        {
+          "recordId": "g9-ch2-ex3-q2-ii",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "06e5f06b35475c75b2dc6f9c163f7a85e558a25624ebdac63948f5ed9b4ca705"
+        },
+        {
+          "recordId": "g9-ch2-ex3-q2-iii",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "3da28100140c74498fa7fa055f32d132d46773eeff3dfb0b086bdd66b69f3fdb"
+        },
+        {
+          "recordId": "g9-ch2-ex6-q5-i",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "68766acb2d6425fbfd3d70b787326b1cac913dbd96f329c063cff110572047e6"
+        },
+        {
+          "recordId": "g9-ch2-ex6-q5-ii",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "278131a54ef27b124334b4370fd947bc3c928830d71aae51fec8a67b6f764430"
+        },
+        {
+          "recordId": "g9-ch2-ex6-q5-iii",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "af3d8d8a303ece065c492bf3b86eecbb95a6acd06e44b3e9ab79d9c3227ec94b"
+        },
+        {
+          "recordId": "g9-ch2-ex6-q5-iv",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "f84a749989ab5215e03d87d36c9c5c017c3d235f5bd2e38b692fda62503e268e"
+        },
+        {
+          "recordId": "g9-ch2-ex6-q6-i",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "9e76f001f0f4740005e5dfbbc25a948637f122e6fe22e935c42dd89a8566d4aa"
+        },
+        {
+          "recordId": "g9-ch2-ex6-q6-ii",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "9b0ffbe47a7ed6c0df4fa240d9c94289082cebad7a9b0ef685cda2b1e0955700"
+        },
+        {
+          "recordId": "g9-ch2-ex6-q6-iii",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "133ee01e5f1877a75ee4b3ef06df19f1ab2ec47f6b129d4fce1a1ef5690aaf69"
+        },
+        {
+          "recordId": "g9-ch2-ex6-q6-iv",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "68e491f496cb7ce2853c2f398e19941127c20ee64c9749fc5619cd836eae5ee7"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q1",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "db466352492acf82c44a9caebddd8286ca1e066af79340d10a8838178cd65dba"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q2",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "e1ce9f27c678a54ee6c58951eee8993f1b461f4ba1335953d6b7e24adf39f993"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q3",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "e01bb3b9d7f2600818556af8360167802cceb1760c6932fc343081148efc3650"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q4",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "fdc9bd9371498814753955c3a7cd3517fe01819621e4d225f5fb9f2a4f05888a"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q5",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "46e43de37941099e46ba939fdfe7c194fa0caa36829217494e59028c8216f202"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q6",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "13acb593a3a4dd8f1c0630b29b891beff2f4f31815f952b7182a7e630ce216e2"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q7",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "eaecc80db1b385d4e4b50ba4eaca9b06ffd6f61adf23bea08e162682b112f0fb"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q8",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "42e3353054039c6c9e2c31761647b15b06d4314268093476e22df16a3f36db33"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q9",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "7ae15f8bcac938720f3172c26f7e354b4c8d799369f6b92a21a8f5b562fe6fa5"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q10",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "7cafbb8f466976be2f1e38f5058fba7b4b89c28ff164d26b4fe128410315f409"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q11",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "2d3a0683879c5ed565e527e655203cea33d0fb29509a42b267e418d00366e21c"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q12",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "5ff3e0fa6598f0c75730c97e296669caa3f08f0714db3f381a643ddccfceaeee"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q13",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "808a7144da124507ef4e8d00d4e341fac1a91f0df8fec1d3cd9e1c501b72bc2a"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q14",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "49eed717755ee42512468f59942272b308ef153cd9c4ca8cd9bda64916fc78e1"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q15",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "3eafb8f24072199869888efc760ad3174528a0b4b9522b91e8906a084f17d96c"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q16",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "c658dc18c57e379320283354b38ea07de75c7dc8a30c27561254ed23e904ead5"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q17",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "bffe935da62a3ac47ae2bf9a3405791a37c12aa5088f68b02d95b9e54fdb0a96"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q18",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "cd3b73f2997b76181e6cb0669b8dbb9b05e7363fda0e81482eab3b8cd8cddc80"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q19",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "1a488dbb2a43f38934406eb00cbe5e170428af488ba03048dabc8c2b33ce73e9"
+        },
+        {
+          "recordId": "g9-ch2-ex9-q20",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "9d235c5ed4da564c1535a75c455968b18434f6239eb2df0842bf721329f752ea"
+        }
+      ],
+      "sourceEvidence": "site/data/textbook-fidelity/g9-ch2-ex2-9-frontier.json",
+      "release": {
+        "status": "TESTED",
+        "pr": 434,
+        "head": "e9795fae19c62697c86db42b30222207fd6b1e42",
+        "prQualityRun": 45688847027,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/434",
+        "previousCiFailure": {
+          "run": 45685961032,
+          "job": 139458618056,
+          "diagnosis": "The whole-grade typography comparison used the pre-translation final answer. The updated fixture passed locally for all 755 Grade 9 cards."
+        }
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.2",
+      "status": "TESTED",
+      "canonicalTasks": 20,
+      "existingCardsReviewed": 12,
+      "figuresAdded": 4,
+      "mathEvidence": [
+        {
+          "recordId": "g9-ch5-ex5.2-q1",
+          "parts": [
+            "i",
+            "ii",
+            "iii",
+            "iv"
+          ],
+          "passed": true,
+          "recordSha256": "e4b638f53cc9ab5df5eb3065ca15af9ebc98dd2ecfd36e6307557187f833c5e6"
+        },
+        {
+          "recordId": "g9-ch5-ex5.2-q2",
+          "parts": [
+            "i",
+            "ii"
+          ],
+          "passed": true,
+          "recordSha256": "71e8b2138a4eb4e49fc10738c822928766dd4b8bc3f4ee58159b3b813e5c5e0b"
+        },
+        {
+          "recordId": "g9-ch5-ex5.2-q3",
+          "parts": [
+            "i",
+            "ii"
+          ],
+          "passed": true,
+          "recordSha256": "78855343e2bd9ba81b70b29937dd6d00396010d9e0001ea76c2e4c22d0da7cc9"
+        },
+        {
+          "recordId": "g9-ch5-ex5.2-q4",
+          "parts": [
+            "i",
+            "ii"
+          ],
+          "passed": true,
+          "recordSha256": "23a6206a20a1528eec1f2c0eecc6f28407f47aeff0a0882b2f6f6862a20263d3"
+        },
+        {
+          "recordId": "g9-ch5-ex5.2-q5",
+          "parts": [
+            "i",
+            "ii"
+          ],
+          "passed": true,
+          "recordSha256": "a8b4af61fa60973dd41fd252ad31b45f45f903ab0c80f59575ee46ae8d3170b3"
+        },
+        {
+          "recordId": "g9-ch5-ex5.2-q6",
+          "parts": [
+            "i",
+            "ii"
+          ],
+          "passed": true,
+          "recordSha256": "2b76b118cda0f793ba74658a246000bf1876cf78389569e70c4f4d8ac4a74d77"
+        },
+        {
+          "recordId": "g9-ch5-ex5.2-q7",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "133743ba00b3ecde7ccee8d5a0ea02987fbfff15c3cf050a1760422948b334b0"
+        },
+        {
+          "recordId": "g9-ch5-ex5.2-q8",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "900d40b96b5eec8d8b00a9967e98a5c0e49bf9552e9dd4c1930a58a8ce753ee1"
+        },
+        {
+          "recordId": "g9-ch5-ex5.2-q9",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "00ae9f21c5a958ac6f4d5d74d55c1ecd4d975683efc191e3049e078fbcfa01b0"
+        },
+        {
+          "recordId": "g9-ch5-ex5.2-q10",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "8b395cf7ed395b4c5846117aef43760d5ea37a38db3758fab7bf2dd65ef6c2cd"
+        },
+        {
+          "recordId": "g9-ch5-ex5.2-q11",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "61be13f5fe7a602684e0e9ffb6ab7301ca48fb8104c6619fc1b905ff9d1fa31f"
+        },
+        {
+          "recordId": "g9-ch5-ex5.2-q12",
+          "parts": [
+            "whole"
+          ],
+          "passed": true,
+          "recordSha256": "f5857d899b08c4c896bf084bc5badab2ebe956c9ebfc5bc6807594c971d947fc"
+        }
+      ],
+      "sourceEvidence": "site/data/textbook-fidelity/g9-ch5-ex5-2-frontier.json",
+      "release": {
+        "status": "TESTED",
+        "pr": 435,
+        "head": "d1ed3fd5b82e90650e46fc379aa62462adcb4acb",
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/435"
       }
     }
   ],
-  "latestMain": "0d6e4e7eb407b8d93ed4af0ab183e06b58af6e8a",
+  "latestMain": "452540614a3043c1a1a7b7b85f58e9ff7107f9be",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -716,16 +1321,22 @@
       "unit": "/workspace/scratch/trace-set-batch-npm-test.log",
       "browser": "/workspace/scratch/trace-set-batch-browser.log"
     },
-    "grade9SetWorktree": "/workspace/Triggle-ex16"
+    "grade9SetWorktree": "/workspace/Triggle-ex16",
+    "currentRuntime": "/workspace/scratch/trace-sources/batch3-rendered-browser-runtime.json",
+    "coordinateRuntime": "/workspace/scratch/trace-sources/batch4-browser-runtime.json",
+    "liveSetLogs": [
+      "/workspace/scratch/trace-sources/live-ex13-browser.log",
+      "/workspace/scratch/trace-sources/live-sets-browser.log"
+    ]
   },
   "openManagement": {
     "mathguard": "https://github.com/vigneswaranmba20-afk/Triggle/pull/425",
     "androidRecommendation": "NO-GO"
   },
   "resume": [
-    "Verify PR 432 Pages workflow 45681691336, compare deployed bytes against its merge, and run the live bilingual exercise smoke test.",
-    "Check PR 433 risk workflow 45682881316 and all other applicable checks. Re-fetch main, merge via normal workflow, then verify Pages and both languages.",
-    "Finish Ex 2.9 Tamil final answers and reasoning in the existing cards, including source questions and choices, focused math and browser checks and a separate release.",
-    "Reconcile the remaining per-task inventory candidates with original pages, runtime rendering, hints, figures and prior exact mathematical evidence. Repeat source-to-runtime reconciliation after each release."
+    "Check the corrected PR 434 head e9795fae19c62697c86db42b30222207fd6b1e42 and quality run 45688847027. After it passes, fetch latest main and merge through the normal gate, then verify Pages.",
+    "Check PR 435 head d1ed3fd5b82e90650e46fc379aa62462adcb4acb. Reconcile with whichever batch merges first, rerun required checks, then merge and verify Pages.",
+    "Resolve actual Tamil render gaps in Grade 9 Real Numbers legacy equation labels, Grade 9 Algebra and the remaining Grade 10 candidates. Inspect the reader and preserved 2025 page locators.",
+    "Perform the second source-to-runtime review, including remaining visual assets and mathematical evidence. Update the report with exact source-verified counts and production deployment evidence."
   ]
 }
