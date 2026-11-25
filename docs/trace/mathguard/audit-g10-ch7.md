@@ -1,9 +1,9 @@
 # TRACE MathGuard V1.0 — Grade 10 Chapter 7 (Mensuration) Audit Report
 
 - **Total audited items**: 71 (62 exercises + 9 concepts)
-- **Overall status**: PASS=22, PARTIAL=40, FAIL=8, UNVERIFIABLE=1
+- **Overall status**: PASS=24, PARTIAL=45, FAIL=1, UNVERIFIABLE=1
 - **Answer verification (independent SymPy)**: PASS=70, FAIL=0, UNVERIFIABLE=1
-- **Intermediate-step verification**: PASS=27, PARTIAL=18, FAIL=7, UNVERIFIABLE=19
+- **Intermediate-step verification**: PASS=29, PARTIAL=22, FAIL=0, UNVERIFIABLE=20
 - **Tamil consistency validation**: PASS=50, PARTIAL=10, FAIL=1, MISSING=10
 
 ## Items Requiring Attention (Non-PASS Overall Status)
@@ -13,7 +13,7 @@
 | `c10-7-ex7-1-q1` | exercise | 7.1 | PARTIAL | PASS | PARTIAL | MISSING | minor | Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [0] |
 | `c10-7-ex7-1-q2` | exercise | 7.1 | PARTIAL | PASS | PARTIAL | MISSING | minor | Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [1, 2] |
 | `c10-7-ex7-1-q3` | exercise | 7.1 | PARTIAL | PASS | PARTIAL | MISSING | minor | Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [0] |
-| `c10-7-ex7-1-q4` | exercise | 7.1 | PARTIAL | PASS | PARTIAL | MISSING | minor | Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [0, 1, 2, 3, 4] |
+| `c10-7-ex7-1-q4` | exercise | 7.1 | PARTIAL | PASS | PARTIAL | MISSING | minor | Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [1, 2, 3, 4] |
 | `c10-7-ex7-1-q5` | exercise | 7.1 | PARTIAL | PASS | PARTIAL | MISSING | minor | Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [1, 2] |
 | `c10-7-ex7-1-q6` | exercise | 7.1 | PARTIAL | PASS | PARTIAL | MISSING | minor | Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [1] |
 | `c10-7-ex7-1-q7` | exercise | 7.1 | PARTIAL | PASS | UNVERIFIABLE | MISSING | minor | Tamil prompt missing in student data module (TRACE Tamil Validator); Intermediate steps have no verifiable equality chains |
@@ -23,13 +23,13 @@
 | `c10-7-ex7-2-q1` | exercise | 7.2 | PARTIAL | PASS | PASS | PARTIAL | minor | Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch'] |
 | `c10-7-ex7-2-q2` | exercise | 7.2 | PARTIAL | PASS | PARTIAL | PASS | minor | Unparsed step indices: [0] |
 | `c10-7-ex7-2-q5` | exercise | 7.2 | PARTIAL | PASS | PARTIAL | PASS | minor | Unparsed step indices: [3] |
-| `c10-7-ex7-2-q6` | exercise | 7.2 | FAIL | PASS | FAIL | PARTIAL | major | Intermediate step equality failure: [{'stepIndex': 1, 'line': '\\dfrac{V_1}{V_2}=\\dfrac{\\tfrac{1}{3}\\pi r^2 h_1}{\\tfrac{1}{3}\\pi r^2 h_2}=\\dfrac{h_1}{h_2}=\\dfrac{3600}{5040}', 'lhs': 'V_1/V_2', 'rhs': 'h_1/h_2'}] |
-| `c10-7-ex7-2-q7` | exercise | 7.2 | FAIL | PASS | FAIL | PARTIAL | major | Intermediate step equality failure: [{'stepIndex': 1, 'line': '\\dfrac{V_1}{V_2}=\\dfrac{\\tfrac{4}{3}\\pi r_1^3}{\\tfrac{4}{3}\\pi r_2^3}=(\\dfrac{r_1}{r_2})^3', 'lhs': 'V_1/V_2', 'rhs': 'r_1**3/r_2**3'}] |
-| `c10-7-ex7-2-q8` | exercise | 7.2 | FAIL | PASS | FAIL | PASS | major | Intermediate step equality failure: [{'stepIndex': 2, 'line': 'V_sphere / V_hemisphere = ((4/3)\\pi R^{3}) / ((2/3)\\pi r^{3}) = 2(R/r)^{3}', 'lhs': 'V_sphere/V_hemisphere', 'rhs': '2*R**3/r**3'}] |
+| `c10-7-ex7-2-q6` | exercise | 7.2 | PARTIAL | PASS | PARTIAL | PARTIAL | minor | Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']; Unparsed step indices: [0, 2] |
+| `c10-7-ex7-2-q7` | exercise | 7.2 | PARTIAL | PASS | PARTIAL | PARTIAL | minor | Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']; Unparsed step indices: [2] |
+| `c10-7-ex7-2-q8` | exercise | 7.2 | PARTIAL | PASS | PARTIAL | PASS | minor | Unparsed step indices: [3] |
 | `c10-7-ex7-2-q9` | exercise | 7.2 | PARTIAL | PASS | PARTIAL | PARTIAL | minor | Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']; Unparsed step indices: [0, 1] |
 | `c10-7-ex7-2-q10` | exercise | 7.2 | PARTIAL | PASS | PARTIAL | PASS | minor | Unparsed step indices: [0, 3] |
 | `c10-7-ex7-3-q2` | exercise | 7.3 | PARTIAL | PASS | PARTIAL | PASS | minor | Unparsed step indices: [0] |
-| `c10-7-ex7-3-q4` | exercise | 7.3 | FAIL | PASS | FAIL | PASS | major | Intermediate step equality failure: [{'stepIndex': 1, 'line': 'V_displaced = V_cone + V_hemisphere = (1/3)\\pi r^{2}h_cone + (2/3)\\pi r^{3}', 'lhs': 'V_cone + V_hemisphere', 'rhs': 'pi*h_cone*r**2/3 + 2*pi*r**3/3'}] |
+| `c10-7-ex7-3-q4` | exercise | 7.3 | PARTIAL | PASS | PARTIAL | PASS | minor | Unparsed step indices: [0] |
 | `c10-7-ex7-3-q5` | exercise | 7.3 | PARTIAL | PASS | PASS | PARTIAL | minor | Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch'] |
 | `c10-7-ex7-3-q7-i` | exercise | 7.3 | PARTIAL | PASS | UNVERIFIABLE | PASS | minor | Intermediate steps have no verifiable equality chains |
 | `c10-7-ex7-3-q7-ii` | exercise | 7.3 | PARTIAL | PASS | UNVERIFIABLE | PASS | minor | Intermediate steps have no verifiable equality chains |
@@ -43,7 +43,6 @@
 | `c10-7-ex7-5-q10` | exercise | 7.5 | PARTIAL | PASS | UNVERIFIABLE | PASS | minor | Intermediate steps have no verifiable equality chains |
 | `c10-7-ex7-5-q11` | exercise | 7.5 | UNVERIFIABLE | UNVERIFIABLE | UNVERIFIABLE | PASS | info | Shuttlecock shape recognition is qualitative/non-numerical and cannot be derived from stated quantities. |
 | `c10-7-ex7-5-q12` | exercise | 7.5 | PARTIAL | PASS | UNVERIFIABLE | PASS | minor | Intermediate steps have no verifiable equality chains |
-| `c10-7-ex7-5-q14` | exercise | 7.5 | FAIL | PASS | FAIL | PASS | major | Intermediate step equality failure: [{'stepIndex': 0, 'line': 'h_1-h_2=h_1-\\dfrac{h_1}{2}=\\dfrac{h_1}{2}', 'lhs': 'h_1 - h_2', 'rhs': 'h_1/2'}, {'stepIndex': 1, 'line': '\\dfrac{r_2}{r_1}=\\dfrac{h_1-h_2}{h_1}=\\dfrac{1}{2}', 'lhs': 'r_2/r_1', 'rhs': '(h_1 - h_2)/h_1'}] |
 | `c10-7-ex7-5-q15` | exercise | 7.5 | PARTIAL | PASS | PARTIAL | PASS | minor | Unparsed step indices: [2] |
 | `c10-7-unit-q1` | exercise | 7.unit | PARTIAL | PASS | PASS | PARTIAL | minor | Tamil consistency flags (TRACE Tamil Validator): ['en_ta_unit_mismatch'] |
 | `c10-7-unit-q3` | exercise | 7.unit | PARTIAL | PASS | UNVERIFIABLE | PARTIAL | minor | Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']; Intermediate steps have no verifiable equality chains |
@@ -57,8 +56,7 @@
 | `g10-ch7-frustum-surface-volume` | concept | 7.2.7 & 7.3.8 | PARTIAL | PASS | UNVERIFIABLE | PASS | minor | Proof step status=UNVERIFIABLE (unverified=[0]) |
 | `g10-ch7-volumes-cylinder-cone` | concept | 7.3.1–7.3.3 | PARTIAL | PASS | UNVERIFIABLE | PASS | minor | Proof step status=UNVERIFIABLE (unverified=[0, 1]) |
 | `g10-ch7-volumes-sphere-hemisphere` | concept | 7.3.4–7.3.7 | PARTIAL | PASS | UNVERIFIABLE | PARTIAL | minor | Tamil editorial check flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']; Proof step status=UNVERIFIABLE (unverified=[0, 1]) |
-| `g10-ch7-combined-solids` | concept | 7.4 | FAIL | PASS | FAIL | PASS | major | Step=FAIL ([{'stepIndex': 1, 'line': 'V=\\pi r^2 h-\\dfrac{1}{3}\\pi r^2 =\\dfrac{2}{3}\\pi r^2 h\\end{aligned}', 'lhs': 'pi*h*r**2 - pi*r**2/3', 'rhs': '2*pi*h*r**2/3'}]), Tamil=[] |
-| `g10-ch7-conversion-volume-conservation` | concept | 7.5 | FAIL | PASS | FAIL | PASS | major | Step=FAIL ([{'stepIndex': 0, 'line': '\\begin{aligned}\\dfrac{4}{3}\\pi R^3=\\pi r^2 H\\  H=\\dfrac{4R^3}{3r^2}\\end{aligned}', 'lhs': '4*pi*R**3/3', 'rhs': 'pi*H**2*r**2'}, {'stepIndex': 0, 'line': '\\begin{aligned}\\dfrac{4}{3}\\pi R^3=\\pi r^2 H\\  H=\\dfrac{4R^3}{3r^2}\\end{aligned}', 'lhs': 'pi*H**2*r**2', 'rhs': '4*R**3/(3*r**2)'}]), Tamil=[] |
+| `g10-ch7-conversion-volume-conservation` | concept | 7.5 | PARTIAL | PASS | UNVERIFIABLE | PASS | minor | Proof step status=UNVERIFIABLE (unverified=[1]) |
 
 ## Full Item-by-Item Ledger
 
@@ -79,15 +77,15 @@
 | `c10-7-ex7-2-q3` | 7.2 | `cone_volume_from_circumference` | 652190 | Volume of the conical wooden piece = 652190 cm³. | PASS | PASS | PASS | PASS |
 | `c10-7-ex7-2-q4` | 7.2 | `cone_emptying_time` | 20*pi (≈ 62.8571 with pi=22/7) | 63 minutes (approx). | PASS | PASS | PASS | PASS |
 | `c10-7-ex7-2-q5` | 7.2 | `right_triangle_cone_volumes_diff` | 32*pi (≈ 100.5714 with pi=22/7) | Difference in volumes = 100.58 cm³. | PARTIAL | PASS | PARTIAL | PASS |
-| `c10-7-ex7-2-q6` | 7.2 | `cone_height_ratio_from_volumes` | 3600 : 5040 (simplified ratio 5/7) | Ratio of heights = 5 : 7. | FAIL | PASS | FAIL | PARTIAL |
-| `c10-7-ex7-2-q7` | 7.2 | `sphere_volume_ratio_from_radii` | 64 : 343 (simplified ratio 64/343) | Ratio of their volumes = 64 : 343. | FAIL | PASS | FAIL | PARTIAL |
-| `c10-7-ex7-2-q8` | 7.2 | `sphere_hemisphere_equal_tsa_volume_ratio` | 3*sqrt(3) : 4 (simplified ratio 3*sqrt(3)/4) | Ratio of their volumes = 3√3 : 4 (Proved). | FAIL | PASS | FAIL | PASS |
+| `c10-7-ex7-2-q6` | 7.2 | `cone_height_ratio_from_volumes` | 3600 : 5040 (simplified ratio 5/7) | Ratio of heights = 5 : 7. | PARTIAL | PASS | PARTIAL | PARTIAL |
+| `c10-7-ex7-2-q7` | 7.2 | `sphere_volume_ratio_from_radii` | 64 : 343 (simplified ratio 64/343) | Ratio of their volumes = 64 : 343. | PARTIAL | PASS | PARTIAL | PARTIAL |
+| `c10-7-ex7-2-q8` | 7.2 | `sphere_hemisphere_equal_tsa_volume_ratio` | 3*sqrt(3) : 4 (simplified ratio 3*sqrt(3)/4) | Ratio of their volumes = 3√3 : 4 (Proved). | PARTIAL | PASS | PARTIAL | PASS |
 | `c10-7-ex7-2-q9` | 7.2 | `hollow_sphere_volume_from_areas` | 1332*pi (≈ 4186.2857 with pi=22/7) | Volume of the material required = 4186.29 cm³. | PARTIAL | PASS | PARTIAL | PARTIAL |
 | `c10-7-ex7-2-q10` | 7.2 | `frustum_milk_cost` | 3328*pi/25 (≈ 418.3771 with pi=22/7) | Cost of milk = ₹418.36. | PARTIAL | PASS | PARTIAL | PASS |
 | `c10-7-ex7-3-q1` | 7.3 | `hemisphere_plus_cylinder_volume` | 1568*pi/3 (≈ 1642.6667 with pi=22/7) | Capacity of the vessel ≈ 1642.67 cm³ (exact 4928/3 cm³). | PASS | PASS | PASS | PASS |
 | `c10-7-ex7-3-q2` | 7.3 | `cylinder_plus_two_cones_volume` | 21*pi (≈ 66.0000 with pi=22/7) | Volume of the model = 66 cm³. | PARTIAL | PASS | PARTIAL | PASS |
 | `c10-7-ex7-3-q3` | 7.3 | `cylinder_minus_cone_volume` | 98*pi/125 (≈ 2.4640 with pi=22/7) | 2.46 cm³ (2025 textbook key; 2 cm³ if rounded to the nearest | PASS | PASS | PASS | PASS |
-| `c10-7-ex7-3-q4` | 7.3 | `cone_on_hemisphere_displacement` | 288*pi (≈ 905.1429 with pi=22/7) | Volume of water displaced ≈ 905.14 cm³ (exact 288π cm³). | FAIL | PASS | FAIL | PASS |
+| `c10-7-ex7-3-q4` | 7.3 | `cone_on_hemisphere_displacement` | 288*pi (≈ 905.1429 with pi=22/7) | Volume of water displaced ≈ 905.14 cm³ (exact 288π cm³). | PARTIAL | PASS | PARTIAL | PASS |
 | `c10-7-ex7-3-q5` | 7.3 | `capsule_cylinder_plus_two_hemispheres` | 99*pi/4 (≈ 77.7857 with pi=22/7) | 77.78 mm³ of medicine (exact 1089/14 mm³). | PARTIAL | PASS | PASS | PARTIAL |
 | `c10-7-ex7-3-q6` | 7.3 | `cube_surmounted_by_hemisphere_sa` | 49*pi/4 + 294 (≈ 332.5000 with pi=22/7) | Surface area of the solid = 332.5 cm². | PASS | PASS | PASS | PASS |
 | `c10-7-ex7-3-q7-i` | 7.3 | `enclosed_sphere_sa` | 4*pi*r**2 | 4πr² sq. units. | PARTIAL | PASS | UNVERIFIABLE | PASS |
@@ -114,7 +112,7 @@
 | `c10-7-ex7-5-q11` | 7.5 | `qualitative_shape_recognition` | UNVERIFIABLE | (D) frustum of a cone and a hemisphere | UNVERIFIABLE | UNVERIFIABLE | UNVERIFIABLE | PASS |
 | `c10-7-ex7-5-q12` | 7.5 | `mcq_sphere_8_balls_ratio` | 2 : 1 (simplified ratio 2) | (A) 2:1 | PARTIAL | PASS | UNVERIFIABLE | PASS |
 | `c10-7-ex7-5-q13` | 7.5 | `mcq_greatest_sphere_in_cylinder` | 4*pi/3 (≈ 4.1888 with pi=exact) | (A) (4/3)π | PASS | PASS | PASS | PASS |
-| `c10-7-ex7-5-q14` | 7.5 | `mcq_similar_cones_ratio` | 1 : 2 (simplified ratio 1/2) | (B) 1:2 | FAIL | PASS | FAIL | PASS |
+| `c10-7-ex7-5-q14` | 7.5 | `mcq_similar_cones_ratio` | 1 : 2 (simplified ratio 1/2) | (B) 1:2 | PASS | PASS | PASS | PASS |
 | `c10-7-ex7-5-q15` | 7.5 | `mcq_cylinder_cone_sphere_volume_ratio` | 2*pi*r**3 : 2*pi*r**3/3 : 4*pi*r**3/3 | (D) 3:1:2 | PARTIAL | PASS | PARTIAL | PASS |
 | `c10-7-unit-q1` | 7.unit | `fountain_pen_words` | 48000 | Approximately 48,000 words | PARTIAL | PASS | PASS | PARTIAL |
 | `c10-7-unit-q2` | 7.unit | `hemisphere_tank_empty_time` | 1925/72 | Approximately 27 minutes | PASS | PASS | PASS | PASS |
@@ -133,5 +131,5 @@
 | `g10-ch7-frustum-surface-volume` | 7.2.7 & 7.3.8 | `concept_frustum_slant` | 5 | choice[1]: 5 cm | PARTIAL | PASS | UNVERIFIABLE | PASS |
 | `g10-ch7-volumes-cylinder-cone` | 7.3.1–7.3.3 | `concept_cone_double_radius_scaling` | 4 | choice[2]: 4 times | PARTIAL | PASS | UNVERIFIABLE | PASS |
 | `g10-ch7-volumes-sphere-hemisphere` | 7.3.4–7.3.7 | `concept_sphere_volume_ratio` | 8 : 27 (simplified ratio 8/27) | choice[0]: 8 : 27 | PARTIAL | PASS | UNVERIFIABLE | PARTIAL |
-| `g10-ch7-combined-solids` | 7.4 | `concept_cube_minus_hemisphere_sa` | 6*a**2 + pi*r**2 | choice[1]: 6a² + πr² | FAIL | PASS | FAIL | PASS |
-| `g10-ch7-conversion-volume-conservation` | 7.5 | `concept_sphere_recast_count` | 27 | choice[2]: 27 small spheres | FAIL | PASS | FAIL | PASS |
+| `g10-ch7-combined-solids` | 7.4 | `concept_cube_minus_hemisphere_sa` | 6*a**2 + pi*r**2 | choice[1]: 6a² + πr² | PASS | PASS | PASS | PASS |
+| `g10-ch7-conversion-volume-conservation` | 7.5 | `concept_sphere_recast_count` | 27 | choice[2]: 27 small spheres | PARTIAL | PASS | UNVERIFIABLE | PASS |

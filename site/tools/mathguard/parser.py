@@ -71,6 +71,10 @@ _UNIT_WORDS = {
 def preprocess_math_text(text: str) -> str:
     """Normalize Unicode math symbols and strip benign formatting wrappers."""
     s = str(text or "").strip()
+    # Strip LaTeX spacing/sizing commands BEFORE replacing \implies/\Rightarrow with ';'
+    s = re.sub(r"\\(left|right|big|Big|bigg|Bigg)\b", "", s)
+    s = re.sub(r"\\[,;:! ]", " ", s)
+    s = re.sub(r"\\quad\b|\\qquad\b", " ", s)
     # Replace Unicode operators & constants
     s = s.replace("−", "-").replace("–", "-").replace("—", "-")
     s = s.replace("×", "*").replace("·", "*").replace("÷", "/")
@@ -94,10 +98,6 @@ def preprocess_math_text(text: str) -> str:
         lambda m: f"{m.group(1)}_{re.sub(r'[^A-Za-z0-9]', '', m.group(2))}",
         s,
     )
-    # Strip LaTeX spacing/sizing/text commands
-    s = re.sub(r"\\(left|right|big|Big|bigg|Bigg)\b", "", s)
-    s = re.sub(r"\\[,;:! ]", " ", s)
-    s = re.sub(r"\\quad\b|\\qquad\b", " ", s)
     # Strip \boxed{...} wrapper
     s = re.sub(r"\\boxed\s*\{", "{", s)
     # Strip \text{...}, \mathrm{...}, \operatorname{...} when they hold units/labels
@@ -176,7 +176,9 @@ def tokenize(text: str) -> List[Token]:
             while j < n and (s[j].isalnum() or s[j] == "_"):
                 j += 1
             word = s[i:j]
-            if word.startswith("__"):
+            if word.startswith("__") or word in {
+                "eval", "exec", "open", "print", "lambda", "import", "getattr", "setattr", "system", "popen",
+            }:
                 raise ParseError(f"Disallowed identifier {word!r}")
             if word.lower() in _UNIT_WORDS:
                 k = j
@@ -227,9 +229,11 @@ def tokenize(text: str) -> List[Token]:
             tokens.append(Token("COMMA", ","))
             i += 1
             continue
-        if ch == "₹" or ch in "&;…":
+        if ch == "₹" or ch in "&…":
             i += 1
             continue
+        if ch == ";":
+            raise ParseError("Unexpected ';' in expression")
         i += 1
     tokens.append(Token("EOF", ""))
     return tokens

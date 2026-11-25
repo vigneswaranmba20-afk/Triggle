@@ -132,6 +132,37 @@ def _check_pair_equivalent(
     return False, None
 
 
+def _has_domain_violation(expr: sp.Expr) -> bool:
+    """Detect division by zero (zoo), indeterminate (nan), or infinity (oo)."""
+    return bool(expr.has(sp.zoo, sp.nan, sp.oo, -sp.oo))
+
+
+def _is_named_quantity_expr(expr: sp.Expr) -> bool:
+    """Return True if expr is a ratio/sum of named or subscripted quantities (e.g. V_1/V_2, V_cone+V_hemi)."""
+    syms = expr.free_symbols
+    if not syms:
+        return False
+    return all("_" in s.name or len(s.name) >= 2 for s in syms)
+
+
+def extract_stem_assumptions(question_en: str, figure_alt_en: str = "") -> Dict[str, sp.Expr]:
+    """Extract explicit variable assignments and ratios from question stem (general, non-hardcoded)."""
+    text = f"{question_en or ''} {figure_alt_en or ''}"
+    assumptions: Dict[str, sp.Expr] = {}
+    # Explicit assignments like "QR = 16", "r = 6 cm", "R = 12 cm"
+    for m in re.finditer(r"\b([A-Za-z](?:_[A-Za-z0-9]+|[A-Z])?)\s*=\s*(\d+(?:\.\d+)?)\b", text):
+        name, val = m.group(1), m.group(2)
+        if name not in assumptions:
+            assumptions[name] = sp.Rational(val) if "." in val else sp.Integer(int(val))
+    # Explicit variable ratios like "h₂ : h₁ = 1 : 2" or "h_2 : h_1 = 1 : 2"
+    norm_t = text.replace("₁", "_1").replace("₂", "_2").replace("₃", "_3")
+    for m in re.finditer(r"\b([A-Za-z]_[0-9]+)\s*:\s*([A-Za-z]_[0-9]+)\s*=\s*(\d+)\s*:\s*(\d+)\b", norm_t):
+        v1, v2, p, q = m.group(1), m.group(2), int(m.group(3)), int(m.group(4))
+        if q != 0 and v1 not in assumptions:
+            assumptions[v1] = sp.Rational(p, q) * sp.Symbol(v2, real=True)
+    return assumptions
+
+
 def validate_steps(
     steps: List[Dict[str, Any]],
     allow_positive_domain: bool = True,
@@ -148,10 +179,14 @@ def validate_steps(
             classification="Missing mathematical context",
         )
 
-    env: Dict[sp.Symbol, sp.Expr] = {}
+    env_sym: Dict[sp.Symbol, sp.Expr] = {}
+    env_num: Dict[sp.Symbol, sp.Expr] = {}
     if initial_env:
         for k, v in initial_env.items():
-            env[sp.Symbol(k, real=True)] = v
+            sym = sp.Symbol(k, real=True)
+            env_sym[sym] = v
+            if not v.free_symbols:
+                env_num[sym] = v
 
     checked = 0
     passed = 0
@@ -187,31 +222,52 @@ def validate_steps(
         step_equations: List[Tuple[str, sp.Expr, sp.Expr]] = []
 
         for line, exprs in chains:
+            if any(_has_domain_violation(e) for e in exprs):
+                checked += 1
+                failed.append(
+                    {
+                        "stepIndex": idx,
+                        "line": line,
+                        "lhs": "domain_violation",
+                        "rhs": "division_by_zero_or_indeterminate",
+                    }
+                )
+                continue
             if len(exprs) < 2:
                 continue
             raw_segs = [seg.strip() for seg in line.split("=") if seg.strip()]
             raw_target_segs = [seg.strip() for seg in re.split(r"=|≈", target) if seg.strip()]
             lhs_raw = raw_segs[0] if raw_segs else ""
 
-            # Record 2-term equation for implication checking (even if rhs is itself a chain: take e0 = e1)
+            # Record 2-term equation for implication checking
             step_equations.append((line, exprs[0], exprs[1]))
 
-            # Record clean variable definition in env (e.g. r = 7, A = 4*pi*r^2, r_new = 1.25*r)
+            # Record clean variable definition in dual symbolic/numeric env
             if isinstance(exprs[0], sp.Symbol) and exprs[0] not in exprs[1].free_symbols:
-                # Prefer exact/numeric tail if len >= 3, else exprs[1]
-                val_expr = exprs[-1] if (len(exprs) >= 3 and not exprs[-1].free_symbols) else exprs[1]
-                if exprs[0] not in env:
-                    env[exprs[0]] = val_expr
+                if exprs[0] not in env_sym:
+                    env_sym[exprs[0]] = exprs[1]
+                if len(exprs) >= 3 and not exprs[-1].free_symbols and exprs[0] not in env_num:
+                    env_num[exprs[0]] = exprs[-1]
+                elif not exprs[1].free_symbols and exprs[0] not in env_num:
+                    env_num[exprs[0]] = exprs[1]
 
-            # If e0 is a named quantity/prose label, OR if e0 is constant while e1, e2 share symbols (e.g. 1540 = 2*(22/7)*7h = 44h),
-            # e0=e1 is the stated equation and e1=e2=... are the algebraic simplifications.
+            # If e0 is a named quantity/prose label, or a named-quantity ratio/sum not yet fully bound in env_sym,
+            # or a constant LHS with algebraic e1==e2, e0=e1 is definitional/stated; check e1=e2=...
             is_stated_eq_chain = (
                 len(exprs) >= 3
                 and not exprs[0].free_symbols
                 and exprs[1].free_symbols
                 and exprs[1].free_symbols == exprs[2].free_symbols
             )
-            start_pair = 1 if ((_is_named_quantity_lhs(exprs[0], exprs[1], lhs_raw) or is_stated_eq_chain) and len(exprs) >= 3) else 0
+            is_named_expr_def = (
+                len(exprs) >= 3
+                and _is_named_quantity_expr(exprs[0])
+                and not (exprs[0].free_symbols <= set(env_sym.keys()))
+            )
+            start_pair = 1 if (
+                len(exprs) >= 3
+                and (_is_named_quantity_lhs(exprs[0], exprs[1], lhs_raw) or is_stated_eq_chain or is_named_expr_def)
+            ) else 0
 
             for j in range(start_pair, len(exprs) - 1):
                 lhs, rhs = exprs[j], exprs[j + 1]
@@ -222,15 +278,19 @@ def validate_steps(
                 if "%" in lhs_raw and "%" in r_rhs and not rhs.free_symbols:
                     rhs = rhs * sp.Integer(100)
 
-                # Skip definitional assignment or stated 2-side equation/formula when symbols differ
+                # Skip definitional assignment, named-quantity formula expansion, or stated 2-side equation when symbols differ
                 if j == 0 and len(exprs) == 2 and (
                     _is_named_quantity_lhs(lhs, rhs, lhs_raw)
                     or lhs.free_symbols != rhs.free_symbols
                 ):
                     continue
+                if _is_named_quantity_expr(lhs) and not _is_named_quantity_expr(rhs) and not (lhs.free_symbols <= set(env_sym.keys())):
+                    continue
 
                 checked += 1
-                ok, reason = _check_pair_equivalent(lhs, rhs, r_lhs, r_rhs, target, env)
+                ok, reason = _check_pair_equivalent(lhs, rhs, r_lhs, r_rhs, target, env_sym)
+                if not ok and env_num:
+                    ok, reason = _check_pair_equivalent(lhs, rhs, r_lhs, r_rhs, target, env_num)
                 if ok:
                     passed += 1
                     if reason and reason not in context_applied:
@@ -238,14 +298,13 @@ def validate_steps(
                 else:
                     # Check if lhs is a symbolic formula and rhs is its numeric substitution
                     if lhs.free_symbols and not rhs.free_symbols:
-                        # Only accept without penalty if env wasn't violated; still record context note
-                        l_sub = _apply_env_subs(lhs, env)
+                        l_sub = _apply_env_subs(lhs, env_num if env_num else env_sym)
                         if not l_sub.free_symbols:
-                            ok_sub, _ = _check_pair_equivalent(l_sub, rhs, r_lhs, r_rhs, target, env)
+                            ok_sub, _ = _check_pair_equivalent(l_sub, rhs, r_lhs, r_rhs, target, env_sym)
                             if ok_sub:
                                 passed += 1
                                 continue
-                        # Missing variable bindings -> cannot verify substitution; mark as unparsed/context gap
+                        # Missing variable bindings -> cannot verify substitution
                         unparsed.append(idx)
                         checked -= 1
                     else:

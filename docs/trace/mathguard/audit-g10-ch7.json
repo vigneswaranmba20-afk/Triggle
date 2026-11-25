@@ -11,9 +11,9 @@
     "exercises": 62,
     "concepts": 9,
     "overallStatusCounts": {
-      "PASS": 22,
-      "FAIL": 8,
-      "PARTIAL": 40,
+      "PASS": 24,
+      "FAIL": 1,
+      "PARTIAL": 45,
       "UNVERIFIABLE": 1
     },
     "answerVerificationCounts": {
@@ -22,10 +22,10 @@
       "UNVERIFIABLE": 1
     },
     "intermediateStepCounts": {
-      "PASS": 27,
-      "FAIL": 7,
-      "PARTIAL": 18,
-      "UNVERIFIABLE": 19
+      "PASS": 29,
+      "FAIL": 0,
+      "PARTIAL": 22,
+      "UNVERIFIABLE": 20
     },
     "tamilValidationCounts": {
       "PASS": 50,
@@ -212,7 +212,7 @@
       "answer_status": "PASS",
       "step_status": "PARTIAL",
       "tamil_status": "MISSING",
-      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [0, 1, 2, 3, 4]",
+      "discrepancy": "Tamil prompt missing in student data module (TRACE Tamil Validator); Unparsed step indices: [1, 2, 3, 4]",
       "severity": "minor",
       "classification": "Parser limitation",
       "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
@@ -221,17 +221,18 @@
           "ratioMatched": "3 : 4 "
         },
         "stepChecks": {
-          "checkedChains": 2,
-          "passedChains": 2,
+          "checkedChains": 3,
+          "passedChains": 3,
           "failedChains": [],
           "unparsedSteps": [
-            0,
             1,
             2,
             3,
             4
           ],
-          "contextApplied": []
+          "contextApplied": [
+            "env_substitution"
+          ]
         },
         "tamilChecks": {
           "flags": [
@@ -808,35 +809,29 @@
       "validation_method": "cone_height_ratio_from_volumes",
       "independently_derived_result": "3600 : 5040 (simplified ratio 5/7)",
       "existing_result": "Ratio of heights = 5 : 7.",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "PARTIAL",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': '\\\\dfrac{V_1}{V_2}=\\\\dfrac{\\\\tfrac{1}{3}\\\\pi r^2 h_1}{\\\\tfrac{1}{3}\\\\pi r^2 h_2}=\\\\dfrac{h_1}{h_2}=\\\\dfrac{3600}{5040}', 'lhs': 'V_1/V_2', 'rhs': 'h_1/h_2'}]",
-      "severity": "major",
-      "classification": "Confirmed mathematical error",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']; Unparsed step indices: [0, 2]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "ratioMatched": "5 : 7"
         },
         "stepChecks": {
           "checkedChains": 2,
-          "passedChains": 1,
-          "failedChains": [
-            {
-              "stepIndex": 1,
-              "line": "\\dfrac{V_1}{V_2}=\\dfrac{\\tfrac{1}{3}\\pi r^2 h_1}{\\tfrac{1}{3}\\pi r^2 h_2}=\\dfrac{h_1}{h_2}=\\dfrac{3600}{5040}",
-              "lhs": "V_1/V_2",
-              "rhs": "h_1/h_2"
-            }
-          ],
+          "passedChains": 2,
+          "failedChains": [],
           "unparsedSteps": [
             0,
-            1,
             2
           ],
-          "contextApplied": []
+          "contextApplied": [
+            "env_substitution"
+          ]
         },
         "tamilChecks": {
           "flags": [
@@ -865,29 +860,22 @@
       "validation_method": "sphere_volume_ratio_from_radii",
       "independently_derived_result": "64 : 343 (simplified ratio 64/343)",
       "existing_result": "Ratio of their volumes = 64 : 343.",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "PARTIAL",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': '\\\\dfrac{V_1}{V_2}=\\\\dfrac{\\\\tfrac{4}{3}\\\\pi r_1^3}{\\\\tfrac{4}{3}\\\\pi r_2^3}=(\\\\dfrac{r_1}{r_2})^3', 'lhs': 'V_1/V_2', 'rhs': 'r_1**3/r_2**3'}]",
-      "severity": "major",
-      "classification": "Confirmed mathematical error",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Tamil consistency flags (TRACE Tamil Validator): ['en_ta_terminology_mismatch']; Unparsed step indices: [2]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "ratioMatched": "64 : 343"
         },
         "stepChecks": {
-          "checkedChains": 2,
+          "checkedChains": 1,
           "passedChains": 1,
-          "failedChains": [
-            {
-              "stepIndex": 1,
-              "line": "\\dfrac{V_1}{V_2}=\\dfrac{\\tfrac{4}{3}\\pi r_1^3}{\\tfrac{4}{3}\\pi r_2^3}=(\\dfrac{r_1}{r_2})^3",
-              "lhs": "V_1/V_2",
-              "rhs": "r_1**3/r_2**3"
-            }
-          ],
+          "failedChains": [],
           "unparsedSteps": [
             2
           ],
@@ -920,29 +908,22 @@
       "validation_method": "sphere_hemisphere_equal_tsa_volume_ratio",
       "independently_derived_result": "3*sqrt(3) : 4 (simplified ratio 3*sqrt(3)/4)",
       "existing_result": "Ratio of their volumes = 3√3 : 4 (Proved).",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 2, 'line': 'V_sphere / V_hemisphere = ((4/3)\\\\pi R^{3}) / ((2/3)\\\\pi r^{3}) = 2(R/r)^{3}', 'lhs': 'V_sphere/V_hemisphere', 'rhs': '2*R**3/r**3'}]",
-      "severity": "major",
-      "classification": "Confirmed mathematical error",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Unparsed step indices: [3]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "ratioMatched": "3√3 : 4 "
         },
         "stepChecks": {
-          "checkedChains": 2,
+          "checkedChains": 1,
           "passedChains": 1,
-          "failedChains": [
-            {
-              "stepIndex": 2,
-              "line": "V_sphere / V_hemisphere = ((4/3)\\pi R^{3}) / ((2/3)\\pi r^{3}) = 2(R/r)^{3}",
-              "lhs": "V_sphere/V_hemisphere",
-              "rhs": "2*R**3/r**3"
-            }
-          ],
+          "failedChains": [],
           "unparsedSteps": [
             3
           ],
@@ -1221,14 +1202,14 @@
       "validation_method": "cone_on_hemisphere_displacement",
       "independently_derived_result": "288*pi (≈ 905.1429 with pi=22/7)",
       "existing_result": "Volume of water displaced ≈ 905.14 cm³ (exact 288π cm³).",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 1, 'line': 'V_displaced = V_cone + V_hemisphere = (1/3)\\\\pi r^{2}h_cone + (2/3)\\\\pi r^{3}', 'lhs': 'V_cone + V_hemisphere', 'rhs': 'pi*h_cone*r**2/3 + 2*pi*r**3/3'}]",
-      "severity": "major",
-      "classification": "Confirmed mathematical error",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "Unparsed step indices: [0]",
+      "severity": "minor",
+      "classification": "Parser limitation",
+      "recommended_correction": "Populate/review Tamil prompt or provide explicit verifiable step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "numericMatch": {
@@ -1240,16 +1221,9 @@
           "observedDimension": "volume"
         },
         "stepChecks": {
-          "checkedChains": 5,
+          "checkedChains": 4,
           "passedChains": 4,
-          "failedChains": [
-            {
-              "stepIndex": 1,
-              "line": "V_displaced = V_cone + V_hemisphere = (1/3)\\pi r^{2}h_cone + (2/3)\\pi r^{3}",
-              "lhs": "V_cone + V_hemisphere",
-              "rhs": "pi*h_cone*r**2/3 + 2*pi*r**3/3"
-            }
-          ],
+          "failedChains": [],
           "unparsedSteps": [
             0
           ],
@@ -2444,14 +2418,14 @@
       "validation_method": "mcq_similar_cones_ratio",
       "independently_derived_result": "1 : 2 (simplified ratio 1/2)",
       "existing_result": "(B) 1:2",
-      "status": "FAIL",
+      "status": "PASS",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PASS",
       "tamil_status": "PASS",
-      "discrepancy": "Intermediate step equality failure: [{'stepIndex': 0, 'line': 'h_1-h_2=h_1-\\\\dfrac{h_1}{2}=\\\\dfrac{h_1}{2}', 'lhs': 'h_1 - h_2', 'rhs': 'h_1/2'}, {'stepIndex': 1, 'line': '\\\\dfrac{r_2}{r_1}=\\\\dfrac{h_1-h_2}{h_1}=\\\\dfrac{1}{2}', 'lhs': 'r_2/r_1', 'rhs': '(h_1 - h_2)/h_1'}]",
-      "severity": "major",
-      "classification": "Confirmed mathematical error",
-      "recommended_correction": "Fix invalid intermediate equation transformation in steps.",
+      "discrepancy": "",
+      "severity": "none",
+      "classification": "Verified",
+      "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
           "mcqSelected": "B",
@@ -2460,25 +2434,10 @@
           ]
         },
         "stepChecks": {
-          "checkedChains": 3,
+          "checkedChains": 1,
           "passedChains": 1,
-          "failedChains": [
-            {
-              "stepIndex": 0,
-              "line": "h_1-h_2=h_1-\\dfrac{h_1}{2}=\\dfrac{h_1}{2}",
-              "lhs": "h_1 - h_2",
-              "rhs": "h_1/2"
-            },
-            {
-              "stepIndex": 1,
-              "line": "\\dfrac{r_2}{r_1}=\\dfrac{h_1-h_2}{h_1}=\\dfrac{1}{2}",
-              "lhs": "r_2/r_1",
-              "rhs": "(h_1 - h_2)/h_1"
-            }
-          ],
-          "unparsedSteps": [
-            1
-          ],
+          "failedChains": [],
+          "unparsedSteps": [],
           "contextApplied": []
         },
         "tamilChecks": {
@@ -3268,14 +3227,14 @@
       "validation_method": "concept_cube_minus_hemisphere_sa",
       "independently_derived_result": "6*a**2 + pi*r**2",
       "existing_result": "choice[1]: 6a² + πr²",
-      "status": "FAIL",
+      "status": "PASS",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "PASS",
       "tamil_status": "PASS",
-      "discrepancy": "Step=FAIL ([{'stepIndex': 1, 'line': 'V=\\\\pi r^2 h-\\\\dfrac{1}{3}\\\\pi r^2 =\\\\dfrac{2}{3}\\\\pi r^2 h\\\\end{aligned}', 'lhs': 'pi*h*r**2 - pi*r**2/3', 'rhs': '2*pi*h*r**2/3'}]), Tamil=[]",
-      "severity": "major",
-      "classification": "Confirmed mathematical error",
-      "recommended_correction": "Review concept question/choice/proof/Tamil alignment.",
+      "discrepancy": "",
+      "severity": "none",
+      "classification": "Verified",
+      "recommended_correction": "",
       "supporting_evidence": {
         "answerEvidence": {
           "correctIndex": 1,
@@ -3285,15 +3244,8 @@
         },
         "stepChecks": {
           "checkedChains": 1,
-          "passedChains": 0,
-          "failedChains": [
-            {
-              "stepIndex": 1,
-              "line": "V=\\pi r^2 h-\\dfrac{1}{3}\\pi r^2 =\\dfrac{2}{3}\\pi r^2 h\\end{aligned}",
-              "lhs": "pi*h*r**2 - pi*r**2/3",
-              "rhs": "2*pi*h*r**2/3"
-            }
-          ],
+          "passedChains": 1,
+          "failedChains": [],
           "unparsedSteps": [],
           "contextApplied": []
         },
@@ -3311,14 +3263,14 @@
       "validation_method": "concept_sphere_recast_count",
       "independently_derived_result": "27",
       "existing_result": "choice[2]: 27 small spheres",
-      "status": "FAIL",
+      "status": "PARTIAL",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
-      "discrepancy": "Step=FAIL ([{'stepIndex': 0, 'line': '\\\\begin{aligned}\\\\dfrac{4}{3}\\\\pi R^3=\\\\pi r^2 H\\\\  H=\\\\dfrac{4R^3}{3r^2}\\\\end{aligned}', 'lhs': '4*pi*R**3/3', 'rhs': 'pi*H**2*r**2'}, {'stepIndex': 0, 'line': '\\\\begin{aligned}\\\\dfrac{4}{3}\\\\pi R^3=\\\\pi r^2 H\\\\  H=\\\\dfrac{4R^3}{3r^2}\\\\end{aligned}', 'lhs': 'pi*H**2*r**2', 'rhs': '4*R**3/(3*r**2)'}]), Tamil=[]",
-      "severity": "major",
-      "classification": "Confirmed mathematical error",
-      "recommended_correction": "Review concept question/choice/proof/Tamil alignment.",
+      "discrepancy": "Proof step status=UNVERIFIABLE (unverified=[1])",
+      "severity": "minor",
+      "classification": "Missing mathematical context",
+      "recommended_correction": "Review Tamil terminology/units or proof step equalities.",
       "supporting_evidence": {
         "answerEvidence": {
           "correctIndex": 2,
@@ -3327,22 +3279,9 @@
           ]
         },
         "stepChecks": {
-          "checkedChains": 2,
+          "checkedChains": 0,
           "passedChains": 0,
-          "failedChains": [
-            {
-              "stepIndex": 0,
-              "line": "\\begin{aligned}\\dfrac{4}{3}\\pi R^3=\\pi r^2 H\\  H=\\dfrac{4R^3}{3r^2}\\end{aligned}",
-              "lhs": "4*pi*R**3/3",
-              "rhs": "pi*H**2*r**2"
-            },
-            {
-              "stepIndex": 0,
-              "line": "\\begin{aligned}\\dfrac{4}{3}\\pi R^3=\\pi r^2 H\\  H=\\dfrac{4R^3}{3r^2}\\end{aligned}",
-              "lhs": "pi*H**2*r**2",
-              "rhs": "4*R**3/(3*r**2)"
-            }
-          ],
+          "failedChains": [],
           "unparsedSteps": [
             1
           ],

@@ -12,6 +12,9 @@ from mathguard import geometry as geo
 from mathguard.arithmetic import exact_fractions_equal, parse_ratio, ratios_equivalent, to_exact_fraction
 from mathguard.benchmark import run_benchmark
 from mathguard.benchmark_v1_1 import run_v1_1_benchmark
+from mathguard.benchmark_v1_2 import run_v1_2_benchmark
+from mathguard.corrector import propose_and_verify_correction
+from mathguard.derivations_g10_ch7 import DerivedResult
 from mathguard.engine import run_audit
 from mathguard.mcq import extract_selected_option_label, option_matches_derived, parse_mcq_options_en
 from mathguard.parser import ParseError, parse_expression
@@ -140,6 +143,30 @@ def test_v1_1_108_case_benchmark():
     res = run_v1_1_benchmark()
     s = res["summary"]
     assert s["total"] == 108
+    assert s["criticalMissedErrors"] == 0
+    assert s["falsePositives"] == 0
+    assert s["precision"] >= 0.98
+    assert s["recall"] >= 0.98
+
+
+def test_v1_2_division_by_zero_and_safe_corrector():
+    div0 = validate_steps([{"eq": "", "math": {"latex": r"\dfrac{5}{0}=5"}}])
+    assert div0.status == "FAIL"
+
+    d_cyl = DerivedResult(True, "cyl", geo.cylinder_csa(sp.Integer(7), sp.Integer(10)), "area", "22/7", required_numbers=["7", "10"])
+    bad_item = {"id": "syn-fix", "q": {"en": "r=7 cm, h=10 cm"}, "answer": "220 cm²", "steps": []}
+    prop = propose_and_verify_correction(bad_item, "synthetic", d_cyl)
+    assert prop.status == "APPROVED"
+
+    unver_item = {"id": "syn-unver", "q": {"en": "qualitative"}, "answer": "cone", "steps": []}
+    unver_prop = propose_and_verify_correction(unver_item, "synthetic", DerivedResult(False, "qualitative"))
+    assert unver_prop.status == "UNRESOLVED"
+
+
+def test_v1_2_300_case_benchmark():
+    res = run_v1_2_benchmark()
+    s = res["summary"]
+    assert s["total"] == 300
     assert s["criticalMissedErrors"] == 0
     assert s["falsePositives"] == 0
     assert s["precision"] >= 0.98

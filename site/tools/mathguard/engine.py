@@ -26,7 +26,7 @@ from .mcq import (
 from .parser import ParseError, parse_expression
 from .reconcile import build_fidelity_index, reconcile_item
 from .rounding import check_numeric_match
-from .steps import validate_steps
+from .steps import extract_stem_assumptions, validate_steps
 from .symbolic import evaluate_with_pi_mode, expressions_equivalent
 from .tamil_consistency import validate_en_ta_consistency
 from .units import detect_answer_dimension
@@ -297,8 +297,10 @@ def run_audit(repo_root: Path) -> Dict[str, Any]:
         derived = deriv_fn() if deriv_fn else DerivedResult(False, "unregistered", notes="No derivation registered.")
 
         ans_status, ans_disc, ans_sev, ans_ev = _verify_exercise_answer(item, derived)
-        step_res = validate_steps(item.get("steps") or [])
         q_obj = item.get("q") or {}
+        fig_alt = (item.get("figureAlt") or {}).get("en") or ""
+        stem_env = extract_stem_assumptions(q_obj.get("en") or "", fig_alt)
+        step_res = validate_steps(item.get("steps") or [], initial_env=stem_env)
         ta_res = validate_en_ta_consistency(q_obj.get("en") or "", q_obj.get("ta"))
 
         # Combine into overall status while keeping sub-statuses strictly separate
