@@ -22,7 +22,7 @@ const grade9=manifest.grades.find(g=>g.grade===9);
 const grade9Chapter6=grade9.chapters.find(c=>String(c.number)==='6');
 const exercise64=grade9Chapter6.exercises.find(e=>e.id==='6.4');
 const newG9Ids=['q2-i','q2-ii','q2-iii','q2-iv','q2-v','q3-i','q3-ii'].map(s=>'c9-exercise-6-4-'+s);
-assert.equal(grade9.exerciseRecords,690,'Grade 9 exercise inventory includes Ch3, Ch4, Ch5, and the source-checked Ch6 parts');
+assert.equal(grade9.exerciseRecords,697,'Grade 9 exercise inventory includes the seven new Exercise 1.3 records');
 const geometry=grade9.chapters.find(c=>c.number==='4');
 assert.equal(geometry.exerciseRecords,86);
 assert.equal(geometry.totalNumberedQuestions,69);

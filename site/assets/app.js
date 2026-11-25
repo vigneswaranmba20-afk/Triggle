@@ -552,7 +552,7 @@
   ?{src:ch1SvgFigures[item.id].src,alt:{en:ch1SvgFigures[item.id].alt,ta:ch1SvgFigures[item.id].altTa||ch1SvgFigures[item.id].alt},caption:{en:ch1SvgFigures[item.id].caption,ta:ch1SvgFigures[item.id].captionTa||ch1SvgFigures[item.id].caption}}
   :(item?.figureSrc?{src:lang==='ta'&&item.figureSrcTa?item.figureSrcTa:item.figureSrc,alt:item.figureAlt,caption:item.figureCaption}:null);
  function isQuestionFigure(item){
-  if(resolveFigureSpec(item))return true;
+  if(resolveFigureSpec(item))return !item.figureInSolution;
   // The Figure button already opens a full Venn: no duplicate mini preview.
   if(window.TriggleSetVenn?.supports(item))return false;
   return !!(item.diagram && typeof item.diagram==='object' && /\b(diagram|figure|labelled|labeled)\b/i.test(item.q?.en||''));
@@ -701,8 +701,9 @@
   $('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   if(lang==='ta'&&!current.q?.ta)$('kindBadge').textContent+=' · தமிழ் மொழிபெயர்ப்பு நிலுவையில்';
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
-  const conceptPath = isG10GeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH;
-  let conceptIndexForQuestion = isG10GeometryExercise(current)
+  const setPath = grade === 9 && current.setConcept && window.TRIGGLE_SET_PATH;
+  const conceptPath = setPath || (isG10GeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH);
+  let conceptIndexForQuestion = setPath ? setPath.stages.findIndex(stage => stage.id === current.setConcept) : isG10GeometryExercise(current)
     ? (conceptPath?.stages.findIndex(stage => stage.id === current.conceptId ||
         [stage.practiceId, stage.secondaryPracticeId, stage.tertiaryPracticeId].includes(current.id)) ?? -1)
     : (conceptPath?.conceptForQuestion(current) ?? -1);
@@ -712,13 +713,13 @@
       ({'4.1':1, '4.2':2, '4.3':4}[current.exercise] ?? -1);
   }
   const hintPanel = $('g9GeometryHint');
-  const geometryHint = isG9GeometryExercise(current) && isTextbookExercise &&
-    (current.hint || window.TriggleGrade9Geometry?.preservedHints[current.id.slice(9)]);
-  hintPanel.hidden = !geometryHint;
+  const textbookHint = isTextbookExercise && (setPath ? current.hint : isG9GeometryExercise(current) &&
+    (current.hint || window.TriggleGrade9Geometry?.preservedHints[current.id.slice(9)]));
+  hintPanel.hidden = !textbookHint;
   hintPanel.open = false;
-  if (geometryHint) {
+  if (textbookHint) {
     hintPanel.querySelector('summary').textContent = lang === 'ta' ? 'குறிப்பு' : 'Hint';
-    hintPanel.querySelector('p').textContent = tr(geometryHint);
+    hintPanel.querySelector('p').textContent = tr(textbookHint);
   }
   const relatedConcept = $('chapter8QuestionConcept');
   relatedConcept.hidden = conceptIndexForQuestion < 0;

@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 550" width="336" height="550" role="img" xml:lang="en">
+  <title>Fig. 1.26–1.28</title>
+  <g fill="#2b2145" font-family="system-ui, sans-serif" font-weight="600">
+  <g transform="translate(8 6)">
+    <defs>
+      <clipPath id="q6-0-right"><ellipse cx="201" cy="76" rx="65" ry="48" /></clipPath>
+      <mask id="q6-0-left-only"><ellipse cx="119" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>
+      <mask id="q6-0-right-only"><ellipse cx="201" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="119" cy="76" rx="65" ry="48" fill="black"/></mask>
+      <mask id="q6-0-outside"><rect width="320" height="153" fill="white"/><ellipse cx="119" cy="76" rx="65" ry="48" fill="black"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>
+    </defs>
+    <rect x="1" y="1" width="318" height="151" rx="6" fill="#fff" stroke="#726787" stroke-width="2"/>
+    <rect width="320" height="153" fill="#cfbbf2" mask="url(#q6-0-right-only)"/>
+    <ellipse cx="119" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/>
+    <text x="51" y="29" text-anchor="middle" font-size="16">X</text><text x="269" y="29" text-anchor="middle" font-size="16">Y</text><text x="300" y="26" text-anchor="middle" font-size="16">U</text><text x="160.0" y="176" text-anchor="middle" font-size="19">Fig. 1.26</text>
+  </g>
+  <g transform="translate(8 188)">
+    <defs>
+      <clipPath id="q6-1-right"><ellipse cx="201" cy="76" rx="65" ry="48" /></clipPath>
+      <mask id="q6-1-left-only"><ellipse cx="119" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>
+      <mask id="q6-1-right-only"><ellipse cx="201" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="119" cy="76" rx="65" ry="48" fill="black"/></mask>
+      <mask id="q6-1-outside"><rect width="320" height="153" fill="white"/><ellipse cx="119" cy="76" rx="65" ry="48" fill="black"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>
+    </defs>
+    <rect x="1" y="1" width="318" height="151" rx="6" fill="#fff" stroke="#726787" stroke-width="2"/>
+    <rect width="320" height="153" fill="#cfbbf2" mask="url(#q6-1-outside)"/>
+    <ellipse cx="119" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/>
+    <text x="51" y="29" text-anchor="middle" font-size="16">X</text><text x="269" y="29" text-anchor="middle" font-size="16">Y</text><text x="300" y="26" text-anchor="middle" font-size="16">U</text><text x="160.0" y="176" text-anchor="middle" font-size="19">Fig. 1.27</text>
+  </g>
+  <g transform="translate(8 370)">
+    <defs>
+      <clipPath id="q6-2-right"><ellipse cx="201" cy="76" rx="65" ry="48" /></clipPath>
+      <mask id="q6-2-left-only"><ellipse cx="119" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>
+      <mask id="q6-2-right-only"><ellipse cx="201" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="119" cy="76" rx="65" ry="48" fill="black"/></mask>
+      <mask id="q6-2-outside"><rect width="320" height="153" fill="white"/><ellipse cx="119" cy="76" rx="65" ry="48" fill="black"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>
+    </defs>
+    <rect x="1" y="1" width="318" height="151" rx="6" fill="#fff" stroke="#726787" stroke-width="2"/>
+    <rect width="320" height="153" fill="#cfbbf2" mask="url(#q6-2-left-only)"/><rect width="320" height="153" fill="#cfbbf2" mask="url(#q6-2-right-only)"/>
+    <ellipse cx="119" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/>
+    <text x="51" y="29" text-anchor="middle" font-size="16">X</text><text x="269" y="29" text-anchor="middle" font-size="16">Y</text><text x="300" y="26" text-anchor="middle" font-size="16">U</text><text x="160.0" y="176" text-anchor="middle" font-size="19">Fig. 1.28</text>
+  </g>
+  </g>
+</svg>

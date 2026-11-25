@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": 1,
+  "exercise": "1.3",
+  "edition": "2025 revised",
+  "sources": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037"
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303"
+    }
+  },
+  "items": [
+    {
+      "id": "g9-ch1-ex1.3-q1",
+      "question": 1,
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv",
+        "v",
+        "vi",
+        "vii",
+        "viii",
+        "ix"
+      ],
+      "sourcePages": {
+        "en": {
+          "printed": 18,
+          "pdf": 24
+        },
+        "ta": {
+          "printed": 20,
+          "pdf": 26
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. Using the given Venn diagram, write the elements of\n(i) A   (ii) B   (iii) A∪B   (iv) A∩B   (v) A–B   (vi) B–A   (vii) A′   (viii) B′   (ix) U",
+        "ta": "1. கொடுக்கப்பட்ட வென்படத்தில் இருந்து கீழேயுள்ள கணங்களின் உறுப்புகளை எழுதுக.\n(i) A   (ii) B   (iii) A∪B   (iv) A∩B   (v) A–B   (vi) B–A   (vii) A′   (viii) B′   (ix) U"
+      },
+      "figureFiles": [
+        "./assets/grade9-ch1/ex1-3-q1.svg"
+      ]
+    },
+    {
+      "id": "g9-ch1-ex1.3-q2",
+      "question": 2,
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv"
+      ],
+      "sourcePages": {
+        "en": {
+          "printed": 18,
+          "pdf": 24
+        },
+        "ta": {
+          "printed": 21,
+          "pdf": 27
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "2. Find A∪B, A∩B, A–B and B–A for the following sets.\n(i) A = {2, 6, 10, 14} and B = {2, 5, 14, 16}\n(ii) A = {a, b, c, e, u} and B = {a, e, i, o, u}\n(iii) A = {x : x ∈ N, x ≤ 10} and B = {x : x ∈ W, x < 6}\n(iv) A = Set of all letters in the word “mathematics” and\nB = Set of all letters in the word “geometry”",
+        "ta": "2. பின்வரும் கணங்களுக்கு A∪B, A∩B, A–B மற்றும் B–A காண்க.\n(i) A = {2, 6, 10, 14} மற்றும் B = {2, 5, 14, 16}\n(ii) A = {a, b, c, e, u} மற்றும் B = {a, e, i, o, u}\n(iii) A = {x : x ∈ N, x ≤ 10} மற்றும் B = {x : x ∈ W, x < 6}\n(iv) A = “mathematics” என்ற சொல்லில் உள்ள எழுத்துகளின் கணம்\nB = “geometry” என்ற சொல்லில் உள்ள எழுத்துகளின் கணம்"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch1-ex1.3-q3",
+      "question": 3,
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv",
+        "v",
+        "vi",
+        "vii",
+        "viii"
+      ],
+      "sourcePages": {
+        "en": {
+          "printed": 19,
+          "pdf": 25
+        },
+        "ta": {
+          "printed": 21,
+          "pdf": 27
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. If U = {a, b, c, d, e, f, g, h}, A = {b, d, f, h}, B = {a, d, e, h}, find the following sets.\n(i) A′   (ii) B′   (iii) A′∪B′   (iv) A′∩B′   (v) (A∪B)′   (vi) (A∩B)′   (vii) (A′)′   (viii) (B′)′",
+        "ta": "3. U = {a, b, c, d, e, f, g, h}, A = {b, d, f, h} மற்றும் B = {a, d, e, h} எனில் பின்வரும் கணங்களைக் காண்க.\n(i) A′   (ii) B′   (iii) A′∪B′   (iv) A′∩B′   (v) (A∪B)′   (vi) (A∩B)′   (vii) (A′)′   (viii) (B′)′"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch1-ex1.3-q4",
+      "question": 4,
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv",
+        "v",
+        "vi",
+        "vii",
+        "viii"
+      ],
+      "sourcePages": {
+        "en": {
+          "printed": 19,
+          "pdf": 25
+        },
+        "ta": {
+          "printed": 21,
+          "pdf": 27
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. Let U = {0, 1, 2, 3, 4, 5, 6, 7}, A = {1, 3, 5, 7}, B = {0, 2, 3, 5, 7}, find the following sets.\n(i) A′   (ii) B′   (iii) A′∪B′   (iv) A′∩B′   (v) (A∪B)′   (vi) (A∩B)′   (vii) (A′)′   (viii) (B′)′",
+        "ta": "4. U = {0, 1, 2, 3, 4, 5, 6, 7}, A = {1, 3, 5, 7} மற்றும் B = {0, 2, 3, 5, 7} எனில் பின்வரும் கணங்களைக் காண்க.\n(i) A′   (ii) B′   (iii) A′∪B′   (iv) A′∩B′   (v) (A∪B)′   (vi) (A∩B)′   (vii) (A′)′   (viii) (B′)′"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch1-ex1.3-q5",
+      "question": 5,
+      "parts": [
+        "i",
+        "ii",
+        "iii"
+      ],
+      "sourcePages": {
+        "en": {
+          "printed": 19,
+          "pdf": 25
+        },
+        "ta": {
+          "printed": 21,
+          "pdf": 27
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "5. Find the symmetric difference between the following sets.\n(i) P = {2, 3, 5, 7, 11} and Q = {1, 3, 5, 11}\n(ii) R = {l, m, n, o, p} and S = {j, l, n, q}\n(iii) X = {5, 6, 7} and Y = {5, 7, 9, 10}",
+        "ta": "5. கொடுக்கப்பட்ட கணங்களின் சமச்சீர் வித்தியாசம் காண்க.\n(i) P = {2, 3, 5, 7, 11} மற்றும் Q = {1, 3, 5, 11}\n(ii) R = {l, m, n, o, p} மற்றும் S = {j, l, n, q}\n(iii) X = {5, 6, 7} மற்றும் Y = {5, 7, 9, 10}"
+      },
+      "figureFiles": []
+    },
+    {
+      "id": "g9-ch1-ex1.3-q6",
+      "question": 6,
+      "parts": [
+        "fig-1.26",
+        "fig-1.27",
+        "fig-1.28"
+      ],
+      "sourcePages": {
+        "en": {
+          "printed": 19,
+          "pdf": 25
+        },
+        "ta": {
+          "printed": 21,
+          "pdf": 27
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "6. Using the set symbols, write down the expressions for the shaded region in the following\nFig. 1.26   Fig. 1.27   Fig. 1.28",
+        "ta": "6. கணக் குறியீடுகளைக் கொண்டு பின்வரும் நிழலிட்ட பகுதியினைக் குறிப்பிடவும்.\nபடம் 1.26   படம் 1.27   படம் 1.28"
+      },
+      "figureFiles": [
+        "./assets/grade9-ch1/ex1-3-q6-en.svg",
+        "./assets/grade9-ch1/ex1-3-q6-ta.svg"
+      ]
+    },
+    {
+      "id": "g9-ch1-ex1.3-q7",
+      "question": 7,
+      "parts": [
+        "i",
+        "ii",
+        "iii",
+        "iv",
+        "v",
+        "vi",
+        "vii"
+      ],
+      "sourcePages": {
+        "en": {
+          "printed": 19,
+          "pdf": 25
+        },
+        "ta": {
+          "printed": 21,
+          "pdf": 27
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. Let A and B be two overlapping sets and the universal set be U. Draw appropriate Venn diagram for each of the following,\n(i) A∪B   (ii) A∩B   (iii) (A∩B)′   (iv) (B–A)′   (v) A′∪B′   (vi) A′∩B′\n(vii) What do you observe from the Venn diagram (iii) and (v)?",
+        "ta": "7. A, B என்பன வெட்டும் கணங்கள் மற்றும் U என்பது அனைத்துக் கணம் எனில், பின்வருவனவற்றை வென்படத்தில் குறிக்கவும்,\n(i) A∪B   (ii) A∩B   (iii) (A∩B)′   (iv) (B–A)′   (v) A′∪B′   (vi) A′∩B′\n(vii) வினா எண் (iii) மற்றும் (v)-ன் வென்படங்களை உற்று நோக்கி உன்னுடைய கருத்தை எழுதுக."
+      },
+      "figureFiles": [
+        "./assets/grade9-ch1/ex1-3-q7.svg"
+      ]
+    }
+  ],
+  "countingRule": "Each printed subpart is one canonical task. Q6 labels its three independent subparts by figure number. Q2 requires four operations per printed subpart.",
+  "discrepancies": [
+    {
+      "question": 6,
+      "detail": "The English figures label the circles X and Y. The Tamil figures label the same circles A and B. Each student-facing answer uses its own source labels.",
+      "resolution": "bilingual figure and solution variants"
+    }
+  ],
+  "editorialReview": {
+    "ta": "pending",
+    "teacher": "pending"
+  }
+}

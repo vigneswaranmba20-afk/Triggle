@@ -26,9 +26,9 @@ function check(value,original,id){
   }
  }
 }
-const authoredGeometry=load().filter(q=>q.notationSource==='authored');
-assert.equal(authoredGeometry.length,75);
-for(const item of authoredGeometry) assert.equal(get(item),undefined,item.id+' uses source-authored notation');
+const authored=load().filter(q=>q.notationSource==='authored');
+assert.equal(authored.length,82);
+for(const item of authored) assert.equal(get(item),undefined,item.id+' uses source-authored notation');
 const items=load({legacyNotationOnly:true});assert.equal(items.length,624);
 assert.equal(new Set(items.map(q=>q.id)).size,624,'Student-facing IDs must be unique');
 assert.equal(items.filter(q=>q.kind!=='practice').length,615);

@@ -511,7 +511,8 @@
       window.TriggleLivingConcepts?.decorate(stage,panel,lang,htmlMath);
       extraPractice(stage);
       if(stage.id==='cardinality')hard();
-      const related=chapterQuestions.find(question=>question.id===stage.practiceId);
+      const related=chapterQuestions.find(question=>question.id===stage.practiceId) ||
+        chapterQuestions.find(question=>question.setConcept===stage.id);
       if(related&&typeof onQuestion==='function'){
         const button=document.createElement('button');
         button.type='button';button.className='g10ch2-practice-link';
