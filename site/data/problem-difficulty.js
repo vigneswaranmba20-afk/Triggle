@@ -11,6 +11,16 @@ const metadata={
     "difficult": "Complex reasoning, proof, case analysis, multi-stage calculations or advanced connections."
   },
   "entries": {
+    "c10-7-unit-q1": {"grade":10,"level":"medium","basis":"Convert diameter and litres, then use proportional ink consumption.","review":"implementation-audit"},
+    "c10-7-unit-q2": {"grade":10,"level":"medium","basis":"Combine hemisphere capacity, rate and unit conversion.","review":"implementation-audit"},
+    "c10-7-unit-q3": {"grade":10,"level":"medium","basis":"Identify the maximal base and height in the standard axial cone construction.","review":"implementation-audit"},
+    "c10-7-unit-q4": {"grade":10,"level":"difficult","basis":"Derive frustum slant height and identify exposed curved surfaces.","review":"implementation-audit"},
+    "c10-7-unit-q5": {"grade":10,"level":"medium","basis":"Convert thickness and conserve volume.","review":"implementation-audit"},
+    "c10-7-unit-q6": {"grade":10,"level":"medium","basis":"Use hollow cylinder volume and recover the new diameter.","review":"implementation-audit"},
+    "c10-7-unit-q7": {"grade":10,"level":"medium","basis":"Use circumference sum to calculate curved area and cost.","review":"implementation-audit"},
+    "c10-7-unit-q8": {"grade":10,"level":"medium","basis":"Use material volume and cube root to find the thickness.","review":"implementation-audit"},
+    "c10-7-unit-q9": {"grade":10,"level":"difficult","basis":"Recover height and radius from mixed-number volume and base area.","review":"implementation-audit"},
+    "c10-7-unit-q10": {"grade":10,"level":"difficult","basis":"Map sector arc to circumference, derive cone height, and calculate volume.","review":"implementation-audit"},
     "c10-7-ex7-5-q1": {"grade":10,"level":"medium","basis":"Recover radius and slant height before applying cone curved area.","review":"implementation-audit"},
     "c10-7-ex7-5-q2": {"grade":10,"level":"easy","basis":"Recognise a sphere and exclude the joined bases.","review":"implementation-audit"},
     "c10-7-ex7-5-q3": {"grade":10,"level":"easy","basis":"Apply Pythagoras to cone dimensions.","review":"implementation-audit"},

@@ -1,0 +1,5 @@
+# Grade 10 Mensuration Unit Exercise 7 — draft integration
+
+- Ten numbered whole questions, English printed 298–299/PDF 304–305; Tamil printed 306–307/PDF 312–313. English Q4 crosses pages. Both original 2025 keys checked (EN 342/PDF348; TA 357/PDF363). SHA-256 evidence in fidelity manifest. No printed exercise-specific figures; no unrelated textbook summary illustrations included.
+- Worked solutions in EN/TA with structured KaTeX and fallbacks, stable IDs and difficulty metadata. Q3 explains the standard axial right circular cone construction. All answer values independently evaluated; π≈22/7 and decimal/average approximations labeled. Tamil editorial and teacher certification pending.
+- Unit and 60-view mobile test registered, not claimed executed. Stacked on Exercise 7.5 PR #419, which depends on #418. Main and concept files untouched. Reconcile shared registration, difficulty, package and cache files after Codex/Antigravity work; regenerate project status with npm run status:build, then full source/unit/browser/security and production verification. Do not merge on unresolved critical checks.
