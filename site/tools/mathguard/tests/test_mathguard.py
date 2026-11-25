@@ -227,3 +227,18 @@ def test_v1_3_2a_ch5_hardening_and_mutations():
     res = run_ch5_mutation_suite(REPO_ROOT)
     assert res["total"] >= 25
     assert res["failed"] == 0, [c for c in res["cases"] if not c["passed"]]
+
+
+def test_v1_3_3_ch3_coverage_and_mutations():
+    from mathguard.audit_chapters import _audit_generic_chapter, load_all_3_chapters
+    from mathguard.ch3_mutation_tests import run_ch3_mutation_suite
+
+    b = load_all_3_chapters(REPO_ROOT)
+    ch3_rep = _audit_generic_chapter("3", b["chapters"]["3"], "algebra")
+    assert ch3_rep["counts"]["total"] == 153
+    assert ch3_rep["answerVerificationCounts"]["PASS"] >= 146
+    assert ch3_rep["answerVerificationCounts"].get("FAIL", 0) == 0
+
+    mut = run_ch3_mutation_suite(REPO_ROOT)
+    assert mut["total"] >= 25
+    assert mut["failed"] == 0, [c for c in mut["cases"] if not c["passed"]]

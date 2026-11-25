@@ -9,8 +9,9 @@ import time
 from pathlib import Path
 from typing import Any, Dict, List
 
-from .algebra import try_derive_algebra_from_prompt, verify_algebra_answer
+from .ch3_verifier import verify_ch3_answer
 from .ch5_verifier import verify_ch5_answer
+from .derivations_g10_ch3 import derive_ch3_for_item
 from .derivations_g10_ch5 import Ch5DerivedResult, derive_ch5_for_item
 from .engine import run_audit as run_ch7_audit
 from .steps import extract_stem_assumptions, validate_steps
@@ -47,8 +48,8 @@ def _audit_generic_chapter(
         ta_res = validate_en_ta_consistency(q_en, q_ta)
 
         if mode == "algebra":
-            deriv = try_derive_algebra_from_prompt(q_en)
-            ans_status, ans_disc = verify_algebra_answer(item, deriv)
+            deriv = derive_ch3_for_item(qid, item, is_concept=False)
+            ans_status, ans_disc = verify_ch3_answer(item, deriv, is_concept=False)
         else:
             deriv = derive_ch5_for_item(qid, item, is_concept=False)
             ans_status, ans_disc = verify_ch5_answer(item, deriv, is_concept=False)
@@ -87,8 +88,8 @@ def _audit_generic_chapter(
         ta_res = validate_en_ta_consistency(q_en, q_ta)
 
         if mode == "algebra":
-            deriv = try_derive_algebra_from_prompt(q_en)
-            c_ans_status, c_ans_disc = "UNVERIFIABLE", ""
+            deriv = derive_ch3_for_item(cid, concept, is_concept=True)
+            c_ans_status, c_ans_disc = verify_ch3_answer(concept, deriv, is_concept=True)
         else:
             deriv = derive_ch5_for_item(cid, concept, is_concept=True)
             c_ans_status, c_ans_disc = verify_ch5_answer(concept, deriv, is_concept=True)
