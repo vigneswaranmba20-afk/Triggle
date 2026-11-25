@@ -59326,13 +59326,13 @@ const records=[
     },
     "answerMath": {
       "en": {
-        "latex": "\\begin{aligned}\\text{(i) }\\sqrt{10},&\\quad \\text{(ii) }2\\sqrt{26}\\\\\\text{(iii) }c-a,&\\quad \\text{(iv) }13\\end{aligned}",
-        "fallback": "(i) √10 units; (ii) 2√26 units; (iii) |c − a| (c − a); (iv) 13 units",
+        "latex": "\\begin{aligned}\\text{(i) }\\sqrt{10},&\\quad \\text{(ii) }2\\sqrt{26}\\\\\\text{(iii) }|c-a|,&\\quad \\text{(iv) }13\\end{aligned}",
+        "fallback": "(i) √10 units; (ii) 2√26 units; (iii) |c − a|; (iv) 13 units",
         "display": true
       },
       "ta": {
-        "latex": "\\begin{aligned}\\text{(i) }\\sqrt{10},&\\quad \\text{(ii) }2\\sqrt{26}\\\\\\text{(iii) }c-a,&\\quad \\text{(iv) }13\\end{aligned}",
-        "fallback": "(i) √10 அலகுகள்; (ii) 2√26 அலகுகள்; (iii) |c − a| (c − a); (iv) 13 அலகுகள்",
+        "latex": "\\begin{aligned}\\text{(i) }\\sqrt{10},&\\quad \\text{(ii) }2\\sqrt{26}\\\\\\text{(iii) }|c-a|,&\\quad \\text{(iv) }13\\end{aligned}",
+        "fallback": "(i) √10 அலகுகள்; (ii) 2√26 அலகுகள்; (iii) |c − a|; (iv) 13 அலகுகள்",
         "display": true
       }
     },
@@ -60055,11 +60055,19 @@ const records=[
         "fallback": "Axes points: (30, 0), (−30, 0), (0, 30), (0, −30); distance between adjacent points = 30√2 units (opposite = 60 units)",
         "display": true
       },
-      "ta": {
-        "latex": "(30,0),(-30,0),(0,30),(0,-30);\\quad d = 30\\sqrt{2}\\text{ units}",
-        "fallback": "வெட்டுப் புள்ளிகள்: (30, 0), (−30, 0), (0, 30), (0, −30); அடுத்துள்ள இரு புள்ளிகளின் தொலைவு = 30√2 அலகுகள் (எதிரெதிர் = 60 அலகுகள்)",
-        "display": true
-      }
+      "ta": [
+        "அச்சு வெட்டுப்புள்ளிகள் ",
+        {
+          "latex": "(30,0),\\ (-30,0),\\ (0,30),\\ (0,-30)",
+          "fallback": "(30, 0), (−30, 0), (0, 30), (0, −30)"
+        },
+        ". அடுத்தடுத்த புள்ளிகளின் தொலைவு ",
+        {
+          "latex": "30\\sqrt2",
+          "fallback": "30√2"
+        },
+        " அலகுகள். எதிரெதிர் புள்ளிகளின் தொலைவு 60 அலகுகள்."
+      ]
     },
     "steps": [
       {
