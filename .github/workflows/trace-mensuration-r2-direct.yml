@@ -1,0 +1,43 @@
+name: Sign direct R2 uploads for TRACE Mensuration
+
+on:
+  push:
+    branches: [video/trace-mensuration-batch-01-r2]
+    paths: ['.github/trace-mensuration/direct-manifest.json']
+
+permissions:
+  contents: read
+
+jobs:
+  sign:
+    if: github.repository == 'vigneswaranmba20-afk/Triggle'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Prepare R2 signing library
+        run: python -m pip install --disable-pip-version-check 'boto3>=1.38,<2'
+      - name: Encrypt the short-lived six-object upload grants
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_BUCKET: ${{ secrets.R2_BUCKET }}
+          R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        run: |
+          set -euo pipefail
+          umask 077
+          temp="$(mktemp -d)"
+          trap 'rm -rf "$temp"' EXIT
+          input=.github/trace-mensuration
+          python "$input/sign_direct_uploads.py" "$input/direct-manifest.json" "$temp/grants.json"
+          openssl cms -encrypt -aes-256-gcm -binary -in "$temp/grants.json" \
+            -outform DER -out "$RUNNER_TEMP/r2-upload-grants.der" "$input/recipient.pem"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: encrypted-r2-upload-grants
+          path: ${{ runner.temp }}/r2-upload-grants.der
+          if-no-files-found: error
+          retention-days: 1

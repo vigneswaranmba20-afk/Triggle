@@ -1,0 +1,50 @@
+[
+  {
+    "id": "g10-ch7-cylinder-surface-area",
+    "file": "g10-ch7-cylinder-surface-area-en.mp4",
+    "sha256": "2f0bd4ce83cdd25d949c67aa9a9863e5cd171612ef0121df287429b3930d9614",
+    "durationSeconds": 51.416667,
+    "bytes": 1040249,
+    "contentMd5": "wqChQks2sZ5jDJoHPtfO/g=="
+  },
+  {
+    "id": "g10-ch7-cone-slant-surface",
+    "file": "g10-ch7-cone-slant-surface-en.mp4",
+    "sha256": "e56b6001bace3ef40b81b3232633791f2af4edb053f6e19b0775f442c781e073",
+    "durationSeconds": 64.791667,
+    "bytes": 1317698,
+    "contentMd5": "63B1B4TqnGlPA3f3Nt2uhA=="
+  },
+  {
+    "id": "g10-ch7-frustum-surface-volume",
+    "file": "g10-ch7-frustum-surface-volume-en.mp4",
+    "sha256": "4004b85de0bb00d154ddf7cef3c187679482b770dbc0f9438e39441e42d43e09",
+    "durationSeconds": 62.416667,
+    "bytes": 1235791,
+    "contentMd5": "kwEqIWWNM+XuaOdwbUE26g=="
+  },
+  {
+    "id": "g10-ch7-volumes-cylinder-cone",
+    "file": "g10-ch7-volumes-cylinder-cone-en.mp4",
+    "sha256": "31b84e51fbf20f9803eef5f90606d37bff2c7b44e999a046d7f4779cf9d767f4",
+    "durationSeconds": 46.291667,
+    "bytes": 1048352,
+    "contentMd5": "wvnYpNGPJlbU966b2kcotg=="
+  },
+  {
+    "id": "g10-ch7-combined-solids",
+    "file": "g10-ch7-combined-solids-en.mp4",
+    "sha256": "9461df191252d72c5b2a0bb82a3379dc8ac34a1dee74c0df72a31afc0cba8845",
+    "durationSeconds": 50.583333,
+    "bytes": 1042106,
+    "contentMd5": "70IHCanK38d5sqJjaRGBMw=="
+  },
+  {
+    "id": "g10-ch7-conversion-volume-conservation",
+    "file": "g10-ch7-conversion-volume-conservation-en.mp4",
+    "sha256": "8fbd10a22a0a6805536818d9aed160b5d4df3489a9bafbefd97affe8b0c8875f",
+    "durationSeconds": 53.208333,
+    "bytes": 1231793,
+    "contentMd5": "1j6oXzJ521HP4J1nJAPGWw=="
+  }
+]
