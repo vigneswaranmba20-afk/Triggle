@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "2e5581512f9861b8f4d4a1fe0ee71a0d4c996ef3",
-  "updatedAt": "2026-11-25T13:43:54Z",
+  "sourceCommit": "5edf8c4af2ed2d7c90638f971d58b1754bf17fde",
+  "updatedAt": "2026-11-25T13:45:44Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -157,7 +157,7 @@
     "site/data/textbook-exercises/g9-ch4-geometry-b.js": "d9059a06c0195d7bde3753c2738d8868925a32bcba5be8fd5bfce77aec22b675",
     "site/data/textbook-exercises/g9-ch4-geometry-c.js": "7db76f58c4149fc4f10199fc75f1b66d66a4cb180e407445acdfbb8e3105f848",
     "site/data/textbook-exercises/g9-ch4-geometry-d.js": "b12c5bc7be08c446aa08281648880dc63d146c2cfe94bdefa5609c88df497d91",
-    "site/data/textbook-exercises/g9-ch4-geometry.js": "6dcf0577242a0b5703f1bfba5e28b1ec269cbd199b6e98d2f7f1397725cd6fb1",
+    "site/data/textbook-exercises/g9-ch4-geometry.js": "c8862b225cfc0417cbe6112689af97f9aa8206c71272b59b63ed74b84b08a22a",
     "site/data/textbook-exercises/g9-ch5-ex5-1.js": "acf33a777033ea412a550e5d6cb33d88d4f0637d1ab2687a59fbb8ecfd24a63d",
     "site/data/textbook-exercises/g9-ch5-ex5-2-en.js": "09433295d5890d199a8c9be6128fce5905f042ff695d46d4f0f3f507e2951df2",
     "site/data/textbook-exercises/g9-ch5-ex5-2.js": "9de170856952775a7b2dd8ecaff77257ce95b0a31c242f64f94abe65017fb182",
@@ -5071,7 +5071,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q1-i",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "f6b514d26d9809c835fe115317b8386b1ca25b77e46ff4cbcce60ed54a337ab2",
+                  "recordSha256": "47d119d6eb961d05dee43a4ee20684639d03b6acf64d215712a2569d602c1456",
                   "verified": true
                 },
                 {
@@ -5080,7 +5080,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q1-ii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "da7aa58093d1add366e3797c6bf93cf43b9182028e0af834b728ef8ca890d8e2",
+                  "recordSha256": "0af2e30016a9ba02ad63dc707b2a9be55f9247045446e73c7962dbec5da43bcc",
                   "verified": true
                 },
                 {
@@ -5089,7 +5089,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q1-iii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "cf8d52b5f9556be0fc8e83350f3cb580fd52e45fa43b8805d6fa480228c71bc0",
+                  "recordSha256": "543585d4b02946446e32a93a25b2ecfd7b23df66083586ce8da70879514a5fd2",
                   "verified": true
                 },
                 {
@@ -5098,7 +5098,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q3-i",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "9fb3ba2eacd22d03e369b88720b5957b97b0ef3f03f95fcfa41b6a475d7da66b",
+                  "recordSha256": "53739cf7004e9b1c9f48f642edba6b1f992bf53e52832658538381d1950a381a",
                   "verified": true
                 },
                 {
@@ -5107,7 +5107,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q3-ii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "f898a558099f20d67c86758ba7f9b832a7ef70a4d46aa94858a2b53cd5c9a385",
+                  "recordSha256": "b2fc791d343fdb7420d345c5ce202646a6d02b88322a7353aab5b3df1791d088",
                   "verified": true
                 },
                 {
@@ -5116,7 +5116,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q3-iii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "ee1f978ef865c99697cbcfaed870f5f4bae1d84b54a40063b56dedf07e643bfc",
+                  "recordSha256": "00dbff77b6579eb61c7cc7b1152a37f72add970d5aaeeac5cdc198944233b4e8",
                   "verified": true
                 },
                 {
@@ -5125,7 +5125,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q3-iv",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "f887877b5c5626b5f6a10b91355db990a7535250d600ea4652a3db9eb89418e0",
+                  "recordSha256": "5b84abb36a753615028ae4aebe47e7f1744f6e24d79955c1f56f9347b35b040a",
                   "verified": true
                 },
                 {
@@ -5134,7 +5134,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q3-v",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "24f9fcad0d2a47e68e97f41fd0b1ef465585201da3893bee4947c613b7fcc7eb",
+                  "recordSha256": "11866a27b5a47142fc5c4f5767abc7f5b08a092caef0f37f42ead906453c7252",
                   "verified": true
                 },
                 {
@@ -5143,7 +5143,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q3-vi",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "05c9881f4e4e44c0df3f5ed28d7050813dda0719965e6e3ced5135a63b6b2c29",
+                  "recordSha256": "b49479537dc8096deadd584d6f68b950edc2a036cfa1aecfcab346a42666125c",
                   "verified": true
                 },
                 {
@@ -5152,7 +5152,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.1-q5",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "ae7c10c4382c206d318be65aebb94fb97925fc95b34b509134714c5bd0b5135c",
+                  "recordSha256": "265e77d908be7db6d00a8a5cf8ec3b8a484fc9aee458be34d6e830dd384d1417",
                   "verified": true
                 }
               ],
@@ -5440,7 +5440,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q5",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "4c0882d009b3a0e0210b761ce07115feb8e5e4fa10072064a7ef251b8442f2b3",
+                  "recordSha256": "2fac9e65f61ab8b3673643eab117c43f2068af3af9db2c99523cfdd7ff095f34",
                   "verified": true
                 },
                 {
@@ -5449,7 +5449,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q7-i",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "6673084cebff4789f9621948964519616351ccf044aab4c30e75552c3f2ca11d",
+                  "recordSha256": "04511f90d774ab401112d98ccb10985b6e3eafe882f0f8b8df7461277fd01710",
                   "verified": true
                 },
                 {
@@ -5458,7 +5458,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q7-ii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "8130583ba9b51d4d1de98fcae41a2f14b42df46b029ca500635415f1de25b1bc",
+                  "recordSha256": "2e3fd58a3d84350c946b39ca8744f2856be6b6e8a216de591e9fae0bc1408dd3",
                   "verified": true
                 },
                 {
@@ -5467,7 +5467,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q7-iii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "a1b35018ca87187e38a8f344402b326e74823a65d0f4ca634131082a7efded47",
+                  "recordSha256": "074f5f0039fb8f2efc704d6654859074461b049bcd30e711a6081745e5151828",
                   "verified": true
                 },
                 {
@@ -5476,7 +5476,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q7-iv",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "54d1ce54757ebd860145a77d621dfbf51cb0732a1f65c23a48f26453b870cdea",
+                  "recordSha256": "e397f36d33e383e4894d21bde07c05c81d43e419fee62de021f123b98e0495a0",
                   "verified": true
                 },
                 {
@@ -5485,7 +5485,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q8",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "c333411adba695a10ddb3435d84f71ec7085b4d043bd9ef4aa26e3410b9b89b0",
+                  "recordSha256": "723b34d5005a86d271fa6f8ced6983103ac23f7ba9f6ec81c398a000dd8f195f",
                   "verified": true
                 },
                 {
@@ -5494,7 +5494,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q9",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "66243e516daaf8720284680fcfc7c81113ae37027f2aadeee84d99e1e4236397",
+                  "recordSha256": "5378d6ff026a55d931ceb59192b58d9b530325e9f7b22e790ce18638a6bc4894",
                   "verified": true
                 },
                 {
@@ -5503,7 +5503,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q10",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "d0c896daa5904b4a40046375076c24d46a3f2c1332ba909fe8dbc6727ff08c6e",
+                  "recordSha256": "76604922cad13c58c84e5f108c48872ffedb7571c01164d12d1872e74985ba37",
                   "verified": true
                 },
                 {
@@ -5512,7 +5512,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.2-q11",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "f00df4c01230ec23eb20726d8a0fc7ae18cadd0d7a82d41c19ae17b4056332ac",
+                  "recordSha256": "d6ab61684777f887bbfb78d1612b52344a7012f6c024acc21c34e298a1861c1f",
                   "verified": true
                 }
               ],
@@ -5809,7 +5809,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q3",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "88b8be6e9f6e7c0b50c65004ed5ef4c1488fa65e97db772c47522c78977cf5e8",
+                  "recordSha256": "8f130c14a93007f050497792c36061826a16d9a942a4dfc54e3ff141bc9d4785",
                   "verified": true
                 },
                 {
@@ -5818,7 +5818,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q5",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "5d5b5334902057438189c9e47d7f2bf4b7e1f0881658fd6877adc9dcccd87e56",
+                  "recordSha256": "805acdb65734bb1407300212e88ae08aecd129667b6f85c117eaf965d6d2857b",
                   "verified": true
                 },
                 {
@@ -5827,7 +5827,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q7-i",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "b3e54cadcf8f34c461f886f11f8c16b36f6cf77e6d1659d2584ea0246ffd4d4f",
+                  "recordSha256": "d765405340e118d803c22b631ee3f6229540a8241f3ecc7ae4671a27920fb351",
                   "verified": true
                 },
                 {
@@ -5836,7 +5836,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q7-ii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "96bf9eea6edac7ea0376bfe02926fb494e14ee58fba16c01d9435f2856a242b0",
+                  "recordSha256": "7451a3fb869445b61be5d7c0dcb8c36ba03418d3e318d2c85d2245d022c72558",
                   "verified": true
                 },
                 {
@@ -5845,7 +5845,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q7-iii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "fe1c37c401cc1fddeb7182f0dba057f9ccb2af14eccacafcd315b7044a7c7cdc",
+                  "recordSha256": "c7f3b374689be7e64c9043728e2adb0c2cf520bf16150cbf5d3d0c6bbde6db84",
                   "verified": true
                 },
                 {
@@ -5854,7 +5854,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q7-iv",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "a399a7eade67a58ef219e7e4d0bb60dbe0e31bac136a2e4ae1d0970e32a0f24c",
+                  "recordSha256": "989385fa65a26b8e6f11d0e0b9d12446067917d3efb7f33f4662e839de94f3a8",
                   "verified": true
                 },
                 {
@@ -5863,7 +5863,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q7-v",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "dfae9066e23c268b56bd7a2dbca8fa911ce25fc04fc1039925a36d583585a6d5",
+                  "recordSha256": "a9fe3355c361c566e1991cd29257c8f199cf9c5ad850315f42639f16b696517a",
                   "verified": true
                 },
                 {
@@ -5872,7 +5872,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.3-q8",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "a190748578f7e2414cb8a1db89429a11c037d431b7ea687379839bc67a6db29b",
+                  "recordSha256": "fc48fb865ddbf94be192bab0a5d31c73bcae8305e7ecb68a1a586f215530c9e8",
                   "verified": true
                 }
               ],
@@ -6103,7 +6103,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q1",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "64af299a727695e053afb4e232ae3f0ea9a9dc44c813ca96c1407219faca3dd1",
+                  "recordSha256": "eecb1d73ef3e8589916b82bfa443473659614bc1f8d2f0415aedbfb736b0ba91",
                   "verified": true
                 },
                 {
@@ -6112,7 +6112,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q2-i",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "1efc0f88128759ae37a61e290a15840b7544feab7708dc8bf81f2a444cd43395",
+                  "recordSha256": "f75d8ba489b14790dd69e8e2b2b4746e6eae290d36a74dc74ceeec7ca30d7b59",
                   "verified": true
                 },
                 {
@@ -6121,7 +6121,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q2-ii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "6f95022a3b92ff5ea4a15c8add51baa21a1c1aa8848274c2ef0826e3ceddb12c",
+                  "recordSha256": "22dcb6d02368df8394a262353226f833f39e8ddb0a8134f9820cdb4846f49aa3",
                   "verified": true
                 },
                 {
@@ -6130,7 +6130,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q2-iii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "95118cf9960399ee1fc5efa2ce3e5393b11c3c3da3f04b29580804db74c5f696",
+                  "recordSha256": "ed6d5c98cd9701afe3983e83cffa3f86ba920c80a07c6624a76131e3ee61079a",
                   "verified": true
                 },
                 {
@@ -6139,7 +6139,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q3",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "04ec4e46764ce1188e28da76baf1de53d2157f2d410cd40027b11820912cc8fc",
+                  "recordSha256": "cf2f24a6ee7e3b2bd467750171143ecc9cf8583e6a8e704cf68b50056ccf5931",
                   "verified": true
                 },
                 {
@@ -6148,7 +6148,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q4-i",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "838c853c9a63bfcce9de69edb98a579170b8de902faff5674e6507db66e74035",
+                  "recordSha256": "e133ab1c23466cf0f913beeaf2d03ec65e3c36c5e0aff7b34dc16114e01d00af",
                   "verified": true
                 },
                 {
@@ -6157,7 +6157,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q4-ii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "a134976346b0dcf452f7092e809feb7ecdf472a19ef8e95ba3b420d2cf2f0dce",
+                  "recordSha256": "06eadbfd9fac68c90d69b0275e32c0039aaee785707d2482a4e90e25632ad3c4",
                   "verified": true
                 },
                 {
@@ -6166,7 +6166,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q5",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "9350ec275781816c9e7cdde615d3990726b365ddba1063daeec25c2586d29043",
+                  "recordSha256": "dbf7bb03b72a6ac3a2b18b8f818a707461e5e0c20f71b9b0719940620744e9d1",
                   "verified": true
                 },
                 {
@@ -6175,7 +6175,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q6",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "f84bb05b3cf3f497fc41653c8043369f7c2fb2e83ae08d0986015bc5ba9d6c47",
+                  "recordSha256": "1e1a29aa90b3b970e397e2536292117f7809c5d5d10d12be6cbcac7b87a545bd",
                   "verified": true
                 },
                 {
@@ -6184,7 +6184,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q7",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "2bd16790af59774308c60e5b422a2f172541cdc772488856498d74c664f860e6",
+                  "recordSha256": "d38273b2c59ddfd01c4f64e77def4234ae9ebdffe2acf1722d30a0eb5d01250f",
                   "verified": true
                 },
                 {
@@ -6193,7 +6193,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q8",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "a760e9e6867c3509800f4c9e6341a1f47553f5ff64d44d338f0b044aee37c2d2",
+                  "recordSha256": "03ff4b973afb0ae5086fcee2934542b5d043613c41f67d64bf01ccc65caf8574",
                   "verified": true
                 },
                 {
@@ -6202,7 +6202,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.4-q9",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "138fc1a5bf5637118cf1b37bfdf0d06ed974c61b3e57467ce3a382538bfe2ed6",
+                  "recordSha256": "b6015855154433f198316d58841cb696d70ec882abc4299bf78be3b86b133962",
                   "verified": true
                 }
               ],
@@ -6435,7 +6435,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.5-q1",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "9656893b80d90b0f107677c8e764caeb4a691542f79442a5b0fa1ae6418d5d83",
+                  "recordSha256": "aa2820ce7fee0e19babce2d03181f798f02d69cf8bc00cf4def0db3562e0e98f",
                   "verified": true
                 },
                 {
@@ -6444,7 +6444,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.5-q2",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "5d872a7aa14d41112fb50f9baff4397e7fbdd627becffef829ee126ab775c85b",
+                  "recordSha256": "c079f1650d08fd5a833f725b1ff1da8f03f6d531f0b88a0bd2d5a92422025e6a",
                   "verified": true
                 },
                 {
@@ -6453,7 +6453,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.5-q3",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "ee8656fe1b8f60243350ad494caa414ae0003685126d925aa16ffd49bace3085",
+                  "recordSha256": "20a397b9956aa2f099f2a695d3fb8684ccb57166da0bb692afd77fadca0c78a2",
                   "verified": true
                 },
                 {
@@ -6462,7 +6462,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.5-q4",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "1862b1c8a70ba8b3dba064c3ccf6d55714c4e21df07c9051c1d01f0fc14ec226",
+                  "recordSha256": "6aec26bc8d614a3ef9f86cfcd922ee4e4391d5558e5e7e714fcb28b5fc7adc9d",
                   "verified": true
                 },
                 {
@@ -6471,7 +6471,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.5-q5",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "24052f423768c000d6a9cceded5580961dcc3f358cf02698ed5fd9caddaccf23",
+                  "recordSha256": "5cf0ef721c37f89cd0546e0dbcd1a6758d2c1d7bed06c0af699170443b818aa3",
                   "verified": true
                 },
                 {
@@ -6480,7 +6480,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.5-q6",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "d71699ff3d438c5d9c04dfa936c583c7f2ac0fd52d5e9ad6f5238018d808c111",
+                  "recordSha256": "b9455cad8e872324c34dad3bbf97c46398b27e4f44bfb9ad261f8aabb393a29b",
                   "verified": true
                 },
                 {
@@ -6489,7 +6489,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.5-q7",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "cede248b9a4a2d183865567e9bce10ce411923ae18b1259f4489fed802eca384",
+                  "recordSha256": "31dcf46e938aca66932629b000d9f2a6547890916759d476eb65d0191ffba90e",
                   "verified": true
                 },
                 {
@@ -6498,7 +6498,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.5-q8",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "b88dbf2f9968dd6891c288de9a7bd55a097559b113b25aadcb6e8e165ea538c7",
+                  "recordSha256": "78c9a6a7eb50223a43fffca41e08caaed6b3fe6de03aecb5a34f3e2c95c388b9",
                   "verified": true
                 }
               ],
@@ -6669,7 +6669,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.6-q1",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "8dc4e6648ec144e42ac77f7a2dfe8f86cc708b6278b0906c103bd991a7e4f6d1",
+                  "recordSha256": "ec4556e9ef214086d6360456cfdbd0d6ad611d185354a1442979f73ce2be50da",
                   "verified": true
                 },
                 {
@@ -6678,7 +6678,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.6-q2",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "d3b15e44c2916d9af9ee31d461c71151eb2148a49bc342b91bc60826ce1ffa28",
+                  "recordSha256": "788b48c19fbea74e7fde201d9c5ad87376d0265bfd52ca0759c494138c9d1808",
                   "verified": true
                 },
                 {
@@ -6687,7 +6687,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.6-q3",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "916c4c084e0b23bbf626e8a9798f93d9fba3e190932d73f3098392e259400d24",
+                  "recordSha256": "bf81ec62fdae5b207fef99f8fd7439864b907201e540d3883b843a80000bf3e1",
                   "verified": true
                 },
                 {
@@ -6696,7 +6696,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.6-q4",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "addf2d1d9f8a3cac58067c52c9b3ca0daab8900ced725e920a9f032c596a57fb",
+                  "recordSha256": "c4a79afcd841359218bc9142bcb2b53470ea814bd34c3c7eb9e78d52a9ce738d",
                   "verified": true
                 },
                 {
@@ -6705,7 +6705,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.6-q5",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "4692c98d0ef293aca2dc7e208928abef0269215e4f46021056c25127794fc787",
+                  "recordSha256": "5f549366e422e6185c795f14731e17befd887de992f181e934b15bd28d4ab953",
                   "verified": true
                 },
                 {
@@ -6714,7 +6714,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.6-q6",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "de2b5f04cf260b2492f767027a567ba4e344eb45c88cb757f31f8ffe0ec0fdcc",
+                  "recordSha256": "0a2ae72c32bfa704f3c6a9fc208544bdd187a2c06eaf1a17bcf5d4c98e5e0481",
                   "verified": true
                 },
                 {
@@ -6723,7 +6723,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.6-q7",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "81fa3219b6635da85183de8d3dbb2a7e398b25af2e23805cbdcc5386b4e8ad47",
+                  "recordSha256": "8cdc0a063e0d8a2b13f50ed5b64dd5158824167cf1f26a417ebb03a0392431ef",
                   "verified": true
                 },
                 {
@@ -6732,7 +6732,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.6-q8",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "016bbed7e5fdd2a53c3c99d6383d77e4d3d586833507f72af525c6df098dc56c",
+                  "recordSha256": "34999270a782d5f55c57bc6be23682e82f15643df4ff245f1c08a1990a2a38b2",
                   "verified": true
                 }
               ],
@@ -6903,7 +6903,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q1",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "f34281ae812dcbf3e60c9c256992b720e06e9fb6424885ca563e6dc0883d16d8",
+                  "recordSha256": "0cb84622ec653ae922711ee422cf81a161d1c4cada703a6d83a2392dee485e97",
                   "verified": true
                 },
                 {
@@ -6912,7 +6912,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q2",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "fe0d48053da83a65789698d2444595f4fe8f742e763605fa1f37b6d26c24604d",
+                  "recordSha256": "523ce209952522c5f0e2625c4fdc181cfd339222139dd8743a07a63d22b40a0e",
                   "verified": true
                 },
                 {
@@ -6921,7 +6921,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q3",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "85880754e6d7650b23b11763a1054f49a629ada9a300ed13b0d8625f63934503",
+                  "recordSha256": "5401ff26378551482a0b0ae96c58d565f9cfbc009b13051fc9d9de9203298dd2",
                   "verified": true
                 },
                 {
@@ -6930,7 +6930,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q4",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "03b5fabef61a6382e74b2e0eda0d27846d3980b5a6a4c24f44e5ec360a1259ba",
+                  "recordSha256": "37daa8d3b48c2cf17b49c9e89cd660ad0cf3552a9af84509f4b4c61543116555",
                   "verified": true
                 },
                 {
@@ -6939,7 +6939,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q5",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "444cd4e1d7bf7b7040627396ad968ca2f5eba6980f2d26c0ea1f3b937bea1d79",
+                  "recordSha256": "f4fd9accd1c867763c793ed34bffe39d80d68c4c000fc795fc7f48e811ff58c9",
                   "verified": true
                 },
                 {
@@ -6948,7 +6948,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q6",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "8cb6cb5eba0e10862b9f10fd3d1122b8a127af7e2a06e4c90b3f1d61e0f2ee31",
+                  "recordSha256": "5a23501c312a0d68022a9c42b504200b7e941ce949fed39af9735731d11cc6e7",
                   "verified": true
                 },
                 {
@@ -6957,7 +6957,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q7",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "586f9ba4b9a8a399772276932a338c7d67bbe93d1bd9030ba234a24607decad3",
+                  "recordSha256": "f89c28afa9ceb5f688ebc361d1c422db354a5e1a14c56a87668d316911f04048",
                   "verified": true
                 },
                 {
@@ -6966,7 +6966,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q8",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "165bcbb265200d837612e366c7f7d4754f22ef8cb936cead1bc653f2adfb125c",
+                  "recordSha256": "7ce729e85a4182ad4eec3a69577df7594f36f5feea2ae6cfb1726f0e6b3a0c9f",
                   "verified": true
                 },
                 {
@@ -6975,7 +6975,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q9",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "17e401705510d8b004cd3637424a3a96cabc69a1eeacf7c596c493c1137c78e6",
+                  "recordSha256": "d6e07e4760242c9c03fb2333fd08baae5b185ff299f3277c1e6914f3ced2136f",
                   "verified": true
                 },
                 {
@@ -6984,7 +6984,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q10",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "1ddffb9ab6c50c8f1a8c800c591137450353d2356b9645ba1ee2431301434e4b",
+                  "recordSha256": "e3523319436c94790ba8d6a3056f751e0a140bf80100446982d6bd23d917d2fa",
                   "verified": true
                 },
                 {
@@ -6993,7 +6993,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q11",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "067ae98174df26f161c1c8b6fedfb74860c32e848973d2ad135e72dc96564558",
+                  "recordSha256": "2f6203c741447388359f9e9123875cf42fe0931ec46bb5ac3156ddcdfcdace98",
                   "verified": true
                 },
                 {
@@ -7002,7 +7002,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q12",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "6e6f7b99cb1b9cd898093e1a9683dbdcaf51021853744031ed4c5a2b5f2141f8",
+                  "recordSha256": "3db7be9a64b6affde9bbaa0885d0c3a53d26dcfe31e8baaeee98cc45bf463c8f",
                   "verified": true
                 },
                 {
@@ -7011,7 +7011,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q13",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "5bdc2e7811db5edcd626473925964c4fcec216bd6d33c5cab95a75eaa4cbc773",
+                  "recordSha256": "daa24d0b67ee234a349be7ab261f55c2edea28e6e04ea19bb90a65a508ff4726",
                   "verified": true
                 },
                 {
@@ -7020,7 +7020,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q14",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "efa12cd116b9da062b464611b8001e31867cea04d164a90465c4b34e09571bc6",
+                  "recordSha256": "a5e57724a171547b584301a631b3303ac4138a3ed1fa166c57dd54b11e9d4248",
                   "verified": true
                 },
                 {
@@ -7029,7 +7029,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q15",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "fde8bfbc1901b868c6c6b8907c6f4bafc5798b28a231bfa46ab8c7cc2837bddb",
+                  "recordSha256": "977dd0fe1e2f358beb96a8921e4e53f00683c24e32a9dccb3abe0fc7e9e48664",
                   "verified": true
                 },
                 {
@@ -7038,7 +7038,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q16",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "b1f294434c696a48ea4688bf2bc79a98fe358fe670c64b6c8817d739fe289979",
+                  "recordSha256": "252baf1d91dd2ac272231a3b505eb3dc3a61f77bdfee2c16811ba3f669d5c543",
                   "verified": true
                 },
                 {
@@ -7047,7 +7047,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q17",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "c2e7866bd9c5b123420dcfd57ce4c7335180ae24b819e683cf7e8d96393799ee",
+                  "recordSha256": "d6dad760615ae497d0875b5652ce9c1bc0c3da6311399144b944e8679e3a2c23",
                   "verified": true
                 },
                 {
@@ -7056,7 +7056,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q18",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "d20ad429b41e45a2a162cbb632be80b79ba4acc066f8d7476943925d9329635c",
+                  "recordSha256": "1236c77091c0df50676d4b3a28c5510a08613991393dd101a125569f925ba7b1",
                   "verified": true
                 },
                 {
@@ -7065,7 +7065,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q19",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "eb7a49e5e47c5c741d34a64cffbc4451a414430ac6eec4ea6facc58aece5b415",
+                  "recordSha256": "1b83fed4b94f6c6589e7c7a91745e2fbd71eff1660705270958b24c756e84b22",
                   "verified": true
                 },
                 {
@@ -7074,7 +7074,7 @@
                   "url": "../index.html?class=9&question=g9-ch4-ex4.7-q20",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "1e92cc74b1bb85612a345c1cbb5ad781647d502d639272e4f52c8cd77f606cd6",
+                  "recordSha256": "106efd189f0d531779778877bc88e9b56f94cddaa0cf815c7689e66f767bccff",
                   "verified": true
                 }
               ],
