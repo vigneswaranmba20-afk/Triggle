@@ -1,0 +1,780 @@
+{
+  "schemaVersion": 1,
+  "edition": "2025",
+  "grade": 9,
+  "chapter": 6,
+  "tamilEditorialReview": "pending",
+  "registeredBooks": [
+    {
+      "grade": 9,
+      "medium": "en",
+      "volume": null,
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "pdfPages": 328,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "printedStartPages": [
+        1,
+        41,
+        78,
+        138,
+        185,
+        222,
+        248,
+        266,
+        291
+      ],
+      "editionClaim": {
+        "first": 2018,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    },
+    {
+      "grade": 9,
+      "medium": "ta",
+      "volume": null,
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+      "pdfPages": 344,
+      "imprintPdfPage": 2,
+      "tocPdfPages": [
+        3,
+        4
+      ],
+      "chapterNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "printedStartPages": [
+        1,
+        43,
+        84,
+        149,
+        197,
+        236,
+        262,
+        281,
+        307
+      ],
+      "editionClaim": {
+        "first": 2018,
+        "latestRevised": 2025
+      },
+      "access": "uploaded PDF available in conversation, not stored in GitHub"
+    }
+  ],
+  "items": [
+    {
+      "id": "c9-exercise-6-1-q1",
+      "exercise": "6.1",
+      "question": 1,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            233
+          ],
+          "printedPages": [
+            227
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            247
+          ],
+          "printedPages": [
+            241
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "c9-exercise-6-1-q2",
+      "exercise": "6.1",
+      "question": 2,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            233
+          ],
+          "printedPages": [
+            227
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            247
+          ],
+          "printedPages": [
+            241
+          ]
+        }
+      }
+    },
+    {
+      "id": "c9-exercise-6-1-q3",
+      "exercise": "6.1",
+      "question": 3,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            233
+          ],
+          "printedPages": [
+            227
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            247
+          ],
+          "printedPages": [
+            241
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "c9-exercise-6-1-q4",
+      "exercise": "6.1",
+      "question": 4,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            233
+          ],
+          "printedPages": [
+            227
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            247
+          ],
+          "printedPages": [
+            241
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "c9-exercise-6-1-q5",
+      "exercise": "6.1",
+      "question": 5,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            233
+          ],
+          "printedPages": [
+            227
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            247
+          ],
+          "printedPages": [
+            241
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "q": {
+          "en": "If cos A = [[2x|1 + x²]], find sin A and tan A. Assume A is acute, so x > 0 and x ≠ 1.",
+          "ta": "cos A = [[2x|1 + x²]] எனில் sin A, tan A-ஐ காண்க. A ஒரு குறுங்கோணம்; x > 0, x ≠ 1 என எடுத்துக்கொள்க."
+        },
+        "page": 6
+      }
+    },
+    {
+      "id": "c9-exercise-6-1-q6",
+      "exercise": "6.1",
+      "question": 6,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            233
+          ],
+          "printedPages": [
+            227
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            247
+          ],
+          "printedPages": [
+            241
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "q": {
+          "en": "Starting from sin θ = [[a|√(a² + b²)]], show that b sin θ = a cos θ.",
+          "ta": "sin θ = [[a|√(a² + b²)]] எனில் b sin θ = a cos θ என்பதை நிரூபிக்கவும்."
+        },
+        "steps": [
+          {
+            "en": "Choose a positive right triangle whose opposite side is a and adjacent side is b.",
+            "ta": "எதிர்ப்பக்கம் a, அடுத்துள்ள பக்கம் b கொண்ட செங்கோண முக்கோணத்தை எடுத்துக்கொள்க.",
+            "eq": "Hypotenuse = √(a² + b²)"
+          },
+          {
+            "en": "Write the adjacent-over-hypotenuse ratio.",
+            "ta": "cos-க்கான அடுத்துள்ள / கர்ண விகிதத்தை எழுதுக.",
+            "eq": "cos θ = [[b|√(a² + b²)]]"
+          },
+          {
+            "en": "Multiply each ratio by the other side and compare.",
+            "ta": "இரு விகிதங்களையும் மற்றொரு பக்கத்தால் பெருக்கி ஒப்பிடுக.",
+            "eq": "b sin θ = [[ab|√(a² + b²)]]"
+          },
+          {
+            "en": "The expression on the right simplifies to the same fraction.",
+            "ta": "வலப்பக்கமும் அதே பின்னமாக எளிமையாகிறது.",
+            "eq": "a cos θ = [[ab|√(a² + b²)]] = b sin θ"
+          }
+        ],
+        "answer": "b sin θ = a cos θ",
+        "page": 6
+      },
+      "disposition": "SOURCE_BLOCKED",
+      "issue": "Neither edition restricts the sign of b. For a = 3, b = −4 and acute θ with sin θ = 3/5, b sin θ = −12/5 while a cos θ = 12/5.",
+      "resolution": "Show the identity in the intended positive right-triangle setting. Keep the original question and include the exact signed counterexample.",
+      "counterexample": {
+        "a": 3,
+        "b": -4,
+        "sin": "3/5",
+        "cos": "4/5",
+        "lhs": "-12/5",
+        "rhs": "12/5"
+      }
+    },
+    {
+      "id": "c9-exercise-6-1-q7",
+      "exercise": "6.1",
+      "question": 7,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            233
+          ],
+          "printedPages": [
+            227
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            247
+          ],
+          "printedPages": [
+            241
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "c9-exercise-6-1-q8",
+      "exercise": "6.1",
+      "question": 8,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            233
+          ],
+          "printedPages": [
+            227
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            248
+          ],
+          "printedPages": [
+            242
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "c9-exercise-6-1-q9",
+      "exercise": "6.1",
+      "question": 9,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            233
+          ],
+          "printedPages": [
+            227
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            248
+          ],
+          "printedPages": [
+            242
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "q": {
+          "en": "The diagram has AD=9, DB=16, CD=12, AC=15 and BC=20. Prove θ+φ=90°, show ∠ACB=90°, and find sinα, cosβ and tanφ.",
+          "ta": "படத்தில் AD=9, DB=16, CD=12, AC=15, BC=20. θ+φ=90°, ∠ACB=90° என நிரூபித்து sinα, cosβ, tanφ காண்க."
+        },
+        "page": 6
+      }
+    },
+    {
+      "id": "c9-exercise-6-1-q10",
+      "exercise": "6.1",
+      "question": 10,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            234
+          ],
+          "printedPages": [
+            228
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            248
+          ],
+          "printedPages": [
+            242
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 7
+      }
+    },
+    {
+      "id": "c9-exercise-6-2-q1-i",
+      "exercise": "6.2",
+      "question": 1,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            238
+          ],
+          "printedPages": [
+            232
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            252
+          ],
+          "printedPages": [
+            246
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 11
+      }
+    },
+    {
+      "id": "c9-exercise-6-2-q1-ii",
+      "exercise": "6.2",
+      "question": 1,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            238
+          ],
+          "printedPages": [
+            232
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            252
+          ],
+          "printedPages": [
+            246
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 11
+      }
+    },
+    {
+      "id": "c9-exercise-6-2-q1-iii",
+      "exercise": "6.2",
+      "question": 1,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            238
+          ],
+          "printedPages": [
+            232
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            252
+          ],
+          "printedPages": [
+            246
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 11
+      }
+    },
+    {
+      "id": "c9-exercise-6-2-q1-iv",
+      "exercise": "6.2",
+      "question": 1,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            238
+          ],
+          "printedPages": [
+            232
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            252
+          ],
+          "printedPages": [
+            246
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 11
+      }
+    },
+    {
+      "id": "c9-exercise-6-2-q2-i",
+      "exercise": "6.2",
+      "question": 2,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            238
+          ],
+          "printedPages": [
+            232
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            252
+          ],
+          "printedPages": [
+            246
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 11
+      }
+    },
+    {
+      "id": "c9-exercise-6-2-q2-ii",
+      "exercise": "6.2",
+      "question": 2,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            238
+          ],
+          "printedPages": [
+            232
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            252,
+            253
+          ],
+          "printedPages": [
+            246,
+            247
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 11
+      }
+    },
+    {
+      "id": "c9-exercise-6-2-q2-iii",
+      "exercise": "6.2",
+      "question": 2,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            238
+          ],
+          "printedPages": [
+            232
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            252,
+            253
+          ],
+          "printedPages": [
+            246,
+            247
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 11
+      }
+    },
+    {
+      "id": "c9-exercise-6-2-q3",
+      "exercise": "6.2",
+      "question": 3,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            238
+          ],
+          "printedPages": [
+            232
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            253
+          ],
+          "printedPages": [
+            247
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 11
+      }
+    },
+    {
+      "id": "c9-exercise-6-2-q4",
+      "exercise": "6.2",
+      "question": 4,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            238
+          ],
+          "printedPages": [
+            232
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            253
+          ],
+          "printedPages": [
+            247
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 11
+      }
+    },
+    {
+      "id": "c9-exercise-6-3-q-i",
+      "exercise": "6.3",
+      "question": null,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            241
+          ],
+          "printedPages": [
+            235
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            255
+          ],
+          "printedPages": [
+            249
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 14
+      }
+    },
+    {
+      "id": "c9-exercise-6-3-q-ii",
+      "exercise": "6.3",
+      "question": null,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            241
+          ],
+          "printedPages": [
+            235
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            255
+          ],
+          "printedPages": [
+            249
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 14
+      }
+    },
+    {
+      "id": "c9-exercise-6-3-q-iii",
+      "exercise": "6.3",
+      "question": null,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            241
+          ],
+          "printedPages": [
+            235
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            255
+          ],
+          "printedPages": [
+            249
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 14
+      }
+    },
+    {
+      "id": "c9-exercise-6-3-q-iv",
+      "exercise": "6.3",
+      "question": null,
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            241
+          ],
+          "printedPages": [
+            235
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            255
+          ],
+          "printedPages": [
+            249
+          ]
+        }
+      },
+      "originalReaderFields": {
+        "reference": "Class 9 earlier-edition chapter PDF · exercise numbering may vary",
+        "source": "https://cdn1.byjus.com/wp-content/uploads/2019/04/Tamilnadu-Board-Class-9-Maths-Textbook-Chapter-6-Term-II.pdf",
+        "page": 14
+      }
+    }
+  ]
+}
