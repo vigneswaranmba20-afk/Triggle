@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.3.5",
+  "performance": {
+    "totalExecutionTimeMs": 89895.67,
+    "peakMemoryMB": 74.99
+  },
+  "chapters": {
+    "ch3_algebra": {
+      "counts": {
+        "exercises": 139,
+        "concepts": 14,
+        "total": 153
+      },
+      "answerVerificationCounts": {
+        "PASS": 149,
+        "UNVERIFIABLE": 4
+      },
+      "intermediateStepCounts": {
+        "UNVERIFIABLE": 34,
+        "FAIL": 45,
+        "PARTIAL": 35,
+        "PASS": 39
+      },
+      "workingVerificationCounts": {
+        "PARTIAL": 52,
+        "PASS": 94,
+        "FAIL": 4,
+        "UNVERIFIABLE": 3
+      },
+      "tamilValidationCounts": {
+        "PASS": 140,
+        "MISSING": 9,
+        "PARTIAL": 2,
+        "FAIL": 2
+      }
+    },
+    "ch5_coord_geometry": {
+      "counts": {
+        "exercises": 98,
+        "concepts": 12,
+        "total": 110
+      },
+      "answerVerificationCounts": {
+        "PASS": 108,
+        "UNVERIFIABLE": 2
+      },
+      "intermediateStepCounts": {
+        "PASS": 10,
+        "FAIL": 60,
+        "PARTIAL": 18,
+        "UNVERIFIABLE": 22
+      },
+      "workingVerificationCounts": {
+        "PASS": 83,
+        "PARTIAL": 19,
+        "FAIL": 5,
+        "UNVERIFIABLE": 3
+      },
+      "tamilValidationCounts": {
+        "PASS": 108,
+        "PARTIAL": 1,
+        "FAIL": 1
+      }
+    },
+    "ch7_mensuration": {
+      "counts": {
+        "exercises": 62,
+        "concepts": 9,
+        "total": 71
+      },
+      "answerVerificationCounts": {
+        "PASS": 70,
+        "FAIL": 0,
+        "UNVERIFIABLE": 1
+      },
+      "intermediateStepCounts": {
+        "PASS": 34,
+        "FAIL": 2,
+        "PARTIAL": 19,
+        "UNVERIFIABLE": 16
+      },
+      "workingVerificationCounts": {
+        "PASS": 40,
+        "FAIL": 10,
+        "PARTIAL": 20,
+        "UNVERIFIABLE": 1
+      },
+      "tamilValidationCounts": {
+        "PASS": 50,
+        "FAIL": 1,
+        "PARTIAL": 10,
+        "MISSING": 10
+      }
+    }
+  },
+  "totalAuditedItems": 334
+}

@@ -288,3 +288,14 @@ def test_v1_3_5_context_and_adversarial_suites():
     assert res["holdout"]["total"] >= 25
 
 
+def test_v1_3_5a_185_case_adversarial_suite():
+    from mathguard.adversarial_v1_3_5a import run_v1_3_5a_adversarial_suite
+
+    res = run_v1_3_5a_adversarial_suite()
+    assert res["total"] == 185
+    assert res["falseAcceptances"] == 0, [d for d in res["details"] if not d["passed"]]
+    assert res["falseRejections"] == 0, [d for d in res["details"] if not d["passed"]]
+    assert res["passed"] == 185, [d for d in res["details"] if not d["passed"]]
+
+
+

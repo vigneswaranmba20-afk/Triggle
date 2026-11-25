@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.3.5a",
+  "benchmarkSeparationPolicy": {
+    "frozenBenchmark": "docs/trace/mathguard/v1_3_5_frozen_dataset.json",
+    "frozenItemCount": 334,
+    "frozenDatasetSha256": "e72571d9be9c0978cab84762b5c21f356a78d04c799d2ba6a75d060093005f9b",
+    "note": "The 334-item G10 Ch3/Ch5/Ch7 benchmark is strictly isolated from Codex's expanding Grade 9 and Grade 10 curriculum dataset."
+  },
+  "totalChapters": 17,
+  "summaryByStatus": {
+    "verified_pilot": 3,
+    "adapter_ready": 3,
+    "partial_ready": 4,
+    "planned_v1_4": 7
+  },
+  "certificationPolicy": "Unsupported domains (Sets/Relations, Euclidean Geometry proofs, Statistics, Probability) are explicitly marked planned_v1_4 and never certified without dedicated symbolic/combinatorial verifiers.",
+  "chapters": [
+    {
+      "id": "g9-ch1",
+      "grade": 9,
+      "chapter": 1,
+      "domain": "sets_and_relations",
+      "title": "Set Language",
+      "adapterStatus": "planned_v1_4",
+      "supportedNow": [],
+      "requiresModules": [
+        "set_builder_parser",
+        "venn_cardinality_solver",
+        "subset_equality_checker"
+      ]
+    },
+    {
+      "id": "g9-ch2",
+      "grade": 9,
+      "chapter": 2,
+      "domain": "real_numbers",
+      "title": "Real Numbers",
+      "adapterStatus": "partial_ready",
+      "supportedNow": [
+        "surds_simplification",
+        "rationalisation",
+        "scientific_notation"
+      ],
+      "requiresModules": [
+        "recurring_decimal_verifier",
+        "irrationality_proof_checker"
+      ]
+    },
+    {
+      "id": "g9-ch3",
+      "grade": 9,
+      "chapter": 3,
+      "domain": "algebra",
+      "title": "Algebra",
+      "adapterStatus": "adapter_ready",
+      "supportedNow": [
+        "polynomial_ops",
+        "factorisation",
+        "linear_systems",
+        "gcd_lcm"
+      ],
+      "requiresModules": [
+        "synthetic_division_verifier"
+      ]
+    },
+    {
+      "id": "g9-ch4",
+      "grade": 9,
+      "chapter": 4,
+      "domain": "geometry",
+      "title": "Geometry",
+      "adapterStatus": "planned_v1_4",
+      "supportedNow": [
+        "pythagoras_numeric",
+        "angle_sum_numeric"
+      ],
+      "requiresModules": [
+        "euclidean_theorem_checker",
+        "congruence_similarity_graph"
+      ]
+    },
+    {
+      "id": "g9-ch5",
+      "grade": 9,
+      "chapter": 5,
+      "domain": "coordinate_geometry",
+      "title": "Coordinate Geometry",
+      "adapterStatus": "adapter_ready",
+      "supportedNow": [
+        "distance",
+        "midpoint",
+        "section_formula",
+        "centroid"
+      ],
+      "requiresModules": []
+    },
+    {
+      "id": "g9-ch6",
+      "grade": 9,
+      "chapter": 6,
+      "domain": "trigonometry",
+      "title": "Trigonometry",
+      "adapterStatus": "partial_ready",
+      "supportedNow": [
+        "standard_angle_values",
+        "trig_identities_basic"
+      ],
+      "requiresModules": [
+        "complementary_angle_verifier",
+        "trig_table_lookup"
+      ]
+    },
+    {
+      "id": "g9-ch7",
+      "grade": 9,
+      "chapter": 7,
+      "domain": "mensuration",
+      "title": "Mensuration",
+      "adapterStatus": "adapter_ready",
+      "supportedNow": [
+        "herons_formula",
+        "cuboid_cube_sa_vol",
+        "unit_conversions"
+      ],
+      "requiresModules": [
+        "heron_area_template"
+      ]
+    },
+    {
+      "id": "g9-ch8",
+      "grade": 9,
+      "chapter": 8,
+      "domain": "statistics",
+      "title": "Statistics",
+      "adapterStatus": "planned_v1_4",
+      "supportedNow": [
+        "mean_median_mode_basic"
+      ],
+      "requiresModules": [
+        "grouped_frequency_table_verifier"
+      ]
+    },
+    {
+      "id": "g9-ch9",
+      "grade": 9,
+      "chapter": 9,
+      "domain": "probability",
+      "title": "Probability",
+      "adapterStatus": "planned_v1_4",
+      "supportedNow": [
+        "classical_ratio_probability"
+      ],
+      "requiresModules": [
+        "sample_space_enumerator",
+        "complement_rule_checker"
+      ]
+    },
+    {
+      "id": "g10-ch1",
+      "grade": 10,
+      "chapter": 1,
+      "domain": "sets_and_relations",
+      "title": "Relations and Functions",
+      "adapterStatus": "planned_v1_4",
+      "supportedNow": [
+        "cartesian_product_basic"
+      ],
+      "requiresModules": [
+        "relation_domain_range_verifier",
+        "function_bijection_checker",
+        "composition_f_of_g_verifier"
+      ]
+    },
+    {
+      "id": "g10-ch2",
+      "grade": 10,
+      "chapter": 2,
+      "domain": "number_sequences",
+      "title": "Numbers and Sequences",
+      "adapterStatus": "partial_ready",
+      "supportedNow": [
+        "euclid_division_lemma",
+        "modular_arithmetic_basic",
+        "ap_gp_nth_term"
+      ],
+      "requiresModules": [
+        "ap_gp_series_sum_verifier",
+        "modular_congruence_solver"
+      ]
+    },
+    {
+      "id": "g10-ch3",
+      "grade": 10,
+      "chapter": 3,
+      "domain": "algebra",
+      "title": "Algebra",
+      "adapterStatus": "verified_pilot",
+      "supportedNow": [
+        "rational_expressions",
+        "polynomial_gcd_lcm",
+        "quadratic_formula",
+        "vieta_relations",
+        "matrix_ops"
+      ],
+      "requiresModules": [
+        "graphing_parabola_intersection"
+      ]
+    },
+    {
+      "id": "g10-ch4",
+      "grade": 10,
+      "chapter": 4,
+      "domain": "geometry",
+      "title": "Geometry",
+      "adapterStatus": "planned_v1_4",
+      "supportedNow": [
+        "bpt_thales_numeric",
+        "angle_bisector_numeric"
+      ],
+      "requiresModules": [
+        "circle_tangent_theorem_checker",
+        "similarity_proof_verifier"
+      ]
+    },
+    {
+      "id": "g10-ch5",
+      "grade": 10,
+      "chapter": 5,
+      "domain": "coordinate_geometry",
+      "title": "Coordinate Geometry",
+      "adapterStatus": "verified_pilot",
+      "supportedNow": [
+        "triangle_area_shoelace",
+        "collinearity",
+        "slope_inclination",
+        "line_equations",
+        "perpendicular_parallel"
+      ],
+      "requiresModules": []
+    },
+    {
+      "id": "g10-ch6",
+      "grade": 10,
+      "chapter": 6,
+      "domain": "trigonometry",
+      "title": "Trigonometry",
+      "adapterStatus": "partial_ready",
+      "supportedNow": [
+        "trig_identities_sympy"
+      ],
+      "requiresModules": [
+        "heights_and_distances_diagram_binder"
+      ]
+    },
+    {
+      "id": "g10-ch7",
+      "grade": 10,
+      "chapter": 7,
+      "domain": "mensuration",
+      "title": "Mensuration",
+      "adapterStatus": "verified_pilot",
+      "supportedNow": [
+        "cylinder_cone_sphere_hemisphere_frustum",
+        "composite_solids",
+        "volume_conservation",
+        "unit_conversions"
+      ],
+      "requiresModules": []
+    },
+    {
+      "id": "g10-ch8",
+      "grade": 10,
+      "chapter": 8,
+      "domain": "statistics_and_probability",
+      "title": "Statistics and Probability",
+      "adapterStatus": "planned_v1_4",
+      "supportedNow": [
+        "range_sd_variance_formula"
+      ],
+      "requiresModules": [
+        "grouped_sd_verifier",
+        "compound_probability_tree_verifier"
+      ]
+    }
+  ]
+}

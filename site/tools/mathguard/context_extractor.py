@@ -102,6 +102,16 @@ def _add_given(
         res.domain_constraints.append(domain)
 
 
+def _strip_mcq_options(raw: str) -> str:
+    """Strip MCQ answer choices (A) ... (B) ... so option values never leak into stem givens."""
+    if not raw:
+        return ""
+    m = re.search(r"(?:\n|\s)\(A\)\s+", raw)
+    if m and re.search(r"\(B\)\s+", raw[m.start():]):
+        return raw[:m.start()].strip()
+    return raw.strip()
+
+
 def extract_mathematical_context(
     q_en: str,
     q_ta: Optional[str] = None,
@@ -109,63 +119,85 @@ def extract_mathematical_context(
 ) -> ContextExtractionResult:
     """Extract deterministic, source-grounded mathematical givens from question stems."""
     res = ContextExtractionResult()
-    text = (q_en or "").strip()
-    ta_text = (q_ta or "").strip()
+    text = _strip_mcq_options(q_en or "")
+    ta_text = _strip_mcq_options(q_ta or "")
     if not text and not ta_text:
         return res
 
     # 1. Mensuration / Geometry physical quantities (English + Tamil cues)
     if allow_positive_domain or re.search(
         r"\b(?:cylinder|cone|sphere|hemisphere|frustum|cube|cuboid|radius|diameter|height|slant\s+height|volume|surface\s+area|ஆரம்|விட்டம்|உயரம்|சாய்வுயரம்)\b",
-        text + " " + (q_ta or ""),
+        text + " " + ta_text,
         flags=re.I,
     ):
-        _SOLIDS = re.findall(r"\b(?:cylinder|cone|sphere|hemisphere|frustum|cuboid|cube|wire|bullet|funnel|vessel)\b", text, flags=re.I)
-        is_multi_solid = len({s.lower() for s in _SOLIDS}) >= 2
+        _SOLIDS = re.findall(
+            r"\b(?:cylinder|cylindrical|cone|conical|sphere|spherical|hemisphere|hemispherical|frustum|cuboid|cube|wire|bullet|coins?|sector|circle)\b",
+            text,
+            flags=re.I,
+        )
+        is_multi_solid = len(_SOLIDS) >= 2 or bool(re.search(r"\b(?:two|three|both|each|melted|recast|sector\s+of\s+a\s+circle)\b", text, flags=re.I))
+        _OF_BRIDGE = r"(?:of\s+(?:(?!\b(?:whose|which|where|with|and|or|radius|diameter|height|slant|area|volume|circumference)\b)[^0-9\n,;]){1,35}?)?"
+        _VAL_TAIL = r"(" + _NUM_PAT + r")(?!\s*(?::|times\b))\s*(" + _UNIT_PAT + r")"
         qty_patterns = [
-            (r"\bslant\s+height\s*(?:of\s+[^0-9\n]+?)?(?:is|=|of)?\s*(" + _NUM_PAT + r")(?!\s*:)\s*(" + _UNIT_PAT + r")", "l", "slant_height", "l > 0"),
-            (r"(?<!outer\s)(?<!inner\s)(?<!external\s)(?<!internal\s)\bradius\s*(?:of\s+[^0-9\n]+?)?(?:is|=|of)?\s*(" + _NUM_PAT + r")(?!\s*:)\s*(" + _UNIT_PAT + r")", "r", "radius", "r > 0"),
-            (r"(?<!outer\s)(?<!inner\s)(?<!external\s)(?<!internal\s)\bdiameter\s*(?:of\s+[^0-9\n]+?)?(?:is|=|of)?\s*(" + _NUM_PAT + r")(?!\s*:)\s*(" + _UNIT_PAT + r")", "d", "diameter", "d > 0"),
-            (r"(?<!total\s)(?<!slant\s)\bheight\s*(?:of\s+[^0-9\n]+?)?(?:is|=|of)?\s*(" + _NUM_PAT + r")(?!\s*:)\s*(" + _UNIT_PAT + r")", "h", "height", "h > 0"),
-            (r"\bthickness\s*(?:is|=|of)?\s*(" + _NUM_PAT + r")(?!\s*:)\s*(" + _UNIT_PAT + r")", "t", "thickness", "t > 0"),
-            (r"\bcurved\s+surface\s+area\s*(?:is|=|of)?\s*(" + _NUM_PAT + r")(?!\s*:)\s*(" + _UNIT_PAT + r")", "CSA", "curved_surface_area", "CSA > 0"),
-            (r"\btotal\s+surface\s+area\s*(?:is|=|of)?\s*(" + _NUM_PAT + r")(?!\s*:)\s*(" + _UNIT_PAT + r")", "TSA", "total_surface_area", "TSA > 0"),
+            (r"\bslant\s+height\s*" + _OF_BRIDGE + r"(?:is|=|be|of)?\s*" + _VAL_TAIL, "l", "slant_height", "l > 0"),
+            (r"(?<!outer\s)(?<!inner\s)(?<!external\s)(?<!internal\s)\bradius\s*" + _OF_BRIDGE + r"(?:is|=|be|of)?\s*" + _VAL_TAIL, "r", "radius", "r > 0"),
+            (r"(?<!outer\s)(?<!inner\s)(?<!external\s)(?<!internal\s)\bdiameter\s*" + _OF_BRIDGE + r"(?:is|=|be|of)?\s*" + _VAL_TAIL, "d", "diameter", "d > 0"),
+            (r"(?<!total\s)(?<!slant\s)\bheight\s*" + _OF_BRIDGE + r"(?:is|=|be|of)?\s*" + _VAL_TAIL, "h", "height", "h > 0"),
+            (r"\bthickness\s*(?:is|=|be|of)?\s*" + _VAL_TAIL, "t", "thickness", "t > 0"),
+            (r"\bcurved\s+surface\s+area\s*(?:is|=|be|of)?\s*" + _VAL_TAIL, "CSA", "curved_surface_area", "CSA > 0"),
+            (r"\btotal\s+surface\s+area\s*(?:is|=|be|of)?\s*" + _VAL_TAIL, "TSA", "total_surface_area", "TSA > 0"),
         ]
         for pat, sym, role, dom in qty_patterns:
             matches = list(re.finditer(pat, text, flags=re.I))
-            if len(matches) == 1 and not (is_multi_solid and sym in ("r", "d", "h", "l")):
+            # Also count "<num> <unit> in diameter" mentions so multi-diameter stems don't look single-object
+            in_diam_matches = list(re.finditer(r"(" + _NUM_PAT + r")\s*(" + _UNIT_PAT + r")\s+in\s+diameter\b", text, flags=re.I)) if sym == "d" else []
+            total_matches = len(matches) + len(in_diam_matches)
+            if total_matches == 1 and len(matches) == 1 and not (is_multi_solid and sym in ("r", "d", "h", "l")):
                 m = matches[0]
                 val = _parse_num(m.group(1))
-                if val is not None and (not val.is_real or val > 0):
-                    unit = (m.group(2) or "").strip()
-                    _add_given(res, sym, val, m.group(0), role, unit=unit, domain=dom)
-                    if sym == "d":
-                        _add_given(res, "r", val / 2, m.group(0), "radius_from_diameter", unit=unit, domain="r > 0")
-            elif len(matches) >= 2:
+                if val is not None:
+                    if val.is_real and val <= 0:
+                        res.conflicts.append(f"Invalid non-positive physical dimension for {sym}: {val} ({m.group(0)})")
+                    else:
+                        unit = (m.group(2) or "").strip()
+                        _add_given(res, sym, val, m.group(0), role, unit=unit, domain=dom)
+                        if sym == "d":
+                            _add_given(res, "r", val / 2, m.group(0), "radius_from_diameter", unit=unit, domain="r > 0")
+            elif total_matches >= 2:
                 # Multiple objects: bind sym_1, sym_2, ... without overwriting primary
                 for idx_m, m in enumerate(matches, start=1):
                     val = _parse_num(m.group(1))
-                    if val is not None and (not val.is_real or val > 0):
-                        unit = (m.group(2) or "").strip()
-                        _add_given(res, f"{sym}_{idx_m}", val, m.group(0), f"{role}_{idx_m}", unit=unit, domain=f"{sym}_{idx_m} > 0", obj_id=f"object_{idx_m}")
+                    if val is not None:
+                        if val.is_real and val <= 0:
+                            res.conflicts.append(f"Invalid non-positive physical dimension for {sym}_{idx_m}: {val} ({m.group(0)})")
+                        else:
+                            unit = (m.group(2) or "").strip()
+                            _add_given(res, f"{sym}_{idx_m}", val, m.group(0), f"{role}_{idx_m}", unit=unit, domain=f"{sym}_{idx_m} > 0", obj_id=f"object_{idx_m}")
 
         # Also extract explicit "r = 7 cm", "h = 10 cm" assignments in stem
-        for m_ex in re.finditer(r"\b([rhlbaRHd])\s*=\s*(" + _NUM_PAT + r")(?!\s*:)\s*(" + _UNIT_PAT + r")", text):
+        for m_ex in re.finditer(r"\b([rhlbaRHd])\s*=\s*(" + _NUM_PAT + r")(?!\s*(?::|times\b))\s*(" + _UNIT_PAT + r")", text):
             sym = m_ex.group(1)
             val = _parse_num(m_ex.group(2))
-            if val is not None and (not val.is_real or val > 0) and sym not in res.givens:
-                unit = (m_ex.group(3) or "").strip()
-                _add_given(res, sym, val, m_ex.group(0), f"explicit_{sym}", unit=unit, domain=f"{sym} > 0")
-        if q_ta:
+            if val is not None:
+                if allow_positive_domain and val.is_real and val <= 0:
+                    res.conflicts.append(f"Invalid non-positive physical dimension for {sym}: {val} ({m_ex.group(0)})")
+                elif (not val.is_real or val > 0) and sym not in res.givens:
+                    unit = (m_ex.group(3) or "").strip()
+                    _add_given(res, sym, val, m_ex.group(0), f"explicit_{sym}", unit=unit, domain=f"{sym} > 0")
+        if ta_text and not is_multi_solid:
             for ta_pat, sym, role, dom in [
-                (r"ஆரம்\s*(" + _NUM_PAT + r")", "r", "radius_ta", "r > 0"),
-                (r"உயரம்\s*(" + _NUM_PAT + r")", "h", "height_ta", "h > 0"),
+                (r"(?<!வெளி\s)(?<!உள்\s)(?<!வெளிப்புற\s)(?<!உட்புற\s)ஆரம்\s*(" + _NUM_PAT + r")(?!\s*(?::|மடங்கு))", "r", "radius_ta", "r > 0"),
+                (r"(?<!மொத்த\s)(?<!சாய்வு\s)உயரம்\s*(" + _NUM_PAT + r")(?!\s*(?::|மடங்கு))", "h", "height_ta", "h > 0"),
             ]:
-                m_ta = re.search(ta_pat, q_ta)
-                if m_ta and sym not in res.givens:
+                ta_matches = list(re.finditer(ta_pat, ta_text))
+                if len(ta_matches) == 1 and sym not in res.givens:
+                    m_ta = ta_matches[0]
                     val = _parse_num(m_ta.group(1))
-                    if val is not None and (not val.is_real or val > 0):
-                        _add_given(res, sym, val, m_ta.group(0), role, domain=dom, lang="ta")
+                    if val is not None:
+                        if val.is_real and val <= 0:
+                            res.conflicts.append(f"Invalid non-positive physical dimension for {sym}: {val} ({m_ta.group(0)})")
+                        else:
+                            _add_given(res, sym, val, m_ta.group(0), role, domain=dom, lang="ta")
 
     # 2. Algebra: quadratic equation ax^2 + bx + c = 0 in stem
     m_quad = re.search(
