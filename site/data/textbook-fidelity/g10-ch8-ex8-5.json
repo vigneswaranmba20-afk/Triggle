@@ -599,7 +599,11 @@
         "en": "The total number of pages is not given. Among pages 1 to 10, seven have a units digit below 7. Among pages 1 to 9, only six do. The printed choice 7/10 is valid if each units digit is equally likely, for example when the page count is a multiple of ten.",
         "ta": "பக்கங்களின் மொத்த எண்ணிக்கை கொடுக்கப்படவில்லை. 1 முதல் 10 வரை உள்ள பக்கங்களில் ஏழு பக்கங்களின் ஒன்றாம் இட இலக்கம் 7-ஐ விடக் குறைவு. 1 முதல் 9 வரை இருந்தால் ஆறு பக்கங்களே பொருந்தும். பக்க எண்ணிக்கை பத்தின் மடங்காக இருக்கும்போது போல, ஒன்றாம் இடத்தில் ஒவ்வொரு இலக்கமும் சமவாய்ப்பில் கிடைத்தால் அச்சிடப்பட்ட 7/10 பொருந்தும்."
       },
-      "releaseGate": "Existing source ambiguity blocks publication with an unconditional correct choice."
+      "releaseGate": "Existing source ambiguity blocks publication with an unconditional correct choice.",
+      "answerKey": {
+        "en": "(B) 7/10",
+        "ta": "(அ) 3/10"
+      }
     }
   ]
 }

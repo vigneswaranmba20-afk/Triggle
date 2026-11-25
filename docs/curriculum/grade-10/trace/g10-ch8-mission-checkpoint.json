@@ -2,7 +2,7 @@
   "repository": "vigneswaranmba20-afk/Triggle",
   "branch": "codex/grade-10-chapter-8-completion",
   "plannedBranch": "codex/grade-10-chapter-8-completion",
-  "commitSha": "3ac0419de7e9ec552d9f5130595a3fa1a234ae5f",
+  "commitSha": "78e1e8b68403a8ee088fd44778eef6a1471ce213",
   "inventory": {
     "verification": "Reconciled 75 questions and 94 source tasks against the repository inventory. Its historical statuses are retained separately from current runtime validation.",
     "numberedQuestions": 75,
@@ -302,11 +302,15 @@
         ],
         "initialRuntime": {
           "englishTasks": 16,
-          "bilingualWorkingTasks": 0
+          "bilingualWorkingTasks": 16,
+          "sourceFaithfulEligibleTamilTasks": null,
+          "notes": "Tamil content appears via an application startup overlay. Several stems are reworded and the Q5 overlay omits the printed count discrepancy."
         },
         "currentBranchRuntime": {
           "englishTasks": 16,
-          "bilingualWorkingTasks": 0
+          "bilingualWorkingTasks": 16,
+          "sourceFaithfulEligibleTamilTasks": null,
+          "notes": "Tamil content appears via an application startup overlay. Several stems are reworded and the Q5 overlay omits the printed count discrepancy."
         }
       },
       {
@@ -1640,14 +1644,13 @@
           "bilingualWorkingTasks": 0
         },
         "currentBranchRuntime": {
-          "englishTasks": 0,
-          "bilingualWorkingTasks": 0
+          "englishTasks": 11,
+          "bilingualWorkingTasks": 11
         }
       }
     ]
   },
   "pending": [
-    "Unit Exercise 8",
     "Exercises 8.1–8.3 gaps",
     "Bilingual concept studio",
     "Full release verification",
@@ -1665,12 +1668,16 @@
     "Authored all 14 solvable Exercise 8.4 tasks in English and Tamil",
     "Pushed Exercise 8.4 to the dedicated GitHub branch",
     "Visually checked Exercise 8.5 English PDF pages 336–337 and Tamil PDF pages 348–349",
-    "Authored all 14 determinate Exercise 8.5 tasks with exact bilingual choices and interactive feedback"
+    "Authored all 14 determinate Exercise 8.5 tasks with exact bilingual choices and interactive feedback",
+    "Checked the original Unit Exercise 8 source pages and both answer keys",
+    "Authored all 11 Unit Exercise 8 items in both languages with four source tables",
+    "Recorded additional disagreements with the printed answer keys"
   ],
   "validated": [
     "Repository source inventory accounts for 75 questions and 94 tasks",
     "Exercise 8.4 source wording, 14 independent answers, bilingual steps, KaTeX rendering, mobile routes and dice-grid figure",
-    "Exercise 8.5 source wording and choices, independent arithmetic, KaTeX, feedback, and mobile navigation"
+    "Exercise 8.5 source wording and choices, independent arithmetic, KaTeX, feedback, and mobile navigation",
+    "Unit Exercise 8 independent calculations, source and table fidelity, KaTeX, previous/next and mobile layouts"
   ],
   "blocked": [
     {
@@ -1695,17 +1702,19 @@
     "node site/tools/test_g10_stats_ex8_2_q4_q8.cjs",
     "node site/tools/test_standard_solutions.cjs",
     "node site/tools/test_g10_ch8_ex8_5.cjs",
-    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_ex8_5_browser.cjs"
+    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_ex8_5_browser.cjs",
+    "node site/tools/test_g10_ch8_unit.cjs",
+    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_unit_browser.cjs"
   ],
   "deployment": {
     "status": "development_branch_only",
     "branchUrl": "https://github.com/vigneswaranmba20-afk/Triggle/tree/codex/grade-10-chapter-8-completion"
   },
-  "nextExecutableTask": "Register and validate Unit Exercise 8’s 11 draft tasks, including exact original source tables in both languages.",
+  "nextExecutableTask": "Repair Exercise 8.1 exact student-facing stems and tables, document source/answer-key discrepancies, and recheck remaining Exercise 8.2 and 8.3 items.",
   "baseSha": "327ec4de48264c5358c5e7b351afc49d6158f229",
   "latestFullTestAttempt": {
     "suite": "npm test",
-    "result": "blocked by shallow clone",
-    "evidence": "test_trace_reconcile.cjs requires baseline commit 91c56ddfd556cc6e748c39bbfb7861658170da92"
+    "result": "requires historic PR objects outside main history",
+    "evidence": "test_trace_reconcile.cjs references historic SHA 65a6f21258497f9df2370db60945328843366d69; fetching verified snapshot objects separately"
   }
 }

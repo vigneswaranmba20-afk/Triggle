@@ -298,7 +298,8 @@ const ch8Ex83Records=ch8Ex83Context.window.TRIGGLE_CLASSES[10].items;
 const ch8Ex83Ids=ch8Ex83Inv.questions.flatMap(q=>q.parts.length===1&&q.parts[0]==='whole'?['c10-8-ex8-3-q'+q.question]:q.parts.map(p=>'c10-8-ex8-3-q'+q.question+'-'+p));
 const ch8PublishedEvidence = [
   require('../data/textbook-fidelity/g10-ch8-ex8-4.json'),
-  require('../data/textbook-fidelity/g10-ch8-ex8-5.json')
+  require('../data/textbook-fidelity/g10-ch8-ex8-5.json'),
+  require('../data/textbook-fidelity/g10-ch8-unit.json')
 ];
 const ch8PublishedRows = ch8PublishedEvidence.flatMap(exercise => exercise.items);
 const ch8PublishedById = new Map(ch8PublishedRows.map(row => [row.id, row]));

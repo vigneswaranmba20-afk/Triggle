@@ -385,5 +385,14 @@
       },
       "releaseGate": "Existing bilingual source-discrepancy quarantine pending authorized source clarification."
     }
+  ],
+  "answerKeyDiscrepancies": [
+    {
+      "id": "c10-8-ex8-4-q7",
+      "answerKeyEnglish": "13/18",
+      "answerKeyTamil": "5/6",
+      "independentAnswer": "13/18",
+      "proof": "The 18 odd cards include 11 primes and 3 multiples of seven. Exactly one card, 7, belongs to both groups."
+    }
   ]
 }
