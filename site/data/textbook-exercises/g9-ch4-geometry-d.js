@@ -11,7 +11,7 @@
     const literal = v => Array.isArray(v) ? v.map(x=>x.fallback ?? x).join('') : v;
     const pages = [n<=6?187:n<=17?188:189,n<=7?199:n<=18?200:201];
     add(n,q,steps,['Option '+correct+' · '+literal(choice.en),'விடை '+correct+' · '+literal(choice.ta)],{
-      choices:options,correct:correct-1,related,pages,figure,note,difficulty:[4,7,15,16,18].includes(n)?'medium':'easy'
+      choices:options,correct:correct-1,solutionChoice:choice,related,pages,figure,note,difficulty:[4,7,15,16,18].includes(n)?'medium':'easy'
     });
   }
 
@@ -21,7 +21,7 @@
     step('The exterior angle and the adjacent interior angle sum to 180°. All three interior angles also sum to 180°. Subtract the adjacent interior angle from both totals.',
       'வெளிக்கோணமும் அதை அடுத்துள்ள உட்கோணமும் சேர்ந்து 180°. மூன்று உட்கோணங்களின் கூடுதலும் 180°. இரு கூடுதல்களிலிருந்தும் அடுத்துள்ள உட்கோணத்தைக் கழிக்கவும்.',
       'The two interior angles left are opposite the exterior angle.','எஞ்சிய இரு உட்கோணங்களும் வெளிக்கோணத்திற்கு உள்ளெதிர்க் கோணங்கள்.')
-  ],1);
+  ],0);
 
   mcq(2,['In the quadrilateral ABCD, AB = BC and AD = DC. Measure of ∠BCD is',
     'நாற்கரம் ABCD இல் AB = BC மற்றும் AD = DC எனில், கோணம் ∠BCD இன் அளவு'],choices([150,30,105,72],'°'),3,[
@@ -89,8 +89,8 @@
   ].map(([fallback,latex])=>both([{...formula(fallback,latex),display:false}],[{...formula(fallback,latex),display:false}]));
   mcq(7,['If bisectors of ∠A and ∠B of a quadrilateral ABCD meet at O, then ∠AOB is',
     'நாற்கரம் ABCD இல் ∠A மற்றும் ∠B இன் இருசமவெட்டிகள் O இல் சந்திக்கின்றன, எனில், ∠AOB இன் மதிப்பு'],fractions,2,[
-    step('The angles at A and B in triangle AOB are half the corresponding quadrilateral angles. Subtract their sum from 180°.',
-      'AOB முக்கோணத்தில் A, B கோணங்கள் நாற்கரத்தின் அதற்குரிய கோணங்களில் பாதி. அவற்றின் கூடுதலை 180° இலிருந்து கழிக்கவும்.',
+    step('In the convex quadrilateral shown by the chapter’s convention, the angles at A and B in triangle AOB are half the corresponding quadrilateral angles. Subtract their sum from 180°.',
+      'குவிந்த நாற்கரத்தில், AOB முக்கோணத்தின் A, B கோணங்கள் நாற்கரத்தின் அதற்குரிய கோணங்களில் பாதி. அவற்றின் கூடுதலை 180° இலிருந்து கழிக்கவும்.',
       'AO and BO bisect the respective interior angles.', 'AO, BO ஆகியவை அதற்குரிய உட்கோணங்களை இருசமமாகப் பிரிக்கின்றன.'),
     step('Replace 360° − (∠A + ∠B) by ∠C + ∠D.', '360° − (∠A + ∠B) என்பதற்குப் பதிலாக ∠C + ∠D ஐப் பயன்படுத்துக.',
       'The four interior angles of a quadrilateral add to 360°.', 'நாற்கரத்தின் நான்கு உட்கோணங்களின் கூடுதல் 360°.',

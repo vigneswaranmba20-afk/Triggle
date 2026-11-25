@@ -77,12 +77,12 @@
     const ta = lang === 'ta';
     const all = [...vertices,centre,...landing];
     if (radius) all.push(add(centre,[-radius,-radius]),add(centre,[radius,radius]));
-    const low = [0,1].map(i => Math.min(...all.map(p => p[i])));
-    const high = [0,1].map(i => Math.max(...all.map(p => p[i])));
-    const zoom = Math.min(228/(high[0]-low[0]),154/(high[1]-low[1]));
-    const pivot = midpoint(low,high);
-    const project = p => add([160,104],scale([p[0]-pivot[0],pivot[1]-p[1]],zoom));
-    const coords = p => project(p).map(x=>x.toFixed(2)).join(' ');
+    let collecting = true;
+    let project = point => point;
+    const coords = p => {
+      if (collecting) all.push(p);
+      return project(p).map(x=>x.toFixed(2)).join(' ');
+    };
     const path = (p, attrs='') => '<path d="M '+p.map(coords).join(' L ')+'" '+attrs+'/>';
     const guide = p => path(p,'stroke="#8a4b69" stroke-dasharray="5 4"');
     const marker = (name,p,shift) => {
@@ -91,13 +91,20 @@
     };
     const arc = ([p,r,theta],span=.15) => {
       const from = at(p,r,theta-span), to = at(p,r,theta+span);
-      return '<path d="M '+coords(from)+' A '+(r*zoom)+' '+(r*zoom)+' 0 0 0 '+coords(to)+'" stroke="#825c26"/>';
+      if (collecting) for (let i=0;i<=8;i++) all.push(at(p,r,theta-span+2*span*i/8));
+      const size = length(sub(project(at(p,r,theta)),project(p)));
+      return '<path d="M '+coords(from)+' A '+size+' '+size+' 0 0 0 '+coords(to)+'" stroke="#825c26"/>';
     };
     const spot = p => {
       const [x,y] = project(p);
       return '<circle cx="'+x+'" cy="'+y+'" r="3" fill="#8a4b69" stroke="none"/>';
     };
     const samePoint = (p,q) => length(sub(p,q))<1e-8;
+    const rightMark = (p,u,v) => {
+      const size = spec.length*.045;
+      const a = scale(unit(u),size), b = scale(unit(v),size);
+      return path([add(p,a),add(add(p,a),b),add(p,b)],'stroke="#825c26"');
+    };
     const centreGuide = (i) => {
       const [v,a,b] = pairs[i], m = landing[i];
       const side = sub(b,a), sideLength = length(side), axis = unit(side);
@@ -108,16 +115,17 @@
         const reach = Math.sqrt(opening*opening-sideLength*sideLength/4);
         const crossings = [-1,1].map(s => add(middle,scale(normal(axis),s*reach)));
         for (const p of [a,b]) for (const q of crossings) result += arc([p,opening,bearing(sub(q,p))],.08);
-        result += guide(crossings);
+        result += guide(crossings)+rightMark(middle,axis,normal(axis));
       }
       if (spec.centre==='H'&&!samePoint(v,m)) {
         const separation = Math.min(sideLength*.15,length(sub(v,m))*.45);
         const cuts = [-1,1].map(s => add(m,scale(axis,s*separation)));
-        const reflect = add(m,sub(m,v));
+        const crossing = add(m,scale(unit(sub(m,v)),separation*.68));
         for (const q of cuts) result += arc([v,length(sub(q,v)),bearing(sub(q,v))],.06);
-        for (const q of cuts) result += arc([q,length(sub(v,q)),bearing(sub(reflect,q))],.055);
+        for (const q of cuts) result += arc([q,length(sub(crossing,q)),bearing(sub(crossing,q))],.20);
         if (dot(sub(m,a),axis)<0) result += guide([a,m]);
         if (dot(sub(m,b),axis)>0) result += guide([b,m]);
+        result += rightMark(m,axis,sub(v,m));
       }
       if (spec.centre==='I') {
         const opening = Math.min(length(sub(a,v)),length(sub(b,v)))*.28;
@@ -151,8 +159,7 @@
     controls.append(prev,document.createTextNode(' '),count,document.createTextNode(' '),next);
     host.replaceChildren(picture,instruction,controls);
     let stage = 0;
-
-    function draw() {
+    function shapesFor(stage,zoom=1) {
       const [a,b,c] = vertices;
       let shapes = path([a,b]);
       if (stage===1) shapes += rays.map(guide).join('')+arcs.map(mark=>arc(mark)).join('')+spot(c);
@@ -166,11 +173,25 @@
         if (radius) {
           const [cx,cy] = project(centre);
           shapes += '<circle cx="'+cx+'" cy="'+cy+'" r="'+radius*zoom+'" stroke="#256987"/>';
-          if (spec.centre==='I') shapes += guide([centre,foot(centre,a,b)]);
+          if (spec.centre==='I') {
+            const tangentPoint = foot(centre,a,b);
+            shapes += guide([centre,tangentPoint])+rightMark(tangentPoint,sub(b,a),sub(centre,tangentPoint));
+          }
         } else shapes += centreGuide(2);
       }
       shapes += marker(spec.vertices[0],a,[-10,12])+marker(spec.vertices[1],b,[9,12]);
       if (stage>=1) shapes += marker(spec.vertices[2],c,[7,-10]);
+      return shapes;
+    }
+    for (let i=0;i<steps.length;i++) shapesFor(i);
+    collecting = false;
+    const low = [0,1].map(i => Math.min(...all.map(p => p[i])));
+    const high = [0,1].map(i => Math.max(...all.map(p => p[i])));
+    const zoom = Math.min(228/(high[0]-low[0]),150/(high[1]-low[1]));
+    const pivot = midpoint(low,high);
+    project = p => add([160,104],scale([p[0]-pivot[0],pivot[1]-p[1]],zoom));
+    function draw() {
+      const shapes = shapesFor(stage,zoom);
       picture.innerHTML='<svg viewBox="0 0 320 208" role="img" aria-labelledby="g9GeometryStageTitle" '+
         'style="display:block;width:100%;max-height:52vh" fill="none" stroke="#284671" stroke-width="1.8">'+
         '<title id="g9GeometryStageTitle"></title><g font-family="system-ui,sans-serif" font-size="12" text-anchor="middle">'+

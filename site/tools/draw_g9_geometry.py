@@ -157,8 +157,8 @@ def exercise_41():
     a=polar(b,202*sin(radians(15))/sin(radians(80)),85)
     d=(288,165)
     save('1-q5',lines(a,b,c,a)+lines(c,d)+text((a[0]-9,a[1]-13),'A')+text((32,177),'B')
-         +text((242,180),'C')+text((290,179),'D')+angle(b,a,c,'(x+35)°',17,43)
-         +angle(c,b,a,'(2x−5)°',18,44)+angle(a,c,d,'(4x−15)°',20,53))
+         +text((242,180),'C')+text((290,179),'D')+angle(b,a,c,'',17)+text((93,109),'(x+35)°')
+         +angle(c,b,a,'',18)+text((75,151),'(2x−5)°')+angle(a,c,d,'(4x−15)°',20,53))
 
 
 def exercise_42():
@@ -174,10 +174,10 @@ def exercise_42():
         cross=((b[0][0]+b[1][0])/2,(top+bottom)/2)
         body += angle(e[0],c[0],c[1],'75°',12,25)+angle(b[1],cross,c[1],'30°',21,43)
         targets = [(b[0],cross,c[0]),(d[1],d[0],e[1]),(f[1],d[1],d[0]),(f[0],c[1],c[0])]
-        body += angle(*targets[['i','ii','iii','iv'].index(part)],'x°',18,35)
+        body += angle(*targets[['i','ii','iii','iv'].index(part)],'x°',18,24 if part=='i' else 35)
         save('2-q7-'+part,body)
 
-    b,c=(60,175),(260,175)
+    b,c=(65,184),(245,184)
     a=polar(b,100/cos(radians(58)),58)
     o=polar(b,100/cos(radians(29)),29)
     p=dict(A=a,B=b,C=c,O=o)
@@ -185,8 +185,8 @@ def exercise_42():
          +angle(b,a,c,'64°',14,31)+angle(c,b,a,'58°',29,56)
          +angle(b,o,c,'x°',15,31)+angle(a,c,o,'y°',32,67))
 
-    s=25
-    a,b,c=(58,49),(108,49),(258,49)
+    s=22
+    a,b,c=(58,47),(102,47),(234,47)
     ae_x=(6**2+8**2-7**2)/(2*8)
     bf_x=(8**2+6**2-7**2)/(2*6)
     e=(a[0]+s*ae_x,a[1]+s*sqrt(36-ae_x**2))
@@ -264,12 +264,12 @@ def exercise_44():
         dict(A=(-13,7),B=(14,7),C=(14,-9),D=(-10,-12)),lambda p:
         angle(p['D'],p['A'],p['B'],'',14)+text((144,150),'(2y+4)°')
         +angle(p['A'],p['B'],p['C'],'',14)+text((191,146),'(6x−4)°')
-        +angle(p['B'],p['C'],p['D'],'',14)+text((191,65),'(4y−4)°')
+        +angle(p['B'],p['C'],p['D'],'',14)+text((202,72),'(4y−4)°')
         +angle(p['C'],p['D'],p['A'],'',14)+text((148,53),'(7x+2)°'))
     for part in ('i','ii'):
         def mark(p):
             P=crossing(p['A'],p['C'],p['B'],p['D'])
-            return (text((P[0]+13,P[1]+8),'P')+angle(p['C'],p['B'],p['D'],'40°',15,42)
+            return (text((P[0]-12,P[1]-12),'P')+angle(p['C'],p['B'],p['D'],'40°',15,42)
                     +angle(p['C'],p['A'],p['B'],'60°',15,38))
         round_figure('4-q4-'+part,dict(A=230,B=350,C=110,D=190),('ABCDA','AC','BD'),
             dict(A=(-10,12),B=(12,7),C=(0,-12),D=(-13,-3)),mark)
@@ -294,7 +294,7 @@ def exercise_44():
          +labels(p,dict(O=(-11,11),P=(-14,14),A=(-13,-7),B=(13,-7),C=(3,-13),D=(6,14))))
     round_figure('4-q9',dict(P=230,Q=330,R=170),('PQRP','POQ'),
         dict(P=(-12,11),Q=(12,9),R=(-13,-6),O=(0,-13)),lambda p:
-        angle(p['P'],p['O'],p['Q'],'100°',17,33)+angle(p['P'],p['Q'],p['R'],'30°',24,51))
+        angle(p['P'],p['O'],p['Q'],'100°',17,27)+angle(p['P'],p['Q'],p['R'],'30°',24,32))
 
 
 def construction_bases():
@@ -321,10 +321,10 @@ def exercise_47():
     save('7-q3',edges(p,'ABCDA','AC','BD')+labels(p,dict(A=(-13,11),B=(13,11),C=(13,-11),D=(-13,-11),O=(0,17))))
 
     d=(51,173)
-    a=polar(d,111,75)
+    a=polar(d,93,75)
     b=crossing(d,polar(d,150,35),a,polar(a,150,5))
     c=(b[0]+(d[1]-b[1])/sqrt(3),d[1])
-    e=polar(c,56,35)
+    e=polar(c,48,35)
     p=dict(A=a,B=b,C=c,D=d,E=e)
     save('7-q4',edges(p,'ABCDA','DB','CE')+arrows(d,b)+arrows(c,e)
          +angle(d,a,b,'110°',14,36)+angle(a,b,d,'30°',23,60)
@@ -373,6 +373,48 @@ def exercise_47():
          +text((118,111),'17')+text((185,164),'30'))
 
 
+def preserved_figures():
+    body=''
+    for left,names in [(47,'BCA'),(196,'DEF')]:
+        b,c=(left,168),(left+94,168)
+        a=polar(b,94*sin(radians(70))/sin(radians(50)),60)
+        body += (lines(a,b,c,a)+ticks(a,b)+angle(c,b,a,'60°',13,30)+angle(a,c,b,'70°',13,30)
+                 +text((b[0]-10,b[1]+13),names[0])+text((c[0]+10,c[1]+13),names[1])
+                 +text((a[0]+2,a[1]-13),names[2]))
+    save('1-q4',body)
+
+    w=144/sin(radians(46))*cos(radians(46))
+    p=dict(A=(160-w/2,187),B=(160+w/2,187),C=(160+w/2,43),D=(160-w/2,43),O=(160,115))
+    save('2-q3',edges(p,'ABCDA','AC','BD')+right(p['B'],p['A'],p['C'])
+         +angle(p['B'],p['A'],p['O'],'46°',22,44)
+         +angle(p['O'],p['B'],p['C'],'?',22,44)
+         +labels(p,dict(A=(-11,12),B=(11,12),C=(11,-12),D=(-11,-12),O=(0,-15))))
+
+    a,b,c,d,o=(160,43),(252,112),(160,181),(68,112),(160,112)
+    save('2-q4',lines(a,b,c,d,a)+lines(a,c,dash=True)+lines(b,d,dash=True)+right(o,a,b)
+         +''.join(ticks(u,v) for u,v in [(a,b),(b,c),(c,d),(d,a)])
+         +text((174,144),'12')+text((111,126),'16')+text((218,63),'?'))
+
+    for n,r,half_chord,dist in [(1,26,10,24),(2,17,15,8),(4,15,9,12)]:
+        o=(160,105)
+        scale=79/r
+        a,b,m=(160-half_chord*scale,105+dist*scale),(160+half_chord*scale,105+dist*scale),(160,105+dist*scale)
+        body=circle(o,79)+lines(a,b)+lines(o,m,dash=True)+right(m,a,o)+text((174,99),'O')
+        if n==1:
+            body+=lines((81,105),(239,105))+text((125,91),'52')+text((160,m[1]+15),'20')+text((172,(105+m[1])/2),'?')
+        elif n==2:
+            body+=lines(o,a)+text((160,m[1]+15),'30')+text((175,(105+m[1])/2),'8')+text((121,111),'?')
+        else:
+            body+=lines(o,a)+text((115,135),'15')+text((174,(105+m[1])/2),'12')+text((160,m[1]+15),'?')
+        save(f'3-q{n}',body)
+
+    first,second=(134,112),(198,112)
+    a,b=(198,64),(198,160)
+    save('3-q6',circle(first,80)+circle(second,48,ACCENT)+lines(a,b)+lines(first,second,dash=True)
+         +lines(first,a)+right(second,first,a)+text((121,123),'O₁')+text((214,113),'O₂')
+         +text((157,80),'5')+text((165,127),'4')+text((211,84),'3'))
+
+
 if __name__ == '__main__':
     exercise_41()
     exercise_42()
@@ -380,3 +422,4 @@ if __name__ == '__main__':
     exercise_44()
     construction_bases()
     exercise_47()
+    preserved_figures()

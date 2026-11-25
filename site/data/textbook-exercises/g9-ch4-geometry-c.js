@@ -14,8 +14,8 @@
         'The three medians of a triangle are concurrent at the centroid.', 'முக்கோணத்தின் மூன்று நடுக்கோடுகளும் நடுக்கோட்டு மையத்தில் ஒருங்கிசையும்.')
     ],
     H: [
-      step('From two vertices draw perpendiculars to their opposite side lines. Extend a side if the perpendicular foot falls beyond it. To construct each perpendicular, draw an arc centred at the vertex to cut the opposite line twice. From those two points draw equal arcs and join their other crossing to the vertex.',
-        'இரு முனைகளிலிருந்து அவற்றின் எதிர்ப்பக்கக் கோடுகளுக்குச் செங்குத்துகள் வரைக. செங்குத்தின் அடி பக்கத்திற்கு வெளியே இருந்தால் பக்கத்தை நீட்டிக்கவும். முனையை மையமாகக் கொண்டு எதிர்ப்பக்கக் கோட்டை இருமுறை வெட்டும் வில் வரைக. அந்த இரு புள்ளிகளிலிருந்தும் சம வில்கள் வரைந்து, அவற்றின் மற்றொரு சந்திப்பை முனையுடன் இணைக்கவும்.',
+      step('From two vertices draw perpendiculars to their opposite side lines. Extend a side if the perpendicular foot falls beyond it. To construct each perpendicular, draw an arc centred at the vertex to cut the opposite line twice. From those two points draw equal arcs and join their crossing on the far side of the line to the vertex.',
+        'இரு முனைகளிலிருந்து அவற்றின் எதிர்ப்பக்கக் கோடுகளுக்குச் செங்குத்துகள் வரைக. செங்குத்தின் அடி பக்கத்திற்கு வெளியே இருந்தால் பக்கத்தை நீட்டிக்கவும். முனையை மையமாகக் கொண்டு எதிர்ப்பக்கக் கோட்டை இருமுறை வெட்டும் வில் வரைக. அந்த இரு புள்ளிகளிலிருந்தும் சம வில்கள் வரைந்து, கோட்டின் மறுபுறமுள்ள வில்களின் சந்திப்பை முனையுடன் இணைக்கவும்.',
         'Two points equidistant from the cuts determine the perpendicular bisector of the segment between the cuts.',
         'வெட்டுப் புள்ளிகளுக்குச் சம தொலைவில் உள்ள இரு புள்ளிகள் அவற்றை இணைக்கும் துண்டின் மையக்குத்துக்கோட்டைத் தீர்மானிக்கின்றன.'),
       step('Mark the intersection of the two altitudes as H. Draw the third altitude to verify concurrence.',

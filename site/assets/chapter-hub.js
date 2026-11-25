@@ -556,7 +556,8 @@
       const isCh8=stageId.startsWith('g10-ch8-');
       const isStudio6=isCh8||stageId.startsWith('g10-ch4-')||stageId.startsWith('g10-ch5-')||stageId.startsWith('g10-ch6-')||stageId.startsWith('g10-ch7-');
       if(stage.activity?.options&&stage.check){
-        const related=chapterQuestions.find(question=>question.id===stage.exercise);
+        const ids=[stage.exercise,...(stage.additionalExercises||[])];
+        const related=ids.map(id=>chapterQuestions.find(question=>question.id===id)).filter(Boolean);
         window.TriggleG9ConceptLessons.mount(panel,stage,lang,related,onQuestion);
       }else if(statistics){
         statistics.mount(panel,stage,i,lang,chapterQuestions,onQuestion);

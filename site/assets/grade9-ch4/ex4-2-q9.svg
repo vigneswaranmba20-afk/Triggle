@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
 <g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
-<path d="M 58.000 49.000 L 108.000 49.000 L 258.000 49.000 L 137.688 176.082 L 58.000 49.000" fill="none" stroke="#263755"/>
-<path d="M 108.000 49.000 L 214.250 218.443 L 258.000 49.000" fill="none" stroke="#263755"/>
-<text x="49.000" y="36.000">A</text>
-<text x="108.000" y="36.000">B</text>
-<text x="268.000" y="36.000">C</text>
-<text x="154.766" y="144.312">D</text>
-<text x="127.688" y="188.082">E</text>
-<text x="221.250" y="230.443">F</text>
+<path d="M 58.000 47.000 L 102.000 47.000 L 234.000 47.000 L 128.125 158.832 L 58.000 47.000" fill="none" stroke="#263755"/>
+<path d="M 102.000 47.000 L 195.500 196.110 L 234.000 47.000" fill="none" stroke="#263755"/>
+<text x="49.000" y="34.000">A</text>
+<text x="102.000" y="34.000">B</text>
+<text x="244.000" y="34.000">C</text>
+<text x="141.594" y="130.874">D</text>
+<text x="118.125" y="170.832">E</text>
+<text x="202.500" y="208.110">F</text>
 </g>
 </svg>

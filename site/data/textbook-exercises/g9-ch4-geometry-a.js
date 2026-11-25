@@ -1,7 +1,7 @@
 /* TN SCERT revised 2025, Grade 9, the remaining tasks in Exercises 4.1–4.3. */
 (() => {
   'use strict';
-  const {batch, step} = window.TriggleGrade9Geometry;
+  const {batch, step, formula} = window.TriggleGrade9Geometry;
   const a = batch(1, 1, 149, 160);
   const b = batch(2, 2, 163, 175);
   const c = batch(3, 4, 176, 187);
@@ -85,11 +85,11 @@
     step('Each pair of adjacent angles of a parallelogram adds to 180°. Their half angles therefore add to 90°.',
       'இணைகரத்தின் அடுத்தடுத்த இரு கோணங்களின் கூடுதல் 180°. எனவே அவற்றின் அரைக் கோணங்களின் கூடுதல் 90°.',
       'Adjacent angles are same-side interior angles between parallel sides.', 'அடுத்தடுத்த கோணங்கள் இணைப்பக்கங்களுக்கு இடையில் ஒரே பக்க உட்கோணங்கள்.'),
-    step('At the intersection of the two adjacent bisectors, the triangle with the adjacent vertices has a right angle. This holds for every adjacent pair. Four distinct intersections therefore form a quadrilateral with four right angles.',
-      'அடுத்தடுத்த இரு இருசமவெட்டிகளின் சந்திப்பையும் அந்த இரு முனைகளையும் இணைக்கும் முக்கோணத்தில் சந்திப்புக் கோணம் செங்கோணம். இது ஒவ்வொரு அடுத்தடுத்த சோடிக்கும் பொருந்தும். எனவே நான்கு தனித்த சந்திப்புகள் ஒரு செவ்வகத்தை அமைக்கின்றன.',
+    step('At the intersection of the two adjacent bisectors, the triangle with the adjacent vertices has a right angle. This holds for every adjacent pair. Opposite bisectors are parallel because both are perpendicular to an intervening bisector. When they are distinct they bound a rectangle.',
+      'அடுத்தடுத்த இரு இருசமவெட்டிகளின் சந்திப்பையும் அந்த இரு முனைகளையும் இணைக்கும் முக்கோணத்தில் சந்திப்புக் கோணம் செங்கோணம். இது ஒவ்வொரு அடுத்தடுத்த சோடிக்கும் பொருந்தும். எதிரெதிர் இருசமவெட்டிகள் ஒரே இடைப்பட்ட இருசமவெட்டிக்குச் செங்குத்து என்பதால் இணையானவை. அவை வெவ்வேறு கோடுகளாக இருந்தால் செவ்வகம் அமையும்.',
       'The third angle is 180° minus the sum of the two half angles.', '180° இலிருந்து அரைக் கோணங்களின் கூடுதலைக் கழித்தால் மூன்றாம் கோணம் கிடைக்கும்.'),
-    step('If adjacent sides have equal length, the parallelogram is a rhombus. Its diagonals are the angle bisectors, so all four meet at one point.',
-      'அடுத்தடுத்த பக்கங்கள் சமமெனில் இணைகரம் ஒரு சாய்சதுரம். அதன் மூலைவிட்டங்களே கோண இருசமவெட்டிகள். எனவே நான்கும் ஒரே புள்ளியில் சந்திக்கின்றன.',
+    step('If two opposite bisectors coincide, their common line is a diagonal that bisects a vertex angle. Parallel sides make the two angles at the ends of this diagonal in either half-triangle equal. The two adjacent sides are therefore equal and the parallelogram is a rhombus. In a rhombus both diagonals bisect the vertex angles, so all four bisectors meet at one point.',
+      'இரு எதிரெதிர் இருசமவெட்டிகள் ஒன்றின்மீது ஒன்று அமைந்தால், அவற்றின் பொதுக்கோடான மூலைவிட்டம் ஒரு முனைக்கோணத்தை இருசமமாகப் பிரிக்கிறது. இணைப்பக்கங்களால், மூலைவிட்டத்தால் உருவான ஒரு முக்கோணத்தில் மூலைவிட்டத்தின் இரு முனைக் கோணங்களும் சமம். எனவே அடுத்தடுத்த பக்கங்கள் சமம்; இணைகரம் ஒரு சாய்சதுரம். சாய்சதுரத்தின் இரு மூலைவிட்டங்களும் முனைக்கோணங்களை இருசமமாகப் பிரிப்பதால் நான்கு இருசமவெட்டிகளும் ஒரே புள்ளியில் சந்திக்கின்றன.',
       'A rectangle requires four distinct vertices.', 'செவ்வகத்திற்கு நான்கு தனித்த முனைகள் தேவை.')
   ],['The bisectors form a rectangle when the parallelogram is not a rhombus. In a rhombus they meet at a single point.',
      'சாய்சதுரம் அல்லாத இணைகரத்தின் கோண இருசமவெட்டிகள் செவ்வகத்தை அமைக்கும். சாய்சதுரத்தில் அவை ஒரு புள்ளியில் சந்திக்கும்.'],
@@ -162,7 +162,10 @@
       'Both heights are measured perpendicular to the same base line.', 'இரு உயரங்களும் ஒரே அடிக்கோட்டுக்குச் செங்குத்தாக அளக்கப்படுகின்றன.',
       '[QPO] / [ABCD] = (½ × 3AB × ¾h)/(AB × h) = 9/8','\\dfrac{[QPO]}{[ABCD]}=\\dfrac{\\tfrac12\\cdot3AB\\cdot\\tfrac34h}{AB\\cdot h}=\\dfrac98')
   ],['','','[QPO] = 9/8 [ABCD]','[QPO]=\\dfrac98[ABCD]'],
-  {pages:[164,176],difficulty:'difficult',figure:['Parallelogram ABCD with midpoints M on AD and N on BC. DP and CQ cross at O and meet extended AB at P and Q.',
+  {pages:[164,176],difficulty:'difficult',questionMath:[
+    ['In parallelogram ABCD of the accompanying diagram, line DP is drawn bisecting BC at N and meeting AB (extended) at P. From vertex C, line CQ is drawn bisecting side AD at M and meeting AB (extended) at Q. Lines DP and CQ meet at O. Show that the area of triangle QPO is ',{...formula('9/8','\\dfrac98'),display:false},' of the area of the parallelogram ABCD.'],
+    ['படத்தில் இணைகரம் ABCD இல் முனை D இலிருந்து வரையப்படும் கோடு DP ஆனது BC இன் நடுப்புள்ளியை N இலும், AB இன் நீட்சியை P இலும் சந்திக்கிறது. C இலிருந்து வரையப்படும் கோடு CQ ஆனது, AD இன் நடுப்புள்ளி M இலும், AB இன் நீட்சியை Q விலும் சந்திக்கிறது. கோடுகள் DP மற்றும் CQ ஆனது O இல் சந்திக்கின்றன, எனில் △QPO இன் பரப்பளவானது, இணைகரம் ABCD இன் பரப்பளவில் ',{...formula('9/8','\\dfrac98'),display:false},' மடங்கு என நிறுவுக.']
+  ],figure:['Parallelogram ABCD with midpoints M on AD and N on BC. DP and CQ cross at O and meet extended AB at P and Q.',
     'ABCD இணைகரத்தின் AD, BC நடுப்புள்ளிகள் M, N. DP, CQ ஆகியவை O இல் வெட்டுகின்றன; AB நீட்சியை P, Q இல் சந்திக்கின்றன.']});
 
   c(3,['Find the length of the chord AC where AB and CD are the two diameters perpendicular to each other of a circle with radius 4√2 cm and also find ∠OAC and ∠OCA.',
@@ -175,7 +178,10 @@
       'Angles opposite equal sides of a triangle are equal.', 'முக்கோணத்தில் சம பக்கங்களுக்கு எதிர்க்கோணங்கள் சமம்.',
       '∠OAC = ∠OCA = 45°','\\angle OAC=\\angle OCA=45^\\circ')
   ],['AC is 8 cm.','AC இன் நீளம் 8 செமீ.','∠OAC = ∠OCA = 45°','\\angle OAC=\\angle OCA=45^\\circ'],
-  {pages:[175,187],figure:['Perpendicular diameters AB and CD cross at O. Chord AC joins their endpoints.', 'செங்குத்து விட்டங்கள் AB, CD ஆகியவை O இல் வெட்டுகின்றன. A, C ஆகியவற்றை நாண் AC இணைக்கிறது.']});
+  {pages:[175,187],related:3,questionMath:[
+    ['Find the length of the chord AC where AB and CD are the two diameters perpendicular to each other of a circle with radius ',{...formula('4√2','4\\sqrt2'),display:false},' cm and also find ∠OAC and ∠OCA.'],
+    ['ஆரம் ',{...formula('4√2','4\\sqrt2'),display:false},' செமீ உள்ள வட்டத்தில் AB மற்றும் CD என்ற ஒன்றுக்கு ஒன்று செங்குத்தான விட்டங்கள் வரையப்பட்டுள்ளன எனில், நாண் ACஇன் நீளம் காண்க. மேலும், ∠OAC மற்றும் ∠OCA காண்க.']
+  ],figure:['Perpendicular diameters AB and CD cross at O. Chord AC joins their endpoints.', 'செங்குத்து விட்டங்கள் AB, CD ஆகியவை O இல் வெட்டுகின்றன. A, C ஆகியவற்றை நாண் AC இணைக்கிறது.']});
   c(5,['In a circle, AB and CD are two parallel chords with centre O and radius 10 cm such that AB = 16 cm and CD = 12 cm determine the distance between the two chords?',
     'Oஐ மையமாக உடைய வட்டத்தில் AB மற்றும் CD என்பன இரு இணையான நாண்கள் ஆகும். மேலும் ஆரம் 10 செமீ, AB = 16 செமீ மற்றும் CD = 12 செமீ எனில், இரு நாண்களுக்கு இடைப்பட்ட தொலைவைத் தீர்மானிக்க.'],[
     step('Perpendiculars from O bisect the two chords. The half-lengths are 8 cm and 6 cm. Use the radius as hypotenuse to find the two perpendicular distances.',
