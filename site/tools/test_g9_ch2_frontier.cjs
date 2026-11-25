@@ -150,7 +150,11 @@ function verify() {
       }
     } else {
       assert.equal(JSON.stringify(item.q),JSON.stringify(previous.q));
-      assert.equal(JSON.stringify(item.steps),JSON.stringify(previous.steps));
+      assert.equal(JSON.stringify(item.steps.map(({mathTa,...step})=>step)),JSON.stringify(previous.steps));
+      for(const step of item.steps)if(step.mathTa) {
+        assert.match(plain(step.mathTa),/\p{Script=Tamil}/u);
+        authored(step.mathTa);
+      }
     }
     return {recordId:item.id,parts:['whole'],passed:true,
       recordSha256:createHash('sha256').update(JSON.stringify(item)).digest('hex')};

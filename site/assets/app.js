@@ -23,6 +23,7 @@
  window.TriggleG10AlgebraTamil?.(classes[10].items);
  window.TriggleG10GeometryTamil?.(classes[10].items);
  window.TriggleG9RealFrontier?.(classes[9].items);
+ window.TriggleG9AlgebraTamilAnswers?.(classes[9].items);
  const curriculum=window.TRIGGLE_CURRICULUM;
  if(!curriculum?.grades)throw Error('Missing curriculum metadata');
  const chapterList=()=>curriculum.grades.find(g=>g.grade===grade)?.chapters||[];
