@@ -804,7 +804,7 @@
   $('visualTitle').textContent=tr(figSpec?.caption)||tr(current.title);
   // Same final answer inside glass viewer lets students compare regions to result.
   $('diagramCompare').hidden=isG9GeometryExercise(current);
-  $('diagramCompareAnswer').innerHTML=$('diagramCompare').hidden?'':$('answerText').innerHTML;
+  $('diagramCompareAnswer').innerHTML=$('answerText').innerHTML;
   $('diagramCompareLabel').textContent=ui('finalAnswer');
   $('figureDialog').showModal();
   if(grade===9)window.TriggleNotation?.prepareSvg?.($('diagramContent'),window.TriggleG9Math?.diagramLabels);
