@@ -6,7 +6,7 @@ The baseline was Triggle main at `327ec4de48264c5358c5e7b351afc49d6158f229`. The
 
 The source inventory contains 75 numbered questions and 94 canonical tasks. The baseline displayed 53 tasks across Exercises 8.1–8.3, including Tamil working applied during app startup. There were no student records for Exercises 8.4, 8.5 or Unit Exercise 8, and there was no Chapter 8 concept studio.
 
-| Exercise | Source questions | Source tasks | Baseline runtime tasks | Release candidate English tasks | Release candidate unconditional Tamil tasks | Source limits |
+| Exercise | Source questions | Source tasks | Baseline runtime tasks | Live English tasks | Live unconditional Tamil tasks | Source limits |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
 | 8.1 | 15 | 16 | 16 | 16 | 15 | Q5 provides a conditional Tamil solution for the nine wages actually listed |
 | 8.2 | 8 | 8 | 8 | 8 | 8 | Q6 explains the textbook rounding convention |
@@ -16,7 +16,7 @@ The source inventory contains 75 numbered questions and 94 canonical tasks. The 
 | Unit Exercise 8 | 11 | 11 | 0 | 11 | 11 | Q5 retains exact values and correct final rounding |
 | **Total** | **75** | **94** | **53** | **92** | **91** | **Two absent tasks and one conditional Tamil task** |
 
-The release candidate adds 39 bilingual canonical tasks. It covers 73 numbered questions in English and 72 with unconditional bilingual solutions. All 94 canonical tasks are accounted for in the [mission checkpoint](g10-ch8-mission-checkpoint.json). Independent Tamil editorial approval remains pending.
+The release adds 39 bilingual canonical tasks. It covers 73 numbered questions in English and 72 with unconditional bilingual solutions. All 94 canonical tasks are accounted for in the [mission checkpoint](g10-ch8-mission-checkpoint.json). Independent Tamil editorial approval remains pending.
 
 ## Concept studio and student experience
 
@@ -42,7 +42,7 @@ The release candidate adds 39 bilingual canonical tasks. It covers 73 numbered q
 
 ## Verification and release
 
-Targeted tests cover original wording and choices, frequency counts, exact and rounded arithmetic, probability bounds, registered IDs, KaTeX, mobile layout, exercise navigation, linked concepts and correct-answer feedback. The 15 concept lessons were exercised in both languages across 320, 390, 412 and 1024 pixel viewports. The repository-wide regression and GitHub release gates run against the integrated branch.
+Targeted tests cover original wording and choices, frequency counts, exact and rounded arithmetic, probability bounds, registered IDs, KaTeX, mobile layout, exercise navigation, linked concepts and correct-answer feedback. The 15 concept lessons were exercised in both languages across 320, 390, 412 and 1024 pixel viewports. The full local non-browser regression passed. The four GitHub Chromium/WebKit shards, core suite, Firestore tests and required quality gate passed on both the reviewed PR head and the merged commit.
 
 - [Chapter 8 pull request](https://github.com/vigneswaranmba20-afk/Triggle/pull/428)
 - [Production Chapter 8 overview](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&chapter=g10-ch8)
@@ -50,3 +50,11 @@ Targeted tests cover original wording and choices, frequency counts, exact and r
 - [Production concept studio](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&chapter=g10-ch8&section=concepts)
 
 Obtain authorized textbook clarification for the two quarantined tasks and the missing Tamil wage. Commission independent Tamil editorial review of the complete chapter.
+
+## Production release record
+
+- Reviewed branch head `f4cbfad45c76ba6409fbbcdb023e67204c1b289a`. [PR quality run](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45580599291)
+- GitHub Pages published merged commit `213e207ca8047e20ca188229ee584074a4ebf626`. The site tree on main matched the reviewed branch, and eight served files were compared byte for byte with the merge commit. [Successful Pages workflow](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45582715378)
+- Production Chromium checks at 390 pixels exercised six representative questions, one from each exercise, in English and Tamil. The test opened a figure, followed previous/next navigation, and used the linked probability Venn diagram. The Tamil studio and target diagram also passed a separate local offline test at 320 pixels. [Live exercise reader](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-8-ex8-4-q6)
+
+Paid external LLM expenditure was zero.

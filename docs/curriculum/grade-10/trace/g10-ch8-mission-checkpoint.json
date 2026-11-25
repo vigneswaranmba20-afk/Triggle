@@ -2,7 +2,7 @@
   "repository": "vigneswaranmba20-afk/Triggle",
   "branch": "codex/grade-10-chapter-8-completion",
   "plannedBranch": "codex/grade-10-chapter-8-completion",
-  "commitSha": "a54f458183cd0bf1fef033f58355c179b08a1c8a",
+  "commitSha": "f4cbfad45c76ba6409fbbcdb023e67204c1b289a",
   "inventory": {
     "verification": "Reconciled 75 questions and 94 source tasks against the repository inventory. Its historical statuses are retained separately from current runtime validation.",
     "numberedQuestions": 75,
@@ -2131,11 +2131,7 @@
       "sourceBlockedTasks": 2
     }
   },
-  "pending": [
-    "Full release verification",
-    "Merge and deploy",
-    "Live route verification"
-  ],
+  "pending": [],
   "completed": [
     "Created persistent mission checkpoint",
     "Cloned current main and created the dedicated local development branch",
@@ -2158,7 +2154,10 @@
     "Rechecked the Exercise 8.2 and 8.3 source exercise pages and their existing independent arithmetic tests",
     "Integrated the 15 bilingual concept lessons with eight interactive lab modes and reciprocal exercise links",
     "Localised the three Exercise 8.3 figures and stated the independent model for Q12",
-    "Corrected both chapter PDF locators and structured the bilingual Exercise 8.2 Q4 question formula"
+    "Corrected both chapter PDF locators and structured the bilingual Exercise 8.2 Q4 question formula",
+    "Squash-merged PR #428 after the exact head passed all eight PR workflows",
+    "Published the actual merged commit through GitHub Pages",
+    "Verified eight production assets and six representative question routes in English and Tamil"
   ],
   "validated": [
     "Repository source inventory accounts for 75 questions and 94 tasks",
@@ -2167,7 +2166,10 @@
     "Unit Exercise 8 independent calculations, source and table fidelity, KaTeX, previous/next and mobile layouts",
     "Exercise 8.1 bilingual mobile browser and table checks at 320, 390 and 412px",
     "Historical TRACE reconciliation fixture and all six groups",
-    "All 15 concept lessons and lab arithmetic, English and Tamil viewport layout, correct-answer feedback and linked routes"
+    "All 15 concept lessons and lab arithmetic, English and Tamil viewport layout, correct-answer feedback and linked routes",
+    "Merged commit matches the tested site tree",
+    "Full GitHub core, four browser shards and security gates passed on the merged commit",
+    "Eight served assets match merged source and the live concept/exercise round trip passed in EN and TA"
   ],
   "blocked": [
     {
@@ -2200,23 +2202,51 @@
     "node site/tools/test_project_status.cjs",
     "node site/tools/test_g10_ch8_concepts.cjs",
     "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_concepts_browser.cjs",
-    "node site/tools/test_g10_stats_ex8_2_q4_q8.cjs"
+    "node site/tools/test_g10_stats_ex8_2_q4_q8.cjs",
+    "npm test",
+    "Full GitHub browser regression across four Chromium/WebKit shards",
+    "GitHub Firestore security",
+    "GitHub Triggle risk-based quality gate",
+    "Offline Tamil concept and diagram at 320px",
+    "Aggregate browser reconciliation of all 94 canonical IDs",
+    "Origin main at merged commit has the identical site tree reviewed in PR 428",
+    "Full GitHub Chromium/WebKit and Firestore checks on merged commit",
+    "Eight deployed assets compared byte for byte",
+    "Live Chromium EN/TA exercises, figure dialog, table layout, previous/next, reciprocal exercise-to-concept navigation and Venn interaction"
   ],
   "deployment": {
-    "status": "development_branch_only",
+    "status": "live_verified",
     "branchUrl": "https://github.com/vigneswaranmba20-afk/Triggle/tree/codex/grade-10-chapter-8-completion",
-    "pullRequest": "https://github.com/vigneswaranmba20-afk/Triggle/pull/428"
+    "pullRequest": "https://github.com/vigneswaranmba20-afk/Triggle/pull/428",
+    "qualityRun": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45580599291",
+    "mergedCommit": "213e207ca8047e20ca188229ee584074a4ebf626",
+    "pagesWorkflow": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45582715378",
+    "reviewedSiteMatchesMergedSite": true,
+    "qualityGate": "success",
+    "pagesWorkflowConclusion": "success",
+    "exactAssetMatches": 8,
+    "liveBrowserLocales": [
+      "en",
+      "ta"
+    ],
+    "liveBrowserViewportPixels": 390,
+    "liveRoutes": {
+      "chapter": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&chapter=g10-ch8",
+      "exercises": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&chapter=g10-ch8&section=exercises",
+      "concepts": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&chapter=g10-ch8&section=concepts"
+    }
   },
-  "nextExecutableTask": "Verify the integrated branch through the full local suites and the current PR quality gates, then merge and verify Pages on the merged commit.",
+  "nextExecutableTask": null,
   "baseSha": "327ec4de48264c5358c5e7b351afc49d6158f229",
   "latestFullTestAttempt": {
     "suite": "npm test",
-    "result": "historic object recovered and fixture now passes",
-    "evidence": "Read-only historical snapshot heads are pinned under refs/triggle-fixtures."
+    "result": "passed for the integrated release candidate"
   },
   "concepts": {
     "english": 15,
     "tamil": 15,
     "independentTamilEditorialApproval": false
-  }
+  },
+  "resumeWhen": "An authorized source clarification resolves Exercise 8.4 Q1, Exercise 8.5 Q11 or Tamil Exercise 8.1 Q5, or independent Tamil editorial feedback is available.",
+  "paidExternalLlmExpenditureUsd": 0
 }
