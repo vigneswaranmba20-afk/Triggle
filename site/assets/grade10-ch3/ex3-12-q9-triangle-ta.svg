@@ -1,0 +1,13 @@
+<svg xml:lang="ta" xmlns="http://www.w3.org/2000/svg" width="320" height="190" viewBox="0 0 320 190" role="img" aria-labelledby="title">
+  <title id="title">கர்ணம் 25 செமீ கொண்ட செங்கோண முக்கோணம். செங்குத்தான இரு பக்கங்களின் நீளம் x செமீ மற்றும் (31 − x) செமீ. சுற்றளவு 56 செமீ.</title>
+  <rect width="320" height="190" rx="10" fill="#ffffff"/>
+  <polygon points="74,40 74,145 254,145" fill="#eef4ff" stroke="#283262" stroke-width="2.2" stroke-linejoin="round"/>
+  <polyline points="74,131 88,131 88,145" fill="none" stroke="#a52662" stroke-width="1.8"/>
+  <g font-family="system-ui, -apple-system, sans-serif" font-weight="700" fill="#283262">
+    <text x="64" y="96" font-size="12" text-anchor="end" fill="#29638c">x cm</text>
+    <text x="164" y="163" font-size="12" text-anchor="middle" fill="#29638c">(31 − x) cm</text>
+    <text x="180" y="84" font-size="12" text-anchor="start" fill="#a52662">25 செமீ (கர்ணம்)</text>
+    <text x="160" y="24" font-size="12" text-anchor="middle">சுற்றளவு = 56 செமீ ⇒ x + y = 31 செமீ</text>
+    <text x="160" y="180" font-size="11" text-anchor="middle" fill="#29638c" font-weight="600">பித்தகோரஸ் தேற்றம் · x² + (31 − x)² = 25²</text>
+  </g>
+</svg>
