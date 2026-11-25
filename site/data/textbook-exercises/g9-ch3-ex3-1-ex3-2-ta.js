@@ -626,3 +626,28 @@
     }
   }
 })();
+
+// Exercise 3.1 Q11–Q12 use the original bilingual solution steps. Supply the
+// Tamil final display at reader startup so the archived source stays immutable.
+(() => {
+  'use strict';
+  const area = {latex:'9x^2-4',fallback:'9x² − 4'};
+  const atTwenty = {
+    latex:String.raw`A=9\times20^2-4=3600-4=3596`,fallback:'A = 9 × 20² − 4 = 3600 − 4 = 3596',display:true
+  };
+  const finalArea = [area,' சதுர அலகுகள். ',{latex:'x=20',fallback:'x = 20'},
+    ' எனில் 3596 சதுர அலகுகள்.'];
+  window.TriggleG9AlgebraTamilAnswers = items => {
+    const areaItem=items.find(item=>item.id==='g9-ch3-ex3.1-q11');
+    const polynomial=items.find(item=>item.id==='g9-ch3-ex3.1-q12');
+    if(areaItem) {
+      areaItem.answerTa='9x² − 4 சதுர அலகுகள். x = 20 எனில் 3596 சதுர அலகுகள்.';
+      areaItem.answerMath={ta:finalArea};
+      areaItem.steps[3].mathTa=[atTwenty,' சதுர அலகுகள்.'];
+    }
+    if(polynomial) {
+      polynomial.answerTa='மூன்றாம் படிப் பல்லுறுப்புக் கோவை.';
+      polynomial.answerMath={ta:polynomial.answerTa};
+    }
+  };
+})();

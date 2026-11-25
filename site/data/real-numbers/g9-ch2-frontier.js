@@ -334,6 +334,26 @@
     'ex6-q6-iii':['ஆம். ',math('√2 × √8 = 4',String.raw`\sqrt2\times\sqrt8=4`)],
     'ex6-q6-iv':['ஆம். ',math('√18 ÷ √2 = 3',String.raw`\dfrac{\sqrt{18}}{\sqrt2}=3`)]
   };
+  const pureSurds = [
+    'தனி முறுடுகளுக்கான எடுத்துக்காட்டுகள் ',...roots(2),', ',...roots(3),', ',...roots(6),'.'
+  ];
+  const tamilEquations = {
+    'ex1-q1':{1:['அம்புக்குறி D, ',math('11/3 ≈ 3.67',String.raw`\dfrac{11}{3}\approx3.67`)]},
+    'ex2-q1-i':{1:'சுழல் தசமம். சுழற்சி நீளம் 6.'},
+    'ex2-q1-ii':{1:'சுழல் தசமம். சுழற்சி நீளம் 2.'},
+    'ex2-q1-iii':{1:'சுழல் தசமம். சுழற்சி நீளம் 1.'},
+    'ex2-q1-iv':{1:'முடிவுறு தசமம்.'},
+    'ex2-q2':{1:'சுழற்சி நீளம் 6.'},
+    'ex2-q5-i':{1:'ஆம், முடிவுறு தசமம்.'},
+    'ex2-q5-ii':{1:'ஆம், முடிவுறு தசமம்.'},
+    'ex2-q5-iii':{1:'இல்லை, சுழல் தசமம்.'},
+    'ex2-q5-iv':{0:[math('2200 = 2³ × 5² × 11',String.raw`2200=2^3\times5^2\times11`),'. தொகுதி 219 என்பது 11-ஆல் வகுபடாது.'],
+      1:'இல்லை, சுழல் தசமம்.'},
+    'ex6-q5-i':{0:pureSurds},
+    'ex6-q5-ii':{0:pureSurds},
+    'ex6-q5-iii':{0:pureSurds},
+    'ex6-q5-iv':{0:pureSurds}
+  };
 
   const stageForQuestion = [0,0,0,1,0,0,1,1,4,2,0,0,4,4,4,5,4,3,3,6];
   const hintForStage = {
@@ -357,7 +377,10 @@
     const byId = new Map(items.filter(item=>item.chapter==='2').map(item=>[item.id,item]));
     for (const [suffix,ta] of Object.entries(answerOnly)) {
       const item = byId.get('g9-ch2-'+suffix);
-      if (item) Object.assign(item,{answerTa:flat(ta),answerMath:{ta}});
+      if (!item) continue;
+      const localized = tamilEquations[suffix];
+      if(localized)item.steps=item.steps.map((step,i)=>localized[i]?{...step,mathTa:localized[i]}:step);
+      Object.assign(item,{answerTa:flat(ta),answerMath:{ta}});
     }
     reviewed.forEach(({prompt,options,correct,steps},index) => {
       const item = byId.get('g9-ch2-ex9-q'+(index+1));

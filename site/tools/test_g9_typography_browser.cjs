@@ -5,7 +5,8 @@ const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=r
 const {chromium}=require('playwright'),{server,launchOptions}=require('./dashboard_test_support.cjs');
 const {load}=require('./build_g9_math.cjs');
 const {applyReviewedRealNumbers}=require('./test_g9_ch2_frontier.cjs');
-const records=applyReviewedRealNumbers(load()),widths=[320,360,393,430],samples=new Map(records.map(q=>[q.chapter,q.id]));
+const {applyReviewedAlgebra}=require('./test_g9_tamil_working.cjs');
+const records=applyReviewedAlgebra(applyReviewedRealNumbers(load())),widths=[320,360,393,430],samples=new Map(records.map(q=>[q.chapter,q.id]));
 const normalize=s=>String(s??'').replace(/\s+/g,' ').trim();
 const plain=value=>Array.isArray(value)?value.map(plain).join(''):value?.fallback??value;
 async function inspect(page,q,lang){

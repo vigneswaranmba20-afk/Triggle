@@ -1,0 +1,508 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "edition": "2025 revised",
+  "sources": {
+    "en": {
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J"
+    },
+    "ta": {
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+    }
+  },
+  "scope": "Tamil working labels in existing Real Numbers cards and final answers in Algebra Exercise 3.1 Q11 and Q12.",
+  "items": [
+    {
+      "id": "g9-ch2-ex1-q1",
+      "exercise": "2.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            51
+          ],
+          "printedPages": [
+            45
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            53
+          ],
+          "printedPages": [
+            47
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex2-q1-i",
+      "exercise": "2.2",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            57
+          ],
+          "printedPages": [
+            51
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            61
+          ],
+          "printedPages": [
+            55
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex2-q1-ii",
+      "exercise": "2.2",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            57
+          ],
+          "printedPages": [
+            51
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            61
+          ],
+          "printedPages": [
+            55
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex2-q1-iii",
+      "exercise": "2.2",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            57
+          ],
+          "printedPages": [
+            51
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            61
+          ],
+          "printedPages": [
+            55
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex2-q1-iv",
+      "exercise": "2.2",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            57
+          ],
+          "printedPages": [
+            51
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            61
+          ],
+          "printedPages": [
+            55
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex2-q2",
+      "exercise": "2.2",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            57
+          ],
+          "printedPages": [
+            51
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            61
+          ],
+          "printedPages": [
+            55
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex2-q5-i",
+      "exercise": "2.2",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            58
+          ],
+          "printedPages": [
+            52
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            61
+          ],
+          "printedPages": [
+            55
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex2-q5-ii",
+      "exercise": "2.2",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            58
+          ],
+          "printedPages": [
+            52
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            61
+          ],
+          "printedPages": [
+            55
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex2-q5-iii",
+      "exercise": "2.2",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            58
+          ],
+          "printedPages": [
+            52
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            61
+          ],
+          "printedPages": [
+            55
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex2-q5-iv",
+      "exercise": "2.2",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            58
+          ],
+          "printedPages": [
+            52
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            61
+          ],
+          "printedPages": [
+            55
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex3-q2-ii",
+      "exercise": "2.3",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            61
+          ],
+          "printedPages": [
+            55
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            65
+          ],
+          "printedPages": [
+            59
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex3-q2-iii",
+      "exercise": "2.3",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            61
+          ],
+          "printedPages": [
+            55
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            65
+          ],
+          "printedPages": [
+            59
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex6-q5-i",
+      "exercise": "2.6",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            74
+          ],
+          "printedPages": [
+            68
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex6-q5-ii",
+      "exercise": "2.6",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            74
+          ],
+          "printedPages": [
+            68
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex6-q5-iii",
+      "exercise": "2.6",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            74
+          ],
+          "printedPages": [
+            68
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex6-q5-iv",
+      "exercise": "2.6",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            74
+          ],
+          "printedPages": [
+            68
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex6-q6-i",
+      "exercise": "2.6",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            74
+          ],
+          "printedPages": [
+            68
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex6-q6-ii",
+      "exercise": "2.6",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            74
+          ],
+          "printedPages": [
+            68
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex6-q6-iii",
+      "exercise": "2.6",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            74
+          ],
+          "printedPages": [
+            68
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch2-ex6-q6-iv",
+      "exercise": "2.6",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            74
+          ],
+          "printedPages": [
+            68
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.1-q11",
+      "exercise": "3.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            94
+          ],
+          "printedPages": [
+            88
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            101
+          ],
+          "printedPages": [
+            95
+          ]
+        }
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.1-q12",
+      "exercise": "3.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            94
+          ],
+          "printedPages": [
+            88
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            101
+          ],
+          "printedPages": [
+            95
+          ]
+        }
+      }
+    }
+  ],
+  "editorialReview": {
+    "ta": "pending-independent-review",
+    "teacher": "pending"
+  }
+}
