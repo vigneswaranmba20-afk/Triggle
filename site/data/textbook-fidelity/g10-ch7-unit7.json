@@ -1,0 +1,396 @@
+{
+  "edition": "2025 revised",
+  "grade": 10,
+  "chapter": 7,
+  "exercise": "7.unit",
+  "questionParts": 10,
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3PrsmzZwUUFOuH6Of",
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "keyPrinted": 342,
+      "keyPdf": 348
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "keyPrinted": 357,
+      "keyPdf": 363
+    }
+  },
+  "sourceImages": {
+    "en304": "d5520afae1a147b0d6dc180fa3a20d4a177e3a847df0892efec1b540a50d40b9",
+    "en305": "c1b3eafa7c59fa1e4a6e7eb7ef2843e861f1d87c40b81863a4ceb37ce7d4c40c",
+    "ta312": "26b89abc925ede9fd027be7c289928f59c6f0007a1306e8cd6db77397af35664",
+    "ta313": "04f0046662b5359c940e22efe0bd96543ccd2349f8dff3685c559c15037bfee7",
+    "keyEn348": "5b8bf46a999b68cbd3b659eaff4db543c07b5cfec2d94118e3e4a7f9e9cd1e62",
+    "keyTa363": "7f7fdcaf03e417bc13f22419550b4d648997ff83d2d02defcdf324c34c0df968"
+  },
+  "notes": "Both source pages and answer keys visually inspected; whitespace/Unicode notation normalized. English Q4 spans two pages. No question-specific textbook figures; summary table illustrations are not question figures. Q3 explains the standard axial right-cone construction. Teacher and professional Tamil editorial review pending.",
+  "items": [
+    {
+      "id": "c10-7-unit-q1",
+      "questionNumber": 1,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": [
+            298
+          ],
+          "pdf": [
+            304
+          ]
+        },
+        "ta": {
+          "printed": [
+            306
+          ],
+          "pdf": [
+            312
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "1. The barrel of a fountain-pen cylindrical in shape, is 7 cm long and 5 mm in diameter. A full barrel of ink in the pen will be used for writing 330 words on an average. How many words can be written using a bottle of ink containing one fifth of a litre?",
+        "ta": "1. 7 செ.மீ நீளமுள்ள ஓர் உருளை வடிவ மை குழுவையின் விட்டம் 5 மி.மீ ஆகும். மை முழுமையாகவுள்ள உருளையைக் கொண்டு சராசரியாக 330 வார்த்தைகள் எழுதலாம். ஒரு லிட்டரில் ஐந்தில் ஒரு பங்கு மை ஒரு பாட்டிலில் உள்ளது எனில், அதனைப் பயன்படுத்தி எத்தனை வார்த்தைகள் எழுதலாம்?"
+      },
+      "answerKey": "48000 words",
+      "answerValue": {
+        "en": "Approximately 48,000 words",
+        "ta": "தோராயமாக 48,000 வார்த்தைகள்"
+      }
+    },
+    {
+      "id": "c10-7-unit-q2",
+      "questionNumber": 2,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": [
+            298
+          ],
+          "pdf": [
+            304
+          ]
+        },
+        "ta": {
+          "printed": [
+            306
+          ],
+          "pdf": [
+            312
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "2. A hemi-spherical tank of radius 1.75 m is full of water. It is connected with a pipe which empties the tank at the rate of 7 litre per second. How much time will it take to empty the tank completely?",
+        "ta": "2. ஆரம் 1.75 மீ உள்ள ஓர் அரைக்கோள வடிவத் தொட்டி முற்றிலும் நீரால் நிரப்பப்பட்டுள்ளது. ஒரு குழாயின் மூலம் வினாடிக்கு 7 லிட்டர் வீதம் தொட்டியிலிருந்து நீர் வெளியேற்றப்படுமானால், தொட்டியை எவ்வளவு நேரத்தில் முழுவதுமாகக் காலி செய்யலாம்?"
+      },
+      "answerKey": "27 minutes (approx.)",
+      "answerValue": {
+        "en": "Approximately 27 minutes",
+        "ta": "தோராயமாக 27 நிமிடங்கள்"
+      }
+    },
+    {
+      "id": "c10-7-unit-q3",
+      "questionNumber": 3,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": [
+            298
+          ],
+          "pdf": [
+            304
+          ]
+        },
+        "ta": {
+          "printed": [
+            306
+          ],
+          "pdf": [
+            312
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "3. Find the maximum volume of a cone that can be carved out of a solid hemisphere of radius r units.",
+        "ta": "3. r அலகுகள் ஆரம் கொண்ட ஒரு திண்ம அரைக் கோளத்திலிருந்து வெட்டி எடுக்கப்படும் கூம்பின் மீப்பெரு கனஅளவு என்ன?"
+      },
+      "answerKey": "πr³/3 cubic units",
+      "answerValue": {
+        "en": "πr³/3 cubic units",
+        "ta": "πr³/3 கன அலகுகள்"
+      }
+    },
+    {
+      "id": "c10-7-unit-q4",
+      "questionNumber": 4,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": [
+            298,
+            299
+          ],
+          "pdf": [
+            304,
+            305
+          ]
+        },
+        "ta": {
+          "printed": [
+            306
+          ],
+          "pdf": [
+            312
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "4. An oil funnel of tin sheet consists of a cylindrical portion 10 cm long attached to a frustum of a cone. If the total height is 22 cm, the diameter of the cylindrical portion be 8 cm and the diameter of the top of the funnel be 18 cm, then find the area of the tin sheet required to make the funnel.",
+        "ta": "4. ஒரு கூம்பின் இடைக்கண்டம், 10 செ.மீ நீளமுள்ள ஓர் உருளையுடன் இணைக்கப்பட்ட எண்ணெய்ப் புனலின் மொத்த உயரம் 22 செ.மீ ஆகும். உருளையின் விட்டம் 8 செ.மீ மற்றும் புனலின் மேற்புற விட்டம் 18 செ.மீ எனில், புனலை உருவாக்கத் தேவையான தகர அட்டையின் பரப்பைக் காண்க."
+      },
+      "answerKey": "782.57 cm²",
+      "answerValue": {
+        "en": "249π cm² ≈ 782.57 cm²",
+        "ta": "249π சதுர செ.மீ ≈ 782.57 சதுர செ.மீ"
+      }
+    },
+    {
+      "id": "c10-7-unit-q5",
+      "questionNumber": 5,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": [
+            299
+          ],
+          "pdf": [
+            305
+          ]
+        },
+        "ta": {
+          "printed": [
+            307
+          ],
+          "pdf": [
+            313
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "5. Find the number of coins, 1.5 cm in diameter and 2 mm thick, to be melted to form a right circular cylinder of height 10 cm and diameter 4.5 cm.",
+        "ta": "5. உயரம் 10 செ.மீ மற்றும் விட்டம் 4.5 செ.மீ உடைய ஒரு நேர்வட்ட உருளையை உருவாக்க 1.5 செ.மீ விட்டமும், 2 மி.மீ தடிமன் கொண்ட எத்தனை வட்ட வில்லைகள் தேவை?"
+      },
+      "answerKey": "450 coins",
+      "answerValue": {
+        "en": "450 coins",
+        "ta": "450 நாணயங்கள்"
+      }
+    },
+    {
+      "id": "c10-7-unit-q6",
+      "questionNumber": 6,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": [
+            299
+          ],
+          "pdf": [
+            305
+          ]
+        },
+        "ta": {
+          "printed": [
+            307
+          ],
+          "pdf": [
+            313
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "6. A hollow metallic cylinder whose external radius is 4.3 cm and internal radius is 1.1 cm and whose whole length is 4 cm is melted and recast into a solid cylinder of 12 cm long. Find the diameter of solid cylinder.",
+        "ta": "6. ஓர் உள்ளீடற்ற உலோக உருளையின் வெளிப்புற ஆரம் 4.3 செ.மீ, உட்புற ஆரம் 1.1 செ.மீ மற்றும் நீளம் 4 செ.மீ. உலோக உருளையை உருக்கி 12 செ.மீ நீளமுள்ள வேறொரு திண்ம உருளை உருவாக்கப்பட்டால் புதிய உருளையின் விட்டத்தைக் கணக்கிடுக."
+      },
+      "answerKey": "4.8 cm",
+      "answerValue": {
+        "en": "4.8 cm",
+        "ta": "4.8 செ.மீ"
+      }
+    },
+    {
+      "id": "c10-7-unit-q7",
+      "questionNumber": 7,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": [
+            299
+          ],
+          "pdf": [
+            305
+          ]
+        },
+        "ta": {
+          "printed": [
+            307
+          ],
+          "pdf": [
+            313
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "7. The slant height of a frustum of a cone is 4 m and the perimeter of circular ends are 18 m and 16 m. Find the cost of painting its curved surface area at ₹100 per sq. m.",
+        "ta": "7. ஓர் இடைக்கண்டத்தின் இரு முனைகளின் சுற்றளவுகள் 18 மீ, 16 மீ மற்றும் அதன் சாயுயரம் 4 மீ ஆகும். ஒரு சதுர மீட்டருக்கு ₹ 100 வீதம் இடைக்கண்டத்தின் வளைபரப்பில் வர்ணம் பூச ஆகும் மொத்தச் செலவு என்ன?"
+      },
+      "answerKey": "₹6800",
+      "answerValue": {
+        "en": "₹6,800",
+        "ta": "₹6,800"
+      }
+    },
+    {
+      "id": "c10-7-unit-q8",
+      "questionNumber": 8,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": [
+            299
+          ],
+          "pdf": [
+            305
+          ]
+        },
+        "ta": {
+          "printed": [
+            307
+          ],
+          "pdf": [
+            313
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "8. A hemi-spherical hollow bowl has material of volume 436π/3 cubic cm. Its external diameter is 14 cm. Find its thickness.",
+        "ta": "8. ஓர் உள்ளீடற்ற அரைக்கோளக் கிண்ணத்தை உருவாக்கப் பயன்படுத்தப்பட்ட பொருளின் கனஅளவு 436π/3 க. செ.மீ ஆகும். கிண்ணத்தின் வெளிவிட்டம் 14 செ.மீ எனில் அதன் தடிமனைக் கணக்கிடுக."
+      },
+      "answerKey": "2 cm",
+      "answerValue": {
+        "en": "2 cm",
+        "ta": "2 செ.மீ"
+      }
+    },
+    {
+      "id": "c10-7-unit-q9",
+      "questionNumber": 9,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": [
+            299
+          ],
+          "pdf": [
+            305
+          ]
+        },
+        "ta": {
+          "printed": [
+            307
+          ],
+          "pdf": [
+            313
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "9. The volume of a cone is 1005 5/7 cu. cm. The area of its base is 201 1/7 sq. cm. Find the slant height of the cone.",
+        "ta": "9. ஒரு கூம்பின் கன அளவு 1005 5/7 க. செ.மீ மற்றும் கீழ் வட்டப்பரப்பு 201 1/7 ச. செ.மீ எனில், அதன் சாயுயரம் காண்க."
+      },
+      "answerKey": "17 cm",
+      "answerValue": {
+        "en": "Approximately 17 cm (π ≈ 22/7)",
+        "ta": "தோராயமாக 17 செ.மீ (π ≈ 22/7)"
+      }
+    },
+    {
+      "id": "c10-7-unit-q10",
+      "questionNumber": 10,
+      "part": "whole",
+      "sourcePages": {
+        "en": {
+          "printed": [
+            299
+          ],
+          "pdf": [
+            305
+          ]
+        },
+        "ta": {
+          "printed": [
+            307
+          ],
+          "pdf": [
+            313
+          ]
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "textbookPrompt": {
+        "en": "10. A metallic sheet in the form of a sector of a circle of radius 21 cm has central angle of 216°. The sector is made into a cone by bringing the bounding radii together. Find the volume of the cone formed.",
+        "ta": "10. ஒரு வட்டக்கோண வடிவில் உள்ள உலோகத் தகட்டின் ஆரம் 21 செ.மீ மற்றும் மையக் கோணம் 216° ஆகும். வட்டக்கோணப் பகுதியின் ஆரங்களை இணைத்து உருவாக்கப்படும் கூம்பின் கன அளவைக் காண்க."
+      },
+      "answerKey": "2794.18 cm³",
+      "answerValue": {
+        "en": "Approximately 2794.18 cm³",
+        "ta": "தோராயமாக 2794.18 கன செ.மீ"
+      }
+    }
+  ]
+}
