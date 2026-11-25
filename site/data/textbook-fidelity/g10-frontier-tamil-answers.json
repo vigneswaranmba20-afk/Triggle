@@ -1,0 +1,448 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "edition": "2025 revised",
+  "sources": {
+    "en": {
+      "fileName": "Class_10_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of"
+    },
+    "ta": {
+      "fileName": "Class_10_Mathematics_Tamil_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC"
+    }
+  },
+  "scope": "Tamil final answer display only. Original English, source wording and worked solutions remain preserved.",
+  "items": [
+    {
+      "id": "c10-1-ex1-1-q5",
+      "exercise": "1.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-1-ex1-1-q6-i",
+      "exercise": "1.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-1-ex1-1-q6-ii",
+      "exercise": "1.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-1-ex1-1-q6-iii",
+      "exercise": "1.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-1-ex1-1-q7-i",
+      "exercise": "1.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-1-ex1-1-q7-ii",
+      "exercise": "1.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            12
+          ],
+          "printedPages": [
+            6
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-2-ex2-3-q2",
+      "exercise": "2.3",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            57
+          ],
+          "printedPages": [
+            51
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            58
+          ],
+          "printedPages": [
+            52
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-2-ex2-5-q5",
+      "exercise": "2.5",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            68
+          ],
+          "printedPages": [
+            62
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            68
+          ],
+          "printedPages": [
+            62
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-2-unit-q4",
+      "exercise": "2.unit",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            89
+          ],
+          "printedPages": [
+            83
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            89
+          ],
+          "printedPages": [
+            83
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-2-unit-q5",
+      "exercise": "2.unit",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            89
+          ],
+          "printedPages": [
+            83
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            89
+          ],
+          "printedPages": [
+            83
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-2-unit-q7",
+      "exercise": "2.unit",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            89
+          ],
+          "printedPages": [
+            83
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            90
+          ],
+          "printedPages": [
+            84
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q4-i",
+      "exercise": "6.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            256
+          ],
+          "printedPages": [
+            250
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            264
+          ],
+          "printedPages": [
+            258
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q8-i",
+      "exercise": "6.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            256
+          ],
+          "printedPages": [
+            250
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            264
+          ],
+          "printedPages": [
+            258
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q8-ii",
+      "exercise": "6.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            256
+          ],
+          "printedPages": [
+            250
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            264
+          ],
+          "printedPages": [
+            258
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q9-i",
+      "exercise": "6.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            256
+          ],
+          "printedPages": [
+            250
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            264
+          ],
+          "printedPages": [
+            258
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q9-ii",
+      "exercise": "6.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            256
+          ],
+          "printedPages": [
+            250
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            264
+          ],
+          "printedPages": [
+            258
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-6-ex6-1-q10",
+      "exercise": "6.1",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            256
+          ],
+          "printedPages": [
+            250
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            264
+          ],
+          "printedPages": [
+            258
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-8-unit-q1",
+      "exercise": "8.unit",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            337
+          ],
+          "printedPages": [
+            331
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            350
+          ],
+          "printedPages": [
+            344
+          ]
+        }
+      }
+    },
+    {
+      "id": "c10-8-unit-q5",
+      "exercise": "8.unit",
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            337
+          ],
+          "printedPages": [
+            331
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            350
+          ],
+          "printedPages": [
+            344
+          ]
+        }
+      }
+    }
+  ],
+  "sourceNotes": [
+    {
+      "id": "c10-2-unit-q4",
+      "issue": "The English expression for any integer q describes the residue-class form. The fixed value 107 has that form at exactly q=26. The Tamil text uses ஏதேனும் ஒரு முழு. The final answer specifies the unique integer."
+    }
+  ],
+  "editorialReview": {
+    "ta": "pending-independent-review",
+    "teacher": "pending"
+  }
+}
