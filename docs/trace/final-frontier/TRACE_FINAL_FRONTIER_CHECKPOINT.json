@@ -24,13 +24,13 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g10.coordinate",
+      "key": "g10.trig.hints",
       "status": "MERGED",
-      "pr": 443,
-      "head": "fe1ba8ab609cdd0df82770c63571bfc39f70bfb4",
-      "prQualityRun": 45703862944,
-      "merge": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
-      "pagesRun": 45719371723
+      "pr": 444,
+      "head": "08e198f355a5b32d12c41b43b12a3a09197215e5",
+      "prQualityRun": 45704505918,
+      "merge": "cfb357f7c3004fcc2c754acb16d80cfbad7700df",
+      "pagesRun": 45723049750
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -1834,18 +1834,49 @@
         "c10-5-unit-q4"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g10-frontier-coordinate.json",
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 10,
         "chapter": 5,
         "runtimeRecords": 97,
         "scope": "Grade 10 Coordinate Geometry reasoning and signed-area corrections",
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 443,
         "head": "fe1ba8ab609cdd0df82770c63571bfc39f70bfb4",
         "prQualityRun": 45703862944,
         "merge": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
         "pagesRun": 45719371723,
+        "liveEvidence": {
+          "pr": 443,
+          "merge": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
+          "head": "fe1ba8ab609cdd0df82770c63571bfc39f70bfb4",
+          "slug": "g10-coordinate",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-5-ex5-2-q12",
+          "pagesRun": 45719371723,
+          "deploymentId": 8072280552,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45719371723/job/139584996497",
+          "deploymentCompletedAt": "2026-11-25T23:38:27Z",
+          "versionMatched": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
+          "sha256": {
+            "assets/app.js": "b4663b8103907e011e891a0262468cb5757e465bb6b13d9c2606cd61f2630967",
+            "assets/grade10-ch5/ex5-2-q12.svg": "1fc70a0de1357d812acaff8c6ab86a79c6688ef4da663c30a6370ce6a77b731d",
+            "data/g10-frontier-coordinate-hints.js": "b56f377f8e5654754bf2a22e7d8c1948b9f0333514ad3ee136bcc7992abcd989",
+            "data/project-status.json": "cf04f1537e8fcbaf646972d85dd3bf7b0bf4b72eb8e0368cbc35bf877acf0285",
+            "data/textbook-exercises/g10-frontier-coordinate.js": "b2a046edba1a622add1711f3a79fe23a142d668137a3705a97dc75d9c6d0f265",
+            "data/textbook-fidelity/g10-frontier-coordinate.json": "6e79a0e17095172f29efaf89068f9f1e045ea89a4def8c3c7db957b6324cf6b3",
+            "index.html": "db39404780cb4d3902f03ea4c813aa132a43460bd23cfc339502fbb837999fc0",
+            "service-worker.js": "6dfdbd5ebd2a17296123e9b01e706cbec8a82b418603284c75d38b84615a75ae"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 10 Coordinate Geometry: all five corrections and 97 explanations in both languages at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/443"
       }
     },
@@ -1855,16 +1886,18 @@
       "chapter": 6,
       "scope": "Grade 10 Trigonometry explanations",
       "runtimeRecords": 68,
-      "status": "TESTED",
+      "status": "MERGED",
       "release": {
         "grade": 10,
         "chapter": 6,
         "runtimeRecords": 68,
         "scope": "Grade 10 Trigonometry explanations",
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 444,
         "head": "08e198f355a5b32d12c41b43b12a3a09197215e5",
         "prQualityRun": 45704505918,
+        "merge": "cfb357f7c3004fcc2c754acb16d80cfbad7700df",
+        "pagesRun": 45723049750,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/444"
       }
     },
@@ -2054,9 +2087,70 @@
         "prQualityRun": 45719190105,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/453"
       }
+    },
+    {
+      "key": "g9.coordinate.order",
+      "grade": 9,
+      "chapter": 5,
+      "scope": "Original and keyed plotting orders in Grade 9 Exercise 5.1 Q4",
+      "canonicalTasks": 2,
+      "recordIds": [
+        "g9-ch5-ex5.1-q4"
+      ],
+      "sourceEvidence": "site/data/textbook-fidelity/g9-ch5-frontier-plot-order.json",
+      "status": "TESTED",
+      "release": {
+        "grade": 9,
+        "chapter": 5,
+        "runtimeRecords": 1,
+        "scope": "Printed crossing and keyed trapezium in Grade 9 Exercise 5.1 Q4",
+        "status": "TESTED",
+        "pr": 456,
+        "head": "ada7f0d7cedb24b1b713ea9b6a0a43ee651ee06a",
+        "prQualityRun": 45721015955,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/456"
+      }
+    },
+    {
+      "key": "answer.tamil",
+      "grade": null,
+      "chapter": null,
+      "scope": "Tamil final-answer typesetting in Algebra, Coordinate Geometry, Mensuration, Statistics and Probability",
+      "runtimeRecords": 16,
+      "status": "TESTED",
+      "release": {
+        "grade": null,
+        "chapter": null,
+        "runtimeRecords": 16,
+        "scope": "Tamil final-answer typesetting in Algebra, Coordinate Geometry, Mensuration, Statistics and Probability",
+        "status": "TESTED",
+        "pr": 454,
+        "head": "a30a6add93efe17ad57f297e8e81e4261112ad3f",
+        "prQualityRun": 45720503646,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/454"
+      }
+    },
+    {
+      "key": "g9.trigonometry.source",
+      "grade": 9,
+      "chapter": 6,
+      "scope": "Registered 2025 Trigonometry sources and the positive-side condition in Exercise 6.1 Q6",
+      "runtimeRecords": 23,
+      "status": "TESTED",
+      "release": {
+        "grade": 9,
+        "chapter": 6,
+        "runtimeRecords": 23,
+        "scope": "Registered 2025 Trigonometry sources and the positive-side condition in Exercise 6.1 Q6",
+        "status": "TESTED",
+        "pr": 457,
+        "head": "dbc451ab81f44e0b4090bf2d3f475456638ece7c",
+        "prQualityRun": 45723317551,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/457"
+      }
     }
   ],
-  "latestMain": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
+  "latestMain": "cfb357f7c3004fcc2c754acb16d80cfbad7700df",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2067,7 +2161,7 @@
       "browser": "/workspace/scratch/trace-set-batch-browser.log"
     },
     "grade9SetWorktree": "/workspace/Triggle-ex16",
-    "currentRuntime": "/workspace/scratch/trace-sources/batch14-browser-runtime.json",
+    "currentRuntime": "/workspace/scratch/trace-sources/batch16-browser-runtime.json",
     "coordinateRuntime": "/workspace/scratch/trace-sources/batch4-browser-runtime.json",
     "liveSetLogs": [
       "/workspace/scratch/trace-sources/live-ex13-browser.log",
@@ -2075,7 +2169,7 @@
     ],
     "tamilIndependentNumberedStructure": "/workspace/scratch/trace-sources/tamil-independent-structure.json",
     "tamilIndependentSubparts": "/workspace/scratch/trace-sources/tamil-independent-subparts.json",
-    "localReaderAudit": "/workspace/scratch/trace-sources/reader-answer-audit-candidate.json",
+    "localReaderAudit": "/workspace/scratch/trace-sources/reader-final-both-2025.json",
     "liveVerificationCommand": "/workspace/scratch/trace-sources/verify-frontier-live.sh",
     "localNavigationAudit": "/workspace/scratch/trace-sources/navigation-final.json",
     "releaseQueue": "/workspace/scratch/trace-sources/release-queue.sh",
@@ -2091,23 +2185,16 @@
     "Check the question-level source, mathematical and Tamil evidence still lacking one or more independent checks. Preserve edition-specific task IDs and source locators.",
     "Run the assembled reader and navigation checks against the final Pages revision, and refresh and publish the report."
   ],
-  "latestVerifiedProduction": "b5d2a450abd47305e63a2335a9093c1462bdc2a5",
+  "latestVerifiedProduction": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
   "openReleaseOrder": [
     {
-      "key": "g10.coordinate",
-      "status": "MERGED",
-      "pr": 443,
-      "head": "fe1ba8ab609cdd0df82770c63571bfc39f70bfb4",
-      "prQualityRun": 45703862944,
-      "merge": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
-      "pagesRun": 45719371723
-    },
-    {
       "key": "g10.trig.hints",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 444,
       "head": "08e198f355a5b32d12c41b43b12a3a09197215e5",
-      "prQualityRun": 45704505918
+      "prQualityRun": 45704505918,
+      "merge": "cfb357f7c3004fcc2c754acb16d80cfbad7700df",
+      "pagesRun": 45723049750
     },
     {
       "key": "g10.statistics.hints",
@@ -2171,6 +2258,27 @@
       "pr": 453,
       "head": "7117ed8cd5ad79203be63dfee6f6e8b2707c2370",
       "prQualityRun": 45719190105
+    },
+    {
+      "key": "answer.tamil",
+      "status": "TESTED",
+      "pr": 454,
+      "head": "a30a6add93efe17ad57f297e8e81e4261112ad3f",
+      "prQualityRun": 45720503646
+    },
+    {
+      "key": "g9.coordinate.order",
+      "status": "TESTED",
+      "pr": 456,
+      "head": "ada7f0d7cedb24b1b713ea9b6a0a43ee651ee06a",
+      "prQualityRun": 45721015955
+    },
+    {
+      "key": "g9.trigonometry.source",
+      "status": "TESTED",
+      "pr": 457,
+      "head": "dbc451ab81f44e0b4090bf2d3f475456638ece7c",
+      "prQualityRun": 45723317551
     }
   ]
 }
