@@ -24,11 +24,13 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g9.hints",
-      "status": "TESTED",
-      "pr": 441,
-      "head": "9422df6e0ffbfb3f5ab2f17e40c3527c13afe325",
-      "prQualityRun": 45700509362
+      "key": "g10.coordinate",
+      "status": "MERGED",
+      "pr": 443,
+      "head": "fe1ba8ab609cdd0df82770c63571bfc39f70bfb4",
+      "prQualityRun": 45703862944,
+      "merge": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
+      "pagesRun": 45719371723
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -1722,16 +1724,46 @@
       "chapter": null,
       "scope": "Bilingual Algebra and Coordinate Geometry why-step explanations",
       "runtimeRecords": 21,
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 9,
         "scope": "Grade 9 Algebra and Coordinate Geometry explanations",
         "runtimeRecords": 21,
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 441,
         "head": "9422df6e0ffbfb3f5ab2f17e40c3527c13afe325",
         "prQualityRun": 45700509362,
         "chapter": null,
+        "merge": "dca8e60a1b60dda0c65a30a6db601fc8192277e1",
+        "pagesRun": 45714180505,
+        "liveEvidence": {
+          "pr": 441,
+          "merge": "dca8e60a1b60dda0c65a30a6db601fc8192277e1",
+          "head": "9422df6e0ffbfb3f5ab2f17e40c3527c13afe325",
+          "slug": "g9-hints",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch3-ex3.2-q1-i",
+          "pagesRun": 45714180505,
+          "deploymentId": 8071471182,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45714180505/job/139563704022",
+          "deploymentCompletedAt": "2026-11-25T22:50:28Z",
+          "versionMatched": "dca8e60a1b60dda0c65a30a6db601fc8192277e1",
+          "sha256": {
+            "assets/why-step-g9.js": "081070a0fb5938e2139a023a1f03b52185384321aa18ecb9972e1356d27c6626",
+            "data/project-status.json": "d5b328453e6fbdd1eabf19add5974fe90c6c4002c7c64ce99ce220685a11e599",
+            "data/why-step-g9-frontier.js": "d598f9622e04022df11638a56ece19ad5136657d26f6f341356ddd7092ce6ce8",
+            "index.html": "209082431600392ae5ae6df3030ed592641afbcd9d0d48d57df00c13bc6abe84",
+            "service-worker.js": "2e43bde9f7b844a349bb6c240798963be84ef5880253d6008b0d4aa538ce8019"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 9: all 21 source-matched explanations in both languages at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/441"
       }
     },
@@ -1741,16 +1773,50 @@
       "chapter": 2,
       "scope": "Bilingual Numbers and Sequences why-step explanations and mathematical domain corrections",
       "runtimeRecords": 123,
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 10,
         "chapter": 2,
         "scope": "Grade 10 Numbers and Sequences explanations",
         "runtimeRecords": 123,
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 442,
         "head": "27b91cdef8812cbda4e2d3a81c10a75d3ce9c908",
         "prQualityRun": 45701636311,
+        "merge": "b5d2a450abd47305e63a2335a9093c1462bdc2a5",
+        "pagesRun": 45716753184,
+        "liveEvidence": {
+          "pr": 442,
+          "merge": "b5d2a450abd47305e63a2335a9093c1462bdc2a5",
+          "head": "27b91cdef8812cbda4e2d3a81c10a75d3ce9c908",
+          "slug": "g10-numbers-hints",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q12",
+          "pagesRun": 45716753184,
+          "deploymentId": 8071808631,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45716753184/job/139572620803",
+          "deploymentCompletedAt": "2026-11-25T23:10:19Z",
+          "versionMatched": "b5d2a450abd47305e63a2335a9093c1462bdc2a5",
+          "sha256": {
+            "assets/why-step-g10.js": "e0a2119c97bd6060a00246dd2c70e2c0154ba3b3b6d2175da32d2bcc2839b4ce",
+            "data/g10-frontier-numbers-hints.js": "efa456231950f988d2b8d0248f9bcbe545e8e65dce3456e3655b38bd82debaff",
+            "data/project-status.json": "806bbcca1874119397e7df1e51f590a84836051309fd6f4ff7e814e18f7408a7",
+            "data/textbook-exercises/g10-ch2-ex2-7-gp-missing-en.js": "50fe3a1eafebb0662f43f62b20cc25f82a4808d6a7022f6dd3064af1be57ec60",
+            "data/textbook-exercises/g10-ch2-ex2-8-gp-sum-missing-en.js": "37a812d1c627d9a18257b97e20bede29e3cf622685694ef64a66e7ecd27aff67",
+            "data/textbook-exercises/g10-ch2-numbers-sequences-tamil.js": "5526b96e8605b8b3859ee8d1bdf6a192f02678da6948dd256f98eea097a65856",
+            "data/textbook-fidelity/g10-frontier-numbers-domain.json": "007b36110ec44b72d2efb9dcfcf42c591f38c19c3234ab1f4c04cb2564c29e44",
+            "index.html": "074017acef4d003577e9f07506e85e221cf0de153bd5f6f3e037842fad18e435",
+            "service-worker.js": "7591bb16676f1d22188d4d997f1462f9ccc1daf7c91a8c196fcc4e871b776bb3"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 10 Numbers and Sequences: all 123 bilingual why-step pairs at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/442"
       }
     },
@@ -1768,16 +1834,18 @@
         "c10-5-unit-q4"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g10-frontier-coordinate.json",
-      "status": "TESTED",
+      "status": "MERGED",
       "release": {
         "grade": 10,
         "chapter": 5,
         "runtimeRecords": 97,
         "scope": "Grade 10 Coordinate Geometry reasoning and signed-area corrections",
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 443,
         "head": "fe1ba8ab609cdd0df82770c63571bfc39f70bfb4",
         "prQualityRun": 45703862944,
+        "merge": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
+        "pagesRun": 45719371723,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/443"
       }
     },
@@ -1890,8 +1958,8 @@
         "scope": "Exercise order and boundaries for Grade 9 Exercises 1.1 and 6.4 and Grade 10 Exercise 3.19",
         "status": "TESTED",
         "pr": 449,
-        "head": "6cbce2e270f210868f1d028d7ce812ac72ba41e6",
-        "prQualityRun": 45709619107,
+        "head": "23315dc5c52fc8e59271d834ab23f0f2a3795019",
+        "prQualityRun": 45718845558,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/449"
       }
     },
@@ -1913,8 +1981,8 @@
         "scope": "Equivalent ratio choices in Exercise 7.4 and independent Mensuration mathematics",
         "status": "TESTED",
         "pr": 450,
-        "head": "b74d61af7b1f6117cb56af1152e5e63e32526cc3",
-        "prQualityRun": 45710849546,
+        "head": "a98b04ad8cc1eeba393419116e4c67fd5a98137b",
+        "prQualityRun": 45719169113,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/450"
       }
     },
@@ -1937,13 +2005,58 @@
         "scope": "Composition domains, ranges and answer-key order in Exercise 1.5",
         "status": "TESTED",
         "pr": 451,
-        "head": "65db9687ca86d30b2e4c0170ef3bb76ad2c19772",
-        "prQualityRun": 45712867978,
+        "head": "4cf4411162d45f9caf1d0fe287cbb9134ed4b348",
+        "prQualityRun": 45719175984,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/451"
+      }
+    },
+    {
+      "key": "figure.tamil",
+      "grade": null,
+      "chapter": null,
+      "scope": "Tamil figure descriptions and fourteen localized exercise graphic assets",
+      "runtimeRecords": 37,
+      "status": "TESTED",
+      "release": {
+        "grade": null,
+        "chapter": null,
+        "runtimeRecords": 37,
+        "scope": "Tamil figure descriptions and fourteen localized exercise graphic assets",
+        "status": "TESTED",
+        "pr": 452,
+        "head": "b2a49729cd4123ef07d32b52f88decf99a176358",
+        "prQualityRun": 45719184913,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/452"
+      }
+    },
+    {
+      "key": "g9.algebra.mcq",
+      "grade": 9,
+      "chapter": 3,
+      "scope": "Grade 9 Algebra multiple-choice source questions and Tamil final answers",
+      "canonicalTasks": 4,
+      "recordIds": [
+        "g9-ch3-ex3.15-q9",
+        "g9-ch3-ex3.15-q15",
+        "g9-ch3-ex3.15-q17",
+        "g9-ch3-ex3.15-q28"
+      ],
+      "sourceEvidence": "site/data/textbook-fidelity/g9-ch3-frontier-mcq.json",
+      "status": "TESTED",
+      "release": {
+        "grade": 9,
+        "chapter": 3,
+        "runtimeRecords": 29,
+        "scope": "Algebra multiple-choice proofs, two source ambiguities and Tamil final answers",
+        "status": "TESTED",
+        "pr": 453,
+        "head": "7117ed8cd5ad79203be63dfee6f6e8b2707c2370",
+        "prQualityRun": 45719190105,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/453"
       }
     }
   ],
-  "latestMain": "7521c845cc87913f7ffcba2aac4ec4ad9c471964",
+  "latestMain": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -1954,7 +2067,7 @@
       "browser": "/workspace/scratch/trace-set-batch-browser.log"
     },
     "grade9SetWorktree": "/workspace/Triggle-ex16",
-    "currentRuntime": "/workspace/scratch/trace-sources/batch13-browser-runtime.json",
+    "currentRuntime": "/workspace/scratch/trace-sources/batch14-browser-runtime.json",
     "coordinateRuntime": "/workspace/scratch/trace-sources/batch4-browser-runtime.json",
     "liveSetLogs": [
       "/workspace/scratch/trace-sources/live-ex13-browser.log",
@@ -1962,7 +2075,7 @@
     ],
     "tamilIndependentNumberedStructure": "/workspace/scratch/trace-sources/tamil-independent-structure.json",
     "tamilIndependentSubparts": "/workspace/scratch/trace-sources/tamil-independent-subparts.json",
-    "localReaderAudit": "/workspace/scratch/trace-sources/reader-final-390.json",
+    "localReaderAudit": "/workspace/scratch/trace-sources/reader-answer-audit-candidate.json",
     "liveVerificationCommand": "/workspace/scratch/trace-sources/verify-frontier-live.sh",
     "localNavigationAudit": "/workspace/scratch/trace-sources/navigation-final.json",
     "releaseQueue": "/workspace/scratch/trace-sources/release-queue.sh",
@@ -1978,28 +2091,16 @@
     "Check the question-level source, mathematical and Tamil evidence still lacking one or more independent checks. Preserve edition-specific task IDs and source locators.",
     "Run the assembled reader and navigation checks against the final Pages revision, and refresh and publish the report."
   ],
-  "latestVerifiedProduction": "7521c845cc87913f7ffcba2aac4ec4ad9c471964",
+  "latestVerifiedProduction": "b5d2a450abd47305e63a2335a9093c1462bdc2a5",
   "openReleaseOrder": [
     {
-      "key": "g9.hints",
-      "status": "TESTED",
-      "pr": 441,
-      "head": "9422df6e0ffbfb3f5ab2f17e40c3527c13afe325",
-      "prQualityRun": 45700509362
-    },
-    {
-      "key": "g10.numbers.hints",
-      "status": "TESTED",
-      "pr": 442,
-      "head": "27b91cdef8812cbda4e2d3a81c10a75d3ce9c908",
-      "prQualityRun": 45701636311
-    },
-    {
       "key": "g10.coordinate",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 443,
       "head": "fe1ba8ab609cdd0df82770c63571bfc39f70bfb4",
-      "prQualityRun": 45703862944
+      "prQualityRun": 45703862944,
+      "merge": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
+      "pagesRun": 45719371723
     },
     {
       "key": "g10.trig.hints",
@@ -2040,22 +2141,36 @@
       "key": "navigation",
       "status": "TESTED",
       "pr": 449,
-      "head": "6cbce2e270f210868f1d028d7ce812ac72ba41e6",
-      "prQualityRun": 45709619107
+      "head": "23315dc5c52fc8e59271d834ab23f0f2a3795019",
+      "prQualityRun": 45718845558
     },
     {
       "key": "g9.mensuration",
       "status": "TESTED",
       "pr": 450,
-      "head": "b74d61af7b1f6117cb56af1152e5e63e32526cc3",
-      "prQualityRun": 45710849546
+      "head": "a98b04ad8cc1eeba393419116e4c67fd5a98137b",
+      "prQualityRun": 45719169113
     },
     {
       "key": "g10.compositions",
       "status": "TESTED",
       "pr": 451,
-      "head": "65db9687ca86d30b2e4c0170ef3bb76ad2c19772",
-      "prQualityRun": 45712867978
+      "head": "4cf4411162d45f9caf1d0fe287cbb9134ed4b348",
+      "prQualityRun": 45719175984
+    },
+    {
+      "key": "figure.tamil",
+      "status": "TESTED",
+      "pr": 452,
+      "head": "b2a49729cd4123ef07d32b52f88decf99a176358",
+      "prQualityRun": 45719184913
+    },
+    {
+      "key": "g9.algebra.mcq",
+      "status": "TESTED",
+      "pr": 453,
+      "head": "7117ed8cd5ad79203be63dfee6f6e8b2707c2370",
+      "prQualityRun": 45719190105
     }
   ]
 }
