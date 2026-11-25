@@ -71,8 +71,9 @@ def preprocess_math_text(text: str) -> str:
     # Strip LaTeX spacing/sizing/environment commands BEFORE replacing \implies/\Rightarrow with ';'
     s = re.sub(r"\\(?:begin|end)\{aligned\}", " ", s)
     s = re.sub(r"\\(left|right|big|Big|bigg|Bigg)\b", "", s)
-    # Split equation-separating '\ ' (backslash-space) when followed by a variable assignment like '\ S_2='
-    s = re.sub(r"\\\s+(?=[A-Za-z][A-Za-z0-9_]*\s*=|\(?[0-9A-Za-z])", ";", s)
+    s = s.replace("\\\\", ";")
+    # Split equation-separating '\ ' (single backslash-space) when followed by a variable assignment
+    s = re.sub(r"\\\s+(?=[A-Za-z][A-Za-z0-9_]*\s*=)", ";", s)
     s = re.sub(r"\\[,;:! ]", " ", s)
     s = re.sub(r"\\quad\b|\\qquad\b", " ", s)
     # Replace Unicode operators & constants

@@ -13,10 +13,10 @@
     "UNVERIFIABLE": 152
   },
   "intermediateStepCounts": {
-    "FAIL": 52,
-    "PARTIAL": 37,
-    "PASS": 36,
-    "UNVERIFIABLE": 28
+    "UNVERIFIABLE": 34,
+    "FAIL": 45,
+    "PARTIAL": 35,
+    "PASS": 39
   },
   "tamilValidationCounts": {
     "PASS": 140,
@@ -31,21 +31,14 @@
       "section": "3.practice",
       "validation_method": "algebra_solve_equation",
       "answer_status": "PASS",
-      "step_status": "FAIL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
       "existing_result": "x=2, 3",
-      "discrepancy": "Step=[{'stepIndex': 2, 'line': 'x=2 => x=3', 'lhs': 'x=[2]', 'rhs': 'x=[3]'}]",
+      "discrepancy": "",
       "stepChecks": {
-        "checkedChains": 1,
+        "checkedChains": 0,
         "passedChains": 0,
-        "failedChains": [
-          {
-            "stepIndex": 2,
-            "line": "x=2 => x=3",
-            "lhs": "x=[2]",
-            "rhs": "x=[3]"
-          }
-        ],
+        "failedChains": [],
         "unparsedSteps": [
           1
         ]
@@ -92,11 +85,12 @@
       "existing_result": "(x, y, z) = (1/2, 1/3, 1/4)",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 5,
-        "passedChains": 5,
+        "checkedChains": 3,
+        "passedChains": 3,
         "failedChains": [],
         "unparsedSteps": [
-          0
+          0,
+          3
         ]
       },
       "tamilFlags": [
@@ -114,11 +108,12 @@
       "existing_result": "(x, y, z) = (35, 30, 25)",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 8,
-        "passedChains": 8,
+        "checkedChains": 6,
+        "passedChains": 6,
         "failedChains": [],
         "unparsedSteps": [
-          1
+          1,
+          2
         ]
       },
       "tamilFlags": [
@@ -247,7 +242,7 @@
         "failedChains": [
           {
             "stepIndex": 0,
-            "line": "(2)  100z+10y+x=5(100x+10y+z)+46",
+            "line": "100z+10y+x=5(100x+10y+z)+46",
             "lhs": "x + 10*y + 100*z",
             "rhs": "500*x + 50*y + 5*z + 46"
           }
@@ -1853,8 +1848,8 @@
       "existing_result": "−1/3, −10/3",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 3,
-        "passedChains": 1,
+        "checkedChains": 2,
+        "passedChains": 0,
         "failedChains": [
           {
             "stepIndex": 0,
@@ -1906,8 +1901,8 @@
       "existing_result": "−1/4, 2",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 8,
-        "passedChains": 6,
+        "checkedChains": 6,
+        "passedChains": 4,
         "failedChains": [
           {
             "stepIndex": 2,
@@ -1923,7 +1918,8 @@
           }
         ],
         "unparsedSteps": [
-          0
+          0,
+          1
         ]
       },
       "tamilFlags": []
@@ -1939,8 +1935,8 @@
       "existing_result": "−2, 9/2",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 9,
-        "passedChains": 6,
+        "checkedChains": 5,
+        "passedChains": 2,
         "failedChains": [
           {
             "stepIndex": 0,
@@ -1961,7 +1957,10 @@
             "rhs": "p=[9/2]"
           }
         ],
-        "unparsedSteps": []
+        "unparsedSteps": [
+          0,
+          1
+        ]
       },
       "tamilFlags": []
     },
@@ -1976,8 +1975,8 @@
       "existing_result": "−2, 9",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 10,
-        "passedChains": 5,
+        "checkedChains": 7,
+        "passedChains": 3,
         "failedChains": [
           {
             "stepIndex": 1,
@@ -2002,15 +2001,10 @@
             "line": "a=9: \\sqrt{9\\times 2}=\\sqrt{18}=3\\sqrt{2}",
             "lhs": "3*sqrt(2)/2",
             "rhs": "3*sqrt(2)"
-          },
-          {
-            "stepIndex": 2,
-            "line": "a=-2: \\sqrt{(-2)(-9)}=\\sqrt{18}=3\\sqrt{2} => a=9: \\sqrt{9\\times 2}=\\sqrt{18}=3\\sqrt{2}",
-            "lhs": "a=[-sqrt(2)/3]",
-            "rhs": "a=[3*sqrt(2)/2]"
           }
         ],
         "unparsedSteps": [
+          0,
           1
         ]
       },
@@ -2027,8 +2021,8 @@
       "existing_result": "−√2, −5/√2",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 9,
-        "passedChains": 7,
+        "checkedChains": 7,
+        "passedChains": 5,
         "failedChains": [
           {
             "stepIndex": 2,
@@ -2044,7 +2038,8 @@
           }
         ],
         "unparsedSteps": [
-          0
+          0,
+          1
         ]
       },
       "tamilFlags": []
@@ -2060,10 +2055,11 @@
       "existing_result": "1/4, 1/4",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 3,
-        "passedChains": 3,
+        "checkedChains": 1,
+        "passedChains": 1,
         "failedChains": [],
         "unparsedSteps": [
+          1,
           2
         ]
       },
@@ -2080,8 +2076,8 @@
       "existing_result": "6",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 4,
-        "passedChains": 2,
+        "checkedChains": 2,
+        "passedChains": 0,
         "failedChains": [
           {
             "stepIndex": 1,
@@ -2097,6 +2093,7 @@
           }
         ],
         "unparsedSteps": [
+          0,
           1,
           2
         ]
@@ -2109,15 +2106,17 @@
       "section": "3.11",
       "validation_method": "algebra_unverified_stem",
       "answer_status": "UNVERIFIABLE",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
       "existing_result": "2/3, 2/3",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 2,
-        "passedChains": 2,
+        "checkedChains": 0,
+        "passedChains": 0,
         "failedChains": [],
         "unparsedSteps": [
+          0,
+          1,
           2
         ]
       },
@@ -2134,8 +2133,8 @@
       "existing_result": "−1, 3",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 13,
-        "passedChains": 9,
+        "checkedChains": 5,
+        "passedChains": 2,
         "failedChains": [
           {
             "stepIndex": 0,
@@ -2154,15 +2153,13 @@
             "line": "5x+7=3x^2-x-2",
             "lhs": "5*x + 7",
             "rhs": "3*x**2 - x - 2"
-          },
-          {
-            "stepIndex": 2,
-            "line": "x=1+2=3 => x=1-2=-1",
-            "lhs": "x=[3]",
-            "rhs": "x=[-1]"
           }
         ],
-        "unparsedSteps": []
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
       },
       "tamilFlags": []
     },
@@ -2172,21 +2169,14 @@
       "section": "3.11",
       "validation_method": "algebra_unverified_stem",
       "answer_status": "UNVERIFIABLE",
-      "step_status": "FAIL",
+      "step_status": "PASS",
       "tamil_status": "PASS",
       "existing_result": "2, 1/2",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 6,
+        "checkedChains": 5,
         "passedChains": 5,
-        "failedChains": [
-          {
-            "stepIndex": 2,
-            "line": "x=\\dfrac{5+3}{4}=\\dfrac{8}{4}=2 => x=\\dfrac{5-3}{4}=\\dfrac{2}{4}=\\dfrac{1}{2}",
-            "lhs": "x=[2]",
-            "rhs": "x=[1/2]"
-          }
-        ],
+        "failedChains": [],
         "unparsedSteps": []
       },
       "tamilFlags": []
@@ -2215,21 +2205,14 @@
       "section": "3.11",
       "validation_method": "algebra_unverified_stem",
       "answer_status": "UNVERIFIABLE",
-      "step_status": "FAIL",
+      "step_status": "PASS",
       "tamil_status": "PASS",
       "existing_result": "−1, 23/3",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 6,
+        "checkedChains": 5,
         "passedChains": 5,
-        "failedChains": [
-          {
-            "stepIndex": 2,
-            "line": "y=\\dfrac{20+26}{6}=\\dfrac{46}{6}=\\dfrac{23}{3} => y=\\dfrac{20-26}{6}=\\dfrac{-6}{6}=-1",
-            "lhs": "y=[23/3]",
-            "rhs": "y=[-1]"
-          }
-        ],
+        "failedChains": [],
         "unparsedSteps": []
       },
       "tamilFlags": []
@@ -2270,10 +2253,11 @@
       "existing_result": "3.75 seconds",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 3,
-        "passedChains": 3,
+        "checkedChains": 1,
+        "passedChains": 1,
         "failedChains": [],
         "unparsedSteps": [
+          0,
           2
         ]
       },
@@ -2290,8 +2274,8 @@
       "existing_result": "5, −1/5",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 8,
-        "passedChains": 4,
+        "checkedChains": 3,
+        "passedChains": 0,
         "failedChains": [
           {
             "stepIndex": 0,
@@ -2310,15 +2294,12 @@
             "line": "5x^2-5=24x",
             "lhs": "5*x**2 - 5",
             "rhs": "24*x"
-          },
-          {
-            "stepIndex": 3,
-            "line": "x=5 => x=-\\dfrac{1}{5}",
-            "lhs": "x=[5]",
-            "rhs": "x=[-1/5]"
           }
         ],
-        "unparsedSteps": []
+        "unparsedSteps": [
+          1,
+          2
+        ]
       },
       "tamilFlags": []
     },
@@ -2328,16 +2309,18 @@
       "section": "3.12",
       "validation_method": "algebra_unverified_stem",
       "answer_status": "UNVERIFIABLE",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
       "existing_result": "1.5 m",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 4,
-        "passedChains": 4,
+        "checkedChains": 0,
+        "passedChains": 0,
         "failedChains": [],
         "unparsedSteps": [
           0,
+          1,
+          2,
           3
         ]
       },
@@ -2354,8 +2337,8 @@
       "existing_result": "45 km/hr",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 6,
-        "passedChains": 3,
+        "checkedChains": 3,
+        "passedChains": 0,
         "failedChains": [
           {
             "stepIndex": 0,
@@ -2377,6 +2360,7 @@
           }
         ],
         "unparsedSteps": [
+          2,
           3
         ]
       },
@@ -2393,8 +2377,8 @@
       "existing_result": "20 years, 10 years",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 5,
-        "passedChains": 3,
+        "checkedChains": 2,
+        "passedChains": 0,
         "failedChains": [
           {
             "stepIndex": 3,
@@ -2410,7 +2394,9 @@
           }
         ],
         "unparsedSteps": [
-          0
+          0,
+          1,
+          2
         ]
       },
       "tamilFlags": []
@@ -2426,8 +2412,8 @@
       "existing_result": "Yes, 12 m, 16 m",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 5,
-        "passedChains": 3,
+        "checkedChains": 2,
+        "passedChains": 0,
         "failedChains": [
           {
             "stepIndex": 2,
@@ -2443,6 +2429,7 @@
           }
         ],
         "unparsedSteps": [
+          1,
           2,
           3
         ]
@@ -2460,8 +2447,8 @@
       "existing_result": "72",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 10,
-        "passedChains": 6,
+        "checkedChains": 6,
+        "passedChains": 2,
         "failedChains": [
           {
             "stepIndex": 0,
@@ -2488,7 +2475,10 @@
             "rhs": "18*x**2"
           }
         ],
-        "unparsedSteps": []
+        "unparsedSteps": [
+          1,
+          2
+        ]
       },
       "tamilFlags": []
     },
@@ -2503,8 +2493,8 @@
       "existing_result": "28 m, 42 m",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 6,
-        "passedChains": 4,
+        "checkedChains": 3,
+        "passedChains": 1,
         "failedChains": [
           {
             "stepIndex": 1,
@@ -2520,6 +2510,7 @@
           }
         ],
         "unparsedSteps": [
+          1,
           2,
           3
         ]
@@ -2532,15 +2523,17 @@
       "section": "3.12",
       "validation_method": "algebra_unverified_stem",
       "answer_status": "UNVERIFIABLE",
-      "step_status": "PARTIAL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
       "existing_result": "2 m",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 4,
-        "passedChains": 4,
+        "checkedChains": 0,
+        "passedChains": 0,
         "failedChains": [],
         "unparsedSteps": [
+          1,
+          2,
           3
         ]
       },
@@ -2557,8 +2550,8 @@
       "existing_result": "7 cm",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 5,
-        "passedChains": 3,
+        "checkedChains": 2,
+        "passedChains": 0,
         "failedChains": [
           {
             "stepIndex": 2,
@@ -2575,6 +2568,7 @@
         ],
         "unparsedSteps": [
           0,
+          1,
           2,
           3
         ]
@@ -2687,22 +2681,18 @@
       "section": "3.13",
       "validation_method": "algebra_unverified_stem",
       "answer_status": "UNVERIFIABLE",
-      "step_status": "FAIL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
       "existing_result": "2, 3",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 3,
-        "passedChains": 2,
-        "failedChains": [
-          {
-            "stepIndex": 3,
-            "line": "k=2 => k=3",
-            "lhs": "k=[2]",
-            "rhs": "k=[3]"
-          }
-        ],
-        "unparsedSteps": []
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          1,
+          2
+        ]
       },
       "tamilFlags": []
     },
@@ -2712,22 +2702,18 @@
       "section": "3.13",
       "validation_method": "algebra_unverified_stem",
       "answer_status": "UNVERIFIABLE",
-      "step_status": "FAIL",
+      "step_status": "UNVERIFIABLE",
       "tamil_status": "PASS",
       "existing_result": "1, 1/9",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 6,
-        "passedChains": 5,
-        "failedChains": [
-          {
-            "stepIndex": 3,
-            "line": "k=1 => k=\\dfrac{1}{9}",
-            "lhs": "k=[1]",
-            "rhs": "k=[1/9]"
-          }
-        ],
-        "unparsedSteps": []
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          1,
+          2
+        ]
       },
       "tamilFlags": []
     },
@@ -2972,11 +2958,12 @@
       "existing_result": "x² − 3x − 1 = 0",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 4,
-        "passedChains": 4,
+        "checkedChains": 3,
+        "passedChains": 3,
         "failedChains": [],
         "unparsedSteps": [
-          0
+          0,
+          2
         ]
       },
       "tamilFlags": []
@@ -3008,21 +2995,14 @@
       "section": "3.14",
       "validation_method": "algebra_unverified_stem",
       "answer_status": "UNVERIFIABLE",
-      "step_status": "FAIL",
+      "step_status": "PASS",
       "tamil_status": "PASS",
       "existing_result": "−15, 15",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 4,
-        "passedChains": 3,
-        "failedChains": [
-          {
-            "stepIndex": 3,
-            "line": "a = -15 => a = 15",
-            "lhs": "a=[-15]",
-            "rhs": "a=[15]"
-          }
-        ],
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
         "unparsedSteps": []
       },
       "tamilFlags": []
@@ -3033,40 +3013,17 @@
       "section": "3.14",
       "validation_method": "algebra_unverified_stem",
       "answer_status": "UNVERIFIABLE",
-      "step_status": "FAIL",
+      "step_status": "PARTIAL",
       "tamil_status": "PASS",
       "existing_result": "−24, 24",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 9,
-        "passedChains": 5,
-        "failedChains": [
-          {
-            "stepIndex": 1,
-            "line": "\\alpha+2\\alpha=-\\dfrac{-a}{2} => 3\\alpha=\\dfrac{a}{2}",
-            "lhs": "a=[4]",
-            "rhs": "a=[6]"
-          },
-          {
-            "stepIndex": 2,
-            "line": "α^{2} = 16 => α = 4",
-            "lhs": "α=[-4, 4]",
-            "rhs": "α=[4]"
-          },
-          {
-            "stepIndex": 2,
-            "line": "α = 4 => α = -4",
-            "lhs": "α=[4]",
-            "rhs": "α=[-4]"
-          },
-          {
-            "stepIndex": 3,
-            "line": "a = 6(-4) = -24 => a = 6(4) = 24",
-            "lhs": "a=[-24]",
-            "rhs": "a=[24]"
-          }
-        ],
-        "unparsedSteps": []
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          2
+        ]
       },
       "tamilFlags": []
     },
@@ -3081,8 +3038,8 @@
       "existing_result": "−36",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 3,
-        "passedChains": 2,
+        "checkedChains": 1,
+        "passedChains": 0,
         "failedChains": [
           {
             "stepIndex": 3,
@@ -3288,8 +3245,8 @@
       "existing_result": "360",
       "discrepancy": "Stem requires specialized or non-parsed structure.",
       "stepChecks": {
-        "checkedChains": 6,
-        "passedChains": 6,
+        "checkedChains": 4,
+        "passedChains": 4,
         "failedChains": [],
         "unparsedSteps": []
       },

@@ -10,7 +10,8 @@ from pathlib import Path
 from typing import Any, Dict, List
 
 from .algebra import try_derive_algebra_from_prompt, verify_algebra_answer
-from .coord_geometry import try_derive_coord_from_prompt, verify_coord_answer
+from .ch5_verifier import verify_ch5_answer
+from .derivations_g10_ch5 import CH5_DERIVATION_REGISTRY, Ch5DerivedResult
 from .engine import run_audit as run_ch7_audit
 from .steps import extract_stem_assumptions, validate_steps
 from .tamil_consistency import validate_en_ta_consistency
@@ -49,8 +50,9 @@ def _audit_generic_chapter(
             deriv = try_derive_algebra_from_prompt(q_en)
             ans_status, ans_disc = verify_algebra_answer(item, deriv)
         else:
-            deriv = try_derive_coord_from_prompt(q_en)
-            ans_status, ans_disc = verify_coord_answer(item, deriv)
+            fn = CH5_DERIVATION_REGISTRY.get(qid)
+            deriv = fn() if fn else Ch5DerivedResult(False, "unregistered", "none", notes="No Ch5 derivation.")
+            ans_status, ans_disc = verify_ch5_answer(item, deriv, is_concept=False)
 
         ans_raw = item.get("answer")
         ans_str = str(ans_raw.get("en") if isinstance(ans_raw, dict) else (ans_raw or ""))
@@ -87,8 +89,11 @@ def _audit_generic_chapter(
 
         if mode == "algebra":
             deriv = try_derive_algebra_from_prompt(q_en)
+            c_ans_status, c_ans_disc = "UNVERIFIABLE", ""
         else:
-            deriv = try_derive_coord_from_prompt(q_en)
+            fn = CH5_DERIVATION_REGISTRY.get(cid)
+            deriv = fn() if fn else Ch5DerivedResult(False, "unregistered", "none", notes="No Ch5 derivation.")
+            c_ans_status, c_ans_disc = verify_ch5_answer(concept, deriv, is_concept=True)
 
         records.append(
             {
@@ -96,11 +101,11 @@ def _audit_generic_chapter(
                 "item_type": "concept",
                 "section": str(concept.get("section") or ""),
                 "validation_method": deriv.method,
-                "answer_status": "UNVERIFIABLE",
+                "answer_status": c_ans_status,
                 "step_status": step_res.status,
                 "tamil_status": ta_res.status,
                 "existing_result": f"choice[{concept.get('correct')}]",
-                "discrepancy": f"Step={step_res.failed_chains}" if step_res.status == "FAIL" else "",
+                "discrepancy": c_ans_disc or (f"Step={step_res.failed_chains}" if step_res.status == "FAIL" else ""),
                 "stepChecks": {
                     "checkedChains": step_res.checked_chains,
                     "passedChains": step_res.passed_chains,

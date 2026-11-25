@@ -209,3 +209,13 @@ def test_v1_3_1_100_case_holdout():
     assert s["criticalMissedErrors"] == 0
     assert s["precision"] == 1.0
     assert s["recall"] == 1.0
+
+
+def test_v1_3_2_ch5_coverage():
+    from mathguard.audit_chapters import _audit_generic_chapter, load_all_3_chapters
+
+    b = load_all_3_chapters(REPO_ROOT)
+    ch5_rep = _audit_generic_chapter("5", b["chapters"]["5"], "coord")
+    assert ch5_rep["counts"]["total"] == 110
+    assert ch5_rep["answerVerificationCounts"]["PASS"] >= 105
+    assert ch5_rep["answerVerificationCounts"].get("FAIL", 0) == 0
