@@ -296,7 +296,15 @@ vm.runInNewContext(read('data/textbook-exercises/g10-ch8-ex8-3-q1-q6.js'),ch8Ex8
 vm.runInNewContext(read('data/textbook-exercises/g10-ch8-ex8-3-q7-q13.js'),ch8Ex83Context,{filename:'g10-ch8-ex8-3-q7-q13.js'});
 const ch8Ex83Records=ch8Ex83Context.window.TRIGGLE_CLASSES[10].items;
 const ch8Ex83Ids=ch8Ex83Inv.questions.flatMap(q=>q.parts.length===1&&q.parts[0]==='whole'?['c10-8-ex8-3-q'+q.question]:q.parts.map(p=>'c10-8-ex8-3-q'+q.question+'-'+p));
-const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ch8Ex83Ids,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...ex315Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds,...ch7Ex72Ids,...ch7Ex73Ids,...mensurationIds];
+const ch8PublishedEvidence = [
+  require('../data/textbook-fidelity/g10-ch8-ex8-4.json'),
+  require('../data/textbook-fidelity/g10-ch8-ex8-5.json')
+];
+const ch8PublishedRows = ch8PublishedEvidence.flatMap(exercise => exercise.items);
+const ch8PublishedById = new Map(ch8PublishedRows.map(row => [row.id, row]));
+assert.equal(ch8PublishedById.size, ch8PublishedRows.length);
+const ch8PublishedIds = [...ch8PublishedById.keys()];
+const approvedNewIds=[...approvedEx22,...traceIds,...modularIds,...sequenceIds,...ex25Ids,...ex26Ids,...ex27Ids,...ex28Ids,...ex29Ids,...recoveryIds,...statisticsIds,...followupIds,...statisticsEx82Ids,...ch8Ex83Ids,...ch8PublishedIds,...ex210UnitIds,...ex31Ids,...ex32Ids,...ex33Ids,...ex34Ids,...ex35Ids,...ex36Ids,...ex37Ids,...ex38Ids,...ex39Ids,...ex310Ids,...ex311Ids,...ex312Ids,...ex313Ids,...ex314Ids,...ex315Ids,...geometryNewIds,...geometryEx43NewIds,...ch5Ex51NewIds,...ch5Ex52NewIds,...ch5Ex53NewIds,...ch5Ex54NewIds,...ch5Ex55NewIds,...ch5UnitNewIds,...ch6Ex61NewIds,...ch6Ex62NewIds,...ch6Ex63NewIds,...ch6Ex64NewIds,...ch6Ex65NewIds,...ch6UnitNewIds,...ch7PilotIds,...ch7BIds,...ch7Ex72Ids,...ch7Ex73Ids,...mensurationIds];
 const g9Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q1.json');
 const g9Candidates=require('../../docs/curriculum/grade-9/candidates/g9-ch1-ex1-2-english-34.json');
 const g9Q2Fidelity=require('../data/textbook-fidelity/g9-ch1-ex1-2-q2.json');
@@ -659,6 +667,13 @@ for(const [grade,data] of Object.entries(classes)){
        assert.equal(item.releaseStatus,'english-preview');
        assert(item.q.ta&&item.steps.every(step=>step.ta),'Tamil Exercise 1.2 prompt and explanations '+item.id);
      }
+   }else if (ch8PublishedById.has(item.id)) {
+     const evidence = ch8PublishedById.get(item.id);
+     assert.deepEqual({...item.q}, evidence.textbookPrompt, 'Chapter 8 checked prompt ' + item.id);
+     assert.equal(item.sourceFidelity.status, 'page-visual-checked');
+     assert.equal(item.translationReview, 'pending');
+     assert.ok(item.answer.en && item.answer.ta);
+     assert.ok(item.steps.every(step => step.en && step.ta));
    }else{
      const trace=traceSourceGate.records.find(r=>r.id===item.id);
      if(trace){

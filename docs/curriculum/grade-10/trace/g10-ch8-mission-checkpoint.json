@@ -2,7 +2,7 @@
   "repository": "vigneswaranmba20-afk/Triggle",
   "branch": "codex/grade-10-chapter-8-completion",
   "plannedBranch": "codex/grade-10-chapter-8-completion",
-  "commitSha": "327ec4de48264c5358c5e7b351afc49d6158f229",
+  "commitSha": "3ac0419de7e9ec552d9f5130595a3fa1a234ae5f",
   "inventory": {
     "verification": "Reconciled 75 questions and 94 source tasks against the repository inventory. Its historical statuses are retained separately from current runtime validation.",
     "numberedQuestions": 75,
@@ -1437,8 +1437,9 @@
           "bilingualWorkingTasks": 0
         },
         "currentBranchRuntime": {
-          "englishTasks": 0,
-          "bilingualWorkingTasks": 0
+          "englishTasks": 14,
+          "bilingualWorkingTasks": 14,
+          "sourceBlockedTasks": 1
         }
       },
       {
@@ -1646,7 +1647,6 @@
     ]
   },
   "pending": [
-    "Exercise 8.5",
     "Unit Exercise 8",
     "Exercises 8.1–8.3 gaps",
     "Bilingual concept studio",
@@ -1662,11 +1662,15 @@
     "Downloaded and matched SHA-256 for both 2025 Drive textbooks",
     "Visually checked Exercise 8.4 English PDF page 335 and Tamil PDF pages 347–348",
     "Reconciled all 94 source tasks against the initial runtime",
-    "Authored all 14 solvable Exercise 8.4 tasks in English and Tamil"
+    "Authored all 14 solvable Exercise 8.4 tasks in English and Tamil",
+    "Pushed Exercise 8.4 to the dedicated GitHub branch",
+    "Visually checked Exercise 8.5 English PDF pages 336–337 and Tamil PDF pages 348–349",
+    "Authored all 14 determinate Exercise 8.5 tasks with exact bilingual choices and interactive feedback"
   ],
   "validated": [
     "Repository source inventory accounts for 75 questions and 94 tasks",
-    "Exercise 8.4 source wording, 14 independent answers, bilingual steps, KaTeX rendering, mobile routes and dice-grid figure"
+    "Exercise 8.4 source wording, 14 independent answers, bilingual steps, KaTeX rendering, mobile routes and dice-grid figure",
+    "Exercise 8.5 source wording and choices, independent arithmetic, KaTeX, feedback, and mobile navigation"
   ],
   "blocked": [
     {
@@ -1688,11 +1692,20 @@
     "node site/tools/test_exact_textbook_fidelity.cjs",
     "node site/tools/test_g10_prob_ex8_3.cjs",
     "node site/tools/test_g10_stats_ex8_2_q1_q3.cjs",
-    "node site/tools/test_g10_stats_ex8_2_q4_q8.cjs"
+    "node site/tools/test_g10_stats_ex8_2_q4_q8.cjs",
+    "node site/tools/test_standard_solutions.cjs",
+    "node site/tools/test_g10_ch8_ex8_5.cjs",
+    "CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch8_ex8_5_browser.cjs"
   ],
   "deployment": {
-    "status": "not_attempted"
+    "status": "development_branch_only",
+    "branchUrl": "https://github.com/vigneswaranmba20-afk/Triggle/tree/codex/grade-10-chapter-8-completion"
   },
-  "nextExecutableTask": "Author Exercise 8.5 Q1–10 and Q12–15 from the checked pages, preserve Q11 as a documented ambiguity, then run arithmetic and browser checks.",
-  "baseSha": "327ec4de48264c5358c5e7b351afc49d6158f229"
+  "nextExecutableTask": "Register and validate Unit Exercise 8’s 11 draft tasks, including exact original source tables in both languages.",
+  "baseSha": "327ec4de48264c5358c5e7b351afc49d6158f229",
+  "latestFullTestAttempt": {
+    "suite": "npm test",
+    "result": "blocked by shallow clone",
+    "evidence": "test_trace_reconcile.cjs requires baseline commit 91c56ddfd556cc6e748c39bbfb7861658170da92"
+  }
 }
