@@ -76,8 +76,8 @@ function render(event){
  const item=data.item, geometry=window.TriggleGrade9Geometry?.preservedHints[item.id.slice(9)];
  const legacy=window.TriggleWhyStepG9.hints[item.id] ||
   (item.id.startsWith('g9-ch4-ex') && geometry && {...geometry,step:0,expected:item.steps[0].en});
- const hints=item.geometryConcept === undefined ? [legacy] : item.steps.map((step,index) =>
-  step.why && {...step.why,step:index,expected:step.en});
+ const hints=item.geometryConcept !== undefined || item.setConcept ? item.steps.map((step,index) =>
+  step.why && {...step.why,step:index,expected:step.en}) : [legacy];
  const list=root.querySelectorAll('li.worked-step:not(.final-answer-step)');
  const lang=data.lang==='ta'?'ta':'en';
  for(const hint of hints) appendHint(item,hint,list,lang);

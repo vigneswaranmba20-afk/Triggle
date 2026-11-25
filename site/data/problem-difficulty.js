@@ -5861,7 +5861,14 @@ const metadata={
     "c10-3-ex3-unit-q17-ii": {"grade":10,"level":"medium","basis":"Model crop sales with a matrix","review":"2025-textbook-algebra-source-audit"},
     "c10-3-ex3-unit-q18": {"grade":10,"level":"difficult","basis":"Solve a trigonometric matrix equation","review":"2025-textbook-algebra-source-audit"},
     "c10-3-ex3-unit-q19": {"grade":10,"level":"medium","basis":"Work with matrices","review":"2025-textbook-algebra-source-audit"},
-    "c10-3-ex3-unit-q20": {"grade":10,"level":"difficult","basis":"Work with matrices","review":"2025-textbook-algebra-source-audit"}
+    "c10-3-ex3-unit-q20": {"grade":10,"level":"difficult","basis":"Work with matrices","review":"2025-textbook-algebra-source-audit"},
+    "g9-ch1-ex1.3-q1": {"grade":9,"level":"medium","basis":"Read set membership across four Venn regions","review":"2025-textbook-set-language-source-audit"},
+    "g9-ch1-ex1.3-q2": {"grade":9,"level":"medium","basis":"Compare four set pairs","review":"2025-textbook-set-language-source-audit"},
+    "g9-ch1-ex1.3-q3": {"grade":9,"level":"medium","basis":"Evaluate complements of letter sets","review":"2025-textbook-set-language-source-audit"},
+    "g9-ch1-ex1.3-q4": {"grade":9,"level":"medium","basis":"Evaluate complements of number sets","review":"2025-textbook-set-language-source-audit"},
+    "g9-ch1-ex1.3-q5": {"grade":9,"level":"medium","basis":"Find members in exactly one set","review":"2025-textbook-set-language-source-audit"},
+    "g9-ch1-ex1.3-q6": {"grade":9,"level":"medium","basis":"Interpret three shaded Venn regions","review":"2025-textbook-set-language-source-audit"},
+    "g9-ch1-ex1.3-q7": {"grade":9,"level":"difficult","basis":"Construct six Venn diagrams and compare two","review":"2025-textbook-set-language-source-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
