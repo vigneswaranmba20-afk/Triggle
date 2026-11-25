@@ -415,7 +415,7 @@ const entries=[
         }
       },
       {
-        "en": "Substitute the exponent expressions and y² = xz into x^(b−c) × y^(c−a) × z^(a−b).",
+        "en": "For arbitrary real exponents, assume that x, y and z are positive. Under this condition, substitute the exponent expressions and y² = xz and use the laws of powers.",
         "eq": "x^(−d) × y^(2d) × z^(−d) = (y²/(xz))^d = 1^d = 1",
         "math": {
           "latex": "x^{-d}\\cdot y^{2d}\\cdot z^{-d}=\\left(\\dfrac{y^2}{xz}\\right)^d=1^d=1",
@@ -424,10 +424,10 @@ const entries=[
         }
       }
     ],
-    "answer": "x^(b−c) × y^(c−a) × z^(a−b) = 1 (proved).",
+    "answer": "x^(b−c) × y^(c−a) × z^(a−b) = 1 when x, y, z > 0.",
     "answerMath": {
-      "latex": "x^{b-c}\\times y^{c-a}\\times z^{a-b}=1\\text{ (proved)}.",
-      "fallback": "x^(b−c) × y^(c−a) × z^(a−b) = 1 (proved).",
+      "latex": "x^{b-c}\\times y^{c-a}\\times z^{a-b}=1\\quad(x,y,z>0)",
+      "fallback": "x^(b−c) × y^(c−a) × z^(a−b) = 1 when x, y, z > 0.",
       "display": true
     },
     "kind": "textbook",

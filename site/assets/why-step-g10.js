@@ -98,7 +98,7 @@ function mount(event){
  const authored=lesson.item.steps?.flatMap((step,index)=>step.why?.en
   ? [{...step.why,step:index,expected:step.en}]
   : []);
- const record=window.TriggleWhyStepG10?.hints?.[lesson.item.id]||(authored?.length?authored:null);
+ const record=window.TriggleG10FrontierHints?.[lesson.item.id]||window.TriggleWhyStepG10?.hints?.[lesson.item.id]||(authored?.length?authored:null);
  if(!record)return;
  const hints=(Array.isArray(record)?record:[record]).slice(0,3);
  const allSteps=[...root.querySelectorAll('li.worked-step:not(.final-answer-step)')];

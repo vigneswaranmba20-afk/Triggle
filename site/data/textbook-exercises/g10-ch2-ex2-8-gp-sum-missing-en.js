@@ -44,11 +44,11 @@ const entries=[
     },
     "steps": [
       {
-        "en": "Identify the first term a = 5 and the common ratio r = t₂/t₁ = −3/5. Since r < 1, use the formula Sₙ = a(1 − rⁿ)/(1 − r).",
-        "eq": "a = 5, r = −3/5 < 1, Sₙ = a(1 − rⁿ)/(1 − r)",
+        "en": "Identify the first term a = 5 and the common ratio r = t₂/t₁ = −3/5. Since r ≠ 1, use the finite sum formula Sₙ = a(1 − rⁿ)/(1 − r).",
+        "eq": "a = 5, r = −3/5 ≠ 1, Sₙ = a(1 − rⁿ)/(1 − r)",
         "math": {
-          "latex": "a=5,\\quad r=-\\dfrac{3}{5}<1,\\quad S_n=\\dfrac{a(1-r^n)}{1-r}",
-          "fallback": "a = 5, r = −3/5 < 1, Sₙ = a(1 − rⁿ)/(1 − r)",
+          "latex": "a=5,\\quad r=-\\dfrac{3}{5}\\ne1,\\quad S_n=\\dfrac{a(1-r^n)}{1-r}",
+          "fallback": "a = 5, r = −3/5 ≠ 1, Sₙ = a(1 − rⁿ)/(1 − r)",
           "display": true
         }
       },
@@ -120,11 +120,11 @@ const entries=[
     },
     "steps": [
       {
-        "en": "Identify the first term a = 256 and the common ratio r = 64/256 = 1/4. Since r < 1, use Sₙ = a(1 − rⁿ)/(1 − r).",
-        "eq": "a = 256, r = 64/256 = 1/4 < 1",
+        "en": "Identify the first term a = 256 and the common ratio r = 64/256 = 1/4. Since r ≠ 1, use the finite sum formula Sₙ = a(1 − rⁿ)/(1 − r).",
+        "eq": "a = 256, r = 64/256 = 1/4 ≠ 1",
         "math": {
-          "latex": "a=256,\\quad r=\\dfrac{64}{256}=\\dfrac{1}{4}<1",
-          "fallback": "a = 256, r = 64/256 = 1/4 < 1",
+          "latex": "a=256,\\quad r=\\dfrac{64}{256}=\\dfrac{1}{4}\\ne1",
+          "fallback": "a = 256, r = 64/256 = 1/4 ≠ 1",
           "display": true
         }
       },
@@ -496,7 +496,7 @@ const entries=[
         }
       },
       {
-        "en": "Apply the finite G.P. sum formula a(rⁿ − 1)/(r − 1) to the first series (a = x², r = x) and the second series (a = y², r = y).",
+        "en": "Apply the finite sum formula to the two series when x ≠ 1 and y ≠ 1. If a ratio is 1, its sum is n copies of 1, and the corresponding quotient in the printed formula is undefined.",
         "eq": "(x − y)Sₙ = [x²(xⁿ − 1)/(x − 1) − y²(yⁿ − 1)/(y − 1)]",
         "math": {
           "latex": "(x-y)S_n=\\left[\\dfrac{x^2(x^n-1)}{x-1}-\\dfrac{y^2(y^n-1)}{y-1}\\right]",
