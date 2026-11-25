@@ -106,6 +106,34 @@ async function checkQuestion(page, row, lang) {
       console.log('PASS Geometry completion at '+width+'px in both languages.');
     }
     assert.equal(checked,154);
+    const figures = await browser.newPage();
+    try {
+      const files = require('node:fs').readdirSync('site/assets/grade10-geometry')
+        .filter(name=>/^(ex4-[45]|unit)-/.test(name));
+      assert.equal(files.length,17);
+      for (const file of files) {
+        await figures.goto(site.base+'/assets/grade10-geometry/'+file);
+        const issues = await figures.evaluate(() => {
+          const labels = [...document.querySelectorAll('svg text')].map(node=>({
+            name:node.textContent, box:node.getBBox()
+          }));
+          const problems = [];
+          for (const [i,{name,box:a}] of labels.entries()) {
+            if (a.x<0 || a.y<0 || a.x+a.width>320 || a.y+a.height>220) problems.push(name+' clipped');
+            for (const {name:other,box:b} of labels.slice(i+1)) {
+              const overlapX=Math.min(a.x+a.width,b.x+b.width)-Math.max(a.x,b.x);
+              const overlapY=Math.min(a.y+a.height,b.y+b.height)-Math.max(a.y,b.y);
+              if (overlapX>2 && overlapY>2) problems.push(name+' overlaps '+other);
+            }
+          }
+          return problems;
+        });
+        assert.deepEqual(issues,[],file);
+      }
+      console.log('PASS all 17 new Geometry figures have unclipped, nonoverlapping labels.');
+    } finally {
+      await figures.close();
+    }
   } finally {
     await browser.close();
     await site.close();

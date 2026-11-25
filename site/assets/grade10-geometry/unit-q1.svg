@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
   <title id="title">Two altitudes</title>
   <desc id="desc">BD is perpendicular to AC and CE is perpendicular to AB.</desc>
-  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M41 177 L276 177 L173 51 Z" stroke="#403876"/><path d="M276 177 L163.962 59.627" stroke="#326688"/><path d="M173 51 L173 177" stroke="#326688"/><path d="M155.282 67.9127 L163.568 76.593 L172.248 68.3073" stroke="#403876"/><path d="M173 166 L185 166 L185 177" stroke="#403876"/></g>
-  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="25" y="195">A</text><text x="280" y="195">B</text><text x="178" y="46">C</text><text x="141.962" y="57.627">D</text><text x="169" y="196">E</text><text x="179" y="62.0952">F</text></g>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M32 182 L269 182 L126 43 Z" stroke="#403876"/><path d="M269 182 L106.373 72.0223" stroke="#326688"/><path d="M126 43 L126 182" stroke="#326688"/><path d="M99.6511 81.9627 L109.592 88.6849 L116.314 78.7446" stroke="#403876"/><path d="M126 170 L138 170 L138 182" stroke="#403876"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="16" y="200">A</text><text x="273" y="200">B</text><text x="131" y="38">C</text><text x="84.3734" y="70.0223">D</text><text x="122" y="201">E</text><text x="133" y="91.295">F</text></g>
 </svg>
