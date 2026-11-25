@@ -15,6 +15,7 @@ from mathguard.benchmark import run_benchmark
 from mathguard.benchmark_v1_1 import run_v1_1_benchmark
 from mathguard.benchmark_v1_2 import run_v1_2_benchmark
 from mathguard.benchmark_v1_3_adversarial import run_adversarial_benchmark
+from mathguard.benchmark_v1_3_1_holdout import run_holdout_100
 from mathguard.coord_geometry import are_collinear, distance, midpoint, slope, triangle_area
 from mathguard.corrector import propose_and_verify_correction
 from mathguard.derivations_g10_ch7 import DerivedResult
@@ -195,5 +196,16 @@ def test_v1_3_186_case_adversarial_benchmark():
     s = res["summary"]
     assert s["total"] == 186
     assert s["falsePositives"] == 0
-    assert s["precision"] >= 0.98
-    assert s["recall"] >= 0.98
+    assert s["criticalMissedErrors"] == 0
+    assert s["precision"] == 1.0
+    assert s["recall"] == 1.0
+
+
+def test_v1_3_1_100_case_holdout():
+    res = run_holdout_100()
+    s = res["summary"]
+    assert s["total"] == 100
+    assert s["falsePositives"] == 0
+    assert s["criticalMissedErrors"] == 0
+    assert s["precision"] == 1.0
+    assert s["recall"] == 1.0

@@ -3,16 +3,16 @@
   "engine": "TRACE MathGuard V1.3 Adversarial",
   "summary": {
     "total": 186,
-    "tp": 154,
+    "tp": 156,
     "fp": 0,
-    "fn": 2,
+    "fn": 0,
     "tn": 30,
     "precision": 1.0,
-    "recall": 0.9872,
+    "recall": 1.0,
     "falsePositives": 0,
-    "falseNegatives": 2,
-    "criticalMissedErrors": 2,
-    "executionTimeMs": 2948.97
+    "falseNegatives": 0,
+    "criticalMissedErrors": 0,
+    "executionTimeMs": 3308.17
   },
   "cases": [
     {
@@ -251,7 +251,7 @@
       "category": "incorrect_cancellation",
       "is_error": true,
       "critical": true,
-      "flagged": false
+      "flagged": true
     },
     {
       "caseId": "adv-canc-09",
@@ -692,7 +692,7 @@
       "category": "incorrect_theorem",
       "is_error": true,
       "critical": true,
-      "flagged": false
+      "flagged": true
     },
     {
       "caseId": "adv-thm-07",

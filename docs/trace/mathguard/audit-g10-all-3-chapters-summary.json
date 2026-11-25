@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "engine": "TRACE MathGuard V1.3",
   "performance": {
-    "totalExecutionTimeMs": 27538.84,
-    "peakMemoryMB": 63.49
+    "totalExecutionTimeMs": 30898.14,
+    "peakMemoryMB": 64.1
   },
   "chapters": {
     "ch3_algebra": {
@@ -18,9 +18,9 @@
       },
       "intermediateStepCounts": {
         "FAIL": 52,
-        "PASS": 43,
-        "UNVERIFIABLE": 29,
-        "PARTIAL": 29
+        "PARTIAL": 37,
+        "PASS": 36,
+        "UNVERIFIABLE": 28
       },
       "tamilValidationCounts": {
         "PASS": 140,
@@ -41,9 +41,9 @@
       },
       "intermediateStepCounts": {
         "PASS": 9,
-        "FAIL": 83,
-        "UNVERIFIABLE": 15,
-        "PARTIAL": 3
+        "FAIL": 79,
+        "PARTIAL": 4,
+        "UNVERIFIABLE": 18
       },
       "tamilValidationCounts": {
         "PASS": 108,
@@ -64,9 +64,9 @@
       },
       "intermediateStepCounts": {
         "PASS": 41,
-        "FAIL": 2,
+        "FAIL": 1,
         "PARTIAL": 12,
-        "UNVERIFIABLE": 16
+        "UNVERIFIABLE": 17
       },
       "tamilValidationCounts": {
         "PASS": 50,

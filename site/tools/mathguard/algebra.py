@@ -35,10 +35,14 @@ def solve_quadratic(expr: sp.Expr, var: sp.Symbol) -> List[sp.Expr]:
 
 
 def excluded_values(expr: sp.Expr, var: sp.Symbol) -> List[sp.Expr]:
-    _, den = sp.together(expr).as_numer_denom()
-    if not den.has(var):
+    from .symbolic import _normalize_symbols
+
+    n_expr = _normalize_symbols(expr)
+    n_var = sp.Symbol(var.name)
+    _, den = sp.together(n_expr).as_numer_denom()
+    if not den.has(n_var):
         return []
-    return sp.solve(sp.Eq(den, 0), var)
+    return sp.solve(sp.Eq(den, 0), n_var)
 
 
 def try_derive_algebra_from_prompt(q_en: str) -> AlgebraDerivation:

@@ -71,6 +71,8 @@ def preprocess_math_text(text: str) -> str:
     # Strip LaTeX spacing/sizing/environment commands BEFORE replacing \implies/\Rightarrow with ';'
     s = re.sub(r"\\(?:begin|end)\{aligned\}", " ", s)
     s = re.sub(r"\\(left|right|big|Big|bigg|Bigg)\b", "", s)
+    # Split equation-separating '\ ' (backslash-space) when followed by a variable assignment like '\ S_2='
+    s = re.sub(r"\\\s+(?=[A-Za-z][A-Za-z0-9_]*\s*=|\(?[0-9A-Za-z])", ";", s)
     s = re.sub(r"\\[,;:! ]", " ", s)
     s = re.sub(r"\\quad\b|\\qquad\b", " ", s)
     # Replace Unicode operators & constants
@@ -80,6 +82,12 @@ def preprocess_math_text(text: str) -> str:
     s = s.replace("√", r"\sqrt ")
     s = s.replace("≈", "=").replace(r"\approx", "=")
     s = s.replace("⇒", ";").replace("=>", ";").replace(r"\Rightarrow", ";").replace(r"\Longrightarrow", ";").replace(r"\implies", ";")
+    # Convert prose logical connectors ('or', 'and', 'so', 'then') into ';'
+    s = re.sub(r"\b(?:or|and|so|then)\b", ";", s, flags=re.I)
+    # Normalize function notation like f(x), g(x), p(a) -> f_x, g_x, p_a
+    s = re.sub(r"\b([fgpFGP])\(\s*([A-Za-z])\s*\)", r"\1_\2", s)
+    # Strip leading equation numbering like "(1) " or "(2) " at start of line/semicolon
+    s = re.sub(r"(?:^|(?<=;))\s*\(\d+\)\s*", "", s)
     # Expand LaTeX shorthand fractions like \dfrac43 or \frac13 -> \dfrac{4}{3}
     s = re.sub(r"\\(d?frac|tfrac)\s*([0-9A-Za-z])\s*([0-9A-Za-z])", r"\\\1{\2}{\3}", s)
     # Strip thousands commas inside numbers like 1,812,000

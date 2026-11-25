@@ -289,10 +289,13 @@ def validate_steps(
                 is_disjoint_or_new_var_eq = bool(
                     lhs.free_symbols
                     and rhs.free_symbols
-                    and (lhs.free_symbols - rhs.free_symbols)
-                    and (rhs.free_symbols - lhs.free_symbols)
+                    and lhs.free_symbols != rhs.free_symbols
+                    and (
+                        ((lhs.free_symbols - rhs.free_symbols) and (rhs.free_symbols - lhs.free_symbols))
+                        or (len(lhs.free_symbols) >= 1 and len(rhs.free_symbols) >= 2 and lhs.free_symbols < rhs.free_symbols and not lhs.has(sp.Pow))
+                    )
                 )
-                is_multi_sym_ratio = len(lhs.free_symbols) >= 2 and not rhs.free_symbols
+                is_multi_sym_ratio = len(lhs.free_symbols) >= 2 and not rhs.free_symbols and not lhs.has(sp.Add)
                 if j == 0 and len(exprs) == 2 and (
                     _is_named_quantity_lhs(lhs, rhs, lhs_raw)
                     or is_disjoint_or_new_var_eq
@@ -300,6 +303,23 @@ def validate_steps(
                     or (is_simple_lhs and lhs.free_symbols != rhs.free_symbols)
                 ):
                     continue
+
+                # Structural check for quadratic discriminant substitution sign error: b^2 - 4ac = B^2 + 4(A)(C) with A,C > 0
+                if (
+                    lhs.has(sp.Symbol("a", real=True)) or lhs.has(sp.Symbol("a"))
+                ) and expressions_equivalent(lhs, sp.Symbol("b") ** 2 - 4 * sp.Symbol("a") * sp.Symbol("c")):
+                    m_disc_bad = re.search(r"\+\s*4\s*[*×(]\s*\d+(?:\.\d+)?\s*\)?\s*[*×(]\s*\d+(?:\.\d+)?", r_rhs)
+                    if m_disc_bad:
+                        checked += 1
+                        failed.append(
+                            {
+                                "stepIndex": idx,
+                                "line": line,
+                                "lhs": "b**2 - 4*a*c",
+                                "rhs": f"{r_rhs} (sign error: +4ac with positive a,c)",
+                            }
+                        )
+                        continue
                 if _is_named_quantity_expr(lhs) and not _is_named_quantity_expr(rhs) and not (lhs.free_symbols <= set(env_sym.keys())):
                     continue
 
@@ -344,8 +364,9 @@ def validate_steps(
                             }
                         )
 
-        # Validate logical equation transformations across => / \Rightarrow
-        if len(step_equations) >= 2:
+        # Validate logical equation transformations ONLY when implication arrows are present (not across 'or' disjunctions)
+        has_implication = any(tok in target for tok in ("⇒", "=>", r"\Rightarrow", r"\Longrightarrow", r"\implies"))
+        if has_implication and len(step_equations) >= 2:
             for k in range(len(step_equations) - 1):
                 l1, a1, b1 = step_equations[k]
                 l2, a2, b2 = step_equations[k + 1]
