@@ -20,6 +20,46 @@ const exercises = [
 ];
 
 const question = page => new URL(page.url()).searchParams.get('question');
+const conceptLinks = [
+  [2, 'congruence', ['c10-2-ex2-3-q1-i']],
+  [4, 'pythagoras', ['c10-4-ex4-3-q6']],
+  [4, 'circles-tangents', ['c10-4-ex4-4-q1', 'c10-4-ex4-4-q11']],
+  [4, 'concurrency', ['c10-4-ex4-4-q9', 'c10-4-unit-q3']],
+  [5, 'distance-midpoint-centroid', ['c10-5-5-practice-20', 'c10-5-ex5-1-q8']],
+  [5, 'area-triangle', ['c10-5-ex5-1-q1-i']],
+  [5, 'collinearity', ['c10-5-ex5-1-q2-i']],
+  [5, 'area-quadrilateral', ['c10-5-ex5-1-q5-i']],
+  [5, 'inclination-slope', ['c10-5-ex5-2-q1-i']],
+  [5, 'parallel-perpendicular-slopes', ['c10-5-ex5-2-q9-i', 'c10-5-ex5-2-q10']],
+  [5, 'axes-and-parallel-lines', ['c10-5-ex5-3-q1-i', 'c10-5-ex5-3-q1-ii']],
+  [5, 'slope-intercept-form', ['c10-5-ex5-3-q3']],
+  [5, 'point-slope-and-two-point', ['c10-5-ex5-3-q7-i', 'c10-5-ex5-3-q10']],
+  [5, 'intercept-form', ['c10-5-ex5-3-q12-i']],
+  [5, 'general-form', ['c10-5-ex5-4-q1-i']],
+  [5, 'parallel-perpendicular-general', ['c10-5-ex5-4-q5', 'c10-5-unit-q8']],
+];
+
+async function checkConceptLinks(page, base, language) {
+  for (const [chapter, stage, expected] of conceptLinks) {
+    const chapterId = 'g10-ch' + chapter;
+    const index = await page.evaluate(({chapter, id}) =>
+      window['TRIGGLE_G10_CH' + chapter + '_PATH'].stages.findIndex(stage => stage.id === id),
+    {chapter, id: chapterId + '-' + stage});
+    assert(index >= 0, stage + ' remains registered');
+    const url = `${base}/index.html?class=10&chapter=${chapterId}&section=concepts&concept=${index}`;
+    await page.goto(url, {waitUntil: 'domcontentloaded'});
+    const links = page.locator('#chapterSectionContent .g10ch2-practice-link');
+    assert.equal(await links.count(), expected.length, stage);
+    for (const [position, id] of expected.entries()) {
+      const link = links.nth(position);
+      assert(await link.isVisible(), stage + ' has a visible practice link');
+      assert.match(await link.innerText(), language === 'ta' ? /\p{Script=Tamil}/u : /Solve|Try/);
+      await link.evaluate(button => button.click());
+      assert.equal(question(page), id);
+      if (position < expected.length - 1) await page.goBack({waitUntil: 'domcontentloaded'});
+    }
+  }
+}
 
 async function checkExercise(page, base, {grade, chapter, number, prefix, sequence}, language) {
   const ids = sequence.split(' ').map(suffix => prefix + suffix);
@@ -61,11 +101,12 @@ async function checkExercise(page, base, {grade, chapter, number, prefix, sequen
         try {
           const page = await context.newPage();
           for (const exercise of exercises) await checkExercise(page, live || local.base, exercise, language);
+          await checkConceptLinks(page, live || local.base, language);
         } finally {
           await context.close();
         }
       }
-      console.log(`65 cards in textbook order with bilingual chapter entry, breadcrumbs, boundaries and retained progress at ${width}px.`);
+      console.log(`65 cards in source order and 16 concept paths, bilingual, with boundaries and retained progress at ${width}px.`);
     }));
   } finally {
     await browser.close();

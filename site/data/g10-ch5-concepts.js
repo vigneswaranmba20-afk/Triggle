@@ -118,10 +118,11 @@ window.TRIGGLE_G10_CH5_PATH={
       },
       "explainAfterAttempt": true,
       "connect": {
-        "en": "These recall formulas power every coordinate check ahead—try the interactive Midpoint practice question right away, and watch for upcoming Exercise 5.1 triangle proofs that compare midpoints and side lengths.",
-        "ta": "இவ்வடிப்படைச் சூத்திரங்கள் அடுத்து வரும் அனைத்து ஆயத்தொலைக் கணக்குகளுக்கும் உதவுகின்றன—நடுப்புள்ளி பயிற்சி வினாவை இப்போது முயற்சிக்கவும்."
+        "en": "Practise finding a midpoint, then work backwards from three midpoints to find the triangle's vertices in Exercise 5.1 Q8.",
+        "ta": "முதலில் நடுப்புள்ளியைக் காணப் பயிலுங்கள். பிறகு பயிற்சி 5.1 வினா 8-இல் கொடுத்துள்ள மூன்று நடுப்புள்ளிகளிலிருந்து முக்கோணத்தின் உச்சிகளைக் காணுங்கள்."
       },
       "practiceId": "c10-5-5-practice-20",
+      "secondaryPracticeId": "c10-5-ex5-1-q8",
       "relatedExercise": "5.1"
     },
     {
@@ -232,6 +233,7 @@ window.TRIGGLE_G10_CH5_PATH={
         "en": "In Exercise 5.1 (Q1–Q3, Q8, Q10), always plot a quick mental sketch first to pick counter-clockwise order so signs stay cleaner.",
         "ta": "பயிற்சி 5.1 (வினா 1–3, 8, 10) கணக்குகளில் புள்ளிகளை இடஞ்சுழியாக வரிசைப்படுத்தி எளிதாகப் பரப்பளவு காணலாம்."
       },
+      "practiceId": "c10-5-ex5-1-q1-i",
       "relatedExercise": "5.1"
     },
     {
@@ -341,6 +343,7 @@ window.TRIGGLE_G10_CH5_PATH={
         "en": "Exercise 5.1 Q2, Q4, and Q7 test collinearity directly using Area = 0—and once you master Section 5.4, you can double-check every answer with slopes too!",
         "ta": "பயிற்சி 5.1 வினா 2, 4 மற்றும் 7 ஆகியவை பரப்பு = 0 மூலம் நேர்க்கோடமைவைச் சோதிக்கின்றன; பகுதி 5.4 சாய்வு முறையிலும் சரிபார்க்கலாம்."
       },
+      "practiceId": "c10-5-ex5-1-q2-i",
       "relatedExercise": "5.1"
     },
     {
@@ -450,6 +453,7 @@ window.TRIGGLE_G10_CH5_PATH={
         "en": "Exercise 5.1 Q5, Q6, Q9 (patio surrounding pool), and Q11 all use this boundary-order quadrilateral formula.",
         "ta": "பயிற்சி 5.1 வினா 5, 6, 9 மற்றும் 11 அனைத்தும் இவ்வரிசை நாற்கரச் சூத்திரத்தைப் பயன்படுத்துகின்றன."
       },
+      "practiceId": "c10-5-ex5-1-q5-i",
       "relatedExercise": "5.1"
     },
     {
@@ -559,6 +563,7 @@ window.TRIGGLE_G10_CH5_PATH={
         "en": "Exercise 5.2 Q1–Q4 practice reading θ, calculating two-point slopes, and finding unknown coordinates from given slopes.",
         "ta": "பயிற்சி 5.2 வினா 1–4 ஆகியவை சாய்வுக் கோணம் θ மற்றும் இரு புள்ளிகளின் சாய்வைக் காண உதவுகின்றன."
       },
+      "practiceId": "c10-5-ex5-2-q1-i",
       "relatedExercise": "5.2"
     },
     {
@@ -668,6 +673,8 @@ window.TRIGGLE_G10_CH5_PATH={
         "en": "Exercise 5.2 Q5–Q13 use m₁ = m₂ and m₁m₂ = −1 to test right triangles, parallelograms, and rhombuses without calculating a single distance.",
         "ta": "பயிற்சி 5.2 வினா 5–13 ஆகியவை தொலைவு காணாமலேயே செங்கோண முக்கோணம், இணைகரம், சாய்சதுரம் ஆகியவற்றை நிரூபிக்க இச்சாய்வு விதிகளைப் பயன்படுத்துகின்றன."
       },
+      "practiceId": "c10-5-ex5-2-q9-i",
+      "secondaryPracticeId": "c10-5-ex5-2-q10",
       "relatedExercise": "5.2"
     },
     {
@@ -777,6 +784,8 @@ window.TRIGGLE_G10_CH5_PATH={
         "en": "Exercise 5.3 Q1 and Q2 test horizontal/vertical equations through intersection points and midpoints.",
         "ta": "பயிற்சி 5.3 வினா 1 மற்றும் 2 ஆகியவை அச்சுகளுக்கு இணையான கோடுகளின் சமன்பாடுகளைப் பயிற்சி செய்கின்றன."
       },
+      "practiceId": "c10-5-ex5-3-q1-i",
+      "secondaryPracticeId": "c10-5-ex5-3-q1-ii",
       "relatedExercise": "5.3"
     },
     {
@@ -886,6 +895,7 @@ window.TRIGGLE_G10_CH5_PATH={
         "en": "Exercise 5.3 Q3–Q5 and Q11 (song download rate y = −0.1x + 1) rely on interpreting m as rate of change and c as starting value.",
         "ta": "பயிற்சி 5.3 வினா 3–5 மற்றும் 11 ஆகியவை y = mx + c வடிவத்தைப் பயன்படுத்துகின்றன."
       },
+      "practiceId": "c10-5-ex5-3-q3",
       "relatedExercise": "5.3"
     },
     {
@@ -995,6 +1005,8 @@ window.TRIGGLE_G10_CH5_PATH={
         "en": "Exercise 5.3 Q6–Q10 (including medians and altitudes through a vertex in Q9) use Point-Slope and Two-Point forms directly.",
         "ta": "பயிற்சி 5.3 வினா 6–10 (முக்கோணத்தின் நடுக்கோடு, குத்துக்கோடு உட்பட) இவ்விரு வடிவங்களைப் பயன்படுத்துகின்றன."
       },
+      "practiceId": "c10-5-ex5-3-q7-i",
+      "secondaryPracticeId": "c10-5-ex5-3-q10",
       "relatedExercise": "5.3"
     },
     {
@@ -1104,6 +1116,7 @@ window.TRIGGLE_G10_CH5_PATH={
         "en": "Exercise 5.3 Q12–Q14 (equal intercepts and ratio intercepts) build directly on x/a + y/b = 1.",
         "ta": "பயிற்சி 5.3 வினா 12–14 ஆகியவை வெட்டுத்துண்டு வடிவத்தை நேரடியாகப் பயன்படுத்துகின்றன."
       },
+      "practiceId": "c10-5-ex5-3-q12-i",
       "relatedExercise": "5.3"
     },
     {
@@ -1213,6 +1226,7 @@ window.TRIGGLE_G10_CH5_PATH={
         "en": "Exercise 5.4 Q1–Q4 check slope and y-intercept extraction from rearranged general equations.",
         "ta": "பயிற்சி 5.4 வினா 1–4 ஆகியவை பொது வடிவச் சமன்பாட்டிலிருந்து சாய்வும் வெட்டுத்துண்டும் காண்பதைச் சோதிக்கின்றன."
       },
+      "practiceId": "c10-5-ex5-4-q1-i",
       "relatedExercise": "5.4"
     },
     {
@@ -1322,6 +1336,8 @@ window.TRIGGLE_G10_CH5_PATH={
         "en": "Exercise 5.4 Q5–Q12 and Unit Exercise 5 (foot of perpendicular, reflection across a line in Q8, and shortest path in Q10) rely directly on these general-form families.",
         "ta": "பயிற்சி 5.4 வினா 5–12 மற்றும் அலகுப் பயிற்சி 5 (சமதள ஆடி பிம்பம், குறுகிய பாதை) இக்கெழு விதிகளைப் பயன்படுத்துகின்றன."
       },
+      "practiceId": "c10-5-ex5-4-q5",
+      "secondaryPracticeId": "c10-5-unit-q8",
       "relatedExercise": "5.4 & Unit Ex 5"
     }
   ]

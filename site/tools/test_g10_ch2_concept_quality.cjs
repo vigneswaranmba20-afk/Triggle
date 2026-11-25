@@ -2,6 +2,7 @@
 /* Grade 10 Ch2 quality-regression guard. Original concept practice, not textbook exercises. */
 const assert=require('node:assert/strict');
 const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+const {loadRuntime}=require('./curriculum_bulk.cjs');
 const site=path.resolve(__dirname,'..');
 const read=name=>fs.readFileSync(path.join(site,name),'utf8');
 const ctx={window:{}};
@@ -18,7 +19,7 @@ assert.deepEqual(exerciseLinks,{
  'g10-ch2-bezout':'c10-2-ex2-1-q8',
  'g10-ch2-primes':'c10-2-ex2-2-q6',
  'g10-ch2-modulo':'c10-2-ex2-3-q5',
- 'g10-ch2-congruence':'c10-2-ex2-3-q1',
+ 'g10-ch2-congruence':'c10-2-ex2-3-q1-i',
  'g10-ch2-sequence':'c10-2-ex2-4-q2-i',
  'g10-ch2-recursive':'c10-2-ex2-4-q6',
  'g10-ch2-ap':'c10-2-ex2-5-q1-i',
@@ -29,6 +30,9 @@ assert.deepEqual(exerciseLinks,{
  'g10-ch2-gp-infinite':'c10-2-ex2-8-q2',
  'g10-ch2-special':'c10-2-ex2-9-q1-v'
 },'Link all 15 Chapter 2 concepts to source-checked exercises');
+const textbookIds=new Set(loadRuntime().classes[10].items
+ .filter(item=>item.chapter==='2'&&item.kind==='textbook').map(item=>item.id));
+for(const [stage,id] of Object.entries(exerciseLinks))assert(textbookIds.has(id),stage+' opens a current textbook record');
 for(const stage of stages){
  assert(stage.page?.en&&stage.page?.ta,'2025 EN/TA page citation on '+stage.id);
  assert(stage.math.latex&&stage.math.fallback,'Structured mathematics + accessible fallback');
