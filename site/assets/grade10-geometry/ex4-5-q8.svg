@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Altitude to the hypotenuse</title>
+  <desc id="desc">AD meets the hypotenuse BC at a right angle, and angle BAC is a right angle.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M40 170 L130 50 L290 170 Z" stroke="#403876"/><path d="M130 50 L130 170" stroke="#403876"/><path d="M130 158 L142 158 L142 170" stroke="#403876"/><path d="M122.8 59.6 L132.4 66.8 L139.6 57.2" stroke="#403876"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="121" y="43">A</text><text x="24" y="191">B</text><text x="294" y="191">C</text><text x="124" y="191">D</text></g>
+</svg>

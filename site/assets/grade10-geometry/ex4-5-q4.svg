@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Parallel sides</title>
+  <desc id="desc">S is on PQ, T is on PR and ST is parallel to QR.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M30 180 L180 55 L285 180 Z" stroke="#403876"/><path d="M90 130 L132 180" stroke="#326688"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="17" y="198">P</text><text x="178" y="47">Q</text><text x="288" y="198">R</text><text x="76" y="128">S</text><text x="126" y="199">T</text></g>
+</svg>

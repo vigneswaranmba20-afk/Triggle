@@ -52,7 +52,7 @@
  const mobile=matchMedia('(max-width:800px)');
  function esc(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  const plainMath=value=>Array.isArray(value)?value.map(plainMath).join(''):(value?.fallback??value);
- const isGeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2','4.3'].includes(item.exercise);
+ const isGeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2','4.3','4.4','4.5','4.unit'].includes(item.exercise);
  const englishInTamilReader=text=>lang==='ta'&&/[a-z]{2}/i.test(text)&&!/\p{Script=Tamil}/u.test(text);
  function math(str){
   // Local typesetting: accessible group exponents and no cloud requests.
@@ -699,8 +699,11 @@
   $('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   if(lang==='ta'&&!current.q?.ta)$('kindBadge').textContent+=' · தமிழ் மொழிபெயர்ப்பு நிலுவையில்';
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
-  const conceptPath = window.TRIGGLE_G10_CH8_PATH;
-  const conceptIndexForQuestion = conceptPath?.conceptForQuestion(current) ?? -1;
+  const conceptPath = isGeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH;
+  const conceptIndexForQuestion = isGeometryExercise(current)
+    ? (conceptPath?.stages.findIndex(stage => stage.id === current.conceptId ||
+        [stage.practiceId, stage.secondaryPracticeId, stage.tertiaryPracticeId].includes(current.id)) ?? -1)
+    : (conceptPath?.conceptForQuestion(current) ?? -1);
   const relatedConcept = $('chapter8QuestionConcept');
   relatedConcept.hidden = conceptIndexForQuestion < 0;
   if (conceptIndexForQuestion >= 0) {

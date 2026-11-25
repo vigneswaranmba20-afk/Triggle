@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Triangular window</title>
+  <desc id="desc">The three lines from the vertices meet inside the window. BF is the missing strip.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M83.1559 100.512 L130.832 22.8892 L106.526 187.111 Z" stroke="#403876"/><path d="M83.1559 100.512 L125.223 60.7865" stroke="#326688"/><path d="M130.832 22.8892 L93.1715 137.626" stroke="#326688"/><path d="M106.526 187.111 L117.21 45.0671" stroke="#326688"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="66.1559" y="101.512">A</text><text x="128.832" y="15.8892">B</text><text x="106.526" y="206.111">C</text><text x="130.223" y="57.7865">D</text><text x="76.1715" y="141.626">E</text><text x="102.21" y="41.0671">F</text><text x="59.8858" y="66.0173">5 cm</text><text x="109.021" y="26.9781">?</text><text x="136.588" y="35.0481">3 cm</text><text x="124.752" y="128.528">10 cm</text><text x="43.6629" y="130.213">3 cm</text><text x="60.8517" y="183.791">4 cm</text></g>
+</svg>

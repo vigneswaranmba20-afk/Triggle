@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Inscribed circle</title>
+  <desc id="desc">The contact points on the sides of length 12, 8 and 10 are D, E and F.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M45 176 L261 176 L180 56.9412 Z" stroke="#403876"/><circle cx="171" cy="128.376" r="47.6235" stroke="#326688"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="29" y="190">A</text><text x="265" y="190">B</text><text x="178" y="48">C</text><text x="163" y="168">D</text><text x="219.375" y="100.588">E</text><text x="118.5" y="89.6588">F</text><text x="129" y="199">12 cm</text><text x="79" y="97">10 cm</text><text x="234" y="102">8 cm</text></g>
+</svg>

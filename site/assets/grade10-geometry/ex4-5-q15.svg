@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Tangent and chord</title>
+  <desc id="desc">The chord PQ and tangent ray PR form a 60 degree angle.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="122" cy="116" r="75" stroke="#326688"/><path d="M122 41 L272 41" stroke="#326688"/><path d="M122 41 L186.952 153.5 L122 116 L122 41" stroke="#403876"/><path d="M145 41 A23 23 0 0 1 133.5 60.9186"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="112" y="33">P</text><text x="252" y="33">R</text><text x="194" y="161">Q</text><text x="102" y="121">O</text><text x="150" y="66">60°</text></g>
+</svg>

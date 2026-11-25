@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Equal sides and equal divisions</title>
+  <desc id="desc">D is on AB and E is on AC, at equal distances from A.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M157 40 L52 176 L262 176 Z" stroke="#403876"/><path d="M105.55 106.64 L208.45 106.64" stroke="#326688"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="153" y="32">A</text><text x="34" y="194">B</text><text x="267" y="194">C</text><text x="85.55" y="104.64">D</text><text x="215.45" y="104.64">E</text></g>
+</svg>

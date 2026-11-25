@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title desc">
+  <title id="title">Crossing lines and parallel segments</title>
+  <desc id="desc">The lines BE and AF cross at D. AB, CD and EF are parallel.</desc>
+  <g fill="none" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M57 57 L57 177 L257 177 L257 97" stroke="#403876"/><path d="M57 57 L257 177" stroke="#326688"/><path d="M57 177 L257 97" stroke="#326688"/><path d="M177 177 L177 129" stroke="#403876"/></g>
+  <g fill="#252147" font-family="system-ui,sans-serif" font-size="15" font-weight="600"><text x="44" y="196">A</text><text x="44" y="50">B</text><text x="173" y="196">C</text><text x="172" y="119">D</text><text x="259" y="196">E</text><text x="261" y="91">F</text><text x="13" y="124">6 cm</text><text x="266" y="142">4 cm</text><text x="100" y="83">5 cm</text><text x="158" y="159">x</text><text x="221" y="147">y</text></g>
+</svg>

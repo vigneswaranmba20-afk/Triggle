@@ -94,8 +94,11 @@ function visual(spec,lang){
 function mount(event){
  const lesson=event?.detail,root=$('stepsList');if(!root)return;
  root.querySelectorAll('details.why-step-g10').forEach(node=>node.remove());
- if(lesson?.grade!==10||!lesson.item||!window.TriggleWhyStepG10?.hints)return;
- const record=window.TriggleWhyStepG10.hints[lesson.item.id];
+ if(lesson?.grade!==10||!lesson.item)return;
+ const authored=lesson.item.steps?.flatMap((step,index)=>step.why?.en
+  ? [{...step.why,step:index,expected:step.en}]
+  : []);
+ const record=window.TriggleWhyStepG10?.hints?.[lesson.item.id]||(authored?.length?authored:null);
  if(!record)return;
  const hints=(Array.isArray(record)?record:[record]).slice(0,3);
  const allSteps=[...root.querySelectorAll('li.worked-step:not(.final-answer-step)')];

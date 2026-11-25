@@ -1,0 +1,273 @@
+{
+  "edition": "2025 revised",
+  "source": {
+    "en": {
+      "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pdfSha256": "602eb88de6fc05200199bcb4c31e7b8a02175513c6ac2594e49b479cc6aec09d",
+      "pages": [
+        {
+          "pdfPage": 206,
+          "printedPage": 200,
+          "visualChecked": true,
+          "imageSha256": "702a59712ba120ffe294f6269733f55dcacee105c7fbb7cc3b06f9267ab113f3"
+        },
+        {
+          "pdfPage": 207,
+          "printedPage": 201,
+          "visualChecked": true,
+          "imageSha256": "37b131a61df68e03c20c721c3e9516d260225f3c3820807ae18c73cc59a24ff2"
+        }
+      ]
+    },
+    "ta": {
+      "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pdfSha256": "6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f",
+      "pages": [
+        {
+          "pdfPage": 213,
+          "printedPage": 207,
+          "visualChecked": true,
+          "imageSha256": "30df74d63d39e027ec4cb847cbb07465faa9392e36d082b8e19e8c8effbf92a7"
+        },
+        {
+          "pdfPage": 214,
+          "printedPage": 208,
+          "visualChecked": true,
+          "imageSha256": "e1bf6eb2d8f7a8fd43c456a389e5bcc3b58bd18017faf25266d4d6735fbcf477"
+        }
+      ]
+    }
+  },
+  "items": [
+    {
+      "id": "c10-4-unit-q1-i",
+      "questionNumber": "1",
+      "part": "i",
+      "textbookPrompt": {
+        "en": "1. In the figure, if BD ⟂ AC and CE ⟂ AB, prove that\n(i) △AEC ∼ △ADB",
+        "ta": "1. கொடுக்கப்பட்ட படத்தில் BD ⟂ AC மற்றும் CE ⟂ AB, எனில்\n(i) △AEC ∼ △ADB என நிரூபிக்கவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 206,
+          "printed": 200
+        },
+        "ta": {
+          "pdf": 213,
+          "printed": 207
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-unit-q1-ii",
+      "questionNumber": "1",
+      "part": "ii",
+      "textbookPrompt": {
+        "en": "1. In the figure, if BD ⟂ AC and CE ⟂ AB, prove that\n(ii) CA/AB = CE/DB",
+        "ta": "1. கொடுக்கப்பட்ட படத்தில் BD ⟂ AC மற்றும் CE ⟂ AB, எனில்\n(ii) CA/AB = CE/DB என நிரூபிக்கவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 206,
+          "printed": 200
+        },
+        "ta": {
+          "pdf": 213,
+          "printed": 207
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-unit-q2",
+      "questionNumber": "2",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "2. In the given figure AB ∥ CD ∥ EF. If AB = 6 cm, CD = x cm, EF = 4 cm, BD = 5 cm and DE = y cm. Find x and y.",
+        "ta": "2. கொடுக்கப்பட்ட படத்தில் AB ∥ CD ∥ EF. AB = 6 செ.மீ, CD = x செ.மீ, EF = 4 செ.மீ, BD = 5 செ.மீ மற்றும் DE = y செ.மீ எனில், x மற்றும் y-யின் மதிப்பு காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 206,
+          "printed": 200
+        },
+        "ta": {
+          "pdf": 213,
+          "printed": 207
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-unit-q3",
+      "questionNumber": "3",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "3. O is any point inside a triangle ABC. The bisector of ∠AOB, ∠BOC and ∠COA meet the sides AB, BC and CA in point D, E and F respectively. Show that AD × BE × CF = DB × EC × FA",
+        "ta": "3. O ஆனது முக்கோணம் ABC-யின் உள்ளே அமைந்த ஒரு புள்ளி ஆகும். ∠AOB, ∠BOC மற்றும் ∠COA-யின் இருசமவெட்டிகள், பக்கங்கள் AB, BC மற்றும் CA-வை முறையே D, E மற்றும் F-ல் சந்திக்கின்றன எனில், AD × BE × CF = DB × EC × FA எனக் காட்டுக."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 206,
+          "printed": 200
+        },
+        "ta": {
+          "pdf": 213,
+          "printed": 207
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-unit-q4",
+      "questionNumber": "4",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "4. In the figure, ABC is a triangle in which AB = AC. Points D and E are points on the side AB and AC respectively such that AD = AE. Show that the points B, C, E and D lie on a same circle.",
+        "ta": "4. கொடுக்கப்பட்ட முக்கோணம் ABC-யில் AB = AC ஆகும். AD = AE என இருக்குமாறு D மற்றும் E என்ற புள்ளிகள் முறையே பக்கங்கள் AB மற்றும் AC-யின் மீது அமைந்துள்ளன. B, C, E மற்றும் D என்ற புள்ளிகள் ஒரே வட்டத்தில் அமையும் எனக் காட்டுக."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 206,
+          "printed": 200
+        },
+        "ta": {
+          "pdf": 214,
+          "printed": 208
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-unit-q5",
+      "questionNumber": "5",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "5. Two trains leave a railway station at the same time. The first train travels due west and the second train due north. The first train travels at a speed of 20 km/hr and the second train travels at 30 km/hr. After 2 hours, what is the distance between them?",
+        "ta": "5. இரண்டு தொடர்வண்டிகள் ஒரே நேரத்தில் ஒரு தொடர்வண்டி நிலையத்திலிருந்து புறப்படுகின்றன. முதல் வண்டி மேற்கு நோக்கியும், இரண்டாவது வண்டி வடக்கு நோக்கியும் செல்கின்றன. முதல் தொடர்வண்டி 20 கி.மீ/மணி வேகத்திலும், இரண்டாவது வண்டி 30 கி.மீ/மணி வேகத்திலும் செல்கின்றன. இரண்டு மணி நேரத்திற்குப் பின்னர் அவைகளுக்கு இடையேயுள்ள தொலைவு எவ்வளவு?"
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 206,
+          "printed": 200
+        },
+        "ta": {
+          "pdf": 214,
+          "printed": 208
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-unit-q6-iii",
+      "questionNumber": "6",
+      "part": "iii",
+      "textbookPrompt": {
+        "en": "6. D is the mid point of side BC and AE ⟂ BC. If BC = a, AC = b, AB = c, ED = x, AD = p and AE = h, prove that\n(iii) b² + c² = 2p² + a²/2",
+        "ta": "6. BC-யின் மையப்புள்ளி D மற்றும் AE ⟂ BC. BC = a, AC = b, AB = c, ED = x, AD = p மற்றும் AE = h, எனில்\n(iii) b² + c² = 2p² + a²/2 என நிரூபிக்க"
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 207,
+          "printed": 201
+        },
+        "ta": {
+          "pdf": 214,
+          "printed": 208
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-unit-q7",
+      "questionNumber": "7",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "7. A man whose eye-level is 2 m above the ground wishes to find the height of a tree. He places a mirror horizontally on the ground 20 m from the tree and finds that if he stands at a point C which is 4 m from the mirror B, he can see the reflection of the top of the tree. How height is the tree?",
+        "ta": "7. 2 மீ உயரமுள்ள மனிதர் ஒரு மரத்தின் உயரத்தைக் கணக்கிட விரும்புகிறார். மரத்தின் அடியிலிருந்து 20 மீ தொலைவில் B என்ற புள்ளியில் ஒரு கண்ணாடி கிடைமட்டமாக மேல் நோக்கி வைக்கப்படுகிறது. கண்ணாடியிலிருந்து 4 மீ தொலைவில் C என்ற புள்ளியில் நிற்கும் மனிதர் மரத்தின் உச்சியின் பிரதிபலிப்பைக் கண்ணாடியில் காண முடிகிறது எனில், மரத்தின் உயரத்தைக் காண்க. (மரத்தின் அடி, கண்ணாடி, மனிதர் ஒரே நேர்க்கோட்டில் உள்ளதாகக் கொள்க)."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 207,
+          "printed": 201
+        },
+        "ta": {
+          "pdf": 214,
+          "printed": 208
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-unit-q8",
+      "questionNumber": "8",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "8. An Emu which is 8 feet tall is standing at the foot of a pillar which is 30 feet high. It walks away from the pillar. The shadow of the Emu falls beyond Emu. What is the relation between the length of the shadow and the distance from the Emu to the pillar?",
+        "ta": "8. 30 அடி உயரமுள்ள ஒரு தூணின் அடிப்பகுதியிலிருந்து 8 அடி உயரமுள்ள ஒரு ஈமு கோழி விலகி நடந்து செல்கிறது. ஈமு கோழியின் நிழல் அது நடந்து செல்லும் திசையில் அதற்கு முன் விழுகிறது. ஈமு கோழியின் நிழலின் நீளத்திற்கும், ஈமு தூணிலிருந்து இருக்கும் தொலைவிற்கும் இடையே உள்ள தொடர்பைக் காண்க."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 207,
+          "printed": 201
+        },
+        "ta": {
+          "pdf": 214,
+          "printed": 208
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    },
+    {
+      "id": "c10-4-unit-q9",
+      "questionNumber": "9",
+      "part": "whole",
+      "textbookPrompt": {
+        "en": "9. Two circles intersect at A and B. From a point P on one of the circles lines PAC and PBD are drawn intersecting the second circle at C and D. Prove that CD is parallel to the tangent at P.",
+        "ta": "9. A மற்றும் B என்ற புள்ளிகளில் இரு வட்டங்கள் வெட்டிக்கொள்கின்றன. ஒரு வட்டத்தின் மீதுள்ள புள்ளி P-யிலிருந்து வரையப்படும் PAC மற்றும் PBD என்ற கோடுகள் இரண்டாவது வட்டத்தினை முறையே C மற்றும் D-யில் வெட்டுகின்றன எனில், CD-யானது P வழியே வரையப்படும் தொடுகோட்டிற்கு இணை என நிரூபிக்கவும்."
+      },
+      "sourcePages": {
+        "en": {
+          "pdf": 207,
+          "printed": 201
+        },
+        "ta": {
+          "pdf": 214,
+          "printed": 208
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      }
+    }
+  ]
+}
