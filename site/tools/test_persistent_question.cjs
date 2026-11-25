@@ -4,7 +4,9 @@ const html=fs.readFileSync('site/index.html','utf8'),js=fs.readFileSync('site/as
 assert.equal((html.match(/id="questionText"/g)||[]).length,1);
 assert.ok(html.indexOf('id="questionText"')<html.indexOf('id="stepsRegion"'));
 assert.ok(!/id="(?:guidedDialog|deepQuestionDock|deepQuestionContext)"/.test(html));
-assert.ok(js.includes('const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath'),'Grade 9 presentation retains canonical rich-math fallback');
+assert.ok(js.includes("const grade9Presentation=item=>item.notationSource==='authored'?undefined:window.TriggleG9Math?.get(item)") &&
+ js.includes('const questionMath=grade9Presentation(current)?.questionMath||current.questionMath'),
+ 'Grade 9 presentation retains canonical rich-math fallback and uses authored math for reviewed questions');
 assert.ok(js.includes("const ex82TamilPrompt=lang==='ta'&&grade===10&&current.chapter==='8'&&current.exercise==='8.2'&&!!current.q?.ta;"),'Tamil source prompt used only for verified Grade 10 Exercise 8.2');
 assert.ok(js.includes("$('questionText').innerHTML=ex82TamilPrompt?math(questionMath?.ta||current.q.ta):(workedDisplay?.question||math(questionMath?.[lang]||current.q?.[lang]||questionMath?.en||tr(current.q)))"),'Original question remains permanent and typeset; Tamil takes precedence over English-only math markup');
 assert.ok(js.includes('all.forEach((s,i)=>ul.append(buildStep(s,i)))'),'All authored steps rendered');

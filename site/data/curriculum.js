@@ -190,7 +190,7 @@ window.TRIGGLE_CURRICULUM = {
       "title": "பத்தாம் வகுப்பு கணிதம் (2025 திருத்திய பதிப்பு)",
       "medium": "ta",
       "edition": "Revised 2025",
-      "url": "https://drive.google.com/file/d/1l12138-f6mB32Br55-Zq-xm6jj144v0y/view",
+      "url": "https://drive.google.com/file/d/1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC/view",
       "verification": "verified",
       "evidence": "2025 edition imprint (PDF p. 2, SHA-256 6c6629e39b3ba5c7fccf43c320dc54eec56f7aed393895409eaaad1a7907b22f) and contents (PDF pp. 5–6) directly verified from connected Google Drive; independent Tamil editorial review pending."
     }
