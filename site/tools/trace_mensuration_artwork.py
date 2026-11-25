@@ -306,7 +306,10 @@ def frustum_scene(d, beat, stage, t):
             d.text((x+R+27,654),"ℓ",43,INDIGO,True)
     elif beat == 3:
         if stage:
-            d.polygon([(x-r,top),(x,apex),(x+r,top)],SAND,GOLD)
+            visibility = t if stage == 1 else 1
+            d.polygon([(x-r,top),(x,apex),(x+r,top)],
+                      mix(WHITE,SAND,visibility),mix(WHITE,GOLD,visibility))
+        if stage >= 2:
             d.dash((x,apex),(x,base),MUTED)
             d.line([(x,top),(x+r,top)],TEAL,5)
             d.line([(x,base),(x+R,base)],INDIGO,5)
@@ -314,7 +317,7 @@ def frustum_scene(d, beat, stage, t):
             d.dimension((224,apex),(224,top),"H − h",(150,(apex+top)/2),TEAL)
             d.text((x+100,top-43),"r",32,TEAL,True)
             d.text((x+86,base+52),"R",32,INDIGO,True)
-        if stage >= 2:
+        if stage >= 3:
             d.text((x,top-144),"Remove",30,GOLD,True)
     else:
         if stage >= 2:
