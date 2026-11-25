@@ -23,12 +23,9 @@
   },
   "nextBatch": {
     "grade": 10,
+    "chapter": 2,
     "status": "IN_PROGRESS",
-    "exercises": [
-      "1.3",
-      "3.3"
-    ],
-    "scope": "Restore the three confirmed source data tables on stable Relations and Functions and Algebra cards."
+    "scope": "Add source-matched bilingual why-step explanations to 123 Numbers and Sequences cards. Review finite sum conditions and the domain of the arbitrary-exponent identity."
   },
   "editorialReview": {
     "ta": "pending",
@@ -1218,7 +1215,7 @@
       "grade": 9,
       "chapter": 5,
       "exercise": "5.2",
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "canonicalTasks": 20,
       "existingCardsReviewed": 12,
       "figuresAdded": 4,
@@ -1330,10 +1327,41 @@
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch5-ex5-2-frontier.json",
       "release": {
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 435,
         "head": "269cb96ae86d10261809e082f5fd52d1f634a01a",
         "prQualityRun": 45691981458,
+        "merge": "56635d458a0332ed085fd2c5d34e1b6423c47219",
+        "pagesRun": 45695859868,
+        "liveEvidence": {
+          "deploymentId": 8069213992,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45695859868/job/139504815478",
+          "deploymentCompletedAt": "2026-11-25T20:54:38Z",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch5-ex5.2-q1-iii",
+          "versionMatched": "56635d458a0332ed085fd2c5d34e1b6423c47219",
+          "sha256": {
+            "assets/grade9-ch5/ex5-2-q11-checked.svg": "8f9696e8707867d39ce70da1b906b3941891b43470d0e4aabb9009c1816b8905",
+            "assets/grade9-ch5/ex5-2-q3-checked.svg": "708b68bd2828782a1a5d5b1b4bd981d953ebaaa24e7be1d636936493285e8174",
+            "assets/grade9-ch5/ex5-2-q5-checked.svg": "c9560f422685288e216840c2eda579d22344cecc8c784b2448f3cec3c1da94ee",
+            "assets/grade9-ch5/ex5-2-q6-checked.svg": "b709d2fb908cbf5fa30e6a7eaaebc50fc0058807dbd1f3284202f5f70c8d0bb8",
+            "data/g9-clear-math.js": "4518d031bdeeb3d302262039f01a206289bd185759a85867e33f15192fcf59c1",
+            "data/project-status.json": "9130d304b1422b6e1273a6761664be7cd5cff4ceacf4af68c31c7949008d4956",
+            "data/textbook-exercises/g9-ch5-ex5-2.js": "1405075f0d6dbe46e480cb015a373b18efa8787bdb728f4b912d8de4c7dfd3a7",
+            "data/textbook-fidelity/g9-ch5-ex5-2-frontier.json": "b1b21281e1d79e0258c6b7f6538a126ba61813488349a9cff8b77ae6eb598043",
+            "index.html": "a7870218bddde6e9e18fd01867be4532603cdf77d388ec3cb1b9f7f094e28fd4",
+            "service-worker.js": "7de301d034a9a2b152b9c43406be024bc352bc6a08647714abcfb35de4cb259b"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "all12Cards": true,
+            "figures": 4
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/435"
       }
     },
@@ -1343,7 +1371,7 @@
       "chapter": null,
       "scope": "Tamil final answers and two equation labels",
       "canonicalTasks": 19,
-      "status": "TESTED",
+      "status": "MERGED",
       "recordIds": [
         "c10-1-ex1-1-q5",
         "c10-1-ex1-1-q6-i",
@@ -1367,10 +1395,13 @@
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g10-frontier-tamil-answers.json",
       "release": {
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 436,
-        "head": "bf01e25d6ab6cbf33a4a68ea2823d67932d21639",
-        "prQualityRun": 45692985412
+        "head": "82490b8b8b1bdb86dca9760fc3db15fe01165815",
+        "prQualityRun": 45696488927,
+        "merge": "03e716eb769366748217c51b09009c2d8a7f6a38",
+        "pagesRun": 45699947516,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/436"
       }
     },
     {
@@ -1408,8 +1439,9 @@
       "release": {
         "status": "TESTED",
         "pr": 437,
-        "head": "42b8cdaed1188eab4e6c9405b058fabc95be4d37",
-        "prQualityRun": 45692990798
+        "head": "006098d4cbcaf09d0ad86cae525530fa5e20f06c",
+        "prQualityRun": 45698190245,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/437"
       }
     },
     {
@@ -1418,7 +1450,7 @@
       "chapter": 8,
       "scope": "Statistics source tables and edition-specific solutions",
       "canonicalTasks": 11,
-      "status": "IN_PROGRESS",
+      "status": "TESTED",
       "recordIds": [
         "g9-ch8-ex8.1-q4",
         "g9-ch8-ex8.1-q5",
@@ -1432,13 +1464,68 @@
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch8-frontier-tables.json",
       "release": {
-        "status": "IN_PROGRESS",
+        "status": "TESTED",
         "numberedQuestions": 9,
-        "canonicalTasks": 11
+        "canonicalTasks": 11,
+        "pr": 438,
+        "head": "1d4a7a96876a6588fb3aaf4048d4ac6350c6fdbe",
+        "prQualityRun": 45698197473,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/438"
+      }
+    },
+    {
+      "key": "g10.tables",
+      "grade": 10,
+      "chapter": null,
+      "scope": "Relations and Functions and Algebra data tables with Tamil figure labels",
+      "canonicalTasks": 6,
+      "recordIds": [
+        "c10-1-1-3-q10",
+        "c10-3-ex3-3-q4-i",
+        "c10-3-ex3-3-q4-ii"
+      ],
+      "sourceEvidence": "site/data/textbook-fidelity/g10-frontier-source-tables.json",
+      "status": "TESTED",
+      "release": {
+        "status": "TESTED",
+        "pr": 439,
+        "head": "891f046ccbeb26d7dda668bc25eb9daf56c452ba",
+        "prQualityRun": 45698184974,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/439"
+      }
+    },
+    {
+      "key": "g9.graphs",
+      "grade": 9,
+      "chapter": null,
+      "scope": "Algebra graphical solutions and coordinate quadrant plot",
+      "canonicalTasks": 12,
+      "recordIds": [
+        "g9-ch3-ex3.10-q1-i",
+        "g9-ch3-ex3.10-q1-ii",
+        "g9-ch3-ex3.10-q1-iii",
+        "g9-ch3-ex3.10-q1-iv",
+        "g9-ch3-ex3.10-q2-i",
+        "g9-ch3-ex3.10-q2-ii",
+        "g9-ch3-ex3.10-q2-iii",
+        "g9-ch3-ex3.10-q2-iv",
+        "g9-ch3-ex3.10-q2-v",
+        "g9-ch3-ex3.10-q2-vi",
+        "g9-ch3-ex3.10-q3",
+        "g9-ch5-ex5.6-q4"
+      ],
+      "sourceEvidence": "site/data/textbook-fidelity/g9-frontier-graphs.json",
+      "status": "TESTED",
+      "release": {
+        "status": "TESTED",
+        "pr": 440,
+        "head": "bd7777f5ef2f49db9baa59ddb97be270ed2185dd",
+        "prQualityRun": 45698510313,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/440"
       }
     }
   ],
-  "latestMain": "bdb2a4a06a71530eee7b61443a67a3d25d2ed1ae",
+  "latestMain": "03e716eb769366748217c51b09009c2d8a7f6a38",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -1449,24 +1536,65 @@
       "browser": "/workspace/scratch/trace-set-batch-browser.log"
     },
     "grade9SetWorktree": "/workspace/Triggle-ex16",
-    "currentRuntime": "/workspace/scratch/trace-sources/batch7-browser-runtime.json",
+    "currentRuntime": "/workspace/scratch/trace-sources/batch9-browser-runtime.json",
     "coordinateRuntime": "/workspace/scratch/trace-sources/batch4-browser-runtime.json",
     "liveSetLogs": [
       "/workspace/scratch/trace-sources/live-ex13-browser.log",
       "/workspace/scratch/trace-sources/live-sets-browser.log"
     ],
     "tamilIndependentNumberedStructure": "/workspace/scratch/trace-sources/tamil-independent-structure.json",
-    "tamilIndependentSubparts": "/workspace/scratch/trace-sources/tamil-independent-subparts.json"
+    "tamilIndependentSubparts": "/workspace/scratch/trace-sources/tamil-independent-subparts.json",
+    "localReaderAudit": "/workspace/scratch/trace-sources/reader-audit-390.json",
+    "liveVerificationCommand": "/workspace/scratch/trace-sources/verify-frontier-live.sh"
   },
   "openManagement": {
     "mathguard": "https://github.com/vigneswaranmba20-afk/Triggle/pull/425",
     "androidRecommendation": "NO-GO"
   },
   "resume": [
-    "Check PR 435 exact head 269cb96ae86d10261809e082f5fd52d1f634a01a and quality run 45691981458. Reconcile latest main, merge through the normal gate and verify the deployed bytes and bilingual reader.",
-    "After each predecessor is live, retarget #436 and #437 to main and require passing checks at the normal merge gate. Verify separate Pages runs and both languages after each merge.",
-    "Finish the Grade 9 Statistics check suite, then publish the verified batch through a traceable PR. The four required mobile widths, offline KaTeX and retained progress already pass.",
-    "Restore the original Grade 10 Exercise 1.3 Q10 and Exercise 3.3 Q4 source data tables. Continue the chapter-by-chapter second source-to-runtime reconciliation and mathematical evidence joins."
+    "Process openReleaseOrder in order. Confirm the exact PR head and passing required checks against main. Reconcile the preceding released tree with the queued PR diff before merging.",
+    "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
+    "Finish the remaining Grade 10 teaching explanations by chapter, using the exact reader candidates and stable IDs in the inventory.",
+    "Finish the independent source-to-reader review and reuse verified mathematical evidence. Record visual and domain differences at the canonical task level and refresh the report."
   ],
-  "latestVerifiedProduction": "bdb2a4a06a71530eee7b61443a67a3d25d2ed1ae"
+  "latestVerifiedProduction": "56635d458a0332ed085fd2c5d34e1b6423c47219",
+  "openReleaseOrder": [
+    {
+      "key": "g10.tamil",
+      "status": "MERGED",
+      "pr": 436,
+      "head": "82490b8b8b1bdb86dca9760fc3db15fe01165815",
+      "prQualityRun": 45696488927,
+      "merge": "03e716eb769366748217c51b09009c2d8a7f6a38",
+      "pagesRun": 45699947516
+    },
+    {
+      "key": "g9.tamil",
+      "status": "TESTED",
+      "pr": 437,
+      "head": "006098d4cbcaf09d0ad86cae525530fa5e20f06c",
+      "prQualityRun": 45698190245
+    },
+    {
+      "key": "g9.statistics",
+      "status": "TESTED",
+      "pr": 438,
+      "head": "1d4a7a96876a6588fb3aaf4048d4ac6350c6fdbe",
+      "prQualityRun": 45698197473
+    },
+    {
+      "key": "g10.tables",
+      "status": "TESTED",
+      "pr": 439,
+      "head": "891f046ccbeb26d7dda668bc25eb9daf56c452ba",
+      "prQualityRun": 45698184974
+    },
+    {
+      "key": "g9.graphs",
+      "status": "TESTED",
+      "pr": 440,
+      "head": "bd7777f5ef2f49db9baa59ddb97be270ed2185dd",
+      "prQualityRun": 45698510313
+    }
+  ]
 }
