@@ -416,7 +416,10 @@
   // Do not probe the remote R2 asset on concept open: avoid wasting mobile data
   // and avoid holding up navigation/browser tests when the CDN is slow.
   function attachStageVideo(panel,stage,lang){
-    if(!['g9-ch5-distance-formula','g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch3-discriminant','g10-ch4-bpt-thales','g10-ch5-area-triangle'].includes(stage?.id)||!stage.video?.src)return;
+    if(!stage?.video?.src)return;
+    const mensuration=stage.id?.startsWith('g10-ch7-');
+    if(mensuration ? stage.video.language!==lang :
+      !['g9-ch5-distance-formula','g10-ch2-ap-sum','g10-ch2-gp-sum','g10-ch3-discriminant','g10-ch4-bpt-thales','g10-ch5-area-triangle'].includes(stage.id))return;
     let url;try{url=new URL(stage.video.src,document.baseURI);}catch{return;}
     // Live media requires HTTPS. Permit same-origin loopback HTTP in local browser tests only.
     const loopback=location.origin===url.origin&&['localhost','127.0.0.1','[::1]'].includes(location.hostname);
@@ -441,7 +444,7 @@
        const thales=stage.id==='g10-ch4-bpt-thales';
        const area=stage.id==='g10-ch5-area-triangle';
        const distance=stage.id==='g9-ch5-distance-formula';
-       title.textContent=distance
+       title.textContent=mensuration ? stage.title[lang] : distance
          ?(ta?'இரு புள்ளிகளுக்கு இடையேயான தொலைவு (ஆங்கிலக் குரல்)':'Why the distance formula works')
          :area
          ?(ta?'ஆயத்தொலைவுகள் மூலம் முக்கோணத்தின் பரப்பு (ஆங்கிலக் குரல்)':'Area of a triangle from coordinates')
