@@ -48636,8 +48636,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(5x - 2y - 3z)^2}",
-      "fallback": "(−5x + 2y + 3z)² or (5x − 2y − 3z)²"
+      "en": {
+        "latex": "\\boxed{(5x - 2y - 3z)^2}",
+        "fallback": "(−5x + 2y + 3z)² or (5x − 2y − 3z)²"
+      },
+      "ta": {
+        "latex": "\\boxed{(5x - 2y - 3z)^2}",
+        "fallback": "(5x − 2y − 3z)²"
+      }
     },
     "steps": [
       {
