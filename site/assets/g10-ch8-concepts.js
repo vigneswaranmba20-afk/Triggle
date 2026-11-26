@@ -33,7 +33,36 @@
   function control(host, name, options, initial, update) {
     const label = element('label', '', host);
     label.className = 'g10ch8-control';
-    element('span', name, label);
+    const nameNode = element('span', name, label);
+    const numeric = options.length > 1 && options.every(([value, text], i) =>
+      typeof value === 'number' && Number.isFinite(value) && String(value) === String(text) &&
+      (i === 0 || value - options[i - 1][0] === options[1][0] - options[0][0])) &&
+      options[1][0] > options[0][0];
+    if (numeric) {
+      label.classList.add('g10ch8-range-control');
+      nameNode.className = 'g10ch8-control-name';
+      const current = element('span', String(initial), label);
+      current.className = 'g10ch8-range-value';
+      current.setAttribute('aria-hidden', 'true');
+      const slider = element('input', '', label);
+      slider.type = 'range';
+      slider.min = options[0][0];
+      slider.max = options[options.length - 1][0];
+      slider.step = options[1][0] - options[0][0];
+      slider.value = initial;
+      slider.className = 'g10ch8-range';
+      slider.setAttribute('aria-label', name);
+      const bounds = element('span', '', label);
+      bounds.className = 'g10ch8-range-bounds';
+      bounds.setAttribute('aria-hidden', 'true');
+      element('span', String(slider.min), bounds);
+      element('span', String(slider.max), bounds);
+      slider.addEventListener('input', () => {
+        current.textContent = slider.value;
+        update();
+      });
+      return slider;
+    }
     const select = element('select', '', label);
     for (const [value, text] of options) {
       element('option', text, select).value = value;

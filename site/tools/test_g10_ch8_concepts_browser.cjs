@@ -25,7 +25,14 @@ const {server, launchOptions} = require('./dashboard_test_support.cjs');
         const chosen = width === 390 ? Array.from({length: total}, (_, i) => i) : [0, 4, 7, 8, 9, 12, 14];
         for (const index of chosen) {
           await page.goto(concepts + '&concept=' + index);
-          await page.locator('.g10ch8-lab select').first().waitFor();
+          await page.locator('.g10ch8-lab :is(select, input[type="range"])').first().waitFor();
+          if (index < 8 || index === 14) {
+            assert.equal(await page.locator('.g10ch8-lab select').count(), 0, 'Numeric lab must not open a native dropdown');
+            const slider = page.locator('.g10ch8-lab input[type="range"]').first();
+            assert.ok(await slider.isVisible());
+            assert.ok(await slider.getAttribute('aria-label'));
+            assert.ok((await slider.boundingBox()).height >= 44);
+          }
           const rendered = await page.evaluate(i => {
             const stage = window.TRIGGLE_G10_CH8_PATH.stages[i];
             const panel = document.querySelector('.g10ch4-studio');
@@ -58,39 +65,59 @@ const {server, launchOptions} = require('./dashboard_test_support.cjs');
     }
     await page.setViewportSize({width: 390, height: 844});
     await page.locator('#langEn').click();
-    const select = n => page.locator('.g10ch8-lab select').nth(n);
+    const control = n => page.locator('.g10ch8-lab :is(select, input[type="range"])').nth(n);
+    const setControl = async (n, value) => {
+      const field = control(n);
+      if (await field.getAttribute('type') !== 'range') {
+        await field.selectOption(value);
+        return;
+      }
+      const min = Number(await field.getAttribute('min'));
+      const step = Number(await field.getAttribute('step'));
+      await field.focus();
+      await field.press('Home');
+      for (let i = 0; i < (Number(value) - min) / step; i++) await field.press('ArrowRight');
+      assert.equal(await field.inputValue(), value);
+      assert.equal(await field.locator('..').locator('.g10ch8-range-value').textContent(), value);
+    };
     const result = () => page.locator('.g10ch8-result').textContent();
     await page.goto(concepts + '&concept=0');
-    await select(0).selectOption('5');
+    await setControl(0, '5');
     assert.match(await result(), /Mean: 9/);
     await page.goto(concepts + '&concept=1');
-    await select(0).selectOption('8');
+    await setControl(0, '8');
+    assert.match(await result(), /Mean: 10.*Range: 16.*Variance: 26/);
+    await page.goto(concepts + '&concept=2');
+    await setControl(0, '1');
+    assert.match(await result(), /Mean: 10.*Range: 2.*Variance: 0\.8/);
+    assert.equal(await page.locator('.g10ch8-point').count(), 5);
+    await setControl(0, '8');
     assert.match(await result(), /Mean: 10.*Range: 16.*Variance: 26/);
     await page.goto(concepts + '&concept=4');
-    await select(0).selectOption('-2');
-    await select(1).selectOption('4');
+    await setControl(0, '-2');
+    await setControl(1, '4');
     assert.match(await result(), /Mean: -6.*Variance: 20.*Standard deviation: 4\.47/);
     await page.goto(concepts + '&concept=7');
     assert.match(await result(), /32\.66%.*32\.66%/);
-    await select(1).selectOption('4');
+    await setControl(1, '4');
     assert.match(await result(), /32\.66%.*27\.22%/);
     await page.goto(concepts + '&concept=8');
-    await select(0).selectOption('coins');
+    await setControl(0, 'coins');
     assert.equal(await page.locator('.g10ch8-favourable').count(), 3);
     assert.match(await result(), /3 of 4.*0\.75/);
     await page.goto(concepts + '&concept=9');
-    await select(0).selectOption('T');
+    await setControl(0, 'T');
     assert.match(await result(), /TH, TT/);
     assert.equal(await page.locator('.g10ch8-tree-active').count(), 3);
     await page.goto(concepts + '&concept=12');
-    await select(0).selectOption('intersection');
+    await setControl(0, 'intersection');
     assert.match(await result(), /\{4, 6\}.*2\/6/);
     assert.equal(await page.locator('.g10ch8-region.is-selected').count(), 1);
-    await select(0).selectOption('neither');
+    await setControl(0, 'neither');
     assert.match(await result(), /\{1, 3\}.*2\/6/);
     await page.goto(concepts + '&concept=14');
     assert.match(await result(), /3 − 3 \+ 1 = 1/);
-    await select(0).selectOption('2');
+    await setControl(0, '2');
     assert.match(await result(), /2 − 1 \+ 0 = 1/);
     await page.locator('[data-g10ch4-connect] button').nth(1).click();
     await page.waitForURL(/question=c10-8-ex8-4-q12/);

@@ -192,7 +192,7 @@ async function main() {
         const logo=page.locator('#homeBtn img');
         await logo.waitFor({state:'visible'});
         assert.ok(await logo.evaluate(async img=>{await img.decode();return img.naturalWidth>0;}),'Brand image loads');
-        assert.equal(await page.getByText('© 2026 Very Labs',{exact:true}).isVisible(),true);
+        assert.equal(await page.getByText('© 2026 VER labs',{exact:true}).isVisible(),true);
          assert.deepEqual(await page.locator('#sideClasses button b').allTextContents(),['9','10'],'Sidebar contains only active grades');
          assert.deepEqual(await page.locator('#classDock button strong').allTextContents(),['9','10'],'Grade dock contains only active grades');
         assert.deepEqual(await page.locator('.discover-grade-grid [data-grade]').evaluateAll(nodes=>nodes.map(n=>Number(n.dataset.grade))),[9,10]);

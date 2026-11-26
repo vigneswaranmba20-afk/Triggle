@@ -76,3 +76,44 @@
   text-align: start;
   cursor: pointer;
 }
+
+/* Inline, discrete numeric controls: no Android selection dialog. */
+.g10ch8-range-control {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: .15rem .65rem;
+  width: 100%;
+  margin-block: .45rem;
+}
+.g10ch8-control-name {
+  overflow-wrap: anywhere;
+}
+.g10ch8-range-value {
+  color: #85384c;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  text-align: end;
+}
+.g10ch8-range-control .g10ch8-range {
+  grid-column: 1 / -1;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  margin: 0;
+  accent-color: #85384c;
+  cursor: pointer;
+}
+.g10ch8-range-control .g10ch8-range:focus-visible {
+  outline: 2px solid #3730a3;
+  outline-offset: 3px;
+  border-radius: .3rem;
+}
+.g10ch8-range-bounds {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  color: #475569;
+  font-size: .85rem;
+  font-variant-numeric: tabular-nums;
+}
