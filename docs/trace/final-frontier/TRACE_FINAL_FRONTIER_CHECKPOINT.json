@@ -24,13 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g10.algebra.hints",
-      "status": "MERGED",
-      "pr": 448,
-      "head": "d5e1b7e375618b5a8911a9ffeebd3821f8ff14b6",
-      "prQualityRun": 45707428910,
-      "merge": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
-      "pagesRun": 45731462969
+      "key": "navigation",
+      "status": "TESTED",
+      "pr": 449,
+      "head": "23315dc5c52fc8e59271d834ab23f0f2a3795019",
+      "prQualityRun": 45718845558
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2148,13 +2146,13 @@
       "chapter": 3,
       "scope": "Grade 10 Algebra explanations and Tamil difficulty labels",
       "runtimeRecords": 12,
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 10,
         "chapter": 3,
         "runtimeRecords": 12,
         "scope": "Grade 10 Algebra explanations and Tamil difficulty labels",
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 448,
         "head": "d5e1b7e375618b5a8911a9ffeebd3821f8ff14b6",
         "prQualityRun": 45707428910,
@@ -2167,6 +2165,34 @@
         },
         "merge": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
         "pagesRun": 45731462969,
+        "liveEvidence": {
+          "pr": 448,
+          "merge": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
+          "head": "d5e1b7e375618b5a8911a9ffeebd3821f8ff14b6",
+          "slug": "g10-algebra-hints",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-3-ex3-15-q1-i",
+          "pagesRun": 45731462969,
+          "deploymentId": 8073597873,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45731462969/job/139620124702",
+          "deploymentCompletedAt": "2026-11-26T01:05:27Z",
+          "versionMatched": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
+          "sha256": {
+            "assets/app.js": "d4a83ba7703dd815d7a6da638a1efcadc877789ae876c13e0edfbf8235332c88",
+            "data/g10-frontier-algebra-hints.js": "48676705d47fe4ae804f15fed8c1d5d57e66ee90d8da45bdfcf00131445b1303",
+            "data/project-status.json": "28855e5f44d417db316e97b80553462ac9f580c204995384d828152d8fc6cd23",
+            "index.html": "9423e111e84fdc14a7f27b9874b335f9e0847a727fe74e03cbd3f86b048b67a8",
+            "service-worker.js": "af4ac1ee3db441b722f33875f532300019376a61c2bb8124141753e7a23722b4"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 10 Chapter 3: 12 bilingual explanations at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/448"
       }
     },
@@ -2489,8 +2515,8 @@
         "scope": "Bilingual hints across all 129 registered textbook exercise sections",
         "status": "TESTED",
         "pr": 461,
-        "head": "bd766b7b30c1d3ff8819f63c16e556fb9f401b1e",
-        "prQualityRun": 45731037748,
+        "head": "daea78aa0131ddea4858260f3d656427f59dc82f",
+        "prQualityRun": 45732851130,
         "verification": {
           "slug": "frontier-exercise-hints",
           "worktree": "/workspace/Triggle-frontier-exercise-hints",
@@ -2531,7 +2557,8 @@
     "localOfflineAudit": "/workspace/scratch/trace-sources/offline-hints-final-candidate.log",
     "deliverablesMergeCommand": "/workspace/scratch/trace-sources/publish-frontier-artifacts.sh",
     "localTamilNavigationAudit": "/workspace/scratch/trace-sources/navigation-ta-final-candidate.json",
-    "localMultipleChoiceAudit": "/workspace/scratch/trace-sources/mcq-feedback-final-candidate.json"
+    "localMultipleChoiceAudit": "/workspace/scratch/trace-sources/mcq-feedback-final-candidate.json",
+    "inventoryConsistencyCheck": "/workspace/scratch/trace-sources/verify-frontier-inventory-consistency.py"
   },
   "openManagement": {
     "mathguard": "https://github.com/vigneswaranmba20-afk/Triggle/pull/425",
@@ -2543,17 +2570,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "96bdc9a6cb532ef07df0e137d8fea6274f975aa0",
+  "latestVerifiedProduction": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
   "openReleaseOrder": [
-    {
-      "key": "g10.algebra.hints",
-      "status": "MERGED",
-      "pr": 448,
-      "head": "d5e1b7e375618b5a8911a9ffeebd3821f8ff14b6",
-      "prQualityRun": 45707428910,
-      "merge": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
-      "pagesRun": 45731462969
-    },
     {
       "key": "navigation",
       "status": "TESTED",
@@ -2635,8 +2653,8 @@
       "key": "exercise.hints",
       "status": "TESTED",
       "pr": 461,
-      "head": "bd766b7b30c1d3ff8819f63c16e556fb9f401b1e",
-      "prQualityRun": 45731037748
+      "head": "daea78aa0131ddea4858260f3d656427f59dc82f",
+      "prQualityRun": 45732851130
     }
   ]
 }
