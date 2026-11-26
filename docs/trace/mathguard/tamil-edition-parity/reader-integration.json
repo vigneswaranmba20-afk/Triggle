@@ -1,0 +1,54 @@
+{
+  "readerAnswers": {
+    "en": "2 cm³",
+    "ta": "சுமார் 2.46 கன செ.மீ"
+  },
+  "integratedAnswerAudit": {
+    "PASS": 70,
+    "FAIL": 0,
+    "UNVERIFIABLE": 1
+  },
+  "grade10Exercise73Question3": {
+    "id": "c10-7-ex7-3-q3",
+    "grade": 10,
+    "chapter": "7",
+    "domain": "mensuration",
+    "item_type": "exercise",
+    "validation_method": "cylinder_minus_cone_volume",
+    "working_status": "PASS",
+    "answer_status": "PASS",
+    "tamil_status": "PASS",
+    "tamil_flags": [],
+    "tamil_answer_evidence": {
+      "method": "source_verified_medium_rounding",
+      "sourcePdfPages": {
+        "en": 300,
+        "ta": 308
+      },
+      "keyPdfPages": {
+        "en": 347,
+        "ta": 362
+      },
+      "exactVolumeCm3": "98*pi/125",
+      "forms": {
+        "en": {
+          "plain": "PASS",
+          "fallback": "PASS",
+          "latex": "PASS"
+        },
+        "ta": {
+          "plain": "PASS",
+          "fallback": "PASS",
+          "latex": "PASS"
+        }
+      }
+    },
+    "total_claims": 8,
+    "verified_claims": 8,
+    "failed_claims": 0,
+    "unsupported_claims": 0,
+    "failed_details": [],
+    "unsupported_details": [],
+    "discrepancy": ""
+  }
+}

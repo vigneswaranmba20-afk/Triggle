@@ -1,0 +1,51 @@
+{
+  "testedEngineCommit": "7343a6644833d576515deec1198d75ecc1faf56d",
+  "testedReaderContentCommit": "9ea9cb343d6fb071ace2f4407cc60c0ba2554ba9",
+  "productionMainObserved": "5daa2ece125200b099fd5b676d7df2a4973aa049",
+  "releaseDecision": "HOLD",
+  "frozen": {
+    "cases": 334,
+    "samePerItemWorkingAndAnswerResultsAsScalarRepair": true,
+    "workingStatuses": {
+      "PARTIAL": 74,
+      "PASS": 256,
+      "UNVERIFIABLE": 4
+    },
+    "answerStatuses": {
+      "PASS": 326,
+      "UNVERIFIABLE": 7,
+      "FAIL": 1
+    }
+  },
+  "expandedExistingEngineDataset": {
+    "records": 765,
+    "before": {
+      "PARTIAL": 648,
+      "FAIL": 34,
+      "UNVERIFIABLE": 35,
+      "PASS": 48
+    },
+    "after": {
+      "PARTIAL": 297,
+      "PASS": 398,
+      "FAIL": 35,
+      "UNVERIFIABLE": 35
+    },
+    "statusTransitions": {
+      "PARTIAL to PASS": 350,
+      "PARTIAL to FAIL": 1
+    },
+    "scope": "Existing adapter parity statuses. The unpatched Q3 on the engine branch fails and the corrected reader record passes the integration audit."
+  },
+  "fixtureCorrection": {
+    "cases": [
+      "v14b-ta-ok-1",
+      "v14b-ta-ok-2",
+      "v14b-ta-ok-3",
+      "v14b-ta-ok-4",
+      "v14b-ta-ok-5"
+    ],
+    "originalRun": "The positive fixtures lacked a Tamil answer and correctly returned PARTIAL. Their original run is preserved.",
+    "finalRun": "Added the localized answer to the positive test inputs. A separate test verifies the same incomplete shape still returns PARTIAL."
+  }
+}
