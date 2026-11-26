@@ -2586,13 +2586,13 @@
       "status": "TESTED",
       "release": {
         "grade": null,
-        "chapter": 4,
-        "runtimeRecords": 6,
-        "scope": "Bilingual descriptions for three constructions and three geometry diagrams",
+        "chapter": null,
+        "runtimeRecords": 7,
+        "scope": "Six bilingual figure descriptions and a Grade 10 Trigonometry label clearance",
         "status": "TESTED",
         "pr": 460,
-        "head": "37296d1096654ad04be3f720b1b53d566f9a6100",
-        "prQualityRun": 45735993291,
+        "head": "1fd2b28e98788e73b1f194c1fb9d3dbae56dc842",
+        "prQualityRun": 45740805117,
         "verification": {
           "slug": "geometry-descriptions",
           "worktree": "/workspace/Triggle-frontier-geometry-descriptions",
@@ -2616,8 +2616,8 @@
         "scope": "Bilingual starting hints and Tamil worked formulas and accessible readings",
         "status": "TESTED",
         "pr": 461,
-        "head": "e02f863500cbd3beddb36d14431c0c1191b43d33",
-        "prQualityRun": 45740229963,
+        "head": "cfdaa09d2d8214b12e9e24f15ff49b7a87fc59ee",
+        "prQualityRun": 45740811075,
         "verification": {
           "slug": "frontier-exercise-hints",
           "worktree": "/workspace/Triggle-frontier-tamil-formulas",
@@ -2660,7 +2660,8 @@
     "localTamilNavigationAudit": "/workspace/scratch/trace-sources/navigation-ta-final-candidate.json",
     "localMultipleChoiceAudit": "/workspace/scratch/trace-sources/mcq-feedback-final-candidate.json",
     "inventoryConsistencyCheck": "/workspace/scratch/trace-sources/verify-frontier-inventory-consistency.py",
-    "tamilWorkedNotationAudit": "/workspace/scratch/trace-sources/tamil-formula-verification.json"
+    "tamilWorkedNotationAudit": "/workspace/scratch/trace-sources/tamil-formula-verification.json",
+    "trigonometryFigureLabelAudit": "/workspace/scratch/trace-sources/g10-trig-figure-layout-regression.log"
   },
   "openManagement": {
     "mathguard": "https://github.com/vigneswaranmba20-afk/Triggle/pull/425",
@@ -2729,15 +2730,15 @@
       "key": "geometry.descriptions",
       "status": "TESTED",
       "pr": 460,
-      "head": "37296d1096654ad04be3f720b1b53d566f9a6100",
-      "prQualityRun": 45735993291
+      "head": "1fd2b28e98788e73b1f194c1fb9d3dbae56dc842",
+      "prQualityRun": 45740805117
     },
     {
       "key": "exercise.hints",
       "status": "TESTED",
       "pr": 461,
-      "head": "e02f863500cbd3beddb36d14431c0c1191b43d33",
-      "prQualityRun": 45740229963
+      "head": "cfdaa09d2d8214b12e9e24f15ff49b7a87fc59ee",
+      "prQualityRun": 45740811075
     }
   ]
 }
