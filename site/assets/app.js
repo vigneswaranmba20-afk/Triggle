@@ -562,6 +562,8 @@
   $('lessonCard').classList.toggle('many-steps',all.length>3);
  }
  function observeLessonMath(){
+  // Keep wide expressions keyboard reachable as soon as the question changes.
+  prepareLessonMath();
   if(lessonMathObserver){
    for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
     lessonMathObserver.observe(formula);
@@ -572,10 +574,10 @@
     const glyphs=formula.querySelector('.katex-html');
     if(glyphs)lessonMathObserver.observe(glyphs);
    }
+  }else{
+   // Older browsers without ResizeObserver still get a post-layout measurement.
+   requestAnimationFrame(prepareLessonMath);
   }
-  // Measure the completed layout before paint. ResizeObserver and loadingdone
-  // keep the keyboard scroll state current when containers or fonts change.
-  requestAnimationFrame(prepareLessonMath);
  }
  document.fonts?.addEventListener('loadingdone',()=>{
   if(!$('lessonCard').hidden)prepareLessonMath();

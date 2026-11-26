@@ -415,6 +415,7 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
   font-size: var(--ver-text-small) !important;
   line-height: var(--ver-prose-leading) !important;
 }
+.ver-glyph #lessonCard #inlineFigureOpen { color: var(--ver-forest); }
 .ver-glyph #lessonCard .inline-figure-visual svg { max-height: min(45dvh, 19rem) !important; }
 .ver-glyph #lessonCard .inline-figure-visual:has(img) {
   position: relative;
