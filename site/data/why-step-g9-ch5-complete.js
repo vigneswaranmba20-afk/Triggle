@@ -23,10 +23,10 @@
     "ta": "(i) (−5, 3), (−1, 3), (0, 3), (5, 3) ஆகிய அனைத்துப் புள்ளிகளிலும் y-ஆயத்தொலைவு y = 3 எனச் சமமாக உள்ளது (x-அச்சிற்கு 3 அலகுகள் மேல்). (புள்ளிகளைக் குறித்து இணைத்து கிடைக்கும் கோட்டைக் காணுதல்: (i) x-அச்சிற்கு இணையான நேர்க்கோடு; (ii) y-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு)"
   },
   "g9-ch5-ex5.1-q4": {
-    "step": 0,
-    "expected": "(i) Joining (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) gives two horizontal sides of length 4 and two vertical sides of length 4 meeting at 90° angles. Hence it is a square.",
-    "en": "(i) Joining (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) gives two horizontal sides of length 4 and two vertical sides of length 4 meeting at 90° angles. Hence it is a square. (Identify shapes formed by plotted points: (i) Square; (ii) Trapezium)",
-    "ta": "(i) (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) என இணைக்கும்போது, 4 அலகு நீளமுள்ள செங்குத்து மற்றும் கிடைமட்டப் பக்கங்கள் 90° கோணத்தில் வெட்டுகின்றன. எனவே இது ஒரு சதுரம். (புள்ளிகளை இணைத்து உருவாகும் வடிவத்தைக் காணுதல்: (i) சதுரம்; (ii) சரிவகம்)"
+    "step": 1,
+    "expected": "(ii) Label the printed points A, B, C and D. As we move from y = 3 down to y = −1, BC moves left 8 units and AD moves right 8 units. The x-coordinates become equal after travelling 5/16 of the vertical drop. The two segments cross between their endpoints, so the printed order gives a self-crossing quadrilateral.",
+    "en": "The top and bottom sides alone cannot identify a trapezium. Follow the other two segments in order and see whether they meet between their endpoints.",
+    "ta": "மேல் பக்கமும் கீழ்ப்பக்கமும் இணையாக இருப்பது மட்டும் சரிவகத்தை உறுதி செய்யாது. மற்ற இரு பக்கங்களும் அவற்றின் முனைகளுக்கு இடையில் வெட்டிக்கொள்கின்றனவா எனச் சரிபார்க்க வேண்டும்."
   },
   "g9-ch5-ex5.2-q1": {
     "step": 0,

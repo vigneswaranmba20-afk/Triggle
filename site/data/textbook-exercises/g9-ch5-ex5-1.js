@@ -10,11 +10,12 @@
   chapter.textbookQuestionIds = chapter.textbookQuestionIds || [];
 
   const tex = (latex, fallback, display = false) => ({ latex, fallback, ...(display ? { display: true } : {}) });
-  const step = (en, ta, eq, latex) => ({
+  const step = (en, ta, eq, latex, tamilLatex) => ({
     en,
     ta,
     eq,
-    math: tex(latex || eq, eq, true)
+    math: tex(latex || eq, eq, true),
+    ...(tamilLatex ? { mathTa: tex(tamilLatex, eq, true) } : {})
   });
 
   const entries = [
@@ -229,12 +230,12 @@
       title: { en: 'Identify shapes formed by plotted points', ta: 'புள்ளிகளை இணைத்து உருவாகும் வடிவத்தைக் காணுதல்' },
       figureSrc: 'assets/grade9-ch5/ex5-1-q4.svg',
       figureAlt: {
-        en: 'Coordinate plot showing (i) a 4x4 square in Quadrant III and (ii) a trapezium with horizontal parallel sides y=3 and y=-1',
-        ta: '(i) சதுரம் மற்றும் (ii) சரிவகம் ஆகிய வடிவங்களைக் காட்டும் ஆய அச்சு வரைபடம்'
+        en: 'Three coordinate plots. In part (i), PQRS forms a square. In part (ii), the printed path ABCDA crosses, and the reordered path ABDCA follows the outside of the trapezium.',
+        ta: 'மூன்று ஆயத்தொலை வரைபடங்கள். (i)-இல் PQRS ஒரு சதுரம். (ii)-இல் கொடுக்கப்பட்ட ABCDA வரிசையில் பக்கங்கள் குறுக்கிடுகின்றன. ABDCA வரிசை சரிவகத்தின் எல்லையைப் பின்பற்றுகிறது.'
       },
       figureCaption: {
-        en: 'Shapes formed: (i) Square of side 4 units; (ii) Trapezium with parallel bases y = 3 and y = −1',
-        ta: 'உருவாகும் வடிவங்கள்: (i) சதுரம்; (ii) சரிவகம்'
+        en: '(i) Square. (ii) Printed order ABCDA and perimeter order ABDCA.',
+        ta: '(i) சதுரம். (ii) கொடுக்கப்பட்ட வரிசை ABCDA, சுற்றுப்புற வரிசை ABDCA.'
       },
       q: {
         en: '4. Plot the following points in the coordinate plane. Join them in order. What type of geometrical shape is formed?\n(i) (0, 0) (−4, 0) (−4, −4) (0, −4)   (ii) (−3, 3) (2, 3) (−6, −1) (5, −1)',
@@ -259,26 +260,34 @@
           '(i) Joining (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) gives two horizontal sides of length 4 and two vertical sides of length 4 meeting at 90° angles. Hence it is a square.',
           '(i) (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) என இணைக்கும்போது, 4 அலகு நீளமுள்ள செங்குத்து மற்றும் கிடைமட்டப் பக்கங்கள் 90° கோணத்தில் வெட்டுகின்றன. எனவே இது ஒரு சதுரம்.',
           'All 4 sides = 4 units, angles = 90° ⇒ Square',
-          '\\text{All 4 sides}=4\\text{ units},\\;\\text{angles}=90^\\circ \\implies \\text{Square}'
+          '\\text{All 4 sides}=4\\text{ units},\\;\\text{angles}=90^\\circ \\implies \\text{Square}',
+          '\\begin{gathered}\\text{நான்கு பக்கங்களும் }4\\text{ அலகுகள்}\\\\\\text{கோணங்கள் }90^\\circ \\implies \\text{சதுரம்}\\end{gathered}'
         ),
         step(
-          '(ii) Points (−3, 3) and (2, 3) lie on the horizontal line y = 3 (length 5). Points (−6, −1) and (5, −1) lie on the horizontal line y = −1 (length 11). Since one pair of opposite sides is parallel with unequal lengths, the quadrilateral is a trapezium.',
-          '(ii) (−3, 3), (2, 3) ஆகியவை y = 3 என்ற கிடைமட்டக் கோட்டிலும் (நீளம் 5), (−6, −1), (5, −1) ஆகியவை y = −1 என்ற கிடைமட்டக் கோட்டிலும் (நீளம் 11) உள்ளன. ஒரு சோடி எதிர்ப்பக்கங்கள் இணையாகவும் சமமற்ற நீளமாகவும் உள்ளதால் இது ஒரு சரிவகம்.',
-          'y=3 ∥ y=−1, lengths 5 ≠ 11 ⇒ Trapezium',
-          '\\text{One pair of opposite sides parallel } (y=3 \\parallel y=-1) \\implies \\text{Trapezium}'
+          '(ii) Label the printed points A, B, C and D. As we move from y = 3 down to y = −1, BC moves left 8 units and AD moves right 8 units. The x-coordinates become equal after travelling 5/16 of the vertical drop. The two segments cross between their endpoints, so the printed order gives a self-crossing quadrilateral.',
+          '(ii) கொடுக்கப்பட்ட புள்ளிகளுக்கு முறையே A, B, C, D எனப் பெயரிடுவோம். y = 3 இலிருந்து y = −1 வரை கீழிறங்கும்போது BC இடதுபுறம் 8 அலகுகளும் AD வலதுபுறம் 8 அலகுகளும் நகர்கின்றன. செங்குத்துத் தொலைவில் 5/16 பங்கு கீழிறங்கியதும் இரண்டின் x-ஆயத்தொலைவுகள் சமமாகின்றன. இரு கோட்டுத்துண்டுகளும் முனைகளுக்கு இடையில் வெட்டிக்கொள்வதால், அச்சிட்ட வரிசையில் தன்னைத்தானே வெட்டிக்கொள்ளும் நாற்கரம் கிடைக்கிறது.',
+          '2 − 8t = −3 + 8t ⇒ t = 5/16; BC and AD meet at (−1/2, 7/4)',
+          '\\begin{aligned}2-8t&=-3+8t\\\\t&=\\dfrac{5}{16}\\in(0,1)\\\\BC\\cap AD&=\\left(-\\dfrac12,\\dfrac74\\right)\\end{aligned}'
+        ),
+        step(
+          'To get the figure named in both answer appendices, follow the outside A → B → D → C → A. The top and bottom sides AB and DC are horizontal. The other two sides have the same length, so this order gives an isosceles trapezium.',
+          'இரு பாடநூல்களின் விடைக்குறிப்பிலும் கூறிய சரிவகம் கிடைக்க, சுற்றுப்புறமாக A → B → D → C → A என இணைக்க வேண்டும். மேல் பக்கம் AB, கீழ்ப்பக்கம் DC இரண்டும் கிடைமட்டமாக உள்ளன. மற்ற இரு பக்கங்களின் நீளம் சமம். எனவே இந்த வரிசையில் இருசமபக்கச் சரிவகம் கிடைக்கிறது.',
+          'AB ∥ DC; AB = 5, DC = 11; BD = CA = √(3² + 4²) = 5',
+          '\\begin{gathered}AB\\parallel DC,\\quad AB=5,\\quad DC=11\\\\BD=CA=\\sqrt{3^2+4^2}=5\\end{gathered}'
         )
       ],
-      answer: '(i) Square; (ii) Trapezium',
-      answerTa: '(i) சதுரம்; (ii) சரிவகம்',
+      answer: '(i) Square. (ii) Self-crossing quadrilateral in the printed order ABCDA. The keyed trapezium uses ABDCA.',
+      answerTa: '(i) சதுரம். (ii) ABCDA என்ற வரிசையில் பக்கங்கள் குறுக்கிடும் நாற்கரம். விடைக்குறிப்பின் சரிவகத்திற்கு ABDCA வரிசை தேவை.',
       answerMath: {
-        en: tex('\\text{(i) Square};\\quad \\text{(ii) Trapezium}', '(i) Square; (ii) Trapezium', true),
-        ta: tex('\\text{(i) சதுரம்};\\quad \\text{(ii) சரிவகம்}', '(i) சதுரம்; (ii) சரிவகம்', true)
+        en: tex('\\begin{gathered}\\text{(i) Square}\\\\\\text{(ii) }ABCDA:\\text{ sides cross}\\\\ABDCA:\\text{ trapezium}\\end{gathered}', '(i) Square. (ii) Self-crossing quadrilateral in the printed order ABCDA. The keyed trapezium uses ABDCA.', true),
+        ta: tex('\\begin{gathered}\\text{(i) சதுரம்}\\\\\\text{(ii) }ABCDA:\\text{ பக்கங்கள் குறுக்கிடும்}\\\\ABDCA:\\text{ சரிவகம்}\\end{gathered}', '(i) சதுரம். (ii) ABCDA என்ற வரிசையில் பக்கங்கள் குறுக்கிடும் நாற்கரம். விடைக்குறிப்பின் சரிவகத்திற்கு ABDCA வரிசை தேவை.', true)
       },
       sourceFidelity: {
         status: 'page-visual-checked',
         sourcePdfPage: { en: 199, ta: 212 },
         sourcePrintedPage: { en: 193, ta: 206 },
-        answerKeyPdfPage: { en: 321, ta: 337 }
+        answerKeyPdfPage: { en: 321, ta: 337 },
+        sourceDiscrepancy: 'Both editions require the printed order and key a trapezium. That order crosses. The trapezium follows the perimeter in ABDCA order.'
       }
     }
   ];
