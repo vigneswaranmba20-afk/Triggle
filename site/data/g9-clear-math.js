@@ -898,17 +898,18 @@ const records=[
       "en": [
         "For positive side lengths, ",
         {
-          "latex": "b \\sin \\theta = a \\cos \\theta",
+          "latex": "b\\sin\\theta=a\\cos\\theta",
           "fallback": "b sin θ = a cos θ",
-          "display": true
+          "display": false
         },
         ". The printed equation alone does not ensure equality."
       ],
       "ta": [
         "நேர்மப் பக்க நீளங்களுக்கு ",
         {
-          "latex": "b \\sin \\theta = a \\cos \\theta",
-          "fallback": "b sin θ = a cos θ"
+          "latex": "b\\sin\\theta=a\\cos\\theta",
+          "fallback": "b sin θ = a cos θ",
+          "display": false
         },
         ". கொடுக்கப்பட்ட சமன்பாடு மட்டும் சமத்துவத்தை உறுதி செய்யாது."
       ]

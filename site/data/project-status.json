@@ -48,7 +48,7 @@
     "site/data/g10-relations-concepts.js": "ebf12612d7aaabff56a529b4866b707f69043abd8009c22350799162e74d04fa",
     "site/data/g9-algebra-chapter.js": "13b62ccfd65b6d0e48d1b2cb0e50dfd0220e5c0572e9a7a81a5cafd6749bbbb9",
     "site/data/g9-ch5-distance-concept.js": "a275ff38a7230ce3e3010cc2d2f66a0fe835435706e34a03094a6ce0e4b4ee12",
-    "site/data/g9-clear-math.js": "f914f6b532ad3e0ea22ec7167596cf72041954e2177f0a7adce463c517df3bbe",
+    "site/data/g9-clear-math.js": "6a07836621641c06adb66b6218e1a28ddc81ced59788f9d98b58ca9ba42a33e0",
     "site/data/g9-coordinates-concepts.js": "3332cf001ed529d624f33e388ea6426ab5210daae394d0ab35370726e7a5a1ed",
     "site/data/g9-geometry-concepts.js": "d830ca80742ce4f9e78ced05e6db197b0169d5c33ec4c60c47d3b6b4f56a1e1f",
     "site/data/g9-mensuration-chapter.js": "6fd6136c6a2de67eacfc51c320ea1df0364612839a173707e6319128bc51cef9",
@@ -191,7 +191,7 @@
     "site/data/textbook-exercises/g9-ch5-ex5-5.js": "a2475361f8b47510d4616252836cb80b8774abf549e71674abfefce5326a956f",
     "site/data/textbook-exercises/g9-ch5-ex5-6.js": "d39a3a49de36cc01a9221ae6b356a16bc6f6ace9d4589e8678781b269dbbc83a",
     "site/data/textbook-exercises/g9-ch6-ex6-4-q2-q3-en.js": "a81b04243accc8755a5839a8e0adbf5e909cce35879652420eccf3387922d668",
-    "site/data/textbook-exercises/g9-ch6-frontier-2025.js": "a3a1f1aaf327a92ed7447c4e6165c30293fe9ea274856856f0166102c2aca6e4",
+    "site/data/textbook-exercises/g9-ch6-frontier-2025.js": "2209d6246a7521fd2d5ee811339acd4db7978cc31d2bc25e48d6b86dab0dc1b3",
     "site/data/textbook-exercises/g9-ch7-ex7-1-en.js": "1cf2a1ec1d40f676f136b5fcbb3453106ab56eae8521cbe9221cda8f38345647",
     "site/data/textbook-exercises/g9-ch7-ex7-2-en.js": "98257ddd4c6e8e373403d6fcf95bfbfbec10105978b61119efce05e7b02b56f1",
     "site/data/textbook-exercises/g9-ch7-ex7-3-en.js": "74e8370320e973b6e5e4393b9d69d83683b60f0cdb9b10071b1bbd87c36619c0",
@@ -8853,7 +8853,7 @@
                   "url": "../index.html?class=9&question=c9-exercise-6-1-q6",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "34209541713a709cf5cd09c8c9b7ed45d6af483aeee93e60d9aea0dd7633e8ae",
+                  "recordSha256": "4aab67478e4c740792b3988a23728252a3060d523f34e1405a6f4f40f34cbca0",
                   "verified": false
                 },
                 {
