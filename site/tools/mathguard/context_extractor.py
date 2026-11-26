@@ -225,6 +225,28 @@ def extract_mathematical_context(
         except Exception:
             pass
 
+    # Extract explicit "whose GCD is <expr>" / "whose LCM is <expr>"
+    for m_gl in re.finditer(r"\bwhose\s+(GCD|LCM)\s+is\s+([^,.;\n]+)", text, flags=re.I):
+        sym_gl = m_gl.group(1).upper()
+        raw_gl = m_gl.group(2).strip().replace("−", "-")
+        raw_gl = re.sub(r"([⁰¹²³⁴⁵⁶⁷⁸⁹]+)", lambda m: "^" + m.group(1).translate(str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹", "0123456789")), raw_gl)
+        try:
+            e_gl = parse_expression(raw_gl)
+            _add_given(res, sym_gl, e_gl, m_gl.group(0), f"explicit_{sym_gl.lower()}")
+        except Exception:
+            pass
+
+    # Check triangle inequality when 3 triangle sides are explicitly given
+    m_tri = re.search(
+        r"\btriangle\s+with\s+sides\s+(\d+(?:\.\d+)?)\s*(?:cm|m|mm)?\s*,\s*(\d+(?:\.\d+)?)\s*(?:cm|m|mm)?\s*(?:,|and)\s*(\d+(?:\.\d+)?)\s*(?:cm|m|mm)?",
+        text,
+        flags=re.I,
+    )
+    if m_tri:
+        s1, s2, s3 = float(m_tri.group(1)), float(m_tri.group(2)), float(m_tri.group(3))
+        if s1 + s2 <= s3 or s1 + s3 <= s2 or s2 + s3 <= s1:
+            res.conflicts.append(f"Triangle inequality violated for sides ({s1}, {s2}, {s3})")
+
     # 3. Coordinate Geometry: inclination angle, slope, intercepts, points
     m_ang = re.search(r"\binclination\s+(?:with[^0-9]+)?(?:is\s+)?(\d+)\s*°", text, flags=re.I)
     if m_ang:

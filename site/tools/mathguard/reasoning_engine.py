@@ -121,15 +121,21 @@ def _preprocess_math_line(raw: str) -> str:
         s = s[1:]
     s = s.replace("&=", "=").replace("&", " ")
     s = s.replace(r"\,", " ").replace(r"\;", " ").replace(r"\:", " ")
+    s = re.sub(r"\\qq?uad\b", " ", s)
+    # Collapse LaTeX thousands separators like 1{,}000{,}000 -> 1000000
+    while re.search(r"(\d)\{,\}(\d{3})", s):
+        s = re.sub(r"(\d)\{,\}(\d{3})", r"\1\2", s)
     # Strip equation operation prefixes & trailing labels ONLY when preceded by comma/quad/dots
     s = re.sub(r"^\s*(?:[-−]?\s*\(\d+'?\)\s*(?:[-+−]\s*\(\d+'?\))?\s*:\s*)", "", s)
     s = re.sub(r"^\s*[A-Za-z0-9_]+\s*=\s*[-+]?\d+(?:/\d+)?\s*:\s*(?=.*=)", "", s)
     s = re.sub(r"^\s*\(\d+'?\)\s+(?=[A-Za-z0-9\\-])", "", s)
-    s = re.sub(r"(?:\\dots\s*|,\s*|\\qq?uad\s*)\(\d+'?\)\s*$", "", s)
+    s = re.sub(r"(?:\\dots\s*|,\s*|\s+)\(\d+'?\)\s*$", "", s)
     s = re.sub(r"\\text\s*\{\s*[-—]+\s*\(\d+'?\)\s*\}\s*$", "", s)
-    s = re.sub(r"\\qq?uad\s*\([^)]*(?:\\ne|≠|perpendicular|parallel|collinear|approx|real and (?:un)?equal|reject|Option|check:|since\b)[^)]*\)\s*$", "", s, flags=re.I)
-    s = re.sub(r"\\qq?uad\s*\(\s*\\text\s*\{\s*reject\b.*$", "", s, flags=re.I)
-    s = re.sub(r"\\qq?uad\s*\(\s*[A-Za-z]\s*(?:,\s*[A-Za-z]\s*[><]\s*0|=\s*[^)]+)\)\s*$", "", s)
+    s = re.sub(r"\(\s*[^)]*(?:\\ne|≠|perpendicular|parallel|collinear|approx|real and (?:un)?equal|reject|Option|check:|since\b)[^)]*\)\s*$", "", s, flags=re.I)
+    s = re.sub(r"\(\s*\\text\s*\{\s*reject\b.*$", "", s, flags=re.I)
+    s = re.sub(r",\s*[A-Za-z]\s*>\s*0(?:\s*,\s*[A-Za-z]\s*>\s*0)*\s*$", "", s)
+    s = re.sub(r"\(\s*[A-Za-z](?:\s*,\s*[A-Za-z])*\s*[><]\s*0(?:\s*,\s*[A-Za-z]\s*[><]\s*0)*\s*\)\s*$", "", s)
+    s = re.sub(r"\(\s*[A-Za-z]\s*=\s*[^)]+\)\s*$", "", s)
     s = re.sub(r"\(\s*\\text\s*\{\s*(?:Option[^}]*|since\s+[^}]*|real\s+and\s+unequal\s+roots)\s*\}\s*\)\s*$", "", s, flags=re.I)
     s = s.replace(r"\ldots", "").replace("…", "")
     # Strip measurement units, rate units, & trailing %
@@ -140,9 +146,11 @@ def _preprocess_math_line(raw: str) -> str:
     s = re.sub(r"\\text\s*\{\s*Rs\.?\s*\}", "", s, flags=re.I)
     s = re.sub(r"\(\s*approx\s*\)", "", s, flags=re.I)
     s = re.sub(r"\\text\s*\{\s*(?:Exact|Yes|Wall|Check|Points)\s*:\s*\}", "", s, flags=re.I)
+    s = re.sub(r"\\text\s*\{\s*passes\s+through\s*\}.*$", "", s, flags=re.I)
     s = re.sub(r"\\text\s*\{\s*At\s*\}\s*([A-Za-z_0-9]+\s*=\s*[^:]+?)\s*:\s*", r"\1 ; ", s, flags=re.I)
     s = re.sub(r"\(\s*\\text\s*\{\s*Option[^}]*\}\s*\)", "", s, flags=re.I)
     s = re.sub(r"(?<=\d)\s*\\%", "", s)
+    s = re.sub(r"\\text\s*\{[^}]*\b(?:so|gives)\b[^}]*\}\s*=", "; named_rhs =", s, flags=re.I)
     s = re.sub(r"\\text\s*\{\s*(?:gives|so|hence|then|or|and|where|is vertical, so)\s*\}", ";", s, flags=re.I)
     s = re.sub(r"\\text\s*\{[^}]*\b(?:so|gives)\b[^}]*\}", ";", s, flags=re.I)
     s = re.sub(r"\\text\s*\{\s*Area\s*\}\s*\(\\triangle\s*([A-Z]+)\)", r"Area_\1", s)
@@ -241,10 +249,38 @@ def _sub_env(expr: sp.Expr, env: Dict[str, sp.Expr], allow_positive_domain: bool
     if not env:
         return expr
     subs = {sym: env[sym.name] for sym in expr.free_symbols if sym.name in env}
-    return expr.subs(subs) if subs else expr
+    out = expr.subs(subs) if subs else expr
+    if ("alpha_plus_beta" in env or "alpha_beta" in env) and (
+        sp.Symbol("u") in out.free_symbols or sp.Symbol("v") in out.free_symbols
+    ):
+        u, v = sp.Symbol("u"), sp.Symbol("v")
+        def _sym_poly(p_expr: sp.Expr) -> sp.Expr:
+            try:
+                sym_res = sp.symmetrize(p_expr, u, v, formal=True)
+                if isinstance(sym_res, tuple) and len(sym_res) == 3 and sym_res[1] == 0:
+                    s1, s2 = sp.Symbol("s_1"), sp.Symbol("s_2")
+                    rep = sym_res[0]
+                    if "alpha_plus_beta" in env:
+                        rep = rep.subs(s1, env["alpha_plus_beta"])
+                    if "alpha_beta" in env:
+                        rep = rep.subs(s2, env["alpha_beta"])
+                    return rep
+            except Exception:
+                pass
+            return p_expr
+        num, den = sp.fraction(sp.together(out))
+        num_s, den_s = _sym_poly(num), _sym_poly(den)
+        if not (sp.Symbol("u") in num_s.free_symbols or sp.Symbol("v") in num_s.free_symbols or sp.Symbol("u") in den_s.free_symbols or sp.Symbol("v") in den_s.free_symbols):
+            out = num_s / den_s
+        else:
+            if "alpha_plus_beta" in env:
+                out = out.subs(u + v, env["alpha_plus_beta"])
+            if "alpha_beta" in env:
+                out = out.subs(u * v, env["alpha_beta"])
+    return out
 
 
-_PHYSICAL_POS_SYMS = {"r", "h", "l", "b", "a", "R", "H", "d", "k", "r_1", "r_2", "h_1", "h_2", "l_1", "l_2"}
+_PHYSICAL_POS_SYMS = {"r", "h", "l", "b", "a", "s", "R", "H", "d", "k", "r_1", "r_2", "h_1", "h_2", "l_1", "l_2"}
 
 
 def _exprs_match(
@@ -317,6 +353,11 @@ def _exprs_match(
 
 def _is_named_lhs(raw: str) -> Optional[str]:
     s = _strip_trailing_units(_preprocess_math_line(raw)).strip()
+    compact = re.sub(r"\s+", "", s)
+    if compact in ("u+v", "v+u"):
+        return "alpha_plus_beta"
+    if compact in ("u*v", "v*u", "uv", "vu"):
+        return "alpha_beta"
     if re.fullmatch(r"[A-Za-z]+_[A-Za-z0-9_]+|[A-Za-z]|theta|Delta|LHS|RHS", s):
         return s
     if s in _KNOWN_SYMBOL_BANK or re.fullmatch(r"[A-Z]{2}", s):
@@ -368,6 +409,15 @@ def _extract_step_lines(step: Dict[str, Any]) -> List[str]:
         ln_s = ln.strip()
         if not buf and joined and re.match(r"^&\s*(?:\\q?quad\s*)?[+\-−]", ln_s):
             joined[-1] = joined[-1] + " " + re.sub(r"^&\s*(?:\\q?quad\s*)?", "", ln_s)
+            continue
+        if (
+            not buf
+            and joined
+            and re.match(r"^(?:\\iff|\\Rightarrow|\\implies)\s*&", joined[-1])
+            and "=" not in joined[-1]
+            and re.match(r"^&\s*=", ln_s)
+        ):
+            joined[-1] = re.sub(r"^(?:\\iff|\\Rightarrow|\\implies)\s*&\s*", "", joined[-1]) + " " + ln_s
             continue
         buf = (buf + " " + ln_s).strip() if buf else ln_s
         depth += ln_s.count("(") - ln_s.count(")")
@@ -425,7 +475,13 @@ def _verify_gcd_lcm_call(pre: str) -> Optional[bool]:
 
 
 def _check_named_formula_validity(var_name: str, rhs: sp.Expr, allow_positive_domain: bool = False, q_en: str = "") -> bool:
-    """Validate dimensional consistency AND solid-specific formula applicability for Mensuration formulas."""
+    """Validate dimensional consistency AND solid-specific / algebraic formula applicability."""
+    if var_name == "alpha_plus_beta" and {s.name for s in rhs.free_symbols} == {"a", "b"}:
+        if sp.simplify(rhs - sp.Symbol("b") / sp.Symbol("a")) == 0:
+            return False
+    if var_name == "alpha_beta" and {s.name for s in rhs.free_symbols} == {"a", "c"}:
+        if sp.simplify(rhs + sp.Symbol("c") / sp.Symbol("a")) == 0:
+            return False
     if not allow_positive_domain or not rhs.free_symbols:
         return True
     length_syms = {
@@ -436,6 +492,12 @@ def _check_named_formula_validity(var_name: str, rhs: sp.Expr, allow_positive_do
     if not length_syms and not area_syms:
         return True
     v_norm = var_name.split("_")[0]
+    if var_name.lower() in ("named_tsa", "named_csa", "named_volume", "named_area"):
+        v_norm = var_name.split("_", 1)[1].upper()
+        if v_norm == "VOLUME":
+            v_norm = "Volume"
+        elif v_norm == "AREA":
+            v_norm = "Area"
     expected_deg = 3 if v_norm in ("V", "Volume") else (2 if v_norm in ("CSA", "TSA", "Area", "A") else None)
     if expected_deg is None:
         return True
@@ -451,19 +513,24 @@ def _check_named_formula_validity(var_name: str, rhs: sp.Expr, allow_positive_do
         pass
     # Solid-specific formula applicability (e.g., single-solid cone volume cannot be pi*r^2*h)
     if q_en:
+        rhs_n = _norm_syms(rhs)
         solids = {s.lower() for s in re.findall(r"\b(?:cylinder|cone|sphere|hemisphere|frustum)\b", q_en, flags=re.I)}
         if v_norm in ("V", "Volume"):
-            if solids == {"cone"} and {s.name for s in rhs.free_symbols} == {"r", "h"}:
+            if solids == {"cone"} and {s.name for s in rhs_n.free_symbols} == {"r", "h"}:
                 r_s, h_s = sp.Symbol("r"), sp.Symbol("h")
-                if sp.simplify(rhs - sp.pi * r_s**2 * h_s) == 0:
+                if sp.simplify(rhs_n - sp.pi * r_s**2 * h_s) == 0:
                     return False
-            if solids == {"hemisphere"} and {s.name for s in rhs.free_symbols} == {"r"}:
+            if solids == {"hemisphere"} and {s.name for s in rhs_n.free_symbols} == {"r"}:
                 r_s = sp.Symbol("r")
-                if sp.simplify(rhs - sp.Rational(4, 3) * sp.pi * r_s**3) == 0:
+                if sp.simplify(rhs_n - sp.Rational(4, 3) * sp.pi * r_s**3) == 0:
                     return False
-        if v_norm == "CSA" and solids == {"cylinder"} and {s.name for s in rhs.free_symbols} == {"r", "h"}:
+        if v_norm == "CSA" and solids == {"cylinder"} and {s.name for s in rhs_n.free_symbols} == {"r", "h"}:
             r_s, h_s = sp.Symbol("r"), sp.Symbol("h")
-            if sp.simplify(rhs - sp.pi * r_s * h_s) == 0:
+            if sp.simplify(rhs_n - sp.pi * r_s * h_s) == 0:
+                return False
+        if v_norm == "TSA" and solids == {"sphere"} and {s.name for s in rhs_n.free_symbols} == {"r"}:
+            r_s = sp.Symbol("r")
+            if sp.simplify(rhs_n - 2 * sp.pi * r_s**2) == 0:
                 return False
     return True
 
@@ -675,6 +742,11 @@ def verify_complete_working(
         )
 
     env: Dict[str, sp.Expr] = dict(graph.givens)
+    var_units: Dict[str, str] = {
+        p["symbol"]: p["unit"].lower()
+        for p in graph.context_provenance
+        if p.get("symbol") and p.get("unit")
+    }
     steps = ((item.get("proof") or {}).get("steps") if is_concept else item.get("steps")) or []
     if is_concept and not steps:
         for k_m in ("whyMath", "exampleMath"):
@@ -948,6 +1020,7 @@ def verify_complete_working(
                     conc_ok = False
                     if ("=" in prem_s or (not prem_s and graph.active_equations)) and "=" in conc_s:
                         c_parts = [p.strip() for p in conc_s.split("=") if p.strip()]
+                        ep_l = ep_r = None
                         if "=" in prem_s:
                             p_parts = [p.strip() for p in prem_s.split("=") if p.strip()]
                             ep_l, ep_r = _safe_parse(p_parts[0]), _safe_parse(p_parts[-1])
@@ -1002,10 +1075,47 @@ def verify_complete_working(
                                         pass
                                 if not conc_ok and eq_p == 0 and eq_c == 0:
                                     conc_ok = True
+                                if (
+                                    not conc_ok
+                                    and eq_p == 0
+                                    and c_var == "GCD"
+                                    and ep_l is not None
+                                    and ep_r is not None
+                                    and ec_r is not None
+                                    and ec_r != 0
+                                ):
+                                    try:
+                                        _syms_g = list((ep_l.free_symbols | ec_r.free_symbols))
+                                        if _syms_g and sp.rem(ep_l, ec_r, *_syms_g) == 0:
+                                            conc_ok = True
+                                        elif _syms_g and sp.rem(ec_r, sp.gcd(ep_l, ep_r)) == 0:
+                                            conc_ok = True
+                                    except Exception:
+                                        pass
+                                if (
+                                    not conc_ok
+                                    and ep_l is not None
+                                    and ep_r is not None
+                                    and expressions_equivalent(_sub_env(ep_l, env), _sub_env(ec_l, env))
+                                    and expressions_equivalent(_sub_env(ep_r, env), _sub_env(ec_r, env))
+                                ):
+                                    conc_ok = True
                                 if conc_ok:
                                     last_imp_eq = sp.Eq(eq_c, 0, evaluate=False)
                     elif "=" in prem_s and (":" in conc_s or "no solution" in conc_s.lower() or "infinite" in conc_s.lower()):
                         conc_ok = True
+                    else:
+                        m_dim = re.match(
+                            r"^\(\s*(\d+)\s*(?:\\times|×|\*)\s*(\d+)\s*\)\s*(?:\*|\\cdot|·)?\s*\(\s*(\d+)\s*(?:\\times|×|\*)\s*(\d+)\s*\)$",
+                            re.sub(r"\\mathbf\s*\{([^}]+)\}", r"\1", prem_s).strip(),
+                        )
+                        m_dim_c = re.match(
+                            r"^(\d+)\s*(?:\\times|×|\*)\s*(\d+)$",
+                            re.sub(r"\\mathbf\s*\{([^}]+)\}", r"\1", conc_s).strip(),
+                        )
+                        if m_dim and m_dim_c:
+                            if m_dim.group(2) == m_dim.group(3) and m_dim.group(1) == m_dim_c.group(1) and m_dim.group(4) == m_dim_c.group(2):
+                                conc_ok = True
                     if not conc_ok:
                         all_imp_ok = False
                         break
@@ -1078,8 +1188,10 @@ def verify_complete_working(
                         if not all_rhs_ok:
                             graph.claims.append(MathClaim(s_idx, ln, "approximation", "FAILED", evidence="approx_chain_mismatch"))
                         elif lhs_nm is not None and lhs_nm not in env:
-                            # Only accept a new approximate definition if justified by a multi-link RHS or derived from env
-                            if len(e_rhs_list) >= 2:
+                            # Only accept a new approximate definition if justified by a multi-link RHS or non-atomic arithmetic expression
+                            rhs0_sub = _sub_env(e_rhs_list[0], env, allow_positive_domain=allow_positive_domain)
+                            is_computed_expr = (not e_rhs_list[0].is_Number) and (not rhs0_sub.free_symbols)
+                            if len(e_rhs_list) >= 2 or (is_computed_expr and lhs_nm in ("V", "N", "t", "Area", "CSA", "TSA", "Volume", "Time")):
                                 env[lhs_nm] = e_rhs_list[-1]
                                 graph.claims.append(MathClaim(s_idx, ln, "approximation", "VERIFIED", evidence="verified_approx_chain_definition"))
                             else:
@@ -1138,6 +1250,15 @@ def verify_complete_working(
                         graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="division_by_zero"))
                         continue
                     if len(exprs) == 1:
+                        if (
+                            not allow_positive_domain
+                            and var_name in ("x", "y")
+                            and re.search(r"\b(?:wall|line|axis|parallel|perpendicular|path)\b", ln, flags=re.I)
+                        ):
+                            line_eq = sp.Eq(sp.Symbol(var_name) - exprs[0], 0, evaluate=False)
+                            graph.active_equations.append(line_eq)
+                            graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="coordinate_line_equation"))
+                            continue
                         new_val = _norm_syms(_sub_env(exprs[0], env, allow_positive_domain=allow_positive_domain))
                         if not _check_named_formula_validity(var_name, exprs[0], allow_positive_domain=allow_positive_domain, q_en=q_en):
                             graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="invalid_formula_dimension"))
@@ -1145,11 +1266,20 @@ def verify_complete_working(
                         if var_name in graph.givens and not new_val.free_symbols and not graph.givens[var_name].free_symbols and not expressions_equivalent(graph.givens[var_name], new_val):
                             graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="overwrites_established_given"))
                             continue
-                        if var_name in ("CSA", "TSA", "V", "Volume", "Area") and var_name in env and not new_val.free_symbols:
+                        if var_name in ("CSA", "TSA", "V", "Volume", "Area", "m", "Slope", "Midpoint", "Distance") and var_name in env and not new_val.free_symbols:
                             prev_sub = _sub_env(env[var_name], env, allow_positive_domain=allow_positive_domain)
                             if not prev_sub.free_symbols and not _exprs_match(prev_sub, new_val, env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain)[0]:
                                 graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="overwrites_established_formula"))
                                 continue
+                        if allow_positive_domain and not new_val.free_symbols:
+                            m_u = re.search(r"(?:\\text\s*\{\s*|\\mathrm\s*\{\s*|\s)(cm|m|mm|km)\b", ln, flags=re.I)
+                            if m_u:
+                                cur_u = m_u.group(1).lower()
+                                prev_u = var_units.get(var_name)
+                                if prev_u and prev_u != cur_u and var_name in env and not env[var_name].free_symbols and expressions_equivalent(env[var_name], new_val):
+                                    graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="unit_mismatch_without_conversion"))
+                                    continue
+                                var_units[var_name] = cur_u
                         if not allow_positive_domain and not new_val.free_symbols:
                             m_seq = re.search(r"\b(?:if|solve)\s+([A-Za-z0-9_+\-*/^()\s]+)=([^,\.\n;]+)", q_stem, flags=re.I)
                             if m_seq:
@@ -1340,6 +1470,15 @@ def verify_complete_working(
                 e_standalone = _safe_parse(pre)
                 if e_standalone is not None:
                     prev_chain_expr = e_standalone
+                    m_task_stem = re.match(r"^(?:Simplify|Factorise|Factorize|Factor|Expand)\s+(?:\([ivx]+\)\s*)?(.+)$", q_stem, flags=re.I)
+                    if s_idx == 0 and m_task_stem:
+                        raw_stem_expr = m_task_stem.group(1).strip().rstrip(".")
+                        raw_stem_expr = raw_stem_expr.replace("−", "-").replace("×", "*").replace("÷", "/")
+                        raw_stem_expr = re.sub(r"([⁰¹²³⁴⁵⁶⁷⁸⁹]+)", lambda m: "^" + m.group(1).translate(_SUP_MAP), raw_stem_expr)
+                        e_stem = _safe_parse(raw_stem_expr)
+                        if e_stem is not None and expressions_equivalent(e_stem, e_standalone):
+                            graph.claims.append(MathClaim(s_idx, ln, "identity", "VERIFIED", evidence="stem_expression_equivalence"))
+                            continue
                     graph.claims.append(MathClaim(s_idx, ln, "prose_claim", "UNVERIFIED", evidence="standalone_expression_no_relation"))
                 else:
                     graph.claims.append(MathClaim(s_idx, ln, "prose_claim", "UNVERIFIED", evidence="no_equality_relation"))
