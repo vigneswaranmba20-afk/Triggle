@@ -102,3 +102,26 @@ for (const lang of ['en', 'ta']) {
   }
 }
 console.log('PASS: Grade 10 Statistics directory readiness and chapter click, both locales, all four data/viewer states.');
+
+ // The staged directory intentionally does not load the chapter viewer or data.
+ // Its build-derived count is authoritative, including a legitimate zero.
+for (const lang of ['en','ta']) {
+  for (const count of [0,15]) {
+    const ctx = vm.createContext({window: {TriggleStudentRelease: {conceptCounts: {'g10-ch8':count}}}, console});
+    for (const file of ['data/curriculum.js','assets/chapter-hub.js','assets/discovery.js'])
+      vm.runInContext(read(file),ctx,{filename:file});
+    let opened;
+    const button={dataset:{chapter:'g10-ch8'},addEventListener(event,handler){if(event==='click')this.click=handler;}};
+    const root={innerHTML:'',querySelector:()=>null,querySelectorAll:selector=>selector==='[data-chapter]'?[button]:[]};
+    ctx.window.TriggleDiscovery.mount(root,{mode:'directory',grade:10,lang,curriculum:ctx.window.TRIGGLE_CURRICULUM,classes:{},openChapter:(grade,chapter)=>{opened=[grade,chapter.id];}});
+    const card=root.innerHTML.match(/<button[^>]*data-chapter="g10-ch8"[\s\S]*?<\/button>/)?.[0];
+    assert.ok(card);
+    assert.equal(card.includes('is-ready'),count>0);
+    assert.ok(card.includes(count ? (lang==='ta'?'✦ 15 சிறு செயல்வழிப் பாடங்கள் உள்ளன':'✦ 15 Interactive mini-lessons available') : (lang==='ta'?'அத்தியாயம் பட்டியலில் உள்ளது · பாடங்கள் உருவாகின்றன':'Chapter mapped · More lessons coming')));
+    assert.equal(ctx.window.TriggleG10Ch8Labs,undefined);
+    assert.equal(ctx.window.TRIGGLE_G10_CH8_PATH,undefined);
+    button.click();
+    assert.deepEqual(opened,[10,'g10-ch8']);
+  }
+}
+console.log('PASS staged directory availability in both languages, no eager chapter load, zero manifest count preserved.');

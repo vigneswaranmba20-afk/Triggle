@@ -6,6 +6,19 @@ const assert=require('node:assert/strict');
 const {chromium}=require('playwright');
 const {server,launchOptions}=require('./dashboard_test_support.cjs');
 const ids=[6,7,8,9,10].map(n=>'c10-7-ex7-1-q'+n);
+async function checkQ10Figure(page,width,lang){
+ const figure=await page.locator('#inlineFigureVisual img').evaluate(async img=>{
+  await img.decode();
+  const image=img.getBoundingClientRect();
+  const action=img.closest('button').querySelector('.inline-figure-action').getBoundingClientRect();
+  return {src:img.getAttribute('src'),width:image.width,height:image.height,bottom:image.bottom,actionTop:action.top};
+ });
+ const label=lang+' Q10 '+width+'px';
+ assert.ok(figure.src.includes('/grade10-ch7/ex7-1-q10'+(lang==='ta'?'-ta':'')+'.svg'),label+' diagram language');
+ assert.ok(figure.width>=210,label+' thumbnail squeezed to '+figure.width+'px');
+ assert.ok(figure.height>=120,label+' labels too small');
+ assert.ok(figure.actionTop>=figure.bottom-2,label+' diagram enlarge action must be below artwork');
+}
 (async()=>{
  const app=await server();let browser;
  try {
@@ -23,7 +36,6 @@ const ids=[6,7,8,9,10].map(n=>'c10-7-ex7-1-q'+n);
     await page.evaluate(()=>document.fonts.ready);
     const state=await page.evaluate(()=>{
      const lesson=document.querySelector('#lessonCard');
-     const img=lesson?.querySelector('img');
      return {
       question:(document.querySelector('#questionText')?.innerText||'').trim(),
       answer:(document.querySelector('#answerText')?.innerText||'').trim(),
@@ -31,10 +43,6 @@ const ids=[6,7,8,9,10].map(n=>'c10-7-ex7-1-q'+n);
       finalMath:!!lesson?.querySelector('#answerText .katex'),
       errors:lesson?.querySelectorAll('.katex-error,[data-math-error]').length||0,
       clippedEquations:[...lesson.querySelectorAll('#stepsList .katex')].map((el,index)=>({index,right:el.getBoundingClientRect().right})).filter(el=>el.right>document.querySelector('#stepsList').getBoundingClientRect().right+4),
-      image:img?{src:img.getAttribute('src'),ok:img.complete&&img.naturalWidth>0,
-        width:img.getBoundingClientRect().width,height:img.getBoundingClientRect().height,
-        top:img.getBoundingClientRect().top,bottom:img.getBoundingClientRect().bottom,
-        actionTop:lesson.querySelector('#inlineFigureOpen .inline-figure-action')?.getBoundingClientRect().top??-1}:null,
       viewportW:window.innerWidth,
       documentW:document.documentElement.scrollWidth,
      };
@@ -46,13 +54,7 @@ const ids=[6,7,8,9,10].map(n=>'c10-7-ex7-1-q'+n);
     assert.equal(state.errors,0,id+' '+width+'px: KaTeX error');
     assert.deepEqual(state.clippedEquations,[],id+' '+width+'px: equations extend beyond their reading column');
     if(id.endsWith('q9')||id.endsWith('q10'))assert.ok(state.answer.includes('Rs.'),id+' '+width+'px: KaTeX-safe rupee abbreviation missing');
-    if(id.endsWith('q10')){
-     assert.ok(state.image&&state.image.ok,id+' '+width+'px: figure broken');
-     assert.ok(state.image.src.includes('grade10-ch7'),id+' '+width+'px: unrelated figure');
-     assert.ok(state.image.width>=210,id+' '+width+'px: Q10 thumbnail squeezed to '+state.image.width+'px');
-     assert.ok(state.image.height>=120,id+' '+width+'px: Q10 labels too small');
-     assert.ok(state.image.actionTop>=state.image.bottom-2,id+' '+width+'px: diagram enlarge action must be below artwork');
-    }
+    if(id.endsWith('q10'))await checkQ10Figure(page,width,'en');
     assert.ok(state.documentW<=state.viewportW+1,id+' '+width+'px: horizontal overflow '+state.documentW+' > '+state.viewportW);
    }
    // User-journey regression: use the REAL buttons rather than direct-linking each question.
@@ -77,6 +79,9 @@ const ids=[6,7,8,9,10].map(n=>'c10-7-ex7-1-q'+n);
    await page.goto(app.base+'/index.html?class=10&question=c10-7-ex7-1-q10',{waitUntil:'load'});
    await page.locator('#lessonCard:not([hidden])').waitFor({timeout:7000});
    await page.locator('#inlineFigureVisual img').waitFor({state:'visible'});
+   await page.locator('#langTa').click();
+   await checkQ10Figure(page,width,'ta');
+   await page.locator('#langEn').click();
    assert.equal(await page.locator('#next').isDisabled(),true,'Q10 must stop at end of Exercise 7.1');
    assert.match(await page.locator('#next').innerText(),/End of exercise/);
    await page.locator('#inlineFigureOpen').click();

@@ -32,17 +32,27 @@
   }
   // Explicit structured TeX only: never guess LaTeX from prose or variable names.
   // A readable authored fallback is required; trust is disabled even for our data.
+  const latexCache=new Map();
   function renderLatex(value, {displayMode=false, fallback='Mathematical expression unavailable'}={}) {
     const label=String(fallback);
     try {
       if(typeof value!=='string'||value.length>12000||!window.katex)throw Error('Unavailable renderer');
-      const html=window.katex.renderToString(value, {
-        displayMode, output:'htmlAndMathml', throwOnError:true, trust:false,
-        strict:'error', maxExpand:200, maxSize:20, macros:{}
-      });
-      // KaTeX represents denied trust commands as red source text, without
-      // throwing. Treat that result as a failure so commands never reach pupils.
-      if(html.includes('mathcolor="#cc0000"'))throw Error('Unsupported command');
+      const key=(displayMode?'display:':'inline:')+value;
+      let html=latexCache.get(key);
+      if(html===undefined){
+        html=window.katex.renderToString(value, {
+          displayMode, output:'htmlAndMathml', throwOnError:true, trust:false,
+          strict:'error', maxExpand:200, maxSize:20, macros:{}
+        });
+        // KaTeX represents denied trust commands as red source text without throwing.
+        if(html.includes('mathcolor="#cc0000"'))throw Error('Unsupported command');
+        // Common expressions recur in the prompt, steps and adjacent questions.
+        // Bound both the number and size of cached expressions on small devices.
+        if(html.length<=8192){
+          if(latexCache.size===128)latexCache.delete(latexCache.keys().next().value);
+          latexCache.set(key,html);
+        }
+      }
       return '<span class="triggle-tex'+(displayMode?' triggle-tex-display':'')+'" data-math-fallback="'+esc(label)+'">'+html+'</span>';
     } catch {
       return '<span class="math-fallback" data-math-error="true">'+esc(label)+'</span>';
@@ -142,15 +152,19 @@
   }
   function prepare(root=document) {
     const tamil=(root.closest?.('[lang]')?.lang||document.documentElement.lang)==='ta';
-    root.querySelectorAll('.triggle-tex').forEach(el=>{
-      if(el.scrollWidth>el.clientWidth+1){
-        el.tabIndex=0;
-        el.setAttribute('role','group');
-        el.setAttribute('aria-label',tamil?'உருட்டிப் பார்க்கக்கூடிய கணிதக் கோவை':'Scrollable mathematical expression');
-      }else{
-        el.removeAttribute('tabindex');el.removeAttribute('role');el.removeAttribute('aria-label');
+    const label=tamil?'உருட்டிப் பார்க்கக்கூடிய கணிதக் கோவை':'Scrollable mathematical expression';
+    const measurements=Array.from(root.querySelectorAll('.triggle-tex'),el=>[el,el.scrollWidth>el.clientWidth+1]);
+    for(const [el,wide] of measurements){
+      if(wide){
+        if(el.tabIndex!==0)el.tabIndex=0;
+        if(el.getAttribute('role')!=='group')el.setAttribute('role','group');
+        if(el.getAttribute('aria-label')!==label)el.setAttribute('aria-label',label);
+      }else if(el.hasAttribute('tabindex')){
+        el.removeAttribute('tabindex');
+        el.removeAttribute('role');
+        el.removeAttribute('aria-label');
       }
-    });
+    }
   }
   // Opt-in annotations for existing SVG labels. Keep the original diagram's
   // coordinates and geometry; only exact, authored label matches use KaTeX.

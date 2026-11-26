@@ -68,10 +68,8 @@ async function sample(page, base, id, width) {
   assert.equal(metrics.overflow, false, name + ' page width');
   assert.equal(metrics.viewport, width, name + ' mobile viewport width');
   assert.equal(metrics.failures, 0, name + ' renders');
-  if (width <= 800) {
-    assert(Math.abs(metrics.question - Math.min(17, Math.max(15, width * .039))) < .01, name + ' responsive question size');
-    assert.equal(metrics.reason, 15, name + ' worked instruction size');
-  } else assert(metrics.question >= 18 && metrics.reason >= 16, name + ' desktop reading scale');
+  assert(metrics.question >= 18 && metrics.question <= 22, name + ' responsive question size');
+  assert.equal(metrics.reason, 16, name + ' worked instruction size');
   assert.equal(metrics.answer, 1, name + ' visible final answer');
   for (const formula of metrics.details) {
     assert(formula.visible && formula.accessible, name + ' glyphs and MathML');

@@ -54,6 +54,35 @@ const renderer=read('assets/textbook-activities.js');new vm.Script(renderer);
 assert(renderer.includes('const raw=pick(item.answer,lang)')&&renderer.includes('p.textContent=text.trim()'),'Answers must render from the source as safely escaped text');
 assert(renderer.includes('card.open=index===0'),'First activity question and answer must be visible on entry');
 assert(!renderer.includes('answer.append(answerSummary'),'Do not nest answer behind a second toggle');
+// Shared renderer: preserve exact titles, questions and answers, remove duplicate index,
+// keep native details and truthful Tamil fallback warnings.
+class TestElement{
+ constructor(tag){this.tagName=tag;this.children=[];this.dataset={};this.attrs={};this.textContent='';}
+ append(...nodes){this.children.push(...nodes);}
+ setAttribute(k,v){this.attrs[k]=v;}
+}
+const sample={kind:'activity',page:294,title:{en:'Activity 1 · Two coins and two dice',ta:'English version only — Tamil editorial content pending. Activity 1 · Two coins and two dice'},question:{en:'Original question',ta:'Original question'},answer:{en:'Original answer',ta:'Original answer'}};
+const sample2={...sample,kind:'progress',title:{en:'Progress Check · Valid values',ta:'முன்னேற்றச் சோதனை · மதிப்புகள்'}};
+const doc={createElement:t=>new TestElement(t)};
+const renderContext={document:doc,window:{TRIGGLE_TEXTBOOK_TASKS:{test:[sample,sample2]},TriggleNotation:{render:t=>t}}};
+vm.runInNewContext(renderer,renderContext);
+for(const lang of ['en','ta']){
+ const parent=new TestElement('div');
+ assert.equal(renderContext.window.TriggleTextbookActivities.mount(parent,{id:'test'},lang),true);
+ const section=parent.children[0],first=section.children[1],second=section.children[2];
+ assert.equal(first.open,true);assert.equal(second.open,false);
+ assert.equal(first.dataset.activityKind,'activity');assert.equal(second.dataset.activityKind,'progress');
+ const summary=first.children[0],copy=summary.children[1];
+ assert.equal(summary.attrs['aria-label'],undefined,'Use the visible activity heading as the native summary name');
+ assert.equal(copy.children[0].textContent,'Activity 1');
+ assert.equal(copy.children[1].textContent,'Two coins and two dice');
+ assert.equal(copy.children.length,lang==='ta'?3:2);
+ if(lang==='ta')assert.match(copy.children[2].textContent,/Tamil editorial content pending/);
+ assert.equal(first.children[1].innerHTML,'Original question');
+ assert.equal(first.children[2].children[1].children[0].textContent,'Original answer');
+}
+const activityCSS=read('assets/math-first.css');
+assert(activityCSS.includes('min-height:56px!important')&&activityCSS.includes('summary:focus-visible'),'Large touch targets and keyboard focus retained');
 assert(renderer.includes('data-textbook')===false,'No unreviewed tracking or network');
 const html=read('index.html');
 for(const pathName of ['data/g9-textbook-activities.js','assets/textbook-activities.js'])assert(html.includes(pathName),'Page loads '+pathName);
