@@ -27892,13 +27892,34 @@ const records=[
         }
       ]
     },
-    "answerMath": [
-      "(2) ",
-      {
-        "latex": "4 : 9",
-        "fallback": "4:9"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        "(2) ",
+        {
+          "latex": "4:9",
+          "fallback": "4:9"
+        },
+        " (simplest form); (4) ",
+        {
+          "latex": "16:36",
+          "fallback": "16:36"
+        },
+        " (equivalent)"
+      ],
+      "ta": [
+        "(2) ",
+        {
+          "latex": "4:9",
+          "fallback": "4:9"
+        },
+        " (எளிய வடிவம்); (4) ",
+        {
+          "latex": "16:36",
+          "fallback": "16:36"
+        },
+        " (சமமான விகிதம்)"
+      ]
+    },
     "steps": [
       {
         "math": [
@@ -27942,10 +27963,39 @@ const records=[
         }
       },
       {
-        "math": "Correct option (2)",
+        "math": {
+          "latex": "\\left(16 \\div 4\\right) : \\left(36 \\div 4\\right) = 4 : 9",
+          "fallback": "(16 ÷ 4) : (36 ÷ 4) = 4 : 9",
+          "display": true
+        },
         "reasonMath": {
-          "en": "Match the resulting ratio to the choices.",
-          "ta": "கிடைத்த விகிதத்துடன் பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்."
+          "en": [
+            "Option (2) gives the ratio in simplest form. In option (4), dividing both terms by ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            " gives the same ratio."
+          ],
+          "ta": [
+            "விடை (2) விகிதத்தின் எளிய வடிவம். விடை (4)-இல் இரு உறுப்புகளையும் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            "-ஆல் வகுத்தால் அதே விகிதம் கிடைக்கிறது."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "16 : 36 = 4 : 9",
+          "fallback": "16 : 36 = 4 : 9",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "The textbook key selects (2). The question does not require the simplest form, so both (2) and (4) are mathematically correct.",
+          "ta": "பாடநூல் விடைக்குறிப்பு (2)-ஐத் தருகிறது. வினாவில் எளிய வடிவம் கேட்கப்படாததால் (2), (4) இரண்டுமே கணிதப்படி சரி."
         }
       }
     ]
@@ -76072,6 +76122,24 @@ const texts={
       "fallback": "length × breadth × height"
     },
     "."
+  ],
+  "ஒரு சதுர முகத்தின் பரப்பை 6-ஆல் பெருக்கினால் மொத்தப் புறப்பரப்பு கிடைக்கும். இரு கனசதுரங்களிலும் 6 முகங்கள் இருப்பதால் விகிதத்தில் 6 என்ற பொதுக்காரணி நீங்கும்.": [
+    "ஒரு சதுர முகத்தின் பரப்பை ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    "-ஆல் பெருக்கினால் மொத்தப் புறப்பரப்பு கிடைக்கும். இரு கனசதுரங்களிலும் ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    " முகங்கள் இருப்பதால் விகிதத்தில் ",
+    {
+      "latex": "6",
+      "fallback": "6"
+    },
+    " என்ற பொதுக்காரணி நீங்கும்."
   ],
   "Choose 27 years as the assumed mean.": [
     "Choose ",

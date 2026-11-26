@@ -452,23 +452,32 @@ const entries=[
         "eq": "2²:3²=4:9"
       },
       {
-        "en": "Match the resulting ratio to the choices.",
-        "ta": "கிடைத்த விகிதத்துடன் பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்.",
-        "eq": "Correct option (2)",
-        "mathTa": "சரியான விடை (2)"
+        "en": "Option (2) gives the ratio in simplest form. In option (4), dividing both terms by 4 gives the same ratio.",
+        "ta": "விடை (2) விகிதத்தின் எளிய வடிவம். விடை (4)-இல் இரு உறுப்புகளையும் 4-ஆல் வகுத்தால் அதே விகிதம் கிடைக்கிறது.",
+        "eq": "(16 ÷ 4) : (36 ÷ 4) = 4 : 9"
+      },
+      {
+        "en": "The textbook key selects (2). The question does not require the simplest form, so both (2) and (4) are mathematically correct.",
+        "ta": "பாடநூல் விடைக்குறிப்பு (2)-ஐத் தருகிறது. வினாவில் எளிய வடிவம் கேட்கப்படாததால் (2), (4) இரண்டுமே கணிதப்படி சரி.",
+        "eq": "16 : 36 = 4 : 9"
       }
     ],
-    "answer": "(2) 4:9",
+    "answer": "(2) 4:9 (simplest form); (4) 16:36 (equivalent)",
+    "answerTa": "(2) 4:9 (எளிய வடிவம்); (4) 16:36 (சமமான விகிதம்)",
+    "answerMath": {
+      "en": ["(2) ", {"latex": "4:9", "fallback": "4:9"}, " (simplest form); (4) ", {"latex": "16:36", "fallback": "16:36"}, " (equivalent)"],
+      "ta": ["(2) ", {"latex": "4:9", "fallback": "4:9"}, " (எளிய வடிவம்); (4) ", {"latex": "16:36", "fallback": "16:36"}, " (சமமான விகிதம்)"]
+    },
     "kind": "reference",
-    "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 7.4 · printed p. 264 / PDF p. 270; mathematical solutions by Triggle; original PDF page-image review required for diagrams and tables.",
+    "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics · Exercise 7.4 Q7 · English PDF p. 270 and Tamil PDF p. 285.",
     "source": "https://drive.google.com/file/d/1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J/view?usp=drivesdk",
     "page": 270,
     "sourceFidelity": {
-      "status": "pdf-text-checked-en-visual-pending",
+      "status": "page-visual-checked",
       "enPdfPage": 270,
       "enPrintedPage": 264,
       "tamilEditorial": "pending",
-      "notes": [],
+      "notes": ["Both editions list the same two equivalent answers. Both answer appendices select (2)."],
       "answerOptions": [
         "4:6",
         "4:9",

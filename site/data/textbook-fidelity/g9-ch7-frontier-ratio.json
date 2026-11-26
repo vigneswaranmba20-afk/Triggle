@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": 7,
+  "edition": "Tamil Nadu SCERT revised 2025",
+  "items": [
+    {
+      "id": "g9-ch7-ex7.4-q7",
+      "exercise": "7.4",
+      "question": 7,
+      "parts": ["whole"],
+      "sourcePages": {
+        "en": [{"pdf": 270, "printed": 264}],
+        "ta": [{"pdf": 285, "printed": 279}]
+      },
+      "answerKeyPages": {
+        "en": {"pdf": 323, "printed": 317},
+        "ta": {"pdf": 339, "printed": 333}
+      },
+      "optionCrop": {
+        "renderer": "pdftoppm",
+        "dpi": 125,
+        "boundsPx": {"x": 100, "y": 80, "width": 950, "height": 480},
+        "sha256": {
+          "en": "da9a8d615e6b2420d68d88383dc383c5df69cd2b256429cf8e5ef825e48f3d2a",
+          "ta": "9b07839f9dbdd990877bb403fd0d658e4b0e2aad06e9eba6724813e881c2410d"
+        }
+      },
+      "visualStatus": {"en": "page-checked", "ta": "page-checked"},
+      "printedKeyOption": 2,
+      "mathematicallyEquivalentOptions": [2, 4],
+      "answer": "4:9",
+      "previousReader": {
+        "answer": "(2) 4:9",
+        "reference": "Tamil Nadu SCERT 2025 revised Standard Nine Mathematics English · Exercise 7.4 · printed p. 264 / PDF p. 270; mathematical solutions by Triggle; original PDF page-image review required for diagrams and tables.",
+        "fidelityStatus": "pdf-text-checked-en-visual-pending",
+        "lastStep": {
+          "en": "Match the resulting ratio to the choices.",
+          "ta": "கிடைத்த விகிதத்துடன் பொருந்தும் விடையைத் தேர்ந்தெடுக்கவும்.",
+          "eq": "Correct option (2)"
+        }
+      },
+      "disposition": "SOURCE_BLOCKED",
+      "issue": "Both editions ask for the area ratio and list 4:9 and 16:36. Both answer appendices choose 4:9. The question does not ask for simplest form.",
+      "resolution": "Retain both options in the reader without single-option grading. An official erratum could ask for the simplest form or replace the equivalent distractor.",
+      "mathTest": "site/tools/test_g9_bulk_content_only.cjs",
+      "teacherReview": "pending",
+      "tamilEditorial": "pending"
+    }
+  ]
+}

@@ -8,6 +8,8 @@ const auditedG9Proofs=require('../../docs/audit/AUD13_02_CORRECTION_HASHES.json'
 const auditedG9TrigTable=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.json');
 const auditedG9TrigQ46=require('../../docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json');
 const auditedG9SourceChoices=require('../../docs/audit/AUD14_03_EX61_EX65_SOURCE_EVIDENCE.json');
+const [mensurationRatio]=require('../data/textbook-fidelity/g9-ch7-frontier-ratio.json').items;
+const compositionEvidence=new Map(require('../data/textbook-fidelity/g10-frontier-compositions.json').items.map(item=>[item.id,item]));
 const g9BilingualGeometry=require('../data/textbook-fidelity/g9-ch4-bilingual-20261124.json');
 const expectedGeometryIds=[
   '4.1-q2','4.1-q4','4.2-q1','4.2-q2','4.2-q3','4.2-q4',
@@ -526,6 +528,11 @@ for(const [grade,data] of Object.entries(classes)){
     original.q.en=original.q.en.split(' (iii) Find the height')[0];
     original.answer=original.answer.split('; (iii) 60.5 inches')[0];
    }
+   if(compositionEvidence.has(item.id)){
+    const previous=compositionEvidence.get(item.id).previousEnglish;
+    if(item.id==='c10-1-1-5-q1')original.steps[2]=previous.steps[2];
+    else Object.assign(original,previous);
+   }
    assert.equal(crypto.createHash('sha256').update(JSON.stringify(original)).digest('hex'),preserved.sha256[item.id]);
    assert.match(item.q.ta,/\p{Script=Tamil}/u);
    assert(item.steps.every(step=>/\p{Script=Tamil}/u.test(step.ta)));
@@ -539,6 +546,17 @@ for(const [grade,data] of Object.entries(classes)){
    const algebra=require('../data/textbook-fidelity/g9-ch3-ex3-1-q10-q12-bilingual.json').records[item.id];
    if(grade==='9' && /^g9-ch(?:7-ex7\.[1-4]|8-ex8\.[1-4]|9-ex9\.[1-3])-q\d+$/.test(item.id)){
     const original=JSON.parse(JSON.stringify(item));
+    if(item.id===mensurationRatio.id){
+     const previous=mensurationRatio.previousReader;
+     original.steps=[...original.steps.slice(0,2),{...previous.lastStep}];
+     original.answer=previous.answer;
+     original.reference=previous.reference;
+     original.sourceFidelity.status=previous.fidelityStatus;
+     original.sourceFidelity.notes=[];
+     assert.deepEqual(Array.from(mensurationRatio.mathematicallyEquivalentOptions),[2,4]);
+     assert.match(item.answer,/\(2\) 4:9.*\(4\) 16:36/);
+     assert.equal(item.sourceFidelity.status,'page-visual-checked');
+    }
     original.q.ta='English-language question; Tamil version pending. '+item.q.en;
     for(const step of original.steps){
      if(step.reasonMath){
