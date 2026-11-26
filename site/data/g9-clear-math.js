@@ -56414,8 +56414,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(4) cubic polynomial}}",
-      "fallback": "(4) cubic polynomial"
+      "en": {
+        "latex": "\\boxed{\\text{(4) cubic polynomial}}",
+        "fallback": "(4) cubic polynomial"
+      },
+      "ta": "(4) முப்படி பல்லுறுப்புக் கோவை"
     },
     "steps": [
       {
@@ -56681,28 +56684,64 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(4) factor}}",
-      "fallback": "(4) factor"
+      "en": "Both (1) divisor and (4) factor",
+      "ta": "(1) வகுத்தி, (4) காரணி ஆகிய இரண்டும் சரி"
     },
     "steps": [
       {
         "math": {
-          "latex": "p(a)=0 \\implies (x-a)\\text{ is a factor}",
-          "fallback": "By Factor Theorem, p(a) = 0 ⇒ (x − a) is a factor"
+          "latex": "p(x)=(x-a)Q(x)+p(a)",
+          "fallback": "p(x) = (x − a)Q(x) + p(a)"
         },
         "reasonMath": {
-          "en": "Option (4) is correct.",
+          "en": [
+            "Divide by ",
+            {
+              "latex": "x - a",
+              "fallback": "x − a"
+            },
+            ". The remainder theorem gives ",
+            {
+              "latex": "p \\left(a\\right)",
+              "fallback": "p(a)"
+            },
+            " as the remainder."
+          ],
           "ta": [
             {
-              "latex": "p \\left(a\\right) = 0",
-              "fallback": "p(a) = 0"
+              "latex": "x - a",
+              "fallback": "x − a"
             },
-            " எனில் ",
+            " ஆல் வகுக்கவும். மீதித் தேற்றத்தின்படி மீதி ",
             {
-              "latex": "\\left(x - a\\right)",
-              "fallback": "(x − a)"
+              "latex": "p \\left(a\\right)",
+              "fallback": "p(a)"
             },
-            " ஒரு காரணி; விருப்பம் (4)."
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p(a)=0\\implies p(x)=(x-a)Q(x)",
+          "fallback": "p(a) = 0 ⇒ p(x) = (x − a)Q(x)"
+        },
+        "reasonMath": {
+          "en": [
+            "A zero remainder makes ",
+            {
+              "latex": "x - a",
+              "fallback": "x − a"
+            },
+            " both a divisor and a factor. The answer key uses the term factor."
+          ],
+          "ta": [
+            "மீதி பூச்சியம் என்பதால் ",
+            {
+              "latex": "x - a",
+              "fallback": "x − a"
+            },
+            " என்பது வகுத்தியாகவும் காரணியாகவும் அமையும். பாடநூல் விடைக்குறிப்பு காரணி என்பதைக் கொடுக்கிறது."
           ]
         }
       }
@@ -56912,28 +56951,35 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "a=1,\\; b=2,\\; c=-15",
-          "fallback": "(x + 5)(x − 3) = x² + 2x − 15 ⇒ a = 1, b = 2, c = −15"
+          "latex": "ax^2+bx+c=a(x+5)(x-3),\\quad a\\ne0",
+          "fallback": "ax² + bx + c = a(x + 5)(x − 3), a ≠ 0"
         },
         "reasonMath": {
-          "en": "Expand and compare; option (3).",
+          "en": "A quadratic with those factors is a nonzero multiple of their product.",
+          "ta": "இவ்விரு காரணிகளும் உள்ள இருபடிக் கோவை, அவற்றின் பெருக்கற்பலனின் பூச்சியமற்ற ஒரு மடங்காகும்."
+        }
+      },
+      {
+        "math": {
+          "latex": "a(x+5)(x-3)=ax^2+2ax-15a",
+          "fallback": "a(x + 5)(x − 3) = ax² + 2ax − 15a"
+        },
+        "reasonMath": {
+          "en": [
+            "Compare coefficients after expanding. In every listed choice the leading coefficient is ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            ", so (3) is the only matching choice."
+          ],
           "ta": [
-            "விரித்தெழுத ",
+            "விரித்தபின் கெழுக்களை ஒப்பிடுக. கொடுக்கப்பட்ட அனைத்துத் தேர்வுகளிலும் தலைமைக் கெழு ",
             {
-              "latex": "x^{2} + 2 x - 15 \\Rightarrow 1",
-              "fallback": "x² + 2x − 15 ⇒ 1"
+              "latex": "1",
+              "fallback": "1"
             },
-            ", ",
-            {
-              "latex": "2",
-              "fallback": "2"
-            },
-            ", ",
-            {
-              "latex": "- 15",
-              "fallback": "−15"
-            },
-            "; விருப்பம் (3)."
+            ". எனவே (3) மட்டுமே பொருந்துகிறது."
           ]
         }
       }
@@ -56995,25 +57041,18 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "0",
-          "fallback": "A nonzero constant c = c·x⁰ has degree 0"
+          "latex": "c=c\\cdot x^0,\\quad c\\ne0",
+          "fallback": "c = c·x⁰, c ≠ 0"
         },
         "reasonMath": {
-          "en": [
-            "Option (4) is correct (note: zero polynomial ",
-            {
-              "latex": "0",
-              "fallback": "0"
-            },
-            " has undefined degree)."
-          ],
+          "en": "A nonzero constant has degree zero. The degree of the zero polynomial is undefined.",
           "ta": [
             "பூச்சியமற்ற மாறிலிக் கோவையின் படி ",
             {
               "latex": "0",
               "fallback": "0"
             },
-            "; விருப்பம் (4)."
+            ". பூச்சியக் கோவையின் படி வரையறுக்கப்படவில்லை."
           ]
         }
       }
@@ -57318,8 +57357,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(2) Parallel lines}}",
-      "fallback": "(2) Parallel lines"
+      "en": {
+        "latex": "\\boxed{\\text{(2) Parallel lines}}",
+        "fallback": "(2) Parallel lines"
+      },
+      "ta": "(2) இணை கோடுகள்"
     },
     "steps": [
       {
@@ -57345,8 +57387,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(3) unique}}",
-      "fallback": "(3) unique"
+      "en": {
+        "latex": "\\boxed{\\text{(3) unique}}",
+        "fallback": "(3) unique"
+      },
+      "ta": "(3) ஒரு தீர்வு"
     },
     "steps": [
       {
@@ -57372,8 +57417,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(1) no solution}}",
-      "fallback": "(1) no solution"
+      "en": {
+        "latex": "\\boxed{\\text{(1) no solution}}",
+        "fallback": "(1) no solution"
+      },
+      "ta": "(1) தீர்வு இல்லை"
     },
     "steps": [
       {
@@ -57399,25 +57447,42 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(3) } 1}",
-      "fallback": "(3) 1"
+      "en": "Distinct primes give (3) 1. If a prime is repeated, that prime is the GCD.",
+      "ta": "வெவ்வேறு பகா எண்களுக்கு விடை (3) 1. ஒரே பகா எண்ணை இருமுறை எடுத்தால் அதுவே மீ.பொ.வ."
     },
     "steps": [
       {
         "math": {
-          "latex": "1",
-          "fallback": "Distinct primes share only 1 (and equal primes are not meant here; standard TN answer is 1)"
+          "latex": "p\\ne q\\implies\\gcd(p,q)=1",
+          "fallback": "p ≠ q ⇒ gcd(p, q) = 1"
         },
         "reasonMath": {
-          "en": "Option (3) is correct.",
-          "ta": [
-            "பகா எண்களின் பொது வகுத்தி ",
+          "en": [
+            "Two different primes share only the divisor ",
             {
               "latex": "1",
               "fallback": "1"
             },
-            "; விருப்பம் (3)."
+            ". This is the case intended by option (3)."
+          ],
+          "ta": [
+            "வெவ்வேறு பகா எண்களுக்கு ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " மட்டுமே பொது வகுத்தியாகும். (3) இந்த நேர்வுக்கான விடை."
           ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\gcd(p,p)=p,\\quad\\gcd(2,2)=2",
+          "fallback": "gcd(p, p) = p, gcd(2, 2) = 2"
+        },
+        "reasonMath": {
+          "en": "If both primes are equal, their GCD is that prime. The question needs the word distinct for a unique choice.",
+          "ta": "இரண்டு பகா எண்களும் சமமாக இருந்தால் மீ.பொ.வ. அதே பகா எண். ஒரே விடை கிடைக்க, வெவ்வேறு பகா எண்கள் என்று வினாவில் குறிப்பிட வேண்டும்."
         }
       }
     ]
@@ -85911,35 +85976,34 @@ const texts={
     },
     ")"
   ],
-  "Option (4) is correct. (MCQ 9 · Factor Theorem definition: (4) factor)": [
-    "Option (4) is correct. (",
+  "Divide by x − a. The remainder theorem gives p(a) as the remainder.": [
+    "Divide by ",
     {
-      "latex": "MCQ 9",
-      "fallback": "MCQ 9"
+      "latex": "x - a",
+      "fallback": "x − a"
     },
-    " · Factor Theorem definition: (4) factor)"
-  ],
-  "p(a) = 0 எனில் (x − a) ஒரு காரணி; விருப்பம் (4). (வினா 9 · காரணித் தேற்றம்: (4) காரணி)": [
+    ". The remainder theorem gives ",
     {
       "latex": "p",
       "fallback": "p"
     },
-    "(a) = ",
+    "(a) as the remainder."
+  ],
+  "A linear divisor leaves a constant remainder. Substituting x=a makes the divisor term zero, so only that remainder is left.": [
+    "A linear divisor leaves a constant remainder. Substituting ",
     {
-      "latex": "0",
-      "fallback": "0"
+      "latex": "x = a",
+      "fallback": "x=a"
     },
-    " எனில் ",
+    " makes the divisor term zero, so only that remainder is left."
+  ],
+  "நேரிய கோவையால் வகுக்கும்போது மீதி ஒரு மாறிலி. x=a எனப் பிரதியிட்டால் வகுத்தியுள்ள உறுப்பு பூச்சியமாகும். மீதி மட்டும் எஞ்சும்.": [
+    "நேரிய கோவையால் வகுக்கும்போது மீதி ஒரு மாறிலி. ",
     {
-      "latex": "\\left(x - a\\right)",
-      "fallback": "(x − a)"
+      "latex": "x = a",
+      "fallback": "x=a"
     },
-    " ஒரு காரணி; விருப்பம் (4). (வினா ",
-    {
-      "latex": "9",
-      "fallback": "9"
-    },
-    " · காரணித் தேற்றம்: (4) காரணி)"
+    " எனப் பிரதியிட்டால் வகுத்தியுள்ள உறுப்பு பூச்சியமாகும். மீதி மட்டும் எஞ்சும்."
   ],
   "Option (3) is correct. (MCQ 10 · Zero of (2 − 3x): (3) 2/3)": [
     "Option (3) is correct. (",
@@ -86166,36 +86230,13 @@ const texts={
     },
     ")"
   ],
-  "Expand and compare; option (3). (MCQ 15 · Quadratic from factors: (3) 1, 2, −15)": [
-    "Expand and compare; option (3). (",
+  "இரு காரணிகளின் பெருக்கற்பலன் ஏற்கெனவே படி 2 கொண்டது. பூச்சியமற்ற மாறிலியால் பெருக்கினால் பூச்சியங்கள் மாறாது. அந்த மாறிலியே தலைமைக் கெழுவாகும்.": [
+    "இரு காரணிகளின் பெருக்கற்பலன் ஏற்கெனவே படி ",
     {
-      "latex": "MCQ 15",
-      "fallback": "MCQ 15"
+      "latex": "2",
+      "fallback": "2"
     },
-    " · Quadratic from factors: (3) ",
-    {
-      "latex": "1, 2, - 15",
-      "fallback": "1, 2, −15"
-    },
-    ")"
-  ],
-  "விரித்தெழுத x² + 2x − 15 ⇒ 1, 2, −15; விருப்பம் (3). (வினா 15 · காரணிகளிலிருந்து கெழுக்கள்: (3) 1, 2, −15)": [
-    "விரித்தெழுத ",
-    {
-      "latex": "x^{2} + 2 x - 15 \\Rightarrow 1, 2, - 15",
-      "fallback": "x² + 2x − 15 ⇒ 1, 2, −15"
-    },
-    "; விருப்பம் (3). (வினா ",
-    {
-      "latex": "15",
-      "fallback": "15"
-    },
-    " · காரணிகளிலிருந்து கெழுக்கள்: (3) ",
-    {
-      "latex": "1, 2, - 15",
-      "fallback": "1, 2, −15"
-    },
-    ")"
+    " கொண்டது. பூச்சியமற்ற மாறிலியால் பெருக்கினால் பூச்சியங்கள் மாறாது. அந்த மாறிலியே தலைமைக் கெழுவாகும்."
   ],
   "Option (3) is correct. (MCQ 16 · Linear factors of cubic: (3) 3)": [
     "Option (3) is correct. (",
@@ -86233,49 +86274,36 @@ const texts={
     },
     ")"
   ],
-  "Option (4) is correct (note: zero polynomial 0 has undefined degree).": [
-    "Option (4) is correct (note: zero polynomial ",
+  "Degree counts the largest exponent with a nonzero coefficient. Writing a nonzero constant as c times x⁰ makes that exponent visible.": [
+    "Degree counts the largest exponent with a nonzero coefficient. Writing a nonzero constant as ",
     {
-      "latex": "0",
-      "fallback": "0"
+      "latex": "c",
+      "fallback": "c"
     },
-    " has undefined degree)."
+    " times ",
+    {
+      "latex": "x^{0}",
+      "fallback": "x⁰"
+    },
+    " makes that exponent visible."
   ],
-  "Option (4) is correct (note: zero polynomial 0 has undefined degree). (MCQ 17 · Degree of constant polynomial: (4) 0)": [
-    "Option (4) is correct (note: zero polynomial ",
+  "பூச்சியமற்ற கெழுவுடன் வரும் மிகப்பெரிய அடுக்கே படி. மாறிலியை c பெருக்கல் x⁰ என எழுதும்போது அடுக்கு 0 என்பது தெரிகிறது.": [
+    "பூச்சியமற்ற கெழுவுடன் வரும் மிகப்பெரிய அடுக்கே படி. மாறிலியை ",
+    {
+      "latex": "c",
+      "fallback": "c"
+    },
+    " பெருக்கல் ",
+    {
+      "latex": "x^{0}",
+      "fallback": "x⁰"
+    },
+    " என எழுதும்போது அடுக்கு ",
     {
       "latex": "0",
       "fallback": "0"
     },
-    " has undefined degree). (",
-    {
-      "latex": "MCQ 17",
-      "fallback": "MCQ 17"
-    },
-    " · Degree of constant polynomial: (4) ",
-    {
-      "latex": "0",
-      "fallback": "0"
-    },
-    ")"
-  ],
-  "பூச்சியமற்ற மாறிலிக் கோவையின் படி 0; விருப்பம் (4). (வினா 17 · மாறிலிக் கோவையின் படி: (4) 0)": [
-    "பூச்சியமற்ற மாறிலிக் கோவையின் படி ",
-    {
-      "latex": "0",
-      "fallback": "0"
-    },
-    "; விருப்பம் (4). (வினா ",
-    {
-      "latex": "17",
-      "fallback": "17"
-    },
-    " · மாறிலிக் கோவையின் படி: (4) ",
-    {
-      "latex": "0",
-      "fallback": "0"
-    },
-    ")"
+    " என்பது தெரிகிறது."
   ],
   "Substitute x = 2, y = −2; option (2).": [
     "Substitute ",
@@ -86709,41 +86737,29 @@ const texts={
     },
     " · தீர்வு இல்லை விகிதம்: (1) தீர்வு இல்லை)"
   ],
-  "Option (3) is correct. (MCQ 28 · GCD of two primes: (3) 1)": [
-    "Option (3) is correct. (",
-    {
-      "latex": "MCQ 28",
-      "fallback": "MCQ 28"
-    },
-    " · ",
-    {
-      "latex": "GCD",
-      "fallback": "GCD"
-    },
-    " of two primes: (3) ",
+  "Two different primes share only the divisor 1. This is the case intended by option (3).": [
+    "Two different primes share only the divisor ",
     {
       "latex": "1",
       "fallback": "1"
     },
-    ")"
+    ". This is the case intended by option (3)."
   ],
-  "பகா எண்களின் பொது வகுத்தி 1; விருப்பம் (3). (வினா 28 · இரண்டு பகா எண்களின் மீ.பொ.வ: (3) 1)": [
-    "பகா எண்களின் பொது வகுத்தி ",
+  "A prime has only two positive divisors, 1 and itself. Compare the two divisor lists and keep only their common members.": [
+    "A prime has only two positive divisors, ",
     {
       "latex": "1",
       "fallback": "1"
     },
-    "; விருப்பம் (3). (வினா ",
-    {
-      "latex": "28",
-      "fallback": "28"
-    },
-    " · இரண்டு பகா எண்களின் மீ.பொ.வ: (3) ",
+    " and itself. Compare the two divisor lists and keep only their common members."
+  ],
+  "ஒரு பகா எண்ணுக்கு 1 மற்றும் அந்த எண்ணே நேர்ம வகுத்திகள். இரு வகுத்திப் பட்டியல்களையும் ஒப்பிட்டுப் பொதுவாக உள்ளவற்றை மட்டும் எடுத்துக்கொள்ளுங்கள்.": [
+    "ஒரு பகா எண்ணுக்கு ",
     {
       "latex": "1",
       "fallback": "1"
     },
-    ")"
+    " மற்றும் அந்த எண்ணே நேர்ம வகுத்திகள். இரு வகுத்திப் பட்டியல்களையும் ஒப்பிட்டுப் பொதுவாக உள்ளவற்றை மட்டும் எடுத்துக்கொள்ளுங்கள்."
   ],
   "Common factor is x² − y²; option (2).": [
     "Common factor is ",
