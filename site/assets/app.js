@@ -33,7 +33,15 @@
  if(!curriculum?.grades)throw Error('Missing curriculum metadata');
  const chapterList=()=>curriculum.grades.find(g=>g.grade===grade)?.chapters||[];
  const chapterForItem=item=>chapterList().find(c=>c.legacyQuestionIds.includes(item.id))||chapterList().find(c=>String(c.number)===String(item.chapter));
- const chapterItems=chapter=>{const ids=new Set([...(chapter.legacyQuestionIds||[]),...(chapter.textbookQuestionIds||[])]);return classes[grade].items.filter(item=>ids.has(item.id)||(grade===10&&Number(chapter.number)===1&&String(item.chapter)==='1'&&item.kind==='textbook'));};
+ const itemsByChapter=new WeakMap();
+ const chapterItems=chapter=>{
+   if(!itemsByChapter.has(chapter)){
+     const ids=new Set([...(chapter.legacyQuestionIds||[]),...(chapter.textbookQuestionIds||[])]);
+     itemsByChapter.set(chapter,classes[grade].items.filter(item=>ids.has(item.id)||
+       (grade===10&&Number(chapter.number)===1&&String(item.chapter)==='1'&&item.kind==='textbook')));
+   }
+   return itemsByChapter.get(chapter);
+ };
  const selectedChapter=()=>homeView||classIndex?null:(chapterOverview||chapterForItem(current));
  const load=(key,other)=>{try{const v=JSON.parse(localStorage.getItem(key));return v===null?other:v}catch{return other}};
  const store=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value))}catch{}};
@@ -96,13 +104,18 @@
  };
  // The 2025 source batches can append subparts outside their printed order.
  // Use the same sequence for exercise entry, its picker, and Previous/Next.
+ const orderedExercises=new WeakMap();
  const textbookExerciseList=chapter=>{
-   const items=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
-   if(grade!==9&&grade!==10)return items;
-   return [...items].sort((a,b)=>{
-     const exercise=exerciseOrder.compare(String(a.exercise||''),String(b.exercise||''));
-     return exercise||compareTextbookPositions(a,b);
-   });
+   if(!chapter)return [];
+   if(!orderedExercises.has(chapter)){
+     const items=window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[];
+     if(!publicGrade(grade))return items;
+     orderedExercises.set(chapter,items.sort((a,b)=>{
+       const exercise=exerciseOrder.compare(String(a.exercise||''),String(b.exercise||''));
+       return exercise||compareTextbookPositions(a,b);
+     }));
+   }
+   return orderedExercises.get(chapter);
  };
  const catalogueId=item=>item.duplicateOf||item.id;
  const activeList=()=>{
@@ -277,8 +290,12 @@
   }
  }
  const expanded=new Set();
+ let sidebarView;
  function renderList(){
    const query=$('search').value.trim().toLocaleLowerCase();
+   const chapterId=selectedChapter()?.id||'';
+   const view=JSON.stringify([grade,lang,chapterId,chapterOverview?.id,chapterSection,query]);
+   if(sidebarView===view)return;
    const container=$('exerciseList');container.replaceChildren();
    const menuNames=lang==='ta'
      ?{concepts:'கருத்துகள்',exercises:'பயிற்சிகள்',quizzes:'சிறு தேர்வுகள்',activities:'சிந்தனை மூலை & செயல்பாடுகள்'}
@@ -293,7 +310,7 @@
      if(query&&!hit&&!found.length)continue;
      visible++;
      const section=document.createElement('section');section.className='curriculum-chapter';
-     const selected=selectedChapter()?.id===chapter.id;
+     const selected=chapterId===chapter.id;
      const button=document.createElement('button');button.type='button';button.className='chapter-link';
      button.dataset.chapterId=chapter.id;button.classList.toggle('active',selected);
      button.setAttribute('aria-current',selected?'true':'false');
@@ -347,6 +364,7 @@
    }
    $('sideCount').textContent=visible+' '+ui('chapters');
    if(!visible){const msg=document.createElement('p');msg.className='empty-search';msg.textContent=ui('empty');container.append(msg);}
+   sidebarView=view;
  }
 
  function renderOverview(chapter){
@@ -513,7 +531,6 @@
    $('answerText').replaceChildren();
    $('stepCount').textContent=lang==='ta'?current.steps.length+' பகுதிகள்':current.steps.length+' parts';
    $('lessonCard').classList.toggle('many-steps',true);
-   observeLessonMath();
    return;
   }
   const all=current.steps||[];const ul=$('stepsList');ul.replaceChildren();
@@ -543,7 +560,6 @@
   appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
-  observeLessonMath();
  }
  function observeLessonMath(){
   // Set keyboard scrolling state immediately for all grades; refresh when layout or fonts settle.
@@ -564,7 +580,6 @@
    // The layout read starts loading any math fonts this question newly uses.
    document.fonts?.ready.then(prepareLessonMath);
   });
-  if(grade!==9)document.fonts?.ready.then(prepareLessonMath);
  }
  document.fonts?.addEventListener('loadingdone',()=>{
   if(!$('lessonCard').hidden)prepareLessonMath();
@@ -823,6 +838,7 @@
   renderList();
   window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:current,lang,grade}}));
   $('deepSolutionAction').hidden=!firstReasoningDetail();
+  observeLessonMath();
  }
  function syncDrawer(){
    const sidebar=$('sidebar');

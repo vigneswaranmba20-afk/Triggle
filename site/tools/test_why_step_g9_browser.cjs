@@ -20,6 +20,22 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    ['g9-ch9-ex9.1-q4','9']
   ];
   const route=id=>app.base+'/index.html?class=9&question='+id;
+  const snapshot=()=>page.evaluate(()=>{
+    function content(node){
+      const copy=node?.cloneNode(true);
+      // Font loading and reflow may independently change overflow affordances.
+      copy?.querySelectorAll('.triggle-tex[aria-label="Scrollable mathematical expression"]').forEach(formula=>{
+        for(const attribute of ['tabindex','role','aria-label'])formula.removeAttribute(attribute);
+      });
+      return copy?.innerHTML;
+    }
+    return {
+      q:content(document.querySelector('#questionText')),
+      steps:[...document.querySelectorAll('#stepsList li.worked-step:not(.final-answer-step)')].map(li=>content(li.querySelector('.step-equation'))),
+      final:content(document.querySelector('.final-answer-step')),
+      scroll:document.documentElement.scrollWidth,viewport:innerWidth
+    };
+  });
   const widths=[320,360,390,393,412,430,768,1280];
   for(const width of widths){
    await page.setViewportSize({width,height:844});
@@ -32,23 +48,13 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert.equal(await control.evaluate(el=>el.open),false,'Collapsed by default '+id);
     assert.ok(await summary.evaluate(el=>el.offsetHeight>=44),'Readable touch target '+id+' @'+width);
     assert.ok(await summary.evaluate(el=>parseFloat(getComputedStyle(el).fontSize)===(innerWidth<=800?12:14)),'Readable disclosure label '+id+' @'+width);
-    const before=await page.evaluate(()=>({
-      q:document.querySelector('#questionText')?.innerHTML,
-      steps:[...document.querySelectorAll('#stepsList li.worked-step:not(.final-answer-step)')].map(li=>li.querySelector('.step-equation')?.innerHTML),
-      final:document.querySelector('.final-answer-step')?.innerHTML,
-      scroll:document.documentElement.scrollWidth,viewport:innerWidth
-    }));
+    const before=await snapshot();
     await summary.click();
     assert.equal(await control.evaluate(el=>el.open),true,'Open on tap '+id);
     const explanation=control.locator('.why-step-panel p');
     assert.ok((await explanation.innerText()).length>34,'Explanation is meaningful '+id);
     assert.ok(await explanation.evaluate(el=>parseFloat(getComputedStyle(el).fontSize)>=16),'Explanation uses reader prose scale '+id+' @'+width);
-    const after=await page.evaluate(()=>({
-      q:document.querySelector('#questionText')?.innerHTML,
-      steps:[...document.querySelectorAll('#stepsList li.worked-step:not(.final-answer-step)')].map(li=>li.querySelector('.step-equation')?.innerHTML),
-      final:document.querySelector('.final-answer-step')?.innerHTML,
-      scroll:document.documentElement.scrollWidth,viewport:innerWidth
-    }));
+    const after=await snapshot();
     assert.deepEqual(after.q,before.q,'Question unchanged '+id);
     assert.deepEqual(after.steps,before.steps,'Every original mathematical step unchanged '+id);
     assert.deepEqual(after.final,before.final,'Final answer unchanged '+id);

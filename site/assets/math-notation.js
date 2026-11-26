@@ -142,15 +142,19 @@
   }
   function prepare(root=document) {
     const tamil=(root.closest?.('[lang]')?.lang||document.documentElement.lang)==='ta';
-    root.querySelectorAll('.triggle-tex').forEach(el=>{
-      if(el.scrollWidth>el.clientWidth+1){
-        el.tabIndex=0;
-        el.setAttribute('role','group');
-        el.setAttribute('aria-label',tamil?'உருட்டிப் பார்க்கக்கூடிய கணிதக் கோவை':'Scrollable mathematical expression');
-      }else{
-        el.removeAttribute('tabindex');el.removeAttribute('role');el.removeAttribute('aria-label');
+    const label=tamil?'உருட்டிப் பார்க்கக்கூடிய கணிதக் கோவை':'Scrollable mathematical expression';
+    const measurements=Array.from(root.querySelectorAll('.triggle-tex'),el=>[el,el.scrollWidth>el.clientWidth+1]);
+    for(const [el,wide] of measurements){
+      if(wide){
+        if(el.tabIndex!==0)el.tabIndex=0;
+        if(el.getAttribute('role')!=='group')el.setAttribute('role','group');
+        if(el.getAttribute('aria-label')!==label)el.setAttribute('aria-label',label);
+      }else if(el.hasAttribute('tabindex')){
+        el.removeAttribute('tabindex');
+        el.removeAttribute('role');
+        el.removeAttribute('aria-label');
       }
-    });
+    }
   }
   // Opt-in annotations for existing SVG labels. Keep the original diagram's
   // coordinates and geometry; only exact, authored label matches use KaTeX.

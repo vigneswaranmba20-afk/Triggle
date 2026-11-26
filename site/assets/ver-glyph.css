@@ -422,7 +422,7 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
   inline-size: min(100%, 28rem);
   block-size: clamp(10rem, 42vw, 16rem);
 }
-.ver-glyph #lessonCard .inline-figure-visual img {
+.ver-glyph #lessonCard #inlineFigureVisual > img {
   position: absolute;
   inset: 0;
   width: 100% !important;
