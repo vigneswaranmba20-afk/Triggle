@@ -26,11 +26,11 @@ from .mcq import (
 from .parser import ParseError, parse_expression
 from .reasoning_engine import verify_complete_working
 from .reconcile import build_fidelity_index, reconcile_item
-from .rounding import check_numeric_match
+from .scalar_answer import parse_scalar_answer, requested_precision, scalar_latex_text, scalar_matches
 from .steps import extract_stem_assumptions, validate_steps
 from .symbolic import evaluate_with_pi_mode, expressions_equivalent
 from .tamil_consistency import validate_en_ta_consistency
-from .units import detect_answer_dimension, convert_length
+from .units import convert_length
 
 
 @dataclass
@@ -159,12 +159,32 @@ def _verify_exercise_answer(item: Dict[str, Any], derived: DerivedResult) -> Tup
 
     ans_text = _extract_answer_text(item)
     ans_math = item.get("answerMath")
+    expr = derived.expr
+    is_scalar = isinstance(expr, sp.Expr) and not expr.free_symbols
+    if is_scalar:
+        try:
+            precision = requested_precision(q_en)
+        except ValueError as error:
+            return "UNVERIFIABLE", str(error), "info", {}
+
+        def matches(text: str) -> bool:
+            values = parse_scalar_answer(text, q_en, derived.expected_dimension)
+            return scalar_matches(
+                values, expr, derived.expected_dimension, precision, derived.preferred_pi, derived.tolerance,
+            )
 
     # 1. MCQ handling
     mcq_opts = parse_mcq_options_en(q_en)
     if mcq_opts:
         selected = extract_selected_option_label(ans_text)
-        matched_labels = [lbl for lbl, txt in mcq_opts.items() if option_matches_derived(txt, derived.expr)]
+        matched_labels = []
+        for label, text in mcq_opts.items():
+            try:
+                matched = matches(text) if is_scalar and precision.active else option_matches_derived(text, expr)
+            except ParseError:
+                continue
+            if matched:
+                matched_labels.append(label)
         if selected and selected in matched_labels:
             return (
                 "PASS",
@@ -223,8 +243,29 @@ def _verify_exercise_answer(item: Dict[str, Any], derived: DerivedResult) -> Tup
             {"observedNumbers": obs_nums, "expectedNumbers": expected_vals},
         )
 
-    # 4. Symbolic or numeric scalar expression
-    expr = derived.expr
+    # 4. Check the explicit result field, including any representations of that result.
+    if is_scalar:
+        structured = ans_math.get("en", ans_math) if isinstance(ans_math, dict) else {}
+        fallback = str(structured.get("fallback") or "").strip() if isinstance(structured, dict) else ""
+        answer = ans_text.strip() or fallback
+        if not answer and isinstance(structured, dict):
+            answer = scalar_latex_text(str(structured.get("latex") or ""))
+        try:
+            matched = matches(answer) and (not fallback or fallback == answer or matches(fallback))
+        except ParseError as error:
+            return "UNVERIFIABLE", f"Could not read the scalar answer field: {error}", "info", {}
+        evidence = {"verifiedField": answer}
+        if fallback and fallback != answer:
+            evidence["structuredFallback"] = fallback
+        if precision.pi is not None:
+            evidence["requiredPi"] = str(precision.pi)
+        if precision.places is not None:
+            evidence["requiredDecimalPlaces"] = precision.places
+        if matched:
+            return "PASS", "", "none", evidence
+        return "FAIL", f"Scalar answer does not match the derived value and source requirements: {expr}.", "critical", evidence
+
+    # 5. Symbolic expressions with variables.
     if isinstance(expr, sp.Expr):
         # Try symbolic equivalence first if answerMath latex exists
         lx = ""
@@ -240,46 +281,19 @@ def _verify_exercise_answer(item: Dict[str, Any], derived: DerivedResult) -> Tup
             except Exception:
                 pass
 
-        # Strip algebraic expression from answer_text if free_symbols present
-        if expr.free_symbols:
-            seg = re.sub(r"\b(sq\.?\s*units?|cubic\s+units?|units?)\b", "", ans_text, flags=re.I)
-            seg = seg.split("=")[-1].strip().rstrip(".")
-            try:
-                obs_expr = parse_expression(seg)
-                if expressions_equivalent(obs_expr, expr):
-                    return "PASS", "", "none", {"matchType": "symbolic_text"}
-            except Exception:
-                pass
-            return (
-                "FAIL",
-                f"Symbolic answer mismatch: expected {expr}, got {ans_text!r}",
-                "critical",
-                {},
-            )
-
-        # Numeric comparison
-        obs_nums = _extract_answer_numbers(ans_text, ans_math)
-        for o in obs_nums:
-            # If answer_text had '%' (e.g. "100%"), parse_expression("100%") returns 1.0; scale back to 100
-            cand = o * 100.0 if (derived.expected_dimension == "percentage" and "%" in ans_text and o <= 1.0) else o
-            m = check_numeric_match(expr, cand, tolerance=derived.tolerance, preferred_pi=derived.preferred_pi)
-            if m.matched:
-                # Dimensional consistency check
-                obs_dim = detect_answer_dimension(ans_text)
-                if derived.expected_dimension and obs_dim and obs_dim != derived.expected_dimension:
-                    return (
-                        "FAIL",
-                        f"Dimensional unit mismatch: expected {derived.expected_dimension}, observed {obs_dim} in {ans_text!r}",
-                        "major",
-                        {"numericMatch": asdict(m), "observedDimension": obs_dim},
-                    )
-                return "PASS", "", "none", {"numericMatch": asdict(m), "observedDimension": obs_dim}
-
+        seg = re.sub(r"\b(sq\.?\s*units?|cubic\s+units?|units?)\b", "", ans_text, flags=re.I)
+        seg = seg.split("=")[-1].strip().rstrip(".")
+        try:
+            obs_expr = parse_expression(seg)
+            if expressions_equivalent(obs_expr, expr):
+                return "PASS", "", "none", {"matchType": "symbolic_text"}
+        except ParseError:
+            pass
         return (
             "FAIL",
-            f"Numeric answer mismatch: expected {_format_derived(derived)}, got {obs_nums} ({ans_text!r})",
+            f"Symbolic answer mismatch: expected {expr}, got {ans_text!r}",
             "critical",
-            {"observedNumbers": obs_nums},
+            {},
         )
 
     return "UNVERIFIABLE", "Unsupported derived expression type.", "info", {}

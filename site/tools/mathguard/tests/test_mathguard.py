@@ -112,9 +112,14 @@ def test_g10_ch7_audit_inventory_and_answers():
     assert s["exercises"] == 62
     assert s["concepts"] == 9
     assert s["totalItems"] == 71
-    assert s["answerVerificationCounts"]["FAIL"] == 0
+    assert s["answerVerificationCounts"]["FAIL"] == 1
     assert s["answerVerificationCounts"]["UNVERIFIABLE"] == 1
-    assert s["answerVerificationCounts"]["PASS"] == 70
+    assert s["answerVerificationCounts"]["PASS"] == 69
+    # The authored primary answer uses the textbook key (2.46 cm³).
+    # The original question explicitly asks for 2 cm³, rounded to the nearest cm³.
+    assert [record["id"] for record in report["records"] if record["answer_status"] == "FAIL"] == [
+        "c10-7-ex7-3-q3",
+    ]
 
 
 def test_120_case_mutation_benchmark():
