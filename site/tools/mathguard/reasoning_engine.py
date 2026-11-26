@@ -10,6 +10,7 @@ Builds a structured ReasoningGraph per curriculum item containing:
 from __future__ import annotations
 
 import math
+from fractions import Fraction
 import re
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional, Tuple
@@ -113,8 +114,47 @@ def _strip_trailing_units(s: str) -> str:
     return cur
 
 
+_CONV_UNITS = {
+    "mm": ("L", Fraction(1, 10)), "cm": ("L", Fraction(1)), "m": ("L", Fraction(100)), "km": ("L", Fraction(100000)),
+    "mm2": ("A", Fraction(1, 100)), "cm2": ("A", Fraction(1)), "m2": ("A", Fraction(10000)),
+    "mm3": ("V", Fraction(1, 1000)), "cm3": ("V", Fraction(1)), "m3": ("V", Fraction(1000000)),
+    "ml": ("V", Fraction(1)), "l": ("V", Fraction(1000)), "litre": ("V", Fraction(1000)), "litres": ("V", Fraction(1000)),
+    "liter": ("V", Fraction(1000)), "liters": ("V", Fraction(1000)),
+}
+_CONV_RE = re.compile(
+    r"^\s*\$?\s*(-?[\d,]*\.?\d+)\s*(?:\\,|\\text\{)?\s*([A-Za-z]+)\s*(?:\^?\{?([23])\}?|([²³]))?\}?\s*=\s*"
+    r"(-?[\d,]*\.?\d+)\s*(?:\\,|\\text\{)?\s*([A-Za-z]+)\s*(?:\^?\{?([23])\}?|([²³]))?\}?\s*\$?\s*$")
+
+
+def _verify_unit_conversion_statement(ln: str):
+    """Pure unit-conversion fact 'a U1 = b U2'. Returns True/False, or None if not such a statement."""
+    m = _CONV_RE.match(ln.replace("\\mathrm", "").replace("\\;", " "))
+    if not m:
+        return None
+    def side(num, unit, e1, e2):
+        u = unit.lower()
+        e = e1 or {"²": "2", "³": "3"}.get(e2 or "", "")
+        key = u + e
+        if key not in _CONV_UNITS:
+            return None
+        return Fraction(num.replace(",", "")) * _CONV_UNITS[key][1], _CONV_UNITS[key][0]
+    a = side(m.group(1), m.group(2), m.group(3), m.group(4))
+    b = side(m.group(5), m.group(6), m.group(7), m.group(8))
+    if a is None or b is None:
+        return None
+    if a[1] != b[1]:
+        return False
+    return a[0] == b[0]
+
+
 def _preprocess_math_line(raw: str) -> str:
     s = (raw or "").strip().rstrip("\\").strip()
+    # Triggle custom stacked-fraction notation [[num|den]] -> (num)/(den)
+    for _ in range(4):
+        s2 = re.sub(r"\[\[\s*([^\[\]|]+?)\s*\|\s*([^\[\]|]+?)\s*\]\]", r"((\1)/(\2))", s)
+        if s2 == s:
+            break
+        s = s2
     if s.startswith("&="):
         s = "=" + s[2:]
     elif s.startswith(r"&\approx") or s.startswith("&≈"):
@@ -794,6 +834,11 @@ def verify_complete_working(
                     expanded_pairs.append((ln, raw_pre))
 
         for ln, pre in expanded_pairs:
+            _conv = _verify_unit_conversion_statement(ln)
+            if _conv is not None:
+                graph.claims.append(MathClaim(s_idx, ln, "unit_conversion", "VERIFIED" if _conv else "FAILED",
+                                              evidence="unit_conversion_verified" if _conv else "unit_conversion_mismatch"))
+                continue
             # Matrix operations (definition, addition, scalar/matrix multiplication, transpose)
             mat_src = ln.lstrip()
             if mat_src.startswith("&="):
