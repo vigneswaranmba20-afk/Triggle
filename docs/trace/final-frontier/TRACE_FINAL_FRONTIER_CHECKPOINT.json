@@ -24,11 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g9.coordinate.order",
+      "key": "g9.trigonometry.source",
       "status": "TESTED",
-      "pr": 456,
-      "head": "8bb7e69bd10284899663ad6ad436fd0015836831",
-      "prQualityRun": 45735899574
+      "pr": 457,
+      "head": "65276d080f25e0d72ca8ed0ae7af66e13e4e60ac",
+      "prQualityRun": 45735926507
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2520,13 +2520,13 @@
         "g9-ch5-ex5.1-q4"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch5-frontier-plot-order.json",
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 9,
         "chapter": 5,
         "runtimeRecords": 1,
         "scope": "Printed crossing and keyed trapezium in Grade 9 Exercise 5.1 Q4",
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 456,
         "head": "8bb7e69bd10284899663ad6ad436fd0015836831",
         "prQualityRun": 45735899574,
@@ -2535,6 +2535,39 @@
           "worktree": "/workspace/Triggle-frontier-g9-coordinate-order",
           "browserScript": "site/tools/test_g9_frontier_plot_order_browser.cjs",
           "studentQuery": "class=9&question=g9-ch5-ex5.1-q4"
+        },
+        "merge": "801c7af389821789fa9052f2d76878372dbab629",
+        "pagesRun": 45746125418,
+        "liveEvidence": {
+          "pr": 456,
+          "merge": "801c7af389821789fa9052f2d76878372dbab629",
+          "head": "8bb7e69bd10284899663ad6ad436fd0015836831",
+          "slug": "g9-coordinate-order",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch5-ex5.1-q4",
+          "pagesRun": 45746125418,
+          "deploymentId": 8075563440,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45746125418/job/139669738268",
+          "deploymentCompletedAt": "2026-11-26T03:21:48Z",
+          "versionMatched": "801c7af389821789fa9052f2d76878372dbab629",
+          "sha256": {
+            "assets/grade9-ch5/ex5-1-q4.svg": "214fab7aae7288bcdf69883111b3fdedf2d714f6f033f2aeaf5d0cf66403f48c",
+            "data/g9-clear-math.js": "6d2e833199e00b3701bfe9746647e0f8a5e87e85c113995363089ac38abb8426",
+            "data/project-status.json": "6a751e8a11d53ecbac7f93aed9d077beaab7409a90e8ad6bc598e2940b31caf7",
+            "data/textbook-exercises/g9-ch5-ex5-1.js": "d6af95ca52651a27afc801468588c6fa570c66864e573be5cc9894039c5a355a",
+            "data/textbook-fidelity/g9-ch5-frontier-plot-order.json": "64918bd438adfb5d02ce87d526511626972b4f91a4f0f8067198195c81139eee",
+            "data/why-step-g9-ch5-complete.js": "4071428fbd9b7b19b220d1fb21f4cfb297fdf3a26efcefe8e252d684223ceb7a",
+            "index.html": "42ce743c3fb84b4220d5fb0c68771a67769a7e357408ce5f5eb43a891161491d",
+            "service-worker.js": "ea139f3e3502820823714dcbf4546de4c70325912653ef7a414f8021f46164d9"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 9 5.1 Q4 plotted order, bilingual walkthrough and progress at 390px passed."
+          }
         },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/456"
       }
@@ -2740,7 +2773,7 @@
       }
     }
   ],
-  "latestMain": "77271aa097b636aa2dd9292e06e00fff84cc1434",
+  "latestMain": "801c7af389821789fa9052f2d76878372dbab629",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2761,7 +2794,7 @@
     "tamilIndependentSubparts": "/workspace/scratch/trace-sources/tamil-independent-subparts.json",
     "localReaderAudit": "/workspace/scratch/trace-sources/reader-tamil-formulas-candidate-complete.json",
     "liveVerificationCommand": "/workspace/scratch/trace-sources/verify-frontier-live.sh",
-    "localNavigationAudit": "/workspace/scratch/trace-sources/navigation-final-candidate.json",
+    "localNavigationAudit": "/workspace/scratch/trace-sources/navigation-index-final-candidate.json",
     "releaseQueue": "/workspace/scratch/trace-sources/release-queue.sh",
     "releaseQueueLog": "/workspace/scratch/trace-sources/release-queue.log",
     "finalProductionSweep": "/workspace/scratch/trace-sources/sweep-final-production.sh",
@@ -2769,7 +2802,7 @@
     "localFigureAudit": "/workspace/scratch/trace-sources/figure-audit-final-reconciled.json",
     "localOfflineAudit": "/workspace/scratch/trace-sources/offline-final-reconciled.log",
     "deliverablesMergeCommand": "/workspace/scratch/trace-sources/publish-frontier-artifacts.sh",
-    "localTamilNavigationAudit": "/workspace/scratch/trace-sources/navigation-ta-final-candidate.json",
+    "localTamilNavigationAudit": "/workspace/scratch/trace-sources/navigation-index-ta-final-candidate.json",
     "localMultipleChoiceAudit": "/workspace/scratch/trace-sources/mcq-feedback-final-candidate.json",
     "inventoryConsistencyCheck": "/workspace/scratch/trace-sources/verify-frontier-inventory-consistency.py",
     "tamilWorkedNotationAudit": "/workspace/scratch/trace-sources/tamil-formula-verification.json",
@@ -2788,15 +2821,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "77271aa097b636aa2dd9292e06e00fff84cc1434",
+  "latestVerifiedProduction": "801c7af389821789fa9052f2d76878372dbab629",
   "openReleaseOrder": [
-    {
-      "key": "g9.coordinate.order",
-      "status": "TESTED",
-      "pr": 456,
-      "head": "8bb7e69bd10284899663ad6ad436fd0015836831",
-      "prQualityRun": 45735899574
-    },
     {
       "key": "g9.trigonometry.source",
       "status": "TESTED",
