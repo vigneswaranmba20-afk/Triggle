@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.5a",
+  "gitCommit": "f026a79",
+  "historicalAndRecent1654": {
+    "discovered": 1654,
+    "executed": 1654,
+    "passed": 1654,
+    "failed": 0,
+    "falseAcceptances": 0,
+    "falseRejections": 0
+  },
+  "v1_5_450_case_adversarial_and_holdout": {
+    "totalCases": 450,
+    "passed": 450,
+    "failed": 0,
+    "abstentions": 26,
+    "falseAcceptances": 0,
+    "falseRejections": 0,
+    "main": {
+      "total": 350,
+      "passed": 350,
+      "failed": 0,
+      "abstentions": 16,
+      "falseAcceptances": 0,
+      "falseRejections": 0
+    },
+    "holdout": {
+      "total": 100,
+      "passed": 100,
+      "failed": 0,
+      "abstentions": 10,
+      "falseAcceptances": 0,
+      "falseRejections": 0
+    }
+  },
+  "totalExecutedCases": 2104,
+  "totalPassed": 2104,
+  "totalFailed": 0,
+  "totalFalseAcceptances": 0
+}

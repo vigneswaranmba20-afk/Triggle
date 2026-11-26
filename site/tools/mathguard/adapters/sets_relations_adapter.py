@@ -114,9 +114,14 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
         q_en = str(q_obj.get("en") or "")
         steps = ((item.get("proof") or {}).get("steps") if is_concept else item.get("steps")) or []
 
+        subpart_envs: List[Dict[str, TypedSet]] = []
+        subpart_idx = 0
         if "(i)" in q_en and "(ii)" in q_en:
-            first_sub = q_en.split("(ii)", 1)[0]
-            env: Dict[str, TypedSet] = _extract_named_sets_from_text(first_sub)
+            for part in re.split(r"\([ivx]+\)", q_en):
+                pe = _extract_named_sets_from_text(part)
+                if pe:
+                    subpart_envs.append(pe)
+            env: Dict[str, TypedSet] = dict(subpart_envs[0]) if subpart_envs else _extract_named_sets_from_text(q_en)
         else:
             env = _extract_named_sets_from_text(q_en)
         universal: Optional[TypedSet] = env.get("U")
@@ -213,6 +218,14 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
                 # General set expression evaluation
                 ev = self.set_reasoner.evaluate(lhs_str, env=env, universe=universal)
                 if ev.ok and isinstance(ev.value, TypedSet):
+                    if ev.value != rhs_set and subpart_idx + 1 < len(subpart_envs):
+                        nxt_env = subpart_envs[subpart_idx + 1]
+                        nxt_ev = self.set_reasoner.evaluate(lhs_str, env=nxt_env, universe=nxt_env.get("U"))
+                        if nxt_ev.ok and nxt_ev.value == rhs_set:
+                            subpart_idx += 1
+                            env = dict(nxt_env)
+                            universal = env.get("U")
+                            ev = nxt_ev
                     total += 1
                     if ev.value == rhs_set:
                         verified += 1
