@@ -24,13 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g9.trigonometry.source",
-      "status": "MERGED",
-      "pr": 457,
-      "head": "65276d080f25e0d72ca8ed0ae7af66e13e4e60ac",
-      "prQualityRun": 45735926507,
-      "merge": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
-      "pagesRun": 45748490478
+      "key": "g10.numbers.salary",
+      "status": "TESTED",
+      "pr": 458,
+      "head": "474775c7d699c9e5ff85aabd1980aa2f28a6d39e",
+      "prQualityRun": 45735946793
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2645,13 +2643,13 @@
       "chapter": 6,
       "scope": "Registered 2025 Trigonometry sources and the positive-side condition in Exercise 6.1 Q6",
       "runtimeRecords": 23,
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 9,
         "chapter": 6,
         "runtimeRecords": 23,
         "scope": "Registered 2025 Trigonometry sources and the positive-side condition in Exercise 6.1 Q6",
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 457,
         "head": "65276d080f25e0d72ca8ed0ae7af66e13e4e60ac",
         "prQualityRun": 45735926507,
@@ -2663,6 +2661,36 @@
         },
         "merge": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
         "pagesRun": 45748490478,
+        "liveEvidence": {
+          "pr": 457,
+          "merge": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
+          "head": "65276d080f25e0d72ca8ed0ae7af66e13e4e60ac",
+          "slug": "g9-trigonometry-source",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=c9-exercise-6-1-q6",
+          "pagesRun": 45748490478,
+          "deploymentId": 8075943888,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45748490478/job/139678910157",
+          "deploymentCompletedAt": "2026-11-26T03:48:14Z",
+          "versionMatched": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
+          "sha256": {
+            "class9-classic.html": "1b3bf1d725ec45aad91a7de5df82b372375f36555b1030afaad8d29ae4f26dcf",
+            "data/g9-clear-math.js": "60145639a2815f3471811cd5d561d7cf304df03dc9fe6e2347f6fc3819d25e69",
+            "data/project-status.json": "fdd8c4f9c77efd01e37841c9b5d8e9cf75561fa7207dd2ecd7db3ad2e08f7485",
+            "data/textbook-exercises/g9-ch6-frontier-2025.js": "2209d6246a7521fd2d5ee811339acd4db7978cc31d2bc25e48d6b86dab0dc1b3",
+            "data/textbook-fidelity/g9-ch6-frontier-source.json": "c5f4feeda7d461a2927717e8efbdb38fe1d1aa0d76f65623cf74929590a56f07",
+            "index.html": "274c77930bcb4f9684069de0875401e5bda5a87c4f718168e52a8609bb01d7e0",
+            "service-worker.js": "371282bfb4bb9b65b7145991909af96b3c58ae84274d06ae8490319f52e92d89"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 9 Trigonometry source prompts, conditional proof and navigation at 390px passed."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/457"
       }
     },
@@ -2825,17 +2853,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "801c7af389821789fa9052f2d76878372dbab629",
+  "latestVerifiedProduction": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
   "openReleaseOrder": [
-    {
-      "key": "g9.trigonometry.source",
-      "status": "MERGED",
-      "pr": 457,
-      "head": "65276d080f25e0d72ca8ed0ae7af66e13e4e60ac",
-      "prQualityRun": 45735926507,
-      "merge": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
-      "pagesRun": 45748490478
-    },
     {
       "key": "g10.numbers.salary",
       "status": "TESTED",
