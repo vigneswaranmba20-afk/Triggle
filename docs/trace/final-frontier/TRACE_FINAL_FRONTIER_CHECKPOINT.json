@@ -25,10 +25,12 @@
     "status": "IN_PROGRESS",
     "release": {
       "key": "g10.algebra.hints",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 448,
       "head": "d5e1b7e375618b5a8911a9ffeebd3821f8ff14b6",
-      "prQualityRun": 45707428910
+      "prQualityRun": 45707428910,
+      "merge": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
+      "pagesRun": 45731462969
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2146,13 +2148,13 @@
       "chapter": 3,
       "scope": "Grade 10 Algebra explanations and Tamil difficulty labels",
       "runtimeRecords": 12,
-      "status": "TESTED",
+      "status": "MERGED",
       "release": {
         "grade": 10,
         "chapter": 3,
         "runtimeRecords": 12,
         "scope": "Grade 10 Algebra explanations and Tamil difficulty labels",
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 448,
         "head": "d5e1b7e375618b5a8911a9ffeebd3821f8ff14b6",
         "prQualityRun": 45707428910,
@@ -2163,6 +2165,8 @@
           "studentQuery": "class=10&question=c10-3-ex3-15-q1-i",
           "chapterVariable": 3
         },
+        "merge": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
+        "pagesRun": 45731462969,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/448"
       }
     },
@@ -2497,7 +2501,7 @@
       }
     }
   ],
-  "latestMain": "96bdc9a6cb532ef07df0e137d8fea6274f975aa0",
+  "latestMain": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2543,10 +2547,12 @@
   "openReleaseOrder": [
     {
       "key": "g10.algebra.hints",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 448,
       "head": "d5e1b7e375618b5a8911a9ffeebd3821f8ff14b6",
-      "prQualityRun": 45707428910
+      "prQualityRun": 45707428910,
+      "merge": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
+      "pagesRun": 45731462969
     },
     {
       "key": "navigation",
