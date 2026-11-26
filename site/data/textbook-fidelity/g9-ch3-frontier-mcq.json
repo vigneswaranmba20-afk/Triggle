@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": 3,
+  "edition": "Tamil Nadu SCERT revised 2025",
+  "sourceAnswerAppendix": {
+    "en": {
+      "pdf": 320,
+      "printed": 314
+    },
+    "ta": {
+      "pdf": 336,
+      "printed": 330
+    }
+  },
+  "items": [
+    {
+      "id": "g9-ch3-ex3.15-q9",
+      "exercise": "3.15",
+      "question": 9,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 140,
+            "printed": 134
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 151,
+            "printed": 145
+          }
+        ]
+      },
+      "printedKeyOption": 4,
+      "mathematicallyValidOptions": [
+        1,
+        4
+      ],
+      "disposition": "SOURCE_BLOCKED",
+      "issue": "By the remainder theorem, p(a)=0 makes x−a both a divisor and a factor. Each is a printed option in both editions.",
+      "resolution": "Show both valid terms and identify the key’s choice. An official erratum could remove the equivalent distractor.",
+      "proof": "p(x)=(x−a)Q(x)+p(a)=(x−a)Q(x).",
+      "previousReader": {
+        "answer": "(4) factor",
+        "steps": [
+          {
+            "en": "Option (4) is correct.",
+            "ta": "p(a) = 0 எனில் (x − a) ஒரு காரணி; விருப்பம் (4).",
+            "eq": "By Factor Theorem, p(a) = 0 ⇒ (x − a) is a factor"
+          }
+        ]
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.15-q15",
+      "exercise": "3.15",
+      "question": 15,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 141,
+            "printed": 135
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 151,
+            "printed": 145
+          }
+        ]
+      },
+      "printedKeyOption": 3,
+      "issue": "The printed stem does not specify the leading coefficient. All answer choices have a=1. Tamil calls the expression ஈருறுப்புக் கோவை, though the expanded quadratic has three nonzero terms.",
+      "resolution": "Derive the general quadratic as a nonzero multiple of the product, then select the only listed choice that matches.",
+      "proof": "a(x+5)(x−3)=ax²+2ax−15a, a≠0.",
+      "previousReader": {
+        "answer": "(3) 1, 2, −15",
+        "steps": [
+          {
+            "en": "Expand and compare; option (3).",
+            "ta": "விரித்தெழுத x² + 2x − 15 ⇒ 1, 2, −15; விருப்பம் (3).",
+            "eq": "(x + 5)(x − 3) = x² + 2x − 15 ⇒ a = 1, b = 2, c = −15"
+          }
+        ]
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.15-q17",
+      "exercise": "3.15",
+      "question": 17,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 141,
+            "printed": 135
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 151,
+            "printed": 145
+          }
+        ]
+      },
+      "printedKeyOption": 4,
+      "issue": "The chapter defines a constant polynomial by degree zero and treats the zero polynomial separately.",
+      "resolution": "State the nonzero-constant rule and the zero-polynomial exception explicitly in both languages.",
+      "proof": "c=c·x⁰ for c≠0. For c=0 no exponent has a nonzero coefficient.",
+      "previousReader": {
+        "answer": "(4) 0",
+        "steps": [
+          {
+            "en": "Option (4) is correct (note: zero polynomial 0 has undefined degree).",
+            "ta": "பூச்சியமற்ற மாறிலிக் கோவையின் படி 0; விருப்பம் (4).",
+            "eq": "A nonzero constant c = c·x⁰ has degree 0"
+          }
+        ]
+      }
+    },
+    {
+      "id": "g9-ch3-ex3.15-q28",
+      "exercise": "3.15",
+      "question": 28,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 142,
+            "printed": 136
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 152,
+            "printed": 146
+          }
+        ]
+      },
+      "printedKeyOption": 3,
+      "disposition": "SOURCE_BLOCKED",
+      "issue": "Neither source says the primes are distinct. Repeating the same prime gives that prime as the GCD, including the other listed value 2.",
+      "resolution": "Teach both cases without a single graded choice. An official erratum could specify that the primes must be distinct.",
+      "proof": "gcd(p,q)=1 for p≠q prime. gcd(p,p)=p, so gcd(2,2)=2.",
+      "previousReader": {
+        "answer": "(3) 1",
+        "steps": [
+          {
+            "en": "Option (3) is correct.",
+            "ta": "பகா எண்களின் பொது வகுத்தி 1; விருப்பம் (3).",
+            "eq": "Distinct primes share only 1 (and equal primes are not meant here; standard TN answer is 1)"
+          }
+        ]
+      }
+    }
+  ],
+  "teacherReview": "pending",
+  "tamilEditorial": "pending"
+}

@@ -1,0 +1,24 @@
+<svg xml:lang="ta" xmlns="http://www.w3.org/2000/svg" width="680" height="440" viewBox="0 0 680 440" role="img" aria-labelledby="title desc">
+<title id="title">Q-இல் செங்கோணம் கொண்ட PQR முக்கோணம். PQ = 12 செமீ, QR = 16 செமீ, கர்ணம் PR = 20 செமீ. செங்குத்தான இரு பக்கங்களில் ஏதேனும் ஒன்றை அச்சாகக் கொண்டு சுழற்றினால் கூம்பு கிடைக்கும்.</title>
+<desc id="desc">Q-இல் செங்கோணம் கொண்ட PQR முக்கோணம். PQ = 12 செமீ, QR = 16 செமீ, கர்ணம் PR = 20 செமீ. செங்குத்தான இரு பக்கங்களில் ஏதேனும் ஒன்றை அச்சாகக் கொண்டு சுழற்றினால் கூம்பு கிடைக்கும்.</desc>
+<rect width="680" height="440" rx="24" fill="#fffdf9"/>
+<text x="340" y="42" font-family="Arial,sans-serif" font-size="23" text-anchor="middle" font-weight="700" fill="#28374a">ஒரு முக்கோணம், இரு கூம்புகள்</text>
+<g stroke="#22579a" stroke-width="5" stroke-linejoin="round" fill="#eaf4ff">
+<path d="M130 335 L130 110 L430 335 Z"/>
+</g>
+<g fill="#172f4c" font-family="Arial,sans-serif" font-size="24" font-weight="700">
+<text x="107" y="90">P</text><text x="93" y="365">Q</text><text x="438" y="358">R</text>
+</g>
+<path d="M130 314 h21 v21" fill="none" stroke="#264369" stroke-width="3"/>
+<g font-family="Arial,sans-serif" font-size="21" fill="#202f43" font-weight="600">
+<text x="40" y="234">12 cm</text>
+<text x="270" y="373">16 cm</text>
+<text x="308" y="188" transform="rotate(37 308 188)">20 cm</text>
+</g>
+<path d="M130 335 V75" stroke="#df6a51" stroke-width="2" stroke-dasharray="9 7" opacity=".85"/>
+<path d="M80 335 H470" stroke="#188f7a" stroke-width="2" stroke-dasharray="9 7" opacity=".9"/>
+<g font-family="Arial,sans-serif" font-size="17" font-weight="600">
+<text x="153" y="72" fill="#be4e37">PQ சுழற்சி அச்சு · ஆரம் 16 செமீ</text>
+<text x="147" y="410" fill="#167a68">QR சுழற்சி அச்சு · ஆரம் 12 செமீ</text>
+</g>
+</svg>

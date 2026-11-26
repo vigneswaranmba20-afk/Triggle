@@ -35,7 +35,7 @@
     steps,
     answer: ansEn,
     answerTa: ansTa,
-    answerMath: { en: tex(ansLatex, ansEn, true), ta: tex(ansLatex, ansTa, true) },
+    answerMath: { en: tex(ansLatex, ansEn, true), ta: tex(extra.ansLatexTa??ansLatex, ansTa, true) },
     sourceFidelity: {
       status: 'page-visual-checked',
       sourcePdfPage: { en: 220, ta: 234 },
@@ -216,7 +216,8 @@
       ],
       'Proved: B divides AC internally in the ratio 1:2, so A, B, C are collinear',
       'நிறுவப்பட்டது: B ஆனது AC-ஐ 1:2 விகிதத்தில் பிரிப்பதால் A, B, C ஒரே கோட்டில் அமையும்',
-      'AB:BC = 1:2 \\implies \\text{Collinear}'
+      'AB:BC = 1:2 \\implies \\text{Collinear}',
+      { ansLatexTa: 'AB:BC=1:2\\implies A,B,C\\text{ ஒரே கோட்டில் அமையும்}' }
     ),
 
     makeEntry(

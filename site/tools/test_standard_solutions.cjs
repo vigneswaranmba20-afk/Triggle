@@ -9,6 +9,8 @@ const auditedG9TrigTable=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EV
 const auditedG9TrigQ46=require('../../docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json');
 const auditedG9SourceChoices=require('../../docs/audit/AUD14_03_EX61_EX65_SOURCE_EVIDENCE.json');
 const [mensurationRatio]=require('../data/textbook-fidelity/g9-ch7-frontier-ratio.json').items;
+const [salaryProof]=require('../data/textbook-fidelity/g10-ch2-frontier-salary.json').items;
+const frontierTrigonometry=new Map(require('../data/textbook-fidelity/g9-ch6-frontier-source.json').items.filter(item=>item.originalReaderFields).map(item=>[item.id,item]));
 const compositionEvidence=new Map(require('../data/textbook-fidelity/g10-frontier-compositions.json').items.map(item=>[item.id,item]));
 const g9BilingualGeometry=require('../data/textbook-fidelity/g9-ch4-bilingual-20261124.json');
 const expectedGeometryIds=[
@@ -542,9 +544,19 @@ for(const [grade,data] of Object.entries(classes)){
    const extended=auditedG9TrigQ46.records[item.id];
    const originalChoices=auditedG9SourceChoices.records[item.id];
    const bilingualGeometry=g9BilingualGeometry.records[item.id];
-   assert.ok([trig,correction,extended,originalChoices,bilingualGeometry].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
+   const trig2025=frontierTrigonometry.get(item.id);
+   assert.ok([trig,correction,extended,originalChoices,bilingualGeometry,trig2025].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
    const algebra=require('../data/textbook-fidelity/g9-ch3-ex3-1-q10-q12-bilingual.json').records[item.id];
-   if(grade==='9' && /^g9-ch(?:7-ex7\.[1-4]|8-ex8\.[1-4]|9-ex9\.[1-3])-q\d+$/.test(item.id)){
+   if(trig2025){
+    const historical={...item,...trig2025.originalReaderFields};
+    if(trig2025.disposition==='SOURCE_BLOCKED'){
+     delete historical.answerTa;
+     delete historical.answerMath;
+    }
+    assert.equal(crypto.createHash('sha256').update(JSON.stringify(historical)).digest('hex'),preserved.sha256[item.id],'Preserve the pre-existing Trigonometry record '+item.id);
+    assert.equal(item.page,trig2025.sourcePages.en.pdfPages[0]);
+    assert.match(item.reference,/revised 2025/);
+   }else if(grade==='9' && /^g9-ch(?:7-ex7\.[1-4]|8-ex8\.[1-4]|9-ex9\.[1-3])-q\d+$/.test(item.id)){
     const original=JSON.parse(JSON.stringify(item));
     if(item.id===mensurationRatio.id){
      const previous=mensurationRatio.previousReader;
@@ -723,14 +735,28 @@ for(const [grade,data] of Object.entries(classes)){
    }else{
      const trace=traceSourceGate.records.find(r=>r.id===item.id);
      if(trace){
-       assert.equal(hash,trace.recordSha256,'Immutable Grade 10 Chapter 2 source record '+item.id);
-       assert.equal(item.q.en,trace.question,'Textbook question wording frozen '+item.id);
-       assert.equal(item.answer,trace.answer,'Authored answer frozen '+item.id);
+       const salaryCorrection=item.id===salaryProof.id;
+       const reviewedBefore=salaryCorrection?{...item,...salaryProof.previousEnglishFields}:item;
+       const reviewedDigest=salaryCorrection?crypto.createHash('sha256').update(JSON.stringify(reviewedBefore)).digest('hex'):hash;
+       assert.equal(reviewedDigest,trace.recordSha256,'Immutable Grade 10 Chapter 2 source record '+item.id);
+       assert.equal(reviewedBefore.q.en,trace.question,'Textbook question wording frozen '+item.id);
+       assert.equal(reviewedBefore.answer,trace.answer,'Authored answer frozen '+item.id);
+       if(salaryCorrection){
+         assert.equal(item.q.en,salaryProof.publishedPrompt.en);
+         assert.match(item.answer,/₹24,039\.99.*₹219\.67/);
+       }
        assert.equal(item.edition,'2025','TRACE source edition '+item.id);
        assert.equal(item.translationReview,'pending','Do not invent Tamil teacher approval '+item.id);
      }else{
        const approved=approvedBatch.records.find(r=>r.id===item.id)||recoveredBatch.records.find(r=>r.id===item.id)||statisticsBatch.records.find(r=>r.id===item.id)||statisticsFollowup.records.find(r=>r.id===item.id)||statisticsEx82Batch.records.find(r=>r.id===item.id)||statisticsEx82FollowupBatch.records.find(r=>r.id===item.id)||ch8Ex83Records.find(r=>r.id===item.id)||modularRecords.find(r=>r.id===item.id)||sequenceRecords.find(r=>r.id===item.id)||ex25Records.find(r=>r.id===item.id)||ex26Records.find(r=>r.id===item.id)||ex27Records.find(r=>r.id===item.id)||ex28Records.find(r=>r.id===item.id)||ex29Records.find(r=>r.id===item.id)||ex210UnitRecords.find(r=>r.id===item.id)||ex31Records.find(r=>r.id===item.id)||ex32Records.find(r=>r.id===item.id)||ex33Records.find(r=>r.id===item.id)||ex34Records.find(r=>r.id===item.id)||ex35Records.find(r=>r.id===item.id)||ex36Records.find(r=>r.id===item.id)||ex37Records.find(r=>r.id===item.id)||ex38Records.find(r=>r.id===item.id)||ex39Records.find(r=>r.id===item.id)||ex310Records.find(r=>r.id===item.id)||ex311Records.find(r=>r.id===item.id)||ex312Records.find(r=>r.id===item.id)||ex313Records.find(r=>r.id===item.id)||ex314Records.find(r=>r.id===item.id)||ex315Records.find(r=>r.id===item.id)||finalAlgebra.find(r=>r.id===item.id);
-       assert.equal(hash,crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'New content exactly matches source-verified batch '+item.id);
+       const localizedFinalAnswer=['c10-8-ex8-2-q6','c10-8-ex8-3-q2','c10-8-ex8-3-q6-i','c10-8-ex8-3-q10'].includes(item.id);
+       const preservedRecord=localizedFinalAnswer?{...item,answerMath:approved.answerMath}:item;
+       if(localizedFinalAnswer){
+         assert.equal(item.answerMath.en.fallback,approved.answer.en,item.id);
+         assert.equal(item.answerMath.ta.fallback,approved.answer.ta,item.id);
+         assert.match(item.answerMath.ta.latex,/\p{Script=Tamil}/u,item.id);
+       }
+       assert.equal(crypto.createHash('sha256').update(JSON.stringify(preservedRecord)).digest('hex'),crypto.createHash('sha256').update(JSON.stringify(approved)).digest('hex'),'New content exactly matches source-verified batch '+item.id);
      }
    }
   }

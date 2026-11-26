@@ -342,7 +342,7 @@ const entries = [
         "display": true
       },
       "ta": {
-        "latex": "\\boxed{63\\text{ min (approx)}}",
+        "latex": "\\boxed{63\\text{ நிமிடங்கள் (தோராயமாக)}}",
         "fallback": "63 நிமிடங்கள் (தோராயமாக).",
         "display": true
       }

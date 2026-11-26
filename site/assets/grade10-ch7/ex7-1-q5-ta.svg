@@ -1,0 +1,18 @@
+<svg xml:lang="ta" xmlns="http://www.w3.org/2000/svg" width="680" height="470" viewBox="0 0 680 470" role="img" aria-labelledby="title desc">
+<title id="title">19 மீ சாயுயரமுள்ள கூம்பு வடிவக் கூடாரம். செங்குத்து உயரம் h, அடித்தள ஆரம் r. வட்ட அடித்தளப் பரப்பளவு 88 சதுர மீ.</title>
+<desc id="desc">19 மீ சாயுயரமுள்ள கூம்பு வடிவக் கூடாரம். செங்குத்து உயரம் h, அடித்தள ஆரம் r. வட்ட அடித்தளப் பரப்பளவு 88 சதுர மீ.</desc>
+<rect width="680" height="470" rx="24" fill="#fffdf9"/>
+<text x="340" y="43" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#28374a">நால்வருக்கான கூம்புக் கூடாரம்</text>
+<path d="M340 90 L164 362 Q340 406 516 362 Z" fill="#e5f4ee" stroke="#188f7a" stroke-width="4"/>
+<ellipse cx="340" cy="363" rx="176" ry="44" fill="#d5eee3" stroke="#188f7a" stroke-width="3"/>
+<path d="M340 90 V363" stroke="#d25b45" stroke-width="4" stroke-dasharray="10 8"/>
+<path d="M340 363 H516" stroke="#22579a" stroke-width="4" stroke-dasharray="7 5"/>
+<path d="M340 341 h20 v22" fill="none" stroke="#264369" stroke-width="3"/>
+<g fill="#23374b" font-family="Arial,sans-serif" font-size="22" font-weight="600">
+<text x="234" y="221" transform="rotate(-58 234 221)">சாயுயரம் = 19 மீ</text>
+<text x="363" y="220" fill="#be4e37">h = ?</text>
+<text x="428" y="349" fill="#22579a">r</text>
+<text x="340" y="429" text-anchor="middle">தரைப் பரப்பு = 4 × 22 = 88 மீ²</text>
+</g>
+<circle cx="340" cy="363" r="5" fill="#264369"/>
+</svg>

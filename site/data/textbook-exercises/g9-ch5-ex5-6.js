@@ -38,7 +38,7 @@
     steps,
     answer: ansEn,
     answerTa: ansTa,
-    answerMath: { en: tex(ansLatex, ansEn, false), ta: tex(ansLatex, ansTa, false) },
+    answerMath: { en: tex(ansLatex, ansEn, false), ta: tex(extra.ansLatexTa??ansLatex, ansTa, false) },
     ...(extra.figureSrc ? { figureSrc: extra.figureSrc, figureAlt: extra.figureAlt, figureCaption: extra.figureCaption } : {}),
     sourceFidelity: {
       status: 'page-visual-checked',

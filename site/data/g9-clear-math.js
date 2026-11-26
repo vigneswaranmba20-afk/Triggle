@@ -700,7 +700,7 @@ const records=[
           "latex": "\\cos A = \\dfrac{2 x}{1 + x^{2}}",
           "fallback": "cos A = [[2x|1 + x²]]"
         },
-        ", find ",
+        ", then find the values of ",
         {
           "latex": "\\sin A",
           "fallback": "sin A"
@@ -710,15 +710,10 @@ const records=[
           "latex": "\\tan A",
           "fallback": "tan A"
         },
-        ". Assume A is acute, so ",
+        " in terms of ",
         {
-          "latex": "x > 0",
-          "fallback": "x > 0"
-        },
-        " and ",
-        {
-          "latex": "x \\ne 1",
-          "fallback": "x ≠ 1"
+          "latex": "x",
+          "fallback": "x"
         },
         "."
       ],
@@ -727,17 +722,22 @@ const records=[
           "latex": "\\cos A = \\dfrac{2 x}{1 + x^{2}}",
           "fallback": "cos A = [[2x|1 + x²]]"
         },
-        " எனில் ",
+        " எனில், ",
         {
-          "latex": "\\sin A, \\tan A",
-          "fallback": "sin A, tan A"
+          "latex": "\\sin A",
+          "fallback": "sin A"
         },
-        "-ஐ காண்க. A ஒரு குறுங்கோணம்; ",
+        " மற்றும் ",
         {
-          "latex": "x > 0, x \\ne 1",
-          "fallback": "x > 0, x ≠ 1"
+          "latex": "\\tan A",
+          "fallback": "tan A"
         },
-        " என எடுத்துக்கொள்க."
+        " இன் மதிப்புகளை ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " இல் காண்க."
       ]
     },
     "answerMath": {
@@ -869,12 +869,12 @@ const records=[
     "id": "c9-exercise-6-1-q6",
     "questionMath": {
       "en": [
-        "Starting from ",
+        "If ",
         {
           "latex": "\\sin \\theta = \\dfrac{a}{\\sqrt{a^{2} + b^{2}}}",
           "fallback": "sin θ = [[a|√(a² + b²)]]"
         },
-        ", show that ",
+        ", then show that ",
         {
           "latex": "b \\sin \\theta = a \\cos \\theta",
           "fallback": "b sin θ = a cos θ"
@@ -886,18 +886,33 @@ const records=[
           "latex": "\\sin \\theta = \\dfrac{a}{\\sqrt{a^{2} + b^{2}}}",
           "fallback": "sin θ = [[a|√(a² + b²)]]"
         },
-        " எனில் ",
+        " எனில், ",
         {
           "latex": "b \\sin \\theta = a \\cos \\theta",
           "fallback": "b sin θ = a cos θ"
         },
-        " என்பதை நிரூபிக்கவும்."
+        " என நிறுவுக."
       ]
     },
     "answerMath": {
-      "latex": "b \\sin \\theta = a \\cos \\theta",
-      "fallback": "b sin θ = a cos θ",
-      "display": true
+      "en": [
+        "For positive side lengths, ",
+        {
+          "latex": "b\\sin\\theta=a\\cos\\theta",
+          "fallback": "b sin θ = a cos θ",
+          "display": false
+        },
+        ". The printed equation alone does not ensure equality."
+      ],
+      "ta": [
+        "நேர்மப் பக்க நீளங்களுக்கு ",
+        {
+          "latex": "b\\sin\\theta=a\\cos\\theta",
+          "fallback": "b sin θ = a cos θ",
+          "display": false
+        },
+        ". கொடுக்கப்பட்ட சமன்பாடு மட்டும் சமத்துவத்தை உறுதி செய்யாது."
+      ]
     },
     "steps": [
       {
@@ -956,6 +971,92 @@ const records=[
         "reasonMath": {
           "en": "The expression on the right simplifies to the same fraction.",
           "ta": "வலப்பக்கமும் அதே பின்னமாக எளிமையாகிறது."
+        }
+      },
+      {
+        "math": {
+          "latex": "b\\sin\\theta=-\\dfrac{12}{5}\\neq\\dfrac{12}{5}=a\\cos\\theta",
+          "fallback": "b sin θ = −12/5 ≠ 12/5 = a cos θ",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "The proof uses a and ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            " as positive lengths. The printed equation also allows ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            " to be negative if a and ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            " are treated as signed numbers. Take ",
+            {
+              "latex": "a = 3",
+              "fallback": "a = 3"
+            },
+            " and ",
+            {
+              "latex": "b = - 4",
+              "fallback": "b = −4"
+            },
+            ". For the acute angle with sine ",
+            {
+              "latex": "\\dfrac{3}{5}",
+              "fallback": "3/5"
+            },
+            ", the cosine is ",
+            {
+              "latex": "\\dfrac{4}{5}",
+              "fallback": "4/5"
+            },
+            ", so the two products have opposite signs."
+          ],
+          "ta": [
+            "நிறுவலில் ",
+            {
+              "latex": "a, b",
+              "fallback": "a, b"
+            },
+            " ஆகியவை நேர்ம நீளங்கள். ",
+            {
+              "latex": "a, b",
+              "fallback": "a, b"
+            },
+            " ஆகியவற்றைக் குறியுள்ள எண்களாக எடுத்தால், கொடுக்கப்பட்ட சமன்பாட்டில் ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            " எதிர்மமாகவும் இருக்கலாம். ",
+            {
+              "latex": "a = 3",
+              "fallback": "a = 3"
+            },
+            ",",
+            " ",
+            {
+              "latex": "b = - 4",
+              "fallback": "b = −4"
+            },
+            " என்க. சைன் ",
+            {
+              "latex": "\\dfrac{3}{5}",
+              "fallback": "3/5"
+            },
+            " உள்ள குறுங்கோணத்தின் கொசைன் ",
+            {
+              "latex": "\\dfrac{4}{5}",
+              "fallback": "4/5"
+            },
+            ". எனவே இரு பெருக்கற்பலன்களும் எதிரெதிர்க் குறிகளைக் கொண்டவை."
+          ]
         }
       }
     ]
@@ -1302,103 +1403,40 @@ const records=[
     "id": "c9-exercise-6-1-q9",
     "questionMath": {
       "en": [
-        "The diagram has ",
-        {
-          "latex": "AD = 9",
-          "fallback": "AD=9"
-        },
-        ",",
-        " ",
-        {
-          "latex": "DB = 16",
-          "fallback": "DB=16"
-        },
-        ",",
-        " ",
-        {
-          "latex": "CD = 12",
-          "fallback": "CD=12"
-        },
-        ",",
-        " ",
-        {
-          "latex": "AC = 15",
-          "fallback": "AC=15"
-        },
-        " and ",
-        {
-          "latex": "BC = 20",
-          "fallback": "BC=20"
-        },
-        ". Prove ",
+        "From the given figure, prove that ",
         {
           "latex": "\\theta + \\phi = 90^{\\circ}",
-          "fallback": "θ+φ=90°"
+          "fallback": "θ + φ = 90°"
         },
-        ", show ",
-        {
-          "latex": "\\angle ACB = 90^{\\circ}",
-          "fallback": "∠ACB=90°"
-        },
-        ", and find ",
+        ". Also prove that there are two other right angled triangles. Find ",
         {
           "latex": "\\sin \\alpha, \\cos \\beta",
-          "fallback": "sinα, cosβ"
+          "fallback": "sin α, cos β"
         },
         " and ",
         {
           "latex": "\\tan \\phi",
-          "fallback": "tanφ"
+          "fallback": "tan φ"
         },
         "."
       ],
       "ta": [
-        "படத்தில் ",
-        {
-          "latex": "AD = 9",
-          "fallback": "AD=9"
-        },
-        ",",
-        " ",
-        {
-          "latex": "DB = 16",
-          "fallback": "DB=16"
-        },
-        ",",
-        " ",
-        {
-          "latex": "CD = 12",
-          "fallback": "CD=12"
-        },
-        ",",
-        " ",
-        {
-          "latex": "AC = 15",
-          "fallback": "AC=15"
-        },
-        ",",
-        " ",
-        {
-          "latex": "BC = 20",
-          "fallback": "BC=20"
-        },
-        ". ",
+        "கொடுக்கப்பட்டுள்ள படத்தில் ",
         {
           "latex": "\\theta + \\phi = 90^{\\circ}",
-          "fallback": "θ+φ=90°"
+          "fallback": "θ + φ = 90°"
         },
-        ",",
-        " ",
+        " என மெய்ப்பிக்க. இப்படத்தில் மேலும் இரு செங்கோண முக்கோணங்கள் உள்ளன என்பதை மெய்ப்பித்து, ",
         {
-          "latex": "\\angle ACB = 90^{\\circ}",
-          "fallback": "∠ACB=90°"
+          "latex": "\\sin \\alpha, \\cos \\beta",
+          "fallback": "sin α, cos β"
         },
-        " என நிரூபித்து ",
+        " மற்றும் ",
         {
-          "latex": "\\sin \\alpha, \\cos \\beta, \\tan \\phi",
-          "fallback": "sinα, cosβ, tanφ"
+          "latex": "\\tan \\phi",
+          "fallback": "tan φ"
         },
-        " காண்க."
+        " ஆகியவற்றின் மதிப்புகளையும் காண்க."
       ]
     },
     "answerMath": {
@@ -36989,9 +37027,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Not a polynomial}",
-      "fallback": "Not a polynomial",
-      "display": true
+      "en": {
+        "latex": "\\text{Not a polynomial}",
+        "fallback": "Not a polynomial",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை அல்ல"
     },
     "steps": [
       {
@@ -37050,9 +37091,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Polynomial}",
-      "fallback": "Polynomial",
-      "display": true
+      "en": {
+        "latex": "\\text{Polynomial}",
+        "fallback": "Polynomial",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை"
     },
     "steps": [
       {
@@ -37111,9 +37155,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Not a polynomial}",
-      "fallback": "Not a polynomial",
-      "display": true
+      "en": {
+        "latex": "\\text{Not a polynomial}",
+        "fallback": "Not a polynomial",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை அல்ல"
     },
     "steps": [
       {
@@ -37201,9 +37248,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Polynomial (for }x\\ne0\\text{)}",
-      "fallback": "Polynomial (after simplification for x ≠ 0)",
-      "display": true
+      "en": {
+        "latex": "\\text{Polynomial (for }x\\ne0\\text{)}",
+        "fallback": "Polynomial (after simplification for x ≠ 0)",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை (x ≠ 0 எனச் சுருக்கியபின்)"
     },
     "steps": [
       {
@@ -37262,9 +37312,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Polynomial}",
-      "fallback": "Polynomial",
-      "display": true
+      "en": {
+        "latex": "\\text{Polynomial}",
+        "fallback": "Polynomial",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை"
     },
     "steps": [
       {
@@ -37323,9 +37376,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Not a polynomial}",
-      "fallback": "Not a polynomial",
-      "display": true
+      "en": {
+        "latex": "\\text{Not a polynomial}",
+        "fallback": "Not a polynomial",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை அல்ல"
     },
     "steps": [
       {
@@ -37394,9 +37450,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\frac{2}{5}\\text{ and }-3}",
-      "fallback": "Coefficient of x²: 2/5; coefficient of x: −3",
-      "display": true
+      "en": {
+        "latex": "\\boxed{\\frac{2}{5}\\text{ and }-3}",
+        "fallback": "Coefficient of x²: 2/5; coefficient of x: −3",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "\\displaystyle \\frac{2}{5}",
+          "fallback": "2/5"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "- 3",
+          "fallback": "−3"
+        }
+      ]
     },
     "steps": [
       {
@@ -37516,9 +37595,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{-2\\text{ and }-\\sqrt{7}}",
-      "fallback": "Coefficient of x²: −2; coefficient of x: −√7",
-      "display": true
+      "en": {
+        "latex": "\\boxed{-2\\text{ and }-\\sqrt{7}}",
+        "fallback": "Coefficient of x²: −2; coefficient of x: −√7",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "- 2",
+          "fallback": "−2"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "- \\sqrt{7}",
+          "fallback": "−√7"
+        }
+      ]
     },
     "steps": [
       {
@@ -37638,9 +37740,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\pi\\text{ and }-1}",
-      "fallback": "Coefficient of x²: π; coefficient of x: −1",
-      "display": true
+      "en": {
+        "latex": "\\boxed{\\pi\\text{ and }-1}",
+        "fallback": "Coefficient of x²: π; coefficient of x: −1",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "\\pi",
+          "fallback": "π"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "- 1",
+          "fallback": "−1"
+        }
+      ]
     },
     "steps": [
       {
@@ -37760,9 +37885,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\sqrt{3}\\text{ and }\\sqrt{2}}",
-      "fallback": "Coefficient of x²: √3; coefficient of x: √2",
-      "display": true
+      "en": {
+        "latex": "\\boxed{\\sqrt{3}\\text{ and }\\sqrt{2}}",
+        "fallback": "Coefficient of x²: √3; coefficient of x: √2",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "\\sqrt{3}",
+          "fallback": "√3"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "\\sqrt{2}",
+          "fallback": "√2"
+        }
+      ]
     },
     "steps": [
       {
@@ -37882,9 +38030,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{1\\text{ and }-\\frac{7}{2}}",
-      "fallback": "Coefficient of x²: 1; coefficient of x: −7/2",
-      "display": true
+      "en": {
+        "latex": "\\boxed{1\\text{ and }-\\frac{7}{2}}",
+        "fallback": "Coefficient of x²: 1; coefficient of x: −7/2",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "\\displaystyle \\frac{- 7}{2}",
+          "fallback": "−7/2"
+        }
+      ]
     },
     "steps": [
       {
@@ -37998,9 +38169,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "7",
-      "fallback": "Degree 7",
-      "display": true
+      "en": {
+        "latex": "7",
+        "fallback": "Degree 7",
+        "display": true
+      },
+      "ta": [
+        "படி ",
+        {
+          "latex": "7",
+          "fallback": "7"
+        }
+      ]
     },
     "steps": [
       {
@@ -38057,9 +38237,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "4",
-      "fallback": "Degree 4 (after simplifying for x ≠ 0)",
-      "display": true
+      "en": {
+        "latex": "4",
+        "fallback": "Degree 4 (after simplifying for x ≠ 0)",
+        "display": true
+      },
+      "ta": "படி 4 (x ≠ 0 எனச் சுருக்கியபின்)"
     },
     "steps": [
       {
@@ -38116,9 +38299,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "5",
-      "fallback": "Degree 5",
-      "display": true
+      "en": {
+        "latex": "5",
+        "fallback": "Degree 5",
+        "display": true
+      },
+      "ta": [
+        "படி ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        }
+      ]
     },
     "steps": [
       {
@@ -38175,9 +38367,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "6",
-      "fallback": "Degree 6",
-      "display": true
+      "en": {
+        "latex": "6",
+        "fallback": "Degree 6",
+        "display": true
+      },
+      "ta": [
+        "படி ",
+        {
+          "latex": "6",
+          "fallback": "6"
+        }
+      ]
     },
     "steps": [
       {
@@ -38234,9 +38435,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "4",
-      "fallback": "Degree 4",
-      "display": true
+      "en": {
+        "latex": "4",
+        "fallback": "Degree 4",
+        "display": true
+      },
+      "ta": [
+        "படி ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        }
+      ]
     },
     "steps": [
       {
@@ -38293,9 +38503,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\sqrt7\\,x^3+6x^2+x-9",
-      "fallback": "Descending: √7 x³ + 6x² + x − 9; ascending: −9 + x + 6x² + √7 x³",
-      "display": true
+      "en": {
+        "latex": "\\sqrt7\\,x^3+6x^2+x-9",
+        "fallback": "Descending: √7 x³ + 6x² + x − 9; ascending: −9 + x + 6x² + √7 x³",
+        "display": true
+      },
+      "ta": [
+        "இறங்கு வரிசை: ",
+        {
+          "latex": "\\sqrt{7} x^{3} + 6 x^{2} + x - 9",
+          "fallback": "√7 x³ + 6x² + x − 9"
+        },
+        "; ஏறு வரிசை: ",
+        {
+          "latex": "- 9 + x + 6 x^{2} + \\sqrt{7} x^{3}",
+          "fallback": "−9 + x + 6x² + √7 x³"
+        }
+      ]
     },
     "steps": [
       {
@@ -38352,9 +38576,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "-\\frac72x^4-5x^3+\\sqrt2\\,x^2+x",
-      "fallback": "Descending: −(7/2)x⁴ − 5x³ + √2 x² + x; ascending: x + √2 x² − 5x³ − (7/2)x⁴",
-      "display": true
+      "en": {
+        "latex": "-\\frac72x^4-5x^3+\\sqrt2\\,x^2+x",
+        "fallback": "Descending: −(7/2)x⁴ − 5x³ + √2 x² + x; ascending: x + √2 x² − 5x³ − (7/2)x⁴",
+        "display": true
+      },
+      "ta": [
+        "இறங்கு வரிசை: ",
+        {
+          "latex": "\\displaystyle - \\left(\\frac{7}{2}\\right) x^{4} - 5 x^{3} + \\sqrt{2} x^{2} + x",
+          "fallback": "−(7/2)x⁴ − 5x³ + √2 x² + x"
+        },
+        "; ஏறு வரிசை: ",
+        {
+          "latex": "\\displaystyle x + \\sqrt{2} x^{2} - 5 x^{3} - \\left(\\frac{7}{2}\\right) x^{4}",
+          "fallback": "x + √2 x² − 5x³ − (7/2)x⁴"
+        }
+      ]
     },
     "steps": [
       {
@@ -38411,9 +38649,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "7x^3-\\frac65x^2+4x-1",
-      "fallback": "Descending: 7x³ − (6/5)x² + 4x − 1; ascending: −1 + 4x − (6/5)x² + 7x³",
-      "display": true
+      "en": {
+        "latex": "7x^3-\\frac65x^2+4x-1",
+        "fallback": "Descending: 7x³ − (6/5)x² + 4x − 1; ascending: −1 + 4x − (6/5)x² + 7x³",
+        "display": true
+      },
+      "ta": [
+        "இறங்கு வரிசை: ",
+        {
+          "latex": "\\displaystyle 7 x^{3} - \\left(\\frac{6}{5}\\right) x^{2} + 4 x - 1",
+          "fallback": "7x³ − (6/5)x² + 4x − 1"
+        },
+        "; ஏறு வரிசை: ",
+        {
+          "latex": "\\displaystyle - 1 + 4 x - \\left(\\frac{6}{5}\\right) x^{2} + 7 x^{3}",
+          "fallback": "−1 + 4x − (6/5)x² + 7x³"
+        }
+      ]
     },
     "steps": [
       {
@@ -38470,9 +38722,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "9y^4+\\sqrt5\\,y^3+y^2-\\frac73y-11",
-      "fallback": "Descending: 9y⁴ + √5 y³ + y² − (7/3)y − 11; ascending: −11 − (7/3)y + y² + √5 y³ + 9y⁴",
-      "display": true
+      "en": {
+        "latex": "9y^4+\\sqrt5\\,y^3+y^2-\\frac73y-11",
+        "fallback": "Descending: 9y⁴ + √5 y³ + y² − (7/3)y − 11; ascending: −11 − (7/3)y + y² + √5 y³ + 9y⁴",
+        "display": true
+      },
+      "ta": [
+        "இறங்கு வரிசை: ",
+        {
+          "latex": "\\displaystyle 9 y^{4} + \\sqrt{5} y^{3} + y^{2} - \\left(\\frac{7}{3}\\right) y - 11",
+          "fallback": "9y⁴ + √5 y³ + y² − (7/3)y − 11"
+        },
+        "; ஏறு வரிசை: ",
+        {
+          "latex": "\\displaystyle - 11 - \\left(\\frac{7}{3}\\right) y + y^{2} + \\sqrt{5} y^{3} + 9 y^{4}",
+          "fallback": "−11 − (7/3)y + y² + √5 y³ + 9y⁴"
+        }
+      ]
     },
     "steps": [
       {
@@ -38529,9 +38795,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "6x^3+6x^2-14x+17;\\quad \\deg=3",
-      "fallback": "6x³ + 6x² − 14x + 17; degree 3",
-      "display": true
+      "en": {
+        "latex": "6x^3+6x^2-14x+17;\\quad \\deg=3",
+        "fallback": "6x³ + 6x² − 14x + 17; degree 3",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "6 x^{3} + 6 x^{2} - 14 x + 17",
+          "fallback": "6x³ + 6x² − 14x + 17"
+        },
+        "; படி ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        }
+      ]
     },
     "steps": [
       {
@@ -38588,9 +38867,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "7x^3+7x^2+11x-8;\\quad \\deg=3",
-      "fallback": "7x³ + 7x² + 11x − 8; degree 3",
-      "display": true
+      "en": {
+        "latex": "7x^3+7x^2+11x-8;\\quad \\deg=3",
+        "fallback": "7x³ + 7x² + 11x − 8; degree 3",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "7 x^{3} + 7 x^{2} + 11 x - 8",
+          "fallback": "7x³ + 7x² + 11x − 8"
+        },
+        "; படி ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        }
+      ]
     },
     "steps": [
       {
@@ -38647,9 +38939,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "16x^4-6x^3-5x^2+7x-6;\\quad \\deg=4",
-      "fallback": "16x⁴ − 6x³ − 5x² + 7x − 6; degree 4",
-      "display": true
+      "en": {
+        "latex": "16x^4-6x^3-5x^2+7x-6;\\quad \\deg=4",
+        "fallback": "16x⁴ − 6x³ − 5x² + 7x − 6; degree 4",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "16 x^{4} - 6 x^{3} - 5 x^{2} + 7 x - 6",
+          "fallback": "16x⁴ − 6x³ − 5x² + 7x − 6"
+        },
+        "; படி ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        }
+      ]
     },
     "steps": [
       {
@@ -38706,9 +39011,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "7x^2+8;\\quad \\deg=2",
-      "fallback": "7x² + 8; degree 2",
-      "display": true
+      "en": {
+        "latex": "7x^2+8;\\quad \\deg=2",
+        "fallback": "7x² + 8; degree 2",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "7 x^{2} + 8",
+          "fallback": "7x² + 8"
+        },
+        "; படி ",
+        {
+          "latex": "2",
+          "fallback": "2"
+        }
+      ]
     },
     "steps": [
       {
@@ -38765,9 +39083,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "-y^3+6y^2-14y+2;\\quad \\deg=3",
-      "fallback": "−y³ + 6y² − 14y + 2; degree 3",
-      "display": true
+      "en": {
+        "latex": "-y^3+6y^2-14y+2;\\quad \\deg=3",
+        "fallback": "−y³ + 6y² − 14y + 2; degree 3",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "- y^{3} + 6 y^{2} - 14 y + 2",
+          "fallback": "−y³ + 6y² − 14y + 2"
+        },
+        "; படி ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        }
+      ]
     },
     "steps": [
       {
@@ -38824,9 +39155,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "z^5-6z^4-6z^2-9z+7;\\quad \\deg=5",
-      "fallback": "z⁵ − 6z⁴ − 6z² − 9z + 7; degree 5",
-      "display": true
+      "en": {
+        "latex": "z^5-6z^4-6z^2-9z+7;\\quad \\deg=5",
+        "fallback": "z⁵ − 6z⁴ − 6z² − 9z + 7; degree 5",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "z^{5} - 6 z^{4} - 6 z^{2} - 9 z + 7",
+          "fallback": "z⁵ − 6z⁴ − 6z² − 9z + 7"
+        },
+        "; படி ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        }
+      ]
     },
     "steps": [
       {
@@ -38993,9 +39337,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "6x^4+7x^3-56x^2-63x+18;\\quad \\deg=4",
-      "fallback": "6x⁴ + 7x³ − 56x² − 63x + 18; degree 4",
-      "display": true
+      "en": {
+        "latex": "6x^4+7x^3-56x^2-63x+18;\\quad \\deg=4",
+        "fallback": "6x⁴ + 7x³ − 56x² − 63x + 18; degree 4",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "6 x^{4} + 7 x^{3} - 56 x^{2} - 63 x + 18",
+          "fallback": "6x⁴ + 7x³ − 56x² − 63x + 18"
+        },
+        "; படி ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        }
+      ]
     },
     "steps": [
       {
@@ -39052,9 +39409,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "105x^2-33x-18;\\quad \\deg=2",
-      "fallback": "105x² − 33x − 18; degree 2",
-      "display": true
+      "en": {
+        "latex": "105x^2-33x-18;\\quad \\deg=2",
+        "fallback": "105x² − 33x − 18; degree 2",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "105 x^{2} - 33 x - 18",
+          "fallback": "105x² − 33x − 18"
+        },
+        "; படி ",
+        {
+          "latex": "2",
+          "fallback": "2"
+        }
+      ]
     },
     "steps": [
       {
@@ -39111,9 +39481,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "30x^3-77x^2+54x-7;\\quad \\deg=3",
-      "fallback": "30x³ − 77x² + 54x − 7; degree 3",
-      "display": true
+      "en": {
+        "latex": "30x^3-77x^2+54x-7;\\quad \\deg=3",
+        "fallback": "30x³ − 77x² + 54x − 7; degree 3",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "30 x^{3} - 77 x^{2} + 54 x - 7",
+          "fallback": "30x³ − 77x² + 54x − 7"
+        },
+        "; படி ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        }
+      ]
     },
     "steps": [
       {
@@ -43041,9 +43424,19 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Yes. }\\dfrac12\\text{ is a zero.}",
-      "fallback": "Yes, 1/2 is a zero.",
-      "display": true
+      "en": {
+        "latex": "\\text{Yes. }\\dfrac12\\text{ is a zero.}",
+        "fallback": "Yes, 1/2 is a zero.",
+        "display": true
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "\\displaystyle \\frac{1}{2}",
+          "fallback": "1/2"
+        },
+        " ஒரு பூச்சியமாகும்."
+      ]
     },
     "steps": [
       {
@@ -43094,9 +43487,19 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Yes. }1\\text{ is a zero.}",
-      "fallback": "Yes, 1 is a zero.",
-      "display": true
+      "en": {
+        "latex": "\\text{Yes. }1\\text{ is a zero.}",
+        "fallback": "Yes, 1 is a zero.",
+        "display": true
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " ஒரு பூச்சியமாகும்."
+      ]
     },
     "steps": [
       {
@@ -43147,9 +43550,24 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\begin{gathered}\\text{Yes. }-\\dfrac ba\\text{ is a zero}\\\\ \\text{when }a\\ne0.\\end{gathered}",
-      "fallback": "Yes, −b/a is a zero when a ≠ 0.",
-      "display": true
+      "en": {
+        "latex": "\\begin{gathered}\\text{Yes. }-\\dfrac ba\\text{ is a zero}\\\\ \\text{when }a\\ne0.\\end{gathered}",
+        "fallback": "Yes, −b/a is a zero when a ≠ 0.",
+        "display": true
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "a \\ne 0",
+          "fallback": "a ≠ 0"
+        },
+        " எனில் ",
+        {
+          "latex": "\\displaystyle \\frac{- b}{a}",
+          "fallback": "−b/a"
+        },
+        " ஒரு பூச்சியமாகும்."
+      ]
     },
     "steps": [
       {
@@ -43205,9 +43623,24 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Yes. }4\\text{ and }-3\\text{ are zeros.}",
-      "fallback": "Yes, both 4 and −3 are zeros.",
-      "display": true
+      "en": {
+        "latex": "\\text{Yes. }4\\text{ and }-3\\text{ are zeros.}",
+        "fallback": "Yes, both 4 and −3 are zeros.",
+        "display": true
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " மற்றும் ",
+        {
+          "latex": "- 3",
+          "fallback": "−3"
+        },
+        " ஆகிய இரண்டும் பூச்சியங்களாகும்."
+      ]
     },
     "steps": [
       {
@@ -43245,9 +43678,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "2\\text{ zeros}",
-      "fallback": "2 zeros",
-      "display": true
+      "en": {
+        "latex": "2\\text{ zeros}",
+        "fallback": "2 zeros",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        " பூச்சியங்கள்"
+      ]
     },
     "steps": [
       {
@@ -43287,9 +43729,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "3\\text{ zeros}",
-      "fallback": "3 zeros",
-      "display": true
+      "en": {
+        "latex": "3\\text{ zeros}",
+        "fallback": "3 zeros",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        " பூச்சியங்கள்"
+      ]
     },
     "steps": [
       {
@@ -43329,9 +43780,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "0\\text{ zeros}",
-      "fallback": "0 zeros",
-      "display": true
+      "en": {
+        "latex": "0\\text{ zeros}",
+        "fallback": "0 zeros",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "0",
+          "fallback": "0"
+        },
+        " பூச்சியங்கள்"
+      ]
     },
     "steps": [
       {
@@ -43371,9 +43831,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "1\\text{ zero}",
-      "fallback": "1 zero",
-      "display": true
+      "en": {
+        "latex": "1\\text{ zero}",
+        "fallback": "1 zero",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " பூச்சியம்"
+      ]
     },
     "steps": [
       {
@@ -43425,9 +43894,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "1\\text{ zero}",
-      "fallback": "1 zero",
-      "display": true
+      "en": {
+        "latex": "1\\text{ zero}",
+        "fallback": "1 zero",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " பூச்சியம்"
+      ]
     },
     "steps": [
       {
@@ -43486,8 +43964,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Not a multiple } (p(2) = -7 \\ne 0)}",
-      "fallback": "No, p(x) is not a multiple of g(x) (remainder = −7)"
+      "en": {
+        "latex": "\\boxed{\\text{Not a multiple } (p(2) = -7 \\ne 0)}",
+        "fallback": "No, p(x) is not a multiple of g(x) (remainder = −7)"
+      },
+      "ta": [
+        "இல்லை, ",
+        {
+          "latex": "p \\left(x\\right)",
+          "fallback": "p(x)"
+        },
+        " என்பது ",
+        {
+          "latex": "g \\left(x\\right)",
+          "fallback": "g(x)"
+        },
+        "-இன் மடங்கல்ல (மீதி = −7)"
+      ]
     },
     "steps": [
       {
@@ -43588,8 +44081,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{0}",
-      "fallback": "Remainder = 0"
+      "en": {
+        "latex": "\\boxed{0}",
+        "fallback": "Remainder = 0"
+      },
+      "ta": "மீதி = 0"
     },
     "steps": [
       {
@@ -43695,8 +44191,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\dfrac{3}{2}}",
-      "fallback": "Remainder = 3/2"
+      "en": {
+        "latex": "\\boxed{\\dfrac{3}{2}}",
+        "fallback": "Remainder = 3/2"
+      },
+      "ta": "மீதி = 3/2"
     },
     "steps": [
       {
@@ -43802,8 +44301,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{62}",
-      "fallback": "Remainder = 62"
+      "en": {
+        "latex": "\\boxed{62}",
+        "fallback": "Remainder = 62"
+      },
+      "ta": "மீதி = 62"
     },
     "steps": [
       {
@@ -43927,8 +44429,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{-143}",
-      "fallback": "Remainder = −143"
+      "en": {
+        "latex": "\\boxed{-143}",
+        "fallback": "Remainder = −143"
+      },
+      "ta": "மீதி = −143"
     },
     "steps": [
       {
@@ -44045,8 +44550,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{2019}",
-      "fallback": "Remainder = 2019"
+      "en": {
+        "latex": "\\boxed{2019}",
+        "fallback": "Remainder = 2019"
+      },
+      "ta": "மீதி = 2019"
     },
     "steps": [
       {
@@ -44295,8 +44803,17 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{a = -3,\\; \\text{Remainder} = 27}",
-      "fallback": "a = −3; remainder = 27"
+      "en": {
+        "latex": "\\boxed{a = -3,\\; \\text{Remainder} = 27}",
+        "fallback": "a = −3; remainder = 27"
+      },
+      "ta": [
+        {
+          "latex": "a = - 3",
+          "fallback": "a = −3"
+        },
+        "; மீதி = 27"
+      ]
     },
     "steps": [
       {
@@ -44421,8 +44938,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Yes, } (x - 1) \\text{ is a factor}}",
-      "fallback": "Yes, (x − 1) is a factor"
+      "en": {
+        "latex": "\\boxed{\\text{Yes, } (x - 1) \\text{ is a factor}}",
+        "fallback": "Yes, (x − 1) is a factor"
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "\\left(x - 1\\right)",
+          "fallback": "(x − 1)"
+        },
+        " ஒரு காரணி"
+      ]
     },
     "steps": [
       {
@@ -44505,8 +45032,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{No, } p(1) = 2 \\ne 0}",
-      "fallback": "No, (x − 1) is not a factor"
+      "en": {
+        "latex": "\\boxed{\\text{No, } p(1) = 2 \\ne 0}",
+        "fallback": "No, (x − 1) is not a factor"
+      },
+      "ta": [
+        "இல்லை, ",
+        {
+          "latex": "\\left(x - 1\\right)",
+          "fallback": "(x − 1)"
+        },
+        " காரணி அல்ல"
+      ]
     },
     "steps": [
       {
@@ -44606,8 +45143,21 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{p(5) = 0 \\implies (x - 5) \\text{ is a factor}}",
-      "fallback": "(x − 5) is a factor (since p(5) = 0)"
+      "en": {
+        "latex": "\\boxed{p(5) = 0 \\implies (x - 5) \\text{ is a factor}}",
+        "fallback": "(x − 5) is a factor (since p(5) = 0)"
+      },
+      "ta": [
+        {
+          "latex": "\\left(x - 5\\right)",
+          "fallback": "(x − 5)"
+        },
+        " ஒரு காரணி ",
+        {
+          "latex": "\\left(p \\left(5\\right) = 0\\right)",
+          "fallback": "(p(5) = 0)"
+        }
+      ]
     },
     "steps": [
       {
@@ -44862,8 +45412,21 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{a = b}",
-      "fallback": "a = b (and a = b = −2)"
+      "en": {
+        "latex": "\\boxed{a = b}",
+        "fallback": "a = b (and a = b = −2)"
+      },
+      "ta": [
+        {
+          "latex": "a = b",
+          "fallback": "a = b"
+        },
+        " என நிரூபிக்கப்பட்டது ",
+        {
+          "latex": "\\left(a = b = - 2\\right)",
+          "fallback": "(a = b = −2)"
+        }
+      ]
     },
     "steps": [
       {
@@ -45117,8 +45680,27 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(x + 2) \\text{ and } (x - 4) \\text{ are factors}}",
-      "fallback": "Yes, (x + 2) and (x − 4) are the sides (for x > 4)"
+      "en": {
+        "latex": "\\boxed{(x + 2) \\text{ and } (x - 4) \\text{ are factors}}",
+        "fallback": "Yes, (x + 2) and (x − 4) are the sides (for x > 4)"
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "\\left(x + 2\\right)",
+          "fallback": "(x + 2)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "\\left(x - 4\\right)",
+          "fallback": "(x − 4)"
+        },
+        " பக்கங்கள் ஆகும் ",
+        {
+          "latex": "\\left(x > 4\\right)",
+          "fallback": "(x > 4)"
+        }
+      ]
     },
     "steps": [
       {
@@ -45522,8 +46104,36 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{coeff}(x^2)=18,\\; \\text{coeff}(x)=107,\\; \\text{const}=210}",
-      "fallback": "x² coeff: 18; x coeff: 107; constant: 210"
+      "en": {
+        "latex": "\\boxed{\\text{coeff}(x^2)=18,\\; \\text{coeff}(x)=107,\\; \\text{const}=210}",
+        "fallback": "x² coeff: 18; x coeff: 107; constant: 210"
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        " கெழு: ",
+        {
+          "latex": "18",
+          "fallback": "18"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " கெழு: ",
+        {
+          "latex": "107",
+          "fallback": "107"
+        },
+        "; மாறிலி: ",
+        {
+          "latex": "210",
+          "fallback": "210"
+        }
+      ]
     },
     "steps": [
       {
@@ -45611,8 +46221,36 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{coeff}(x^2)=-32,\\; \\text{coeff}(x)=-6,\\; \\text{const}=90}",
-      "fallback": "x² coeff: −32; x coeff: −6; constant: 90"
+      "en": {
+        "latex": "\\boxed{\\text{coeff}(x^2)=-32,\\; \\text{coeff}(x)=-6,\\; \\text{const}=90}",
+        "fallback": "x² coeff: −32; x coeff: −6; constant: 90"
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        " கெழு: ",
+        {
+          "latex": "- 32",
+          "fallback": "−32"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " கெழு: ",
+        {
+          "latex": "- 6",
+          "fallback": "−6"
+        },
+        "; மாறிலி: ",
+        {
+          "latex": "90",
+          "fallback": "90"
+        }
+      ]
     },
     "steps": [
       {
@@ -47998,8 +48636,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(5x - 2y - 3z)^2}",
-      "fallback": "(−5x + 2y + 3z)² or (5x − 2y − 3z)²"
+      "en": {
+        "latex": "\\boxed{(5x - 2y - 3z)^2}",
+        "fallback": "(−5x + 2y + 3z)² or (5x − 2y − 3z)²"
+      },
+      "ta": {
+        "latex": "\\boxed{(5x - 2y - 3z)^2}",
+        "fallback": "(5x − 2y − 3z)²"
+      }
     },
     "steps": [
       {
@@ -49829,8 +50473,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(x) = 4x^2 - 6x - 5,\\; r = 33}",
-      "fallback": "Quotient: 4x² − 6x − 5; Remainder: 33"
+      "en": {
+        "latex": "\\boxed{q(x) = 4x^2 - 6x - 5,\\; r = 33}",
+        "fallback": "Quotient: 4x² − 6x − 5; Remainder: 33"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "4 x^{2} - 6 x - 5",
+          "fallback": "4x² − 6x − 5"
+        },
+        "; மீதி: ",
+        {
+          "latex": "33",
+          "fallback": "33"
+        }
+      ]
     },
     "steps": [
       {
@@ -49925,8 +50583,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(y) = 4y^2 - 6y + 5,\\; r = -10}",
-      "fallback": "Quotient: 4y² − 6y + 5; Remainder: −10"
+      "en": {
+        "latex": "\\boxed{q(y) = 4y^2 - 6y + 5,\\; r = -10}",
+        "fallback": "Quotient: 4y² − 6y + 5; Remainder: −10"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "4 y^{2} - 6 y + 5",
+          "fallback": "4y² − 6y + 5"
+        },
+        "; மீதி: ",
+        {
+          "latex": "- 10",
+          "fallback": "−10"
+        }
+      ]
     },
     "steps": [
       {
@@ -50068,8 +50740,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(x) = 4x^2 + 2x + 1,\\; r = 0}",
-      "fallback": "Quotient: 4x² + 2x + 1; Remainder: 0"
+      "en": {
+        "latex": "\\boxed{q(x) = 4x^2 + 2x + 1,\\; r = 0}",
+        "fallback": "Quotient: 4x² + 2x + 1; Remainder: 0"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "4 x^{2} + 2 x + 1",
+          "fallback": "4x² + 2x + 1"
+        },
+        "; மீதி: ",
+        {
+          "latex": "0",
+          "fallback": "0"
+        }
+      ]
     },
     "steps": [
       {
@@ -50143,8 +50829,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(z) = 8z^2 - 6z + 2,\\; r = 10}",
-      "fallback": "Quotient: 8z² − 6z + 2; Remainder: 10"
+      "en": {
+        "latex": "\\boxed{q(z) = 8z^2 - 6z + 2,\\; r = 10}",
+        "fallback": "Quotient: 8z² − 6z + 2; Remainder: 10"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "8 z^{2} - 6 z + 2",
+          "fallback": "8z² − 6z + 2"
+        },
+        "; மீதி: ",
+        {
+          "latex": "10",
+          "fallback": "10"
+        }
+      ]
     },
     "steps": [
       {
@@ -50495,8 +51195,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(x) = x^2 + 4x + 5,\\; r = 12}",
-      "fallback": "Quotient: x² + 4x + 5; Remainder: 12"
+      "en": {
+        "latex": "\\boxed{q(x) = x^2 + 4x + 5,\\; r = 12}",
+        "fallback": "Quotient: x² + 4x + 5; Remainder: 12"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "x^{2} + 4 x + 5",
+          "fallback": "x² + 4x + 5"
+        },
+        "; மீதி: ",
+        {
+          "latex": "12",
+          "fallback": "12"
+        }
+      ]
     },
     "steps": [
       {
@@ -50579,8 +51293,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(x) = x^2 - 1,\\; r = -2}",
-      "fallback": "Quotient: x² − 1; Remainder: −2"
+      "en": {
+        "latex": "\\boxed{q(x) = x^2 - 1,\\; r = -2}",
+        "fallback": "Quotient: x² − 1; Remainder: −2"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "x^{2} - 1",
+          "fallback": "x² − 1"
+        },
+        "; மீதி: ",
+        {
+          "latex": "- 2",
+          "fallback": "−2"
+        }
+      ]
     },
     "steps": [
       {
@@ -50671,8 +51399,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(x) = 2x^3 - \\dfrac{1}{2}x^2 - \\dfrac{3}{8}x + \\dfrac{51}{32},\\; r = \\dfrac{109}{32}}",
-      "fallback": "Quotient: 2x³ − (1/2)x² − (3/8)x + 51/32; Remainder: 109/32"
+      "en": {
+        "latex": "\\boxed{q(x) = 2x^3 - \\dfrac{1}{2}x^2 - \\dfrac{3}{8}x + \\dfrac{51}{32},\\; r = \\dfrac{109}{32}}",
+        "fallback": "Quotient: 2x³ − (1/2)x² − (3/8)x + 51/32; Remainder: 109/32"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "\\displaystyle 2 x^{3} - \\left(\\frac{1}{2}\\right) x^{2} - \\left(\\frac{3}{8}\\right) x + \\frac{51}{32}",
+          "fallback": "2x³ − (1/2)x² − (3/8)x + 51/32"
+        },
+        "; மீதி: ",
+        {
+          "latex": "\\displaystyle \\frac{109}{32}",
+          "fallback": "109/32"
+        }
+      ]
     },
     "steps": [
       {
@@ -50831,8 +51573,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{p = -2,\\; q = 0,\\; r = -10}",
-      "fallback": "p = −2, q = 0; Remainder = −10"
+      "en": {
+        "latex": "\\boxed{p = -2,\\; q = 0,\\; r = -10}",
+        "fallback": "p = −2, q = 0; Remainder = −10"
+      },
+      "ta": [
+        {
+          "latex": "p = - 2",
+          "fallback": "p = −2"
+        },
+        ", ",
+        {
+          "latex": "q = 0",
+          "fallback": "q = 0"
+        },
+        "; மீதி = −10"
+      ]
     },
     "steps": [
       {
@@ -51011,8 +51767,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{a = 20,\\; b = 94,\\; r = 388}",
-      "fallback": "a = 20, b = 94; Remainder = 388"
+      "en": {
+        "latex": "\\boxed{a = 20,\\; b = 94,\\; r = 388}",
+        "fallback": "a = 20, b = 94; Remainder = 388"
+      },
+      "ta": [
+        {
+          "latex": "a = 20",
+          "fallback": "a = 20"
+        },
+        ", ",
+        {
+          "latex": "b = 94",
+          "fallback": "b = 94"
+        },
+        "; மீதி = 388"
+      ]
     },
     "steps": [
       {
@@ -52645,8 +53415,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Line through } (0,0),\\; (1,2),\\; (2,4)}",
-      "fallback": "Straight line through (−1, −2), (0, 0), (1, 2), (2, 4)"
+      "en": {
+        "latex": "\\boxed{\\text{Line through } (0,0),\\; (1,2),\\; (2,4)}",
+        "fallback": "Straight line through (−1, −2), (0, 0), (1, 2), (2, 4)"
+      },
+      "ta": "(−1, −2), (0, 0), (1, 2), (2, 4) வழியே செல்லும் நேர்க்கோடு"
     },
     "steps": [
       {
@@ -52710,8 +53483,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Line through } (0,-1),\\; (1,3),\\; (2,7)}",
-      "fallback": "Straight line through (0, −1), (1, 3), (2, 7)"
+      "en": {
+        "latex": "\\boxed{\\text{Line through } (0,-1),\\; (1,3),\\; (2,7)}",
+        "fallback": "Straight line through (0, −1), (1, 3), (2, 7)"
+      },
+      "ta": "(0, −1), (1, 3), (2, 7) வழியே செல்லும் நேர்க்கோடு"
     },
     "steps": [
       {
@@ -52795,8 +53571,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Line through } (-2,0),\\; (0,3),\\; (2,6)}",
-      "fallback": "Straight line through (−2, 0), (0, 3), (2, 6)"
+      "en": {
+        "latex": "\\boxed{\\text{Line through } (-2,0),\\; (0,3),\\; (2,6)}",
+        "fallback": "Straight line through (−2, 0), (0, 3), (2, 6)"
+      },
+      "ta": "(−2, 0), (0, 3), (2, 6) வழியே செல்லும் நேர்க்கோடு"
     },
     "steps": [
       {
@@ -52871,8 +53650,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Line through } (0,7),\\; (2,4),\\; (4,1)}",
-      "fallback": "Straight line through (0, 7), (2, 4), (4, 1)"
+      "en": {
+        "latex": "\\boxed{\\text{Line through } (0,7),\\; (2,4),\\; (4,1)}",
+        "fallback": "Straight line through (0, 7), (2, 4), (4, 1)"
+      },
+      "ta": "(0, 7), (2, 4), (4, 1) வழியே செல்லும் நேர்க்கோடு"
     },
     "steps": [
       {
@@ -52936,8 +53718,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(x, y) = (5, 2)}",
-      "fallback": "(5, 2) i.e. x = 5, y = 2"
+      "en": {
+        "latex": "\\boxed{(x, y) = (5, 2)}",
+        "fallback": "(5, 2) i.e. x = 5, y = 2"
+      },
+      "ta": [
+        "(5, 2) அதாவது ",
+        {
+          "latex": "x = 5",
+          "fallback": "x = 5"
+        },
+        ", ",
+        {
+          "latex": "y = 2",
+          "fallback": "y = 2"
+        }
+      ]
     },
     "steps": [
       {
@@ -53031,8 +53827,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Infinitely many solutions (coinciding lines)}}",
-      "fallback": "Infinitely many solutions (coinciding lines)"
+      "en": {
+        "latex": "\\boxed{\\text{Infinitely many solutions (coinciding lines)}}",
+        "fallback": "Infinitely many solutions (coinciding lines)"
+      },
+      "ta": "எண்ணற்ற தீர்வுகள் (ஒன்றிய கோடுகள்)"
     },
     "steps": [
       {
@@ -53085,8 +53884,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{No solution (parallel lines)}}",
-      "fallback": "No solution (parallel lines)"
+      "en": {
+        "latex": "\\boxed{\\text{No solution (parallel lines)}}",
+        "fallback": "No solution (parallel lines)"
+      },
+      "ta": "தீர்வு இல்லை (இணை கோடுகள்)"
     },
     "steps": [
       {
@@ -53155,8 +53957,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(x, y) = (-3, -3)}",
-      "fallback": "(−3, −3) i.e. x = −3, y = −3"
+      "en": {
+        "latex": "\\boxed{(x, y) = (-3, -3)}",
+        "fallback": "(−3, −3) i.e. x = −3, y = −3"
+      },
+      "ta": [
+        "(−3, −3) அதாவது ",
+        {
+          "latex": "x = - 3",
+          "fallback": "x = −3"
+        },
+        ", ",
+        {
+          "latex": "y = - 3",
+          "fallback": "y = −3"
+        }
+      ]
     },
     "steps": [
       {
@@ -53215,8 +54031,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(x, y) = (1, 3)}",
-      "fallback": "(1, 3) i.e. x = 1, y = 3"
+      "en": {
+        "latex": "\\boxed{(x, y) = (1, 3)}",
+        "fallback": "(1, 3) i.e. x = 1, y = 3"
+      },
+      "ta": [
+        "(1, 3) அதாவது ",
+        {
+          "latex": "x = 1",
+          "fallback": "x = 1"
+        },
+        ", ",
+        {
+          "latex": "y = 3",
+          "fallback": "y = 3"
+        }
+      ]
     },
     "steps": [
       {
@@ -53298,8 +54128,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(x, y) = (-3, 3)}",
-      "fallback": "(−3, 3) i.e. x = −3, y = 3"
+      "en": {
+        "latex": "\\boxed{(x, y) = (-3, 3)}",
+        "fallback": "(−3, 3) i.e. x = −3, y = 3"
+      },
+      "ta": [
+        "(−3, 3) அதாவது ",
+        {
+          "latex": "x = - 3",
+          "fallback": "x = −3"
+        },
+        ", ",
+        {
+          "latex": "y = 3",
+          "fallback": "y = 3"
+        }
+      ]
     },
     "steps": [
       {
@@ -53369,8 +54213,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{75\\text{ mph},\\; 25\\text{ mph}}",
-      "fallback": "75 miles/hr and 25 miles/hr"
+      "en": {
+        "latex": "\\boxed{75\\text{ mph},\\; 25\\text{ mph}}",
+        "fallback": "75 miles/hr and 25 miles/hr"
+      },
+      "ta": [
+        "மணிக்கு ",
+        {
+          "latex": "75",
+          "fallback": "75"
+        },
+        " மைல்கள் மற்றும் ",
+        {
+          "latex": "25",
+          "fallback": "25"
+        },
+        " மைல்கள்"
+      ]
     },
     "steps": [
       {
@@ -53884,8 +54743,17 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{45\\text{ years}}",
-      "fallback": "45 years"
+      "en": {
+        "latex": "\\boxed{45\\text{ years}}",
+        "fallback": "45 years"
+      },
+      "ta": [
+        {
+          "latex": "45",
+          "fallback": "45"
+        },
+        " ஆண்டுகள்"
+      ]
     },
     "steps": [
       {
@@ -54371,8 +55239,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(1,\\; \\dfrac{3}{2}) \\text{ and } (0, 0)}",
-      "fallback": "(1, 3/2) and (0, 0)"
+      "en": {
+        "latex": "\\boxed{(1,\\; \\dfrac{3}{2}) \\text{ and } (0, 0)}",
+        "fallback": "(1, 3/2) and (0, 0)"
+      },
+      "ta": "(1, 3/2) மற்றும் (0, 0)"
     },
     "steps": [
       {
@@ -54836,8 +55707,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Man} = 75,\\; \\text{Son} = 15}",
-      "fallback": "Man: 75 years; Son: 15 years"
+      "en": {
+        "latex": "\\boxed{\\text{Man} = 75,\\; \\text{Son} = 15}",
+        "fallback": "Man: 75 years; Son: 15 years"
+      },
+      "ta": [
+        "தந்தை: ",
+        {
+          "latex": "75",
+          "fallback": "75"
+        },
+        " ஆண்டுகள்; மகன்: ",
+        {
+          "latex": "15",
+          "fallback": "15"
+        },
+        " ஆண்டுகள்"
+      ]
     },
     "steps": [
       {
@@ -55228,8 +56114,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{60\\text{ (Rs. 2)},\\; 20\\text{ (Rs. 5)}}",
-      "fallback": "60 two-rupee coins and 20 five-rupee coins"
+      "en": {
+        "latex": "\\boxed{60\\text{ (Rs. 2)},\\; 20\\text{ (Rs. 5)}}",
+        "fallback": "60 two-rupee coins and 20 five-rupee coins"
+      },
+      "ta": [
+        {
+          "latex": "60",
+          "fallback": "60"
+        },
+        " இரண்டு ரூபாய் நாணயங்கள் மற்றும் ",
+        {
+          "latex": "20",
+          "fallback": "20"
+        },
+        " ஐந்து ரூபாய் நாணயங்கள்"
+      ]
     },
     "steps": [
       {
@@ -55379,8 +56279,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{x = 40\\text{ hrs},\\; y = 60\\text{ hrs}}",
-      "fallback": "Larger pipe: 40 hours; Smaller pipe: 60 hours"
+      "en": {
+        "latex": "\\boxed{x = 40\\text{ hrs},\\; y = 60\\text{ hrs}}",
+        "fallback": "Larger pipe: 40 hours; Smaller pipe: 60 hours"
+      },
+      "ta": [
+        "பெரிய குழாய்: ",
+        {
+          "latex": "40",
+          "fallback": "40"
+        },
+        " மணி நேரம்; சிறிய குழாய்: ",
+        {
+          "latex": "60",
+          "fallback": "60"
+        },
+        " மணி நேரம்"
+      ]
     },
     "steps": [
       {
@@ -55942,8 +56857,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{TV} = \\text{Rs.\\,}20,000,\\; \\text{Fridge} = \\text{Rs.\\,}10,000}",
-      "fallback": "T.V.: ₹20,000; Fridge: ₹10,000"
+      "en": {
+        "latex": "\\boxed{\\text{TV} = \\text{Rs.\\,}20,000,\\; \\text{Fridge} = \\text{Rs.\\,}10,000}",
+        "fallback": "T.V.: ₹20,000; Fridge: ₹10,000"
+      },
+      "ta": [
+        "தொலைக்காட்சிப் பெட்டி: ₹",
+        {
+          "latex": "20",
+          "fallback": "20"
+        },
+        ",",
+        {
+          "latex": "000",
+          "fallback": "000"
+        },
+        "; குளிர்சாதனப் பெட்டி: ₹",
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        ",",
+        {
+          "latex": "000",
+          "fallback": "000"
+        }
+      ]
     },
     "steps": [
       {
@@ -56098,8 +57037,21 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{40,\\; 48}",
-      "fallback": "40 and 48"
+      "en": {
+        "latex": "\\boxed{40,\\; 48}",
+        "fallback": "40 and 48"
+      },
+      "ta": [
+        {
+          "latex": "40",
+          "fallback": "40"
+        },
+        " மற்றும் ",
+        {
+          "latex": "48",
+          "fallback": "48"
+        }
+      ]
     },
     "steps": [
       {
@@ -56243,8 +57195,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{x = 18\\text{ days},\\; y = 36\\text{ days}}",
-      "fallback": "1 Indian: 18 days; 1 Chinese: 36 days"
+      "en": {
+        "latex": "\\boxed{x = 18\\text{ days},\\; y = 36\\text{ days}}",
+        "fallback": "1 Indian: 18 days; 1 Chinese: 36 days"
+      },
+      "ta": [
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " இந்தியர்: ",
+        {
+          "latex": "18",
+          "fallback": "18"
+        },
+        " நாள்கள்; ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " சீனர்: ",
+        {
+          "latex": "36",
+          "fallback": "36"
+        },
+        " நாள்கள்"
+      ]
     },
     "steps": [
       {
@@ -56414,8 +57390,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(4) cubic polynomial}}",
-      "fallback": "(4) cubic polynomial"
+      "en": {
+        "latex": "\\boxed{\\text{(4) cubic polynomial}}",
+        "fallback": "(4) cubic polynomial"
+      },
+      "ta": "(4) முப்படி பல்லுறுப்புக் கோவை"
     },
     "steps": [
       {
@@ -56681,28 +57660,64 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(4) factor}}",
-      "fallback": "(4) factor"
+      "en": "Both (1) divisor and (4) factor",
+      "ta": "(1) வகுத்தி, (4) காரணி ஆகிய இரண்டும் சரி"
     },
     "steps": [
       {
         "math": {
-          "latex": "p(a)=0 \\implies (x-a)\\text{ is a factor}",
-          "fallback": "By Factor Theorem, p(a) = 0 ⇒ (x − a) is a factor"
+          "latex": "p(x)=(x-a)Q(x)+p(a)",
+          "fallback": "p(x) = (x − a)Q(x) + p(a)"
         },
         "reasonMath": {
-          "en": "Option (4) is correct.",
+          "en": [
+            "Divide by ",
+            {
+              "latex": "x - a",
+              "fallback": "x − a"
+            },
+            ". The remainder theorem gives ",
+            {
+              "latex": "p \\left(a\\right)",
+              "fallback": "p(a)"
+            },
+            " as the remainder."
+          ],
           "ta": [
             {
-              "latex": "p \\left(a\\right) = 0",
-              "fallback": "p(a) = 0"
+              "latex": "x - a",
+              "fallback": "x − a"
             },
-            " எனில் ",
+            " ஆல் வகுக்கவும். மீதித் தேற்றத்தின்படி மீதி ",
             {
-              "latex": "\\left(x - a\\right)",
-              "fallback": "(x − a)"
+              "latex": "p \\left(a\\right)",
+              "fallback": "p(a)"
             },
-            " ஒரு காரணி; விருப்பம் (4)."
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "p(a)=0\\implies p(x)=(x-a)Q(x)",
+          "fallback": "p(a) = 0 ⇒ p(x) = (x − a)Q(x)"
+        },
+        "reasonMath": {
+          "en": [
+            "A zero remainder makes ",
+            {
+              "latex": "x - a",
+              "fallback": "x − a"
+            },
+            " both a divisor and a factor. The answer key uses the term factor."
+          ],
+          "ta": [
+            "மீதி பூச்சியம் என்பதால் ",
+            {
+              "latex": "x - a",
+              "fallback": "x − a"
+            },
+            " என்பது வகுத்தியாகவும் காரணியாகவும் அமையும். பாடநூல் விடைக்குறிப்பு காரணி என்பதைக் கொடுக்கிறது."
           ]
         }
       }
@@ -56912,28 +57927,35 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "a=1,\\; b=2,\\; c=-15",
-          "fallback": "(x + 5)(x − 3) = x² + 2x − 15 ⇒ a = 1, b = 2, c = −15"
+          "latex": "ax^2+bx+c=a(x+5)(x-3),\\quad a\\ne0",
+          "fallback": "ax² + bx + c = a(x + 5)(x − 3), a ≠ 0"
         },
         "reasonMath": {
-          "en": "Expand and compare; option (3).",
+          "en": "A quadratic with those factors is a nonzero multiple of their product.",
+          "ta": "இவ்விரு காரணிகளும் உள்ள இருபடிக் கோவை, அவற்றின் பெருக்கற்பலனின் பூச்சியமற்ற ஒரு மடங்காகும்."
+        }
+      },
+      {
+        "math": {
+          "latex": "a(x+5)(x-3)=ax^2+2ax-15a",
+          "fallback": "a(x + 5)(x − 3) = ax² + 2ax − 15a"
+        },
+        "reasonMath": {
+          "en": [
+            "Compare coefficients after expanding. In every listed choice the leading coefficient is ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            ", so (3) is the only matching choice."
+          ],
           "ta": [
-            "விரித்தெழுத ",
+            "விரித்தபின் கெழுக்களை ஒப்பிடுக. கொடுக்கப்பட்ட அனைத்துத் தேர்வுகளிலும் தலைமைக் கெழு ",
             {
-              "latex": "x^{2} + 2 x - 15 \\Rightarrow 1",
-              "fallback": "x² + 2x − 15 ⇒ 1"
+              "latex": "1",
+              "fallback": "1"
             },
-            ", ",
-            {
-              "latex": "2",
-              "fallback": "2"
-            },
-            ", ",
-            {
-              "latex": "- 15",
-              "fallback": "−15"
-            },
-            "; விருப்பம் (3)."
+            ". எனவே (3) மட்டுமே பொருந்துகிறது."
           ]
         }
       }
@@ -56995,25 +58017,18 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "0",
-          "fallback": "A nonzero constant c = c·x⁰ has degree 0"
+          "latex": "c=c\\cdot x^0,\\quad c\\ne0",
+          "fallback": "c = c·x⁰, c ≠ 0"
         },
         "reasonMath": {
-          "en": [
-            "Option (4) is correct (note: zero polynomial ",
-            {
-              "latex": "0",
-              "fallback": "0"
-            },
-            " has undefined degree)."
-          ],
+          "en": "A nonzero constant has degree zero. The degree of the zero polynomial is undefined.",
           "ta": [
             "பூச்சியமற்ற மாறிலிக் கோவையின் படி ",
             {
               "latex": "0",
               "fallback": "0"
             },
-            "; விருப்பம் (4)."
+            ". பூச்சியக் கோவையின் படி வரையறுக்கப்படவில்லை."
           ]
         }
       }
@@ -57318,8 +58333,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(2) Parallel lines}}",
-      "fallback": "(2) Parallel lines"
+      "en": {
+        "latex": "\\boxed{\\text{(2) Parallel lines}}",
+        "fallback": "(2) Parallel lines"
+      },
+      "ta": "(2) இணை கோடுகள்"
     },
     "steps": [
       {
@@ -57345,8 +58363,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(3) unique}}",
-      "fallback": "(3) unique"
+      "en": {
+        "latex": "\\boxed{\\text{(3) unique}}",
+        "fallback": "(3) unique"
+      },
+      "ta": "(3) ஒரு தீர்வு"
     },
     "steps": [
       {
@@ -57372,8 +58393,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(1) no solution}}",
-      "fallback": "(1) no solution"
+      "en": {
+        "latex": "\\boxed{\\text{(1) no solution}}",
+        "fallback": "(1) no solution"
+      },
+      "ta": "(1) தீர்வு இல்லை"
     },
     "steps": [
       {
@@ -57399,25 +58423,42 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{(3) } 1}",
-      "fallback": "(3) 1"
+      "en": "Distinct primes give (3) 1. If a prime is repeated, that prime is the GCD.",
+      "ta": "வெவ்வேறு பகா எண்களுக்கு விடை (3) 1. ஒரே பகா எண்ணை இருமுறை எடுத்தால் அதுவே மீ.பொ.வ."
     },
     "steps": [
       {
         "math": {
-          "latex": "1",
-          "fallback": "Distinct primes share only 1 (and equal primes are not meant here; standard TN answer is 1)"
+          "latex": "p\\ne q\\implies\\gcd(p,q)=1",
+          "fallback": "p ≠ q ⇒ gcd(p, q) = 1"
         },
         "reasonMath": {
-          "en": "Option (3) is correct.",
-          "ta": [
-            "பகா எண்களின் பொது வகுத்தி ",
+          "en": [
+            "Two different primes share only the divisor ",
             {
               "latex": "1",
               "fallback": "1"
             },
-            "; விருப்பம் (3)."
+            ". This is the case intended by option (3)."
+          ],
+          "ta": [
+            "வெவ்வேறு பகா எண்களுக்கு ",
+            {
+              "latex": "1",
+              "fallback": "1"
+            },
+            " மட்டுமே பொது வகுத்தியாகும். (3) இந்த நேர்வுக்கான விடை."
           ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\gcd(p,p)=p,\\quad\\gcd(2,2)=2",
+          "fallback": "gcd(p, p) = p, gcd(2, 2) = 2"
+        },
+        "reasonMath": {
+          "en": "If both primes are equal, their GCD is that prime. The question needs the word distinct for a unique choice.",
+          "ta": "இரண்டு பகா எண்களும் சமமாக இருந்தால் மீ.பொ.வ. அதே பகா எண். ஒரே விடை கிடைக்க, வெவ்வேறு பகா எண்கள் என்று வினாவில் குறிப்பிட வேண்டும்."
         }
       }
     ]
@@ -59028,7 +60069,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "\\text{(i) Parallel to }x\\text{-axis};\\quad \\text{(ii) Lies on }y\\text{-axis}",
+        "latex": "\\begin{gathered}\\text{(i) }x\\text{-அச்சிற்கு இணையான நேர்க்கோடு}\\\\\\text{(ii) }y\\text{-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு}\\end{gathered}",
         "fallback": "(i) x-அச்சிற்கு இணையான நேர்க்கோடு; (ii) y-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு",
         "display": true
       }
@@ -59186,13 +60227,13 @@ const records=[
     },
     "answerMath": {
       "en": {
-        "latex": "\\text{(i) Square};\\quad \\text{(ii) Trapezium}",
-        "fallback": "(i) Square; (ii) Trapezium",
+        "latex": "\\begin{gathered}\\text{(i) Square}\\\\\\text{(ii) }ABCDA:\\text{ sides cross}\\\\ABDCA:\\text{ trapezium}\\end{gathered}",
+        "fallback": "(i) Square. (ii) Self-crossing quadrilateral in the printed order ABCDA. The keyed trapezium uses ABDCA.",
         "display": true
       },
       "ta": {
-        "latex": "\\text{(i) Square};\\quad \\text{(ii) Trapezium}",
-        "fallback": "(i) சதுரம்; (ii) சரிவகம்",
+        "latex": "\\begin{gathered}\\text{(i) சதுரம்}\\\\\\text{(ii) }ABCDA:\\text{ பக்கங்கள் குறுக்கிடும்}\\\\ABDCA:\\text{ சரிவகம்}\\end{gathered}",
+        "fallback": "(i) சதுரம். (ii) ABCDA என்ற வரிசையில் பக்கங்கள் குறுக்கிடும் நாற்கரம். விடைக்குறிப்பின் சரிவகத்திற்கு ABDCA வரிசை தேவை.",
         "display": true
       }
     },
@@ -59289,76 +60330,171 @@ const records=[
       },
       {
         "math": {
-          "latex": "\\text{One pair of opposite sides parallel } (y=3 \\parallel y=-1) \\implies \\text{Trapezium}",
-          "fallback": "y=3 ∥ y=−1, lengths 5 ≠ 11 ⇒ Trapezium",
+          "latex": "\\begin{aligned}2-8t&=-3+8t\\\\t&=\\dfrac{5}{16}\\in(0,1)\\\\BC\\cap AD&=\\left(-\\dfrac12,\\dfrac74\\right)\\end{aligned}",
+          "fallback": "2 − 8t = −3 + 8t ⇒ t = 5/16; BC and AD meet at (−1/2, 7/4)",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "(ii) Points ",
+            "(ii) Label the printed points ",
             {
-              "latex": "\\left(- 3, 3\\right)",
-              "fallback": "(−3, 3)"
+              "latex": "A, B, C",
+              "fallback": "A, B, C"
             },
             " and ",
             {
-              "latex": "\\left(2, 3\\right)",
-              "fallback": "(2, 3)"
+              "latex": "D",
+              "fallback": "D"
             },
-            " lie on the horizontal line ",
-            {
-              "latex": "y = 3 \\left(\\text{length} 5\\right)",
-              "fallback": "y = 3 (length 5)"
-            },
-            ". Points ",
-            {
-              "latex": "\\left(- 6, - 1\\right)",
-              "fallback": "(−6, −1)"
-            },
-            " and ",
-            {
-              "latex": "\\left(5, - 1\\right)",
-              "fallback": "(5, −1)"
-            },
-            " lie on the horizontal line ",
-            {
-              "latex": "y = - 1 \\left(\\text{length} 11\\right)",
-              "fallback": "y = −1 (length 11)"
-            },
-            ". Since one pair of opposite sides is parallel with unequal lengths, the quadrilateral is a trapezium."
-          ],
-          "ta": [
-            "(ii) ",
-            {
-              "latex": "\\left(- 3, 3\\right), \\left(2, 3\\right)",
-              "fallback": "(−3, 3), (2, 3)"
-            },
-            " ஆகியவை ",
+            ". As we move from ",
             {
               "latex": "y = 3",
               "fallback": "y = 3"
             },
-            " என்ற கிடைமட்டக் கோட்டிலும் (நீளம் ",
+            " down to ",
             {
-              "latex": "5",
-              "fallback": "5"
+              "latex": "y = - 1, BC",
+              "fallback": "y = −1, BC"
             },
-            "), ",
+            " moves left ",
             {
-              "latex": "\\left(- 6, - 1\\right), \\left(5, - 1\\right)",
-              "fallback": "(−6, −1), (5, −1)"
+              "latex": "8",
+              "fallback": "8"
             },
-            " ஆகியவை ",
+            " units and ",
+            {
+              "latex": "AD",
+              "fallback": "AD"
+            },
+            " moves right ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " units. The ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-coordinates become equal after travelling ",
+            {
+              "latex": "\\dfrac{5}{16}",
+              "fallback": "5/16"
+            },
+            " of the vertical drop. The two segments cross between their endpoints, so the printed order gives a self-crossing quadrilateral."
+          ],
+          "ta": [
+            "(ii) கொடுக்கப்பட்ட புள்ளிகளுக்கு முறையே ",
+            {
+              "latex": "A, B, C, D",
+              "fallback": "A, B, C, D"
+            },
+            " எனப் பெயரிடுவோம். ",
+            {
+              "latex": "y = 3",
+              "fallback": "y = 3"
+            },
+            " இலிருந்து ",
             {
               "latex": "y = - 1",
               "fallback": "y = −1"
             },
-            " என்ற கிடைமட்டக் கோட்டிலும் (நீளம் ",
+            " வரை கீழிறங்கும்போது ",
             {
-              "latex": "11",
-              "fallback": "11"
+              "latex": "BC",
+              "fallback": "BC"
             },
-            ") உள்ளன. ஒரு சோடி எதிர்ப்பக்கங்கள் இணையாகவும் சமமற்ற நீளமாகவும் உள்ளதால் இது ஒரு சரிவகம்."
+            " இடதுபுறம் ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " அலகுகளும் ",
+            {
+              "latex": "AD",
+              "fallback": "AD"
+            },
+            " வலதுபுறம் ",
+            {
+              "latex": "8",
+              "fallback": "8"
+            },
+            " அலகுகளும் நகர்கின்றன. செங்குத்துத் தொலைவில் ",
+            {
+              "latex": "\\dfrac{5}{16}",
+              "fallback": "5/16"
+            },
+            " பங்கு கீழிறங்கியதும் இரண்டின் ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            "-ஆயத்தொலைவுகள் சமமாகின்றன. இரு கோட்டுத்துண்டுகளும் முனைகளுக்கு இடையில் வெட்டிக்கொள்வதால், அச்சிட்ட வரிசையில் தன்னைத்தானே வெட்டிக்கொள்ளும் நாற்கரம் கிடைக்கிறது."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\begin{gathered}AB\\parallel DC,\\quad AB=5,\\quad DC=11\\\\BD=CA=\\sqrt{3^2+4^2}=5\\end{gathered}",
+          "fallback": "AB ∥ DC; AB = 5, DC = 11; BD = CA = √(3² + 4²) = 5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "To get the figure named in both answer appendices, follow the outside A → ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " → ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " → ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            " → A. The top and bottom sides ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            " and ",
+            {
+              "latex": "DC",
+              "fallback": "DC"
+            },
+            " are horizontal. The other two sides have the same length, so this order gives an isosceles trapezium."
+          ],
+          "ta": [
+            "இரு பாடநூல்களின் விடைக்குறிப்பிலும் கூறிய சரிவகம் கிடைக்க, சுற்றுப்புறமாக A → ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " → ",
+            {
+              "latex": "D",
+              "fallback": "D"
+            },
+            " → ",
+            {
+              "latex": "C",
+              "fallback": "C"
+            },
+            " → A என இணைக்க வேண்டும். மேல் பக்கம் ",
+            {
+              "latex": "AB",
+              "fallback": "AB"
+            },
+            ", கீழ்ப்பக்கம் ",
+            {
+              "latex": "DC",
+              "fallback": "DC"
+            },
+            " இரண்டும் கிடைமட்டமாக உள்ளன. மற்ற இரு பக்கங்களின் நீளம் சமம். எனவே இந்த வரிசையில் இருசமபக்கச் சரிவகம் கிடைக்கிறது."
           ]
         }
       }
@@ -60867,7 +62003,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "(9,3),\\;(-5,5)\\text{ and }(1,1)",
+        "latex": "(9,3),\\;(-5,5)\\text{ மற்றும் }(1,1)",
         "fallback": "(9, 3), (−5, 5) மற்றும் (1, 1)",
         "display": true
       }
@@ -61471,7 +62607,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "\\text{Mid}(AC)=\\text{Mid}(BD)=\\left(-1,\\dfrac{15}{2}\\right)\\implies\\text{Parallelogram}",
+        "latex": "\\begin{gathered}D(-2,8)\\\\AC,BD\\text{-இன் நடுப்புள்ளி }\\left(-1,\\dfrac{15}{2}\\right)\\\\\\implies ABCD\\text{ ஓர் இணைகரம்}\\end{gathered}",
         "fallback": "நிறுவப்பட்டது: D(−2, 8); AC மற்றும் BD-இன் நடுப்புள்ளி (−1, 15/2) சமம் என்பதால் ABCD ஓர் இணைகரம்",
         "display": true
       }
@@ -62918,7 +64054,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "AB:BC = 1:2 \\implies \\text{Collinear}",
+        "latex": "AB:BC=1:2\\implies A,B,C\\text{ ஒரே கோட்டில் அமையும்}",
         "fallback": "நிறுவப்பட்டது: B ஆனது AC-ஐ 1:2 விகிதத்தில் பிரிப்பதால் A, B, C ஒரே கோட்டில் அமையும்",
         "display": true
       }
@@ -63687,7 +64823,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "5\\text{ units}",
+        "latex": "5\\text{ அலகுகள்}",
         "fallback": "5 அலகுகள்",
         "display": true
       }
@@ -64009,7 +65145,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "3\\sqrt{\\dfrac{5}{2}}\\text{ units}",
+        "latex": "3\\sqrt{\\dfrac{5}{2}}\\text{ அலகுகள்}",
         "fallback": "3√(5/2) அலகுகள் (அல்லது (3√10)/2 அலகுகள்)",
         "display": true
       }
@@ -64448,7 +65584,7 @@ const records=[
         "fallback": "(3) on x-axis"
       },
       "ta": {
-        "latex": "\\text{(3) on }x\\text{-axis}",
+        "latex": "\\text{(3) }x\\text{-அச்சின் மீது}",
         "fallback": "(3) x-அச்சின் மீது"
       }
     },
@@ -64545,7 +65681,7 @@ const records=[
         "fallback": "(3) II and IV quadrant respectively"
       },
       "ta": {
-        "latex": "\\text{(3) II and IV}",
+        "latex": "\\text{(3) முறையே II, IV}",
         "fallback": "(3) முறையே II, IV காற்பகுதியில்"
       }
     },
@@ -64641,7 +65777,7 @@ const records=[
         "fallback": "(3) Trapezium"
       },
       "ta": {
-        "latex": "\\text{(3) Trapezium}",
+        "latex": "\\text{(3) சரிவகம்}",
         "fallback": "(3) சரிவகம்"
       }
     },
@@ -64778,7 +65914,7 @@ const records=[
         "fallback": "(2) Q and R"
       },
       "ta": {
-        "latex": "\\text{(2) }Q\\text{ and }R",
+        "latex": "\\text{(2) }Q\\text{ மற்றும் }R",
         "fallback": "(2) Q மற்றும் R"
       }
     },
@@ -65170,7 +66306,7 @@ const records=[
         "fallback": "(3) Null set"
       },
       "ta": {
-        "latex": "\\text{(3) Null set}",
+        "latex": "\\text{(3) வெற்றுக் கணம்}",
         "fallback": "(3) வெற்றுக் கணம்"
       }
     },
@@ -85911,35 +87047,34 @@ const texts={
     },
     ")"
   ],
-  "Option (4) is correct. (MCQ 9 · Factor Theorem definition: (4) factor)": [
-    "Option (4) is correct. (",
+  "Divide by x − a. The remainder theorem gives p(a) as the remainder.": [
+    "Divide by ",
     {
-      "latex": "MCQ 9",
-      "fallback": "MCQ 9"
+      "latex": "x - a",
+      "fallback": "x − a"
     },
-    " · Factor Theorem definition: (4) factor)"
-  ],
-  "p(a) = 0 எனில் (x − a) ஒரு காரணி; விருப்பம் (4). (வினா 9 · காரணித் தேற்றம்: (4) காரணி)": [
+    ". The remainder theorem gives ",
     {
       "latex": "p",
       "fallback": "p"
     },
-    "(a) = ",
+    "(a) as the remainder."
+  ],
+  "A linear divisor leaves a constant remainder. Substituting x=a makes the divisor term zero, so only that remainder is left.": [
+    "A linear divisor leaves a constant remainder. Substituting ",
     {
-      "latex": "0",
-      "fallback": "0"
+      "latex": "x = a",
+      "fallback": "x=a"
     },
-    " எனில் ",
+    " makes the divisor term zero, so only that remainder is left."
+  ],
+  "நேரிய கோவையால் வகுக்கும்போது மீதி ஒரு மாறிலி. x=a எனப் பிரதியிட்டால் வகுத்தியுள்ள உறுப்பு பூச்சியமாகும். மீதி மட்டும் எஞ்சும்.": [
+    "நேரிய கோவையால் வகுக்கும்போது மீதி ஒரு மாறிலி. ",
     {
-      "latex": "\\left(x - a\\right)",
-      "fallback": "(x − a)"
+      "latex": "x = a",
+      "fallback": "x=a"
     },
-    " ஒரு காரணி; விருப்பம் (4). (வினா ",
-    {
-      "latex": "9",
-      "fallback": "9"
-    },
-    " · காரணித் தேற்றம்: (4) காரணி)"
+    " எனப் பிரதியிட்டால் வகுத்தியுள்ள உறுப்பு பூச்சியமாகும். மீதி மட்டும் எஞ்சும்."
   ],
   "Option (3) is correct. (MCQ 10 · Zero of (2 − 3x): (3) 2/3)": [
     "Option (3) is correct. (",
@@ -86166,36 +87301,13 @@ const texts={
     },
     ")"
   ],
-  "Expand and compare; option (3). (MCQ 15 · Quadratic from factors: (3) 1, 2, −15)": [
-    "Expand and compare; option (3). (",
+  "இரு காரணிகளின் பெருக்கற்பலன் ஏற்கெனவே படி 2 கொண்டது. பூச்சியமற்ற மாறிலியால் பெருக்கினால் பூச்சியங்கள் மாறாது. அந்த மாறிலியே தலைமைக் கெழுவாகும்.": [
+    "இரு காரணிகளின் பெருக்கற்பலன் ஏற்கெனவே படி ",
     {
-      "latex": "MCQ 15",
-      "fallback": "MCQ 15"
+      "latex": "2",
+      "fallback": "2"
     },
-    " · Quadratic from factors: (3) ",
-    {
-      "latex": "1, 2, - 15",
-      "fallback": "1, 2, −15"
-    },
-    ")"
-  ],
-  "விரித்தெழுத x² + 2x − 15 ⇒ 1, 2, −15; விருப்பம் (3). (வினா 15 · காரணிகளிலிருந்து கெழுக்கள்: (3) 1, 2, −15)": [
-    "விரித்தெழுத ",
-    {
-      "latex": "x^{2} + 2 x - 15 \\Rightarrow 1, 2, - 15",
-      "fallback": "x² + 2x − 15 ⇒ 1, 2, −15"
-    },
-    "; விருப்பம் (3). (வினா ",
-    {
-      "latex": "15",
-      "fallback": "15"
-    },
-    " · காரணிகளிலிருந்து கெழுக்கள்: (3) ",
-    {
-      "latex": "1, 2, - 15",
-      "fallback": "1, 2, −15"
-    },
-    ")"
+    " கொண்டது. பூச்சியமற்ற மாறிலியால் பெருக்கினால் பூச்சியங்கள் மாறாது. அந்த மாறிலியே தலைமைக் கெழுவாகும்."
   ],
   "Option (3) is correct. (MCQ 16 · Linear factors of cubic: (3) 3)": [
     "Option (3) is correct. (",
@@ -86233,49 +87345,36 @@ const texts={
     },
     ")"
   ],
-  "Option (4) is correct (note: zero polynomial 0 has undefined degree).": [
-    "Option (4) is correct (note: zero polynomial ",
+  "Degree counts the largest exponent with a nonzero coefficient. Writing a nonzero constant as c times x⁰ makes that exponent visible.": [
+    "Degree counts the largest exponent with a nonzero coefficient. Writing a nonzero constant as ",
     {
-      "latex": "0",
-      "fallback": "0"
+      "latex": "c",
+      "fallback": "c"
     },
-    " has undefined degree)."
+    " times ",
+    {
+      "latex": "x^{0}",
+      "fallback": "x⁰"
+    },
+    " makes that exponent visible."
   ],
-  "Option (4) is correct (note: zero polynomial 0 has undefined degree). (MCQ 17 · Degree of constant polynomial: (4) 0)": [
-    "Option (4) is correct (note: zero polynomial ",
+  "பூச்சியமற்ற கெழுவுடன் வரும் மிகப்பெரிய அடுக்கே படி. மாறிலியை c பெருக்கல் x⁰ என எழுதும்போது அடுக்கு 0 என்பது தெரிகிறது.": [
+    "பூச்சியமற்ற கெழுவுடன் வரும் மிகப்பெரிய அடுக்கே படி. மாறிலியை ",
+    {
+      "latex": "c",
+      "fallback": "c"
+    },
+    " பெருக்கல் ",
+    {
+      "latex": "x^{0}",
+      "fallback": "x⁰"
+    },
+    " என எழுதும்போது அடுக்கு ",
     {
       "latex": "0",
       "fallback": "0"
     },
-    " has undefined degree). (",
-    {
-      "latex": "MCQ 17",
-      "fallback": "MCQ 17"
-    },
-    " · Degree of constant polynomial: (4) ",
-    {
-      "latex": "0",
-      "fallback": "0"
-    },
-    ")"
-  ],
-  "பூச்சியமற்ற மாறிலிக் கோவையின் படி 0; விருப்பம் (4). (வினா 17 · மாறிலிக் கோவையின் படி: (4) 0)": [
-    "பூச்சியமற்ற மாறிலிக் கோவையின் படி ",
-    {
-      "latex": "0",
-      "fallback": "0"
-    },
-    "; விருப்பம் (4). (வினா ",
-    {
-      "latex": "17",
-      "fallback": "17"
-    },
-    " · மாறிலிக் கோவையின் படி: (4) ",
-    {
-      "latex": "0",
-      "fallback": "0"
-    },
-    ")"
+    " என்பது தெரிகிறது."
   ],
   "Substitute x = 2, y = −2; option (2).": [
     "Substitute ",
@@ -86709,41 +87808,29 @@ const texts={
     },
     " · தீர்வு இல்லை விகிதம்: (1) தீர்வு இல்லை)"
   ],
-  "Option (3) is correct. (MCQ 28 · GCD of two primes: (3) 1)": [
-    "Option (3) is correct. (",
-    {
-      "latex": "MCQ 28",
-      "fallback": "MCQ 28"
-    },
-    " · ",
-    {
-      "latex": "GCD",
-      "fallback": "GCD"
-    },
-    " of two primes: (3) ",
+  "Two different primes share only the divisor 1. This is the case intended by option (3).": [
+    "Two different primes share only the divisor ",
     {
       "latex": "1",
       "fallback": "1"
     },
-    ")"
+    ". This is the case intended by option (3)."
   ],
-  "பகா எண்களின் பொது வகுத்தி 1; விருப்பம் (3). (வினா 28 · இரண்டு பகா எண்களின் மீ.பொ.வ: (3) 1)": [
-    "பகா எண்களின் பொது வகுத்தி ",
+  "A prime has only two positive divisors, 1 and itself. Compare the two divisor lists and keep only their common members.": [
+    "A prime has only two positive divisors, ",
     {
       "latex": "1",
       "fallback": "1"
     },
-    "; விருப்பம் (3). (வினா ",
-    {
-      "latex": "28",
-      "fallback": "28"
-    },
-    " · இரண்டு பகா எண்களின் மீ.பொ.வ: (3) ",
+    " and itself. Compare the two divisor lists and keep only their common members."
+  ],
+  "ஒரு பகா எண்ணுக்கு 1 மற்றும் அந்த எண்ணே நேர்ம வகுத்திகள். இரு வகுத்திப் பட்டியல்களையும் ஒப்பிட்டுப் பொதுவாக உள்ளவற்றை மட்டும் எடுத்துக்கொள்ளுங்கள்.": [
+    "ஒரு பகா எண்ணுக்கு ",
     {
       "latex": "1",
       "fallback": "1"
     },
-    ")"
+    " மற்றும் அந்த எண்ணே நேர்ம வகுத்திகள். இரு வகுத்திப் பட்டியல்களையும் ஒப்பிட்டுப் பொதுவாக உள்ளவற்றை மட்டும் எடுத்துக்கொள்ளுங்கள்."
   ],
   "Common factor is x² − y²; option (2).": [
     "Common factor is ",
@@ -87181,129 +88268,53 @@ const texts={
     },
     "-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு)"
   ],
-  "(i) Joining (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) gives two horizontal sides of length 4 and two vertical sides of length 4 meeting at 90° angles. Hence it is a square.": [
-    "(i) Joining ",
+  "(ii) Label the printed points A, B, C and D. As we move from y = 3 down to y = −1, BC moves left 8 units and AD moves right 8 units. The x-coordinates become equal after travelling 5/16 of the vertical drop. The two segments cross between their endpoints, so the printed order gives a self-crossing quadrilateral.": [
+    "(ii) Label the printed points ",
     {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
+      "latex": "A, B, C",
+      "fallback": "A, B, C"
     },
-    " → ",
+    " and ",
     {
-      "latex": "\\left(- 4, 0\\right)",
-      "fallback": "(−4,0)"
+      "latex": "D",
+      "fallback": "D"
     },
-    " → ",
+    ". As we move from ",
     {
-      "latex": "\\left(- 4, - 4\\right)",
-      "fallback": "(−4,−4)"
+      "latex": "y = 3",
+      "fallback": "y = 3"
     },
-    " → ",
+    " down to ",
     {
-      "latex": "\\left(0, - 4\\right)",
-      "fallback": "(0,−4)"
+      "latex": "y = - 1, BC",
+      "fallback": "y = −1, BC"
     },
-    " → ",
+    " moves left ",
     {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
+      "latex": "8",
+      "fallback": "8"
     },
-    " gives two horizontal sides of ",
+    " units and ",
     {
-      "latex": "\\text{length} 4",
-      "fallback": "length 4"
+      "latex": "AD",
+      "fallback": "AD"
     },
-    " and two vertical sides of ",
+    " moves right ",
     {
-      "latex": "\\text{length} 4",
-      "fallback": "length 4"
+      "latex": "8",
+      "fallback": "8"
     },
-    " meeting at ",
+    " units. The ",
     {
-      "latex": "90^{\\circ}",
-      "fallback": "90°"
+      "latex": "x",
+      "fallback": "x"
     },
-    " angles. Hence it is a square."
-  ],
-  "(i) Joining (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) gives two horizontal sides of length 4 and two vertical sides of length 4 meeting at 90° angles. Hence it is a square. (Identify shapes formed by plotted points: (i) Square; (ii) Trapezium)": [
-    "(i) Joining ",
+    "-coordinates become equal after travelling ",
     {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
+      "latex": "\\dfrac{5}{16}",
+      "fallback": "5/16"
     },
-    " → ",
-    {
-      "latex": "\\left(- 4, 0\\right)",
-      "fallback": "(−4,0)"
-    },
-    " → ",
-    {
-      "latex": "\\left(- 4, - 4\\right)",
-      "fallback": "(−4,−4)"
-    },
-    " → ",
-    {
-      "latex": "\\left(0, - 4\\right)",
-      "fallback": "(0,−4)"
-    },
-    " → ",
-    {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
-    },
-    " gives two horizontal sides of ",
-    {
-      "latex": "\\text{length} 4",
-      "fallback": "length 4"
-    },
-    " and two vertical sides of ",
-    {
-      "latex": "\\text{length} 4",
-      "fallback": "length 4"
-    },
-    " meeting at ",
-    {
-      "latex": "90^{\\circ}",
-      "fallback": "90°"
-    },
-    " angles. Hence it is a square. (Identify shapes formed by plotted points: (i) Square; (ii) Trapezium)"
-  ],
-  "(i) (0,0) → (−4,0) → (−4,−4) → (0,−4) → (0,0) என இணைக்கும்போது, 4 அலகு நீளமுள்ள செங்குத்து மற்றும் கிடைமட்டப் பக்கங்கள் 90° கோணத்தில் வெட்டுகின்றன. எனவே இது ஒரு சதுரம். (புள்ளிகளை இணைத்து உருவாகும் வடிவத்தைக் காணுதல்: (i) சதுரம்; (ii) சரிவகம்)": [
-    "(i) ",
-    {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
-    },
-    " → ",
-    {
-      "latex": "\\left(- 4, 0\\right)",
-      "fallback": "(−4,0)"
-    },
-    " → ",
-    {
-      "latex": "\\left(- 4, - 4\\right)",
-      "fallback": "(−4,−4)"
-    },
-    " → ",
-    {
-      "latex": "\\left(0, - 4\\right)",
-      "fallback": "(0,−4)"
-    },
-    " → ",
-    {
-      "latex": "\\left(0, 0\\right)",
-      "fallback": "(0,0)"
-    },
-    " என இணைக்கும்போது, ",
-    {
-      "latex": "4",
-      "fallback": "4"
-    },
-    " அலகு நீளமுள்ள செங்குத்து மற்றும் கிடைமட்டப் பக்கங்கள் ",
-    {
-      "latex": "90^{\\circ}",
-      "fallback": "90°"
-    },
-    " கோணத்தில் வெட்டுகின்றன. எனவே இது ஒரு சதுரம். (புள்ளிகளை இணைத்து உருவாகும் வடிவத்தைக் காணுதல்: (i) சதுரம்; (ii) சரிவகம்)"
+    " of the vertical drop. The two segments cross between their endpoints, so the printed order gives a self-crossing quadrilateral."
   ],
   "Use the distance formula d = √[(x₂ − x₁)² + (y₂ − y₁)²].": [
     "Use the distance formula ",

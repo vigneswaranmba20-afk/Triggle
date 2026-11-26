@@ -9,6 +9,10 @@
   chapter.textbookQuestionIds = chapter.textbookQuestionIds || [];
 
   const tex = (latex, fallback, display = false) => ({ latex, fallback, ...(display ? { display: true } : {}) });
+  const localizedAnswer = (en, ta, latex) => {
+    const formattedEnglish = latex ? tex(`\\boxed{${latex}}`, en) : en;
+    return en === ta ? formattedEnglish : {en:formattedEnglish,ta};
+  };
   const mcq = (qNum, titleEn, titleTa, qEn, qTa, ansEn, ansTa, ansTex, steps, diff = 'easy') => ({
     id: `g9-ch3-ex3.15-q${qNum}`,
     classNum: 9,
@@ -29,7 +33,7 @@
     })),
     answer: ansEn,
     answerTa: ansTa,
-    answerMath: tex(`\\boxed{${ansTex}}`, ansEn, false),
+    answerMath: localizedAnswer(ansEn, ansTa, ansTex),
     releaseStatus: 'bilingual-2025-source-checked',
     translationReview: '2025-tamil-pdf-checked-teacher-review-pending'
   });
@@ -87,8 +91,9 @@
     mcq(9, 'MCQ 9 · Factor Theorem definition', 'வினா 9 · காரணித் தேற்றம்',
       '9. If p(a) = 0 then (x − a) is a ________ of p(x)\n(1) divisor  (2) quotient  (3) remainder  (4) factor',
       '9. p(a) = 0 எனில், (x − a) என்பது p(x)-இன் ஒரு ________\n(1) வகுத்தி  (2) ஈவு  (3) மீதி  (4) காரணி',
-      '(4) factor', '(4) காரணி', '\\text{(4) factor}', [
-        ['By Factor Theorem, p(a) = 0 ⇒ (x − a) is a factor', 'Option (4) is correct.', 'p(a) = 0 எனில் (x − a) ஒரு காரணி; விருப்பம் (4).', 'p(a)=0 \\implies (x-a)\\text{ is a factor}']
+      'Both (1) divisor and (4) factor', '(1) வகுத்தி, (4) காரணி ஆகிய இரண்டும் சரி', null, [
+        ['p(x) = (x − a)Q(x) + p(a)', 'Divide by x − a. The remainder theorem gives p(a) as the remainder.', 'x − a ஆல் வகுக்கவும். மீதித் தேற்றத்தின்படி மீதி p(a).', 'p(x)=(x-a)Q(x)+p(a)'],
+        ['p(a) = 0 ⇒ p(x) = (x − a)Q(x)', 'A zero remainder makes x − a both a divisor and a factor. The answer key uses the term factor.', 'மீதி பூச்சியம் என்பதால் x − a என்பது வகுத்தியாகவும் காரணியாகவும் அமையும். பாடநூல் விடைக்குறிப்பு காரணி என்பதைக் கொடுக்கிறது.', 'p(a)=0\\implies p(x)=(x-a)Q(x)']
       ]),
     mcq(10, 'MCQ 10 · Zero of (2 − 3x)', 'வினா 10 · (2 − 3x)-இன் பூச்சியம்',
       '10. Zeros of (2 − 3x) is ________\n(1) 3  (2) 2  (3) 2/3  (4) 3/2',
@@ -124,7 +129,8 @@
       '15. If (x + 5) and (x − 3) are the factors of ax² + bx + c, then values of a, b and c are\n(1) 1,2,3  (2) 1,2,15  (3) 1,2,−15  (4) 1,−2,15',
       '15. ax² + bx + c என்ற ஈருறுப்புக் கோவையின் காரணிகள் (x + 5) மற்றும் (x − 3) எனில், a, b மற்றும் c-இன் மதிப்புகள் ________\n(1) 1,2,3  (2) 1,2,15  (3) 1,2,−15  (4) 1,−2,15',
       '(3) 1, 2, −15', '(3) 1, 2, −15', '\\text{(3) } 1,\\; 2,\\; -15', [
-        ['(x + 5)(x − 3) = x² + 2x − 15 ⇒ a = 1, b = 2, c = −15', 'Expand and compare; option (3).', 'விரித்தெழுத x² + 2x − 15 ⇒ 1, 2, −15; விருப்பம் (3).', 'a=1,\\; b=2,\\; c=-15']
+        ['ax² + bx + c = a(x + 5)(x − 3), a ≠ 0', 'A quadratic with those factors is a nonzero multiple of their product.', 'இவ்விரு காரணிகளும் உள்ள இருபடிக் கோவை, அவற்றின் பெருக்கற்பலனின் பூச்சியமற்ற ஒரு மடங்காகும்.', 'ax^2+bx+c=a(x+5)(x-3),\\quad a\\ne0'],
+        ['a(x + 5)(x − 3) = ax² + 2ax − 15a', 'Compare coefficients after expanding. In every listed choice the leading coefficient is 1, so (3) is the only matching choice.', 'விரித்தபின் கெழுக்களை ஒப்பிடுக. கொடுக்கப்பட்ட அனைத்துத் தேர்வுகளிலும் தலைமைக் கெழு 1. எனவே (3) மட்டுமே பொருந்துகிறது.', 'a(x+5)(x-3)=ax^2+2ax-15a']
       ]),
     mcq(16, 'MCQ 16 · Linear factors of cubic', 'வினா 16 · முப்படி கோவையின் நேரிய காரணிகள்',
       '16. Cubic polynomial may have maximum of ________ linear factors\n(1) 1  (2) 2  (3) 3  (4) 4',
@@ -136,7 +142,7 @@
       '17. Degree of the constant polynomial is ________\n(1) 3  (2) 2  (3) 1  (4) 0',
       '17. மாறிலிக் கோவையின் படி\n(1) 3  (2) 2  (3) 1  (4) 0',
       '(4) 0', '(4) 0', '\\text{(4) } 0', [
-        ['A nonzero constant c = c·x⁰ has degree 0', 'Option (4) is correct (note: zero polynomial 0 has undefined degree).', 'பூச்சியமற்ற மாறிலிக் கோவையின் படி 0; விருப்பம் (4).', '0']
+        ['c = c·x⁰, c ≠ 0', 'A nonzero constant has degree zero. The degree of the zero polynomial is undefined.', 'பூச்சியமற்ற மாறிலிக் கோவையின் படி 0. பூச்சியக் கோவையின் படி வரையறுக்கப்படவில்லை.', 'c=c\\cdot x^0,\\quad c\\ne0']
       ]),
     mcq(18, 'MCQ 18 · Solution of 2x + 3y = m', 'வினா 18 · 2x + 3y = m தீர்வு',
       '18. Find the value of m from the equation 2x + 3y = m. If its one solution is x = 2 and y = −2.\n(1) 2  (2) −2  (3) 10  (4) 0',
@@ -201,8 +207,9 @@
     mcq(28, 'MCQ 28 · GCD of two primes', 'வினா 28 · இரண்டு பகா எண்களின் மீ.பொ.வ',
       '28. GCD of any two prime numbers is ________\n(1) −1  (2) 0  (3) 1  (4) 2',
       '28. இரண்டு பகா எண்களின் மீ.பொ.வ\n(1) −1  (2) 0  (3) 1  (4) 2',
-      '(3) 1', '(3) 1', '\\text{(3) } 1', [
-        ['Distinct primes share only 1 (and equal primes are not meant here; standard TN answer is 1)', 'Option (3) is correct.', 'பகா எண்களின் பொது வகுத்தி 1; விருப்பம் (3).', '1']
+      'Distinct primes give (3) 1. If a prime is repeated, that prime is the GCD.', 'வெவ்வேறு பகா எண்களுக்கு விடை (3) 1. ஒரே பகா எண்ணை இருமுறை எடுத்தால் அதுவே மீ.பொ.வ.', null, [
+        ['p ≠ q ⇒ gcd(p, q) = 1', 'Two different primes share only the divisor 1. This is the case intended by option (3).', 'வெவ்வேறு பகா எண்களுக்கு 1 மட்டுமே பொது வகுத்தியாகும். (3) இந்த நேர்வுக்கான விடை.', 'p\\ne q\\implies\\gcd(p,q)=1'],
+        ['gcd(p, p) = p, gcd(2, 2) = 2', 'If both primes are equal, their GCD is that prime. The question needs the word distinct for a unique choice.', 'இரண்டு பகா எண்களும் சமமாக இருந்தால் மீ.பொ.வ. அதே பகா எண். ஒரே விடை கிடைக்க, வெவ்வேறு பகா எண்கள் என்று வினாவில் குறிப்பிட வேண்டும்.', '\\gcd(p,p)=p,\\quad\\gcd(2,2)=2']
       ]),
     mcq(29, 'MCQ 29 · GCD of x⁴ − y⁴ and x² − y²', 'வினா 29 · x⁴ − y⁴ மற்றும் x² − y² மீ.பொ.வ',
       '29. The GCD of x⁴ − y⁴ and x² − y² is\n(1) x⁴ − y⁴  (2) x² − y²  (3) (x + y)²  (4) (x + y)⁴',
