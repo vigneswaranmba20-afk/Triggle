@@ -375,7 +375,7 @@
 
   add([
     ["c10-2-ex2-10-q3","Find HCF of 65 and 117."],
-    ["c10-2-unit-q2-i","To fill both 175 litres and 105 litres exactly into cans of the grea"]
+    ["c10-2-unit-q2-i","The Tamil edition asks for the greatest capacity. The English wording permits smaller equal capacities as well. Find the greatest one by the Euclidean algorithm."]
   ],
     "The highest common factor divides both quantities. Dividing both by it leaves coprime quotients, confirming that no larger common factor remains.",
     "மீப்பெரு பொது வகுத்தி இரு அளவுகளையும் வகுக்கும். இரண்டையும் அதனால் வகுத்தபின் கிடைக்கும் எண்கள் சார்பகா எண்களாக இருந்தால் பெரிய பொது வகுத்தி எஞ்சவில்லை.");
@@ -411,8 +411,8 @@
     "அடுத்தடுத்த இரு முழு எண்களில் ஒன்று ஒற்றை, மற்றொன்று இரட்டை. எனவே அவற்றின் பெருக்கற்பலனில் இரண்டென்ற காரணி இருக்கும்.");
 
   add([
-    ["c10-2-unit-q2-ii","From part (i), the capacity of each can is HCF(175, 105) = 35 litres"],
-    ["c10-2-unit-q2-iii","From part (i), the capacity of each can is HCF(175, 105) = 35 litres"]
+    ["c10-2-unit-q2-ii","Use the greatest capacity from part (i), as requested in the Tamil edition."],
+    ["c10-2-unit-q2-iii","Use the greatest capacity from part (i), as requested in the Tamil edition."]
   ],
     "Divide the volume of the requested type of milk by the capacity of one can. The quotient is a whole number because the capacity divides that volume exactly.",
     "கேட்ட பால் வகையின் மொத்த அளவை ஒரு கலனின் கொள்ளளவால் வகுக்கவும். கொள்ளளவு அந்த அளவை மீதியின்றி வகுப்பதால் கலன்களின் எண்ணிக்கை முழு எண்ணாக இருக்கும்.");

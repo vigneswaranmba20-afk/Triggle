@@ -366,7 +366,7 @@ const entries=[
     },
     "steps": [
       {
-        "en": "To fill both 175 litres and 105 litres exactly into cans of the greatest equal capacity without mixing, find HCF(175, 105) using Euclid's division algorithm.",
+        "en": "The Tamil edition asks for the greatest capacity. The English wording permits smaller equal capacities as well. Find the greatest one by the Euclidean algorithm.",
         "eq": "175 = 105 × 1 + 70",
         "math": {
           "latex": "175=105\\times 1+70",
@@ -391,12 +391,21 @@ const entries=[
           "fallback": "70 = 35 × 2 + 0 ⇒ HCF(175, 105) = 35 litres",
           "display": true
         }
+      },
+      {
+        "en": "Let p and q be the numbers of full cans used for cow’s and buffalo’s milk. Their ratio is 175:105 = 5:3, so p = 5k and q = 3k for a positive whole number k. In either case each can holds 35/k litres. The largest capacity is reached at k = 1.",
+        "eq": "p/q = 5/3 ⇒ (p, q) = (5k, 3k), k ≥ 1; capacity = 35/k litres",
+        "math": {
+          "latex": "\\begin{aligned}\\dfrac{p}{q}&=\\dfrac{175}{105}=\\dfrac53\\\\(p,q)&=(5k,3k),\\quad k\\in\\mathbb N,\\ k\\ge 1\\\\c&=\\dfrac{175}{5k}=\\dfrac{35}{k}\\end{aligned}",
+          "fallback": "p/q = 5/3 ⇒ (p, q) = (5k, 3k), k ≥ 1; capacity = 35/k litres",
+          "display": true
+        }
       }
     ],
-    "answer": "35 litres.",
+    "answer": "Greatest capacity: 35 litres. With only an equal-capacity condition, each can can hold 35/k litres for any positive integer k.",
     "answerMath": {
-      "latex": "35\\text{ litres.}",
-      "fallback": "35 litres.",
+      "latex": "\\begin{gathered}c_{\\max}=35\\,\\mathrm L\\\\c=\\dfrac{35}{k}\\,\\mathrm L,\\quad k\\in\\mathbb N,\\ k\\ge 1\\end{gathered}",
+      "fallback": "Greatest capacity: 35 litres. With only an equal-capacity condition, each can can hold 35/k litres for any positive integer k.",
       "display": true
     },
     "kind": "textbook",
@@ -443,7 +452,7 @@ const entries=[
     },
     "steps": [
       {
-        "en": "From part (i), the capacity of each can is HCF(175, 105) = 35 litres.",
+        "en": "Use the greatest capacity from part (i), as requested in the Tamil edition.",
         "eq": "Capacity of one can = 35 litres",
         "math": {
           "latex": "\\text{Capacity of one can}=35\\text{ litres}",
@@ -459,12 +468,21 @@ const entries=[
           "fallback": "Number of cans of cow's milk = 175 / 35 = 5",
           "display": true
         }
+      },
+      {
+        "en": "Under the English equal-capacity wording, a can could hold 35/k litres. Dividing 175 litres by that capacity gives 5k cans.",
+        "eq": "175/(35/k) = 5k, k ≥ 1",
+        "math": {
+          "latex": "\\dfrac{175}{35/k}=5k,\\quad k\\in\\mathbb N,\\ k\\ge 1",
+          "fallback": "175/(35/k) = 5k, k ≥ 1",
+          "display": true
+        }
       }
     ],
-    "answer": "5.",
+    "answer": "5 cans at the greatest capacity. For capacity 35/k litres, the count is 5k.",
     "answerMath": {
-      "latex": "5.",
-      "fallback": "5.",
+      "latex": "\\begin{gathered}c=35\\,\\mathrm L\\implies 5\\text{ cans}\\\\c=\\dfrac{35}{k}\\,\\mathrm L\\implies 5k\\text{ cans}\\end{gathered}",
+      "fallback": "5 cans at the greatest capacity. For capacity 35/k litres, the count is 5k.",
       "display": true
     },
     "kind": "textbook",
@@ -511,7 +529,7 @@ const entries=[
     },
     "steps": [
       {
-        "en": "From part (i), the capacity of each can is HCF(175, 105) = 35 litres.",
+        "en": "Use the greatest capacity from part (i), as requested in the Tamil edition.",
         "eq": "Capacity of one can = 35 litres",
         "math": {
           "latex": "\\text{Capacity of one can}=35\\text{ litres}",
@@ -527,12 +545,21 @@ const entries=[
           "fallback": "Number of cans of buffalo's milk = 105 / 35 = 3",
           "display": true
         }
+      },
+      {
+        "en": "Under the English equal-capacity wording, a can could hold 35/k litres. Dividing 105 litres by that capacity gives 3k cans.",
+        "eq": "105/(35/k) = 3k, k ≥ 1",
+        "math": {
+          "latex": "\\dfrac{105}{35/k}=3k,\\quad k\\in\\mathbb N,\\ k\\ge 1",
+          "fallback": "105/(35/k) = 3k, k ≥ 1",
+          "display": true
+        }
       }
     ],
-    "answer": "3.",
+    "answer": "3 cans at the greatest capacity. For capacity 35/k litres, the count is 3k.",
     "answerMath": {
-      "latex": "3.",
-      "fallback": "3.",
+      "latex": "\\begin{gathered}c=35\\,\\mathrm L\\implies 3\\text{ cans}\\\\c=\\dfrac{35}{k}\\,\\mathrm L\\implies 3k\\text{ cans}\\end{gathered}",
+      "fallback": "3 cans at the greatest capacity. For capacity 35/k litres, the count is 3k.",
       "display": true
     },
     "kind": "textbook",

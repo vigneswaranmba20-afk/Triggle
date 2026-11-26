@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 1,
+  "edition": "2025",
+  "grade": 10,
+  "chapter": 2,
+  "items": [
+    {
+      "id": "c10-2-unit-q2-i",
+      "exercise": "2.unit",
+      "question": 2,
+      "parts": [
+        "i"
+      ],
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            89
+          ],
+          "printedPages": [
+            83
+          ],
+          "keyPdfPages": [
+            343
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            89
+          ],
+          "printedPages": [
+            83
+          ],
+          "keyPdfPages": [
+            357
+          ]
+        }
+      },
+      "sourceDifference": "The Tamil exercise asks for the maximum capacity. The English exercise asks only for equal capacity.",
+      "verification": {
+        "largestCapacityLitres": 35,
+        "cansAtLargest": {
+          "cow": 5,
+          "buffalo": 3
+        },
+        "allCapacitiesLitres": "35/k",
+        "allCounts": {
+          "cow": "5k",
+          "buffalo": "3k"
+        },
+        "domain": "positive integer k"
+      },
+      "previousEnglishFields": {
+        "steps": [
+          {
+            "en": "To fill both 175 litres and 105 litres exactly into cans of the greatest equal capacity without mixing, find HCF(175, 105) using Euclid's division algorithm.",
+            "eq": "175 = 105 × 1 + 70",
+            "math": {
+              "latex": "175=105\\times 1+70",
+              "fallback": "175 = 105 × 1 + 70",
+              "display": true
+            }
+          },
+          {
+            "en": "Divide the divisor 105 by the remainder 70.",
+            "eq": "105 = 70 × 1 + 35",
+            "math": {
+              "latex": "105=70\\times 1+35",
+              "fallback": "105 = 70 × 1 + 35",
+              "display": true
+            }
+          },
+          {
+            "en": "Divide 70 by 35. Since the remainder becomes 0, the last divisor 35 is the HCF.",
+            "eq": "70 = 35 × 2 + 0 ⇒ HCF(175, 105) = 35 litres",
+            "math": {
+              "latex": "70=35\\times 2+0\\implies \\operatorname{HCF}(175,105)=35\\text{ litres}",
+              "fallback": "70 = 35 × 2 + 0 ⇒ HCF(175, 105) = 35 litres",
+              "display": true
+            }
+          }
+        ],
+        "answer": "35 litres.",
+        "answerMath": {
+          "latex": "35\\text{ litres.}",
+          "fallback": "35 litres.",
+          "display": true
+        }
+      }
+    },
+    {
+      "id": "c10-2-unit-q2-ii",
+      "exercise": "2.unit",
+      "question": 2,
+      "parts": [
+        "ii"
+      ],
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            89
+          ],
+          "printedPages": [
+            83
+          ],
+          "keyPdfPages": [
+            343
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            89
+          ],
+          "printedPages": [
+            83
+          ],
+          "keyPdfPages": [
+            357
+          ]
+        }
+      },
+      "sourceDifference": "The Tamil exercise asks for the maximum capacity. The English exercise asks only for equal capacity.",
+      "verification": {
+        "largestCapacityLitres": 35,
+        "cansAtLargest": {
+          "cow": 5,
+          "buffalo": 3
+        },
+        "allCapacitiesLitres": "35/k",
+        "allCounts": {
+          "cow": "5k",
+          "buffalo": "3k"
+        },
+        "domain": "positive integer k"
+      },
+      "previousEnglishFields": {
+        "steps": [
+          {
+            "en": "From part (i), the capacity of each can is HCF(175, 105) = 35 litres.",
+            "eq": "Capacity of one can = 35 litres",
+            "math": {
+              "latex": "\\text{Capacity of one can}=35\\text{ litres}",
+              "fallback": "Capacity of one can = 35 litres",
+              "display": true
+            }
+          },
+          {
+            "en": "Divide the total volume of cow's milk (175 litres) by the capacity of one can (35 litres).",
+            "eq": "Number of cans of cow's milk = 175 / 35 = 5",
+            "math": {
+              "latex": "\\text{Number of cans of cow's milk}=\\dfrac{175}{35}=5",
+              "fallback": "Number of cans of cow's milk = 175 / 35 = 5",
+              "display": true
+            }
+          }
+        ],
+        "answer": "5.",
+        "answerMath": {
+          "latex": "5.",
+          "fallback": "5.",
+          "display": true
+        }
+      }
+    },
+    {
+      "id": "c10-2-unit-q2-iii",
+      "exercise": "2.unit",
+      "question": 2,
+      "parts": [
+        "iii"
+      ],
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            89
+          ],
+          "printedPages": [
+            83
+          ],
+          "keyPdfPages": [
+            343
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            89
+          ],
+          "printedPages": [
+            83
+          ],
+          "keyPdfPages": [
+            357
+          ]
+        }
+      },
+      "sourceDifference": "The Tamil exercise asks for the maximum capacity. The English exercise asks only for equal capacity.",
+      "verification": {
+        "largestCapacityLitres": 35,
+        "cansAtLargest": {
+          "cow": 5,
+          "buffalo": 3
+        },
+        "allCapacitiesLitres": "35/k",
+        "allCounts": {
+          "cow": "5k",
+          "buffalo": "3k"
+        },
+        "domain": "positive integer k"
+      },
+      "previousEnglishFields": {
+        "steps": [
+          {
+            "en": "From part (i), the capacity of each can is HCF(175, 105) = 35 litres.",
+            "eq": "Capacity of one can = 35 litres",
+            "math": {
+              "latex": "\\text{Capacity of one can}=35\\text{ litres}",
+              "fallback": "Capacity of one can = 35 litres",
+              "display": true
+            }
+          },
+          {
+            "en": "Divide the total volume of buffalo's milk (105 litres) by the capacity of one can (35 litres).",
+            "eq": "Number of cans of buffalo's milk = 105 / 35 = 3",
+            "math": {
+              "latex": "\\text{Number of cans of buffalo's milk}=\\dfrac{105}{35}=3",
+              "fallback": "Number of cans of buffalo's milk = 105 / 35 = 3",
+              "display": true
+            }
+          }
+        ],
+        "answer": "3.",
+        "answerMath": {
+          "latex": "3.",
+          "fallback": "3.",
+          "display": true
+        }
+      }
+    }
+  ],
+  "legacyBookmark": {
+    "id": "c10-2-ex2-7-q2-ii",
+    "duplicateOf": "c10-2-ex2-7-q2",
+    "exercise": "2.7",
+    "parts": [
+      "ii"
+    ],
+    "enPdfPages": [
+      78
+    ],
+    "taPdfPages": [
+      78
+    ],
+    "reason": "Both reader cards contain the same source part. Keep the complete grouped Q2 in the exercise index and preserve the existing route and progress of the dedicated (ii) bookmark."
+  }
+}
