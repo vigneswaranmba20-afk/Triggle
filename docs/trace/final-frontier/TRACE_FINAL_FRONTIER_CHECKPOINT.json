@@ -24,13 +24,13 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g10.trig.hints",
+      "key": "g10.mensuration.hints",
       "status": "MERGED",
-      "pr": 444,
-      "head": "08e198f355a5b32d12c41b43b12a3a09197215e5",
-      "prQualityRun": 45704505918,
-      "merge": "cfb357f7c3004fcc2c754acb16d80cfbad7700df",
-      "pagesRun": 45723049750
+      "pr": 446,
+      "head": "3968ae19932db758253f0d831c5acceda57284b2",
+      "prQualityRun": 45705674618,
+      "merge": "76453efbc667288712d77723f664320af21f9548",
+      "pagesRun": 45727334947
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -1886,18 +1886,45 @@
       "chapter": 6,
       "scope": "Grade 10 Trigonometry explanations",
       "runtimeRecords": 68,
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 10,
         "chapter": 6,
         "runtimeRecords": 68,
         "scope": "Grade 10 Trigonometry explanations",
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 444,
         "head": "08e198f355a5b32d12c41b43b12a3a09197215e5",
         "prQualityRun": 45704505918,
         "merge": "cfb357f7c3004fcc2c754acb16d80cfbad7700df",
         "pagesRun": 45723049750,
+        "liveEvidence": {
+          "pr": 444,
+          "merge": "cfb357f7c3004fcc2c754acb16d80cfbad7700df",
+          "head": "08e198f355a5b32d12c41b43b12a3a09197215e5",
+          "slug": "g10-trig-hints",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-6-ex6-1-q1-i",
+          "pagesRun": 45723049750,
+          "deploymentId": 8072545819,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45723049750/job/139591988272",
+          "deploymentCompletedAt": "2026-11-25T23:55:19Z",
+          "versionMatched": "cfb357f7c3004fcc2c754acb16d80cfbad7700df",
+          "sha256": {
+            "data/g10-frontier-trig-hints.js": "1832d18f20213e9d353db5c485c02030b4167287623a621240b47ef678500fbc",
+            "data/project-status.json": "7c3eed609b72898fcafc9f825329665294abd3784b7dc814c2a07d9ce435ca9a",
+            "index.html": "a2a41f4bc65a9c88ca472ec6ae4290d2e12f71ec416ad090c3238a4d867fc0ef",
+            "service-worker.js": "3ff0d7784cea8bb52df21a90cacc2934c3e51d5c389fb658d694f36ce14c4002"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 10 Chapter 6: 68 bilingual explanations at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/444"
       }
     },
@@ -1907,16 +1934,45 @@
       "chapter": 8,
       "scope": "Grade 10 Statistics and Probability explanations",
       "runtimeRecords": 76,
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 10,
         "chapter": 8,
         "runtimeRecords": 76,
         "scope": "Grade 10 Statistics and Probability explanations",
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 445,
         "head": "ba26537d5a4c15f231636b5715e9ceb8a43274a8",
         "prQualityRun": 45705123641,
+        "merge": "abe44345d4fdaefec1932e82f4286b28b56dec08",
+        "pagesRun": 45725042198,
+        "liveEvidence": {
+          "pr": 445,
+          "merge": "abe44345d4fdaefec1932e82f4286b28b56dec08",
+          "head": "ba26537d5a4c15f231636b5715e9ceb8a43274a8",
+          "slug": "g10-statistics-hints",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-8-ex8-1-q1-i",
+          "pagesRun": 45725042198,
+          "deploymentId": 8072826598,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45725042198/job/139599779200",
+          "deploymentCompletedAt": "2026-11-26T00:14:04Z",
+          "versionMatched": "abe44345d4fdaefec1932e82f4286b28b56dec08",
+          "sha256": {
+            "data/g10-frontier-statistics-hints.js": "1bd6a532f539a3970a69b11697d98ecc57ea16beadeda4b6348db799ad8f0810",
+            "data/project-status.json": "4e29c6d70d7cb8971c7269480ded4f535d32f9a2831e2e3b7aa0a6e3d7e33d15",
+            "index.html": "1fdcb3cf755258e6b7999c39681fa4da70666eb11224e047961cc25ebcfcf8c9",
+            "service-worker.js": "72d5a67fcee7623c35ccf3783ba8cc216fad57d87f52a6db65468de5a954225b"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 10 Chapter 8: 76 bilingual explanations at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/445"
       }
     },
@@ -1926,16 +1982,18 @@
       "chapter": 7,
       "scope": "Grade 10 Mensuration explanations",
       "runtimeRecords": 62,
-      "status": "TESTED",
+      "status": "MERGED",
       "release": {
         "grade": 10,
         "chapter": 7,
         "runtimeRecords": 62,
         "scope": "Grade 10 Mensuration explanations",
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 446,
         "head": "3968ae19932db758253f0d831c5acceda57284b2",
         "prQualityRun": 45705674618,
+        "merge": "76453efbc667288712d77723f664320af21f9548",
+        "pagesRun": 45727334947,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/446"
       }
     },
@@ -2148,9 +2206,76 @@
         "prQualityRun": 45723317551,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/457"
       }
+    },
+    {
+      "key": "g10.numbers.salary",
+      "grade": 10,
+      "chapter": 2,
+      "scope": "Fourth-year salaries and both printed prompts in Exercise 2.7 Q11",
+      "canonicalTasks": 1,
+      "recordIds": [
+        "c10-2-ex2-7-q11"
+      ],
+      "sourceEvidence": "site/data/textbook-fidelity/g10-ch2-frontier-salary.json",
+      "status": "TESTED",
+      "release": {
+        "grade": 10,
+        "chapter": 2,
+        "runtimeRecords": 1,
+        "scope": "Exact fourth-year salary and the printed bilingual question in Exercise 2.7 Q11",
+        "status": "TESTED",
+        "pr": 458,
+        "head": "012e6d1f0f599d1fad1c486296a2f1db864b8505",
+        "prQualityRun": 45724974517,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/458"
+      }
+    },
+    {
+      "key": "g10.numbers.capacity",
+      "grade": 10,
+      "chapter": 2,
+      "scope": "Equal-capacity solutions and the retained duplicate bookmark",
+      "canonicalTasks": 3,
+      "recordIds": [
+        "c10-2-unit-q2-i",
+        "c10-2-unit-q2-ii",
+        "c10-2-unit-q2-iii"
+      ],
+      "sourceEvidence": "site/data/textbook-fidelity/g10-ch2-frontier-capacity.json",
+      "status": "TESTED",
+      "release": {
+        "grade": 10,
+        "chapter": 2,
+        "runtimeRecords": 4,
+        "scope": "Unit Exercise 2 milk-capacity case and duplicate Exercise 2.7 bookmark",
+        "status": "TESTED",
+        "pr": 459,
+        "head": "73750945c647af6dfd40fb9fa68e1e773eb63525",
+        "prQualityRun": 45726340192,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/459"
+      }
+    },
+    {
+      "key": "geometry.descriptions",
+      "grade": null,
+      "chapter": 4,
+      "scope": "Bilingual descriptions for three constructions and three geometry diagrams",
+      "runtimeRecords": 6,
+      "status": "TESTED",
+      "release": {
+        "grade": null,
+        "chapter": 4,
+        "runtimeRecords": 6,
+        "scope": "Bilingual descriptions for three constructions and three geometry diagrams",
+        "status": "TESTED",
+        "pr": 460,
+        "head": "efbc76d049061b261fe2bccfb42deb96674306b3",
+        "prQualityRun": 45727706029,
+        "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/460"
+      }
     }
   ],
-  "latestMain": "cfb357f7c3004fcc2c754acb16d80cfbad7700df",
+  "latestMain": "76453efbc667288712d77723f664320af21f9548",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2161,7 +2286,7 @@
       "browser": "/workspace/scratch/trace-set-batch-browser.log"
     },
     "grade9SetWorktree": "/workspace/Triggle-ex16",
-    "currentRuntime": "/workspace/scratch/trace-sources/batch16-browser-runtime.json",
+    "currentRuntime": "/workspace/scratch/trace-sources/batch19-browser-runtime.json",
     "coordinateRuntime": "/workspace/scratch/trace-sources/batch4-browser-runtime.json",
     "liveSetLogs": [
       "/workspace/scratch/trace-sources/live-ex13-browser.log",
@@ -2169,46 +2294,36 @@
     ],
     "tamilIndependentNumberedStructure": "/workspace/scratch/trace-sources/tamil-independent-structure.json",
     "tamilIndependentSubparts": "/workspace/scratch/trace-sources/tamil-independent-subparts.json",
-    "localReaderAudit": "/workspace/scratch/trace-sources/reader-final-both-2025.json",
+    "localReaderAudit": "/workspace/scratch/trace-sources/reader-final-candidate.json",
     "liveVerificationCommand": "/workspace/scratch/trace-sources/verify-frontier-live.sh",
-    "localNavigationAudit": "/workspace/scratch/trace-sources/navigation-final.json",
+    "localNavigationAudit": "/workspace/scratch/trace-sources/navigation-final-candidate.json",
     "releaseQueue": "/workspace/scratch/trace-sources/release-queue.sh",
-    "releaseQueueLog": "/workspace/scratch/trace-sources/release-queue.log"
+    "releaseQueueLog": "/workspace/scratch/trace-sources/release-queue.log",
+    "finalProductionSweep": "/workspace/scratch/trace-sources/sweep-final-production.sh",
+    "checkpointWriter": "/workspace/scratch/trace-sources/persist-frontier-checkpoint.sh",
+    "localFigureAudit": "/workspace/scratch/trace-sources/figure-audit-final-candidate.json",
+    "localOfflineAudit": "/workspace/scratch/trace-sources/offline-final-candidate.log"
   },
   "openManagement": {
     "mathguard": "https://github.com/vigneswaranmba20-afk/Triggle/pull/425",
-    "androidRecommendation": "NO-GO"
+    "androidRecommendation": "NO-GO",
+    "deliverablesPR": "https://github.com/vigneswaranmba20-afk/Triggle/pull/455"
   },
   "resume": [
     "Process openReleaseOrder in order. Confirm the exact PR head and passing required checks against main. Reconcile the preceding released tree with the queued PR diff before merging.",
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
-    "Check the question-level source, mathematical and Tamil evidence still lacking one or more independent checks. Preserve edition-specific task IDs and source locators.",
-    "Run the assembled reader and navigation checks against the final Pages revision, and refresh and publish the report."
+    "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "4756428dbcaedb4215ab0ee72c54d2ee6e2799c6",
+  "latestVerifiedProduction": "abe44345d4fdaefec1932e82f4286b28b56dec08",
   "openReleaseOrder": [
     {
-      "key": "g10.trig.hints",
-      "status": "MERGED",
-      "pr": 444,
-      "head": "08e198f355a5b32d12c41b43b12a3a09197215e5",
-      "prQualityRun": 45704505918,
-      "merge": "cfb357f7c3004fcc2c754acb16d80cfbad7700df",
-      "pagesRun": 45723049750
-    },
-    {
-      "key": "g10.statistics.hints",
-      "status": "TESTED",
-      "pr": 445,
-      "head": "ba26537d5a4c15f231636b5715e9ceb8a43274a8",
-      "prQualityRun": 45705123641
-    },
-    {
       "key": "g10.mensuration.hints",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 446,
       "head": "3968ae19932db758253f0d831c5acceda57284b2",
-      "prQualityRun": 45705674618
+      "prQualityRun": 45705674618,
+      "merge": "76453efbc667288712d77723f664320af21f9548",
+      "pagesRun": 45727334947
     },
     {
       "key": "g10.geometry.hints",
@@ -2279,6 +2394,27 @@
       "pr": 457,
       "head": "dbc451ab81f44e0b4090bf2d3f475456638ece7c",
       "prQualityRun": 45723317551
+    },
+    {
+      "key": "g10.numbers.salary",
+      "status": "TESTED",
+      "pr": 458,
+      "head": "012e6d1f0f599d1fad1c486296a2f1db864b8505",
+      "prQualityRun": 45724974517
+    },
+    {
+      "key": "g10.numbers.capacity",
+      "status": "TESTED",
+      "pr": 459,
+      "head": "73750945c647af6dfd40fb9fa68e1e773eb63525",
+      "prQualityRun": 45726340192
+    },
+    {
+      "key": "geometry.descriptions",
+      "status": "TESTED",
+      "pr": 460,
+      "head": "efbc76d049061b261fe2bccfb42deb96674306b3",
+      "prQualityRun": 45727706029
     }
   ]
 }
