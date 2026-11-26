@@ -84,7 +84,7 @@ async function testActions(page, base) {
   await page.goto(base + route(9, 'g9-ch1-ex1.1-q5-ii'));
   await page.locator('#langEn').click();
   const id = () => new URL(page.url()).searchParams.get('question');
-  await page.locator('#questionTopNext').click();
+  await page.locator('#next').click();
   assert.equal(id(), 'g9-ch1-ex1.1-q5-iii');
   await page.locator('#previous').click();
   assert.equal(id(), 'g9-ch1-ex1.1-q5-ii');
@@ -101,11 +101,16 @@ async function testActions(page, base) {
   assert.equal(await reasoning.evaluate(el => el.open), true);
   await page.goto(base + route(9, 'g9-ch3-ex3.2-q1-i'));
   await page.locator('.g9a-concept-return').click();
-  assert.equal(new URL(page.url()).searchParams.get('section'), 'concepts');
+  await page.waitForURL(url => url.searchParams.get('section') === 'concepts');
   await page.goBack();
   await page.locator('#exerciseIndexLink').click();
   assert.equal(new URL(page.url()).searchParams.get('section'), 'exercises');
-  await page.goto(base + route(10, 'c10-4-ex4-1-q1-i'));
+  const geometry = 'c10-4-ex4-1-q1-i';
+  await page.goto(base + route(10, geometry));
+  await page.locator('#questionTopNext').click();
+  assert.notEqual(id(), geometry);
+  await page.locator('#questionTopPrevious').click();
+  assert.equal(id(), geometry);
   await page.locator('#figureBtn').click();
   assert.equal(await page.locator('#figureDialog').evaluate(dialog => dialog.open), true);
   await page.keyboard.press('Escape');
