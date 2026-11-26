@@ -797,6 +797,12 @@
       ], 'easy')
   ];
 
+  const square = entries.find(entry => entry.id === 'g9-ch3-ex3.5-q3-ii');
+  square.answerMath = {
+    en: square.answerMath,
+    ta: {...square.answerMath,fallback:square.answerTa}
+  };
+
   for (const entry of entries) {
     if (grade.items.some(q => q.id === entry.id) || chapter.textbookQuestionIds.includes(entry.id)) {
       throw Error('Duplicate Algebra source ID ' + entry.id);
