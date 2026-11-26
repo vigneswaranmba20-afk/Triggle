@@ -69,3 +69,36 @@ for (const asset of ['data/g10-ch8-concepts.js','assets/g10-ch8-concepts.js','as
   assert.ok(cache.includes('./' + asset));
 }
 console.log('PASS: 15 textbook-order bilingual concepts, valid KaTeX, independently checked answers and intact exercise links.');
+
+// Directory readiness: mount actual discovery, data, viewer and hub code.
+// Minimal DOM isolates label and navigation wiring; browser/cache checks remain separate.
+for (const lang of ['en', 'ta']) {
+  for (const [hasData, hasViewer] of [[true,true],[true,false],[false,true],[false,false]]) {
+    const ctx = vm.createContext({window: {}, console});
+    for (const file of ['data/curriculum.js', 'assets/chapter-hub.js',
+      ...(hasData ? ['data/g10-ch8-concepts.js'] : []),
+      ...(hasViewer ? ['assets/g10-ch8-concepts.js'] : []),
+      'assets/discovery.js']) vm.runInContext(read(file), ctx, {filename: file});
+    let opened = null;
+    const button = {dataset: {chapter: 'g10-ch8'}, addEventListener(event, handler) {
+      if (event === 'click') this.click = handler;
+    }};
+    const root = {innerHTML: '', querySelector: () => null,
+      querySelectorAll: selector => selector === '[data-chapter]' ? [button] : []};
+    ctx.window.TriggleDiscovery.mount(root, {
+      mode: 'directory', grade: 10, lang, curriculum: ctx.window.TRIGGLE_CURRICULUM, classes: {},
+      openChapter: (grade, chapter) => { opened = [grade, chapter.id]; }
+    });
+    const card = root.innerHTML.match(/<button[^>]*data-chapter="g10-ch8"[\s\S]*?<\/button>/)?.[0];
+    assert.ok(card, 'Statistics chapter card exists');
+    const ready = hasData && hasViewer;
+    assert.equal(card.includes('is-ready'), ready);
+    const expected = lang === 'ta'
+      ? (ready ? '✦ 15 சிறு செயல்வழிப் பாடங்கள் உள்ளன' : 'அத்தியாயம் பட்டியலில் உள்ளது · பாடங்கள் உருவாகின்றன')
+      : (ready ? '✦ 15 Interactive mini-lessons available' : 'Chapter mapped · More lessons coming');
+    assert.ok(card.includes(expected), lang + ' data=' + hasData + ' viewer=' + hasViewer);
+    button.click();
+    assert.deepEqual(opened, [10, 'g10-ch8']);
+  }
+}
+console.log('PASS: Grade 10 Statistics directory readiness and chapter click, both locales, all four data/viewer states.');
