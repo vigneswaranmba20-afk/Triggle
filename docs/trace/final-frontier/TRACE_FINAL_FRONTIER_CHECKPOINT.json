@@ -24,13 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "figure.tamil",
-      "status": "MERGED",
-      "pr": 452,
-      "head": "b2a49729cd4123ef07d32b52f88decf99a176358",
-      "prQualityRun": 45719184913,
-      "merge": "2c62b1c80d6bfecf176b78568d40aaa9a5742c1d",
-      "pagesRun": 45740250140
+      "key": "g9.algebra.mcq",
+      "status": "TESTED",
+      "pr": 453,
+      "head": "7117ed8cd5ad79203be63dfee6f6e8b2707c2370",
+      "prQualityRun": 45719190105
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2385,13 +2383,13 @@
       "chapter": null,
       "scope": "Tamil figure descriptions and fourteen localized exercise graphic assets",
       "runtimeRecords": 37,
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": null,
         "chapter": null,
         "runtimeRecords": 37,
         "scope": "Tamil figure descriptions and fourteen localized exercise graphic assets",
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 452,
         "head": "b2a49729cd4123ef07d32b52f88decf99a176358",
         "prQualityRun": 45719184913,
@@ -2403,6 +2401,48 @@
         },
         "merge": "2c62b1c80d6bfecf176b78568d40aaa9a5742c1d",
         "pagesRun": 45740250140,
+        "liveEvidence": {
+          "pr": 452,
+          "merge": "2c62b1c80d6bfecf176b78568d40aaa9a5742c1d",
+          "head": "b2a49729cd4123ef07d32b52f88decf99a176358",
+          "slug": "frontier-figure-tamil",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-3-ex3-12-q7",
+          "pagesRun": 45740250140,
+          "deploymentId": 8074772428,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45740250140/job/139650210834",
+          "deploymentCompletedAt": "2026-11-26T02:26:43Z",
+          "versionMatched": "2c62b1c80d6bfecf176b78568d40aaa9a5742c1d",
+          "sha256": {
+            "assets/app.js": "377fe1085cb66acc212585a438789f50bd6f0d5b445727460aa7c3a7f0098186",
+            "assets/grade10-ch3/ex3-12-q2-pathway-ta.svg": "ec7948e3c7b0dd2d8b1146457c94e428b499854194e75af5cd62e311b1e2a719",
+            "assets/grade10-ch3/ex3-12-q5-circle-gates-ta.svg": "06ebb1b3199ea29f7c36f08726ede756a5ac123d29cb4d19af7cb1e316b39f7b",
+            "assets/grade10-ch3/ex3-12-q7-galleries-ta.svg": "13928b6ed2eff1be2ee947b86a5a3beea74d7050526a1252ac30b1db3882a0d7",
+            "assets/grade10-ch3/ex3-12-q8-flowerbed-ta.svg": "b3b9bfeb27a3c781a5464999a8cc41888d88332bc879fea8d5d605fb51b92dcc",
+            "assets/grade10-ch3/ex3-12-q9-triangle-ta.svg": "86ce14034598f52f80500d85357abd92de3fdcd49d8fee27430205286dfc3b6a",
+            "assets/grade10-ch7/ex7-1-q10-ta.svg": "4cc2b8063b82f9c5bb3b47337f22c424686e7642f6172313c035b2383cd511e9",
+            "assets/grade10-ch7/ex7-1-q4-ta.svg": "bc3d4b4d86dad36066a1728ac853b61dfd23edf1f7d8c22e5e3420ca77ddcdfc",
+            "assets/grade10-ch7/ex7-1-q5-ta.svg": "602685e00a68a13cd16ad0e74c82c3fadb0e058c289abc4daabf5e1a0cb84fe9",
+            "assets/grade10-geometry/ex4-1-q2-ta.svg": "6ab490aaed297bc1af614644382f1d576c6a58060e7aae03297ffd44664e3864",
+            "assets/grade10-geometry/ex4-1-q3-ta.svg": "969336a8ad3cd2d07dd6d303c2c58e2bc336cb6f9f1fbbd7abb40215d1d55d69",
+            "assets/grade10-geometry/ex4-2-q1-i-ta.svg": "44e8e64a0745a8f6f8bb1e33361e47c37be3013ca92a84e1dc16563ebf02e4a3",
+            "assets/grade10-geometry/ex4-2-q1-ii-ta.svg": "081af4f283bcf72939f10b580a026652d91d56f9eb404730d6b9b6a8d37fe3f9",
+            "assets/grade10-geometry/ex4-2-q3-ta.svg": "6adc626a6abf3c527336f04e279421cb14ad01bb90b8e80f493159c15571aa1d",
+            "assets/grade10-geometry/ex4-2-q8-i-ta.svg": "930e2ee5faee79da4ca59a86a9a9d74a790bfdbb604a539ac9a7a81aea71c995",
+            "data/frontier-figure-tamil.js": "1b75699cc89eedc9cb4fbb8fce87025e637b7682e3f5a90177f1dfaeaaf72148",
+            "data/project-status.json": "11d784437019622776bdea083d566020cd0da097969e8763b1fc0f1e0d06ea86",
+            "index.html": "856728925b8ba4872dd2349a250a427b585aa2e3e3ec295f0bc1014f26005eef",
+            "service-worker.js": "8399e74343a99e42970bea80711800401e85f2678d8c94a7aed3e07b710566a6"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "37 original figures have bilingual descriptions and 14 Tamil-label assets at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/452"
       }
     },
@@ -2654,14 +2694,17 @@
     "releaseQueueLog": "/workspace/scratch/trace-sources/release-queue.log",
     "finalProductionSweep": "/workspace/scratch/trace-sources/sweep-final-production.sh",
     "checkpointWriter": "/workspace/scratch/trace-sources/persist-frontier-checkpoint.sh",
-    "localFigureAudit": "/workspace/scratch/trace-sources/figure-audit-final-candidate.json",
-    "localOfflineAudit": "/workspace/scratch/trace-sources/offline-hints-final-candidate.log",
+    "localFigureAudit": "/workspace/scratch/trace-sources/figure-audit-final-reconciled.json",
+    "localOfflineAudit": "/workspace/scratch/trace-sources/offline-final-reconciled.log",
     "deliverablesMergeCommand": "/workspace/scratch/trace-sources/publish-frontier-artifacts.sh",
     "localTamilNavigationAudit": "/workspace/scratch/trace-sources/navigation-ta-final-candidate.json",
     "localMultipleChoiceAudit": "/workspace/scratch/trace-sources/mcq-feedback-final-candidate.json",
     "inventoryConsistencyCheck": "/workspace/scratch/trace-sources/verify-frontier-inventory-consistency.py",
     "tamilWorkedNotationAudit": "/workspace/scratch/trace-sources/tamil-formula-verification.json",
-    "trigonometryFigureLabelAudit": "/workspace/scratch/trace-sources/g10-trig-figure-layout-regression.log"
+    "trigonometryFigureLabelAudit": "/workspace/scratch/trace-sources/g10-trig-figure-layout-regression.log",
+    "additionalBrowserRegression": "/workspace/scratch/trace-sources/frontier-final-browser-last-commands.log",
+    "localBrowserEngineRegression": "/workspace/scratch/trace-sources/frontier-final-browser-system-chromium.log",
+    "localUnitRegression": "/workspace/scratch/trace-sources/frontier-tamil-formulas-full-unit-final.log"
   },
   "openManagement": {
     "mathguard": "https://github.com/vigneswaranmba20-afk/Triggle/pull/425",
@@ -2673,17 +2716,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "45d25baab7ba44449db15e0c18305d66d08c04db",
+  "latestVerifiedProduction": "2c62b1c80d6bfecf176b78568d40aaa9a5742c1d",
   "openReleaseOrder": [
-    {
-      "key": "figure.tamil",
-      "status": "MERGED",
-      "pr": 452,
-      "head": "b2a49729cd4123ef07d32b52f88decf99a176358",
-      "prQualityRun": 45719184913,
-      "merge": "2c62b1c80d6bfecf176b78568d40aaa9a5742c1d",
-      "pagesRun": 45740250140
-    },
     {
       "key": "g9.algebra.mcq",
       "status": "TESTED",
