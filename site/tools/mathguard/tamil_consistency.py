@@ -122,7 +122,14 @@ def validate_en_ta_consistency(en_text: str, ta_text: Optional[str]) -> TamilVal
     details: Dict[str, object] = {}
 
     if not re.search(r"[\u0B80-\u0BFF]", ta_text):
-        flags.append("missing_tamil_script")
+        cleaned_en = re.sub(
+            r"(?<![a-zA-Z])(?:cm|mm|km|ml|sin|cos|tan|cot|sec|csc|log|ln|sqrt|mod|iff|and|or|xyz|abc)(?![a-zA-Z])",
+            "",
+            ta_text,
+            flags=re.I,
+        )
+        if re.search(r"[a-zA-Z]{3,}", cleaned_en) or "english" in ta_text.lower() or "unchanged" in ta_text.lower():
+            flags.append("missing_tamil_script")
 
     from .tamil_semantic_parity import extract_semantic_values
     en_vals = extract_semantic_values(en_text, is_tamil=False)

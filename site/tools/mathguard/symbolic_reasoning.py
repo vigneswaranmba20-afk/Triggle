@@ -115,9 +115,18 @@ class FunctionRegistry:
                 maxsplit=1,
                 flags=re.I,
             )[0]
-            rhs_raw = re.split(r"\b(?:find|at|when|where|if|and)\b", rhs_raw, maxsplit=1, flags=re.I)[0]
+            rhs_raw = re.split(
+                r"\b(?:find|at|when|where|if|and|is|are|exactly|divisible|divided|by|has|have|leaves|gives|whose|which|with|for|to|the|in|on|of)\b",
+                rhs_raw,
+                maxsplit=1,
+                flags=re.I,
+            )[0]
             rhs_raw = rhs_raw.strip().rstrip(".,:")
             if not rhs_raw:
+                continue
+            # Reject if multi-letter English prose words remain (excluding known math functions)
+            cleaned_words = re.sub(r"\b(?:sin|cos|tan|cot|sec|csc|log|ln|sqrt|lcm|gcd)\b", "", rhs_raw, flags=re.I)
+            if re.search(r"[a-zA-Z]{3,}", cleaned_words):
                 continue
             body = parse_fn(rhs_raw)
             if body is not None:

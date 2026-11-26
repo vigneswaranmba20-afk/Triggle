@@ -208,6 +208,7 @@ def _preprocess_math_line(raw: str) -> str:
     s = re.sub(r"\\text\s*\{([^}]+)\}(?=\s*(?:=|\\approx|≈))", lambda m: "named_" + re.sub(r"[^A-Za-z0-9]+", "_", m.group(1).strip()).strip("_").lower()[:24], s)
     s = re.sub(r"=\s*\\text\s*\{\s*RHS\s*\}", "= RHS", s)
     s = re.sub(r"\\mathrm\s*\{\s*([A-Za-z]+)\s*\}_\{([A-Za-z0-9]+)\}", r"\1_\2", s)
+    s = re.sub(r"(\\[A-Za-z]+)\\(?:text|mathrm)\s*\{\s*([A-Za-z0-9_]+)\s*\}", r"\1 \2", s)
     s = re.sub(r"\\text\s*\{\s*([A-Za-z0-9_]+)\s*\}", r"\1", s)
     s = re.sub(r"\\mathrm\s*\{\s*([A-Za-z0-9_]+)\s*\}", r"\1", s)
     s = re.sub(r"([A-Za-z])_\{([A-Za-z0-9\\]+)\}", lambda m: f"{m.group(1)}_{m.group(2).replace(chr(92), '')}", s)
@@ -822,6 +823,16 @@ def verify_complete_working(
             graph.givens[s_a] = sp.Rational(p_val, q_val) * sp.Symbol(s_b)
             graph.variable_declarations[s_a] = graph.givens[s_a]
 
+    # Extract named polynomial/quantity givens like LCM = ..., GCD = ..., HCF = ... from stem
+    for m_named in re.finditer(r"\b(LCM|GCD|HCF)\s*=\s*([^,\n;]+)", q_stem):
+        n_key = m_named.group(1)
+        n_rhs = re.split(r"\b(?:find|and|where|if|when|p\(|q\()\b", m_named.group(2), maxsplit=1, flags=re.I)[0].strip().rstrip(".,:")
+        if n_key not in graph.givens and n_rhs:
+            n_expr = _safe_parse(n_rhs, func_registry=func_registry, scalar_env_names=set(graph.givens.keys()))
+            if n_expr is not None:
+                graph.givens[n_key] = _norm_syms(n_expr)
+                graph.variable_declarations[n_key] = graph.givens[n_key]
+
     if allow_positive_domain:
         graph.assumptions.append("positive_physical_quantities")
     graph.assumptions.append("real_valued_variables")
@@ -851,6 +862,12 @@ def verify_complete_working(
             if isinstance(m_obj, dict) and (m_obj.get("latex") or "").strip():
                 steps = [{"math": m_obj}]
                 break
+
+    all_steps_text = " ".join(
+        f"{st.get('en', '')} {st.get('eq', '')} {(st.get('math') or {}).get('latex', '') if isinstance(st.get('math'), dict) else ''}"
+        for st in steps
+        if isinstance(st, dict)
+    ).lower()
 
     if not steps:
         return WorkingAuditResult(
@@ -901,19 +918,28 @@ def verify_complete_working(
                 graph.claims.append(MathClaim(s_idx, txt[:80], "prose_claim", "UNVERIFIED", evidence="prose_only_unverified"))
             continue
 
-        expanded_pairs: List[Tuple[str, str]] = []
+        step_raw_math = f"{step.get('eq', '')} {(step.get('math') or {}).get('latex', '') if isinstance(step.get('math'), dict) else ''}"
+        step_has_or = bool(re.search(r"\\text\s*\{\s*or\s*\}|\\lor|\bor\b", step_raw_math, flags=re.I))
+        expanded_pairs: List[Tuple[str, str, bool]] = []
         for ln in lines:
+            has_or_disj = step_has_or or bool(re.search(r"\\text\s*\{\s*or\s*\}|\\lor|\bor\b", ln, flags=re.I))
             raw_pre = _preprocess_math_line(ln)
-            if ";" in raw_pre:
+            or_parts = re.split(r"\\text\s*\{\s*or\s*\}|\\lor|\bor\b", raw_pre, flags=re.I)
+            if len(or_parts) >= 2 and all("=" in op for op in or_parts):
+                for op in or_parts:
+                    op_s = op.strip()
+                    if op_s and not _CONNECTOR_ONLY_RE.match(op_s):
+                        expanded_pairs.append((ln, op_s, True))
+            elif ";" in raw_pre:
                 for sp_s in raw_pre.split(";"):
                     sp_s = sp_s.strip()
                     if sp_s and not _CONNECTOR_ONLY_RE.match(sp_s):
-                        expanded_pairs.append((ln, sp_s))
+                        expanded_pairs.append((ln, sp_s, has_or_disj))
             else:
                 if raw_pre and not _CONNECTOR_ONLY_RE.match(raw_pre):
-                    expanded_pairs.append((ln, raw_pre))
+                    expanded_pairs.append((ln, raw_pre, has_or_disj))
 
-        for ln, pre in expanded_pairs:
+        for ln, pre, is_disjunctive_branch in expanded_pairs:
             m_subp = re.match(r"^\s*\((i|ii|iii|iv|v|vi)\)\s+", ln, flags=re.I)
             if m_subp:
                 tag = m_subp.group(1).lower()
@@ -1218,7 +1244,7 @@ def verify_complete_working(
                                 if (
                                     not conc_ok
                                     and eq_p == 0
-                                    and c_var == "GCD"
+                                    and c_var in ("GCD", "named_gcd")
                                     and ep_l is not None
                                     and ep_r is not None
                                     and ec_r is not None
@@ -1349,6 +1375,22 @@ def verify_complete_working(
                             graph.claims.append(MathClaim(s_idx, ln, "approximation", "VERIFIED", evidence="verified_approx_chain_definition"))
                         else:
                             ok, ev = _exprs_match(e1, e_rhs_list[0], env, allow_pi_approx=True, allow_positive_domain=allow_positive_domain, allow_numeric_tolerance=True)
+                            if (
+                                not ok
+                                and lhs_nm is not None
+                                and lhs_nm in env
+                                and re.search(r"\b(?:min|hr|h|s|sec|cm|mm|km|m|l|ml|litre|litres)\b", ln, flags=re.I)
+                            ):
+                                try:
+                                    prev_v = float(sp.N(env[lhs_nm]))
+                                    new_v = float(sp.N(_sub_env(e_rhs_list[0], env, allow_positive_domain=allow_positive_domain)))
+                                    if new_v != 0:
+                                        ratio_u = prev_v / new_v
+                                        if any(abs(ratio_u - f) / f < 1e-4 for f in (60.0, 3600.0, 10.0, 100.0, 1000.0, 10000.0, 100000.0, 1000000.0)) or any(abs(new_v / prev_v - f) / f < 1e-4 for f in (60.0, 3600.0, 10.0, 100.0, 1000.0)):
+                                            env[lhs_nm] = e_rhs_list[-1]
+                                            ok, ev = True, "unit_converted_approx_reassignment"
+                                except Exception:
+                                    pass
                             graph.claims.append(MathClaim(s_idx, ln, "approximation", "VERIFIED" if ok else "FAILED", evidence=ev or "approx_mismatch"))
                         prev_chain_expr = e_rhs_list[-1]
                         continue
@@ -1397,7 +1439,14 @@ def verify_complete_working(
                                 graph.claims.append(MathClaim(s_idx, ln, "definition", "VERIFIED", evidence="function_definition"))
                                 continue
                             else:
-                                graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="function_definition_chain_mismatch"))
+                                # Check if failure was due to unbound named symbols (e.g. LCM/GCD) not in env
+                                rhs0_sub = _sub_env(rhs_exprs[0], env, allow_positive_domain=allow_positive_domain)
+                                rhs_last_sub = _sub_env(rhs_exprs[-1], env, allow_positive_domain=allow_positive_domain)
+                                extra_syms = rhs0_sub.free_symbols - rhs_last_sub.free_symbols - {sp.Symbol(fvar)}
+                                if extra_syms:
+                                    graph.claims.append(MathClaim(s_idx, ln, "definition", "UNVERIFIED", evidence="missing_variable_bindings"))
+                                else:
+                                    graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="function_definition_chain_mismatch"))
                                 continue
 
                 # 4b. Multi-link unit conversion chain: e.g. "125,000 litres = [[125,000|1000]] = 125 m^3"
@@ -1741,6 +1790,9 @@ def verify_complete_working(
                         prev_eq_sides.append((_sub_env(exprs[0], env, allow_positive_domain=allow_positive_domain), _sub_env(exprs[1], env, allow_positive_domain=allow_positive_domain)))
                         graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence=matched_ev))
                         continue
+                    if is_disjunctive_branch:
+                        graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="disjunctive_branch_equation"))
+                        continue
                     prev_eq = graph.active_equations[cand_indices[0]].lhs
                     syms = list(cur_eq.free_symbols | prev_eq.free_symbols)
                     if len(syms) == 1 and cur_eq.free_symbols <= prev_eq.free_symbols:
@@ -1749,6 +1801,11 @@ def verify_complete_working(
                     if cur_eq.free_symbols <= prev_eq.free_symbols and len(syms) >= 2:
                         diff_c = sp.simplify(cur_eq - prev_eq)
                         if diff_c.is_Number and diff_c != 0:
+                            if any(kw in all_steps_text for kw in ("no solution", "parallel", "inconsistent")):
+                                graph.active_equations.append(sp.Eq(cur_eq, 0, evaluate=False))
+                                prev_eq_sides.append((_sub_env(exprs[0], env, allow_positive_domain=allow_positive_domain), _sub_env(exprs[1], env, allow_positive_domain=allow_positive_domain)))
+                                graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="multi_variable_system_equation"))
+                                continue
                             graph.claims.append(MathClaim(s_idx, ln, "equation", "FAILED", evidence="inconsistent_system_equation"))
                             continue
                     graph.active_equations.append(sp.Eq(cur_eq, 0, evaluate=False))

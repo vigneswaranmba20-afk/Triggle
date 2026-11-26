@@ -29,24 +29,25 @@ _EN_NUM_WORDS: Dict[str, str] = {
     "thirty": "30", "forty": "40", "fifty": "50", "sixty": "60",
     "seventy": "70", "eighty": "80", "ninety": "90", "hundred": "100",
     "thousand": "1000", "half": "0.5", "quarter": "0.25",
-    "twice": "2", "thrice": "3",
+    "twice": "2", "doubled": "2", "thrice": "3", "both": "2",
 }
 
 _TA_NUM_WORDS: List[Tuple[str, str]] = [
     ("பூஜ்ஜியம்", "0"), ("பூச்சியம்", "0"),
-    ("ஒன்று", "1"), ("ஒரு", "1"),
-    ("இரண்டு", "2"), ("இரு", "2"),
-    ("மூன்று", "3"), ("மூன்ற", "3"),
-    ("நான்கு", "4"), ("நாலு", "4"),
-    ("ஐந்து", "5"), ("அஞ்சு", "5"),
-    ("ஆறு", "6"),
-    ("ஏழு", "7"),
-    ("எட்டு", "8"),
-    ("ஒன்பது", "9"),
-    ("பத்து", "10"),
+    ("நூற்று ஐம்பது", "150"), ("நூற்றுஐம்பது", "150"),
+    ("ஒன்று", "1"), ("ஒன்றை", "1"),
+    ("இரண்டு", "2"), ("இரண்டை", "2"), ("இரு", "2"),
+    ("மூன்று", "3"), ("மூன்றை", "3"), ("மூன்ற", "3"),
+    ("நான்கு", "4"), ("நான்கை", "4"), ("நாலு", "4"),
+    ("ஐந்து", "5"), ("ஐந்தை", "5"), ("அஞ்சு", "5"),
+    ("ஆறு", "6"), ("ஆறை", "6"),
+    ("ஏழு", "7"), ("ஏழை", "7"),
+    ("எட்டு", "8"), ("எட்டை", "8"),
+    ("ஒன்பது", "9"), ("ஒன்பதை", "9"),
+    ("பத்து", "10"), ("பத்தை", "10"),
     ("நூறு", "100"),
     ("ஆயிரம்", "1000"),
-    ("அரை", "0.5"),
+    ("அரை", "0.5"), ("பாதி", "0.5"),
     ("கால்", "0.25"),
     ("முக்கால்", "0.75"),
     ("இருமடங்கு", "2"),
@@ -69,20 +70,30 @@ _UNIT_SCALE: Dict[str, Tuple[str, Fraction]] = {
 _TA_UNIT_MAP = [
     (r"செ\.?\s*மீ", "cm"),
     (r"மி\.?\s*மீ", "mm"),
-    (r"கி\.?\s*மீ", "km"),
+    (r"கி\.?\s*மீ(?!/\s*மணி)", "km"),
     (r"லிட்டர்", "litre"),
-    (r"(?<!செ\.)(?<!மி\.)(?<!கி\.)மீ(?!\.மீ)", "m"),
+    (r"(?<!செ\.)(?<!மி\.)(?<!கி\.)(?<![\u0B80-\u0BFF])மீ(?![\u0B80-\u0BFF])", "m"),
 ]
 
 
 def _normalize_bilingual_text(text: str, is_tamil: bool = False) -> str:
     s = norm_nfc(text).replace("−", "-").replace("–", "-")
-    s = re.sub(r"\([A-Da-d0-9ivxIVX]+\)", " ", s)
+    # Strip option/subpart labels like (A)-(D), (i)-(vi), or line-leading (1)-(9),
+    # but preserve inline parenthesized numbers like "7x^3 (3)"
+    s = re.sub(r"\([A-Da-d]\)|\((?:ii|iii|iv|vi|v|i)\)", " ", s)
+    s = re.sub(r"(?:^|\n)\s*\(\d+\)\s*", " ", s)
     s = re.sub(r"^\d+\.\s+", "", s)
-    s = re.sub(r"(?<=\d),(?=\d{3}\b)", "", s)
+    # Strip Western (125,000) and Indian (1,25,000) digit-grouping commas
+    s = re.sub(r"(?<=\d),(?=\d{2,3}(?:,|\b))", "", s)
     s = re.sub(r"\b(mm|cm|km|m)[²³23]\b", r" \1 ", s, flags=re.I)
     s = s.translate(_SUP_MAP)
     if is_tamil:
+        # Map "ஒரு" to "1" ONLY when followed by an explicit unit (not indefinite article "a/an")
+        s = re.sub(
+            r"(?<![\u0B80-\u0BFF])ஒரு\s+(?=(?:செ\.?\s*மீ|மி\.?\s*மீ|கி\.?\s*மீ|மீ|லிட்டர்|சதுர|கன))",
+            " 1 ",
+            s,
+        )
         for pat, rep in _TA_UNIT_MAP:
             s = re.sub(pat, f" {rep} ", s)
         for tw, num in _TA_NUM_WORDS:
@@ -147,7 +158,7 @@ def extract_semantic_values(text: str, is_tamil: bool = False) -> Set[Fraction]:
         try:
             inner = parse_expression(m.group(1))
             if inner is not None and not inner.free_symbols:
-                vals.add(Fraction(round(float(sp.sqrt(inner).evalf()), 4)))
+                vals.add(Fraction(str(round(float(sp.sqrt(inner).evalf()), 4))))
         except Exception:
             pass
 
@@ -169,13 +180,20 @@ def semantic_step_parity_check(
         return True, flags
 
     has_ta = bool(re.search(r"[\u0B80-\u0BFF]", ta_text))
-    if "tamil unchanged" in ta_text.lower():
+    ta_low = ta_text.lower()
+    if "tamil unchanged" in ta_low or "english-language question" in ta_low or "english explanation" in ta_low:
         flags.append("missing_tamil_script")
         return False, flags
     if not has_ta:
-        # Pure math expressions like "±110." or "3(2x)(-3y)(-4z) = 72xyz." don't require Tamil letters;
-        # flag only if English prose words (>=3 letters outside units/math) are left untranslated.
-        cleaned_en_words = re.sub(r"\b(?:cm|mm|km|ml|sin|cos|tan|cot|sec|csc|log|ln|sqrt|mod|iff|and|or|xyz|abc)\b", "", ta_text, flags=re.I)
+        # Pure math expressions like "±110." or "3(2x)(-3y)(-4z) = 72xyz." or "3abc = -9/4." don't require Tamil letters;
+        # flag only if English prose words (>=3 letters outside units/math/roman numerals) are left untranslated.
+        cleaned_en_words = re.sub(r"\((?:ii|iii|iv|vi|v|i)\)", "", ta_text, flags=re.I)
+        cleaned_en_words = re.sub(
+            r"(?<![a-zA-Z])(?:cm|mm|km|ml|sin|cos|tan|cot|sec|csc|log|ln|sqrt|mod|iff|and|or|xyz|abc|lhs|rhs|lcm|gcd|hcf|csa|tsa)(?![a-zA-Z])",
+            "",
+            cleaned_en_words,
+            flags=re.I,
+        )
         if re.search(r"[a-zA-Z]{3,}", cleaned_en_words):
             flags.append("missing_tamil_script")
             return False, flags
@@ -186,7 +204,6 @@ def semantic_step_parity_check(
 
     # Extra numbers in TA not in EN and not in shared math/eq
     extra_ta = ta_vals - en_vals - shared_vals
-    missing_en = en_vals - ta_vals - shared_vals
 
     # Only flag if TA introduces an ungrounded number while EN has an explicit number not in TA
     if extra_ta and (en_vals - ta_vals):

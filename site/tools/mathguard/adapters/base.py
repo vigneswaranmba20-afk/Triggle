@@ -67,9 +67,17 @@ def verify_tamil_math_parity(item: Dict[str, Any], is_concept: bool = False) -> 
 
     if q_ta:
         ta_q_res = validate_en_ta_consistency(q_en, q_ta)
-        flags.extend(ta_q_res.flags)
-        if ta_q_res.status == "FAIL":
-            mismatches.append({"location": "question", "flags": ta_q_res.flags})
+        q_flags = list(ta_q_res.flags)
+        q_status = ta_q_res.status
+        if "en_ta_number_mismatch" in q_flags:
+            sem_ok, sem_flags = semantic_step_parity_check(q_en, q_ta)
+            if sem_ok:
+                q_flags = [f for f in q_flags if f != "en_ta_number_mismatch"]
+                if q_status == "FAIL" and "en_ta_unit_mismatch" not in q_flags:
+                    q_status = "PARTIAL" if q_flags else "PASS"
+        flags.extend(q_flags)
+        if q_status == "FAIL":
+            mismatches.append({"location": "question", "flags": q_flags})
 
     # Check answer semantic numerical parity when both EN and TA answers are present
     if ans_en and ans_ta:

@@ -1,0 +1,537 @@
+{
+ "schemaVersion": 1,
+ "engine": "TRACE MathGuard V1.4c",
+ "gitCommit": "1300f61",
+ "externalLlmApiCostUSD": 0.0,
+ "frozenBenchmark": {
+  "datasetSha256": "e72571d9be9c0978cab84762b5c21f356a78d04c799d2ba6a75d060093005f9b",
+  "totalItems": 334,
+  "v1_4b": {
+   "statuses": {
+    "PARTIAL": 77,
+    "PASS": 253,
+    "UNVERIFIABLE": 4
+   },
+   "passRatePct": 75.75,
+   "claimVerifiedPct": 93.3
+  },
+  "v1_4c": {
+   "statuses": {
+    "PARTIAL": 74,
+    "PASS": 256,
+    "UNVERIFIABLE": 4
+   },
+   "passRatePct": 76.65,
+   "claimVerifiedPct": 93.38,
+   "claims": {
+    "total": 1708,
+    "verified": 1595,
+    "failed": 0,
+    "unsupported": 113,
+    "verifiedRatePct": 93.38
+   },
+   "answerStatuses": {
+    "PASS": 328,
+    "UNVERIFIABLE": 6
+   },
+   "answerPassRatePct": 100.0,
+   "byChapter": {
+    "3": {
+     "total": 153,
+     "statuses": {
+      "PARTIAL": 33,
+      "PASS": 119,
+      "UNVERIFIABLE": 1
+     },
+     "total_claims": 766,
+     "verified_claims": 720,
+     "failed_claims": 0,
+     "unsupported_claims": 46
+    },
+    "5": {
+     "total": 110,
+     "statuses": {
+      "PASS": 89,
+      "PARTIAL": 19,
+      "UNVERIFIABLE": 2
+     },
+     "total_claims": 533,
+     "verified_claims": 502,
+     "failed_claims": 0,
+     "unsupported_claims": 31
+    },
+    "7": {
+     "total": 71,
+     "statuses": {
+      "PASS": 48,
+      "PARTIAL": 22,
+      "UNVERIFIABLE": 1
+     },
+     "total_claims": 409,
+     "verified_claims": 373,
+     "failed_claims": 0,
+     "unsupported_claims": 36
+    }
+   },
+   "regressionsVsV1_3_5a": [
+    {
+     "id": "c10-5-ex5-1-q3-ii",
+     "chapter": "5",
+     "v1_3_5a": "PASS",
+     "v1_4": "PARTIAL"
+    },
+    {
+     "id": "c10-7-unit-q10",
+     "chapter": "7",
+     "v1_3_5a": "PASS",
+     "v1_4": "PARTIAL"
+    }
+   ],
+   "runtimeSec": 84.06,
+   "peakMemoryMB": 96.24
+  }
+ },
+ "expandedBenchmark": {
+  "totalAuditedItems": 765,
+  "v1_4b": {
+   "workingStatusCounts": {
+    "PARTIAL": 238,
+    "PASS": 404,
+    "UNVERIFIABLE": 120,
+    "FAIL": 3
+   },
+   "tamilStatusCounts": {
+    "PASS": 656,
+    "FAIL": 55,
+    "PARTIAL": 19,
+    "UNVERIFIABLE": 35
+   },
+   "claims": {
+    "total": 3120,
+    "verified": 2537,
+    "verifiedRatePct": 81.31
+   }
+  },
+  "v1_4c": {
+   "workingStatusCounts": {
+    "PARTIAL": 238,
+    "PASS": 407,
+    "UNVERIFIABLE": 120
+   },
+   "answerStatusCounts": {
+    "UNVERIFIABLE": 265,
+    "PASS": 500
+   },
+   "tamilStatusCounts": {
+    "PASS": 677,
+    "FAIL": 34,
+    "PARTIAL": 19,
+    "UNVERIFIABLE": 35
+   },
+   "claims": {
+    "total": 3113,
+    "verified": 2534,
+    "verifiedRatePct": 81.4
+   },
+   "auditedChapters": {
+    "g9-ch3": {
+     "grade": 9,
+     "chapter": 3,
+     "domain": "algebra",
+     "title": "Algebra",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 224,
+      "concepts": 10,
+      "total": 234
+     },
+     "workingStatusCounts": {
+      "PARTIAL": 74,
+      "PASS": 81,
+      "UNVERIFIABLE": 79
+     },
+     "answerStatusCounts": {
+      "UNVERIFIABLE": 148,
+      "PASS": 86
+     },
+     "tamilStatusCounts": {
+      "PASS": 207,
+      "FAIL": 15,
+      "PARTIAL": 2,
+      "UNVERIFIABLE": 10
+     },
+     "claims": {
+      "total": 596,
+      "verified": 361,
+      "failed": 0,
+      "unsupported": 235,
+      "verifiedRatePct": 60.57
+     }
+    },
+    "g9-ch5": {
+     "grade": 9,
+     "chapter": 5,
+     "domain": "coordinate_geometry",
+     "title": "Coordinate Geometry",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 58,
+      "concepts": 7,
+      "total": 65
+     },
+     "workingStatusCounts": {
+      "PARTIAL": 20,
+      "PASS": 32,
+      "UNVERIFIABLE": 13
+     },
+     "answerStatusCounts": {
+      "UNVERIFIABLE": 31,
+      "PASS": 34
+     },
+     "tamilStatusCounts": {
+      "FAIL": 9,
+      "PASS": 50,
+      "UNVERIFIABLE": 6
+     },
+     "claims": {
+      "total": 225,
+      "verified": 180,
+      "failed": 0,
+      "unsupported": 45,
+      "verifiedRatePct": 80.0
+     }
+    },
+    "g9-ch7": {
+     "grade": 9,
+     "chapter": 7,
+     "domain": "mensuration",
+     "title": "Mensuration",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 36,
+      "concepts": 1,
+      "total": 37
+     },
+     "workingStatusCounts": {
+      "PASS": 12,
+      "PARTIAL": 25
+     },
+     "answerStatusCounts": {
+      "PASS": 21,
+      "UNVERIFIABLE": 16
+     },
+     "tamilStatusCounts": {
+      "PASS": 32,
+      "FAIL": 3,
+      "PARTIAL": 2
+     },
+     "claims": {
+      "total": 147,
+      "verified": 106,
+      "failed": 0,
+      "unsupported": 41,
+      "verifiedRatePct": 72.11
+     }
+    },
+    "g10-ch3": {
+     "grade": 10,
+     "chapter": 3,
+     "domain": "algebra",
+     "title": "Algebra",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 235,
+      "concepts": 14,
+      "total": 249
+     },
+     "workingStatusCounts": {
+      "PASS": 146,
+      "PARTIAL": 78,
+      "UNVERIFIABLE": 25
+     },
+     "answerStatusCounts": {
+      "PASS": 181,
+      "UNVERIFIABLE": 68
+     },
+     "tamilStatusCounts": {
+      "UNVERIFIABLE": 9,
+      "PASS": 231,
+      "PARTIAL": 4,
+      "FAIL": 5
+     },
+     "claims": {
+      "total": 1205,
+      "verified": 1014,
+      "failed": 0,
+      "unsupported": 191,
+      "verifiedRatePct": 84.15
+     }
+    },
+    "g10-ch5": {
+     "grade": 10,
+     "chapter": 5,
+     "domain": "coordinate_geometry",
+     "title": "Coordinate Geometry",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 97,
+      "concepts": 12,
+      "total": 109
+     },
+     "workingStatusCounts": {
+      "PASS": 88,
+      "PARTIAL": 19,
+      "UNVERIFIABLE": 2
+     },
+     "answerStatusCounts": {
+      "PASS": 108,
+      "UNVERIFIABLE": 1
+     },
+     "tamilStatusCounts": {
+      "PASS": 107,
+      "PARTIAL": 1,
+      "FAIL": 1
+     },
+     "claims": {
+      "total": 531,
+      "verified": 500,
+      "failed": 0,
+      "unsupported": 31,
+      "verifiedRatePct": 94.16
+     }
+    },
+    "g10-ch7": {
+     "grade": 10,
+     "chapter": 7,
+     "domain": "mensuration",
+     "title": "Mensuration",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 62,
+      "concepts": 9,
+      "total": 71
+     },
+     "workingStatusCounts": {
+      "PASS": 48,
+      "PARTIAL": 22,
+      "UNVERIFIABLE": 1
+     },
+     "answerStatusCounts": {
+      "PASS": 70,
+      "UNVERIFIABLE": 1
+     },
+     "tamilStatusCounts": {
+      "UNVERIFIABLE": 10,
+      "PARTIAL": 10,
+      "PASS": 50,
+      "FAIL": 1
+     },
+     "claims": {
+      "total": 409,
+      "verified": 373,
+      "failed": 0,
+      "unsupported": 36,
+      "verifiedRatePct": 91.2
+     }
+    }
+   },
+   "runtimeSec": 123.92
+  }
+ },
+ "latestCurriculumSnapshot": {
+  "pinnedGitCommit": "1300f61",
+  "inventory": {
+   "9": {
+    "1": {
+     "title": "Set Language",
+     "totalItems": 156,
+     "exercises": 120
+    },
+    "2": {
+     "title": "Real Numbers",
+     "totalItems": 152,
+     "exercises": 120
+    },
+    "3": {
+     "title": "Algebra",
+     "totalItems": 226,
+     "exercises": 224
+    },
+    "4": {
+     "title": "Geometry",
+     "totalItems": 87,
+     "exercises": 86
+    },
+    "5": {
+     "title": "Coordinate Geometry",
+     "totalItems": 59,
+     "exercises": 58
+    },
+    "6": {
+     "title": "Trigonometry",
+     "totalItems": 51,
+     "exercises": 47
+    },
+    "7": {
+     "title": "Mensuration",
+     "totalItems": 37,
+     "exercises": 36
+    },
+    "8": {
+     "title": "Statistics",
+     "totalItems": 31,
+     "exercises": 30
+    },
+    "9": {
+     "title": "Probability",
+     "totalItems": 31,
+     "exercises": 25
+    }
+   },
+   "10": {
+    "1": {
+     "title": "Relations and Functions",
+     "totalItems": 74,
+     "exercises": 74
+    },
+    "2": {
+     "title": "Numbers and Sequences",
+     "totalItems": 151,
+     "exercises": 150
+    },
+    "3": {
+     "title": "Algebra",
+     "totalItems": 236,
+     "exercises": 235
+    },
+    "4": {
+     "title": "Geometry",
+     "totalItems": 85,
+     "exercises": 85
+    },
+    "5": {
+     "title": "Coordinate Geometry",
+     "totalItems": 98,
+     "exercises": 97
+    },
+    "6": {
+     "title": "Trigonometry",
+     "totalItems": 86,
+     "exercises": 86
+    },
+    "7": {
+     "title": "Mensuration",
+     "totalItems": 62,
+     "exercises": 62
+    },
+    "8": {
+     "title": "Statistics and Probability",
+     "totalItems": 92,
+     "exercises": 92
+    }
+   }
+  },
+  "plannedUnsupportedChapters": {
+   "g9-ch1": {
+    "grade": 9,
+    "chapter": 1,
+    "domain": "sets_and_relations",
+    "title": "Set Language",
+    "adapterStatus": "planned_v1_4",
+    "discoveredExercises": 120,
+    "certified": false
+   },
+   "g9-ch2": {
+    "grade": 9,
+    "chapter": 2,
+    "domain": "real_numbers",
+    "title": "Real Numbers",
+    "adapterStatus": "planned_v1_4",
+    "discoveredExercises": 120,
+    "certified": false
+   },
+   "g9-ch4": {
+    "grade": 9,
+    "chapter": 4,
+    "domain": "euclidean_geometry",
+    "title": "Geometry",
+    "adapterStatus": "planned_v1_4",
+    "discoveredExercises": 86,
+    "certified": false
+   },
+   "g9-ch6": {
+    "grade": 9,
+    "chapter": 6,
+    "domain": "trigonometry",
+    "title": "Trigonometry",
+    "adapterStatus": "planned_v1_4",
+    "discoveredExercises": 47,
+    "certified": false
+   },
+   "g9-ch8": {
+    "grade": 9,
+    "chapter": 8,
+    "domain": "statistics",
+    "title": "Statistics",
+    "adapterStatus": "planned_v1_4",
+    "discoveredExercises": 30,
+    "certified": false
+   },
+   "g9-ch9": {
+    "grade": 9,
+    "chapter": 9,
+    "domain": "probability",
+    "title": "Probability",
+    "adapterStatus": "planned_v1_4",
+    "discoveredExercises": 25,
+    "certified": false
+   },
+   "g10-ch1": {
+    "grade": 10,
+    "chapter": 1,
+    "domain": "sets_and_relations",
+    "title": "Relations and Functions",
+    "adapterStatus": "planned_v1_4",
+    "discoveredExercises": 74,
+    "certified": false
+   },
+   "g10-ch2": {
+    "grade": 10,
+    "chapter": 2,
+    "domain": "number_sequences",
+    "title": "Numbers and Sequences",
+    "adapterStatus": "planned_v1_4",
+    "discoveredExercises": 150,
+    "certified": false
+   },
+   "g10-ch4": {
+    "grade": 10,
+    "chapter": 4,
+    "domain": "euclidean_geometry",
+    "title": "Geometry",
+    "adapterStatus": "planned_v1_4",
+    "discoveredExercises": 85,
+    "certified": false
+   },
+   "g10-ch6": {
+    "grade": 10,
+    "chapter": 6,
+    "domain": "trigonometry",
+    "title": "Trigonometry",
+    "adapterStatus": "planned_v1_4",
+    "discoveredExercises": 86,
+    "certified": false
+   },
+   "g10-ch8": {
+    "grade": 10,
+    "chapter": 8,
+    "domain": "statistics_and_probability",
+    "title": "Statistics and Probability",
+    "adapterStatus": "planned_v1_4",
+    "discoveredExercises": 92,
+    "certified": false
+   }
+  }
+ },
+ "peakMemoryMB": 108.96
+}
