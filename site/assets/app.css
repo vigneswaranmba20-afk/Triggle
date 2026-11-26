@@ -1103,17 +1103,17 @@ body.textbook-reader .question-top-nav .page-button{min-width:44px;min-height:44
 /* Mensuration Q10: preserve legible radius and slant labels on narrow phones.
    The full-width, vertical enlarge action avoids the 160px thumbnail squeeze. */
 @media (max-width:420px){
-  .inline-figure:has(#inlineFigureVisual img[src*="ex7-1-q10.svg"]) .inline-figure-open{
+  .inline-figure:has(#inlineFigureVisual img[src*="/ex7-1-q10"]) .inline-figure-open{
     flex-direction:column;align-items:stretch;gap:5px;
   }
-  .inline-figure:has(#inlineFigureVisual img[src*="ex7-1-q10.svg"]) .inline-figure-visual{
+  .inline-figure:has(#inlineFigureVisual img[src*="/ex7-1-q10"]) .inline-figure-visual{
     width:100%;flex:none;min-width:0;max-width:100%;overflow:visible;
   }
-  .inline-figure:has(#inlineFigureVisual img[src*="ex7-1-q10.svg"]) .inline-figure-visual img{
+  .inline-figure:has(#inlineFigureVisual img[src*="/ex7-1-q10"]) .inline-figure-visual img{
     width:min(100%,330px)!important;height:auto!important;max-height:215px!important;
     object-fit:contain;margin-inline:auto;
   }
-  .inline-figure:has(#inlineFigureVisual img[src*="ex7-1-q10.svg"]) .inline-figure-action{
+  .inline-figure:has(#inlineFigureVisual img[src*="/ex7-1-q10"]) .inline-figure-action{
     flex:none;max-width:100%;width:100%;text-align:center;font-size:11px;
   }
 }
