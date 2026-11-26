@@ -39,8 +39,13 @@ class AdversarialV14bCase:
     expected: str  # "PASS" | "FAIL" | "NON_PASS" | "UNVERIFIABLE"
 
 
-def _mk(qid: str, q_en: str, steps: List[Dict[str, Any]], ans: str = "", q_ta: str = "") -> Dict[str, Any]:
-    return {"id": qid, "q": {"en": q_en, "ta": q_ta}, "steps": steps, "answer": {"en": ans}}
+def _mk(
+    qid: str, q_en: str, steps: List[Dict[str, Any]], ans: str = "", q_ta: str = "", *, ans_ta: str = "",
+) -> Dict[str, Any]:
+    answer = {"en": ans}
+    if ans_ta:
+        answer["ta"] = ans_ta
+    return {"id": qid, "q": {"en": q_en, "ta": q_ta}, "steps": steps, "answer": answer}
 
 
 def build_v1_4b_adversarial_cases() -> List[AdversarialV14bCase]:
@@ -284,7 +289,7 @@ def build_v1_4b_adversarial_cases() -> List[AdversarialV14bCase]:
             f"v14b-ta-ok-{i}", "bilingual_parity", "tamil",
             _mk(f"ta_ok_{i}", f"Find the area of square of side {n} cm.", [
                 {"en": f"Side is {n} cm, square is {n*n}.", "ta": f"பக்கம் {n} செ.மீ, பரப்பளவு {n*n}.", "math": {"latex": f"A = {n}^2 = {n*n}"}}
-            ], ans=f"{n*n} cm²", q_ta=f"{n} செ.மீ பக்க அளவுள்ள சதுரத்தின் பரப்பளவு காண்க."),
+            ], ans=f"{n*n} cm²", q_ta=f"{n} செ.மீ பக்க அளவுள்ள சதுரத்தின் பரப்பளவு காண்க.", ans_ta=f"{n*n} செ.மீ²"),
             True, "PASS",
         ))
         cases.append(AdversarialV14bCase(

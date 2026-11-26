@@ -8,6 +8,7 @@ from typing import Any, Dict, List, Optional, Tuple
 
 import sympy as sp
 
+from ..answer_fields import localized_answer_forms
 from ..parser import parse_expression
 from ..reasoning_engine import WorkingAuditResult, verify_complete_working
 from ..symbolic import expressions_equivalent
@@ -23,6 +24,7 @@ class TamilParityResult:
     has_tamil_answer: bool
     flags: List[str] = field(default_factory=list)
     mismatched_numbers: List[Dict[str, Any]] = field(default_factory=list)
+    answer_evidence: Dict[str, Any] = field(default_factory=dict)
 
 
 def _norm_ta_nums(text: str) -> List[str]:
@@ -35,7 +37,12 @@ def _norm_ta_nums(text: str) -> List[str]:
     return number_signature(cleaned)
 
 
-def verify_tamil_math_parity(item: Dict[str, Any], is_concept: bool = False) -> TamilParityResult:
+def verify_tamil_math_parity(
+    item: Dict[str, Any],
+    is_concept: bool = False,
+    *,
+    reviewed_answer: Tuple[str, Dict[str, Any]] | None = None,
+) -> TamilParityResult:
     """Audit English vs Tamil mathematical parity across question, steps, and answer.
 
     Uses deterministic semantic normalisation (number words, unit scales, expression
@@ -48,9 +55,10 @@ def verify_tamil_math_parity(item: Dict[str, Any], is_concept: bool = False) -> 
     steps = ((item.get("proof") or {}).get("steps") if is_concept else item.get("steps")) or []
     has_ta_steps = any(isinstance(s, dict) and str(s.get("ta") or "").strip() for s in steps)
 
-    ans_obj = item.get("answer")
-    ans_en = str(ans_obj.get("en") if isinstance(ans_obj, dict) else (ans_obj or ""))
-    ans_ta = str(ans_obj.get("ta") if isinstance(ans_obj, dict) else "").strip()
+    en_forms = localized_answer_forms(item, "en")
+    ta_forms = localized_answer_forms(item, "ta")
+    ans_en = en_forms.get("fallback") or en_forms.get("plain") or en_forms.get("latex", "")
+    ans_ta = ta_forms.get("fallback") or ta_forms.get("plain") or ta_forms.get("latex", "")
 
     if not q_ta and not has_ta_steps and not ans_ta:
         return TamilParityResult(
@@ -89,10 +97,20 @@ def verify_tamil_math_parity(item: Dict[str, Any], is_concept: bool = False) -> 
         if q_status == "FAIL":
             mismatches.append({"location": "question", "flags": q_flags})
 
-    # Check answer semantic numerical parity when both EN and TA answers are present
-    if ans_en and ans_ta:
+    # Independently checked medium-specific requirements supersede raw answer equality.
+    answer_evidence: Dict[str, Any] = {}
+    if reviewed_answer is not None:
+        answer_status, answer_evidence = reviewed_answer
+        if answer_status != "PASS":
+            flag = answer_evidence["reason"]
+            flags.append(flag)
+            if answer_status == "FAIL":
+                mismatches.append({"location": "answer", **answer_evidence})
+    elif ans_en and ans_ta:
         en_vals = extract_semantic_values(ans_en, is_tamil=False)
         ta_vals = extract_semantic_values(ans_ta, is_tamil=True)
+        if en_vals and not ta_vals:
+            flags.append("unverified_tamil_answer_numbers")
         if en_vals and ta_vals and en_vals != ta_vals:
             extra_ta = ta_vals - en_vals
             missing_en = en_vals - ta_vals
@@ -129,6 +147,7 @@ def verify_tamil_math_parity(item: Dict[str, Any], is_concept: bool = False) -> 
         has_tamil_answer=bool(ans_ta),
         flags=flags,
         mismatched_numbers=mismatches,
+        answer_evidence=answer_evidence,
     )
 
 
