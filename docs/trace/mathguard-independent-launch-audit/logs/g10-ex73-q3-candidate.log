@@ -1,0 +1,12 @@
+Curriculum commit 9ea9cb343d6fb071ace2f4407cc60c0ba2554ba9
+Pinned MathGuard engine 7d4a96eab1a91b0ae7b51a643e59b2c03f741e27 with the candidate Exercise 7.3 module overlaid in a detached test worktree.
+$ npm test
+Exit status 0. Selected verdicts for the changed item and source gates follow.
+PASS owner-revised active-denominator progress: no partial credit, evidence/baseline/duplicate guards, curriculum unknown and real pilot zero
+PASS G10 Mensuration Ex 7.2 & Ex 7.3 QA: 19/19 IDs in runtime/curriculum/difficulty, source-inventory & SVG parity, bilingual completeness, strict KaTeX (EN/TA), exact arithmetic + negative mutations, index.html & service-worker.js CORE.
+$ CHROMIUM_PATH=/usr/bin/chromium node site/tools/test_g10_ch7_ex72_ex73_mobile_browser.cjs
+PASS G10 Mensuration 7.2 & 7.3 mobile: all 11 required questions verified in EN & TA at 320/390/412px, KaTeX, SVG diagrams + modal, exercise-bounded navigation, zero overflow/errors.
+PASS 320px offline service worker, both language prompts, and MathML answers 2 and approximately 2.46 cm³.
+Integrated answer audit {'PASS': 70, 'FAIL': 0, 'UNVERIFIABLE': 1}
+Record status {'id': 'c10-7-ex7-3-q3', 'answer_status': 'PASS', 'step_status': 'PASS', 'tamil_status': 'PASS'}
+MathGuard adapter {'answer_status': 'PASS', 'working_status': 'PASS', 'tamil_status': 'PARTIAL', 'tamil_flags': ['missing_tamil_answer']}
