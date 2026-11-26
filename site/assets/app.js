@@ -7,32 +7,27 @@
  Object.assign(dictionary.en,{backAllChapters:'Back to all chapters',searchOptional:'Search (optional)',browse:'Chapters',exploreExercise:'Chapters and sections',search:'Search chapters, exercises, questions…',chapter:'Chapter',chapters:'chapters',overview:'Chapter overview',planned:'Planned',drafting:'Drafting',review:'In review',published:'Published',existingQuestions:'Existing questions',chapterNotComplete:'Existing questions are available for practice. Their presence does not mean this chapter is complete or reviewed.',contentPlanned:'Full chapter content is planned. Learning sections will appear after writing and review.',noQuestions:'Questions for this chapter are planned.',terminologyPending:'Tamil textbook terminology needs verification.',terminologyVerified:'Tamil textbook terminology verified.',concepts:'Concepts',prerequisites:'Prerequisites',workedExamples:'Worked examples',exercises:'Exercises',quizzes:'Quizzes',unitExercise:'Unit Exercise',chooseLanguage:'Language',closeNavigation:'Close navigation',navigationLabel:'Class, chapter and exercise navigation',searchLabel:'Search chapters and questions',visualMathematics:'VISUAL MATHEMATICS',textbookReferences:'Textbook references',edition:'Edition',locator:'Location in textbook',englishMedium:'English medium',tamilMedium:'Tamil medium',archivedReference:'Archived textbook references; compare with the edition prescribed by your school.',figureLabel:'Open a relevant mathematics diagram',completeSolution:'Solution',workedSolution:'Worked solution',navigateQuestions:'Navigate questions',switchClass:'Switch school class',diagramDialog:'Mathematics diagram',reviewState:'Review state',unreviewed:'Not reviewed',in_review:'In review',approved:'Approved',home:'Home',browse:'Find a topic'});
  Object.assign(dictionary.ta,{backAllChapters:'அனைத்து அத்தியாயங்களுக்கும் திரும்பு',searchOptional:'தேடல் (விருப்பப்படி)',browse:'அத்தியாயங்கள்',exploreExercise:'அத்தியாயங்களும் பகுதிகளும்',search:'அத்தியாயம், பயிற்சி, வினாவைத் தேட…',chapter:'அத்தியாயம்',chapters:'அத்தியாயங்கள்',overview:'அத்தியாயக் கண்ணோட்டம்',planned:'திட்டமிடப்பட்டுள்ளது',drafting:'எழுதப்படுகிறது',review:'மீளாய்வில் உள்ளது',published:'வெளியிடப்பட்டது',existingQuestions:'ஏற்கெனவே உள்ள வினாக்கள்',chapterNotComplete:'ஏற்கெனவே உள்ள வினாக்களைப் பயிற்சி செய்யலாம். வினாக்கள் இருப்பதால் மட்டும் இந்த அத்தியாயம் முழுமையானது அல்லது மீளாய்வு செய்யப்பட்டது என்று பொருளல்ல.',contentPlanned:'முழு அத்தியாய உள்ளடக்கம் திட்டமிடப்பட்டுள்ளது. கற்றல் பகுதிகள் எழுதப்பட்டு மீளாய்வு செய்யப்பட்டதும் இங்கே இடம்பெறும்.',noQuestions:'இந்த அத்தியாயத்திற்கான வினாக்கள் திட்டமிடப்பட்டுள்ளன.',terminologyPending:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட வேண்டும்.',terminologyVerified:'தமிழ்வழிப் பாடநூல் கலைச்சொற்கள் சரிபார்க்கப்பட்டுள்ளன.',concepts:'கருத்துகள்',prerequisites:'முன்தேவைகள்',workedExamples:'தீர்க்கப்பட்ட எடுத்துக்காட்டுகள்',exercises:'பயிற்சிகள்',quizzes:'குறுவினாத் தேர்வுகள்',unitExercise:'தொகுப்புப் பயிற்சி',chooseLanguage:'மொழி',closeNavigation:'வழிசெலுத்தலை மூடு',navigationLabel:'வகுப்பு, அத்தியாயம் மற்றும் பயிற்சி வழிசெலுத்தல்',searchLabel:'அத்தியாயங்களையும் வினாக்களையும் தேடுக',visualMathematics:'காட்சி வழிக் கணிதம்',textbookReferences:'பாடநூல் குறிப்புகள்',edition:'பதிப்பு',locator:'பாடநூலில் உள்ள இடம்',englishMedium:'ஆங்கிலவழி',tamilMedium:'தமிழ்வழி',archivedReference:'காப்பகப் பாடநூல் குறிப்புகள்; உங்கள் பள்ளி பரிந்துரைக்கும் பதிப்புடன் ஒப்பிடுங்கள்.',figureLabel:'பொருத்தமான கணிதப் படத்தைத் திற',completeSolution:'தீர்வு விளக்கம்',workedSolution:'தீர்வு விளக்கம்',navigateQuestions:'வினாக்களுக்குச் செல்லவும்',switchClass:'வகுப்பை மாற்றவும்',diagramDialog:'கணிதப் படம்',reviewState:'மீளாய்வு நிலை',unreviewed:'மீளாய்வு செய்யப்படவில்லை',in_review:'மீளாய்வில் உள்ளது',approved:'ஏற்கப்பட்டது',home:'முகப்பு',browse:'தலைப்பைத் தேடுக'});
  const ui=k=>dictionary[lang][k]||dictionary.en[k]||k;
- const classes=window.TRIGGLE_CLASSES||{};
+ const chapterRelease=window.TriggleStudentRelease;
+ const classes=chapterRelease?window.TRIGGLE_CLASSES:window.TrigglePrepareStudentRecords(window);
  // Public student routes are restricted until the revised higher-grade syllabus arrives.
  const publicGrade=g=>Number(g)===9||Number(g)===10;
  const restrictedRoute=p=>(p.has('class')&&!publicGrade(p.get('class')))||/^g1[12]-/.test(p.get('chapter')||'')||/^(?:c1[12]|g1[12])-/.test(p.get('question')||'');
- // Preserve source records while showing exercise questions, not worked examples.
- const isWorkedExample=item=>item?.kind==='textbook-example'||
-   /(?:^|[-_])(?:worked[-_])?examples?(?:[-_]|$)/i.test(item?.id||'')||
-   /^\s*(?:Worked\s+)?Example\b/i.test(item?.label?.en||'');
- for(const key of [9,10,11,12]){
-   if(!classes[key]||!Array.isArray(classes[key].items))throw Error('Missing data for class '+key);
-   classes[key].items=classes[key].items.filter(item=>!isWorkedExample(item));
- }
- window.TriggleG10NumbersTamil?.(classes[10].items);
- window.TriggleG10AlgebraTamil?.(classes[10].items);
- window.TriggleG10GeometryTamil?.(classes[10].items);
- window.TriggleG10FrontierTamilAnswers?.(classes[10].items);
- window.TriggleG10SourceTables?.(classes[10].items);
- window.TriggleG10CoordinateFrontier?.(classes[10].items);
- window.TriggleG9RealFrontier?.(classes[9].items);
- window.TriggleG9AlgebraTamilAnswers?.(classes[9].items);
- window.TriggleG9StatisticsTables?.(classes[9].items);
- window.TriggleG9FrontierGraphs?.(classes[9].items);
  const curriculum=window.TRIGGLE_CURRICULUM;
  if(!curriculum?.grades)throw Error('Missing curriculum metadata');
- const chapterList=()=>curriculum.grades.find(g=>g.grade===grade)?.chapters||[];
- const chapterForItem=item=>chapterList().find(c=>c.legacyQuestionIds.includes(item.id))||chapterList().find(c=>String(c.number)===String(item.chapter));
+ const chaptersByGrade=new Map(curriculum.grades.map(row=>{
+   const legacy=new Map(),numbers=new Map();
+   for(const chapter of row.chapters){
+     const number=String(chapter.number);
+     if(!numbers.has(number))numbers.set(number,chapter);
+     for(const id of chapter.legacyQuestionIds)if(!legacy.has(id))legacy.set(id,chapter);
+   }
+   return [row.grade,{chapters:row.chapters,legacy,numbers}];
+ }));
+ const chapterList=()=>chaptersByGrade.get(grade)?.chapters||[];
+ const chapterForItem=item=>{
+   const lookup=chaptersByGrade.get(grade);
+   return lookup?.legacy.get(item.id)||lookup?.numbers.get(String(item.chapter));
+ };
  const itemsByChapter=new WeakMap();
  const chapterItems=chapter=>{
    if(!itemsByChapter.has(chapter)){
@@ -181,6 +176,7 @@
    $('discoveryView').focus({preventScroll:true});
  }
  function selectLesson(item){
+   if(chapterRelease?.open(grade,{question:item.id}))return;
    const wasQuestion=!homeView&&!classIndex&&!chapterOverview;
    if(wasQuestion&&item.id===current.id){closeDrawer();return;}
    if(chapterOverview)questionOrigin={grade,chapterId:chapterOverview.id,section:chapterSection};
@@ -192,6 +188,7 @@
  // Every chapter's Exercises card opens the exercise-number index first.
  // Choosing a numbered exercise begins at its first available question.
  function selectChapter(chapter){
+   if(chapterRelease?.open(grade,{chapter:chapter.id}))return;
    homeView=false;classIndex=false;chapterOverview=chapter;chapterSection=null;conceptIndex=null;
    questionOrigin=null;
    updateUrl();render();closeDrawer();resetScroll();
@@ -199,6 +196,7 @@
  }
  function openChapterSection(section,chapter=chapterOverview,concept=null){
    if(!chapter||(!validSections.has(section)&&section!==null))return;
+   if(chapterRelease?.open(grade,{chapter:chapter.id,section,concept}))return;
    homeView=false;classIndex=false;chapterOverview=chapter;
    chapterSection=section;conceptIndex=Number.isInteger(concept)?concept:null;
    updateUrl();render();closeDrawer();resetScroll();
@@ -211,6 +209,7 @@
  }
  function openQuestionFor(g,item){
    if(!publicGrade(g)||!classes[g])return;
+   if(chapterRelease?.open(g,{question:item.id}))return;
    grade=g;homeView=false;classIndex=false;chapterOverview=null;chapterSection=null;conceptIndex=null;questionOrigin=null;current=item;
    updateUrl();remember();render();closeDrawer();resetScroll();
    $('lessonCard').focus({preventScroll:true});
@@ -218,7 +217,11 @@
 
  function navMove(delta){if(homeView||classIndex||chapterOverview)return;const list=activeList(),i=currentIndex(list)+(current.duplicateOf&&delta<0?0:delta);if(i<0||i>=list.length)return;selectLesson(list[i])}
 
+ let breadcrumbView;
  function renderBreadcrumb(chapter,exerciseIndex=null){
+   const view=JSON.stringify([grade,lang,chapterOverview?.id,tr(chapter),current?.exercise,exerciseIndex?.id]);
+   if(breadcrumbView===view)return;
+   breadcrumbView=view;
    const nav=$('crumb');nav.replaceChildren();
    const choices=[{text:ui('class')+' '+grade,type:'class'}];
    // On chapter menus, the main heading already names the chapter.
@@ -293,6 +296,8 @@
  let sidebarView;
  function renderList(){
    const query=$('search').value.trim().toLocaleLowerCase();
+   if(query&&chapterRelease&&!chapterRelease.searchReady(grade))return;
+   $('sidebarSearchStatus').hidden=true;
    const chapterId=selectedChapter()?.id||'';
    const view=JSON.stringify([grade,lang,chapterId,chapterOverview?.id,chapterSection,query]);
    if(sidebarView===view)return;
@@ -328,7 +333,7 @@
        chapter.id==='g10-ch8'?window.TRIGGLE_G10_CH8_PATH?.stages:
        chapter.id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:
        null);
-     const interactiveCount=Array.isArray(interactiveStages)?interactiveStages.length:0;
+     const interactiveCount=chapterRelease?.conceptCounts[chapter.id]??(Array.isArray(interactiveStages)?interactiveStages.length:0);
           const practiceCount=visibleExercises.length;
      const grade9Journey=chapter.id==='g9-ch1'||chapter.id==='g9-ch2'||chapter.id==='g9-ch9';
      meta.textContent=grade9Journey
@@ -365,6 +370,24 @@
    $('sideCount').textContent=visible+' '+ui('chapters');
    if(!visible){const msg=document.createElement('p');msg.className='empty-search';msg.textContent=ui('empty');container.append(msg);}
    sidebarView=view;
+ }
+
+ function searchSidebar(){
+   if(!chapterRelease||!$('search').value.trim()||chapterRelease.searchReady(grade)){
+     renderList();
+     return;
+   }
+   const requestedGrade=grade;
+   const status=$('sidebarSearchStatus');
+   status.textContent=lang==='ta'?'தேடல் ஏற்றப்படுகிறது…':'Loading search…';
+   status.hidden=false;
+   chapterRelease.loadSearch(requestedGrade,classes[requestedGrade].items).then(()=>{
+     if(grade===requestedGrade)renderList();
+   },()=>{
+     if(grade===requestedGrade&&$('search').value.trim())status.textContent=lang==='ta'
+       ?'தேடலை ஏற்ற முடியவில்லை. மீண்டும் முயற்சிக்கவும்.'
+       :'Search could not load. Edit your search to try again.';
+   });
  }
 
  function renderOverview(chapter){
@@ -533,7 +556,7 @@
    $('lessonCard').classList.toggle('many-steps',true);
    return;
   }
-  const all=current.steps||[];const ul=$('stepsList');ul.replaceChildren();
+  const all=current.steps||[];const rows=document.createDocumentFragment();
   // TRACE teaching bridge: begin with meaning, without changing textbook
   // exercise data, authored steps or strict mathematical source checksums.
   const teacherBridge=window.TriggleG10Ch2Bridge?.get?.(current,lang);
@@ -543,9 +566,9 @@
    const p=document.createElement('p');p.textContent=teacherBridge.explain;
    const formula=document.createElement('div');formula.className='g10ch2-bridge-math';
    formula.innerHTML=math(teacherBridge.math);
-   intro.append(title,p,formula);ul.append(intro);
+   intro.append(title,p,formula);rows.append(intro);
   }
-  all.forEach((s,i)=>ul.append(buildStep(s,i)));
+  all.forEach((s,i)=>rows.append(buildStep(s,i)));
   const localizedAnswer=tr(lang==='ta'&&current.answerTa?current.answerTa:current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
   const grade9Answer=grade9Presentation(current)?.answerMath;
   const possibleAnswerMath=(grade===9&&current.answerMath?.[lang])||
@@ -557,7 +580,8 @@
   $('answerText').classList.toggle('answer-grid',canGrid);
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
   $('answerText').innerHTML=answerMath?workedMath(answerMath):(canGrid?parts.map(v=>'<span class="answer-part">'+workedMath(v)+'</span>').join(''):workedMath(localizedAnswer));
-  appendFinalStep(ul);
+  appendFinalStep(rows);
+  $('stepsList').replaceChildren(rows);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
  }
@@ -566,8 +590,8 @@
   prepareLessonMath();
   if(lessonMathObserver){
    for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
+    if(formula.closest('[hidden]'))continue;
     lessonMathObserver.observe(formula);
-    if(formula.firstElementChild)lessonMathObserver.observe(formula.firstElementChild);
     // KaTeX glyph widths can change after fonts settle without resizing the
     // outer formula box. Observe the painted glyph layer too, so formulas
     // that newly overflow immediately become keyboard-scrollable.
@@ -705,7 +729,12 @@
   $('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;
   renderBreadcrumb(chapter,isTextbookExercise?questionChapter:null);
   $('gradeTotal').textContent=list.length+' '+ui('lessons');
-  $('questionEmblem').innerHTML=window.TriggleGlyph?.chapter(questionChapter?.id)||'';
+  const emblem=$('questionEmblem');
+  const emblemChapter=questionChapter?.id||'';
+  if(emblem.dataset.chapter!==emblemChapter){
+    emblem.innerHTML=window.TriggleGlyph?.chapter(emblemChapter)||'';
+    emblem.dataset.chapter=emblemChapter;
+  }
   const label=tr(current.label);
   const group=labelForGroup(current.exercise);
   $('questionHead').textContent=label.startsWith(group+' · ')?label.slice(group.length+3):label;
@@ -928,7 +957,7 @@
    openChapterSection(section,chapter);
  };
  $('browseBtn').onclick=()=>drawerOpen?closeDrawer():openDrawer();$('closeSidebar').onclick=closeDrawer;$('backdrop').onclick=closeDrawer;
- $('search').oninput=renderList;
+ $('search').oninput=searchSidebar;
  $('pathClose').onclick=()=>$('pathDialog').close();$('pathDialog').addEventListener('click',e=>{if(e.target===$('pathDialog'))$('pathDialog').close()});
  $('inlineFigureOpen').onclick=showDiagram;
  $('figureBtn').onclick=showDiagram;$('closeDiagram').onclick=()=>$('figureDialog').close();

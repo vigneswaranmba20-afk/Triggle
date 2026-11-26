@@ -118,6 +118,7 @@ html[lang="ta"] .ver-loading [lang="en"] { display: none; }
 }
 
 .ver-glyph :is(.sidebar, .sidebar-foot, .sidebar-search-bottom) { background: var(--ver-paper); }
+.ver-glyph .sidebar[inert] { content-visibility: hidden; }
 .ver-glyph :is(.sidebar .side-grade, .sidebar .chapter-link, .sidebar-chapter-sections button) {
   border-radius: var(--ver-radius);
   box-shadow: none;

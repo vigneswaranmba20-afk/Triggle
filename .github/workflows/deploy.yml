@@ -77,6 +77,7 @@ jobs:
         run: |
           mkdir -p _pages/site _pages/dashboard
           cp -a site/. _pages/site/
+          node site/tools/build_student_release.cjs _pages/site
           cp index.html teacher-review.html _pages/
           cp dashboard/index.html _pages/dashboard/
           test -s _pages/site/dashboard/index.html
@@ -139,20 +140,23 @@ jobs:
             data/textbook-exercises/g10-ch7-unit7.js
             assets/app.js
           )
+          for asset in _pages/site/assets/student-*.*.*; do
+            files+=("${asset#_pages/site/}")
+          done
           for attempt in $(seq 1 18); do
             matching=1
             for file in "${files[@]}"; do
               mkdir -p "/tmp/triggle-live/$(dirname "$file")"
               if ! curl -fsSL --max-time 15 -H 'Cache-Control: no-cache' \
                    "$BASE/$file?sha=$GITHUB_SHA" -o "/tmp/triggle-live/$file" ||
-                 ! cmp -s "site/$file" "/tmp/triggle-live/$file"; then
+                 ! cmp -s "_pages/site/$file" "/tmp/triggle-live/$file"; then
                 matching=0
                 echo "::notice::Pages asset mismatch on attempt $attempt: $file"
                 break
               fi
             done
             if (( matching )); then
-              echo "PASS: Pages HTML, SW, G9 source/math layout, all three new G10 Mensuration exercise files, and app JS match tested commit $GITHUB_SHA"
+              echo "PASS: Pages shell, chapter packs, service worker and canonical reference assets match staged commit $GITHUB_SHA"
               exit 0
             fi
             sleep 10

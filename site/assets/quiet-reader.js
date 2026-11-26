@@ -10,18 +10,24 @@
   const dock=document.getElementById('questionNavDock');
   const context=document.querySelector('.appbar');
   if(!card||!question||!jump||!dock||!context)return;
-  let active=false,queued=false;
+  let active=false,queued=false,labelLanguage,dockHeight;
   function measure(){
     queued=false;
     if(!active)return;
     const past=question.getBoundingClientRect().bottom<context.getBoundingClientRect().bottom+8;
+    const height=Math.ceil(dock.getBoundingClientRect().height);
     body.classList.toggle('reader-question-past',past);
     jump.hidden=!past;
-    const tamil=document.documentElement.lang==='ta';
-    jump.textContent=tamil?'↑ வினா':'↑ Question';
-    jump.setAttribute('aria-label',tamil?'முழு வினாவுக்குத் திரும்பு':'Return to the complete question');
-    const h=Math.ceil(dock.getBoundingClientRect().height);
-    if(h>0)document.documentElement.style.setProperty('--triggle-reader-dock-height',h+'px');
+    const lang=document.documentElement.lang;
+    if(lang!==labelLanguage){
+      jump.textContent=lang==='ta'?'↑ வினா':'↑ Question';
+      jump.setAttribute('aria-label',lang==='ta'?'முழு வினாவுக்குத் திரும்பு':'Return to the complete question');
+      labelLanguage=lang;
+    }
+    if(height>0&&height!==dockHeight){
+      document.documentElement.style.setProperty('--triggle-reader-dock-height',height+'px');
+      dockHeight=height;
+    }
   }
   function schedule(){
     if(!queued){queued=true;window.requestAnimationFrame(measure);}

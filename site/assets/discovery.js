@@ -66,6 +66,8 @@
     const chapters=visibleGrades.flatMap(g=>g.chapters.map(c=>({grade:g.grade,chapter:c})));
     // Only advertise a lab when both its lesson data and interactive viewer are loaded.
     const interactiveCount=id=>{
+      const cached=window.TriggleStudentRelease?.conceptCounts[id];
+      if(cached!==undefined&&id!=='g10-ch8')return cached;
       const stages=window.TriggleChapterHub?.grade9Stages?.(id)??(id==='g9-ch1'&&window.TriggleSetJourney?window.TRIGGLE_SET_PATH?.stages:
         id==='g9-ch2'&&window.TriggleRealJourney?window.TRIGGLE_REAL_PATH?.stages:
         id==='g9-ch9'&&window.TriggleProbabilityConcepts?window.TRIGGLE_PROB_PATH?.stages:
