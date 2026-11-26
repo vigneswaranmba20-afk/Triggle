@@ -1,52 +1,52 @@
 # TRACE Final Frontier
 
-**Mission in progress. Android release preparation is NO-GO.** The assembled candidate covers all 1,756 source-verifiable canonical tasks in both languages. The inventory accounts for 18 additional source-blocked tasks. The remaining curriculum releases and final production checks are in progress. The latest verified production revision is `b0f1557c34178af9ea737aaca8109297a962cb90`. Grade 9 Set Language Exercises 1.3–1.7 added 56 cards representing 112 tasks, including 111 verified bilingual solutions and one unscored source ambiguity. [Live Triggle](https://vigneswaranmba20-afk.github.io/Triggle/site/)
+**Android release preparation is GO.** All 1,756 source-verifiable canonical tasks passed the English and Tamil curriculum, mathematics and production checks. The inventory accounts for 18 additional source-blocked tasks and explains each source limitation. The latest verified production revision is `0898788ea1e05a54c9924c3c5cf32eae749ecb8d`. Grade 9 Set Language Exercises 1.3–1.7 added 56 cards representing 112 tasks, including 111 verified bilingual solutions and one unscored source ambiguity. [Live Triggle](https://vigneswaranmba20-afk.github.io/Triggle/site/)
 
 - [Machine-readable inventory](TRACE_FINAL_FRONTIER_INVENTORY.json)
-- [One row per candidate canonical task](TRACE_FINAL_FRONTIER_INVENTORY.csv)
+- [One row per canonical task](TRACE_FINAL_FRONTIER_INVENTORY.csv)
 - [Release and verification checkpoint](TRACE_FINAL_FRONTIER_CHECKPOINT.json)
 
 ## Sources and counting
 
 All four 2025 revised Tamil Nadu SCERT PDFs were retrieved and matched the registered SHA-256 digests. The Grade 10 Tamil PDF with the registered bytes is the copy at Drive ID `1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC`. The older student-facing link in the baseline is inaccessible. [2025 source register](../../reference-library/2025-user-textbook-manifest.json) · [Grade 10 Tamil source](https://drive.google.com/file/d/1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC/view)
 
-The baseline is production commit `7b39aef78215088ccd64576f983d71f665f82066`. The current column measures the assembled release candidate. A numbered question can contain several canonical tasks. Grade 9 Exercise 6.3 has one unnumbered stem containing four tasks. Grade 10 retains 17 legacy Trigonometry bookmarks and the earlier Exercise 2.7 Q2(ii) bookmark. Their canonical cards appear in the exercise index. The JSON tracks both catalogue and direct-bookmark registrations. [Baseline deployment](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45667113749)
+The baseline is production commit `7b39aef78215088ccd64576f983d71f665f82066`. The current column measures the final deployed curriculum. A numbered question can contain several canonical tasks. Grade 9 Exercise 6.3 has one unnumbered stem containing four tasks. Grade 10 retains 17 legacy Trigonometry bookmarks and the earlier Exercise 2.7 Q2(ii) bookmark. Their canonical cards appear in the exercise index. The JSON tracks both catalogue and direct-bookmark registrations. [Baseline deployment](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45667113749)
 
 Fresh source extraction was checked against the reader, captured page images and existing fidelity manifests. An independent Tamil pass matched all 129 exercise headings and the numbered sequences. The bilingual review resolved 28 apparent subpart differences. The inventory records both edition locators, exact mathematical evidence and status for each canonical task. A separate bilingual numerical review screened 1,609 cards and examined 34 differences in printed wording, visible values, rendered tables and mathematical expressions. Grade 10 Exercise 8.1 Q5 uses the nine wages printed in both editions.
 
-| Grade | Exercise sections | Numbered questions | Canonical tasks | Registered records before → candidate | Missing eligible before → candidate | Partial before → candidate | Source blocked | Math evidence | Live verified |
+| Grade | Exercise sections | Numbered questions | Canonical tasks | Registered records before → live | Missing eligible before → live | Partial before → live | Source blocked | Math evidence | Live verified |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| 9 | 60 | 482 | 843 | 690 → 746 | 111 → 0 | 46 → 0 | 7 | 836 | 200 |
-| 10 | 69 | 664 | 931 | 881 → 881 | 0 → 0 | 28 → 0 | 11 | 920 | 39 |
+| 9 | 60 | 482 | 843 | 690 → 746 | 111 → 0 | 46 → 0 | 7 | 836 | 836 |
+| 10 | 69 | 664 | 931 | 881 → 881 | 0 → 0 | 28 → 0 | 11 | 920 | 920 |
 
 ## Chapter reconciliation
 
-| Grade | Chapter | Title | Sections | Numbered | Canonical | Missing eligible before → candidate | Partial before → candidate | Source blocked | Math evidence | Live verified |
+| Grade | Chapter | Title | Sections | Numbered | Canonical | Missing eligible before → live | Partial before → live | Source blocked | Math evidence | Live verified |
 |---|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| 9 | 1 | Set Language | 7 | 72 | 176 | 111 → 0 | 0 → 0 | 1 | 175 | 111 |
-| 9 | 2 | Real Numbers | 9 | 53 | 120 | 0 → 0 | 40 → 0 | 0 | 120 | 40 |
-| 9 | 3 | Algebra | 15 | 109 | 227 | 0 → 0 | 2 → 0 | 2 | 225 | 15 |
-| 9 | 4 | Geometry | 7 | 69 | 86 | 0 → 0 | 0 → 0 | 0 | 86 | 0 |
-| 9 | 5 | Coordinate Geometry | 6 | 58 | 75 | 0 → 0 | 2 → 0 | 0 | 75 | 23 |
-| 9 | 6 | Trigonometry | 5 | 30 | 54 | 0 → 0 | 0 → 0 | 3 | 51 | 0 |
-| 9 | 7 | Mensuration | 4 | 36 | 42 | 0 → 0 | 0 → 0 | 1 | 41 | 0 |
-| 9 | 8 | Statistics | 4 | 30 | 32 | 0 → 0 | 2 → 0 | 0 | 32 | 11 |
-| 9 | 9 | Probability | 3 | 25 | 31 | 0 → 0 | 0 → 0 | 0 | 31 | 0 |
-| 10 | 1 | Relations and Functions | 7 | 69 | 124 | 0 → 0 | 8 → 0 | 0 | 124 | 13 |
-| 10 | 2 | Numbers and Sequences | 11 | 115 | 161 | 0 → 0 | 8 → 0 | 1 | 160 | 12 |
-| 10 | 3 | Algebra | 21 | 140 | 236 | 0 → 0 | 0 → 0 | 1 | 235 | 2 |
-| 10 | 4 | Geometry | 6 | 78 | 88 | 0 → 0 | 0 → 0 | 4 | 84 | 0 |
-| 10 | 5 | Coordinate Geometry | 6 | 75 | 97 | 0 → 0 | 4 → 0 | 1 | 96 | 4 |
-| 10 | 6 | Trigonometry | 6 | 52 | 69 | 0 → 0 | 6 → 0 | 2 | 67 | 6 |
-| 10 | 7 | Mensuration | 6 | 60 | 62 | 0 → 0 | 0 → 0 | 0 | 62 | 0 |
-| 10 | 8 | Statistics and Probability | 6 | 75 | 94 | 0 → 0 | 2 → 0 | 2 | 92 | 2 |
+| 9 | 1 | Set Language | 7 | 72 | 176 | 111 → 0 | 0 → 0 | 1 | 175 | 175 |
+| 9 | 2 | Real Numbers | 9 | 53 | 120 | 0 → 0 | 40 → 0 | 0 | 120 | 120 |
+| 9 | 3 | Algebra | 15 | 109 | 227 | 0 → 0 | 2 → 0 | 2 | 225 | 225 |
+| 9 | 4 | Geometry | 7 | 69 | 86 | 0 → 0 | 0 → 0 | 0 | 86 | 86 |
+| 9 | 5 | Coordinate Geometry | 6 | 58 | 75 | 0 → 0 | 2 → 0 | 0 | 75 | 75 |
+| 9 | 6 | Trigonometry | 5 | 30 | 54 | 0 → 0 | 0 → 0 | 3 | 51 | 51 |
+| 9 | 7 | Mensuration | 4 | 36 | 42 | 0 → 0 | 0 → 0 | 1 | 41 | 41 |
+| 9 | 8 | Statistics | 4 | 30 | 32 | 0 → 0 | 2 → 0 | 0 | 32 | 32 |
+| 9 | 9 | Probability | 3 | 25 | 31 | 0 → 0 | 0 → 0 | 0 | 31 | 31 |
+| 10 | 1 | Relations and Functions | 7 | 69 | 124 | 0 → 0 | 8 → 0 | 0 | 124 | 124 |
+| 10 | 2 | Numbers and Sequences | 11 | 115 | 161 | 0 → 0 | 8 → 0 | 1 | 160 | 160 |
+| 10 | 3 | Algebra | 21 | 140 | 236 | 0 → 0 | 0 → 0 | 1 | 235 | 235 |
+| 10 | 4 | Geometry | 6 | 78 | 88 | 0 → 0 | 0 → 0 | 4 | 84 | 84 |
+| 10 | 5 | Coordinate Geometry | 6 | 75 | 97 | 0 → 0 | 4 → 0 | 1 | 96 | 96 |
+| 10 | 6 | Trigonometry | 6 | 52 | 69 | 0 → 0 | 6 → 0 | 2 | 67 | 67 |
+| 10 | 7 | Mensuration | 6 | 60 | 62 | 0 → 0 | 0 → 0 | 0 | 62 | 62 |
+| 10 | 8 | Statistics and Probability | 6 | 75 | 94 | 0 → 0 | 2 → 0 | 2 | 92 | 92 |
 
 ## Verified coverage by language
 
 | Grade | Current catalogue cards | Eligible tasks | English reader before → current | Tamil reader before → current | Bilingual reader before → current | Current independently confirmed bilingual | Fully verified live |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| 9 | 746 | 836 | 723 → 836 | 681 → 836 | 681 → 836 | 836 | 200 |
-| 10 | 863 | 920 | 920 → 920 | 901 → 920 | 901 → 920 | 920 | 39 |
+| 9 | 746 | 836 | 723 → 836 | 681 → 836 | 681 → 836 | 836 | 836 |
+| 10 | 863 | 920 | 920 → 920 | 901 → 920 | 901 → 920 | 920 | 920 |
 
 The before-and-current reader counts measure visible question, solution and final-answer content on registered tasks. Independently confirmed bilingual completion also requires matching source and mathematical evidence. The JSON and CSV preserve the evidence at task level.
 
@@ -139,4 +139,7 @@ The 18 tasks below are excluded from completion counts. The ledger identifies wh
 - **Multiple-choice feedback.** Across the 17 multiple-choice sections, 127 tasks passed interactive correct and incorrect feedback checks in both languages. Another 139 passed the bilingual worked-feedback and final-answer checks. All 8 source-blocked multiple-choice tasks remain outside scoring.
 - **Tamil mathematical notation and accessibility.** The assembled candidate localizes labels and accessible equation text across 315 cards. The before-and-after reader comparison matched 5,570 mathematical expressions. All 1,609 English reader results matched.
 - **Concept links.** The local reader audit inspected 155 concept stages and resolved 223 explicit textbook links. The one other link opens the existing Midpoint practice activity.
-- **Production verification in progress.** The checkpoint records each Pages receipt, exact revision and live student route. The final sweep is queued for the integrated main revision after PR #466. [Pages run](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45760976349)
+- **Integrated revision.** PR #466 landed after the final curriculum merge. It updated the Android Statistics and Probability concept controls, the brand name and the cache version. The exercise data and reader code match the preceding curriculum revision `b0f1557c34178af9ea737aaca8109297a962cb90`. The final sweep used the integrated deployment. [PR #466](https://github.com/vigneswaranmba20-afk/Triggle/pull/466)
+- **Final production reconciliation.** At revision `0898788ea1e05a54c9924c3c5cf32eae749ecb8d`, Chromium opened all 1,609 catalogue cards and verified their localized breadcrumbs in each language. All 129 exercise index routes and question sequences passed. All 310 full-screen Figure views passed in both languages. The sweep found zero missing core content, hints, bilingual step explanations, KaTeX errors, navigation failures or horizontal page overflows. The deployed HTML, app script and service worker matched the merge revision byte for byte. The offline test retained Grade 9 and Grade 10 content, diagrams and progress. [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45760976349/job/139719370745) · [Live Triggle](https://vigneswaranmba20-afk.github.io/Triggle/site/)
+- **Earlier offline verification.** An initial learned-state assertion failed on the curriculum deployment, and one simultaneous retry timed out while the online reader initialized. 2 fresh sessions passed the stored-progress and offline reload checks for both grades at that revision. The integrated revision passed its own offline check.
+- **Figure confirmation.** The first integrated sweep recorded 620 dialog-open failures. A direct Pages probe opened the Figure, and the full sweep repeated with an explicit reader-initialization check opened and verified all 620 bilingual views at the same revision.

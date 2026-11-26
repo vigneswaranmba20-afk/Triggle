@@ -3,7 +3,7 @@
   "repository": "vigneswaranmba20-afk/Triggle",
   "baselineMain": "7b39aef78215088ccd64576f983d71f665f82066",
   "baselineDeployment": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45667113749",
-  "stage": "IN_PROGRESS",
+  "stage": "LIVE_VERIFIED",
   "statusVocabulary": [
     "MISSING",
     "PARTIAL",
@@ -22,9 +22,9 @@
     "grade10TamilId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC"
   },
   "nextBatch": {
-    "status": "IN_PROGRESS",
+    "status": "LIVE_VERIFIED",
     "release": null,
-    "scope": "Verify the integrated main revision and Pages run after PR #466."
+    "scope": "Publish the reconciled report and inventories through PR #455."
   },
   "editorialReview": {
     "ta": "pending",
@@ -2970,13 +2970,13 @@
   },
   "openManagement": {
     "mathguard": "https://github.com/vigneswaranmba20-afk/Triggle/pull/425",
-    "androidRecommendation": "NO-GO",
+    "androidRecommendation": "GO",
     "deliverablesPR": "https://github.com/vigneswaranmba20-afk/Triggle/pull/455"
   },
   "resume": [
-    "Wait for the exact intervening Pages run and verify the integrated main revision. Then publish the final report through PR #455."
+    "Check and merge the evidence-only PR #455 through the normal workflow. Verify the site bytes still match the final curriculum release."
   ],
-  "latestVerifiedProduction": "b0f1557c34178af9ea737aaca8109297a962cb90",
+  "latestVerifiedProduction": "0898788ea1e05a54c9924c3c5cf32eae749ecb8d",
   "openReleaseOrder": [],
   "interveningMain": {
     "pr": 466,
@@ -2996,5 +2996,180 @@
     "curriculumDataAndReaderCodeMatch": true,
     "integratedWorktree": "/workspace/Triggle-frontier-integrated",
     "scope": "Android Grade 10 Statistics and Probability concept controls, branding and cache version"
+  },
+  "finalProductionEvidence": {
+    "revision": "0898788ea1e05a54c9924c3c5cf32eae749ecb8d",
+    "curriculumRevision": "b0f1557c34178af9ea737aaca8109297a962cb90",
+    "verifiedAt": "2026-11-26T05:54:34+00:00",
+    "pages": {
+      "pr": 466,
+      "merge": "0898788ea1e05a54c9924c3c5cf32eae749ecb8d",
+      "head": "eea31d88fe6aee44d7cddc8c25d939bfec5daf6f",
+      "slug": "integrated-main",
+      "curriculumRevision": "b0f1557c34178af9ea737aaca8109297a962cb90",
+      "pagesRun": 45760976349,
+      "deploymentId": 8077571559,
+      "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45760976349/job/139719370745",
+      "deploymentCompletedAt": "2026-11-26T05:46:26Z"
+    },
+    "deployedFileSha256": {
+      "assets/app.js": "a3848c0e0bc65828f50c2fe17313818db552f2970f3979f254a3e6f1bacdea06",
+      "assets/discovery.js": "402a4338252973f2303ce9de5610bae5877d57db7f0e12f90aa828f8ee8bf3eb",
+      "assets/g10-ch8-concepts.css": "0c173dce259bc0535aafcff3d5afe3ad888b75c228d0f324aa8ef8e9b24c7910",
+      "assets/g10-ch8-concepts.js": "77b1f87061a72a9a66eb5b9c10322a41c438309822f943e175b27bbf8bcb4a66",
+      "data/frontier-exercise-hints.js": "9379d1cfe0e0d0b55ffecbae8d07d5127b5992b89d6d778b22f8c111eba161fa",
+      "data/project-status.json": "966a3ac358bee9b747dbda48ba20b493799b0f19d49d4cd860dac92eb717fc21",
+      "data/textbook-tamil-formula-labels.js": "f507ca11fd9649b6af7e792ffb7f2ace30adcd3d06764c60772aacd4b15d6fda",
+      "index.html": "f078077fa7ec5366d9ac4bed52a02bce882a719b33410c5ada8d1fe9e0ed809c",
+      "service-worker.js": "3c11aae16be2d5b4955a2c82087a27ccf7a1dc762cd2f1cfa90d6658f256d944"
+    },
+    "catalogueReaderCardsByLanguage": {
+      "en": 1609,
+      "ta": 1609
+    },
+    "auditedReaderFieldsMatchCandidate": true,
+    "standaloneHintCardsByLanguage": {
+      "en": 1609,
+      "ta": 1609
+    },
+    "workedNotationAndAccessibleTextMatchCandidate": true,
+    "canonicalTasksVerifiedLiveByGrade": {
+      "9": 836,
+      "10": 920
+    },
+    "quarantinedCanonicalTasksByGrade": {
+      "9": 7,
+      "10": 11
+    },
+    "notationOnlyLanguageFlagsManuallyReviewed": [
+      "g9-ch3-ex3.15-q13",
+      "g9-ch3-ex3.2-q3-v",
+      "g9-ch3-ex3.2-q3-vi",
+      "g9-ch3-ex3.2-q4",
+      "g9-ch3-ex3.4-q13-ii",
+      "g9-ch3-ex3.4-q14",
+      "g9-ch3-ex3.5-q2-ii",
+      "g9-ch3-ex3.6-q2-i",
+      "g9-ch3-ex3.6-q2-ii",
+      "g9-ch3-ex3.6-q3-iii"
+    ],
+    "readerFailures": 0,
+    "navigationByLanguage": {
+      "en": {
+        "grades": {
+          "9": {
+            "exercises": 60,
+            "navigated": 746,
+            "returnedToFirst": 60
+          },
+          "10": {
+            "exercises": 69,
+            "navigated": 863,
+            "returnedToFirst": 69
+          }
+        },
+        "exerciseIndexRoundTripsByGrade": {
+          "9": 60,
+          "10": 69
+        },
+        "localizedBreadcrumbCardsByGrade": {
+          "9": 746,
+          "10": 863
+        }
+      },
+      "ta": {
+        "grades": {
+          "9": {
+            "exercises": 60,
+            "navigated": 746,
+            "returnedToFirst": 60
+          },
+          "10": {
+            "exercises": 69,
+            "navigated": 863,
+            "returnedToFirst": 69
+          }
+        },
+        "exerciseIndexRoundTripsByGrade": {
+          "9": 60,
+          "10": 69
+        },
+        "localizedBreadcrumbCardsByGrade": {
+          "9": 746,
+          "10": 863
+        }
+      }
+    },
+    "figureSweep": {
+      "cards": 310,
+      "inspected": 620,
+      "images": 498,
+      "other": 122,
+      "accessibleNameReview": [],
+      "tamilDescriptionsForReview": []
+    },
+    "offlineChecks": "PASS offline reader, bilingual hints, mathematical notation, localized diagrams and saved progress in both grades.",
+    "offlineVerification": {
+      "result": "PASS offline reader, bilingual hints, mathematical notation, localized diagrams and saved progress in both grades."
+    },
+    "verificationTransport": {
+      "deployedBytes": "HTTPS with curl certificate validation",
+      "chromiumWorker": "The managed browser used its test certificate override to install the Pages worker."
+    },
+    "multipleChoiceFeedback": {
+      "results": [
+        {
+          "grade": 9,
+          "sections": 9,
+          "interactive": 79,
+          "workedFeedback": 64,
+          "sourceBlocked": 6,
+          "visibleUnscored": 4
+        },
+        {
+          "grade": 10,
+          "sections": 8,
+          "interactive": 48,
+          "workedFeedback": 75,
+          "sourceBlocked": 2,
+          "visibleUnscored": 0
+        }
+      ],
+      "languages": [
+        "en",
+        "ta"
+      ],
+      "width": 390
+    },
+    "interveningMain": {
+      "pr": 466,
+      "revision": "0898788ea1e05a54c9924c3c5cf32eae749ecb8d",
+      "curriculumRevision": "b0f1557c34178af9ea737aaca8109297a962cb90",
+      "pagesRun": 45760976349,
+      "changedPaths": [
+        "site/assets/discovery.js",
+        "site/assets/g10-ch8-concepts.css",
+        "site/assets/g10-ch8-concepts.js",
+        "site/data/project-status.json",
+        "site/index.html",
+        "site/service-worker.js",
+        "site/tools/test_curriculum_ui.cjs",
+        "site/tools/test_g10_ch8_concepts_browser.cjs"
+      ],
+      "curriculumDataAndReaderCodeMatch": true,
+      "integratedWorktree": "/workspace/Triggle-frontier-integrated",
+      "scope": "Android Grade 10 Statistics and Probability concept controls, branding and cache version"
+    },
+    "integratedFigureRepeat": {
+      "firstAttemptDialogOpenFailures": 620,
+      "confirmedReaderInitialization": true,
+      "verifiedDialogViews": 620
+    },
+    "earlierCurriculumOfflineVerification": {
+      "revision": "b0f1557c34178af9ea737aaca8109297a962cb90",
+      "confirmedFreshSessions": 2,
+      "initialGrade9LearnedStateFailure": true,
+      "simultaneousOnlineInitializationTimeout": true
+    }
   }
 }
