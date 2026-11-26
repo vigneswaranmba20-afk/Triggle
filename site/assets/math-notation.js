@@ -32,17 +32,27 @@
   }
   // Explicit structured TeX only: never guess LaTeX from prose or variable names.
   // A readable authored fallback is required; trust is disabled even for our data.
+  const latexCache=new Map();
   function renderLatex(value, {displayMode=false, fallback='Mathematical expression unavailable'}={}) {
     const label=String(fallback);
     try {
       if(typeof value!=='string'||value.length>12000||!window.katex)throw Error('Unavailable renderer');
-      const html=window.katex.renderToString(value, {
-        displayMode, output:'htmlAndMathml', throwOnError:true, trust:false,
-        strict:'error', maxExpand:200, maxSize:20, macros:{}
-      });
-      // KaTeX represents denied trust commands as red source text, without
-      // throwing. Treat that result as a failure so commands never reach pupils.
-      if(html.includes('mathcolor="#cc0000"'))throw Error('Unsupported command');
+      const key=(displayMode?'display:':'inline:')+value;
+      let html=latexCache.get(key);
+      if(html===undefined){
+        html=window.katex.renderToString(value, {
+          displayMode, output:'htmlAndMathml', throwOnError:true, trust:false,
+          strict:'error', maxExpand:200, maxSize:20, macros:{}
+        });
+        // KaTeX represents denied trust commands as red source text without throwing.
+        if(html.includes('mathcolor="#cc0000"'))throw Error('Unsupported command');
+        // Common expressions recur in the prompt, steps and adjacent questions.
+        // Bound both the number and size of cached expressions on small devices.
+        if(html.length<=8192){
+          if(latexCache.size===128)latexCache.delete(latexCache.keys().next().value);
+          latexCache.set(key,html);
+        }
+      }
       return '<span class="triggle-tex'+(displayMode?' triggle-tex-display':'')+'" data-math-fallback="'+esc(label)+'">'+html+'</span>';
     } catch {
       return '<span class="math-fallback" data-math-error="true">'+esc(label)+'</span>';

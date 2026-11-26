@@ -562,8 +562,6 @@
   $('lessonCard').classList.toggle('many-steps',all.length>3);
  }
  function observeLessonMath(){
-  // Set keyboard scrolling state immediately for all grades; refresh when layout or fonts settle.
-  prepareLessonMath();
   if(lessonMathObserver){
    for(const formula of $('lessonCard').querySelectorAll('.triggle-tex')){
     lessonMathObserver.observe(formula);
@@ -575,11 +573,9 @@
     if(glyphs)lessonMathObserver.observe(glyphs);
    }
   }
-  requestAnimationFrame(()=>{
-   prepareLessonMath();
-   // The layout read starts loading any math fonts this question newly uses.
-   document.fonts?.ready.then(prepareLessonMath);
-  });
+  // Measure the completed layout before paint. ResizeObserver and loadingdone
+  // keep the keyboard scroll state current when containers or fonts change.
+  requestAnimationFrame(prepareLessonMath);
  }
  document.fonts?.addEventListener('loadingdone',()=>{
   if(!$('lessonCard').hidden)prepareLessonMath();
@@ -664,7 +660,15 @@
      openGrade:changeGrade,openChapter:openChapterFor,openQuestion:openQuestionFor,goHome
    });
  }
- function render(){if(current&&window.TriggleG9Ch5Overrides?.has(current.id))current=window.TriggleG9Ch5Overrides.get(current.id);renderText();renderGrades();
+ let chromeView;
+ function render(){
+   if(current&&window.TriggleG9Ch5Overrides?.has(current.id))current=window.TriggleG9Ch5Overrides.get(current.id);
+   const view=grade+':'+lang+':'+homeView;
+   if(chromeView!==view){
+     renderText();
+     renderGrades();
+     chromeView=view;
+   }
     // Chapter-only typography: follow lesson, chapter hub, browser back, language and grade switching.
     const typographyChapter=homeView||classIndex?null:(chapterOverview?.number??chapterForItem(current)?.number);
     document.body.classList.toggle('g10-ch2-type',grade===10&&String(typographyChapter)==='2');
