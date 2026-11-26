@@ -1,0 +1,173 @@
+{
+  "schemaVersion": 1,
+  "edition": "Tamil Nadu SCERT revised 2025",
+  "grade": 10,
+  "chapter": 1,
+  "items": [
+    {
+      "id": "c10-1-1-5-q1",
+      "exercise": "1.5",
+      "question": 1,
+      "parts": [
+        "ii",
+        "iii"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 37,
+            "printed": 31
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 38,
+            "printed": 32
+          }
+        ]
+      },
+      "answerKeyPages": {
+        "en": {
+          "pdf": 341,
+          "printed": 335
+        },
+        "ta": {
+          "pdf": 355,
+          "printed": 349
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "issue": "The rational compositions have different domains. Both answer appendices reverse the order of the two correct formulas in part (iii).",
+      "mathematicalEvidence": {
+        "partIi": {
+          "fAfterG": "2/(2x²−1)",
+          "excludeForFAfterG": "±1/√2",
+          "gAfterF": "8/x²−1",
+          "excludeForGAfterF": "0"
+        },
+        "partIii": {
+          "fAfterG": "(9−x)/3",
+          "gAfterF": "(3−x)/3"
+        }
+      },
+      "previousEnglish": {
+        "steps": [
+          {
+            "en": "Remember that (f∘g)(x)=f(g(x)) and (g∘f)(x)=g(f(x)); domain restrictions apply.",
+            "eq": "f∘g=f(g(x)); g∘f=g(f(x))"
+          },
+          {
+            "en": "For (i), first square then subtract 6, or first subtract 6 then square.",
+            "eq": "f∘g=x²−6; g∘f=(x−6)²; unequal"
+          },
+          {
+            "en": "For (ii), substitute each function into the other.",
+            "eq": "f∘g=2/(2x²−1); g∘f=2(2/x)²−1=8/x²−1; unequal"
+          },
+          {
+            "en": "For (iii), substitute 3−x into (x+6)/3 and substitute (x+6)/3 into 3−x.",
+            "eq": "f∘g=(9−x)/3; g∘f=(3−x)/3; unequal"
+          },
+          {
+            "en": "For (iv), adding 3 and subtracting 4 commute.",
+            "eq": "f∘g=(x−4)+3=x−1; g∘f=(3+x)−4=x−1; equal"
+          },
+          {
+            "en": "For (v), expand the square in f(g(x)).",
+            "eq": "f∘g=4(x+1)²−1=4x²+8x+3; g∘f=1+(4x²−1)=4x²; unequal"
+          }
+        ],
+        "answer": "(i) x²−6, (x−6)²; not equal. (ii) 2/(2x²−1), 8/x²−1; not equal. (iii) (9−x)/3, (3−x)/3; not equal. (iv) x−1, x−1; equal. (v) 4x²+8x+3, 4x²; not equal."
+      },
+      "teacherReview": "pending",
+      "tamilEditorial": "pending"
+    },
+    {
+      "id": "c10-1-1-5-q5",
+      "exercise": "1.5",
+      "question": 5,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 37,
+            "printed": 31
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 39,
+            "printed": 33
+          }
+        ]
+      },
+      "answerKeyPages": {
+        "en": {
+          "pdf": 341,
+          "printed": 335
+        },
+        "ta": {
+          "pdf": 355,
+          "printed": 349
+        }
+      },
+      "visualStatus": {
+        "en": "page-checked",
+        "ta": "page-checked"
+      },
+      "issue": "Both prompts allow arbitrary natural-number subsets. The ranges in both answer appendices use the special case A=B=C=ℕ. The general ranges must respect the given sets and the domain of each composition.",
+      "mathematicalEvidence": {
+        "allowedInputsForFAfterG": "D={x∈B : x²∈A}",
+        "rangeFAfterG": "{2x²+1 : x∈D}",
+        "rangeGAfterF": "{(2x+1)² : x∈A}",
+        "counterexample": {
+          "A": [
+            1
+          ],
+          "B": [
+            3
+          ],
+          "C": [
+            9
+          ],
+          "D": [],
+          "rangeGAfterF": [
+            9
+          ]
+        }
+      },
+      "previousEnglish": {
+        "steps": [
+          {
+            "en": "Compose f after g algebraically.",
+            "eq": "f(g(x))=2(x²)+1=2x²+1"
+          },
+          {
+            "en": "The outputs of f∘g are obtained by varying the natural input.",
+            "eq": "Range(f∘g)={2x²+1:x∈ℕ}"
+          },
+          {
+            "en": "Compose g after f.",
+            "eq": "g(f(x))=(2x+1)²"
+          },
+          {
+            "en": "The outputs of g∘f are odd perfect squares (from natural x).",
+            "eq": "Range(g∘f)={(2x+1)²:x∈ℕ}"
+          },
+          {
+            "en": "Composition only applies where the inner function’s output belongs to the next function’s domain.",
+            "eq": "Use the intended compatible natural-number domains."
+          }
+        ],
+        "answer": "Range of f∘g={2x²+1 : x∈ℕ}; range of g∘f={(2x+1)² : x∈ℕ}, on the intended natural-number domains."
+      },
+      "teacherReview": "pending",
+      "tamilEditorial": "pending"
+    }
+  ]
+}

@@ -749,10 +749,7 @@
     },
     {
       title:'சேர்ப்புச் சார்புகளின் வீச்சகம்',
-      prompt:[tex('A,B,C\\subseteq\\mathbb N','A,B,C⊆ℕ'),' என்க. f:A→B என்பது f(x)=2x+1 எனவும் g:B→C என்பது g(x)=x² எனவும் வரையறுக்கப்படுகின்றன. f∘g மற்றும் g∘f இன் வீச்சகங்களைக் காண்க.'],
-      reasons:['g இன் பிம்பத்தை f இல் பிரதியிட்டு f∘g இன் விதியைப் பெறுக.','உட்புறச் சார்பின் பிம்பம் வெளிப்புறச் சார்பின் சார்பகத்தில் அமையும் உள்ளீடுகளை எடுத்துக்கொள்க. முதல் சேர்ப்பின் வெளியீடுகள் 2x²+1 என்ற வடிவத்தில் அமையும்.','f இன் பிம்பத்தை g இல் பிரதியிடுக.','இரண்டாவது சேர்ப்பின் வெளியீடுகள் 2x+1 என்ற ஒற்றை எண்களின் வர்க்கங்கள்.','கொடுக்கப்பட்ட கணங்களில் சேர்ப்பு வரையறுக்கப்படும் உள்ளீடுகளுக்கு மட்டும் இந்தக் கணங்களை எழுதுக.'],
-      equations:{1:[tex('\\{2x^2+1\\mid x\\in B,\\ x^2\\in A\\}','{2x²+1 | x∈B, x²∈A}')],3:[tex('\\{(2x+1)^2\\mid x\\in A\\}','{(2x+1)² | x∈A}')],4:['சேர்ப்பு வரையறுக்கப்படும் உள்ளீடுகளை மட்டுமே பயன்படுத்துக.']},
-      answer:['f∘g இன் வீச்சகம் ',tex('\\{2x^2+1\\mid x\\in B,\\ x^2\\in A\\}','{2x²+1 | x∈B, x²∈A}'),'. g∘f இன் வீச்சகம் ',tex('\\{(2x+1)^2\\mid x\\in A\\}','{(2x+1)² | x∈A}'),'.']
+      prompt:[tex('A,B,C\\subseteq\\mathbb N','A,B,C⊆ℕ'),' என்க. f:A→B என்பது f(x)=2x+1 எனவும் g:B→C என்பது g(x)=x² எனவும் வரையறுக்கப்படுகின்றன. f∘g மற்றும் g∘f இன் வீச்சகங்களைக் காண்க.']
     },
     {
       title:'ஒரு சார்பை மீண்டும் சேர்த்தல்',
@@ -923,7 +920,7 @@
       item.q.ta = plain(entry.prompt);
       item.questionMath = {en, ta:entry.prompt};
       item.steps.forEach((step,index) => {
-        step.ta = entry.reasons[index];
+        if (entry.reasons) step.ta = entry.reasons[index];
         if (entry.equations?.[index]) step.mathTa = entry.equations[index];
       });
       if (entry.answer) {
@@ -932,4 +929,57 @@
       }
     }
   }
+
+  const display = (latex, fallback) => ({...tex(latex, fallback), display: true});
+  const rational = items.find(q => q.id === 'c10-1-1-5-q1');
+  const rationalMath = [
+    display('(f\\circ g)(x)=\\dfrac{2}{2x^2-1},\\quad x\\ne\\pm\\dfrac1{\\sqrt2}', '(f∘g)(x)=2/(2x²−1), x≠±1/√2'),
+    display('(g\\circ f)(x)=2\\left(\\dfrac2x\\right)^2-1=\\dfrac8{x^2}-1,\\quad x\\ne0', '(g∘f)(x)=8/x²−1, x≠0')
+  ];
+  rational.steps[2] = {
+    en:'For (ii), f cannot accept zero. In f∘g exclude the x-values for which g(x)=0. In g∘f exclude x=0 because f acts first. The two functions have different domains.',
+    ta:'(ii) இல் f சார்பு பூச்சியத்தை உள்ளீடாக ஏற்காது. f∘g இல் g(x)=0 ஆகும் x மதிப்புகளை நீக்குக. g∘f இல் f முதலில் செயல்படுவதால் x=0 ஐ நீக்குக. இரு சார்புகளின் சார்பகங்களும் வேறுபடுகின்றன.',
+    eq:rationalMath.map(part => part.fallback).join('; '),
+    math:rationalMath
+  };
+
+  const ranges = items.find(q => q.id === 'c10-1-1-5-q5');
+  const domain = display('D=\\{x\\in B:x^2\\in A\\}\\subseteq B', 'D={x∈B : x²∈A}⊆B');
+  const rangeFG = display('\\{2x^2+1:x\\in D\\}', '{2x²+1 : x∈D}');
+  const rangeGF = display('\\{(2x+1)^2:x\\in A\\}', '{(2x+1)² : x∈A}');
+  const rangeSteps = [
+    {
+      en:'Apply g to each value f(x). Every x in A is allowed because f maps A into B, the domain of g.',
+      ta:'ஒவ்வொரு f(x) மதிப்பையும் g சார்பில் பிரதியிடுக. f சார்பு A இன் மதிப்புகளை g இன் சார்பகமான B க்கு அனுப்புவதால் A இல் உள்ள எல்லா x மதிப்புகளும் பொருந்தும்.',
+      math:[display('(g\\circ f)(x)=g(2x+1)=(2x+1)^2', '(g∘f)(x)=g(2x+1)=(2x+1)²'), rangeGF]
+    },
+    {
+      en:'For f∘g, begin with x in B. The output g(x) must belong to A before f can act. Call the allowed inputs D.',
+      ta:'f∘g இல் x என்பது B இல் இருக்க வேண்டும். f செயல்படுவதற்கு g(x) என்ற வெளியீடு A இல் இருக்க வேண்டும். பொருந்தும் உள்ளீடுகளின் கணத்தை D என்க.',
+      math:[domain]
+    },
+    {
+      en:'For every x in D, substitute x² into f to get the first range. The composition is defined on all of B only if every g(x) belongs to A.',
+      ta:'D இல் உள்ள ஒவ்வொரு x-க்கும் f இல் x² ஐப் பிரதியிட்டு முதல் வீச்சகத்தைக் காண்க. ஒவ்வொரு g(x) மதிப்பும் A இல் இருந்தால் மட்டுமே B முழுவதிலும் சேர்ப்புச் சார்பு வரையறுக்கப்படும்.',
+      math:[display('(f\\circ g)(x)=f(x^2)=2x^2+1', '(f∘g)(x)=f(x²)=2x²+1'), rangeFG]
+    },
+    {
+      en:'For example, take A={1}, B={3} and C={9}. The only possible input for f∘g is 3, but g(3)=9 is outside A.',
+      ta:'எடுத்துக்காட்டாக, A={1}, B={3}, C={9} என்க. f∘g-க்கு B இல் உள்ள ஒரே உள்ளீடு 3. ஆனால் g(3)=9 என்பது A இல் இல்லை.',
+      math:[display('f(1)=3,\\quad g(3)=9\\notin A,\\quad D=\\varnothing', 'f(1)=3, g(3)=9∉A, D=∅')]
+    },
+    {
+      en:'Composition only applies where the inner function’s output belongs to the next function’s domain. The printed key uses the special case where all three sets are the natural numbers.',
+      ta:'உட்சார்பின் வெளியீடு அடுத்த சார்பின் சார்பகத்தில் இருக்கும்போது மட்டுமே சேர்ப்பு வரையறுக்கப்படும். மூன்று கணங்களுமே இயல் எண்களின் கணமாக இருக்கும் சிறப்பு நேர்வைப் பாடநூல் விடைக்குறிப்பு தருகிறது.',
+      math:[display('A=B=C=\\mathbb N\\quad\\Longrightarrow\\quad D=\\mathbb N', 'A=B=C=ℕ ⇒ D=ℕ')]
+    }
+  ];
+  ranges.steps = rangeSteps.map(step => ({...step, eq:step.math.map(part => part.fallback).join('; ')}));
+  ranges.answerMath = {
+    en:['Range of f∘g, for the allowed inputs ',domain,rangeFG,'Range of g∘f ',rangeGF],
+    ta:['அனுமதிக்கப்பட்ட உள்ளீடுகளின் கணம் ',domain,'f∘g இன் வீச்சகம் ',rangeFG,'g∘f இன் வீச்சகம் ',rangeGF]
+  };
+  const plainAnswer = parts => parts.map(part => typeof part === 'string' ? part : part.fallback).join(' ');
+  ranges.answer = plainAnswer(ranges.answerMath.en);
+  ranges.answerTa = plainAnswer(ranges.answerMath.ta);
 })();
