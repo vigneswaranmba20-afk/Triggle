@@ -103,7 +103,7 @@
       ],
       '3.9': [
         'Factor the coefficients and variables. For the GCD use the least shared powers, and for the LCM use the greatest required powers.',
-        'கெழுக்களையும் மாறிகளையும் காரணிப்படுத்து. மீ.பெ.வ. காண பொதுக் காரணிகளின் சிறிய அடுக்குகளையும், மீ.சி.ம. காண தேவையான பெரிய அடுக்குகளையும் எடு.',
+        'கெழுக்களையும் மாறிகளையும் காரணிப்படுத்து. மீ.பொ.வ. காண பொதுக் காரணிகளின் சிறிய அடுக்குகளையும், மீ.சி.ம. காண தேவையான பெரிய அடுக்குகளையும் எடு.',
       ],
       '3.10': [
         'Make a table of coordinate pairs for each line. For simultaneous equations, look for the point on both lines.',
