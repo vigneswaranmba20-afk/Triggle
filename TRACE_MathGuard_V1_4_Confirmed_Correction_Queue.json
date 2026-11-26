@@ -1,0 +1,3884 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.4",
+  "policy": "Auto-modification of student content is disabled. All confirmed errors require editorial sign-off.",
+  "totalConfirmedErrors": 72,
+  "corrections": [
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.2",
+      "questionId": "g9-ch3-ex3.2-q4",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "For a linear equation ax+b=0 with a≠0, isolate x.",
+          "ta": "(i) 5x − 6 = 0 ⇒ 5x = 6 ⇒ x = 6/5.",
+          "math": "",
+          "eq": "x = −b/a"
+        },
+        {
+          "en": "Move the constant term in parts (i) and (ii).",
+          "ta": "(ii) x + 3 = 0 ⇒ x = −3.",
+          "math": "",
+          "eq": "(i) 5x=6 ⇒ x=[[6|5]]; (ii) x=−3"
+        },
+        {
+          "en": "Move the constant term and divide in parts (iii) and (iv).",
+          "ta": "(iii) 10x + 9 = 0 ⇒ 10x = −9 ⇒ x = −9/10.",
+          "math": "",
+          "eq": "(iii) 10x=−9 ⇒ x=−[[9|10]]; (iv) 9x=4 ⇒ x=[[4|9]]"
+        },
+        {
+          "en": "Each value makes its original left-hand side equal zero.",
+          "ta": "(iv) 9x − 4 = 0 ⇒ 9x = 4 ⇒ x = 4/9.",
+          "math": "",
+          "eq": "5([[6|5]])−6=0; −3+3=0; 10(−[[9|10]])+9=0; 9([[4|9]])−4=0"
+        }
+      ],
+      "incorrectStep": {
+        "step": 3,
+        "line": "5([[6|5]])−6=0",
+        "evidence": "contradictory_constant_equation"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 3,
+            "line": "5([[6|5]])−6=0",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step": 3,
+            "line": "10(−[[9|10]])+9=0",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step": 3,
+            "line": "9([[4|9]])−4=0",
+            "evidence": "contradictory_constant_equation"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 3, 'line': '5([[6|5]])−6=0', 'evidence': 'contradictory_constant_equation'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.2-q4",
+        "reason": "contradictory_constant_equation"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.1",
+      "questionId": "g9-ch3-ex3.1-q3-ii",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Divide each term in the numerator by x squared; this calculation requires x to be nonzero.",
+          "ta": "x ≠ 0 எனும்போது ஒவ்வொரு உறுப்பையும் x²-ஆல் வகுக்கவும்.",
+          "math": "\\frac{x^3}{x^2}-\\frac{x^4}{x^2}+\\frac{6x^6}{x^2}",
+          "eq": "x³/x² − x⁴/x² + 6x⁶/x²"
+        },
+        {
+          "en": "Subtract exponents on the same base to get the simplified polynomial expression.",
+          "ta": "(x³ − x⁴ + 6x⁶)/x² = x − x² + 6x⁴.",
+          "math": "x-x^2+6x^4",
+          "eq": "x − x² + 6x⁴"
+        },
+        {
+          "en": "The largest exponent in the simplified polynomial is four. The original fractional expression is undefined at x = 0.",
+          "ta": "சுருக்கியபின் x-இன் மிக உயர்ந்த அடுக்கு 4; எனவே படி 4 ஆகும்.",
+          "math": "\\deg=4,\\quad x\\ne0",
+          "eq": "degree = 4; x ≠ 0"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_2_number_mismatch:en=['0'],ta=['4']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "UNVERIFIABLE",
+        "answerStatus": "UNVERIFIABLE",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_2_number_mismatch:en=['0'],ta=['4']"
+        ],
+        "discrepancy": "no_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_2_number_mismatch:en=['0'],ta=['4']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.1-q3-ii",
+        "reason": "step_2_number_mismatch:en=['0'],ta=['4']"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.1",
+      "questionId": "g9-ch3-ex3.1-q6-i",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Distribute the minus sign across every term of the second polynomial q(x) = 6x − 9.",
+          "ta": "p(x) − q(x) = (7x² + 6x − 1) − (6x − 9) = 7x² + 6x − 1 − 6x + 9.",
+          "math": "p(x)-q(x)=(7x^2+6x-1)-6x+9",
+          "eq": "p(x) − q(x) = (7x² + 6x − 1) − 6x + 9"
+        },
+        {
+          "en": "Group and combine like terms: 6x − 6x = 0x cancels out, and −1 + 9 = 8.",
+          "ta": "ஒத்த உறுப்புகளை இணைக்க: 7x² + (6x − 6x) + (−1 + 9) = 7x² + 8.",
+          "math": "p(x)-q(x)=7x^2+8",
+          "eq": "p(x) − q(x) = 7x² + 8"
+        },
+        {
+          "en": "The highest power of x remaining with a nonzero coefficient is x², so the degree is 2.",
+          "ta": "மிக உயர்ந்த அடுக்கு 2; எனவே படி 2 ஆகும்.",
+          "math": "\\deg=2",
+          "eq": "degree = 2"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['0'],ta=['7']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PARTIAL",
+        "answerStatus": "UNVERIFIABLE",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['0'],ta=['7']"
+        ],
+        "discrepancy": "no_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_1_number_mismatch:en=['0'],ta=['7']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.1-q6-i",
+        "reason": "step_1_number_mismatch:en=['0'],ta=['7']"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.2",
+      "questionId": "g9-ch3-ex3.2-q1-iii",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Replace every y with the given input. The notation f(y) means the output at that input.",
+          "ta": "f(0) = 6(0) − 3(0)² + 3.",
+          "math": "f(0)=6(0) - 3(0)^2 + 3",
+          "eq": "f(0) = 6(0) − 3(0)² + 3"
+        },
+        {
+          "en": "Evaluate the square and the multiplications before adding the terms.",
+          "ta": "0 − 0 + 3 = 3.",
+          "math": "\\begin{aligned}f(0)&=0 - 0 + 3\\\\&=3\\end{aligned}",
+          "eq": "f(0) = 0 − 0 + 3 = 3"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "f(0)=6(0) - 3(0)^2 + 3",
+        "evidence": "contradictory_constant_equation"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "f(0)=6(0) - 3(0)^2 + 3",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step": 1,
+            "line": "f(0)&=0 - 0 + 3",
+            "evidence": "contradictory_constant_equation"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'f(0)=6(0) - 3(0)^2 + 3', 'evidence': 'contradictory_constant_equation'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.2-q1-iii",
+        "reason": "contradictory_constant_equation"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.2",
+      "questionId": "g9-ch3-ex3.2-q2",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Replace both occurrences of x with two times the square root of two.",
+          "ta": "x = 2√2 எனப் பிரதியிட: p(2√2) = (2√2)² − 2√2(2√2) + 1.",
+          "math": "\\begin{aligned}p(2\\sqrt{2})&=(2\\sqrt{2})^2\\\\&\\quad-2\\sqrt{2}(2\\sqrt{2})+1\\end{aligned}",
+          "eq": "p(2√2) = (2√2)² − 2√2(2√2) + 1"
+        },
+        {
+          "en": "Squaring two times the square root of two gives eight. The product in the second term is the same square.",
+          "ta": "(2√2)² = 4 × 2 = 8 மற்றும் 2√2 × 2√2 = 8.",
+          "math": "(2\\sqrt{2})^2=2^2\\times2=8",
+          "eq": "(2√2)² = 2² × 2 = 8"
+        },
+        {
+          "en": "The two eights cancel, leaving the constant term.",
+          "ta": "எனவே p(2√2) = 8 − 8 + 1 = 1.",
+          "math": "\\begin{aligned}p(2\\sqrt{2})&=8-8+1\\\\&=1\\end{aligned}",
+          "eq": "p(2√2) = 8 − 8 + 1 = 1"
+        }
+      ],
+      "incorrectStep": {
+        "step": 2,
+        "line": "&=1",
+        "evidence": "aligned_chain_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 2,
+            "line": "&=1",
+            "evidence": "aligned_chain_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 2, 'line': '&=1', 'evidence': 'aligned_chain_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.2-q2",
+        "reason": "aligned_chain_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.2",
+      "questionId": "g9-ch3-ex3.2-q5-i",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "A proposed input is a zero if substituting it makes the polynomial equal to zero.",
+          "ta": "p(x) = 2x − 1-இல் x = 1/2 எனப் பிரதியிட: p(1/2) = 2(1/2) − 1.",
+          "math": "p\\left(\\dfrac12\\right)=2\\times\\dfrac12-1",
+          "eq": "p(1/2) = 2 × (1/2) − 1"
+        },
+        {
+          "en": "Two halves make one. Subtract one to get zero.",
+          "ta": "1 − 1 = 0; எனவே x = 1/2 என்பது பூச்சியமாகும்.",
+          "math": "p\\left(\\dfrac12\\right)=1-1=0",
+          "eq": "p(1/2) = 1 − 1 = 0"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "p\\left(\\dfrac12\\right)=2\\times\\dfrac12-1",
+        "evidence": "identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "p\\left(\\dfrac12\\right)=2\\times\\dfrac12-1",
+            "evidence": "identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'p\\\\left(\\\\dfrac12\\\\right)=2\\\\times\\\\dfrac12-1', 'evidence': 'identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.2-q5-i",
+        "reason": "identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.2",
+      "questionId": "g9-ch3-ex3.2-q5-ii",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Substitute the proposed input for x.",
+          "ta": "p(x) = x³ − 1-இல் x = 1 எனப் பிரதியிட: p(1) = 1³ − 1.",
+          "math": "p(1)=1^3-1",
+          "eq": "p(1) = 1³ − 1"
+        },
+        {
+          "en": "The cube of one is one. The output is zero, so one is a zero.",
+          "ta": "1 − 1 = 0; எனவே x = 1 என்பது பூச்சியமாகும்.",
+          "math": "p(1)=1-1=0",
+          "eq": "p(1) = 1 − 1 = 0"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "p(1)=1^3-1",
+        "evidence": "identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "p(1)=1^3-1",
+            "evidence": "identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'p(1)=1^3-1', 'evidence': 'identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.2-q5-ii",
+        "reason": "identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.2",
+      "questionId": "g9-ch3-ex3.2-q5-iii",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "The proposed input has a in its denominator, so it is defined only when a is nonzero.",
+          "ta": "a ≠ 0 எனும்போது p(−b/a) = a(−b/a) + b.",
+          "math": "a\\ne0",
+          "eq": "a ≠ 0"
+        },
+        {
+          "en": "Substitute the fraction for x. The factor a cancels with the nonzero denominator a.",
+          "ta": "−b + b = 0; எனவே x = −b/a என்பது பூச்சியமாகும்.",
+          "math": "\\begin{aligned}p\\left(-\\dfrac{b}{a}\\right)&=a\\left(-\\dfrac{b}{a}\\right)+b\\\\&=-b+b=0\\end{aligned}",
+          "eq": "p(−b/a) = a(−b/a) + b = −b + b = 0"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "p\\left(-\\dfrac{b}{a}\\right)&=a\\left(-\\dfrac{b}{a}\\right)+b",
+        "evidence": "identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "p\\left(-\\dfrac{b}{a}\\right)&=a\\left(-\\dfrac{b}{a}\\right)+b",
+            "evidence": "identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': 'p\\\\left(-\\\\dfrac{b}{a}\\\\right)&=a\\\\left(-\\\\dfrac{b}{a}\\\\right)+b', 'evidence': 'identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.2-q5-iii",
+        "reason": "identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.2",
+      "questionId": "g9-ch3-ex3.2-q5-iv",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Substitute four. The second factor becomes zero, so the whole product is zero.",
+          "ta": "p(4) = (4 + 3)(4 − 4) = 7 × 0 = 0.",
+          "math": "\\begin{aligned}p(4)&=(4+3)(4-4)\\\\&=7\\times0=0\\end{aligned}",
+          "eq": "p(4) = (4 + 3)(4 − 4) = 7 × 0 = 0"
+        },
+        {
+          "en": "Substitute negative three. This time the first factor becomes zero.",
+          "ta": "p(−3) = (−3 + 3)(−3 − 4) = 0 × (−7) = 0; எனவே இரண்டும் பூச்சியங்களாகும்.",
+          "math": "\\begin{aligned}p(-3)&=(-3+3)(-3-4)\\\\&=0\\times(-7)=0\\end{aligned}",
+          "eq": "p(−3) = (−3 + 3)(−3 − 4) = 0 × (−7) = 0"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "p(4)&=(4+3)(4-4)",
+        "evidence": "identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "p(4)&=(4+3)(4-4)",
+            "evidence": "identity_mismatch"
+          },
+          {
+            "step": 1,
+            "line": "p(-3)&=(-3+3)(-3-4)",
+            "evidence": "identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'p(4)&=(4+3)(4-4)', 'evidence': 'identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.2-q5-iv",
+        "reason": "identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.3",
+      "questionId": "g9-ch3-ex3.3-q7-i",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "By Factor Theorem, check p(1).",
+          "ta": "காரணித் தேற்றப்படி p(1) காண்க.",
+          "math": "p(1) = 1 + 5 - 10 + 4",
+          "eq": "p(1) = 1³ + 5(1)² − 10(1) + 4"
+        },
+        {
+          "en": "Since p(1) = 0, (x − 1) is a factor.",
+          "ta": "p(1) = 0 என்பதால் (x − 1) ஒரு காரணி.",
+          "math": "p(1) = 0",
+          "eq": "= 0 ⇒ (x − 1) is a factor"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "p(1) = 1 + 5 - 10 + 4",
+        "evidence": "identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "p(1) = 1 + 5 - 10 + 4",
+            "evidence": "identity_mismatch"
+          },
+          {
+            "step": 1,
+            "line": "p(1) = 0",
+            "evidence": "identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'p(1) = 1 + 5 - 10 + 4', 'evidence': 'identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.3-q7-i",
+        "reason": "identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.3",
+      "questionId": "g9-ch3-ex3.3-q7-ii",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Evaluate p(1).",
+          "ta": "p(1) மதிப்பைக் காண்க.",
+          "math": "p(1) = 1 + 5 - 5 + 1",
+          "eq": "p(1) = 1⁴ + 5(1)² − 5(1) + 1"
+        },
+        {
+          "en": "Since p(1) ≠ 0, (x − 1) is not a factor.",
+          "ta": "p(1) ≠ 0 என்பதால் (x − 1) காரணி அல்ல.",
+          "math": "p(1) = 2 \\ne 0",
+          "eq": "= 2 ≠ 0 ⇒ (x − 1) is not a factor"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "p(1) = 1 + 5 - 5 + 1",
+        "evidence": "identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "p(1) = 1 + 5 - 5 + 1",
+            "evidence": "identity_mismatch"
+          },
+          {
+            "step": 1,
+            "line": "p(1) = 2 \\ne 0",
+            "evidence": "identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'p(1) = 1 + 5 - 5 + 1', 'evidence': 'identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.3-q7-ii",
+        "reason": "identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.3",
+      "questionId": "g9-ch3-ex3.3-q8",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Evaluate p(5) for divisor (x − 5).",
+          "ta": "x = 5 எனப் பிரதியிட்டு p(5) காண்க.",
+          "math": "p(5) = 2(125) - 5(25) - 140 + 15",
+          "eq": "p(5) = 2(5)³ − 5(5)² − 28(5) + 15"
+        },
+        {
+          "en": "Simplify; p(5) = 0 proves (x − 5) is a factor.",
+          "ta": "p(5) = 0 என்பதால் (x − 5) ஒரு காரணி.",
+          "math": "250 - 125 - 140 + 15 = 0",
+          "eq": "= 250 − 125 − 140 + 15 = 0"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "p(5) = 2(125) - 5(25) - 140 + 15",
+        "evidence": "identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "p(5) = 2(125) - 5(25) - 140 + 15",
+            "evidence": "identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'p(5) = 2(125) - 5(25) - 140 + 15', 'evidence': 'identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.3-q8",
+        "reason": "identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.3",
+      "questionId": "g9-ch3-ex3.3-q9",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "By Factor Theorem, p(−3) = 0.",
+          "ta": "காரணித் தேற்றப்படி p(−3) = 0.",
+          "math": "p(-3) = 0",
+          "eq": "x + 3 = 0 ⇒ x = −3; p(−3) = 0"
+        },
+        {
+          "en": "Substitute x = −3.",
+          "ta": "x = −3 எனப் பிரதியிட.",
+          "math": "-27 - 27 + 3m + 24 = 0",
+          "eq": "(−3)³ − 3(−3)² − m(−3) + 24 = 0"
+        },
+        {
+          "en": "Solve for m.",
+          "ta": "m மதிப்பு காண்க.",
+          "math": "3m = 30 \\implies m = 10",
+          "eq": "3m − 30 = 0 ⇒ m = 10"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "p(-3) = 0",
+        "evidence": "identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PARTIAL",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "p(-3) = 0",
+            "evidence": "identity_mismatch"
+          },
+          {
+            "step": 1,
+            "line": "-27 - 27 + 3m + 24 = 0",
+            "evidence": "identity_mismatch"
+          }
+        ],
+        "tamilFlags": [
+          "en_ta_unit_mismatch"
+        ],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'p(-3) = 0', 'evidence': 'identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PARTIAL (flags: ['en_ta_unit_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.3-q9",
+        "reason": "identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.3",
+      "questionId": "g9-ch3-ex3.3-q10",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Use factor (x − 2).",
+          "ta": "(x − 2) காரணி என்பதால் p(2) = 0.",
+          "math": "4a + 10 + b = 0",
+          "eq": "p(2) = 0 ⇒ 4a + 10 + b = 0"
+        },
+        {
+          "en": "Use factor (x − 1/2) and multiply by 4.",
+          "ta": "(x − 1/2) காரணி என்பதால் p(1/2) = 0.",
+          "math": "a + 10 + 4b = 0",
+          "eq": "p(1/2) = 0 ⇒ a/4 + 5/2 + b = 0 ⇒ a + 10 + 4b = 0"
+        },
+        {
+          "en": "Equate −10 = 4a + b = a + 4b and simplify.",
+          "ta": "இரு சமன்பாடுகளையும் சமப்படுத்த a = b கிடைக்கும்.",
+          "math": "3a = 3b \\implies a = b",
+          "eq": "4a + b = a + 4b ⇒ 3a = 3b ⇒ a = b"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['4'],ta=['0']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['4'],ta=['0']"
+        ],
+        "discrepancy": "working_verified_without_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_1_number_mismatch:en=['4'],ta=['0']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.3-q10",
+        "reason": "step_1_number_mismatch:en=['4'],ta=['0']"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.4",
+      "questionId": "g9-ch3-ex3.4-q2-ii",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Identify a = 3, b = −5, c = −6.",
+          "ta": "u = 2x என்க; a=3, b=−5, c=−6.",
+          "math": "a=3,\\; b=-5,\\; c=-6",
+          "eq": "Let u = 2x: (u+3)(u−5)(u−6)"
+        },
+        {
+          "en": "Multiply (a+b+c) by 2² = 4.",
+          "ta": "(a+b+c) × 4 = −32.",
+          "math": "(-8)(4) = -32",
+          "eq": "coeff(x²) = (a+b+c)·2² = (−8)(4) = −32"
+        },
+        {
+          "en": "Multiply (ab+bc+ca) by 2; constant = abc.",
+          "ta": "(ab+bc+ca) × 2 = −6; மாறிலி = 90.",
+          "math": "(-3)(2)=-6,\\; 3(-5)(-6)=90",
+          "eq": "coeff(x) = (ab+bc+ca)·2 = (−15+30−18)(2) = −6; const = 3(−5)(−6) = 90"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['2'],ta=['32']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['2'],ta=['32']"
+        ],
+        "discrepancy": "working_verified_without_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_1_number_mismatch:en=['2'],ta=['32']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.4-q2-ii",
+        "reason": "step_1_number_mismatch:en=['2'],ta=['32']"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.4",
+      "questionId": "g9-ch3-ex3.4-q10",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Square (x + 1/x).",
+          "ta": "(x + 1/x)² = 23 + 2 = 25.",
+          "math": "\\left(x+\\dfrac{1}{x}\\right)^2 = 25",
+          "eq": "(x + 1/x)² = x² + 1/x² + 2 = 23 + 2 = 25"
+        },
+        {
+          "en": "Take square root (both +5 and −5 are valid).",
+          "ta": "வர்க்கமூலம் காண ±5.",
+          "math": "x+\\dfrac{1}{x} = \\pm 5",
+          "eq": "x + 1/x = ±5"
+        },
+        {
+          "en": "Compute x³ + 1/x³ for both signs.",
+          "ta": "±110.",
+          "math": "x^3+\\dfrac{1}{x^3} = \\pm 110",
+          "eq": "x³ + 1/x³ = (±5)³ − 3(±5) = ±(125 − 15) = ±110"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_2_number_mismatch:en=['1'],ta=['110']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_2_number_mismatch:en=['1'],ta=['110']"
+        ],
+        "discrepancy": "working_verified_without_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_2_number_mismatch:en=['1'],ta=['110']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.4-q10",
+        "reason": "step_2_number_mismatch:en=['1'],ta=['110']"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.4",
+      "questionId": "g9-ch3-ex3.4-q14",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Rewrite 8x³ − 27y³ − 64z³ as a³ + b³ + c³.",
+          "ta": "a = 2x, b = −3y, c = −4z; கூடுதல் 0.",
+          "math": "a+b+c = 0",
+          "eq": "a = 2x, b = −3y, c = −4z; a + b + c = 0"
+        },
+        {
+          "en": "Since a+b+c = 0, result = 3abc = 72xyz.",
+          "ta": "3(2x)(−3y)(−4z) = 72xyz.",
+          "math": "3(2x)(-3y)(-4z) = 72xyz",
+          "eq": "3abc = 3(2x)(−3y)(−4z) = 72xyz"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['0'],ta=['4']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['0'],ta=['4']"
+        ],
+        "discrepancy": "working_verified_without_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_1_number_mismatch:en=['0'],ta=['4']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.4-q14",
+        "reason": "step_1_number_mismatch:en=['0'],ta=['4']"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.6",
+      "questionId": "g9-ch3-ex3.6-q3-vi",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Recognize a² + 2ab + b² with x, y ≠ 0.",
+          "ta": "a = 1/x, b = 1/y எனக் கொள்க (x, y ≠ 0).",
+          "math": "\\left(\\dfrac{1}{x}\\right)^2 + 2\\left(\\dfrac{1}{x}\\right)\\left(\\dfrac{1}{y}\\right) + \\left(\\dfrac{1}{y}\\right)^2",
+          "eq": "(1/x)² + 2(1/x)(1/y) + (1/y)²"
+        },
+        {
+          "en": "Write as square.",
+          "ta": "(1/x + 1/y)².",
+          "math": "\\left(\\dfrac{1}{x} + \\dfrac{1}{y}\\right)^2",
+          "eq": "= (1/x + 1/y)²"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_0_number_mismatch:en=['2'],ta=['1']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "UNVERIFIABLE",
+        "answerStatus": "UNVERIFIABLE",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_0_number_mismatch:en=['2'],ta=['1']"
+        ],
+        "discrepancy": "no_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_0_number_mismatch:en=['2'],ta=['1']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.6-q3-vi",
+        "reason": "step_0_number_mismatch:en=['2'],ta=['1']"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.10",
+      "questionId": "g9-ch3-ex3.10-q2-ii",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Both equations represent the exact same line through (0, 2) and (2, −1).",
+          "ta": "இரு சமன்பாடுகளும் ஒரே கோட்டைக் குறிக்கின்றன.",
+          "math": "a_1/a_2 = b_1/b_2 = c_1/c_2 = 1/3",
+          "eq": "9x + 6y − 12 = 0 ÷ 3 gives 3x + 2y = 4"
+        },
+        {
+          "en": "Every point on 3x + 2y = 4 is a solution.",
+          "ta": "ஒன்றிய கோடுகள் என்பதால் எண்ணற்ற தீர்வுகள்.",
+          "math": "\\text{Infinitely many solutions}",
+          "eq": "Lines coincide ⇒ infinitely many solutions"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "a_1/a_2 = b_1/b_2 = c_1/c_2 = 1/3",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "a_1/a_2 = b_1/b_2 = c_1/c_2 = 1/3",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'a_1/a_2 = b_1/b_2 = c_1/c_2 = 1/3', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.10-q2-ii",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.10",
+      "questionId": "g9-ch3-ex3.10-q3",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Relative speed towards each other is x + y.",
+          "ta": "எதிர் திசை: x + y = 100.",
+          "math": "x + y = 100",
+          "eq": "Let speeds be x and y mph (x > y). Towards each other: 1(x + y) = 100"
+        },
+        {
+          "en": "Relative speed in same direction is x − y.",
+          "ta": "ஒரே திசை: x − y = 50.",
+          "math": "x - y = 50",
+          "eq": "Same direction in 2 hrs: 2(x − y) = 100 ⇒ x − y = 50"
+        },
+        {
+          "en": "Speeds are 75 mph and 25 mph.",
+          "ta": "வெட்டும் புள்ளி (75, 25); வேகங்கள் 75, 25 மைல்/மணி.",
+          "math": "(75, 25)",
+          "eq": "Plotting both lines gives intersection (75, 25)"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PARTIAL",
+        "answerStatus": "UNVERIFIABLE",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": "no_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.10-q3",
+        "reason": "en_ta_number_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.11",
+      "questionId": "g9-ch3-ex3.11-q1-iii",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Multiply first by 10; solve second for y.",
+          "ta": "முதல் சமன்பாட்டை 10-ஆல் பெருக்க x + 2y = 240; y = 3x − 20.",
+          "math": "x + 2y = 240,\\; y = 3x - 20",
+          "eq": "x + 2y = 240; y = 3x − 20"
+        },
+        {
+          "en": "Substitute y.",
+          "ta": "பிரதியிட 7x = 280 ⇒ x = 40.",
+          "math": "x = 40",
+          "eq": "x + 2(3x − 20) = 240 ⇒ 7x = 280 ⇒ x = 40"
+        },
+        {
+          "en": "Find y.",
+          "ta": "y = 120 − 20 = 100.",
+          "math": "y = 100",
+          "eq": "y = 3(40) − 20 = 100"
+        }
+      ],
+      "incorrectStep": {
+        "step": 2,
+        "line": "y = 100",
+        "evidence": "overwrites_established_given"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 2,
+            "line": "y = 100",
+            "evidence": "overwrites_established_given"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 2, 'line': 'y = 100', 'evidence': 'overwrites_established_given'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.11-q1-iii",
+        "reason": "overwrites_established_given"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.11",
+      "questionId": "g9-ch3-ex3.11-q1-iv",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Express y from √3 x = √8 y.",
+          "ta": "y = (√3 / √8)x.",
+          "math": "y = \\dfrac{\\sqrt{3}}{\\sqrt{8}}\\,x",
+          "eq": "From (2), y = (√3 / √8) x"
+        },
+        {
+          "en": "Substitute into (1).",
+          "ta": "பிரதியிட x = √8 = 2√2.",
+          "math": "x = 2\\sqrt{2}",
+          "eq": "√2 x − √3 (√3 / √8) x = 1 ⇒ (4 − 3)x / √8 = 1 ⇒ x = √8 = 2√2"
+        },
+        {
+          "en": "Find y.",
+          "ta": "y = √3.",
+          "math": "y = \\sqrt{3}",
+          "eq": "y = (√3 / √8)(√8) = √3"
+        }
+      ],
+      "incorrectStep": {
+        "step": 2,
+        "line": "y = \\sqrt{3}",
+        "evidence": "overwrites_established_given"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 2,
+            "line": "y = \\sqrt{3}",
+            "evidence": "overwrites_established_given"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 2, 'line': 'y = \\\\sqrt{3}', 'evidence': 'overwrites_established_given'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.11-q1-iv",
+        "reason": "overwrites_established_given"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.11",
+      "questionId": "g9-ch3-ex3.11-q2",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "First condition.",
+          "ta": "இராமனின் வயது x, இரு மகன்களின் வயதுக் கூடுதல் y என்க; x = 3y.",
+          "math": "x = 3y",
+          "eq": "Let Raman’s age = x and sum of two sons’ ages = y. Then x = 3y"
+        },
+        {
+          "en": "Each son ages 5 years, so their sum increases by 10.",
+          "ta": "இரு மகன்களுக்கும் 5 வயது கூடுவதால் கூடுதல் y + 10.",
+          "math": "x + 5 = 2(y + 10)",
+          "eq": "After 5 years: x + 5 = 2(y + 5 + 5) = 2(y + 10)"
+        },
+        {
+          "en": "Substitute x = 3y.",
+          "ta": "3y + 5 = 2y + 20 ⇒ y = 15 ⇒ x = 45.",
+          "math": "x = 45",
+          "eq": "3y + 5 = 2y + 20 ⇒ y = 15 ⇒ x = 45"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.11-q2",
+        "reason": "en_ta_number_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.12",
+      "questionId": "g9-ch3-ex3.12-q1-ii",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Eliminate y by scaling (1).",
+          "ta": "முதல் சமன்பாட்டை 2-ஆல் பெருக்கிக் கூட்ட 5x = 35 ⇒ x = 7.",
+          "math": "5x = 35 \\implies x = 7",
+          "eq": "Multiply (1) by 2: 2x − 2y = 10; add to (2): 5x = 35 ⇒ x = 7"
+        },
+        {
+          "en": "Find y.",
+          "ta": "y = 2.",
+          "math": "y = 2",
+          "eq": "7 − y = 5 ⇒ y = 2"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "y = 2",
+        "evidence": "overwrites_established_given"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "y = 2",
+            "evidence": "overwrites_established_given"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': 'y = 2', 'evidence': 'overwrites_established_given'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.12-q1-ii",
+        "reason": "overwrites_established_given"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.12",
+      "questionId": "g9-ch3-ex3.12-q3",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Set up equations from 5 years ago and 5 years hence.",
+          "ta": "x − 7y = −30; x − 4y = 15.",
+          "math": "x - 7y = -30;\\; x - 4y = 15",
+          "eq": "x − 7y = −30 and x − 4y = 15"
+        },
+        {
+          "en": "Eliminate x.",
+          "ta": "கழிக்க 3y = 45 ⇒ y = 15, x = 75.",
+          "math": "x = 75,\\; y = 15",
+          "eq": "Subtract: 3y = 45 ⇒ y = 15; x = 75"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": "working_verified_without_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.12-q3",
+        "reason": "en_ta_number_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.13",
+      "questionId": "g9-ch3-ex3.13-q1-i",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Write in standard form a₁x + b₁y + c₁ = 0.",
+          "ta": "திட்ட வடிவில் எழுத.",
+          "math": "8x-3y-12=0,\\; 5x-2y-7=0",
+          "eq": "8x − 3y − 12 = 0 and 5x − 2y − 7 = 0"
+        },
+        {
+          "en": "Apply cross-multiplication formula.",
+          "ta": "குறுக்குப் பெருக்கல் சூத்திரத்தைப் பயன்படுத்த.",
+          "math": "\\dfrac{x}{-3} = \\dfrac{y}{-4} = \\dfrac{1}{-1}",
+          "eq": "x / (21 − 24) = y / (−60 + 56) = 1 / (−16 + 15) ⇒ x/(−3) = y/(−4) = 1/(−1)"
+        },
+        {
+          "en": "Solve for x and y.",
+          "ta": "x = 3, y = 4.",
+          "math": "x = 3,\\; y = 4",
+          "eq": "x = 3, y = 4"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "\\dfrac{x}{-3} = \\dfrac{y}{-4} = \\dfrac{1}{-1}",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "\\dfrac{x}{-3} = \\dfrac{y}{-4} = \\dfrac{1}{-1}",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': '\\\\dfrac{x}{-3} = \\\\dfrac{y}{-4} = \\\\dfrac{1}{-1}', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.13-q1-i",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.13",
+      "questionId": "g9-ch3-ex3.13-q1-ii",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Standard form.",
+          "ta": "திட்ட வடிவம்.",
+          "math": "6x+7y-11=0,\\; 5x+2y-13=0",
+          "eq": "6x + 7y − 11 = 0 and 5x + 2y − 13 = 0"
+        },
+        {
+          "en": "Cross-multiply.",
+          "ta": "குறுக்குப் பெருக்கல் செய்க.",
+          "math": "\\dfrac{x}{-69} = \\dfrac{y}{23} = \\dfrac{1}{-23}",
+          "eq": "x / (−91 + 22) = y / (−55 + 78) = 1 / (12 − 35) ⇒ x/(−69) = y/23 = 1/(−23)"
+        },
+        {
+          "en": "Solve for x and y.",
+          "ta": "x = 3, y = −1.",
+          "math": "x = 3,\\; y = -1",
+          "eq": "x = 3, y = −1"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "\\dfrac{x}{-69} = \\dfrac{y}{23} = \\dfrac{1}{-23}",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "\\dfrac{x}{-69} = \\dfrac{y}{23} = \\dfrac{1}{-23}",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': '\\\\dfrac{x}{-69} = \\\\dfrac{y}{23} = \\\\dfrac{1}{-23}', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.13-q1-ii",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.13",
+      "questionId": "g9-ch3-ex3.13-q1-iii",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Substitute u, v.",
+          "ta": "u = 1/x, v = 1/y என்க.",
+          "math": "2u + 3v - 5 = 0;\\; 3u - v + 9 = 0",
+          "eq": "Let u = 1/x, v = 1/y (x, y ≠ 0): 2u + 3v − 5 = 0; 3u − v + 9 = 0"
+        },
+        {
+          "en": "Cross-multiply.",
+          "ta": "குறுக்குப் பெருக்கல் செய்க.",
+          "math": "\\dfrac{u}{22} = \\dfrac{v}{-33} = \\dfrac{1}{-11}",
+          "eq": "u / (27 − 5) = v / (−15 − 18) = 1 / (−2 − 9) ⇒ u/22 = v/(−33) = 1/(−11)"
+        },
+        {
+          "en": "Invert to get x, y.",
+          "ta": "x = −1/2, y = 1/3.",
+          "math": "x = -\\dfrac{1}{2},\\; y = \\dfrac{1}{3}",
+          "eq": "u = −2, v = 3 ⇒ x = −1/2, y = 1/3"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "\\dfrac{u}{22} = \\dfrac{v}{-33} = \\dfrac{1}{-11}",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "\\dfrac{u}{22} = \\dfrac{v}{-33} = \\dfrac{1}{-11}",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': '\\\\dfrac{u}{22} = \\\\dfrac{v}{-33} = \\\\dfrac{1}{-11}', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.13-q1-iii",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.13",
+      "questionId": "g9-ch3-ex3.13-q2",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Let ₹2 coins = x, ₹5 coins = y.",
+          "ta": "₹2 நாணயங்கள் x, ₹5 நாணயங்கள் y என்க.",
+          "math": "x+y-80=0,\\; 2x+5y-220=0",
+          "eq": "x + y − 80 = 0 and 2x + 5y − 220 = 0"
+        },
+        {
+          "en": "Apply cross-multiplication.",
+          "ta": "குறுக்குப் பெருக்கல் செய்க.",
+          "math": "\\dfrac{x}{180} = \\dfrac{y}{60} = \\dfrac{1}{3}",
+          "eq": "x / (−220 + 400) = y / (−160 + 220) = 1 / (5 − 2) ⇒ x/180 = y/60 = 1/3"
+        },
+        {
+          "en": "60 ₹2 coins and 20 ₹5 coins.",
+          "ta": "x = 60, y = 20.",
+          "math": "x = 60,\\; y = 20",
+          "eq": "x = 60, y = 20"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "\\dfrac{x}{180} = \\dfrac{y}{60} = \\dfrac{1}{3}",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "FAIL",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "\\dfrac{x}{180} = \\dfrac{y}{60} = \\dfrac{1}{3}",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": "Working failed: [{'step': 1, 'line': '\\\\dfrac{x}{180} = \\\\dfrac{y}{60} = \\\\dfrac{1}{3}', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.13-q2",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.13",
+      "questionId": "g9-ch3-ex3.13-q3",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Work rates per hour.",
+          "ta": "u = 1/x, v = 1/y என்க.",
+          "math": "24u+24v-1=0,\\; 16u+36v-1=0",
+          "eq": "Let u = 1/x, v = 1/y: 24u + 24v − 1 = 0 and 16u + 36v − 1 = 0"
+        },
+        {
+          "en": "Cross-multiply.",
+          "ta": "குறுக்குப் பெருக்கல் செய்க.",
+          "math": "\\dfrac{u}{12} = \\dfrac{v}{8} = \\dfrac{1}{480}",
+          "eq": "u / (−24 + 36) = v / (−16 + 24) = 1 / (864 − 384) ⇒ u/12 = v/8 = 1/480"
+        },
+        {
+          "en": "Invert rates to get fill times.",
+          "ta": "x = 40 மணி நேரம், y = 60 மணி நேரம்.",
+          "math": "x = 40,\\; y = 60",
+          "eq": "u = 1/40, v = 1/60 ⇒ x = 40 hrs, y = 60 hrs"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "\\dfrac{u}{12} = \\dfrac{v}{8} = \\dfrac{1}{480}",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "\\dfrac{u}{12} = \\dfrac{v}{8} = \\dfrac{1}{480}",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': '\\\\dfrac{u}{12} = \\\\dfrac{v}{8} = \\\\dfrac{1}{480}', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.13-q3",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.14",
+      "questionId": "g9-ch3-ex3.14-q6",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Set up 1-day work equations.",
+          "ta": "ஒரு நாள் வேலை: 4u + 4v = 1/3; 2u + 5v = 1/4.",
+          "math": "4u+4v=\\dfrac{1}{3};\\; 2u+5v=\\dfrac{1}{4}",
+          "eq": "Let u = 1/x, v = 1/y: 4u + 4v = 1/3; 2u + 5v = 1/4"
+        },
+        {
+          "en": "Eliminate u.",
+          "ta": "v = 1/36 ⇒ y = 36; u = 1/18 ⇒ x = 18.",
+          "math": "x = 18,\\; y = 36",
+          "eq": "6v = 1/2 − 1/3 = 1/6 ⇒ v = 1/36 ⇒ y = 36; u = 1/18 ⇒ x = 18"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": "working_verified_without_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.14-q6",
+        "reason": "en_ta_number_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.15",
+      "questionId": "g9-ch3-ex3.15-q1",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "By Factor Theorem, p(−2) = 0.",
+          "ta": "காரணித் தேற்றப்படி p(−2) = 0.",
+          "math": "p(-2) = -8 + 24 - 2k + 6 = 0",
+          "eq": "p(−2) = (−2)³ + 6(−2)² + k(−2) + 6 = 0"
+        },
+        {
+          "en": "Solve for k; option (4) is correct.",
+          "ta": "k = 11; விருப்பம் (4) சரி.",
+          "math": "k = 11",
+          "eq": "22 − 2k = 0 ⇒ k = 11"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "p(-2) = -8 + 24 - 2k + 6 = 0",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "p(-2) = -8 + 24 - 2k + 6 = 0",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'p(-2) = -8 + 24 - 2k + 6 = 0', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.15-q1",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.15",
+      "questionId": "g9-ch3-ex3.15-q13",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Standard sum of cubes identity; option (3).",
+          "ta": "x³ + y³ முற்றொருமை; விருப்பம் (3).",
+          "math": "x^3 + y^3",
+          "eq": "(x + y)(x² − xy + y²) = x³ + y³"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "missing_tamil_script"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "UNVERIFIABLE",
+        "answerStatus": "UNVERIFIABLE",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "missing_tamil_script"
+        ],
+        "discrepancy": "no_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['missing_tamil_script'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.15-q13",
+        "reason": "missing_tamil_script"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 3,
+      "exercise": "3.15",
+      "questionId": "g9-ch3-ex3.15-q14",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Negating an expression does not change its square; option (2).",
+          "ta": "எதிர்க் கோவையின் வர்க்கம் சமம்; விருப்பம் (2).",
+          "math": "[-(a+b-c)]^2 = (a+b-c)^2",
+          "eq": "(−a − b + c)² = [−(a + b − c)]² = (a + b − c)²"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "missing_tamil_script"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "missing_tamil_script"
+        ],
+        "discrepancy": "working_verified_without_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['missing_tamil_script'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch3-ex3.15-q14",
+        "reason": "missing_tamil_script"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.2",
+      "questionId": "g9-ch5-ex5.2-q2",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "For any two points, use the Class 9 distance formula to find the length between them.",
+          "ta": "English explanation (Tamil unchanged): For any two points, use the Class 9 distance formula to find the length between them.",
+          "math": "",
+          "eq": "PQ=√((x₂−x₁)²+(y₂−y₁)²)"
+        },
+        {
+          "en": "Part (i): find the distance from A(7,−2) to B(5,1).",
+          "ta": "English explanation (Tamil unchanged): Part (i): find the distance from A(7,−2) to B(5,1).",
+          "math": "",
+          "eq": "AB=√((5−7)²+(1−(−2))²)=√(4+9)=√13"
+        },
+        {
+          "en": "Find the distance from B(5,1) to C(3,4).",
+          "ta": "English explanation (Tamil unchanged): Find the distance from B(5,1) to C(3,4).",
+          "math": "",
+          "eq": "BC=√((3−5)²+(4−1)²)=√(4+9)=√13"
+        },
+        {
+          "en": "Now measure the full distance from A to C.",
+          "ta": "English explanation (Tamil unchanged): Now measure the full distance from A to C.",
+          "math": "",
+          "eq": "AC=√((3−7)²+(4−(−2))²)=√(16+36)=2√13"
+        },
+        {
+          "en": "Since AB + BC = AC, B lies on the segment AC. The three points are collinear.",
+          "ta": "English explanation (Tamil unchanged): Since AB + BC = AC, B lies on the segment AC. The three points are collinear.",
+          "math": "",
+          "eq": "√13+√13=2√13=AC; (i) Collinear"
+        },
+        {
+          "en": "Part (ii): all three points have x-coordinate a. The vertical distances are AB = 5, BC = 3 and CA = 2.",
+          "ta": "English explanation (Tamil unchanged): Part (ii): all three points have x-coordinate a. The vertical distances are AB = 5, BC = 3 and CA = 2.",
+          "math": "",
+          "eq": "AB=|3−(−2)|=5; BC=|0−3|=3; CA=|−2−0|=2"
+        },
+        {
+          "en": "Since BC + CA = AB, C is between B and A on the line x = a. These points are also collinear.",
+          "ta": "English explanation (Tamil unchanged): Since BC + CA = AB, C is between B and A on the line x = a. These points are also collinear.",
+          "math": "",
+          "eq": "3+2=5=AB; (ii) Collinear"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "missing_tamil_script"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PARTIAL",
+        "answerStatus": "UNVERIFIABLE",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "missing_tamil_script"
+        ],
+        "discrepancy": "no_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['missing_tamil_script'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch5-ex5.2-q2",
+        "reason": "missing_tamil_script"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.2",
+      "questionId": "g9-ch5-ex5.2-q3",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "To identify equal sides, compare squared distances and avoid unnecessary square roots.",
+          "ta": "English explanation (Tamil unchanged): To identify equal sides, compare squared distances and avoid unnecessary square roots.",
+          "math": "",
+          "eq": "AB²=(x₂−x₁)²+(y₂−y₁)²"
+        },
+        {
+          "en": "Part (i): calculate all three squared side lengths.",
+          "ta": "English explanation (Tamil unchanged): Part (i): calculate all three squared side lengths.",
+          "math": "",
+          "eq": "AB²=3²+4²=25; BC²=4²+3²=25; CA²=7²+1²=50"
+        },
+        {
+          "en": "Because AB=BC, the first triangle is isosceles.",
+          "ta": "English explanation (Tamil unchanged): Because AB=BC, the first triangle is isosceles.",
+          "math": "",
+          "eq": "(i) AB=BC=5"
+        },
+        {
+          "en": "Part (ii): calculate corresponding squared lengths.",
+          "ta": "English explanation (Tamil unchanged): Part (ii): calculate corresponding squared lengths.",
+          "math": "",
+          "eq": "AB²=8²=64; BC²=4²+14²=212; CA²=4²+14²=212"
+        },
+        {
+          "en": "Because BC=CA, the second triangle is isosceles.",
+          "ta": "English explanation (Tamil unchanged): Because BC=CA, the second triangle is isosceles.",
+          "math": "",
+          "eq": "(ii) BC=CA=√212=2√53"
+        }
+      ],
+      "incorrectStep": {
+        "step": 2,
+        "line": "(i) AB=BC=5",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "FAIL",
+        "failedDetails": [
+          {
+            "step": 2,
+            "line": "(i) AB=BC=5",
+            "evidence": "multi_link_identity_mismatch"
+          },
+          {
+            "step": 4,
+            "line": "(ii) BC=CA=√212=2√53",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [
+          "missing_tamil_script"
+        ],
+        "discrepancy": "Working failed: [{'step': 2, 'line': '(i) AB=BC=5', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['missing_tamil_script'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch5-ex5.2-q3",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.2",
+      "questionId": "g9-ch5-ex5.2-q5",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Use the Class 9 distance formula. If both pairs of opposite sides of a non-degenerate quadrilateral have equal lengths, it is a parallelogram.",
+          "ta": "English explanation (Tamil unchanged): Use the Class 9 distance formula. If both pairs of opposite sides of a non-degenerate quadrilateral have equal lengths, it is a parallelogram.",
+          "math": "",
+          "eq": "PQ²=(x₂−x₁)²+(y₂−y₁)²"
+        },
+        {
+          "en": "Part (i): find the squared length of AB.",
+          "ta": "English explanation (Tamil unchanged): Part (i): find the squared length of AB.",
+          "math": "",
+          "eq": "AB²=(−6−(−3))²+(−7−1)²=9+64=73"
+        },
+        {
+          "en": "Find the squared length of the opposite side CD.",
+          "ta": "English explanation (Tamil unchanged): Find the squared length of the opposite side CD.",
+          "math": "",
+          "eq": "CD²=(6−3)²+(−1−(−9))²=9+64=73"
+        },
+        {
+          "en": "Find the squared length of BC.",
+          "ta": "English explanation (Tamil unchanged): Find the squared length of BC.",
+          "math": "",
+          "eq": "BC²=(3−(−6))²+(−9−(−7))²=81+4=85"
+        },
+        {
+          "en": "Find the squared length of the opposite side DA.",
+          "ta": "English explanation (Tamil unchanged): Find the squared length of the opposite side DA.",
+          "math": "",
+          "eq": "DA²=(−3−6)²+(1−(−1))²=81+4=85"
+        },
+        {
+          "en": "Both opposite side pairs are equal, so the first quadrilateral is a parallelogram.",
+          "ta": "English explanation (Tamil unchanged): Both opposite side pairs are equal, so the first quadrilateral is a parallelogram.",
+          "math": "",
+          "eq": "AB=CD=√73; BC=DA=√85; (i) Parallelogram"
+        },
+        {
+          "en": "Part (ii): calculate AB and CD with the same distance formula.",
+          "ta": "English explanation (Tamil unchanged): Part (ii): calculate AB and CD with the same distance formula.",
+          "math": "",
+          "eq": "AB²=CD²=12²+13²=313"
+        },
+        {
+          "en": "Calculate the other opposite pair, BC and DA.",
+          "ta": "English explanation (Tamil unchanged): Calculate the other opposite pair, BC and DA.",
+          "math": "",
+          "eq": "BC²=DA²=10²+(−2)²=104"
+        },
+        {
+          "en": "Again both pairs of opposite sides are equal; the second quadrilateral is a parallelogram.",
+          "ta": "English explanation (Tamil unchanged): Again both pairs of opposite sides are equal; the second quadrilateral is a parallelogram.",
+          "math": "",
+          "eq": "AB=CD=√313; BC=DA=2√26; (ii) Parallelogram"
+        }
+      ],
+      "incorrectStep": {
+        "step": 6,
+        "line": "AB²=CD²=12²+13²=313",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "FAIL",
+        "failedDetails": [
+          {
+            "step": 6,
+            "line": "AB²=CD²=12²+13²=313",
+            "evidence": "multi_link_identity_mismatch"
+          },
+          {
+            "step": 7,
+            "line": "BC²=DA²=10²+(−2)²=104",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [
+          "missing_tamil_script"
+        ],
+        "discrepancy": "Working failed: [{'step': 6, 'line': 'AB²=CD²=12²+13²=313', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['missing_tamil_script'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch5-ex5.2-q5",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.2",
+      "questionId": "g9-ch5-ex5.2-q6",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "A rhombus has four equal side lengths. Use the Class 9 distance formula to check each pair of neighboring vertices.",
+          "ta": "English explanation (Tamil unchanged): A rhombus has four equal side lengths. Use the Class 9 distance formula to check each pair of neighboring vertices.",
+          "math": "",
+          "eq": "PQ²=(x₂−x₁)²+(y₂−y₁)²"
+        },
+        {
+          "en": "Part (i): find the first two squared side lengths.",
+          "ta": "English explanation (Tamil unchanged): Part (i): find the first two squared side lengths.",
+          "math": "",
+          "eq": "AB²=4²+8²=80; BC²=(−8)²+(−4)²=80"
+        },
+        {
+          "en": "Find the remaining two squared side lengths.",
+          "ta": "English explanation (Tamil unchanged): Find the remaining two squared side lengths.",
+          "math": "",
+          "eq": "CD²=(−4)²+(−8)²=80; DA²=8²+4²=80"
+        },
+        {
+          "en": "All four sides measure √80 = 4√5, so the first quadrilateral is a rhombus.",
+          "ta": "English explanation (Tamil unchanged): All four sides measure √80 = 4√5, so the first quadrilateral is a rhombus.",
+          "math": "",
+          "eq": "AB=BC=CD=DA=√80=4√5"
+        },
+        {
+          "en": "To check whether this rhombus is also a square, measure diagonal AC.",
+          "ta": "English explanation (Tamil unchanged): To check whether this rhombus is also a square, measure diagonal AC.",
+          "math": "",
+          "eq": "AC=√((−1−3)²+(2−(−2))²)=4√2"
+        },
+        {
+          "en": "Measure the other diagonal BD.",
+          "ta": "English explanation (Tamil unchanged): Measure the other diagonal BD.",
+          "math": "",
+          "eq": "BD=√((−5−7)²+(−6−6)²)=12√2"
+        },
+        {
+          "en": "The diagonals have different lengths. Therefore, part (i) is a rhombus but not a square.",
+          "ta": "English explanation (Tamil unchanged): The diagonals have different lengths. Therefore, part (i) is a rhombus but not a square.",
+          "math": "",
+          "eq": "AC≠BD; (i) Rhombus, not square"
+        },
+        {
+          "en": "Part (ii): the four neighboring point pairs are each exactly 1 unit apart.",
+          "ta": "English explanation (Tamil unchanged): Part (ii): the four neighboring point pairs are each exactly 1 unit apart.",
+          "math": "",
+          "eq": "AB²=BC²=CD²=DA²=1"
+        },
+        {
+          "en": "The diagonals are equal in this case.",
+          "ta": "English explanation (Tamil unchanged): The diagonals are equal in this case.",
+          "math": "",
+          "eq": "AC=√((2−1)²+(2−1)²)=√2; BD=√((1−2)²+(2−1)²)=√2"
+        },
+        {
+          "en": "Also, AB is horizontal and BC is vertical, so they meet at 90°. Thus this rhombus is a square.",
+          "ta": "English explanation (Tamil unchanged): Also, AB is horizontal and BC is vertical, so they meet at 90°. Thus this rhombus is a square.",
+          "math": "",
+          "eq": "AB⊥BC; (ii) Rhombus (also a square)"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "PQ²=(x₂−x₁)²+(y₂−y₁)²",
+        "evidence": "identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "FAIL",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "PQ²=(x₂−x₁)²+(y₂−y₁)²",
+            "evidence": "identity_mismatch"
+          },
+          {
+            "step": 7,
+            "line": "AB²=BC²=CD²=DA²=1",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [
+          "missing_tamil_script"
+        ],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'PQ²=(x₂−x₁)²+(y₂−y₁)²', 'evidence': 'identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['missing_tamil_script'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch5-ex5.2-q6",
+        "reason": "identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.2",
+      "questionId": "g9-ch5-ex5.2-q7",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Equate the squares of the lengths AB and BC.",
+          "ta": "English explanation (Tamil unchanged): Equate the squares of the lengths AB and BC.",
+          "math": "",
+          "eq": "AB²=BC²"
+        },
+        {
+          "en": "Calculate from the coordinates.",
+          "ta": "English explanation (Tamil unchanged): Calculate from the coordinates.",
+          "math": "",
+          "eq": "(1−(−1))²+(3−1)²=(3−1)²+(a−3)²"
+        },
+        {
+          "en": "Simplify to obtain a quadratic condition.",
+          "ta": "English explanation (Tamil unchanged): Simplify to obtain a quadratic condition.",
+          "math": "",
+          "eq": "8=4+(a−3)² ⇒ (a−3)²=4"
+        },
+        {
+          "en": "Take both positive and negative square roots.",
+          "ta": "English explanation (Tamil unchanged): Take both positive and negative square roots.",
+          "math": "",
+          "eq": "a−3=±2 ⇒ a=1 or a=5"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "missing_tamil_script"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "missing_tamil_script"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['missing_tamil_script'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch5-ex5.2-q7",
+        "reason": "missing_tamil_script"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.2",
+      "questionId": "g9-ch5-ex5.2-q8",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Equal abscissa and ordinate means A=(t,t).",
+          "ta": "English explanation (Tamil unchanged): Equal abscissa and ordinate means A=(t,t).",
+          "math": "",
+          "eq": "A=(t,t)"
+        },
+        {
+          "en": "Apply the distance formula to B(1,3).",
+          "ta": "English explanation (Tamil unchanged): Apply the distance formula to B(1,3).",
+          "math": "",
+          "eq": "(t−1)²+(t−3)²=10²"
+        },
+        {
+          "en": "Expand and factor the quadratic.",
+          "ta": "English explanation (Tamil unchanged): Expand and factor the quadratic.",
+          "math": "",
+          "eq": "2t²−8t+10=100 ⇒ t²−4t−45=0"
+        },
+        {
+          "en": "Solve for both possible coordinates.",
+          "ta": "English explanation (Tamil unchanged): Solve for both possible coordinates.",
+          "math": "",
+          "eq": "(t−9)(t+5)=0 ⇒ t=9 or −5"
+        },
+        {
+          "en": "Write both ordered pairs and verify their distance is 10.",
+          "ta": "English explanation (Tamil unchanged): Write both ordered pairs and verify their distance is 10.",
+          "math": "",
+          "eq": "A=(9,9) or (−5,−5)"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "missing_tamil_script"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PARTIAL",
+        "answerStatus": "UNVERIFIABLE",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "missing_tamil_script"
+        ],
+        "discrepancy": "no_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['missing_tamil_script'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch5-ex5.2-q8",
+        "reason": "missing_tamil_script"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.2",
+      "questionId": "g9-ch5-ex5.2-q9",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Equal distances imply equal squared distances.",
+          "ta": "English explanation (Tamil unchanged): Equal distances imply equal squared distances.",
+          "math": "",
+          "eq": "(x−3)²+(y−4)²=(x+5)²+(y−6)²"
+        },
+        {
+          "en": "Expand the brackets and cancel x² and y².",
+          "ta": "English explanation (Tamil unchanged): Expand the brackets and cancel x² and y².",
+          "math": "",
+          "eq": "−6x−8y+25=10x−12y+61"
+        },
+        {
+          "en": "Collect terms and solve for y.",
+          "ta": "English explanation (Tamil unchanged): Collect terms and solve for y.",
+          "math": "",
+          "eq": "4y=16x+36"
+        },
+        {
+          "en": "Divide by four to obtain a linear relation.",
+          "ta": "English explanation (Tamil unchanged): Divide by four to obtain a linear relation.",
+          "math": "",
+          "eq": "y=4x+9"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "missing_tamil_script"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "missing_tamil_script"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['missing_tamil_script'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch5-ex5.2-q9",
+        "reason": "missing_tamil_script"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.2",
+      "questionId": "g9-ch5-ex5.2-q11",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "A point is a circle centre for these three points if its distance to all three is equal.",
+          "ta": "English explanation (Tamil unchanged): A point is a circle centre for these three points if its distance to all three is equal.",
+          "math": "",
+          "eq": "O=(11,2)"
+        },
+        {
+          "en": "Compute the squared distance to (1,2).",
+          "ta": "English explanation (Tamil unchanged): Compute the squared distance to (1,2).",
+          "math": "",
+          "eq": "d₁²=(11−1)²+(2−2)²=100"
+        },
+        {
+          "en": "Repeat for (3,−4).",
+          "ta": "English explanation (Tamil unchanged): Repeat for (3,−4).",
+          "math": "",
+          "eq": "d₂²=(11−3)²+(2−(−4))²=64+36=100"
+        },
+        {
+          "en": "Repeat for (5,−6).",
+          "ta": "English explanation (Tamil unchanged): Repeat for (5,−6).",
+          "math": "",
+          "eq": "d₃²=(11−5)²+(2−(−6))²=36+64=100"
+        },
+        {
+          "en": "All three points are at radius √100=10, so the proposed centre is valid.",
+          "ta": "English explanation (Tamil unchanged): All three points are at radius √100=10, so the proposed centre is valid.",
+          "math": "",
+          "eq": "d₁=d₂=d₃=10"
+        }
+      ],
+      "incorrectStep": {
+        "step": 4,
+        "line": "d₁=d₂=d₃=10",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "FAIL",
+        "failedDetails": [
+          {
+            "step": 4,
+            "line": "d₁=d₂=d₃=10",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [
+          "missing_tamil_script"
+        ],
+        "discrepancy": "Working failed: [{'step': 4, 'line': 'd₁=d₂=d₃=10', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['missing_tamil_script'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch5-ex5.2-q11",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.2",
+      "questionId": "g9-ch5-ex5.2-q12",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "A circle with centre O(0, 0) and radius 30 intersects the x-axis (y = 0) at (±30, 0) and the y-axis (x = 0) at (0, ±30).",
+          "ta": "மையம் O(0, 0), ஆரம் 30 உடைய வட்டம் x-அச்சை (30, 0), (−30, 0) ஆகிய புள்ளிகளிலும், y-அச்சை (0, 30), (0, −30) ஆகிய புள்ளிகளிலும் வெட்டும்.",
+          "math": "\\text{Axis points: }(30,0),\\;(-30,0),\\;(0,30),\\;(0,-30)",
+          "eq": "Intersections: (30, 0), (−30, 0), (0, 30), (0, −30)"
+        },
+        {
+          "en": "Distance between any two adjacent axis-intersection points (on different axes, e.g. (30, 0) and (0, 30)): √((0 − 30)² + (30 − 0)²) = √(900 + 900) = 30√2 units. (Opposite points on the same axis are a diameter 60 units apart.)",
+          "ta": "அடுத்துள்ள இரு வெட்டுப் புள்ளிகளுக்கு (எ.கா. (30, 0) மற்றும் (0, 30)) இடையேயான தொலைவு: √((0 − 30)² + (30 − 0)²) = √1800 = 30√2 அலகுகள். (ஒரே அச்சின் எதிரெதிர் புள்ளிகளுக்கு இடைப்பட்ட தொலைவு விட்டம் = 60 அலகுகள்.)",
+          "math": "d_{\\text{adj}} = \\sqrt{(-30)^2+30^2} = \\sqrt{1800} = 30\\sqrt{2}\\text{ units}",
+          "eq": "Adjacent distance = 30√2 units (opposite = 60 units)"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['900'],ta=['1800']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['900'],ta=['1800']"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_1_number_mismatch:en=['900'],ta=['1800']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch5-ex5.2-q12",
+        "reason": "step_1_number_mismatch:en=['900'],ta=['1800']"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.3",
+      "questionId": "g9-ch5-ex5.3-q2",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "The centre C(−4, 2) is the mid-point of the diameter joining A(−3, 7) and the unknown end B(x, y).",
+          "ta": "வட்டத்தின் மையம் C(−4, 2) என்பது A(−3, 7) மற்றும் B(x, y) முனைகளை இணைக்கும் விட்டத்தின் நடுப்புள்ளியாகும்.",
+          "math": "\\left(\\dfrac{-3+x}{2},\\; \\dfrac{7+y}{2}\\right) = (-4, 2)",
+          "eq": "C(−4, 2) = mid-point of A(−3, 7) and B(x, y)"
+        },
+        {
+          "en": "Equate x-coordinates and y-coordinates separately and solve for x and y.",
+          "ta": "x மற்றும் y ஆயத்தொலைவுகளைத் தனித்தனியே சமப்படுத்தி x, y மதிப்புகளைக் காண்க.",
+          "math": "\\begin{aligned}\\dfrac{-3+x}{2}&=-4 &\\quad \\dfrac{7+y}{2}&=2\\\\-3+x&=-8 &\\quad 7+y&=4\\\\x&=-5 &\\quad y&=-3\\end{aligned}",
+          "eq": "x = −5, y = −3 ⇒ B = (−5, −3)"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "\\dfrac{-3+x}{2}&=-4 &\\quad \\dfrac{7+y}{2}&=2",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "\\dfrac{-3+x}{2}&=-4 &\\quad \\dfrac{7+y}{2}&=2",
+            "evidence": "multi_link_identity_mismatch"
+          },
+          {
+            "step": 1,
+            "line": "-3+x&=-8 &\\quad 7+y&=4",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': '\\\\dfrac{-3+x}{2}&=-4 &\\\\quad \\\\dfrac{7+y}{2}&=2', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch5-ex5.3-q2",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 5,
+      "exercise": "5.3",
+      "questionId": "g9-ch5-ex5.3-q4",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Let the vertices be A(x₁, y₁), B(x₂, y₂), C(x₃, y₃), with mid-points D(2, 4) of AB, E(−2, 3) of BC, and F(5, 2) of CA.",
+          "ta": "முக்கோணத்தின் உச்சிகள் A(x₁, y₁), B(x₂, y₂), C(x₃, y₃) என்க. AB-இன் நடுப்புள்ளி D(2, 4), BC-இன் நடுப்புள்ளி E(−2, 3), CA-இன் நடுப்புள்ளி F(5, 2) என்க.",
+          "math": "\\begin{aligned}x_1+x_2&=4,\\; x_2+x_3=-4,\\; x_3+x_1=10\\\\y_1+y_2&=8,\\; y_2+y_3=6,\\; y_3+y_1=4\\end{aligned}",
+          "eq": "x₁+x₂=4, x₂+x₃=−4, x₃+x₁=10; y₁+y₂=8, y₂+y₃=6, y₃+y₁=4"
+        },
+        {
+          "en": "Add all three x-equations: 2(x₁ + x₂ + x₃) = 4 − 4 + 10 = 10 ⇒ x₁ + x₂ + x₃ = 5. Subtract each pair to find x₁, x₂, x₃.",
+          "ta": "மூன்று x-சமன்பாடுகளையும் கூட்ட: 2(x₁ + x₂ + x₃) = 10 ⇒ x₁ + x₂ + x₃ = 5. இதிலிருந்து x₁, x₂, x₃ காண்க.",
+          "math": "\\begin{aligned}x_1+x_2+x_3 &= 5\\\\x_1 &= 5-(-4)=9,\\; x_2=5-10=-5,\\; x_3=5-4=1\\end{aligned}",
+          "eq": "x₁ = 5−(−4) = 9, x₂ = 5−10 = −5, x₃ = 5−4 = 1"
+        },
+        {
+          "en": "Similarly, 2(y₁ + y₂ + y₃) = 8 + 6 + 4 = 18 ⇒ y₁ + y₂ + y₃ = 9. Subtract each pair to find y₁, y₂, y₃.",
+          "ta": "இதேபோல், 2(y₁ + y₂ + y₃) = 18 ⇒ y₁ + y₂ + y₃ = 9. இதிலிருந்து y₁, y₂, y₃ காண்க.",
+          "math": "\\begin{aligned}y_1+y_2+y_3 &= 9\\\\y_1 &= 9-6=3,\\; y_2=9-4=5,\\; y_3=9-8=1\\end{aligned}",
+          "eq": "y₁ = 9−6 = 3, y₂ = 9−4 = 5, y₃ = 9−8 = 1 ⇒ A(9,3), B(−5,5), C(1,1)"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "x_1+x_2&=4",
+        "evidence": "contradictory_constant_equation"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "x_1+x_2&=4",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step": 0,
+            "line": "x_2+x_3=-4",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step": 0,
+            "line": "x_3+x_1=10",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step": 0,
+            "line": "y_1+y_2&=8",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step": 0,
+            "line": "y_2+y_3=6",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step": 0,
+            "line": "y_3+y_1=4",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step": 1,
+            "line": "x_1 &= 5-(-4)=9",
+            "evidence": "overwrites_established_given"
+          },
+          {
+            "step": 1,
+            "line": "x_2=5-10=-5",
+            "evidence": "overwrites_established_given"
+          },
+          {
+            "step": 1,
+            "line": "x_3=5-4=1",
+            "evidence": "overwrites_established_given"
+          },
+          {
+            "step": 2,
+            "line": "y_1 &= 9-6=3",
+            "evidence": "overwrites_established_given"
+          },
+          {
+            "step": 2,
+            "line": "y_2=9-4=5",
+            "evidence": "overwrites_established_given"
+          },
+          {
+            "step": 2,
+            "line": "y_3=9-8=1",
+            "evidence": "overwrites_established_given"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'x_1+x_2&=4', 'evidence': 'contradictory_constant_equation'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch5-ex5.3-q4",
+        "reason": "contradictory_constant_equation"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.2",
+      "questionId": "g9-ch7-ex7.2-q1",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Use l=20,b=15,h=8 centimetres and the total surface area formula.",
+          "ta": "நீளம் 20 செமீ, அகலம் 15 செமீ, உயரம் 8 செமீ. கனசெவ்வகத்தின் மொத்தப்பரப்புக்கான சூத்திரத்தை எழுதுக.",
+          "math": "",
+          "eq": "TSA = 2(lb+bh+lh)"
+        },
+        {
+          "en": "Substitute the dimensions.",
+          "ta": "கொடுக்கப்பட்ட அளவுகளைப் பிரதியிட்டு ஆறு முகங்களின் மொத்தப்பரப்பைக் காண்க.",
+          "math": "",
+          "eq": "TSA = 2(300+120+160) = 1160 cm²"
+        },
+        {
+          "en": "Find the four side faces without the top and bottom.",
+          "ta": "மேல் மற்றும் கீழ் முகங்களை நீக்கி, நான்கு பக்கவாட்டு முகங்களின் பரப்பைக் காண்க.",
+          "math": "",
+          "eq": "LSA = 2(l+b)h = 2(20+15)×8 = 560 cm²"
+        }
+      ],
+      "incorrectStep": {
+        "step": 2,
+        "line": "LSA = 2(l+b)h = 2(20+15)×8 = 560 cm²",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 2,
+            "line": "LSA = 2(l+b)h = 2(20+15)×8 = 560 cm²",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 2, 'line': 'LSA = 2(l+b)h = 2(20+15)×8 = 560 cm²', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.2-q1",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.2",
+      "questionId": "g9-ch7-ex7.2-q2",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Convert all the dimensions to metres.",
+          "ta": "எல்லா அளவுகளையும் மீட்டரில் எழுதுக. 400 செமீ என்பது 4 மீ.",
+          "math": "",
+          "eq": "400 cm = 4 m"
+        },
+        {
+          "en": "Painting the entire outer box means all six faces.",
+          "ta": "முழு வெளிப்புறத்திற்கும் வண்ணம் பூசுவதால் ஆறு முகங்களின் பரப்புகளையும் சேர்க்கவும்.",
+          "math": "",
+          "eq": "TSA = 2(6×4+4×1.5+6×1.5) = 78 m²"
+        },
+        {
+          "en": "Multiply by painting cost per square metre.",
+          "ta": "அந்தப் பரப்பை ஒரு சதுர மீட்டருக்கான செலவால் பெருக்குக.",
+          "math": "",
+          "eq": "Cost = 78×22 = ₹1716"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "400 cm = 4 m",
+        "evidence": "contradictory_constant_equation"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "FAIL",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "400 cm = 4 m",
+            "evidence": "contradictory_constant_equation"
+          }
+        ],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": "Working failed: [{'step': 0, 'line': '400 cm = 4 m', 'evidence': 'contradictory_constant_equation'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.2-q2",
+        "reason": "contradictory_constant_equation"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.2",
+      "questionId": "g9-ch7-ex7.2-q5",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "The total area is six congruent square faces.",
+          "ta": "மொத்தப்பரப்பு ஆறு சர்வசமச் சதுர முகங்களின் பரப்புகளின் கூடுதல்.",
+          "math": "",
+          "eq": "6a²=2400 cm²"
+        },
+        {
+          "en": "Divide by six to find the area of one face.",
+          "ta": "ஆறால் வகுத்து ஒரு முகத்தின் பரப்பைக் காண்க.",
+          "math": "",
+          "eq": "a²=400 cm²"
+        },
+        {
+          "en": "Lateral area comprises four such faces.",
+          "ta": "நான்கு முகங்களின் பரப்பே பக்கப்பரப்பு.",
+          "math": "",
+          "eq": "LSA=4a²=4×400=1600 cm²"
+        }
+      ],
+      "incorrectStep": {
+        "step": 2,
+        "line": "LSA=4a²=4×400=1600 cm²",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 2,
+            "line": "LSA=4a²=4×400=1600 cm²",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 2, 'line': 'LSA=4a²=4×400=1600 cm²', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.2-q5",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.2",
+      "questionId": "g9-ch7-ex7.2-q6",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Outer surface of a cube includes six square faces.",
+          "ta": "கனசதுரத்தின் வெளிப்பரப்பில் ஆறு சதுர முகங்களும் அடங்கும்.",
+          "math": "",
+          "eq": "TSA=6a²"
+        },
+        {
+          "en": "Calculate painted area at a=6.5 metres.",
+          "ta": "பக்க நீளம் 6.5 மீ எனப் பிரதியிட்டு வண்ணம் பூச வேண்டிய பரப்பைக் காண்க.",
+          "math": "",
+          "eq": "A=6×6.5²=6×42.25=253.5 m²"
+        },
+        {
+          "en": "Multiply by the ₹24/m² rate.",
+          "ta": "பரப்பை ஒரு சதுர மீட்டருக்கான செலவான ₹24 ஆல் பெருக்குக.",
+          "math": "",
+          "eq": "Cost=253.5×24=₹6084"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PARTIAL",
+        "answerStatus": "UNVERIFIABLE",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": "no_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.2-q6",
+        "reason": "en_ta_number_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.3",
+      "questionId": "g9-ch7-ex7.3-q3",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Represent the dimensions as 5x, 4x and 3x centimetres.",
+          "ta": "நீளம், அகலம், உயரம் ஆகியவற்றை முறையே 5x, 4x, 3x செமீ எனக் கொள்க.",
+          "math": "",
+          "eq": "l = 5x, b = 4x, h = 3x"
+        },
+        {
+          "en": "Substitute them into the given volume.",
+          "ta": "கொடுக்கப்பட்ட கன அளவுக்கான சமன்பாட்டில் இவற்றைப் பிரதியிடுக.",
+          "math": "",
+          "eq": "(5x)(4x)(3x) = 7500 ⇒ 60x³ = 7500"
+        },
+        {
+          "en": "Solve for the positive scale factor.",
+          "ta": "நீளம் நேர்மறை என்பதால் x இன் நேர்மறை மதிப்பைக் காண்க.",
+          "math": "",
+          "eq": "x³ = 125 ⇒ x = 5"
+        },
+        {
+          "en": "Find all three dimensions and check their product.",
+          "ta": "மூன்று அளவுகளையும் கண்டுபிடித்து அவற்றின் பெருக்கற்பலனைச் சரிபார்க்கவும்.",
+          "math": "",
+          "eq": "25 × 20 × 15 = 7500 cm³"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": "working_verified_without_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.3-q3",
+        "reason": "en_ta_number_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.3",
+      "questionId": "g9-ch7-ex7.3-q4",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Find the pond's capacity as a rectangular prism in cubic metres.",
+          "ta": "குளத்தைக் கனசெவ்வகமாகக் கொண்டு அதன் கன அளவைக் கன மீட்டரில் காண்க.",
+          "math": "",
+          "eq": "V = 20.5 × 16 × 8 = 2624 m³"
+        },
+        {
+          "en": "Convert cubic metres to litres.",
+          "ta": "ஒரு கன மீட்டர் எத்தனை லிட்டர் என்பதைப் பயன்படுத்துக.",
+          "math": "",
+          "eq": "1 m³ = 1000 litres"
+        },
+        {
+          "en": "Multiply to obtain capacity.",
+          "ta": "கன மீட்டரில் கிடைத்த அளவை 1000 ஆல் பெருக்கிக் கொள்ளளவை லிட்டரில் பெறுக.",
+          "math": "",
+          "eq": "2624 × 1000 = 2,624,000 litres"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "1 m³ = 1000 litres",
+        "evidence": "contradictory_constant_equation"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PARTIAL",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "1 m³ = 1000 litres",
+            "evidence": "contradictory_constant_equation"
+          }
+        ],
+        "tamilFlags": [
+          "en_ta_unit_mismatch"
+        ],
+        "discrepancy": "Working failed: [{'step': 1, 'line': '1 m³ = 1000 litres', 'evidence': 'contradictory_constant_equation'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PARTIAL (flags: ['en_ta_unit_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.3-q4",
+        "reason": "contradictory_constant_equation"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.3",
+      "questionId": "g9-ch7-ex7.3-q5",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Convert the wall dimensions to centimetres so the units match the brick dimensions.",
+          "ta": "செங்கல்லின் அளவுகளுடன் பொருந்துமாறு சுவரின் எல்லா அளவுகளையும் சென்டிமீட்டருக்கு மாற்றுக.",
+          "math": "",
+          "eq": "20 m = 2000 cm; 6 m = 600 cm"
+        },
+        {
+          "en": "Compute the wall's volume.",
+          "ta": "சுவரின் கன அளவைக் கணக்கிடுக.",
+          "math": "",
+          "eq": "Vwall = 2000 × 48 × 600 = 57,600,000 cm³"
+        },
+        {
+          "en": "Compute the volume of one brick.",
+          "ta": "ஒரு செங்கல்லின் கன அளவைக் கணக்கிடுக.",
+          "math": "",
+          "eq": "Vbrick = 24 × 12 × 8 = 2304 cm³"
+        },
+        {
+          "en": "Divide the wall volume by one brick volume, ignoring mortar and gaps as in the textbook model.",
+          "ta": "சாந்து மற்றும் இடைவெளியைப் புறக்கணித்து சுவரின் கன அளவை ஒரு செங்கல்லின் கன அளவால் வகுக்கவும்.",
+          "math": "",
+          "eq": "Number = [[57,600,000|2304]] = 25,000"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "20 m = 2000 cm",
+        "evidence": "contradictory_constant_equation"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "20 m = 2000 cm",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step": 0,
+            "line": "6 m = 600 cm",
+            "evidence": "contradictory_constant_equation"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': '20 m = 2000 cm', 'evidence': 'contradictory_constant_equation'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.3-q5",
+        "reason": "contradictory_constant_equation"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.3",
+      "questionId": "g9-ch7-ex7.3-q6",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Start with the cuboid-volume formula.",
+          "ta": "கனசெவ்வகத்தின் கன அளவுக்கான சூத்திரத்தை எழுதுக.",
+          "math": "",
+          "eq": "V = l × b × h"
+        },
+        {
+          "en": "Rearrange it to solve for height.",
+          "ta": "உயரத்தைத் தனியாகப் பெற, கன அளவை நீளம் மற்றும் அகலத்தின் பெருக்கற்பலனால் வகுக்கவும்.",
+          "math": "",
+          "eq": "h = [[V|l × b]]"
+        },
+        {
+          "en": "Substitute the given values.",
+          "ta": "கொடுக்கப்பட்ட மதிப்புகளைப் பிரதியிடுக.",
+          "math": "",
+          "eq": "h = [[1440|15 × 8]] = [[1440|120]] = 12 m"
+        }
+      ],
+      "incorrectStep": {
+        "step": 2,
+        "line": "h = [[1440|15 × 8]] = [[1440|120]] = 12 m",
+        "evidence": "chain_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "FAIL",
+        "failedDetails": [
+          {
+            "step": 2,
+            "line": "h = [[1440|15 × 8]] = [[1440|120]] = 12 m",
+            "evidence": "chain_mismatch"
+          }
+        ],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": "Working failed: [{'step': 2, 'line': 'h = [[1440|15 × 8]] = [[1440|120]] = 12 m', 'evidence': 'chain_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.3-q6",
+        "reason": "chain_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.3",
+      "questionId": "g9-ch7-ex7.3-q7",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "The volume of a cube is the cube of its side length.",
+          "ta": "கனசதுரத்தின் கன அளவு அதன் பக்க நீளத்தின் மும்மடி.",
+          "math": "",
+          "eq": "V = a³"
+        },
+        {
+          "en": "For (i), cube 5 centimetres.",
+          "ta": "(i) 5 செமீ இன் மும்மடியைக் காண்க.",
+          "math": "",
+          "eq": "5³ = 125 cm³"
+        },
+        {
+          "en": "For (ii), cube 3.5 metres.",
+          "ta": "(ii) 3.5 மீ இன் மும்மடியைக் காண்க.",
+          "math": "",
+          "eq": "3.5³ = 42.875 m³"
+        },
+        {
+          "en": "For (iii), cube 21 centimetres.",
+          "ta": "(iii) 21 செமீ இன் மும்மடியைக் காண்க.",
+          "math": "",
+          "eq": "21³ = 9261 cm³"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_2_number_mismatch:en=['3.5'],ta=['5']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_2_number_mismatch:en=['3.5'],ta=['5']"
+        ],
+        "discrepancy": "working_verified_without_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_2_number_mismatch:en=['3.5'],ta=['5']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.3-q7",
+        "reason": "step_2_number_mismatch:en=['3.5'],ta=['5']"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.3",
+      "questionId": "g9-ch7-ex7.3-q8",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Convert litres into cubic metres.",
+          "ta": "லிட்டரில் உள்ள கொள்ளளவைக் கன மீட்டருக்கு மாற்றுக.",
+          "math": "",
+          "eq": "125,000 litres = [[125,000|1000]] = 125 m³"
+        },
+        {
+          "en": "For a cube of side a, the volume is a³.",
+          "ta": "பக்க நீளம் a உள்ள கனசதுரத்தின் கன அளவு a³.",
+          "math": "",
+          "eq": "a³ = 125"
+        },
+        {
+          "en": "Take the positive cube root.",
+          "ta": "கன அளவின் நேர்மறைக் கனமூலத்தைக் கண்டு பக்க நீளத்தைப் பெறுக.",
+          "math": "",
+          "eq": "a = ∛125 = 5 m"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "125,000 litres = [[125,000|1000]] = 125 m³",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "FAIL",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "125,000 litres = [[125,000|1000]] = 125 m³",
+            "evidence": "multi_link_identity_mismatch"
+          },
+          {
+            "step": 2,
+            "line": "a = ∛125 = 5 m",
+            "evidence": "chain_mismatch"
+          }
+        ],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": "Working failed: [{'step': 0, 'line': '125,000 litres = [[125,000|1000]] = 125 m³', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.3-q8",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.3",
+      "questionId": "g9-ch7-ex7.3-q9",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Melting and recasting preserve volume, assuming no loss of metal.",
+          "ta": "உலோக இழப்பு இல்லாமல் உருக்கி மறுவார்ப்பு செய்வதால் கன அளவு மாறாது.",
+          "math": "",
+          "eq": "Vcube = 15³ = 3375 cm³"
+        },
+        {
+          "en": "Express the new cuboid's volume using unknown breadth b.",
+          "ta": "புதிய கனசெவ்வகத்தின் அகலத்தை b எனக் கொண்டு அதன் கன அளவை எழுதுக.",
+          "math": "",
+          "eq": "Vcuboid = 25 × b × 9 = 225b"
+        },
+        {
+          "en": "Equate volumes and solve for b.",
+          "ta": "இரு கன அளவுகளையும் சமப்படுத்தி b இன் மதிப்பைக் காண்க.",
+          "math": "",
+          "eq": "225b = 3375 ⇒ b = 15 cm"
+        },
+        {
+          "en": "Verify that the new volume equals the original volume.",
+          "ta": "புதிய கன அளவும் பழைய கன அளவும் சமமா எனச் சரிபார்க்கவும்.",
+          "math": "",
+          "eq": "25 × 15 × 9 = 3375 cm³"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "Vcuboid = 25 × b × 9 = 225b",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "Vcuboid = 25 × b × 9 = 225b",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': 'Vcuboid = 25 × b × 9 = 225b', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.3-q9",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 9,
+      "chapter": 7,
+      "exercise": "7.4",
+      "questionId": "g9-ch7-ex7.4-q8",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Volume equals base area times height.",
+          "ta": "கன அளவு என்பது அடிப்பரப்பையும் உயரத்தையும் பெருக்கினால் கிடைப்பது.",
+          "math": "",
+          "eq": "V=A_base×h"
+        },
+        {
+          "en": "Divide the given volume by base area.",
+          "ta": "கொடுக்கப்பட்ட கன அளவை அடிப்பரப்பால் வகுக்கவும்.",
+          "math": "",
+          "eq": "h=660/33=20 cm"
+        },
+        {
+          "en": "Choose the answer matching 20 cm.",
+          "ta": "20 செமீ உள்ள விடையைத் தேர்ந்தெடுக்கவும்.",
+          "math": "",
+          "eq": "Correct option (3)"
+        }
+      ],
+      "incorrectStep": {
+        "step": 0,
+        "line": "V=A_base×h",
+        "evidence": "invalid_formula_dimension"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 0,
+            "line": "V=A_base×h",
+            "evidence": "invalid_formula_dimension"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 0, 'line': 'V=A_base×h', 'evidence': 'invalid_formula_dimension'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g9-ch7-ex7.4-q8",
+        "reason": "invalid_formula_dimension"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.2",
+      "questionId": "c10-3-ex3-2-q2-v",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Factorize the first quadratic 2x² − 5x − 3 by splitting −5x into −6x + x.",
+          "ta": "−5x ஐ −6x + x எனப் பிரித்து முதல் கோவையைக் காரணிப்படுத்துக.",
+          "math": "2x^2-5x-3=2x(x-3)+1(x-3)=(2x+1)(x-3)",
+          "eq": "2x² − 5x − 3 = 2x(x − 3) + 1(x − 3) = (2x + 1)(x − 3)"
+        },
+        {
+          "en": "Factor out 4 from the second expression 4x² − 36 and apply the difference of squares identity x² − 3² = (x + 3)(x − 3).",
+          "ta": "இரண்டாவது கோவையிலிருந்து 4 ஐ வெளியே எடுக்க. x² − 9 ஐ (x + 3)(x − 3) எனக் காரணிப்படுத்துக.",
+          "math": "4x^2-36=4(x^2-9)=4(x+3)(x-3)",
+          "eq": "4x² − 36 = 4(x² − 9) = 4(x + 3)(x − 3)"
+        },
+        {
+          "en": "Combine the numerical factor 4 with each distinct linear factor (x + 3), (2x + 1), and (x − 3). Therefore, the LCM is 4(x + 3)(2x + 1)(x − 3).",
+          "ta": "4 உடன் (x + 3), (2x + 1), (x − 3) ஆகிய மூன்று காரணிகளையும் பெருக்கி மீ.சி.ம. காண்க.",
+          "math": "\\text{LCM}=4(x+3)(2x+1)(x-3)",
+          "eq": "LCM = 4(x + 3)(2x + 1)(x − 3)"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['36'],ta=['9']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_1_number_mismatch:en=['36'],ta=['9']"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_1_number_mismatch:en=['36'],ta=['9']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-3-ex3-2-q2-v",
+        "reason": "step_1_number_mismatch:en=['36'],ta=['9']"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.10",
+      "questionId": "c10-3-ex3-10-q2",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Substitute G(n) = 15 into the given formula G(n) = (n² − n)/2. Clear the denominator 2 by multiplying both sides by 2, then subtract 30 from both sides to write standard quadratic form.",
+          "ta": "கொடுக்கப்பட்ட சூத்திரத்தில் G(n) = 15 எனப் பிரதியிடுக. இருபுறமும் 2 ஆல் பெருக்கி 30 ஐக் கழித்தால் இருபடிச் சமன்பாடு கிடைக்கும்.",
+          "math": "\\begin{aligned}\\dfrac{n^2-n}{2}&=15\\\\n^2-n&=30\\\\n^2-n-30&=0\\end{aligned}",
+          "eq": "(n² − n)/2 = 15 ⇒ n² − n = 30 ⇒ n² − n − 30 = 0"
+        },
+        {
+          "en": "Find two numbers whose product is −30 and sum is −1: they are −6 and +5 (since −6 × 5 = −30 and −6 + 5 = −1). Factor n² − n − 30 = 0 and solve.",
+          "ta": "பெருக்கற்பலன் −30, கூடுதல் −1 கொண்ட எண்கள் −6 மற்றும் 5. நடு உறுப்பைப் பிரித்துக் காரணிப்படுத்தி n ஐக் காண்க.",
+          "math": "(n-6)(n+5)=0\\implies n=6\\text{ or }n=-5",
+          "eq": "(n − 6)(n + 5) = 0 ⇒ n = 6 or n = −5"
+        },
+        {
+          "en": "The number of teams n cannot be negative, so reject n = −5. Check n = 6: G(6) = (6² − 6)/2 = 30/2 = 15 games. Therefore, there are 6 teams in the league.",
+          "ta": "அணிகளின் எண்ணிக்கை எதிர்மறையாக இருக்க முடியாது. எனவே −5 ஐ விலக்குக. n = 6 எனில் ஆட்டங்களின் எண்ணிக்கை (36 − 6)/2 = 15. ஆகவே 6 அணிகள்.",
+          "math": "n=6\\quad(\\text{reject }n=-5;\\;\\dfrac{6^2-6}{2}=15)",
+          "eq": "n = 6 (since n > 0; check: (36 − 6)/2 = 15)"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_2_number_mismatch:en=['30'],ta=['36']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_2_number_mismatch:en=['30'],ta=['36']"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_2_number_mismatch:en=['30'],ta=['36']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-3-ex3-10-q2",
+        "reason": "step_2_number_mismatch:en=['30'],ta=['36']"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.14",
+      "questionId": "c10-3-ex3-14-q5",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Write 2y² − ay + 64 = 0 in standard form Ay² + By + C = 0 (with A = 2, B = −a, C = 64). Let the two roots be α and β; since one root is twice the other, set β = 2α so the two roots are α and 2α.",
+          "ta": "ஒரு மூலம் மற்றதன் இருமடங்கு என்பதால் மூலங்களை α, 2α எனக் கொள்க. கெழுக்கள் 2, −a, 64.",
+          "math": "\\text{Roots}=\\alpha,\\;2\\alpha\\qquad(A=2,\\;B=-a,\\;C=64)",
+          "eq": "Roots are α and 2α; A = 2, B = −a, C = 64"
+        },
+        {
+          "en": "Use the sum of the roots formula α + β = −B/A to express a in terms of α.",
+          "ta": "மூலங்களின் கூடுதல் 3α = a/2 என்பதால் a = 6α.",
+          "math": "\\begin{aligned}\\alpha+2\\alpha&=-\\dfrac{-a}{2}\\\\3\\alpha&=\\dfrac{a}{2}\\\\a&=6\\alpha\\end{aligned}",
+          "eq": "α + 2α = −(−a)/2; 3α = a/2; a = 6α"
+        },
+        {
+          "en": "Use the product of the roots formula αβ = C/A to solve for α. Divide both sides of 2α² = 32 by 2 to get α² = 16, giving α = 4 or α = −4.",
+          "ta": "மூலங்களின் பெருக்கற்பலன் 2α² = 32. எனவே α = 4 அல்லது −4.",
+          "math": "\\begin{aligned}\\alpha(2\\alpha)&=\\dfrac{64}{2}\\\\2\\alpha^2&=32\\\\\\alpha^2&=16\\\\\\alpha&=\\pm 4\\end{aligned}",
+          "eq": "α(2α) = 64/2; 2α² = 32; α² = 16; α = 4 or α = −4"
+        },
+        {
+          "en": "Substitute both values α = −4 and α = 4 into a = 6α to obtain the two possible values of a.",
+          "ta": "இரு மதிப்புகளையும் a = 6α இல் பிரதியிட்டால் a = −24 அல்லது 24.",
+          "math": "\\begin{aligned}\\alpha=-4&:\\;a=6(-4)=-24\\\\\\alpha=4&:\\;a=6(4)=24\\end{aligned}",
+          "eq": "a = 6(−4) = −24 or a = 6(4) = 24"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_3_number_mismatch:en=['4'],ta=['24']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_3_number_mismatch:en=['4'],ta=['24']"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_3_number_mismatch:en=['4'],ta=['24']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-3-ex3-14-q5",
+        "reason": "step_3_number_mismatch:en=['4'],ta=['24']"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.15",
+      "questionId": "c10-3-ex3-15-q4-i",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "From the table, as the number of pipes x increases, the time y decreases, and the product xy is constant: 2 × 45 = 3 × 30 = 6 × 15 = 9 × 10 = 90. This is inverse variation with xy = 90.",
+          "ta": "அட்டவணையிலிருந்து x அதிகரிக்க y குறைகிறது; மேலும் xy மாறிலியாக உள்ளது: 2 × 45 = 3 × 30 = 6 × 15 = 9 × 10 = 90. இது xy = 90 என்ற எதிர் மாறுபாடு ஆகும்.",
+          "math": "xy = 2\\times 45 = 3\\times 30 = 6\\times 15 = 9\\times 10 = 90",
+          "eq": "xy = 2 × 45 = 3 × 30 = 6 × 15 = 9 × 10 = 90"
+        },
+        {
+          "en": "Plot the table points (2, 45), (3, 30), (6, 15), (9, 10) as solid dots (physically meaningful whole-number pipe counts), and draw a smooth dashed guide curve for xy = 90 to read intermediate values.",
+          "ta": "அட்டவணைப் புள்ளிகள் (2, 45), (3, 30), (6, 15), (9, 10) ஆகியவற்றை முழு எண் குழாய் எண்ணிக்கைகளாகக் குறித்து, இடைமதிப்புகளைப் படிக்க xy = 90 வளைவரையை வழிகாட்டியாக வரைக.",
+          "math": "(2,45),\\ (3,30),\\ (6,15),\\ (9,10)",
+          "eq": "Points: (2, 45), (3, 30), (6, 15), (9, 10)"
+        },
+        {
+          "en": "To read (i) from the graph: locate x = 5 on the horizontal pipes axis (midway between 4 and 6), move vertically up to the curve at (5, 18), and move horizontally left to the vertical time axis to read y = 18 minutes.",
+          "ta": "வரைபடத்திலிருந்து (i) காண: கிடை அச்சில் x = 5 (4 மற்றும் 6-க்கு நடுவே) என்ற இடத்திலிருந்து செங்குத்தாக மேலே வளைவரையை (5, 18)-இல் சந்தித்து, இடதுபுறம் செங்குத்து அச்சில் y = 18 நிமிடங்கள் எனப் படிக்கவும்.",
+          "math": "x = 5 \\longrightarrow (5,\\ 18) \\longrightarrow y = 18\\text{ minutes}",
+          "eq": "x = 5 -> (5, 18) -> y = 18 minutes"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-3-ex3-15-q4-i",
+        "reason": "en_ta_number_mismatch"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.18",
+      "questionId": "c10-3-ex3-18-q8",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Compare corresponding entries and collect all terms on the left.",
+          "ta": "ஒத்த இடங்களில் உள்ள உறுப்புகளைச் சமப்படுத்தி, எல்லா உறுப்புகளையும் இடப்பக்கம் கொண்டுவருக.",
+          "math": "\\begin{aligned}x^2-4x-5&=0\\\\y^2-2y-8&=0\\end{aligned}",
+          "eq": "x²−4x−5=0\ny²−2y−8=0"
+        },
+        {
+          "en": "Factor each quadratic. Either factor may be zero.",
+          "ta": "ஒவ்வோர் இருபடிக் கோவையையும் காரணிப்படுத்துக. இரண்டு காரணிகளில் ஏதேனும் ஒன்று பூச்சியமாகலாம்.",
+          "math": "\\begin{aligned}(x-5)(x+1)&=0\\\\(y-4)(y+2)&=0\\end{aligned}",
+          "eq": "(x−5)(x+1)=0\n(y−4)(y+2)=0"
+        },
+        {
+          "en": "The x and y equations are independent. Pair each x-value with both y-values.",
+          "ta": "x மற்றும் y சமன்பாடுகள் ஒன்றையொன்று சார்ந்தவை அல்ல. ஒவ்வோர் x மதிப்பையும் இரு y மதிப்புகளுடனும் இணைக்கலாம்.",
+          "math": "\\begin{aligned}x&=-1,\\ 5\\\\y&=-2,\\ 4\\end{aligned}",
+          "eq": "x=−1, 5\ny=−2, 4"
+        }
+      ],
+      "incorrectStep": {
+        "step": 2,
+        "line": "x&=-1,\\ 5",
+        "evidence": "invalid_root_set"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 2,
+            "line": "x&=-1,\\ 5",
+            "evidence": "invalid_root_set"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 2, 'line': 'x&=-1,\\\\ 5', 'evidence': 'invalid_root_set'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-3-ex3-18-q8",
+        "reason": "invalid_root_set"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.20",
+      "questionId": "c10-3-ex3-20-q9",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "The quantity being squared can be three or negative three.",
+          "ta": "வர்க்கப்படுத்தப்பட்ட கோவை 3 ஆகவோ −3 ஆகவோ இருக்கலாம்.",
+          "math": "2x-1=\\pm3",
+          "eq": "2x−1=±3"
+        },
+        {
+          "en": "Solve both linear equations. The complete answer must contain both values.",
+          "ta": "இரு நேரியல் சமன்பாடுகளையும் தீர்க்கவும். முழு விடையில் இரு மதிப்புகளும் இடம்பெற வேண்டும்.",
+          "math": "\\begin{aligned}2x&=4\\quad\\text{or}\\quad 2x=-2\\\\x&=2\\quad\\text{or}\\quad x=-1\\end{aligned}",
+          "eq": "2x=4 or  2x=−2\nx=2 or  x=−1"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "2x=-2",
+        "evidence": "invalid_equation_transformation"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "2x=-2",
+            "evidence": "invalid_equation_transformation"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': '2x=-2', 'evidence': 'invalid_equation_transformation'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-3-ex3-20-q9",
+        "reason": "invalid_equation_transformation"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.unit",
+      "questionId": "c10-3-ex3-unit-q2",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Let a, b and c be the original counts. The Tamil text specifies that the two affected sections, A and C, become equal. Use that reading of the English phrase “the sections”.",
+          "ta": "தொடக்க எண்ணிக்கைகள் a, b, c என்க. மாணவர் மாற்றத்தால் பாதிக்கப்படும் A, C ஆகிய இரு பிரிவுகளே சமம் எனத் தமிழ் வினா குறிப்பிடுகிறது.",
+          "math": "\\begin{aligned}a+b+c&=150\\\\a-6&=c+6\\\\4c-a&=b\\end{aligned}",
+          "eq": "a+b+c=150\na−6=c+6\n4c−a=b"
+        },
+        {
+          "en": "Substitute a + b = 4c into the total to find c. Then use the transfer equation for a and the remaining count for b.",
+          "ta": "மொத்தத்திற்கான சமன்பாட்டில் a + b = 4c எனப் பிரதியிட்டு c-ஐக் காண்க. பின்னர் மாற்றத்திற்கான சமன்பாட்டிலிருந்து a-ஐயும் மீதியிலிருந்து b-ஐயும் காண்க.",
+          "math": "\\begin{aligned}5c&=150,\\quad c=30\\\\a&=30+12=42\\\\b&=150-42-30=78\\end{aligned}",
+          "eq": "5c=150,  c=30\na=30+12=42\nb=150−42−30=78"
+        },
+        {
+          "en": "Check the transfer and the original comparison. If the English phrase is read as requiring all three sections to be equal after the transfer, the conditions are inconsistent.",
+          "ta": "மாற்றிய பின் எண்ணிக்கைகளையும் அசல் ஒப்பீட்டையும் சரிபார்க்கவும். மாற்றத்திற்குப் பின் மூன்று பிரிவுகளும் சமம் என்று பொருள் கொண்டால் நிபந்தனைகள் ஒன்றுக்கொன்று முரணாகும்.",
+          "math": "\\begin{aligned}42-6&=30+6=36\\\\4(30)-42&=78\\end{aligned}",
+          "eq": "42−6=30+6=36\n4(30)−42=78"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": "working_verified_without_dedicated_derivation"
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-3-ex3-unit-q2",
+        "reason": "en_ta_number_mismatch"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.unit",
+      "questionId": "c10-3-ex3-unit-q5",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Call the polynomials P, Q and R in their given order. Divide P by Q. The leading terms give 2x first, then 7.",
+          "ta": "கொடுக்கப்பட்ட வரிசையில் கோவைகளை P, Q, R என்க. P-ஐ Q-ஆல் வகுக்கவும். தலைமையுறுப்புகளிலிருந்து முதலில் 2x, பின்னர் 7 கிடைக்கும்.",
+          "math": "\\begin{aligned}P-2xQ&=7x^3+21x^2+21x+7\\\\P-(2x+7)Q&=0\\end{aligned}",
+          "eq": "P−2xQ=7x³+21x²+21x+7\nP−(2x+7)Q=0"
+        },
+        {
+          "en": "The remainder is zero, so Q is the GCD of P and Q. Divide Q by R to include the third polynomial.",
+          "ta": "மீதி பூச்சியம் என்பதால் P, Q ஆகியவற்றின் மீ.பெ.வ. Q ஆகும். மூன்றாவது கோவையையும் சேர்க்க Q-ஐ R-ஆல் வகுக்கவும்.",
+          "math": "\\begin{aligned}Q-xR&=x^2+2x+1=R\\\\Q-(x+1)R&=0\\end{aligned}",
+          "eq": "Q−xR=x²+2x+1=R\nQ−(x+1)R=0"
+        },
+        {
+          "en": "The second remainder is also zero. Consequently R is a divisor of all three and is their greatest common divisor.",
+          "ta": "இரண்டாவது வகுத்தலிலும் மீதி பூச்சியம். எனவே R மூன்று கோவைகளுக்கும் பொதுவகுத்தி; அதுவே அவற்றின் மீ.பெ.வ.",
+          "math": "R=x^2+2x+1",
+          "eq": "R=x²+2x+1"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "Q-xR&=x^2+2x+1=R",
+        "evidence": "multi_link_identity_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "Q-xR&=x^2+2x+1=R",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': 'Q-xR&=x^2+2x+1=R', 'evidence': 'multi_link_identity_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-3-ex3-unit-q5",
+        "reason": "multi_link_identity_mismatch"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.unit",
+      "questionId": "c10-3-ex3-unit-q9",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Start the square-root division with 17x², the square root of the leading term. After subtracting its square, divide the next leading term by twice 17x².",
+          "ta": "தலைமை உறுப்பின் வர்க்கமூலமான 17x²-இல் வர்க்கமூல வகுத்தலைத் தொடங்குக. அதன் வர்க்கத்தைக் கழித்த பின் அடுத்த தலைமை உறுப்பை 17x²-இன் இருமடங்கால் வகுக்கவும்.",
+          "math": "\\begin{aligned}\\sqrt{289x^4}&=17x^2\\\\\\dfrac{-612x^3}{34x^2}&=-18x\\end{aligned}",
+          "eq": "√(289x⁴)=17x²\n(−612x³)/(34x²)=−18x"
+        },
+        {
+          "en": "Subtract the square of the current partial root. Divide the leading remainder term by 34x² to find the last term.",
+          "ta": "இதுவரை கிடைத்த வர்க்கமூலத்தின் வர்க்கத்தைக் கழிக்கவும். மீதியின் தலைமையுறுப்பை 34x² ஆல் வகுத்துக் கடைசி உறுப்பைக் காண்க.",
+          "math": "\\begin{aligned}P-(17x^2-18x)^2\\\\=646x^2-684x+361\\\\\\dfrac{646x^2}{34x^2}=19\\end{aligned}",
+          "eq": "P−(17x²−18x)²\n=646x²−684x+361\n(646x²)/(34x²)=19"
+        },
+        {
+          "en": "Squaring the completed result restores the polynomial. Completing the square shows the result is positive, so it equals its absolute value.",
+          "ta": "கிடைத்த கோவையை வர்க்கப்படுத்தினால் அசல் கோவை கிடைக்கும். முழு வர்க்கமாக மாற்றும்போது விடை நேர்மம் எனத் தெரியும்; எனவே அது அதன் தனி மதிப்புக்குச் சமம்.",
+          "math": "\\begin{aligned}17x^2-18x+19\\\\=17\\left(x-\\dfrac9{17}\\right)^2+\\dfrac{242}{17}>0\\end{aligned}",
+          "eq": "17x²−18x+19\n=17(x−(9)/(17))²+(242)/(17)>0"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "=646x^2-684x+361",
+        "evidence": "aligned_chain_mismatch"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "=646x^2-684x+361",
+            "evidence": "aligned_chain_mismatch"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': '=646x^2-684x+361', 'evidence': 'aligned_chain_mismatch'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-3-ex3-unit-q9",
+        "reason": "aligned_chain_mismatch"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.unit",
+      "questionId": "c10-3-ex3-unit-q10",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Both radicands must be nonnegative. The second root cannot exceed three, since the other root is nonnegative.",
+          "ta": "இரு வர்க்கமூலங்களின் உள் கோவைகளும் எதிர்மமற்றவை. முதல் வர்க்கமூலம் எதிர்மமற்றதால் இரண்டாவது வர்க்கமூலம் மூன்றை மீறாது.",
+          "math": "\\dfrac52\\le y\\le7",
+          "eq": "(5)/(2)≤ y≤7"
+        },
+        {
+          "en": "Isolate the first radical. Square both sides, then isolate the remaining radical.",
+          "ta": "முதல் வர்க்கமூலத்தைத் தனியாகப் பிரிக்கவும். இரு பக்கங்களையும் வர்க்கப்படுத்தி மீதமுள்ள வர்க்கமூலத்தைத் தனியாக்கவும்.",
+          "math": "\\begin{aligned}\\sqrt{y+1}&=3-\\sqrt{2y-5}\\\\y+1&=4+2y-6\\sqrt{2y-5}\\\\6\\sqrt{2y-5}&=y+3\\end{aligned}",
+          "eq": "√(y+1)=3−√(2y−5)\ny+1=4+2y−6√(2y−5)\n6√(2y−5)=y+3"
+        },
+        {
+          "en": "Square again and factor. Reject 63 because it is outside the original bounds. Substitution confirms 3.",
+          "ta": "மீண்டும் வர்க்கப்படுத்திக் காரணிப்படுத்துக. அசல் எல்லைக்கு வெளியே இருப்பதால் 63-ஐ விலக்குக. பிரதியிட்டால் 3 சமன்பாட்டை நிறைவு செய்கிறது.",
+          "math": "\\begin{aligned}36(2y-5)&=(y+3)^2\\\\(y-3)(y-63)&=0\\\\\\sqrt{4}+\\sqrt1&=3\\end{aligned}",
+          "eq": "36(2y−5)=(y+3)²\n(y−3)(y−63)=0\n√(4)+√(1)=3"
+        }
+      ],
+      "incorrectStep": {
+        "step": 1,
+        "line": "y+1&=4+2y-6\\sqrt{2y-5}",
+        "evidence": "invalid_equation_transformation"
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "FAIL",
+        "answerStatus": "FAIL",
+        "tamilStatus": "PASS",
+        "failedDetails": [
+          {
+            "step": 1,
+            "line": "y+1&=4+2y-6\\sqrt{2y-5}",
+            "evidence": "invalid_equation_transformation"
+          },
+          {
+            "step": 1,
+            "line": "6\\sqrt{2y-5}&=y+3",
+            "evidence": "invalid_equation_transformation"
+          },
+          {
+            "step": 2,
+            "line": "36(2y-5)&=(y+3)^2",
+            "evidence": "invalid_equation_transformation"
+          },
+          {
+            "step": 2,
+            "line": "(y-3)(y-63)&=0",
+            "evidence": "invalid_equation_transformation"
+          }
+        ],
+        "tamilFlags": [],
+        "discrepancy": "Working failed: [{'step': 1, 'line': 'y+1&=4+2y-6\\\\sqrt{2y-5}', 'evidence': 'invalid_equation_transformation'}]"
+      },
+      "englishTamilParityImplications": "Tamil parity status: PASS",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-3-ex3-unit-q10",
+        "reason": "invalid_equation_transformation"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.unit",
+      "questionId": "c10-3-ex3-unit-q13",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "There are sixty minutes from 2 pm to 3 pm. After t minutes, the remaining time is 60 − t.",
+          "ta": "பிற்பகல் 2 முதல் 3 மணி வரை 60 நிமிடங்கள். t நிமிடங்கள் கடந்த பின் மீதமிருப்பது 60 − t நிமிடங்கள்.",
+          "math": "60-t=\\dfrac{t^2}{4}-3,\\quad 0\\le t\\le60",
+          "eq": "60−t=(t²)/(4)−3,  0≤ t≤60"
+        },
+        {
+          "en": "Multiply by four and factor. The negative root cannot be a time elapsed after 2 pm.",
+          "ta": "நான்கால் பெருக்கிக் காரணிப்படுத்துக. எதிர்ம மூலம் 2 மணிக்குப் பின் கடந்த நேரமாக இருக்க முடியாது.",
+          "math": "\\begin{aligned}t^2+4t-252&=0\\\\(t-14)(t+18)&=0\\\\t&=14\\end{aligned}",
+          "eq": "t²+4t−252=0\n(t−14)(t+18)=0\nt=14"
+        },
+        {
+          "en": "Check that both expressions give 46 minutes remaining.",
+          "ta": "இரு கோவைகளிலும் மீத நேரம் 46 நிமிடங்கள் எனச் சரிபார்க்கவும்.",
+          "math": "60-14=46=\\dfrac{14^2}{4}-3",
+          "eq": "60−14=46=(14²)/(4)−3"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-3-ex3-unit-q13",
+        "reason": "en_ta_number_mismatch"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 3,
+      "exercise": "3.7",
+      "questionId": "g10-ch3-variations",
+      "itemType": "concept",
+      "originalWorking": [],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "g10-ch3-variations",
+        "reason": "en_ta_number_mismatch"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 5,
+      "exercise": "5.unit",
+      "questionId": "c10-5-unit-q7",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Quick Solution Plan: Treat (price x, litres y) as points (14, 980) and (16, 1220). Constant rate of change is (1220 − 980)/(16 − 14) = 120 litres per rupee, so at x = 17, y = 1220 + 120 = 1340 litres.",
+          "ta": "",
+          "math": "m = \\dfrac{1220 - 980}{16 - 14} = \\dfrac{240}{2} = 120",
+          "eq": "Slope m = (1220 − 980)/(16 − 14) = 240/2 = 120"
+        },
+        {
+          "en": "Understand Deeply — Form the linear equation y − 980 = 120(x − 14), giving y = 120x − 700, and evaluate at x = 17.",
+          "ta": "",
+          "math": "\\begin{aligned} y - 980 &= 120(x - 14) \\\\ \\text{At } x = 17:\\quad y &= 980 + 120(3) = 1340\\;\\text{litres} \\end{aligned}",
+          "eq": "y = 120(17) − 700 = 2040 − 700 = 1340 litres"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-5-unit-q7",
+        "reason": "en_ta_number_mismatch"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 7,
+      "exercise": "7.3",
+      "questionId": "c10-7-ex7-3-q3",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Let r be the common radius and h = 2.4 cm be the common height of both the solid cylinder and the carved-out cone. Halve the diameter d = 1.4 cm to find r.",
+          "ta": "திண்ம உருளை மற்றும் வெட்டி எடுக்கப்படும் கூம்பு ஆகிய இரண்டின் பொது உயரம் h = 2.4 செ.மீ மற்றும் பொது ஆரம் r எனக் கொள்வோம். விட்டம் d = 1.4 செ.மீ என்பதால் ஆரம் r அதன் பாதியாகும்.",
+          "math": "\\begin{aligned}r&=\\dfrac{1.4}{2}=0.7\\,\\mathrm{cm}\\\\h&=2.4\\,\\mathrm{cm}\\end{aligned}",
+          "eq": "r = 1.4/2 = 0.7 cm, h = 2.4 cm"
+        },
+        {
+          "en": "Because the cone is removed from inside the cylinder, subtract the cone's volume from the cylinder's volume.",
+          "ta": "உருளையிலிருந்து கூம்பு வெட்டி எடுக்கப்படுவதால், உருளையின் கனஅளவிலிருந்து கூம்பின் கனஅளவைக் கழிக்க வேண்டும்.",
+          "math": "\\begin{aligned}V_{\\text{rem}}&=\\pi r^2 h-\\dfrac{1}{3}\\pi r^2 h\\\\&=\\dfrac{2}{3}\\pi r^2 h\\end{aligned}",
+          "eq": "V_rem = πr²h − (1/3)πr²h = (2/3)πr²h"
+        },
+        {
+          "en": "Substitute π = 22/7, r = 0.7 cm, and h = 2.4 cm to find the exact remaining volume.",
+          "ta": "π = 22/7, r = 0.7 செ.மீ மற்றும் h = 2.4 செ.மீ எனப் பிரதியிட்டு மீதமுள்ள கனஅளவைக் காண்க.",
+          "math": "\\begin{aligned}V_{\\text{rem}}&=\\dfrac{2}{3}\\times\\dfrac{22}{7}\\times0.7\\times0.7\\times2.4\\\\&=2\\times22\\times0.1\\times0.7\\times0.8\\\\&=2.464\\,\\mathrm{cm}^3\\end{aligned}",
+          "eq": "V_rem = (2/3)×(22/7)×0.7×0.7×2.4 = 2.464 cm³"
+        },
+        {
+          "en": "Rounding 2.464 cm³ to two decimal places gives 2.46 cm³ (which matches both the English and Tamil 2025 textbook answer keys). Note: rounding literally to the nearest whole cm³ as phrased in the English question gives 2 cm³.",
+          "ta": "2.464 கன செ.மீ-ஐ இரண்டு தசம இடங்களுக்கு முழுமையாக்கினால் 2.46 கன செ.மீ கிடைக்கும் (இது 2025 தமிழ் மற்றும் ஆங்கிலப் பாடநூல் விடைக்குறிப்புடன் பொருந்துகிறது). முழு எண் கன செ.மீ-க்கு முழுமையாக்கினால் 2 கன செ.மீ ஆகும்.",
+          "math": "2.464\\,\\mathrm{cm}^3\\approx2.46\\,\\mathrm{cm}^3",
+          "eq": "2.464 cm³ ≈ 2.46 cm³ (nearest whole cm³: 2 cm³)"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "step_3_number_mismatch:en=['2.464'],ta=['464']"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "step_3_number_mismatch:en=['2.464'],ta=['464']"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: [\"step_3_number_mismatch:en=['2.464'],ta=['464']\"])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-7-ex7-3-q3",
+        "reason": "step_3_number_mismatch:en=['2.464'],ta=['464']"
+      }
+    },
+    {
+      "grade": 10,
+      "chapter": 7,
+      "exercise": "7.5",
+      "questionId": "c10-7-ex7-5-q5",
+      "itemType": "exercise",
+      "originalWorking": [
+        {
+          "en": "Total area consists of the curved surface and both circular ends. Use the relation between radius and height.",
+          "ta": "மொத்தப் புறப்பரப்பு என்பது வளைபரப்பும் இரு வட்ட அடிப்பரப்புகளும் சேர்ந்தது. ஆரத்திற்கும் உயரத்திற்கும் உள்ள தொடர்பைப் பயன்படுத்துக.",
+          "math": "\\begin{aligned}A&=2\\pi r(r+h)\\\\r&=\\dfrac h3\\end{aligned}",
+          "eq": "A = 2πr(r + h); r = h/3"
+        },
+        {
+          "en": "Substitute h/3 for r, combine the terms in the bracket, and multiply.",
+          "ta": "r-க்குப் பதிலாக h/3-ஐப் பிரதியிடுக. அடைப்புக்குறிக்குள் உள்ள உறுப்புகளைக் கூட்டிப் பெருக்குக.",
+          "math": "\\begin{aligned}A&=2\\pi\\dfrac h3\\left(\\dfrac h3+h\\right)\\\\&=2\\pi\\dfrac h3\\dfrac{4h}{3}\\\\&=\\dfrac{8\\pi h^2}{9}\\end{aligned}",
+          "eq": "A = 8πh²/9 square units"
+        }
+      ],
+      "incorrectStep": {
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ]
+      },
+      "correctWorking": "Requires independent editorial review against verified 2025 textbook source before patching.",
+      "independentDeterministicEvidence": {
+        "workingStatus": "PASS",
+        "answerStatus": "PASS",
+        "tamilStatus": "FAIL",
+        "failedDetails": [],
+        "tamilFlags": [
+          "en_ta_number_mismatch"
+        ],
+        "discrepancy": ""
+      },
+      "englishTamilParityImplications": "Tamil parity status: FAIL (flags: ['en_ta_number_mismatch'])",
+      "proposedCorrectionPatch": {
+        "status": "PROPOSED_DO_NOT_AUTO_APPLY",
+        "targetId": "c10-7-ex7-5-q5",
+        "reason": "en_ta_number_mismatch"
+      }
+    }
+  ]
+}

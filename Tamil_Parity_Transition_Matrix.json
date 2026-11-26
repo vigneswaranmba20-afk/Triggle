@@ -1,0 +1,1014 @@
+{
+ "schemaVersion": 1,
+ "engine": "TRACE MathGuard V1.4c",
+ "overallV1_4cCounts": {
+  "PASS": 677,
+  "FAIL": 34,
+  "PARTIAL": 19,
+  "UNVERIFIABLE": 35
+ },
+ "transitions": {
+  "v1_4a_to_v1_4b": {
+   "v1_4aFails": 39,
+   "fixedInV1_4b": 24,
+   "persistedInV1_4b": 15,
+   "newlyFailingInV1_4b": 40,
+   "v1_4bFails": 55,
+   "rootCauseOfIncrease": "V1.4b introduced step-level semantic_step_parity_check across 765 items, which fixed 24 legacy question-token alarms but introduced 40 new step-level alarms (mostly mapping Tamil indefinite article 'ஒரு'->'1', matching 'மீ' inside 'மீது'->'m', IEEE-754 float Fractions, and pure algebraic stems)."
+  },
+  "v1_4b_to_v1_4c": {
+   "v1_4bFails": 55,
+   "fixedInV1_4c": 27,
+   "persistedInV1_4c": 28,
+   "newlyFailingInV1_4c": 6,
+   "v1_4cFails": 34
+  }
+ },
+ "v1_4b_55_investigation_summary": {
+  "engine_false_positive_resolved_in_v1_4c": 27,
+  "equivalent_alternative_working_or_prose_alignment": 20,
+  "missing_or_placeholder_tamil_explanation": 8
+ },
+ "v1_4b_55_investigation": [
+  {
+   "id": "c10-3-ex3-12-q1",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_3_semantic_number_mismatch:en=['0', '4'],ta=['2']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "c10-3-ex3-12-q2",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "c10-3-ex3-12-q3",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_3_semantic_number_mismatch:en=['1/2', '15', '90'],ta=['6000000']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "c10-3-ex3-12-q5",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['20', '90', '2000'],ta=['400']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_0_semantic_number_mismatch:en=['20', '90', '2000'],ta=['400']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "c10-3-ex3-12-q6",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch",
+    "step_0_semantic_number_mismatch:en=['0', '1/2', '8/9', '16/9'],ta=['2/9']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_0_semantic_number_mismatch:en=['0', '1/2', '8/9', '16/9'],ta=['2/9']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "c10-3-ex3-13-q3",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_3_semantic_number_mismatch:en=['-2', '4'],ta=['1']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "c10-3-ex3-20-q10",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "c10-3-ex3-6-q2-i",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['-3', '-1', '1', '2'],ta=['400']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "c10-3-ex3-unit-q10",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['3'],ta=['2']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "c10-3-ex3-unit-q2",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "c10-3-ex3-unit-q3",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "c10-5-unit-q7",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "c10-7-ex7-2-q1",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "en_ta_terminology_mismatch",
+    "step_0_semantic_number_mismatch:en=['1/2'],ta=['1']"
+   ],
+   "v1_4cStatus": "PARTIAL",
+   "v1_4cFlags": [
+    "en_ta_terminology_mismatch"
+   ],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "c10-7-ex7-2-q10",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_3_semantic_number_mismatch:en=['10459'],ta=['1']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "c10-7-ex7-2-q5",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch",
+    "step_0_semantic_number_mismatch:en=['2'],ta=['1']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "c10-7-ex7-3-q1",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['1/2'],ta=['13']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_0_semantic_number_mismatch:en=['1/2', '2'],ta=['13']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "c10-7-ex7-3-q5",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch",
+    "en_ta_terminology_mismatch"
+   ],
+   "v1_4cStatus": "PARTIAL",
+   "v1_4cFlags": [
+    "en_ta_terminology_mismatch"
+   ],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch3-ex3.1-q1-ii",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_2_semantic_number_mismatch:en=['3'],ta=['1']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_2_semantic_number_mismatch:en=['3'],ta=['1']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.1-q1-iii",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['2'],ta=['0', '6']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_0_semantic_number_mismatch:en=['2'],ta=['0', '6']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.1-q1-iv",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_2_semantic_number_mismatch:en=['2', '7'],ta=['1']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch3-ex3.1-q1-vi",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "en_ta_unit_mismatch",
+    "step_2_semantic_number_mismatch:en=['1'],ta=['7', '10', '700']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "en_ta_unit_mismatch",
+    "step_2_semantic_number_mismatch:en=['1'],ta=['7', '10', '700']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.1-q2-v",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['1'],ta=['8']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_0_semantic_number_mismatch:en=['1'],ta=['8']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.1-q3-i",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_1_semantic_number_mismatch:en=['2'],ta=['7']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_1_semantic_number_mismatch:en=['2'],ta=['7']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.1-q4-ii",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['1'],ta=['6368990593027355/4503599627370496', '7/2', '5', '7']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch3-ex3.1-q4-iii",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['0'],ta=['6/5', '4', '5', '6']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch3-ex3.1-q4-iv",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['0', '1'],ta=['5035249563381583/2251799813685248', '7/3', '5', '7']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch3-ex3.11-q1-i",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_2_semantic_number_mismatch:en=['2'],ta=['-1', '10']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_2_semantic_number_mismatch:en=['2'],ta=['-1', '10']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.11-q3",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.12-q1-i",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_1_semantic_number_mismatch:en=['2'],ta=['6']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_1_semantic_number_mismatch:en=['2'],ta=['6']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.13-q3",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch3-ex3.15-q13",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "missing_tamil_script"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch3-ex3.15-q14",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "missing_tamil_script"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch3-ex3.2-q4",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_2_missing_tamil_script"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch3-ex3.2-q6-i",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['0'],ta=['2']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_0_semantic_number_mismatch:en=['0'],ta=['2']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.2-q6-ii",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['0'],ta=['3']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_0_semantic_number_mismatch:en=['0'],ta=['3']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.2-q6-iv",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['0'],ta=['1']",
+    "step_1_semantic_number_mismatch:en=['2'],ta=['1']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_0_semantic_number_mismatch:en=['0'],ta=['1']",
+    "step_1_semantic_number_mismatch:en=['2'],ta=['1']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.2-q6-v",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['0'],ta=['1']",
+    "step_1_semantic_number_mismatch:en=['0'],ta=['1']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_1_semantic_number_mismatch:en=['0'],ta=['1']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.3-q10",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "step_2_semantic_number_mismatch:en=['4', '10'],ta=['2']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_2_semantic_number_mismatch:en=['4', '10'],ta=['2']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch3-ex3.4-q13-ii",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_1_missing_tamil_script"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch3-ex3.4-q14",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "step_1_missing_tamil_script"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch5-ex5.1-q4",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['2'],ta=['1']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_0_semantic_number_mismatch:en=['2'],ta=['1']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q11",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ],
+   "classification": "missing_or_placeholder_tamil_explanation"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q2",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script"
+   ],
+   "classification": "missing_or_placeholder_tamil_explanation"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q3",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ],
+   "classification": "missing_or_placeholder_tamil_explanation"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q5",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script",
+    "step_7_missing_tamil_script",
+    "step_8_missing_tamil_script"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script",
+    "step_7_missing_tamil_script",
+    "step_8_missing_tamil_script"
+   ],
+   "classification": "missing_or_placeholder_tamil_explanation"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q6",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script",
+    "step_7_missing_tamil_script",
+    "step_8_missing_tamil_script",
+    "step_9_missing_tamil_script"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script",
+    "step_7_missing_tamil_script",
+    "step_8_missing_tamil_script",
+    "step_9_missing_tamil_script"
+   ],
+   "classification": "missing_or_placeholder_tamil_explanation"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q7",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script"
+   ],
+   "classification": "missing_or_placeholder_tamil_explanation"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q8",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ],
+   "classification": "missing_or_placeholder_tamil_explanation"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q9",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script"
+   ],
+   "classification": "missing_or_placeholder_tamil_explanation"
+  },
+  {
+   "id": "g9-ch5-ex5.4-q5",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch5-ex5.5-q7",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['3'],ta=['1']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch5-ex5.6-q3",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['5'],ta=['1']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch7-ex7.1-q8",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['2'],ta=['1', '1500']"
+   ],
+   "v1_4cStatus": "FAIL",
+   "v1_4cFlags": [
+    "step_0_semantic_number_mismatch:en=['2'],ta=['1500']",
+    "step_2_semantic_number_mismatch:en=['252617', '25261700'],ta=['1700']"
+   ],
+   "classification": "equivalent_alternative_working_or_prose_alignment"
+  },
+  {
+   "id": "g9-ch7-ex7.3-q8",
+   "inV1_4aFailSet": true,
+   "v1_4bFlags": [
+    "en_ta_number_mismatch"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  },
+  {
+   "id": "g9-ch7-ex7.4-q3",
+   "inV1_4aFailSet": false,
+   "v1_4bFlags": [
+    "step_0_semantic_number_mismatch:en=['3'],ta=['1']"
+   ],
+   "v1_4cStatus": "PASS",
+   "v1_4cFlags": [],
+   "classification": "engine_false_positive_resolved_in_v1_4c"
+  }
+ ],
+ "v1_4c_remaining_fails": [
+  {
+   "id": "g9-ch3-ex3.1-q1-ii",
+   "flags": [
+    "step_2_semantic_number_mismatch:en=['3'],ta=['1']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.1-q1-iii",
+   "flags": [
+    "step_0_semantic_number_mismatch:en=['2'],ta=['0', '6']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.1-q1-vi",
+   "flags": [
+    "en_ta_unit_mismatch",
+    "step_2_semantic_number_mismatch:en=['1'],ta=['7', '10', '700']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.1-q2-v",
+   "flags": [
+    "step_0_semantic_number_mismatch:en=['1'],ta=['8']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.1-q3-i",
+   "flags": [
+    "step_1_semantic_number_mismatch:en=['2'],ta=['7']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.2-q3-i",
+   "flags": [
+    "step_1_semantic_number_mismatch:en=['2'],ta=['0']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.2-q3-vi",
+   "flags": [
+    "step_1_semantic_number_mismatch:en=['2'],ta=['0']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.2-q6-i",
+   "flags": [
+    "step_0_semantic_number_mismatch:en=['0'],ta=['2']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.2-q6-ii",
+   "flags": [
+    "step_0_semantic_number_mismatch:en=['0'],ta=['3']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.2-q6-iv",
+   "flags": [
+    "step_0_semantic_number_mismatch:en=['0'],ta=['1']",
+    "step_1_semantic_number_mismatch:en=['2'],ta=['1']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.2-q6-v",
+   "flags": [
+    "step_1_semantic_number_mismatch:en=['0'],ta=['1']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.3-q10",
+   "flags": [
+    "step_2_semantic_number_mismatch:en=['4', '10'],ta=['2']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.11-q1-i",
+   "flags": [
+    "step_2_semantic_number_mismatch:en=['2'],ta=['-1', '10']"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.11-q3",
+   "flags": [
+    "en_ta_number_mismatch"
+   ]
+  },
+  {
+   "id": "g9-ch3-ex3.12-q1-i",
+   "flags": [
+    "step_1_semantic_number_mismatch:en=['2'],ta=['6']"
+   ]
+  },
+  {
+   "id": "g9-ch5-ex5.2-q2",
+   "flags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script"
+   ]
+  },
+  {
+   "id": "g9-ch5-ex5.2-q3",
+   "flags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ]
+  },
+  {
+   "id": "g9-ch5-ex5.2-q5",
+   "flags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script",
+    "step_7_missing_tamil_script",
+    "step_8_missing_tamil_script"
+   ]
+  },
+  {
+   "id": "g9-ch5-ex5.2-q6",
+   "flags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script",
+    "step_7_missing_tamil_script",
+    "step_8_missing_tamil_script",
+    "step_9_missing_tamil_script"
+   ]
+  },
+  {
+   "id": "g9-ch5-ex5.2-q7",
+   "flags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script"
+   ]
+  },
+  {
+   "id": "g9-ch5-ex5.2-q8",
+   "flags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ]
+  },
+  {
+   "id": "g9-ch5-ex5.2-q9",
+   "flags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script"
+   ]
+  },
+  {
+   "id": "g9-ch5-ex5.2-q11",
+   "flags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ]
+  },
+  {
+   "id": "g9-ch5-ex5.1-q4",
+   "flags": [
+    "step_0_semantic_number_mismatch:en=['2'],ta=['1']"
+   ]
+  },
+  {
+   "id": "g9-ch7-ex7.1-q7",
+   "flags": [
+    "en_ta_terminology_mismatch",
+    "step_1_semantic_number_mismatch:en=['131415'],ta=['13', '14', '15']",
+    "step_2_semantic_number_mismatch:en=['915'],ta=['15']"
+   ]
+  },
+  {
+   "id": "g9-ch7-ex7.1-q8",
+   "flags": [
+    "step_0_semantic_number_mismatch:en=['2'],ta=['1500']",
+    "step_2_semantic_number_mismatch:en=['252617', '25261700'],ta=['1700']"
+   ]
+  },
+  {
+   "id": "g9-ch7-ex7.1-q10",
+   "flags": [
+    "en_ta_terminology_mismatch",
+    "step_0_semantic_number_mismatch:en=['342042'],ta=['4200']"
+   ]
+  },
+  {
+   "id": "c10-3-ex3-11-q1-ii",
+   "flags": [
+    "step_1_semantic_number_mismatch:en=['2'],ta=['-1/2']"
+   ]
+  },
+  {
+   "id": "c10-3-ex3-12-q5",
+   "flags": [
+    "step_0_semantic_number_mismatch:en=['20', '90', '2000'],ta=['400']"
+   ]
+  },
+  {
+   "id": "c10-3-ex3-12-q6",
+   "flags": [
+    "step_0_semantic_number_mismatch:en=['0', '1/2', '8/9', '16/9'],ta=['2/9']"
+   ]
+  },
+  {
+   "id": "c10-3-ex3-unit-q2",
+   "flags": [
+    "en_ta_number_mismatch"
+   ]
+  },
+  {
+   "id": "c10-3-ex3-unit-q11",
+   "flags": [
+    "en_ta_number_mismatch"
+   ]
+  },
+  {
+   "id": "c10-5-unit-q7",
+   "flags": [
+    "en_ta_number_mismatch"
+   ]
+  },
+  {
+   "id": "c10-7-ex7-3-q1",
+   "flags": [
+    "step_0_semantic_number_mismatch:en=['1/2', '2'],ta=['13']"
+   ]
+  }
+ ],
+ "gitCommit": "1300f61"
+}

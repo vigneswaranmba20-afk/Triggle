@@ -1,0 +1,7 @@
+{
+ "schemaVersion": 1,
+ "engine": "TRACE MathGuard V1.4b",
+ "gitCommit": "2187c00",
+ "policy": "Only independently confirmed student-facing mathematical or translation errors are listed. Zero confirmed mathematical content errors in audited Grade 9/10 Ch 3, 5, 7.",
+ "confirmedErrors": []
+}

@@ -1,0 +1,2675 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.5",
+  "gitCommit": "0b7b1fa",
+  "grade": 10,
+  "chapter": "1",
+  "title": "Relations and Functions",
+  "inventoryCounts": {
+    "totalRuntimeItems": 74,
+    "exercises": 74,
+    "nonExercises": 0,
+    "concepts": 10
+  },
+  "summary": {
+    "totalItems": 84,
+    "workingStatusCounts": {
+      "FAIL": 11,
+      "PASS": 15,
+      "UNVERIFIABLE": 29,
+      "PARTIAL": 29
+    },
+    "answerStatusCounts": {
+      "FAIL": 12,
+      "PASS": 15,
+      "UNVERIFIABLE": 57
+    },
+    "tamilStatusCounts": {
+      "PASS": 70,
+      "PARTIAL": 4,
+      "UNVERIFIABLE": 10
+    },
+    "claims": {
+      "total": 281,
+      "verified": 118,
+      "failed": 19,
+      "unsupported": 144,
+      "verifiedRatePct": 41.99
+    },
+    "ambiguityFlagCounts": {
+      "external_diagram_dependency": 1
+    }
+  },
+  "exercisesSummary": {
+    "totalItems": 74,
+    "workingStatusCounts": {
+      "FAIL": 11,
+      "PASS": 15,
+      "UNVERIFIABLE": 19,
+      "PARTIAL": 29
+    },
+    "answerStatusCounts": {
+      "FAIL": 12,
+      "PASS": 15,
+      "UNVERIFIABLE": 47
+    },
+    "tamilStatusCounts": {
+      "PASS": 70,
+      "PARTIAL": 4
+    },
+    "claims": {
+      "total": 281,
+      "verified": 118,
+      "failed": 19,
+      "unsupported": 144,
+      "verifiedRatePct": 41.99
+    },
+    "ambiguityFlagCounts": {
+      "external_diagram_dependency": 1
+    }
+  },
+  "conceptsSummary": {
+    "totalItems": 10,
+    "workingStatusCounts": {
+      "UNVERIFIABLE": 10
+    },
+    "answerStatusCounts": {
+      "UNVERIFIABLE": 10
+    },
+    "tamilStatusCounts": {
+      "UNVERIFIABLE": 10
+    },
+    "claims": {
+      "total": 0,
+      "verified": 0,
+      "failed": 0,
+      "unsupported": 0,
+      "verifiedRatePct": 0.0
+    },
+    "ambiguityFlagCounts": {}
+  },
+  "records": [
+    {
+      "id": "c10-1-ex1-1-q1-i",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 6,
+      "verified_claims": 3,
+      "failed_claims": 3,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 3,
+          "claim": "n(A × B) = 3",
+          "expected": 6
+        },
+        {
+          "step": 3,
+          "claim": "n(A × A) = 3",
+          "expected": 9
+        },
+        {
+          "step": 3,
+          "claim": "n(B × A) = 2",
+          "expected": 6
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 3, 'claim': 'n(A × B) = 3', 'expected': 6}]"
+    },
+    {
+      "id": "c10-1-ex1-1-q1-ii",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 2,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 2,
+          "claim": "B × A = {(p,p), (p,q), (q,p), (q,q)}",
+          "reason": "Cartesian product mismatch"
+        },
+        {
+          "step": 3,
+          "claim": "n(A × B) = 2",
+          "expected": 8
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 2, 'claim': 'B × A = {(p,p), (p,q), (q,p), (q,q)}', 'reason': 'Cartesian product mismatch'}]"
+    },
+    {
+      "id": "c10-1-ex1-1-q1-iii",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PARTIAL",
+      "tamil_flags": [
+        "en_ta_unit_mismatch"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-ex1-1-q2",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 3,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-ex1-1-q3",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 0,
+      "failed_claims": 1,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 3,
+          "claim": "B × A = {(-2,3), (-2,4), (0,3), (0,4), (3,3), (3,4)}",
+          "reason": "Cartesian product mismatch"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 3, 'claim': 'B × A = {(-2,3), (-2,4), (0,3), (0,4), (3,3), (3,4)}', 'reason': 'Cartesian product mismatch'}]"
+    },
+    {
+      "id": "c10-1-ex1-1-q4",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 3,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-ex1-1-q5",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 3,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-ex1-1-q6-i",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 4,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-ex1-1-q6-ii",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-ex1-1-q6-iii",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 3,
+      "failed_claims": 1,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 2,
+          "claim": "B × C = {(2,3), (2,5), (3,3), (3,5), (4,3), (4,5)}",
+          "reason": "Cartesian product mismatch"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 2, 'claim': 'B × C = {(2,3), (2,5), (3,3), (3,5), (4,3), (4,5)}', 'reason': 'Cartesian product mismatch'}]"
+    },
+    {
+      "id": "c10-1-ex1-1-q7-i",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-ex1-1-q7-ii",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 1,
+      "failed_claims": 2,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 2,
+          "claim": "A × C = {(1,2), (2,2), (3,2), (4,2), (5,2), (6,2), (7,2)}",
+          "reason": "Cartesian product mismatch"
+        },
+        {
+          "step": 2,
+          "claim": "n(A × B) = 7",
+          "expected": 28
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 2, 'claim': 'A × C = {(1,2), (2,2), (3,2), (4,2), (5,2), (6,2), (7,2)}', 'reason': 'Cartesian product mismatch'}]"
+    },
+    {
+      "id": "c10-1-1-2-q1",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-2-q2",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "1≤x≤45",
+          "evidence": "unverified_inequality"
+        },
+        {
+          "step": 0,
+          "line": "x²≤45",
+          "evidence": "unverified_inequality"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-2-q3",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "x=0,1,2,3,4,5",
+          "evidence": "unparsed_rhs"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-2-q4",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 6,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 4,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 1,
+          "line": "2→1",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "4→2",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "points (2,1),(4,2)",
+          "evidence": "no_equality_relation"
+        },
+        {
+          "step": 2,
+          "line": "x=1,2,3,4,5,6",
+          "evidence": "unparsed_rhs"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-2-q5",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PARTIAL",
+      "tamil_flags": [
+        "en_ta_unit_mismatch"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 6,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 5,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "(salary, employee)",
+          "evidence": "no_equality_relation"
+        },
+        {
+          "step": 1,
+          "line": "10000→A₁,A₂,A₃,A₄,A₅",
+          "evidence": "no_equality_relation"
+        },
+        {
+          "step": 1,
+          "line": "25000→C₁,C₂,C₃,C₄",
+          "evidence": "no_equality_relation"
+        },
+        {
+          "step": 2,
+          "line": "50000→M₁,M₂,M₃",
+          "evidence": "no_equality_relation"
+        },
+        {
+          "step": 2,
+          "line": "100000→E₁,E₂",
+          "evidence": "no_equality_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-3-q1",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "It is a function.",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-3-q2",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 5,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "f(3)=10",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 0,
+          "line": "f(4)=17",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 0,
+          "line": "f(6)=37",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 0,
+          "line": "f(8)=65",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "R:X→ℕ is a function.",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-3-q3",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 5,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-1-3-q4",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 9,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 8,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 1,
+          "line": "f(0)=9",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "f(7)=6",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "f(2)=6",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "f(10)=0",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 2,
+          "line": "f(9.5)=1",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 3,
+          "line": "Domain=[0,10]",
+          "evidence": "unparsed_equation"
+        },
+        {
+          "step": 3,
+          "line": "Range=[0,9]",
+          "evidence": "unparsed_equation"
+        },
+        {
+          "step": 4,
+          "line": "f(6)=5",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-3-q5",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 3,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-1-3-q6",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 6,
+      "verified_claims": 6,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-1-3-q7",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 3,
+      "failed_claims": 1,
+      "unsupported_claims": 1,
+      "failed_details": [
+        {
+          "step": 1,
+          "line": "Base length=base width=24−2x",
+          "evidence": "multi_link_identity_mismatch"
+        }
+      ],
+      "unsupported_details": [
+        {
+          "step": 3,
+          "line": "0<x<12",
+          "evidence": "unverified_inequality"
+        }
+      ],
+      "discrepancy": "Working failed: [{'step': 1, 'line': 'Base length=base width=24−2x', 'evidence': 'multi_link_identity_mismatch'}]"
+    },
+    {
+      "id": "c10-1-1-3-q8",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 4,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-1-3-q9",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 2,
+          "line": "t≥0",
+          "evidence": "unverified_inequality"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-3-q10",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 4,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "The relation is a function.",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "Working failed: [{'step': 4, 'line': 'y=0.9(40)+24.5=60.5 \\\\text{inches}', 'evidence': 'chain_mismatch'}]"
+    },
+    {
+      "id": "c10-1-1-4-q1",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [
+        "external_diagram_dependency"
+      ],
+      "total_claims": 5,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 5,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "One x-value must never have two y-values.",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "(i) Not a function.",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 2,
+          "line": "(ii) Function.",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 3,
+          "line": "(iii) Not a function.",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 4,
+          "line": "(iv) Function.",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-4-q2",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 12,
+      "verified_claims": 7,
+      "failed_claims": 0,
+      "unsupported_claims": 5,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 2,
+          "line": "2→0",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 2,
+          "line": "4→1",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 2,
+          "line": "6→2",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 2,
+          "line": "10→4",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 2,
+          "line": "12→5",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-4-q3",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 8,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 7,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "1→2",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "2→2",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "3→2",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "4→3",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "5→4",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "x:1,2,3,4,5",
+          "evidence": "no_equality_relation"
+        },
+        {
+          "step": 1,
+          "line": "f(x):2,2,2,3,4",
+          "evidence": "no_equality_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-4-q4",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 1,
+          "line": "f is one-one.",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-4-q5",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PARTIAL",
+      "tamil_flags": [
+        "en_ta_unit_mismatch"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 2,
+          "line": "m=n ⇒ f is one-one.",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-4-q6",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 4,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 1,
+          "line": "One-one into function.",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-4-q7",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 4,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 1,
+          "line": "f((y−1)/2)=y ⇒ (i) one-one and onto.",
+          "evidence": "unverified_implication"
+        },
+        {
+          "step": 2,
+          "line": "f(1)=f(−1)=−1 ⇒ not one-one",
+          "evidence": "unverified_implication"
+        },
+        {
+          "step": 3,
+          "line": "(ii) Not onto",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 3,
+          "line": "not bijective.",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-4-q8",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 5,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-1-4-q9",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 6,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 6,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "f(3)=3+2=5",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "f(0)=2",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 2,
+          "line": "f(−1.5)=−1.5−1=−2.5",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 3,
+          "line": "f(2)=4",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 3,
+          "line": "f(−2)=−3",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 3,
+          "line": "f(2)+f(−2)=1",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-4-q10",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 12,
+      "verified_claims": 4,
+      "failed_claims": 0,
+      "unsupported_claims": 8,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "f(−3)=−17",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 0,
+          "line": "f(1)=7",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 0,
+          "line": "f(−2)=−11",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "f(2)=19",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "f(4)=79",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 2,
+          "line": "f(6)=14",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 2,
+          "line": "f(7)=17",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 2,
+          "line": "f(8)=20",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-4-q11",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 0,
+      "failed_claims": 1,
+      "unsupported_claims": 4,
+      "failed_details": [
+        {
+          "step": 1,
+          "line": "S(t₂)−S(t₁)=(t₂−t₁)[½g(t₂+t₁)+a]",
+          "evidence": "identity_mismatch"
+        }
+      ],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "t≥0",
+          "evidence": "unverified_inequality"
+        },
+        {
+          "step": 0,
+          "line": "g>0",
+          "evidence": "unverified_inequality"
+        },
+        {
+          "step": 0,
+          "line": "a>0",
+          "evidence": "unverified_inequality"
+        },
+        {
+          "step": 2,
+          "line": "t₂>t₁ ⇒ S(t₂)>S(t₁) ⇒ one-one",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "Working failed: [{'step': 1, 'line': 'S(t₂)−S(t₁)=(t₂−t₁)[½g(t₂+t₁)+a]', 'evidence': 'identity_mismatch'}]"
+    },
+    {
+      "id": "c10-1-1-4-q12",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 6,
+      "verified_claims": 3,
+      "failed_claims": 1,
+      "unsupported_claims": 2,
+      "failed_details": [
+        {
+          "step": 1,
+          "line": "t(0)=32",
+          "evidence": "contradictory_constant_equation"
+        }
+      ],
+      "unsupported_details": [
+        {
+          "step": 1,
+          "line": "t(28)=50.4+32=82.4",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "t(−10)=−18+32=14",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "Working failed: [{'step': 1, 'line': 't(0)=32', 'evidence': 'contradictory_constant_equation'}]"
+    },
+    {
+      "id": "c10-1-1-5-q1",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 14,
+      "verified_claims": 3,
+      "failed_claims": 5,
+      "unsupported_claims": 6,
+      "failed_details": [
+        {
+          "step": 2,
+          "line": "g∘f=(3−x)/3",
+          "evidence": "inconsistent_system_equation"
+        },
+        {
+          "step": 3,
+          "line": "f∘g=(x−4)+3=x−1",
+          "evidence": "multi_link_identity_mismatch"
+        },
+        {
+          "step": 3,
+          "line": "g∘f=(3+x)−4=x−1",
+          "evidence": "multi_link_identity_mismatch"
+        },
+        {
+          "step": 4,
+          "line": "f∘g=4(x+1)²−1=4x²+8x+3",
+          "evidence": "multi_link_identity_mismatch"
+        },
+        {
+          "step": 4,
+          "line": "g∘f=1+(4x²−1)=4x²",
+          "evidence": "multi_link_identity_mismatch"
+        }
+      ],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "f∘g=f(g(x))",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 0,
+          "line": "g∘f=g(f(x))",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "unequal",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 2,
+          "line": "unequal",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 3,
+          "line": "equal",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 4,
+          "line": "unequal",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "Working failed: [{'step': 2, 'line': 'g∘f=(3−x)/3', 'evidence': 'inconsistent_system_equation'}]"
+    },
+    {
+      "id": "c10-1-1-5-q2",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 6,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 4,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "f(g(x))=18x−3k+2",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 0,
+          "line": "g(f(x))=18x+12−k",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 2,
+          "line": "f(g(x))=8x+10−k",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 2,
+          "line": "g(f(x))=8x−4k+5",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-5-q3",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 1,
+      "unsupported_claims": 2,
+      "failed_details": [
+        {
+          "step": 2,
+          "line": "f∘g=g∘f=x",
+          "evidence": "multi_link_identity_mismatch"
+        }
+      ],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "f(g(x))=2((x+1)/2)−1=x+1−1=x",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "g(f(x))=((2x−1)+1)/2=2x/2=x",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "Working failed: [{'step': 2, 'line': 'f∘g=g∘f=x', 'evidence': 'multi_link_identity_mismatch'}]"
+    },
+    {
+      "id": "c10-1-1-5-q4",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 3,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "g(f(a))=(a²−1)−2=a²−3",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-5-q5",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-5-q6",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 3,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 3,
+          "line": "x⁸−4x⁶+4x⁴−1",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-5-q7",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 4,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "f(a)=f(b) ⇒ a⁵=b⁵ ⇒ a=b",
+          "evidence": "unverified_implication"
+        },
+        {
+          "step": 1,
+          "line": "g(1)=g(−1)=1 ⇒ g is not one-one",
+          "evidence": "unverified_implication"
+        },
+        {
+          "step": 2,
+          "line": "f(g(x))=(x⁴)⁵=x²⁰",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 3,
+          "line": "(f∘g)(1)=(f∘g)(−1)=1 ⇒ not one-one",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-5-q8",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 3,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "(f∘g)∘h=f(g(h(x)))=f∘(g∘h)",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-5-q9",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 4,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-1-5-q10",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 2,
+          "line": "=aC(t₁)+bC(t₂)",
+          "evidence": "empty_side"
+        },
+        {
+          "step": 2,
+          "line": "superposition holds",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q1",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q2",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-1-6-q3",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q4",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q5",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q6",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 1,
+          "line": "4=2(3)+b ⇒ b=−2 ⇒ (D)",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q7",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PARTIAL",
+      "tamil_flags": [
+        "en_ta_unit_mismatch"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "2^(mn)−1 ⇒ (C)",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q8",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "(x,x)",
+          "evidence": "no_equality_relation"
+        },
+        {
+          "step": 1,
+          "line": "b=6 ⇒ (A)",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q9",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 5,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "1→4",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "2→8",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "3→9",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "4→10",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "One-to-one ⇒ (C)",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q10",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "f(g(x))=2(1/(3x))²",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "2/(9x²) ⇒ (C)",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q11",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q12",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "f(2)=0",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 0,
+          "line": "f(0)=1",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 0,
+          "line": "f(4)=2",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q13",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "[f(x)f(y)]²=(1+x²)(1+y²)=1+x²+y²+x²y²",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "[f(x)f(y)]²−[f(xy)]²=x²+y²≥0",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "both sides nonnegative ⇒ (C)",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q14",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "α=(3−1)/(2−1)=2",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "1=2(1)+β ⇒ β=−1 ⇒ (B)",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-6-q15",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 1,
+          "line": "f(x)=6x²+2 ⇒ quadratic ⇒ (D)",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-unit-q1",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 1,
+          "line": "(x−1)(x−2)=0 ⇒ x=1 or 2",
+          "evidence": "unverified_implication"
+        },
+        {
+          "step": 3,
+          "line": "(y+5)(y−1)=0 ⇒ y=−5 or 1",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-unit-q2",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-unit-q3",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "f(0)=4",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "f(3)=√(3−1)=√2",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 2,
+          "line": "f(a+1)=√((a+1)−1)=√a",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-unit-q4",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 10,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 9,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "9→3",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "10→5",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "12→3",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "14→7",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "15→5",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 0,
+          "line": "16→2",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "11→11",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "13→13",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "17→17",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-unit-q5",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 5,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "1−x²≥0",
+          "evidence": "unverified_inequality"
+        },
+        {
+          "step": 1,
+          "line": "x²≤1 ⇒ −1≤x≤1",
+          "evidence": "unverified_implication"
+        },
+        {
+          "step": 2,
+          "line": "1−√(1−x²)≥0",
+          "evidence": "unverified_inequality"
+        },
+        {
+          "step": 2,
+          "line": "1+√(1−√(1−x²))>0",
+          "evidence": "unverified_inequality"
+        },
+        {
+          "step": 3,
+          "line": "Domain=[−1,1]",
+          "evidence": "unparsed_equation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-unit-q6",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 2,
+      "failed_claims": 1,
+      "unsupported_claims": 2,
+      "failed_details": [
+        {
+          "step": 3,
+          "line": "(f∘g)∘h=f∘(g∘h)=9(x−2)²",
+          "evidence": "multi_link_identity_mismatch"
+        }
+      ],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "(f∘g)(x)=f(3x)=9x²",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 2,
+          "line": "f(g(h(x)))=[3(x−2)]²",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "Working failed: [{'step': 3, 'line': '(f∘g)∘h=f∘(g∘h)=9(x−2)²', 'evidence': 'multi_link_identity_mismatch'}]"
+    },
+    {
+      "id": "c10-1-1-unit-q7",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "c10-1-1-unit-q8",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "f(f(x))=[(x−1)/(x+1)−1]/[(x−1)/(x+1)+1]",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 3,
+          "line": "f(f(x))=[−2/(x+1)]/[2x/(x+1)]=−1/x",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-unit-q9",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 4,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "g(1/2)=(1/2−2)/3=(−3/2)/3=−1/2",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 1,
+          "line": "g(g(1/2))=g(−1/2)=(−1/2−2)/3=−5/6",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 2,
+          "line": "g(f(x))=((6x+8)−2)/3",
+          "evidence": "missing_variable_bindings"
+        },
+        {
+          "step": 3,
+          "line": "g(f(x))=(6x+6)/3=2x+2",
+          "evidence": "missing_variable_bindings"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "c10-1-1-unit-q10",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "x−9≠0 ⇒ x≠9",
+          "evidence": "unverified_implication"
+        },
+        {
+          "step": 1,
+          "line": "4x²+1≥1>0 ⇒ domain ℝ",
+          "evidence": "unverified_implication"
+        },
+        {
+          "step": 2,
+          "line": "x−2≥0 ⇒ x≥2",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g10-ch1-section-1",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "UNVERIFIABLE",
+      "tamil_flags": [
+        "tamil_pending"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "g10-ch1-section-2",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "UNVERIFIABLE",
+      "tamil_flags": [
+        "tamil_pending"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "g10-ch1-section-3",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "UNVERIFIABLE",
+      "tamil_flags": [
+        "tamil_pending"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "g10-ch1-section-4",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "UNVERIFIABLE",
+      "tamil_flags": [
+        "tamil_pending"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "g10-ch1-section-5",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "UNVERIFIABLE",
+      "tamil_flags": [
+        "tamil_pending"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "g10-ch1-section-6",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "UNVERIFIABLE",
+      "tamil_flags": [
+        "tamil_pending"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "g10-ch1-section-7",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "UNVERIFIABLE",
+      "tamil_flags": [
+        "tamil_pending"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "g10-ch1-section-8",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "UNVERIFIABLE",
+      "tamil_flags": [
+        "tamil_pending"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "g10-ch1-section-9",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "UNVERIFIABLE",
+      "tamil_flags": [
+        "tamil_pending"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "g10-ch1-section-10",
+      "grade": 10,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "UNVERIFIABLE",
+      "tamil_flags": [
+        "tamil_pending"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    }
+  ]
+}
