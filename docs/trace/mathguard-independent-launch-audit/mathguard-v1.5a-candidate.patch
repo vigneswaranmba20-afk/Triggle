@@ -1,0 +1,180 @@
+diff --git a/site/tools/mathguard/adapters/base.py b/site/tools/mathguard/adapters/base.py
+index 7e40d2f..435fec8 100644
+--- a/site/tools/mathguard/adapters/base.py
++++ b/site/tools/mathguard/adapters/base.py
+@@ -10,7 +10,6 @@ import sympy as sp
+ 
+ from ..parser import parse_expression
+ from ..reasoning_engine import WorkingAuditResult, verify_complete_working
+-from ..rounding import check_numeric_match
+ from ..symbolic import expressions_equivalent
+ from ..tamil_consistency import number_signature, validate_en_ta_consistency
+ from ..tamil_semantic_parity import extract_semantic_values, semantic_step_parity_check
+@@ -64,6 +63,17 @@ def verify_tamil_math_parity(item: Dict[str, Any], is_concept: bool = False) ->
+ 
+     flags: List[str] = []
+     mismatches: List[Dict[str, Any]] = []
++    if q_en and not q_ta:
++        flags.append("missing_tamil_question")
++    if ans_en and not ans_ta:
++        flags.append("missing_tamil_answer")
++    if any(isinstance(step, dict) and str(step.get("en") or "").strip()
++           and not str(step.get("ta") or "").strip() for step in steps):
++        flags.append("missing_tamil_working")
++    if steps and not has_ta_steps and not any(
++        isinstance(step, dict) and step.get("math") and not step.get("en") for step in steps
++    ) and "missing_tamil_working" not in flags:
++        flags.append("missing_tamil_working")
+ 
+     if q_ta:
+         ta_q_res = validate_en_ta_consistency(q_en, q_ta)
+@@ -135,40 +145,30 @@ def verify_generic_answer(
+     ans_raw = item.get("answer")
+     ans_en = str(ans_raw.get("en") if isinstance(ans_raw, dict) else (ans_raw or "")).strip()
+     ans_math = item.get("answerMath")
+-    ans_latex = ""
+-    if isinstance(ans_math, dict):
+-        if isinstance(ans_math.get("en"), dict):
+-            ans_latex = str(ans_math["en"].get("latex") or "")
+-        else:
+-            ans_latex = str(ans_math.get("latex") or "")
++    if ans_math:
++        return "UNVERIFIABLE", "structured_answer_requires_dedicated_derivation"
+ 
+     if work_res.status == "FAIL":
+         return "FAIL", f"Working failed: {work_res.failed_details[:1]}"
+ 
+-    # Compare against final step / variable declarations in ReasoningGraph
+-    graph = work_res.graph
+-    ans_cand = ans_latex or ans_en
+-    if ans_cand:
+-        ans_clean = re.sub(r"\\text\s*\{[^}]*\}", "", ans_cand).strip()
+-        ans_clean = ans_clean.split("=")[-1].strip() if "=" in ans_clean else ans_clean
++    # Bind the answer to the requested expression. A correct intermediate
++    # equality or an unrelated declaration cannot establish a final answer.
++    question = str((item.get("q") or {}).get("en") or "").strip().rstrip(".?")
++    target = re.fullmatch(
++        r"(?:find(?: the value of)?|evaluate|calculate)\s+([0-9+*/^(). −–×÷-]+)"
++        r"(?:\s+in exact form)?", question, re.I,
++    )
++    if target and ans_en and re.fullmatch(r"[0-9+*/^(). −–×÷-]+", ans_en):
+         try:
+-            ans_expr = parse_expression(ans_clean)
+-        except Exception:
+-            ans_expr = None
+-
+-        if ans_expr is not None:
+-            for val in reversed(list(graph.variable_declarations.values())):
+-                try:
+-                    if expressions_equivalent(val, ans_expr):
+-                        return "PASS", ""
+-                    if not val.free_symbols and not ans_expr.free_symbols:
+-                        if check_numeric_match(float(val.evalf()), float(ans_expr.evalf()), rel_tol=0.02):
+-                            return "PASS", ""
+-                except Exception:
+-                    pass
+-
+-    if work_res.status == "PASS":
+-        return "PASS", "working_verified_without_dedicated_derivation"
++            expected = parse_expression(target[1].strip())
++            observed = parse_expression(ans_en)
++        except ValueError:
++            return "UNVERIFIABLE", "unsupported_answer_expression"
++        if expected.is_finite and observed.is_finite and not (expected.free_symbols or observed.free_symbols):
++            if expressions_equivalent(expected, observed):
++                return "PASS", "exact_question_expression"
++            return "FAIL", "answer_differs_from_exact_question_expression"
++
+     return "UNVERIFIABLE", "no_dedicated_derivation"
+ 
+ 
+diff --git a/site/tools/mathguard/adapters/sets_relations_adapter.py b/site/tools/mathguard/adapters/sets_relations_adapter.py
+index 0da14c7..a71e4c9 100644
+--- a/site/tools/mathguard/adapters/sets_relations_adapter.py
++++ b/site/tools/mathguard/adapters/sets_relations_adapter.py
+@@ -24,7 +24,7 @@ from ..set_theory_reasoner import SetTheoryReasoner
+ from ..set_types import TypedSet, parse_set_literal
+ from ..tamil_sets_parity import check_bilingual_set_parity
+ from ..venn_reasoner import VennDiagramReasoner
+-from .base import ChapterAdapter, verify_generic_answer, verify_tamil_math_parity
++from .base import ChapterAdapter, verify_tamil_math_parity
+ 
+ 
+ def _extract_named_sets_from_text(text: str) -> Dict[str, TypedSet]:
+@@ -373,12 +373,24 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
+             ans_en = str(ans_obj.get("en") if isinstance(ans_obj, dict) else (ans_obj or "")).strip()
+             if not ans_en:
+                 ans_status, ans_disc = "UNVERIFIABLE", "empty_answer"
+-            elif work_status == "PASS":
+-                ans_status, ans_disc = "PASS", "set_theory_working_verified"
+             else:
+-                ans_status, ans_disc = verify_generic_answer(item, base_work, is_concept=is_concept, allow_positive_domain=False)
+-                if ans_status == "FAIL" and any(sym in ans_en for sym in ("{", "}", "∅", "∪", "∩", "×")):
+-                    ans_status, ans_disc = "UNVERIFIABLE", "set_answer_requires_full_context"
++                target = re.search(r"\bfind\s+([A-Z]\s*[∪∩Δ×-]\s*[A-Z])\s*[.?]?\s*$", q_en, re.I)
++                if target and "(i)" not in q_en and "external_diagram_dependency" not in ambiguity_flags:
++                    givens = _extract_named_sets_from_text(q_en)
++                    expected = self.set_reasoner.evaluate(target[1], env=givens, universe=givens.get("U"))
++                    answer_expression = ans_en
++                    if "=" in ans_en:
++                        lhs, answer_expression = ans_en.split("=", 1)
++                        if re.sub(r"\s+", "", lhs) != re.sub(r"\s+", "", target[1]):
++                            answer_expression = ""
++                    observed = parse_set_literal(answer_expression.strip())
++                    if expected.ok and isinstance(expected.value, TypedSet) and isinstance(observed, TypedSet):
++                        ans_status = "PASS" if expected.value == observed else "FAIL"
++                        ans_disc = "compared_answer_to_question_sets"
++                    else:
++                        ans_status, ans_disc = "UNVERIFIABLE", "set_answer_requires_full_context"
++                else:
++                    ans_status, ans_disc = "UNVERIFIABLE", "no_dedicated_set_answer_derivation"
+ 
+         ta_res = verify_tamil_math_parity(item, is_concept=is_concept)
+         ta_flags = list(ta_res.flags)
+diff --git a/site/tools/mathguard/reasoning_engine.py b/site/tools/mathguard/reasoning_engine.py
+index 2b89b61..06946a5 100644
+--- a/site/tools/mathguard/reasoning_engine.py
++++ b/site/tools/mathguard/reasoning_engine.py
+@@ -117,6 +117,8 @@ def _strip_trailing_units(s: str) -> str:
+ 
+ 
+ _CONV_UNITS = {
++    "kg": ("mass", Fraction(1000)), "g": ("mass", Fraction(1)),
++    "mg": ("mass", Fraction(1, 1000)),
+     "mm": ("L", Fraction(1, 10)), "cm": ("L", Fraction(1)), "m": ("L", Fraction(100)), "km": ("L", Fraction(100000)),
+     "mm2": ("A", Fraction(1, 100)), "cm2": ("A", Fraction(1)), "m2": ("A", Fraction(10000)),
+     "mm3": ("V", Fraction(1, 1000)), "cm3": ("V", Fraction(1)), "m3": ("V", Fraction(1000000)),
+@@ -1713,6 +1715,24 @@ def verify_complete_working(
+                             graph.claims.append(MathClaim(s_idx, ln, "identity", "FAILED", evidence="multi_link_identity_mismatch"))
+                     continue
+ 
++                if re.search(r"\bfor all real\b", q_stem, re.I):
++                    symbols = exprs[0].free_symbols | exprs[1].free_symbols
++                    if len(symbols) == 1:
++                        variable = next(iter(symbols))
++                        try:
++                            domains = [
++                                sp.calculus.util.continuous_domain(expr, variable, sp.S.Reals)
++                                for expr in exprs
++                            ]
++                        except (NotImplementedError, ValueError):
++                            domains = []
++                        if not domains or any(domain != sp.S.Reals for domain in domains):
++                            status = "FAILED" if domains else "UNVERIFIED"
++                            graph.claims.append(MathClaim(
++                                s_idx, ln, "identity", status, evidence="universal_real_domain_unmet"
++                            ))
++                            continue
++
+                 ok, ev = _exprs_match(exprs[0], exprs[1], env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain)
+                 if ok:
+                     if ne_rhs_str is not None:
+@@ -1731,7 +1751,7 @@ def verify_complete_working(
+                     else:
+                         graph.claims.append(MathClaim(s_idx, ln, "equation", "FAILED", evidence="contradictory_constant_equation"))
+                     continue
+-                if is_identity_task:
++                if is_identity_task or re.search(r"\bfor all real\b", q_stem, re.I):
+                     graph.claims.append(MathClaim(s_idx, ln, "identity", "FAILED", evidence="identity_mismatch"))
+                     continue
+                 if not graph.active_equations:

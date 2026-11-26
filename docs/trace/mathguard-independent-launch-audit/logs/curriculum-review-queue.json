@@ -1,0 +1,102 @@
+{
+  "c10-3-ex3-1-q2-ii": {
+    "exactWorkingConflictsToReview": [
+      [
+        "0",
+        "7/2"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-6-ex6-2-q3": {
+    "exactWorkingConflictsToReview": [
+      [
+        "5√3 − 5",
+        "5(1.732 − 1)"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-6-ex6-3-q3": {
+    "exactWorkingConflictsToReview": [
+      [
+        "(60)/(√(3))",
+        "(60)/(1.732)"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-6-ex6-3-q4": {
+    "exactWorkingConflictsToReview": [
+      [
+        "1200√(3)",
+        "1200×1.732"
+      ],
+      [
+        "1200√3",
+        "1200 × 1.732"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-6-ex6-4-q2": {
+    "exactWorkingConflictsToReview": [
+      [
+        "40√(3)",
+        "40(1.732)"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-6-unit-q5": {
+    "exactWorkingConflictsToReview": [
+      [
+        "(80(√(3)−1))/(2)",
+        "40(1.732−1)"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-7-ex7-1-q2": {
+    "exactWorkingConflictsToReview": [
+      [
+        "308/(2π)",
+        "49"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-7-ex7-1-q3": {
+    "exactWorkingConflictsToReview": [
+      [
+        "952π",
+        "952×(22)/(7)"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  }
+}

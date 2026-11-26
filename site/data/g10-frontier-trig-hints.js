@@ -26,8 +26,8 @@
 
   add([
     ["c10-6-ex6-1-q2-ii","Quick Solution Plan: Multiply numerator and denominator by the conjugate"],
-    ["c10-6-ex6-1-q3-i","Quick Solution Plan: Rationalise inside the square root by multiplying n"],
-    ["c10-6-ex6-1-q3-ii","Quick Solution Plan: Rationalise each radical term separately (or combin"],
+    ["c10-6-ex6-1-q3-i","Quick Solution Plan: On the common domain, cos θ is nonzero and 1 + sin"],
+    ["c10-6-ex6-1-q3-ii","Quick Solution Plan: On the common domain, cos θ is nonzero and both"],
     ["c10-6-unit-q2","Quick Solution Plan: Group A = 1 + sin θ so the numerator becomes (A − c"]
   ],
     "Multiplying by the conjugate creates a difference of squares. For a square root, keep the principal nonnegative root and justify any sign removed in simplification.",

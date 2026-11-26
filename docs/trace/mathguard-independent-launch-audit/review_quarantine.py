@@ -1,0 +1,21 @@
+"""Independent dispositions of the paired PDF pages and available reader explanations."""
+REVIEWS = {
+    "g9/ch1/ex1.7/q12/whole": "Intersection x has 35−x Carrom-only, 20−x Chess-only and x−5 neither. All are nonnegative exactly for integers 5 through 20. Both reader languages correctly give the range and explain the condition for 5.",
+    "g9/ch3/ex3.15/q9/whole": "Division gives p(x)=(x−a)Q(x)+p(a). If p(a)=0, x−a is both a divisor and a factor. Both reader languages identify choices (1) and (4).",
+    "g9/ch3/ex3.15/q28/whole": "Distinct primes have GCD 1, while gcd(2,2)=2. The two editions omit distinctness. Both reader languages correctly present the two cases.",
+    "g9/ch6/ex6.1/q6/whole": "For the intended acute right-triangle model, cos θ=b/√(a²+b²) and both products are ab/√(a²+b²). Without positive b, a=3, b=−4 and acute sin θ=3/5 give −12/5 and 12/5. Both reader languages show the same valid condition and counterexample.",
+    "g9/ch6/ex6.5/q5/whole": "2θ=60° or 120° yields θ=30° or 60° within the acute-angle interpretation. Both are printed options. No reader card.",
+    "g9/ch6/ex6.5/q6/whole": "The first term equals 3. The second equals 2 cos(41°)/cos(51°), giving approximately 5.3984908 in total. None of 2, 3, 5, 6 is exact. Both languages print the same angles. No reader card.",
+    "g9/ch7/ex7.4/q7/whole": "Surface area is 6s². The areas have ratio 4:9 and 16:36 is equivalent. Both reader languages correctly explain both options.",
+    "g10/ch2/ex2.7/q12/whole": "With AP difference d, the expression is x^(−d)y^(2d)z^(−d). Positive bases permit (y²/(xz))^d=1. Taking a,b,c=0,1/2,1 and x=y=z=−1 makes the printed real expression undefined. The positive-base proof is sound in both reader languages.",
+    "g10/ch3/ex3.20/q11/whole": "English Vieta gives p²/q²−2r/q=−p²/q², hence p²=qr. Tamil reverses the premise. For q=1,p=−1,r=0, x²+x has roots 0,−1 and their squares are roots of x²−x, yet (1,−1,0) fails p²=qr. No reader card.",
+    "g10/ch4/ex4.2/q8/i": "BD+DC=5, so AB+BC=10=AC. The triangle is degenerate. Also 3/7 differs from 1/2. The bilingual diagnosis is correct.",
+    "g10/ch4/ex4.unit/q6/i": "Take D at 0, B at −a/2, C at a/2 and E at signed coordinate t. Then b²=p²−at+a²/4. Printed plus sign requires t=−x (or x=0); t=+x reverses it. The paired pages supply neither order nor figure for Q6. No reader card.",
+    "g10/ch4/ex4.unit/q6/ii": "With the same signed coordinate t, c²=p²+at+a²/4. The printed minus sign requires t=−x (or x=0). Their sum in part iii is unaffected. No reader card for ii.",
+    "g10/ch4/ex4.unit/q10/whole": "D and E fix no F. If D,E,F are internal and CD, AE, BF are concurrent, Ceva gives (5/3)(3/2)(CF/FA)=1 and CF=6 from AC=21. The concurrency is absent in both. No reader card.",
+    "g10/ch5/ex5.2/q12/whole": "AB and CD are horizontal. The BC and DA equations intersect at (6,−25/4), interior to both segments. Under order ABDC the other two slopes are 3/2 and −3/2. The bilingual reader correctly distinguishes both orders.",
+    "g10/ch6/ex6.1/q7/i": "Since (sin θ+cos θ)²≤2 for real θ, no real angle satisfies the premise. Formally the premise gives sin θ cos θ=1 and hence the printed algebraic consequence 1. Both reader languages explain the impossibility.",
+    "g10/ch6/ex6.1/q7/ii": "All solutions have θ=30°+180°k. Then 3θ=90°+540°k and tan(3θ) is undefined. On the right, tan²θ=1/3 gives a zero denominator and nonzero numerator. Both reader languages correctly demonstrate the acute representative.",
+    "g10/ch8/ex8.4/q1/whole": "Monotonicity requires P(A∪B)≥2/3, contradicted by 1/3. Formal inclusion–exclusion yields 11/15>min(2/3,2/5), another contradiction. Both editions agree on the incompatible data. No reader card.",
+    "g10/ch8/ex8.5/q11/whole": "For N=10k+r pages numbered 1 through N, favourable count is 7k+min(r,6). For N=10 it gives 7/10; for N=9 it gives 2/3. Both editions omit N. No reader card.",
+}

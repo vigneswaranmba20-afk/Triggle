@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "b0f1557c34178af9ea737aaca8109297a962cb90",
-  "updatedAt": "2026-11-26T05:01:15Z",
+  "sourceCommit": "0898788ea1e05a54c9924c3c5cf32eae749ecb8d",
+  "updatedAt": "2026-11-26T05:20:40Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -45,7 +45,7 @@
     "site/data/g10-frontier-mensuration-hints.js": "205586706909e5c6fc9ac64a59b772b78aab925d77b25f83b095efbec7bd60e0",
     "site/data/g10-frontier-numbers-hints.js": "59311a1ed2d8ef54adef25b909cdc7ac93b0067c9690cd155005d112ce6250e3",
     "site/data/g10-frontier-statistics-hints.js": "1bd6a532f539a3970a69b11697d98ecc57ea16beadeda4b6348db799ad8f0810",
-    "site/data/g10-frontier-trig-hints.js": "1832d18f20213e9d353db5c485c02030b4167287623a621240b47ef678500fbc",
+    "site/data/g10-frontier-trig-hints.js": "36b063138270e9d5b76eaeddc90310c13d771faa01ac1e49395067915819d1e5",
     "site/data/g10-relations-concepts.js": "ebf12612d7aaabff56a529b4866b707f69043abd8009c22350799162e74d04fa",
     "site/data/g9-algebra-chapter.js": "13b62ccfd65b6d0e48d1b2cb0e50dfd0220e5c0572e9a7a81a5cafd6749bbbb9",
     "site/data/g9-ch5-distance-concept.js": "a275ff38a7230ce3e3010cc2d2f66a0fe835435706e34a03094a6ce0e4b4ee12",
@@ -123,7 +123,7 @@
     "site/data/textbook-exercises/g10-ch5-ex5-4-en.js": "2e8cf567d4ad999724d44eebe9bbc5c2febed2fdbcdb66b82b9443072c509667",
     "site/data/textbook-exercises/g10-ch5-ex5-5-en.js": "bcc2ce6fb996da78d7f80e650debdc611e4f99a7e2895bcc0c860bc391efabda",
     "site/data/textbook-exercises/g10-ch5-ex5-unit-en.js": "400b4bb445825210434db721a8528a07c5e611637436971ce1b887258cdc801e",
-    "site/data/textbook-exercises/g10-ch6-ex6-1-en.js": "1be24cdd6ae681a8578b92e1610b80a20f1719c421ebaa0ff0c79910f139f3e6",
+    "site/data/textbook-exercises/g10-ch6-ex6-1-en.js": "fa00686794bdf7527872dffaf358c3256f489a8ff466831b5cf8936ce3137b2d",
     "site/data/textbook-exercises/g10-ch6-ex6-2-en.js": "ee58f99ee7c0ea94d8410851744e43a29902e7a8f55f93172dc964fccafdea5c",
     "site/data/textbook-exercises/g10-ch6-ex6-3-en.js": "926ed9e35156d890cb18de401983ea4f6a5ccdb0543e50bb2837bbc2ac38cc65",
     "site/data/textbook-exercises/g10-ch6-ex6-4-en.js": "b110b8e05052973566f78ecbae0709509c4c5add057d19c062ad00aca4c118bc",
@@ -149,7 +149,7 @@
     "site/data/textbook-exercises/g10-frontier-coordinate.js": "b2a046edba1a622add1711f3a79fe23a142d668137a3705a97dc75d9c6d0f265",
     "site/data/textbook-exercises/g10-frontier-source-tables.js": "32736170d1e1707a143627256bda042a7040a8cdf043388f149bd8631fc2e640",
     "site/data/textbook-exercises/g10-frontier-tamil-answers.js": "d73cda954d617c68658792089541e910b384aec6b6ccc9d3ea1c3971786be433",
-    "site/data/textbook-exercises/g10-geometry-worked-tamil.js": "0134048194dbf00e61f9686dbdbc85a86b115a4fbb1d7da60ae7c9907586831c",
+    "site/data/textbook-exercises/g10-geometry-worked-tamil.js": "c760c150d285217a2e74bb0eb1f195cace5adf27db9972d90c8d9bc134649c6f",
     "site/data/textbook-exercises/g10-seven-recovery-20261113-en.js": "b3a704bf15e5c250c05318af8eb9c1fce16b55ec8c0dcf4977f76ce74ee3621b",
     "site/data/textbook-exercises/g12-ch1-ex1-1-en.js": "d979dd28edcd293771fcad174ade5ac4690781330306583cf437c025f617ed26",
     "site/data/textbook-exercises/g12-ch1-ex1-2-en.js": "06805b9f72e3097ca24a148ea792253135fa83596f3c66607bf1eff3f4fb8557",
@@ -19466,7 +19466,7 @@
                   "url": "../index.html?class=10&question=c10-6-ex6-1-q3-i",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "b2f4e7b860ee36395bef30cc95de7e3e5505f38feeeae58adc5886460a83be05",
+                  "recordSha256": "db1f01e97046d61940a08452a09839d25617c012d99da116cc15b8b64dbf524d",
                   "verified": false
                 },
                 {
@@ -19475,7 +19475,7 @@
                   "url": "../index.html?class=10&question=c10-6-ex6-1-q3-ii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "cb013c30dfe410d93678c6034fd7329d3dbae5139852b85ede5d6e12faae1925",
+                  "recordSha256": "86c2f245378a691c28414bd27b697fdc09fef66b508a49b638ed14340ba1af16",
                   "verified": false
                 },
                 {
