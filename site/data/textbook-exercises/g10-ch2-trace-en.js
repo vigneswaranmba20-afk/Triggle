@@ -1369,7 +1369,7 @@ const entries=[
       "en": "Compare two annual-growth salary offers"
     },
     "q": {
-      "en": "Offer A starts at ₹20,000 with a 6% annual rise; Offer B starts at ₹22,000 with a 3% rise. Find the fourth-year salaries."
+      "en": "Sivamani is attending an interview for a job and the company gave two offers to him.\nOffer A: ₹20,000 to start with followed by a guaranteed annual increase of 6% for the first 5 years.\nOffer B: ₹22,000 to start with followed by a guaranteed annual increase of 3% for the first 5 years.\nWhat is his salary in the 4th year with respect to the offers A and B?"
     },
     "steps": [
       {
@@ -1382,18 +1382,28 @@ const entries=[
         }
       },
       {
-        "en": "Compute each fourth-year salary separately.",
-        "eq": "A: 20,000(1.06)³=₹23,820.32; B: 22,000(1.03)³≈₹24,039.39"
+        "en": "Calculate each fourth-year salary. Keep the exact products before rounding the pay to the nearest paise.",
+        "eq": "A = 20,000(1.06)³ = ₹23,820.32; B = 22,000(1.03)³ = ₹24,039.994 ≈ ₹24,039.99",
+        "math": {
+          "latex": "\\begin{aligned}A&=20{,}000(1.06)^3=23{,}820.32\\\\B&=22{,}000(1.03)^3=24{,}039.994\\\\&\\approx24{,}039.99\\end{aligned}",
+          "fallback": "A = 20,000(1.06)³ = ₹23,820.32; B = 22,000(1.03)³ = ₹24,039.994 ≈ ₹24,039.99",
+          "display": true
+        }
       },
       {
-        "en": "Compare; B is larger in the fourth year by about ₹219.07.",
-        "eq": "B−A≈₹219.07"
+        "en": "Compare the exact amounts. Both answer appendices give ₹23,820 and ₹24,040 when rounded to the nearest rupee.",
+        "eq": "B − A = 24,039.994 − 23,820.32 = ₹219.674 ≈ ₹219.67",
+        "math": {
+          "latex": "\\begin{aligned}B-A&=24{,}039.994-23{,}820.32\\\\&=219.674\\approx219.67\\end{aligned}",
+          "fallback": "B − A = 24,039.994 − 23,820.32 = ₹219.674 ≈ ₹219.67",
+          "display": true
+        }
       }
     ],
-    "answer": "Offer A: ₹23,820.32; Offer B: about ₹24,039.39; Offer B is larger.",
+    "answer": "Offer A: ₹23,820.32. Offer B: ₹24,039.99 to the nearest paise. Offer B is higher by ₹219.67.",
     "kind": "textbook",
     "source": "https://drive.google.com/file/d/13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of/view",
-    "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.7 Q11; printed p. 73; PDF p. 79. Text verified against source extract; independent figure/editorial review not claimed.",
+    "reference": "TN SCERT revised 2025 Grade 10 Mathematics, Exercise 2.7 Q11. Both source PDFs p. 79 (printed p. 73). English answer PDF p. 343 (printed p. 337), Tamil answer PDF p. 356 (printed p. 350).",
     "edition": "2025",
     "translationReview": "pending",
     "traceStatus": "source-text-checked; arithmetic independently tested where numeric"

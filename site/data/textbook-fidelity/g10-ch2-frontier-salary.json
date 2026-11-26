@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "edition": "2025",
+  "grade": 10,
+  "chapter": 2,
+  "items": [
+    {
+      "id": "c10-2-ex2-7-q11",
+      "question": 11,
+      "exercise": "2.7",
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ],
+          "keyPdfPages": [
+            343
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ],
+          "keyPdfPages": [
+            356
+          ]
+        }
+      },
+      "publishedPrompt": {
+        "en": "Sivamani is attending an interview for a job and the company gave two offers to him.\nOffer A: ₹20,000 to start with followed by a guaranteed annual increase of 6% for the first 5 years.\nOffer B: ₹22,000 to start with followed by a guaranteed annual increase of 3% for the first 5 years.\nWhat is his salary in the 4th year with respect to the offers A and B?",
+        "ta": "சிவமணி ஒரு பணிக்கான நேர்காணலில் பங்கேற்கிறார். அந்நிறுவனம் அவருக்கு இரண்டு விதமான வாய்ப்புகளை வழங்குகிறது.\nவாய்ப்பு A: முதல் மாத ஊதியம் ₹20,000 மற்றும் நிச்சயமான 6% ஆண்டு ஊதிய உயர்வு 5 ஆண்டுகளுக்கு.\nவாய்ப்பு B: முதல் மாத ஊதியம் ₹22,000 மற்றும் நிச்சயமான 3% ஆண்டு ஊதிய உயர்வு 5 ஆண்டுகளுக்கு.\nA மற்றும் B ஆகிய இரு வாய்ப்புகளிலும் அவருடைய 4-வது வருட ஊதியம் எவ்வளவு?"
+      },
+      "results": {
+        "payA": "23820.32",
+        "payB": "24039.994",
+        "difference": "219.674",
+        "payBPaise": "24039.99",
+        "differencePaise": "219.67",
+        "keyWholeRupees": [
+          23820,
+          24040
+        ]
+      },
+      "issue": "The previous reader evaluated Offer B as ₹24,039.39 and the difference as ₹219.07. Both 2025 appendices give whole-rupee answers ₹23,820 and ₹24,040. The 2025 prompts name Sivamani in English and Tamil.",
+      "resolution": "Restore the printed prompt and multiply each starting salary by the applicable annual factor three times. Show both exact and nearest-paise results and explain the answer appendices’ whole-rupee rounding.",
+      "previousEnglishFields": {
+        "q": {
+          "en": "Offer A starts at ₹20,000 with a 6% annual rise; Offer B starts at ₹22,000 with a 3% rise. Find the fourth-year salaries."
+        },
+        "steps": [
+          {
+            "en": "The fourth year follows three raises; do not apply four raises.",
+            "eq": "t₄=a(1+r)³",
+            "math": {
+              "latex": "t_4=a(1+r)^3",
+              "fallback": "t₄=a(1+r)³",
+              "display": true
+            }
+          },
+          {
+            "en": "Compute each fourth-year salary separately.",
+            "eq": "A: 20,000(1.06)³=₹23,820.32; B: 22,000(1.03)³≈₹24,039.39"
+          },
+          {
+            "en": "Compare; B is larger in the fourth year by about ₹219.07.",
+            "eq": "B−A≈₹219.07"
+          }
+        ],
+        "answer": "Offer A: ₹23,820.32; Offer B: about ₹24,039.39; Offer B is larger.",
+        "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.7 Q11; printed p. 73; PDF p. 79. Text verified against source extract; independent figure/editorial review not claimed."
+      },
+      "previousReaderFields": {
+        "q": {
+          "en": "Offer A starts at ₹20,000 with a 6% annual rise; Offer B starts at ₹22,000 with a 3% rise. Find the fourth-year salaries.",
+          "ta": "விமலிக்கு இரண்டு வேலை வாய்ப்புகள் கிடைக்கின்றன. வாய்ப்பு A இல் ஐந்து ஆண்டுகளுக்கு தொடக்க மாத ஊதியம் ₹20,000, ஆண்டு உயர்வு 6%. வாய்ப்பு B இல் ஐந்து ஆண்டுகளுக்கு தொடக்க மாத ஊதியம் ₹22,000, ஆண்டு உயர்வு 3%. இரு வாய்ப்புகளிலும் நான்காம் ஆண்டு மாத ஊதியம் எவ்வளவு?"
+        },
+        "steps": [
+          {
+            "en": "The fourth year follows three raises; do not apply four raises.",
+            "eq": "t₄=a(1+r)³",
+            "math": {
+              "latex": "t_4=a(1+r)^3",
+              "fallback": "t₄=a(1+r)³",
+              "display": true
+            },
+            "ta": "நான்காம் ஆண்டு தொடங்கும்போது மூன்று ஆண்டு உயர்வுகள் கிடைத்திருக்கும்."
+          },
+          {
+            "en": "Compute each fourth-year salary separately.",
+            "eq": "A: 20,000(1.06)³=₹23,820.32; B: 22,000(1.03)³≈₹24,039.39",
+            "ta": "A, B ஆகியவற்றின் தொடக்க ஊதியங்களுடன் உரிய உயர்வுக் காரணிகளை மூன்று முறை பெருக்குக."
+          },
+          {
+            "en": "Compare; B is larger in the fourth year by about ₹219.07.",
+            "eq": "B−A≈₹219.07",
+            "ta": "நான்காம் ஆண்டு B இன் மாத ஊதியம் சுமார் ₹219.07 அதிகம் என ஒப்பிடுக."
+          }
+        ],
+        "answer": "Offer A: ₹23,820.32; Offer B: about ₹24,039.39; Offer B is larger.",
+        "reference": "TN SCERT Standard Ten Mathematics; 2025 revised English edition; Chapter 2, Exercise 2.7 Q11; printed p. 73; PDF p. 79. Text verified against source extract; independent figure/editorial review not claimed.",
+        "questionMath": {
+          "en": "Offer A starts at ₹20,000 with a 6% annual rise; Offer B starts at ₹22,000 with a 3% rise. Find the fourth-year salaries.",
+          "ta": [
+            "விமலிக்கு இரண்டு வேலை வாய்ப்புகள் கிடைக்கின்றன. வாய்ப்பு A இல் ஐந்து ஆண்டுகளுக்கு தொடக்க மாத ஊதியம் ₹20,000, ஆண்டு உயர்வு 6%. வாய்ப்பு B இல் ஐந்து ஆண்டுகளுக்கு தொடக்க மாத ஊதியம் ₹22,000, ஆண்டு உயர்வு 3%. இரு வாய்ப்புகளிலும் நான்காம் ஆண்டு மாத ஊதியம் எவ்வளவு?"
+          ]
+        },
+        "answerTa": "வாய்ப்பு A: ₹23,820.32. வாய்ப்பு B: சுமார் ₹24,039.39. நான்காம் ஆண்டில் B இன் ஊதியம் அதிகம்.",
+        "answerMath": {
+          "en": "Offer A: ₹23,820.32; Offer B: about ₹24,039.39; Offer B is larger.",
+          "ta": [
+            "வாய்ப்பு A: ₹23,820.32. வாய்ப்பு B: சுமார் ₹24,039.39. நான்காம் ஆண்டில் B இன் ஊதியம் அதிகம்."
+          ]
+        }
+      }
+    }
+  ]
+}
