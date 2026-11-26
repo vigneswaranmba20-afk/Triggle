@@ -14,6 +14,10 @@ ADAPTER_REGISTRY = {
     "algebra": AlgebraAdapter,
     "coordinate_geometry": CoordGeometryAdapter,
     "mensuration": MensurationAdapter,
+}
+
+V1_5_ADAPTER_REGISTRY = {
+    **ADAPTER_REGISTRY,
     "sets_and_relations": SetsRelationsFunctionsAdapter,
 }
 
@@ -38,11 +42,12 @@ CHAPTER_DOMAIN_MAP: Dict[Tuple[int, str], Tuple[str, str]] = {
 }
 
 
-def get_adapter_for_chapter(grade: int, chapter: str, domain: str = "") -> ChapterAdapter:
+def get_adapter_for_chapter(grade: int, chapter: str, domain: str = "", include_v1_5: bool = False) -> ChapterAdapter:
     ch_str = str(chapter)
     mapped_domain, title = CHAPTER_DOMAIN_MAP.get((grade, ch_str), (domain or "unknown", f"Chapter {ch_str}"))
     eff_domain = domain or mapped_domain
-    cls = ADAPTER_REGISTRY.get(eff_domain)
+    reg = V1_5_ADAPTER_REGISTRY if include_v1_5 else ADAPTER_REGISTRY
+    cls = reg.get(eff_domain)
     if cls is not None:
         return cls(grade=grade, chapter=ch_str, title=title)
     return UnsupportedDomainAdapter(grade=grade, chapter=ch_str, domain=eff_domain, title=title)

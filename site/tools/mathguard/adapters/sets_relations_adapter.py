@@ -289,6 +289,39 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
         base_work = verify_complete_working(san_item, is_concept=is_concept, allow_positive_domain=False)
         tot_c, ver_c, fail_c, unsup_c, fail_det, unsup_det = self._verify_set_and_relation_steps(item, is_concept)
 
+        q_low = q_en.lower()
+        has_domain_context = (
+            "unsupported domain" not in q_low
+            and bool(
+                re.search(
+                    r"(?:∪|∩|∈|∉|⊆|⊂|∅|×|Δ|\{|\}|n\s*\(|P\s*\(|[fgh]\s*\(|\b(?:set|sets|subset|union|intersection|complement|venn|relation|function|codomain|range|ordered\s+pair|cartesian|bijective|injective|surjective|onto|one-to-one)\b|(?<!unsupported\s)\bdomain\b)",
+                    q_en + " " + " ".join(str(s.get("eq") or "") + " " + str(s.get("en") or "") for s in (((item.get("proof") or {}).get("steps") if is_concept else item.get("steps")) or []) if isinstance(s, dict)),
+                    re.I,
+                )
+            )
+        )
+
+        if not has_domain_context:
+            return {
+                "id": qid,
+                "grade": self.grade,
+                "chapter": self.chapter,
+                "domain": self.domain,
+                "item_type": "concept" if is_concept else "exercise",
+                "working_status": "UNVERIFIABLE",
+                "answer_status": "UNVERIFIABLE",
+                "tamil_status": "UNVERIFIABLE",
+                "tamil_flags": [],
+                "ambiguity_flags": ambiguity_flags + ["no_domain_context"],
+                "total_claims": 0,
+                "verified_claims": 0,
+                "failed_claims": 0,
+                "unsupported_claims": 0,
+                "failed_details": [],
+                "unsupported_details": [],
+                "discrepancy": "No set-theory, relation, or function mathematical context found; abstaining",
+            }
+
         if fail_c > 0:
             work_status = "FAIL"
         elif ver_c > 0 and unsup_c == 0:
