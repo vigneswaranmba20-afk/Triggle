@@ -1,0 +1,41 @@
+{
+  "testedEngineCommit": "b466486b706e27b9b37a212a7d5e833bcf843db6",
+  "auditCheckpoint": "db57d846878bbba0e7d3006136ba289e6fe230e6",
+  "publicationDecision": "HOLD",
+  "frozenCases": 334,
+  "workingStatuses": {
+    "PARTIAL": 74,
+    "PASS": 256,
+    "UNVERIFIABLE": 4
+  },
+  "verifiedClaims": {
+    "total": 1708,
+    "verified": 1595,
+    "failed": 0,
+    "unsupported": 113,
+    "verifiedRatePct": 93.38
+  },
+  "answerStatuses": {
+    "PASS": 326,
+    "UNVERIFIABLE": 7,
+    "FAIL": 1
+  },
+  "answerStatusChanges": [
+    {
+      "id": "c10-7-ex7-3-q3",
+      "previous": "PASS",
+      "observed": "FAIL",
+      "evidence": {
+        "questionRequirement": "Nearest cubic centimetre in the Grade 10 English exercise",
+        "derivedVolumeCm3": "98π/125",
+        "requestedAnswerCm3": 2,
+        "primaryAuthoredAnswerCm3": 2.46,
+        "readerStatus": "The existing working explains both conventions. The displayed primary answer follows the key."
+      }
+    }
+  ],
+  "regressionLog": "regressions.jsonl",
+  "independentReproductionLog": "reproductions.jsonl",
+  "engineTestLog": "pytest.log",
+  "independentTestLog": "focused.log"
+}
