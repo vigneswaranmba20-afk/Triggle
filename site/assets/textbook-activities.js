@@ -42,12 +42,35 @@
   if(!Array.isArray(entries)||!entries.length)return false;
   const lang=language==='ta'?'ta':'en',t=words[lang];
   const section=document.createElement('section');section.className='textbook-extras';section.setAttribute('aria-label',t.heading);
+  const heading=document.createElement('h3');heading.className='activity-index-heading';heading.textContent=t.heading;
+  section.append(heading);
+  const marks={activity:'◇',thinking:'✦',progress:'✓',other:'•'};
+  const pendingTitle='English version only — Tamil editorial content pending. ';
   entries.forEach((item,index)=>{
    const card=document.createElement('details');card.className='textbook-extra';
    card.dataset.textbookItem=String(index+1);
    card.dataset.textbookReview=item.review||'source-matched';
    card.open=index===0; // The first question and its answer are immediately visible.
-   const summary=document.createElement('summary');summary.textContent=(index+1)+'. '+pick(item.title,lang);
+   const kind=Object.hasOwn(marks,item.kind)?item.kind:'other';
+   card.dataset.activityKind=kind;
+   const summary=document.createElement('summary');
+   const original=pick(item.title,lang);
+   const fallback=original.startsWith(pendingTitle);
+   const title=fallback?original.slice(pendingTitle.length):original;
+   const split=title.indexOf(' · ');
+   summary.setAttribute('aria-label',original);
+   const mark=document.createElement('span');mark.className='activity-mark';mark.setAttribute('aria-hidden','true');mark.textContent=marks[kind];
+   const copy=document.createElement('span');copy.className='activity-copy';
+   if(split>=0){
+    const category=document.createElement('span');category.className='activity-kicker';category.textContent=title.slice(0,split);
+    copy.append(category);
+   }
+   const name=document.createElement('span');name.className='activity-title';name.textContent=split>=0?title.slice(split+3):title;copy.append(name);
+   if(fallback){
+    const notice=document.createElement('span');notice.className='activity-translation-note';notice.textContent=pendingTitle.trim();copy.append(notice);
+   }
+   const toggle=document.createElement('span');toggle.className='activity-toggle';toggle.setAttribute('aria-hidden','true');
+   summary.append(mark,copy,toggle);
    const question=document.createElement('p');question.className='task-question';question.innerHTML=window.TriggleNotation.render(window.TriggleG9Math?.text(pick(item.question,lang))??pick(item.question,lang));
    const worked=document.createElement('section');worked.className='task-solution';
    const label=document.createElement('h4');label.className='task-solution-label';label.textContent=t.answer;worked.append(label);
