@@ -528,21 +528,24 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
 .ver-glyph.textbook-reader #lessonCard .worked-step .structured-equation {
   font-size: var(--ver-text-math) !important;
 }
-.ver-glyph.textbook-reader #lessonCard :is(.triggle-tex-display, .triggle-tex[tabindex]) {
+.ver-glyph.textbook-reader #lessonCard .triggle-tex-display {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 0 var(--ver-space-1);
+  padding: var(--ver-space-1) .125rem;
+  overflow: clip visible !important;
+  font-size: var(--ver-text-math) !important;
+  color: var(--ver-ink);
+  text-align: start;
+}
+.ver-glyph.textbook-reader #lessonCard .triggle-tex[tabindex] {
   min-width: 0;
   max-width: 100%;
   overflow-x: auto !important;
   overflow-y: hidden !important;
   scrollbar-width: thin;
   scrollbar-color: var(--ver-control-edge) var(--ver-mist);
-}
-.ver-glyph.textbook-reader #lessonCard .triggle-tex-display {
-  width: 100%;
-  margin: 0 0 var(--ver-space-1);
-  padding: var(--ver-space-1) .125rem;
-  font-size: var(--ver-text-math) !important;
-  color: var(--ver-ink);
-  text-align: start;
 }
 .ver-glyph #lessonCard .triggle-tex-display :is(.katex, .katex-display) {
   text-align: start;
