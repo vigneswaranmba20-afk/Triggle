@@ -269,12 +269,20 @@ function validatePreservation(root = siteRoot) {
     }
     if (root===siteRoot && relative==='class9-classic.html'){
       const audit=JSON.parse(fs.readFileSync(path.resolve(root,'..','docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.json'),'utf8'));
+      const frontier=JSON.parse(fs.readFileSync(path.resolve(root,'data/textbook-fidelity/g9-ch6-frontier-source.json'),'utf8')).classic;
       let classic=preservedContent.toString('utf8');
       const match=classic.match(/const SOLUTIONS=(\[[^\n]+\]);/);
       if(!match){errors.push('Classic reader solution inventory missing');}
       else{
         const rows=JSON.parse(match[1]);
         if(JSON.stringify(rows)!==match[1])errors.push('Classic reader immutable array format changed');
+        for(const proof of frontier.records){
+          const index=rows.findIndex(row=>row.id===proof.id);
+          if(index<0||crypto.createHash('sha256').update(JSON.stringify(rows[index])).digest('hex')!==proof.reviewedSha256){
+            errors.push('Unapproved classic Trigonometry update '+proof.id);continue;
+          }
+          rows[index]=proof.originalRecord;
+        }
         const choicesAudit=JSON.parse(fs.readFileSync(path.resolve(root,'..','docs/audit/AUD14_03_EX61_EX65_SOURCE_EVIDENCE.json'),'utf8'));
         if(choicesAudit.auditId!=='AUD14-03'||Object.keys(choicesAudit.records).length!==9){
           errors.push('AUD14-03 classic evidence absent');
@@ -304,6 +312,10 @@ function validatePreservation(root = siteRoot) {
           rows[idx]=correction.originalClassicRecord;
         }
         classic=classic.replace(match[1],JSON.stringify(rows));
+        for(const {before,after} of frontier.operations){
+          if(classic.split(after).length!==2){errors.push('Classic 2025 textbook link or localized answer update does not match the reviewed content');continue;}
+          classic=classic.replace(after,()=>before);
+        }
         preservedContent=Buffer.from(classic,'utf8');
       }
     }

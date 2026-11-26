@@ -700,7 +700,7 @@ const records=[
           "latex": "\\cos A = \\dfrac{2 x}{1 + x^{2}}",
           "fallback": "cos A = [[2x|1 + x²]]"
         },
-        ", find ",
+        ", then find the values of ",
         {
           "latex": "\\sin A",
           "fallback": "sin A"
@@ -710,15 +710,10 @@ const records=[
           "latex": "\\tan A",
           "fallback": "tan A"
         },
-        ". Assume A is acute, so ",
+        " in terms of ",
         {
-          "latex": "x > 0",
-          "fallback": "x > 0"
-        },
-        " and ",
-        {
-          "latex": "x \\ne 1",
-          "fallback": "x ≠ 1"
+          "latex": "x",
+          "fallback": "x"
         },
         "."
       ],
@@ -727,17 +722,22 @@ const records=[
           "latex": "\\cos A = \\dfrac{2 x}{1 + x^{2}}",
           "fallback": "cos A = [[2x|1 + x²]]"
         },
-        " எனில் ",
+        " எனில், ",
         {
-          "latex": "\\sin A, \\tan A",
-          "fallback": "sin A, tan A"
+          "latex": "\\sin A",
+          "fallback": "sin A"
         },
-        "-ஐ காண்க. A ஒரு குறுங்கோணம்; ",
+        " மற்றும் ",
         {
-          "latex": "x > 0, x \\ne 1",
-          "fallback": "x > 0, x ≠ 1"
+          "latex": "\\tan A",
+          "fallback": "tan A"
         },
-        " என எடுத்துக்கொள்க."
+        " இன் மதிப்புகளை ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " இல் காண்க."
       ]
     },
     "answerMath": {
@@ -869,12 +869,12 @@ const records=[
     "id": "c9-exercise-6-1-q6",
     "questionMath": {
       "en": [
-        "Starting from ",
+        "If ",
         {
           "latex": "\\sin \\theta = \\dfrac{a}{\\sqrt{a^{2} + b^{2}}}",
           "fallback": "sin θ = [[a|√(a² + b²)]]"
         },
-        ", show that ",
+        ", then show that ",
         {
           "latex": "b \\sin \\theta = a \\cos \\theta",
           "fallback": "b sin θ = a cos θ"
@@ -886,18 +886,33 @@ const records=[
           "latex": "\\sin \\theta = \\dfrac{a}{\\sqrt{a^{2} + b^{2}}}",
           "fallback": "sin θ = [[a|√(a² + b²)]]"
         },
-        " எனில் ",
+        " எனில், ",
         {
           "latex": "b \\sin \\theta = a \\cos \\theta",
           "fallback": "b sin θ = a cos θ"
         },
-        " என்பதை நிரூபிக்கவும்."
+        " என நிறுவுக."
       ]
     },
     "answerMath": {
-      "latex": "b \\sin \\theta = a \\cos \\theta",
-      "fallback": "b sin θ = a cos θ",
-      "display": true
+      "en": [
+        "For positive side lengths, ",
+        {
+          "latex": "b\\sin\\theta=a\\cos\\theta",
+          "fallback": "b sin θ = a cos θ",
+          "display": false
+        },
+        ". The printed equation alone does not ensure equality."
+      ],
+      "ta": [
+        "நேர்மப் பக்க நீளங்களுக்கு ",
+        {
+          "latex": "b\\sin\\theta=a\\cos\\theta",
+          "fallback": "b sin θ = a cos θ",
+          "display": false
+        },
+        ". கொடுக்கப்பட்ட சமன்பாடு மட்டும் சமத்துவத்தை உறுதி செய்யாது."
+      ]
     },
     "steps": [
       {
@@ -956,6 +971,92 @@ const records=[
         "reasonMath": {
           "en": "The expression on the right simplifies to the same fraction.",
           "ta": "வலப்பக்கமும் அதே பின்னமாக எளிமையாகிறது."
+        }
+      },
+      {
+        "math": {
+          "latex": "b\\sin\\theta=-\\dfrac{12}{5}\\neq\\dfrac{12}{5}=a\\cos\\theta",
+          "fallback": "b sin θ = −12/5 ≠ 12/5 = a cos θ",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "The proof uses a and ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            " as positive lengths. The printed equation also allows ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            " to be negative if a and ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            " are treated as signed numbers. Take ",
+            {
+              "latex": "a = 3",
+              "fallback": "a = 3"
+            },
+            " and ",
+            {
+              "latex": "b = - 4",
+              "fallback": "b = −4"
+            },
+            ". For the acute angle with sine ",
+            {
+              "latex": "\\dfrac{3}{5}",
+              "fallback": "3/5"
+            },
+            ", the cosine is ",
+            {
+              "latex": "\\dfrac{4}{5}",
+              "fallback": "4/5"
+            },
+            ", so the two products have opposite signs."
+          ],
+          "ta": [
+            "நிறுவலில் ",
+            {
+              "latex": "a, b",
+              "fallback": "a, b"
+            },
+            " ஆகியவை நேர்ம நீளங்கள். ",
+            {
+              "latex": "a, b",
+              "fallback": "a, b"
+            },
+            " ஆகியவற்றைக் குறியுள்ள எண்களாக எடுத்தால், கொடுக்கப்பட்ட சமன்பாட்டில் ",
+            {
+              "latex": "b",
+              "fallback": "b"
+            },
+            " எதிர்மமாகவும் இருக்கலாம். ",
+            {
+              "latex": "a = 3",
+              "fallback": "a = 3"
+            },
+            ",",
+            " ",
+            {
+              "latex": "b = - 4",
+              "fallback": "b = −4"
+            },
+            " என்க. சைன் ",
+            {
+              "latex": "\\dfrac{3}{5}",
+              "fallback": "3/5"
+            },
+            " உள்ள குறுங்கோணத்தின் கொசைன் ",
+            {
+              "latex": "\\dfrac{4}{5}",
+              "fallback": "4/5"
+            },
+            ". எனவே இரு பெருக்கற்பலன்களும் எதிரெதிர்க் குறிகளைக் கொண்டவை."
+          ]
         }
       }
     ]
@@ -1302,103 +1403,40 @@ const records=[
     "id": "c9-exercise-6-1-q9",
     "questionMath": {
       "en": [
-        "The diagram has ",
-        {
-          "latex": "AD = 9",
-          "fallback": "AD=9"
-        },
-        ",",
-        " ",
-        {
-          "latex": "DB = 16",
-          "fallback": "DB=16"
-        },
-        ",",
-        " ",
-        {
-          "latex": "CD = 12",
-          "fallback": "CD=12"
-        },
-        ",",
-        " ",
-        {
-          "latex": "AC = 15",
-          "fallback": "AC=15"
-        },
-        " and ",
-        {
-          "latex": "BC = 20",
-          "fallback": "BC=20"
-        },
-        ". Prove ",
+        "From the given figure, prove that ",
         {
           "latex": "\\theta + \\phi = 90^{\\circ}",
-          "fallback": "θ+φ=90°"
+          "fallback": "θ + φ = 90°"
         },
-        ", show ",
-        {
-          "latex": "\\angle ACB = 90^{\\circ}",
-          "fallback": "∠ACB=90°"
-        },
-        ", and find ",
+        ". Also prove that there are two other right angled triangles. Find ",
         {
           "latex": "\\sin \\alpha, \\cos \\beta",
-          "fallback": "sinα, cosβ"
+          "fallback": "sin α, cos β"
         },
         " and ",
         {
           "latex": "\\tan \\phi",
-          "fallback": "tanφ"
+          "fallback": "tan φ"
         },
         "."
       ],
       "ta": [
-        "படத்தில் ",
-        {
-          "latex": "AD = 9",
-          "fallback": "AD=9"
-        },
-        ",",
-        " ",
-        {
-          "latex": "DB = 16",
-          "fallback": "DB=16"
-        },
-        ",",
-        " ",
-        {
-          "latex": "CD = 12",
-          "fallback": "CD=12"
-        },
-        ",",
-        " ",
-        {
-          "latex": "AC = 15",
-          "fallback": "AC=15"
-        },
-        ",",
-        " ",
-        {
-          "latex": "BC = 20",
-          "fallback": "BC=20"
-        },
-        ". ",
+        "கொடுக்கப்பட்டுள்ள படத்தில் ",
         {
           "latex": "\\theta + \\phi = 90^{\\circ}",
-          "fallback": "θ+φ=90°"
+          "fallback": "θ + φ = 90°"
         },
-        ",",
-        " ",
+        " என மெய்ப்பிக்க. இப்படத்தில் மேலும் இரு செங்கோண முக்கோணங்கள் உள்ளன என்பதை மெய்ப்பித்து, ",
         {
-          "latex": "\\angle ACB = 90^{\\circ}",
-          "fallback": "∠ACB=90°"
+          "latex": "\\sin \\alpha, \\cos \\beta",
+          "fallback": "sin α, cos β"
         },
-        " என நிரூபித்து ",
+        " மற்றும் ",
         {
-          "latex": "\\sin \\alpha, \\cos \\beta, \\tan \\phi",
-          "fallback": "sinα, cosβ, tanφ"
+          "latex": "\\tan \\phi",
+          "fallback": "tan φ"
         },
-        " காண்க."
+        " ஆகியவற்றின் மதிப்புகளையும் காண்க."
       ]
     },
     "answerMath": {

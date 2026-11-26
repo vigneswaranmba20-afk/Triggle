@@ -9,6 +9,7 @@ const auditedG9TrigTable=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EV
 const auditedG9TrigQ46=require('../../docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json');
 const auditedG9SourceChoices=require('../../docs/audit/AUD14_03_EX61_EX65_SOURCE_EVIDENCE.json');
 const [mensurationRatio]=require('../data/textbook-fidelity/g9-ch7-frontier-ratio.json').items;
+const frontierTrigonometry=new Map(require('../data/textbook-fidelity/g9-ch6-frontier-source.json').items.filter(item=>item.originalReaderFields).map(item=>[item.id,item]));
 const compositionEvidence=new Map(require('../data/textbook-fidelity/g10-frontier-compositions.json').items.map(item=>[item.id,item]));
 const g9BilingualGeometry=require('../data/textbook-fidelity/g9-ch4-bilingual-20261124.json');
 const expectedGeometryIds=[
@@ -542,9 +543,19 @@ for(const [grade,data] of Object.entries(classes)){
    const extended=auditedG9TrigQ46.records[item.id];
    const originalChoices=auditedG9SourceChoices.records[item.id];
    const bilingualGeometry=g9BilingualGeometry.records[item.id];
-   assert.ok([trig,correction,extended,originalChoices,bilingualGeometry].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
+   const trig2025=frontierTrigonometry.get(item.id);
+   assert.ok([trig,correction,extended,originalChoices,bilingualGeometry,trig2025].filter(Boolean).length<=1,'Overlapping immutable-source exceptions '+item.id);
    const algebra=require('../data/textbook-fidelity/g9-ch3-ex3-1-q10-q12-bilingual.json').records[item.id];
-   if(grade==='9' && /^g9-ch(?:7-ex7\.[1-4]|8-ex8\.[1-4]|9-ex9\.[1-3])-q\d+$/.test(item.id)){
+   if(trig2025){
+    const historical={...item,...trig2025.originalReaderFields};
+    if(trig2025.disposition==='SOURCE_BLOCKED'){
+     delete historical.answerTa;
+     delete historical.answerMath;
+    }
+    assert.equal(crypto.createHash('sha256').update(JSON.stringify(historical)).digest('hex'),preserved.sha256[item.id],'Preserve the pre-existing Trigonometry record '+item.id);
+    assert.equal(item.page,trig2025.sourcePages.en.pdfPages[0]);
+    assert.match(item.reference,/revised 2025/);
+   }else if(grade==='9' && /^g9-ch(?:7-ex7\.[1-4]|8-ex8\.[1-4]|9-ex9\.[1-3])-q\d+$/.test(item.id)){
     const original=JSON.parse(JSON.stringify(item));
     if(item.id===mensurationRatio.id){
      const previous=mensurationRatio.previousReader;
