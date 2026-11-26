@@ -25,10 +25,12 @@
     "status": "IN_PROGRESS",
     "release": {
       "key": "g9.algebra.mcq",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 453,
       "head": "7117ed8cd5ad79203be63dfee6f6e8b2707c2370",
-      "prQualityRun": 45719190105
+      "prQualityRun": 45719190105,
+      "merge": "086f858b2c4ab00b83f7eaad3ef2b12b6786dfd8",
+      "pagesRun": 45742565702
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2459,13 +2461,13 @@
         "g9-ch3-ex3.15-q28"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch3-frontier-mcq.json",
-      "status": "TESTED",
+      "status": "MERGED",
       "release": {
         "grade": 9,
         "chapter": 3,
         "runtimeRecords": 29,
         "scope": "Algebra multiple-choice proofs, two source ambiguities and Tamil final answers",
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 453,
         "head": "7117ed8cd5ad79203be63dfee6f6e8b2707c2370",
         "prQualityRun": 45719190105,
@@ -2475,6 +2477,8 @@
           "browserScript": "site/tools/test_g9_frontier_algebra_mcq_browser.cjs",
           "studentQuery": "class=9&question=g9-ch3-ex3.15-q9"
         },
+        "merge": "086f858b2c4ab00b83f7eaad3ef2b12b6786dfd8",
+        "pagesRun": 45742565702,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/453"
       }
     },
@@ -2668,7 +2672,7 @@
       }
     }
   ],
-  "latestMain": "2c62b1c80d6bfecf176b78568d40aaa9a5742c1d",
+  "latestMain": "086f858b2c4ab00b83f7eaad3ef2b12b6786dfd8",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2720,10 +2724,12 @@
   "openReleaseOrder": [
     {
       "key": "g9.algebra.mcq",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 453,
       "head": "7117ed8cd5ad79203be63dfee6f6e8b2707c2370",
-      "prQualityRun": 45719190105
+      "prQualityRun": 45719190105,
+      "merge": "086f858b2c4ab00b83f7eaad3ef2b12b6786dfd8",
+      "pagesRun": 45742565702
     },
     {
       "key": "answer.tamil",
