@@ -24,11 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "navigation",
+      "key": "g9.mensuration",
       "status": "TESTED",
-      "pr": 449,
-      "head": "23315dc5c52fc8e59271d834ab23f0f2a3795019",
-      "prQualityRun": 45718845558
+      "pr": 450,
+      "head": "a98b04ad8cc1eeba393419116e4c67fd5a98137b",
+      "prQualityRun": 45719169113
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2202,13 +2202,13 @@
       "chapter": null,
       "scope": "Exercise order and boundaries for Grade 9 Exercises 1.1 and 6.4 and Grade 10 Exercise 3.19",
       "runtimeRecords": 65,
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": null,
         "chapter": null,
         "runtimeRecords": 65,
         "scope": "Exercise order and boundaries for Grade 9 Exercises 1.1 and 6.4 and Grade 10 Exercise 3.19",
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 449,
         "head": "23315dc5c52fc8e59271d834ab23f0f2a3795019",
         "prQualityRun": 45718845558,
@@ -2217,6 +2217,39 @@
           "worktree": "/workspace/Triggle-frontier-navigation",
           "browserScript": "site/tools/test_frontier_navigation_browser.cjs",
           "studentQuery": "class=9&question=g9-ch1-ex1.1-q3-a-i"
+        },
+        "merge": "bd31c2b0d222e43e746e3e56925f85b8a05c45d2",
+        "pagesRun": 45733459057,
+        "liveEvidence": {
+          "pr": 449,
+          "merge": "bd31c2b0d222e43e746e3e56925f85b8a05c45d2",
+          "head": "23315dc5c52fc8e59271d834ab23f0f2a3795019",
+          "slug": "frontier-navigation",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch1-ex1.1-q3-a-i",
+          "pagesRun": 45733459057,
+          "deploymentId": 8073863759,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45733459057/job/139626826181",
+          "deploymentCompletedAt": "2026-11-26T01:22:41Z",
+          "versionMatched": "bd31c2b0d222e43e746e3e56925f85b8a05c45d2",
+          "sha256": {
+            "assets/app.js": "d6ed1d0b7fc8cbcec5e49328f55f34e68f82c66381004f344a09f0b6fc2c5dd9",
+            "assets/chapter-hub.js": "2b6c2c137923c726a2acb8f9978680d12bab98c7cc66702c00b26c5195605448",
+            "data/g10-ch2-concepts.js": "a42e9704104891b19c8cd9975976abfeef6ed468b837fb2e25fb24a8021a1c0c",
+            "data/g10-ch4-concepts.js": "20f6cf1bfb5ee0f0fb4a87da2daa6f973d8d8551e6ea7e01d0aee5aed847454f",
+            "data/g10-ch5-concepts.js": "b8687bd2369755dccfadf30f9bf8180b99d70a705fc39941a1548fed16fe97e4",
+            "data/project-status.json": "280c02b8b2d2aad643f0db8384f6fae43f8d2fca0837938c59406db14e8217b0",
+            "index.html": "9a6dceea530b8c9d34c44d1e910ee62df02091ab701ecd5eaddcdb20e449ade6",
+            "service-worker.js": "a9d7ca1ef12d596b7833e2aac201115f5c491f0d380d88a1e744b10f5341d505"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "65 cards in source order and 16 concept paths, bilingual, with boundaries and retained progress at 390px."
+          }
         },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/449"
       }
@@ -2527,7 +2560,7 @@
       }
     }
   ],
-  "latestMain": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
+  "latestMain": "bd31c2b0d222e43e746e3e56925f85b8a05c45d2",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2570,15 +2603,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "59f26f46d938e94e7e7b04cd3d8a7222cc220094",
+  "latestVerifiedProduction": "bd31c2b0d222e43e746e3e56925f85b8a05c45d2",
   "openReleaseOrder": [
-    {
-      "key": "navigation",
-      "status": "TESTED",
-      "pr": 449,
-      "head": "23315dc5c52fc8e59271d834ab23f0f2a3795019",
-      "prQualityRun": 45718845558
-    },
     {
       "key": "g9.mensuration",
       "status": "TESTED",
