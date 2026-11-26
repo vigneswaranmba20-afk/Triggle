@@ -8,6 +8,7 @@ from typing import Any, Callable, Dict, List, Optional, Tuple
 
 import sympy as sp
 
+from .answer_fields import localized_answer_forms
 from .algebra_parser import (
     classify_algebra_nature,
     extract_unit_and_dimension,
@@ -25,6 +26,7 @@ from .coordinate_parser import parse_line_equation
 from .matrix_solver import matrices_equal
 from .mcq import extract_selected_option_label, parse_mcq_options_en
 from .rounding import check_numeric_match
+from .scalar_answer import scalar_latex_text
 from .steps import validate_steps
 from .symbolic import expressions_equivalent
 
@@ -139,6 +141,48 @@ def _parse_hrs_mins(text: str) -> Optional[sp.Expr]:
     return None
 
 
+_DOMAIN_FIELDS = re.compile(
+    r"(?:Original (?:expression|exclusions)|மூலக் கோவையின் விலக்க(?:ுகள்|ப்பட்ட மதிப்புகள்))"
+    r"\s*:\s*(.*?)\s*"
+    r"(?:Reduced form(?: \(textbook key\))?|எளிய வடிவ(?:ம்|ில்)(?: \(பாடநூல் விடைக்குறிப்பு\))?)"
+    r"\s*:\s*(.*)",
+    re.I | re.S,
+)
+
+
+def _match_exclusions(text: str, expected: list[sp.Expr]) -> bool:
+    text = re.sub(r"\s+(?:are excluded|only|மட்டும்)\s*\.?$", "", text.strip(), flags=re.I)
+    text = re.sub(r"^x\s*=\s*", "", text.strip().rstrip(".")).strip()
+    if not re.fullmatch(r"[+−\-]?\s*\d+(?:\s*,\s*[+−\-]?\s*\d+)*", text):
+        return False
+    values = [sp.Integer(re.sub(r"\s+", "", token.replace("−", "-"))) for token in text.split(",")]
+    return _match_bijection(values, expected, expressions_equivalent)
+
+
+def _verify_two_domains(item: Dict[str, Any], original: list[sp.Expr], reduced: list[sp.Expr]) -> Tuple[str, str]:
+    forms = [(language, name, value) for language in ("en", "ta")
+             for name, value in localized_answer_forms(item, language).items()]
+    if not forms:
+        return "UNVERIFIABLE", "No authored exclusions."
+
+    missing_original = False
+    for language, name, value in forms:
+        if name == "latex":
+            value = re.sub(r"\\(?:begin|end)\{aligned\}", "", value).replace(r"\\", "\n").replace("&", "")
+            value = scalar_latex_text(value)
+        fields = _DOMAIN_FIELDS.fullmatch(value.strip())
+        if fields and _match_exclusions(fields[1], original) and _match_exclusions(fields[2], reduced):
+            continue
+        if not fields and _match_exclusions(value, reduced):
+            missing_original = True
+            continue
+        return "FAIL", f"{language} {name}: expected original exclusions {original} and reduced exclusions {reduced}."
+
+    if missing_original:
+        return "PARTIAL", "The textbook's reduced exclusion is correct. The original domain exclusions require separate evidence."
+    return "PASS", ""
+
+
 def verify_ch3_answer(item: Dict[str, Any], deriv: Ch3DerivedResult, is_concept: bool = False) -> Tuple[str, str]:
     """Compare existing Ch3 answer against independently derived result."""
     if not deriv.verifiable:
@@ -162,6 +206,8 @@ def verify_ch3_answer(item: Dict[str, Any], deriv: Ch3DerivedResult, is_concept:
 
     rt = deriv.result_type
     val = deriv.value
+    if rt == "two_domain_exclusions":
+        return _verify_two_domains(item, *val)
 
     if rt == "scalar":
         hm = _parse_hrs_mins(ans_text)

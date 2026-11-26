@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+from copy import deepcopy
 from fractions import Fraction
+import json
 from pathlib import Path
 
 import pytest
@@ -248,6 +250,28 @@ def test_v1_3_3_ch3_coverage_and_mutations():
     mut = run_ch3_mutation_suite(REPO_ROOT)
     assert mut["total"] >= 25
     assert mut["failed"] == 0, [c for c in mut["cases"] if not c["passed"]]
+
+
+def test_cancelling_a_factor_preserves_the_original_domain():
+    from mathguard.audit_chapters import load_all_3_chapters
+    from mathguard.ch3_verifier import verify_ch3_answer
+    from mathguard.derivations_g10_ch3 import derive_ch3_for_item
+
+    qid = "c10-3-ex3-4-q2-iii"
+    bundle = load_all_3_chapters(REPO_ROOT)
+    active = next(row for row in bundle["chapters"]["3"]["exercises"] if row["id"] == qid)
+    expected = derive_ch3_for_item(qid, active)
+    assert {value for value in expected.value[0]} == {-2, 1}
+    assert {value for value in expected.value[1]} == {1}
+    assert verify_ch3_answer(active, expected)[0] == "PASS"
+
+    historical = json.loads((REPO_ROOT / "docs/trace/mathguard/v1_3_5_frozen_dataset.json").read_text())
+    old = next(row["item"] for row in historical["items"] if row["id"] == qid)
+    assert verify_ch3_answer(old, expected)[0] == "PARTIAL"
+    for language in ("en", "ta"):
+        altered = deepcopy(active)
+        altered["answerMath"][language]["latex"] = altered["answerMath"][language]["latex"].replace("x=-2", "x=2", 1)
+        assert verify_ch3_answer(altered, expected)[0] == "FAIL"
 
 
 def test_v1_3_4_reasoning_engine_and_mutations(tmp_path):

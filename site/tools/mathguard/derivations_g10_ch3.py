@@ -241,8 +241,11 @@ def _d_3_4_q2_ii(_item: Dict[str, Any]) -> Ch3DerivedResult:
 
 
 def _d_3_4_q2_iii(_item: Dict[str, Any]) -> Ch3DerivedResult:
-    # TN textbook reduces common factor (x+2) first before finding excluded value of reduced form
-    return Ch3DerivedResult(True, "alg_excluded_values_reduced", "scalar_set", alg.excluded_values((x**2 + 6 * x + 8) / (x**2 + x - 2), x, reduce_first=True))
+    denominator = x**2 + x - 2
+    expression = (x**2 + 6 * x + 8) / denominator
+    original = list(sp.solveset(denominator, x, domain=sp.S.Reals))
+    reduced = alg.excluded_values(expression, x, reduce_first=True)
+    return Ch3DerivedResult(True, "alg_original_and_reduced_domains", "two_domain_exclusions", (original, reduced))
 
 
 def _d_3_4_q2_iv(_item: Dict[str, Any]) -> Ch3DerivedResult:
