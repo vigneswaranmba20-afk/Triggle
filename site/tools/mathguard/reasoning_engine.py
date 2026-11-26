@@ -13,7 +13,7 @@ import math
 from fractions import Fraction
 import re
 from dataclasses import dataclass, field
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 import sympy as sp
 
@@ -24,11 +24,13 @@ from .parser import parse_expression
 from .rounding import check_numeric_match
 from .steps import extract_stem_assumptions
 from .symbolic import expressions_equivalent
+from .symbolic_reasoning import FunctionRegistry, PolynomialReasoner, ScopedMathState
 
 _SUP_MAP = str.maketrans("⁰¹²³⁴⁵⁶⁷⁸⁹", "0123456789")
 
 _KNOWN_SYMBOL_BANK = {
-    "LCM", "GCD", "Area", "CSA", "TSA", "Volume", "LHS", "RHS", "Slope",
+    "LCM", "GCD", "Area", "CSA", "TSA", "LSA", "Volume", "Vcuboid", "A_base",
+    "LHS", "RHS", "Slope",
     "V_earth", "A_sphere", "m_perp", "Time", "Midpoint", "Distance", "named_qty",
     "opposite", "adjacent", "hypotenuse",
 }
@@ -162,9 +164,17 @@ def _preprocess_math_line(raw: str) -> str:
     s = s.replace("&=", "=").replace("&", " ")
     s = s.replace(r"\,", " ").replace(r"\;", " ").replace(r"\:", " ")
     s = re.sub(r"\\qq?uad\b", " ", s)
-    # Collapse LaTeX thousands separators like 1{,}000{,}000 -> 1000000
+    # Collapse LaTeX thousands separators like 1{,}000{,}000 -> 1000000 and plain 125,000 -> 125000
     while re.search(r"(\d)\{,\}(\d{3})", s):
         s = re.sub(r"(\d)\{,\}(\d{3})", r"\1\2", s)
+    while re.search(r"(\d),(\d{3})(?!\d)", s):
+        s = re.sub(r"(\d),(\d{3})(?!\d)", r"\1\2", s)
+    # Normalize single-digit LaTeX fraction shorthand like \dfrac12, \dfrac52, \dfrac9{17}
+    s = re.sub(r"\\(?:d|t)?frac\s*([0-9])\s*([0-9])", r"\\frac{\1}{\2}", s)
+    s = re.sub(r"\\(?:d|t)?frac\s*([0-9])\s*\{", r"\\frac{\1}{", s)
+    s = re.sub(r"\\(?:d|t)?frac\s*\{([^{}]+)\}\s*([0-9])", r"\\frac{\1}{\2}", s)
+    # Strip leading roman numeral list markers like (i), (ii), (iii), (iv), (v)
+    s = re.sub(r"^\s*\((?:i|ii|iii|iv|v|vi|vii|viii|ix|x)\)\s+", "", s, flags=re.I)
     # Strip equation operation prefixes & trailing labels ONLY when preceded by comma/quad/dots
     s = re.sub(r"^\s*(?:[-−]?\s*\(\d+'?\)\s*(?:[-+−]\s*\(\d+'?\))?\s*:\s*)", "", s)
     s = re.sub(r"^\s*[A-Za-z0-9_]+\s*=\s*[-+]?\d+(?:/\d+)?\s*:\s*(?=.*=)", "", s)
@@ -173,7 +183,7 @@ def _preprocess_math_line(raw: str) -> str:
     s = re.sub(r"\\text\s*\{\s*[-—]+\s*\(\d+'?\)\s*\}\s*$", "", s)
     s = re.sub(r"\(\s*[^)]*(?:\\ne|≠|perpendicular|parallel|collinear|approx|real and (?:un)?equal|reject|Option|check:|since\b)[^)]*\)\s*$", "", s, flags=re.I)
     s = re.sub(r"\(\s*\\text\s*\{\s*reject\b.*$", "", s, flags=re.I)
-    s = re.sub(r",\s*[A-Za-z]\s*>\s*0(?:\s*,\s*[A-Za-z]\s*>\s*0)*\s*$", "", s)
+    s = re.sub(r"(?:,\s*[A-Za-z]\s*(?:\\ge|\\le|≥|≤|>|<)\s*0)+\s*$", "", s)
     s = re.sub(r"\(\s*[A-Za-z](?:\s*,\s*[A-Za-z])*\s*[><]\s*0(?:\s*,\s*[A-Za-z]\s*[><]\s*0)*\s*\)\s*$", "", s)
     s = re.sub(r"\(\s*[A-Za-z]\s*=\s*[^)]+\)\s*$", "", s)
     s = re.sub(r"\(\s*\\text\s*\{\s*(?:Option[^}]*|since\s+[^}]*|real\s+and\s+unequal\s+roots)\s*\}\s*\)\s*$", "", s, flags=re.I)
@@ -208,6 +218,8 @@ def _preprocess_math_line(raw: str) -> str:
     s = re.sub(r"\b4AC\b", "4*A*C", s)
     s = re.sub(r"\\min\s*\(\s*([-+]?\d+(?:\.\d+)?)\s*,\s*([-+]?\d+(?:\.\d+)?)\s*\)", lambda m: str(min(float(m.group(1)), float(m.group(2))).rstrip("0").rstrip(".") if "." in m.group(1)+m.group(2) else min(int(m.group(1)), int(m.group(2)))), s)
     s = re.sub(r"\\max\s*\(\s*([-+]?\d+(?:\.\d+)?)\s*,\s*([-+]?\d+(?:\.\d+)?)\s*\)", lambda m: str(max(float(m.group(1)), float(m.group(2))).rstrip("0").rstrip(".") if "." in m.group(1)+m.group(2) else max(int(m.group(1)), int(m.group(2)))), s)
+    s = re.sub(r"∛\s*\(([^)]+)\)", r"(\1)^{\\frac{1}{3}}", s)
+    s = re.sub(r"∛\s*([0-9A-Za-z]+)", r"(\1)^{\\frac{1}{3}}", s)
     s = re.sub(r"\\sqrt\s*([0-9A-Za-z])(?![A-Za-z0-9{])", r"\\sqrt{\1}", s)
     s = re.sub(r"\\tan\s*0\s*\^\s*\\circ", "0", s)
     s = re.sub(r"\\tan\s*30\s*\^\s*\\circ", "(1/sqrt(3))", s)
@@ -224,7 +236,7 @@ def _preprocess_math_line(raw: str) -> str:
     s = s.replace(r"\left(", "(").replace(r"\right)", ")")
     s = s.replace(r"\left[", "[").replace(r"\right]", "]")
     s = re.sub(r"([⁰¹²³⁴⁵⁶⁷⁸⁹]+)", lambda m: "^" + m.group(1).translate(_SUP_MAP), s)
-    s = re.sub(r"\b([fgpqG])\s*\(\s*([a-zA-Z])\s*\)", r"\1_\2", s)
+    s = re.sub(r"(?<!_)([₀₁₂₃₄₅₆₇₈₉]+)", lambda m: "_" + m.group(1).translate(str.maketrans("₀₁₂₃₄₅₆₇₈₉", "0123456789")), s)
     s = re.sub(r"\bSlope\s*\(\s*([A-Z]{2})\s*\)", r"m_\1", s)
     s = re.sub(r"\bm\s*\(\s*([A-Z]{2})\s*\)", r"m_\1", s)
     s = re.sub(r"\[([^\[\]]+)\]", r"(\1)", s)
@@ -235,16 +247,29 @@ def _preprocess_math_line(raw: str) -> str:
     return s.strip().rstrip(",\\").strip()
 
 
-def _parse_with_token_map(raw: str) -> sp.Expr:
+def _parse_with_token_map(
+    raw: str,
+    func_registry: Optional[FunctionRegistry] = None,
+    scalar_env_names: Optional[Set[str]] = None,
+) -> sp.Expr:
     s = _strip_trailing_units(_preprocess_math_line(raw))
     rev_map: Dict[str, sp.Expr] = {}
     char_idx = 0
+    if func_registry is not None or re.search(r"\b[fghpqPQR]\s*\(", s):
+        reg = func_registry if func_registry is not None else FunctionRegistry()
+        s, fn_map, _unbound, char_idx = reg.resolve_calls_in_preprocessed(
+            s,
+            lambda arg_s: _safe_parse(arg_s, func_registry=reg, scalar_env_names=scalar_env_names),
+            scalar_env_names or set(),
+            _PROTECT_CHARS,
+        )
+        rev_map.update(fn_map)
     if "|" in s:
         def _repl_abs(m: re.Match[str]) -> str:
             nonlocal char_idx
             inner_s = m.group(1)
             try:
-                inner_e = _parse_with_token_map(inner_s)
+                inner_e = _parse_with_token_map(inner_s, func_registry=func_registry, scalar_env_names=scalar_env_names)
                 abs_e = abs(inner_e) if not inner_e.free_symbols else sp.Abs(inner_e)
                 if char_idx < len(_PROTECT_CHARS):
                     ch = _PROTECT_CHARS[char_idx]
@@ -278,9 +303,13 @@ def _parse_with_token_map(raw: str) -> sp.Expr:
     return expr
 
 
-def _safe_parse(raw: str) -> Optional[sp.Expr]:
+def _safe_parse(
+    raw: str,
+    func_registry: Optional[FunctionRegistry] = None,
+    scalar_env_names: Optional[Set[str]] = None,
+) -> Optional[sp.Expr]:
     try:
-        return _norm_syms(_parse_with_token_map(raw))
+        return _norm_syms(_parse_with_token_map(raw, func_registry=func_registry, scalar_env_names=scalar_env_names))
     except Exception:
         return None
 
@@ -453,6 +482,14 @@ def _extract_step_lines(step: Dict[str, Any]) -> List[str]:
         if (
             not buf
             and joined
+            and "=" not in joined[-1]
+            and re.match(r"^(?:&\s*)?=", ln_s)
+        ):
+            joined[-1] = joined[-1] + " " + ln_s
+            continue
+        if (
+            not buf
+            and joined
             and re.match(r"^(?:\\iff|\\Rightarrow|\\implies)\s*&", joined[-1])
             and "=" not in joined[-1]
             and re.match(r"^&\s*=", ln_s)
@@ -472,6 +509,11 @@ def _extract_step_lines(step: Dict[str, Any]) -> List[str]:
         ln = ln.strip().rstrip("\\").strip()
         if not ln or _CONNECTOR_ONLY_RE.match(ln):
             continue
+        if re.search(r"&?\s*\\q?quad\b", ln) and ln.count("=") >= 2:
+            q_parts = [p.strip() for p in re.split(r"\s*&?\s*\\q?quad\s*", ln) if p.strip()]
+            if len(q_parts) >= 2 and all("=" in p for p in q_parts):
+                out.extend(q_parts)
+                continue
         if re.search(r"\b(?:or|and)\b", ln, flags=re.I) and ln.count("=") >= 2:
             sub_parts = re.split(r"\s*(?:\\quad\s*)?(?:\\text\s*\{\s*)?\b(?:or|and)\b(?:\s*\})?(?:\s*\\quad)?\s*", ln, flags=re.I)
             if all("=" in p for p in sub_parts if p.strip()):
@@ -528,18 +570,24 @@ def _check_named_formula_validity(var_name: str, rhs: sp.Expr, allow_positive_do
         s for s in rhs.free_symbols
         if s.name in _PHYSICAL_POS_SYMS or bool(re.fullmatch(r"[rhlbaRHd]_[A-Za-z0-9]+", s.name))
     }
-    area_syms = {s for s in rhs.free_symbols if s.name in ("A", "Area")}
+    area_syms = {s for s in rhs.free_symbols if s.name in ("A", "Area") or s.name.startswith("A_") or s.name.startswith("Area_")}
     if not length_syms and not area_syms:
         return True
     v_norm = var_name.split("_")[0]
-    if var_name.lower() in ("named_tsa", "named_csa", "named_volume", "named_area"):
+    if var_name.lower() in ("named_tsa", "named_csa", "named_lsa", "named_volume", "named_area"):
         v_norm = var_name.split("_", 1)[1].upper()
         if v_norm == "VOLUME":
             v_norm = "Volume"
         elif v_norm == "AREA":
             v_norm = "Area"
-    expected_deg = 3 if v_norm in ("V", "Volume") else (2 if v_norm in ("CSA", "TSA", "Area", "A") else None)
+    if var_name.startswith("V") and var_name not in ("V_1", "V_2"):
+        v_norm = "Volume"
+    expected_deg = 3 if v_norm in ("V", "Volume") else (2 if v_norm in ("CSA", "TSA", "LSA", "Area", "A") else None)
     if expected_deg is None:
+        return True
+    # Only check symbolic dimensional scaling on pure formulas (not partially substituted numbers like 25 * b * 9)
+    num_atoms = [a for a in rhs.atoms(sp.Number) if abs(float(a)) >= 5]
+    if num_atoms:
         return True
     try:
         t = sp.Symbol("_dim_t", positive=True)
@@ -737,23 +785,32 @@ def verify_complete_working(
 
     # Extract explicit algebraic definitions A = ..., B = ... BEFORE extract_stem_assumptions so B = 1/(x+1) isn't truncated to 1
     for m_def in re.finditer(r"\b([AB])\s*=\s*([^,;]+?)(?=\s*(?:,|;|\bfind\b|\bprove\b|\bshow\b|$))", q_stem):
-        if re.search(rf"[+\-*/]\s*{re.escape(m_def.group(1))}\s*=", q_stem):
+        if re.search(rf"[+\-−–*/]\s*{re.escape(m_def.group(1))}\s*=", q_stem):
             continue
         e_def = _safe_parse(m_def.group(2))
         if e_def is not None and m_def.group(1) not in graph.givens:
             graph.givens[m_def.group(1)] = e_def
             graph.variable_declarations[m_def.group(1)] = e_def
 
+    is_solve_q = bool(re.search(r"\b(?:solve|method\s+of\s+substitution|simultaneous|cross\s*multiplication)\b", q_stem, flags=re.I))
     if not allow_positive_domain:
         stem_env = extract_stem_assumptions(q_stem)
         for k, v in stem_env.items():
-            if re.search(rf"[+\-*/]\s*{re.escape(k)}\s*=", q_stem):
+            if re.search(rf"[+\-−–*/]\s*{re.escape(k)}\s*=", q_stem):
                 continue
             if is_coord_eq_q and k in ("x", "y"):
+                continue
+            if is_solve_q and k in ("x", "y", "u", "v", "z"):
                 continue
             if k not in graph.givens:
                 graph.givens[k] = _norm_syms(v)
                 graph.variable_declarations[k] = _norm_syms(v)
+
+    func_registry = FunctionRegistry()
+    func_registry.extract_from_stem(q_stem, lambda x: _safe_parse(x, func_registry=func_registry, scalar_env_names=set(graph.givens.keys())))
+    if "p" in func_registry.functions and "P" not in graph.givens:
+        graph.givens["P"] = func_registry.functions["p"].body
+        graph.variable_declarations["P"] = graph.givens["P"]
 
     # Extract ratio givens like h_2 : h_1 = 1 : 2 or h₂ : h₁ = 1 : 2
     q_ratio_norm = q_stem.translate(str.maketrans("₀₁₂₃₄₅₆₇₈₉", "0123456789"))
@@ -808,12 +865,35 @@ def verify_complete_working(
             failed_details=[{"step": c.step_index, "line": c.line, "evidence": c.evidence} for c in graph.claims if c.status == "FAILED"],
         )
 
-    is_identity_task = bool(re.search(r"\b(?:expand|simplify|factor|factorise|verify)\b", q_stem, flags=re.I)) and not bool(re.search(r"\bsolve\b", q_stem, flags=re.I))
+    is_identity_task = (
+        bool(re.search(r"\b(?:expand|simplify|factorise|verify)\b", q_stem, flags=re.I))
+        or (bool(re.search(r"\bfactor\b", q_stem, flags=re.I)) and not bool(re.search(r"\bfactor\s+of\b|\bvalue\s+of\b", q_stem, flags=re.I)))
+    ) and not bool(re.search(r"\bsolve\b|\bdetermine\s+the\s+value\b|\bfind\s+the\s+value\b", q_stem, flags=re.I))
+
+    def _p(raw_s: str) -> Optional[sp.Expr]:
+        return _safe_parse(raw_s, func_registry=func_registry, scalar_env_names=set(env.keys()))
+
+    def _has_unbound_fn(e: Optional[sp.Expr]) -> bool:
+        return e is not None and any(sym.name.startswith("__unbound_") for sym in e.free_symbols)
 
     prev_chain_expr: Optional[sp.Expr] = None
     prev_pm_pair: Optional[Tuple[sp.Expr, sp.Expr]] = None
+    prev_eq_sides: List[Tuple[sp.Expr, sp.Expr]] = []
     mat_env: Dict[str, sp.Matrix] = {}
+    current_subpart: Optional[str] = None
     for s_idx, step in enumerate(steps):
+        step_en_txt = str(step.get("en") or "").strip()
+        m_step_sub = re.match(r"^\s*\((i|ii|iii|iv|v|vi)\)\b", step_en_txt, flags=re.I)
+        if m_step_sub:
+            tag = m_step_sub.group(1).lower()
+            if current_subpart is not None and tag != current_subpart:
+                env.clear()
+                env.update(graph.givens)
+                prev_chain_expr = None
+                prev_pm_pair = None
+                graph.active_equations.clear()
+                prev_eq_sides.clear()
+            current_subpart = tag
         lines = _extract_step_lines(step)
         if not lines:
             txt = (step.get("text") or step.get("en") or "").strip()
@@ -834,6 +914,17 @@ def verify_complete_working(
                     expanded_pairs.append((ln, raw_pre))
 
         for ln, pre in expanded_pairs:
+            m_subp = re.match(r"^\s*\((i|ii|iii|iv|v|vi)\)\s+", ln, flags=re.I)
+            if m_subp:
+                tag = m_subp.group(1).lower()
+                if current_subpart is not None and tag != current_subpart:
+                    env.clear()
+                    env.update(graph.givens)
+                    prev_chain_expr = None
+                    prev_pm_pair = None
+                    graph.active_equations.clear()
+                    prev_eq_sides.clear()
+                current_subpart = tag
             _conv = _verify_unit_conversion_statement(ln)
             if _conv is not None:
                 graph.claims.append(MathClaim(s_idx, ln, "unit_conversion", "VERIFIED" if _conv else "FAILED",
@@ -971,15 +1062,19 @@ def verify_complete_working(
                 rhs_s = pre[1:].strip()
                 if r"\approx" in rhs_s or "≈" in rhs_s:
                     ap = re.split(r"\\approx|≈", rhs_s)
-                    e1, e2 = _safe_parse(ap[0]), _safe_parse(ap[1])
+                    e1, e2 = _p(ap[0]), _p(ap[1])
                     if e1 is not None and e2 is not None:
                         ok, ev = _exprs_match(e1, e2, env, allow_pi_approx=True, allow_positive_domain=allow_positive_domain, allow_numeric_tolerance=True)
                         graph.claims.append(MathClaim(s_idx, ln, "approximation", "VERIFIED" if ok else "FAILED", evidence=ev or "approx_mismatch"))
                         prev_chain_expr = e1
                         continue
                 elif prev_chain_expr is not None:
-                    e_cur = _safe_parse(rhs_s)
+                    e_cur = _p(rhs_s)
                     if e_cur is not None:
+                        if _has_unbound_fn(prev_chain_expr) or _has_unbound_fn(e_cur):
+                            graph.claims.append(MathClaim(s_idx, ln, "substitution", "UNVERIFIED", evidence="missing_variable_bindings"))
+                            prev_chain_expr = e_cur
+                            continue
                         has_trunc = (r"\ldots" in ln or "…" in ln)
                         ok, ev = _exprs_match(prev_chain_expr, e_cur, env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain, allow_numeric_tolerance=has_trunc)
                         if not ok and _sub_env(prev_chain_expr, env).free_symbols and not _sub_env(e_cur, env).free_symbols:
@@ -991,7 +1086,7 @@ def verify_complete_working(
             elif pre.startswith(r"\approx") or pre.startswith("≈"):
                 rhs_s = re.sub(r"^(?:\\approx|≈)\s*", "", pre).strip()
                 if prev_chain_expr is not None:
-                    e_cur = _safe_parse(rhs_s)
+                    e_cur = _p(rhs_s)
                     if e_cur is not None:
                         ok, ev = _exprs_match(prev_chain_expr, e_cur, env, allow_pi_approx=True, allow_positive_domain=allow_positive_domain, allow_numeric_tolerance=True)
                         if not ok and _sub_env(prev_chain_expr, env).free_symbols and not _sub_env(e_cur, env).free_symbols:
@@ -1260,18 +1355,116 @@ def verify_complete_working(
 
             # 4. Equality chains: E0 = E1 = ... = En
             if "=" in pre:
+                # Handle trailing "\ne" / "≠" assertion like "p(1) = 2 \ne 0"
+                ne_rhs_str: Optional[str] = None
+                m_ne_tail = re.search(r"^(.*)\s*(?:\\ne|≠)\s*([^=]+)$", pre)
+                if m_ne_tail and "=" in m_ne_tail.group(1):
+                    pre = m_ne_tail.group(1).strip()
+                    ne_rhs_str = m_ne_tail.group(2).strip()
+
                 parts = [p.strip() for p in pre.split("=") if p.strip()]
                 if len(parts) < 2:
                     graph.claims.append(MathClaim(s_idx, ln, "identity", "UNVERIFIED", evidence="empty_side"))
                     continue
 
+                # 4a. Function definition: f(x) = expr1 [= expr2 ...]
+                m_fdef = re.fullmatch(r"([fghpqPQR])\s*\(\s*([a-zA-Z])\s*\)", parts[0].strip())
+                if m_fdef and m_fdef.group(1) not in env:
+                    fname, fvar = m_fdef.group(1), m_fdef.group(2)
+                    is_new_fn = fname not in func_registry.functions
+                    rhs_cand = _p(parts[1])
+                    is_redef_in_var = (
+                        not is_new_fn
+                        and func_registry.functions[fname].params == (fvar,)
+                        and rhs_cand is not None
+                        and sp.Symbol(fvar) in rhs_cand.free_symbols
+                    )
+                    if is_new_fn or is_redef_in_var:
+                        rhs_exprs = [_p(p) for p in parts[1:]]
+                        if all(e is not None for e in rhs_exprs):
+                            if any(_has_unbound_fn(e) for e in rhs_exprs):
+                                graph.claims.append(MathClaim(s_idx, ln, "definition", "UNVERIFIED", evidence="missing_variable_bindings"))
+                                continue
+                            chain_ok = True
+                            for i in range(len(rhs_exprs) - 1):
+                                ok_r, _ = _exprs_match(rhs_exprs[i], rhs_exprs[i + 1], env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain)
+                                if not ok_r:
+                                    chain_ok = False
+                                    break
+                            if chain_ok:
+                                func_registry.define(fname, (fvar,), rhs_exprs[-1], source="step")
+                                prev_chain_expr = rhs_exprs[-1]
+                                graph.claims.append(MathClaim(s_idx, ln, "definition", "VERIFIED", evidence="function_definition"))
+                                continue
+                            else:
+                                graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="function_definition_chain_mismatch"))
+                                continue
+
+                # 4b. Multi-link unit conversion chain: e.g. "125,000 litres = [[125,000|1000]] = 125 m^3"
+                if len(parts) >= 3:
+                    uv_ok = _verify_unit_conversion_statement(f"{parts[0]} = {parts[-1]}")
+                    if uv_ok is True:
+                        e_last = _p(parts[-1])
+                        mid_ok = True
+                        if e_last is not None:
+                            for mid_p in parts[1:-1]:
+                                em = _p(mid_p)
+                                if em is not None and not em.free_symbols and not _exprs_match(em, e_last, env, allow_pi_approx=True, allow_positive_domain=allow_positive_domain)[0]:
+                                    mid_ok = False
+                                    break
+                        if mid_ok:
+                            prev_chain_expr = e_last
+                            graph.claims.append(MathClaim(s_idx, ln, "unit_conversion", "VERIFIED", evidence="unit_conversion_chain"))
+                            continue
+
+                # 4c. Named squared-length chain: e.g. "AB^2 = CD^2 = 12^2 + 13^2 = 313"
+                _sq_lhs_pat = re.compile(r"^([A-Z]{2}|[a-z]_?\d+)\s*(?:\^\s*2|²)$")
+                if _sq_lhs_pat.match(_strip_trailing_units(_preprocess_math_line(parts[0])).strip()):
+                    sq_names = []
+                    idx_sq = 0
+                    while idx_sq < len(parts) - 1:
+                        norm_p = _strip_trailing_units(_preprocess_math_line(parts[idx_sq])).strip()
+                        m_sq = _sq_lhs_pat.match(norm_p)
+                        if m_sq:
+                            sq_names.append(m_sq.group(1))
+                            idx_sq += 1
+                        else:
+                            break
+                    if sq_names and idx_sq < len(parts):
+                        rhs_exprs = [_p(p) for p in parts[idx_sq:]]
+                        if all(e is not None for e in rhs_exprs):
+                            all_r_ok = all(_exprs_match(rhs_exprs[i], rhs_exprs[i + 1], env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain)[0] for i in range(len(rhs_exprs) - 1))
+                            if all_r_ok:
+                                val_sq = _norm_syms(_sub_env(rhs_exprs[-1], env, allow_positive_domain=allow_positive_domain))
+                                consistent = True
+                                for nm in sq_names:
+                                    if nm in graph.givens and not graph.givens[nm].free_symbols and not val_sq.free_symbols:
+                                        if not expressions_equivalent(graph.givens[nm] ** 2, val_sq):
+                                            consistent = False
+                                            break
+                                if consistent:
+                                    for nm in sq_names:
+                                        if not val_sq.free_symbols:
+                                            env[nm] = sp.sqrt(val_sq)
+                                            graph.variable_declarations[nm] = env[nm]
+                                    prev_chain_expr = val_sq
+                                    graph.claims.append(MathClaim(s_idx, ln, "substitution", "VERIFIED", evidence="squared_length_chain_verified"))
+                                    continue
+
                 var_name = _is_named_lhs(parts[0])
                 if var_name is not None:
                     if len(parts) == 2 and "," in parts[1] and graph.active_equations:
-                        roots = [_safe_parse(r) for r in parts[1].split(",") if r.strip()]
+                        roots = [_p(r) for r in parts[1].split(",") if r.strip()]
                         if roots and all(r is not None for r in roots):
-                            prev_eq = graph.active_equations[-1].lhs
-                            if all(expressions_equivalent(_sub_env(prev_eq, {var_name: r}), sp.Integer(0)) for r in roots):
+                            target_eq = None
+                            v_sym = sp.Symbol(var_name)
+                            for ae in reversed(graph.active_equations):
+                                if v_sym in ae.lhs.free_symbols:
+                                    target_eq = ae.lhs
+                                    break
+                            if target_eq is None:
+                                target_eq = graph.active_equations[-1].lhs
+                            if all(expressions_equivalent(_sub_env(target_eq, {var_name: r}), sp.Integer(0)) for r in roots):
                                 graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="multi_root_verified"))
                                 continue
                             else:
@@ -1287,9 +1480,12 @@ def verify_complete_working(
                         var_name = named_lhs_list[-1]
                     if parts[-1].strip() == "RHS" and len(parts) >= 3:
                         parts = parts[:-1]
-                    exprs = [_safe_parse(p) for p in parts[1:]]
+                    exprs = [_p(p) for p in parts[1:]]
                     if any(e is None for e in exprs):
                         graph.claims.append(MathClaim(s_idx, ln, "definition", "UNVERIFIED", evidence="unparsed_rhs"))
+                        continue
+                    if any(_has_unbound_fn(e) for e in exprs):
+                        graph.claims.append(MathClaim(s_idx, ln, "definition", "UNVERIFIED", evidence="missing_variable_bindings"))
                         continue
                     if not re.search(r"\b(?:not\s+defined|undefined)\b", ln, flags=re.I) and any(_has_zero_div(e, env) for e in exprs):
                         graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="division_by_zero"))
@@ -1302,16 +1498,25 @@ def verify_complete_working(
                         ):
                             line_eq = sp.Eq(sp.Symbol(var_name) - exprs[0], 0, evaluate=False)
                             graph.active_equations.append(line_eq)
+                            prev_eq_sides.append((sp.Symbol(var_name), exprs[0]))
                             graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="coordinate_line_equation"))
                             continue
                         new_val = _norm_syms(_sub_env(exprs[0], env, allow_positive_domain=allow_positive_domain))
                         if not _check_named_formula_validity(var_name, exprs[0], allow_positive_domain=allow_positive_domain, q_en=q_en):
                             graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="invalid_formula_dimension"))
                             continue
+                        if var_name == "alpha_plus_beta" and "a" in graph.givens and "b" in graph.givens and not new_val.free_symbols:
+                            if not expressions_equivalent(new_val, -graph.givens["b"] / graph.givens["a"]):
+                                graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="invalid_vieta_sum"))
+                                continue
+                        if var_name == "alpha_beta" and "a" in graph.givens and "c" in graph.givens and not new_val.free_symbols:
+                            if not expressions_equivalent(new_val, graph.givens["c"] / graph.givens["a"]):
+                                graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="invalid_vieta_product"))
+                                continue
                         if var_name in graph.givens and not new_val.free_symbols and not graph.givens[var_name].free_symbols and not expressions_equivalent(graph.givens[var_name], new_val):
                             graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="overwrites_established_given"))
                             continue
-                        if var_name in ("CSA", "TSA", "V", "Volume", "Area", "m", "Slope", "Midpoint", "Distance") and var_name in env and not new_val.free_symbols:
+                        if var_name in ("CSA", "TSA", "LSA", "V", "Volume", "Area", "m", "Slope", "Midpoint", "Distance") and var_name in env and not new_val.free_symbols:
                             prev_sub = _sub_env(env[var_name], env, allow_positive_domain=allow_positive_domain)
                             if not prev_sub.free_symbols and not _exprs_match(prev_sub, new_val, env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain)[0]:
                                 graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="overwrites_established_formula"))
@@ -1328,7 +1533,7 @@ def verify_complete_working(
                         if not allow_positive_domain and not new_val.free_symbols:
                             m_seq = re.search(r"\b(?:if|solve)\s+([A-Za-z0-9_+\-*/^()\s]+)=([^,\.\n;]+)", q_stem, flags=re.I)
                             if m_seq:
-                                se_l, se_r = _safe_parse(m_seq.group(1)), _safe_parse(m_seq.group(2))
+                                se_l, se_r = _p(m_seq.group(1)), _p(m_seq.group(2))
                                 if se_l is not None and se_r is not None and (se_l - se_r).free_symbols == {sp.Symbol(var_name)}:
                                     if sp.simplify((se_l - se_r).subs(sp.Symbol(var_name), new_val)) != 0:
                                         graph.claims.append(MathClaim(s_idx, ln, "definition", "FAILED", evidence="contradicts_stem_equation"))
@@ -1383,9 +1588,12 @@ def verify_complete_working(
                         graph.claims.append(MathClaim(s_idx, ln, "substitution", "FAILED", evidence="chain_mismatch"))
                     continue
 
-                exprs = [_safe_parse(p) for p in parts]
+                exprs = [_p(p) for p in parts]
                 if any(e is None for e in exprs):
                     graph.claims.append(MathClaim(s_idx, ln, "identity", "UNVERIFIED", evidence="unparsed_equation"))
+                    continue
+                if any(_has_unbound_fn(e) for e in exprs):
+                    graph.claims.append(MathClaim(s_idx, ln, "identity", "UNVERIFIED", evidence="missing_variable_bindings"))
                     continue
                 if any(_has_zero_div(e, env) for e in exprs):
                     graph.claims.append(MathClaim(s_idx, ln, "identity", "FAILED", evidence="division_by_zero"))
@@ -1407,7 +1615,7 @@ def verify_complete_working(
                                     ok = True
                             if not ok and i == len(check_exprs) - 2 and s_i and s_nxt and any(_is_named_formula_sym(sym) for sym in check_exprs[-1].free_symbols):
                                 ok = True
-                            if not ok and s_i and not s_nxt:
+                            if not ok and s_i and (not s_nxt or (s_i - s_nxt) & {sp.Symbol("P"), sp.Symbol("Q"), sp.Symbol("R")}):
                                 has_unverified_binding = True
                             if not ok:
                                 all_ok = False
@@ -1415,16 +1623,54 @@ def verify_complete_working(
                     prev_chain_expr = check_exprs[-1]
                     if all_ok:
                         if trailing_zero_eq:
-                            graph.active_equations.append(sp.Eq(check_exprs[-1], 0, evaluate=False))
+                            eq_zero = sp.Eq(check_exprs[-1], 0, evaluate=False)
+                            graph.active_equations.append(eq_zero)
+                            prev_eq_sides.append((check_exprs[-1], sp.Integer(0)))
                         graph.claims.append(MathClaim(s_idx, ln, "identity", "VERIFIED", evidence="multi_link_verified"))
-                    elif has_unverified_binding:
-                        graph.claims.append(MathClaim(s_idx, ln, "identity", "UNVERIFIED", evidence="missing_variable_bindings"))
                     else:
-                        graph.claims.append(MathClaim(s_idx, ln, "identity", "FAILED", evidence="multi_link_identity_mismatch"))
+                        # Check for conditional proportion/system chains like x/-3 = y/-4 = 1/-1 or a_1/a_2 = b_1/b_2 = c_1/c_2 = 1/3
+                        sub_links = [_sub_env(ce, env, allow_positive_domain=allow_positive_domain) for ce in check_exprs]
+                        link_syms = [e.free_symbols for e in sub_links]
+                        disjoint_vars = (
+                            not trailing_zero_eq
+                            and len(sub_links) >= 3
+                            and any(ls for ls in link_syms[:-1])
+                            and all(not (link_syms[i] & link_syms[j]) for i in range(len(link_syms) - 1) for j in range(i + 1, len(link_syms)) if link_syms[i] and link_syms[j])
+                        )
+                        if disjoint_vars:
+                            sys_eqs = [sp.Eq(sub_links[i] - sub_links[-1], 0, evaluate=False) for i in range(len(sub_links) - 1)]
+                            all_vars = sorted({s for eq_s in sys_eqs for s in eq_s.free_symbols}, key=lambda s: s.name)
+                            try:
+                                sols_sys = sp.solve(sys_eqs, all_vars, dict=True) if all_vars else []
+                            except Exception:
+                                sols_sys = []
+                            if sols_sys or (not link_syms[-1] and all(len(ls) >= 1 for ls in link_syms[:-1])):
+                                for eq_s in sys_eqs:
+                                    graph.active_equations.append(eq_s)
+                                    prev_eq_sides.append((eq_s.lhs, sp.Integer(0)))
+                                graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="conditional_proportion_chain"))
+                                continue
+                        # Also handle conditional function-eval chains like p(-2) = -8 + 24 - 2k + 6 = 0
+                        if trailing_zero_eq and len(check_exprs) >= 2:
+                            sub_links = [_sub_env(ce, env, allow_positive_domain=allow_positive_domain) for ce in check_exprs]
+                            if all(_exprs_match(sub_links[i], sub_links[i + 1], env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain)[0] for i in range(len(sub_links) - 1)):
+                                graph.active_equations.append(sp.Eq(sub_links[-1], 0, evaluate=False))
+                                prev_eq_sides.append((sub_links[-1], sp.Integer(0)))
+                                graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="conditional_equation_chain"))
+                                continue
+                        if has_unverified_binding:
+                            graph.claims.append(MathClaim(s_idx, ln, "identity", "UNVERIFIED", evidence="missing_variable_bindings"))
+                        else:
+                            graph.claims.append(MathClaim(s_idx, ln, "identity", "FAILED", evidence="multi_link_identity_mismatch"))
                     continue
 
                 ok, ev = _exprs_match(exprs[0], exprs[1], env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain)
                 if ok:
+                    if ne_rhs_str is not None:
+                        ne_e = _p(ne_rhs_str)
+                        if ne_e is not None and _exprs_match(exprs[1], ne_e, env)[0]:
+                            graph.claims.append(MathClaim(s_idx, ln, "inequality", "FAILED", evidence="contradicted_non_equality"))
+                            continue
                     prev_chain_expr = exprs[1]
                     graph.claims.append(MathClaim(s_idx, ln, "identity", "VERIFIED", evidence=ev))
                     continue
@@ -1441,22 +1687,41 @@ def verify_complete_working(
                     continue
                 if not graph.active_equations:
                     graph.active_equations.append(sp.Eq(cur_eq, 0, evaluate=False))
+                    prev_eq_sides.append((_sub_env(exprs[0], env, allow_positive_domain=allow_positive_domain), _sub_env(exprs[1], env, allow_positive_domain=allow_positive_domain)))
                     graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="conditional_equation_stated"))
                 else:
-                    prev_eq = graph.active_equations[-1].lhs
-                    syms = list(cur_eq.free_symbols | prev_eq.free_symbols)
-                    ratio = sp.simplify(cur_eq / prev_eq) if prev_eq != 0 else None
-                    if ratio is None or ratio.has(*syms):
-                        if allow_positive_domain and prev_eq.has(sp.pi) and not cur_eq.has(sp.pi):
-                            for pi_v in (sp.Rational(22, 7), sp.Float("3.14")):
-                                r_pi = sp.simplify(cur_eq / prev_eq.subs(sp.pi, pi_v)) if prev_eq.subs(sp.pi, pi_v) != 0 else None
-                                if r_pi is not None and not r_pi.has(*syms):
-                                    ratio = r_pi
-                                    break
-                    if ratio is not None and ratio != 0 and not ratio.has(*syms):
-                        graph.active_equations.append(sp.Eq(cur_eq, 0, evaluate=False))
-                        graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="equivalent_equation_transform"))
-                    else:
+                    matched_ev: Optional[str] = None
+                    # Search active equations for matching variable scope (supports simultaneous equations & branches)
+                    cand_indices = [
+                        idx_ae for idx_ae in range(len(graph.active_equations) - 1, -1, -1)
+                        if cur_eq.free_symbols & graph.active_equations[idx_ae].lhs.free_symbols
+                    ]
+                    if not cand_indices:
+                        cand_indices = [len(graph.active_equations) - 1]
+                    for idx_ae in cand_indices:
+                        prev_eq = graph.active_equations[idx_ae].lhs
+                        syms = list(cur_eq.free_symbols | prev_eq.free_symbols)
+                        ratio = sp.simplify(cur_eq / prev_eq) if prev_eq != 0 else None
+                        if ratio is None or ratio.has(*syms):
+                            if allow_positive_domain and prev_eq.has(sp.pi) and not cur_eq.has(sp.pi):
+                                for pi_v in (sp.Rational(22, 7), sp.Float("3.14")):
+                                    r_pi = sp.simplify(cur_eq / prev_eq.subs(sp.pi, pi_v)) if prev_eq.subs(sp.pi, pi_v) != 0 else None
+                                    if r_pi is not None and not r_pi.has(*syms):
+                                        ratio = r_pi
+                                        break
+                        if ratio is not None and ratio != 0 and not ratio.has(*syms):
+                            matched_ev = "equivalent_equation_transform"
+                            break
+                        # Check squared consequence: (L_prev^2 - R_prev^2) == k * cur_eq
+                        if idx_ae < len(prev_eq_sides):
+                            lp, rp = prev_eq_sides[idx_ae]
+                            sq_diff = sp.simplify(lp ** 2 - rp ** 2)
+                            sq_ratio = sp.simplify(sq_diff / cur_eq) if cur_eq != 0 else None
+                            if sq_ratio is not None and sq_ratio != 0 and not sq_ratio.has(*syms):
+                                matched_ev = "squared_consequence_transform"
+                                if "squaring_may_introduce_extraneous_roots" not in graph.domain_restrictions:
+                                    graph.domain_restrictions.append("squaring_may_introduce_extraneous_roots")
+                                break
                         try:
                             sols_prev = sp.solve(prev_eq, syms[0] if len(syms) == 1 else syms, dict=True) if syms else []
                             sols_cur = sp.solve(cur_eq, syms[0] if len(syms) == 1 else syms, dict=True) if syms else []
@@ -1464,20 +1729,31 @@ def verify_complete_working(
                             sols_prev, sols_cur = [], []
                         dict_sols = [s for s in (sols_prev if isinstance(sols_prev, list) else [sols_prev]) if isinstance(s, dict) and s]
                         cur_sols = [s for s in (sols_cur if isinstance(sols_cur, list) else [sols_cur]) if isinstance(s, dict) and s]
-                        # Bidirectional solution-set equality for same-variable equations
                         if dict_sols and cur_sols and len(dict_sols) == len(cur_sols) and all(sp.simplify(cur_eq.subs(s)) == 0 for s in dict_sols) and all(sp.simplify(prev_eq.subs(s)) == 0 for s in cur_sols):
-                            graph.active_equations.append(sp.Eq(cur_eq, 0, evaluate=False))
-                            graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="solution_set_preserved"))
-                            continue
+                            matched_ev = "solution_set_preserved"
+                            break
                         if len(dict_sols) >= 2 and len(syms) == 1 and sp.Poly(cur_eq, syms[0]).total_degree() == 1 and any(sp.simplify(cur_eq.subs(s)) == 0 for s in dict_sols):
-                            graph.active_equations.append(sp.Eq(cur_eq, 0, evaluate=False))
-                            graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="root_branch_extracted"))
-                            continue
-                        if len(syms) == 1 and cur_eq.free_symbols <= prev_eq.free_symbols:
-                            graph.claims.append(MathClaim(s_idx, ln, "equation", "FAILED", evidence="invalid_equation_transformation"))
-                            continue
+                            matched_ev = "root_branch_extracted"
+                            break
+
+                    if matched_ev is not None:
                         graph.active_equations.append(sp.Eq(cur_eq, 0, evaluate=False))
-                        graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="multi_variable_system_equation"))
+                        prev_eq_sides.append((_sub_env(exprs[0], env, allow_positive_domain=allow_positive_domain), _sub_env(exprs[1], env, allow_positive_domain=allow_positive_domain)))
+                        graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence=matched_ev))
+                        continue
+                    prev_eq = graph.active_equations[cand_indices[0]].lhs
+                    syms = list(cur_eq.free_symbols | prev_eq.free_symbols)
+                    if len(syms) == 1 and cur_eq.free_symbols <= prev_eq.free_symbols:
+                        graph.claims.append(MathClaim(s_idx, ln, "equation", "FAILED", evidence="invalid_equation_transformation"))
+                        continue
+                    if cur_eq.free_symbols <= prev_eq.free_symbols and len(syms) >= 2:
+                        diff_c = sp.simplify(cur_eq - prev_eq)
+                        if diff_c.is_Number and diff_c != 0:
+                            graph.claims.append(MathClaim(s_idx, ln, "equation", "FAILED", evidence="inconsistent_system_equation"))
+                            continue
+                    graph.active_equations.append(sp.Eq(cur_eq, 0, evaluate=False))
+                    prev_eq_sides.append((_sub_env(exprs[0], env, allow_positive_domain=allow_positive_domain), _sub_env(exprs[1], env, allow_positive_domain=allow_positive_domain)))
+                    graph.claims.append(MathClaim(s_idx, ln, "equation", "VERIFIED", evidence="multi_variable_system_equation"))
             else:
                 # Standalone inequalities: e.g., (a+b)^2 >= 0, (a-b)^2 > 0, \Delta > 0
                 m_st_ineq = re.match(r"^(.+?)\s*(\\ge|\\le|≥|≤|>|<)\s*(.+)$", pre)

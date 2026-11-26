@@ -201,7 +201,7 @@ def extract_mathematical_context(
 
     # 2. Algebra: quadratic equation ax^2 + bx + c = 0 in stem
     m_quad = re.search(
-        r"([+-]?\s*(?:√\d+|\d+(?:\.\d+)?(?:/\d+)?)?\s*[a-zA-Z]\s*[²2])\s*([+-]\s*(?:√\d+|\d+(?:\.\d+)?(?:/\d+)?)?\s*[a-zA-Z])\s*([+-]\s*(?:√\d+|\d+(?:\.\d+)?(?:/\d+)?))\s*=\s*0",
+        r"([+-]?\s*(?:√\d+|\d+(?:\.\d+)?(?:/\d+)?)?\s*[a-zA-Z]\s*(?:\^2|[²2]))\s*([+-]\s*(?:√\d+|\d+(?:\.\d+)?(?:/\d+)?)?\s*[a-zA-Z])\s*([+-]\s*(?:√\d+|\d+(?:\.\d+)?(?:/\d+)?))\s*=\s*0",
         text.replace("−", "-"),
     )
     if m_quad:
@@ -268,8 +268,8 @@ def extract_mathematical_context(
         _add_given(res, f"{lbl}_x", pt[0], f"{lbl}{pt}", f"point_{lbl}_x")
         _add_given(res, f"{lbl}_y", pt[1], f"{lbl}{pt}", f"point_{lbl}_y")
 
-    # Unlabeled coordinate sequence (x1, y1), (x2, y2), ... when not an equation-of-line question
-    if not lpts:
+    # Unlabeled coordinate sequence (x1, y1), (x2, y2), ... when not an equation-of-line or midpoint-of-vertices question
+    if not lpts and not re.search(r"\bmid-?points?\b", text, flags=re.I):
         all_pts = parse_all_points(text)
         if 2 <= len(all_pts) <= 4:
             for idx_p, pt in enumerate(all_pts, start=1):

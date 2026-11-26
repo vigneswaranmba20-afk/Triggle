@@ -372,6 +372,19 @@ def run_all_suites() -> Dict[str, Any]:
         s = res.get("summary")
         if isinstance(s, dict):
             return s
+        if "main" in res and "holdout" in res and isinstance(res["main"], dict) and isinstance(res["holdout"], dict):
+            m_r, h_r = res["main"], res["holdout"]
+            tot = int(m_r.get("total", 0)) + int(h_r.get("total", 0))
+            pas = int(m_r.get("passed", 0)) + int(h_r.get("passed", 0))
+            return {
+                "totalCases": tot,
+                "passed": pas,
+                "failed": tot - pas,
+                "falseAcceptances": int(m_r.get("falseAcceptances", 0)) + int(h_r.get("falseAcceptances", 0)),
+                "falseRejections": int(m_r.get("falseRejections", 0)) + int(h_r.get("falseRejections", 0)),
+                "main": {k: v for k, v in m_r.items() if k != "details"},
+                "holdout": {k: v for k, v in h_r.items() if k != "details"},
+            }
         return {k: v for k, v in res.items() if k not in ("cases", "details", "failures")}
 
     suites = {}

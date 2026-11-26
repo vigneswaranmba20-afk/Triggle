@@ -124,12 +124,13 @@ def validate_en_ta_consistency(en_text: str, ta_text: Optional[str]) -> TamilVal
     if not re.search(r"[\u0B80-\u0BFF]", ta_text):
         flags.append("missing_tamil_script")
 
-    en_nums = number_signature(en_text)
-    ta_nums = number_signature(ta_text)
-    if sorted(en_nums) != sorted(ta_nums):
+    from .tamil_semantic_parity import extract_semantic_values
+    en_vals = extract_semantic_values(en_text, is_tamil=False)
+    ta_vals = extract_semantic_values(ta_text, is_tamil=True)
+    if en_vals and ta_vals and (en_vals - ta_vals) and (ta_vals - en_vals):
         flags.append("en_ta_number_mismatch")
-        details["en_nums"] = en_nums
-        details["ta_nums"] = ta_nums
+        details["en_nums"] = [str(x) for x in sorted(en_vals)[:10]]
+        details["ta_nums"] = [str(x) for x in sorted(ta_vals)[:10]]
 
     term_mismatches: List[str] = []
     for name, en_re, ta_re in CROSS_LINGUAL_TERMS:

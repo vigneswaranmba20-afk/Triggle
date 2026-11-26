@@ -13,6 +13,7 @@ from ..reasoning_engine import WorkingAuditResult, verify_complete_working
 from ..rounding import check_numeric_match
 from ..symbolic import expressions_equivalent
 from ..tamil_consistency import number_signature, validate_en_ta_consistency
+from ..tamil_semantic_parity import extract_semantic_values, semantic_step_parity_check
 
 
 @dataclass
@@ -38,8 +39,8 @@ def _norm_ta_nums(text: str) -> List[str]:
 def verify_tamil_math_parity(item: Dict[str, Any], is_concept: bool = False) -> TamilParityResult:
     """Audit English vs Tamil mathematical parity across question, steps, and answer.
 
-    Shared LaTeX (`steps[i].math`, `answerMath`) is deduplicated at the symbolic layer;
-    this function specifically catches translation-specific mathematical errors in Tamil text.
+    Uses deterministic semantic normalisation (number words, unit scales, expression
+    evaluation, and shared LaTeX/eq grounding) rather than naive token equality.
     """
     q_obj = (item.get("question") if is_concept else item.get("q")) or {}
     q_en = str(q_obj.get("en") or "")
@@ -70,34 +71,31 @@ def verify_tamil_math_parity(item: Dict[str, Any], is_concept: bool = False) -> 
         if ta_q_res.status == "FAIL":
             mismatches.append({"location": "question", "flags": ta_q_res.flags})
 
-    # Check answer numerical parity when both EN and TA answers are present
+    # Check answer semantic numerical parity when both EN and TA answers are present
     if ans_en and ans_ta:
-        en_nums = set(_norm_ta_nums(ans_en))
-        ta_nums = set(_norm_ta_nums(ans_ta))
-        # Check for numbers present in TA answer that contradict EN answer
-        if en_nums and ta_nums and en_nums != ta_nums:
-            # Allow Tamil prose to omit or spell out small counts like 1/2, but flag conflicting values
-            extra_ta = ta_nums - en_nums
-            missing_en = en_nums - ta_nums
+        en_vals = extract_semantic_values(ans_en, is_tamil=False)
+        ta_vals = extract_semantic_values(ans_ta, is_tamil=True)
+        if en_vals and ta_vals and en_vals != ta_vals:
+            extra_ta = ta_vals - en_vals
+            missing_en = en_vals - ta_vals
             if extra_ta and missing_en:
-                flags.append(f"answer_number_mismatch:en={sorted(missing_en)},ta={sorted(extra_ta)}")
-                mismatches.append({"location": "answer", "en": sorted(en_nums), "ta": sorted(ta_nums)})
+                flags.append(f"answer_number_mismatch:en={[str(x) for x in sorted(missing_en)[:4]]},ta={[str(x) for x in sorted(extra_ta)[:4]]}")
+                mismatches.append({"location": "answer", "en": [str(x) for x in sorted(en_vals)], "ta": [str(x) for x in sorted(ta_vals)]})
 
-    # Check step-level numerical parity where Tamil step prose is authored
+    # Check step-level semantic parity grounded in shared math.latex / eq
     for idx, st in enumerate(steps):
         if not isinstance(st, dict):
             continue
         st_en = str(st.get("en") or "").strip()
         st_ta = str(st.get("ta") or "").strip()
+        st_math = (st.get("math") or {}).get("latex") if isinstance(st.get("math"), dict) else ""
+        st_eq = str(st.get("eq") or "")
         if st_en and st_ta:
-            n_en = set(_norm_ta_nums(st_en))
-            n_ta = set(_norm_ta_nums(st_ta))
-            # Only flag if both have explicit numbers and Tamil introduces a conflicting number
-            if n_en and n_ta and (n_ta - n_en) and (n_en - n_ta):
-                # Ignore cases where math LaTeX carries the numbers and prose just differs in phrasing
-                if len(n_ta - n_en) == len(n_en - n_ta):
-                    flags.append(f"step_{idx}_number_mismatch:en={sorted(n_en - n_ta)},ta={sorted(n_ta - n_en)}")
-                    mismatches.append({"location": f"step[{idx}]", "en": sorted(n_en), "ta": sorted(n_ta)})
+            ok_st, st_flags = semantic_step_parity_check(st_en, st_ta, math_latex=str(st_math or ""), eq_text=st_eq)
+            if not ok_st:
+                for fl in st_flags:
+                    flags.append(f"step_{idx}_{fl}")
+                mismatches.append({"location": f"step[{idx}]", "flags": st_flags})
 
     if mismatches:
         status = "FAIL"
