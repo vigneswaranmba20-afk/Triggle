@@ -37,6 +37,23 @@ def test_legacy_and_structured_localized_answers():
     assert verify_tamil_math_parity(item).status == "PARTIAL"
 
 
+@pytest.mark.parametrize(("en", "ta", "expected"), [
+    ("5", "−5", "FAIL"),
+    ("5 cm²", "5 கன செ.மீ", "FAIL"),
+    ("5 cm²", "5 கன செ.மீ²", "FAIL"),
+    ("1 m²", "10000 சதுர செ.மீ", "PASS"),
+    ("1000 cm³", "1 கன மீ", "FAIL"),
+])
+def test_localized_scalars_preserve_sign_and_dimension(en, ta, expected):
+    item = {
+        "q": {"en": "Find the value.", "ta": "மதிப்பைக் காண்க."},
+        "steps": [{"en": "Simplify.", "ta": "சுருக்கவும்."}],
+        "answer": en,
+        "answerTa": ta,
+    }
+    assert verify_tamil_math_parity(item).status == expected
+
+
 @pytest.fixture(scope="module")
 def observed_q3():
     root = Path(__file__).resolve().parents[4]

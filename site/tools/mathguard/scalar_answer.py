@@ -46,6 +46,10 @@ _UNIT_TOKEN = re.compile(
     r"|(?<![A-Za-z])(?:lit(?:re|er)s?|ml|l|seconds?|sec|minutes?|min|hours?|hrs?|h|%)\s*$",
     re.I,
 )
+_TA_METRIC_SUFFIX = re.compile(
+    r"(?:(சதுர|கன)\s+)?(?:(கி|செ|மி)\.?\s*)?மீ\.?"
+    r"(?:\s*([²³]|\^\s*(?:\{[23]\}|[23])))?$"
+)
 
 
 def _unit_name(token: str) -> str:
@@ -152,6 +156,22 @@ def scalar_latex_text(latex: str) -> str:
     return text.replace(r"\approx", "≈").replace(r"\%", "%")
 
 
+def tamil_scalar_text(answer: str) -> str:
+    """Normalize compact Tamil scalar prefixes and metric units for the math parser."""
+    text = re.sub(r"^(?:சுமார்|தோராயமாக|விடை)\s+", "", answer.strip()).rstrip(".")
+    match = _TA_METRIC_SUFFIX.search(text)
+    if not match:
+        return text
+    dimension, prefix, power = match.groups()
+    explicit_power = {"சதுர": "2", "கன": "3"}.get(dimension)
+    suffix_power = re.sub(r"[\s^{}]", "", (power or "").translate(str.maketrans("²³", "23")))
+    if explicit_power and suffix_power and explicit_power != suffix_power:
+        raise ParseError("The Tamil unit gives conflicting dimensions.")
+    unit = {"கி": "km", "செ": "cm", "மி": "mm", None: "m"}[prefix]
+    size = explicit_power or suffix_power
+    return f"{text[:match.start()]} {unit}{'^' + size if size else ''}".strip()
+
+
 def parse_scalar_answer(answer: str, question: str, dimension: str | None) -> list[ScalarValue]:
     # Annotations and independent clauses cannot supply an alternative answer value.
     annotation = r"(?=(?:\d{4}\s+)?(?:[A-Za-z]{2}|π\s*[=≈])|[^()]*\b(?:from|using|check|key)\b)"
@@ -179,6 +199,30 @@ def parse_scalar_answer(answer: str, question: str, dimension: str | None) -> li
             if asked and given and asked[1].lower() != given[1].lower():
                 raise ParseError(f"The question asks for {asked[1]}, but the answer field gives {given[1]}.")
     return [_parse_value(part) for part in parts]
+
+
+def scalar_answer_parity(english: str, tamil: str) -> bool | None:
+    """Compare compact scalar answers with their signs and units intact."""
+    try:
+        normalized_tamil = tamil_scalar_text(scalar_latex_text(tamil))
+    except ParseError:
+        return False
+    try:
+        en = parse_scalar_answer(scalar_latex_text(english), "", None)
+        ta = parse_scalar_answer(normalized_tamil, "", None)
+    except ParseError:
+        return None
+    if len(en) != 1 or len(ta) != 1:
+        return None
+    left, right = en[0], ta[0]
+    if not left.unit or not right.unit or left.unit == right.unit:
+        return expressions_equivalent(left.expression, right.expression)
+    for units in _UNITS.values():
+        if left.unit in units and right.unit in units:
+            en_scaled = left.expression * sp.Rational(units[left.unit])
+            ta_scaled = right.expression * sp.Rational(units[right.unit])
+            return expressions_equivalent(en_scaled, ta_scaled)
+    return False
 
 
 def scalar_matches(

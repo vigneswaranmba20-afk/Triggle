@@ -11,6 +11,7 @@ import sympy as sp
 from ..answer_fields import localized_answer_forms
 from ..parser import parse_expression
 from ..reasoning_engine import WorkingAuditResult, verify_complete_working
+from ..scalar_answer import scalar_answer_parity
 from ..symbolic import expressions_equivalent
 from ..tamil_consistency import number_signature, validate_en_ta_consistency
 from ..tamil_semantic_parity import extract_semantic_values, semantic_step_parity_check
@@ -107,14 +108,16 @@ def verify_tamil_math_parity(
             if answer_status == "FAIL":
                 mismatches.append({"location": "answer", **answer_evidence})
     elif ans_en and ans_ta:
-        en_vals = extract_semantic_values(ans_en, is_tamil=False)
-        ta_vals = extract_semantic_values(ans_ta, is_tamil=True)
-        if en_vals and not ta_vals:
-            flags.append("unverified_tamil_answer_numbers")
-        if en_vals and ta_vals and en_vals != ta_vals:
-            extra_ta = ta_vals - en_vals
-            missing_en = en_vals - ta_vals
-            if extra_ta and missing_en:
+        scalar_parity = scalar_answer_parity(ans_en, ans_ta)
+        if scalar_parity is False:
+            flags.append("answer_scalar_value_or_unit_mismatch")
+            mismatches.append({"location": "answer", "en": ans_en, "ta": ans_ta})
+        elif scalar_parity is None:
+            en_vals = extract_semantic_values(ans_en, is_tamil=False)
+            ta_vals = extract_semantic_values(ans_ta, is_tamil=True)
+            if en_vals and not ta_vals:
+                flags.append("unverified_tamil_answer_numbers")
+            if en_vals and ta_vals and (extra_ta := ta_vals - en_vals) and (missing_en := en_vals - ta_vals):
                 flags.append(f"answer_number_mismatch:en={[str(x) for x in sorted(missing_en)[:4]]},ta={[str(x) for x in sorted(extra_ta)[:4]]}")
                 mismatches.append({"location": "answer", "en": [str(x) for x in sorted(en_vals)], "ta": [str(x) for x in sorted(ta_vals)]})
 

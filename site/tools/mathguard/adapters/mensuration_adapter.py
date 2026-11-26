@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import hashlib
-import re
 import unicodedata
 from typing import Any, Dict
 
@@ -12,7 +11,9 @@ from ..derivations_g10_ch7 import DERIVATION_REGISTRY, DerivedResult
 from ..engine import _verify_concept_answer, _verify_exercise_answer
 from ..parser import ParseError
 from ..reasoning_engine import verify_complete_working
-from ..scalar_answer import RequestedPrecision, parse_scalar_answer, requested_precision, scalar_latex_text, scalar_matches
+from ..scalar_answer import (
+    RequestedPrecision, parse_scalar_answer, requested_precision, scalar_latex_text, scalar_matches, tamil_scalar_text,
+)
 from .base import ChapterAdapter, verify_generic_answer, verify_tamil_math_parity
 
 
@@ -23,7 +24,6 @@ _REVIEWED_PROMPTS = {
     "en": "8a60b8993f4c86e42a8101e58f0ce207473b8b2fca3fcf067113ead80090f189",
     "ta": "7932205da33947d595556522c4e967c1ddd48065e2e377201ac0c01aac18f25f",
 }
-_TA_CUBIC_CM = re.compile(r"கன\s+செ\.?\s*மீ\.?|செ\.?\s*மீ\.?\s*(?:³|\^\s*(?:\{3\}|3))")
 
 
 def _check_reviewed_rounding(item: Dict[str, Any], derived: DerivedResult) -> tuple[str, Dict[str, Any]]:
@@ -60,10 +60,9 @@ def _check_reviewed_rounding(item: Dict[str, Any], derived: DerivedResult) -> tu
         for representation, answer in forms.items():
             if representation == "latex":
                 answer = scalar_latex_text(answer)
-            if language == "ta":
-                answer = re.sub(r"^(?:சுமார்|தோராயமாக)\s+", "", answer)
-                answer = _TA_CUBIC_CM.sub("cm³", answer)
             try:
+                if language == "ta":
+                    answer = tamil_scalar_text(answer)
                 values = parse_scalar_answer(answer, prompts[language], "volume")
             except ParseError:
                 checks[representation] = "UNVERIFIABLE"
