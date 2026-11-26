@@ -70,9 +70,18 @@ const chapter=ctx.window.TRIGGLE_CURRICULUM.grades.find(g=>g.grade===10).chapter
 assert.equal(items.filter(x=>x.chapter==='8'&&x.exercise==='8.2').length,8,'full Ex8.2 registration');
 assert.equal(new Set(items.map(x=>x.id)).size,items.length,'unique IDs');
 for(const r of records){
- assert.equal(JSON.stringify(items.find(x=>x.id===r.id)),JSON.stringify(r),'source/runtime parity '+r.id);
+ const runtime=items.find(x=>x.id===r.id);
+ if(r.id==='c10-8-ex8-2-q6'){
+  for(const language of ['en','ta']){
+   const display=runtime.answerMath[language];
+   assert.equal(display.fallback,r.answer[language]);
+   assert.match(display.latex,/10\.07\\%/);
+   assert.match(display.latex,/10\.06\\%/);
+  }
+  assert.equal(JSON.stringify({...runtime,answerMath:r.answerMath}),JSON.stringify(r),'preserve the non-presentation source fields '+r.id);
+ }else assert.equal(JSON.stringify(runtime),JSON.stringify(r),'source/runtime parity '+r.id);
  assert.equal(chapter.textbookQuestionIds.filter(x=>x===r.id).length,1,'curriculum registration '+r.id);
- assert.equal(ctx.window.TriggleDifficulty.get(items.find(x=>x.id===r.id)).grade,10);
+ assert.equal(ctx.window.TriggleDifficulty.get(runtime).grade,10);
 }
 for(const id of [1,2,3].map(n=>'c10-8-ex8-2-q'+n))assert(items.some(x=>x.id===id),'preserve '+id);
 console.log('PASS G10 Exercise 8.2 Q4-Q8: source/page, maths, invariants, reversal, data table, registration');

@@ -473,7 +473,18 @@ const entries=[
       }
     ],
     "answer": {"en": "12", "ta": "12"},
-    "answerMath": {"latex": "\\boxed{12\\text{ defective bulbs}}", "display": true, "fallback": "12"},
+    "answerMath": {
+      "en": {
+        "latex": "\\boxed{12\\text{ defective bulbs}}",
+        "display": true,
+        "fallback": "12"
+      },
+      "ta": {
+        "latex": "\\boxed{12\\text{ பழுதடைந்த மின்விளக்குகள்}}",
+        "display": true,
+        "fallback": "12"
+      }
+    },
     "kind": "textbook", "source": SOURCE_EN, "reference": REF_323, "edition": "2025",
     "translationReview": "pending", "tamilQuestionSourceVerified": true, "tamilWorkedSolutionReview": "pending"
   },

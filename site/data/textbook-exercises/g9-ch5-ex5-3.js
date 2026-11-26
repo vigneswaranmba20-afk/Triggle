@@ -35,7 +35,7 @@
     steps,
     answer: ansEn,
     answerTa: ansTa,
-    answerMath: { en: tex(ansLatex, ansEn, true), ta: tex(ansLatex, ansTa, true) },
+    answerMath: { en: tex(ansLatex, ansEn, true), ta: tex(extra.ansLatexTa??ansLatex, ansTa, true) },
     ...(extra.figureSrc ? { figureSrc: extra.figureSrc, figureAlt: extra.figureAlt, figureCaption: extra.figureCaption } : {}),
     sourceFidelity: {
       status: 'page-visual-checked',
@@ -280,7 +280,8 @@
       ],
       'Proved: D(−2, 8) and diagonals AC, BD bisect each other at (−1, 15/2), so ABCD is a parallelogram',
       'நிறுவப்பட்டது: D(−2, 8); AC மற்றும் BD-இன் நடுப்புள்ளி (−1, 15/2) சமம் என்பதால் ABCD ஓர் இணைகரம்',
-      '\\text{Mid}(AC)=\\text{Mid}(BD)=\\left(-1,\\dfrac{15}{2}\\right)\\implies\\text{Parallelogram}'
+      '\\text{Mid}(AC)=\\text{Mid}(BD)=\\left(-1,\\dfrac{15}{2}\\right)\\implies\\text{Parallelogram}',
+      { ansLatexTa: '\\begin{gathered}D(-2,8)\\\\AC,BD\\text{-இன் நடுப்புள்ளி }\\left(-1,\\dfrac{15}{2}\\right)\\\\\\implies ABCD\\text{ ஓர் இணைகரம்}\\end{gathered}' }
     ),
 
     makeEntry(

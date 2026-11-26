@@ -36989,9 +36989,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Not a polynomial}",
-      "fallback": "Not a polynomial",
-      "display": true
+      "en": {
+        "latex": "\\text{Not a polynomial}",
+        "fallback": "Not a polynomial",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை அல்ல"
     },
     "steps": [
       {
@@ -37050,9 +37053,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Polynomial}",
-      "fallback": "Polynomial",
-      "display": true
+      "en": {
+        "latex": "\\text{Polynomial}",
+        "fallback": "Polynomial",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை"
     },
     "steps": [
       {
@@ -37111,9 +37117,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Not a polynomial}",
-      "fallback": "Not a polynomial",
-      "display": true
+      "en": {
+        "latex": "\\text{Not a polynomial}",
+        "fallback": "Not a polynomial",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை அல்ல"
     },
     "steps": [
       {
@@ -37201,9 +37210,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Polynomial (for }x\\ne0\\text{)}",
-      "fallback": "Polynomial (after simplification for x ≠ 0)",
-      "display": true
+      "en": {
+        "latex": "\\text{Polynomial (for }x\\ne0\\text{)}",
+        "fallback": "Polynomial (after simplification for x ≠ 0)",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை (x ≠ 0 எனச் சுருக்கியபின்)"
     },
     "steps": [
       {
@@ -37262,9 +37274,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Polynomial}",
-      "fallback": "Polynomial",
-      "display": true
+      "en": {
+        "latex": "\\text{Polynomial}",
+        "fallback": "Polynomial",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை"
     },
     "steps": [
       {
@@ -37323,9 +37338,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Not a polynomial}",
-      "fallback": "Not a polynomial",
-      "display": true
+      "en": {
+        "latex": "\\text{Not a polynomial}",
+        "fallback": "Not a polynomial",
+        "display": true
+      },
+      "ta": "பல்லுறுப்புக் கோவை அல்ல"
     },
     "steps": [
       {
@@ -37394,9 +37412,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\frac{2}{5}\\text{ and }-3}",
-      "fallback": "Coefficient of x²: 2/5; coefficient of x: −3",
-      "display": true
+      "en": {
+        "latex": "\\boxed{\\frac{2}{5}\\text{ and }-3}",
+        "fallback": "Coefficient of x²: 2/5; coefficient of x: −3",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "\\displaystyle \\frac{2}{5}",
+          "fallback": "2/5"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "- 3",
+          "fallback": "−3"
+        }
+      ]
     },
     "steps": [
       {
@@ -37516,9 +37557,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{-2\\text{ and }-\\sqrt{7}}",
-      "fallback": "Coefficient of x²: −2; coefficient of x: −√7",
-      "display": true
+      "en": {
+        "latex": "\\boxed{-2\\text{ and }-\\sqrt{7}}",
+        "fallback": "Coefficient of x²: −2; coefficient of x: −√7",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "- 2",
+          "fallback": "−2"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "- \\sqrt{7}",
+          "fallback": "−√7"
+        }
+      ]
     },
     "steps": [
       {
@@ -37638,9 +37702,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\pi\\text{ and }-1}",
-      "fallback": "Coefficient of x²: π; coefficient of x: −1",
-      "display": true
+      "en": {
+        "latex": "\\boxed{\\pi\\text{ and }-1}",
+        "fallback": "Coefficient of x²: π; coefficient of x: −1",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "\\pi",
+          "fallback": "π"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "- 1",
+          "fallback": "−1"
+        }
+      ]
     },
     "steps": [
       {
@@ -37760,9 +37847,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\sqrt{3}\\text{ and }\\sqrt{2}}",
-      "fallback": "Coefficient of x²: √3; coefficient of x: √2",
-      "display": true
+      "en": {
+        "latex": "\\boxed{\\sqrt{3}\\text{ and }\\sqrt{2}}",
+        "fallback": "Coefficient of x²: √3; coefficient of x: √2",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "\\sqrt{3}",
+          "fallback": "√3"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "\\sqrt{2}",
+          "fallback": "√2"
+        }
+      ]
     },
     "steps": [
       {
@@ -37882,9 +37992,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{1\\text{ and }-\\frac{7}{2}}",
-      "fallback": "Coefficient of x²: 1; coefficient of x: −7/2",
-      "display": true
+      "en": {
+        "latex": "\\boxed{1\\text{ and }-\\frac{7}{2}}",
+        "fallback": "Coefficient of x²: 1; coefficient of x: −7/2",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        "-இன் கெழு: ",
+        {
+          "latex": "\\displaystyle \\frac{- 7}{2}",
+          "fallback": "−7/2"
+        }
+      ]
     },
     "steps": [
       {
@@ -37998,9 +38131,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "7",
-      "fallback": "Degree 7",
-      "display": true
+      "en": {
+        "latex": "7",
+        "fallback": "Degree 7",
+        "display": true
+      },
+      "ta": [
+        "படி ",
+        {
+          "latex": "7",
+          "fallback": "7"
+        }
+      ]
     },
     "steps": [
       {
@@ -38057,9 +38199,12 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "4",
-      "fallback": "Degree 4 (after simplifying for x ≠ 0)",
-      "display": true
+      "en": {
+        "latex": "4",
+        "fallback": "Degree 4 (after simplifying for x ≠ 0)",
+        "display": true
+      },
+      "ta": "படி 4 (x ≠ 0 எனச் சுருக்கியபின்)"
     },
     "steps": [
       {
@@ -38116,9 +38261,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "5",
-      "fallback": "Degree 5",
-      "display": true
+      "en": {
+        "latex": "5",
+        "fallback": "Degree 5",
+        "display": true
+      },
+      "ta": [
+        "படி ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        }
+      ]
     },
     "steps": [
       {
@@ -38175,9 +38329,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "6",
-      "fallback": "Degree 6",
-      "display": true
+      "en": {
+        "latex": "6",
+        "fallback": "Degree 6",
+        "display": true
+      },
+      "ta": [
+        "படி ",
+        {
+          "latex": "6",
+          "fallback": "6"
+        }
+      ]
     },
     "steps": [
       {
@@ -38234,9 +38397,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "4",
-      "fallback": "Degree 4",
-      "display": true
+      "en": {
+        "latex": "4",
+        "fallback": "Degree 4",
+        "display": true
+      },
+      "ta": [
+        "படி ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        }
+      ]
     },
     "steps": [
       {
@@ -38293,9 +38465,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\sqrt7\\,x^3+6x^2+x-9",
-      "fallback": "Descending: √7 x³ + 6x² + x − 9; ascending: −9 + x + 6x² + √7 x³",
-      "display": true
+      "en": {
+        "latex": "\\sqrt7\\,x^3+6x^2+x-9",
+        "fallback": "Descending: √7 x³ + 6x² + x − 9; ascending: −9 + x + 6x² + √7 x³",
+        "display": true
+      },
+      "ta": [
+        "இறங்கு வரிசை: ",
+        {
+          "latex": "\\sqrt{7} x^{3} + 6 x^{2} + x - 9",
+          "fallback": "√7 x³ + 6x² + x − 9"
+        },
+        "; ஏறு வரிசை: ",
+        {
+          "latex": "- 9 + x + 6 x^{2} + \\sqrt{7} x^{3}",
+          "fallback": "−9 + x + 6x² + √7 x³"
+        }
+      ]
     },
     "steps": [
       {
@@ -38352,9 +38538,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "-\\frac72x^4-5x^3+\\sqrt2\\,x^2+x",
-      "fallback": "Descending: −(7/2)x⁴ − 5x³ + √2 x² + x; ascending: x + √2 x² − 5x³ − (7/2)x⁴",
-      "display": true
+      "en": {
+        "latex": "-\\frac72x^4-5x^3+\\sqrt2\\,x^2+x",
+        "fallback": "Descending: −(7/2)x⁴ − 5x³ + √2 x² + x; ascending: x + √2 x² − 5x³ − (7/2)x⁴",
+        "display": true
+      },
+      "ta": [
+        "இறங்கு வரிசை: ",
+        {
+          "latex": "\\displaystyle - \\left(\\frac{7}{2}\\right) x^{4} - 5 x^{3} + \\sqrt{2} x^{2} + x",
+          "fallback": "−(7/2)x⁴ − 5x³ + √2 x² + x"
+        },
+        "; ஏறு வரிசை: ",
+        {
+          "latex": "\\displaystyle x + \\sqrt{2} x^{2} - 5 x^{3} - \\left(\\frac{7}{2}\\right) x^{4}",
+          "fallback": "x + √2 x² − 5x³ − (7/2)x⁴"
+        }
+      ]
     },
     "steps": [
       {
@@ -38411,9 +38611,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "7x^3-\\frac65x^2+4x-1",
-      "fallback": "Descending: 7x³ − (6/5)x² + 4x − 1; ascending: −1 + 4x − (6/5)x² + 7x³",
-      "display": true
+      "en": {
+        "latex": "7x^3-\\frac65x^2+4x-1",
+        "fallback": "Descending: 7x³ − (6/5)x² + 4x − 1; ascending: −1 + 4x − (6/5)x² + 7x³",
+        "display": true
+      },
+      "ta": [
+        "இறங்கு வரிசை: ",
+        {
+          "latex": "\\displaystyle 7 x^{3} - \\left(\\frac{6}{5}\\right) x^{2} + 4 x - 1",
+          "fallback": "7x³ − (6/5)x² + 4x − 1"
+        },
+        "; ஏறு வரிசை: ",
+        {
+          "latex": "\\displaystyle - 1 + 4 x - \\left(\\frac{6}{5}\\right) x^{2} + 7 x^{3}",
+          "fallback": "−1 + 4x − (6/5)x² + 7x³"
+        }
+      ]
     },
     "steps": [
       {
@@ -38470,9 +38684,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "9y^4+\\sqrt5\\,y^3+y^2-\\frac73y-11",
-      "fallback": "Descending: 9y⁴ + √5 y³ + y² − (7/3)y − 11; ascending: −11 − (7/3)y + y² + √5 y³ + 9y⁴",
-      "display": true
+      "en": {
+        "latex": "9y^4+\\sqrt5\\,y^3+y^2-\\frac73y-11",
+        "fallback": "Descending: 9y⁴ + √5 y³ + y² − (7/3)y − 11; ascending: −11 − (7/3)y + y² + √5 y³ + 9y⁴",
+        "display": true
+      },
+      "ta": [
+        "இறங்கு வரிசை: ",
+        {
+          "latex": "\\displaystyle 9 y^{4} + \\sqrt{5} y^{3} + y^{2} - \\left(\\frac{7}{3}\\right) y - 11",
+          "fallback": "9y⁴ + √5 y³ + y² − (7/3)y − 11"
+        },
+        "; ஏறு வரிசை: ",
+        {
+          "latex": "\\displaystyle - 11 - \\left(\\frac{7}{3}\\right) y + y^{2} + \\sqrt{5} y^{3} + 9 y^{4}",
+          "fallback": "−11 − (7/3)y + y² + √5 y³ + 9y⁴"
+        }
+      ]
     },
     "steps": [
       {
@@ -38529,9 +38757,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "6x^3+6x^2-14x+17;\\quad \\deg=3",
-      "fallback": "6x³ + 6x² − 14x + 17; degree 3",
-      "display": true
+      "en": {
+        "latex": "6x^3+6x^2-14x+17;\\quad \\deg=3",
+        "fallback": "6x³ + 6x² − 14x + 17; degree 3",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "6 x^{3} + 6 x^{2} - 14 x + 17",
+          "fallback": "6x³ + 6x² − 14x + 17"
+        },
+        "; படி ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        }
+      ]
     },
     "steps": [
       {
@@ -38588,9 +38829,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "7x^3+7x^2+11x-8;\\quad \\deg=3",
-      "fallback": "7x³ + 7x² + 11x − 8; degree 3",
-      "display": true
+      "en": {
+        "latex": "7x^3+7x^2+11x-8;\\quad \\deg=3",
+        "fallback": "7x³ + 7x² + 11x − 8; degree 3",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "7 x^{3} + 7 x^{2} + 11 x - 8",
+          "fallback": "7x³ + 7x² + 11x − 8"
+        },
+        "; படி ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        }
+      ]
     },
     "steps": [
       {
@@ -38647,9 +38901,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "16x^4-6x^3-5x^2+7x-6;\\quad \\deg=4",
-      "fallback": "16x⁴ − 6x³ − 5x² + 7x − 6; degree 4",
-      "display": true
+      "en": {
+        "latex": "16x^4-6x^3-5x^2+7x-6;\\quad \\deg=4",
+        "fallback": "16x⁴ − 6x³ − 5x² + 7x − 6; degree 4",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "16 x^{4} - 6 x^{3} - 5 x^{2} + 7 x - 6",
+          "fallback": "16x⁴ − 6x³ − 5x² + 7x − 6"
+        },
+        "; படி ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        }
+      ]
     },
     "steps": [
       {
@@ -38706,9 +38973,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "7x^2+8;\\quad \\deg=2",
-      "fallback": "7x² + 8; degree 2",
-      "display": true
+      "en": {
+        "latex": "7x^2+8;\\quad \\deg=2",
+        "fallback": "7x² + 8; degree 2",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "7 x^{2} + 8",
+          "fallback": "7x² + 8"
+        },
+        "; படி ",
+        {
+          "latex": "2",
+          "fallback": "2"
+        }
+      ]
     },
     "steps": [
       {
@@ -38765,9 +39045,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "-y^3+6y^2-14y+2;\\quad \\deg=3",
-      "fallback": "−y³ + 6y² − 14y + 2; degree 3",
-      "display": true
+      "en": {
+        "latex": "-y^3+6y^2-14y+2;\\quad \\deg=3",
+        "fallback": "−y³ + 6y² − 14y + 2; degree 3",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "- y^{3} + 6 y^{2} - 14 y + 2",
+          "fallback": "−y³ + 6y² − 14y + 2"
+        },
+        "; படி ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        }
+      ]
     },
     "steps": [
       {
@@ -38824,9 +39117,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "z^5-6z^4-6z^2-9z+7;\\quad \\deg=5",
-      "fallback": "z⁵ − 6z⁴ − 6z² − 9z + 7; degree 5",
-      "display": true
+      "en": {
+        "latex": "z^5-6z^4-6z^2-9z+7;\\quad \\deg=5",
+        "fallback": "z⁵ − 6z⁴ − 6z² − 9z + 7; degree 5",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "z^{5} - 6 z^{4} - 6 z^{2} - 9 z + 7",
+          "fallback": "z⁵ − 6z⁴ − 6z² − 9z + 7"
+        },
+        "; படி ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        }
+      ]
     },
     "steps": [
       {
@@ -38993,9 +39299,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "6x^4+7x^3-56x^2-63x+18;\\quad \\deg=4",
-      "fallback": "6x⁴ + 7x³ − 56x² − 63x + 18; degree 4",
-      "display": true
+      "en": {
+        "latex": "6x^4+7x^3-56x^2-63x+18;\\quad \\deg=4",
+        "fallback": "6x⁴ + 7x³ − 56x² − 63x + 18; degree 4",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "6 x^{4} + 7 x^{3} - 56 x^{2} - 63 x + 18",
+          "fallback": "6x⁴ + 7x³ − 56x² − 63x + 18"
+        },
+        "; படி ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        }
+      ]
     },
     "steps": [
       {
@@ -39052,9 +39371,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "105x^2-33x-18;\\quad \\deg=2",
-      "fallback": "105x² − 33x − 18; degree 2",
-      "display": true
+      "en": {
+        "latex": "105x^2-33x-18;\\quad \\deg=2",
+        "fallback": "105x² − 33x − 18; degree 2",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "105 x^{2} - 33 x - 18",
+          "fallback": "105x² − 33x − 18"
+        },
+        "; படி ",
+        {
+          "latex": "2",
+          "fallback": "2"
+        }
+      ]
     },
     "steps": [
       {
@@ -39111,9 +39443,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "30x^3-77x^2+54x-7;\\quad \\deg=3",
-      "fallback": "30x³ − 77x² + 54x − 7; degree 3",
-      "display": true
+      "en": {
+        "latex": "30x^3-77x^2+54x-7;\\quad \\deg=3",
+        "fallback": "30x³ − 77x² + 54x − 7; degree 3",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "30 x^{3} - 77 x^{2} + 54 x - 7",
+          "fallback": "30x³ − 77x² + 54x − 7"
+        },
+        "; படி ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        }
+      ]
     },
     "steps": [
       {
@@ -43041,9 +43386,19 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Yes. }\\dfrac12\\text{ is a zero.}",
-      "fallback": "Yes, 1/2 is a zero.",
-      "display": true
+      "en": {
+        "latex": "\\text{Yes. }\\dfrac12\\text{ is a zero.}",
+        "fallback": "Yes, 1/2 is a zero.",
+        "display": true
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "\\displaystyle \\frac{1}{2}",
+          "fallback": "1/2"
+        },
+        " ஒரு பூச்சியமாகும்."
+      ]
     },
     "steps": [
       {
@@ -43094,9 +43449,19 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Yes. }1\\text{ is a zero.}",
-      "fallback": "Yes, 1 is a zero.",
-      "display": true
+      "en": {
+        "latex": "\\text{Yes. }1\\text{ is a zero.}",
+        "fallback": "Yes, 1 is a zero.",
+        "display": true
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " ஒரு பூச்சியமாகும்."
+      ]
     },
     "steps": [
       {
@@ -43147,9 +43512,24 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\begin{gathered}\\text{Yes. }-\\dfrac ba\\text{ is a zero}\\\\ \\text{when }a\\ne0.\\end{gathered}",
-      "fallback": "Yes, −b/a is a zero when a ≠ 0.",
-      "display": true
+      "en": {
+        "latex": "\\begin{gathered}\\text{Yes. }-\\dfrac ba\\text{ is a zero}\\\\ \\text{when }a\\ne0.\\end{gathered}",
+        "fallback": "Yes, −b/a is a zero when a ≠ 0.",
+        "display": true
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "a \\ne 0",
+          "fallback": "a ≠ 0"
+        },
+        " எனில் ",
+        {
+          "latex": "\\displaystyle \\frac{- b}{a}",
+          "fallback": "−b/a"
+        },
+        " ஒரு பூச்சியமாகும்."
+      ]
     },
     "steps": [
       {
@@ -43205,9 +43585,24 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\text{Yes. }4\\text{ and }-3\\text{ are zeros.}",
-      "fallback": "Yes, both 4 and −3 are zeros.",
-      "display": true
+      "en": {
+        "latex": "\\text{Yes. }4\\text{ and }-3\\text{ are zeros.}",
+        "fallback": "Yes, both 4 and −3 are zeros.",
+        "display": true
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "4",
+          "fallback": "4"
+        },
+        " மற்றும் ",
+        {
+          "latex": "- 3",
+          "fallback": "−3"
+        },
+        " ஆகிய இரண்டும் பூச்சியங்களாகும்."
+      ]
     },
     "steps": [
       {
@@ -43245,9 +43640,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "2\\text{ zeros}",
-      "fallback": "2 zeros",
-      "display": true
+      "en": {
+        "latex": "2\\text{ zeros}",
+        "fallback": "2 zeros",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        " பூச்சியங்கள்"
+      ]
     },
     "steps": [
       {
@@ -43287,9 +43691,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "3\\text{ zeros}",
-      "fallback": "3 zeros",
-      "display": true
+      "en": {
+        "latex": "3\\text{ zeros}",
+        "fallback": "3 zeros",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        " பூச்சியங்கள்"
+      ]
     },
     "steps": [
       {
@@ -43329,9 +43742,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "0\\text{ zeros}",
-      "fallback": "0 zeros",
-      "display": true
+      "en": {
+        "latex": "0\\text{ zeros}",
+        "fallback": "0 zeros",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "0",
+          "fallback": "0"
+        },
+        " பூச்சியங்கள்"
+      ]
     },
     "steps": [
       {
@@ -43371,9 +43793,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "1\\text{ zero}",
-      "fallback": "1 zero",
-      "display": true
+      "en": {
+        "latex": "1\\text{ zero}",
+        "fallback": "1 zero",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " பூச்சியம்"
+      ]
     },
     "steps": [
       {
@@ -43425,9 +43856,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "1\\text{ zero}",
-      "fallback": "1 zero",
-      "display": true
+      "en": {
+        "latex": "1\\text{ zero}",
+        "fallback": "1 zero",
+        "display": true
+      },
+      "ta": [
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " பூச்சியம்"
+      ]
     },
     "steps": [
       {
@@ -43486,8 +43926,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Not a multiple } (p(2) = -7 \\ne 0)}",
-      "fallback": "No, p(x) is not a multiple of g(x) (remainder = −7)"
+      "en": {
+        "latex": "\\boxed{\\text{Not a multiple } (p(2) = -7 \\ne 0)}",
+        "fallback": "No, p(x) is not a multiple of g(x) (remainder = −7)"
+      },
+      "ta": [
+        "இல்லை, ",
+        {
+          "latex": "p \\left(x\\right)",
+          "fallback": "p(x)"
+        },
+        " என்பது ",
+        {
+          "latex": "g \\left(x\\right)",
+          "fallback": "g(x)"
+        },
+        "-இன் மடங்கல்ல (மீதி = −7)"
+      ]
     },
     "steps": [
       {
@@ -43588,8 +44043,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{0}",
-      "fallback": "Remainder = 0"
+      "en": {
+        "latex": "\\boxed{0}",
+        "fallback": "Remainder = 0"
+      },
+      "ta": "மீதி = 0"
     },
     "steps": [
       {
@@ -43695,8 +44153,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\dfrac{3}{2}}",
-      "fallback": "Remainder = 3/2"
+      "en": {
+        "latex": "\\boxed{\\dfrac{3}{2}}",
+        "fallback": "Remainder = 3/2"
+      },
+      "ta": "மீதி = 3/2"
     },
     "steps": [
       {
@@ -43802,8 +44263,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{62}",
-      "fallback": "Remainder = 62"
+      "en": {
+        "latex": "\\boxed{62}",
+        "fallback": "Remainder = 62"
+      },
+      "ta": "மீதி = 62"
     },
     "steps": [
       {
@@ -43927,8 +44391,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{-143}",
-      "fallback": "Remainder = −143"
+      "en": {
+        "latex": "\\boxed{-143}",
+        "fallback": "Remainder = −143"
+      },
+      "ta": "மீதி = −143"
     },
     "steps": [
       {
@@ -44045,8 +44512,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{2019}",
-      "fallback": "Remainder = 2019"
+      "en": {
+        "latex": "\\boxed{2019}",
+        "fallback": "Remainder = 2019"
+      },
+      "ta": "மீதி = 2019"
     },
     "steps": [
       {
@@ -44295,8 +44765,17 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{a = -3,\\; \\text{Remainder} = 27}",
-      "fallback": "a = −3; remainder = 27"
+      "en": {
+        "latex": "\\boxed{a = -3,\\; \\text{Remainder} = 27}",
+        "fallback": "a = −3; remainder = 27"
+      },
+      "ta": [
+        {
+          "latex": "a = - 3",
+          "fallback": "a = −3"
+        },
+        "; மீதி = 27"
+      ]
     },
     "steps": [
       {
@@ -44421,8 +44900,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Yes, } (x - 1) \\text{ is a factor}}",
-      "fallback": "Yes, (x − 1) is a factor"
+      "en": {
+        "latex": "\\boxed{\\text{Yes, } (x - 1) \\text{ is a factor}}",
+        "fallback": "Yes, (x − 1) is a factor"
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "\\left(x - 1\\right)",
+          "fallback": "(x − 1)"
+        },
+        " ஒரு காரணி"
+      ]
     },
     "steps": [
       {
@@ -44505,8 +44994,18 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{No, } p(1) = 2 \\ne 0}",
-      "fallback": "No, (x − 1) is not a factor"
+      "en": {
+        "latex": "\\boxed{\\text{No, } p(1) = 2 \\ne 0}",
+        "fallback": "No, (x − 1) is not a factor"
+      },
+      "ta": [
+        "இல்லை, ",
+        {
+          "latex": "\\left(x - 1\\right)",
+          "fallback": "(x − 1)"
+        },
+        " காரணி அல்ல"
+      ]
     },
     "steps": [
       {
@@ -44606,8 +45105,21 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{p(5) = 0 \\implies (x - 5) \\text{ is a factor}}",
-      "fallback": "(x − 5) is a factor (since p(5) = 0)"
+      "en": {
+        "latex": "\\boxed{p(5) = 0 \\implies (x - 5) \\text{ is a factor}}",
+        "fallback": "(x − 5) is a factor (since p(5) = 0)"
+      },
+      "ta": [
+        {
+          "latex": "\\left(x - 5\\right)",
+          "fallback": "(x − 5)"
+        },
+        " ஒரு காரணி ",
+        {
+          "latex": "\\left(p \\left(5\\right) = 0\\right)",
+          "fallback": "(p(5) = 0)"
+        }
+      ]
     },
     "steps": [
       {
@@ -44862,8 +45374,21 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{a = b}",
-      "fallback": "a = b (and a = b = −2)"
+      "en": {
+        "latex": "\\boxed{a = b}",
+        "fallback": "a = b (and a = b = −2)"
+      },
+      "ta": [
+        {
+          "latex": "a = b",
+          "fallback": "a = b"
+        },
+        " என நிரூபிக்கப்பட்டது ",
+        {
+          "latex": "\\left(a = b = - 2\\right)",
+          "fallback": "(a = b = −2)"
+        }
+      ]
     },
     "steps": [
       {
@@ -45117,8 +45642,27 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(x + 2) \\text{ and } (x - 4) \\text{ are factors}}",
-      "fallback": "Yes, (x + 2) and (x − 4) are the sides (for x > 4)"
+      "en": {
+        "latex": "\\boxed{(x + 2) \\text{ and } (x - 4) \\text{ are factors}}",
+        "fallback": "Yes, (x + 2) and (x − 4) are the sides (for x > 4)"
+      },
+      "ta": [
+        "ஆம், ",
+        {
+          "latex": "\\left(x + 2\\right)",
+          "fallback": "(x + 2)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "\\left(x - 4\\right)",
+          "fallback": "(x − 4)"
+        },
+        " பக்கங்கள் ஆகும் ",
+        {
+          "latex": "\\left(x > 4\\right)",
+          "fallback": "(x > 4)"
+        }
+      ]
     },
     "steps": [
       {
@@ -45522,8 +46066,36 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{coeff}(x^2)=18,\\; \\text{coeff}(x)=107,\\; \\text{const}=210}",
-      "fallback": "x² coeff: 18; x coeff: 107; constant: 210"
+      "en": {
+        "latex": "\\boxed{\\text{coeff}(x^2)=18,\\; \\text{coeff}(x)=107,\\; \\text{const}=210}",
+        "fallback": "x² coeff: 18; x coeff: 107; constant: 210"
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        " கெழு: ",
+        {
+          "latex": "18",
+          "fallback": "18"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " கெழு: ",
+        {
+          "latex": "107",
+          "fallback": "107"
+        },
+        "; மாறிலி: ",
+        {
+          "latex": "210",
+          "fallback": "210"
+        }
+      ]
     },
     "steps": [
       {
@@ -45611,8 +46183,36 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{coeff}(x^2)=-32,\\; \\text{coeff}(x)=-6,\\; \\text{const}=90}",
-      "fallback": "x² coeff: −32; x coeff: −6; constant: 90"
+      "en": {
+        "latex": "\\boxed{\\text{coeff}(x^2)=-32,\\; \\text{coeff}(x)=-6,\\; \\text{const}=90}",
+        "fallback": "x² coeff: −32; x coeff: −6; constant: 90"
+      },
+      "ta": [
+        {
+          "latex": "x^{2}",
+          "fallback": "x²"
+        },
+        " கெழு: ",
+        {
+          "latex": "- 32",
+          "fallback": "−32"
+        },
+        "; ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " கெழு: ",
+        {
+          "latex": "- 6",
+          "fallback": "−6"
+        },
+        "; மாறிலி: ",
+        {
+          "latex": "90",
+          "fallback": "90"
+        }
+      ]
     },
     "steps": [
       {
@@ -47998,8 +48598,14 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(5x - 2y - 3z)^2}",
-      "fallback": "(−5x + 2y + 3z)² or (5x − 2y − 3z)²"
+      "en": {
+        "latex": "\\boxed{(5x - 2y - 3z)^2}",
+        "fallback": "(−5x + 2y + 3z)² or (5x − 2y − 3z)²"
+      },
+      "ta": {
+        "latex": "\\boxed{(5x - 2y - 3z)^2}",
+        "fallback": "(5x − 2y − 3z)²"
+      }
     },
     "steps": [
       {
@@ -49829,8 +50435,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(x) = 4x^2 - 6x - 5,\\; r = 33}",
-      "fallback": "Quotient: 4x² − 6x − 5; Remainder: 33"
+      "en": {
+        "latex": "\\boxed{q(x) = 4x^2 - 6x - 5,\\; r = 33}",
+        "fallback": "Quotient: 4x² − 6x − 5; Remainder: 33"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "4 x^{2} - 6 x - 5",
+          "fallback": "4x² − 6x − 5"
+        },
+        "; மீதி: ",
+        {
+          "latex": "33",
+          "fallback": "33"
+        }
+      ]
     },
     "steps": [
       {
@@ -49925,8 +50545,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(y) = 4y^2 - 6y + 5,\\; r = -10}",
-      "fallback": "Quotient: 4y² − 6y + 5; Remainder: −10"
+      "en": {
+        "latex": "\\boxed{q(y) = 4y^2 - 6y + 5,\\; r = -10}",
+        "fallback": "Quotient: 4y² − 6y + 5; Remainder: −10"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "4 y^{2} - 6 y + 5",
+          "fallback": "4y² − 6y + 5"
+        },
+        "; மீதி: ",
+        {
+          "latex": "- 10",
+          "fallback": "−10"
+        }
+      ]
     },
     "steps": [
       {
@@ -50068,8 +50702,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(x) = 4x^2 + 2x + 1,\\; r = 0}",
-      "fallback": "Quotient: 4x² + 2x + 1; Remainder: 0"
+      "en": {
+        "latex": "\\boxed{q(x) = 4x^2 + 2x + 1,\\; r = 0}",
+        "fallback": "Quotient: 4x² + 2x + 1; Remainder: 0"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "4 x^{2} + 2 x + 1",
+          "fallback": "4x² + 2x + 1"
+        },
+        "; மீதி: ",
+        {
+          "latex": "0",
+          "fallback": "0"
+        }
+      ]
     },
     "steps": [
       {
@@ -50143,8 +50791,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(z) = 8z^2 - 6z + 2,\\; r = 10}",
-      "fallback": "Quotient: 8z² − 6z + 2; Remainder: 10"
+      "en": {
+        "latex": "\\boxed{q(z) = 8z^2 - 6z + 2,\\; r = 10}",
+        "fallback": "Quotient: 8z² − 6z + 2; Remainder: 10"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "8 z^{2} - 6 z + 2",
+          "fallback": "8z² − 6z + 2"
+        },
+        "; மீதி: ",
+        {
+          "latex": "10",
+          "fallback": "10"
+        }
+      ]
     },
     "steps": [
       {
@@ -50495,8 +51157,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(x) = x^2 + 4x + 5,\\; r = 12}",
-      "fallback": "Quotient: x² + 4x + 5; Remainder: 12"
+      "en": {
+        "latex": "\\boxed{q(x) = x^2 + 4x + 5,\\; r = 12}",
+        "fallback": "Quotient: x² + 4x + 5; Remainder: 12"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "x^{2} + 4 x + 5",
+          "fallback": "x² + 4x + 5"
+        },
+        "; மீதி: ",
+        {
+          "latex": "12",
+          "fallback": "12"
+        }
+      ]
     },
     "steps": [
       {
@@ -50579,8 +51255,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(x) = x^2 - 1,\\; r = -2}",
-      "fallback": "Quotient: x² − 1; Remainder: −2"
+      "en": {
+        "latex": "\\boxed{q(x) = x^2 - 1,\\; r = -2}",
+        "fallback": "Quotient: x² − 1; Remainder: −2"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "x^{2} - 1",
+          "fallback": "x² − 1"
+        },
+        "; மீதி: ",
+        {
+          "latex": "- 2",
+          "fallback": "−2"
+        }
+      ]
     },
     "steps": [
       {
@@ -50671,8 +51361,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{q(x) = 2x^3 - \\dfrac{1}{2}x^2 - \\dfrac{3}{8}x + \\dfrac{51}{32},\\; r = \\dfrac{109}{32}}",
-      "fallback": "Quotient: 2x³ − (1/2)x² − (3/8)x + 51/32; Remainder: 109/32"
+      "en": {
+        "latex": "\\boxed{q(x) = 2x^3 - \\dfrac{1}{2}x^2 - \\dfrac{3}{8}x + \\dfrac{51}{32},\\; r = \\dfrac{109}{32}}",
+        "fallback": "Quotient: 2x³ − (1/2)x² − (3/8)x + 51/32; Remainder: 109/32"
+      },
+      "ta": [
+        "ஈவு: ",
+        {
+          "latex": "\\displaystyle 2 x^{3} - \\left(\\frac{1}{2}\\right) x^{2} - \\left(\\frac{3}{8}\\right) x + \\frac{51}{32}",
+          "fallback": "2x³ − (1/2)x² − (3/8)x + 51/32"
+        },
+        "; மீதி: ",
+        {
+          "latex": "\\displaystyle \\frac{109}{32}",
+          "fallback": "109/32"
+        }
+      ]
     },
     "steps": [
       {
@@ -50831,8 +51535,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{p = -2,\\; q = 0,\\; r = -10}",
-      "fallback": "p = −2, q = 0; Remainder = −10"
+      "en": {
+        "latex": "\\boxed{p = -2,\\; q = 0,\\; r = -10}",
+        "fallback": "p = −2, q = 0; Remainder = −10"
+      },
+      "ta": [
+        {
+          "latex": "p = - 2",
+          "fallback": "p = −2"
+        },
+        ", ",
+        {
+          "latex": "q = 0",
+          "fallback": "q = 0"
+        },
+        "; மீதி = −10"
+      ]
     },
     "steps": [
       {
@@ -51011,8 +51729,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{a = 20,\\; b = 94,\\; r = 388}",
-      "fallback": "a = 20, b = 94; Remainder = 388"
+      "en": {
+        "latex": "\\boxed{a = 20,\\; b = 94,\\; r = 388}",
+        "fallback": "a = 20, b = 94; Remainder = 388"
+      },
+      "ta": [
+        {
+          "latex": "a = 20",
+          "fallback": "a = 20"
+        },
+        ", ",
+        {
+          "latex": "b = 94",
+          "fallback": "b = 94"
+        },
+        "; மீதி = 388"
+      ]
     },
     "steps": [
       {
@@ -52645,8 +53377,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Line through } (0,0),\\; (1,2),\\; (2,4)}",
-      "fallback": "Straight line through (−1, −2), (0, 0), (1, 2), (2, 4)"
+      "en": {
+        "latex": "\\boxed{\\text{Line through } (0,0),\\; (1,2),\\; (2,4)}",
+        "fallback": "Straight line through (−1, −2), (0, 0), (1, 2), (2, 4)"
+      },
+      "ta": "(−1, −2), (0, 0), (1, 2), (2, 4) வழியே செல்லும் நேர்க்கோடு"
     },
     "steps": [
       {
@@ -52710,8 +53445,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Line through } (0,-1),\\; (1,3),\\; (2,7)}",
-      "fallback": "Straight line through (0, −1), (1, 3), (2, 7)"
+      "en": {
+        "latex": "\\boxed{\\text{Line through } (0,-1),\\; (1,3),\\; (2,7)}",
+        "fallback": "Straight line through (0, −1), (1, 3), (2, 7)"
+      },
+      "ta": "(0, −1), (1, 3), (2, 7) வழியே செல்லும் நேர்க்கோடு"
     },
     "steps": [
       {
@@ -52795,8 +53533,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Line through } (-2,0),\\; (0,3),\\; (2,6)}",
-      "fallback": "Straight line through (−2, 0), (0, 3), (2, 6)"
+      "en": {
+        "latex": "\\boxed{\\text{Line through } (-2,0),\\; (0,3),\\; (2,6)}",
+        "fallback": "Straight line through (−2, 0), (0, 3), (2, 6)"
+      },
+      "ta": "(−2, 0), (0, 3), (2, 6) வழியே செல்லும் நேர்க்கோடு"
     },
     "steps": [
       {
@@ -52871,8 +53612,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Line through } (0,7),\\; (2,4),\\; (4,1)}",
-      "fallback": "Straight line through (0, 7), (2, 4), (4, 1)"
+      "en": {
+        "latex": "\\boxed{\\text{Line through } (0,7),\\; (2,4),\\; (4,1)}",
+        "fallback": "Straight line through (0, 7), (2, 4), (4, 1)"
+      },
+      "ta": "(0, 7), (2, 4), (4, 1) வழியே செல்லும் நேர்க்கோடு"
     },
     "steps": [
       {
@@ -52936,8 +53680,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(x, y) = (5, 2)}",
-      "fallback": "(5, 2) i.e. x = 5, y = 2"
+      "en": {
+        "latex": "\\boxed{(x, y) = (5, 2)}",
+        "fallback": "(5, 2) i.e. x = 5, y = 2"
+      },
+      "ta": [
+        "(5, 2) அதாவது ",
+        {
+          "latex": "x = 5",
+          "fallback": "x = 5"
+        },
+        ", ",
+        {
+          "latex": "y = 2",
+          "fallback": "y = 2"
+        }
+      ]
     },
     "steps": [
       {
@@ -53031,8 +53789,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Infinitely many solutions (coinciding lines)}}",
-      "fallback": "Infinitely many solutions (coinciding lines)"
+      "en": {
+        "latex": "\\boxed{\\text{Infinitely many solutions (coinciding lines)}}",
+        "fallback": "Infinitely many solutions (coinciding lines)"
+      },
+      "ta": "எண்ணற்ற தீர்வுகள் (ஒன்றிய கோடுகள்)"
     },
     "steps": [
       {
@@ -53085,8 +53846,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{No solution (parallel lines)}}",
-      "fallback": "No solution (parallel lines)"
+      "en": {
+        "latex": "\\boxed{\\text{No solution (parallel lines)}}",
+        "fallback": "No solution (parallel lines)"
+      },
+      "ta": "தீர்வு இல்லை (இணை கோடுகள்)"
     },
     "steps": [
       {
@@ -53155,8 +53919,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(x, y) = (-3, -3)}",
-      "fallback": "(−3, −3) i.e. x = −3, y = −3"
+      "en": {
+        "latex": "\\boxed{(x, y) = (-3, -3)}",
+        "fallback": "(−3, −3) i.e. x = −3, y = −3"
+      },
+      "ta": [
+        "(−3, −3) அதாவது ",
+        {
+          "latex": "x = - 3",
+          "fallback": "x = −3"
+        },
+        ", ",
+        {
+          "latex": "y = - 3",
+          "fallback": "y = −3"
+        }
+      ]
     },
     "steps": [
       {
@@ -53215,8 +53993,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(x, y) = (1, 3)}",
-      "fallback": "(1, 3) i.e. x = 1, y = 3"
+      "en": {
+        "latex": "\\boxed{(x, y) = (1, 3)}",
+        "fallback": "(1, 3) i.e. x = 1, y = 3"
+      },
+      "ta": [
+        "(1, 3) அதாவது ",
+        {
+          "latex": "x = 1",
+          "fallback": "x = 1"
+        },
+        ", ",
+        {
+          "latex": "y = 3",
+          "fallback": "y = 3"
+        }
+      ]
     },
     "steps": [
       {
@@ -53298,8 +54090,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(x, y) = (-3, 3)}",
-      "fallback": "(−3, 3) i.e. x = −3, y = 3"
+      "en": {
+        "latex": "\\boxed{(x, y) = (-3, 3)}",
+        "fallback": "(−3, 3) i.e. x = −3, y = 3"
+      },
+      "ta": [
+        "(−3, 3) அதாவது ",
+        {
+          "latex": "x = - 3",
+          "fallback": "x = −3"
+        },
+        ", ",
+        {
+          "latex": "y = 3",
+          "fallback": "y = 3"
+        }
+      ]
     },
     "steps": [
       {
@@ -53369,8 +54175,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{75\\text{ mph},\\; 25\\text{ mph}}",
-      "fallback": "75 miles/hr and 25 miles/hr"
+      "en": {
+        "latex": "\\boxed{75\\text{ mph},\\; 25\\text{ mph}}",
+        "fallback": "75 miles/hr and 25 miles/hr"
+      },
+      "ta": [
+        "மணிக்கு ",
+        {
+          "latex": "75",
+          "fallback": "75"
+        },
+        " மைல்கள் மற்றும் ",
+        {
+          "latex": "25",
+          "fallback": "25"
+        },
+        " மைல்கள்"
+      ]
     },
     "steps": [
       {
@@ -53884,8 +54705,17 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{45\\text{ years}}",
-      "fallback": "45 years"
+      "en": {
+        "latex": "\\boxed{45\\text{ years}}",
+        "fallback": "45 years"
+      },
+      "ta": [
+        {
+          "latex": "45",
+          "fallback": "45"
+        },
+        " ஆண்டுகள்"
+      ]
     },
     "steps": [
       {
@@ -54371,8 +55201,11 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{(1,\\; \\dfrac{3}{2}) \\text{ and } (0, 0)}",
-      "fallback": "(1, 3/2) and (0, 0)"
+      "en": {
+        "latex": "\\boxed{(1,\\; \\dfrac{3}{2}) \\text{ and } (0, 0)}",
+        "fallback": "(1, 3/2) and (0, 0)"
+      },
+      "ta": "(1, 3/2) மற்றும் (0, 0)"
     },
     "steps": [
       {
@@ -54836,8 +55669,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{Man} = 75,\\; \\text{Son} = 15}",
-      "fallback": "Man: 75 years; Son: 15 years"
+      "en": {
+        "latex": "\\boxed{\\text{Man} = 75,\\; \\text{Son} = 15}",
+        "fallback": "Man: 75 years; Son: 15 years"
+      },
+      "ta": [
+        "தந்தை: ",
+        {
+          "latex": "75",
+          "fallback": "75"
+        },
+        " ஆண்டுகள்; மகன்: ",
+        {
+          "latex": "15",
+          "fallback": "15"
+        },
+        " ஆண்டுகள்"
+      ]
     },
     "steps": [
       {
@@ -55228,8 +56076,22 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{60\\text{ (Rs. 2)},\\; 20\\text{ (Rs. 5)}}",
-      "fallback": "60 two-rupee coins and 20 five-rupee coins"
+      "en": {
+        "latex": "\\boxed{60\\text{ (Rs. 2)},\\; 20\\text{ (Rs. 5)}}",
+        "fallback": "60 two-rupee coins and 20 five-rupee coins"
+      },
+      "ta": [
+        {
+          "latex": "60",
+          "fallback": "60"
+        },
+        " இரண்டு ரூபாய் நாணயங்கள் மற்றும் ",
+        {
+          "latex": "20",
+          "fallback": "20"
+        },
+        " ஐந்து ரூபாய் நாணயங்கள்"
+      ]
     },
     "steps": [
       {
@@ -55379,8 +56241,23 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{x = 40\\text{ hrs},\\; y = 60\\text{ hrs}}",
-      "fallback": "Larger pipe: 40 hours; Smaller pipe: 60 hours"
+      "en": {
+        "latex": "\\boxed{x = 40\\text{ hrs},\\; y = 60\\text{ hrs}}",
+        "fallback": "Larger pipe: 40 hours; Smaller pipe: 60 hours"
+      },
+      "ta": [
+        "பெரிய குழாய்: ",
+        {
+          "latex": "40",
+          "fallback": "40"
+        },
+        " மணி நேரம்; சிறிய குழாய்: ",
+        {
+          "latex": "60",
+          "fallback": "60"
+        },
+        " மணி நேரம்"
+      ]
     },
     "steps": [
       {
@@ -55942,8 +56819,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{\\text{TV} = \\text{Rs.\\,}20,000,\\; \\text{Fridge} = \\text{Rs.\\,}10,000}",
-      "fallback": "T.V.: ₹20,000; Fridge: ₹10,000"
+      "en": {
+        "latex": "\\boxed{\\text{TV} = \\text{Rs.\\,}20,000,\\; \\text{Fridge} = \\text{Rs.\\,}10,000}",
+        "fallback": "T.V.: ₹20,000; Fridge: ₹10,000"
+      },
+      "ta": [
+        "தொலைக்காட்சிப் பெட்டி: ₹",
+        {
+          "latex": "20",
+          "fallback": "20"
+        },
+        ",",
+        {
+          "latex": "000",
+          "fallback": "000"
+        },
+        "; குளிர்சாதனப் பெட்டி: ₹",
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        ",",
+        {
+          "latex": "000",
+          "fallback": "000"
+        }
+      ]
     },
     "steps": [
       {
@@ -56098,8 +56999,21 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{40,\\; 48}",
-      "fallback": "40 and 48"
+      "en": {
+        "latex": "\\boxed{40,\\; 48}",
+        "fallback": "40 and 48"
+      },
+      "ta": [
+        {
+          "latex": "40",
+          "fallback": "40"
+        },
+        " மற்றும் ",
+        {
+          "latex": "48",
+          "fallback": "48"
+        }
+      ]
     },
     "steps": [
       {
@@ -56243,8 +57157,32 @@ const records=[
       ]
     },
     "answerMath": {
-      "latex": "\\boxed{x = 18\\text{ days},\\; y = 36\\text{ days}}",
-      "fallback": "1 Indian: 18 days; 1 Chinese: 36 days"
+      "en": {
+        "latex": "\\boxed{x = 18\\text{ days},\\; y = 36\\text{ days}}",
+        "fallback": "1 Indian: 18 days; 1 Chinese: 36 days"
+      },
+      "ta": [
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " இந்தியர்: ",
+        {
+          "latex": "18",
+          "fallback": "18"
+        },
+        " நாள்கள்; ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        },
+        " சீனர்: ",
+        {
+          "latex": "36",
+          "fallback": "36"
+        },
+        " நாள்கள்"
+      ]
     },
     "steps": [
       {
@@ -59093,7 +60031,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "\\text{(i) Parallel to }x\\text{-axis};\\quad \\text{(ii) Lies on }y\\text{-axis}",
+        "latex": "\\begin{gathered}\\text{(i) }x\\text{-அச்சிற்கு இணையான நேர்க்கோடு}\\\\\\text{(ii) }y\\text{-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு}\\end{gathered}",
         "fallback": "(i) x-அச்சிற்கு இணையான நேர்க்கோடு; (ii) y-அச்சின் மேல் அமைந்துள்ள நேர்க்கோடு",
         "display": true
       }
@@ -59256,7 +60194,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "\\text{(i) Square};\\quad \\text{(ii) Trapezium}",
+        "latex": "\\text{(i) சதுரம்};\\quad \\text{(ii) சரிவகம்}",
         "fallback": "(i) சதுரம்; (ii) சரிவகம்",
         "display": true
       }
@@ -60932,7 +61870,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "(9,3),\\;(-5,5)\\text{ and }(1,1)",
+        "latex": "(9,3),\\;(-5,5)\\text{ மற்றும் }(1,1)",
         "fallback": "(9, 3), (−5, 5) மற்றும் (1, 1)",
         "display": true
       }
@@ -61536,7 +62474,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "\\text{Mid}(AC)=\\text{Mid}(BD)=\\left(-1,\\dfrac{15}{2}\\right)\\implies\\text{Parallelogram}",
+        "latex": "\\begin{gathered}D(-2,8)\\\\AC,BD\\text{-இன் நடுப்புள்ளி }\\left(-1,\\dfrac{15}{2}\\right)\\\\\\implies ABCD\\text{ ஓர் இணைகரம்}\\end{gathered}",
         "fallback": "நிறுவப்பட்டது: D(−2, 8); AC மற்றும் BD-இன் நடுப்புள்ளி (−1, 15/2) சமம் என்பதால் ABCD ஓர் இணைகரம்",
         "display": true
       }
@@ -62983,7 +63921,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "AB:BC = 1:2 \\implies \\text{Collinear}",
+        "latex": "AB:BC=1:2\\implies A,B,C\\text{ ஒரே கோட்டில் அமையும்}",
         "fallback": "நிறுவப்பட்டது: B ஆனது AC-ஐ 1:2 விகிதத்தில் பிரிப்பதால் A, B, C ஒரே கோட்டில் அமையும்",
         "display": true
       }
@@ -63752,7 +64690,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "5\\text{ units}",
+        "latex": "5\\text{ அலகுகள்}",
         "fallback": "5 அலகுகள்",
         "display": true
       }
@@ -64074,7 +65012,7 @@ const records=[
         "display": true
       },
       "ta": {
-        "latex": "3\\sqrt{\\dfrac{5}{2}}\\text{ units}",
+        "latex": "3\\sqrt{\\dfrac{5}{2}}\\text{ அலகுகள்}",
         "fallback": "3√(5/2) அலகுகள் (அல்லது (3√10)/2 அலகுகள்)",
         "display": true
       }
@@ -64513,7 +65451,7 @@ const records=[
         "fallback": "(3) on x-axis"
       },
       "ta": {
-        "latex": "\\text{(3) on }x\\text{-axis}",
+        "latex": "\\text{(3) }x\\text{-அச்சின் மீது}",
         "fallback": "(3) x-அச்சின் மீது"
       }
     },
@@ -64610,7 +65548,7 @@ const records=[
         "fallback": "(3) II and IV quadrant respectively"
       },
       "ta": {
-        "latex": "\\text{(3) II and IV}",
+        "latex": "\\text{(3) முறையே II, IV}",
         "fallback": "(3) முறையே II, IV காற்பகுதியில்"
       }
     },
@@ -64706,7 +65644,7 @@ const records=[
         "fallback": "(3) Trapezium"
       },
       "ta": {
-        "latex": "\\text{(3) Trapezium}",
+        "latex": "\\text{(3) சரிவகம்}",
         "fallback": "(3) சரிவகம்"
       }
     },
@@ -64843,7 +65781,7 @@ const records=[
         "fallback": "(2) Q and R"
       },
       "ta": {
-        "latex": "\\text{(2) }Q\\text{ and }R",
+        "latex": "\\text{(2) }Q\\text{ மற்றும் }R",
         "fallback": "(2) Q மற்றும் R"
       }
     },
@@ -65235,7 +66173,7 @@ const records=[
         "fallback": "(3) Null set"
       },
       "ta": {
-        "latex": "\\text{(3) Null set}",
+        "latex": "\\text{(3) வெற்றுக் கணம்}",
         "fallback": "(3) வெற்றுக் கணம்"
       }
     },

@@ -105,7 +105,8 @@ for (const evidence of fidelity.items) {
   }
   const presentation = TriggleG9Math.get(record);
   checkMath(presentation.questionMath.en, record.q.en);
-  checkMath(presentation.answerMath, record.answer);
+  checkMath(presentation.answerMath.en??presentation.answerMath, record.answer);
+  if(presentation.answerMath.ta) checkMath(presentation.answerMath.ta, record.answerTa);
   for (const [i, step] of record.steps.entries()) {
     if (step.eq) checkMath(presentation.steps[i].math, step.eq);
   }
