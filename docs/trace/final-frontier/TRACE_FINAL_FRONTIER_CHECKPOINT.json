@@ -24,13 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g10.geometry.hints",
-      "status": "MERGED",
-      "pr": 447,
-      "head": "7ad00ea8241382a8827de734eae61d91e98992a1",
-      "prQualityRun": 45706060651,
-      "merge": "96bdc9a6cb532ef07df0e137d8fea6274f975aa0",
-      "pagesRun": 45729473430
+      "key": "g10.algebra.hints",
+      "status": "TESTED",
+      "pr": 448,
+      "head": "d5e1b7e375618b5a8911a9ffeebd3821f8ff14b6",
+      "prQualityRun": 45707428910
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2093,13 +2091,13 @@
       "chapter": 4,
       "scope": "Grade 10 Geometry explanations",
       "runtimeRecords": 40,
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 10,
         "chapter": 4,
         "runtimeRecords": 40,
         "scope": "Grade 10 Geometry explanations",
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 447,
         "head": "7ad00ea8241382a8827de734eae61d91e98992a1",
         "prQualityRun": 45706060651,
@@ -2112,6 +2110,33 @@
         },
         "merge": "96bdc9a6cb532ef07df0e137d8fea6274f975aa0",
         "pagesRun": 45729473430,
+        "liveEvidence": {
+          "pr": 447,
+          "merge": "96bdc9a6cb532ef07df0e137d8fea6274f975aa0",
+          "head": "7ad00ea8241382a8827de734eae61d91e98992a1",
+          "slug": "g10-geometry-hints",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-4-ex4-1-q1",
+          "pagesRun": 45729473430,
+          "deploymentId": 8073343828,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45729473430/job/139613448389",
+          "deploymentCompletedAt": "2026-11-26T00:48:17Z",
+          "versionMatched": "96bdc9a6cb532ef07df0e137d8fea6274f975aa0",
+          "sha256": {
+            "data/g10-frontier-geometry-hints.js": "d9c8c70ccc344bd0d6fd9779236fb4e045c7763d5ae2dc9f34c54a72438d0554",
+            "data/project-status.json": "8abb5e4fa2aff983646a656178ad601fcb282796cf78f8e13c599e0248c4fcdb",
+            "index.html": "cb470e690dc275490fbffa2f51783013988d06b9390f6645bea632a0ca6bb7bc",
+            "service-worker.js": "1ebdf5ecc86a8c85d03e5fc0d0a7ffa29e7958a44b8f11e31e523304fcd509ae"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 10 Chapter 4: 40 bilingual explanations at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/447"
       }
     },
@@ -2514,17 +2539,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "76453efbc667288712d77723f664320af21f9548",
+  "latestVerifiedProduction": "96bdc9a6cb532ef07df0e137d8fea6274f975aa0",
   "openReleaseOrder": [
-    {
-      "key": "g10.geometry.hints",
-      "status": "MERGED",
-      "pr": 447,
-      "head": "7ad00ea8241382a8827de734eae61d91e98992a1",
-      "prQualityRun": 45706060651,
-      "merge": "96bdc9a6cb532ef07df0e137d8fea6274f975aa0",
-      "pagesRun": 45729473430
-    },
     {
       "key": "g10.algebra.hints",
       "status": "TESTED",
