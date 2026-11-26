@@ -1,4 +1,4 @@
-/* Tamil descriptions for the original exercise figures in the bilingual reader. */
+/* Localized exercise figure descriptions and Tamil-labelled assets. */
 (() => {
   'use strict';
 
@@ -18,6 +18,38 @@
 
   window.TriggleFrontierFigureTamil = Object.freeze({
     ...graphDescriptions,
+    'g9-ch4-ex4.5-q3': {
+      description:'6 செமீ நீளமுள்ள AB அடிப்பக்கம் முதலில் காட்டப்படுகிறது. ∠B = 110°, AC = 9 செமீ ஆகிய அளவுகளைக் கொண்டு ABC முக்கோணத்தைக் கட்டமைத்து, நடுக்கோடுகள் சந்திக்கும் G புள்ளியைக் குறிக்கவும்.',
+      caption:'ABC முக்கோணமும் நடுக்கோட்டு மையம் G-யும்',
+      en:{description:'The construction starts with segment AB of length 6 cm. Use angle B = 110° and AC = 9 cm to draw triangle ABC, then mark the centroid G at the intersection of the medians.',caption:'Constructing triangle ABC and its centroid G'}
+    },
+    'g9-ch4-ex4.5-q7': {
+      description:'6 செமீ நீளமுள்ள AB அடிப்பக்கம் முதலில் காட்டப்படுகிறது. ∠B = 110°, BC = 5 செமீ கொண்டு ABC முக்கோணத்தைக் கட்டமைக்கவும். தேவையான பக்கங்களை நீட்டி, செங்குத்துக்கோடுகள் சந்திக்கும் H புள்ளியைக் குறிக்கவும்.',
+      caption:'ABC முக்கோணத்தின் செங்கோட்டு மையம் H',
+      en:{description:'The construction starts with segment AB of length 6 cm. Use angle B = 110° and BC = 5 cm to draw triangle ABC. Extend the required sides and mark the orthocentre H where the altitudes intersect.',caption:'Constructing the orthocentre H of triangle ABC'}
+    },
+    'g9-ch4-ex4.6-q8': {
+      description:'6 செமீ நீளமுள்ள AB அடிப்பக்கம் முதலில் காட்டப்படுகிறது. AB = BC = 6 செமீ, ∠B = 80°. கோண இருசமவெட்டிகள் சந்திக்கும் I புள்ளியை மையமாகக் கொண்டு, மூன்று பக்கங்களையும் தொடும் உள்வட்டத்தை வரையவும்.',
+      caption:'உள்வட்ட மையம் I மற்றும் மூன்று பக்கங்களையும் தொடும் உள்வட்டம்',
+      en:{description:'The construction starts with segment AB of length 6 cm. The triangle has AB = BC = 6 cm and angle B = 80°. Its angle bisectors meet at the incentre I, and the incircle touches all three sides.',caption:'Constructing the incentre I and the incircle'}
+    },
+    'c10-4-ex4-3-q2': {
+      src:'./assets/grade10-geometry/ex4-3-q2-ta.svg',
+      description:'சாராவின் வீட்டையும் ஜேம்ஸின் வீட்டையும் இணைக்கும் நேர்வழி C தெரு. 2 மைல் நீளமுள்ள B தெருவும் 1.5 மைல் நீளமுள்ள A தெருவும் செங்கோணத்தில் சந்திக்கின்றன. C தெரு அந்தச் செங்கோண முக்கோணத்தின் கர்ணம்.',
+      caption:'A, B தெருக்கள் வழியாகச் செல்லும் பாதையும் C தெரு வழியாகச் செல்லும் நேர்வழியும்',
+      en:{description:'B Street is 2 miles long and A Street is 1.5 miles long. They meet at a right angle. C Street is the hypotenuse and connects Sarah’s house directly to James’s house.',caption:'The two-street route and the direct route along C Street'}
+    },
+    'c10-4-ex4-3-q4': {
+      src:'./assets/grade10-geometry/ex4-3-q4-ta.svg',
+      description:'செவ்வகம் WXYZ. மேல் இடப்புறம் W, கீழ் இடப்புறம் X, கீழ் வலப்புறம் Y, மேல் வலப்புறம் Z. சம நீளமுள்ள XZ, YW மூலைவிட்டங்கள் செவ்வகத்திற்குள் வெட்டிக்கொள்கின்றன.',
+      caption:'WXYZ செவ்வகத்தின் பக்கங்கள் XY, YZ மற்றும் சம மூலைவிட்டங்கள் XZ, YW',
+      en:{description:'Rectangle WXYZ has W at top left, X at bottom left, Y at bottom right and Z at top right. Its equal diagonals XZ and YW cross inside the rectangle.',caption:'Adjacent sides XY and YZ and equal diagonals XZ and YW'}
+    },
+    'c10-4-ex4-3-q8': {
+      description:'ABC முக்கோணத்தில் B-இல் செங்கோணம் உள்ளது. AB செங்குத்தாகவும் BC கிடைமட்டமாகவும் உள்ளன. BC மீது B, D, E, C வரிசையில் உள்ளன. BD, DE, EC சம நீளமுள்ளவை. A இலிருந்து D, E, C வரை கோட்டுத்துண்டுகள் வரையப்பட்டுள்ளன.',
+      caption:'BD = DE = EC கொண்ட ABC செங்கோண முக்கோணம்',
+      en:{description:'Triangle ABC has a right angle at B. Points B, D, E and C are in order along BC, and BD, DE and EC have equal length. Segments AD, AE and AC run from A to those points.',caption:'Right triangle ABC with BD = DE = EC'}
+    },
     'g9-ch9-ex9.1-q9': spinner,
     'g9-ch9-ex9.1-q10': spinner,
     'c10-3-ex3-12-q2': {src:'./assets/grade10-ch3/ex3-12-q2-pathway-ta.svg',

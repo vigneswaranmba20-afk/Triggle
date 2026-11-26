@@ -59,7 +59,7 @@ async function checkLabelsInBounds(page, path) {
       try {
         const page = await context.newPage();
         await page.goto(base + '/index.html?class=9');
-        const descriptions = await page.evaluate(() => window.TriggleFrontierFigureTamil);
+        const descriptions = await page.evaluate(() => Object.fromEntries(Object.entries(window.TriggleFrontierFigureTamil).filter(([,record]) => !record.en)));
         assert.equal(Object.keys(descriptions).length, 37);
         assert.equal(Object.values(descriptions).filter(item => item.src).length, 14);
         const clippedLabels = [];

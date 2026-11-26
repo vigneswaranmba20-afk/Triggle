@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t d">
+  <title id="t">சாரா மற்றும் ஜேம்ஸ் வீடுகளுக்கு இடையிலான வழிகள்</title>
+  <desc id="d">B தெரு 2 மைல் அடிப்பக்கம். A தெரு 1.5 மைல் செங்குத்துப் பக்கம். C தெரு வீடுகளை நேரடியாக இணைக்கும் கர்ணம்.</desc>
+  <style>
+    .edge,.accent,.guide {fill:none;stroke-linecap:round;stroke-linejoin:round}
+    .edge{stroke:#273349;stroke-width:2.5}.accent{stroke:#155c89;stroke-width:2.6}
+    .guide{stroke:#698397;stroke-width:1.4;stroke-dasharray:5 4}
+    .mark{fill:none;stroke:#273349;stroke-width:1.5}
+    text{fill:#202c40;font:600 14px system-ui,sans-serif;paint-order:stroke;stroke:#f8fafc;stroke-width:3px;stroke-linejoin:round}
+    .hint{fill:#57687a;font-size:12px}
+  </style>
+  <rect width="320" height="220" rx="8" fill="#f8fafc"/>
+  <polyline class="edge" points="39,179 275,179 275,34"/>
+  <line class="accent" x1="39" y1="179" x2="275" y2="34"/>
+  <polyline class="mark" points="261,179 261,165 275,165"/>
+  <circle cx="39" cy="179" r="3" fill="#273349"/><circle cx="275" cy="34" r="3" fill="#273349"/>
+  <text x="9" y="202">சாரா</text><text x="238" y="24">ஜேம்ஸ்</text>
+  <text x="130" y="198">B தெரு</text><text x="129" y="215" class="hint">2 மைல்</text>
+  <text x="207" y="116" transform="rotate(-31 207 116)">C தெரு</text>
+  <text x="280" y="86">A</text><text x="280" y="101">தெரு</text><text x="280" y="118" class="hint">1.5</text><text x="280" y="132" class="hint">மைல்</text>
+</svg>

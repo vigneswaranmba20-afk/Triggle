@@ -37,6 +37,16 @@ async function inspect(page,q,lang){
   const choices=q.choices?.reduce((n,choice)=>n+count(choice[lang]||choice.en),0)||0;
   const question=sourcePrompt?count(sourcePrompt.before)+count(sourcePrompt.after):count(p.questionMath?.[lang]||p.questionMath?.en);
   const tableCount=sourcePrompt?q.dataTable.rows.flat().reduce((total,cell)=>total+Number(!!cell?.latex||/^\d+(?:\.\d+)?$/.test(String(cell))),0):0;
+  const localizedFormula=value=>{
+   if(lang!=='ta'||q.kind==='practice')return null;
+   const localized=window.TriggleTamilFormulaLabels.translate(value);
+   return JSON.stringify(localized)===JSON.stringify(value)?null:localized;
+  };
+  const answerFormula=q.answerMath?.[lang]||p.answerMath?.[lang]||p.answerMath?.en||p.answerMath;
+  const localizedSteps=p.steps.map((step,index)=>{
+   const authoredStep=(override||q).steps[index];
+   return localizedFormula(authoredStep.mathTa||step.math||authoredStep.eq);
+  });
   const expected=hintCount+choices+question+tableCount+
    count(q.answerMath?.[lang]||p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s,i)=>n+
    count((lang==='ta'&&(override||q).steps[i].mathTa)||s.math)+count(s.reasonMath?.[lang]||s.reasonMath?.en),0);
@@ -64,7 +74,7 @@ async function inspect(page,q,lang){
    errors:document.querySelectorAll('[data-math-error]').length,
    question:fallback('#questionText'),answer:fallback('.final-answer-value'),
    steps:[...document.querySelectorAll('#stepsList li.worked-step:not(.final-answer-step)')].map((li,i)=>({reason:fallback('#stepsList li.worked-step:nth-child('+(i+1)+') .step-reason'),eq:fallback('#stepsList li.worked-step:nth-child('+(i+1)+') .step-equation')})),
-   formulas,override};
+   formulas,override,localizedSteps,localizedAnswer:localizedFormula(answerFormula)};
  },{q,lang});
  const refQ=state.override||q;
  const label=q.id+' '+lang+' '+state.width;
@@ -77,11 +87,12 @@ async function inspect(page,q,lang){
  const authoredAnswer=(lang==='ta'?refQ.answerTa:null)||refQ.answer?.[lang]||refQ.answer;
  // Both the legacy fraction token and the localized slash fallback name
  // the same fraction. The assertions below separately verify its rendering.
- assert.equal(normalizeAnswer(state.answer),normalizeAnswer(reviewedAnswer?plain(reviewedAnswer):authoredAnswer),label+' final answer');
+ const expectedAnswer=state.localizedAnswer||reviewedAnswer;
+ assert.equal(normalizeAnswer(state.answer),normalizeAnswer(expectedAnswer?plain(expectedAnswer):authoredAnswer),label+' final answer');
  assert.equal(state.steps.length,refQ.steps.length,label+' all steps retained');
  state.steps.forEach((s,i)=>{
   const step=refQ.steps[i];
-  const expectedEquation=lang==='ta'&&step.mathTa
+  const expectedEquation=state.localizedSteps[i]?plain(state.localizedSteps[i]):lang==='ta'&&step.mathTa
    ?[step.mathTa].flat().map(part=>typeof part==='string'?part:part.fallback).join('')
    :step.eq;
   assert.equal(normalize(s.reason),normalize(step[lang]||step.en),label+' reason '+i);
