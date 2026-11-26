@@ -1,0 +1,222 @@
+$ npm test
+Exit status 0. Output excerpt retains package commands and reported verdicts.
+> triggle@1.28.0 test
+> npm run validate && node site/tools/test_g9_real_numbers.cjs && node site/tools/test_g9_ch2_frontier.cjs && node site/tools/test_g9_tamil_working.cjs && node site/tools/test_g9_frontier_graphs.cjs && node site/tools/test_g9_frontier_hints.cjs && node site/tools/test_g9_real_source_pages.cjs && node site/tools/test_real_numbers_ch2.cjs && node site/tools/test_g9_rationalisation_teaching.cjs && node site/tools/test_worked_example_display.cjs && node site/tools/test_ch1_worked_examples.cjs && node site/tools/test_set_venn_figures.cjs && node site/tools/test_curriculum_validation.cjs && node site/tools/test_video_coming_soon.cjs && node site/tools/test_phase2_pilot.cjs && node site/tools/test_math_notation.cjs && node site/tools/test_set_language_journey.cjs && node site/tools/test_g9_compact_concepts.cjs && node site/tools/test_g9_textbook_activities.cjs && node site/tools/test_textbook_ex1_1_q1.cjs && node site/tools/test_textbook_ex1_1_q2.cjs && node site/tools/test_textbook_ex1_1_integration.cjs && node site/tools/test_textbook_ex1_1_q3a.cjs && node site/tools/test_textbook_ex1_1_q3b.cjs && node site/tools/test_question_navigation.cjs && node site/tools/test_back_to_chapters.cjs && node site/tools/test_persistent_question.cjs && node site/tools/test_exact_textbook_fidelity.cjs && node site/tools/test_g9_ch1_ex13.cjs && node site/tools/test_g9_ch1_ex14.cjs && node site/tools/test_g9_ch1_ex15.cjs && node site/tools/test_g9_ch1_ex16.cjs && node site/tools/test_g9_ch1_ex17.cjs && node site/tools/test_exercise_direct.cjs && node site/tools/test_math_first.cjs && node site/tools/test_quiet_reader.cjs && node site/tools/test_pinned_reader.cjs && node site/tools/test_sticky_example_layout.cjs && node site/tools/test_g9_ch9_probability_2025.cjs && node site/tools/test_g9_ch9_complete_content.cjs && node site/tools/test_g9_ch7_heron.cjs && node site/tools/test_g9_english_bulk_20261109.cjs && node site/tools/test_grade10_exercise_1_1.cjs && node site/tools/test_g10_frontier_tamil_answers.cjs && node site/tools/test_g10_frontier_numbers_hints.cjs && node site/tools/test_g10_frontier_coordinate.cjs && node site/tools/test_g10_frontier_hints.cjs && node site/tools/test_g10_frontier_source_tables.cjs && node site/tools/test_grade10_ch1_complete.cjs && python3 site/tools/verify_video_assets.py && node site/tools/test_teacher_portal_loader.cjs && npm run test:curriculum-bulk && node site/tools/test_project_status.cjs && node site/tools/test_g10_checkpoint_20261110.cjs && node site/tools/test_g10_seven_recovery.cjs && node site/tools/test_g10_statistics_q5_q10.cjs && node site/tools/test_g10_stats_q11_q15.cjs && node site/tools/test_g10_stats_ex8_2_q1_q3.cjs && node site/tools/test_g10_stats_ex8_2_q4_q8.cjs && node site/tools/test_g10_prob_ex8_3.cjs && node site/tools/test_g10_ch8_ex8_4.cjs && node site/tools/test_g10_ch8_ex8_5.cjs && node site/tools/test_g10_ch8_unit.cjs && node site/tools/test_g10_ch8_concepts.cjs && node site/tools/test_chatgpt_math_g10.cjs && node site/tools/test_g10_ch1_chatgpt_math.cjs && node site/tools/test_g10_remaining_math.cjs && node site/tools/test_katex_notation.cjs && node site/tools/test_matrix_pilot.cjs && node site/tools/test_standard_solutions.cjs && node site/tools/test_g12_matrix_math.cjs && node site/tools/test_g10_ch2_ex2_2_release.cjs && node site/tools/test_g10_ch2_typography.cjs && node site/tools/test_g10_ch2_power_baseline.cjs && node site/tools/test_g9_clear_math.cjs && node site/tools/test_g9_statistics_meaning.cjs && node site/tools/test_g9_statistics_frontier.cjs && node site/tools/test_g9_ex3_2_release.cjs && node site/tools/test_g9_math_compiler.cjs && node site/tools/test_why_step_g10.cjs && node site/tools/test_why_step_g9.cjs && node docs/curriculum/grade-9/tests/ex1-2-source-audit-math.cjs && node docs/curriculum/grade-9/tests/ex2-1-source-audit-math.cjs && node docs/curriculum/grade-9/tests/ex2-2-source-audit-math.cjs && node docs/curriculum/grade-9/tests/ex2-3-source-audit-math.cjs && node docs/curriculum/grade-9/tests/ex3-1-q1-q2-source-candidates.cjs && node docs/curriculum/grade-9/tests/ex3-1-q3-q4-source-candidates.cjs && node docs/curriculum/grade-9/tests/ex3-1-q5-q9-source-candidates.cjs && node site/tools/test_g9_ex3_1_q1_q2_release.cjs && node site/tools/test_g9_ex3_1_q3_q9_release.cjs && node site/tools/test_g9_ex1_2_candidates.cjs && node site/tools/test_g9_ex1_2_q1_release.cjs && node site/tools/test_g9_ex1_2_q2_draft.cjs && node site/tools/test_g9_ex1_2_q5_iii_q6_batch.cjs && node site/tools/test_g9_ex1_2_q3_q5_batch1.cjs && node site/tools/test_g9_ex1_2_q7_q10_batch.cjs && node site/tools/test_g9_ex1_2_combined_release.cjs && node site/tools/bulk/test_trace_g9_gemini_handoff.cjs && npm run test:trace && node site/tools/test_paper_indigo_theme.cjs && node site/tools/test_g10_ch2_trace.cjs && node site/tools/test_g10_ch2_top_next.cjs && node site/tools/test_g10_ch2_ex2_5_release.cjs && node site/tools/test_g10_ch2_ex2_6_release.cjs && node site/tools/test_g10_ch2_ex2_7_release.cjs && node site/tools/test_g10_ch2_ex2_8_release.cjs && node site/tools/test_g10_ch2_ex2_9_release.cjs && node site/tools/test_g10_ch2_unit_and_ex31_release.cjs && node site/tools/test_g10_ch3_ex32_to_36_release.cjs && node site/tools/test_g10_ch3_ex37_to_39_release.cjs && node site/tools/test_g10_ch3_ex310_to_312_release.cjs && node site/tools/test_g10_ch3_ex313_to_314_release.cjs && node site/tools/test_g10_ch3_ex315_release.cjs && node site/tools/test_g10_ch2_gp_sum.cjs && node site/tools/test_trace_gp_fola_v2_release.cjs && node site/tools/test_g10_ch2_discovery.cjs && python3 site/tools/test_trace_gp_video.py && python3 site/tools/test_trace_thales_video.py && python3 site/tools/test_trace_thales_one_wav.py && python3 site/tools/test_trace_voice_policy.py && python3 site/tools/test_trace_fola_voice.py && python3 site/tools/test_trace_voice_pack_import.py && python3 -m py_compile site/tools/trace_gp_artwork.py && node site/tools/test_g10_ch2_trace_release.cjs && node site/tools/test_g10_ch2_ex2_3_modular.cjs && node site/tools/test_g10_ch2_ex2_4_staging.cjs && node site/tools/test_bond_light_theme.cjs && node site/tools/test_g10_ch2_concept_quality.cjs && node site/tools/test_g10_ch3_concepts.cjs && node site/tools/test_g10_geometry_release.cjs && node site/tools/test_g10_geometry_ex43_release.cjs && node site/tools/test_g10_geometry_completion.cjs && node site/tools/test_g9_geometry_completion.cjs && node site/tools/test_g10_ch4_concepts.cjs && node site/tools/test_g10_ch5_concepts.cjs && node site/tools/test_g10_ch6_concepts.cjs && node site/tools/test_g10_ch7_concepts.cjs && node site/tools/test_af01_remediations.cjs && node site/tools/test_g10_ch5_ex51_release.cjs && node site/tools/test_g10_ch5_ex52_release.cjs && node site/tools/test_g10_ch5_ex53_release.cjs && node site/tools/test_g10_ch5_ex54_release.cjs && node site/tools/test_g10_ch5_ex55_unit_release.cjs && node site/tools/test_g10_ch6_ex61_release.cjs && node site/tools/test_g10_ch6_ex62_ex63_release.cjs && node site/tools/test_g10_ch6_ex64_ex65_release.cjs && node site/tools/test_g10_ch6_unit_release.cjs && node site/tools/test_af09_ch6_fixes.cjs && node site/tools/test_af09_p0_fixes.cjs && node site/tools/test_af09_batch3_fixes.cjs && node site/tools/test_g10_ch7_ex71_pilot.cjs && node site/tools/test_g10_ch7_ex71_q6_q10_draft.cjs && node site/tools/test_g10_ch7_ex72_ex73.cjs && node site/tools/test_g9_ch5_aud13_02.cjs && node site/tools/test_g9_ch5_ex52_tamil.cjs && node site/tools/test_g9_ch6_aud14_02.cjs && node site/tools/test_g9_ch6_aud14_02_q4_q6.cjs && node site/tools/test_g9_aud14_03_source_options.cjs && node site/tools/test_g9_ex64_q2_q3_stage.cjs && node site/tools/test_g9_algebra_concept.cjs && node site/tools/test_g9_ch5_distance_concept.cjs && node site/tools/test_g9_ch3_complete.cjs && node site/tools/test_g9_ch5_complete.cjs && node site/tools/test_g10_ch7_ex74.cjs && node site/tools/test_g10_ch7_ex75.cjs && node site/tools/test_g10_ch7_unit7.cjs && node site/tools/test_g10_ch3_final_release.cjs
+> triggle@1.28.0 validate
+> node site/tools/validate_curriculum.cjs && node site/tools/check_site.cjs
+PASS: 41 bilingual chapters, 112 preserved questions, schema, IDs, references, translations, local links and content hashes
+PASS: static Pages source, 246 JavaScript files, 296 local HTML links, bilingual UI, JSON and offline assets
+PASS: Real Numbers 31 examples, 120 exercise entries, all 20 MCQs, bilingual steps, source anchors, math spot-checks, UI script order and offline assets.
+PASS Grade 9 Real Numbers: 20 rechecked bilingual MCQs, 20 localized final answers, stable IDs and authored KaTeX
+PASS Grade 9 Tamil equations across 20 Real Numbers tasks and two bilingual Algebra conclusions
+PASS: 31 examples have independently checked EN/TA printed pages; Exercises 2.6 and 2.8 Tamil references corrected.
+PASS: Real Numbers 31 examples + 120 exercise units + 8 concepts; source, bilingual, figures, hard-only detail, IDs, cache and math checks
+PASS: textbook-style rationalisation, four-stage teaching, Tamil/English content and both exact identities
+PASS: rich bilingual Worked Example 2.12, 4 question-answer pairs, 8 conclusions, offline hook and independent identities
+PASS: 35/35 Grade 9 Set Language worked examples, bilingual data, curriculum wiring, math and script order
+PASS: 14 original bilingual Venn diagrams, uncluttered enlarged figures, region values, accessibility and offline delivery
+PASS: 35 curriculum validation checks (coverage, translations, IDs, references, future content, preservation and local links)
+PASS: direct dialog, no fullscreen clutter, video close/reset, R2/WebM and Drive, no autoplay
+PASS: safe superscripts, group brackets, fractions, bilingual paper-first learning and offline pilot
+PASS: 35 math notation cases, safe escaping, bilingual lesson integration, nested fraction styling
+PASS: seven bilingual Grade 9 sections, page crosswalk, arithmetic, offline delivery and staged advanced reasoning
+PASS: 24 bilingual textbook prompts, truthfully labelled reviews, nonfloating question, single activity section, 7-page navigation, slider and offline regression
+PASS: Grade 9 exercise 1.1 Q1 all four bilingual subparts, answer keys, source and draft gates
+PASS: Grade 9 Exercise 1.1 Q2 four bilingual roster subparts
+PASS: all 30 Grade 9 Exercise 1.1 subparts integrated with bilingual prompts/answers/steps, mapped to chapter and preserving legacy IDs
+PASS: 6 bilingual Q3(a) subparts, unique IDs, source refs, independent set-membership truth tables and draft gates
+PASS question navigation, bilingual controls, stored progress and versioned offline cache.
+PASS: chapter-first directory and compact two-button adaptive reader retain accessible navigation.
+PASS one permanent original question followed by full working and final answer.
+PASS: 30 Grade 9 Exercise 1.1 bilingual Q1–Q6 subparts now source-evidenced and student-facing exact; new questions require evidence.
+PASS Grade 9 Exercise 1.3: 42 bilingual source tasks, roster workings, shading truth tables and KaTeX
+PASS Grade 9 Exercise 1.4: seven source tasks, bilingual reasoning, roster invariants and KaTeX
+PASS Grade 9 Exercise 1.5: 20 bilingual source tasks, both distinct Q3 identities, Venn membership and KaTeX
+PASS Grade 9 Exercise 1.6: 23 bilingual source tasks, independent counts, all four Venn diagrams and KaTeX
+PASS Grade 9 Exercise 1.7: 19 verified MCQs and one bilingual source-ambiguity explanation
+PASS: exercises index first, one-exercise navigation boundary, linked return to index, and textbook/practice separation.
+PASS: chapter → section → list → question navigation, truthful fallbacks, quiz/activity first content, accessible figure comparison, mobile layout and offline cache
+PASS: accessible always-visible controls, natural scrolling and context return without touch-hide.
+PASS: one document scroll, full textbook question and solution, two-action dock, compact question anchor.
+PASS: one standard solution, question-first continuous reader and uncluttered navigation.
+PASS: 8 source-checked English questions, 12 numbered subpart responses, 2025 edition evidence and independent probability checks.
+PASS: Grade 9 Probability English textbook content: 25 exercises, 5 worked examples, 5 concepts, 7 activities/checks, math and source registrations.
+PASS Grade 9 Mensuration: four textbook-aligned topics, independent area and volume arithmetic, connected route and offline assets.
+PASS: 23 registered Grade 9 English questions, 6 modules, 60-exercise source index, unique IDs, mathematical invariants and offline/page load references
+PASS Grade 10: 19 independent final-answer checks, stable English work, Tamil displays and offline script
+PASS Grade 10 Chapter 1: 69 numbered questions, 74 individual app records, 7 exercise groups, 3 figures.
+PASS: Teacher portal Grade 9 exercise eligibility, data module dependency order, local asset paths, loading/error states and ES module syntax
+> triggle@1.28.0 test:curriculum-bulk
+> node site/tools/test_curriculum_bulk.cjs && node site/tools/bulk/test_remote_lease.cjs && node site/tools/bulk/test_execution_preflight.cjs && node site/tools/curriculum_bulk.cjs validate-all
+PASS bulk engine: source/math/subpart gates, truthful coverage, runtime registration, offline assets, idempotence, locks and checkpoint isolation.
+PASS remote curriculum leases: persistent ownership, two-clone exclusion, inherited nesting, failure cleanup and guarded release; legacy and persistent CAS refs guarded; main unchanged.
+PASS read-only execution preflight: strict refs, Git/API agreement, pinned sentinel, auth/write permission, held/missing/changed refs fail closed.
+PASS project status: source-derived totals, unknown denominators, exact next task, prompt scope, deployment distinction, public/private separation.
+PASS seven authored Class 10 textbook solutions: provenance, complete steps, math, navigation, difficulty, visuals, old IDs and offline.
+PASS Grade 10 Statistics Exercise 8.1 Q5-Q10: six unique source-checked English lessons, transparent Tamil discrepancy, complete steps, arithmetic, navigation and offline cache.
+PASS Grade 10 Ex8.1 Q11-Q15: exact 2025 source, mobile KaTeX annotations, complete math, preserved IDs, difficulty, navigation and offline assets.
+PASS G10 Ex8.2 Q1-Q3: exact wording, inventory numbers, independent maths, registration, parity
+PASS G10 Exercise 8.2 Q4-Q8: source/page, maths, invariants, reversal, data table, registration
+PASS G10 Ex8.3 (29 parts): IDs, EN/TA coverage, Q8 Tamil labels, KaTeX math, SVG assets, independent enumeration
+PASS: Exercise 8.4 source, runtime, KaTeX and independent arithmetic for 14 bilingual tasks, plus Q1 quarantine.
+PASS: 14 bilingual Exercise 8.5 tasks, exact prompts and choices, independent calculations, KaTeX and Q11 source ambiguity.
+PASS: all 11 Unit Exercise 8 tasks, source and table fidelity, bilingual working, exact arithmetic and rounding.
+PASS: 15 textbook-order bilingual concepts, valid KaTeX, independently checked answers and intact exercise links.
+PASS permanent ChatGPT math style: 13 source-checked questions, 70 validated KaTeX steps, semantic stacked fractions/roots, readable answer fallbacks, offline assets and agent policy.
+PASS 74 complete Class 10 Chapter 1 question parts, 259 unmodified steps, 517 valid KaTeX formulas, 40 real fractions, source hash unchanged, semantic MathML and offline cache.
+PASS Grade 10 Chapters 2–8 rich maths: 45 source-checked records, 153 complete steps, 45 final answers, 29 formula-heavy questions, 52 stacked fractions, 24 radicals, 98 powers, offline cache and Tamil preservation.
+PASS 32 migrated Grade 12 records, 386 mathematical formulas, source wording, step/answer fallbacks and semantic matrices.
+PASS structured KaTeX notation, safe fallback, mixed Tamil/English, exact source text, cofactor signs/transpose/two-sided identity, local assets and cache.
+PASS retired Q8 redirect, archived intermediate mathematics, valid KaTeX and both verified ± matrices.
+PASS original ID order, preserved records and source-audited additions, 1784 explicit difficulties, 88 retained classifications, single solutions and offline metadata.
+PASS exact Grade 12 math: 320 seeded matrices (234 invertible, 86 singular), cofactor/adjoint identities, independent ranks, row operations, inverse methods, rotation signs and cipher round trips.
+PASS Grade 10 Exercise 2.2 release: nine source-checked records, Q8 disclosed without hiding literal minimum, navigation/offline/cache ready, no false complete claim
+PASS Grade 10 Chapter 2 font styling scoped, offline, clear text/maths and navigation-safe
+PASS coefficient and powered base share a MathML row only in Grade 10 Chapter 2; original text and other grades preserved
+PASS Grade 9: 624 records across all nine chapters, 8567 valid offline TeX formulas, bilingual fallbacks, fractional powers, radical/fraction grouping, recurring decimals, aligned steps and isolated presentation.
+PASS Grade 9 Statistics: 30 source locators, six worked explanations and answers, and rendered bilingual fallback parity.
+PASS Statistics concepts: six sections, valid KaTeX, practice and exercise links, odd/even and grouped boundary cases.
+PASS Grade 9 Exercise 3.2: 6 numbered questions, 22 labeled subparts, 23 checked tasks, five cached graphs, and unique source-aligned records.
+PASS Grade 9 compiler: grouping, membership, units, absolute values, probability labels, statistical bars, data spacing, alignment, escaping, and every compiled formula
+PASS Class 10 Why: 268 questions, 269 source-matched explanations, 20 optional diagrams, 7 authored chapters, bilingual and no unverified maths alteration.
+PASS Grade 9 Why: 610 authored question bridges; 30 optional figures; all nine chapters, bilingual, source-pinned, archival examples excluded, app and offline assets intact.
+PASS Grade 9 Ex2.1 source audit & math gate: 5/5 subparts (Q1, Q2, Q3(i–iii)) verified against 2025 PDF p. 51 & answer key p. 314, 25 KaTeX renders, midpoint & decimal checks, and Why-step/notation repairs.
+PASS: SCERT 2025 G9 Ex2.2 all 16 source parts, exact arithmetic, 16 beginner Why-steps, pinned answers
+PASS: 2025 G9 Ex2.3 7/7 source parts, 3 geometric constructions, exact irrational inequalities, rational containment and 7 English Why-steps.
+PASS 2025 original source pages 93 and answer appendix 316: 11 registered English Algebra Ex3.1 records, Q1 classifications, Q2 coefficients, 55 offline KaTeX renders and 33 explanations. Tamil review pending.
+PASS G9 Algebra Ex3.1 Q3–Q4: nine original-image-audited parts, official degree answers [7,4,5,6,4], standard-order results, domain caveat, 27 steps, 45 accessible KaTeX renders.
+PASS Q3/Q4 independent numeric equivalence: 5 sample points, original vs reordered/simplified polynomials; rational expression excludes x=0.
+PASS five independent Q3 coefficient/degree witnesses, including radical coefficients and restricted rational simplification.
+PASS four independent Q4 source-expression witnesses.
+PASS Q4 ascending/descending presentation witnesses across five sample inputs.
+PASS G9 Algebra Ex3.1 Q5–Q9: 11 original-image-audited parts, 55 KaTeX renders, 33 steps, and 55 sample-point polynomial addition/subtraction/multiplication checks.
+PASS G9 Algebra Ex3.1: 11 visual-source-verified bilingual parts, 33 complete steps, 11 Why hints, one-per-ID chapter navigation and offline assets.
+PASS G9 Algebra Ex3.1 Q3-Q9: 20 visual-source-verified bilingual parts (34/34 total Ex 3.1), 60 complete steps, 20 Why hints, one-per-ID chapter navigation and offline assets.
+PASS Grade 9 Exercise 1.2: 34 parts / 10 questions, 105 steps, exact-source anchors, independent audit, unique IDs, deterministic module, and gated publication.
+PASS Grade 9 Ex1.2 Q1: 5 official parts, exact English question/fraction, all steps and answers, no duplicate IDs, matched Why-step hints, English-only notice, offline caching, and mathematical checks
+PASS Grade 9 Ex1.2 Q2 release: 4 exact-source English parts, 14 complete steps, offline KaTeX, distinct IDs, mathematical reasoning, Tamil pending, published module registration, offline cache and hints.
+PASS Grade 9 Ex1.2 Q5(iii) & Q6(i–iv) release: 5 exact-source English parts, 15 complete steps, symbol explanations, offline KaTeX, independent math checks, Why-step hints, and offline cache.
+PASS G9 Ex1.2 Q3–Q5 batch 1: 10 exact English parts, 30 complete steps, 44 KaTeX checks, linked Why-step hints, source page 12, offline cache, no duplicate IDs; Tamil pending.
+PASS Grade 9 Ex1.2 Q7–Q10(iii) release: 10 exact-source English parts, 33 complete steps, symbol explanations, offline KaTeX, independent math checks, Why-step hints, and offline cache.
+PASS G9 Exercise 1.2: all 34 source-audited English parts, no duplicates, all steps and Why hints, offline modules and 21 G10 Ex2.5 registrations; Tamil pending.
+PASS Gemini 15-part English handoff: all 15 answer keys match original source-audited TRACE candidates; exact independent set, shape and power-set checks pass; three release flags retained. No student release.
+> triggle@1.28.0 test:trace
+> python3 -m unittest discover -s site/tools/bulk -p test_trace_intake.py -v && node site/tools/bulk/test_trace_reconcile.cjs && node site/tools/bulk/test_trace_broker.cjs && node site/tools/bulk/test_trace_cramer.cjs && node site/tools/bulk/test_trace_pilot.cjs && node site/tools/bulk/test_trace_source_guard.cjs && node site/tools/bulk/test_trace_progress.cjs && node site/tools/bulk/test_trace_dual_ai.cjs && node site/tools/bulk/trace_dual_cli.cjs --demo && node site/tools/bulk/test_trace_dual_evidence.cjs && node site/tools/bulk/test_trace_dual_rehearsal.cjs && node site/tools/bulk/test_trace_g9_g10_batch.cjs
+PASS TRACE identities preserve grade, unit exercises and nested subparts
+PASS TRACE runtime tracing leaves every final record and curriculum unchanged
+PASS TRACE pinned PR adapter reads data but never executes branch JavaScript
+PASS TRACE real reconciliation keeps source, math, Tamil and deployment separate
+PASS TRACE invalid stages and stale/missing evidence fail closed
+PASS TRACE reports are repeatable, atomic and CSV-safe
+PASS 6 TRACE reconciliation groups
+PASS TRACE broker offline default, output remains an untrusted candidate
+PASS TRACE broker missing keys and absent spending authority fail before invocation
+PASS TRACE broker strict schema rejection, no unvalidated cache writes
+PASS TRACE broker timeout aborts and an uncertain job cannot be replayed
+PASS TRACE broker 429 respects Retry-After and rejects excessive delays
+PASS TRACE broker Retry-After HTTP date and 5xx backoff
+PASS TRACE broker outage opens a circuit without exposing exception text
+PASS TRACE broker duplicate concurrency, persistent cache and idempotency conflict
+PASS TRACE broker run, daily, provider and task ceilings reserve each failed attempt
+PASS TRACE broker secret masking and output protection
+PASS TRACE broker cancellation, queue bound and concurrency limit
+PASS TRACE broker corrupt accounting fails closed and public state is forbidden
+PASS TRACE broker monthly cap counts reservations on different days
+PASS 13 TRACE broker groups; all provider calls simulated, external spend USD 0
+PASS TRACE Cramer all eight source models and reciprocal domains independently verified
+PASS TRACE Cramer singular, reciprocal-zero, invalid shape, constraints and overflow quarantine
+PASS TRACE Cramer independent critic rejects altered arithmetic, cofactor signs and domain omissions
+PASS TRACE Cramer 240 seeded systems, row-swap and equation-scaling metamorphic checks
+PASS TRACE Cramer existing bulk gate accepts staged evidence and rejects changed answers/working/source labels
+PASS 5 Cramer compiler groups; no student content published
+PASS TRACE pilot seeded 30/30 stratification, stable assignment and input-order independence
+PASS TRACE pilot source claims, missing reviewers and fewer than 60 never start a real trial
+PASS TRACE pilot duplicates cannot inflate the 60-part denominator
+PASS TRACE pilot synthetic speedups are never reported as actual pilot adoption
+PASS TRACE pilot real-mode threshold logic needs reviews, all results, tests and no new observed faults
+PASS TRACE pilot failed-case effort/cost stay in the experiment and can erase an apparent speedup
+PASS TRACE pilot no post-allocation exclusions, result duplication, arm changes or plan edits
+PASS 7 pilot harness groups; no real experiment run
+PASS source guard: actual EN/TA count/method discrepancies, missing images, stale digest/edition, uncertain symbols, figures and math mutations
+PASS owner-revised active-denominator progress: no partial credit, evidence/baseline/duplicate guards, curriculum unknown and real pilot zero
+PASS TRACE dual source evidence, difficulty, payload and schema guards
+PASS TRACE dual OpenAI request is private, strict JSON and bounded
+PASS TRACE dual Gemini request uses structured JSON without unsupported constraints
+PASS TRACE dual 429 reports safe status without leaking provider body
+PASS TRACE dual local-first skips medium, and live cannot silently spend
+PASS TRACE dual offline pilot runs both mocked adapters and publishes nothing
+PASS TRACE dual a disagreement never authorizes publication
+PASS 7 TRACE dual-AI groups; all HTTP calls mocked, external spend USD 0
+PASS TRACE dual evidence grade 10 metadata fingerprints bind both books
+PASS TRACE dual evidence explicit English-first evidence does not assert Tamil review
+PASS TRACE dual evidence single-language metadata fails closed on swapped or extra pages
+PASS TRACE dual evidence reject missing and fake book identity
+PASS TRACE dual evidence reject impossible page claims and inconsistent grade
+PASS TRACE dual evidence reject absent image inspection and forged image hash
+PASS TRACE dual evidence reject swapped medium and same-page image hashes
+PASS TRACE dual evidence refusals never turn into completed review candidates
+PASS TRACE dual evidence offline mode remains safe without source attestations
+PASS 9 extra source-identity/response tests, external spend USD 0
+PASS TRACE local exact GP oracle and 12-case dual-model rehearsal; USD 0, textbook fidelity not claimed
+PASS TRACE Grade 9/10 English-first queue: 34 candidates, 34 registered, 0 review-queued; Grade 10 Ex 2.5: 21 distinct registered, 5 overlapping script ownerships; API USD 0, no release.
+PASS Paper + Indigo source tokens, 7 contrast calculations, offline cache, all-grade CSS contract
+PASS TRACE Grade 10 Chapter 2: 15 bilingual foundations, 53 source-grounded exercises, 150 current textbook records, offline ordering, no false completion
+PASS Grade 10 Chapter 2 top Next navigation remains touch-friendly, bilingual and isolated
+PASS English Exercise 2.5 has 21 of 21 source-audited tasks, six new unique parts, correct arithmetic and offline import; Tamil pending
+PASS English Exercise 2.6 has 13 student records covering all 16 of 16 source-audited tasks across 12 questions, five new unique parts, verified arithmetic/identities and offline import; Tamil pending
+PASS English Exercise 2.7 has 19 student records covering all 19 of 19 source-audited tasks across 12 questions, six new unique parts, verified GP arithmetic/identities and offline import; Tamil pending
+PASS English Exercise 2.8 has 12 student records covering all 13 of 13 source-audited tasks across 10 questions, seven new unique parts, verified GP sum/telescoping arithmetic and offline import; Tamil pending
+PASS English Exercise 2.9 has 14 student records covering all 14 of 14 source-audited tasks across 7 questions, nine new unique parts, verified special-series arithmetic/identities and offline import; Tamil pending
+PASS Grade 10 Ch 2 Ex 2.10 (15/15), Unit Ex 2 (12/12), Ch 3 Ex 3.1 (9/9) and TRACE inventory (654/664 questions, 921/932 tasks; Ch 1 & Ch 2 100% complete)
+PASS Grade 10 Ch 3 Exercises 3.2–3.6 release gate: 49/49 tasks across 21 numbered questions verified (KaTeX, source audit, math identities, duplicate guards, and TRACE inventory 654/664 questions, 921/932 tasks).
+PASS Grade 10 Ch 3 Exercises 3.7–3.9 release gate: 23/23 tasks across 7 numbered questions verified (KaTeX, source audit, math identities, duplicate guards, and TRACE inventory 654/664 questions, 921/932 tasks).
+PASS Grade 10 Ch 3 Exercises 3.10–3.12 release gate: 22/22 tasks across 14 numbered questions verified (KaTeX, source audit, 5 SVGs, math identities, duplicate guards, and TRACE inventory 654/664 questions, 921/932 tasks).
+PASS Grade 10 Ch 3 Exercises 3.13–3.14 release gate: 23/23 tasks across 11 numbered questions verified (KaTeX, source audit, no implication symbols, math identities, duplicate guards, and TRACE inventory 654/664 questions, 921/932 tasks).
+PASS G10 Ex 3.15 release: 6 printed questions, 12 EN+TA parts, 6 distinct graphs, 3 bilingual tables, KaTeX & numerical checks
+PASS Grade 10 Ch 2 GP-sum: bilingual transfer, aligned cancellation, exact formula, offline mobile lab
+PASS G.P. Fola v2 immutable URL, runtime, single reference, HTML revision and PWA cache
+PASS: Bilingual labs, exact sums, triangle rotations, cube cancellation, shifted squares and independent checks
+PASS TRACE Grade 10 Chapter 2: 15 concept stages, 63 deduplicated source-scoped question parts, independent math, HCF pedagogy and offline assets
+PASS Grade 10 Exercise 2.3: ten source-linked records, 6 numbered questions, integer arithmetic, 100 exponent checks, notation, navigation.
+PASS source-checked Grade 10 Ex 2.4 integrated Q2–Q6: ten accurate parts, full math, source provenance and offline loaded.
+PASS Midnight Precision palette: seven contrast pairs, mobile PWA, all-grade source contract
+PASS G10 Ch2 quality: 15 bilingual concepts, 7 targeted teaching repairs and functional cycle/sequence visuals, formulas and lab models
+PASS Grade 10 Chapter 3 Algebra Concepts: 14 bilingual stages, all KaTeX expressions, 14 mathematical checks, exercise links & offline cache
+PASS Grade 10 Geometry: 36 bilingual source prompts, KaTeX, offline assets and independent geometry checks.
+PASS G10 Geometry Exercise 4.3: 8 textbook prompts (EN/TA), offline figures, KaTeX and independent numerical/proof checks.
+PASS Grade 10 Geometry: 85 unique records, 41 new bilingual prompts and solutions, 15 MCQ answers, 17 original figures and deterministic checks.
+PASS Grade 9 Geometry: 69 numbered questions, 86 tasks, both languages, preserved IDs, numeric answers, all 20 MCQs, 16 construction invariants, KaTeX and offline assets
+PASS Grade 10 Chapter 4 Geometry Concepts: 12 bilingual 6-part stages, all KaTeX expressions, degeneracy & geometry math checks, PR #277 links & offline cache
+PASS Grade 10 Chapter 5 Coordinate Geometry Concepts: 12 bilingual 6-part stages, KaTeX, coordinate math, degeneracy & offline checks
+PASS Grade 10 Chapter 6 Trigonometry Concepts: 10 bilingual 6-part stages, KaTeX, identities, heights/distances & offline checks
+PASS Grade 10 Chapter 7 Mensuration Concepts: 9 bilingual 6-part stages, KaTeX, formulas, conservation & degeneracy checks
+PASS AF-01 remediations: 21 steps + 9 answers (59 stacked fractions, SHA-256 preserved), geometry guards, WCAG targets/contrast, Tamil Ch 5 parity, and audit_af01 --check.
+PASS Grade 10 Ch 5 Exercise 5.1: 18/18 source-verified subparts, 7 accessible SVGs, KaTeX, bilingual prompts, and independent coordinate geometry checks.
+PASS Grade 10 Ch 5 Exercise 5.2: 17/17 source-verified subparts, 5 coordinate SVGs, KaTeX, bilingual prompts, and independent slope checks.
+PASS Grade 10 Ch 5 Exercise 5.3: 22/22 source-verified subparts, 2 coordinate SVGs, KaTeX, bilingual prompts, and independent algebra checks.
+PASS Grade 10 Ch 5 Exercise 5.4: 15/15 source-verified subparts, 2 coordinate SVGs, KaTeX, bilingual prompts, and independent verification.
+PASS Grade 10 Ch 5 Ex 5.5 (15 MCQs) & Unit Exercise 5 (10 Qs): 25/25 verified, 3 coordinate SVGs, KaTeX, bilingual prompts, legacy preservation.
+PASS Grade 10 Ch 6 Exercise 6.1: 19/19 canonical items verified (18 new + 1 preserved), bilingual 2025 prompts, KaTeX, and independent trigonometric identity checks.
+PASS Grade 10 Ch 6 Ex 6.2 (7 items) & Ex 6.3 (6 items = 7 inventory tasks): 12 right-triangle SVGs, KaTeX, bilingual 2025 prompts, and independent trigonometric checks.
+PASS Grade 10 Ch 6 Ex 6.4 (9 tasks, 6 SVGs) & Ex 6.5 (15 MCQs): KaTeX, bilingual 2025 prompts, and independent trigonometric checks.
+PASS Grade 10 Ch 6 Unit Exercise 6 (13 tasks, 5 SVGs): KaTeX, bilingual 2025 prompts, and independent trigonometric checks.
+PASS AF-09 Ch 6 fixes: Unit Q2 split cleanly (0 ∓), all 23 SVGs orientation-aware with halos, and 46-item audit log synced.
+PASS AF-09 P0/P1 fixes: AUD03-01, AUD03-02, AUD07-03, AUD02-01, AUD06-02, and AUD07-04.
+PASS AF-09 Batch 3 fixes: AUD03-04, AUD04-01..05, AUD06-04..06, and AUD07-06.
+PASS G10 Mensuration Ex 7.1 Q1-Q5: source passports, 5 question records, navigation, KaTeX, diagrams, offline cache, exact arithmetic and 4 negative mutations. Source page-image and Tamil editorial audits remain pending.
+PASS G10 Ch7 Ex7.1 Q6–Q10 draft source/Math: 5 records, 10/10 chapter questions, exact radical/rounding, page-image evidence, accessibility, offline cache, 5 mutations. Neon Phase 1 PASS; Phase 2 CONDITIONAL GO with remediation gates still open.
+PASS G10 Mensuration Ex 7.2 & Ex 7.3 QA: 19/19 IDs in runtime/curriculum/difficulty, source-inventory & SVG parity, bilingual completeness, strict KaTeX (EN/TA), exact arithmetic + negative mutations, index.html & service-worker.js CORE.
+PASS AUD13-02: Grade 9 distance-formula reasoning, answers, invalid-step guards and independent geometry oracle.
+PASS Grade 9 Exercise 5.2: 20 bilingual tasks on 12 stable IDs, exact distance checks and four accessible SVGs
+PASS AUD14-02: six Grade 9 2025 trigonometric table results, original prompt hashes, mean differences, calculator negative controls, why-step and offline inclusion.
+PASS AUD14-02 Q4–Q6: exact prescribed 2025 table values, independent arithmetic, classic parity, immutable sources and calculator-method negative controls.
+PASS AUD14-03: nine source-pinned Grade 9 questions, 32 original option choices, six named ratios, original solutions, bilingual text and classic reader parity.
+PASS AUD14-02 released source: seven source-exact textbook prompts, immutable Grade 9 core, five reverse-table checks, two school-table sums, official key and negative calculator control.
+PASS: G9 Ch3 polynomial pilot: stage, review flags, isolated registration, math guards, offline assets.
+PASS G9 Ch5 distance concept: bilingual content, math, radical reach, nav, offline, and reviewed video SHA-256.
+PASS G9 Ch3 complete: 10/10 concepts (§§3.1–3.8), 15/15 exercises, 224/224 bilingual EN+TA items, 37 concept<->exercise links verified.
+PASS G9 Ch5 complete validation: 58/58 numbered questions across Ex 5.1–5.6, bilingual EN+TA, KaTeX, 7 SVGs, 20 MCQs, difficulty metadata, R2 concept preserved.
+PASS Grade 10 Exercise 7.4: eight unique bilingual IDs, source pages, math rendering, registration and independent calculations.
+PASS Exercise 7.5: 15 IDs, 60 choices in both languages, exact key mapping, structured formulas, registration and independent geometry arithmetic.
+PASS Unit Exercise 7: ten IDs, source pages, bilingual explanations, structured maths, registration, independent answer checks.
+PASS Grade 10 Algebra: 97 registered and reviewed bilingual tasks, 13 graphs, 19 MCQs, one source quarantine.

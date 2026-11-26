@@ -278,14 +278,27 @@ const q73_2_V = PI * 1.5 * 1.5 * (8 + (2 * 2) / 3);
 assert.ok(close(q73_2_V, 66));
 assert.ok(byId.get('c10-7-ex7-3-q2').answer.includes('66'));
 
-// Q3: Cylinder h=2.4, d=1.4 (r=0.7) minus cone -> 2.464 -> 2.46 and 2 cm³ note
-const q73_3_V = (2 / 3) * PI * 0.7 * 0.7 * 2.4;
-assert.ok(close(q73_3_V, 2.464));
+// Q3: The volume is the same in both editions. Their prompts request different precision.
+const q73_3_exact = (2 / 3) * Math.PI * (1.4 / 2) ** 2 * 2.4;
+const q73_3_textbook = (2 / 3) * PI * (1.4 / 2) ** 2 * 2.4;
+assert.ok(close(q73_3_exact, (98 / 125) * Math.PI));
+assert.ok(close(q73_3_textbook, 2.464));
 const q73_3 = byId.get('c10-7-ex7-3-q3');
-assert.ok(q73_3.answer.includes('2.46'), '7.3 Q3 must mention 2.46');
-assert.ok(q73_3.answer.includes('2 cm'), '7.3 Q3 must mention 2 cm (nearest whole cm³ note)');
+assert.match(q73_3.q.en, /to the nearest cm³\.$/);
+assert.match(q73_3.q.ta, /கனஅளவு எவ்வளவு கன செ\.மீ ஆகும்\?$/);
+assert.equal(q73_3.answer, `${Math.round(q73_3_exact)} cm³`);
+assert.equal(q73_3.answerTa, `சுமார் ${round2(q73_3_textbook)} கன செ.மீ`);
+assert.equal(q73_3.answerMath.en.fallback, q73_3.answer);
+assert.equal(q73_3.answerMath.ta.fallback, q73_3.answerTa);
+assert.match(q73_3.answerMath.en.latex, /^\\boxed\{2\\,/);
+assert.match(q73_3.answerMath.ta.latex, /^\\boxed\{\\approx2\.46\\,/);
+assert.match(q73_3.steps.at(-1).en, /Both textbook answer keys give 2\.46 cm³/);
+assert.match(q73_3.steps.at(-1).ta, /ஆங்கில வினா.*2 கன செ\.மீ/);
+assert.doesNotThrow(() => katex.renderToString(q73_3.steps.at(-1).mathTa.latex, {
+  displayMode: true, throwOnError: true, strict: 'error',
+}));
 // Mutation check: taking cone volume (1/3) instead of remaining (2/3) fails
-assert.equal(close((1 / 3) * PI * 0.7 * 0.7 * 2.4, q73_3_V), false, 'Mutation: 1/3 instead of 2/3 must fail');
+assert.equal(close((1 / 3) * PI * 0.7 * 0.7 * 2.4, q73_3_textbook), false, 'Mutation: 1/3 instead of 2/3 must fail');
 
 // Q4: Cone (r=6, h=12) + hemisphere (r=6) displaced water = 288π ≈ 905.14 cm³
 const q73_4_V = (1 / 3) * PI * 6 * 6 * 12 + (2 / 3) * PI * 6 ** 3;

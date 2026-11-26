@@ -1,0 +1,171 @@
+{
+  "c9-exercise-6-4-q1-ii": {
+    "exactWorkingConflictsToReview": [],
+    "questionDerivedMethod": "calculator_at_four_places",
+    "expected": [
+      "0.26471468452196"
+    ],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c9-exercise-6-4-q1-vi": {
+    "exactWorkingConflictsToReview": [],
+    "questionDerivedMethod": "calculator_at_four_places",
+    "expected": [
+      "2.7903338772472"
+    ],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c9-exercise-6-5-q3": {
+    "exactWorkingConflictsToReview": [],
+    "questionDerivedMethod": "exact_degree_trig",
+    "expected": [
+      "sqrt(1 - 2*sqrt(5)/5)*sqrt(2*sqrt(5) + 5)"
+    ],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "g9-ch8-ex8.3-q6": {
+    "exactWorkingConflictsToReview": [],
+    "questionDerivedMethod": "grouped_mode_interpolation",
+    "expected": [
+      "117/2",
+      "kg"
+    ],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-3-ex3-1-q2-ii": {
+    "exactWorkingConflictsToReview": [
+      [
+        "0",
+        "7/2"
+      ]
+    ],
+    "questionDerivedMethod": "exact_linear_system_rank",
+    "expected": [
+      "none"
+    ],
+    "englishAnswerMatch": true,
+    "tamilAnswerMatch": true
+  },
+  "c10-3-ex3-4-q2-iii": {
+    "exactWorkingConflictsToReview": [],
+    "questionDerivedMethod": "original_denominator_real_zeros",
+    "expected": [
+      "-2",
+      "1"
+    ],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-6-ex6-2-q3": {
+    "exactWorkingConflictsToReview": [
+      [
+        "5√3 − 5",
+        "5(1.732 − 1)"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-6-ex6-3-q3": {
+    "exactWorkingConflictsToReview": [
+      [
+        "(60)/(√(3))",
+        "(60)/(1.732)"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-6-ex6-3-q4": {
+    "exactWorkingConflictsToReview": [
+      [
+        "1200√(3)",
+        "1200×1.732"
+      ],
+      [
+        "1200√3",
+        "1200 × 1.732"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-6-ex6-4-q2": {
+    "exactWorkingConflictsToReview": [
+      [
+        "40√(3)",
+        "40(1.732)"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-6-unit-q5": {
+    "exactWorkingConflictsToReview": [
+      [
+        "(80(√(3)−1))/(2)",
+        "40(1.732−1)"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-7-ex7-1-q2": {
+    "exactWorkingConflictsToReview": [
+      [
+        "308/(2π)",
+        "49"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-7-ex7-1-q3": {
+    "exactWorkingConflictsToReview": [
+      [
+        "952π",
+        "952×(22)/(7)"
+      ]
+    ],
+    "questionDerivedMethod": "",
+    "expected": [],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  },
+  "c10-8-ex8-1-q13": {
+    "exactWorkingConflictsToReview": [],
+    "questionDerivedMethod": "frequency_population_sd",
+    "expected": [
+      "sqrt(959)/25",
+      "seconds"
+    ],
+    "englishAnswerMatch": true,
+    "tamilAnswerMatch": false
+  },
+  "c10-8-unit-q2": {
+    "exactWorkingConflictsToReview": [],
+    "questionDerivedMethod": "frequency_population_sd",
+    "expected": [
+      "sqrt(771)/5",
+      "cm"
+    ],
+    "englishAnswerMatch": false,
+    "tamilAnswerMatch": false
+  }
+}

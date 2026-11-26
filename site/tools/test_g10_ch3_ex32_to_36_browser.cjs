@@ -30,7 +30,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
    ['c10-3-ex3-4-q1-iv','p² − 3p − 40','(p + 5)/[2p(p − 4)]'],
    ['c10-3-ex3-4-q2-i','excluded values','−5, 5'],
    ['c10-3-ex3-4-q2-ii','excluded values','2, 3'],
-   ['c10-3-ex3-4-q2-iii','excluded values','1'],
+   ['c10-3-ex3-4-q2-iii','excluded values','x = −2, 1 are excluded'],
    ['c10-3-ex3-4-q2-iv','excluded values','0, −3, 2'],
    ['c10-3-ex3-5-q1-i','4x²y','(3x³z)/(5y³)'],
    ['c10-3-ex3-5-q1-ii','p² − 10p + 21','p + 4'],
@@ -73,6 +73,14 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert(qText.trim().length>=10,'Question text rendered '+id+' @'+width);
     const ansText=await page.locator('#answerText').innerText();
     assert(ansText.trim().length>0&&!/loading/i.test(ansText),'Answer text rendered '+id+' @'+width);
+    if(id==='c10-3-ex3-4-q2-iii'){
+     for (const lang of ['Ta','En']){
+      await page.locator('#lang'+lang).click();
+      const rendered=await page.locator('#answerText annotation').textContent();
+      assert.match(rendered,/x=-2,\\,1/);
+      assert.match(rendered,/(?:Reduced form|எளிய வடிவம்).*x=1/);
+     }
+    }
     if(id.startsWith('c10-3-ex3-2-')){
      for(const lang of ['Ta','En']){
       await page.locator('#lang'+lang).click();

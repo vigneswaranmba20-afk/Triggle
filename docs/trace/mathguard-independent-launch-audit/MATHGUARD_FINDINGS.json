@@ -1,0 +1,2804 @@
+{
+  "schemaVersion": 1,
+  "mainBaseline": "413a7540c4a6054b98f20d9c43d73b66ddb6332b",
+  "mathGuardBaseline": "985a9bbf6c34a9cd069a3cba3c04c078a0f3c0a1",
+  "releaseDecision": "HOLD",
+  "coverage": {
+    "chapters": 17,
+    "exerciseSections": 129,
+    "catalogueCards": 1609,
+    "ledgerSections": 129,
+    "registeredOutsideCatalogueIds": [
+      "c10-2-ex2-7-q2-ii",
+      "c10-6-6-1-1",
+      "c10-6-6-1-2",
+      "c10-6-6-1-3",
+      "c10-6-6-2-4",
+      "c10-6-6-2-5",
+      "c10-6-6-2-6",
+      "c10-6-6-3-7",
+      "c10-6-6-3-8",
+      "c10-6-6-3-9",
+      "c10-6-6-4-10",
+      "c10-6-6-4-11",
+      "c10-6-6-4-12",
+      "c10-6-6-5-13",
+      "c10-6-6-5-14",
+      "c10-6-6-5-15",
+      "c10-6-6-5-16",
+      "c10-6-6-unit-17"
+    ],
+    "ledgerOnlyCardSectionTuples": [],
+    "runtimeOnlyCardSectionTuples": [],
+    "canonicalTasks": 1774,
+    "eligibleTasks": 1756,
+    "eligibleAttempts": 1756,
+    "corrected": 3,
+    "counts": {
+      "VERIFIED_WORKING": 9,
+      "VERIFIED_FINAL_ANSWER": 318,
+      "FAILED": 3,
+      "PARTIAL": 509,
+      "UNSUPPORTED": 917,
+      "UNTESTED": 0,
+      "QUARANTINED": 18
+    },
+    "byGradeChapter": {
+      "9/1": {
+        "UNSUPPORTED": 113,
+        "VERIFIED_FINAL_ANSWER": 51,
+        "PARTIAL": 11,
+        "QUARANTINED": 1
+      },
+      "9/2": {
+        "UNSUPPORTED": 10,
+        "VERIFIED_FINAL_ANSWER": 71,
+        "PARTIAL": 39
+      },
+      "9/3": {
+        "UNSUPPORTED": 81,
+        "PARTIAL": 47,
+        "VERIFIED_FINAL_ANSWER": 97,
+        "QUARANTINED": 2
+      },
+      "9/4": {
+        "UNSUPPORTED": 70,
+        "VERIFIED_FINAL_ANSWER": 2,
+        "PARTIAL": 14
+      },
+      "9/5": {
+        "UNSUPPORTED": 49,
+        "VERIFIED_FINAL_ANSWER": 14,
+        "PARTIAL": 12
+      },
+      "9/6": {
+        "VERIFIED_FINAL_ANSWER": 22,
+        "PARTIAL": 17,
+        "UNSUPPORTED": 12,
+        "QUARANTINED": 3
+      },
+      "9/7": {
+        "VERIFIED_FINAL_ANSWER": 8,
+        "UNSUPPORTED": 28,
+        "PARTIAL": 5,
+        "QUARANTINED": 1
+      },
+      "9/8": {
+        "PARTIAL": 13,
+        "UNSUPPORTED": 8,
+        "VERIFIED_FINAL_ANSWER": 8,
+        "VERIFIED_WORKING": 3
+      },
+      "9/9": {
+        "UNSUPPORTED": 24,
+        "PARTIAL": 7
+      },
+      "10/1": {
+        "VERIFIED_FINAL_ANSWER": 10,
+        "UNSUPPORTED": 102,
+        "PARTIAL": 12
+      },
+      "10/2": {
+        "UNSUPPORTED": 58,
+        "PARTIAL": 95,
+        "VERIFIED_FINAL_ANSWER": 7,
+        "QUARANTINED": 1
+      },
+      "10/3": {
+        "VERIFIED_FINAL_ANSWER": 8,
+        "PARTIAL": 84,
+        "UNSUPPORTED": 142,
+        "FAILED": 1,
+        "QUARANTINED": 1
+      },
+      "10/4": {
+        "UNSUPPORTED": 53,
+        "PARTIAL": 31,
+        "QUARANTINED": 4
+      },
+      "10/5": {
+        "VERIFIED_FINAL_ANSWER": 6,
+        "PARTIAL": 46,
+        "UNSUPPORTED": 44,
+        "QUARANTINED": 1
+      },
+      "10/6": {
+        "UNSUPPORTED": 53,
+        "PARTIAL": 12,
+        "FAILED": 2,
+        "QUARANTINED": 2
+      },
+      "10/7": {
+        "VERIFIED_FINAL_ANSWER": 1,
+        "PARTIAL": 10,
+        "UNSUPPORTED": 51
+      },
+      "10/8": {
+        "VERIFIED_FINAL_ANSWER": 13,
+        "PARTIAL": 54,
+        "UNSUPPORTED": 19,
+        "QUARANTINED": 2,
+        "VERIFIED_WORKING": 6
+      }
+    },
+    "catalogueCardsWithoutCanonicalMapping": [],
+    "workingConflictCandidateCards": 8,
+    "oracleAnswerReviewCandidateCards": 8
+  },
+  "regressionRuns": {
+    "baseline": {
+      "historical": {
+        "discovered": 1654,
+        "executed": 1654,
+        "passed": 1654,
+        "failed": 0,
+        "falseAcceptances": 0,
+        "falseRejections": 0
+      },
+      "v15": {
+        "schemaVersion": 1,
+        "engine": "TRACE MathGuard V1.5",
+        "provenance": {
+          "mainSuite": "developer_generated_deterministic_and_property_based",
+          "holdoutSuite": "separately_seeded_independent_holdout"
+        },
+        "totalCases": 450,
+        "passed": 450,
+        "failed": 0,
+        "abstentions": 26,
+        "falseAcceptances": 0,
+        "falseRejections": 0
+      }
+    },
+    "candidate": {
+      "historical": {
+        "discovered": 1654,
+        "executed": 1654,
+        "passed": 1654,
+        "failed": 0,
+        "falseAcceptances": 0,
+        "falseRejections": 0
+      },
+      "v15": {
+        "schemaVersion": 1,
+        "engine": "TRACE MathGuard V1.5",
+        "provenance": {
+          "mainSuite": "developer_generated_deterministic_and_property_based",
+          "holdoutSuite": "separately_seeded_independent_holdout"
+        },
+        "totalCases": 450,
+        "passed": 450,
+        "failed": 0,
+        "abstentions": 26,
+        "falseAcceptances": 0,
+        "falseRejections": 0
+      }
+    }
+  },
+  "independentEngineTests": {
+    "baselinePassed": 10,
+    "baselineFailed": 21,
+    "candidatePassed": 31,
+    "logs": [
+      "logs/independent-expanded-baseline.log",
+      "logs/independent-expanded-candidate.log"
+    ]
+  },
+  "engineFindings": [
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-001",
+      "finding": "Correct union working certified the separately wrong roster {2,5,13}.",
+      "derived": "{2,5} ∪ {11} = {2,5,11}. Final answer checked against question rosters in candidate."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-002",
+      "finding": "Generic answer fallback accepted 52 and 51.01 for exact 17+34, and accepted an unrelated declaration a=5 as the answer to 99−7.",
+      "derived": "Exact answers are 51 and 92. The candidate binds supported exact numeric answers to the stem and abstains outside that grammar."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "Tamil parity omitted missing question and working",
+      "id": "ENG-003",
+      "finding": "A translated numeric answer alone certified Tamil parity with missing Tamil question and working.",
+      "derived": "Candidate records missing fields. Full bilingual semantic review remains separate."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-004",
+      "finding": "The engine counted √(x²)=x and (x²−1)/(x−1)=x+1 for all real x as verified.",
+      "derived": "At x=−1 the first left side is 1. At x=1 only the second right side is defined. Candidate checks the explicit universal real domain for supported single-variable equalities."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-005",
+      "finding": "5 kg = 5 m passed after unit normalization.",
+      "derived": "Mass and length dimensions differ. Candidate recognizes gram, kilogram and milligram in pure conversions."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-006",
+      "finding": "A worked step replaced a given roster and certified a changed set.",
+      "derived": "The original question fixes A={2,5}. A student step cannot replace 5 with 7. Candidate preserves declared rosters."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-007",
+      "finding": "A Venn calculation returned a known region before establishing feasibility of all regions.",
+      "derived": "A two-member subset of a one-member universe is impossible. Candidate checks nonnegative integer feasibility with a bounded exact search."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-008",
+      "finding": "Composition simplification discarded a pole or accepted an input outside the outer domain.",
+      "derived": "For f(x)=(x−1)/(x+1), f(f(x)) simplifies to −1/x but excludes both −1 and 0. An outer function on the naturals cannot take g(1)=1/2 when g(x)=x/2."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-009",
+      "finding": "Composition equality treated matching simplified expressions as equal functions despite unequal domains.",
+      "derived": "The Möbius functions f(x)=(x−1)/(x+1) and g(x)=(1+x)/(1−x) have both compositions simplifying to x. The first excludes 1 and the second excludes −1. Domains are retained before comparison."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-010",
+      "finding": "The function reasoner accepted totality or evaluation outside the provided domain and codomain.",
+      "derived": "√x cannot define a total real-valued function on all reals, and a negative result for a declared nonnegative codomain is invalid."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-011",
+      "finding": "The reasoner inferred surjectivity and non-injectivity from degree without respecting integer inputs.",
+      "derived": "2x maps integers to even integers. For 2x²+x, two distinct integer inputs would require 2(x+y)+1=0, an impossibility."
+    },
+    {
+      "grade": 10,
+      "chapter": 7,
+      "questionId": "c10-7-ex7-1-q1",
+      "sourceEvidence": "Source-pinned production stem and independently constructed mutated answers. The same two-measure check applies to Q2.",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The verified radius and height have the same physical values in English and Tamil. The repaired acceptance path reads the English exercise answer. Tamil parity has its own remaining coverage limits.",
+      "id": "ENG-012",
+      "finding": "The English mensuration answer checker ignored measure labels, discarded the minus sign and accepted metres as centimetres. It rejected equivalent converted lengths.",
+      "derived": "With r=5k and h=7k, the textbook π=22/7 convention gives 220k²=5500, so r=25 cm and h=35 cm. Candidate binds the two named measures and converts their units."
+    }
+  ],
+  "curriculumFindings": [
+    {
+      "id": "CURR-003",
+      "grade": 10,
+      "chapter": 3,
+      "questionId": "c10-3-ex3-4-q2-iii",
+      "original": "The reader gave x=1 as the only exclusion without distinguishing the original quotient from its reduced form.",
+      "corrected": "The original denominator (x+2)(x−1) vanishes at −2 and 1. Cancellation gives (x+4)/(x−1) on the original domain. The reduced expression, considered separately, excludes 1, as the textbook convention and key specify.",
+      "sourceEvidence": {
+        "edition": 2025,
+        "EN": {
+          "pdf": 105,
+          "keyPdf": 343,
+          "keyPrinted": 337
+        },
+        "TA": {
+          "pdf": 107,
+          "keyPdf": 357,
+          "keyPrinted": 351
+        }
+      },
+      "englishTamilImpact": "Both answers display the original exclusions and the lowest-term convention. Both hint sets explain why cancelling a factor does not extend the original domain.",
+      "regression": "site/tools/test_g10_ch3_ex32_to_36_browser.cjs",
+      "deployed": false
+    },
+    {
+      "id": "CURR-001",
+      "grade": 10,
+      "chapter": 6,
+      "questionId": "c10-6-ex6-1-q3-i",
+      "original": "The proof assumes an acute angle and the rendered answer omits cos θ > 0.",
+      "corrected": "(1+sin θ)/|cos θ| = |sec θ+tan θ|",
+      "sourceEvidence": {
+        "edition": 2025,
+        "EN": {
+          "pdf": 256,
+          "printed": 250
+        },
+        "TA": {
+          "pdf": 264,
+          "printed": 258
+        }
+      },
+      "englishTamilImpact": "Both solutions keep the absolute value and give the 180° counterexample. Both rendered answers state cos θ > 0.",
+      "regression": "test_trig_reader.cjs",
+      "deployed": false
+    },
+    {
+      "id": "CURR-002",
+      "grade": 10,
+      "chapter": 6,
+      "questionId": "c10-6-ex6-1-q3-ii",
+      "original": "The proof assumes an acute angle and the rendered answer omits cos θ > 0.",
+      "corrected": "2/|cos θ| = 2|sec θ|",
+      "sourceEvidence": {
+        "edition": 2025,
+        "EN": {
+          "pdf": 256,
+          "printed": 250
+        },
+        "TA": {
+          "pdf": 264,
+          "printed": 258
+        }
+      },
+      "englishTamilImpact": "Both solutions keep the absolute value and give the 180° counterexample. Both rendered answers state cos θ > 0.",
+      "regression": "test_trig_reader.cjs",
+      "deployed": false
+    }
+  ],
+  "verifiedProbabilityWorking": {
+    "6": "20 of 36 ordered outcomes, 5/9.",
+    "7": "13 of 18 odd-numbered cards.",
+    "8": "All outcomes except TTT, 7/8.",
+    "11": "All eight outcomes.",
+    "12": "11/48, 11/24, 11/16. All eight probability atoms are nonnegative.",
+    "13": "17 even, seven additional odd prime boys, five additional odd composite girls, 29/35."
+  },
+  "openEngineFindings": [
+    {
+      "id": "ENG-013",
+      "question": "Find the area of a circle of radius 100 cm. Use π = 22/7 and round to two decimal places.",
+      "submittedAnswer": "Area = 31415.93 cm²",
+      "independentlyDerivedAnswer": "31428.57 cm²",
+      "expectedStatus": "FAIL",
+      "observedStatus": "PASS",
+      "evidence": {
+        "numericMatch": {
+          "matched": true,
+          "mode": "exact",
+          "derived_value": 31415.926535897932,
+          "abs_diff": 0.0034641020683920942
+        },
+        "observedDimension": "area"
+      },
+      "baselineObservedStatus": "PASS",
+      "repairStatus": "OPEN",
+      "regression": "reproduce_engine.py open-findings"
+    },
+    {
+      "id": "ENG-014",
+      "question": "Find the area of a rectangle with length 8 cm and width 5 cm.",
+      "submittedAnswer": "Area = 1 cm²; an unrelated check figure is 40 cm²",
+      "independentlyDerivedAnswer": "40 cm²",
+      "expectedStatus": "FAIL",
+      "observedStatus": "PASS",
+      "evidence": {
+        "numericMatch": {
+          "matched": true,
+          "mode": "22/7",
+          "derived_value": 40.0,
+          "abs_diff": 0.0
+        },
+        "observedDimension": "area"
+      },
+      "baselineObservedStatus": "PASS",
+      "repairStatus": "OPEN",
+      "regression": "reproduce_engine.py open-findings"
+    }
+  ],
+  "statisticsReviews": {
+    "STAT-001": {
+      "grade": 9,
+      "chapter": 8,
+      "questionId": "g9-ch8-ex8.3-q6",
+      "sources": {
+        "EN": 293,
+        "TA": 311
+      },
+      "sourceDifference": "English asks for mode. Tamil asks for mean, median and mode from the same frequencies.",
+      "derived": "Mode 117/2 kg, midpoint-estimated mean 559/10 kg, interpolated median 793/14 kg.",
+      "disposition": "Bilingual working and all three results independently verified."
+    },
+    "STAT-002": {
+      "grade": 10,
+      "chapter": 8,
+      "questionId": "c10-8-ex8-1-q5",
+      "sources": {
+        "EN": 319,
+        "TA": 328
+      },
+      "sourceDifference": "English says nine wages. Tamil says ten. Both list the same nine values.",
+      "derived": "For the nine listed values, mean 300 rupees, variance 2000/9 square rupees, deviation 20√5/3 rupees.",
+      "disposition": "The conditional calculation is correct. The tenth Tamil value remains unknown. Existing source status preserved."
+    }
+  },
+  "quarantine": [
+    {
+      "taskId": "g9/ch1/ex1.7/q12/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [
+        "g9-ch1-ex1.7-q12"
+      ],
+      "source": {
+        "en": {
+          "pdfPages": [
+            43
+          ],
+          "printedPages": [
+            37
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            46
+          ],
+          "printedPages": [
+            40
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "Intersection x has 35−x Carrom-only, 20−x Chess-only and x−5 neither. All are nonnegative exactly for integers 5 through 20. Both reader languages correctly give the range and explain the condition for 5."
+    },
+    {
+      "taskId": "g9/ch3/ex3.15/q9/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [
+        "g9-ch3-ex3.15-q9"
+      ],
+      "source": {
+        "en": {
+          "pdfPages": [
+            140
+          ],
+          "printedPages": [
+            134
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            151
+          ],
+          "printedPages": [
+            145
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "Division gives p(x)=(x−a)Q(x)+p(a). If p(a)=0, x−a is both a divisor and a factor. Both reader languages identify choices (1) and (4)."
+    },
+    {
+      "taskId": "g9/ch3/ex3.15/q28/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [
+        "g9-ch3-ex3.15-q28"
+      ],
+      "source": {
+        "en": {
+          "pdfPages": [
+            142
+          ],
+          "printedPages": [
+            136
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            152
+          ],
+          "printedPages": [
+            146
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "Distinct primes have GCD 1, while gcd(2,2)=2. The two editions omit distinctness. Both reader languages correctly present the two cases."
+    },
+    {
+      "taskId": "g9/ch6/ex6.1/q6/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [
+        "c9-exercise-6-1-q6"
+      ],
+      "source": {
+        "en": {
+          "pdfPages": [
+            233
+          ],
+          "printedPages": [
+            227
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            247
+          ],
+          "printedPages": [
+            241
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "For the intended acute right-triangle model, cos θ=b/√(a²+b²) and both products are ab/√(a²+b²). Without positive b, a=3, b=−4 and acute sin θ=3/5 give −12/5 and 12/5. Both reader languages show the same valid condition and counterexample."
+    },
+    {
+      "taskId": "g9/ch6/ex6.5/q5/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [],
+      "source": {
+        "en": {
+          "pdfPages": [
+            246
+          ],
+          "printedPages": [
+            240
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            260
+          ],
+          "printedPages": [
+            254
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "2θ=60° or 120° yields θ=30° or 60° within the acute-angle interpretation. Both are printed options. No reader card."
+    },
+    {
+      "taskId": "g9/ch6/ex6.5/q6/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [],
+      "source": {
+        "en": {
+          "pdfPages": [
+            246
+          ],
+          "printedPages": [
+            240
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            260
+          ],
+          "printedPages": [
+            254
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "The first term equals 3. The second equals 2 cos(41°)/cos(51°), giving approximately 5.3984908 in total. None of 2, 3, 5, 6 is exact. Both languages print the same angles. No reader card."
+    },
+    {
+      "taskId": "g9/ch7/ex7.4/q7/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [
+        "g9-ch7-ex7.4-q7"
+      ],
+      "source": {
+        "en": {
+          "pdfPages": [
+            270
+          ],
+          "printedPages": [
+            264
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            285
+          ],
+          "printedPages": [
+            279
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "Surface area is 6s². The areas have ratio 4:9 and 16:36 is equivalent. Both reader languages correctly explain both options."
+    },
+    {
+      "taskId": "g10/ch2/ex2.7/q12/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [
+        "c10-2-ex2-7-q12"
+      ],
+      "source": {
+        "en": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            79
+          ],
+          "printedPages": [
+            73
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "With AP difference d, the expression is x^(−d)y^(2d)z^(−d). Positive bases permit (y²/(xz))^d=1. Taking a,b,c=0,1/2,1 and x=y=z=−1 makes the printed real expression undefined. The positive-base proof is sound in both reader languages."
+    },
+    {
+      "taskId": "g10/ch3/ex3.20/q11/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [],
+      "source": {
+        "en": {
+          "pdfPages": [
+            161
+          ],
+          "printedPages": [
+            155
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            165
+          ],
+          "printedPages": [
+            159
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "English Vieta gives p²/q²−2r/q=−p²/q², hence p²=qr. Tamil reverses the premise. For q=1,p=−1,r=0, x²+x has roots 0,−1 and their squares are roots of x²−x, yet (1,−1,0) fails p²=qr. No reader card."
+    },
+    {
+      "taskId": "g10/ch4/ex4.2/q8/i",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [
+        "c10-4-ex4-2-q8-i"
+      ],
+      "source": {
+        "en": {
+          "pdfPages": [
+            188
+          ],
+          "printedPages": [
+            182
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            194
+          ],
+          "printedPages": [
+            188
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "BD+DC=5, so AB+BC=10=AC. The triangle is degenerate. Also 3/7 differs from 1/2. The bilingual diagnosis is correct."
+    },
+    {
+      "taskId": "g10/ch4/ex4.unit/q6/i",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [],
+      "source": {
+        "en": {
+          "pdfPages": [
+            207
+          ],
+          "printedPages": [
+            201
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            214
+          ],
+          "printedPages": [
+            208
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "Take D at 0, B at −a/2, C at a/2 and E at signed coordinate t. Then b²=p²−at+a²/4. Printed plus sign requires t=−x (or x=0); t=+x reverses it. The paired pages supply neither order nor figure for Q6. No reader card."
+    },
+    {
+      "taskId": "g10/ch4/ex4.unit/q6/ii",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [],
+      "source": {
+        "en": {
+          "pdfPages": [
+            207
+          ],
+          "printedPages": [
+            201
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            214
+          ],
+          "printedPages": [
+            208
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "With the same signed coordinate t, c²=p²+at+a²/4. The printed minus sign requires t=−x (or x=0). Their sum in part iii is unaffected. No reader card for ii."
+    },
+    {
+      "taskId": "g10/ch4/ex4.unit/q10/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [],
+      "source": {
+        "en": {
+          "pdfPages": [
+            207
+          ],
+          "printedPages": [
+            201
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            214
+          ],
+          "printedPages": [
+            208
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "D and E fix no F. If D,E,F are internal and CD, AE, BF are concurrent, Ceva gives (5/3)(3/2)(CF/FA)=1 and CF=6 from AC=21. The concurrency is absent in both. No reader card."
+    },
+    {
+      "taskId": "g10/ch5/ex5.2/q12/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [
+        "c10-5-ex5-2-q12"
+      ],
+      "source": {
+        "en": {
+          "pdfPages": [
+            227
+          ],
+          "printedPages": [
+            221
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            234
+          ],
+          "printedPages": [
+            228
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "AB and CD are horizontal. The BC and DA equations intersect at (6,−25/4), interior to both segments. Under order ABDC the other two slopes are 3/2 and −3/2. The bilingual reader correctly distinguishes both orders."
+    },
+    {
+      "taskId": "g10/ch6/ex6.1/q7/i",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [
+        "c10-6-ex6-1-q7-i"
+      ],
+      "source": {
+        "en": {
+          "pdfPages": [
+            256
+          ],
+          "printedPages": [
+            250
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            264
+          ],
+          "printedPages": [
+            258
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "Since (sin θ+cos θ)²≤2 for real θ, no real angle satisfies the premise. Formally the premise gives sin θ cos θ=1 and hence the printed algebraic consequence 1. Both reader languages explain the impossibility."
+    },
+    {
+      "taskId": "g10/ch6/ex6.1/q7/ii",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [
+        "c10-6-ex6-1-q7-ii"
+      ],
+      "source": {
+        "en": {
+          "pdfPages": [
+            256
+          ],
+          "printedPages": [
+            250
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            264
+          ],
+          "printedPages": [
+            258
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "All solutions have θ=30°+180°k. Then 3θ=90°+540°k and tan(3θ) is undefined. On the right, tan²θ=1/3 gives a zero denominator and nonzero numerator. Both reader languages correctly demonstrate the acute representative."
+    },
+    {
+      "taskId": "g10/ch8/ex8.4/q1/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [],
+      "source": {
+        "en": {
+          "pdfPages": [
+            335
+          ],
+          "printedPages": [
+            329
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            347
+          ],
+          "printedPages": [
+            341
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "Monotonicity requires P(A∪B)≥2/3, contradicted by 1/3. Formal inclusion–exclusion yields 11/15>min(2/3,2/5), another contradiction. Both editions agree on the incompatible data. No reader card."
+    },
+    {
+      "taskId": "g10/ch8/ex8.5/q11/whole",
+      "status": "SOURCE_BLOCKED",
+      "readerCards": [],
+      "source": {
+        "en": {
+          "pdfPages": [
+            336
+          ],
+          "printedPages": [
+            330
+          ]
+        },
+        "ta": {
+          "pdfPages": [
+            349
+          ],
+          "printedPages": [
+            343
+          ]
+        }
+      },
+      "sourcePagesVisuallyCompared": [
+        "en",
+        "ta"
+      ],
+      "independentReview": "For N=10k+r pages numbered 1 through N, favourable count is 7k+min(r,6). For N=10 it gives 7/10; for N=9 it gives 2/3. Both editions omit N. No reader card."
+    }
+  ],
+  "frozenBenchmark": {
+    "baseline": {
+      "statuses": {
+        "PARTIAL": 74,
+        "PASS": 256,
+        "UNVERIFIABLE": 4
+      },
+      "answerStatuses": {
+        "PASS": 328,
+        "UNVERIFIABLE": 6
+      },
+      "claims": {
+        "total": 1708,
+        "verified": 1595,
+        "failed": 0,
+        "unsupported": 113,
+        "verifiedRatePct": 93.38
+      },
+      "runtimeSec": 27.72,
+      "peakMemoryMB": 91.18
+    },
+    "candidate": {
+      "statuses": {
+        "PARTIAL": 74,
+        "PASS": 256,
+        "UNVERIFIABLE": 4
+      },
+      "answerStatuses": {
+        "PASS": 327,
+        "UNVERIFIABLE": 7
+      },
+      "claims": {
+        "total": 1708,
+        "verified": 1595,
+        "failed": 0,
+        "unsupported": 113,
+        "verifiedRatePct": 93.38
+      },
+      "runtimeSec": 54.86,
+      "peakMemoryMB": 90.61
+    },
+    "observedFileSha256": "bccf5645dadb2c22d067ccecd014c9a6bfd3c0c2173911beee1c939316645035",
+    "declaredDatasetDigest": "e72571d9be9c0978cab84762b5c21f356a78d04c799d2ba6a75d060093005f9b",
+    "productionCardsWithMatchingId": 297,
+    "nonPassWorkingInvestigation": [
+      {
+        "id": "c10-3-3-practice-18",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 3,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "−2 and −3",
+            "evidence": "no_equality_relation",
+            "disposition": "This step has no parsed equality. Review the actual theorem, construction or prose rather than counting the line as a proved equality."
+          }
+        ],
+        "evidenceCounts": {
+          "no_equality_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-2-q1-iii",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 4,
+        "claimsTotal": 5,
+        "unsupportedClaims": [
+          {
+            "step": 2,
+            "line": "x^3+2x^2-4x-8=(x-2)(x^2+4x+4)+0\\implies\\text{GCD}=x(x^2+4x+4)",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-5-q3-i",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 2,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\dfrac{(2a+3)(a+1)}{(2a+3)(a+2)}\\times\\dfrac{-5(a+5)(a+2)}{(a+5)(a+1)}",
+            "evidence": "standalone_expression_no_relation",
+            "disposition": "A displayed expression alone does not assert an equality. Recover its relation to the question or adjacent working."
+          }
+        ],
+        "evidenceCounts": {
+          "standalone_expression_no_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-5-q3-ii",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 2,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\dfrac{(b+7)(b-4)}{(b+2)^2}\\times\\dfrac{(b-7)(b+2)}{(b-7)(b+7)}",
+            "evidence": "standalone_expression_no_relation",
+            "disposition": "A displayed expression alone does not assert an equality. Recover its relation to the question or adjacent working."
+          }
+        ],
+        "evidenceCounts": {
+          "standalone_expression_no_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-5-q3-iii",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 2,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\dfrac{x+2}{4y}\\times\\dfrac{12y^2}{(x-3)(x+2)}",
+            "evidence": "standalone_expression_no_relation",
+            "disposition": "A displayed expression alone does not assert an equality. Recover its relation to the question or adjacent working."
+          }
+        ],
+        "evidenceCounts": {
+          "standalone_expression_no_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-5-q3-iv",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 2,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\dfrac{2(3t-4)(2t-1)}{3t}\\times\\dfrac{2t(t+2)}{(3t-4)(t+2)}",
+            "evidence": "standalone_expression_no_relation",
+            "disposition": "A displayed expression alone does not assert an equality. Recover its relation to the question or adjacent working."
+          }
+        ],
+        "evidenceCounts": {
+          "standalone_expression_no_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-5-q5",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\dfrac{p(x)}{q(x)}=\\dfrac{x-7}{x+2}\\implies\\dfrac{(x-7)(x+2)}{q(x)}=\\dfrac{x-7}{x+2}",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-8-q2-ii",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 9,
+        "claimsTotal": 10,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "&100+220x+361x^2+bx^3+ax^4",
+            "evidence": "standalone_expression_no_relation",
+            "disposition": "A displayed expression alone does not assert an equality. Recover its relation to the question or adjacent working."
+          }
+        ],
+        "evidenceCounts": {
+          "standalone_expression_no_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-10-q1-iii",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 5,
+        "claimsTotal": 7,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "a^2-7a&=9\\times 2=18",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 1,
+            "line": "(a-9)(a+2)=0\\implies a=9",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1,
+          "unverified_implication": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-10-q1-iv",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 6,
+        "claimsTotal": 7,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "a\\times c=\\sqrt{2}\\times 5\\sqrt{2}=5\\times 2=10,",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-10-q2",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 5,
+        "claimsTotal": 6,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "(n-6)(n+5)=0\\implies n=6",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-12-q4",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 7,
+        "claimsTotal": 8,
+        "unsupportedClaims": [
+          {
+            "step": 3,
+            "line": "\\text{Girl}=2x=20\\text{ years},",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-12-q5",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 10,
+        "claimsTotal": 12,
+        "unsupportedClaims": [
+          {
+            "step": 2,
+            "line": "(x+16)(x-12)&=0\\implies x=12",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          },
+          {
+            "step": 3,
+            "line": "\\text{Yes: }12\\text{ m and }16\\text{ m}\\quad(12^2+16^2=20^2)",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 1,
+          "unparsed_equation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-12-q6",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 6,
+        "claimsTotal": 8,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\sqrt{\\dfrac{2x^2}{2}}+\\dfrac{8}{9}(2x^2)+2=2x^2\\implies x+\\dfrac{16}{9}x^2+2=2x^2",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          },
+          {
+            "step": 3,
+            "line": "x=6\\implies \\text{Total bees}=2x^2=2(6^2)=72",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-12-q7",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 7,
+        "claimsTotal": 8,
+        "unsupportedClaims": [
+          {
+            "step": 2,
+            "line": "(x+140)(x-28)=0\\implies x=28\\text{ m}",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-12-q8",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 8,
+        "claimsTotal": 9,
+        "unsupportedClaims": [
+          {
+            "step": 3,
+            "line": "(w-8)(w-2)=0\\implies w=2\\text{ m}",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-12-q9",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 6,
+        "claimsTotal": 8,
+        "unsupportedClaims": [
+          {
+            "step": 2,
+            "line": "(x-7)(x-24)=0\\implies x=7",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          },
+          {
+            "step": 3,
+            "line": "\\text{Sides}=7\\text{ cm}, 24\\text{ cm}, 25\\text{ cm}\\implies \\text{smallest side}=7\\text{ cm}",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-13-q2-i",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 9,
+        "claimsTotal": 10,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\Delta=b^2-4ac&=0",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-13-q4",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "UNVERIFIABLE",
+        "claimsVerified": 10,
+        "claimsTotal": 11,
+        "unsupportedClaims": [
+          {
+            "step": 3,
+            "line": "\\Delta>0\\quad(\\text{real and unequal roots})",
+            "evidence": "unverified_inequality",
+            "disposition": "The engine did not establish the inequality under the stated domain. Check the sign conditions before accepting the comparison."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_inequality": 1
+        },
+        "independentRecheck": "Discriminant 72(a²+b²)>0 if a≠b. When a=b≠0 the equation is linear with one root, and when a=b=0 it is identically zero."
+      },
+      {
+        "id": "c10-3-ex3-14-q1-iv",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\dfrac{(\\alpha^2+\\beta^2)+3(\\alpha+\\beta)}{\\alpha\\beta}",
+            "evidence": "standalone_expression_no_relation",
+            "disposition": "A displayed expression alone does not assert an equality. Recover its relation to the question or adjacent working."
+          },
+          {
+            "step": 2,
+            "line": "\\dfrac{(\\alpha+\\beta)^2-2\\alpha\\beta+3(\\alpha+\\beta)}{\\alpha\\beta}",
+            "evidence": "standalone_expression_no_relation",
+            "disposition": "A displayed expression alone does not assert an equality. Recover its relation to the question or adjacent working."
+          }
+        ],
+        "evidenceCounts": {
+          "standalone_expression_no_relation": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-14-q2-iii",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 7,
+        "claimsTotal": 8,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\alpha^2+\\beta^2&=\\left(\\dfrac{7}{2}\\right)^2-2\\left(\\dfrac{5}{2}\\right)=\\dfrac{49}{4}-5=\\dfrac{29}{4}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-14-q3-i",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 5,
+        "claimsTotal": 6,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\text{Product}&=\\alpha^2\\beta^2=(\\alpha\\beta)^2=(-4)^2=16",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-14-q3-ii",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 4,
+        "claimsTotal": 6,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\text{Sum}&=\\dfrac{2}{\\alpha}+\\dfrac{2}{\\beta}=\\dfrac{2(\\alpha+\\beta)}{\\alpha\\beta}=\\dfrac{2(-6)}{-4}=3",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 1,
+            "line": "\\text{Product}&=\\dfrac{2}{\\alpha}\\times\\dfrac{2}{\\beta}=\\dfrac{4}{\\alpha\\beta}=\\dfrac{4}{-4}=-1",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-14-q4",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 10,
+        "claimsTotal": 11,
+        "unsupportedClaims": [
+          {
+            "step": 2,
+            "line": "a^2&=169+56=225",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-14-q5",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 7,
+        "claimsTotal": 10,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\text{Roots}=\\alpha, 2\\alpha",
+            "evidence": "unparsed_rhs",
+            "disposition": "The right-hand side failed to parse. Normalize the authored notation before attempting verification."
+          },
+          {
+            "step": 3,
+            "line": "\\alpha=-4&: a=6(-4)=-24",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 3,
+            "line": "\\alpha=4&: a=6(4)=24",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_rhs": 1,
+          "missing_variable_bindings": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-14-q6",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 8,
+        "claimsTotal": 9,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\text{Roots}=\\alpha, \\alpha^2",
+            "evidence": "unparsed_rhs",
+            "disposition": "The right-hand side failed to parse. Normalize the authored notation before attempting verification."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_rhs": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-15-q1-i",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\text{Points: }(1000, 500),\\ (2000, 1000),\\ (4000, 2000),\\ (6000, 3000)",
+            "evidence": "no_equality_relation",
+            "disposition": "This step has no parsed equality. Review the actual theorem, construction or prose rather than counting the line as a proved equality."
+          }
+        ],
+        "evidenceCounts": {
+          "no_equality_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-15-q2-i",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "y = \\dfrac{24}{x}, \\quad x > 0,\\ y > 0",
+            "evidence": "unparsed_rhs",
+            "disposition": "The right-hand side failed to parse. Normalize the authored notation before attempting verification."
+          },
+          {
+            "step": 1,
+            "line": "(1,24),\\ (2,12),\\ (3,8),\\ (4,6),\\ (6,4),\\ (8,3),\\ (12,2)",
+            "evidence": "no_equality_relation",
+            "disposition": "This step has no parsed equality. Review the actual theorem, construction or prose rather than counting the line as a proved equality."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_rhs": 1,
+          "no_equality_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-15-q2-ii",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "xy = 24 \\quad (x,\\ y > 0)",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_equation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-15-q3-i",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "y = kx \\quad \\text{with} \\quad k = \\dfrac{1}{2}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 1,
+            "line": "k = \\dfrac{y}{x} = \\dfrac{1}{2} = \\dfrac{2}{4} = \\dfrac{3}{6} = \\dfrac{6}{12} = \\dfrac{1}{2}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-15-q4-i",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "xy = 2\\times 45 = 3\\times 30 = 6\\times 15 = 9\\times 10 = 90",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 1,
+            "line": "(2,45),\\ (3,30),\\ (6,15),\\ (9,10)",
+            "evidence": "no_equality_relation",
+            "disposition": "This step has no parsed equality. Review the actual theorem, construction or prose rather than counting the line as a proved equality."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1,
+          "no_equality_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-3-ex3-15-q6-i",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\dfrac{y}{x} = \\dfrac{60}{4} = \\dfrac{120}{8} = \\dfrac{180}{12} = \\dfrac{360}{24} = 15",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 1,
+            "line": "(4,60),\\ (8,120),\\ (12,180),\\ (24,360)",
+            "evidence": "no_equality_relation",
+            "disposition": "This step has no parsed equality. Review the actual theorem, construction or prose rather than counting the line as a proved equality."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1,
+          "no_equality_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "g10-ch3-variations",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 2,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "xy&=4\\times 6=24",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "g10-ch3-matrix-types",
+        "workingStatus": "UNVERIFIABLE",
+        "answerStatus": "PASS",
+        "claimsVerified": 0,
+        "claimsTotal": 1,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "A_{3\\times 4}\\xrightarrow{\\text{transpose}}(A^T)_{4\\times 3}",
+            "evidence": "standalone_expression_no_relation",
+            "disposition": "A displayed expression alone does not assert an equality. Recover its relation to the question or adjacent working."
+          }
+        ],
+        "evidenceCounts": {
+          "standalone_expression_no_relation": 1
+        },
+        "independentRecheck": "Recoverable abstention. Transposition sends A[i,j] to Aᵀ[j,i], so 3×4 becomes 4×3."
+      },
+      {
+        "id": "c10-5-ex5-1-q2-i",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 6,
+        "claimsTotal": 7,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\text{Area}=\\dfrac{1}{2}\\left|(x_1y_2+x_2y_3+x_3y_1)-(y_1x_2+y_2x_3+y_3x_1)\\right|=0",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-1-q3-ii",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 5,
+        "claimsTotal": 7,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "S_1&=p(6)+5(-2)+5(p)=11p-10",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 1,
+            "line": "S_2&=p(5)+6(5)+(-2)p=3p+30",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-1-q9",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 6,
+        "claimsTotal": 8,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\text{Area}(ABCD)&=\\dfrac{1}{2}|212-(-212)|=212\\text{ sq. units}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 2,
+            "line": "\\text{Area}(EFGH)&=\\dfrac{1}{2}|90-(-90)|=90\\text{ sq. units}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-2-q1-i",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 2,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "m=\\tan 90^\\circ=\\dfrac{1}{0}\\quad\\text{(not defined)}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-2-q4",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 3,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 3,
+            "line": "m_\\perp=-\\dfrac{1}{-1/3}=3",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-2-q12",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 7,
+        "claimsTotal": 8,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "m_{AC}=-\\dfrac{3}{2}\\ne m_{BD}=\\dfrac{3}{2}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-3-q3",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 4,
+        "claimsTotal": 5,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "m=\\tan 30^\\circ=\\dfrac{1}{\\sqrt{3}},",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-3-q11-ii",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "0.1x=1-0.25=0.75\\quad",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-5-q3",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 2,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\text{Parallel to } Y\\text{-axis}\\quad(\\text{Option (B)})",
+            "evidence": "standalone_expression_no_relation",
+            "disposition": "A displayed expression alone does not assert an equality. Recover its relation to the question or adjacent working."
+          }
+        ],
+        "evidenceCounts": {
+          "standalone_expression_no_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-5-q4",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\dfrac{p-7}{3-5} = \\dfrac{6-7}{6-5} = -1",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 1,
+            "line": "p - 7 = (-1)(-2) = 2\\quad",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-5-q5",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 4,
+        "claimsTotal": 5,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\quad (3,5)\\quad(\\text{Option (C)})",
+            "evidence": "no_equality_relation",
+            "disposition": "This step has no parsed equality. Review the actual theorem, construction or prose rather than counting the line as a proved equality."
+          }
+        ],
+        "evidenceCounts": {
+          "no_equality_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-5-q12",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "c \\approx 2.6\\quad(\\text{Option (A)})",
+            "evidence": "unjustified_approximation",
+            "disposition": "The transition was not justified by a specified approximation or rounding rule. Recompute at the requested precision."
+          }
+        ],
+        "evidenceCounts": {
+          "unjustified_approximation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-ex5-5-q13",
+        "workingStatus": "UNVERIFIABLE",
+        "answerStatus": "UNVERIFIABLE",
+        "claimsVerified": 0,
+        "claimsTotal": 1,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\text{One pair parallel }(m_{AB}=m_{CD}) \\text{and second pair non-parallel }(m_{BC}\\neq m_{AD})",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_equation": 1
+        },
+        "independentRecheck": "The keyed B is the strongest option under the chapter's exclusive trapezium definition. A and C describe necessary fragments. Abstain on a uniquely necessary condition under the literal wording."
+      },
+      {
+        "id": "c10-5-ex5-5-q15",
+        "workingStatus": "UNVERIFIABLE",
+        "answerStatus": "PASS",
+        "claimsVerified": 0,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "x + y &= 2 + 1 = 3",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 0,
+            "line": "3x + y &= 3(2) + 1 = 7",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 1,
+            "line": "(2,1) \\text{satisfies both equations in (B)}",
+            "evidence": "no_equality_relation",
+            "disposition": "This step has no parsed equality. Review the actual theorem, construction or prose rather than counting the line as a proved equality."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 2,
+          "no_equality_relation": 1
+        },
+        "independentRecheck": "Recoverable working abstention. Substitution at (2,1) satisfies only both equations in B. Their normals (1,1) and (3,1) are independent, so the intersection is unique."
+      },
+      {
+        "id": "c10-5-unit-q1",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 3,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "AC &= 6 \\neq BD = 5",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-5-unit-q6",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 8,
+        "claimsTotal": 11,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\quad (a,b) = (3,-2) \\text{or} (-2,3)",
+            "evidence": "no_equality_relation",
+            "disposition": "This step has no parsed equality. Review the actual theorem, construction or prose rather than counting the line as a proved equality."
+          },
+          {
+            "step": 1,
+            "line": "\\text{Case 1 } (3,-2):\\quad \\dfrac{x}{3} + \\dfrac{y}{-2} &= 1\\quad",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          },
+          {
+            "step": 1,
+            "line": "\\text{Case 2 } (-2,3):\\quad \\dfrac{x}{-2} + \\dfrac{y}{3} &= 1\\quad",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          }
+        ],
+        "evidenceCounts": {
+          "no_equality_relation": 1,
+          "unparsed_equation": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "g10-ch5-distance-midpoint-centroid",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "D&=\\left(\\dfrac{x_2+x_3}{2}, \\dfrac{y_2+y_3}{2}\\right)",
+            "evidence": "unparsed_rhs",
+            "disposition": "The right-hand side failed to parse. Normalize the authored notation before attempting verification."
+          },
+          {
+            "step": 1,
+            "line": "&=\\left(\\dfrac{x_1+x_2+x_3}{3}, \\dfrac{y_1+y_2+y_3}{3}\\right)",
+            "evidence": "empty_side",
+            "disposition": "An equation segment lost an operand in extraction. Reassemble from adjacent authored segments before checking."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_rhs": 1,
+          "empty_side": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "g10-ch5-collinearity",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 3,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\text{Area}=\\dfrac{1}{2}\\times AC\\times h=0\\iff h=0",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "g10-ch5-inclination-slope",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 3,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "m=\\tan\\theta=\\dfrac{\\text{opposite}}{\\text{adjacent}}=\\dfrac{y_2-y_1}{x_2-x_1}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "g10-ch5-axes-and-parallel-lines",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "&\\implies y=b",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          },
+          {
+            "step": 1,
+            "line": "b=0&\\implies y=0 (X\\text{-axis})",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          },
+          {
+            "step": 1,
+            "line": "c=0&\\implies x=0 (Y\\text{-axis})",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 3
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "g10-ch5-general-form",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 3,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\implies m&=-\\dfrac{a}{b}",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-1-q2",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 3,
+        "claimsTotal": 5,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "2\\pi r^2=1848-1540=308",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 4,
+            "line": "2\\pi r(r+h)=2\\times\\dfrac{22}{7}\\times7\\times(7+35)=1848",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-1-q4",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 8,
+        "claimsTotal": 10,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "PQ=\\sqrt{PR^2-QR^2}=\\sqrt{20^2-16^2}=12 \\mathrm{cm}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 2,
+            "line": "\\mathrm{CSA}_{QR}=\\pi r\\ell=\\pi(12)(20)=240\\pi \\mathrm{cm}^2",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-1-q5",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\pi r^2=88\\quad\\Rightarrow\\quad r^2=\\dfrac{88}{22/7}=28 \\mathrm{m}^2",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          },
+          {
+            "step": 2,
+            "line": "\\ell^2=h^2+r^2\\quad\\Rightarrow\\quad h^2=19^2-28=333",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-2-q5",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 5,
+        "claimsTotal": 8,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "V_1&=\\dfrac{1}{3}\\pi r_1^2 h_1=\\dfrac{1}{3}\\pi(6^2)(8)",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 2,
+            "line": "V_2&=\\dfrac{1}{3}\\pi r_2^2 h_2=\\dfrac{1}{3}\\pi(8^2)(6)",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 3,
+            "line": "V_2-V_1&=402.29-301.71=100.58 \\mathrm{cm}^3",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 3
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-2-q6",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 5,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "V_1&=\\dfrac{1}{3}\\pi r^2 h_1=3600 \\mathrm{cm}^3",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 0,
+            "line": "V_2&=\\dfrac{1}{3}\\pi r^2 h_2=5040 \\mathrm{cm}^3",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 1,
+            "line": "\\dfrac{V_1}{V_2}=\\dfrac{\\tfrac{1}{3}\\pi r^2 h_1}{\\tfrac{1}{3}\\pi r^2 h_2}=\\dfrac{h_1}{h_2}=\\dfrac{3600}{5040}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 2,
+            "line": "\\dfrac{h_1}{h_2}&=\\dfrac{360}{504}=\\dfrac{5}{7}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 4
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-2-q7",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 3,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 2,
+            "line": "\\dfrac{V_1}{V_2}&=\\left(\\dfrac{4}{7}\\right)^3=\\dfrac{64}{343}",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-2-q9",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 10,
+        "claimsTotal": 12,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "R^2&=\\dfrac{576}{4}=144",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          },
+          {
+            "step": 1,
+            "line": "r^2&=\\dfrac{324}{4}=81",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-2-q10",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 8,
+        "claimsTotal": 10,
+        "unsupportedClaims": [
+          {
+            "step": 2,
+            "line": "&\\approx10459.43 \\mathrm{cm}^3 &=10.4594\\ldots \\mathrm{L}\\approx10.459 \\mathrm{L}",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          },
+          {
+            "step": 3,
+            "line": "(\\text{Unrounded: }&\\text{Rs.} 418.38)",
+            "evidence": "standalone_expression_no_relation",
+            "disposition": "A displayed expression alone does not assert an equality. Recover its relation to the question or adjacent working."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_equation": 1,
+          "standalone_expression_no_relation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-3-q4",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 9,
+        "claimsTotal": 10,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "&=\\dfrac{1}{3}\\pi r^2 h_{\\text{cone}}+\\dfrac{2}{3}\\pi r^3",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-3-q7-iii",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 3,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "&=1 : 1",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-5-q6",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 5,
+        "claimsTotal": 6,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "&=\\pi(20)(14)(4)",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-ex7-5-q11",
+        "workingStatus": "UNVERIFIABLE",
+        "answerStatus": "UNVERIFIABLE",
+        "claimsVerified": 0,
+        "claimsTotal": 1,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "The rounded cork tip is modelled as a hemisphere. The feather skirt widens from ",
+            "evidence": "prose_only_unverified",
+            "disposition": "This answer classifies a physical object's shape. Confirm independently with an appropriate shuttlecock model."
+          }
+        ],
+        "evidenceCounts": {
+          "prose_only_unverified": 1
+        },
+        "independentRecheck": "The textbook option D describes an idealized shuttlecock. The algebra engine appropriately abstains on the unmodeled physical shape."
+      },
+      {
+        "id": "c10-7-ex7-5-q14",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 1,
+        "claimsTotal": 2,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\dfrac{r_2}{r_1}=\\dfrac{h_1-h_2}{h_1}=\\dfrac12",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-unit-q1",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 6,
+        "claimsTotal": 7,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "&\\approx\\dfrac{22}{7}\\left(\\dfrac14\\right)^2(7) &=\\dfrac{11}{8} \\mathrm{cm}^3",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_equation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-unit-q2",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 3,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "&\\approx\\dfrac23\\times\\dfrac{22}{7}\\left(\\dfrac74\\right)^3 &=\\dfrac{539}{48} \\mathrm{m}^3",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_equation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-unit-q6",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 6,
+        "claimsTotal": 7,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "a^2&=\\dfrac{69.12}{12}=5.76",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-unit-q7",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 3,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "2\\pi(R+r)=18+16=34",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-unit-q9",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 8,
+        "claimsTotal": 9,
+        "unsupportedClaims": [
+          {
+            "step": 3,
+            "line": "&\\approx\\sqrt{64+225} &=17 \\mathrm{cm}",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_equation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "c10-7-unit-q10",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 8,
+        "claimsTotal": 9,
+        "unsupportedClaims": [
+          {
+            "step": 3,
+            "line": "&\\approx\\dfrac13\\times\\dfrac{22}{7}(12.6)^2(16.8) &=2794.176 \\mathrm{cm}^3",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_equation": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "g10-ch7-solids-and-units",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "&=1{,}000{,}000\\text{ cm}^3",
+            "evidence": "empty_side",
+            "disposition": "An equation segment lost an operand in extraction. Reassemble from adjacent authored segments before checking."
+          },
+          {
+            "step": 1,
+            "line": "\\implies 1\\text{ m}^3&=\\dfrac{10^6\\text{ cm}^3}{1000\\text{ cm}^3/\\text{L}}=1000\\text{ L}",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "empty_side": 1,
+          "unverified_implication": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "g10-ch7-frustum-surface-volume",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 0,
+            "line": "\\implies H&=\\dfrac{hR}{R-r}",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          },
+          {
+            "step": 1,
+            "line": "&=\\dfrac{\\pi h}{3}(R^2+Rr+r^2)",
+            "evidence": "missing_variable_bindings",
+            "disposition": "The evaluator lacks a source-bound substitution or definition. Trace the named values or variables to the stem or prior step before validating."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 1,
+          "missing_variable_bindings": 1
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "g10-ch7-volumes-cylinder-cone",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 2,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "V(kr, h)&=k^2(\\pi r^2 h)",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          },
+          {
+            "step": 1,
+            "line": "V(r, kh)&=k(\\pi r^2 h)",
+            "evidence": "unparsed_equation",
+            "disposition": "At least one side is outside the parser grammar. Reconstruct both sides using the original mathematical notation."
+          }
+        ],
+        "evidenceCounts": {
+          "unparsed_equation": 2
+        },
+        "independentRecheck": null
+      },
+      {
+        "id": "g10-ch7-conversion-volume-conservation",
+        "workingStatus": "PARTIAL",
+        "answerStatus": "PASS",
+        "claimsVerified": 3,
+        "claimsTotal": 4,
+        "unsupportedClaims": [
+          {
+            "step": 1,
+            "line": "\\implies V_{\\text{inflow}}&=\\pi r^2(vt)",
+            "evidence": "unverified_implication",
+            "disposition": "The engine did not establish the logical direction of this implication. Preserve source premises and check them independently."
+          }
+        ],
+        "evidenceCounts": {
+          "unverified_implication": 1
+        },
+        "independentRecheck": null
+      }
+    ],
+    "answerAbstentionInvestigation": [
+      {
+        "id": "c10-3-ex3-6-q6",
+        "review": "Independent simplification gives 2(x²+1)/(x(x+1)²) for x≠−1,0. The engine lacks a dedicated proof-answer oracle."
+      },
+      {
+        "id": "c10-3-ex3-13-q3",
+        "review": "The quadratic has x=1 as a root. A repeated root forces the derivative at 1 to vanish, so 2a=b+c, under the nonzero leading coefficient condition."
+      },
+      {
+        "id": "c10-3-ex3-13-q4",
+        "review": "Discriminant 72(a²+b²)>0 if a≠b. When a=b≠0 the equation is linear with one root, and when a=b=0 it is identically zero."
+      },
+      {
+        "id": "c10-3-ex3-13-q5",
+        "review": "One fourth of the discriminant factors as a(a³+b³+c³−3abc). A genuine repeated-root quadratic makes that product zero."
+      },
+      {
+        "id": "c10-5-ex5-5-q13",
+        "review": "The keyed B is the strongest option under the chapter's exclusive trapezium definition. A and C describe necessary fragments. Abstain on a uniquely necessary condition under the literal wording."
+      },
+      {
+        "id": "c10-5-ex5-5-q14",
+        "review": "Candidate newly abstains. For the requested slopes method, testing slopes or directions of both pairs of opposite sides establishes answer B."
+      },
+      {
+        "id": "c10-7-ex7-5-q11",
+        "review": "The textbook option D describes an idealized shuttlecock. The algebra engine appropriately abstains on the unmodeled physical shape."
+      }
+    ],
+    "independenceFindings": [
+      "334 frozen entries cover Grade 10 chapters 3, 5 and 7, including concepts and practice. The 297 shared production IDs are an ID overlap, not proof of byte equality.",
+      "All 153 chapter 3 and all 110 chapter 5 frozen IDs are present in their chapter-specific source fingerprint registries. The registered derivations include literal coefficients. The grade 10 chapter 7 derivations also embed per-question quantities.",
+      "The frozen benchmark awards working and answer PASS to c10-3-ex3-4-q2-iii. Its fingerprint explicitly reduces before computing exclusions, correctly matching the textbook's lowest-term key. It leaves the omitted original restriction x≠−2 unchecked.",
+      "The V1.5 holdout is visible in the same source file. Thirty expected sets are computed with TypedSet, also used by the system under test. This is a correlated oracle.",
+      "Fifteen wrong-working cases, fifteen source-blocked cases, and twenty shaded-region cases exercise only four distinct fixture behaviors. The published count is an execution count.",
+      "Historical skipped counts follow confusion-matrix totals. For modern suites the normalizer declares skipped=0 and uses suite-reported counts. It is not an independent skip observer.",
+      "Evaluator reads frozen item fields, but echoes a pinned digest without validating the file or recomputing the declared dataset digest. The logged file digest is computed independently.",
+      "The broad working and final-answer denominators are different. The final-answer pass-rate calculation excludes abstentions."
+    ]
+  }
+}

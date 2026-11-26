@@ -277,7 +277,7 @@ const entries = [
     },
     "steps": [
       {
-        "en": "Quick Solution Plan: Rationalise inside the square root by multiplying numerator and denominator by (1 + sin θ), turning 1 − sin²θ into cos²θ so both squares leave the radical cleanly.",
+        "en": "Quick Solution Plan: On the common domain, cos θ is nonzero and 1 + sin θ is positive. Multiply the numerator and denominator by 1 + sin θ and use 1 − sin²θ = cos²θ.",
         "eq": "LHS = √[((1 + sin θ)²)/(1 − sin²θ)]",
         "math": {
           "latex": "\\mathrm{LHS} = \\sqrt{\\dfrac{1+\\sin\\theta}{1-\\sin\\theta}\\times\\dfrac{1+\\sin\\theta}{1+\\sin\\theta}} = \\sqrt{\\dfrac{(1+\\sin\\theta)^2}{1-\\sin^2\\theta}}",
@@ -286,19 +286,19 @@ const entries = [
         }
       },
       {
-        "en": "Understand Deeply — Using 1 − sin²θ = cos²θ gives √[((1 + sin θ)/cos θ)²]. For acute angles where cos θ > 0 (and 1 + sin θ > 0), taking the principal positive square root gives (1 + sin θ)/cos θ = sec θ + tan θ.",
-        "eq": "= √[(1 + sin θ)²/cos²θ] = (1 + sin θ)/cos θ = sec θ + tan θ = RHS",
+        "en": "Understand Deeply — A principal square root is nonnegative. Taking the square root of the square gives an absolute value. The printed equality holds when cos θ > 0. At θ = 180°, the left side is 1 and the printed right side is −1.",
+        "eq": "LHS = (1 + sin θ)/|cos θ| = |sec θ + tan θ|",
         "math": {
-          "latex": "\\begin{aligned} &= \\sqrt{\\dfrac{(1+\\sin\\theta)^2}{\\cos^2\\theta}} = \\dfrac{1+\\sin\\theta}{\\cos\\theta} \\\\ &= \\dfrac{1}{\\cos\\theta} + \\dfrac{\\sin\\theta}{\\cos\\theta} = \\sec\\theta + \\tan\\theta = \\mathrm{RHS} \\end{aligned}",
-          "fallback": "= √[(1 + sin θ)²/cos²θ] = (1 + sin θ)/cos θ = sec θ + tan θ = RHS",
+          "latex": "\\mathrm{LHS}=\\dfrac{1+\\sin\\theta}{|\\cos\\theta|}=|\\sec\\theta+\\tan\\theta|",
+          "fallback": "LHS = (1 + sin θ)/|cos θ| = |sec θ + tan θ|",
           "display": true
         }
       }
     ],
-    "answer": "LHS = RHS = sec θ + tan θ (for acute θ where cos θ > 0)",
+    "answer": "LHS = sec θ + tan θ when cos θ > 0.",
     "answerMath": {
-      "latex": "\\mathrm{LHS} = \\mathrm{RHS} = \\sec\\theta + \\tan\\theta",
-      "fallback": "LHS = RHS = sec θ + tan θ (for acute θ where cos θ > 0)",
+      "latex": "\\mathrm{LHS}=\\sec\\theta+\\tan\\theta\\quad(\\cos\\theta>0)",
+      "fallback": "LHS = sec θ + tan θ when cos θ > 0.",
       "display": true
     },
     "kind": "textbook",
@@ -354,28 +354,28 @@ const entries = [
     },
     "steps": [
       {
-        "en": "Quick Solution Plan: Rationalise each radical term separately (or combine over √(1 − sin²θ) = cos θ) to get (1 + sin θ)/cos θ + (1 − sin θ)/cos θ = 2/cos θ = 2 sec θ.",
-        "eq": "First term = (1 + sin θ)/cos θ; second term = (1 − sin θ)/cos θ",
+        "en": "Quick Solution Plan: On the common domain, cos θ is nonzero and both 1 + sin θ and 1 − sin θ are positive. Rationalise each radical using 1 − sin²θ = cos²θ.",
+        "eq": "LHS = √[(1 + sin θ)²/cos²θ] + √[(1 − sin θ)²/cos²θ]",
         "math": {
           "latex": "\\mathrm{LHS} = \\sqrt{\\dfrac{(1+\\sin\\theta)^2}{\\cos^2\\theta}} + \\sqrt{\\dfrac{(1-\\sin\\theta)^2}{\\cos^2\\theta}}",
-          "fallback": "First term = (1 + sin θ)/cos θ; second term = (1 − sin θ)/cos θ",
+          "fallback": "LHS = √[(1 + sin θ)²/cos²θ] + √[(1 − sin θ)²/cos²θ]",
           "display": true
         }
       },
       {
-        "en": "Understand Deeply — For acute θ (cos θ > 0 and 1 ± sin θ > 0), drop the square roots and add the fractions with common denominator cos θ: the +sin θ and −sin θ terms cancel completely.",
-        "eq": "= (1 + sin θ + 1 − sin θ)/cos θ = 2/cos θ = 2 sec θ = RHS",
+        "en": "Understand Deeply — Each principal square root has denominator |cos θ|. The sine terms cancel. The printed equality holds when cos θ > 0. At θ = 180°, the left side is 2 and the printed right side is −2.",
+        "eq": "LHS = (1 + sin θ + 1 − sin θ)/|cos θ| = 2/|cos θ| = 2|sec θ|",
         "math": {
-          "latex": "\\begin{aligned} &= \\dfrac{1+\\sin\\theta}{\\cos\\theta} + \\dfrac{1-\\sin\\theta}{\\cos\\theta} \\\\ &= \\dfrac{(1+\\sin\\theta)+(1-\\sin\\theta)}{\\cos\\theta} = \\dfrac{2}{\\cos\\theta} = 2\\sec\\theta = \\mathrm{RHS} \\end{aligned}",
-          "fallback": "= (1 + sin θ + 1 − sin θ)/cos θ = 2/cos θ = 2 sec θ = RHS",
+          "latex": "\\mathrm{LHS}=\\dfrac{(1+\\sin\\theta)+(1-\\sin\\theta)}{|\\cos\\theta|}=2|\\sec\\theta|",
+          "fallback": "LHS = (1 + sin θ + 1 − sin θ)/|cos θ| = 2/|cos θ| = 2|sec θ|",
           "display": true
         }
       }
     ],
-    "answer": "LHS = RHS = 2 sec θ (for acute θ where cos θ > 0)",
+    "answer": "LHS = 2 sec θ when cos θ > 0.",
     "answerMath": {
-      "latex": "\\mathrm{LHS} = \\mathrm{RHS} = 2\\sec\\theta",
-      "fallback": "LHS = RHS = 2 sec θ (for acute θ where cos θ > 0)",
+      "latex": "\\mathrm{LHS}=2\\sec\\theta\\quad(\\cos\\theta>0)",
+      "fallback": "LHS = 2 sec θ when cos θ > 0.",
       "display": true
     },
     "kind": "textbook",

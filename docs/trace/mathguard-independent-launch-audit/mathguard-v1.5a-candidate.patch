@@ -1,0 +1,532 @@
+diff --git a/site/tools/mathguard/adapters/base.py b/site/tools/mathguard/adapters/base.py
+index 7e40d2fe..435fec8c 100644
+--- a/site/tools/mathguard/adapters/base.py
++++ b/site/tools/mathguard/adapters/base.py
+@@ -10,7 +10,6 @@ import sympy as sp
+ 
+ from ..parser import parse_expression
+ from ..reasoning_engine import WorkingAuditResult, verify_complete_working
+-from ..rounding import check_numeric_match
+ from ..symbolic import expressions_equivalent
+ from ..tamil_consistency import number_signature, validate_en_ta_consistency
+ from ..tamil_semantic_parity import extract_semantic_values, semantic_step_parity_check
+@@ -64,6 +63,17 @@ def verify_tamil_math_parity(item: Dict[str, Any], is_concept: bool = False) ->
+ 
+     flags: List[str] = []
+     mismatches: List[Dict[str, Any]] = []
++    if q_en and not q_ta:
++        flags.append("missing_tamil_question")
++    if ans_en and not ans_ta:
++        flags.append("missing_tamil_answer")
++    if any(isinstance(step, dict) and str(step.get("en") or "").strip()
++           and not str(step.get("ta") or "").strip() for step in steps):
++        flags.append("missing_tamil_working")
++    if steps and not has_ta_steps and not any(
++        isinstance(step, dict) and step.get("math") and not step.get("en") for step in steps
++    ) and "missing_tamil_working" not in flags:
++        flags.append("missing_tamil_working")
+ 
+     if q_ta:
+         ta_q_res = validate_en_ta_consistency(q_en, q_ta)
+@@ -135,40 +145,30 @@ def verify_generic_answer(
+     ans_raw = item.get("answer")
+     ans_en = str(ans_raw.get("en") if isinstance(ans_raw, dict) else (ans_raw or "")).strip()
+     ans_math = item.get("answerMath")
+-    ans_latex = ""
+-    if isinstance(ans_math, dict):
+-        if isinstance(ans_math.get("en"), dict):
+-            ans_latex = str(ans_math["en"].get("latex") or "")
+-        else:
+-            ans_latex = str(ans_math.get("latex") or "")
++    if ans_math:
++        return "UNVERIFIABLE", "structured_answer_requires_dedicated_derivation"
+ 
+     if work_res.status == "FAIL":
+         return "FAIL", f"Working failed: {work_res.failed_details[:1]}"
+ 
+-    # Compare against final step / variable declarations in ReasoningGraph
+-    graph = work_res.graph
+-    ans_cand = ans_latex or ans_en
+-    if ans_cand:
+-        ans_clean = re.sub(r"\\text\s*\{[^}]*\}", "", ans_cand).strip()
+-        ans_clean = ans_clean.split("=")[-1].strip() if "=" in ans_clean else ans_clean
++    # Bind the answer to the requested expression. A correct intermediate
++    # equality or an unrelated declaration cannot establish a final answer.
++    question = str((item.get("q") or {}).get("en") or "").strip().rstrip(".?")
++    target = re.fullmatch(
++        r"(?:find(?: the value of)?|evaluate|calculate)\s+([0-9+*/^(). −–×÷-]+)"
++        r"(?:\s+in exact form)?", question, re.I,
++    )
++    if target and ans_en and re.fullmatch(r"[0-9+*/^(). −–×÷-]+", ans_en):
+         try:
+-            ans_expr = parse_expression(ans_clean)
+-        except Exception:
+-            ans_expr = None
+-
+-        if ans_expr is not None:
+-            for val in reversed(list(graph.variable_declarations.values())):
+-                try:
+-                    if expressions_equivalent(val, ans_expr):
+-                        return "PASS", ""
+-                    if not val.free_symbols and not ans_expr.free_symbols:
+-                        if check_numeric_match(float(val.evalf()), float(ans_expr.evalf()), rel_tol=0.02):
+-                            return "PASS", ""
+-                except Exception:
+-                    pass
+-
+-    if work_res.status == "PASS":
+-        return "PASS", "working_verified_without_dedicated_derivation"
++            expected = parse_expression(target[1].strip())
++            observed = parse_expression(ans_en)
++        except ValueError:
++            return "UNVERIFIABLE", "unsupported_answer_expression"
++        if expected.is_finite and observed.is_finite and not (expected.free_symbols or observed.free_symbols):
++            if expressions_equivalent(expected, observed):
++                return "PASS", "exact_question_expression"
++            return "FAIL", "answer_differs_from_exact_question_expression"
++
+     return "UNVERIFIABLE", "no_dedicated_derivation"
+ 
+ 
+diff --git a/site/tools/mathguard/adapters/sets_relations_adapter.py b/site/tools/mathguard/adapters/sets_relations_adapter.py
+index 0da14c78..b9b2ec96 100644
+--- a/site/tools/mathguard/adapters/sets_relations_adapter.py
++++ b/site/tools/mathguard/adapters/sets_relations_adapter.py
+@@ -24,7 +24,7 @@ from ..set_theory_reasoner import SetTheoryReasoner
+ from ..set_types import TypedSet, parse_set_literal
+ from ..tamil_sets_parity import check_bilingual_set_parity
+ from ..venn_reasoner import VennDiagramReasoner
+-from .base import ChapterAdapter, verify_generic_answer, verify_tamil_math_parity
++from .base import ChapterAdapter, verify_tamil_math_parity
+ 
+ 
+ def _extract_named_sets_from_text(text: str) -> Dict[str, TypedSet]:
+@@ -124,6 +124,7 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
+             env: Dict[str, TypedSet] = dict(subpart_envs[0]) if subpart_envs else _extract_named_sets_from_text(q_en)
+         else:
+             env = _extract_named_sets_from_text(q_en)
++        question_sets = dict(env)
+         universal: Optional[TypedSet] = env.get("U")
+         card_givens: List[Tuple[str, int]] = _extract_cardinality_givens(q_en)
+ 
+@@ -167,6 +168,16 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
+ 
+             step_sets = _extract_named_sets_from_text(combined)
+             for k, v in step_sets.items():
++                if not subpart_envs and k in question_sets and v != question_sets[k]:
++                    total += 1
++                    failed += 1
++                    failed_details.append({
++                        "step": idx,
++                        "claim": f"{k} = {v}",
++                        "expected": str(question_sets[k]),
++                        "reason": "Step contradicts a set given in the question",
++                    })
++                    continue
+                 env[k] = v
+                 if k == "U":
+                     universal = v
+@@ -278,7 +289,7 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
+                                 else:
+                                     failed += 1
+                                     failed_details.append({"step": idx, "claim": f"n({c_expr}) = {c_val}", "expected": int(vres.determined_quantities[c_expr])})
+-                            elif vres.status == "INCONSISTENT":
++                            elif vres.status in {"INCONSISTENT", "INVALID_POPULATION"}:
+                                 total += 1
+                                 failed += 1
+                                 failed_details.append({"step": idx, "claim": f"n({c_expr}) = {c_val}", "reason": vres.reason})
+@@ -373,12 +384,24 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
+             ans_en = str(ans_obj.get("en") if isinstance(ans_obj, dict) else (ans_obj or "")).strip()
+             if not ans_en:
+                 ans_status, ans_disc = "UNVERIFIABLE", "empty_answer"
+-            elif work_status == "PASS":
+-                ans_status, ans_disc = "PASS", "set_theory_working_verified"
+             else:
+-                ans_status, ans_disc = verify_generic_answer(item, base_work, is_concept=is_concept, allow_positive_domain=False)
+-                if ans_status == "FAIL" and any(sym in ans_en for sym in ("{", "}", "∅", "∪", "∩", "×")):
+-                    ans_status, ans_disc = "UNVERIFIABLE", "set_answer_requires_full_context"
++                target = re.search(r"\bfind\s+([A-Z]\s*[∪∩Δ×-]\s*[A-Z])\s*[.?]?\s*$", q_en, re.I)
++                if target and "(i)" not in q_en and "external_diagram_dependency" not in ambiguity_flags:
++                    givens = _extract_named_sets_from_text(q_en)
++                    expected = self.set_reasoner.evaluate(target[1], env=givens, universe=givens.get("U"))
++                    answer_expression = ans_en
++                    if "=" in ans_en:
++                        lhs, answer_expression = ans_en.split("=", 1)
++                        if re.sub(r"\s+", "", lhs) != re.sub(r"\s+", "", target[1]):
++                            answer_expression = ""
++                    observed = parse_set_literal(answer_expression.strip())
++                    if expected.ok and isinstance(expected.value, TypedSet) and isinstance(observed, TypedSet):
++                        ans_status = "PASS" if expected.value == observed else "FAIL"
++                        ans_disc = "compared_answer_to_question_sets"
++                    else:
++                        ans_status, ans_disc = "UNVERIFIABLE", "set_answer_requires_full_context"
++                else:
++                    ans_status, ans_disc = "UNVERIFIABLE", "no_dedicated_set_answer_derivation"
+ 
+         ta_res = verify_tamil_math_parity(item, is_concept=is_concept)
+         ta_flags = list(ta_res.flags)
+diff --git a/site/tools/mathguard/engine.py b/site/tools/mathguard/engine.py
+index 9ccd9259..dc06a660 100644
+--- a/site/tools/mathguard/engine.py
++++ b/site/tools/mathguard/engine.py
+@@ -30,7 +30,7 @@ from .rounding import check_numeric_match
+ from .steps import extract_stem_assumptions, validate_steps
+ from .symbolic import evaluate_with_pi_mode, expressions_equivalent
+ from .tamil_consistency import validate_en_ta_consistency
+-from .units import detect_answer_dimension
++from .units import detect_answer_dimension, convert_length
+ 
+ 
+ @dataclass
+@@ -127,6 +127,19 @@ def _extract_answer_numbers(answer_text: str, answer_math: Any) -> List[float]:
+     return nums
+ 
+ 
++def _cylinder_dimensions_in_cm(answer: str) -> Optional[Tuple[sp.Rational, sp.Rational]]:
++    lengths = {}
++    for field in re.split(r"\s*(?:[;,]|\band\b)\s*", answer.strip().rstrip("."), flags=re.I):
++        match = re.fullmatch(r"(radius|r|height|h)\s*(?:=|is|:)\s*([+−-]?\d+(?:\.\d+)?)\s*(mm|cm|m|km)", field, re.I)
++        if not match or match[1][0].lower() in lengths:
++            return None
++        label, number, unit = match.groups()
++        lengths[label[0].lower()] = convert_length(sp.Rational(number.replace("−", "-")), unit, "cm")
++    if lengths.keys() == {"r", "h"}:
++        return lengths["r"], lengths["h"]
++    return None
++
++
+ def _verify_exercise_answer(item: Dict[str, Any], derived: DerivedResult) -> Tuple[str, str, str, Dict[str, Any]]:
+     """Return (answer_status, discrepancy, severity, evidence)."""
+     if not derived.verifiable:
+@@ -190,6 +203,13 @@ def _verify_exercise_answer(item: Dict[str, Any], derived: DerivedResult) -> Tup
+ 
+     # 3. Multi-value answers (e.g. radius and height in Ex 7.1 Q1, Q2)
+     if isinstance(derived.expr, list):
++        if derived.method in {"sympy_solve_cylinder_csa_ratio", "sympy_solve_cylinder_tsa_csa"}:
++            dimensions = _cylinder_dimensions_in_cm(ans_text)
++            if dimensions is None:
++                return "UNVERIFIABLE", "Radius and height must have distinct labels and length units.", "info", {}
++            if all(abs(actual - exact) <= derived.tolerance for actual, exact in zip(dimensions, derived.expr)):
++                return "PASS", "", "none", {"radiusHeightCm": list(map(str, dimensions))}
++            return "FAIL", f"Radius or height mismatch: expected {derived.expr} cm, got {dimensions} cm.", "critical", {}
+         obs_nums = _extract_answer_numbers(ans_text, ans_math)
+         expected_vals = [float(x.evalf()) for x in derived.expr]
+         if len(obs_nums) >= len(expected_vals) and all(
+diff --git a/site/tools/mathguard/function_reasoner.py b/site/tools/mathguard/function_reasoner.py
+index 2049b0fb..43b98659 100644
+--- a/site/tools/mathguard/function_reasoner.py
++++ b/site/tools/mathguard/function_reasoner.py
+@@ -143,30 +143,42 @@ class SymbolicFunction:
+         codomain: Union[TypedSet, SymbolicInfiniteSet],
+     ) -> None:
+         self.var = var
++        self._raw_expr = expr
+         self.expr = sp.simplify(expr)
+         self.domain = domain
+         self.codomain = codomain
++        self._composition: Optional[Tuple[SymbolicFunction, SymbolicFunction]] = None
+ 
+     def excluded_singularities(self) -> Set[sp.Expr]:
+-        """Find denominator zeros for rational expressions."""
+-        try:
+-            _, den = sp.fraction(sp.together(self.expr))
+-            if den == 1 or not den.has(self.var):
+-                return set()
+-            sols = sp.solve(sp.Eq(den, 0), self.var)
+-            return {sp.simplify(s) for s in sols}
+-        except Exception:
+-            return set()
++        """Find real denominator zeros while retaining pre-cancellation poles."""
++        poles: Set[sp.Expr] = set()
++        denominators = [power.base for power in self._raw_expr.atoms(sp.Pow) if power.exp.is_negative]
++        for denominator in denominators:
++            roots = sp.solveset(denominator, self.var, domain=sp.S.Reals)
++            if isinstance(roots, sp.FiniteSet):
++                poles.update(roots)
++        if self._composition:
++            outer, inner = self._composition
++            poles.update(inner.excluded_singularities())
++            for outer_pole in outer.excluded_singularities():
++                preimage = sp.solveset(inner.expr - outer_pole, self.var, domain=sp.S.Reals)
++                if isinstance(preimage, sp.FiniteSet):
++                    poles.update(preimage)
++        return poles
+ 
+     def is_input_defined(self, val: Any) -> Tuple[bool, str]:
++        if self._composition:
++            outer, inner = self._composition
++            ok, value, reason = inner.evaluate(val)
++            return outer.is_input_defined(value) if ok else (False, reason)
+         # Check domain membership
+         if isinstance(self.domain, TypedSet):
+             if _normalize_element(val) not in self.domain:
+                 return False, f"{val} ∉ domain"
+         elif isinstance(self.domain, SymbolicInfiniteSet):
+             c = self.domain.contains(val)
+-            if c is False:
+-                return False, f"{val} ∉ {self.domain.label}"
++            if c is not True:
++                return False, f"{val} is not provably in {self.domain.label}"
+ 
+         # Check rational singularities
+         sval = sp.sympify(val) if not isinstance(val, sp.Basic) else val
+@@ -175,22 +187,32 @@ class SymbolicFunction:
+                 return False, f"Division by zero at {self.var} = {val}"
+ 
+         # Check real radical non-negativity when codomain is ℝ or subset
+-        for pow_expr in self.expr.atoms(sp.Pow):
+-            if pow_expr.exp.is_Rational and pow_expr.exp.q % 2 == 0 and pow_expr.exp > 0:
++        for pow_expr in self._raw_expr.atoms(sp.Pow):
++            if pow_expr.exp.is_Rational and pow_expr.exp.q % 2 == 0:
+                 inner_val = sp.simplify(pow_expr.base.subs(self.var, sval))
+-                if inner_val.is_real and inner_val < 0:
+-                    return False, f"Negative radicand {inner_val} under even root"
++                if inner_val.is_nonnegative is not True:
++                    return False, f"Radicand {inner_val} is not provably nonnegative under even root"
++                if pow_expr.exp.is_negative and inner_val == 0:
++                    return False, "Zero radicand of a reciprocal root"
+         return True, "Defined"
+ 
+     def evaluate(self, val: Any) -> Tuple[bool, Optional[sp.Expr], str]:
++        if self._composition:
++            outer, inner = self._composition
++            ok, value, reason = inner.evaluate(val)
++            return outer.evaluate(value) if ok else (False, None, reason)
+         ok, msg = self.is_input_defined(val)
+         if not ok:
+             return False, None, msg
+         sval = sp.sympify(val) if not isinstance(val, sp.Basic) else val
+         try:
+             res = sp.simplify(self.expr.subs(self.var, sval))
+-            if res.has(sp.zoo, sp.nan):
+-                return False, None, "Undefined evaluation (zoo/nan)"
++            if res.has(sp.zoo, sp.nan) or res.is_finite is not True:
++                return False, None, "Evaluation has no finite value"
++            in_codomain = (_normalize_element(res) in self.codomain if isinstance(self.codomain, TypedSet)
++                           else self.codomain.contains(res))
++            if in_codomain is not True:
++                return False, None, f"Output {res} is not provably in the codomain"
+             return True, res, "OK"
+         except Exception as exc:
+             return False, None, str(exc)
+@@ -227,6 +249,19 @@ class SymbolicFunction:
+                         reason=f"Not a total function on {self.domain.label}: undefined at {self.var} = {sing}",
+                     )
+ 
++        if self.domain.kind == "R" and self.codomain.kind == "R" and not self._composition:
++            try:
++                real_domain = sp.calculus.util.continuous_domain(self._raw_expr, self.var, sp.S.Reals)
++            except (ValueError, NotImplementedError):
++                real_domain = None
++            if real_domain is not None and real_domain != sp.S.Reals:
++                return FunctionClassification(is_function=False, reason="Expression undefined on part of the stated real domain")
++
++        sample = {"N": (1, 2), "W": (0, 1), "Z": (-1, 0, 1), "Q": (0, sp.Rational(1, 2)),
++                  "R": (-1, 0, 1, sp.Rational(1, 2))}.get(self.domain.kind, ())
++        if any(not self.evaluate(value)[0] for value in sample):
++            return FunctionClassification(is_function=False, reason="A domain member has no valid codomain value")
++
+         # Constant check
+         if not self.expr.has(self.var):
+             return FunctionClassification(
+@@ -259,7 +294,8 @@ class SymbolicFunction:
+                 coeff_a = poly.LC()
+                 const_c = poly.EC()
+                 if self.codomain.kind == "R":
+-                    onto = True
++                    if self.domain.kind in ("R", "N", "W", "Z", "Q"):
++                        onto = self.domain.kind == "R"
+                 elif self.domain.kind in ("N", "W", "Z") and self.codomain.kind in ("N", "W", "Z"):
+                     # Test y = 1 (in N, W, Z) and y = 0 (in W, Z)
+                     test_ys = [1, 2] if self.codomain.kind == "N" else [0, 1, -1] if self.codomain.kind == "Z" else [0, 1]
+@@ -273,9 +309,15 @@ class SymbolicFunction:
+                     if self.domain.kind == "Z" and self.codomain.kind == "Z":
+                         onto = abs(coeff_a) == 1
+             elif deg % 2 == 0 and deg >= 2:
+-                # Even degree polynomial on R or Z is not injective (or check N)
+-                if self.domain.kind in ("R", "Z"):
++                # An even-degree polynomial on R has a turning point. Integer
++                # inputs require an independent proof of a collision.
++                if self.domain.kind == "R":
+                     one_to_one = False
++                elif self.domain.kind == "Z" and deg == 2:
++                    a_coeff, b_coeff, _ = poly.all_coeffs()
++                    reflected_sum = sp.simplify(-b_coeff / a_coeff)
++                    if reflected_sum.is_integer is not None:
++                        one_to_one = not reflected_sum.is_integer
+                 elif self.domain.kind in ("N", "W"):
+                     # e.g. x^2 is injective on N/W if vertex <= 0, check derivative or sample
+                     vals = [self.expr.subs(self.var, k) for k in range(1 if self.domain.kind == "N" else 0, 10)]
+@@ -334,7 +376,8 @@ class SymbolicFunction:
+         """Compute (f ∘ g)(x) = f(g(x)) symbolically with domain compatibility check."""
+         composed_expr = sp.simplify(self.expr.subs(self.var, g.expr))
+         # Check if g's codomain/range is compatible with f's domain
+-        if isinstance(g.domain, TypedSet) and isinstance(self.domain, TypedSet):
++        domain = g.domain
++        if isinstance(g.domain, TypedSet):
+             valid_xs = []
+             for x in g.domain:
+                 ok_g, gx, _ = g.evaluate(x)
+@@ -344,11 +387,18 @@ class SymbolicFunction:
+                 if ok_f:
+                     valid_xs.append(x)
+             if len(valid_xs) < g.domain.cardinality:
+-                return (
+-                    SymbolicFunction(g.var, composed_expr, TypedSet(valid_xs), self.codomain),
+-                    f"Restricted composition domain to {TypedSet(valid_xs)}",
+-                )
+-        return SymbolicFunction(g.var, composed_expr, g.domain, self.codomain), "Valid symbolic composition"
++                domain = TypedSet(valid_xs)
++        combined = SymbolicFunction(g.var, composed_expr, domain, self.codomain)
++        combined._composition = (self, g)
++        return combined, "Symbolic composition with both input restrictions retained"
++
++    def _is_real_rational_formula(self) -> bool:
++        if self._composition:
++            return all(part._is_real_rational_formula() for part in self._composition)
++        return (isinstance(self.domain, SymbolicInfiniteSet) and self.domain.kind == "R"
++                and isinstance(self.codomain, SymbolicInfiniteSet) and self.codomain.kind == "R"
++                and self._raw_expr.free_symbols <= {self.var}
++                and self._raw_expr.is_rational_function(self.var))
+ 
+     def inverse(self) -> Tuple[Optional[sp.Expr], str]:
+         cls = self.classify()
+@@ -396,5 +446,8 @@ class ExtendedFunctionRegistry(FunctionRegistry):
+         if isinstance(fg, FiniteFunction) and isinstance(gf, FiniteFunction):
+             return fg.domain == gf.domain and fg.mapping == gf.mapping
+         if isinstance(fg, SymbolicFunction) and isinstance(gf, SymbolicFunction):
+-            return sp.simplify(fg.expr - gf.expr.subs(gf.var, fg.var)) == 0
++            if fg._is_real_rational_formula() and gf._is_real_rational_formula():
++                if fg.excluded_singularities() != gf.excluded_singularities():
++                    return False
++                return sp.simplify(fg.expr - gf.expr.subs(gf.var, fg.var)) == 0
+         return None
+diff --git a/site/tools/mathguard/reasoning_engine.py b/site/tools/mathguard/reasoning_engine.py
+index 2b89b61e..06946a5f 100644
+--- a/site/tools/mathguard/reasoning_engine.py
++++ b/site/tools/mathguard/reasoning_engine.py
+@@ -117,6 +117,8 @@ def _strip_trailing_units(s: str) -> str:
+ 
+ 
+ _CONV_UNITS = {
++    "kg": ("mass", Fraction(1000)), "g": ("mass", Fraction(1)),
++    "mg": ("mass", Fraction(1, 1000)),
+     "mm": ("L", Fraction(1, 10)), "cm": ("L", Fraction(1)), "m": ("L", Fraction(100)), "km": ("L", Fraction(100000)),
+     "mm2": ("A", Fraction(1, 100)), "cm2": ("A", Fraction(1)), "m2": ("A", Fraction(10000)),
+     "mm3": ("V", Fraction(1, 1000)), "cm3": ("V", Fraction(1)), "m3": ("V", Fraction(1000000)),
+@@ -1713,6 +1715,24 @@ def verify_complete_working(
+                             graph.claims.append(MathClaim(s_idx, ln, "identity", "FAILED", evidence="multi_link_identity_mismatch"))
+                     continue
+ 
++                if re.search(r"\bfor all real\b", q_stem, re.I):
++                    symbols = exprs[0].free_symbols | exprs[1].free_symbols
++                    if len(symbols) == 1:
++                        variable = next(iter(symbols))
++                        try:
++                            domains = [
++                                sp.calculus.util.continuous_domain(expr, variable, sp.S.Reals)
++                                for expr in exprs
++                            ]
++                        except (NotImplementedError, ValueError):
++                            domains = []
++                        if not domains or any(domain != sp.S.Reals for domain in domains):
++                            status = "FAILED" if domains else "UNVERIFIED"
++                            graph.claims.append(MathClaim(
++                                s_idx, ln, "identity", status, evidence="universal_real_domain_unmet"
++                            ))
++                            continue
++
+                 ok, ev = _exprs_match(exprs[0], exprs[1], env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain)
+                 if ok:
+                     if ne_rhs_str is not None:
+@@ -1731,7 +1751,7 @@ def verify_complete_working(
+                     else:
+                         graph.claims.append(MathClaim(s_idx, ln, "equation", "FAILED", evidence="contradictory_constant_equation"))
+                     continue
+-                if is_identity_task:
++                if is_identity_task or re.search(r"\bfor all real\b", q_stem, re.I):
+                     graph.claims.append(MathClaim(s_idx, ln, "identity", "FAILED", evidence="identity_mismatch"))
+                     continue
+                 if not graph.active_equations:
+diff --git a/site/tools/mathguard/venn_reasoner.py b/site/tools/mathguard/venn_reasoner.py
+index 43f66f4e..a09a0207 100644
+--- a/site/tools/mathguard/venn_reasoner.py
++++ b/site/tools/mathguard/venn_reasoner.py
+@@ -12,6 +12,9 @@ from __future__ import annotations
+ 
+ from dataclasses import dataclass, field
+ from fractions import Fraction
++from math import ceil, floor
++
++from sympy.solvers.simplex import InfeasibleLPError, linprog
+ from typing import Any, Dict, List, Optional, Sequence, Tuple
+ 
+ from .set_theory_reasoner import _BooleanMaskParser
+@@ -157,6 +160,50 @@ class VennDiagramReasoner:
+         val = Fraction(value) if not isinstance(value, Fraction) else value
+         self.constraints.append((w, val, label or "custom"))
+ 
++    @staticmethod
++    def _has_integer_population(matrix, rhs, limit=128):
++        """Search nonnegative exact LP witnesses, branching on fractional regions."""
++        size = len(matrix[0])
++        pending = [[(0, None)] * size]
++        for _ in range(limit):
++            if not pending:
++                return False
++            bounds = pending.pop()
++            upper_rows, upper_values = [[0] * size], [0]
++            for index, (lower, upper) in enumerate(bounds):
++                if lower > 0:
++                    row = [0] * size
++                    row[index] = -1
++                    upper_rows.append(row)
++                    upper_values.append(-lower)
++                if upper is not None:
++                    row = [0] * size
++                    row[index] = 1
++                    upper_rows.append(row)
++                    upper_values.append(upper)
++            try:
++                _, values = linprog([0] * size, A=upper_rows, b=upper_values,
++                                    A_eq=matrix, b_eq=rhs)
++            except InfeasibleLPError:
++                continue
++            except ValueError:
++                return None
++            if any(value < 0 for value in values) or any(
++                sum(coef * value for coef, value in zip(row, values)) != total
++                for row, total in zip(matrix, rhs)
++            ):
++                return None
++            index = next((i for i, value in enumerate(values) if value != floor(value)), None)
++            if index is None:
++                return True
++            lower, upper = bounds[index]
++            for lo, hi in ((lower, floor(values[index])), (ceil(values[index]), upper)):
++                if hi is None or lo <= hi:
++                    child = bounds.copy()
++                    child[index] = (lo, hi)
++                    pending.append(child)
++        return None
++
+     def solve(self, target_exprs: Optional[List[str]] = None) -> VennSolveResult:
+         n = len(self.region_names)
+         if not self.constraints:
+@@ -245,6 +292,16 @@ class VennDiagramReasoner:
+                 reason="All Venn regions uniquely solved as non-negative integers",
+             )
+ 
++        if determined:
++            feasible = self._has_integer_population(mat, rhs)
++            if feasible is not True:
++                return VennSolveResult(
++                    status="INVALID_POPULATION" if feasible is False else "UNDERDETERMINED",
++                    num_sets=self.num_sets,
++                    reason=("No nonnegative integer population satisfies the givens" if feasible is False
++                            else "Integer population feasibility could not be certified"),
++                )
++
+         # If target_exprs were requested and ALL of them are uniquely determined, still report free_variables
+         free_names = [self.region_names[c] for c in free_cols]
+         if target_exprs and len(determined) == len(target_exprs):

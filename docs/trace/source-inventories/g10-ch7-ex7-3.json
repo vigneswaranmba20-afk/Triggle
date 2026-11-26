@@ -87,15 +87,19 @@
         2.4,
         1.4
       ],
-      "symbolEvidence": "Requested nearest cubic centimetre (cm³), NOT 2.4 cm³; carved-out cone has same height and diameter as cylinder.",
+      "symbolEvidence": "English requests the nearest cubic centimetre (cm³). The cone and cylinder share a 1.4 cm diameter and 2.4 cm height.",
       "diagramRequested": null,
       "textbookFigure": null,
       "tablesRequired": false,
       "figuresRequired": false,
-      "sourceDiscrepancy": null,
+      "sourceDiscrepancy": "English requests the nearest whole cubic centimetre. Tamil asks for the volume in cubic centimetres without specifying precision. Both answer keys give 2.46 cm³.",
+      "answerKeyLocators": {
+        "en": {"pdfPage": 347, "printedPage": 341},
+        "ta": {"pdfPage": 362, "printedPage": 356}
+      },
       "crossMediumIntentAndNumbersChecked": true,
       "runtimeAndPrReconciliation": "NOT_RECHECKED_BY_THIS_SOURCE_INVENTORY",
-      "note": "Cylinder height 2.4 cm, diameter 1.4 cm; coaxial cone removed; remaining volume rounded to nearest cm³."
+      "note": "The exact volume is 98π/125 cm³. The isolated reader correction displays 2 cm³ in English and approximately 2.46 cm³ in Tamil. Both solutions explain the difference."
     },
     {
       "question": "4",

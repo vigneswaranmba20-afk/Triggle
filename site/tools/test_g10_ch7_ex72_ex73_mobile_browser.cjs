@@ -44,6 +44,9 @@ async function collectState(page) {
     return {
       question: (document.querySelector('#questionText')?.innerText || '').trim(),
       answer: (document.querySelector('#answerText')?.innerText || '').trim(),
+      answerNumbers: [...document.querySelectorAll('.final-answer-value .katex-mathml mn')].map((el) => el.textContent),
+      answerVisible: !!document.querySelector('.final-answer-value .katex')?.getClientRects().length,
+      working: stepsList?.innerText || '',
       stepsKatex: lesson ? lesson.querySelectorAll('#stepsList .katex').length : 0,
       answerKatex: !!(lesson && lesson.querySelector('#answerText .katex')),
       mathErrors: lesson ? lesson.querySelectorAll('.katex-error, [data-math-error]').length : 0,
@@ -77,6 +80,11 @@ function assertQuestionState(state, id, width, lang) {
     `${id} ${width}px (${lang}): expected KaTeX in #stepsList, found ${state.stepsKatex}`
   );
   assert.ok(state.answerKatex, `${id} ${width}px (${lang}): expected KaTeX in #answerText`);
+  if (id === 'c10-7-ex7-3-q3') {
+    assert.ok(state.answerVisible, `${id} ${width}px (${lang}): final answer must be visible`);
+    assert.deepEqual(state.answerNumbers, [lang === 'en' ? '2' : '2.46', '3']);
+    assert.match(state.working, lang === 'en' ? /answer keys give 2\.46 cm³/ : /ஆங்கில வினா.*2 கன செ\.மீ/);
+  }
   assert.equal(
     state.mathErrors,
     0,

@@ -493,31 +493,38 @@ const entries=[
     },
     "steps": [
       {
-        "en": "First reduce the rational expression to its lowest form by factorizing the numerator x² + 6x + 8 = (x + 4)(x + 2) and the denominator x² + x − 2 = (x + 2)(x − 1), then cancelling (x + 2).",
-        "eq": "(x² + 6x + 8)/(x² + x − 2) = [(x + 4)(x + 2)] / [(x + 2)(x − 1)] = (x + 4)/(x − 1)",
+        "en": "Factor the original denominator and set each factor equal to zero. The given expression is undefined at x = −2 and x = 1.",
+        "eq": "x² + x − 2 = (x + 2)(x − 1); (x + 2)(x − 1) = 0 at x = −2 or x = 1",
         "math": {
-          "latex": "\\dfrac{x^2+6x+8}{x^2+x-2}=\\dfrac{(x+4)(x+2)}{(x+2)(x-1)}=\\dfrac{x+4}{x-1}",
-          "fallback": "(x² + 6x + 8)/(x² + x − 2) = [(x + 4)(x + 2)] / [(x + 2)(x − 1)] = (x + 4)/(x − 1)",
+          "latex": "\\begin{aligned}x^2+x-2&=(x+2)(x-1)\\\\(x+2)(x-1)=0&\\quad\\text{at }x=-2\\text{ or }x=1\\end{aligned}",
+          "fallback": "x² + x − 2 = (x + 2)(x − 1); (x + 2)(x − 1) = 0 at x = −2 or x = 1",
           "display": true
         },
-        "ta": "தொகுதியை (x + 4)(x + 2) எனவும் பகுதியை (x + 2)(x − 1) எனவும் காரணிப்படுத்துக. x ≠ −2 எனும்போது பொதுக்காரணி x + 2 ஐ நீக்கலாம்."
+        "ta": "கொடுக்கப்பட்ட கோவையின் பகுதியைக் காரணிப்படுத்தி ஒவ்வொரு காரணியையும் பூச்சியத்திற்குச் சமப்படுத்துக. x = −2 மற்றும் x = 1 ஆகிய இரு மதிப்புகளிலும் மூலக் கோவை வரையறுக்கப்படாது."
       },
       {
-        "en": "Set the denominator of the lowest-form expression equal to zero: x − 1 = 0. Therefore, the excluded value is 1. The original expression is also undefined at x = −2, where the cancelled factor is zero.",
-        "eq": "x − 1 = 0 ⇒ x = 1",
+        "en": "For values in the original domain, factor the numerator and cancel x + 2. The textbook key lists 1 because it uses the denominator of the reduced form. Cancelling x + 2 does not give the original expression a value at x = −2.",
+        "eq": "[(x + 4)(x + 2)]/[(x + 2)(x − 1)] = (x + 4)/(x − 1) for x ≠ −2, 1",
         "math": {
-          "latex": "x-1=0\\implies x=1",
-          "fallback": "x − 1 = 0 ⇒ x = 1",
+          "latex": "\\begin{aligned}\\dfrac{(x+4)(x+2)}{(x+2)(x-1)}&=\\dfrac{x+4}{x-1}\\\\x&\\notin\\{-2,1\\}\\end{aligned}",
+          "fallback": "[(x + 4)(x + 2)]/[(x + 2)(x − 1)] = (x + 4)/(x − 1) for x ≠ −2, 1",
           "display": true
         },
-        "ta": "எளிய வடிவத்தின் பகுதி x − 1 என்பதால் அதன் விலக்கப்பட்ட மதிப்பு 1. கொடுக்கப்பட்ட மூலக் கோவை x = −2 இலும் வரையறுக்கப்படாது."
+        "ta": "மூலக் கோவை வரையறுக்கப்படும் மதிப்புகளுக்கு, தொகுதியைக் காரணிப்படுத்திப் பொதுக்காரணி x + 2 ஐ நீக்கலாம். எளிய வடிவின் பகுதியை மட்டும் கொண்டு பாடநூல் விடைக்குறிப்பு 1 எனத் தருகிறது. x = −2 இல் மூலக் கோவை தொடர்ந்து வரையறுக்கப்படாது."
       }
     ],
-    "answer": "1",
+    "answer": "Original expression: x = −2, 1 are excluded. Reduced form (textbook key): x = 1 only.",
     "answerMath": {
-      "latex": "1",
-      "fallback": "1",
-      "display": true
+      "en": {
+        "latex": "\\begin{aligned}\\text{Original exclusions: }&x=-2,\\,1\\\\\\text{Reduced form: }&x=1\\end{aligned}",
+        "fallback": "Original expression: x = −2, 1 are excluded. Reduced form (textbook key): x = 1 only.",
+        "display": true
+      },
+      "ta": {
+        "latex": "\\begin{aligned}\\text{மூலக் கோவையின் விலக்குகள்: }&x=-2,\\,1\\\\\\text{எளிய வடிவம்: }&x=1\\end{aligned}",
+        "fallback": "மூலக் கோவையின் விலக்கப்பட்ட மதிப்புகள்: x = −2, 1. எளிய வடிவில் (பாடநூல் விடைக்குறிப்பு): x = 1 மட்டும்.",
+        "display": true
+      }
     },
     "kind": "textbook",
     "edition": "2025",
