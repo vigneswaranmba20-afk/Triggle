@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "f3b51cab2a650d9c57b74dce06dab8c88921cf47",
-  "updatedAt": "2026-11-26T13:58:32Z",
+  "sourceCommit": "ad67b7c72ec0e6804163ebefdb61a4606109368b",
+  "updatedAt": "2026-11-26T14:04:37Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -224,7 +224,7 @@
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9-frontier.js": "d598f9622e04022df11638a56ece19ad5136657d26f6f341356ddd7092ce6ce8",
     "site/data/why-step-g9.js": "2f50c267f609b46b57ce74320e92f440713b14a04e63bef1f63c2838076df127",
-    "site/index.html": "3df29f2eb4a88e384339a3a86558b8d42e57606a8f2ba22302ee0e053886ca63",
+    "site/index.html": "ec1d62830c783d86ce1d18d9940a6eb7b35a222c713bef8d51513c9eca7891bb",
     "site/tools/test_g9_geometry_completion.cjs": "f943394ba001f2aea4d80444997d4cbb7e96e457c3679d1838d9446a5ed3af6b",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
