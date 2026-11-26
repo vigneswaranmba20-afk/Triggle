@@ -24,11 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g10.numbers.salary",
+      "key": "g10.numbers.capacity",
       "status": "TESTED",
-      "pr": 458,
-      "head": "474775c7d699c9e5ff85aabd1980aa2f28a6d39e",
-      "prQualityRun": 45735946793
+      "pr": 459,
+      "head": "2b2dca43e14d5e932289f4600401dd7a92388b9c",
+      "prQualityRun": 45735971159
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2704,13 +2704,13 @@
         "c10-2-ex2-7-q11"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g10-ch2-frontier-salary.json",
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 10,
         "chapter": 2,
         "runtimeRecords": 1,
         "scope": "Exact fourth-year salary and the printed bilingual question in Exercise 2.7 Q11",
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 458,
         "head": "474775c7d699c9e5ff85aabd1980aa2f28a6d39e",
         "prQualityRun": 45735946793,
@@ -2719,6 +2719,37 @@
           "worktree": "/workspace/Triggle-g10-numbers-exact",
           "browserScript": "site/tools/test_g10_frontier_salary_browser.cjs",
           "studentQuery": "class=10&question=c10-2-ex2-7-q11"
+        },
+        "merge": "9bb35b50b5c9e6f96f44fa386fe1ef79107affc6",
+        "pagesRun": 45751287304,
+        "liveEvidence": {
+          "pr": 458,
+          "merge": "9bb35b50b5c9e6f96f44fa386fe1ef79107affc6",
+          "head": "474775c7d699c9e5ff85aabd1980aa2f28a6d39e",
+          "slug": "g10-numbers-salary",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q11",
+          "pagesRun": 45751287304,
+          "deploymentId": 8076313933,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45751287304/job/139688137783",
+          "deploymentCompletedAt": "2026-11-26T04:15:44Z",
+          "versionMatched": "9bb35b50b5c9e6f96f44fa386fe1ef79107affc6",
+          "sha256": {
+            "data/project-status.json": "c593292c3560bd383830c502c9f28153212b027b24ce790b515c1a24f93a7f87",
+            "data/textbook-exercises/g10-ch2-numbers-sequences-tamil.js": "4101db3d6b38cf3d8b31a460e45fb8bfdf7ad9ea66942fc8860dfba9edfa88ec",
+            "data/textbook-exercises/g10-ch2-trace-en.js": "156445fb3ff2d26f47e62df6e7a436bd8949e691b3070cc7ad8f4428560d8e25",
+            "data/textbook-fidelity/g10-ch2-frontier-salary.json": "655faf693930e746f5d49342e4dc952258781dc37303e1afee0a256351fd5d96",
+            "index.html": "6bb54de602b24a93a78409088f88b8cffe26cbc01a76e04737433a9fb26ed43b",
+            "service-worker.js": "f996d97e3db20aa57b178f3a2aae493ed4b2fc824c623583e69a9e924af79f29"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 10 salary arithmetic, both languages and saved progress at 390px passed."
+          }
         },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/458"
       }
@@ -2805,7 +2836,7 @@
       }
     }
   ],
-  "latestMain": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
+  "latestMain": "9bb35b50b5c9e6f96f44fa386fe1ef79107affc6",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2853,15 +2884,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
+  "latestVerifiedProduction": "9bb35b50b5c9e6f96f44fa386fe1ef79107affc6",
   "openReleaseOrder": [
-    {
-      "key": "g10.numbers.salary",
-      "status": "TESTED",
-      "pr": 458,
-      "head": "474775c7d699c9e5ff85aabd1980aa2f28a6d39e",
-      "prQualityRun": 45735946793
-    },
     {
       "key": "g10.numbers.capacity",
       "status": "TESTED",

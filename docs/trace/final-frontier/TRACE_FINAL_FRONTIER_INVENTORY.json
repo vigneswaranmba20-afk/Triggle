@@ -1377,7 +1377,7 @@
           "chapter": 2,
           "runtimeRecords": 1,
           "scope": "Exact fourth-year salary and the printed bilingual question in Exercise 2.7 Q11",
-          "status": "TESTED",
+          "status": "LIVE_VERIFIED",
           "pr": 458,
           "head": "474775c7d699c9e5ff85aabd1980aa2f28a6d39e",
           "prQualityRun": 45735946793,
@@ -1386,6 +1386,37 @@
             "worktree": "/workspace/Triggle-g10-numbers-exact",
             "browserScript": "site/tools/test_g10_frontier_salary_browser.cjs",
             "studentQuery": "class=10&question=c10-2-ex2-7-q11"
+          },
+          "merge": "9bb35b50b5c9e6f96f44fa386fe1ef79107affc6",
+          "pagesRun": 45751287304,
+          "liveEvidence": {
+            "pr": 458,
+            "merge": "9bb35b50b5c9e6f96f44fa386fe1ef79107affc6",
+            "head": "474775c7d699c9e5ff85aabd1980aa2f28a6d39e",
+            "slug": "g10-numbers-salary",
+            "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q11",
+            "pagesRun": 45751287304,
+            "deploymentId": 8076313933,
+            "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45751287304/job/139688137783",
+            "deploymentCompletedAt": "2026-11-26T04:15:44Z",
+            "versionMatched": "9bb35b50b5c9e6f96f44fa386fe1ef79107affc6",
+            "sha256": {
+              "data/project-status.json": "c593292c3560bd383830c502c9f28153212b027b24ce790b515c1a24f93a7f87",
+              "data/textbook-exercises/g10-ch2-numbers-sequences-tamil.js": "4101db3d6b38cf3d8b31a460e45fb8bfdf7ad9ea66942fc8860dfba9edfa88ec",
+              "data/textbook-exercises/g10-ch2-trace-en.js": "156445fb3ff2d26f47e62df6e7a436bd8949e691b3070cc7ad8f4428560d8e25",
+              "data/textbook-fidelity/g10-ch2-frontier-salary.json": "655faf693930e746f5d49342e4dc952258781dc37303e1afee0a256351fd5d96",
+              "index.html": "6bb54de602b24a93a78409088f88b8cffe26cbc01a76e04737433a9fb26ed43b",
+              "service-worker.js": "f996d97e3db20aa57b178f3a2aae493ed4b2fc824c623583e69a9e924af79f29"
+            },
+            "browser": {
+              "engine": "Chromium",
+              "width": 390,
+              "languages": [
+                "en",
+                "ta"
+              ],
+              "result": "Grade 10 salary arithmetic, both languages and saved progress at 390px passed."
+            }
           }
         },
         "g10.numbers.capacity": {
@@ -2254,9 +2285,9 @@
             },
             "current": {
               "statusCounts": {
-                "LIVE_VERIFIED": 8,
+                "LIVE_VERIFIED": 9,
                 "SOURCE_BLOCKED": 1,
-                "TESTED": 152
+                "TESTED": 151
               },
               "fullyCompletedEnglishTasks": 160,
               "fullyCompletedTamilTasks": 160,
@@ -2276,7 +2307,7 @@
               "tamilFieldsPresent": 161,
               "bilingualVerifiedTasks": 160,
               "mathVerifiedTasks": 160,
-              "liveVerifiedTasks": 8
+              "liveVerifiedTasks": 9
             }
           }
         },
@@ -2735,9 +2766,9 @@
         },
         "current": {
           "statusCounts": {
-            "LIVE_VERIFIED": 35,
+            "LIVE_VERIFIED": 36,
             "SOURCE_BLOCKED": 11,
-            "TESTED": 885
+            "TESTED": 884
           },
           "fullyCompletedEnglishTasks": 920,
           "fullyCompletedTamilTasks": 920,
@@ -2757,7 +2788,7 @@
           "tamilFieldsPresent": 925,
           "bilingualVerifiedTasks": 920,
           "mathVerifiedTasks": 920,
-          "liveVerifiedTasks": 35
+          "liveVerifiedTasks": 36
         }
       }
     }
@@ -12132,7 +12163,7 @@
         {"number":8,"source":{"en":{"pdfPages":[79],"printedPages":[73]},"ta":{"pdfPages":[79],"printedPages":[73]}},"basis":"reconciled bilingual PDF extraction","tasks":[{"taskId":"g10/ch2/ex2.7/q8/whole","part":"whole","state":{"baseline":{"status":"MATH_VERIFIED","records":[{"id":"c10-2-ex2-7-q8","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q8","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":false,"mathematicsVerifiedEvidence":true,"liveVerified":false,"reasons":[],"priorEvidence":[],"independentArithmetic":[{"answer":"3ᵃ, 3ᵇ, 3ᶜ form a G.P.","exactResult":"r=3ᵈ","method":"Equal adjacent exponent differences give equal adjacent ratios of the powers. The base 3 is positive."}]},"current":{"status":"TESTED","records":[{"id":"c10-2-ex2-7-q8","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q8","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false,"reader":{"en":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false},"ta":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false}}}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":true,"mathematicsVerifiedEvidence":true,"liveVerified":false,"reasons":[],"priorEvidence":[],"independentArithmetic":[{"answer":"3ᵃ, 3ᵇ, 3ᶜ form a G.P.","exactResult":"r=3ᵈ","method":"Equal adjacent exponent differences give equal adjacent ratios of the powers. The base 3 is positive."}],"candidateReaderTested":true}},"knownVisualRequirements":{},"visualReviewOutstanding":[],"instructionReviewOutstanding":[],"discrepancy":null,"productionReaderObservation":{"en":true,"ta":true},"teachingReleases":{"c10-2-ex2-7-q8":{"key":"g10.numbers.hints","status":"LIVE_VERIFIED","pr":442}},"standaloneHint":{"languages":["en","ta"],"release":{"status":"TESTED","pr":461}}}]},
         {"number":9,"source":{"en":{"pdfPages":[79],"printedPages":[73]},"ta":{"pdfPages":[79],"printedPages":[73]}},"basis":"reconciled bilingual PDF extraction","tasks":[{"taskId":"g10/ch2/ex2.7/q9/whole","part":"whole","state":{"baseline":{"status":"MATH_VERIFIED","records":[{"id":"c10-2-ex2-7-q9","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q9","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":false,"mathematicsVerifiedEvidence":true,"liveVerified":false,"reasons":[],"priorEvidence":[],"independentArithmetic":[{"answer":"9/2, 3, 2 or 2, 3, 9/2.","exactResult":"(2,3,9/2) or reverse","method":"The product fixes the middle term at 3. Solve the reciprocal ratio equation and verify both orders."}]},"current":{"status":"TESTED","records":[{"id":"c10-2-ex2-7-q9","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q9","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false,"reader":{"en":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false},"ta":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false}}}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":true,"mathematicsVerifiedEvidence":true,"liveVerified":false,"reasons":[],"priorEvidence":[],"independentArithmetic":[{"answer":"9/2, 3, 2 or 2, 3, 9/2.","exactResult":"(2,3,9/2) or reverse","method":"The product fixes the middle term at 3. Solve the reciprocal ratio equation and verify both orders."}],"candidateReaderTested":true}},"knownVisualRequirements":{},"visualReviewOutstanding":[],"instructionReviewOutstanding":[],"discrepancy":null,"productionReaderObservation":{"en":true,"ta":true},"teachingReleases":{"c10-2-ex2-7-q9":{"key":"g10.numbers.hints","status":"LIVE_VERIFIED","pr":442}},"standaloneHint":{"languages":["en","ta"],"release":{"status":"TESTED","pr":461}}}]},
         {"number":10,"source":{"en":{"pdfPages":[79],"printedPages":[73]},"ta":{"pdfPages":[79],"printedPages":[73]}},"basis":"reconciled bilingual PDF extraction","tasks":[{"taskId":"g10/ch2/ex2.7/q10/whole","part":"whole","state":{"baseline":{"status":"MATH_VERIFIED","records":[{"id":"c10-2-ex2-7-q10","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q10","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":false,"mathematicsVerifiedEvidence":true,"liveVerified":false,"reasons":[],"priorEvidence":[],"independentArithmetic":[{"answer":"₹76,577.","exactResult":"12252303/160","method":"After five raises multiply by 1.05 five times, then round to the nearest rupee."}]},"current":{"status":"TESTED","records":[{"id":"c10-2-ex2-7-q10","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q10","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false,"reader":{"en":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false},"ta":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false}}}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":true,"mathematicsVerifiedEvidence":true,"liveVerified":false,"reasons":[],"priorEvidence":[],"independentArithmetic":[{"answer":"₹76,577.","exactResult":"12252303/160","method":"After five raises multiply by 1.05 five times, then round to the nearest rupee."}],"candidateReaderTested":true}},"knownVisualRequirements":{},"visualReviewOutstanding":[],"instructionReviewOutstanding":[],"discrepancy":null,"productionReaderObservation":{"en":true,"ta":true},"teachingReleases":{"c10-2-ex2-7-q10":{"key":"g10.numbers.hints","status":"LIVE_VERIFIED","pr":442}},"standaloneHint":{"languages":["en","ta"],"release":{"status":"TESTED","pr":461}}}]},
-        {"number":11,"source":{"en":{"pdfPages":[79],"printedPages":[73]},"ta":{"pdfPages":[79],"printedPages":[73]}},"basis":"site/data/textbook-fidelity/g10-ch2-frontier-salary.json","tasks":[{"taskId":"g10/ch2/ex2.7/q11/whole","part":"whole","state":{"baseline":{"status":"IMPLEMENTED","records":[{"id":"c10-2-ex2-7-q11","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q11","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":false,"mathematicsVerifiedEvidence":false,"liveVerified":false,"reasons":[],"priorEvidence":[]},"current":{"status":"TESTED","records":[{"id":"c10-2-ex2-7-q11","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q11","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false,"reader":{"en":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false},"ta":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false}}}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":true,"mathematicsVerifiedEvidence":true,"liveVerified":false,"reasons":[],"priorEvidence":[{"source":"site/data/textbook-fidelity/g10-ch2-frontier-salary.json","test":"site/tools/test_g10_frontier_salary.cjs"}],"independentArithmetic":[{"answer":"Offer A: ₹23,820.32. Offer B: ₹24,039.99 to the nearest paise. Offer B is higher by ₹219.67.","exactResult":"(595508/25, 12019997/500)","method":"Apply exactly three raises and round only after the products and comparison are exact. The two appendices use whole rupees."}],"candidateReaderTested":true}},"knownVisualRequirements":{},"visualReviewOutstanding":[],"instructionReviewOutstanding":[],"discrepancy":null,"productionReaderObservation":{"en":true,"ta":true},"teachingReleases":{"c10-2-ex2-7-q11":{"key":"g10.numbers.hints","status":"LIVE_VERIFIED","pr":442}},"standaloneHint":{"languages":["en","ta"],"release":{"status":"TESTED","pr":461}}}],"sourceNote":"Both official answers use whole-rupee rounding. The exact fourth-year salaries are ₹23,820.32 and ₹24,039.994. Offer B is higher by ₹219.674."},
+        {"number":11,"source":{"en":{"pdfPages":[79],"printedPages":[73]},"ta":{"pdfPages":[79],"printedPages":[73]}},"basis":"site/data/textbook-fidelity/g10-ch2-frontier-salary.json","tasks":[{"taskId":"g10/ch2/ex2.7/q11/whole","part":"whole","state":{"baseline":{"status":"IMPLEMENTED","records":[{"id":"c10-2-ex2-7-q11","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q11","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":false,"mathematicsVerifiedEvidence":false,"liveVerified":false,"reasons":[],"priorEvidence":[]},"current":{"status":"LIVE_VERIFIED","records":[{"id":"c10-2-ex2-7-q11","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q11","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false,"reader":{"en":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false},"ta":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false}}}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":true,"mathematicsVerifiedEvidence":true,"liveVerified":true,"reasons":[],"priorEvidence":[{"source":"site/data/textbook-fidelity/g10-ch2-frontier-salary.json","test":"site/tools/test_g10_frontier_salary.cjs"}],"independentArithmetic":[{"answer":"Offer A: ₹23,820.32. Offer B: ₹24,039.99 to the nearest paise. Offer B is higher by ₹219.67.","exactResult":"(595508/25, 12019997/500)","method":"Apply exactly three raises and round only after the products and comparison are exact. The two appendices use whole rupees."}],"candidateReaderTested":true}},"knownVisualRequirements":{},"visualReviewOutstanding":[],"instructionReviewOutstanding":[],"discrepancy":null,"productionReaderObservation":{"en":true,"ta":true},"teachingReleases":{"c10-2-ex2-7-q11":{"key":"g10.numbers.hints","status":"LIVE_VERIFIED","pr":442}},"standaloneHint":{"languages":["en","ta"],"release":{"status":"TESTED","pr":461}}}],"sourceNote":"Both official answers use whole-rupee rounding. The exact fourth-year salaries are ₹23,820.32 and ₹24,039.994. Offer B is higher by ₹219.674."},
         {"number":12,"source":{"en":{"pdfPages":[79],"printedPages":[73]},"ta":{"pdfPages":[79],"printedPages":[73]}},"basis":"site/data/textbook-fidelity/g10-frontier-numbers-domain.json","tasks":[{"taskId":"g10/ch2/ex2.7/q12/whole","part":"whole","state":{"baseline":{"status":"SOURCE_BLOCKED","records":[{"id":"c10-2-ex2-7-q12","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q12","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":false,"mathematicsVerifiedEvidence":false,"liveVerified":false,"reasons":["Neither edition restricts the bases for the power identity. Taking a,b,c = 0, 1/2, 1 and x=y=z=−1 makes the left side undefined over the reals. The reader proves the positive-base case."],"priorEvidence":[]},"current":{"status":"SOURCE_BLOCKED","records":[{"id":"c10-2-ex2-7-q12","registered":true,"catalogueVisible":true,"mapping":"numbered-question-label","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q12","fields":{"en":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false},"ta":{"question":true,"workedSteps":true,"finalAnswer":true,"hints":false,"whySteps":false,"choiceFeedbackNeedsBrowserReview":false}},"figure":null,"tamilFigure":null,"interactiveDiagram":false,"dataTable":false,"reader":{"en":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false},"ta":{"questionHint":true,"whySteps":1,"figure":false,"dataTable":false,"mathErrors":0,"pageOverflow":false}}}],"hasEnglishSolutionFields":true,"hasTamilSolutionFields":true,"bilingualContentVerified":false,"mathematicsVerifiedEvidence":false,"liveVerified":false,"reasons":["Neither edition restricts the bases for the power identity. Taking a,b,c = 0, 1/2, 1 and x=y=z=−1 makes the left side undefined over the reals. The reader proves the positive-base case."],"priorEvidence":[]}},"knownVisualRequirements":{},"visualReviewOutstanding":[],"instructionReviewOutstanding":[],"discrepancy":{"issue":"Neither edition restricts the bases for the power identity. Taking a,b,c = 0, 1/2, 1 and x=y=z=−1 makes the left side undefined over the reals. The reader proves the positive-base case.","evidence":"2025 EN and TA PDF p. 79 visual check and site/data/textbook-fidelity/g10-frontier-numbers-domain.json","resolution":"Retain the positive-base condition and obtain an official erratum before counting the unrestricted statement as solved."},"productionReaderObservation":{"en":true,"ta":true},"teachingReleases":{"c10-2-ex2-7-q12":{"key":"g10.numbers.hints","status":"LIVE_VERIFIED","pr":442}},"standaloneHint":{"languages":["en","ta"],"release":{"status":"TESTED","pr":461}}}]}
       ],
       "tamilNumberedCountIndependentlyMatched": true,
@@ -12165,8 +12196,9 @@
         },
         "current": {
           "statusCounts": {
+            "LIVE_VERIFIED": 1,
             "SOURCE_BLOCKED": 1,
-            "TESTED": 20
+            "TESTED": 19
           },
           "fullyCompletedEnglishTasks": 20,
           "fullyCompletedTamilTasks": 20,
@@ -12186,7 +12218,7 @@
           "tamilFieldsPresent": 21,
           "bilingualVerifiedTasks": 20,
           "mathVerifiedTasks": 20,
-          "liveVerifiedTasks": 0
+          "liveVerifiedTasks": 1
         }
       },
       "canonicalTaskCount": 21,
