@@ -24,13 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g10.mensuration.hints",
-      "status": "MERGED",
-      "pr": 446,
-      "head": "3968ae19932db758253f0d831c5acceda57284b2",
-      "prQualityRun": 45705674618,
-      "merge": "76453efbc667288712d77723f664320af21f9548",
-      "pagesRun": 45727334947
+      "key": "g10.geometry.hints",
+      "status": "TESTED",
+      "pr": 447,
+      "head": "7ad00ea8241382a8827de734eae61d91e98992a1",
+      "prQualityRun": 45706060651
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -1982,18 +1980,45 @@
       "chapter": 7,
       "scope": "Grade 10 Mensuration explanations",
       "runtimeRecords": 62,
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 10,
         "chapter": 7,
         "runtimeRecords": 62,
         "scope": "Grade 10 Mensuration explanations",
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 446,
         "head": "3968ae19932db758253f0d831c5acceda57284b2",
         "prQualityRun": 45705674618,
         "merge": "76453efbc667288712d77723f664320af21f9548",
         "pagesRun": 45727334947,
+        "liveEvidence": {
+          "pr": 446,
+          "merge": "76453efbc667288712d77723f664320af21f9548",
+          "head": "3968ae19932db758253f0d831c5acceda57284b2",
+          "slug": "g10-mensuration-hints",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-7-ex7-1-q1",
+          "pagesRun": 45727334947,
+          "deploymentId": 8073080849,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45727334947/job/139606684763",
+          "deploymentCompletedAt": "2026-11-26T00:31:11Z",
+          "versionMatched": "76453efbc667288712d77723f664320af21f9548",
+          "sha256": {
+            "data/g10-frontier-mensuration-hints.js": "205586706909e5c6fc9ac64a59b772b78aab925d77b25f83b095efbec7bd60e0",
+            "data/project-status.json": "0bd7e730f565be4e8ec37c5de5c9c49a486f69041911417c07239a6b1942d961",
+            "index.html": "3666b7d9e9a519e95866ea996a3f97b349b5486ae50fbbd351bce8ee97f538f2",
+            "service-worker.js": "3e2b024e67ff591642fe2de81eab8832711d2e7e3ad9fb5000ef2641b0af6c20"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 10 Chapter 7: 62 bilingual explanations at 390px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/446"
       }
     },
@@ -2316,17 +2341,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "abe44345d4fdaefec1932e82f4286b28b56dec08",
+  "latestVerifiedProduction": "76453efbc667288712d77723f664320af21f9548",
   "openReleaseOrder": [
-    {
-      "key": "g10.mensuration.hints",
-      "status": "MERGED",
-      "pr": 446,
-      "head": "3968ae19932db758253f0d831c5acceda57284b2",
-      "prQualityRun": 45705674618,
-      "merge": "76453efbc667288712d77723f664320af21f9548",
-      "pagesRun": 45727334947
-    },
     {
       "key": "g10.geometry.hints",
       "status": "TESTED",
