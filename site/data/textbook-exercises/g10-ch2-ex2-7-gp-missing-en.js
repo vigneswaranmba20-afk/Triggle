@@ -150,6 +150,7 @@ const entries=[
   },
   {
     "id": "c10-2-ex2-7-q2-ii",
+    "duplicateOf": "c10-2-ex2-7-q2",
     "classNum": 10,
     "chapter": "2",
     "exercise": "2.7",
@@ -443,6 +444,6 @@ for(const row of entries){
   if(seen.has(row.id))throw Error('Duplicate Grade 10 Exercise 2.7 student ID: '+row.id);
   seen.add(row.id);
   grade.items.push(row);
-  if(!chapter.textbookQuestionIds.includes(row.id))chapter.textbookQuestionIds.push(row.id);
+  if(!row.duplicateOf&&!chapter.textbookQuestionIds.includes(row.id))chapter.textbookQuestionIds.push(row.id);
 }
 })();

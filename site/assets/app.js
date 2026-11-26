@@ -98,9 +98,10 @@
      return exercise||compareTextbookPositions(a,b);
    });
  };
+ const catalogueId=item=>item.duplicateOf||item.id;
  const activeList=()=>{
    const chapter=chapterForItem(current),exercises=textbookExerciseList(chapter);
-   if(exercises.some(item=>item.id===current.id)){
+   if(exercises.some(item=>item.id===catalogueId(current))){
      // The selected exercise is a self-contained learning path in every grade.
      return exercises.filter(item=>item.exercise===current.exercise);
    }
@@ -108,7 +109,7 @@
    const local=classes[grade].items.filter(item=>item.chapter===current.chapter&&item.exercise===current.exercise);
    return local.some(item=>item.id===current.id)?local:classes[grade].items;
  };
- const currentIndex=()=>activeList().findIndex(i=>i.id===current.id);
+ const currentIndex=()=>activeList().findIndex(i=>i.id===catalogueId(current));
  const sectionForQuestion=item=>'exercises';
  const num=n=>String(n).padStart(2,'0');
  const labelForGroup=(e)=>e.endsWith('.examples')?(lang==='ta'?'எடுத்துக்காட்டுகள்':'Worked examples'):(e.includes('practice')?ui('practice')+' '+e.split('.')[0]:(e.endsWith('.unit')?ui('unitExercise')+' '+e.split('.')[0]:(lang==='ta'?'பயிற்சி ':'Exercise ')+e));
@@ -197,7 +198,7 @@
    $('lessonCard').focus({preventScroll:true});
  }
 
- function navMove(delta){if(homeView||classIndex||chapterOverview)return;const list=activeList(),i=currentIndex()+delta;if(i<0||i>=list.length)return;selectLesson(list[i])}
+ function navMove(delta){if(homeView||classIndex||chapterOverview)return;const list=activeList(),i=currentIndex()+(current.duplicateOf&&delta<0?0:delta);if(i<0||i>=list.length)return;selectLesson(list[i])}
 
  function renderBreadcrumb(chapter){
    const nav=$('crumb');nav.replaceChildren();
@@ -653,7 +654,7 @@
   if(chapterOverview){$('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;renderBreadcrumb(chapterOverview.title);$('gradeTotal').textContent=chapterList().length+' '+ui('chapters');renderOverview(chapterOverview);renderList();window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:null,lang,grade,chapter:chapterOverview}}));return}
   const list=activeList();const n=currentIndex(),position=n+1,chapter=chapterForItem(current)?.title||classes[grade].chapters[current.chapter]||current.topic;
    const questionChapter=chapterForItem(current);
-   const isTextbookExercise=!!questionChapter&&textbookExerciseList(questionChapter).some(item=>item.id===current.id);
+   const isTextbookExercise=!!questionChapter&&textbookExerciseList(questionChapter).some(item=>item.id===catalogueId(current));
    document.body.classList.toggle('exercise-reading-scale',isTextbookExercise&&(grade===9||(grade===10&&String(typographyChapter)==='2')));
    $('exerciseIndexLink').hidden=!isTextbookExercise;
    $('exerciseIndexLink').textContent=lang==='ta'?'← பயிற்சிகள்':'← Exercises';
@@ -853,7 +854,7 @@
  $('questionReturnBtn').onclick=()=>{
    const chapter=chapterForItem(current);
    if(!chapter)return;
-   if(textbookExerciseList(chapter).some(item=>item.id===current.id)){
+   if(textbookExerciseList(chapter).some(item=>item.id===catalogueId(current))){
      openChapterSection('exercises',chapter);
      return;
    }
