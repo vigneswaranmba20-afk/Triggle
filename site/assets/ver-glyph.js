@@ -9,7 +9,7 @@
     algebra: ['<path d="M3 17h18M9 21V3m-5 2c2 12 5 15 8 12s5-3 8-12"/>', [12, 17]],
     geometry: ['<path d="M3 19 10 5l11 14ZM10 5v14" /><path d="M10 16h3v3"/>', [10, 19]],
     coordinates: ['<path d="M3 17h18m-3-3 3 3-3 3M7 21V3M4 6l3-3 3 3m6 3H7m9 0v8" />', [16, 9]],
-    trigonometry: ['<circle cx="12" cy="12" r="8"/><path d="M2 12h20M12 2v20m0-10 6-5v5"/>', [18, 7]],
+    trigonometry: ['<circle cx="12" cy="12" r="7.5"/><path d="M2 12h20M12 2v20l0-10 6-4.5V12"/>', [18, 7.5]],
     mensuration: ['<path d="m12 3 8 4.5v9L12 21l-8-4.5v-9Zm0 9 8-4.5M12 12 4 7.5M12 12v9"/>', [12, 12]],
     statistics: ['<path d="M3 3v17h18M6 20v-6h3v6m2 0V9h3v11m2 0V5h3v15"/>', [17.5, 5]],
     probability: ['<rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 8h.01M16 16h.01"/>', [12, 12]],

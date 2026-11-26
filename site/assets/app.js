@@ -75,6 +75,7 @@
   return math(localized);
  }
 
+ const exerciseOrder=new Intl.Collator(undefined,{numeric:true});
  const textbookParts='i ii iii iv v vi vii viii ix x xi xii xiii xiv xv xvi xvii xviii xix xx'.split(' ');
  const textbookPosition=item=>{
    const match=item.id.match(/-q(\d*)((?:-[a-z]+)*)$/);
@@ -99,7 +100,7 @@
    const items=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
    if(grade!==9&&grade!==10)return items;
    return [...items].sort((a,b)=>{
-     const exercise=String(a.exercise||'').localeCompare(String(b.exercise||''),undefined,{numeric:true});
+     const exercise=exerciseOrder.compare(String(a.exercise||''),String(b.exercise||''));
      return exercise||compareTextbookPositions(a,b);
    });
  };
@@ -114,7 +115,7 @@
    const local=classes[grade].items.filter(item=>item.chapter===current.chapter&&item.exercise===current.exercise);
    return local.some(item=>item.id===current.id)?local:classes[grade].items;
  };
- const currentIndex=()=>activeList().findIndex(i=>i.id===catalogueId(current));
+ const currentIndex=list=>list.findIndex(i=>i.id===catalogueId(current));
  const sectionForQuestion=item=>'exercises';
  const labelForGroup=(e)=>e.endsWith('.examples')?(lang==='ta'?'எடுத்துக்காட்டுகள்':'Worked examples'):(e.includes('practice')?ui('practice')+' '+e.split('.')[0]:(e.endsWith('.unit')?ui('unitExercise')+' '+e.split('.')[0]:(lang==='ta'?'பயிற்சி ':'Exercise ')+e));
  function updateUrl(replace=false){
@@ -202,7 +203,7 @@
    $('lessonCard').focus({preventScroll:true});
  }
 
- function navMove(delta){if(homeView||classIndex||chapterOverview)return;const list=activeList(),i=currentIndex()+(current.duplicateOf&&delta<0?0:delta);if(i<0||i>=list.length)return;selectLesson(list[i])}
+ function navMove(delta){if(homeView||classIndex||chapterOverview)return;const list=activeList(),i=currentIndex(list)+(current.duplicateOf&&delta<0?0:delta);if(i<0||i>=list.length)return;selectLesson(list[i])}
 
  function renderBreadcrumb(chapter,exerciseIndex=null){
    const nav=$('crumb');nav.replaceChildren();
@@ -676,7 +677,7 @@
    }
   document.body.classList.toggle('chapter-overview-active',!!chapterOverview);$('chapterOverview').hidden=!chapterOverview;$('lessonCard').hidden=!!chapterOverview;
   if(chapterOverview){$('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;renderBreadcrumb(chapterOverview.title);$('gradeTotal').textContent=chapterList().length+' '+ui('chapters');renderOverview(chapterOverview);renderList();window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:null,lang,grade,chapter:chapterOverview}}));return}
-  const list=activeList();const n=currentIndex(),position=n+1,chapter=chapterForItem(current)?.title||classes[grade].chapters[current.chapter]||current.topic;
+  const list=activeList();const n=currentIndex(list),position=n+1,chapter=chapterForItem(current)?.title||classes[grade].chapters[current.chapter]||current.topic;
    const questionChapter=chapterForItem(current);
    const isTextbookExercise=!!questionChapter&&textbookExerciseList(questionChapter).some(item=>item.id===catalogueId(current));
    document.body.classList.toggle('exercise-reading-scale',isTextbookExercise&&(grade===9||(grade===10&&String(typographyChapter)==='2')));
@@ -921,4 +922,5 @@
  });
  window.addEventListener('popstate',()=>{let p=new URL(location.href).searchParams;if(restrictedRoute(p)){history.replaceState(null,'',location.pathname);p=new URL(location.href).searchParams;}const g=Number(p.get('class'));grade=publicGrade(g)&&classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;$('search').value='';render();closeDrawer();resetScroll()});
  mobile.addEventListener('change',syncDrawer);remember();updateUrl(true);render();
+ document.body.classList.remove('ver-starting');
 })();

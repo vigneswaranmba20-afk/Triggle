@@ -19,7 +19,7 @@
   --ver-space-6: 2rem;
   --ver-radius: .5rem;
   --ver-radius-surface: .75rem;
-  --ver-touch: 3rem;
+  --ver-touch: 48px;
   --ver-icon: 1.25rem;
   --ver-motion: 150ms;
   --ver-reader-width: 51rem;
@@ -64,6 +64,19 @@
   --ver-font: "Triggle Noto Sans Tamil", system-ui, sans-serif;
   --ver-prose-leading: 1.7;
   --ver-text-question: clamp(1.0625rem, 1rem + .45vw, 1.3125rem);
+}
+
+.ver-starting :is(.app-shell, .class-dock) { visibility: hidden; opacity: 0; }
+.ver-glyph:not(.ver-starting) .ver-loading,
+html[lang="en"] .ver-loading [lang="ta"],
+html[lang="ta"] .ver-loading [lang="en"] { display: none; }
+.ver-loading {
+  position: absolute;
+  inset-block-start: var(--ver-space-6);
+  inset-inline: var(--ver-space-5);
+  margin: 0;
+  color: var(--ver-forest);
+  font: 650 var(--ver-text-body)/var(--ver-prose-leading) var(--ver-font);
 }
 
 .ver-glyph ::selection {
@@ -382,7 +395,21 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
   font-size: var(--ver-text-small) !important;
   line-height: var(--ver-prose-leading) !important;
 }
-.ver-glyph #lessonCard .inline-figure-visual :is(svg, img) { max-height: min(45dvh, 19rem) !important; }
+.ver-glyph #lessonCard .inline-figure-visual svg { max-height: min(45dvh, 19rem) !important; }
+.ver-glyph #lessonCard .inline-figure-visual:has(img) {
+  position: relative;
+  flex: 0 1 auto;
+  inline-size: min(100%, 28rem);
+  block-size: clamp(10rem, 42vw, 16rem);
+}
+.ver-glyph #lessonCard .inline-figure-visual img {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-height: 100% !important;
+}
+
 
 .ver-question-tools, .ver-solution-actions {
   display: flex;
@@ -418,7 +445,7 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
 .ver-glyph #lessonCard #quickSolutionAction:not([hidden]) { background: var(--ver-mist); }
 .ver-glyph #lessonCard #quickSolutionAction:not([hidden]):hover { background: var(--ver-divider); }
 .ver-glyph #lessonCard #g9GeometryHint { margin: 0; }
-.ver-glyph #lessonCard #g9GeometryHint[open] { flex-basis: 100%; order: 1; }
+.ver-glyph #lessonCard #g9GeometryHint[open] { flex-basis: 100%; }
 .ver-glyph #lessonCard #g9GeometryHint > summary::-webkit-details-marker { display: none; }
 .ver-glyph #lessonCard #g9GeometryHint > summary::after { content: "+"; font-weight: 500; }
 .ver-glyph #lessonCard #g9GeometryHint[open] > summary::after { content: "−"; }
@@ -451,7 +478,7 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
   text-transform: none;
 }
 .ver-glyph.textbook-reader #lessonCard .lesson-divider [data-i18n="stepByStep"] {
-  color: var(--ver-forest);
+  color: var(--ver-forest) !important;
 }
 .ver-glyph #lessonCard #stepCount { color: var(--ver-muted); text-transform: none; }
 .ver-glyph.textbook-reader #lessonCard .worked-step {
@@ -570,6 +597,7 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
     padding: var(--ver-space-1) var(--ver-space-2) !important;
     gap: var(--ver-space-1) !important;
   }
+  .ver-glyph.textbook-reader .appbar .brand-mobile { overflow: hidden; }
   .ver-glyph.textbook-reader .appbar .brand-mobile b { display: block; }
   .ver-glyph.textbook-reader .appbar :is(.browse-button, .home-link) {
     width: var(--ver-touch) !important;

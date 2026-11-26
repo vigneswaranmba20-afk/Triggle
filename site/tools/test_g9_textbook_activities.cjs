@@ -73,7 +73,7 @@ for(const lang of ['en','ta']){
  assert.equal(first.open,true);assert.equal(second.open,false);
  assert.equal(first.dataset.activityKind,'activity');assert.equal(second.dataset.activityKind,'progress');
  const summary=first.children[0],copy=summary.children[1];
- assert.equal(summary.attrs['aria-label'],sample.title[lang]);
+ assert.equal(summary.attrs['aria-label'],undefined,'Use the visible activity heading as the native summary name');
  assert.equal(copy.children[0].textContent,'Activity 1');
  assert.equal(copy.children[1].textContent,'Two coins and two dice');
  assert.equal(copy.children.length,lang==='ta'?3:2);

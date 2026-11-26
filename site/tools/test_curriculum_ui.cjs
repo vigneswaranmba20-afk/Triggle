@@ -139,7 +139,7 @@ async function main() {
         await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='1000px';window.scrollTo(0,900);});
         await page.waitForTimeout(60);
         const past=await page.evaluate(()=>document.querySelector('#questionText').getBoundingClientRect().bottom<
-          document.querySelector('.status-row').getBoundingClientRect().bottom+8);
+          document.querySelector('.appbar').getBoundingClientRect().bottom+8);
         const showing=await page.locator('#questionJump').isVisible();
         assert.equal(showing,past,'Question return link only appears once the question is above its context');
         if(showing){
@@ -384,7 +384,7 @@ async function main() {
         await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
         assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
         await page.locator('.hub-exercise-link').first().click();
-        assert.match(await page.locator('#questionHead').innerText(),/Exercise/);
+        assert.match(await page.locator('#questionLabel').innerText(),/Exercise/);
         assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
         await page.locator('#crumb .crumb-link').nth(1).click();
         assert.equal(await page.locator('#pathDialog').evaluate(el=>el.open),true);
@@ -600,7 +600,7 @@ async function main() {
       assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
       await page.locator('.hub-exercise-link').first().click();
        assert.equal(new URL(page.url()).searchParams.has('question'),true);
-       assert.match(await page.locator('#questionHead').innerText(),/Exercise 6\.1/);
+       assert.match(await page.locator('#questionLabel').innerText(),/Exercise 6\.1/);
        assert.ok((await page.locator('#stepsList li').count())>0,'Full exercise working remains');
        await page.goBack();
       assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
@@ -677,7 +677,7 @@ async function main() {
        await page.locator('#exerciseList [data-section="exercises"]').click();
       assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
       await page.locator('.hub-exercise-link').first().click();
-       assert.match(await page.locator('#questionHead').innerText(),/Exercise/);
+       assert.match(await page.locator('#questionLabel').innerText(),/Exercise/);
        assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
        await noOverflow(page,'mobile chapter-first drawer');
      });
@@ -919,7 +919,7 @@ async function main() {
       assert.equal(new URL(page.url()).searchParams.has('section'),false,'Old section links resolve to chapter');
       await gotoWithControls(page,url+'/index.html?class=9&question=c9-example-6-1');
       assert.notEqual(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
-      assert.match(await page.locator('#questionHead').innerText(),/(?:Exercise|பயிற்சி)/);
+      assert.match(await page.locator('#questionLabel').innerText(),/(?:Exercise|பயிற்சி)/);
       assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
     });
     await check('legacy progress, diagrams and standard solutions survive chapter navigation', async () => {

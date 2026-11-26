@@ -51,6 +51,7 @@ function readerMetrics() {
   )].filter(el => el.offsetWidth).map(el => ({id: el.id, width: bounds(el).width, height: bounds(el).height}));
   return {
     promptY: Math.round(range.getClientRects()[0]?.top || rect.top + parseFloat(style.paddingTop)),
+    headerHeight: Math.round(bounds(document.querySelector('.appbar')).height),
     promptSize: parseFloat(style.fontSize),
     promptText: paragraph.innerText,
     question: new URL(location.href).searchParams.get('question'),
@@ -89,19 +90,21 @@ async function testActions(page, base) {
   await page.goto(base + route(9, 'g9-ch1-ex1.1-q1-i'));
   await page.locator('#g9GeometryHint summary').click();
   assert.equal(await page.locator('#g9GeometryHint').evaluate(el => el.open), true);
-  await page.locator('#figureBtn').click();
-  assert.equal(await page.locator('#figureDialog').evaluate(dialog => dialog.open), true);
-  await page.keyboard.press('Escape');
-  assert.equal(await page.locator('#figureDialog').evaluate(dialog => dialog.open), false);
   await page.locator('#deepSolutionAction').click();
   assert.ok(await page.locator('#stepsList details[open] summary:focus').count());
   await page.locator('#quickSolutionAction').click();
   assert.equal(await page.locator('#stepsRegion').evaluate(el => el === document.activeElement), true);
+  await page.goto(base + route(9, 'g9-ch3-ex3.2-q1-i'));
   await page.locator('#chapter8QuestionConcept').click();
   assert.equal(new URL(page.url()).searchParams.get('section'), 'concepts');
   await page.goBack();
   await page.locator('#exerciseIndexLink').click();
   assert.equal(new URL(page.url()).searchParams.get('section'), 'exercises');
+  await page.goto(base + route(10, 'c10-4-ex4-1-q1-i'));
+  await page.locator('#figureBtn').click();
+  assert.equal(await page.locator('#figureDialog').evaluate(dialog => dialog.open), true);
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator('#figureDialog').evaluate(dialog => dialog.open), false);
   await page.locator('#homeBtn').click();
   assert.equal(await page.locator('.home-copyright').innerText(), '© 2026 VER labs');
   for (const grade of [11, 12]) {
@@ -151,8 +154,12 @@ async function testActions(page, base) {
           check(metrics.controls.every(target => target.height >= 47 && target.width >= 44), 'small essential control');
         }
       }
-      if (!before && width === 390) await testActions(page, base);
       if (!before && errors.length) failures.push(name + ' browser errors: ' + errors.join('; '));
+      await context.close();
+    }
+    if (!before) {
+      const context = await browser.newContext({viewport: {width: 390, height: 844}, serviceWorkers: 'block'});
+      await testActions(await context.newPage(), base);
       await context.close();
     }
   } finally {
