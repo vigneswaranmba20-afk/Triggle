@@ -24,7 +24,7 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": null,
-    "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
+    "scope": "Verify the integrated main revision and Pages run after PR #466."
   },
   "editorialReview": {
     "ta": "pending",
@@ -2929,7 +2929,7 @@
       }
     }
   ],
-  "latestMain": "b0f1557c34178af9ea737aaca8109297a962cb90",
+  "latestMain": "0898788ea1e05a54c9924c3c5cf32eae749ecb8d",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2965,7 +2965,8 @@
     "trigonometryFigureLabelAudit": "/workspace/scratch/trace-sources/g10-trig-figure-layout-regression.log",
     "additionalBrowserRegression": "/workspace/scratch/trace-sources/frontier-final-browser-last-commands.log",
     "localBrowserEngineRegression": "/workspace/scratch/trace-sources/frontier-final-browser-system-chromium.log",
-    "localUnitRegression": "/workspace/scratch/trace-sources/frontier-tamil-formulas-full-unit-final.log"
+    "localUnitRegression": "/workspace/scratch/trace-sources/frontier-tamil-formulas-full-unit-final.log",
+    "integratedMainVerification": "/workspace/scratch/trace-sources/verify-integrated-main.sh"
   },
   "openManagement": {
     "mathguard": "https://github.com/vigneswaranmba20-afk/Triggle/pull/425",
@@ -2973,10 +2974,27 @@
     "deliverablesPR": "https://github.com/vigneswaranmba20-afk/Triggle/pull/455"
   },
   "resume": [
-    "Process openReleaseOrder in order. Confirm the exact PR head and passing required checks against main. Reconcile the preceding released tree with the queued PR diff before merging.",
-    "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
-    "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
+    "Wait for the exact intervening Pages run and verify the integrated main revision. Then publish the final report through PR #455."
   ],
   "latestVerifiedProduction": "b0f1557c34178af9ea737aaca8109297a962cb90",
-  "openReleaseOrder": []
+  "openReleaseOrder": [],
+  "interveningMain": {
+    "pr": 466,
+    "revision": "0898788ea1e05a54c9924c3c5cf32eae749ecb8d",
+    "curriculumRevision": "b0f1557c34178af9ea737aaca8109297a962cb90",
+    "pagesRun": 45760976349,
+    "changedPaths": [
+      "site/assets/discovery.js",
+      "site/assets/g10-ch8-concepts.css",
+      "site/assets/g10-ch8-concepts.js",
+      "site/data/project-status.json",
+      "site/index.html",
+      "site/service-worker.js",
+      "site/tools/test_curriculum_ui.cjs",
+      "site/tools/test_g10_ch8_concepts_browser.cjs"
+    ],
+    "curriculumDataAndReaderCodeMatch": true,
+    "integratedWorktree": "/workspace/Triggle-frontier-integrated",
+    "scope": "Android Grade 10 Statistics and Probability concept controls, branding and cache version"
+  }
 }
