@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": 8,
+  "edition": "2025 revised",
+  "sources": {
+    "en": {
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "sha256": "e6890ec79f4ad09c42f4829f0a14f4fbc3c6814887c4ba14f2b3fa559638c037",
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J"
+    },
+    "ta": {
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf",
+      "sha256": "f1ca8c449f3af848edd7ef844f47ebcf4b7f0c8ef2cb4a8a1ded32687c2e1303",
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj"
+    }
+  },
+  "items": [
+    {
+      "id": "g9-ch8-ex8.1-q4",
+      "exercise": "8.1",
+      "question": 4,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 283,
+            "printed": 277
+          },
+          {
+            "pdf": 284,
+            "printed": 278
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 300,
+            "printed": 294
+          }
+        ]
+      },
+      "sourceTable": true,
+      "tableLayout": "two-column transposition of source data"
+    },
+    {
+      "id": "g9-ch8-ex8.1-q5",
+      "exercise": "8.1",
+      "question": 5,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 284,
+            "printed": 278
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 300,
+            "printed": 294
+          }
+        ]
+      },
+      "sourceTable": true,
+      "tableLayout": "two-column transposition of source data"
+    },
+    {
+      "id": "g9-ch8-ex8.1-q6",
+      "exercise": "8.1",
+      "question": 6,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 284,
+            "printed": 278
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 300,
+            "printed": 294
+          }
+        ]
+      },
+      "sourceTable": true,
+      "tableLayout": "two-column transposition of source data"
+    },
+    {
+      "id": "g9-ch8-ex8.1-q7",
+      "exercise": "8.1",
+      "question": 7,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 284,
+            "printed": 278
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 300,
+            "printed": 294
+          }
+        ]
+      },
+      "sourceTable": true,
+      "tableLayout": "two-column transposition of source data"
+    },
+    {
+      "id": "g9-ch8-ex8.1-q8",
+      "exercise": "8.1",
+      "question": 8,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 284,
+            "printed": 278
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 300,
+            "printed": 294
+          }
+        ]
+      },
+      "sourceTable": true,
+      "tableLayout": "two-column transposition of source data"
+    },
+    {
+      "id": "g9-ch8-ex8.2-q5",
+      "exercise": "8.2",
+      "question": 5,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 290,
+            "printed": 284
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 307,
+            "printed": 301
+          }
+        ]
+      },
+      "sourceTable": true,
+      "tableLayout": "two-column transposition of source data"
+    },
+    {
+      "id": "g9-ch8-ex8.3-q4",
+      "exercise": "8.3",
+      "question": 4,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 293,
+            "printed": 287
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 310,
+            "printed": 304
+          }
+        ]
+      },
+      "sourceTable": true,
+      "tableLayout": "two-column transposition of source data"
+    },
+    {
+      "id": "g9-ch8-ex8.3-q5",
+      "exercise": "8.3",
+      "question": 5,
+      "parts": [
+        "whole"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 293,
+            "printed": 287
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 310,
+            "printed": 304
+          }
+        ]
+      },
+      "sourceTable": true,
+      "tableLayout": "two-column transposition of source data"
+    },
+    {
+      "id": "g9-ch8-ex8.3-q6",
+      "exercise": "8.3",
+      "question": 6,
+      "parts": [
+        "mode",
+        "mean",
+        "median"
+      ],
+      "sourcePages": {
+        "en": [
+          {
+            "pdf": 293,
+            "printed": 287
+          }
+        ],
+        "ta": [
+          {
+            "pdf": 311,
+            "printed": 305
+          }
+        ]
+      },
+      "sourceTable": true,
+      "tableLayout": "two-column transposition of source data"
+    }
+  ],
+  "sourceDifference": {
+    "exercise": "8.3",
+    "question": 6,
+    "enTasks": [
+      "mode"
+    ],
+    "taTasks": [
+      "mean",
+      "median",
+      "mode"
+    ],
+    "appendixPdfPages": {
+      "en": 323,
+      "ta": 339
+    },
+    "note": "Both answer appendices print only 58.5. The Tamil question explicitly asks for mean and median as well. Show the two added solutions in both language modes with their edition context."
+  },
+  "editorialReview": {
+    "ta": "pending-independent-review",
+    "teacher": "pending"
+  }
+}

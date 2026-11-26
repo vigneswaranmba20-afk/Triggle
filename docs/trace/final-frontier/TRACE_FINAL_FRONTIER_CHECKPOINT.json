@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "repository": "vigneswaranmba20-afk/Triggle",
+  "baselineMain": "7b39aef78215088ccd64576f983d71f665f82066",
+  "baselineDeployment": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45667113749",
+  "stage": "IN_PROGRESS",
+  "statusVocabulary": [
+    "MISSING",
+    "PARTIAL",
+    "IN_PROGRESS",
+    "IMPLEMENTED",
+    "MATH_VERIFIED",
+    "BILINGUAL_VERIFIED",
+    "TESTED",
+    "MERGED",
+    "LIVE_VERIFIED",
+    "SOURCE_BLOCKED"
+  ],
+  "sourceAccess": {
+    "documents": 4,
+    "hashesMatchRegister": true,
+    "grade10TamilId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC"
+  },
+  "activeBatch": {
+    "grade": 9,
+    "chapter": 1,
+    "exercise": "1.3",
+    "status": "BILINGUAL_VERIFIED",
+    "numberedQuestions": 7,
+    "canonicalTasks": 42,
+    "runtimeRecords": 7,
+    "mathEvidence": [
+      {
+        "recordId": "g9-ch1-ex1.3-q1",
+        "parts": [
+          "i",
+          "ii",
+          "iii",
+          "iv",
+          "v",
+          "vi",
+          "vii",
+          "viii",
+          "ix"
+        ],
+        "recordSha256": "4ba44ef5aedf1b909894f27476cac417c3ccc739411e6f7977880f4959d7b906",
+        "passed": true,
+        "method": "Explicit partition of the original Venn regions"
+      },
+      {
+        "recordId": "g9-ch1-ex1.3-q2",
+        "parts": [
+          "i",
+          "ii",
+          "iii",
+          "iv"
+        ],
+        "recordSha256": "c1b568313c547acd4e1fbf53e2bb32dd9a9e6feac81a01a8fe2bf52f535ffe86",
+        "passed": true,
+        "method": "Independent roster enumeration and comparison with both-language source tasks"
+      },
+      {
+        "recordId": "g9-ch1-ex1.3-q3",
+        "parts": [
+          "i",
+          "ii",
+          "iii",
+          "iv",
+          "v",
+          "vi",
+          "vii",
+          "viii"
+        ],
+        "recordSha256": "28869c626b177e45c6e555efca028d0d3a706c15473f715dd81cec680cc2b2d7",
+        "passed": true,
+        "method": "Independent roster enumeration and comparison with both-language source tasks"
+      },
+      {
+        "recordId": "g9-ch1-ex1.3-q4",
+        "parts": [
+          "i",
+          "ii",
+          "iii",
+          "iv",
+          "v",
+          "vi",
+          "vii",
+          "viii"
+        ],
+        "recordSha256": "e03212f7bb694126447ed6e9a473b2b731ec09944da21c5f571df2497d504ef5",
+        "passed": true,
+        "method": "Independent roster enumeration and comparison with both-language source tasks"
+      },
+      {
+        "recordId": "g9-ch1-ex1.3-q5",
+        "parts": [
+          "i",
+          "ii",
+          "iii"
+        ],
+        "recordSha256": "35128e4192222a086e51383acee671330ecba42740fa8b79ef03ffa154fcb46a",
+        "passed": true,
+        "method": "Independent roster enumeration and comparison with both-language source tasks"
+      },
+      {
+        "recordId": "g9-ch1-ex1.3-q6",
+        "parts": [
+          "fig-1.26",
+          "fig-1.27",
+          "fig-1.28"
+        ],
+        "recordSha256": "becc79b8e460183214169f342f037d5406ea7b4066dba173744e7923828911d1",
+        "passed": true,
+        "method": "Evaluate the membership truth table of all four disjoint regions"
+      },
+      {
+        "recordId": "g9-ch1-ex1.3-q7",
+        "parts": [
+          "i",
+          "ii",
+          "iii",
+          "iv",
+          "v",
+          "vi",
+          "vii"
+        ],
+        "recordSha256": "7a03e66d69b058137401679e849851187e19dc45741e3fd60839d9f98eb03b16",
+        "passed": true,
+        "method": "Evaluate the membership truth table of all four disjoint regions"
+      }
+    ],
+    "sourceEvidence": "site/data/textbook-fidelity/g9-ch1-ex1-3.json",
+    "release": {
+      "branch": "trace/final-frontier",
+      "pullRequest": null,
+      "mergedCommit": null,
+      "pagesRun": null,
+      "liveVerification": null
+    }
+  },
+  "nextBatch": {
+    "grade": 9,
+    "chapter": 1,
+    "exercise": "1.6",
+    "status": "MISSING",
+    "numberedQuestions": 13,
+    "canonicalTasks": 23,
+    "pdfPages": {
+      "en": [
+        41,
+        42
+      ],
+      "ta": [
+        43,
+        44,
+        45
+      ]
+    },
+    "reusableDrafts": [
+      "origin/bulk/grade9-ex1-6-cardinality-20261110-0302",
+      "origin/bulk/grade9-ex1-6-q9-q12-20261110-0404"
+    ]
+  },
+  "phase2": "Reconcile the freshly extracted question and subpart candidates for all 129 exercise sections against the actual registered browser runtime and prior source evidence.",
+  "editorialReview": {
+    "ta": "pending",
+    "teacher": "pending"
+  }
+}

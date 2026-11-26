@@ -22,6 +22,13 @@
  window.TriggleG10NumbersTamil?.(classes[10].items);
  window.TriggleG10AlgebraTamil?.(classes[10].items);
  window.TriggleG10GeometryTamil?.(classes[10].items);
+ window.TriggleG10FrontierTamilAnswers?.(classes[10].items);
+ window.TriggleG10SourceTables?.(classes[10].items);
+ window.TriggleG10CoordinateFrontier?.(classes[10].items);
+ window.TriggleG9RealFrontier?.(classes[9].items);
+ window.TriggleG9AlgebraTamilAnswers?.(classes[9].items);
+ window.TriggleG9StatisticsTables?.(classes[9].items);
+ window.TriggleG9FrontierGraphs?.(classes[9].items);
  const curriculum=window.TRIGGLE_CURRICULUM;
  if(!curriculum?.grades)throw Error('Missing curriculum metadata');
  const chapterList=()=>curriculum.grades.find(g=>g.grade===grade)?.chapters||[];
@@ -52,6 +59,7 @@
  const mobile=matchMedia('(max-width:800px)');
  function esc(str){return String(str??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
  const plainMath=value=>Array.isArray(value)?value.map(plainMath).join(''):(value?.fallback??value);
+ const grade9Presentation=item=>item.notationSource==='authored'?undefined:window.TriggleG9Math?.get(item);
  const isG9GeometryExercise=item=>item.classNum===9&&item.chapter==='4'&&/^4\.[1-7]$/.test(item.exercise);
  const isG10GeometryExercise=item=>item.classNum===10&&item.chapter==='4'&&['4.1','4.2','4.3','4.4','4.5','4.unit'].includes(item.exercise);
  const isGeometryExercise=item=>isG9GeometryExercise(item)||isG10GeometryExercise(item);
@@ -425,7 +433,7 @@
   }container.append(references);
  }
  function buildStep(s,index){
-  s={...s,...window.TriggleG9Math?.get(current)?.steps[index]};
+  s={...s,...grade9Presentation(current)?.steps[index]};
   const chapter1Math=window.TriggleChapter1Math?.getStep?.(current,index);
   if(chapter1Math)s={...s,math:chapter1Math};
   if(!s.math&&!isGeometryExercise(current)){
@@ -496,8 +504,9 @@
   }
   all.forEach((s,i)=>ul.append(buildStep(s,i)));
   const localizedAnswer=tr(lang==='ta'&&current.answerTa?current.answerTa:current.answer)||'';const parts=String(localizedAnswer).split(/\s+;\s+/);
-  const grade9Answer=window.TriggleG9Math?.get(current)?.answerMath;
-  const possibleAnswerMath=(grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getAnswer?.(current))||window.TriggleG10Ch2FractionMath?.getAnswer?.(current);
+  const grade9Answer=grade9Presentation(current)?.answerMath;
+  const possibleAnswerMath=(grade===9&&current.answerMath?.[lang])||
+    (grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getAnswer?.(current))||window.TriggleG10Ch2FractionMath?.getAnswer?.(current);
   const answerMath=possibleAnswerMath?.[lang]||possibleAnswerMath?.en||possibleAnswerMath;
   const canGrid=!answerMath&&parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
@@ -534,10 +543,10 @@
   'c10-1-1-2-q5':{src:'./assets/grade10-ch1/ex1-2-q5.svg',alt:'Arrow diagram mapping salaries to employees in Exercise 1.2 Q5',altTa:'பயிற்சி 1.2 வினா 5-இல் ஊதியங்களைப் பணியாளர்களுடன் இணைக்கும் அம்புக்குறிப் படம்',caption:'Original arrow diagram showing the salary-to-employee relation in Exercise 1.2 Q5.',captionTa:'பயிற்சி 1.2 வினா 5-இல் ஊதியத்திற்கும் பணியாளர்களுக்கும் இடையிலான உறவைக் காட்டும் அம்புக்குறிப் படம்.'},
   'c10-1-1-3-q4':{src:'./assets/grade10-ch1/figure1-16.svg',alt:'Piecewise linear graph of y = f(x) passing through (0, 9), (4, 3), (7, 6) and (10, 0)',altTa:'(0, 9), (4, 3), (7, 6) மற்றும் (10, 0) வழியாகச் செல்லும் y = f(x) வரைபடம் (படம் 1.16)',caption:'Original diagram replacing Fig. 1.16 for Exercise 1.3 Q4.',captionTa:'பயிற்சி 1.3 வினா 4-க்கான படம் 1.16 வரைபடம்.'},
   'c10-1-1-3-q7':{src:'./assets/grade10-ch1/figure1-17.svg',alt:'Open cuboid tray folded from a 24 cm square with x by x corner cut-outs',altTa:'24 செ.மீ சதுரத் தாளின் மூலைகளில் x × x சதுரங்களை வெட்டி மடித்து உருவாக்கும் திறந்த பெட்டி (படம் 1.17)',caption:'Original diagram replacing Fig. 1.17 for Exercise 1.3 Q7.',captionTa:'பயிற்சி 1.3 வினா 7-க்கான படம் 1.17 வரைபடம்.'},
-  'c10-1-1-3-q10':{src:'./assets/grade10-ch1/ex1-3-q10.svg',alt:'Data table and linear plot y = 0.9x + 24.5 for forehand length vs height',altTa:'முன்கை நீளம் மற்றும் உயரத்திற்கான தரவு அட்டவணையும் y = 0.9x + 24.5 நேர்க்கோட்டு வரைபடமும்',caption:'Original data table and linear plot for Exercise 1.3 Q10.',captionTa:'பயிற்சி 1.3 வினா 10-க்கான தரவு அட்டவணை மற்றும் நேர்க்கோட்டு வரைபடம்.'},
+  'c10-1-1-3-q10':{src:'./assets/grade10-ch1/ex1-3-q10.svg',srcTa:'./assets/grade10-ch1/ex1-3-q10-ta.svg',alt:'Data table and linear plot y = 0.9x + 24.5 for forehand length vs height',altTa:'முன்கை நீளம் மற்றும் உயரத்திற்கான தரவு அட்டவணையும் y = 0.9x + 24.5 நேர்க்கோட்டு வரைபடமும்',caption:'Original data table and linear plot for Exercise 1.3 Q10.',captionTa:'பயிற்சி 1.3 வினா 10-க்கான தரவு அட்டவணை மற்றும் நேர்க்கோட்டு வரைபடம்.'},
   'c10-1-1-4-q1':{src:'./assets/grade10-ch1/figure1-4-graphs.svg',alt:'Four vertical line test graphs (i) through (iv) in Exercise 1.4 Q1',altTa:'பயிற்சி 1.4 வினா 1-க்கான நான்கு குத்துக்கோடு சோதனை வரைபடங்கள் (i)–(iv)',caption:'Original vertical-line-test graphs replacing Fig. 1.4 graphs for Exercise 1.4 Q1.',captionTa:'பயிற்சி 1.4 வினா 1-க்கான குத்துக்கோடு சோதனை வரைபடங்கள் (படம் 1.18).'},
-  'c10-1-1-4-q2':{src:'./assets/grade10-ch1/ex1-4-q2.svg',alt:'Arrow diagram, table and graph of f(x) = x/2 - 1 from A to B with 9 unmapped',altTa:'f(x) = x/2 - 1 சார்பிற்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம் (பயிற்சி 1.4 வினா 2)',caption:'Original arrow diagram, table and plot for Exercise 1.4 Q2.',captionTa:'பயிற்சி 1.4 வினா 2-க்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம்.'},
-  'c10-1-1-4-q3':{src:'./assets/grade10-ch1/ex1-4-q3.svg',alt:'Many-to-one arrow diagram, table and graph for f = {(1,2),(2,2),(3,2),(4,3),(5,4)}',altTa:'f = {(1,2),(2,2),(3,2),(4,3),(5,4)} சார்பிற்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம் (பயிற்சி 1.4 வினா 3)',caption:'Original arrow diagram, table and graph for Exercise 1.4 Q3.',captionTa:'பயிற்சி 1.4 வினா 3-க்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம்.'},
+  'c10-1-1-4-q2':{src:'./assets/grade10-ch1/ex1-4-q2.svg',srcTa:'./assets/grade10-ch1/ex1-4-q2-ta.svg',alt:'Arrow diagram, table and graph of f(x) = x/2 - 1 from A to B with 9 unmapped',altTa:'f(x) = x/2 - 1 சார்பிற்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம் (பயிற்சி 1.4 வினா 2)',caption:'Original arrow diagram, table and plot for Exercise 1.4 Q2.',captionTa:'பயிற்சி 1.4 வினா 2-க்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம்.'},
+  'c10-1-1-4-q3':{src:'./assets/grade10-ch1/ex1-4-q3.svg',srcTa:'./assets/grade10-ch1/ex1-4-q3-ta.svg',alt:'Many-to-one arrow diagram, table and graph for f = {(1,2),(2,2),(3,2),(4,3),(5,4)}',altTa:'f = {(1,2),(2,2),(3,2),(4,3),(5,4)} சார்பிற்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம் (பயிற்சி 1.4 வினா 3)',caption:'Original arrow diagram, table and graph for Exercise 1.4 Q3.',captionTa:'பயிற்சி 1.4 வினா 3-க்கான அம்புக்குறிப் படம், அட்டவணை மற்றும் வரைபடம்.'},
   'g9-ch7-ex7.1-q6':{src:'./assets/grade9-ch7/ex7-1-q6.svg',alt:'Outer triangle ABC with BC = 42 cm and CA = 34 cm, containing shaded right triangle ABD with AD = 12 cm, BD = 16 cm, and right angle at D.',altTa:'BC = 42 செ.மீ, CA = 34 செ.மீ கொண்ட முக்கோணம் ABC-க்குள் AD = 12 செ.மீ, BD = 16 செ.மீ மற்றும் D-இல் செங்கோணம் கொண்ட நிழலிடப்பட்ட முக்கோணம் ABD.',caption:'Textbook Fig. 7.8: Shaded right triangle ABD inside ΔABC',captionTa:'பாடநூல் படம் 7.8: ΔABC-க்குள் நிழலிடப்பட்ட செங்கோண முக்கோணம் ABD'},
   'g9-ch4-ex4.1-q4':{src:'./assets/grade9-ch4/ex4-1-q4.svg',alt:'Two triangles ABC and FDE showing corresponding equal angles 60 and 70 deg with AB=DF.',altTa:'ABC, DEF முக்கோணங்களில் AB = DF. B, D இல் 60°; C, E இல் 70°.',caption:'Triangles ABC and DEF with the given angles and equal sides.',captionTa:'கொடுக்கப்பட்ட கோணங்களும் சமப் பக்கங்களும் உள்ள ABC, DEF முக்கோணங்கள்.'},
   'g9-ch4-ex4.2-q3':{src:'./assets/grade9-ch4/ex4-2-q3.svg',alt:'Rectangle ABCD with diagonals AC and BD intersecting at O, showing angle OAB = 46 deg.',altTa:'செவ்வக மூலைவிட்டங்கள் O-இல் சமமாக வெட்டும்',caption:'Rectangle diagonals bisect equally at O',captionTa:'செவ்வக மூலைவிட்டங்கள் O-இல் சமமாக வெட்டும்'},
@@ -549,10 +558,10 @@
   'g9-ch4-ex4.3-q6':{src:'./assets/grade9-ch4/ex4-3-q6.svg',alt:'Two intersecting circles of radii 5 cm and 3 cm with centre distance 4 cm.',altTa:'ஆரங்கள் 5 செ.மீ, 3 செ.மீ; மையத் தொலைவு 4 செ.மீ',caption:'Radii 5 cm and 3 cm, centre distance 4 cm (3-4-5 right triangle)',captionTa:'ஆரங்கள் 5 செ.மீ, 3 செ.மீ; மையத் தொலைவு 4 செ.மீ'}
  };
  const resolveFigureSpec=item=>item&&ch1SvgFigures[item.id]
-  ?{src:ch1SvgFigures[item.id].src,alt:{en:ch1SvgFigures[item.id].alt,ta:ch1SvgFigures[item.id].altTa||ch1SvgFigures[item.id].alt},caption:{en:ch1SvgFigures[item.id].caption,ta:ch1SvgFigures[item.id].captionTa||ch1SvgFigures[item.id].caption}}
+  ?{src:lang==='ta'&&ch1SvgFigures[item.id].srcTa?ch1SvgFigures[item.id].srcTa:ch1SvgFigures[item.id].src,alt:{en:ch1SvgFigures[item.id].alt,ta:ch1SvgFigures[item.id].altTa||ch1SvgFigures[item.id].alt},caption:{en:ch1SvgFigures[item.id].caption,ta:ch1SvgFigures[item.id].captionTa||ch1SvgFigures[item.id].caption}}
   :(item?.figureSrc?{src:lang==='ta'&&item.figureSrcTa?item.figureSrcTa:item.figureSrc,alt:item.figureAlt,caption:item.figureCaption}:null);
  function isQuestionFigure(item){
-  if(resolveFigureSpec(item))return true;
+  if(resolveFigureSpec(item))return !item.figureInSolution;
   // The Figure button already opens a full Venn: no duplicate mini preview.
   if(window.TriggleSetVenn?.supports(item))return false;
   return !!(item.diagram && typeof item.diagram==='object' && /\b(diagram|figure|labelled|labeled)\b/i.test(item.q?.en||''));
@@ -650,12 +659,12 @@
   $('gradeTotal').textContent=list.length+' '+ui('lessons');$('questionLabel').textContent=labelForGroup(current.exercise).toUpperCase();$('itemPosition').textContent=num(position)+' / '+num(list.length);
   $('questionTitle').textContent=tr(current.topic);$('questionHead').textContent=tr(current.label);
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
-  const questionMath=window.TriggleG9Math?.get(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getQuestion?.(current,lang));
+  const questionMath=grade9Presentation(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getQuestion?.(current,lang));
   const renderDataTableHtml=dt=>{
     if(lang==='ta'&&dt?.ta)dt={...dt,...dt.ta};
     if(!dt||!Array.isArray(dt.headers)||!Array.isArray(dt.rows))return '';
     const ths=dt.headers.map(h=>'<th scope="col">'+esc(h)+' </th>').join('');
-    const trs=dt.rows.map(r=>'<tr>'+r.map((cell,c)=>{const body=/^\d+(?:\.\d+)?$/.test(String(cell).trim())?math({latex:String(cell).trim(),fallback:String(cell).trim()}):esc(cell);return c===0?'<th scope="row">'+body+' </th>':'<td>'+body+' </td>';}).join('')+'</tr>').join('');
+    const trs=dt.rows.map(r=>'<tr>'+r.map((cell,c)=>{const body=cell?.latex?math(cell):/^\d+(?:\.\d+)?$/.test(String(cell).trim())?math({latex:String(cell).trim(),fallback:String(cell).trim()}):esc(cell);return c===0?'<th scope="row">'+body+' </th>':'<td>'+body+' </td>';}).join('')+'</tr>').join('');
     return '<div class="triggle-table-wrap"><table class="triggle-data-table"'+(dt.caption?' aria-label="'+esc(dt.caption)+'"':'')+'><thead><tr>'+ths+'</tr></thead><tbody>'+trs+'</tbody></table></div> ';
   };
   const ex82TamilPrompt=lang==='ta'&&grade===10&&current.chapter==='8'&&current.exercise==='8.2'&&!!current.q?.ta;
@@ -683,9 +692,12 @@
   }
   if(current.dataTable){
     const tableHtml=renderDataTableHtml(current.dataTable);
+    const sourcePrompt=current.dataTable.sourcePrompt?.[lang];
     const rawQ=tr(current.q);
     const tableSplit=lang==='ta'&&current.dataTable.replaceRegexTa?current.dataTable.replaceRegexTa:current.dataTable.replaceRegex;
-    if(tableSplit){
+    if(sourcePrompt){
+      $('questionText').innerHTML=math(sourcePrompt.before)+tableHtml+math(sourcePrompt.after||'');
+    }else if(tableSplit){
       const rx=new RegExp(tableSplit);
       if(rx.test(rawQ)){
         const [before='',after='']=rawQ.split(rx);
@@ -701,8 +713,10 @@
   $('kindBadge').textContent=ui(current.kind==='practice'?'typePractice':'typeBook');
   if(lang==='ta'&&!current.q?.ta)$('kindBadge').textContent+=' · தமிழ் மொழிபெயர்ப்பு நிலுவையில்';
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
-  const conceptPath = isG10GeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH;
-  let conceptIndexForQuestion = isG10GeometryExercise(current)
+  const setPath = grade === 9 && current.setConcept && window.TRIGGLE_SET_PATH;
+  const realPath = grade === 9 && Number.isInteger(current.realConcept) && window.TRIGGLE_REAL_PATH;
+  const conceptPath = setPath || realPath || (isG10GeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH);
+  let conceptIndexForQuestion = setPath ? setPath.stages.findIndex(stage => stage.id === current.setConcept) : realPath ? current.realConcept : isG10GeometryExercise(current)
     ? (conceptPath?.stages.findIndex(stage => stage.id === current.conceptId ||
         [stage.practiceId, stage.secondaryPracticeId, stage.tertiaryPracticeId].includes(current.id)) ?? -1)
     : (conceptPath?.conceptForQuestion(current) ?? -1);
@@ -712,13 +726,13 @@
       ({'4.1':1, '4.2':2, '4.3':4}[current.exercise] ?? -1);
   }
   const hintPanel = $('g9GeometryHint');
-  const geometryHint = isG9GeometryExercise(current) && isTextbookExercise &&
-    (current.hint || window.TriggleGrade9Geometry?.preservedHints[current.id.slice(9)]);
-  hintPanel.hidden = !geometryHint;
+  const textbookHint = isTextbookExercise && ((setPath || realPath) ? current.hint : isG9GeometryExercise(current) &&
+    (current.hint || window.TriggleGrade9Geometry?.preservedHints[current.id.slice(9)]));
+  hintPanel.hidden = !textbookHint;
   hintPanel.open = false;
-  if (geometryHint) {
+  if (textbookHint) {
     hintPanel.querySelector('summary').textContent = lang === 'ta' ? 'குறிப்பு' : 'Hint';
-    hintPanel.querySelector('p').textContent = tr(geometryHint);
+    hintPanel.querySelector('p').textContent = tr(textbookHint);
   }
   const relatedConcept = $('chapter8QuestionConcept');
   relatedConcept.hidden = conceptIndexForQuestion < 0;

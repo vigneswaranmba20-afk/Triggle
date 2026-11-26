@@ -338,8 +338,15 @@ assert.equal(g9Ch5CompleteNewIds.length,50,'50 new G9 Ch5 Ex 5.1–5.6 records')
 const g9GeometryEvidence=require('../data/textbook-fidelity/g9-ch4-geometry-2025.json').records;
 const g9GeometryNewIds=Object.keys(g9GeometryEvidence).filter(id=>!g9GeometryEvidence[id].preservedReviewedSha256);
 assert.equal(g9GeometryNewIds.length,75,'75 source-indexed new Grade 9 Geometry tasks');
-const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ch3CompleteNewIds,...g9Ex64NewIds,...g9Ch5CompleteNewIds,...g9GeometryNewIds];
-assert.equal(approvedG9Ids.length,386);
+const g9SetEvidence = new Map([
+  ...require('../data/textbook-fidelity/g9-ch1-ex1-3.json').items,
+  ...require('../data/textbook-fidelity/g9-ch1-ex1-4.json').items,
+  ...require('../data/textbook-fidelity/g9-ch1-ex1-5.json').items,
+  ...require('../data/textbook-fidelity/g9-ch1-ex1-6.json').items,
+  ...require('../data/textbook-fidelity/g9-ch1-ex1-7.json').items
+].map(row=>[row.id,row]));
+const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ch3CompleteNewIds,...g9Ex64NewIds,...g9Ch5CompleteNewIds,...g9GeometryNewIds,...g9SetEvidence.keys()];
+assert.equal(approvedG9Ids.length,442);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.deepEqual(approvedBatch.records.map(r=>r.id),approvedEx22);
@@ -664,6 +671,10 @@ for(const [grade,data] of Object.entries(classes)){
        }
        assert.equal(item.releaseStatus,'english-preview');
        assert(item.q.ta&&item.steps.every(step=>step.ta),'Tamil Exercise 1.2 prompt and explanations '+item.id);
+     }else if(g9SetEvidence.has(item.id)){
+       assert.deepEqual({...item.q},g9SetEvidence.get(item.id).textbookPrompt);
+       assert.equal(item.review.tamilEditorial,'pending');
+       assert(item.steps.every(step=>step.en&&step.ta&&step.why.en&&step.why.ta));
      }else if(g9GeometryNewIds.includes(item.id)){
        assert.equal(JSON.stringify(item.q),JSON.stringify(g9GeometryEvidence[item.id].textbookPrompt));
        assert.equal(item.translationReview,'pending');

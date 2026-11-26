@@ -74,10 +74,11 @@ function render(event){
  root.querySelectorAll('details.why-step-g9').forEach(x=>x.remove());
  if(data?.grade!==9||!data.item||!window.TriggleWhyStepG9?.hints)return;
  const item=data.item, geometry=window.TriggleGrade9Geometry?.preservedHints[item.id.slice(9)];
- const legacy=window.TriggleWhyStepG9.hints[item.id] ||
+ const legacy=window.TriggleG9FrontierHints?.[item.id] || window.TriggleWhyStepG9.hints[item.id] ||
   (item.id.startsWith('g9-ch4-ex') && geometry && {...geometry,step:0,expected:item.steps[0].en});
- const hints=item.geometryConcept === undefined ? [legacy] : item.steps.map((step,index) =>
-  step.why && {...step.why,step:index,expected:step.en});
+ const authored=item.steps.map((step,index)=>step.why&&{...step.why,step:index,expected:step.en}).filter(Boolean);
+ const hints=item.geometryConcept !== undefined || item.realConcept !== undefined || item.setConcept
+  ? authored : item.dataTable?.sourcePrompt||item.graphSolution ? [legacy,...authored.filter(hint=>hint.step!==legacy?.step)] : [legacy];
  const list=root.querySelectorAll('li.worked-step:not(.final-answer-step)');
  const lang=data.lang==='ta'?'ta':'en';
  for(const hint of hints) appendHint(item,hint,list,lang);
