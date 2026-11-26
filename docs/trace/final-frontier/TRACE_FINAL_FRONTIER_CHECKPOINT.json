@@ -25,10 +25,12 @@
     "status": "IN_PROGRESS",
     "release": {
       "key": "figure.tamil",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 452,
       "head": "b2a49729cd4123ef07d32b52f88decf99a176358",
-      "prQualityRun": 45719184913
+      "prQualityRun": 45719184913,
+      "merge": "2c62b1c80d6bfecf176b78568d40aaa9a5742c1d",
+      "pagesRun": 45740250140
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2383,13 +2385,13 @@
       "chapter": null,
       "scope": "Tamil figure descriptions and fourteen localized exercise graphic assets",
       "runtimeRecords": 37,
-      "status": "TESTED",
+      "status": "MERGED",
       "release": {
         "grade": null,
         "chapter": null,
         "runtimeRecords": 37,
         "scope": "Tamil figure descriptions and fourteen localized exercise graphic assets",
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 452,
         "head": "b2a49729cd4123ef07d32b52f88decf99a176358",
         "prQualityRun": 45719184913,
@@ -2399,6 +2401,8 @@
           "browserScript": "site/tools/test_frontier_figure_tamil_browser.cjs",
           "studentQuery": "class=10&question=c10-3-ex3-12-q7"
         },
+        "merge": "2c62b1c80d6bfecf176b78568d40aaa9a5742c1d",
+        "pagesRun": 45740250140,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/452"
       }
     },
@@ -2609,22 +2613,22 @@
         "grade": null,
         "chapter": null,
         "runtimeRecords": 1609,
-        "scope": "Bilingual hints across all 129 registered textbook exercise sections",
+        "scope": "Bilingual starting hints and Tamil worked formulas and accessible readings",
         "status": "TESTED",
         "pr": 461,
-        "head": "3e7cf365c0a6dab5f4b5a6a701df66f157bcc826",
-        "prQualityRun": 45736014533,
+        "head": "e02f863500cbd3beddb36d14431c0c1191b43d33",
+        "prQualityRun": 45740229963,
         "verification": {
           "slug": "frontier-exercise-hints",
-          "worktree": "/workspace/Triggle-frontier-exercise-hints",
+          "worktree": "/workspace/Triggle-frontier-tamil-formulas",
           "browserScript": "site/tools/test_frontier_exercise_hints_browser.cjs",
-          "studentQuery": "class=10&question=c10-3-ex3-1-q1-i"
+          "studentQuery": "class=10&question=c10-8-ex8-2-q2"
         },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/461"
       }
     }
   ],
-  "latestMain": "45d25baab7ba44449db15e0c18305d66d08c04db",
+  "latestMain": "2c62b1c80d6bfecf176b78568d40aaa9a5742c1d",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2643,7 +2647,7 @@
     ],
     "tamilIndependentNumberedStructure": "/workspace/scratch/trace-sources/tamil-independent-structure.json",
     "tamilIndependentSubparts": "/workspace/scratch/trace-sources/tamil-independent-subparts.json",
-    "localReaderAudit": "/workspace/scratch/trace-sources/reader-exercise-hints-candidate.json",
+    "localReaderAudit": "/workspace/scratch/trace-sources/reader-tamil-formulas-candidate-complete.json",
     "liveVerificationCommand": "/workspace/scratch/trace-sources/verify-frontier-live.sh",
     "localNavigationAudit": "/workspace/scratch/trace-sources/navigation-final-candidate.json",
     "releaseQueue": "/workspace/scratch/trace-sources/release-queue.sh",
@@ -2655,7 +2659,8 @@
     "deliverablesMergeCommand": "/workspace/scratch/trace-sources/publish-frontier-artifacts.sh",
     "localTamilNavigationAudit": "/workspace/scratch/trace-sources/navigation-ta-final-candidate.json",
     "localMultipleChoiceAudit": "/workspace/scratch/trace-sources/mcq-feedback-final-candidate.json",
-    "inventoryConsistencyCheck": "/workspace/scratch/trace-sources/verify-frontier-inventory-consistency.py"
+    "inventoryConsistencyCheck": "/workspace/scratch/trace-sources/verify-frontier-inventory-consistency.py",
+    "tamilWorkedNotationAudit": "/workspace/scratch/trace-sources/tamil-formula-verification.json"
   },
   "openManagement": {
     "mathguard": "https://github.com/vigneswaranmba20-afk/Triggle/pull/425",
@@ -2671,10 +2676,12 @@
   "openReleaseOrder": [
     {
       "key": "figure.tamil",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 452,
       "head": "b2a49729cd4123ef07d32b52f88decf99a176358",
-      "prQualityRun": 45719184913
+      "prQualityRun": 45719184913,
+      "merge": "2c62b1c80d6bfecf176b78568d40aaa9a5742c1d",
+      "pagesRun": 45740250140
     },
     {
       "key": "g9.algebra.mcq",
@@ -2729,8 +2736,8 @@
       "key": "exercise.hints",
       "status": "TESTED",
       "pr": 461,
-      "head": "3e7cf365c0a6dab5f4b5a6a701df66f157bcc826",
-      "prQualityRun": 45736014533
+      "head": "e02f863500cbd3beddb36d14431c0c1191b43d33",
+      "prQualityRun": 45740229963
     }
   ]
 }
