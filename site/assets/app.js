@@ -765,9 +765,12 @@
   renderSteps();
   const difficulty=window.TriggleDifficulty?.get(current);
   const indicator=$('difficultyIndicator');
+  const difficultyLabels=lang==='ta'?
+    {easy:'🟢 எளிது',medium:'🟡 நடுத்தரம்',difficult:'🔴 கடினம்'}:
+    {easy:'🟢 Easy',medium:'🟡 Medium',difficult:'🔴 Difficult'};
   indicator.hidden=!difficulty;
-  indicator.textContent=difficulty?({easy:'🟢 Easy',medium:'🟡 Medium',difficult:'🔴 Difficult'}[difficulty.level]):'';
-  indicator.lang='en';
+  indicator.textContent=difficulty?(difficultyLabels[difficulty.level]||''):'';
+  indicator.lang=lang;
   if(difficulty)indicator.dataset.level=difficulty.level;else delete indicator.dataset.level;
   // A review flag never replaces or conceals authored working.
   $('solutionReview').hidden=!window.TriggleDifficulty?.solutionReviews?.[current.id];

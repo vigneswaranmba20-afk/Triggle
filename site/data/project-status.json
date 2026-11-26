@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "3968ae19932db758253f0d831c5acceda57284b2",
-  "updatedAt": "2026-11-25T21:34:53Z",
+  "sourceCommit": "7ad00ea8241382a8827de734eae61d91e98992a1",
+  "updatedAt": "2026-11-25T21:37:25Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -37,6 +37,7 @@
     "site/data/g10-ch6-concepts.js": "bfd7bb85a4607c4cb71467e006dc161b4679f9f6e081c5ce57176728583b74fd",
     "site/data/g10-ch7-concepts.js": "4329a68d5fb0ab09349cad1821301e6bce528270566ccfbbcf84111bdf2d549a",
     "site/data/g10-ch8-concepts.js": "bd791452a2cc3d87bd114fefe0419bba7f7ba020bacab0ba8ebd28e48ec131e6",
+    "site/data/g10-frontier-algebra-hints.js": "48676705d47fe4ae804f15fed8c1d5d57e66ee90d8da45bdfcf00131445b1303",
     "site/data/g10-frontier-coordinate-hints.js": "b56f377f8e5654754bf2a22e7d8c1948b9f0333514ad3ee136bcc7992abcd989",
     "site/data/g10-frontier-geometry-hints.js": "d9c8c70ccc344bd0d6fd9779236fb4e045c7763d5ae2dc9f34c54a72438d0554",
     "site/data/g10-frontier-mensuration-hints.js": "205586706909e5c6fc9ac64a59b772b78aab925d77b25f83b095efbec7bd60e0",
@@ -219,7 +220,7 @@
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9-frontier.js": "d598f9622e04022df11638a56ece19ad5136657d26f6f341356ddd7092ce6ce8",
     "site/data/why-step-g9.js": "8307f31932077111e3c993e463b677a850ad755a80b271d35fbb169f01fb402a",
-    "site/index.html": "cb470e690dc275490fbffa2f51783013988d06b9390f6645bea632a0ca6bb7bc",
+    "site/index.html": "9423e111e84fdc14a7f27b9874b335f9e0847a727fe74e03cbd3f86b048b67a8",
     "site/tools/test_g9_geometry_completion.cjs": "f943394ba001f2aea4d80444997d4cbb7e96e457c3679d1838d9446a5ed3af6b",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },
