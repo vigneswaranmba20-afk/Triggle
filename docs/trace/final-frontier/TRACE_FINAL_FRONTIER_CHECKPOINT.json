@@ -24,11 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "geometry.descriptions",
+      "key": "exercise.hints",
       "status": "TESTED",
-      "pr": 460,
-      "head": "1fd2b28e98788e73b1f194c1fb9d3dbae56dc842",
-      "prQualityRun": 45740805117
+      "pr": 461,
+      "head": "cfdaa09d2d8214b12e9e24f15ff49b7a87fc59ee",
+      "prQualityRun": 45740811075
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2825,13 +2825,13 @@
       "chapter": 4,
       "scope": "Bilingual descriptions for three constructions and three geometry diagrams",
       "runtimeRecords": 6,
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": null,
         "chapter": null,
         "runtimeRecords": 7,
         "scope": "Six bilingual figure descriptions and a Grade 10 Trigonometry label clearance",
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 460,
         "head": "1fd2b28e98788e73b1f194c1fb9d3dbae56dc842",
         "prQualityRun": 45740805117,
@@ -2840,6 +2840,40 @@
           "worktree": "/workspace/Triggle-frontier-geometry-descriptions",
           "browserScript": "site/tools/test_frontier_geometry_descriptions_browser.cjs",
           "studentQuery": "class=10&question=c10-4-ex4-3-q2"
+        },
+        "merge": "df7dd05a1c02421f8f95676d2371d0db3be1f008",
+        "pagesRun": 45756670555,
+        "liveEvidence": {
+          "pr": 460,
+          "merge": "df7dd05a1c02421f8f95676d2371d0db3be1f008",
+          "head": "1fd2b28e98788e73b1f194c1fb9d3dbae56dc842",
+          "slug": "geometry-descriptions",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-4-ex4-3-q2",
+          "pagesRun": 45756670555,
+          "deploymentId": 8076915973,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45756670555/job/139703078216",
+          "deploymentCompletedAt": "2026-11-26T05:00:04Z",
+          "versionMatched": "df7dd05a1c02421f8f95676d2371d0db3be1f008",
+          "sha256": {
+            "assets/app.js": "9e49d3b7849dd336b91fe8ef41721597c5f160d37b2c7765bbb1a5fcbc3f5a28",
+            "assets/grade10-ch6/ex6-unit-q7.svg": "79050e9c55ce4f21091255a96a00fc59ff6db8f8ebcd363ed6bdf2c56e3fdcc5",
+            "assets/grade10-geometry/ex4-3-q2-ta.svg": "0260b9959bae78221e67c6485734c8b270a16100d85ecefbfc8153e42affc0b4",
+            "assets/grade10-geometry/ex4-3-q4-ta.svg": "bec60b3d13035d73d82a7b18bd5ed7546fa2384419391679fd1100b3189954d8",
+            "data/frontier-figure-tamil.js": "8a1ad4493e67ed146557d74e2cbbf00d7b383e3daa0bfa2e2cc57eb2f42d7132",
+            "data/project-status.json": "016e9fae414380951d318e372b0f639ea82d72ed1a6b3f1179eb2124f543f10d",
+            "data/textbook-fidelity/frontier-geometry-descriptions.json": "4fc7fe70bb0a46f4c0f15b4fc38b74147d313295e1d362595760b1ad9b3a4f60",
+            "index.html": "bd7bfdc77c8860979c5cac04f3ac4e1077ad7e3561a6ebcb188e98cd73dc21af",
+            "service-worker.js": "050a2a12a405c75f41aedf83ea00b7a854265d08702deb443c13b9cded7dd930"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Six bilingual geometry figure descriptions, exact shapes and label bounds passed at 390px."
+          }
         },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/460"
       }
@@ -2870,7 +2904,7 @@
       }
     }
   ],
-  "latestMain": "3edb4c5483152a9a6445bca9b71ed4e633685808",
+  "latestMain": "df7dd05a1c02421f8f95676d2371d0db3be1f008",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2918,15 +2952,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "3edb4c5483152a9a6445bca9b71ed4e633685808",
+  "latestVerifiedProduction": "df7dd05a1c02421f8f95676d2371d0db3be1f008",
   "openReleaseOrder": [
-    {
-      "key": "geometry.descriptions",
-      "status": "TESTED",
-      "pr": 460,
-      "head": "1fd2b28e98788e73b1f194c1fb9d3dbae56dc842",
-      "prQualityRun": 45740805117
-    },
     {
       "key": "exercise.hints",
       "status": "TESTED",
