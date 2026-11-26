@@ -1985,8 +1985,8 @@
     "g9-ch7-ex7.4-q7": {
       "step": 0,
       "expected": "Cube surface area is proportional to the square of side length.",
-      "en": "A cube has six equal square faces, but the lateral surface consists of only the four side faces. Decide whether the question needs four faces or all six.",
-      "ta": "ஒரு கனசதுரத்தில் ஆறு சம சதுர முகங்கள் உள்ளன. பக்கவாட்டுப் பரப்பு நான்கு பக்க முகங்களை மட்டுமே குறிக்கும்; மொத்தப் பரப்பிற்கு ஆறும் வேண்டும்.",
+      "en": "Multiply each square face area by six to get the total. Both cubes have six faces, so the factor of six cancels in the ratio.",
+      "ta": "ஒரு சதுர முகத்தின் பரப்பை 6-ஆல் பெருக்கினால் மொத்தப் புறப்பரப்பு கிடைக்கும். இரு கனசதுரங்களிலும் 6 முகங்கள் இருப்பதால் விகிதத்தில் 6 என்ற பொதுக்காரணி நீங்கும்.",
       "concept": "cubeSurface"
     },
     "g9-ch7-ex7.4-q8": {

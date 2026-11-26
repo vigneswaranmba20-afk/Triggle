@@ -7,6 +7,7 @@ const tableAudit=require('../../docs/audit/AUD14_02_FOUR_FIGURE_TABLE_EVIDENCE.j
 const tableFollowup=require('../../docs/audit/AUD14_02_Q4_Q6_TABLE_EVIDENCE.json');
 const sourceChoices=require('../../docs/audit/AUD14_03_EX61_EX65_SOURCE_EVIDENCE.json');
 const bilingualGeometry=require('../data/textbook-fidelity/g9-ch4-bilingual-20261124.json');
+const [mensurationRatio]=require('../data/textbook-fidelity/g9-ch7-frontier-ratio.json').items;
 const root=path.resolve(__dirname,'..'),read=file=>fs.readFileSync(path.join(root,file),'utf8');
 assert.equal(read('data/g9-clear-math.js'),build(),'Reproducible presentation must track canonical content');
 const ctx={window:{katex}};vm.createContext(ctx);
@@ -84,7 +85,12 @@ const preservation=items.filter(q=>!newIds.has(q.id)).map(q=>{
   question=algebra.originalFields.q;
   steps=steps.map((step,index)=>({...step,ta:algebra.originalTamilReasons[index]}));
  }
- const answer=legacy?(legacy.originalFinalAnswer||legacy.unchangedFinalAnswer):q.answer;
+ const ratio=q.id===mensurationRatio.id?mensurationRatio:null;
+ if(ratio){
+  const original=ratio.previousReader.lastStep;
+  steps=[...steps.slice(0,2),{...original,ta:'English explanation (Tamil version pending): '+original.en}];
+ }
+ const answer=ratio?.previousReader.answer??(legacy?(legacy.originalFinalAnswer||legacy.unchangedFinalAnswer):q.answer);
  return [q.id,q.chapter,q.exercise,q.kind,question,answer,
   steps.filter((_,idx)=>!(q.id==='g9-ch9-ex9.2-q5'&&idx===3)).map(({en,ta,eq},index)=>revisedReasons[q.id]?.includes(index)?[null,null,eq]:[en,ta,eq])];
 });

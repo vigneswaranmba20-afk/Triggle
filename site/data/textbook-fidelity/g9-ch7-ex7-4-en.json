@@ -125,14 +125,15 @@
     {
       "id": "g9-ch7-ex7.4-q7",
       "question": "If the ratio of the sides of two cubes are 2:3, then ratio of their surface areas will be\n(1) 4:6   (2) 4:9   (3) 6:9   (4) 16:36",
-      "answer": "(2) 4:9",
+      "answer": "(2) 4:9 (simplest form); (4) 16:36 (equivalent)",
+      "printedAnswerKey": "(2) 4:9",
       "page": 270,
       "sourceFidelity": {
-        "status": "pdf-text-checked-en-visual-pending",
+        "status": "page-visual-checked",
         "enPdfPage": 270,
         "enPrintedPage": 264,
         "tamilEditorial": "pending",
-        "notes": [],
+        "notes": ["Both editions list the same two equivalent answers. Both answer appendices select (2)."],
         "answerOptions": [
           "4:6",
           "4:9",
