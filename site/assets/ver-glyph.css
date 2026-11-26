@@ -1,5 +1,5 @@
 /* VER Glyph v1. Shared student surfaces, controls and exercise reader. */
-.ver-glyph {
+body.ver-glyph {
   --ver-paper: #FDFDFA;
   --ver-forest: #26382C;
   --ver-gold: #BCA16B;
@@ -117,6 +117,23 @@ html[lang="ta"] .ver-loading [lang="en"] { display: none; }
   box-shadow: none;
 }
 
+.ver-glyph :is(.sidebar, .sidebar-foot, .sidebar-search-bottom) { background: var(--ver-paper); }
+.ver-glyph :is(.sidebar .side-grade, .sidebar .chapter-link, .sidebar-chapter-sections button) {
+  border-radius: var(--ver-radius);
+  box-shadow: none;
+}
+.ver-glyph .sidebar :is(.chapter-link small, .sidebar-search-bottom p),
+.ver-glyph .sidebar .search-field input::placeholder {
+  color: var(--ver-muted);
+  opacity: 1;
+}
+.ver-glyph .sidebar-chapter-sections { border-color: var(--ver-divider); }
+.ver-glyph .sidebar-chapter-sections button {
+  border-color: var(--ver-divider);
+  background: var(--ver-mist);
+  color: var(--ver-forest);
+}
+
 .ver-glyph :is(.appbar button, .appbar a, .dialog-close, .path-option, .sidebar button,
   .discover-grade, .discover-chapter, .hub-section-card, .hub-exercise-link,
   #questionNavDock button, .question-top-nav button, .ver-question-picker,
@@ -211,6 +228,8 @@ html[lang="ta"] .ver-loading [lang="en"] { display: none; }
 .ver-glyph #figureDialog .diagram-compare { background: var(--ver-mist); border-color: var(--ver-divider); }
 .ver-glyph #visualLessonDialog .vl-shell { background: var(--ver-paper); }
 .ver-glyph #visualLessonDialog .vl-header { background: var(--ver-white); border-color: var(--ver-divider); }
+
+.ver-glyph.textbook-reader .welcome { display: none; }
 
 .ver-glyph.textbook-reader .lesson-container {
   inline-size: 100%;

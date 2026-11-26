@@ -302,6 +302,7 @@ async function main() {
           'Most recently opened question must beat a saved Class 10 question');
         assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('triggle.lastOpened.v1')).questionId),ids.g9);
         await page.reload();
+        await page.locator('.discover-resume-card').waitFor({state:'visible'});
         assert.match(await page.locator('.discover-resume-card').innerText(),/Class 9/,
           'Resume must survive a page reload');
         await page.locator('#langTa').click();
