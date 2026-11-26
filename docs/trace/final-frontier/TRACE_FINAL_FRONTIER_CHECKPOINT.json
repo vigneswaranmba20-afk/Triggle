@@ -24,11 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "answer.tamil",
+      "key": "g9.coordinate.order",
       "status": "TESTED",
-      "pr": 454,
-      "head": "923b8ac03c5b7a7053efce66699565b0d5b25a13",
-      "prQualityRun": 45735872838
+      "pr": 456,
+      "head": "8bb7e69bd10284899663ad6ad436fd0015836831",
+      "prQualityRun": 45735899574
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2545,13 +2545,13 @@
       "chapter": null,
       "scope": "Tamil final-answer typesetting in Algebra, Coordinate Geometry, Mensuration, Statistics and Probability",
       "runtimeRecords": 16,
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": null,
         "chapter": null,
         "runtimeRecords": 17,
         "scope": "Tamil final-answer typesetting and accessible notation in Algebra, Coordinate Geometry, Mensuration, Statistics and Probability",
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 454,
         "head": "923b8ac03c5b7a7053efce66699565b0d5b25a13",
         "prQualityRun": 45735872838,
@@ -2560,6 +2560,46 @@
           "worktree": "/workspace/Triggle-frontier-answer-tamil",
           "browserScript": "site/tools/test_frontier_answer_tamil_browser.cjs",
           "studentQuery": "class=10&question=c10-8-ex8-2-q6"
+        },
+        "merge": "77271aa097b636aa2dd9292e06e00fff84cc1434",
+        "pagesRun": 45744372244,
+        "liveEvidence": {
+          "pr": 454,
+          "merge": "77271aa097b636aa2dd9292e06e00fff84cc1434",
+          "head": "923b8ac03c5b7a7053efce66699565b0d5b25a13",
+          "slug": "frontier-answer-tamil",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-8-ex8-2-q6",
+          "pagesRun": 45744372244,
+          "deploymentId": 8075231505,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45744372244/job/139661885089",
+          "deploymentCompletedAt": "2026-11-26T02:59:53Z",
+          "versionMatched": "77271aa097b636aa2dd9292e06e00fff84cc1434",
+          "sha256": {
+            "data/g9-clear-math.js": "92ec4f0ae9565c2a084fe8996c9bcab9ebe0dea9a1ac747f649f30b632c3c4fe",
+            "data/project-status.json": "e484efe1f17b4de01b9f440caf054a805b56cd113d218a090697533e66bf5d34",
+            "data/textbook-exercises/g10-ch7-ex7-2.js": "2882fa670ac7bcfd5f861ae9c63d006caab2e45a563cc24a8bab851ce1a0a5a3",
+            "data/textbook-exercises/g10-ch7-ex7-4.js": "b72fdd603b8ad2684bbb765b9fd04bbd5e907c7a34950178291091442466ad08",
+            "data/textbook-exercises/g10-ch8-ex8-2-q4-q8-en.js": "4cc6f0d7740ada76c19ed2c1b6f68b5e8ebd5d7fdf912f8788a7e059c1bb63b2",
+            "data/textbook-exercises/g10-ch8-ex8-3-q1-q6.js": "793aaf4dd5e389c232b5f717d053f524c3d440ad9041db737c7177b3c06a1b0a",
+            "data/textbook-exercises/g10-ch8-ex8-3-q7-q13.js": "b4a698df464cd0045ca8093f927d7bbfab32c35a516d11acb4b5cd2aac35395e",
+            "data/textbook-exercises/g9-ch3-ex3-3-to-3-6.js": "ba036dc9b87953480fcd9eaa13aee78804cf26b2609311efaf440b7941258219",
+            "data/textbook-exercises/g9-ch5-ex5-1.js": "1e47abde69c3115733042190bd62418ff9fa773c6138c6a10aa02e1b3d970973",
+            "data/textbook-exercises/g9-ch5-ex5-3.js": "eaa558acd27e055c7bf2602a4d918fde255ac11453735afdfedf3c2202df763a",
+            "data/textbook-exercises/g9-ch5-ex5-4.js": "fae7bfa92b23a42b3e5540844f999f9c7c7ff4361b880f268ca642d069eec0cf",
+            "data/textbook-exercises/g9-ch5-ex5-5.js": "a2475361f8b47510d4616252836cb80b8774abf549e71674abfefce5326a956f",
+            "data/textbook-exercises/g9-ch5-ex5-6.js": "d39a3a49de36cc01a9221ae6b356a16bc6f6ace9d4589e8678781b269dbbc83a",
+            "index.html": "1f89283a56d8a8fdb8592800abfe70ed5b1943da3f591a61248a335a816dd7e5",
+            "service-worker.js": "a3fb2ea9132da72d6f6d38e4eca543267ae59d92333d0da31a65c02df204dc01"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Bilingual final-answer display passed at 390px."
+          }
         },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/454"
       }
@@ -2700,7 +2740,7 @@
       }
     }
   ],
-  "latestMain": "086f858b2c4ab00b83f7eaad3ef2b12b6786dfd8",
+  "latestMain": "77271aa097b636aa2dd9292e06e00fff84cc1434",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2748,15 +2788,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "086f858b2c4ab00b83f7eaad3ef2b12b6786dfd8",
+  "latestVerifiedProduction": "77271aa097b636aa2dd9292e06e00fff84cc1434",
   "openReleaseOrder": [
-    {
-      "key": "answer.tamil",
-      "status": "TESTED",
-      "pr": 454,
-      "head": "923b8ac03c5b7a7053efce66699565b0d5b25a13",
-      "prQualityRun": 45735872838
-    },
     {
       "key": "g9.coordinate.order",
       "status": "TESTED",
