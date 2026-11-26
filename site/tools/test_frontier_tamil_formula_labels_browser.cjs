@@ -30,6 +30,8 @@ for (const [latex, fallback, expected, accessible = expected] of formulaExamples
 }
 const conventional = {latex:raw`\operatorname{cosec}\theta\cdot\text{ cm}\cdot\text{ (ii)}`, fallback:'cosec θ × cm × (ii)'};
 assert.equal(translate(conventional), conventional);
+assert.equal(translate('Sum = 10, Product = 24 ⇒ 4 and 6'), 'கூடுதல் = 10, பெருக்கற்பலன் = 24 ⇒ 4 மற்றும் 6');
+assert.equal(translate('OR = √(17² − 15²) = 8'), 'OR = √(17² − 15²) = 8');
 
 const cases = [
   [9, 'g9-ch3-ex3.3-q1', 'Not a multiple', 'மடங்கல்ல'],

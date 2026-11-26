@@ -463,8 +463,8 @@
   const fragments=String(s.eq||'').split(/\s+;\s+/);
   const stepMath=lang==='ta'&&s.mathTa?s.mathTa:s.math;
   if(stepMath){equation.classList.add('structured-equation');equation.innerHTML=workedMath(stepMath);}
-  else if(fragments.length>1&&fragments.length<=8){equation.classList.add('step-equation-group');equation.innerHTML=fragments.map(x=>'<span class="math-part">'+math(x)+'</span>').join('');}
-  else equation.innerHTML=math(s.eq);
+  else if(fragments.length>1&&fragments.length<=8){equation.classList.add('step-equation-group');equation.innerHTML=fragments.map(x=>'<span class="math-part">'+workedMath(x)+'</span>').join('');}
+  else equation.innerHTML=workedMath(s.eq);
   body.append(reason,equation);li.append(number,body);return li;
  }
 
@@ -527,7 +527,7 @@
   const canGrid=!answerMath&&parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
-  $('answerText').innerHTML=answerMath?workedMath(answerMath):(canGrid?parts.map(v=>'<span class="answer-part">'+math(v)+'</span>').join(''):math(localizedAnswer));
+  $('answerText').innerHTML=answerMath?workedMath(answerMath):(canGrid?parts.map(v=>'<span class="answer-part">'+workedMath(v)+'</span>').join(''):workedMath(localizedAnswer));
   appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);

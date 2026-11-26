@@ -43,7 +43,10 @@ async function inspect(page,q,lang){
    return JSON.stringify(localized)===JSON.stringify(value)?null:localized;
   };
   const answerFormula=q.answerMath?.[lang]||p.answerMath?.[lang]||p.answerMath?.en||p.answerMath;
-  const localizedSteps=p.steps.map((step,index)=>localizedFormula((override||q).steps[index].mathTa||step.math));
+  const localizedSteps=p.steps.map((step,index)=>{
+   const authoredStep=(override||q).steps[index];
+   return localizedFormula(authoredStep.mathTa||step.math||authoredStep.eq);
+  });
   const expected=hintCount+choices+question+tableCount+
    count(q.answerMath?.[lang]||p.answerMath?.[lang]||p.answerMath)+p.steps.reduce((n,s,i)=>n+
    count((lang==='ta'&&(override||q).steps[i].mathTa)||s.math)+count(s.reasonMath?.[lang]||s.reasonMath?.en),0);

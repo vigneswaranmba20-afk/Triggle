@@ -85,7 +85,7 @@
     'or': 'அல்லது',
     'ord': 'வரிசை',
     'pipes': 'குழாய்கள்',
-    'radicand': 'மூலக்குறியுள்',
+    'radicand': 'மூலக்குறிக்குள் உள்ள எண்',
     'red or green': 'சிவப்பு அல்லது பச்சை',
     'rem': 'எஞ்சியது',
     'remaining choices': 'எஞ்சிய தேர்வுகள்',
@@ -116,15 +116,241 @@
   const texMidpoint = /\\text\{\s*Mid-point of\s*\}([A-Z]{2})/g;
   const textCommand = /\\(?:text|textrm|mathrm|operatorname)\s*\{([^{}]*)\}/g;
   const escapePattern = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const spokenPhrases = {
+    ...labels,
+    '1900 ÷ 400 is not an integer': '1900 ÷ 400 ஒரு முழு எண் அல்ல',
+    'where k is an integer': 'இங்கு k ஒரு முழு எண்',
+    'where a =': 'இங்கு a =',
+    'n² has remainder 0 or 1 when divided by 4': 'n²-ஐ 4-ஆல் வகுத்தால் மீதி 0 அல்லது 1',
+    'n and n+1 are coprime': 'n மற்றும் n+1 சார்பகா எண்கள்',
+    'd divides n and d divides n+1': 'd ஆனது n மற்றும் n+1 ஆகிய இரண்டையும் வகுக்கும்',
+    'd divides (n+1)−n = 1': '(n+1)−n = 1-ஐ d வகுக்கும்',
+    '2 divides n(n+1)': 'n(n+1) ஆனது 2-ஆல் வகுபடும்',
+    '13 divides a+b+c': 'a+b+c ஆனது 13-ஆல் வகுபடும்',
+    'capacity': 'கொள்ளளவு',
+    'litres': 'லிட்டர்',
+    'Check:': 'சரிபார்ப்பு',
+    'Check': 'சரிபார்க்க',
+    'distances are': 'தொலைவுகள்',
+    'the மூலங்கள் are மெய் மூலங்கள் இல்லை': 'மெய் மூலங்கள் இல்லை',
+    'the மூலங்கள் are': 'மூலங்கள்',
+    'the மூலங்கள்': 'மூலங்கள்',
+    'மூலங்கள் are': 'மூலங்கள்',
+    'with α real': 'α மெய்யெண் எனில்',
+    'b, a, c are in arithmetic progression': 'b, a, c கூட்டுத் தொடர்வரிசையில் உள்ளன',
+    'b, a, c are in A.P.': 'b, a, c கூட்டுத் தொடர்வரிசையில் உள்ளன',
+    'கூடுதல் of new மூலங்கள்': 'புதிய மூலங்களின் கூடுதல்',
+    'பெருக்கற்பலன் of new மூலங்கள்': 'புதிய மூலங்களின் பெருக்கற்பலன்',
+    'either': '',
+    'so': 'எனவே',
+    'Discount': 'தள்ளுபடி',
+    'bring down': 'அடுத்த உறுப்பை இறக்குக',
+    'Ascending order:': 'ஏறு வரிசை',
+    'Order:': 'வரிசை',
+    'Constant term': 'மாறிலி உறுப்பு',
+    'Sum of roots': 'மூலங்களின் கூடுதல்',
+    'Product of roots': 'மூலங்களின் பெருக்கற்பலன்',
+    'reject x = −2': 'x = −2-ஐ விலக்குக',
+    'ground': 'தரைத்தொலைவு',
+    'area': 'பரப்பளவு',
+    'Number of cans': 'கலன்களின் எண்ணிக்கை',
+    'Number of caps': 'தொப்பிகளின் எண்ணிக்கை',
+    'Collinear when': 'ஒரே கோட்டில் இருப்பதற்கான நிபந்தனை',
+    'all positive': 'அனைத்தும் நேர்மம்',
+    'Slope': 'சாய்வு',
+    'slope': 'சாய்வு',
+    'while': 'அதே நேரத்தில்',
+    'is undefined': 'வரையறுக்கப்படவில்லை',
+    'undefined': 'வரையறுக்கப்படவில்லை',
+    'vertical line': 'செங்குத்து நேர்க்கோடு',
+    'horizontal line': 'கிடைமட்ட நேர்க்கோடு',
+    'from': 'இதிலிருந்து',
+    'given சாய்வு': 'கொடுக்கப்பட்ட சாய்வு',
+    'இணைகோடுகள் line சாய்வு': 'இணைகோட்டின் சாய்வு',
+    'x = −11 is இணைகோடுகள் to Y-axis (vertical)': 'x = −11 ஆனது y-அச்சுக்கு இணையான செங்குத்துக் கோடு',
+    'செங்குத்துக் கோடுகள் horizontal line has சாய்வு': 'அதற்குச் செங்குத்தான கிடைமட்டக் கோட்டின் சாய்வு',
+    'the lines are செங்குத்துக் கோடுகள்': 'கோடுகள் ஒன்றுக்கொன்று செங்குத்தானவை',
+    'altitude through A has சாய்வு': 'A வழியாகச் செல்லும் குத்துக்கோட்டின் சாய்வு',
+    'altitude through B சாய்வு': 'B வழியாகச் செல்லும் குத்துக்கோட்டின் சாய்வு',
+    'Through A:': 'A வழியாக',
+    'through (': 'இந்தப் புள்ளி வழியாக (',
+    'At (': 'இந்தப் புள்ளியில் (',
+    'x-intercept': 'x-அச்சு வெட்டுத்துண்டு',
+    'y-intercept': 'y-அச்சு வெட்டுத்துண்டு',
+    'Midpoints:': 'நடுப்புள்ளிகள்',
+    'giving': 'இதிலிருந்து',
+    'gives': 'இதிலிருந்து',
+    'hence': 'எனவே',
+    'then': 'பிறகு',
+    'squaring': 'வர்க்கப்படுத்தினால்',
+    'Horizontal distance from center': 'மையத்திலிருந்து கிடைமட்டத் தொலைவு',
+    'vertical height to pole top': 'கம்பத்தின் உச்சிவரை செங்குத்து உயரம்',
+    'Base area': 'அடிப்பரப்பளவு',
+    'legs are': 'செங்கோணத்தைத் தாங்கும் பக்கங்கள்',
+    'Surface area of sphere': 'கோளத்தின் புறப்பரப்பு',
+    'Maximum diameter': 'அதிகபட்ச விட்டம்',
+    'radius': 'ஆரம்',
+    'Volumes': 'கனஅளவுகள்',
+    'words': 'சொற்கள்',
+    'coins': 'நாணயங்கள்',
+    'rise': 'உயர்வு',
+    'thickness': 'தடிமன்',
+    'square units': 'சதுர அலகுகள்',
+    'cubic units': 'கன அலகுகள்',
+    'ratio': 'விகிதம்',
+    'unrounded:': 'சுற்றாத மதிப்பு',
+    'exact:': 'துல்லிய மதிப்பு',
+    'years': 'ஆண்டுகள்',
+    'variance': 'மாறுபாடு',
+    'mean': 'சராசரி',
+    'Known five': 'தெரிந்த ஐந்து மதிப்புகள்',
+    'sum of squares': 'வர்க்கங்களின் கூடுதல்',
+    'data': 'தரவுகள்',
+    'Full precision': 'முழுத் துல்லியத்தில்',
+    "textbook's intermediate-rounding method": 'பாடநூல் பயன்படுத்தும் இடைநிலைச் சுற்றுதலில்',
+    'Sathya': 'சத்யா',
+    'Vidhya': 'வித்யா',
+    'Social Science most, Science least': 'சமூக அறிவியலில் அதிகம், அறிவியலில் குறைவு',
+    'ordered pairs': 'வரிசைச் சோடிகள்',
+    'neither white nor black': 'வெள்ளையோ கருப்போ அல்லாதவை',
+    'boys': 'மாணவர்கள்',
+    'girls': 'மாணவிகள்',
+    'Odd primes in': 'இந்த இடைவெளியிலுள்ள ஒற்றைப் பகா எண்கள்',
+    'Odd composites in': 'இந்த இடைவெளியிலுள்ள ஒற்றைப் பகு எண்கள்',
+    'known terms': 'தெரிந்த உறுப்புகள்',
+    'at least one girl': 'குறைந்தது ஒரு மாணவி',
+    'black': 'கருப்பு',
+    'white': 'வெள்ளை',
+    'Different slopes give different lines': 'வெவ்வேறு சாய்வுகள் கொண்ட கோடுகள் வெவ்வேறானவை',
+    'Like surds share the same root and radicand.': 'ஒத்த மூலங்களுக்கு ஒரே மூலப் படியும் மூலக்குறிக்குள் ஒரே எண்ணும் உண்டு.',
+    'Like surds share the same root and': 'ஒத்த மூலங்களின் பண்புகள் ஒரே மூலப் படி, ஒரே',
+    'Simplify the radicals before combining.': 'சேர்ப்பதற்கு முன் மூலக்கோவைகளைச் சுருக்குக.',
+    'Denominator conjugate:': 'பகுதியின் இணைமூலம்',
+    'Use a single fraction with common denominator': 'இந்தப் பொது பகுதியைக் கொண்ட ஒரே பின்னமாக எழுதுக',
+    'Align both terms to the same power of ten before adding.': 'கூட்டுவதற்கு முன் இரு உறுப்புகளையும் பத்தின் ஒரே அடுக்கில் எழுதுக.',
+    'Align the exponents and subtract the coefficients.': 'அடுக்குகளைச் சமமாக்கிக் கெழுக்களைக் கழிக்க.',
+    'Multiply coefficients and add exponents.': 'கெழுக்களைப் பெருக்கி அடுக்குகளைக் கூட்டுக.',
+    'Divide coefficients and subtract the denominator exponent.': 'கெழுக்களை வகுத்துப் பகுதியின் அடுக்கைக் கழிக்க.',
+    'allowed exponents:': 'அனுமதிக்கப்பட்ட அடுக்குகள்',
+    'degree': 'படி',
+    'exponent': 'அடுக்கு',
+    'exponents': 'அடுக்குகள்',
+    'exponents are': 'அடுக்குகள்',
+    'powers of x:': 'x-இன் அடுக்குகள்',
+    'powers:': 'அடுக்குகள்',
+    'has power': 'இன் அடுக்கு',
+    'has a nonzero coefficient': 'பூச்சியமல்லாத கெழுவைக் கொண்டது',
+    'coefficient of p⁴': 'p⁴-இன் கெழு',
+    'coefficients:': 'கெழுக்கள்',
+    'coeffs': 'கெழுக்கள்',
+    'coeff': 'கெழு',
+    'const': 'மாறிலி',
+    'Plot the points and join with a straight line': 'புள்ளிகளைக் குறித்துப் பின்னர் நேர்க்கோட்டால் இணைக்க.',
+    'Plot and draw the straight line': 'புள்ளிகளைக் குறித்து நேர்க்கோடு வரைக.',
+    'Plot and join with a straight line': 'புள்ளிகளைக் குறித்துப் பின்னர் நேர்க்கோட்டால் இணைக்க.',
+    'Choose multiples of 2:': '2-இன் மடங்குகளைத் தேர்ந்தெடுக்க.',
+    'passes through': 'இந்தப் புள்ளிகளின் வழியாகச் செல்கிறது',
+    'Lines intersect at': 'கோடுகள் சந்திக்கும் புள்ளி',
+    'Lines coincide ⇒ infinitely many solutions': 'கோடுகள் ஒன்றின்மேல் ஒன்று அமைவதால் எண்ணற்ற தீர்வுகள் உள்ளன',
+    'Lines are parallel': 'கோடுகள் இணையானவை',
+    'is a horizontal line': 'ஒரு கிடைமட்ட நேர்க்கோடு',
+    'is a vertical line': 'ஒரு செங்குத்து நேர்க்கோடு',
+    'they intersect at': 'கோடுகள் சந்திக்கும் புள்ளி',
+    'Let speeds be x and y mph (x > y). Towards each other:': 'வேகங்கள் x மற்றும் y mph என்க (x > y). ஒன்றையொன்று நோக்கிச் செல்லும்போது',
+    'Same direction in 2 hrs:': 'ஒரே திசையில் 2 மணி நேரம் செல்லும்போது',
+    'Plotting both lines gives intersection': 'இரு கோடுகளையும் வரைந்தால் சந்திக்கும் புள்ளி',
+    'From (2),': 'சமன்பாடு (2)-இலிருந்து',
+    'Multiply by 10:': '10-ஆல் பெருக்குக.',
+    'Let Raman’s age = x and sum of two sons’ ages = y. Then x = 3y': 'இராமனின் வயது x, இரு மகன்களின் வயதுகளின் கூடுதல் y என்க. எனவே x = 3y',
+    'After 5 years:': '5 ஆண்டுகளுக்குப் பிறகு',
+    'Original number': 'தொடக்க எண்',
+    'Number': 'எண்',
+    'Add both equations:': 'இரு சமன்பாடுகளையும் கூட்டுக.',
+    'Multiply (1) by 2:': 'சமன்பாடு (1)-ஐ 2-ஆல் பெருக்குக.',
+    'add to (2):': 'சமன்பாடு (2)-உடன் கூட்டுக.',
+    'Note (0, 0) satisfies both equations. For x, y ≠ 0, divide by xy:': '(0, 0) இரு சமன்பாடுகளுக்கும் தீர்வு. x, y ≠ 0 எனில் xy-ஆல் வகுக்க.',
+    'Let u': 'u எனக் கொள்க',
+    'Add both:': 'இரண்டையும் கூட்டுக.',
+    'Add:': 'கூட்டுக.',
+    'Subtract:': 'கழிக்க.',
+    'Incomes:': 'வருமானங்கள்',
+    'Expenditures:': 'செலவுகள்',
+    'Fraction': 'பின்னம்',
+    'Opposite angles of cyclic quad sum to 180°:': 'வட்ட நாற்கரத்தின் எதிர்க்கோணங்களின் கூடுதல் 180°.',
+    'By Remainder Theorem, dividing p(x) by (x − 3) gives remainder p(3)': 'மீதித் தேற்றப்படி p(x)-ஐ (x − 3)-ஆல் வகுத்தால் மீதி p(3)',
+    '3(1) − 3 = 0 ⇒ (x − 1) is a factor of 3x − 3': '3(1) − 3 = 0 எனவே (x − 1) என்பது 3x − 3-இன் காரணி',
+    'Degree 3 means at most 3 linear factors': 'படி 3 எனில் அதிகபட்சம் 3 ஒருபடிக் காரணிகள் உண்டு',
+    'has variable x with degree 1': 'என்ற சமன்பாடு x-இல் ஒருபடிச் சமன்பாடு',
+    'If a = 0 and b = 0, both variables vanish (c = 0 is not a linear equation)': 'a = 0, b = 0 எனில் இரு மாறிகளும் நீங்கும். c = 0 ஒரு நேரிய சமன்பாடு அல்ல',
+    'has both variable coefficients equal to 0': 'என்பதில் இரு மாறிகளின் கெழுக்களும் 0',
+    'Parallel lines never intersect, so no solution': 'இணைகோடுகள் சந்திக்காது. எனவே தீர்வு இல்லை',
+    'lines intersect at one point (unique solution)': 'கோடுகள் ஒரே புள்ளியில் சந்திக்கின்றன (ஒரே ஒரு தீர்வு)',
+    'parallel lines (no solution)': 'இணைகோடுகள் (தீர்வு இல்லை)',
+    'Degree of 4 − 3x³ is 3': '4 − 3x³-இன் படி 3',
+    'is not a factor': 'ஒரு காரணி அல்ல',
+    'Common factor': 'பொதுக் காரணி',
+    'yz term (+12yz) is positive while xy and xz are negative': 'yz உறுப்பு (+12yz) நேர்மம். xy மற்றும் xz உறுப்புகள் எதிர்மம்',
+    'Sum': 'கூடுதல்',
+    'Product': 'பெருக்கற்பலன்',
+    'Divisor zero:': 'வகுக்கும் கோவையின் பூச்சியம்',
+    'Quotient': 'ஈவு',
+    'quotient': 'ஈவு',
+    'Divide quotient by 2:': 'ஈவை 2-ஆல் வகுக்க.',
+    'Divide quotient by 3:': 'ஈவை 3-ஆல் வகுக்க.',
+    'Divide quotient by 4:': 'ஈவை 4-ஆல் வகுக்க.',
+    'Standard form:': 'திட்ட வடிவம்',
+    'Breadth': 'அகலம்',
+    'Base': 'அடிப்பக்கம்',
+    'for x ≠': 'x ≠',
+    'remainder': 'மீதி',
+    'Compare with': 'இதனுடன் ஒப்பிடுக',
+    'Synthetic division by': 'தொகுப்பு வகுத்தலில் வகுக்கும் மதிப்பு',
+    'sum of coeffs': 'கெழுக்களின் கூடுதல்',
+    'Common base is p': 'பொது அடிமானம் p',
+    'No common numerical or variable factor across all three': '1-ஐத் தவிர மூன்றிற்கும் பொதுவான எண் காரணியோ மாறிக் காரணியோ இல்லை',
+    '(2x + 5) and (5x + 2) are distinct linear polynomials': '(2x + 5), (5x + 2) இரண்டும் வெவ்வேறான ஒருபடிப் பல்கோவைகள்',
+    'Lowest powers:': 'குறைந்த அடுக்குகள்',
+    'Lowest power of x is x⁶': 'x-இன் குறைந்த அடுக்கு x⁶',
+    'min power of': 'குறைந்த அடுக்குகள்',
+    'c is absent in 125ab; lowest powers of a, b are 1, 1': '125ab-இல் c இல்லை. a, b-இன் குறைந்த அடுக்குகள் முறையே 1, 1',
+    '3, 5, 7 are primes and variables are all distinct': '3, 5, 7 பகா எண்கள். மாறிகள் அனைத்தும் வெவ்வேறானவை',
+    'variables a, b, c are distinct': 'மாறிகள் a, b, c வெவ்வேறானவை',
+    'Common factor with (a − 3x)² is (a − 3x)': '(a − 3x)² உடன் உள்ள பொதுக் காரணி (a − 3x)',
+    'abscissa': 'x-ஆயத்தொலைவு',
+    'ordinate': 'y-ஆயத்தொலைவு',
+    'straight line parallel to x-axis': 'x-அச்சுக்கு இணையான நேர்க்கோடு',
+    'straight line lying on y-axis': 'y-அச்சின் மீதுள்ள நேர்க்கோடு',
+    'All 4 sides = 4 units, angles = 90° ⇒ Square': '4 பக்கங்களும் 4 அலகுகள். கோணங்கள் 90°. எனவே சதுரம்',
+    'BC and AD meet at': 'BC, AD சந்திக்கும் புள்ளி',
+    'mid-point of': 'இவற்றின் நடுப்புள்ளி',
+    'Equidistant': 'சமத் தொலைவில்',
+    'P divides AB in 1:2; Q divides AB in 2:1': 'P ஆனது AB-ஐ 1:2 விகிதத்தில் பிரிக்கிறது. Q ஆனது AB-ஐ 2:1 விகிதத்தில் பிரிக்கிறது',
+    'matches B': 'B-இன் மதிப்புடன் பொருந்துகிறது',
+    'B(3, 3) divides AC in 2 : 1': 'B(3, 3) ஆனது AC-ஐ 2 : 1 விகிதத்தில் பிரிக்கிறது',
+    'centroid of mid-points D, E, F': 'நடுப்புள்ளிகள் D, E, F அமைக்கும் முக்கோணத்தின் நடுக்கோட்டு மையம்',
+    'point (x, 0) x-அச்சில் உள்ளது': '(x, 0) புள்ளி x-அச்சில் உள்ளது',
+    'have (+, −)': 'குறிகள் (+, −)',
+  };
+  const spokenPattern = new RegExp('(^|[^A-Za-z])(' + Object.keys(spokenPhrases)
+    .sort((first, second) => second.length - first.length).map(escapePattern).join('|') + ')(?![A-Za-z])', 'g');
+
+  function translateFallback(fallback) {
+    if (typeof fallback !== 'string') return fallback;
+    return fallback.replace(/\bto n terms\b/g, 'n உறுப்புகள் வரை')
+      .replace(axisLabel, (_, description, axis) => axis + axisEndings[description])
+      .replace(/\bMid-point of ([A-Z]{2})\b/g, '$1-இன் நடுப்புள்ளி')
+      .replace(spokenPattern, (_, prefix, phrase) => prefix + spokenPhrases[phrase]);
+  }
 
   function translate(value) {
     if (Array.isArray(value)) return value.map(translate);
+    if (typeof value==='string') return translateFallback(value);
     if (!value?.latex) return value;
     if (commonFactor.test(value.latex)) {
-      return {...value,latex:'1\\text{ தவிர வேறு பொதுக் காரணி இல்லை}',fallback:'1 தவிர வேறு பொதுக் காரணி இல்லை'};
+      return {...value,latex:'1\\text{ தவிர வேறு பொதுக் காரணி இல்லை}',
+        fallback:translateFallback(value.fallback)||'1 தவிர வேறு பொதுக் காரணி இல்லை'};
     }
 
-    const replacements = new Map();
     const latex = value.latex
       .replace(seriesRange, ' n\\text{ உறுப்புகள் வரை}')
       .replace(texAxisLabel, (_, description, axis) => ' ' + axis + '\\text{' + axisEndings[description] + '}')
@@ -133,22 +359,11 @@
         const phrase = label.trim();
         if (!Object.hasOwn(labels, phrase)) return literal;
         const tamil = labels[phrase];
-        replacements.set(phrase, tamil);
         return '\\text{' + label.replace(phrase, tamil) + '}';
       });
 
-    if (latex === value.latex) return value;
-    let fallback = value.fallback;
-    if (typeof fallback === 'string') {
-      fallback = fallback.replace(/\bto n terms\b/g, 'n உறுப்புகள் வரை')
-        .replace(axisLabel, (_, description, axis) => axis + axisEndings[description])
-        .replace(/\bMid-point of ([A-Z]{2})\b/g,'$1-இன் நடுப்புள்ளி');
-      for (const [english, tamil] of [...replacements].sort((first, second) => second[0].length - first[0].length)) {
-        const word = new RegExp('(^|[^A-Za-z])' + escapePattern(english) + '(?![A-Za-z])', 'g');
-        fallback = fallback.replace(word, (_, prefix) => prefix + tamil);
-      }
-    }
-    return {...value,latex,fallback};
+    const fallback = translateFallback(value.fallback);
+    return latex === value.latex && fallback === value.fallback ? value : {...value,latex,fallback};
   }
 
   window.TriggleTamilFormulaLabels = {translate};
