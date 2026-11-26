@@ -24,11 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g10.compositions",
+      "key": "figure.tamil",
       "status": "TESTED",
-      "pr": 451,
-      "head": "4cf4411162d45f9caf1d0fe287cbb9134ed4b348",
-      "prQualityRun": 45719175984
+      "pr": 452,
+      "head": "b2a49729cd4123ef07d32b52f88decf99a176358",
+      "prQualityRun": 45719184913
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2327,13 +2327,13 @@
         "c10-1-1-5-q5"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g10-frontier-compositions.json",
-      "status": "TESTED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 10,
         "chapter": 1,
         "runtimeRecords": 2,
         "scope": "Composition domains, ranges and answer-key order in Exercise 1.5",
-        "status": "TESTED",
+        "status": "LIVE_VERIFIED",
         "pr": 451,
         "head": "4cf4411162d45f9caf1d0fe287cbb9134ed4b348",
         "prQualityRun": 45719175984,
@@ -2342,6 +2342,37 @@
           "worktree": "/workspace/Triggle-g10-compositions",
           "browserScript": "site/tools/test_g10_frontier_compositions_browser.cjs",
           "studentQuery": "class=10&question=c10-1-1-5-q5"
+        },
+        "merge": "45d25baab7ba44449db15e0c18305d66d08c04db",
+        "pagesRun": 45738349515,
+        "liveEvidence": {
+          "pr": 451,
+          "merge": "45d25baab7ba44449db15e0c18305d66d08c04db",
+          "head": "4cf4411162d45f9caf1d0fe287cbb9134ed4b348",
+          "slug": "g10-compositions",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-1-1-5-q5",
+          "pagesRun": 45738349515,
+          "deploymentId": 8074465730,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45738349515/job/139642426857",
+          "deploymentCompletedAt": "2026-11-26T02:05:54Z",
+          "versionMatched": "45d25baab7ba44449db15e0c18305d66d08c04db",
+          "sha256": {
+            "data/math-layout/g10-ch1-chatgpt-20261113.js": "2b1cab39a57cd15106a686951c8eb0df249d438455b78fd7df83fd243c93f29f",
+            "data/project-status.json": "c3ebeebfeb8832b44c4cfd2c12984a5a54fcc1517b1db654ba62e0e6f1e956f0",
+            "data/textbook-exercises/g10-ch1-relations-tamil.js": "3fdb052533323c3ffab889c968bf47fefab533cc5e2e8152d1603539b716288e",
+            "data/textbook-fidelity/g10-frontier-compositions.json": "b6ebae041d7d8c6c858b7fc88dea16993458b1990cd9c74b81a7cea5e2bc218a",
+            "index.html": "13ab50aea0cacf616ad97ba965d96ac394c9380bb87368063df1e3325880d34b",
+            "service-worker.js": "36dbc839b8c0dc128da13bc6381da0ff72e7b31b167d1c9592b1a6fe6f78ae09"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 10 Exercise 1.5 at 390px. Both languages, exact notation, boundaries and retained progress passed."
+          }
         },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/451"
       }
@@ -2593,7 +2624,7 @@
       }
     }
   ],
-  "latestMain": "5e34db1c968e592c9a28ecd5536fa774609d9011",
+  "latestMain": "45d25baab7ba44449db15e0c18305d66d08c04db",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2636,15 +2667,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "5e34db1c968e592c9a28ecd5536fa774609d9011",
+  "latestVerifiedProduction": "45d25baab7ba44449db15e0c18305d66d08c04db",
   "openReleaseOrder": [
-    {
-      "key": "g10.compositions",
-      "status": "TESTED",
-      "pr": 451,
-      "head": "4cf4411162d45f9caf1d0fe287cbb9134ed4b348",
-      "prQualityRun": 45719175984
-    },
     {
       "key": "figure.tamil",
       "status": "TESTED",

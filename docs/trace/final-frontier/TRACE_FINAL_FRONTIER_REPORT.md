@@ -1,6 +1,6 @@
 # TRACE Final Frontier
 
-**Mission in progress. Android release preparation is NO-GO.** The assembled candidate covers all 1,756 source-verifiable canonical tasks in both languages. The inventory accounts for 18 additional source-blocked tasks. The remaining curriculum releases and final production checks are in progress. The latest verified production revision is `5e34db1c968e592c9a28ecd5536fa774609d9011`. Grade 9 Set Language Exercises 1.3–1.7 added 56 cards representing 112 tasks, including 111 verified bilingual solutions and one unscored source ambiguity. [Live Triggle](https://vigneswaranmba20-afk.github.io/Triggle/site/)
+**Mission in progress. Android release preparation is NO-GO.** The assembled candidate covers all 1,756 source-verifiable canonical tasks in both languages. The inventory accounts for 18 additional source-blocked tasks. The remaining curriculum releases and final production checks are in progress. The latest verified production revision is `45d25baab7ba44449db15e0c18305d66d08c04db`. Grade 9 Set Language Exercises 1.3–1.7 added 56 cards representing 112 tasks, including 111 verified bilingual solutions and one unscored source ambiguity. [Live Triggle](https://vigneswaranmba20-afk.github.io/Triggle/site/)
 
 - [Machine-readable inventory](TRACE_FINAL_FRONTIER_INVENTORY.json)
 - [One row per candidate canonical task](TRACE_FINAL_FRONTIER_INVENTORY.csv)
@@ -17,7 +17,7 @@ Fresh source extraction was checked against the reader, captured page images and
 | Grade | Exercise sections | Numbered questions | Canonical tasks | Registered records before → candidate | Missing eligible before → candidate | Partial before → candidate | Source blocked | Math evidence | Live verified |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 9 | 60 | 482 | 843 | 690 → 746 | 111 → 0 | 46 → 0 | 7 | 836 | 196 |
-| 10 | 69 | 664 | 931 | 881 → 881 | 0 → 0 | 28 → 0 | 11 | 920 | 32 |
+| 10 | 69 | 664 | 931 | 881 → 881 | 0 → 0 | 28 → 0 | 11 | 920 | 35 |
 
 ## Chapter reconciliation
 
@@ -32,7 +32,7 @@ Fresh source extraction was checked against the reader, captured page images and
 | 9 | 7 | Mensuration | 4 | 36 | 42 | 0 → 0 | 0 → 0 | 1 | 41 | 0 |
 | 9 | 8 | Statistics | 4 | 30 | 32 | 0 → 0 | 2 → 0 | 0 | 32 | 11 |
 | 9 | 9 | Probability | 3 | 25 | 31 | 0 → 0 | 0 → 0 | 0 | 31 | 0 |
-| 10 | 1 | Relations and Functions | 7 | 69 | 124 | 0 → 0 | 8 → 0 | 0 | 124 | 10 |
+| 10 | 1 | Relations and Functions | 7 | 69 | 124 | 0 → 0 | 8 → 0 | 0 | 124 | 13 |
 | 10 | 2 | Numbers and Sequences | 11 | 115 | 161 | 0 → 0 | 8 → 0 | 1 | 160 | 8 |
 | 10 | 3 | Algebra | 21 | 140 | 236 | 0 → 0 | 0 → 0 | 1 | 235 | 2 |
 | 10 | 4 | Geometry | 6 | 78 | 88 | 0 → 0 | 0 → 0 | 4 | 84 | 0 |
@@ -46,7 +46,7 @@ Fresh source extraction was checked against the reader, captured page images and
 | Grade | Catalogue cards | Eligible tasks | English reader content | Tamil reader content | Both languages | Independently confirmed complete in both | Fully verified live |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | 9 | 746 | 836 | 836 | 836 | 836 | 836 | 196 |
-| 10 | 863 | 920 | 920 | 920 | 920 | 920 | 32 |
+| 10 | 863 | 920 | 920 | 920 | 920 | 920 | 35 |
 
 The reader columns measure visible question, solution and final-answer content on registered tasks. The independently confirmed column requires matching source and mathematical evidence in addition. The JSON and CSV preserve the evidence at task level.
 
@@ -85,7 +85,7 @@ The reader columns measure visible question, solution and final-answer content o
 - **Grade 10 Algebra step explanations** · `LIVE_VERIFIED`. Adds 12 bilingual Algebra explanations and localizes the difficulty labels. All four mobile widths and offline checks passed. Revision `59f26f46d938e94e7e7b04cd3d8a7222cc220094`. [PR #448](https://github.com/vigneswaranmba20-afk/Triggle/pull/448) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45707428910) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45731462969/job/139620124702) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-3-ex3-15-q1-i)
 - **Grade 9 and 10 exercise navigation and concept links** · `LIVE_VERIFIED`. Restores source order for 65 affected cards and tests 16 Grade 10 concept paths with matching textbook destinations. All four mobile widths passed in English and Tamil, with progress preserved. The full local sweep found zero order or boundary differences. Revision `bd31c2b0d222e43e746e3e56925f85b8a05c45d2`. [PR #449](https://github.com/vigneswaranmba20-afk/Triggle/pull/449) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45718845558) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45733459057/job/139626826181) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch1-ex1.1-q3-a-i)
 - **Grade 9 Mensuration** · `LIVE_VERIFIED`. Both editions list two equivalent choices in Exercise 7.4 Q7. The reader explains both and preserves the simplest form used in the key. All 42 chapter tasks were checked independently, including the ambiguous item, which remains outside unconditional completion. Revision `5e34db1c968e592c9a28ecd5536fa774609d9011`. [PR #450](https://github.com/vigneswaranmba20-afk/Triggle/pull/450) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45719169113) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45735482206/job/139634847420) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch7-ex7.4-q7)
-- **Grade 10 Relations and Functions compositions** · `TESTED`. Derives the domains and general ranges in Exercise 1.5 Q1(ii) and Q5. Both answer appendices reverse Q1(iii), whose displayed formulas are correct. Independent checks cover 2,592 compatible finite subset pairs and the special case in the keys. Both languages and all four mobile widths passed. Revision `4cf4411162d45f9caf1d0fe287cbb9134ed4b348`. [PR #451](https://github.com/vigneswaranmba20-afk/Triggle/pull/451) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45719175984)
+- **Grade 10 Relations and Functions compositions** · `LIVE_VERIFIED`. Derives the domains and general ranges in Exercise 1.5 Q1(ii) and Q5. Both answer appendices reverse Q1(iii), whose displayed formulas are correct. Independent checks cover 2,592 compatible finite subset pairs and the special case in the keys. Both languages and all four mobile widths passed. Revision `45d25baab7ba44449db15e0c18305d66d08c04db`. [PR #451](https://github.com/vigneswaranmba20-afk/Triggle/pull/451) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45719175984) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45738349515/job/139642426857) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-1-1-5-q5)
 - **Grade 9 and 10 Tamil figure descriptions and labels** · `TESTED`. Localizes descriptions for 37 question figures, with 14 Tamil-labelled SVG versions that retain the underlying geometry and mathematical notation. Checks covered all four mobile widths, the entire viewBox for each new label and offline Figure view. Revision `b2a49729cd4123ef07d32b52f88decf99a176358`. [PR #452](https://github.com/vigneswaranmba20-afk/Triggle/pull/452) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45719184913)
 - **Grade 9 Algebra Exercise 3.15** · `TESTED`. Explains two valid choices in Q9 and the distinct-prime condition for Q28. Both tasks remain unscored. Q15 derives the coefficient triple and Q17 explains the textbook convention for the zero polynomial. The 29 stable IDs, bilingual rendering, progress, offline operation and all four mobile widths passed. Revision `7117ed8cd5ad79203be63dfee6f6e8b2707c2370`. [PR #453](https://github.com/vigneswaranmba20-afk/Triggle/pull/453) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45719190105)
 - **Grade 9 and 10 Tamil final-answer rendering** · `TESTED`. Restores Tamil final-answer text in the rendered reader, including Algebra and Coordinate Geometry, two Mensuration questions and four Statistics and Probability answers. Grade 9 Exercise 3.5 Q3(ii) keeps the same boxed square and uses its authored Tamil-mode text for screen readers. The typography suite checks localized text and exact fractions. Revision `923b8ac03c5b7a7053efce66699565b0d5b25a13`. [PR #454](https://github.com/vigneswaranmba20-afk/Triggle/pull/454) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45735872838)
