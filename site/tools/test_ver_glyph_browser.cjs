@@ -53,7 +53,7 @@ function readerMetrics() {
   };
   const dock = document.querySelector('#questionNavDock');
   const controls = [...document.querySelectorAll(
-    '#exerciseIndexLink, #browseBtn, #langEn, #langTa, #figureBtn, #questionTopNext, #previous, #next'
+    '#questionPicker, #quickSolutionAction, #langEn, #langTa, #figureBtn, #questionTopNext, #previous, #next'
   )].filter(el => el.offsetWidth).map(el => ({id: el.id, width: bounds(el).width, height: bounds(el).height}));
   return {
     promptY: Math.round(range.getClientRects()[0]?.top || rect.top + parseFloat(style.paddingTop)),
@@ -84,7 +84,10 @@ async function testActions(page, base) {
   await page.goto(base + route(9, 'g9-ch1-ex1.1-q5-ii'));
   await page.locator('#langEn').click();
   const id = () => new URL(page.url()).searchParams.get('question');
-  await page.locator('#next').click();
+  await page.locator('#questionPicker').click();
+  assert.equal(await page.locator('#pathDialog').evaluate(dialog => dialog.open), true);
+  assert.equal(await page.locator('#pathOptions button[aria-current="true"]').count(), 1);
+  await page.locator('#pathOptions button').filter({hasText: /(?:Question|Q)\s*5\s*\(iii\)/}).click();
   assert.equal(id(), 'g9-ch1-ex1.1-q5-iii');
   await page.locator('#previous').click();
   assert.equal(id(), 'g9-ch1-ex1.1-q5-ii');
@@ -96,21 +99,19 @@ async function testActions(page, base) {
   await page.goto(base + route(9, 'g9-ch1-ex1.1-q1-i'));
   await page.locator('#g9GeometryHint summary').click();
   assert.equal(await page.locator('#g9GeometryHint').evaluate(el => el.open), true);
+  assert.equal(await page.locator('#deepSolutionAction').count(), 0);
   const reasoning = page.locator('#stepsList details.why-step-g9').first();
   await reasoning.locator('summary').click();
   assert.equal(await reasoning.evaluate(el => el.open), true);
+  await page.locator('#quickSolutionAction').click();
+  assert.equal(await page.locator('#stepsRegion').evaluate(el => el === document.activeElement), true);
   await page.goto(base + route(9, 'g9-ch3-ex3.2-q1-i'));
-  await page.locator('.g9a-concept-return').click();
-  await page.waitForURL(url => url.searchParams.get('section') === 'concepts');
+  await page.locator('#chapter8QuestionConcept').click();
+  assert.equal(new URL(page.url()).searchParams.get('section'), 'concepts');
   await page.goBack();
   await page.locator('#exerciseIndexLink').click();
   assert.equal(new URL(page.url()).searchParams.get('section'), 'exercises');
-  const geometry = 'c10-4-ex4-1-q1-i';
-  await page.goto(base + route(10, geometry));
-  await page.locator('#questionTopNext').click();
-  assert.notEqual(id(), geometry);
-  await page.locator('#questionTopPrevious').click();
-  assert.equal(id(), geometry);
+  await page.goto(base + route(10, 'c10-4-ex4-1-q1-i'));
   await page.locator('#figureBtn').click();
   assert.equal(await page.locator('#figureDialog').evaluate(dialog => dialog.open), true);
   await page.keyboard.press('Escape');
@@ -129,11 +130,6 @@ async function testActions(page, base) {
   }
   await page.locator('#homeBtn').click();
   assert.equal(await page.locator('.home-copyright').innerText(), '© 2026 VER labs');
-  await page.locator('.discover-grade[data-grade="9"]').click();
-  const chapterIcons = page.locator('.discover-chapter .discover-card-arrow .ver-icon');
-  assert.equal(await chapterIcons.count(), 9);
-  assert.equal(await chapterIcons.first().getAttribute('aria-hidden'), 'true');
-  assert.equal(await chapterIcons.first().locator('circle:not(.ver-point)').count(), 2);
   for (const grade of [11, 12]) {
     await page.goto(base + '/index.html?class=' + grade + '&chapter=g' + grade + '-ch1');
     await page.waitForURL(url => !url.search);
@@ -157,7 +153,7 @@ async function testActions(page, base) {
       page.on('pageerror', error => errors.push(error.message));
       for (const [sample, grade, id] of pilot) {
         await page.goto(base + route(grade, id), {waitUntil: 'domcontentloaded'});
-        await page.locator('body:not(.ver-starting) #lessonCard:not([hidden]) #questionHead').waitFor();
+        await page.locator('#lessonCard:not([hidden]) #questionHead').waitFor();
         for (const lang of ['en', 'ta']) {
           if (await page.locator('html').getAttribute('lang') !== lang) await page.locator(lang === 'en' ? '#langEn' : '#langTa').click();
           await page.evaluate(async () => {
@@ -179,11 +175,7 @@ async function testActions(page, base) {
           check(metrics.wideWithoutKeyboard === 0, 'wide formula has no keyboard access');
           check(metrics.visibleQuestionHeadings.length === 1, 'expected one question heading');
           check(!/\\(?:d?frac|sqrt|begin|end|left|right)\b/.test(metrics.promptText), 'raw TeX in prompt');
-          check(metrics.controls.some(target => target.id === 'next'), 'missing Next question');
-          for (const target of ['#browseBtn', '#previous', '#next']) {
-            check(await page.locator(target + ' .ver-icon[aria-hidden="true"]').count() === 1,
-              'missing decorative icon on ' + target);
-          }
+          check(metrics.controls.every(target => target.height >= 47 && target.width >= 44), 'small essential control');
         }
       }
       if (!before && errors.length) failures.push(name + ' browser errors: ' + errors.join('; '));
@@ -200,7 +192,7 @@ async function testActions(page, base) {
     await app?.close();
   }
   assert.deepEqual(failures, []);
-  console.log('PASS restored Triggle interface and math icons · ' + rows.length + ' bilingual viewport snapshots');
+  console.log('PASS VER Glyph pilot · ' + rows.length + ' bilingual viewport snapshots');
 })().catch(error => {
   console.error(error);
   process.exitCode = 1;

@@ -28,8 +28,8 @@ async function main(){
     assert.equal(await page.locator('#answerBox').isVisible(),false,'No separate answer card');
     assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'Green final answer must end the worked steps');
     assert.equal(await page.locator('#stepsList li').last().getAttribute('class').then(x=>x.includes('final-answer-step')),true,'Answer belongs at the end');
-    assert.equal(await page.locator('#questionLabel').isVisible(),true,'Exercise badge always visible');
-    assert.match(await page.locator('#questionLabel').innerText(),/EXERCISE/);
+    assert.equal(await page.locator('#questionLabel').isVisible(),true,'Exercise context is visible in the breadcrumb');
+    assert.match(await page.locator('#questionLabel').innerText(),/Exercise/);
     assert.equal(await page.locator('#questionHead').isVisible(),true,'Exercise question heading visible');
     assert.equal(await page.locator('#stepsRegion').isVisible(),true,'How it works must be visible without touch');
     assert.match(await page.locator('#quickSteps').innerText(),/Solution|எப்படி|தீர்வு|WORKS/);

@@ -8,7 +8,7 @@
   const question=document.getElementById('questionText');
   const jump=document.getElementById('questionJump');
   const dock=document.getElementById('questionNavDock');
-  const context=document.querySelector('.status-row');
+  const context=document.querySelector('.appbar');
   if(!card||!question||!jump||!dock||!context)return;
   let active=false,queued=false,labelLanguage,dockHeight;
   function measure(){
