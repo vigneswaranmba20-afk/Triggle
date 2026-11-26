@@ -745,8 +745,10 @@
       ({'4.1':1, '4.2':2, '4.3':4}[current.exercise] ?? -1);
   }
   const hintPanel = $('g9GeometryHint');
-  const textbookHint = isTextbookExercise && ((setPath || realPath) ? current.hint : isG9GeometryExercise(current) &&
-    (current.hint || window.TriggleGrade9Geometry?.preservedHints[current.id.slice(9)]));
+  const authoredHint = current.hint || (isG9GeometryExercise(current) &&
+    window.TriggleGrade9Geometry?.preservedHints[current.id.slice(9)]);
+  const textbookHint = isTextbookExercise && (authoredHint?.en && authoredHint?.ta ? authoredHint :
+    window.TriggleExerciseHints?.forExercise(grade,current.exercise));
   hintPanel.hidden = !textbookHint;
   hintPanel.open = false;
   if (textbookHint) {
