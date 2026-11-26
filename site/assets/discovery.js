@@ -131,7 +131,7 @@
           <h2 id="discover-recent-title">${escapeHtml(t.continueLabel)}</h2>
           ${recentCard}
         </section>
-        <footer class="home-copyright"><small>© 2026 Very Labs</small></footer>
+        <footer class="home-copyright"><small>© 2026 VER labs</small></footer>
       </div>`;
     }else{
       const g=visibleGrades.find(x=>x.grade===grade)||visibleGrades[0];
