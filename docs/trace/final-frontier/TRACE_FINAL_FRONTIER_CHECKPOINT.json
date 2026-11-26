@@ -25,10 +25,12 @@
     "status": "IN_PROGRESS",
     "release": {
       "key": "g9.trigonometry.source",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 457,
       "head": "65276d080f25e0d72ca8ed0ae7af66e13e4e60ac",
-      "prQualityRun": 45735926507
+      "prQualityRun": 45735926507,
+      "merge": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
+      "pagesRun": 45748490478
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2643,13 +2645,13 @@
       "chapter": 6,
       "scope": "Registered 2025 Trigonometry sources and the positive-side condition in Exercise 6.1 Q6",
       "runtimeRecords": 23,
-      "status": "TESTED",
+      "status": "MERGED",
       "release": {
         "grade": 9,
         "chapter": 6,
         "runtimeRecords": 23,
         "scope": "Registered 2025 Trigonometry sources and the positive-side condition in Exercise 6.1 Q6",
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 457,
         "head": "65276d080f25e0d72ca8ed0ae7af66e13e4e60ac",
         "prQualityRun": 45735926507,
@@ -2659,6 +2661,8 @@
           "browserScript": "site/tools/test_g9_frontier_trig_source_browser.cjs",
           "studentQuery": "class=9&question=c9-exercise-6-1-q6"
         },
+        "merge": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
+        "pagesRun": 45748490478,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/457"
       }
     },
@@ -2773,7 +2777,7 @@
       }
     }
   ],
-  "latestMain": "801c7af389821789fa9052f2d76878372dbab629",
+  "latestMain": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2825,10 +2829,12 @@
   "openReleaseOrder": [
     {
       "key": "g9.trigonometry.source",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 457,
       "head": "65276d080f25e0d72ca8ed0ae7af66e13e4e60ac",
-      "prQualityRun": 45735926507
+      "prQualityRun": 45735926507,
+      "merge": "cda62abf063382d7cfc3c8762fe69d0a08132ad6",
+      "pagesRun": 45748490478
     },
     {
       "key": "g10.numbers.salary",
