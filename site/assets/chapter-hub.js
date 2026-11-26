@@ -905,7 +905,6 @@
         index.setAttribute('aria-label',t.exercises);
         for(const key of keys){
           const items=buckets.get(key);
-          if(chapter.id==='g9-ch5')items.sort((a,b)=>parseInt(String(a.id).match(/q(\d+)/)?.[1]||'0',10)-parseInt(String(b.id).match(/q(\d+)/)?.[1]||'0',10));
           const unit=/^Unit Exercise\b/i.test(items[0].label?.en||'')||key.includes('unit');
           const num=key.match(/\d+/)?.[0]||'';
           const name=unit?(t.unitExercise+(num?' '+num:'')):(t.exerciseSingle+' '+key);

@@ -61,5 +61,10 @@ for(const [index,row] of source.rows.entries()){
  assert.equal(ctx.window.TriggleDifficulty.get(item)?.grade,9);
 }
 const app=read('site/assets/app.js');
-assert(app.includes("['1','3'].includes(String(chapter?.number))"),'Grade 9 Chapter 3 Next navigation must sort by question');
+const compareTextbookPositions=vm.runInNewContext(
+ app.slice(app.indexOf('const textbookParts='),app.indexOf('const textbookExerciseList='))+'\ncompareTextbookPositions;'
+);
+const mixedPositions=['q10','q2-iv','q2-i','q1-i'].map(id=>({id:'g9-ch3-ex3.1-'+id}));
+assert.deepEqual(mixedPositions.sort(compareTextbookPositions).map(item=>item.id.slice('g9-ch3-ex3.1-'.length)),
+ ['q1-i','q2-i','q2-iv','q10'],'Grade 9 Chapter 3 Next navigation follows question and part numbers');
 console.log('PASS G9 Algebra Ex3.1: 11 visual-source-verified bilingual parts, 33 complete steps, 11 Why hints, one-per-ID chapter navigation and offline assets.');

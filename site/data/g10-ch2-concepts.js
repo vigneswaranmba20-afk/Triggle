@@ -407,7 +407,7 @@ window.TRIGGLE_G10_CH2_PATH={
     },
     {
       "id": "g10-ch2-congruence",
-      "practiceId": "c10-2-ex2-3-q1",
+      "practiceId": "c10-2-ex2-3-q1-i",
       "page": { "en": "47–51", "ta": "48–52" },
       "section": "2.5",
       "title": {

@@ -39,7 +39,14 @@ async function inspect(page,id,hint,lang){
         for(const [id,hint] of scope) {
           await page.evaluate(url=>{history.pushState({},'',url);dispatchEvent(new PopStateEvent('popstate'));},base+route(id));
           await page.evaluate(()=>document.fonts.ready);
-          for(const lang of ['en','ta'])await inspect(page,id,hint,lang);
+          for(const lang of ['en','ta']) {
+            await inspect(page,id,hint,lang);
+            if(chapter===3) {
+              const difficulty=page.locator('#difficultyIndicator');
+              assert.equal(await difficulty.getAttribute('lang'),lang);
+              assert.match(await difficulty.innerText(),lang==='ta'?/எளிது|நடுத்தரம்|கடினம்/:/Easy|Medium|Difficult/);
+            }
+          }
         }
         assert.deepEqual(errors,[]);
       } finally {await context.close();}

@@ -70,31 +70,39 @@
   return window.TriggleNotation ? window.TriggleNotation.render(str,{alignCoefficientPowers}) : esc(grade===9?plainMath(str):str);
  }
 
- // Textbook ordering is preserved; Previous/Next are further confined to the
- // current exercise by activeList(), consistently for all Classes 9–12.
+ const textbookParts='i ii iii iv v vi vii viii ix x xi xii xiii xiv xv xvi xvii xviii xix xx'.split(' ');
+ const textbookPosition=item=>{
+   const match=item.id.match(/-q(\d*)((?:-[a-z]+)*)$/);
+   if(!match)return [Number.MAX_SAFE_INTEGER];
+   const parts=match[2].split('-').slice(1).map(part=>{
+     const roman=textbookParts.indexOf(part);
+     return roman<0?100+part.charCodeAt(0):roman+1;
+   });
+   return [Number(match[1]),...parts];
+ };
+ const compareTextbookPositions=(first,second)=>{
+   const left=textbookPosition(first),right=textbookPosition(second);
+   for(let index=0;index<Math.max(left.length,right.length);index++){
+     const difference=(left[index]??0)-(right[index]??0);
+     if(difference)return difference;
+   }
+   return 0;
+ };
+ // The 2025 source batches can append subparts outside their printed order.
+ // Use the same sequence for exercise entry, its picker, and Previous/Next.
  const textbookExerciseList=chapter=>{
    const items=chapter?(window.TriggleChapterHub?.textbookExercises(chapterItems(chapter))||[]):[];
-   const sourceBatches=(grade===10&&['2','4','6'].includes(String(chapter?.number)))||(grade===9&&['1','3'].includes(String(chapter?.number)))||chapter?.id==='g9-ch4';
-   if(!sourceBatches)return items;
-   // Source-verified Grade 9 and Grade 10 exercise parts
-   // arrive in independent batches. Sort only their navigation lists, preserving
-   // immutable question records and all other grades' established order.
-   const part={i:1,ii:2,iii:3,iv:4,v:5,vi:6,vii:7,viii:8};
-   const index=q=>{const m=String(q.id).match(/-q(\d+)(?:-([ivx]+))?$/);
-     return [m?Number(m[1]):Number.MAX_SAFE_INTEGER,m?.[2]?part[m[2]]||99:0];};
+   if(grade!==9&&grade!==10)return items;
    return [...items].sort((a,b)=>{
-     const ex=String(a.exercise||'').localeCompare(String(b.exercise||''),undefined,{numeric:true});
-     if(ex)return ex;
-     const x=index(a),y=index(b);return x[0]-y[0]||x[1]-y[1];
+     const exercise=String(a.exercise||'').localeCompare(String(b.exercise||''),undefined,{numeric:true});
+     return exercise||compareTextbookPositions(a,b);
    });
  };
  const activeList=()=>{
    const chapter=chapterForItem(current),exercises=textbookExerciseList(chapter);
    if(exercises.some(item=>item.id===current.id)){
      // The selected exercise is a self-contained learning path in every grade.
-     const list=exercises.filter(item=>item.exercise===current.exercise);
-     if(chapter?.id==='g9-ch5')return [...list].sort((a,b)=>parseInt(String(a.id).match(/q(\d+)/)?.[1]||'0',10)-parseInt(String(b.id).match(/q(\d+)/)?.[1]||'0',10));
-     return list;
+     return exercises.filter(item=>item.exercise===current.exercise);
    }
    // Legacy practice is also kept inside its own exercise when possible.
    const local=classes[grade].items.filter(item=>item.chapter===current.chapter&&item.exercise===current.exercise);
@@ -765,9 +773,12 @@
   renderSteps();
   const difficulty=window.TriggleDifficulty?.get(current);
   const indicator=$('difficultyIndicator');
+  const difficultyLabels=lang==='ta'?
+    {easy:'🟢 எளிது',medium:'🟡 நடுத்தரம்',difficult:'🔴 கடினம்'}:
+    {easy:'🟢 Easy',medium:'🟡 Medium',difficult:'🔴 Difficult'};
   indicator.hidden=!difficulty;
-  indicator.textContent=difficulty?({easy:'🟢 Easy',medium:'🟡 Medium',difficult:'🔴 Difficult'}[difficulty.level]):'';
-  indicator.lang='en';
+  indicator.textContent=difficulty?(difficultyLabels[difficulty.level]||''):'';
+  indicator.lang=lang;
   if(difficulty)indicator.dataset.level=difficulty.level;else delete indicator.dataset.level;
   // A review flag never replaces or conceals authored working.
   $('solutionReview').hidden=!window.TriggleDifficulty?.solutionReviews?.[current.id];
