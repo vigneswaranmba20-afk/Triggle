@@ -62,7 +62,7 @@ async function main(){
    await page.locator('#previous').click();
    assert.equal(new URL(page.url()).searchParams.get('question'),batch.records.at(-2).id);
    await page.locator('#langTa').click();
-   assert.equal(await page.locator('#questionHead').innerText(),batch.records.at(-2).label.ta,'Tamil switch displays the verified Tamil label');
+   assert.equal(await page.locator('#questionHead').innerText(),batch.records.at(-2).label.ta.split(' · ').slice(1).join(' · '),'Tamil switch preserves the verified question label in the compact heading');
    assert.equal(await page.locator('#questionText').innerText(),batch.records.at(-2).q.ta,'Tamil switch displays the verified Tamil textbook question');
    await page.locator('#langEn').click();
    assert.equal(await page.locator('#questionText').innerText(),batch.records.at(-2).q.en,'Switching back restores the English textbook question');

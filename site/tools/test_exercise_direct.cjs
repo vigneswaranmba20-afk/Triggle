@@ -26,6 +26,6 @@ assert.match(app,/exercises\.filter\(item=>item\.exercise===current\.exercise\)/
 assert.match(app,/exerciseIndexLink/,'Visible return-to-index button is wired');
 assert.match(chapterHub,/hub-exercise-index/,'Shared chapter UI shows exercise numbers');
 assert.match(chapterHub,/onQuestion\(items\[0\]\)/,'Selecting an exercise opens its first question');
-assert.match(html,/id="exerciseIndexLink"/,'Every question template supports the Exercises link');
+assert.match(app,/b\.id='exerciseIndexLink'/,'The exercise breadcrumb supports the Exercises link');
 assert.match(html,/chapter-hub\.js\?v=/,'Shared route helper must load');
 console.log('PASS: exercises index first, one-exercise navigation boundary, linked return to index, and textbook/practice separation.');

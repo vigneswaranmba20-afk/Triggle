@@ -80,7 +80,9 @@
     };
     function chapterCard(entry){
       const c=entry.chapter,count=interactiveCount(c.id),available=count>0;
+      const emblem=window.TriggleGlyph?.chapter(c.id);
       return '<button type="button" class="discover-chapter" data-chapter="'+escapeHtml(c.id)+'">'+
+        (emblem?'<span class="ver-emblem" aria-hidden="true">'+emblem+'</span>':'')+
         '<span class="discover-chapter-number">'+escapeHtml(t.chapter)+' '+c.number+'</span>'+
         '<strong>'+escapeHtml(tr(c.title))+'</strong>'+
         '<span class="discover-chapter-meta'+(available?' is-ready':'')+'">'+
@@ -138,7 +140,7 @@
       // Chapter-first directory: a single compact, interactive heading followed
       // immediately by Chapter 1. Class switching expands in document flow.
       body='<header class="discover-class-header">'+
-        '<h1><button type="button" class="discover-class-switch" data-switch-class aria-controls="discover-class-options" aria-expanded="false" aria-label="'+escapeHtml(t.chooseClass)+'">'+
+        '<h1><button type="button" class="discover-class-switch" data-switch-class aria-controls="discover-class-options" aria-expanded="false" aria-label="'+escapeHtml(t.class+' '+g.grade+' '+t.mathematics+' · '+t.chooseClass)+'">'+
         escapeHtml(t.class)+' '+g.grade+' '+escapeHtml(t.mathematics)+' <span aria-hidden="true">⌄</span></button></h1>'+
         '<span class="discover-class-count">'+g.chapters.length+' '+escapeHtml(t.chapterCount)+'</span></header>'+
         '<div id="discover-class-options" class="discover-class-options" role="group" aria-label="'+escapeHtml(t.chooseClass)+'" hidden>'+

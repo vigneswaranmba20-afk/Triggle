@@ -375,45 +375,5 @@
     return map[ex] ?? 0;
   }
 
-  function syncExerciseReturnLink(detail) {
-    const card = document.getElementById('lessonCard');
-    if (!card) return;
-    let wrap = card.querySelector('.g9a-concept-return-wrap');
-    const item = detail?.item;
-    const lang = detail?.lang || 'en';
-    const idx = conceptIndexForItem(item);
-    if (idx === null || !item) {
-      if (wrap) wrap.hidden = true;
-      return;
-    }
-    if (!wrap) {
-      wrap = make('div', 'g9a-concept-return-wrap');
-      const btn = make('button', 'g9a-concept-return', '');
-      btn.type = 'button';
-      wrap.append(btn);
-      const qText = document.getElementById('questionText');
-      if (qText && qText.parentElement === card) qText.insertAdjacentElement('afterend', wrap);
-      else card.append(wrap);
-    }
-    wrap.hidden = false;
-    const btn = wrap.querySelector('button');
-    const stage = (window.TRIGGLE_ALGEBRA_PATH?.stages || [])[idx];
-    const title = stage ? (stage.title?.[lang] || stage.title?.en || '') : '';
-    btn.textContent = text('Understand this idea: ', 'இந்தக் கருத்தைத் தெரிந்துகொள்ளுங்கள்: ', lang) + title + ' →';
-    btn.onclick = () => {
-      const url = new URL(location.href);
-      url.searchParams.set('class', '9');
-      url.searchParams.set('chapter', 'g9-ch3');
-      url.searchParams.set('section', 'concepts');
-      url.searchParams.set('concept', String(idx));
-      url.searchParams.delete('question');
-      location.href = url.toString();
-    };
-  }
-
-  if (typeof window !== 'undefined' && typeof window.addEventListener === 'function') {
-    window.addEventListener('triggle:lessonchange', e => syncExerciseReturnLink(e.detail));
-  }
-
   window.TriggleG9AlgebraConcepts = Object.freeze({ mount, conceptIndexForItem });
 })();

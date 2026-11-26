@@ -116,7 +116,6 @@
  };
  const currentIndex=()=>activeList().findIndex(i=>i.id===catalogueId(current));
  const sectionForQuestion=item=>'exercises';
- const num=n=>String(n).padStart(2,'0');
  const labelForGroup=(e)=>e.endsWith('.examples')?(lang==='ta'?'எடுத்துக்காட்டுகள்':'Worked examples'):(e.includes('practice')?ui('practice')+' '+e.split('.')[0]:(e.endsWith('.unit')?ui('unitExercise')+' '+e.split('.')[0]:(lang==='ta'?'பயிற்சி ':'Exercise ')+e));
  function updateUrl(replace=false){
   const u=new URL(location.href);
@@ -205,38 +204,47 @@
 
  function navMove(delta){if(homeView||classIndex||chapterOverview)return;const list=activeList(),i=currentIndex()+(current.duplicateOf&&delta<0?0:delta);if(i<0||i>=list.length)return;selectLesson(list[i])}
 
- function renderBreadcrumb(chapter){
+ function renderBreadcrumb(chapter,exerciseIndex=null){
    const nav=$('crumb');nav.replaceChildren();
-   nav.classList.toggle('grade10-statistics-crumb', grade === 10 && !chapterOverview && current.chapter === '8');
    const choices=[{text:ui('class')+' '+grade,type:'class'}];
    // On chapter menus, the main heading already names the chapter.
    // Keep Class as a visible, usable switcher without repeating that title.
    if(!chapterOverview){choices.push({text:tr(chapter),type:'chapter'});choices.push({text:labelForGroup(current.exercise),type:'exercise'});}
    choices.forEach((c,i)=>{
      if(i){const sep=document.createElement('span');sep.className='crumb-sep';sep.textContent='›';sep.setAttribute('aria-hidden','true');nav.append(sep)}
-     const b=document.createElement('button');b.type='button';b.className='crumb-link';b.innerHTML=esc(c.text)+' <span aria-hidden="true">⌄</span>';
-     if(nav.classList.contains('grade10-statistics-crumb')){
-       b.innerHTML='<span class="grade10-statistics-crumb-label">'+esc(c.text)+'</span><span aria-hidden="true">⌄</span>';
-     }
+     const b=document.createElement('button');b.type='button';b.className='crumb-link';
+     const label=document.createElement('span');label.className='ver-crumb-label';label.textContent=c.text;
+     if(c.type==='exercise')label.id='questionLabel';
+     const chevron=document.createElement('span');chevron.textContent='⌄';chevron.setAttribute('aria-hidden','true');
+     b.append(label,chevron);
      b.title=c.type==='chapter'
-       ?(lang==='ta'?'வகுப்பு '+grade+' அத்தியாயங்களைத் தேர்ந்தெடுக்கவும்':'Choose a Class '+grade+' chapter')
+       ?c.text+' · '+(lang==='ta'?'அத்தியாயத்தைத் தேர்வு செய்க':'Choose a chapter')
        :(lang==='ta'?'தேர்வு':'Choose')+' '+c.text;
+     if(c.type==='exercise'&&exerciseIndex){
+       b.id='exerciseIndexLink';
+       b.title=c.text+' · '+(lang==='ta'?'பயிற்சிகளின் பட்டியல்':'Exercise list');
+       b.onclick=()=>openChapterSection('exercises',exerciseIndex);
+     }else{
+       b.setAttribute('aria-haspopup','dialog');
+       b.onclick=()=>openPath(c.type);
+     }
      b.setAttribute('aria-label',b.title);
-     // The chapter chevron always opens the chapter list, never the
-     // current chapter menu. Choosing a chapter then opens its 4–5 sections.
-     b.onclick=()=>openPath(c.type);
      nav.append(b)
    });
  }
  function openPath(type){
    const dialog=$('pathDialog'),list=$('pathOptions');list.replaceChildren();
-   const names={en:{class:'Choose a class',chapter:'Choose a chapter',exercise:'Choose an exercise'},ta:{class:'வகுப்பைத் தேர்வு செய்க',chapter:'அத்தியாயத்தைத் தேர்வு செய்க',exercise:'பயிற்சியைத் தேர்வு செய்க'}};
+   const names={en:{class:'Choose a class',chapter:'Choose a chapter',exercise:'Choose an exercise',question:'Choose a question'},ta:{class:'வகுப்பைத் தேர்வு செய்க',chapter:'அத்தியாயத்தைத் தேர்வு செய்க',exercise:'பயிற்சியைத் தேர்வு செய்க',question:'வினாவைத் தேர்வு செய்க'}};
    $('pathTitle').textContent=names[lang][type];
    const options=[];
    if(type==='class'){
      [9,10].forEach(g=>options.push({title:ui('class')+' '+g,meta:classes[g].items.length+' '+ui('lessons'),active:g===grade,choose:()=>changeGrade(g)}));
    }else if(type==='chapter'){
      chapterList().forEach(c=>options.push({title:ui('chapter')+' '+c.number+' · '+tr(c.title),meta:ui(c.status)+' · '+(window.TriggleChapterHub?.textbookExercises?window.TriggleChapterHub.textbookExercises(chapterItems(c)).length:chapterItems(c).length)+' '+ui('existingQuestions'),active:c.id===selectedChapter()?.id,choose:()=>selectChapter(c)}));
+   }else if(type==='question'){
+     activeList().forEach(item=>options.push({
+       title:tr(item.label),meta:tr(item.title),active:item.id===catalogueId(current),choose:()=>selectLesson(item)
+     }));
    }else{
      const chapter=chapterForItem(current);
      const navigable=chapter?textbookExerciseList(chapter):activeList();
@@ -245,6 +253,7 @@
      navigable.filter(i=>i.exercise===current.exercise).forEach(item=>options.push({title:tr(item.label)+' · '+tr(item.title),meta:labelForGroup(item.exercise),active:item.id===current.id,choose:()=>selectLesson(item)}));
    }
    options.forEach(option=>{const button=document.createElement('button');button.type='button';button.className='path-option'+(option.active?' selected':'');button.innerHTML='<span><strong>'+esc(option.title)+'</strong><small>'+esc(option.meta)+'</small></span><span aria-hidden="true">'+(option.active?'✓':'›')+'</span>';
+     if(option.active&&type==='question')button.setAttribute('aria-current','true');
      button.onclick=()=>{dialog.close();option.choose()};list.append(button)
    });
    const chapterPicker=type==='chapter';
@@ -258,6 +267,7 @@
    }
    list.scrollTop=0;
    dialog.showModal();
+   if(type==='question')list.querySelector('[aria-current=true]')?.focus();
  }
  function renderGrades(){const data=[{num:9,icon:'◈'},{num:10,icon:'◈'}];
   for(const type of ['side','dock']){
@@ -475,7 +485,7 @@
   const li=document.createElement('li');li.className='worked-step final-answer-step';
   li.setAttribute('aria-label',ui('finalAnswer'));
   const number=document.createElement('span');number.className='step-circle';
-  number.textContent='✓';number.setAttribute('aria-hidden','true');
+  number.textContent='∴';number.setAttribute('aria-hidden','true');
   const body=document.createElement('div');body.className='final-answer-content';
   const title=document.createElement('strong');title.className='final-answer-label';
   title.textContent=ui('finalAnswer');
@@ -502,6 +512,7 @@
    $('answerText').replaceChildren();
    $('stepCount').textContent=lang==='ta'?current.steps.length+' பகுதிகள்':current.steps.length+' parts';
    $('lessonCard').classList.toggle('many-steps',true);
+   observeLessonMath();
    return;
   }
   const all=current.steps||[];const ul=$('stepsList');ul.replaceChildren();
@@ -531,6 +542,9 @@
   appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
+  observeLessonMath();
+ }
+ function observeLessonMath(){
   // Set keyboard scrolling state immediately for all grades; refresh when layout or fonts settle.
   prepareLessonMath();
   if(lessonMathObserver){
@@ -622,7 +636,7 @@
  function renderText(){
   // Icon-only controls on narrow readers still have full bilingual names.
   $('browseBtn').setAttribute('aria-label',ui('browse'));
-  $('homeBtn').setAttribute('aria-label',ui('home'));
+  $('homeBtn').setAttribute('aria-label',homeView?'Triggle · '+ui('home'):ui('home'));
   $('questionReturn').setAttribute('aria-label',lang==='ta'?'அத்தியாய வழிசெலுத்தல்':'Chapter navigation');
   $('sidebar').setAttribute('aria-label',ui('navigationLabel'));$('exerciseList').setAttribute('aria-label',ui('navigationLabel'));$('search').setAttribute('aria-label',ui('searchLabel'));$('pathClose').setAttribute('aria-label',ui('closeNavigation'));$('closeSidebar').setAttribute('aria-label',ui('closeNavigation'));document.querySelector('.lang-switch').setAttribute('aria-label',ui('chooseLanguage'));document.querySelector('.side-brand small').textContent=ui('visualMathematics');
   for(const [id,key] of [['crumb','navigationLabel'],['inlineFigureOpen','expandFigure'],['stepsRegion','completeSolution'],['quickSteps','quickSolution'],['stepsList','workedSolution'],['classDock','switchClass'],['figureDialog','diagramDialog']])$(id).setAttribute('aria-label',ui(key));
@@ -666,24 +680,18 @@
    const questionChapter=chapterForItem(current);
    const isTextbookExercise=!!questionChapter&&textbookExerciseList(questionChapter).some(item=>item.id===catalogueId(current));
    document.body.classList.toggle('exercise-reading-scale',isTextbookExercise&&(grade===9||(grade===10&&String(typographyChapter)==='2')));
-   $('exerciseIndexLink').hidden=!isTextbookExercise;
-   $('exerciseIndexLink').textContent=lang==='ta'?'← பயிற்சிகள்':'← Exercises';
-   $('exerciseIndexLink').setAttribute('aria-label',lang==='ta'?'பயிற்சிகளின் பட்டியலுக்குத் திரும்பு':'Back to exercise list');
-   if(questionChapter){
-     const cameFrom=questionOrigin?.grade===grade&&questionOrigin?.chapterId===questionChapter.id;
-     const returnTo=cameFrom&&['examples','exercises'].includes(questionOrigin.section)
-       ?questionOrigin.section:sectionForQuestion(current);
-     const label=isTextbookExercise?(lang==='ta'?'அத்தியாயத்திற்குத் திரும்பு':'Back to chapter'):
-       returnTo==='examples'?(lang==='ta'?'தீர்க்கப்பட்ட எடுத்துக்காட்டுகளுக்குத் திரும்பு':'Back to worked examples'):
-       returnTo==='exercises'?(lang==='ta'?'அனைத்துப் பயிற்சிகளுக்கும் திரும்பு':'Back to all exercises'):
-       (lang==='ta'?'அத்தியாயத்திற்குத் திரும்பு':'Back to chapter');
-     $('questionReturnBtn').textContent='← '+label;
-     // Fixed breadcrumbs and bottom Back to all chapters replace this duplicate row.
-   }
   $('classHeading').textContent=ui('class')+' '+grade;$('classEmblem').querySelector('span').textContent=grade;
-  renderBreadcrumb(chapter);
-  $('gradeTotal').textContent=list.length+' '+ui('lessons');$('questionLabel').textContent=labelForGroup(current.exercise).toUpperCase();$('itemPosition').textContent=num(position)+' / '+num(list.length);
-  $('questionTitle').textContent=tr(current.topic);$('questionHead').textContent=tr(current.label);
+  renderBreadcrumb(chapter,isTextbookExercise?questionChapter:null);
+  $('gradeTotal').textContent=list.length+' '+ui('lessons');
+  $('questionEmblem').innerHTML=window.TriggleGlyph?.chapter(questionChapter?.id)||'';
+  const label=tr(current.label);
+  const group=labelForGroup(current.exercise);
+  $('questionHead').textContent=label.startsWith(group+' · ')?label.slice(group.length+3):label;
+  $('questionPickerLabel').textContent=lang==='ta'?'வினாக்கள்':'Questions';
+  $('itemPosition').textContent=position+' / '+list.length;
+  $('questionTrack').firstElementChild.style.inlineSize=(position/list.length*100)+'%';
+  $('quickSolutionAction').lastElementChild.textContent=lang==='ta'?'விரைவுத் தீர்வு':'Quick Solution';
+  $('deepSolutionAction').lastElementChild.textContent=lang==='ta'?'ஆழமாகப் புரிந்துகொள்':'Understand Deeply';
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
   const questionMath=grade9Presentation(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getQuestion?.(current,lang));
   const renderDataTableHtml=dt=>{
@@ -741,11 +749,14 @@
   if(englishInTamilReader(tr(current.q)))$('questionText').lang='en';else $('questionText').removeAttribute('lang');
   const setPath = grade === 9 && current.setConcept && window.TRIGGLE_SET_PATH;
   const realPath = grade === 9 && Number.isInteger(current.realConcept) && window.TRIGGLE_REAL_PATH;
-  const conceptPath = setPath || realPath || (isG10GeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH);
-  let conceptIndexForQuestion = setPath ? setPath.stages.findIndex(stage => stage.id === current.setConcept) : realPath ? current.realConcept : isG10GeometryExercise(current)
-    ? (conceptPath?.stages.findIndex(stage => stage.id === current.conceptId ||
-        [stage.practiceId, stage.secondaryPracticeId, stage.tertiaryPracticeId].includes(current.id)) ?? -1)
-    : (conceptPath?.conceptForQuestion(current) ?? -1);
+  const algebraStage = window.TriggleG9AlgebraConcepts?.conceptIndexForItem(current);
+  const algebraPath = Number.isInteger(algebraStage) && window.TRIGGLE_ALGEBRA_PATH;
+  const conceptPath = setPath || realPath || algebraPath || (isG10GeometryExercise(current) ? window.TRIGGLE_G10_CH4_PATH : window.TRIGGLE_G10_CH8_PATH);
+  let conceptIndexForQuestion = setPath ? setPath.stages.findIndex(stage => stage.id === current.setConcept) :
+    realPath ? current.realConcept : algebraPath ? algebraStage : isG10GeometryExercise(current)
+      ? (conceptPath?.stages.findIndex(stage => stage.id === current.conceptId ||
+          [stage.practiceId, stage.secondaryPracticeId, stage.tertiaryPracticeId].includes(current.id)) ?? -1)
+      : (conceptPath?.conceptForQuestion?.(current) ?? -1);
   const geometryLessons = window.TRIGGLE_GEOMETRY_LESSONS;
   if (isG9GeometryExercise(current) && isTextbookExercise) {
     conceptIndexForQuestion = current.geometryConcept ??
@@ -759,14 +770,18 @@
   hintPanel.hidden = !textbookHint;
   hintPanel.open = false;
   if (textbookHint) {
-    hintPanel.querySelector('summary').textContent = lang === 'ta' ? 'குறிப்பு' : 'Hint';
+    hintPanel.querySelector('summary').lastElementChild.textContent = lang === 'ta' ? 'குறிப்பு' : 'Hint';
     hintPanel.querySelector('p').textContent = tr(textbookHint);
   }
   const relatedConcept = $('chapter8QuestionConcept');
-  relatedConcept.hidden = conceptIndexForQuestion < 0;
-  if (conceptIndexForQuestion >= 0) {
-    const stage = isG9GeometryExercise(current) ? geometryLessons[conceptIndexForQuestion] : conceptPath.stages[conceptIndexForQuestion];
-    relatedConcept.textContent = (lang === 'ta' ? 'கருத்து · ' : 'Concept · ') + tr(stage.title);
+  const stage = (isG9GeometryExercise(current)?geometryLessons:conceptPath?.stages)?.[conceptIndexForQuestion];
+  relatedConcept.hidden = !stage;
+  relatedConcept.classList.toggle('g9a-concept-return',!!algebraPath);
+  if (stage) {
+    const conceptLabel=lang==='ta'?'கருத்து':'Concept';
+    relatedConcept.lastElementChild.textContent=conceptLabel;
+    relatedConcept.title=tr(stage.title);
+    relatedConcept.setAttribute('aria-label',conceptLabel+' · '+tr(stage.title));
     relatedConcept.onclick = () => openChapterSection('concepts', chapterForItem(current), conceptIndexForQuestion);
   }
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';
@@ -786,16 +801,17 @@
   }
   if(geometryExercise&&lang==='ta')$('stepsList').lang=current.steps.some(step=>step.ta)?'ta':'en';
   else $('stepsList').removeAttribute('lang');
-  $('previous').innerHTML='← '+esc(ui('previous'));
+  const icon=name=>window.TriggleGlyph?.icon(name)||'';
+  $('previous').innerHTML=icon('previous')+'<span>'+esc(ui('previous'))+'</span>';
   $('next').innerHTML=isTextbookExercise&&n===list.length-1
-    ?esc(lang==='ta'?'பயிற்சி முடிந்தது':'End of exercise')+' ✓'
-    :esc(document.body.classList.contains('textbook-reader')?(lang==='ta'?'அடுத்த பக்கம்':'Next page'):ui('nextQuestion'))+' →';
+    ?'<span>'+esc(lang==='ta'?'பயிற்சி முடிந்தது':'End of exercise')+'</span>'+icon('check')
+    :'<span>'+esc(document.body.classList.contains('textbook-reader')?(lang==='ta'?'அடுத்த பக்கம்':'Next page'):ui('nextQuestion'))+'</span>'+icon('next');
   renderSteps();
   const difficulty=window.TriggleDifficulty?.get(current);
   const indicator=$('difficultyIndicator');
   const difficultyLabels=lang==='ta'?
-    {easy:'🟢 எளிது',medium:'🟡 நடுத்தரம்',difficult:'🔴 கடினம்'}:
-    {easy:'🟢 Easy',medium:'🟡 Medium',difficult:'🔴 Difficult'};
+    {easy:'எளிது',medium:'நடுத்தரம்',difficult:'கடினம்'}:
+    {easy:'Easy',medium:'Medium',difficult:'Difficult'};
   indicator.hidden=!difficulty;
   indicator.textContent=difficulty?(difficultyLabels[difficulty.level]||''):'';
   indicator.lang=lang;
@@ -805,6 +821,7 @@
   $('solutionReview').lang='en';
   renderList();
   window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:current,lang,grade}}));
+  $('deepSolutionAction').hidden=!firstReasoningDetail();
  }
  function syncDrawer(){
    const sidebar=$('sidebar');
@@ -859,7 +876,19 @@
  }
  $('previous').onclick=$('questionTopPrevious').onclick=()=>navMove(-1);
  $('next').onclick=$('questionTopNext').onclick=()=>navMove(1);
- $('exerciseIndexLink').onclick=()=>{const chapter=chapterForItem(current);if(chapter)openChapterSection('exercises',chapter);};
+ const firstReasoningDetail=()=>$('stepsList').querySelector('details.why-step-g9, details.why-step-g10');
+ const focusReaderSection=element=>{
+   element.scrollIntoView({block:'start'});
+   element.focus({preventScroll:true});
+ };
+ $('questionPicker').onclick=()=>openPath('question');
+ $('quickSolutionAction').onclick=()=>focusReaderSection($('stepsRegion'));
+ $('deepSolutionAction').onclick=()=>{
+   const detail=firstReasoningDetail();
+   if(!detail)return;
+   detail.open=true;
+   focusReaderSection(detail.querySelector('summary'));
+ };
  $('allChaptersButton').onclick=()=>changeGrade(grade);
  $('markDone').onclick=()=>{if(completed.has(current.id))completed.delete(current.id);else completed.add(current.id);store('triggle.learned.v119',[...completed]);render()};
  $('homeBtn').onclick=e=>{e.preventDefault();goHome()};

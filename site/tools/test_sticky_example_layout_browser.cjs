@@ -59,7 +59,7 @@ async function main(){
     await page.waitForTimeout(60);
     const jumped=await page.locator('#questionJump').isVisible();
     const past=await page.evaluate(()=>document.querySelector('#questionText').getBoundingClientRect().bottom<
-      document.querySelector('.status-row').getBoundingClientRect().bottom+8);
+      document.querySelector('.appbar').getBoundingClientRect().bottom+8);
     assert.equal(jumped,past,'Question return appears iff the full question has passed above the context: '+width);
     const previousY=await page.evaluate(()=>window.scrollY);
     assert.ok(previousY>60,'The document owns vertical scrolling');

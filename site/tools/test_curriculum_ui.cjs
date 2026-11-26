@@ -188,7 +188,7 @@ async function main() {
         const page=await visit(await context(width),'/index.html');
         await page.locator('#discoveryView').waitFor({state:'visible'});
         assert.equal(await page.locator('#lessonCard').isVisible(),false,'Home must not open an unrelated question');
-        assert.equal(await page.locator('#homeBtn').getAttribute('aria-label'),'Home');
+        assert.equal(await page.locator('#homeBtn').getAttribute('aria-label'),'Triggle · Home');
         const logo=page.locator('#homeBtn img');
         await logo.waitFor({state:'visible'});
         assert.ok(await logo.evaluate(async img=>{await img.decode();return img.naturalWidth>0;}),'Brand image loads');
@@ -1196,7 +1196,7 @@ async function main() {
         if(width<=800){
           assert.equal(props.pos,'fixed','Compact mobile dock uses one row');
           assert.equal(props.steps,'visible','Solution is part of the page flow');
-          assert.equal(await page.locator('#crumb .crumb-link:visible').count(),2);
+          assert.equal(await page.locator('#crumb .crumb-link:visible').count(),3,'Class, chapter and exercise are visible on phones');
         }
         await page.locator('#next').click();
         assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q5-iii');
