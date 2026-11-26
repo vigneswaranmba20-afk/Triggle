@@ -24,13 +24,11 @@
   "nextBatch": {
     "status": "IN_PROGRESS",
     "release": {
-      "key": "g9.mensuration",
-      "status": "MERGED",
-      "pr": 450,
-      "head": "a98b04ad8cc1eeba393419116e4c67fd5a98137b",
-      "prQualityRun": 45719169113,
-      "merge": "5e34db1c968e592c9a28ecd5536fa774609d9011",
-      "pagesRun": 45735482206
+      "key": "g10.compositions",
+      "status": "TESTED",
+      "pr": 451,
+      "head": "4cf4411162d45f9caf1d0fe287cbb9134ed4b348",
+      "prQualityRun": 45719175984
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2266,13 +2264,13 @@
         "g9-ch7-ex7.4-q7"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch7-frontier-ratio.json",
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": 9,
         "chapter": 7,
         "runtimeRecords": 1,
         "scope": "Equivalent ratio choices in Exercise 7.4 and independent Mensuration mathematics",
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 450,
         "head": "a98b04ad8cc1eeba393419116e4c67fd5a98137b",
         "prQualityRun": 45719169113,
@@ -2284,6 +2282,37 @@
         },
         "merge": "5e34db1c968e592c9a28ecd5536fa774609d9011",
         "pagesRun": 45735482206,
+        "liveEvidence": {
+          "pr": 450,
+          "merge": "5e34db1c968e592c9a28ecd5536fa774609d9011",
+          "head": "a98b04ad8cc1eeba393419116e4c67fd5a98137b",
+          "slug": "g9-mensuration",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch7-ex7.4-q7",
+          "pagesRun": 45735482206,
+          "deploymentId": 8074174194,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45735482206/job/139634847420",
+          "deploymentCompletedAt": "2026-11-26T01:48:23Z",
+          "versionMatched": "5e34db1c968e592c9a28ecd5536fa774609d9011",
+          "sha256": {
+            "data/g9-clear-math.js": "c1a021d4972e97283025d52c11a95a99f148c81f16e2fe4f4d0e894361f19d01",
+            "data/project-status.json": "fd5b11c83bc1992e4d51f3c553bdd8919e6c1673ecf3f20714fe542d4857859f",
+            "data/textbook-exercises/g9-ch7-ex7-4-en.js": "99dedde2567f2d8f4fbb14d4e21fc81efc16e46c9f528182dd85459a8b5cf3e6",
+            "data/textbook-fidelity/g9-ch7-ex7-4-en.json": "fd719ad59e197127f4f1c9aa1cecfda7ff8dbb9eebd9c7f61f80e2d6ac8315cb",
+            "data/textbook-fidelity/g9-ch7-frontier-ratio.json": "9a7432a8807d9028aa0e28a80afcbd46f864a60ead0c6d1bded3f3bbbfca93bf",
+            "data/why-step-g9.js": "2f50c267f609b46b57ce74320e92f440713b14a04e63bef1f63c2838076df127",
+            "index.html": "eec4fb99618bee6cbc45e1430fda2856bd84fadfb53502f26184bdd7d019c404",
+            "service-worker.js": "4ffcbf774fde0826d4a0254af7b572e70ef97cf6bc787310224d3d3d8e200285"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "Grade 9 Exercise 7.4 Q7 at 390px. The two equivalent options, bilingual explanation, navigation and progress passed."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/450"
       }
     },
@@ -2607,17 +2636,8 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "bd31c2b0d222e43e746e3e56925f85b8a05c45d2",
+  "latestVerifiedProduction": "5e34db1c968e592c9a28ecd5536fa774609d9011",
   "openReleaseOrder": [
-    {
-      "key": "g9.mensuration",
-      "status": "MERGED",
-      "pr": 450,
-      "head": "a98b04ad8cc1eeba393419116e4c67fd5a98137b",
-      "prQualityRun": 45719169113,
-      "merge": "5e34db1c968e592c9a28ecd5536fa774609d9011",
-      "pagesRun": 45735482206
-    },
     {
       "key": "g10.compositions",
       "status": "TESTED",
