@@ -75,6 +75,7 @@
         id==='g10-ch5'&&window.TriggleG10Ch5Labs?window.TRIGGLE_G10_CH5_PATH?.stages:
         id==='g10-ch6'&&window.TriggleG10Ch6Labs?window.TRIGGLE_G10_CH6_PATH?.stages:
         id==='g10-ch7'&&window.TriggleG10Ch7Labs?window.TRIGGLE_G10_CH7_PATH?.stages:
+        id==='g10-ch8'&&typeof window.TriggleG10Ch8Labs?.mount==='function'?window.TRIGGLE_G10_CH8_PATH?.stages:
         id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:null);
       return Array.isArray(stages)?stages.length:0;
     };
