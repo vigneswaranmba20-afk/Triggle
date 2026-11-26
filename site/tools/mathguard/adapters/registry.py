@@ -8,11 +8,13 @@ from .algebra_adapter import AlgebraAdapter
 from .base import ChapterAdapter, UnsupportedDomainAdapter
 from .coord_geometry_adapter import CoordGeometryAdapter
 from .mensuration_adapter import MensurationAdapter
+from .sets_relations_adapter import SetsRelationsFunctionsAdapter
 
 ADAPTER_REGISTRY = {
     "algebra": AlgebraAdapter,
     "coordinate_geometry": CoordGeometryAdapter,
     "mensuration": MensurationAdapter,
+    "sets_and_relations": SetsRelationsFunctionsAdapter,
 }
 
 CHAPTER_DOMAIN_MAP: Dict[Tuple[int, str], Tuple[str, str]] = {
