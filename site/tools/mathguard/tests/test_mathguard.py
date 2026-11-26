@@ -19,7 +19,8 @@ from mathguard.benchmark_v1_3_1_holdout import run_holdout_100
 from mathguard.coord_geometry import are_collinear, distance, midpoint, slope, triangle_area
 from mathguard.corrector import propose_and_verify_correction
 from mathguard.derivations_g10_ch7 import DerivedResult
-from mathguard.engine import run_audit
+from mathguard.adapters.mensuration_adapter import MensurationAdapter
+from mathguard.engine import load_g10_ch7_bundle, run_audit
 from mathguard.mcq import extract_selected_option_label, option_matches_derived, parse_mcq_options_en
 from mathguard.parser import ParseError, parse_expression
 from mathguard.rounding import check_numeric_match
@@ -112,14 +113,14 @@ def test_g10_ch7_audit_inventory_and_answers():
     assert s["exercises"] == 62
     assert s["concepts"] == 9
     assert s["totalItems"] == 71
-    assert s["answerVerificationCounts"]["FAIL"] == 1
-    assert s["answerVerificationCounts"]["UNVERIFIABLE"] == 1
-    assert s["answerVerificationCounts"]["PASS"] == 69
-    # The authored primary answer uses the textbook key (2.46 cm³).
-    # The original question explicitly asks for 2 cm³, rounded to the nearest cm³.
-    assert [record["id"] for record in report["records"] if record["answer_status"] == "FAIL"] == [
-        "c10-7-ex7-3-q3",
-    ]
+    assert s["answerVerificationCounts"] == {"PASS": 70, "FAIL": 0, "UNVERIFIABLE": 1}
+    q3 = next(item for item in load_g10_ch7_bundle(REPO_ROOT)["exercises"] if item["id"] == "c10-7-ex7-3-q3")
+    observed = MensurationAdapter(10, "7").verify_item(q3)
+    assert observed["answer_status"] == observed["working_status"] == observed["tamil_status"] == "PASS", observed
+    assert observed["verified_claims"] == observed["total_claims"] == 8
+    assert observed["tamil_answer_evidence"]["forms"] == {
+        lang: {form: "PASS" for form in ("plain", "fallback", "latex")} for lang in ("en", "ta")
+    }
 
 
 def test_120_case_mutation_benchmark():
