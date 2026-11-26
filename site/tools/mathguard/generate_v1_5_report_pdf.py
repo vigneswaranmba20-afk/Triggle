@@ -1,115 +1,126 @@
-"""Generate concise, quantitative TRACE_MathGuard_V1_5_Report.pdf."""
+"""Generate concise, quantitative TRACE_MathGuard_V1_5_Report.pdf via Playwright Chromium."""
 
 from __future__ import annotations
 
+import html
+import json
 from pathlib import Path
-from typing import Any, Dict, List
-
-from reportlab.lib import colors
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.styles import getSampleStyleSheet
-from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+from playwright.sync_api import sync_playwright
 
 
-def _tbl(data: List[List[str]], col_widths: List[int]) -> Table:
-    t = Table(data, colWidths=col_widths, repeatRows=1)
-    t.setStyle(
-        TableStyle([
-            ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#1e293b")),
-            ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
-            ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
-            ("FONTSIZE", (0, 0), (-1, -1), 8),
-            ("GRID", (0, 0), (-1, -1), 0.4, colors.HexColor("#cbd5e1")),
-            ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, colors.HexColor("#f8fafc")]),
-            ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
-            ("LEFTPADDING", (0, 0), (-1, -1), 4),
-            ("RIGHTPADDING", (0, 0), (-1, -1), 4),
-            ("TOPPADDING", (0, 0), (-1, -1), 3),
-            ("BOTTOMPADDING", (0, 0), (-1, -1), 3),
-        ])
+def build_pdf(repo: Path) -> Path:
+    reg = json.loads((repo / "TRACE_MathGuard_V1_5_Regression_Results.json").read_text(encoding="utf-8"))
+    cov = json.loads((repo / "TRACE_MathGuard_V1_5_Domain_Coverage.json").read_text(encoding="utf-8"))
+    st_doc = json.loads((repo / "TRACE_MathGuard_V1_5_Set_Theory_Results.json").read_text(encoding="utf-8"))
+    rf_doc = json.loads((repo / "TRACE_MathGuard_V1_5_Relations_Functions_Results.json").read_text(encoding="utf-8"))
+    bi_doc = json.loads((repo / "TRACE_MathGuard_V1_5_Bilingual_Parity_Report.json").read_text(encoding="utf-8"))
+    cq_doc = json.loads((repo / "TRACE_MathGuard_V1_5_Confirmed_Correction_Queue.json").read_text(encoding="utf-8"))
+
+    hist = reg["historicalSummary"]
+    rec = reg["recentSummary"]
+    adv = reg["v1_5_adversarial"]
+    frz = cov["frozenBenchmark"]
+    exp14 = cov["expandedV1_4Benchmark"]
+    g9 = cov["newDomainV1_5"]["grade9Chapter1"]["summary"]
+    g10 = cov["newDomainV1_5"]["grade10Chapter1"]["summary"]
+    comb = cov["newDomainV1_5"]["combinedSummary"]
+
+    gates_ok = (
+        hist["failed"] == 0
+        and hist["falseAcceptances"] == 0
+        and rec["failed"] == 0
+        and rec["falseAcceptances"] == 0
+        and adv["failed"] == 0
+        and adv["falseAcceptances"] == 0
+        and frz["statuses"].get("FAIL", 0) == 0
+        and exp14["workingStatusCounts"].get("FAIL", 0) == 0
     )
-    return t
+    decision = "GO for V1.6 (Real Numbers / Number Sequences) with V1.5 New-Domain Certification Gated on Independent Review" if gates_ok else "NO-GO"
+
+    suite_rows = ""
+    for sname, sdata in reg["suites"].items():
+        suite_rows += (
+            f"<tr><td>{html.escape(sname)}</td>"
+            f"<td>{sdata['discovered']}</td>"
+            f"<td>{sdata['executed']}</td>"
+            f"<td>{sdata['passed']}/{sdata['discovered']}</td>"
+            f"<td>{sdata['failed']}</td>"
+            f"<td>{sdata['abstained']}</td>"
+            f"<td>{sdata['falseAcceptances']}</td></tr>"
+        )
+    suite_rows += (
+        f"<tr><td><b>v1_5_450_case_adversarial_and_holdout</b></td>"
+        f"<td>{adv['totalCases']}</td><td>{adv['totalCases']}</td>"
+        f"<td>{adv['passed']}/{adv['totalCases']}</td>"
+        f"<td>{adv['failed']}</td><td>{adv['abstentions']}</td><td>{adv['falseAcceptances']}</td></tr>"
+    )
+
+    html_str = f"""<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {{ font-family: 'Segoe UI', Arial, sans-serif; font-size: 10.5pt; color: #1a202c; margin: 24px 28px; line-height: 1.38; }}
+  h1 {{ font-size: 16pt; color: #1e3a8a; border-bottom: 2px solid #1e3a8a; padding-bottom: 4px; margin-bottom: 8px; }}
+  h2 {{ font-size: 12pt; color: #1e40af; margin-top: 14px; margin-bottom: 6px; }}
+  table {{ width: 100%; border-collapse: collapse; margin: 6px 0 10px 0; font-size: 9pt; }}
+  th, td {{ border: 1px solid #cbd5e1; padding: 4px 6px; text-align: left; }}
+  th {{ background: #f1f5f9; font-weight: 600; }}
+  .kpi {{ display: flex; gap: 10px; margin: 8px 0; }}
+  .card {{ flex: 1; border: 1px solid #cbd5e1; border-radius: 4px; padding: 6px 8px; background: #f8fafc; }}
+  .card b {{ display: block; font-size: 11pt; color: #0f172a; }}
+  .badge {{ display: inline-block; padding: 2px 8px; border-radius: 3px; font-weight: 700; background: {'#dcfce7; color:#166534' if gates_ok else '#fee2e2; color:#991b1b'}; }}
+</style>
+</head>
+<body>
+<h1>TRACE MathGuard V1.5 — Set Theory, Relations &amp; Functional Reasoning Intelligence</h1>
+<p><b>Commit:</b> <code>{html.escape(reg['gitCommit'])}</code> | <b>External LLM Spend:</b> $0.00 | <b>Decision:</b> <span class="badge">{html.escape(decision)}</span></p>
+
+<div class="kpi">
+  <div class="card"><span>Historical + V1.4c</span><b>{hist['passed'] + rec['passed']}/{hist['discovered'] + rec['discovered']} PASS (0 FA)</b></div>
+  <div class="card"><span>V1.5 Adversarial + Holdout</span><b>{adv['passed']}/{adv['totalCases']} PASS (0 FA)</b></div>
+  <div class="card"><span>Frozen 334 Benchmark</span><b>{frz['statuses'].get('PASS',0)}/334 PASS, {frz['claims']['verified']}/{frz['claims']['total']} claims</b></div>
+  <div class="card"><span>New Domain (G9+G10 Ch 1)</span><b>{comb['totalItems']} items ({comb['claims']['verified']}/{comb['claims']['total']} claims)</b></div>
+</div>
+
+<h2>1. Regression &amp; Adversarial Preservation</h2>
+<table>
+  <tr><th>Suite</th><th>Discovered</th><th>Executed</th><th>Passed</th><th>Failed</th><th>Abstained</th><th>False Accept</th></tr>
+  {suite_rows}
+</table>
+
+<h2>2. Frozen &amp; Expanded V1.4 Benchmarks vs. V1.5 New Domain</h2>
+<table>
+  <tr><th>Dataset</th><th>Items</th><th>Working PASS</th><th>Working PARTIAL</th><th>Working FAIL</th><th>Claims Verified</th><th>Tamil PASS / FAIL</th></tr>
+  <tr><td>Frozen Benchmark (V1.4)</td><td>{frz['total']}</td><td>{frz['statuses'].get('PASS',0)}</td><td>{frz['statuses'].get('PARTIAL',0)}</td><td>{frz['statuses'].get('FAIL',0)}</td><td>{frz['claims']['verified']}/{frz['claims']['total']} ({round(frz['claims']['verified']/frz['claims']['total']*100,2)}%)</td><td>N/A</td></tr>
+  <tr><td>Expanded Benchmark (V1.4)</td><td>{exp14['total']}</td><td>{exp14['workingStatusCounts'].get('PASS',0)}</td><td>{exp14['workingStatusCounts'].get('PARTIAL',0)}</td><td>{exp14['workingStatusCounts'].get('FAIL',0)}</td><td>{exp14['claims']['verified']}/{exp14['claims']['total']} ({exp14['claims']['verifiedRatePct']}%)</td><td>{exp14['tamilStatusCounts'].get('PASS',0)} / {exp14['tamilStatusCounts'].get('FAIL',0)}</td></tr>
+  <tr><td>Grade 9 Ch 1 (Set Language)</td><td>{g9['totalItems']}</td><td>{g9['workingStatusCounts'].get('PASS',0)}</td><td>{g9['workingStatusCounts'].get('PARTIAL',0)}</td><td>{g9['workingStatusCounts'].get('FAIL',0)}</td><td>{g9['claims']['verified']}/{g9['claims']['total']} ({g9['claims']['verifiedRatePct']}%)</td><td>{g9['tamilStatusCounts'].get('PASS',0)} / {g9['tamilStatusCounts'].get('FAIL',0)}</td></tr>
+  <tr><td>Grade 10 Ch 1 (Relations &amp; Functions)</td><td>{g10['totalItems']}</td><td>{g10['workingStatusCounts'].get('PASS',0)}</td><td>{g10['workingStatusCounts'].get('PARTIAL',0)}</td><td>{g10['workingStatusCounts'].get('FAIL',0)}</td><td>{g10['claims']['verified']}/{g10['claims']['total']} ({g10['claims']['verifiedRatePct']}%)</td><td>{g10['tamilStatusCounts'].get('PASS',0)} / {g10['tamilStatusCounts'].get('FAIL',0)}</td></tr>
+</table>
+
+<h2>3. Mathematical Algorithms Implemented</h2>
+<ul>
+  <li><b>SetTheoryReasoner &amp; Proof Engine</b> (<code>set_types.py</code>, <code>set_theory_reasoner.py</code>): Typed immutable sets (<code>TypedSet</code>, <code>SymbolicInfiniteSet</code>, <code>OrderedPair</code>), exact <code>∅</code> vs <code>{{∅}}</code> distinction, membership vs subset guard, deduplication, roster/set-builder parsing, and 2<sup>k</sup> Boolean minterm truth-table proofs with minimal counterexamples and finite-sample abstention guards.</li>
+  <li><b>VennDiagramReasoner</b> (<code>venn_reasoner.py</code>): Exact Gauss-Jordan RREF over ℚ on 4-region (2-set) and 8-region (3-set) disjoint partitions; rejects negative/fractional/inconsistent counts; never assumes <code>outside=0</code> unless established; truth-table shaded region verification.</li>
+  <li><b>RelationReasoner &amp; FunctionReasoner</b> (<code>relation_reasoner.py</code>, <code>function_reasoner.py</code>): Ordered-pair directionality, domain/codomain/range, inverse relations, reflexivity/symmetry/transitivity, injective/surjective/bijective classification, rational/radical domain restrictions, non-commutative composition, and bijectivity-guarded inverses.</li>
+  <li><b>Tamil Semantic Parity</b> (<code>tamil_sets_parity.py</code>): Bilingual terminology lexicon for sets, relations, mappings, and cardinality; contradiction detection without requiring identical wording or step order.</li>
+</ul>
+
+<h2>4. Operational Telemetry, Queue Reconciliation &amp; Limitations</h2>
+<p>Frozen benchmark runtime: <b>{frz['runtimeSec']}s</b> (peak RSS: <b>{frz['peakMemoryMB']} MB</b>). Prior V1.4d correction queue reconciled: {len(cq_doc['priorV1_4dQueueReconciliation'])} items tracked; new-domain findings: {len(cq_doc['newDomainConfirmedFindings'])} math flags, {len(cq_doc['newDomainTamilFindings'])} Tamil flags. New-domain certification remains gated until independent review of flagged Grade 9/10 Ch 1 items.</p>
+</body>
+</html>"""
+
+    out_pdf = repo / "TRACE_MathGuard_V1_5_Report.pdf"
+    with sync_playwright() as p:
+        browser = p.chromium.launch()
+        page = browser.new_page()
+        page.set_content(html_str, wait_until="load")
+        page.pdf(path=str(out_pdf), format="A4", print_background=True)
+        browser.close()
+    return out_pdf
 
 
-def build_v1_5_pdf(
-    out_path: Path,
-    reg_doc: Dict[str, Any],
-    frozen: Dict[str, Any],
-    g9_ch1_doc: Dict[str, Any],
-    g10_ch1_doc: Dict[str, Any],
-    parity_doc: Dict[str, Any],
-    corr_doc: Dict[str, Any],
-    coverage_doc: Dict[str, Any],
-) -> None:
-    doc = SimpleDocTemplate(str(out_path), pagesize=A4, leftMargin=32, rightMargin=32, topMargin=32, bottomMargin=32)
-    styles = getSampleStyleSheet()
-    story: List[Any] = []
-
-    story.append(Paragraph("TRACE MathGuard V1.5 — Set Theory, Relations & Functional Reasoning", styles["Title"]))
-    story.append(Paragraph(
-        f"Commit: {coverage_doc.get('gitCommit')} | External LLM Cost: $0.00 | Recommendation: {coverage_doc.get('v1_6Recommendation')}",
-        styles["Normal"],
-    ))
-    story.append(Spacer(1, 8))
-
-    # 1. Regression & Frozen Benchmark Preservation
-    story.append(Paragraph("1. Regression Preservation & Frozen Benchmark (334 items)", styles["Heading2"]))
-    hs = reg_doc["historicalSummary"]
-    rs = reg_doc["recentSummary"]
-    v15s = reg_doc["v1_5Adversarial"]
-    f_st = frozen["statuses"]
-    f_cl = frozen["claims"]
-    reg_rows = [
-        ["Suite", "Discovered", "Executed", "Passed", "Failed", "False Accept"],
-        ["Historical (V1.0–V1.3.1)", str(hs["discovered"]), str(hs["executed"]), str(hs["passed"]), str(hs["failed"]), str(hs["falseAcceptances"])],
-        ["Recent Adversarial (V1.3.4a–V1.4b)", str(rs["discovered"]), str(rs["executed"]), str(rs["passed"]), str(rs["failed"]), str(rs["falseAcceptances"])],
-        ["V1.5 Adversarial + Holdout (New)", str(v15s["totalCases"]), str(v15s["totalCases"]), str(v15s["passed"]), str(v15s["failed"]), str(v15s["falseAcceptances"])],
-        ["Frozen 334 Working", "334", "334", f"{f_st.get('PASS', 0)} ({frozen['passRatePct']}%)", str(f_st.get("FAIL", 0)), "0"],
-        ["Frozen 334 Claims", str(f_cl["total"]), str(f_cl["total"]), f"{f_cl['verified']} ({f_cl['verifiedRatePct']}%)", str(f_cl["failed"]), "0"],
-    ]
-    story.append(_tbl(reg_rows, [160, 65, 65, 95, 55, 65]))
-    story.append(Spacer(1, 8))
-
-    # 2. New Domain Coverage (G9 Ch 1 & G10 Ch 1)
-    story.append(Paragraph("2. New Domain Expansion: Set Language (G9 Ch 1) & Relations/Functions (G10 Ch 1)", styles["Heading2"]))
-    s9 = g9_ch1_doc["summary"]
-    s10 = g10_ch1_doc["summary"]
-    dom_rows = [
-        ["Chapter", "Exercises", "Concepts", "Working PASS", "Answer PASS", "Working FAIL", "Tamil PASS/FAIL"],
-        [
-            "G9 Ch 1: Set Language",
-            str(s9["exercises"]),
-            str(s9["concepts"]),
-            f"{s9['workingCounts'].get('PASS', 0)}/{s9['totalItems']}",
-            f"{s9['answerCounts'].get('PASS', 0)}/{s9['totalItems']}",
-            str(s9["workingCounts"].get("FAIL", 0)),
-            f"{s9['tamilCounts'].get('PASS', 0)}/{s9['tamilCounts'].get('FAIL', 0)}",
-        ],
-        [
-            "G10 Ch 1: Relations & Functions",
-            str(s10["exercises"]),
-            str(s10["concepts"]),
-            f"{s10['workingCounts'].get('PASS', 0)}/{s10['totalItems']}",
-            f"{s10['answerCounts'].get('PASS', 0)}/{s10['totalItems']}",
-            str(s10["workingCounts"].get("FAIL", 0)),
-            f"{s10['tamilCounts'].get('PASS', 0)}/{s10['tamilCounts'].get('FAIL', 0)}",
-        ],
-    ]
-    story.append(_tbl(dom_rows, [145, 55, 55, 70, 70, 55, 65]))
-    story.append(Spacer(1, 8))
-
-    # 3. Algorithms & Bilingual / Correction Summary
-    story.append(Paragraph("3. Mathematical Engines, Bilingual Parity & Correction Queue", styles["Heading2"]))
-    p_sum = parity_doc["summary"]
-    c_sum = corr_doc["summary"]
-    story.append(Paragraph(
-        f"Implemented Engines: SetTheoryReasoner (2^k Stone minterm proof + counterexample), "
-        f"VennDiagramReasoner (2/3-set exact Fraction RREF + shaded-region truth tables), "
-        f"RelationReasoner (directed ordered pairs, R ⊆ A×B, reflexive/symmetric/transitive), "
-        f"ExtendedFunctionRegistry (FiniteFunction & SymbolicFunction, domain-guarded composition, bijective inverse).<br/>"
-        f"New Domain Bilingual Parity: PASS={p_sum.get('PASS', 0)}, FAIL={p_sum.get('FAIL', 0)}, UNVERIFIABLE={p_sum.get('UNVERIFIABLE', 0)}.<br/>"
-        f"Correction Queue: {c_sum['reconciledV14cCount']} reconciled V1.4c/d items + {c_sum['newDomainFindingsCount']} new Ch 1 findings (isolated, non-destructive).",
-        styles["Normal"],
-    ))
-
-    doc.build(story)
+if __name__ == "__main__":
+    p = build_pdf(Path(__file__).resolve().parents[3])
+    print("Generated:", p)

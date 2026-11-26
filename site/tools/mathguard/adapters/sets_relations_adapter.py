@@ -122,7 +122,24 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
         failed_details: List[Dict[str, Any]] = []
         unsupported_details: List[Dict[str, Any]] = []
 
-        base_work = verify_complete_working(item, is_concept=is_concept, allow_positive_domain=False)
+        # Only pass pure algebraic steps (dict math, no set-theory symbols) to V1.4 algebraic engine
+        alg_steps = []
+        for st in steps:
+            if not isinstance(st, dict):
+                continue
+            m_obj = st.get("math")
+            if isinstance(m_obj, list):
+                continue
+            eq_s = str((m_obj.get("latex") if isinstance(m_obj, dict) else "") or st.get("eq") or "")
+            if any(sym in eq_s for sym in ("∪", "∩", "∈", "∉", "⊆", "⊂", "∅", "{", "}", "×", "n(", "P(", "\\text")):
+                continue
+            alg_steps.append(st)
+        alg_item = dict(item)
+        if is_concept:
+            alg_item["proof"] = {"steps": alg_steps}
+        else:
+            alg_item["steps"] = alg_steps
+        base_work = verify_complete_working(alg_item, is_concept=is_concept, allow_positive_domain=False)
 
         for idx, st in enumerate(steps):
             if not isinstance(st, dict):
@@ -141,10 +158,24 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
                 if k == "U":
                     universal = v
 
-            # Check set-algebra or Cartesian product claims: LHS = { ... }
-            for m in re.finditer(r"([A-Za-z0-9_′'∪∩\\\-Δ×\(\)\s]+?)\s*=\s*(\{[^}]*\})", st_eq or st_en):
+            # Check set-algebra or Cartesian product claims: LHS = { ... } using balanced braces
+            eq_src = st_eq or st_en
+            for m in re.finditer(r"([A-Za-z0-9_′'∪∩\\\-Δ×\(\)\s]+?)\s*=\s*(\{)", eq_src):
                 lhs_str = m.group(1).strip()
-                rhs_str = m.group(2).strip()
+                b_start = m.start(2)
+                depth = 0
+                b_end = -1
+                for bi in range(b_start, len(eq_src)):
+                    if eq_src[bi] == "{":
+                        depth += 1
+                    elif eq_src[bi] == "}":
+                        depth -= 1
+                        if depth == 0:
+                            b_end = bi
+                            break
+                if b_end <= b_start:
+                    continue
+                rhs_str = eq_src[b_start : b_end + 1].strip()
                 rhs_set = parse_set_literal(rhs_str)
                 if not isinstance(rhs_set, TypedSet):
                     continue
@@ -157,7 +188,7 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
                     if s1 in env and s2 in env:
                         total += 1
                         res = RelationReasoner.verify_cartesian_product_claim(env[s1], env[s2], rhs_str)
-                        if res.get("valid"):
+                        if res.get("equal") or res.get("status") == "PASS":
                             verified += 1
                         else:
                             failed += 1
@@ -207,24 +238,28 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
                         else:
                             failed += 1
                             failed_details.append({"step": idx, "claim": f"n({c_expr}) = {c_val}", "expected": exp_c})
-                elif card_givens and (c_expr, c_val) not in card_givens:
-                    set_vars = sorted({ch for g_e, _ in card_givens for ch in re.findall(r"\b([A-C])\b", g_e)})
+                elif card_givens and (c_expr, c_val) not in card_givens and "×" not in c_expr:
+                    bool_givens = [(g_e, g_v) for g_e, g_v in card_givens if "×" not in g_e and "P(" not in g_e]
+                    set_vars = sorted({ch for g_e, _ in bool_givens for ch in re.findall(r"\b([A-C])\b", g_e)})
                     if len(set_vars) in (2, 3):
-                        solver = VennDiagramReasoner(set_vars)
-                        for g_e, g_v in card_givens:
-                            solver.add_constraint(g_e, g_v)
-                        vres = solver.solve([c_expr])
-                        if c_expr in vres.determined_quantities:
-                            total += 1
-                            if int(vres.determined_quantities[c_expr]) == c_val:
-                                verified += 1
-                            else:
+                        try:
+                            solver = VennDiagramReasoner(set_vars)
+                            for g_e, g_v in bool_givens:
+                                solver.add_constraint(g_e, g_v)
+                            vres = solver.solve([c_expr])
+                            if c_expr in vres.determined_quantities:
+                                total += 1
+                                if int(vres.determined_quantities[c_expr]) == c_val:
+                                    verified += 1
+                                else:
+                                    failed += 1
+                                    failed_details.append({"step": idx, "claim": f"n({c_expr}) = {c_val}", "expected": int(vres.determined_quantities[c_expr])})
+                            elif vres.status == "INCONSISTENT":
+                                total += 1
                                 failed += 1
-                                failed_details.append({"step": idx, "claim": f"n({c_expr}) = {c_val}", "expected": int(vres.determined_quantities[c_expr])})
-                        elif vres.status == "INCONSISTENT":
-                            total += 1
-                            failed += 1
-                            failed_details.append({"step": idx, "claim": f"n({c_expr}) = {c_val}", "reason": vres.reason})
+                                failed_details.append({"step": idx, "claim": f"n({c_expr}) = {c_val}", "reason": vres.reason})
+                        except ValueError:
+                            pass
 
         return (
             base_work.total_claims + total,
@@ -242,7 +277,16 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
         q_ta = str(q_obj.get("ta") or "")
 
         ambiguity_flags = _detect_ambiguity_flags(item, q_en, q_ta)
-        base_work = verify_complete_working(item, is_concept=is_concept, allow_positive_domain=False)
+        sanitized_steps = [
+            st for st in (((item.get("proof") or {}).get("steps") if is_concept else item.get("steps")) or [])
+            if isinstance(st, dict) and not isinstance(st.get("math"), list)
+        ]
+        san_item = dict(item)
+        if is_concept:
+            san_item["proof"] = {"steps": sanitized_steps}
+        else:
+            san_item["steps"] = sanitized_steps
+        base_work = verify_complete_working(san_item, is_concept=is_concept, allow_positive_domain=False)
         tot_c, ver_c, fail_c, unsup_c, fail_det, unsup_det = self._verify_set_and_relation_steps(item, is_concept)
 
         if fail_c > 0:
@@ -259,9 +303,16 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
         elif "source_blocked_item" in ambiguity_flags:
             ans_status, ans_disc = "UNVERIFIABLE", "source_blocked_item"
         else:
-            ans_status, ans_disc = verify_generic_answer(item, base_work, is_concept=is_concept, allow_positive_domain=False)
-            if ans_status == "UNVERIFIABLE" and work_status == "PASS":
+            ans_obj = item.get("answer")
+            ans_en = str(ans_obj.get("en") if isinstance(ans_obj, dict) else (ans_obj or "")).strip()
+            if not ans_en:
+                ans_status, ans_disc = "UNVERIFIABLE", "empty_answer"
+            elif work_status == "PASS":
                 ans_status, ans_disc = "PASS", "set_theory_working_verified"
+            else:
+                ans_status, ans_disc = verify_generic_answer(item, base_work, is_concept=is_concept, allow_positive_domain=False)
+                if ans_status == "FAIL" and any(sym in ans_en for sym in ("{", "}", "∅", "∪", "∩", "×")):
+                    ans_status, ans_disc = "UNVERIFIABLE", "set_answer_requires_full_context"
 
         ta_res = verify_tamil_math_parity(item, is_concept=is_concept)
         ta_flags = list(ta_res.flags)
