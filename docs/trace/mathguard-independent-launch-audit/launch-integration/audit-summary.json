@@ -1,0 +1,47 @@
+{
+  "sourceMain": "5daa2ece125200b099fd5b676d7df2a4973aa049",
+  "testedCandidate": "d312d6451017900028363eaf26eb8acf4bd6f710",
+  "catalogue": {
+    "candidateSha256": "ae37935cb7477596d172d2137c8ef07d46eaa5b08358a22ec45cc9dc23c55f60",
+    "changedCardIds": [
+      "c10-3-ex3-4-q2-iii",
+      "c10-6-ex6-1-q3-i",
+      "c10-6-ex6-1-q3-ii",
+      "c10-7-ex7-3-q3"
+    ],
+    "preservedBothSourcePrompts": true
+  },
+  "grade10MensurationStrictAnswers": {
+    "PASS": 70,
+    "FAIL": 0,
+    "UNVERIFIABLE": 1
+  },
+  "grade10MensurationWorking": {
+    "PASS": 48,
+    "FAIL": 0,
+    "PARTIAL": 22,
+    "UNVERIFIABLE": 1
+  },
+  "frozen": {
+    "records": 334,
+    "working": {
+      "PARTIAL": 74,
+      "PASS": 256,
+      "UNVERIFIABLE": 4
+    },
+    "answers": {
+      "PASS": 325,
+      "PARTIAL": 1,
+      "UNVERIFIABLE": 7,
+      "FAIL": 1
+    },
+    "changedAnswers": [
+      {
+        "id": "c10-3-ex3-4-q2-iii",
+        "previousAnswerStatus": "PASS",
+        "answerStatus": "PARTIAL"
+      }
+    ]
+  },
+  "fullReleaseAssurance": "Partial and unsupported task results remain open in candidate-coverage-summary.json."
+}
