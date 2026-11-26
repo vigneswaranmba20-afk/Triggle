@@ -566,13 +566,16 @@
   'g9-ch4-ex4.3-q4':{src:'./assets/grade9-ch4/ex4-3-q4.svg',alt:'Circle centre O, radius 15 cm, perpendicular distance 12 cm to chord AB.',altTa:'ஆரம் 15 செ.மீ, தொலைவு 12 செ.மீ, நாண் நீளம் AB = ?',caption:'Radius 15 cm, distance 12 cm, full chord AB = ?',captionTa:'ஆரம் 15 செ.மீ, தொலைவு 12 செ.மீ, நாண் நீளம் AB = ?'},
   'g9-ch4-ex4.3-q6':{src:'./assets/grade9-ch4/ex4-3-q6.svg',alt:'Two intersecting circles of radii 5 cm and 3 cm with centre distance 4 cm.',altTa:'ஆரங்கள் 5 செ.மீ, 3 செ.மீ; மையத் தொலைவு 4 செ.மீ',caption:'Radii 5 cm and 3 cm, centre distance 4 cm (3-4-5 right triangle)',captionTa:'ஆரங்கள் 5 செ.மீ, 3 செ.மீ; மையத் தொலைவு 4 செ.மீ'}
  };
- const tamilFigure=item=>lang==='ta'?window.TriggleFrontierFigureTamil?.[item.id]:null;
+ const figureOverride=item=>{
+  const figures=window.TriggleFrontierFigureTamil?.[item.id];
+  return lang==='ta'?figures:figures?.en;
+ };
  const resolveFigureSpec=item=>item&&ch1SvgFigures[item.id]
   ?{src:lang==='ta'&&ch1SvgFigures[item.id].srcTa?ch1SvgFigures[item.id].srcTa:ch1SvgFigures[item.id].src,alt:{en:ch1SvgFigures[item.id].alt,ta:ch1SvgFigures[item.id].altTa||ch1SvgFigures[item.id].alt},caption:{en:ch1SvgFigures[item.id].caption,ta:ch1SvgFigures[item.id].captionTa||ch1SvgFigures[item.id].caption}}
-  :(item?.figureSrc?{src:tamilFigure(item)?.src||(lang==='ta'&&item.figureSrcTa?item.figureSrcTa:item.figureSrc),alt:item.figureAlt,caption:item.figureCaption}:null);
- const figureCaption=(item,spec)=>tamilFigure(item)?.caption||tr(spec?.caption);
+  :(item?.figureSrc?{src:figureOverride(item)?.src||(lang==='ta'&&item.figureSrcTa?item.figureSrcTa:item.figureSrc),alt:item.figureAlt,caption:item.figureCaption}:null);
+ const figureCaption=(item,spec)=>figureOverride(item)?.caption||tr(spec?.caption);
  const localizeInlineSvg=(container,item)=>{
-  const description=tamilFigure(item)?.description;
+  const description=figureOverride(item)?.description;
   if(description)container.querySelector('svg[role="img"]')?.setAttribute('aria-label',description);
  };
  function isQuestionFigure(item){
@@ -594,7 +597,7 @@
  }
  function textbookFigureImage(item,maxHeight){
   const spec=resolveFigureSpec(item);
-  const alt=tamilFigure(item)?.description||tr(spec?.alt)||tr(item.label)+' textbook figure';
+  const alt=figureOverride(item)?.description||tr(spec?.alt)||tr(item.label)+' textbook figure';
   return '<img src="'+esc(encodeURI(spec?.src||''))+'" alt="'+esc(alt)+'" style="display:block;max-width:100%;max-height:'+maxHeight+'vh;width:auto;height:auto;margin:auto;object-fit:contain">';
  }
  function renderInlineFigure(){

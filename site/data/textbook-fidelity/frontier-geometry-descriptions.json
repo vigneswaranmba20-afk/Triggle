@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "edition": "2025",
+  "items": [
+    {
+      "id": "g9-ch4-ex4.5-q3",
+      "exercise": "4.5",
+      "question": 3,
+      "en": "centroid G",
+      "ta": "நடுக்கோட்டு மையம் G",
+      "facts": [
+        "AB=6 cm",
+        "angle B=110°",
+        "AC=9 cm"
+      ],
+      "sourcePdfPages": {
+        "en": [
+          183
+        ],
+        "ta": [
+          195
+        ]
+      }
+    },
+    {
+      "id": "g9-ch4-ex4.5-q7",
+      "exercise": "4.5",
+      "question": 7,
+      "en": "orthocentre H",
+      "ta": "செங்கோட்டு மையம் H",
+      "facts": [
+        "AB=6 cm",
+        "angle B=110°",
+        "BC=5 cm"
+      ],
+      "sourcePdfPages": {
+        "en": [
+          183
+        ],
+        "ta": [
+          195
+        ]
+      }
+    },
+    {
+      "id": "g9-ch4-ex4.6-q8",
+      "exercise": "4.6",
+      "question": 8,
+      "en": "incentre I",
+      "ta": "உள்வட்ட மையம் I",
+      "facts": [
+        "AB=BC=6 cm",
+        "angle B=80°"
+      ],
+      "sourcePdfPages": {
+        "en": [
+          187
+        ],
+        "ta": [
+          199
+        ]
+      }
+    },
+    {
+      "id": "c10-4-ex4-3-q2",
+      "exercise": "4.3",
+      "question": 2,
+      "en": "C Street",
+      "ta": "C தெரு",
+      "facts": [
+        "A Street=1.5 miles",
+        "B Street=2 miles",
+        "C Street is the hypotenuse"
+      ],
+      "asset": "assets/grade10-geometry/ex4-3-q2-ta.svg",
+      "sourcePdfPages": {
+        "en": [
+          193
+        ],
+        "ta": [
+          199
+        ]
+      }
+    },
+    {
+      "id": "c10-4-ex4-3-q4",
+      "exercise": "4.3",
+      "question": 4,
+      "en": "equal diagonals",
+      "ta": "சம மூலைவிட்டங்கள்",
+      "facts": [
+        "WXYZ rectangle",
+        "XZ and YW are diagonals"
+      ],
+      "asset": "assets/grade10-geometry/ex4-3-q4-ta.svg",
+      "sourcePdfPages": {
+        "en": [
+          193
+        ],
+        "ta": [
+          null
+        ]
+      }
+    },
+    {
+      "id": "c10-4-ex4-3-q8",
+      "exercise": "4.3",
+      "question": 8,
+      "en": "BD = DE = EC",
+      "ta": "BD = DE = EC",
+      "facts": [
+        "Right angle at B",
+        "B, D, E and C are collinear in that order"
+      ],
+      "sourcePdfPages": {
+        "en": [
+          194
+        ],
+        "ta": [
+          null
+        ]
+      }
+    }
+  ]
+}
