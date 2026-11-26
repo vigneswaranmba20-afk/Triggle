@@ -61,7 +61,7 @@ function startServer() {
       await page.click('#langTa');
       await page.waitForTimeout(150);
       const qHeadTa = await page.textContent('#questionHead');
-      assert(qHeadTa.includes('வினா 2') && await page.locator('#questionLabel').innerText() === 'பயிற்சி 5.1', `Tamil label preserved at ${width}px: ${qHeadTa}`);
+      assert(qHeadTa.includes('பயிற்சி 5.1 · வினா 2'), `Tamil label preserved at ${width}px: ${qHeadTa}`);
       const overflowTa = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
       assert.equal(overflowTa, false, `No horizontal overflow in Tamil at ${width}px`);
 

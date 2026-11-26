@@ -144,3 +144,9 @@
   background:#fff;color:#6e2637;font-size:.86rem;font-weight:650;cursor:pointer;
 }
 .g9a-practice-btn:hover,.g9a-practice-btn:focus-visible {background:#f8e4e2;border-color:#883b46;outline:none;}
+.g9a-concept-return-wrap {margin:10px 0 6px;}
+.g9a-concept-return {
+  min-height:44px;padding:8px 12px;border:1px solid #d6c4c4;border-radius:10px;
+  background:#fcf9f8;color:#6e2637;font-size:.85rem;font-weight:650;cursor:pointer;text-align:left;
+}
+.g9a-concept-return:hover,.g9a-concept-return:focus-visible {background:#f8e4e2;border-color:#883b46;}

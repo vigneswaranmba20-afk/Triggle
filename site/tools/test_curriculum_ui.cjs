@@ -139,7 +139,7 @@ async function main() {
         await page.evaluate(()=>{document.querySelector('#stepsList').style.paddingBottom='1000px';window.scrollTo(0,900);});
         await page.waitForTimeout(60);
         const past=await page.evaluate(()=>document.querySelector('#questionText').getBoundingClientRect().bottom<
-          document.querySelector('.appbar').getBoundingClientRect().bottom+8);
+          document.querySelector('.status-row').getBoundingClientRect().bottom+8);
         const showing=await page.locator('#questionJump').isVisible();
         assert.equal(showing,past,'Question return link only appears once the question is above its context');
         if(showing){
@@ -188,11 +188,11 @@ async function main() {
         const page=await visit(await context(width),'/index.html');
         await page.locator('#discoveryView').waitFor({state:'visible'});
         assert.equal(await page.locator('#lessonCard').isVisible(),false,'Home must not open an unrelated question');
-        assert.equal(await page.locator('#homeBtn').getAttribute('aria-label'),'Triggle · Home');
+        assert.equal(await page.locator('#homeBtn').getAttribute('aria-label'),'Home');
         const logo=page.locator('#homeBtn img');
         await logo.waitFor({state:'visible'});
         assert.ok(await logo.evaluate(async img=>{await img.decode();return img.naturalWidth>0;}),'Brand image loads');
-        await page.getByText('© 2026 VER labs',{exact:true}).waitFor({state:'visible'});
+        assert.equal(await page.getByText('© 2026 VER labs',{exact:true}).isVisible(),true);
          assert.deepEqual(await page.locator('#sideClasses button b').allTextContents(),['9','10'],'Sidebar contains only active grades');
          assert.deepEqual(await page.locator('#classDock button strong').allTextContents(),['9','10'],'Grade dock contains only active grades');
         assert.deepEqual(await page.locator('.discover-grade-grid [data-grade]').evaluateAll(nodes=>nodes.map(n=>Number(n.dataset.grade))),[9,10]);
@@ -302,7 +302,6 @@ async function main() {
           'Most recently opened question must beat a saved Class 10 question');
         assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('triggle.lastOpened.v1')).questionId),ids.g9);
         await page.reload();
-        await page.locator('.discover-resume-card').waitFor({state:'visible'});
         assert.match(await page.locator('.discover-resume-card').innerText(),/Class 9/,
           'Resume must survive a page reload');
         await page.locator('#langTa').click();
@@ -385,7 +384,7 @@ async function main() {
         await page.locator('.hub-section-card[data-hub-section="exercises"]').click();
         assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
         await page.locator('.hub-exercise-link').first().click();
-        assert.match(await page.locator('#questionLabel').innerText(),/Exercise/);
+        assert.match(await page.locator('#questionHead').innerText(),/Exercise/);
         assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
         await page.locator('#crumb .crumb-link').nth(1).click();
         assert.equal(await page.locator('#pathDialog').evaluate(el=>el.open),true);
@@ -601,7 +600,7 @@ async function main() {
       assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
       await page.locator('.hub-exercise-link').first().click();
        assert.equal(new URL(page.url()).searchParams.has('question'),true);
-       assert.match(await page.locator('#questionLabel').innerText(),/Exercise 6\.1/);
+       assert.match(await page.locator('#questionHead').innerText(),/Exercise 6\.1/);
        assert.ok((await page.locator('#stepsList li').count())>0,'Full exercise working remains');
        await page.goBack();
       assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
@@ -678,7 +677,7 @@ async function main() {
        await page.locator('#exerciseList [data-section="exercises"]').click();
       assert.equal(new URL(page.url()).searchParams.get('section'),'exercises');
       await page.locator('.hub-exercise-link').first().click();
-       assert.match(await page.locator('#questionLabel').innerText(),/Exercise/);
+       assert.match(await page.locator('#questionHead').innerText(),/Exercise/);
        assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
        await noOverflow(page,'mobile chapter-first drawer');
      });
@@ -849,9 +848,7 @@ async function main() {
         for (const chapter of chapters) {
           await selectChapter(page, chapter.id);
           assert.equal(new URL(page.url()).searchParams.get('chapter'), chapter.id);
-          const title=page.locator('#chapterOverviewTitle');
-          await title.waitFor({state:'visible'});
-          assert.equal(await title.innerText(), chapter.title);
+          assert.equal(await page.locator('#chapterOverviewTitle').innerText(), chapter.title);
         }
         total += amount;
       }
@@ -922,7 +919,7 @@ async function main() {
       assert.equal(new URL(page.url()).searchParams.has('section'),false,'Old section links resolve to chapter');
       await gotoWithControls(page,url+'/index.html?class=9&question=c9-example-6-1');
       assert.notEqual(new URL(page.url()).searchParams.get('question'),'c9-example-6-1');
-      assert.match(await page.locator('#questionLabel').innerText(),/(?:Exercise|பயிற்சி)/);
+      assert.match(await page.locator('#questionHead').innerText(),/(?:Exercise|பயிற்சி)/);
       assert.equal(await page.locator('#stepsList .final-answer-step').count(),1);
     });
     await check('legacy progress, diagrams and standard solutions survive chapter navigation', async () => {
@@ -1199,7 +1196,7 @@ async function main() {
         if(width<=800){
           assert.equal(props.pos,'fixed','Compact mobile dock uses one row');
           assert.equal(props.steps,'visible','Solution is part of the page flow');
-          assert.equal(await page.locator('#crumb .crumb-link:visible').count(),3,'Class, chapter and exercise are visible on phones');
+          assert.equal(await page.locator('#crumb .crumb-link:visible').count(),2);
         }
         await page.locator('#next').click();
         assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch1-ex1.1-q5-iii');

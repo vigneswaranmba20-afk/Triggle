@@ -764,7 +764,7 @@
     const kinds=activityEntries.length?[...chapterKinds,'activities']:chapterKinds;
     const quizStages=stages.filter(stage=>!(stage.activity?.options&&stage.check));
     const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(inlineChecks||matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'||chapter.id==='g10-ch7'||chapter.id==='g9-ch3')?0:quizStages.length,activities:activityEntries.length};
-    const symbols={concepts:'concept',exercises:'exercises',quizzes:'check',activities:'explore'};
+    const symbols={concepts:'◇',examples:'∑',exercises:'✎',quizzes:'✓',activities:'💡'};
     const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0,activities:counts.activities>0};
     const labelFor=kind=>({concepts:t.concepts,examples:t.examples,exercises:t.exercises,quizzes:t.quizzes,activities:t.activities})[kind];
     const noteFor=kind=>({concepts:t.conceptsHint,examples:t.examplesHint,exercises:t.exercisesHint,quizzes:t.quizzesHint,activities:t.activitiesHint})[kind];
@@ -798,11 +798,6 @@
     const chapterNumber=(lang==='ta'?'அத்தியாயம் ':'Chapter ')+chapter.number;
     heading.innerHTML='<p class="hub-eyebrow">'+e(chapterNumber+(section?' · '+text(chapter.title):''))+'</p>'+
       '<h2 id="chapterOverviewTitle">'+e(pageTitle)+'</h2>';
-    const emblem=window.TriggleGlyph?.chapter(chapter.id);
-    if(emblem&&!section){
-      heading.classList.add('ver-chapter-heading');
-      heading.insertAdjacentHTML('afterbegin','<span class="ver-emblem">'+emblem+'</span>');
-    }
     root.append(heading);
     if(!section){
       const grade9Pilot=chapter.id==='g9-ch1'||chapter.id==='g9-ch2';
@@ -820,7 +815,7 @@
       kinds.forEach(kind=>{
         const b=document.createElement('button');b.type='button';b.dataset.hubSection=kind;
         b.className='hub-section-card'+(available[kind]?'':' is-upcoming');
-        b.innerHTML='<span class="hub-section-icon" aria-hidden="true">'+(window.TriggleGlyph?.icon(symbols[kind])||'')+'</span>'+
+        b.innerHTML='<span class="hub-section-icon" aria-hidden="true">'+symbols[kind]+'</span>'+
           '<strong>'+e(labelFor(kind))+'</strong>'+
           '<span class="hub-section-description">'+e(noteFor(kind))+'</span>'+
           '<span class="hub-section-count">'+e(countFor(kind))+'</span>'+
