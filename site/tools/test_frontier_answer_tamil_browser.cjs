@@ -8,6 +8,7 @@ const cases = [
   [9, 'g9-ch3-ex3.1-q1-i', /பல்லுறுப்புக் கோவை/, /Not a polynomial/],
   [9, 'g9-ch3-ex3.2-q5-iii', /பூச்சியமாகும்|பூச்சியம்/, /zero/],
   [9, 'g9-ch3-ex3.3-q10', /நிரூபிக்கப்பட்டது/, /proved|a\s*=\s*b/i],
+  [9, 'g9-ch3-ex3.5-q3-ii', /5\s*x/, /5\s*x/],
   [9, 'g9-ch3-ex3.10-q2-ii', /எண்ணற்ற தீர்வுகள்/, /Infinitely many solutions/],
   [9, 'g9-ch5-ex5.1-q3', /இணையான நேர்க்கோடு/, /Parallel to/],
   [9, 'g9-ch5-ex5.1-q4', /சதுரம்.*சரிவகம்/s, /Square.*Trapezium/s],
@@ -50,6 +51,10 @@ async function checkAnswer(page, expected, id) {
           await checkAnswer(page, english, id);
           await page.locator('#langTa').evaluate(button => button.click());
           await checkAnswer(page, tamil, id);
+          if (id === 'g9-ch3-ex3.5-q3-ii') {
+            const formula = page.locator('.final-answer-value .triggle-tex');
+            assert.equal(await formula.getAttribute('data-math-fallback'), '(5x − 2y − 3z)²');
+          }
         }
         if (!live && width === 390) {
           await page.evaluate(() => navigator.serviceWorker.ready);

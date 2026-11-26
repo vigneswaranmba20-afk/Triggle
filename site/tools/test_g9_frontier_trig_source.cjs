@@ -42,6 +42,11 @@ assert.equal(a*Math.abs(b),12);
 const card = cards.get(condition.id);
 assert.match(card.answer,/positive side lengths/);
 assert.match(card.answerTa,/நேர்மப் பக்க நீளங்களுக்கு/);
+for(const [lang,answer] of [['en',card.answer],['ta',card.answerTa]]){
+  const parts=card.answerMath[lang];
+  assert.equal(parts.map(part=>part.fallback??part).join(''),answer);
+  assert.equal(parts.find(part=>part.latex).latex,String.raw`b\sin\theta=a\cos\theta`);
+}
 assert.match(card.steps.at(-1).math.latex,/-\\dfrac\{12\}\{5\}\\neq\\dfrac\{12\}\{5\}/);
 const html = read('index.html'), sw = read('service-worker.js');
 assert(html.indexOf('g9-ch6-frontier-2025.js') < html.indexOf('g9-clear-math.js'));

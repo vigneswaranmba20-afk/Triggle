@@ -549,7 +549,10 @@ for(const [grade,data] of Object.entries(classes)){
    const algebra=require('../data/textbook-fidelity/g9-ch3-ex3-1-q10-q12-bilingual.json').records[item.id];
    if(trig2025){
     const historical={...item,...trig2025.originalReaderFields};
-    if(trig2025.disposition==='SOURCE_BLOCKED')delete historical.answerTa;
+    if(trig2025.disposition==='SOURCE_BLOCKED'){
+     delete historical.answerTa;
+     delete historical.answerMath;
+    }
     assert.equal(crypto.createHash('sha256').update(JSON.stringify(historical)).digest('hex'),preserved.sha256[item.id],'Preserve the pre-existing Trigonometry record '+item.id);
     assert.equal(item.page,trig2025.sourcePages.en.pdfPages[0]);
     assert.match(item.reference,/revised 2025/);

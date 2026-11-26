@@ -18,6 +18,16 @@
     }
   };
   const conditionId = 'c9-exercise-6-1-q6';
+  const equality = {
+    latex: String.raw`b\sin\theta=a\cos\theta`,
+    fallback: 'b sin θ = a cos θ',
+    display: false
+  };
+  const conditionalAnswer = {
+    en: ['For positive side lengths, ',equality,'. The printed equation alone does not ensure equality.'],
+    ta: ['நேர்மப் பக்க நீளங்களுக்கு ',equality,'. கொடுக்கப்பட்ட சமன்பாடு மட்டும் சமத்துவத்தை உறுதி செய்யாது.']
+  };
+  const answerText = parts => parts.map(part => part.fallback ?? part).join('');
   const counterexample = {
     en: 'The proof uses a and b as positive lengths. The printed equation also allows b to be negative if a and b are treated as signed numbers. Take a = 3 and b = −4. For the acute angle with sine 3/5, the cosine is 4/5, so the two products have opposite signs.',
     ta: 'நிறுவலில் a, b ஆகியவை நேர்ம நீளங்கள். a, b ஆகியவற்றைக் குறியுள்ள எண்களாக எடுத்தால், கொடுக்கப்பட்ட சமன்பாட்டில் b எதிர்மமாகவும் இருக்கலாம். a = 3, b = −4 என்க. சைன் 3/5 உள்ள குறுங்கோணத்தின் கொசைன் 4/5. எனவே இரு பெருக்கற்பலன்களும் எதிரெதிர்க் குறிகளைக் கொண்டவை.',
@@ -42,8 +52,9 @@
     const questionText = prompts[item.id];
     const worked = item.id === conditionId ? {
       steps: [...item.steps,counterexample],
-      answer: 'For positive side lengths, b sin θ = a cos θ. The printed equation alone does not ensure equality.',
-      answerTa: 'நேர்மப் பக்க நீளங்களுக்கு b sin θ = a cos θ. கொடுக்கப்பட்ட சமன்பாடு மட்டும் சமத்துவத்தை உறுதி செய்யாது.'
+      answer: answerText(conditionalAnswer.en),
+      answerTa: answerText(conditionalAnswer.ta),
+      answerMath: conditionalAnswer
     } : {};
     return {...item,...source,...(questionText ? {q:questionText} : {}),...worked};
   });

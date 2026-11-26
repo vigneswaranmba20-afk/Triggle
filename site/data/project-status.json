@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "repository": "vigneswaranmba20-afk/Triggle",
-  "sourceCommit": "6aaeb6dd106b0cc5d17c125ca372b8abfb14d5af",
-  "updatedAt": "2026-11-26T00:41:45Z",
+  "sourceCommit": "d50d24e7c5faee223c6de240a228e1e942f57632",
+  "updatedAt": "2026-11-26T00:59:06Z",
   "inputHashes": {
     "docs/curriculum/audit-2026-11-10.json": "5103e989721ce2b66e5fff4360cb3ca953acee0ca9f7b0aaef52cad5e27b1fa5",
     "docs/curriculum/grade-10/batches/g10-ch2-ex2-1.json": "55947bf1dcdeaf03a41405c57556b1fb3bed5f022c0626aeeceb23b2c324839d",
@@ -49,7 +49,7 @@
     "site/data/g10-relations-concepts.js": "ebf12612d7aaabff56a529b4866b707f69043abd8009c22350799162e74d04fa",
     "site/data/g9-algebra-chapter.js": "13b62ccfd65b6d0e48d1b2cb0e50dfd0220e5c0572e9a7a81a5cafd6749bbbb9",
     "site/data/g9-ch5-distance-concept.js": "a275ff38a7230ce3e3010cc2d2f66a0fe835435706e34a03094a6ce0e4b4ee12",
-    "site/data/g9-clear-math.js": "f914f6b532ad3e0ea22ec7167596cf72041954e2177f0a7adce463c517df3bbe",
+    "site/data/g9-clear-math.js": "60145639a2815f3471811cd5d561d7cf304df03dc9fe6e2347f6fc3819d25e69",
     "site/data/g9-coordinates-concepts.js": "3332cf001ed529d624f33e388ea6426ab5210daae394d0ab35370726e7a5a1ed",
     "site/data/g9-geometry-concepts.js": "d830ca80742ce4f9e78ced05e6db197b0169d5c33ec4c60c47d3b6b4f56a1e1f",
     "site/data/g9-mensuration-chapter.js": "6fd6136c6a2de67eacfc51c320ea1df0364612839a173707e6319128bc51cef9",
@@ -174,7 +174,7 @@
     "site/data/textbook-exercises/g9-ch3-ex3-15.js": "103f791659f43b556b7772d2b35569b57e5976a7d3b9356efa9dedd709c7992c",
     "site/data/textbook-exercises/g9-ch3-ex3-2-missing-en.js": "c73f2d49c4b3212d9958d1d5822f39eb4647b8be7c884c1d03212642ca503c73",
     "site/data/textbook-exercises/g9-ch3-ex3-2-q4-en.js": "289a7a17bc6bbc5095c20450e16b3771a3b59ca35b7844a5147c27f648fbab4a",
-    "site/data/textbook-exercises/g9-ch3-ex3-3-to-3-6.js": "0bf5eb5608e92367d4a261665b34867b79ea8c524cf9c35e168c400a65974e9b",
+    "site/data/textbook-exercises/g9-ch3-ex3-3-to-3-6.js": "ba036dc9b87953480fcd9eaa13aee78804cf26b2609311efaf440b7941258219",
     "site/data/textbook-exercises/g9-ch3-ex3-7-to-3-9.js": "5df6df5bb5f65c5145af2e9b8c8699e3a89b579b4ee0bba1239d0c61df810f9b",
     "site/data/textbook-exercises/g9-ch4-ex4-1-q2-q4-en.js": "fad449a3e47b1eb98ebd28873659173ceaf534182b4808a462d674d1573a6235",
     "site/data/textbook-exercises/g9-ch4-ex4-2-en.js": "ccac217d0f7fa94f7475e6adecfd0fe503d83ac716b3d8c8a6344d2a23e68797",
@@ -192,7 +192,7 @@
     "site/data/textbook-exercises/g9-ch5-ex5-5.js": "a2475361f8b47510d4616252836cb80b8774abf549e71674abfefce5326a956f",
     "site/data/textbook-exercises/g9-ch5-ex5-6.js": "d39a3a49de36cc01a9221ae6b356a16bc6f6ace9d4589e8678781b269dbbc83a",
     "site/data/textbook-exercises/g9-ch6-ex6-4-q2-q3-en.js": "a81b04243accc8755a5839a8e0adbf5e909cce35879652420eccf3387922d668",
-    "site/data/textbook-exercises/g9-ch6-frontier-2025.js": "a3a1f1aaf327a92ed7447c4e6165c30293fe9ea274856856f0166102c2aca6e4",
+    "site/data/textbook-exercises/g9-ch6-frontier-2025.js": "2209d6246a7521fd2d5ee811339acd4db7978cc31d2bc25e48d6b86dab0dc1b3",
     "site/data/textbook-exercises/g9-ch7-ex7-1-en.js": "1cf2a1ec1d40f676f136b5fcbb3453106ab56eae8521cbe9221cda8f38345647",
     "site/data/textbook-exercises/g9-ch7-ex7-2-en.js": "98257ddd4c6e8e373403d6fcf95bfbfbec10105978b61119efce05e7b02b56f1",
     "site/data/textbook-exercises/g9-ch7-ex7-3-en.js": "74e8370320e973b6e5e4393b9d69d83683b60f0cdb9b10071b1bbd87c36619c0",
@@ -4321,7 +4321,7 @@
                   "url": "../index.html?class=9&question=g9-ch3-ex3.5-q3-ii",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "e8cfa7d5e2079eef2fa71ac1eef0e7fbca418c8825ac88d393d5b03d975937ff",
+                  "recordSha256": "6efa737fb32117442017a684d802a9f72f5fac26ada3ea03e826738f54ce50d1",
                   "verified": false
                 },
                 {
@@ -8854,7 +8854,7 @@
                   "url": "../index.html?class=9&question=c9-exercise-6-1-q6",
                   "englishAvailable": true,
                   "tamilAvailable": true,
-                  "recordSha256": "34209541713a709cf5cd09c8c9b7ed45d6af483aeee93e60d9aea0dd7633e8ae",
+                  "recordSha256": "4aab67478e4c740792b3988a23728252a3060d523f34e1405a6f4f40f34cbca0",
                   "verified": false
                 },
                 {

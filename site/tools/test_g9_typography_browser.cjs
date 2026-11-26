@@ -11,6 +11,7 @@ const {applyFrontierGraphs}=require('./test_g9_frontier_graphs.cjs');
 const records=applyFrontierGraphs(applyStatisticsTables(applyReviewedAlgebra(applyReviewedRealNumbers(load())))),widths=[320,360,393,430],samples=new Map(records.map(q=>[q.chapter,q.id]));
 const normalize=s=>String(s??'').replace(/\s+/g,' ').trim();
 const plain=value=>Array.isArray(value)?value.map(plain).join(''):value?.fallback??value;
+const normalizeAnswer=value=>normalize(value).replace(/\[\[([^\[\]|]+)\|([^\[\]|]+)\]\]/g,'$1/$2');
 async function inspect(page,q,lang){
  const state=await page.evaluate(({q,lang})=>{
   const override=window.TriggleG9Ch5Overrides?.get(q.id)||null;
@@ -73,8 +74,10 @@ async function inspect(page,q,lang){
  const question=sourcePrompt?[sourcePrompt.before,sourcePrompt.after].map(plain).join(' '):refQ.q[lang]||refQ.q.en;
  assert.equal(normalize(state.question),normalize(question),label+' question wording');
  const reviewedAnswer=(refQ.chapter==='2'||sourcePrompt)&&refQ.answerMath?.[lang];
- assert.equal(normalize(state.answer),normalize(reviewedAnswer?plain(reviewedAnswer):
-  refQ.answer?.[lang]||(lang==='ta'&&(refQ.chapter==='5'||refQ.answerMath?.ta)?refQ.answerTa:null)||refQ.answer),label+' final answer');
+ const authoredAnswer=(lang==='ta'?refQ.answerTa:null)||refQ.answer?.[lang]||refQ.answer;
+ // Both the legacy fraction token and the localized slash fallback name
+ // the same fraction. The assertions below separately verify its rendering.
+ assert.equal(normalizeAnswer(state.answer),normalizeAnswer(reviewedAnswer?plain(reviewedAnswer):authoredAnswer),label+' final answer');
  assert.equal(state.steps.length,refQ.steps.length,label+' all steps retained');
  state.steps.forEach((s,i)=>{
   const step=refQ.steps[i];
