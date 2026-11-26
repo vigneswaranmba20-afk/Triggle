@@ -202,37 +202,42 @@ const entries=[
         }
       },
       {
-        en:"Substitute π = 22/7, r = 0.7 cm, and h = 2.4 cm to find the exact remaining volume.",
-        ta:"π = 22/7, r = 0.7 செ.மீ மற்றும் h = 2.4 செ.மீ எனப் பிரதியிட்டு மீதமுள்ள கனஅளவைக் காண்க.",
-        eq:"V_rem = (2/3)×(22/7)×0.7×0.7×2.4 = 2.464 cm³",
+        en:"Substitute the radius and height. Keep π for the exact volume, then use 22/7 as an approximation to π.",
+        ta:"ஆரத்தையும் உயரத்தையும் பிரதியிடுக. துல்லியமான கனஅளவில் π-ஐ வைத்துக்கொண்டு, தோராய மதிப்பைக் கணக்கிட π-க்கு 22/7 ஐப் பயன்படுத்துக.",
+        eq:"V_rem = (2/3)×π×0.7²×2.4 = (98π/125) cm³ ≈ 2.464 cm³",
         math:{
-          latex:"\\begin{aligned}V_{\\text{rem}}&=\\dfrac{2}{3}\\times\\dfrac{22}{7}\\times0.7\\times0.7\\times2.4\\\\&=2\\times22\\times0.1\\times0.7\\times0.8\\\\&=2.464\\,\\mathrm{cm}^3\\end{aligned}",
-          fallback:"V_rem = (2/3)×(22/7)×0.7×0.7×2.4 = 2.464 cm³",
+          latex:"\\begin{aligned}V_{\\text{rem}}&=\\dfrac{2}{3}\\pi(0.7)^2(2.4)\\,\\mathrm{cm}^3\\\\&=\\dfrac{98\\pi}{125}\\,\\mathrm{cm}^3\\\\&\\approx2.464\\,\\mathrm{cm}^3\\end{aligned}",
+          fallback:"V_rem = (2/3)×π×0.7²×2.4 = (98π/125) cm³ ≈ 2.464 cm³",
           display:true
         }
       },
       {
-        en:"Rounding 2.464 cm³ to two decimal places gives 2.46 cm³ (which matches both the English and Tamil 2025 textbook answer keys). Note: rounding literally to the nearest whole cm³ as phrased in the English question gives 2 cm³.",
-        ta:"2.464 கன செ.மீ-ஐ இரண்டு தசம இடங்களுக்கு முழுமையாக்கினால் 2.46 கன செ.மீ கிடைக்கும் (இது 2025 தமிழ் மற்றும் ஆங்கிலப் பாடநூல் விடைக்குறிப்புடன் பொருந்துகிறது). முழு எண் கன செ.மீ-க்கு முழுமையாக்கினால் 2 கன செ.மீ ஆகும்.",
-        eq:"2.464 cm³ ≈ 2.46 cm³ (nearest whole cm³: 2 cm³)",
+        en:"The English question asks for the nearest whole cubic centimetre. The volume is below 2.5 cm³, so it rounds to 2 cm³. Both textbook answer keys give 2.46 cm³, the value rounded to two decimal places. The Tamil question does not specify a rounding precision.",
+        ta:"தமிழ் வினாவில் எத்தனை தசம இடங்கள் வரை தோராயமாக்க வேண்டும் என்று குறிப்பிடப்படவில்லை. இரண்டு தசம இடங்களுக்குத் தோராயமாக்கினால் 2.46 கன செ.மீ கிடைக்கும். இரு பாடநூல் விடைக்குறிப்புகளிலும் இந்த மதிப்பே தரப்பட்டுள்ளது. ஆங்கில வினா அருகிலுள்ள முழு கன செ.மீ. அளவைக் கேட்பதால், அதற்கான விடை 2 கன செ.மீ.",
+        eq:"2 cm³ < 2.464 cm³ < 2.5 cm³",
         math:{
-          latex:"2.464\\,\\mathrm{cm}^3\\approx2.46\\,\\mathrm{cm}^3",
-          fallback:"2.464 cm³ ≈ 2.46 cm³",
+          latex:"2\\,\\mathrm{cm}^3<2.464\\,\\mathrm{cm}^3<2.5\\,\\mathrm{cm}^3",
+          fallback:"2 cm³ < 2.464 cm³ < 2.5 cm³",
+          display:true
+        },
+        mathTa:{
+          latex:"2.464\\,\\text{செ.மீ}^3\\approx2.46\\,\\text{செ.மீ}^3",
+          fallback:"2.464 கன செ.மீ ≈ 2.46 கன செ.மீ",
           display:true
         }
       }
     ],
-    answer:"2.46 cm³ (2025 textbook key; 2 cm³ if rounded to the nearest whole cm³).",
-    answerTa:"2.46 கன செ.மீ (முழு எண் கன செ.மீ-க்கு முழுமையாக்கினால் 2 கன செ.மீ).",
+    answer:"2 cm³",
+    answerTa:"சுமார் 2.46 கன செ.மீ",
     answerMath:{
       en:{
-        latex:"\\boxed{2.46\\,\\mathrm{cm}^3}",
-        fallback:"2.46 cm³",
+        latex:"\\boxed{2\\,\\mathrm{cm}^3}",
+        fallback:"2 cm³",
         display:true
       },
       ta:{
-        latex:"\\boxed{2.46\\text{ செ.மீ}^3}",
-        fallback:"2.46 கன செ.மீ",
+        latex:"\\boxed{\\approx2.46\\,\\text{செ.மீ}^3}",
+        fallback:"சுமார் 2.46 கன செ.மீ",
         display:true
       }
     }

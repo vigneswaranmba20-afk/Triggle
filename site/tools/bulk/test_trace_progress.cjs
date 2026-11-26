@@ -346,7 +346,14 @@ assert(ex73.questions.every(q=>q.tablesRequired===false));
 assert.deepEqual(ex73.questions.filter(q=>q.textbookFigure!==null).map(q=>q.textbookFigure),[
  'q4-cone-hemisphere-in-water-filled-cylinder','q6-hemisphere-on-cube'
 ]);
-assert(ex73.questions.every(q=>q.sourceDiscrepancy===null));
+assert.deepEqual(ex73.questions.filter(q=>q.sourceDiscrepancy!==null).map(q=>q.question),['3']);
+const ex73Rounding=ex73.questions.find(q=>q.question==='3');
+assert.match(ex73Rounding.sourceDiscrepancy,/English requests the nearest whole cubic centimetre/);
+assert.match(ex73Rounding.sourceDiscrepancy,/Tamil asks for the volume in cubic centimetres without specifying precision/);
+assert.match(ex73Rounding.sourceDiscrepancy,/Both answer keys give 2\.46 cm³/);
+assert.deepEqual(ex73Rounding.answerKeyLocators,{
+ en:{pdfPage:347,printedPage:341},ta:{pdfPage:362,printedPage:356},
+});
 assert.deepEqual(ex73.questions[0].numericalEvidenceBothMediums,[14,13]);
 assert.deepEqual(ex73.questions[1].numericalEvidenceBothMediums,[3,12,2]);
 assert.deepEqual(ex73.questions[2].numericalEvidenceBothMediums,[2.4,1.4]);
