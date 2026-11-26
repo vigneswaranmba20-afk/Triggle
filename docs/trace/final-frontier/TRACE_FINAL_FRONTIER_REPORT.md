@@ -1,6 +1,6 @@
 # TRACE Final Frontier
 
-**Mission in progress. Android release preparation is NO-GO.** The assembled candidate covers all 1,756 source-verifiable canonical tasks in both languages. The inventory accounts for 18 additional source-blocked tasks. The remaining curriculum releases and final production checks are in progress. The latest verified production revision is `9bb35b50b5c9e6f96f44fa386fe1ef79107affc6`. Grade 9 Set Language Exercises 1.3–1.7 added 56 cards representing 112 tasks, including 111 verified bilingual solutions and one unscored source ambiguity. [Live Triggle](https://vigneswaranmba20-afk.github.io/Triggle/site/)
+**Mission in progress. Android release preparation is NO-GO.** The assembled candidate covers all 1,756 source-verifiable canonical tasks in both languages. The inventory accounts for 18 additional source-blocked tasks. The remaining curriculum releases and final production checks are in progress. The latest verified production revision is `3edb4c5483152a9a6445bca9b71ed4e633685808`. Grade 9 Set Language Exercises 1.3–1.7 added 56 cards representing 112 tasks, including 111 verified bilingual solutions and one unscored source ambiguity. [Live Triggle](https://vigneswaranmba20-afk.github.io/Triggle/site/)
 
 - [Machine-readable inventory](TRACE_FINAL_FRONTIER_INVENTORY.json)
 - [One row per candidate canonical task](TRACE_FINAL_FRONTIER_INVENTORY.csv)
@@ -17,7 +17,7 @@ Fresh source extraction was checked against the reader, captured page images and
 | Grade | Exercise sections | Numbered questions | Canonical tasks | Registered records before → candidate | Missing eligible before → candidate | Partial before → candidate | Source blocked | Math evidence | Live verified |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | 9 | 60 | 482 | 843 | 690 → 746 | 111 → 0 | 46 → 0 | 7 | 836 | 200 |
-| 10 | 69 | 664 | 931 | 881 → 881 | 0 → 0 | 28 → 0 | 11 | 920 | 36 |
+| 10 | 69 | 664 | 931 | 881 → 881 | 0 → 0 | 28 → 0 | 11 | 920 | 39 |
 
 ## Chapter reconciliation
 
@@ -33,7 +33,7 @@ Fresh source extraction was checked against the reader, captured page images and
 | 9 | 8 | Statistics | 4 | 30 | 32 | 0 → 0 | 2 → 0 | 0 | 32 | 11 |
 | 9 | 9 | Probability | 3 | 25 | 31 | 0 → 0 | 0 → 0 | 0 | 31 | 0 |
 | 10 | 1 | Relations and Functions | 7 | 69 | 124 | 0 → 0 | 8 → 0 | 0 | 124 | 13 |
-| 10 | 2 | Numbers and Sequences | 11 | 115 | 161 | 0 → 0 | 8 → 0 | 1 | 160 | 9 |
+| 10 | 2 | Numbers and Sequences | 11 | 115 | 161 | 0 → 0 | 8 → 0 | 1 | 160 | 12 |
 | 10 | 3 | Algebra | 21 | 140 | 236 | 0 → 0 | 0 → 0 | 1 | 235 | 2 |
 | 10 | 4 | Geometry | 6 | 78 | 88 | 0 → 0 | 0 → 0 | 4 | 84 | 0 |
 | 10 | 5 | Coordinate Geometry | 6 | 75 | 97 | 0 → 0 | 4 → 0 | 1 | 96 | 4 |
@@ -46,7 +46,7 @@ Fresh source extraction was checked against the reader, captured page images and
 | Grade | Current catalogue cards | Eligible tasks | English reader before → current | Tamil reader before → current | Bilingual reader before → current | Current independently confirmed bilingual | Fully verified live |
 |---|---:|---:|---:|---:|---:|---:|---:|
 | 9 | 746 | 836 | 723 → 836 | 681 → 836 | 681 → 836 | 836 | 200 |
-| 10 | 863 | 920 | 920 → 920 | 901 → 920 | 901 → 920 | 920 | 36 |
+| 10 | 863 | 920 | 920 → 920 | 901 → 920 | 901 → 920 | 920 | 39 |
 
 The before-and-current reader counts measure visible question, solution and final-answer content on registered tasks. Independently confirmed bilingual completion also requires matching source and mathematical evidence. The JSON and CSV preserve the evidence at task level.
 
@@ -92,7 +92,7 @@ The before-and-current reader counts measure visible question, solution and fina
 - **Grade 9 Coordinate Geometry plotting order** · `LIVE_VERIFIED`. Both editions require joining Exercise 5.1 Q4(ii) in order and key a trapezium. The printed order crosses at (−1/2, 7/4). Three equal-scale coordinate panels show part (i), the crossing and the keyed perimeter. Both languages, all four mobile widths and offline progress passed. Revision `801c7af389821789fa9052f2d76878372dbab629`. [PR #456](https://github.com/vigneswaranmba20-afk/Triggle/pull/456) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45735899574) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45746125418/job/139669738268) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=g9-ch5-ex5.1-q4)
 - **Grade 9 Trigonometry source and identity** · `LIVE_VERIFIED`. Refreshes the 2025 bilingual source locators for Exercises 6.1–6.3 and the classic student reader. Exercise 6.1 Q6 shows the intended positive-length proof, a signed counterexample and the resulting equation in KaTeX in both languages. Independent verification separates the four-figure table results from scientific-calculator evaluation. Revision `cda62abf063382d7cfc3c8762fe69d0a08132ad6`. [PR #457](https://github.com/vigneswaranmba20-afk/Triggle/pull/457) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45735926507) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45748490478/job/139678910157) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=9&question=c9-exercise-6-1-q6)
 - **Grade 10 fourth-year salaries** · `LIVE_VERIFIED`. Restores the printed Sivamani prompts and performs the exact three raises. The nearest-paise offers are ₹23,820.32 and ₹24,039.99. Both answer keys use the whole-rupee values ₹23,820 and ₹24,040. Exact arithmetic, all four mobile widths and saved offline progress passed. Revision `9bb35b50b5c9e6f96f44fa386fe1ef79107affc6`. [PR #458](https://github.com/vigneswaranmba20-afk/Triggle/pull/458) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45735946793) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45751287304/job/139688137783) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-ex2-7-q11)
-- **Grade 10 capacity and exercise registration** · `MERGED`. Restores the maximum-capacity wording in Tamil and solves the English equal-capacity case in full. The possible capacities are 35/k litres for positive integers k. Exercise 2.7 keeps the complete grouped Q2 indexed and preserves the existing Q2(ii) bookmark and its progress. Revision `3edb4c5483152a9a6445bca9b71ed4e633685808`. [PR #459](https://github.com/vigneswaranmba20-afk/Triggle/pull/459) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45735971159) · [Pages run](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45754198130)
+- **Grade 10 capacity and exercise registration** · `LIVE_VERIFIED`. Restores the maximum-capacity wording in Tamil and solves the English equal-capacity case in full. The possible capacities are 35/k litres for positive integers k. Exercise 2.7 keeps the complete grouped Q2 indexed and preserves the existing Q2(ii) bookmark and its progress. Revision `3edb4c5483152a9a6445bca9b71ed4e633685808`. [PR #459](https://github.com/vigneswaranmba20-afk/Triggle/pull/459) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45735971159) · [Pages publish](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45754198130/job/139696203821) · [Live exercise](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-2-unit-q2-i)
 - **Grade 9 and 10 geometry figure descriptions** · `TESTED`. Adds precise English and Tamil descriptions and captions to three Grade 9 constructions and three Grade 10 diagrams. Two Tamil-labelled SVGs use the same plotted shapes as the English versions. Moves Grade 10 Unit Exercise 6 Q7 label B clear of its bearing guide line. The 23 Trigonometry SVGs passed the label bounds and line-intersection checks. Revision `1fd2b28e98788e73b1f194c1fb9d3dbae56dc842`. [PR #460](https://github.com/vigneswaranmba20-afk/Triggle/pull/460) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45740805117)
 - **Grade 9 and 10 bilingual starting hints and worked notation** · `TESTED`. Shows a separate Hint on all 1,609 catalogue cards in both languages. Each card retains its own bilingual hint when available. The 129 exercise sections each have starting guidance that covers cards without an authored hint. The same release localizes Tamil words in worked equations and their accessible readings. Four-width and offline checks passed. Revision `cfdaa09d2d8214b12e9e24f15ff49b7a87fc59ee`. [PR #461](https://github.com/vigneswaranmba20-afk/Triggle/pull/461) · [Hosted checks](https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45740811075)
 
