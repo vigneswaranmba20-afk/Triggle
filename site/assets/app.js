@@ -69,6 +69,11 @@
   const alignCoefficientPowers=grade===10&&String(selectedChapter()?.number)==='2';
   return window.TriggleNotation ? window.TriggleNotation.render(str,{alignCoefficientPowers}) : esc(grade===9?plainMath(str):str);
  }
+ function workedMath(value){
+  const localized=lang==='ta'&&current.kind!=='practice'
+    ? window.TriggleTamilFormulaLabels?.translate(value)??value : value;
+  return math(localized);
+ }
 
  const textbookParts='i ii iii iv v vi vii viii ix x xi xii xiii xiv xv xvi xvii xviii xix xx'.split(' ');
  const textbookPosition=item=>{
@@ -457,7 +462,7 @@
   const equation=document.createElement('div');equation.className='step-equation';
   const fragments=String(s.eq||'').split(/\s+;\s+/);
   const stepMath=lang==='ta'&&s.mathTa?s.mathTa:s.math;
-  if(stepMath){equation.classList.add('structured-equation');equation.innerHTML=math(stepMath);}
+  if(stepMath){equation.classList.add('structured-equation');equation.innerHTML=workedMath(stepMath);}
   else if(fragments.length>1&&fragments.length<=8){equation.classList.add('step-equation-group');equation.innerHTML=fragments.map(x=>'<span class="math-part">'+math(x)+'</span>').join('');}
   else equation.innerHTML=math(s.eq);
   body.append(reason,equation);li.append(number,body);return li;
@@ -516,11 +521,13 @@
   const grade9Answer=grade9Presentation(current)?.answerMath;
   const possibleAnswerMath=(grade===9&&current.answerMath?.[lang])||
     (grade9Answer?.[lang]||grade9Answer?.en||grade9Answer)||current.answerMath||window.TriggleChapter1Math?.getAnswer?.(current)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getAnswer?.(current))||window.TriggleG10Ch2FractionMath?.getAnswer?.(current);
-  const answerMath=possibleAnswerMath?.[lang]||possibleAnswerMath?.en||possibleAnswerMath;
+  const selectedAnswerMath=possibleAnswerMath?.[lang]||possibleAnswerMath?.en||possibleAnswerMath;
+  const answerMath=lang==='ta'&&typeof current.answer?.ta==='string'&&selectedAnswerMath?.fallback===current.answer.en
+    ? {...selectedAnswerMath,fallback:localizedAnswer} : selectedAnswerMath;
   const canGrid=!answerMath&&parts.length>1&&parts.length<=8&&parts.every(v=>v.length<60);
   $('answerText').classList.toggle('answer-grid',canGrid);
   $('answerText').classList.toggle('answer-grid-many',canGrid&&parts.length>=4);
-  $('answerText').innerHTML=answerMath?math(answerMath):(canGrid?parts.map(v=>'<span class="answer-part">'+math(v)+'</span>').join(''):math(localizedAnswer));
+  $('answerText').innerHTML=answerMath?workedMath(answerMath):(canGrid?parts.map(v=>'<span class="answer-part">'+math(v)+'</span>').join(''):math(localizedAnswer));
   appendFinalStep(ul);
   $('stepCount').textContent=lang==='ta'?all.length+' படிகள்':all.length+' steps';
   $('lessonCard').classList.toggle('many-steps',all.length>3);
