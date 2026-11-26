@@ -1196,6 +1196,7 @@ window.TRIGGLE_G10_CH4_PATH={
         "en": "Directly prepares Exercise 4.3 (Pythagoras applications, including Q6 ladder-slide) and supports right-triangle tangent and altitude lengths in Exercises 4.2 & 4.4.",
         "ta": "பயிற்சி 4.3 கணக்குகளுக்கும் (குறிப்பாக வினா 6 ஏணி கணக்கு), பயிற்சி 4.2, 4.4-இல் வரும் செங்கோணத் தொடர்புகளுக்கும் இது நேரடியாக உதவுகிறது."
       },
+      "practiceId": "c10-4-ex4-3-q6",
       "relatedExercise": "4.3"
     },
     {
@@ -1317,6 +1318,8 @@ window.TRIGGLE_G10_CH4_PATH={
         "en": "Prepares Exercise 4.4 (tangents, touching circles, alternate segment calculations & constructions) and directly explains why QO ⟂ QX creates the constant-angle arc in Exercise 4.2 Q11–Q16.",
         "ta": "பயிற்சி 4.4-இன் தொடுகோடு கணக்குகளுக்கும், பயிற்சி 4.2 வினா 11–16-இல் உள்ள சுற்றுவட்ட வரைபடத்திற்கும் இத்தேற்றமே காரணம்."
       },
+      "practiceId": "c10-4-ex4-4-q1",
+      "secondaryPracticeId": "c10-4-ex4-4-q11",
       "relatedExercise": "4.4"
     },
     {
@@ -1430,6 +1433,8 @@ window.TRIGGLE_G10_CH4_PATH={
         "en": "Completes the Grade 10 Geometry theorem sequence—preparing concurrency and collinearity problems in Exercise 4.4 and Unit Exercise 4.",
         "ta": "பயிற்சி 4.4 மற்றும் அலகுப் பயிற்சி 4-இல் உள்ள ஒருங்கிசைவு மற்றும் நேர்க்கோட்டமைவுக் கணக்குகளைத் தீர்க்க இது உதவுகிறது."
       },
+      "practiceId": "c10-4-ex4-4-q9",
+      "secondaryPracticeId": "c10-4-unit-q3",
       "relatedExercise": "4.4 & Unit Exercise 4"
     }
   ]
