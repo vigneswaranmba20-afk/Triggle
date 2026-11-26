@@ -4,6 +4,7 @@ import sympy as sp
 
 from mathguard.adapters.algebra_adapter import AlgebraAdapter
 from mathguard.adapters.base import verify_tamil_math_parity
+from mathguard.adapters.mensuration_adapter import MensurationAdapter
 from mathguard.adapters.sets_relations_adapter import SetsRelationsFunctionsAdapter
 from mathguard.parser import parse_expression
 from mathguard.reasoning_engine import verify_complete_working
@@ -86,3 +87,96 @@ def test_exact_numbers_units_and_rounding():
     assert not are_unit_converted_equivalent("1 m²", 1, "100 cm²", 100)
     assert check_numeric_match(sp.Rational(2, 3), 0.667, tolerance=0.0005).matched
     assert not check_numeric_match(sp.Rational(2, 3), 0.666, tolerance=0.0005).matched
+
+
+def test_working_cannot_replace_question_roster():
+    record = item("Given A = {2,5}, B = {11}, find A ∪ B.",
+                  ["A = {2,13}", "A ∪ B = {2,11,13}"], "{2,5,11}")
+    observed = SetsRelationsFunctionsAdapter(9, "1").verify_item(record)
+    assert observed["working_status"] == "FAIL", observed
+
+
+def test_nonnegative_venn_feasibility_precedes_any_answer():
+    from mathguard.venn_reasoner import VennDiagramReasoner
+
+    venn = VennDiagramReasoner(("A", "B"))
+    # A two-member subset cannot fit in a one-member universe.
+    venn.add_constraint("A", 2)
+    venn.add_constraint("B", 2)
+    venn.add_constraint("U", 1)
+    assert venn.solve(["A"]).status in {"INCONSISTENT", "INVALID_POPULATION"}
+
+
+def symbolic_fn(expr, domain="R", codomain="R"):
+    from mathguard.function_reasoner import SymbolicFunction
+    from mathguard.set_types import STANDARD_INFINITE_SETS
+
+    x = sp.Symbol("x", real=True)
+    return SymbolicFunction(x, expr(x), STANDARD_INFINITE_SETS[domain], STANDARD_INFINITE_SETS[codomain])
+
+
+def test_composition_preserves_removed_pole_of_inner_function():
+    f = symbolic_fn(lambda x: (x - 1) / (x + 1))
+    combined, _ = f.compose(f)
+    # Simplified algebra gives -1/x, but the first f is undefined at -1.
+    assert not combined.evaluate(-1)[0]
+    assert not combined.evaluate(0)[0]
+    assert combined.evaluate(2)[:2] == (True, sp.Rational(-1, 2))
+
+
+def test_composition_preserves_outer_natural_domain():
+    outer = symbolic_fn(lambda x: x + 1, domain="N")
+    inner = symbolic_fn(lambda x: x / 2)
+    combined, _ = outer.compose(inner)
+    assert not combined.evaluate(1)[0]  # g(1)=1/2 is not natural.
+    assert combined.evaluate(4)[:2] == (True, 3)
+
+
+def test_equal_composition_formulas_can_have_different_domains():
+    from mathguard.function_reasoner import ExtendedFunctionRegistry
+
+    registry = ExtendedFunctionRegistry()
+    registry.register_mapping("f", symbolic_fn(lambda x: (x - 1) / (x + 1)))
+    registry.register_mapping("g", symbolic_fn(lambda x: (1 + x) / (1 - x)))
+    # Both reduce to x. At 1, g(f(1)) is defined while f(g(1)) is not.
+    assert registry.verify_commutativity("f", "g") is False
+
+
+def test_radical_without_restricted_domain_is_not_total():
+    root = symbolic_fn(sp.sqrt)
+    assert root.classify().is_function is False  # sqrt(-1) is not real.
+
+
+def test_affine_integer_domain_cannot_be_onto_the_reals():
+    linear = symbolic_fn(lambda x: 2 * x, domain="Z")
+    result = linear.classify()
+    assert result.is_function is True
+    assert result.is_one_to_one is True
+    assert result.is_onto is False  # The real value 1 has no integer preimage.
+
+
+def test_even_degree_does_not_force_integer_collision():
+    parabola = symbolic_fn(lambda x: 2 * x ** 2 + x, domain="Z", codomain="Z")
+    # f(a)=f(b) forces a=b or 2(a+b)=-1, impossible for integers.
+    assert parabola.classify().is_one_to_one is True
+
+
+def test_evaluation_rejects_output_outside_declared_codomain():
+    linear = symbolic_fn(lambda x: x - 2, domain="N", codomain="N")
+    assert not linear.evaluate(1)[0]
+
+
+@pytest.mark.parametrize(("answer", "expected"), [
+    ("Radius = 35 cm; height = 25 cm", "FAIL"),
+    ("Radius = −25 cm; height = 35 cm", "FAIL"),
+    ("Radius = 25 m; height = 35 m", "FAIL"),
+    ("h = 0.35 m; r = 250 mm", "PASS"),
+    ("Radius = 25 cm; height = 35 cm", "PASS"),
+])
+def test_cylinder_answers_bind_each_measure_to_its_label_and_unit(answer, expected):
+    question = "The radius and height of a cylinder are in the ratio 5:7 and its curved surface area is 5500 sq.cm. Find its radius and height."
+    record = item(question, [], answer)
+    record["id"] = "c10-7-ex7-1-q1"
+    # 2 × (22/7) × (5k) × (7k) = 220k² = 5500, so k=5.
+    assert 2 * sp.Rational(22, 7) * 25 * 35 == 5500
+    assert MensurationAdapter(10, "7").verify_item(record)["answer_status"] == expected

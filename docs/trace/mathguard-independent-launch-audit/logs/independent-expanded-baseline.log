@@ -1,0 +1,159 @@
+.F..FFFF..FF.F...FFFFFFFFFFFFF.                                          [100%]
+=================================== FAILURES ===================================
+__________ test_finite_union_from_question[equations1-{2,5,13}-FAIL] ___________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:39: in test_finite_union_from_question
+    assert result["answer_status"] == expected, result
+E   AssertionError: {'id': 'independent-no-fingerprint', 'grade': 9, 'chapter': '1', 'domain': 'sets_and_relations', ...}
+E   assert 'PASS' == 'FAIL'
+E     
+E     - FAIL
+E     + PASS
+_ test_unanchored_answer_never_passes[Find the value of 17 + 34.-equations0-52] _
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:53: in test_unanchored_answer_never_passes
+    assert result["answer_status"] in {"FAIL", "UNVERIFIABLE"}, result
+E   AssertionError: {'id': 'independent-no-fingerprint', 'grade': 9, 'chapter': '3', 'domain': 'algebra', ...}
+E   assert 'PASS' in {'FAIL', 'UNVERIFIABLE'}
+______ test_unanchored_answer_never_passes[Evaluate 99 - 7.-equations1-5] ______
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:53: in test_unanchored_answer_never_passes
+    assert result["answer_status"] in {"FAIL", "UNVERIFIABLE"}, result
+E   AssertionError: {'id': 'independent-no-fingerprint', 'grade': 9, 'chapter': '3', 'domain': 'algebra', ...}
+E   assert 'PASS' in {'FAIL', 'UNVERIFIABLE'}
+_ test_unanchored_answer_never_passes[Find 17 + 34 in exact form.-equations2-51.01] _
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:53: in test_unanchored_answer_never_passes
+    assert result["answer_status"] in {"FAIL", "UNVERIFIABLE"}, result
+E   AssertionError: {'id': 'independent-no-fingerprint', 'grade': 9, 'chapter': '3', 'domain': 'algebra', ...}
+E   assert 'PASS' in {'FAIL', 'UNVERIFIABLE'}
+______________ test_missing_tamil_question_and_work_never_passes _______________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:58: in test_missing_tamil_question_and_work_never_passes
+    assert verify_tamil_math_parity(record).status in {"PARTIAL", "UNVERIFIABLE"}
+E   AssertionError: assert 'PASS' in {'PARTIAL', 'UNVERIFIABLE'}
+E    +  where 'PASS' = TamilParityResult(status='PASS', has_tamil_question=False, has_tamil_steps=False, has_tamil_answer=True, flags=[], mismatched_numbers=[]).status
+E    +    where TamilParityResult(status='PASS', has_tamil_question=False, has_tamil_steps=False, has_tamil_answer=True, flags=[], mismatched_numbers=[]) = verify_tamil_math_parity({'id': 'independent-no-fingerprint', 'q': {'en': 'Evaluate 23 + 9.'}, 'steps': [{'eq': '23 + 9 = 32'}], 'answer': {'en': '32', 'ta': '32'}})
+____ test_working_independent_cases[(x^2 - 1)/(x - 1) = x + 1-UNVERIFIABLE] ____
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:79: in test_working_independent_cases
+    assert result.status in {"FAIL", "PARTIAL", "UNVERIFIABLE"}, result.failed_details
+E   AssertionError: []
+E   assert 'PASS' in {'FAIL', 'PARTIAL', 'UNVERIFIABLE'}
+E    +  where 'PASS' = WorkingAuditResult(status='PASS', total_claims=1, verified_claims=1, failed_claims=0, unsupported_claims=0, assumption..._or_theorem='', transformation='', uncertainty='')], context_provenance=[]), failed_details=[], unsupported_details=[]).status
+______________ test_working_independent_cases[sqrt(x^2) = x-FAIL] ______________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:81: in test_working_independent_cases
+    assert result.status == expected, result.failed_details
+E   AssertionError: []
+E   assert 'PASS' == 'FAIL'
+E     
+E     - FAIL
+E     + PASS
+_______________ test_working_independent_cases[5 kg = 5 m-FAIL] ________________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:81: in test_working_independent_cases
+    assert result.status == expected, result.failed_details
+E   AssertionError: []
+E   assert 'PASS' == 'FAIL'
+E     
+E     - FAIL
+E     + PASS
+_________________ test_working_cannot_replace_question_roster __________________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:96: in test_working_cannot_replace_question_roster
+    assert observed["working_status"] == "FAIL", observed
+E   AssertionError: {'id': 'independent-no-fingerprint', 'grade': 9, 'chapter': '1', 'domain': 'sets_and_relations', ...}
+E   assert 'PASS' == 'FAIL'
+E     
+E     - FAIL
+E     + PASS
+____________ test_nonnegative_venn_feasibility_precedes_any_answer _____________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:107: in test_nonnegative_venn_feasibility_precedes_any_answer
+    assert venn.solve(["A"]).status in {"INCONSISTENT", "INVALID_POPULATION"}
+E   AssertionError: assert 'SOLVED' in {'INCONSISTENT', 'INVALID_POPULATION'}
+E    +  where 'SOLVED' = VennSolveResult(status='SOLVED', num_sets=2, regions={'A_only': None, 'AB': None, 'B_only': None, 'outside': None}, de...uantities={'A': 2}, free_variables=['outside'], reason='Target expressions uniquely determined despite free region(s)').status
+E    +    where VennSolveResult(status='SOLVED', num_sets=2, regions={'A_only': None, 'AB': None, 'B_only': None, 'outside': None}, de...uantities={'A': 2}, free_variables=['outside'], reason='Target expressions uniquely determined despite free region(s)') = solve(['A'])
+E    +      where solve = <mathguard.venn_reasoner.VennDiagramReasoner object at 0x7f9df9b334d0>.solve
+__________ test_composition_preserves_removed_pole_of_inner_function ___________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:122: in test_composition_preserves_removed_pole_of_inner_function
+    assert not combined.evaluate(-1)[0]
+E   assert not True
+_______________ test_composition_preserves_outer_natural_domain ________________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:131: in test_composition_preserves_outer_natural_domain
+    assert not combined.evaluate(1)[0]  # g(1)=1/2 is not natural.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   assert not True
+__________ test_equal_composition_formulas_can_have_different_domains __________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:142: in test_equal_composition_formulas_can_have_different_domains
+    assert registry.verify_commutativity("f", "g") is False
+E   AssertionError: assert True is False
+E    +  where True = verify_commutativity('f', 'g')
+E    +    where verify_commutativity = <mathguard.function_reasoner.ExtendedFunctionRegistry object at 0x7f9df9867950>.verify_commutativity
+_____________ test_radical_without_restricted_domain_is_not_total ______________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:147: in test_radical_without_restricted_domain_is_not_total
+    assert root.classify().is_function is False  # sqrt(-1) is not real.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: assert True is False
+E    +  where True = FunctionClassification(is_function=True, is_one_to_one=None, is_many_to_one=None, is_onto=None, is_into=None, is_bijective=None, is_constant=None, is_identity=False, actual_range=None, reason='Partial symbolic classification').is_function
+E    +    where FunctionClassification(is_function=True, is_one_to_one=None, is_many_to_one=None, is_onto=None, is_into=None, is_bijective=None, is_constant=None, is_identity=False, actual_range=None, reason='Partial symbolic classification') = classify()
+E    +      where classify = <mathguard.function_reasoner.SymbolicFunction object at 0x7f9df9864680>.classify
+_____________ test_affine_integer_domain_cannot_be_onto_the_reals ______________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:155: in test_affine_integer_domain_cannot_be_onto_the_reals
+    assert result.is_onto is False  # The real value 1 has no integer preimage.
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   AssertionError: assert True is False
+E    +  where True = FunctionClassification(is_function=True, is_one_to_one=True, is_many_to_one=False, is_onto=True, is_into=False, is_bijective=True, is_constant=False, is_identity=False, actual_range=None, reason='Exact symbolic classification').is_onto
+______________ test_even_degree_does_not_force_integer_collision _______________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:161: in test_even_degree_does_not_force_integer_collision
+    assert parabola.classify().is_one_to_one is True
+E   AssertionError: assert False is True
+E    +  where False = FunctionClassification(is_function=True, is_one_to_one=False, is_many_to_one=True, is_onto=False, is_into=True, is_bijective=False, is_constant=False, is_identity=False, actual_range=None, reason='Exact symbolic classification').is_one_to_one
+E    +    where FunctionClassification(is_function=True, is_one_to_one=False, is_many_to_one=True, is_onto=False, is_into=True, is_bijective=False, is_constant=False, is_identity=False, actual_range=None, reason='Exact symbolic classification') = classify()
+E    +      where classify = <mathguard.function_reasoner.SymbolicFunction object at 0x7f9df9867d40>.classify
+___________ test_evaluation_rejects_output_outside_declared_codomain ___________
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:166: in test_evaluation_rejects_output_outside_declared_codomain
+    assert not linear.evaluate(1)[0]
+E   assert not True
+_ test_cylinder_answers_bind_each_measure_to_its_label_and_unit[Radius = 35 cm; height = 25 cm-FAIL] _
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:182: in test_cylinder_answers_bind_each_measure_to_its_label_and_unit
+    assert MensurationAdapter(10, "7").verify_item(record)["answer_status"] == expected
+E   AssertionError: assert 'PASS' == 'FAIL'
+E     
+E     - FAIL
+E     + PASS
+_ test_cylinder_answers_bind_each_measure_to_its_label_and_unit[Radius = \u221225 cm; height = 35 cm-FAIL] _
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:182: in test_cylinder_answers_bind_each_measure_to_its_label_and_unit
+    assert MensurationAdapter(10, "7").verify_item(record)["answer_status"] == expected
+E   AssertionError: assert 'PASS' == 'FAIL'
+E     
+E     - FAIL
+E     + PASS
+_ test_cylinder_answers_bind_each_measure_to_its_label_and_unit[Radius = 25 m; height = 35 m-FAIL] _
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:182: in test_cylinder_answers_bind_each_measure_to_its_label_and_unit
+    assert MensurationAdapter(10, "7").verify_item(record)["answer_status"] == expected
+E   AssertionError: assert 'PASS' == 'FAIL'
+E     
+E     - FAIL
+E     + PASS
+_ test_cylinder_answers_bind_each_measure_to_its_label_and_unit[h = 0.35 m; r = 250 mm-PASS] _
+docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py:182: in test_cylinder_answers_bind_each_measure_to_its_label_and_unit
+    assert MensurationAdapter(10, "7").verify_item(record)["answer_status"] == expected
+E   AssertionError: assert 'FAIL' == 'PASS'
+E     
+E     - PASS
+E     + FAIL
+=========================== short test summary info ============================
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_finite_union_from_question[equations1-{2,5,13}-FAIL]
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_unanchored_answer_never_passes[Find the value of 17 + 34.-equations0-52]
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_unanchored_answer_never_passes[Evaluate 99 - 7.-equations1-5]
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_unanchored_answer_never_passes[Find 17 + 34 in exact form.-equations2-51.01]
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_missing_tamil_question_and_work_never_passes
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_working_independent_cases[(x^2 - 1)/(x - 1) = x + 1-UNVERIFIABLE]
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_working_independent_cases[sqrt(x^2) = x-FAIL]
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_working_independent_cases[5 kg = 5 m-FAIL]
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_working_cannot_replace_question_roster
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_nonnegative_venn_feasibility_precedes_any_answer
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_composition_preserves_removed_pole_of_inner_function
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_composition_preserves_outer_natural_domain
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_equal_composition_formulas_can_have_different_domains
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_radical_without_restricted_domain_is_not_total
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_affine_integer_domain_cannot_be_onto_the_reals
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_even_degree_does_not_force_integer_collision
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_evaluation_rejects_output_outside_declared_codomain
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_cylinder_answers_bind_each_measure_to_its_label_and_unit[Radius = 35 cm; height = 25 cm-FAIL]
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_cylinder_answers_bind_each_measure_to_its_label_and_unit[Radius = \u221225 cm; height = 35 cm-FAIL]
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_cylinder_answers_bind_each_measure_to_its_label_and_unit[Radius = 25 m; height = 35 m-FAIL]
+FAILED docs/trace/mathguard-independent-launch-audit/test_engine_soundness.py::test_cylinder_answers_bind_each_measure_to_its_label_and_unit[h = 0.35 m; r = 250 mm-PASS]
+21 failed, 10 passed in 0.77s

@@ -11,6 +11,13 @@ from pathlib import Path
 
 import sympy as sp
 
+from algebra_oracles import check_algebra
+from geometry_oracles import check_geometry
+from number_oracles import check_number
+from set_oracles import check_sets
+from statistics_oracles import check_statistics
+from trig_oracles import check_trigonometry
+
 ROOT = Path(__file__).resolve().parent
 LEDGER = ROOT.parent / "final-frontier/TRACE_FINAL_FRONTIER_INVENTORY.json"
 NUMBER = r"[+-]?(?:\d+\.\d+|\d+)(?:\s*/\s*\d+)?"
@@ -23,24 +30,27 @@ def language(value, lang):
     return str(value.get(lang) or "") if isinstance(value, dict) else (str(value or "") if lang == "en" else "")
 
 
-def exact(node, source):
+def exact(node, source, constants):
     if isinstance(node, ast.Constant) and type(node.value) in {int, float}:
         return sp.Rational(ast.get_source_segment(source, node))
     if isinstance(node, ast.UnaryOp) and isinstance(node.op, (ast.UAdd, ast.USub)):
-        value = exact(node.operand, source)
+        value = exact(node.operand, source, constants)
         return -value if isinstance(node.op, ast.USub) else value
     if isinstance(node, ast.Name):
+        if node.id in constants:
+            return constants[node.id]
         if node.id == "pi":
             return sp.pi
         if len(node.id) == 1 and node.id.isascii():
             return sp.Symbol(node.id, real=True)
     if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and not node.keywords and len(node.args) == 1:
-        if node.func.id == "sqrt":
-            value = exact(node.args[0], source)
-            if value.is_nonnegative:
-                return sp.sqrt(value)
+        value = exact(node.args[0], source, constants)
+        if node.func.id == "sqrt" and value.is_nonnegative:
+            return sp.sqrt(value)
+        if node.func.id == "cbrt" and value.is_real and not value.free_symbols:
+            return sp.real_root(value, 3)
     if isinstance(node, ast.BinOp):
-        left, right = exact(node.left, source), exact(node.right, source)
+        left, right = exact(node.left, source, constants), exact(node.right, source, constants)
         if isinstance(node.op, ast.Add):
             return left + right
         if isinstance(node.op, ast.Sub):
@@ -49,27 +59,42 @@ def exact(node, source):
             return left * right
         if isinstance(node.op, ast.Div) and right.is_nonzero and not right.free_symbols:
             return left / right
-        if isinstance(node.op, ast.Pow) and right.is_integer and abs(right) <= 10:
-            if right >= 0 or (left.is_nonzero and not left.free_symbols):
+        if isinstance(node.op, ast.Pow):
+            if right.is_integer and 0 <= right <= 10 and left.free_symbols:
+                return left ** right
+            if (right.is_Rational and abs(right) <= 100 and not left.free_symbols and
+                    len(str(left)) < 120 and (left.is_positive or (right.is_integer and left != 0) or right > 0 and left == 0)):
                 return left ** right
     raise ValueError("outside exact arithmetic and polynomial grammar")
 
 
 @lru_cache(maxsize=16384)
-def expression(value):
+def expression(value, constants=()):
     text = value.translate(MINUS).strip()
-    if not text or len(text) > 160 or not re.fullmatch(r"[0-9A-Za-z√⁰¹²³⁴⁵⁶⁷⁸⁹⁻+*/^().\[\]|\s-]+", text):
+    if not text or len(text) > 160 or not re.fullmatch(r"[0-9A-Za-z√∛⁰¹²³⁴⁵⁶⁷⁸⁹⁻+*/^().\[\]|\s-]+", text):
         return None
     text = re.sub(r"\[\[([^\[\]|]+)\|([^\[\]|]+)\]\]", r"((\1)/(\2))", text)
     text = re.sub(r"[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+", lambda m: "**(" + m[0].translate(SUPERSCRIPTS) + ")", text)
-    text = re.sub(r"√\s*(\d+(?:\.\d+)?)", r"sqrt(\1)", text).replace("√", "sqrt").replace("^", "**")
+    text = text.replace("[", "(").replace("]", ")")
+    for sign, name in (("√", "sqrt"), ("∛", "cbrt")):
+        text = re.sub(sign + r"\s*(\d+(?:\.\d+)?)", name + r"(\1)", text)
+        text = text.replace(sign, name)
+    text = text.replace("^", "**")
     if re.search(r"\d+\.\d+\(\d+\)", text):
         return None  # Recurring decimal, rather than implicit multiplication.
-    text = re.sub(r"(?<=[\d)])(?=(?:[a-zA-Z]|\())", "*", text)
+    text = re.sub(r"(?<=[\d)])\s*(?=(?:[a-zA-Z]|\())", "*", text)
     try:
-        return exact(ast.parse(text, mode="eval").body, text)
+        return exact(ast.parse(text, mode="eval").body, text, dict(constants))
     except (SyntaxError, ValueError, TypeError, ZeroDivisionError, RecursionError):
         return None
+
+
+def polynomial_expression(text):
+    text = re.sub(r"π\s*(?=[a-z(])", "π*", text)
+    text = re.sub(r"[a-z]{2,}", lambda m: "*".join(m[0]) if
+                  2 <= len(m[0]) <= 4 and all(c in "abcdklmnpqrstuvwxyz" for c in m[0]) else m[0], text)
+    text = re.sub(r"(?<=[abcdklmnpqrstuvwxyz])\s*(?=\()", "*", text)
+    return expression(text)
 
 
 def equal(left, right):
@@ -230,11 +255,35 @@ def audit(runtime, output, manual_path):
     manual = json.loads(manual_path.read_text()) if manual_path.exists() else {}
     rows, suspects, mapped, seen = [], {}, set(), set()
     inspected = {}
+    part_inspections = {}
+    card_chapters = {item["id"]: chapter["chapter"] for chapter in runtime["chapters"] for item in chapter["items"]}
     for record_id, record in records.items():
         checked, candidates = working_evidence(record)
-        method, expected = expected_numeric(language(record.get("q"), "en"))
-        en = numeric_answer(record, "en", method, expected) if method else False
-        ta = numeric_answer(record, "ta", method, expected) if method else False
+        question = language(record.get("q"), "en")
+        answers = [answer_text(record, lang) for lang in ("en", "ta")]
+        extra = check_number(question, answers, expression)
+        if not extra:
+            extra = check_algebra(question, answers, polynomial_expression)
+        if not extra and card_chapters[record_id] == 1:
+            extra, explicit_parts = check_sets(question, answers)
+            for part_name, result in explicit_parts.items():
+                part_inspections[record_id, part_name] = result
+        if not extra and card_chapters[record_id] in (5, 7):
+            extra, explicit_parts = check_geometry(question, answers, polynomial_expression, card_chapters[record_id])
+            for part_name, result in explicit_parts.items():
+                part_inspections[record_id, part_name] = result
+        if not extra and card_chapters[record_id] == 6:
+            extra, explicit_parts = check_trigonometry(question, answers, expression)
+            for part_name, result in explicit_parts.items():
+                part_inspections[record_id, part_name] = result
+        if not extra and card_chapters[record_id] in (8, 9):
+            extra = check_statistics(question, answers, expression, record)
+        if extra:
+            method, expected, (en, ta) = extra
+        else:
+            method, expected = expected_numeric(question)
+            en = numeric_answer(record, "en", method, expected) if method else False
+            ta = numeric_answer(record, "ta", method, expected) if method else False
         inspected[record_id] = (checked, method, en, ta)
         if candidates or (method and not (en and ta)):
             suspects[record_id] = {
@@ -266,6 +315,9 @@ def audit(runtime, output, manual_path):
                 # when the catalogue card serves multiple canonical tasks.
                 if not unique_part:
                     checked = 0
+                    labelled = part_inspections.get((ids[0], task["part"])) if len(ids) == 1 else None
+                    if labelled:
+                        method, _, (en, ta) = labelled
                 status = ("QUARANTINED" if quarantined else "UNTESTED" if not ids else
                           "VERIFIED_FINAL_ANSWER" if en and ta else "PARTIAL" if checked or en or ta else "UNSUPPORTED")
                 note = manual.get(task_id, {})

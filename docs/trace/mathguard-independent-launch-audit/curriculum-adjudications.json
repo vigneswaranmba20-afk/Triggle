@@ -1,6 +1,11 @@
 {
+  "g9/ch8/ex8.3/q6/mode": {"status":"VERIFIED_WORKING","tamil_semantic_review":true,"finding_id":"STAT-001"},
+  "g9/ch8/ex8.3/q6/mean": {"status":"VERIFIED_WORKING","tamil_semantic_review":true,"finding_id":"STAT-001"},
+  "g9/ch8/ex8.3/q6/median": {"status":"VERIFIED_WORKING","tamil_semantic_review":true,"finding_id":"STAT-001"},
+  "g10/ch3/ex3.4/q2/iii": {"status":"FAILED","corrected":true,"tamil_semantic_review":true,"finding_id":"CURR-003"},
   "g10/ch6/ex6.1/q3/i": {"status":"FAILED","corrected":true,"tamil_semantic_review":true,"finding_id":"CURR-001"},
   "g10/ch6/ex6.1/q3/ii": {"status":"FAILED","corrected":true,"tamil_semantic_review":true,"finding_id":"CURR-002"},
+  "g10/ch8/ex8.1/q5/whole": {"status":"PARTIAL","tamil_semantic_review":true,"finding_id":"STAT-002"},
   "g10/ch8/ex8.4/q6/whole": {"status":"VERIFIED_WORKING","tamil_semantic_review":true,"finding_id":"PROB-006"},
   "g10/ch8/ex8.4/q7/whole": {"status":"VERIFIED_WORKING","tamil_semantic_review":true,"finding_id":"PROB-007"},
   "g10/ch8/ex8.4/q8/whole": {"status":"VERIFIED_WORKING","tamil_semantic_review":true,"finding_id":"PROB-008"},

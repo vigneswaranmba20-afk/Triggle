@@ -1,0 +1,188 @@
+$ CHROMIUM_PATH=/usr/bin/chromium npm run test:browser
+Captured at 2026-11-26T12:55:14+05:30. Full-suite exit status pending. Active check: site/tools/test_g9_math_first_browser.cjs.
+
+> triggle@1.28.0 test:browser
+> node site/tools/test_sticky_example_layout_browser.cjs && node site/tools/test_exercise_direct_browser.cjs && node site/tools/test_g9_ch1_set_language_browser.cjs && node site/tools/test_quiet_reader_browser.cjs && node site/tools/test_curriculum_ui.cjs && node site/tools/test_g9_ch9_probability_browser.cjs && node site/tools/test_g9_statistics_concepts_browser.cjs && node site/tools/test_g9_new_concepts_browser.cjs && node site/tools/test_g9_existing_concepts_browser.cjs && node site/tools/test_g9_trigonometry_concepts.cjs && node site/tools/test_g9_ch7_heron_browser.cjs && node site/tools/test_curriculum_bulk_browser.cjs && node site/tools/test_teacher_startup_browser.cjs && node site/tools/test_dashboard_browser.cjs && node site/tools/test_teacher_workflow_browser.cjs && node site/tools/test_matrix_pilot_browser.cjs && node site/tools/test_g10_ch2_typography_browser.cjs && node site/tools/test_g10_ch2_scroll_browser.cjs && node site/tools/test_g10_stats_browser.cjs && node site/tools/test_g10_ch8_ex8_1_bilingual_browser.cjs && node site/tools/test_g10_stats_ex8_2_browser.cjs && node site/tools/test_g10_prob_ex8_3_browser.cjs && node site/tools/test_g10_ch8_ex8_4_browser.cjs && node site/tools/test_g10_ch8_ex8_5_browser.cjs && node site/tools/test_g10_ch8_unit_browser.cjs && node site/tools/test_g10_ch8_concepts_browser.cjs && node site/tools/test_chatgpt_math_g10_browser.cjs && node site/tools/test_g10_ch1_chatgpt_math_browser.cjs && node site/tools/test_g10_remaining_math_browser.cjs && node site/tools/test_g10_ch2_power_baseline_browser.cjs && node site/tools/test_g9_clear_math_browser.cjs && node site/tools/test_why_step_g10_browser.cjs && node site/tools/test_why_step_g10_coverage_browser.cjs && node site/tools/test_why_step_g9_browser.cjs && node site/tools/test_g9_typography_browser.cjs && node site/tools/test_g9_geometry_tamil_browser.cjs && node site/tools/test_g9_geometry_completion_browser.cjs && node site/tools/test_g9_math_first_browser.cjs && node site/tools/test_g9_concepts_typography_browser.cjs && node site/tools/test_g9_venn_aud01_browser.cjs && node site/tools/test_paper_indigo_theme_browser.cjs && node site/tools/test_g10_ch2_trace_browser.cjs && node site/tools/test_g10_ch2_ex2_3_modular_browser.cjs && node site/tools/test_g10_ch2_ex2_4_browser.cjs && node site/tools/test_g10_ch2_gp_sum_browser.cjs && node site/tools/test_g9_ex3_2_browser.cjs && node site/tools/test_g10_ch2_unit_and_ex31_browser.cjs && node site/tools/test_g10_ch3_ex32_to_36_browser.cjs && node site/tools/test_g10_ch3_ex37_to_39_browser.cjs && node site/tools/test_g10_ch3_ex310_to_312_browser.cjs && node site/tools/test_g10_ch3_ex313_to_314_browser.cjs && node site/tools/test_g10_ch3_ex315_browser.cjs && node site/tools/test_g10_ch3_concepts_browser.cjs && node site/tools/test_g10_geometry_browser.cjs && node site/tools/test_g10_geometry_completion_browser.cjs && node site/tools/test_g10_ch4_concepts_browser.cjs && node site/tools/test_g10_ch5_concepts_browser.cjs && node site/tools/test_g10_ch6_concepts_browser.cjs && node site/tools/test_g10_ch7_concepts_browser.cjs && node site/tools/test_g10_ch6_mobile_browser.cjs && node site/tools/test_g9_cardinality_aud01_browser.cjs && node site/tools/test_g10_ch7_ex71_mobile_browser.cjs && node site/tools/test_g10_ch7_ex71_q6_q10_mobile_browser.cjs && node site/tools/test_g10_ch7_ex72_ex73_mobile_browser.cjs && node site/tools/test_g9_aud14_03_source_options_browser.cjs && node site/tools/test_g9_algebra_concept_browser.cjs && node site/tools/test_g9_ch5_distance_concept_browser.cjs && node site/tools/test_g9_ch3_complete_browser.cjs && node site/tools/test_g9_ch5_complete_browser.cjs && node site/tools/test_g10_relations_concepts_browser.cjs && node site/tools/test_g10_ch7_ex74_browser.cjs && node site/tools/test_g10_ch7_ex75_browser.cjs && node site/tools/test_g10_ch7_unit7_browser.cjs && node site/tools/test_g10_ch3_final_browser.cjs
+
+PASS adaptive reader across active Grades 9–10: long question, full steps, one scroll, compact dock, question jump, Tamil, screenshots.
+PASS: active-grade numbered exercise indexes, per-exercise boundaries, return links and 320/390/1280 widths.
+PASS Exercise 1.3 at 320px: 4 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.3 at 360px: 4 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.3 at 390px: 7 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.3 at 412px: 4 bilingual questions, figures, hints, and navigation
+PASS offline deep links, Tamil Venn diagrams and KaTeX, with student progress restored
+PASS Exercise 1.4 at 320px: 4 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.4 at 360px: 4 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.4 at 390px: 5 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.4 at 412px: 4 bilingual questions, figures, hints, and navigation
+PASS offline deep links, Tamil Venn diagrams and KaTeX, with student progress restored
+PASS Exercise 1.5 at 320px: 7 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.5 at 360px: 7 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.5 at 390px: 11 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.5 at 412px: 7 bilingual questions, figures, hints, and navigation
+PASS offline deep links, Tamil Venn diagrams and KaTeX, with student progress restored
+PASS Exercise 1.6 at 320px: 7 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.6 at 360px: 7 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.6 at 390px: 13 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.6 at 412px: 7 bilingual questions, figures, hints, and navigation
+PASS offline deep links, Tamil Venn diagrams and KaTeX, with student progress restored
+PASS Exercise 1.7 at 320px: 6 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.7 at 360px: 6 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.7 at 390px: 20 bilingual questions, figures, hints, and navigation
+PASS Exercise 1.7 at 412px: 6 bilingual questions, figures, hints, and navigation
+PASS offline deep links, Tamil Venn diagrams and KaTeX, with student progress restored
+PASS: question, reasoning, answer, compact Previous/Next and figure remain visible without touch; Home remains available.
+PASS: Retired Grade 11/12 URLs return to the active 9–10 home
+PASS: Adaptive bilingual question navigation at 320px
+PASS: Adaptive bilingual question navigation at 390px
+PASS: Navigation remains keyboard accessible with one solution
+PASS: Reader controls do not appear on chapter menus or float on desktop
+PASS: Home, class directory, chapter jump, browser Back and Tamil at 320px
+PASS: Home, class directory, chapter jump, browser Back and Tamil at 390px
+PASS: Home, class directory, chapter jump, browser Back and Tamil at 1280px
+PASS: Desktop home chapter drawer supports keyboard, history and grade navigation
+PASS: Minimal home remembers last question across classes at 320px
+PASS: Minimal home remembers last question across classes at 390px
+PASS: Minimal home remembers last question across classes at 1280px
+PASS: Chapter-first directory has no welcome panel or obscuring dock at 320px
+PASS: Chapter-first directory has no welcome panel or obscuring dock at 390px
+PASS: Chapter-first directory has no welcome panel or obscuring dock at 768px
+PASS: Chapter-first directory has no welcome panel or obscuring dock at 1280px
+PASS: Chapter-to-exercise flow and chapter dropdown at 320px
+PASS: Chapter-to-exercise flow and chapter dropdown at 390px
+PASS: Chapter-to-exercise flow and chapter dropdown at 1280px
+PASS: Chapter-first class directory translates and offers accessible keyboard navigation
+PASS: Grade 9 chapter directory accurately advertises interactive lessons in both languages
+PASS: Chapter selection offers four choices including Thinking Corner & Activities
+PASS: Clean chapter navigation without overlapping study cards at 320px
+PASS: Clean chapter navigation without overlapping study cards at 390px
+PASS: Clean chapter navigation without overlapping study cards at 768px
+PASS: Clean chapter navigation without overlapping study cards at 1280px
+PASS: Concise Tamil hub and clean Real Numbers chapter navigation
+PASS: Worked Examples is removed; exercises retain complete solutions
+PASS: Direct section first, Trigonometry concepts, single Home and correct Back at 320px
+PASS: Direct section first, Trigonometry concepts, single Home and correct Back at 390px
+PASS: Direct section first, Trigonometry concepts, single Home and correct Back at 1280px
+PASS: Deep links and browser Back open only the requested section
+PASS: Find a Topic keeps only exercise and concept navigation
+PASS: Real Numbers full exercises, concepts and quizzes show correct counts
+PASS: Rationalisation equations remain fully visible on a 320px phone
+PASS: Offline initial Home reload and class directory work without remote scripts
+PASS: Only 17 active chapters are reachable through student grade navigation
+PASS: Active grade chapter navigation and Tamil at 320px
+PASS: Active grade chapter navigation and Tamil at 390px
+PASS: Active grade chapter navigation and Tamil at 1280px
+PASS: Active-grade legacy deep links retain questions and working solutions
+PASS: No Worked Examples in active Grades 9–10, English/Tamil or old links
+PASS: legacy progress, diagrams and standard solutions survive chapter navigation
+PASS: search retains existing questions and returns to full chapter navigation
+PASS: Inline five-operation Venn lesson works in English and Tamil without leaving the chapter
+PASS: Grouped square-bracket exponents are visibly attached to their closing bracket
+PASS: 2025-book Grade 9 learning journey supports seven ideas and live demonstrations at 320px
+PASS: Phase 2 lesson is available during an offline mobile reload
+PASS: service worker caches curriculum and supports an offline chapter reload
+PASS: Grade 9 Exercise 1.1 bilingual textbook questions work at 320px
+PASS: Grade 9 Exercise 1.1 bilingual textbook questions work at 390px
+PASS: Textbook two-action reader and chapter route at 320px
+PASS: Textbook two-action reader and chapter route at 390px
+PASS: Textbook two-action reader and chapter route at 768px
+PASS: Textbook two-action reader and chapter route at 1280px
+PASS: Grade 9 textbook exercises load offline in the chapter reader
+PASS: 56 curriculum browser scenarios; no uncaught errors or broken assets.
+PASS: five bilingual Probability concept lessons, mobile layouts, exercise links, touch, keyboard, independent practice, KaTeX and offline Tamil use.
+PASS: Grade 9 Probability Exercise 9.1 Q4/Q6 and range quiz in English and Tamil UI at 320/390/1280 px.
+Statistics lessons, exercise link and navigation passed at 320 px.
+Statistics lessons, exercise link and navigation passed at 360 px.
+Statistics lessons, exercise link and navigation passed at 390 px.
+Statistics lessons, exercise link and navigation passed at 393 px.
+Statistics lessons, exercise link and navigation passed at 412 px.
+Statistics lessons, exercise link and navigation passed at 430 px.
+PASS Statistics browser: six bilingual lessons, 320–430px, touch and keyboard, KaTeX, exercise return and offline.
+PASS Grade 9 Geometry, Coordinate Geometry and Trigonometry menus and lessons in English and Tamil at 320/390/412px.
+Passed 29 existing Grade 9 concept routes in English and Tamil at 320, 390 and 412px.
+PASS Grade 9 Trigonometry source map, exercise targets, all 30 special-angle values, complementary pairs, and table arithmetic.
+PASS Trigonometry English/Tamil chapter routes and interactions at 320 px.
+PASS Trigonometry English/Tamil chapter routes and interactions at 390 px.
+PASS Trigonometry English/Tamil chapter routes and interactions at 412 px.
+PASS Trigonometry Tamil reverse lookup and diagrams after offline reload.
+Grade 9 Mensuration mobile: four concepts, side checks, face nets, volume layers, Tamil, quiz, and Next idea passed.
+PASS bulk pilot: exact questions, all navigation, final answers, truthful Tamil, continuous reader, no 404/overflow, offline reload at mobile and desktop widths.
+PASS teacher startup: SDK/module/CSS failures, auth/Firestore watchdog, offline/reconnect, Retry and 320/390/430px fallback.
+PASS retired dashboard: old site/root bookmarks lead to lessons; owner assets absent; Teacher Review preserved; Chromium 320/390/430/1280px.
+PASS teacher UI (controlled SDK): auth observer, sign-in/cancellation, unauthorized denial, persisted-login reload, server-grant outage, MathML/Tamil, review hash/note/duplicate prevention, inbox filters, private handoff, correction history, sign-out clearing, 320/390/430px.
+PASS Grade 12 pilot and direct Q8 bookmark return to active Grades 9/10.
+PASS Grade 10 Chapter 2 typography: 320/390/768/1280px, exercises 2.1/2.2, chapter hub, isolation and no horizontal overflow
+PASS Android touch swipes at 320/390/412px, one document scroller, both textbook solutions, final answer not covered, other chapters untouched
+PASS G10 Statistics Q5-Q10: six routes, entire working, chapter navigation, difficulty, final answers, 320/390/412/768px and Tamil fallback
+PASS: Exercise 8.1 exact bilingual wording, five original tables, mathematical notation, and the conditional Q5 calculation.
+PASS G10 Ex8.2 Q1-Q8 browser: 320/360/390/412px, KaTeX, no overflow, navigation, 8.1 regression, offline ?v= reload
+PASS G10 Ex8.3 browser: 320/390/412px, EN/TA, Q3 overbar, Q1/Q2/Q11 figures, Next/Prev, saved progress, Q13 boundary
+PASS: Exercise 8.4 exact English and Tamil prompts, KaTeX, figure, navigation and responsive widths.
+PASS: Exercise 8.5 exact bilingual prompts and choices, feedback, KaTeX, mobile widths and navigation.
+PASS: Unit Exercise 8 bilingual wording, source tables, KaTeX, mobile widths and previous/next routes.
+PASS: 15 English and Tamil concept lessons, checked interactions, four viewport widths, feedback and exercise links.
+PASS ChatGPT-style math: 13 questions, 4 widths (320/390/412/768), correct KaTeX maths/fractions/roots, complete steps, focusable wide equations, Tamil interface, no overflow
+PASS Grade 10 Chapter 1 ChatGPT-style notation: 74 student parts at 390px, 10 difficult layouts at 320/412/768px, semantic fractions/cases/radicals, full working, accessible scroll, original Tamil and no page overflow.
+PASS Grade 10 rich maths all remaining chapters: 45 routes at 390px, 9 high-risk problems at 320/412/768px, stacked fractions, Tamil interface, long-equation access, no horizontal overflow and earlier lessons preserved.
+PASS Chapter 2 Q5 4k² unified maths baseline at 360/390/412/430px, original equation, vertical scroll, chapter isolation
+PASS Grade 9 notation 320px: 10 questions in English/Tamil
+PASS Grade 9 notation 390px: 347 questions in English/Tamil
+PASS Grade 9 notation 1280px: 10 questions in English/Tamil
+PASS Grade 9 navigation, saved progress, figure, offline Real Numbers/Algebra and no browser errors
+PASS Grade 10 Why UI: 7 chapter exemplars at 320/360/390/412px, native open/close, immutable original maths, Tamil, keyboard arrows, unrelated lessons unaffected.
+PASS Grade 10 full Why browser: Q4 2 conceptual diagrams, 4 untouched steps at 320–768px; 17 other questions × 3 phones, Tamil, keyboard and unaffected Grade 9.
+PASS Grade 9 Why: nine chapters at 320/360/390/393/412/430/768/1280px, readable disclosures, bilingual switch, keyboard, figure descriptions, preserved questions/equations/answers, and Grade 10 regression.
+Progress 393px: 75/755 questions in both languages
+Progress 430px: 75/755 questions in both languages
+Progress 320px: 75/755 questions in both languages
+Progress 360px: 75/755 questions in both languages
+Progress 393px: 150/755 questions in both languages
+Progress 430px: 150/755 questions in both languages
+Progress 360px: 150/755 questions in both languages
+Progress 320px: 150/755 questions in both languages
+Progress 393px: 225/755 questions in both languages
+Progress 430px: 225/755 questions in both languages
+Progress 360px: 225/755 questions in both languages
+Progress 320px: 225/755 questions in both languages
+Progress 393px: 300/755 questions in both languages
+Progress 430px: 300/755 questions in both languages
+Progress 360px: 300/755 questions in both languages
+Progress 320px: 300/755 questions in both languages
+Progress 393px: 375/755 questions in both languages
+Progress 430px: 375/755 questions in both languages
+Progress 360px: 375/755 questions in both languages
+Progress 320px: 375/755 questions in both languages
+Progress 393px: 450/755 questions in both languages
+Progress 430px: 450/755 questions in both languages
+Progress 360px: 450/755 questions in both languages
+Progress 320px: 450/755 questions in both languages
+Progress 393px: 525/755 questions in both languages
+Progress 430px: 525/755 questions in both languages
+Progress 360px: 525/755 questions in both languages
+Progress 320px: 525/755 questions in both languages
+Progress 430px: 600/755 questions in both languages
+Progress 393px: 600/755 questions in both languages
+Progress 360px: 600/755 questions in both languages
+Progress 320px: 600/755 questions in both languages
+Progress 393px: 675/755 questions in both languages
+Progress 430px: 675/755 questions in both languages
+Progress 360px: 675/755 questions in both languages
+Progress 320px: 675/755 questions in both languages
+Progress 393px: 750/755 questions in both languages
+Progress 430px: 750/755 questions in both languages
+PASS 430px: 755 questions, English/Tamil, 12901 formula instances; source parity, complete steps, MathML, clipping and page overflow
+PASS 393px: 755 questions, English/Tamil, 12901 formula instances; source parity, complete steps, MathML, clipping and page overflow
+Progress 360px: 750/755 questions in both languages
+PASS 360px: 755 questions, English/Tamil, 12901 formula instances; source parity, complete steps, MathML, clipping and page overflow
+Progress 320px: 750/755 questions in both languages
+PASS 320px: 755 questions, English/Tamil, 12901 formula instances; source parity, complete steps, MathML, clipping and page overflow
+PASS Grade 9 Geometry 320px, 11 questions and 42 explanations in each language
+PASS Grade 9 Geometry 390px, 11 questions and 42 explanations in each language
+PASS Grade 9 Geometry 412px, 11 questions and 42 explanations in each language
+PASS 66 Geometry reader views, 252 explanations and 252 equation comparisons
+PASS Grade 9 Geometry 320px, both languages and all seven exercise routes
+PASS Grade 9 Geometry 360px, both languages and all seven exercise routes
+PASS Grade 9 Geometry 390px, both languages and all seven exercise routes
+PASS Grade 9 Geometry 412px, both languages and all seven exercise routes
+PASS 70 SVG label checks and offline exercise, construction, and KaTeX reload
+PASS 298 bilingual Geometry reader views

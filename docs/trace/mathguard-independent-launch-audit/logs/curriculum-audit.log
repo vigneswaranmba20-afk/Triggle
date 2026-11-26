@@ -29,30 +29,32 @@ Catalogue JSON SHA-256 56f08125d88595d042b93fec2a5067fd3580319f4710e1e60f20f58ab
   "canonicalTasks": 1774,
   "eligibleTasks": 1756,
   "eligibleAttempts": 1756,
-  "corrected": 2,
+  "corrected": 3,
   "counts": {
-    "VERIFIED_WORKING": 6,
-    "VERIFIED_FINAL_ANSWER": 12,
-    "FAILED": 2,
-    "PARTIAL": 618,
-    "UNSUPPORTED": 1118,
+    "VERIFIED_WORKING": 9,
+    "VERIFIED_FINAL_ANSWER": 318,
+    "FAILED": 3,
+    "PARTIAL": 509,
+    "UNSUPPORTED": 917,
     "UNTESTED": 0,
     "QUARANTINED": 18
   },
   "byGradeChapter": {
     "9/1": {
-      "UNSUPPORTED": 160,
-      "PARTIAL": 15,
+      "UNSUPPORTED": 113,
+      "VERIFIED_FINAL_ANSWER": 51,
+      "PARTIAL": 11,
       "QUARANTINED": 1
     },
     "9/2": {
-      "UNSUPPORTED": 30,
-      "VERIFIED_FINAL_ANSWER": 4,
-      "PARTIAL": 86
+      "UNSUPPORTED": 10,
+      "VERIFIED_FINAL_ANSWER": 71,
+      "PARTIAL": 39
     },
     "9/3": {
-      "UNSUPPORTED": 152,
-      "PARTIAL": 73,
+      "UNSUPPORTED": 81,
+      "PARTIAL": 47,
+      "VERIFIED_FINAL_ANSWER": 97,
       "QUARANTINED": 2
     },
     "9/4": {
@@ -61,39 +63,48 @@ Catalogue JSON SHA-256 56f08125d88595d042b93fec2a5067fd3580319f4710e1e60f20f58ab
       "PARTIAL": 14
     },
     "9/5": {
-      "UNSUPPORTED": 63,
+      "UNSUPPORTED": 49,
+      "VERIFIED_FINAL_ANSWER": 14,
       "PARTIAL": 12
     },
     "9/6": {
-      "UNSUPPORTED": 24,
-      "PARTIAL": 27,
+      "VERIFIED_FINAL_ANSWER": 22,
+      "PARTIAL": 17,
+      "UNSUPPORTED": 12,
       "QUARANTINED": 3
     },
     "9/7": {
-      "UNSUPPORTED": 35,
-      "PARTIAL": 6,
+      "VERIFIED_FINAL_ANSWER": 8,
+      "UNSUPPORTED": 28,
+      "PARTIAL": 5,
       "QUARANTINED": 1
     },
     "9/8": {
-      "PARTIAL": 20,
-      "UNSUPPORTED": 12
+      "PARTIAL": 13,
+      "UNSUPPORTED": 8,
+      "VERIFIED_FINAL_ANSWER": 8,
+      "VERIFIED_WORKING": 3
     },
     "9/9": {
       "UNSUPPORTED": 24,
       "PARTIAL": 7
     },
     "10/1": {
-      "PARTIAL": 14,
-      "UNSUPPORTED": 110
+      "VERIFIED_FINAL_ANSWER": 10,
+      "UNSUPPORTED": 102,
+      "PARTIAL": 12
     },
     "10/2": {
-      "UNSUPPORTED": 64,
-      "PARTIAL": 96,
+      "UNSUPPORTED": 58,
+      "PARTIAL": 95,
+      "VERIFIED_FINAL_ANSWER": 7,
       "QUARANTINED": 1
     },
     "10/3": {
-      "PARTIAL": 83,
-      "UNSUPPORTED": 152,
+      "VERIFIED_FINAL_ANSWER": 8,
+      "PARTIAL": 84,
+      "UNSUPPORTED": 142,
+      "FAILED": 1,
       "QUARANTINED": 1
     },
     "10/4": {
@@ -102,8 +113,8 @@ Catalogue JSON SHA-256 56f08125d88595d042b93fec2a5067fd3580319f4710e1e60f20f58ab
       "QUARANTINED": 4
     },
     "10/5": {
-      "VERIFIED_FINAL_ANSWER": 2,
-      "PARTIAL": 50,
+      "VERIFIED_FINAL_ANSWER": 6,
+      "PARTIAL": 46,
       "UNSUPPORTED": 44,
       "QUARANTINED": 1
     },
@@ -115,18 +126,18 @@ Catalogue JSON SHA-256 56f08125d88595d042b93fec2a5067fd3580319f4710e1e60f20f58ab
     },
     "10/7": {
       "VERIFIED_FINAL_ANSWER": 1,
-      "PARTIAL": 9,
-      "UNSUPPORTED": 52
+      "PARTIAL": 10,
+      "UNSUPPORTED": 51
     },
     "10/8": {
-      "VERIFIED_FINAL_ANSWER": 3,
-      "PARTIAL": 63,
-      "UNSUPPORTED": 20,
+      "VERIFIED_FINAL_ANSWER": 13,
+      "PARTIAL": 54,
+      "UNSUPPORTED": 19,
       "QUARANTINED": 2,
       "VERIFIED_WORKING": 6
     }
   },
   "catalogueCardsWithoutCanonicalMapping": [],
   "workingConflictCandidateCards": 8,
-  "oracleAnswerReviewCandidateCards": 0
+  "oracleAnswerReviewCandidateCards": 8
 }

@@ -970,26 +970,26 @@ const additional={
   "c10-3-ex3-4-q2-i": {
       "step": 0,
       "expected": "The rational expression y/(y² − 25) is already i",
-      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
-      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+      "en": "The given fraction is defined only when its original denominator is nonzero. Check that denominator before cancelling common factors.",
+      "ta": "கொடுக்கப்பட்ட பின்னத்தின் மூலப் பகுதி பூச்சியமில்லாதபோது மட்டுமே பின்னம் வரையறுக்கப்படும். பொதுக் காரணிகளை நீக்கும் முன் மூலப் பகுதியைக் கவனிக்கவும்."
   },
   "c10-3-ex3-4-q2-ii": {
       "step": 0,
       "expected": "The rational expression t/(t² − 5t + 6) is in lo",
-      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
-      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+      "en": "The given fraction is defined only when its original denominator is nonzero. Check that denominator before cancelling common factors.",
+      "ta": "கொடுக்கப்பட்ட பின்னத்தின் மூலப் பகுதி பூச்சியமில்லாதபோது மட்டுமே பின்னம் வரையறுக்கப்படும். பொதுக் காரணிகளை நீக்கும் முன் மூலப் பகுதியைக் கவனிக்கவும்."
   },
   "c10-3-ex3-4-q2-iii": {
       "step": 0,
-      "expected": "First reduce the rational expression to its lowe",
-      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
-      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+      "expected": "Factor the original denominator and set each fac",
+      "en": "The given fraction is defined only when its original denominator is nonzero. Check that denominator before cancelling common factors.",
+      "ta": "கொடுக்கப்பட்ட பின்னத்தின் மூலப் பகுதி பூச்சியமில்லாதபோது மட்டுமே பின்னம் வரையறுக்கப்படும். பொதுக் காரணிகளை நீக்கும் முன் மூலப் பகுதியைக் கவனிக்கவும்."
   },
   "c10-3-ex3-4-q2-iv": {
       "step": 0,
       "expected": "Factorize the numerator x³ − 27 = (x − 3)(x² + 3",
-      "en": "Only common multiplicative factors can be cancelled between numerator and denominator—never individual added terms—and excluded values come from setting the reduced denominator to zero.",
-      "ta": "தொகுதி மற்றும் பகுதியின் பொதுப் பெருக்கல் காரணிகளை மட்டுமே நீக்க முடியும் (கூட்டல் உறுப்புகளை அல்ல); சுருக்கிய பகுதியை 0-க்குச் சமப்படுத்த விலக்கப்பட்ட மதிப்புகள் கிடைக்கும்."
+      "en": "The given fraction is defined only when its original denominator is nonzero. Check that denominator before cancelling common factors.",
+      "ta": "கொடுக்கப்பட்ட பின்னத்தின் மூலப் பகுதி பூச்சியமில்லாதபோது மட்டுமே பின்னம் வரையறுக்கப்படும். பொதுக் காரணிகளை நீக்கும் முன் மூலப் பகுதியைக் கவனிக்கவும்."
   },
   "c10-3-ex3-5-q1-i": {
       "step": 0,

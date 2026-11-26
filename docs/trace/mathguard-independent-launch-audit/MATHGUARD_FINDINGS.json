@@ -33,30 +33,32 @@
     "canonicalTasks": 1774,
     "eligibleTasks": 1756,
     "eligibleAttempts": 1756,
-    "corrected": 2,
+    "corrected": 3,
     "counts": {
-      "VERIFIED_WORKING": 6,
-      "VERIFIED_FINAL_ANSWER": 12,
-      "FAILED": 2,
-      "PARTIAL": 618,
-      "UNSUPPORTED": 1118,
+      "VERIFIED_WORKING": 9,
+      "VERIFIED_FINAL_ANSWER": 318,
+      "FAILED": 3,
+      "PARTIAL": 509,
+      "UNSUPPORTED": 917,
       "UNTESTED": 0,
       "QUARANTINED": 18
     },
     "byGradeChapter": {
       "9/1": {
-        "UNSUPPORTED": 160,
-        "PARTIAL": 15,
+        "UNSUPPORTED": 113,
+        "VERIFIED_FINAL_ANSWER": 51,
+        "PARTIAL": 11,
         "QUARANTINED": 1
       },
       "9/2": {
-        "UNSUPPORTED": 30,
-        "VERIFIED_FINAL_ANSWER": 4,
-        "PARTIAL": 86
+        "UNSUPPORTED": 10,
+        "VERIFIED_FINAL_ANSWER": 71,
+        "PARTIAL": 39
       },
       "9/3": {
-        "UNSUPPORTED": 152,
-        "PARTIAL": 73,
+        "UNSUPPORTED": 81,
+        "PARTIAL": 47,
+        "VERIFIED_FINAL_ANSWER": 97,
         "QUARANTINED": 2
       },
       "9/4": {
@@ -65,39 +67,48 @@
         "PARTIAL": 14
       },
       "9/5": {
-        "UNSUPPORTED": 63,
+        "UNSUPPORTED": 49,
+        "VERIFIED_FINAL_ANSWER": 14,
         "PARTIAL": 12
       },
       "9/6": {
-        "UNSUPPORTED": 24,
-        "PARTIAL": 27,
+        "VERIFIED_FINAL_ANSWER": 22,
+        "PARTIAL": 17,
+        "UNSUPPORTED": 12,
         "QUARANTINED": 3
       },
       "9/7": {
-        "UNSUPPORTED": 35,
-        "PARTIAL": 6,
+        "VERIFIED_FINAL_ANSWER": 8,
+        "UNSUPPORTED": 28,
+        "PARTIAL": 5,
         "QUARANTINED": 1
       },
       "9/8": {
-        "PARTIAL": 20,
-        "UNSUPPORTED": 12
+        "PARTIAL": 13,
+        "UNSUPPORTED": 8,
+        "VERIFIED_FINAL_ANSWER": 8,
+        "VERIFIED_WORKING": 3
       },
       "9/9": {
         "UNSUPPORTED": 24,
         "PARTIAL": 7
       },
       "10/1": {
-        "PARTIAL": 14,
-        "UNSUPPORTED": 110
+        "VERIFIED_FINAL_ANSWER": 10,
+        "UNSUPPORTED": 102,
+        "PARTIAL": 12
       },
       "10/2": {
-        "UNSUPPORTED": 64,
-        "PARTIAL": 96,
+        "UNSUPPORTED": 58,
+        "PARTIAL": 95,
+        "VERIFIED_FINAL_ANSWER": 7,
         "QUARANTINED": 1
       },
       "10/3": {
-        "PARTIAL": 83,
-        "UNSUPPORTED": 152,
+        "VERIFIED_FINAL_ANSWER": 8,
+        "PARTIAL": 84,
+        "UNSUPPORTED": 142,
+        "FAILED": 1,
         "QUARANTINED": 1
       },
       "10/4": {
@@ -106,8 +117,8 @@
         "QUARANTINED": 4
       },
       "10/5": {
-        "VERIFIED_FINAL_ANSWER": 2,
-        "PARTIAL": 50,
+        "VERIFIED_FINAL_ANSWER": 6,
+        "PARTIAL": 46,
         "UNSUPPORTED": 44,
         "QUARANTINED": 1
       },
@@ -119,20 +130,20 @@
       },
       "10/7": {
         "VERIFIED_FINAL_ANSWER": 1,
-        "PARTIAL": 9,
-        "UNSUPPORTED": 52
+        "PARTIAL": 10,
+        "UNSUPPORTED": 51
       },
       "10/8": {
-        "VERIFIED_FINAL_ANSWER": 3,
-        "PARTIAL": 63,
-        "UNSUPPORTED": 20,
+        "VERIFIED_FINAL_ANSWER": 13,
+        "PARTIAL": 54,
+        "UNSUPPORTED": 19,
         "QUARANTINED": 2,
         "VERIFIED_WORKING": 6
       }
     },
     "catalogueCardsWithoutCanonicalMapping": [],
     "workingConflictCandidateCards": 8,
-    "oracleAnswerReviewCandidateCards": 0
+    "oracleAnswerReviewCandidateCards": 8
   },
   "regressionRuns": {
     "baseline": {
@@ -185,68 +196,173 @@
     }
   },
   "independentEngineTests": {
-    "baselinePassed": 9,
-    "baselineFailed": 8,
-    "candidatePassed": 17
+    "baselinePassed": 10,
+    "baselineFailed": 21,
+    "candidatePassed": 31,
+    "logs": [
+      "logs/independent-expanded-baseline.log",
+      "logs/independent-expanded-candidate.log"
+    ]
   },
   "engineFindings": [
     {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
       "id": "ENG-001",
       "finding": "Correct union working certified the separately wrong roster {2,5,13}.",
-      "derived": "{2,5} ∪ {11} = {2,5,11}. Final answer checked against question rosters in candidate.",
+      "derived": "{2,5} ∪ {11} = {2,5,11}. Final answer checked against question rosters in candidate."
+    },
+    {
       "grade": null,
       "chapter": null,
       "questionId": null,
       "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
       "regression": "test_engine_soundness.py",
-      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers"
-    },
-    {
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
       "id": "ENG-002",
       "finding": "Generic answer fallback accepted 52 and 51.01 for exact 17+34, and accepted an unrelated declaration a=5 as the answer to 99−7.",
-      "derived": "Exact answers are 51 and 92. The candidate binds supported exact numeric answers to the stem and abstains outside that grammar.",
+      "derived": "Exact answers are 51 and 92. The candidate binds supported exact numeric answers to the stem and abstains outside that grammar."
+    },
+    {
       "grade": null,
       "chapter": null,
       "questionId": null,
       "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
       "regression": "test_engine_soundness.py",
-      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers"
-    },
-    {
+      "englishTamilImpact": "Tamil parity omitted missing question and working",
       "id": "ENG-003",
       "finding": "A translated numeric answer alone certified Tamil parity with missing Tamil question and working.",
-      "derived": "Candidate records missing fields. Full bilingual semantic review remains separate.",
+      "derived": "Candidate records missing fields. Full bilingual semantic review remains separate."
+    },
+    {
       "grade": null,
       "chapter": null,
       "questionId": null,
       "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
       "regression": "test_engine_soundness.py",
-      "englishTamilImpact": "Tamil parity omitted missing question and working"
-    },
-    {
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
       "id": "ENG-004",
       "finding": "The engine counted √(x²)=x and (x²−1)/(x−1)=x+1 for all real x as verified.",
-      "derived": "At x=−1 the first left side is 1. At x=1 only the second right side is defined. Candidate checks the explicit universal real domain for supported single-variable equalities.",
-      "grade": null,
-      "chapter": null,
-      "questionId": null,
-      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
-      "regression": "test_engine_soundness.py",
-      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers"
+      "derived": "At x=−1 the first left side is 1. At x=1 only the second right side is defined. Candidate checks the explicit universal real domain for supported single-variable equalities."
     },
     {
-      "id": "ENG-005",
-      "finding": "5 kg = 5 m passed after unit normalization.",
-      "derived": "Mass and length dimensions differ. Candidate recognizes gram, kilogram and milligram in pure conversions.",
       "grade": null,
       "chapter": null,
       "questionId": null,
       "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
       "regression": "test_engine_soundness.py",
-      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers"
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-005",
+      "finding": "5 kg = 5 m passed after unit normalization.",
+      "derived": "Mass and length dimensions differ. Candidate recognizes gram, kilogram and milligram in pure conversions."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-006",
+      "finding": "A worked step replaced a given roster and certified a changed set.",
+      "derived": "The original question fixes A={2,5}. A student step cannot replace 5 with 7. Candidate preserves declared rosters."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-007",
+      "finding": "A Venn calculation returned a known region before establishing feasibility of all regions.",
+      "derived": "A two-member subset of a one-member universe is impossible. Candidate checks nonnegative integer feasibility with a bounded exact search."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-008",
+      "finding": "Composition simplification discarded a pole or accepted an input outside the outer domain.",
+      "derived": "For f(x)=(x−1)/(x+1), f(f(x)) simplifies to −1/x but excludes both −1 and 0. An outer function on the naturals cannot take g(1)=1/2 when g(x)=x/2."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-009",
+      "finding": "Composition equality treated matching simplified expressions as equal functions despite unequal domains.",
+      "derived": "The Möbius functions f(x)=(x−1)/(x+1) and g(x)=(1+x)/(1−x) have both compositions simplifying to x. The first excludes 1 and the second excludes −1. Domains are retained before comparison."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-010",
+      "finding": "The function reasoner accepted totality or evaluation outside the provided domain and codomain.",
+      "derived": "√x cannot define a total real-valued function on all reals, and a negative result for a declared nonnegative codomain is invalid."
+    },
+    {
+      "grade": null,
+      "chapter": null,
+      "questionId": null,
+      "sourceEvidence": "Synthetic independently specified cases at the pinned PR head",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The engine's acceptance applies to numerical or symbolic content shared by both readers",
+      "id": "ENG-011",
+      "finding": "The reasoner inferred surjectivity and non-injectivity from degree without respecting integer inputs.",
+      "derived": "2x maps integers to even integers. For 2x²+x, two distinct integer inputs would require 2(x+y)+1=0, an impossibility."
+    },
+    {
+      "grade": 10,
+      "chapter": 7,
+      "questionId": "c10-7-ex7-1-q1",
+      "sourceEvidence": "Source-pinned production stem and independently constructed mutated answers. The same two-measure check applies to Q2.",
+      "regression": "test_engine_soundness.py",
+      "englishTamilImpact": "The verified radius and height have the same physical values in English and Tamil. The repaired acceptance path reads the English exercise answer. Tamil parity has its own remaining coverage limits.",
+      "id": "ENG-012",
+      "finding": "The English mensuration answer checker ignored measure labels, discarded the minus sign and accepted metres as centimetres. It rejected equivalent converted lengths.",
+      "derived": "With r=5k and h=7k, the textbook π=22/7 convention gives 220k²=5500, so r=25 cm and h=35 cm. Candidate binds the two named measures and converts their units."
     }
   ],
   "curriculumFindings": [
+    {
+      "id": "CURR-003",
+      "grade": 10,
+      "chapter": 3,
+      "questionId": "c10-3-ex3-4-q2-iii",
+      "original": "The reader gave x=1 as the only exclusion without distinguishing the original quotient from its reduced form.",
+      "corrected": "The original denominator (x+2)(x−1) vanishes at −2 and 1. Cancellation gives (x+4)/(x−1) on the original domain. The reduced expression, considered separately, excludes 1, as the textbook convention and key specify.",
+      "sourceEvidence": {
+        "edition": 2025,
+        "EN": {
+          "pdf": 105,
+          "keyPdf": 343,
+          "keyPrinted": 337
+        },
+        "TA": {
+          "pdf": 107,
+          "keyPdf": 357,
+          "keyPrinted": 351
+        }
+      },
+      "englishTamilImpact": "Both answers display the original exclusions and the lowest-term convention. Both hint sets explain why cancelling a factor does not extend the original domain.",
+      "regression": "site/tools/test_g10_ch3_ex32_to_36_browser.cjs",
+      "deployed": false
+    },
     {
       "id": "CURR-001",
       "grade": 10,
@@ -299,6 +415,74 @@
     "11": "All eight outcomes.",
     "12": "11/48, 11/24, 11/16. All eight probability atoms are nonnegative.",
     "13": "17 even, seven additional odd prime boys, five additional odd composite girls, 29/35."
+  },
+  "openEngineFindings": [
+    {
+      "id": "ENG-013",
+      "question": "Find the area of a circle of radius 100 cm. Use π = 22/7 and round to two decimal places.",
+      "submittedAnswer": "Area = 31415.93 cm²",
+      "independentlyDerivedAnswer": "31428.57 cm²",
+      "expectedStatus": "FAIL",
+      "observedStatus": "PASS",
+      "evidence": {
+        "numericMatch": {
+          "matched": true,
+          "mode": "exact",
+          "derived_value": 31415.926535897932,
+          "abs_diff": 0.0034641020683920942
+        },
+        "observedDimension": "area"
+      },
+      "baselineObservedStatus": "PASS",
+      "repairStatus": "OPEN",
+      "regression": "reproduce_engine.py open-findings"
+    },
+    {
+      "id": "ENG-014",
+      "question": "Find the area of a rectangle with length 8 cm and width 5 cm.",
+      "submittedAnswer": "Area = 1 cm²; an unrelated check figure is 40 cm²",
+      "independentlyDerivedAnswer": "40 cm²",
+      "expectedStatus": "FAIL",
+      "observedStatus": "PASS",
+      "evidence": {
+        "numericMatch": {
+          "matched": true,
+          "mode": "22/7",
+          "derived_value": 40.0,
+          "abs_diff": 0.0
+        },
+        "observedDimension": "area"
+      },
+      "baselineObservedStatus": "PASS",
+      "repairStatus": "OPEN",
+      "regression": "reproduce_engine.py open-findings"
+    }
+  ],
+  "statisticsReviews": {
+    "STAT-001": {
+      "grade": 9,
+      "chapter": 8,
+      "questionId": "g9-ch8-ex8.3-q6",
+      "sources": {
+        "EN": 293,
+        "TA": 311
+      },
+      "sourceDifference": "English asks for mode. Tamil asks for mean, median and mode from the same frequencies.",
+      "derived": "Mode 117/2 kg, midpoint-estimated mean 559/10 kg, interpolated median 793/14 kg.",
+      "disposition": "Bilingual working and all three results independently verified."
+    },
+    "STAT-002": {
+      "grade": 10,
+      "chapter": 8,
+      "questionId": "c10-8-ex8-1-q5",
+      "sources": {
+        "EN": 319,
+        "TA": 328
+      },
+      "sourceDifference": "English says nine wages. Tamil says ten. Both list the same nine values.",
+      "derived": "For the nine listed values, mean 300 rupees, variance 2000/9 square rupees, deviation 20√5/3 rupees.",
+      "disposition": "The conditional calculation is correct. The tenth Tamil value remains unknown. Existing source status preserved."
+    }
   },
   "quarantine": [
     {
@@ -864,8 +1048,8 @@
         "unsupported": 113,
         "verifiedRatePct": 93.38
       },
-      "runtimeSec": 31.41,
-      "peakMemoryMB": 91.12
+      "runtimeSec": 54.86,
+      "peakMemoryMB": 90.61
     },
     "observedFileSha256": "bccf5645dadb2c22d067ccecd014c9a6bfd3c0c2173911beee1c939316645035",
     "declaredDatasetDigest": "e72571d9be9c0978cab84762b5c21f356a78d04c799d2ba6a75d060093005f9b",
@@ -2609,6 +2793,7 @@
     "independenceFindings": [
       "334 frozen entries cover Grade 10 chapters 3, 5 and 7, including concepts and practice. The 297 shared production IDs are an ID overlap, not proof of byte equality.",
       "All 153 chapter 3 and all 110 chapter 5 frozen IDs are present in their chapter-specific source fingerprint registries. The registered derivations include literal coefficients. The grade 10 chapter 7 derivations also embed per-question quantities.",
+      "The frozen benchmark awards working and answer PASS to c10-3-ex3-4-q2-iii. Its fingerprint explicitly reduces before computing exclusions, correctly matching the textbook's lowest-term key. It leaves the omitted original restriction x≠−2 unchecked.",
       "The V1.5 holdout is visible in the same source file. Thirty expected sets are computed with TypedSet, also used by the system under test. This is a correlated oracle.",
       "Fifteen wrong-working cases, fifteen source-blocked cases, and twenty shaded-region cases exercise only four distinct fixture behaviors. The published count is an execution count.",
       "Historical skipped counts follow confusion-matrix totals. For modern suites the normalizer declares skipped=0 and uses suite-reported counts. It is not an independent skip observer.",

@@ -4,3 +4,5 @@ PASS Grade 10 8.4 Q8: 7/8 in EN and TA.
 PASS Grade 10 8.4 Q11: 1 in EN and TA.
 PASS Grade 10 8.4 Q12: 11/48, 11/24, 11/16 in EN and TA.
 PASS Grade 10 8.4 Q13: 29/35 in EN and TA.
+PASS Grade 9 8.3 Q6: mode 117/2, mean 559/10, median 793/14 in EN and TA.
+PASS Grade 10 8.1 Q5 conditional calculation: mean 300, variance 2000/9, deviation 20*sqrt(5)/3.
