@@ -58,7 +58,6 @@
    const fallback=original.startsWith(pendingTitle);
    const title=fallback?original.slice(pendingTitle.length):original;
    const split=title.indexOf(' · ');
-   summary.setAttribute('aria-label',original);
    const mark=document.createElement('span');mark.className='activity-mark';mark.setAttribute('aria-hidden','true');mark.textContent=marks[kind];
    const copy=document.createElement('span');copy.className='activity-copy';
    if(split>=0){

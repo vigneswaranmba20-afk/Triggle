@@ -66,6 +66,8 @@
     const chapters=visibleGrades.flatMap(g=>g.chapters.map(c=>({grade:g.grade,chapter:c})));
     // Only advertise a lab when both its lesson data and interactive viewer are loaded.
     const interactiveCount=id=>{
+      const cached=window.TriggleStudentRelease?.conceptCounts[id];
+      if(cached!==undefined&&id!=='g10-ch8')return cached;
       const stages=window.TriggleChapterHub?.grade9Stages?.(id)??(id==='g9-ch1'&&window.TriggleSetJourney?window.TRIGGLE_SET_PATH?.stages:
         id==='g9-ch2'&&window.TriggleRealJourney?window.TRIGGLE_REAL_PATH?.stages:
         id==='g9-ch9'&&window.TriggleProbabilityConcepts?window.TRIGGLE_PROB_PATH?.stages:
@@ -80,7 +82,9 @@
     };
     function chapterCard(entry){
       const c=entry.chapter,count=interactiveCount(c.id),available=count>0;
+      const emblem=window.TriggleGlyph?.chapter(c.id);
       return '<button type="button" class="discover-chapter" data-chapter="'+escapeHtml(c.id)+'">'+
+        (emblem?'<span class="ver-emblem" aria-hidden="true">'+emblem+'</span>':'')+
         '<span class="discover-chapter-number">'+escapeHtml(t.chapter)+' '+c.number+'</span>'+
         '<strong>'+escapeHtml(tr(c.title))+'</strong>'+
         '<span class="discover-chapter-meta'+(available?' is-ready':'')+'">'+
@@ -138,7 +142,7 @@
       // Chapter-first directory: a single compact, interactive heading followed
       // immediately by Chapter 1. Class switching expands in document flow.
       body='<header class="discover-class-header">'+
-        '<h1><button type="button" class="discover-class-switch" data-switch-class aria-controls="discover-class-options" aria-expanded="false" aria-label="'+escapeHtml(t.chooseClass)+'">'+
+        '<h1><button type="button" class="discover-class-switch" data-switch-class aria-controls="discover-class-options" aria-expanded="false" aria-label="'+escapeHtml(t.class+' '+g.grade+' '+t.mathematics+' · '+t.chooseClass)+'">'+
         escapeHtml(t.class)+' '+g.grade+' '+escapeHtml(t.mathematics)+' <span aria-hidden="true">⌄</span></button></h1>'+
         '<span class="discover-class-count">'+g.chapters.length+' '+escapeHtml(t.chapterCount)+'</span></header>'+
         '<div id="discover-class-options" class="discover-class-options" role="group" aria-label="'+escapeHtml(t.chooseClass)+'" hidden>'+
