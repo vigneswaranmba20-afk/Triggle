@@ -66,7 +66,7 @@ body.ver-glyph {
   --ver-text-question: clamp(1.0625rem, 1rem + .45vw, 1.3125rem);
 }
 
-.ver-starting :is(.app-shell, .class-dock) { visibility: hidden; opacity: 0; }
+.ver-starting :is(.app-shell, .class-dock) { opacity: 0; }
 .ver-glyph:not(.ver-starting) .ver-loading,
 html[lang="en"] .ver-loading [lang="ta"],
 html[lang="ta"] .ver-loading [lang="en"] { display: none; }
@@ -282,6 +282,7 @@ body.ver-glyph.textbook-reader .status-row .crumb-sep { display: inline !importa
 .ver-glyph.textbook-reader #lessonCard.lesson-card {
   display: flex;
   flex-direction: column;
+  container: ver-reader / inline-size;
   gap: 0;
   max-width: none;
   margin: 0;
@@ -655,6 +656,20 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
   .ver-glyph.textbook-reader #lessonCard .question-top { gap: 0 var(--ver-space-1); }
   .ver-glyph .ver-question-picker { gap: var(--ver-space-1); padding-inline: var(--ver-space-1); }
 }
+@container ver-reader (max-width: 16rem) {
+  .ver-glyph.textbook-reader #lessonCard > .question-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .ver-question-identity { max-width: 100%; }
+  .ver-glyph .ver-question-picker {
+    flex-shrink: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ver-glyph :is(.appbar *, .sidebar *, .discover-chapter, .discover-grade, .path-option,
     .hub-section-card, .hub-exercise-link, #lessonCard, #lessonCard button, #lessonCard summary,

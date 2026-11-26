@@ -45,6 +45,12 @@ function readerMetrics() {
     });
   }).length;
   const wide = formulas.filter(el => el.scrollWidth > el.clientWidth + 1);
+  const overlapping = selector => {
+    const boxes = [...document.querySelectorAll(selector)].filter(el => el.offsetWidth && el.offsetHeight).map(bounds);
+    return boxes.some((box, index) => boxes.slice(index + 1).some(other =>
+      Math.min(box.right, other.right) - Math.max(box.left, other.left) > 1 &&
+      Math.min(box.bottom, other.bottom) - Math.max(box.top, other.top) > 1));
+  };
   const dock = document.querySelector('#questionNavDock');
   const controls = [...document.querySelectorAll(
     '#questionPicker, #quickSolutionAction, #langEn, #langTa, #figureBtn, #questionTopNext, #previous, #next'
@@ -57,6 +63,9 @@ function readerMetrics() {
     question: new URL(location.href).searchParams.get('question'),
     documentOverflow: document.documentElement.scrollWidth - innerWidth,
     readerOverflow: lesson.scrollWidth - lesson.clientWidth,
+    overlap: overlapping('.question-top > :not([hidden])') ||
+      overlapping('.appbar .brand-mobile, .appbar #browseBtn, .appbar #homeBtn, .appbar .lang-switch'),
+    replacementGlyphs: /�/.test(lesson.innerText),
     visibleQuestionHeadings: [...lesson.querySelectorAll('h1, h2')].filter(el => el.offsetWidth).map(el => el.innerText),
     displayMathSizes: [...new Set(formulas.filter(el => el.classList.contains('triggle-tex-display'))
       .map(el => Math.round(parseFloat(getComputedStyle(el.querySelector('.katex')).fontSize) * 10) / 10))],
@@ -105,6 +114,18 @@ async function testActions(page, base) {
   assert.equal(await page.locator('#figureDialog').evaluate(dialog => dialog.open), true);
   await page.keyboard.press('Escape');
   assert.equal(await page.locator('#figureDialog').evaluate(dialog => dialog.open), false);
+  // Browser text enlargement still allows the geometry heading and all controls to reflow.
+  await page.setViewportSize({width: 320, height: 844});
+  for (const language of ['#langEn', '#langTa']) {
+    await page.locator(language).click();
+    const zoomed = await page.evaluate(() => {
+      document.documentElement.style.fontSize = '200%';
+      const dimensions = {viewport: innerWidth, page: document.documentElement.scrollWidth};
+      document.documentElement.style.fontSize = '';
+      return dimensions;
+    });
+    assert.ok(zoomed.page <= zoomed.viewport + 1, language + ' 200% text enlargement overflow');
+  }
   await page.locator('#homeBtn').click();
   assert.equal(await page.locator('.home-copyright').innerText(), '© 2026 VER labs');
   for (const grade of [11, 12]) {
@@ -147,6 +168,7 @@ async function testActions(page, base) {
           function check(condition, message) { if (!condition) failures.push(label + ' ' + message); }
           check(metrics.question === id, 'question changed or deep link failed');
           check(metrics.documentOverflow <= 1 && metrics.readerOverflow <= 1, 'page or reader overflowed');
+          check(!metrics.overlap && !metrics.replacementGlyphs, 'controls overlap or a glyph is missing');
           check(metrics.mathErrors === 0 && metrics.clips === 0, 'invalid or clipped mathematics');
           check(metrics.wideWithoutKeyboard === 0, 'wide formula has no keyboard access');
           check(metrics.visibleQuestionHeadings.length === 1, 'expected one question heading');
