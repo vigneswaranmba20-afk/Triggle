@@ -45,8 +45,8 @@ Fresh source extraction was checked against the reader, captured page images and
 
 | Grade | Eligible tasks | English reader content | Tamil reader content | Both languages | Independently confirmed complete in both | Fully verified live |
 |---|---:|---:|---:|---:|---:|---:|
-| 9 | 836 | 836 | 836 | 836 | 286 | 196 |
-| 10 | 920 | 920 | 920 | 920 | 434 | 32 |
+| 9 | 836 | 836 | 836 | 836 | 836 | 196 |
+| 10 | 920 | 920 | 920 | 920 | 920 | 32 |
 
 The reader columns measure visible question, solution and final-answer content on registered tasks. The independently confirmed column requires matching source and mathematical evidence in addition. The JSON and CSV preserve the evidence at task level.
 
@@ -97,19 +97,42 @@ The reader columns measure visible question, solution and final-answer content o
 
 ## Source differences and remaining work
 
-- **Grade 9 Exercise 1.7 Q12, EN PDF p. 43 and TA p. 46.** The overlap is five plus the number who play neither game. Five follows if all 50 play at least one. The reader preserves the unscored conditional explanation.
 - **Grade 9 Exercise 2.5 Q3, EN PDF p. 65 and TA p. 70.** English prints `(vi)` for the fourth expression and Tamil prints `(iv)`. Both map to the stable `(iv)` record.
 - **Grade 9 Exercise 5.2 Q1 and Exercise 5.6 Q4.** English repeats `(ii)` for the third distance expression. Tamil prints `(iii)`. The Tamil Exercise 5.6 Q4 option for S contains an extra conjunction. The coordinates and correct choice Q and R agree across both editions.
-- **Grade 9 Exercise 6.5 Q5 and Q6, EN PDF p. 246 and TA p. 260.** Q5 has two listed solutions, 30° and 60°. Q6 evaluates to approximately 5.3985 and none of its choices matches. Both remain quarantined in the inventory.
-- **Grade 9 Exercise 7.4 Q7, EN PDF p. 270 and TA p. 285.** Both answer appendices key (2), which is the simplest form, but (4) is equivalent. The bilingual reader explains both while the ledger records the single-answer ambiguity.
-- **Grade 9 Exercise 8.3 Q6, EN PDF p. 293 and TA p. 311.** The Tamil question asks for mean and median as well as mode. Both answer appendices show the mode. The candidate preserves the edition-specific prompts and provides all three solutions in both languages.
-- **Grade 10 Exercise 2.7 Q12, EN and TA PDF p. 79.** Arbitrary real exponents require positive bases for this proof. The reader gives the positive-base proof and an undefined negative-base example.
+- **Grade 9 Exercise 8.3 Q6, EN PDF p. 293 and TA p. 311.** The Tamil question asks for mean and median as well as mode. Both answer appendices show the mode. The reader preserves the edition-specific prompts and provides all three solutions in both languages.
 - **Grade 10 Exercise 1.5 Q1 and Q5, EN PDF p. 37 and TA pp. 38–39.** Both answer appendices reverse the order of the formulas in Q1(iii). Q5 uses natural-number subsets while the answer keys assume full natural-number inputs. The reader derives the results for the stated domains.
-- **Grade 10 Exercise 5.2 Q12, EN PDF p. 227 and TA p. 234.** The claimed vertex order crosses. The conditional explanation and figure distinguish the printed order ABCD from the convex trapezium ABDC.
-- **Grade 10 source limitations.** The inventory lists every known source-blocked task with the exact canonical ID, evidence and proposed resolution. Exercise 6.1 Q7(i) has an impossible real-angle premise. In Q7(ii), the given value makes both sides undefined. The figures and final totals leave those cards outside verified completion.
+- **Grade 10 Exercise 8.1 Q5.** The Tamil wording says ten workers and lists nine wages. The set of wages agrees with English. The calculation explicitly covers the nine printed wages.
 - **Teacher and Tamil editorial reviews.** Both are pending. The inventory includes mathematical evidence for all 1,756 eligible tasks. TRACE MathGuard remains a separate development effort. [MathGuard PR #425](https://github.com/vigneswaranmba20-afk/Triggle/pull/425)
+
+### Quarantined source tasks
+
+The 18 tasks below are excluded from completion counts. The ledger identifies which cards provide a conditional explanation and which are absent from the scored catalogue.
+
+| Canonical task | EN PDF page | TA PDF page | Source issue | Resolution |
+|---|---:|---:|---|---|
+| `g9/ch1/ex1.7/q12/whole` | 43 | 46 | Neither source states that all 50 boys play at least one game. The overlap is 5 plus the number who play neither, so the keyed 5 is conditional. | Explain the lower bound and the condition under which the keyed answer follows, or obtain an erratum. |
+| `g9/ch3/ex3.15/q9/whole` | 140 | 151 | By the remainder theorem, p(a)=0 makes x−a both a divisor and a factor. Each is a printed option in both editions. | Show both valid terms and identify the key’s choice. An official erratum could remove the equivalent distractor. |
+| `g9/ch3/ex3.15/q28/whole` | 142 | 152 | Neither source says the primes are distinct. Repeating the same prime gives that prime as the GCD, including the other listed value 2. | Teach both cases without a single graded choice. An official erratum could specify that the primes must be distinct. |
+| `g9/ch6/ex6.1/q6/whole` | 233 | 247 | Neither edition restricts the sign of b. For a = 3, b = −4 and acute θ with sin θ = 3/5, b sin θ = −12/5 while a cos θ = 12/5. | Show the identity in the intended positive right-triangle setting. Keep the original question and include the exact signed counterexample. |
+| `g9/ch6/ex6.5/q5/whole` | 246 | 260 | Both 30° and 60° satisfy the printed equation 2 sin(2θ) = √3. Both are listed choices. | Use a multiple-answer explanation or obtain an official additional domain restriction. |
+| `g9/ch6/ex6.5/q6/whole` | 246 | 260 | Both books give 3 sin(70°) sec(20°) + 2 sin(49°) sec(51°). It is about 5.3985 and none of the printed choices is exact. | Explain the inconsistency and retain the printed angles. Request an official erratum for a corrected MCQ. |
+| `g9/ch7/ex7.4/q7/whole` | 270 | 285 | Both editions ask for the area ratio and list 4:9 and 16:36. Both answer appendices choose 4:9. The question does not ask for simplest form. | Retain both options in the reader without single-option grading. An official erratum could ask for the simplest form or replace the equivalent distractor. |
+| `g10/ch2/ex2.7/q12/whole` | 79 | 79 | Neither edition restricts the bases for the power identity. Taking a,b,c = 0, 1/2, 1 and x=y=z=−1 makes the left side undefined over the reals. The reader proves the positive-base case. | Retain the positive-base condition and obtain an official erratum before counting the unrestricted statement as solved. |
+| `g10/ch3/ex3.20/q11/whole` | 161 | 165 | The Tamil prompt reverses the English squared-roots premise. The keyed geometric progression does not follow from the Tamil premise. | Retain the discrepancy and obtain an official erratum or present a labelled conditional explanation. |
+| `g10/ch4/ex4.2/q8/i` | 188 | 194 | AB + BD + DC = AC in both editions. The existing student card explains the collinearity and is retained for bookmarks and progress. | Retain the discrepancy and obtain an official erratum or present a labelled conditional explanation. |
+| `g10/ch4/ex4.unit/q6/i` | 207 | 214 | Both editions omit the required order of E and D. With E on the C side of D, the ax term in the formula for b² has the opposite sign. | Retain the discrepancy and obtain an official erratum or present a labelled conditional explanation. |
+| `g10/ch4/ex4.unit/q6/ii` | 207 | 214 | Both editions omit the required order of E and D. With E on the C side of D, the ax term in the formula for c² has the opposite sign. | Retain the discrepancy and obtain an official erratum or present a labelled conditional explanation. |
+| `g10/ch4/ex4.unit/q10/whole` | 207 | 214 | Neither edition links F to D and E. The appendix value 6 would follow from Ceva if all three points were internal and CD, AE and BF were concurrent. | Retain the discrepancy and obtain an official erratum or present a labelled conditional explanation. |
+| `g10/ch5/ex5.2/q12/whole` | 227 | 234 | In the printed order ABCD, sides BC and DA intersect at (6, −25/4). The convex order ABDC is a trapezium. The reader shows both orders. | Keep the edition wording and the corrected order visible. Obtain an erratum for the printed order before treating the proof as unconditional. |
+| `g10/ch6/ex6.1/q7/i` | 256 | 264 | The square of sin θ + cos θ would have to be 3. For real θ its square is at most 2. The existing bilingual card explains the impossible premise and the formal consequence. | Retain the explanation and obtain an official erratum to make the exercise satisfiable. |
+| `g10/ch6/ex6.1/q7/ii` | 256 | 264 | The premise forces tan θ = 1/√3, so tan(3θ) and the right-hand ratio are both undefined. The existing bilingual card explains the domain restriction. | Retain the diagnostic. An official correction is required for an evaluable identity at the specified angle. |
+| `g10/ch8/ex8.4/q1/whole` | 335 | 347 | BILINGUAL_SOURCE_MATH_CONTRADICTION: Both English and Tamil 2025 editions print P(A)=2/3, P(B)=2/5, P(A∪B)=1/3, violating P(A∪B) >= P(A). | Retain the discrepancy and obtain an official erratum or present a labelled conditional explanation. |
+| `g10/ch8/ex8.5/q11/whole` | 336 | 349 | The question omits the number of pages. The English and Tamil keys disagree. See the Chapter 8 release report. | Retain the discrepancy and obtain an official erratum or present a labelled conditional explanation. |
+
+## Test and production results
+
 - **Reader reconciliation.** The local candidate opened 1,609 catalogue cards in English and Tamil at 390 px. Each had the question, worked steps and final answer. Chromium found 0 KaTeX errors and 0 page overflows. The sweep found 0 Grade 9 and 0 Grade 10 cards without a bilingual step explanation. Focused release checks covered 499 added explanations at 320, 360, 390 and 412 px.
-- **Navigation reconciliation.** The assembled candidate traversed 1,609 cards within 129 exercise boundaries. The final sweep found 0 differences from the source sequence.
+- **Navigation reconciliation.** The assembled candidate traversed 1,609 cards within 129 exercise boundaries. The English sweep found 0 differences from the source sequence. The Tamil sweep found 0 differences.
 - **Figures.** The assembled candidate opened 310 full-screen Figure views in both languages at 390 px. It found 0 load or description failures and 0 English-text descriptions requiring review in Tamil mode.
 - **Concept links.** The local reader audit inspected 155 concept stages and resolved 223 explicit textbook links. The one other link opens the existing Midpoint practice activity.
 - **Production verification in progress.** The checkpoint records each Pages receipt, exact revision and live student route. The final all-catalogue sweep is queued after the remaining releases.

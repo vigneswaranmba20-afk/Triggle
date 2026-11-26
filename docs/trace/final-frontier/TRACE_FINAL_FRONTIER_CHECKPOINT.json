@@ -2302,7 +2302,9 @@
     "finalProductionSweep": "/workspace/scratch/trace-sources/sweep-final-production.sh",
     "checkpointWriter": "/workspace/scratch/trace-sources/persist-frontier-checkpoint.sh",
     "localFigureAudit": "/workspace/scratch/trace-sources/figure-audit-final-candidate.json",
-    "localOfflineAudit": "/workspace/scratch/trace-sources/offline-final-candidate.log"
+    "localOfflineAudit": "/workspace/scratch/trace-sources/offline-final-candidate.log",
+    "deliverablesMergeCommand": "/workspace/scratch/trace-sources/publish-frontier-artifacts.sh",
+    "localTamilNavigationAudit": "/workspace/scratch/trace-sources/navigation-ta-final-candidate.json"
   },
   "openManagement": {
     "mathguard": "https://github.com/vigneswaranmba20-afk/Triggle/pull/425",
