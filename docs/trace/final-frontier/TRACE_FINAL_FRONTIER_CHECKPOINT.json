@@ -25,10 +25,12 @@
     "status": "IN_PROGRESS",
     "release": {
       "key": "g10.numbers.capacity",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 459,
       "head": "2b2dca43e14d5e932289f4600401dd7a92388b9c",
-      "prQualityRun": 45735971159
+      "prQualityRun": 45735971159,
+      "merge": "3edb4c5483152a9a6445bca9b71ed4e633685808",
+      "pagesRun": 45754198130
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2766,13 +2768,13 @@
         "c10-2-unit-q2-iii"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g10-ch2-frontier-capacity.json",
-      "status": "TESTED",
+      "status": "MERGED",
       "release": {
         "grade": 10,
         "chapter": 2,
         "runtimeRecords": 4,
         "scope": "Unit Exercise 2 milk-capacity case and duplicate Exercise 2.7 bookmark",
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 459,
         "head": "2b2dca43e14d5e932289f4600401dd7a92388b9c",
         "prQualityRun": 45735971159,
@@ -2782,6 +2784,8 @@
           "browserScript": "site/tools/test_g10_frontier_capacity_index_browser.cjs",
           "studentQuery": "class=10&question=c10-2-unit-q2-i"
         },
+        "merge": "3edb4c5483152a9a6445bca9b71ed4e633685808",
+        "pagesRun": 45754198130,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/459"
       }
     },
@@ -2836,7 +2840,7 @@
       }
     }
   ],
-  "latestMain": "9bb35b50b5c9e6f96f44fa386fe1ef79107affc6",
+  "latestMain": "3edb4c5483152a9a6445bca9b71ed4e633685808",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2888,10 +2892,12 @@
   "openReleaseOrder": [
     {
       "key": "g10.numbers.capacity",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 459,
       "head": "2b2dca43e14d5e932289f4600401dd7a92388b9c",
-      "prQualityRun": 45735971159
+      "prQualityRun": 45735971159,
+      "merge": "3edb4c5483152a9a6445bca9b71ed4e633685808",
+      "pagesRun": 45754198130
     },
     {
       "key": "geometry.descriptions",
