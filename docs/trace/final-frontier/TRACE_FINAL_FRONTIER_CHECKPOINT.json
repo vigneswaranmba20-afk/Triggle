@@ -25,10 +25,12 @@
     "status": "IN_PROGRESS",
     "release": {
       "key": "exercise.hints",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 461,
       "head": "cfdaa09d2d8214b12e9e24f15ff49b7a87fc59ee",
-      "prQualityRun": 45740811075
+      "prQualityRun": 45740811075,
+      "merge": "b0f1557c34178af9ea737aaca8109297a962cb90",
+      "pagesRun": 45758849515
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2884,13 +2886,13 @@
       "chapter": null,
       "scope": "Bilingual hints across all 129 registered textbook exercise sections",
       "runtimeRecords": 1609,
-      "status": "TESTED",
+      "status": "MERGED",
       "release": {
         "grade": null,
         "chapter": null,
         "runtimeRecords": 1609,
         "scope": "Bilingual starting hints and Tamil worked formulas and accessible readings",
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 461,
         "head": "cfdaa09d2d8214b12e9e24f15ff49b7a87fc59ee",
         "prQualityRun": 45740811075,
@@ -2900,11 +2902,13 @@
           "browserScript": "site/tools/test_frontier_exercise_hints_browser.cjs",
           "studentQuery": "class=10&question=c10-8-ex8-2-q2"
         },
+        "merge": "b0f1557c34178af9ea737aaca8109297a962cb90",
+        "pagesRun": 45758849515,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/461"
       }
     }
   ],
-  "latestMain": "df7dd05a1c02421f8f95676d2371d0db3be1f008",
+  "latestMain": "b0f1557c34178af9ea737aaca8109297a962cb90",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2956,10 +2960,12 @@
   "openReleaseOrder": [
     {
       "key": "exercise.hints",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 461,
       "head": "cfdaa09d2d8214b12e9e24f15ff49b7a87fc59ee",
-      "prQualityRun": 45740811075
+      "prQualityRun": 45740811075,
+      "merge": "b0f1557c34178af9ea737aaca8109297a962cb90",
+      "pagesRun": 45758849515
     }
   ]
 }
