@@ -25,10 +25,12 @@
     "status": "IN_PROGRESS",
     "release": {
       "key": "g9.mensuration",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 450,
       "head": "a98b04ad8cc1eeba393419116e4c67fd5a98137b",
-      "prQualityRun": 45719169113
+      "prQualityRun": 45719169113,
+      "merge": "5e34db1c968e592c9a28ecd5536fa774609d9011",
+      "pagesRun": 45735482206
     },
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
@@ -2264,13 +2266,13 @@
         "g9-ch7-ex7.4-q7"
       ],
       "sourceEvidence": "site/data/textbook-fidelity/g9-ch7-frontier-ratio.json",
-      "status": "TESTED",
+      "status": "MERGED",
       "release": {
         "grade": 9,
         "chapter": 7,
         "runtimeRecords": 1,
         "scope": "Equivalent ratio choices in Exercise 7.4 and independent Mensuration mathematics",
-        "status": "TESTED",
+        "status": "MERGED",
         "pr": 450,
         "head": "a98b04ad8cc1eeba393419116e4c67fd5a98137b",
         "prQualityRun": 45719169113,
@@ -2280,6 +2282,8 @@
           "browserScript": "site/tools/test_g9_mensuration_ratio_browser.cjs",
           "studentQuery": "class=9&question=g9-ch7-ex7.4-q7"
         },
+        "merge": "5e34db1c968e592c9a28ecd5536fa774609d9011",
+        "pagesRun": 45735482206,
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/450"
       }
     },
@@ -2388,8 +2392,8 @@
         "scope": "Printed crossing and keyed trapezium in Grade 9 Exercise 5.1 Q4",
         "status": "TESTED",
         "pr": 456,
-        "head": "ada7f0d7cedb24b1b713ea9b6a0a43ee651ee06a",
-        "prQualityRun": 45721015955,
+        "head": "8bb7e69bd10284899663ad6ad436fd0015836831",
+        "prQualityRun": 45735899574,
         "verification": {
           "slug": "g9-coordinate-order",
           "worktree": "/workspace/Triggle-frontier-g9-coordinate-order",
@@ -2409,12 +2413,12 @@
       "release": {
         "grade": null,
         "chapter": null,
-        "runtimeRecords": 16,
-        "scope": "Tamil final-answer typesetting in Algebra, Coordinate Geometry, Mensuration, Statistics and Probability",
+        "runtimeRecords": 17,
+        "scope": "Tamil final-answer typesetting and accessible notation in Algebra, Coordinate Geometry, Mensuration, Statistics and Probability",
         "status": "TESTED",
         "pr": 454,
-        "head": "a30a6add93efe17ad57f297e8e81e4261112ad3f",
-        "prQualityRun": 45720503646,
+        "head": "923b8ac03c5b7a7053efce66699565b0d5b25a13",
+        "prQualityRun": 45735872838,
         "verification": {
           "slug": "frontier-answer-tamil",
           "worktree": "/workspace/Triggle-frontier-answer-tamil",
@@ -2438,8 +2442,8 @@
         "scope": "Registered 2025 Trigonometry sources and the positive-side condition in Exercise 6.1 Q6",
         "status": "TESTED",
         "pr": 457,
-        "head": "dbc451ab81f44e0b4090bf2d3f475456638ece7c",
-        "prQualityRun": 45723317551,
+        "head": "65276d080f25e0d72ca8ed0ae7af66e13e4e60ac",
+        "prQualityRun": 45735926507,
         "verification": {
           "slug": "g9-trigonometry-source",
           "worktree": "/workspace/Triggle-g9-trigonometry-source",
@@ -2467,8 +2471,8 @@
         "scope": "Exact fourth-year salary and the printed bilingual question in Exercise 2.7 Q11",
         "status": "TESTED",
         "pr": 458,
-        "head": "012e6d1f0f599d1fad1c486296a2f1db864b8505",
-        "prQualityRun": 45724974517,
+        "head": "474775c7d699c9e5ff85aabd1980aa2f28a6d39e",
+        "prQualityRun": 45735946793,
         "verification": {
           "slug": "g10-numbers-salary",
           "worktree": "/workspace/Triggle-g10-numbers-exact",
@@ -2498,8 +2502,8 @@
         "scope": "Unit Exercise 2 milk-capacity case and duplicate Exercise 2.7 bookmark",
         "status": "TESTED",
         "pr": 459,
-        "head": "73750945c647af6dfd40fb9fa68e1e773eb63525",
-        "prQualityRun": 45726340192,
+        "head": "2b2dca43e14d5e932289f4600401dd7a92388b9c",
+        "prQualityRun": 45735971159,
         "verification": {
           "slug": "g10-numbers-capacity",
           "worktree": "/workspace/Triggle-g10-numbers-register",
@@ -2523,8 +2527,8 @@
         "scope": "Bilingual descriptions for three constructions and three geometry diagrams",
         "status": "TESTED",
         "pr": 460,
-        "head": "efbc76d049061b261fe2bccfb42deb96674306b3",
-        "prQualityRun": 45727706029,
+        "head": "37296d1096654ad04be3f720b1b53d566f9a6100",
+        "prQualityRun": 45735993291,
         "verification": {
           "slug": "geometry-descriptions",
           "worktree": "/workspace/Triggle-frontier-geometry-descriptions",
@@ -2548,8 +2552,8 @@
         "scope": "Bilingual hints across all 129 registered textbook exercise sections",
         "status": "TESTED",
         "pr": 461,
-        "head": "daea78aa0131ddea4858260f3d656427f59dc82f",
-        "prQualityRun": 45732851130,
+        "head": "3e7cf365c0a6dab5f4b5a6a701df66f157bcc826",
+        "prQualityRun": 45736014533,
         "verification": {
           "slug": "frontier-exercise-hints",
           "worktree": "/workspace/Triggle-frontier-exercise-hints",
@@ -2560,7 +2564,7 @@
       }
     }
   ],
-  "latestMain": "bd31c2b0d222e43e746e3e56925f85b8a05c45d2",
+  "latestMain": "5e34db1c968e592c9a28ecd5536fa774609d9011",
   "workspace": {
     "sourceCache": "/workspace/scratch/trace-sources",
     "baselineRuntime": "/workspace/scratch/trace-sources/baseline-browser-runtime.json",
@@ -2607,10 +2611,12 @@
   "openReleaseOrder": [
     {
       "key": "g9.mensuration",
-      "status": "TESTED",
+      "status": "MERGED",
       "pr": 450,
       "head": "a98b04ad8cc1eeba393419116e4c67fd5a98137b",
-      "prQualityRun": 45719169113
+      "prQualityRun": 45719169113,
+      "merge": "5e34db1c968e592c9a28ecd5536fa774609d9011",
+      "pagesRun": 45735482206
     },
     {
       "key": "g10.compositions",
@@ -2637,50 +2643,50 @@
       "key": "answer.tamil",
       "status": "TESTED",
       "pr": 454,
-      "head": "a30a6add93efe17ad57f297e8e81e4261112ad3f",
-      "prQualityRun": 45720503646
+      "head": "923b8ac03c5b7a7053efce66699565b0d5b25a13",
+      "prQualityRun": 45735872838
     },
     {
       "key": "g9.coordinate.order",
       "status": "TESTED",
       "pr": 456,
-      "head": "ada7f0d7cedb24b1b713ea9b6a0a43ee651ee06a",
-      "prQualityRun": 45721015955
+      "head": "8bb7e69bd10284899663ad6ad436fd0015836831",
+      "prQualityRun": 45735899574
     },
     {
       "key": "g9.trigonometry.source",
       "status": "TESTED",
       "pr": 457,
-      "head": "dbc451ab81f44e0b4090bf2d3f475456638ece7c",
-      "prQualityRun": 45723317551
+      "head": "65276d080f25e0d72ca8ed0ae7af66e13e4e60ac",
+      "prQualityRun": 45735926507
     },
     {
       "key": "g10.numbers.salary",
       "status": "TESTED",
       "pr": 458,
-      "head": "012e6d1f0f599d1fad1c486296a2f1db864b8505",
-      "prQualityRun": 45724974517
+      "head": "474775c7d699c9e5ff85aabd1980aa2f28a6d39e",
+      "prQualityRun": 45735946793
     },
     {
       "key": "g10.numbers.capacity",
       "status": "TESTED",
       "pr": 459,
-      "head": "73750945c647af6dfd40fb9fa68e1e773eb63525",
-      "prQualityRun": 45726340192
+      "head": "2b2dca43e14d5e932289f4600401dd7a92388b9c",
+      "prQualityRun": 45735971159
     },
     {
       "key": "geometry.descriptions",
       "status": "TESTED",
       "pr": 460,
-      "head": "efbc76d049061b261fe2bccfb42deb96674306b3",
-      "prQualityRun": 45727706029
+      "head": "37296d1096654ad04be3f720b1b53d566f9a6100",
+      "prQualityRun": 45735993291
     },
     {
       "key": "exercise.hints",
       "status": "TESTED",
       "pr": 461,
-      "head": "daea78aa0131ddea4858260f3d656427f59dc82f",
-      "prQualityRun": 45732851130
+      "head": "3e7cf365c0a6dab5f4b5a6a701df66f157bcc826",
+      "prQualityRun": 45736014533
     }
   ]
 }
