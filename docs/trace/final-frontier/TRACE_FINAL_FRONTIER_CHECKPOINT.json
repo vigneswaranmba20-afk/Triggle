@@ -23,15 +23,7 @@
   },
   "nextBatch": {
     "status": "IN_PROGRESS",
-    "release": {
-      "key": "exercise.hints",
-      "status": "MERGED",
-      "pr": 461,
-      "head": "cfdaa09d2d8214b12e9e24f15ff49b7a87fc59ee",
-      "prQualityRun": 45740811075,
-      "merge": "b0f1557c34178af9ea737aaca8109297a962cb90",
-      "pagesRun": 45758849515
-    },
+    "release": null,
     "scope": "Verify the queued curricula releases in sequence and reconcile outstanding question-level evidence."
   },
   "editorialReview": {
@@ -2886,13 +2878,13 @@
       "chapter": null,
       "scope": "Bilingual hints across all 129 registered textbook exercise sections",
       "runtimeRecords": 1609,
-      "status": "MERGED",
+      "status": "LIVE_VERIFIED",
       "release": {
         "grade": null,
         "chapter": null,
         "runtimeRecords": 1609,
         "scope": "Bilingual starting hints and Tamil worked formulas and accessible readings",
-        "status": "MERGED",
+        "status": "LIVE_VERIFIED",
         "pr": 461,
         "head": "cfdaa09d2d8214b12e9e24f15ff49b7a87fc59ee",
         "prQualityRun": 45740811075,
@@ -2904,6 +2896,35 @@
         },
         "merge": "b0f1557c34178af9ea737aaca8109297a962cb90",
         "pagesRun": 45758849515,
+        "liveEvidence": {
+          "pr": 461,
+          "merge": "b0f1557c34178af9ea737aaca8109297a962cb90",
+          "head": "cfdaa09d2d8214b12e9e24f15ff49b7a87fc59ee",
+          "slug": "frontier-exercise-hints",
+          "studentUrl": "https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?class=10&question=c10-8-ex8-2-q2",
+          "pagesRun": 45758849515,
+          "deploymentId": 8077183982,
+          "deploymentJob": "https://github.com/vigneswaranmba20-afk/Triggle/actions/runs/45758849515/job/139709627416",
+          "deploymentCompletedAt": "2026-11-26T05:18:48Z",
+          "versionMatched": "b0f1557c34178af9ea737aaca8109297a962cb90",
+          "sha256": {
+            "assets/app.js": "a3848c0e0bc65828f50c2fe17313818db552f2970f3979f254a3e6f1bacdea06",
+            "data/frontier-exercise-hints.js": "9379d1cfe0e0d0b55ffecbae8d07d5127b5992b89d6d778b22f8c111eba161fa",
+            "data/project-status.json": "68d15b5e07e6ab0ab902aeae4c33c38324edcf9ca3a52ed7ef226f8f2f9667fb",
+            "data/textbook-tamil-formula-labels.js": "f507ca11fd9649b6af7e792ffb7f2ace30adcd3d06764c60772aacd4b15d6fda",
+            "index.html": "541d8b1f1ad9c001a297cef060218970f3d6444dce5f001fee530c92d1d8eb84",
+            "service-worker.js": "bab6175ac60e667e6f901626c64662900076a7aeafc41a02f2880d60b69e48d9"
+          },
+          "browser": {
+            "engine": "Chromium",
+            "width": 390,
+            "languages": [
+              "en",
+              "ta"
+            ],
+            "result": "PASS bilingual exercise hints, authored hints and practice isolation at 390 px.\nPASS bilingual mathematical labels and accessible answers at 390 px."
+          }
+        },
         "url": "https://github.com/vigneswaranmba20-afk/Triggle/pull/461"
       }
     }
@@ -2956,16 +2977,6 @@
     "Verify each Pages publish run and deployment status. Then compare changed deployed site files with the merge commit and open affected cards in English and Tamil before merging the next batch.",
     "Run the assembled reader, navigation, Figure and offline checks against the final Pages revision, and publish the report."
   ],
-  "latestVerifiedProduction": "df7dd05a1c02421f8f95676d2371d0db3be1f008",
-  "openReleaseOrder": [
-    {
-      "key": "exercise.hints",
-      "status": "MERGED",
-      "pr": 461,
-      "head": "cfdaa09d2d8214b12e9e24f15ff49b7a87fc59ee",
-      "prQualityRun": 45740811075,
-      "merge": "b0f1557c34178af9ea737aaca8109297a962cb90",
-      "pagesRun": 45758849515
-    }
-  ]
+  "latestVerifiedProduction": "b0f1557c34178af9ea737aaca8109297a962cb90",
+  "openReleaseOrder": []
 }
