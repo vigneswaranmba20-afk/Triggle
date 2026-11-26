@@ -20,8 +20,8 @@
       "PASS": 328,
       "UNVERIFIABLE": 6
     },
-    "runtimeSec": 79.68,
-    "peakMemoryMB": 95.21
+    "runtimeSec": 78.86,
+    "peakMemoryMB": 97.42
   },
   "expandedV1_4Benchmark": {
     "total": 765,
@@ -45,7 +45,7 @@
       "verified": 2536,
       "verifiedRatePct": 81.31
     },
-    "runtimeSec": 116.62
+    "runtimeSec": 116.15
   },
   "newDomainV1_5": {
     "grade9Chapter1": {

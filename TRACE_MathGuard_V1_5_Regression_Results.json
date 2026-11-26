@@ -63,7 +63,7 @@
       "falseAcceptances": 0,
       "falseRejections": 0,
       "criticalMissedErrors": 0,
-      "executionTimeMs": 1587.46,
+      "executionTimeMs": 1507.26,
       "rootCauseOfPriorZeroReport": "Reporting schema mismatch: historical suite returned confusion-matrix keys (tp/tn/fp/fn) without a normalized 'passed' field, causing V1.4b PDF generator sdata.get('passed', 0) to display 0."
     },
     "v1_2_300_case": {
@@ -83,7 +83,7 @@
       "falseAcceptances": 0,
       "falseRejections": 0,
       "criticalMissedErrors": 0,
-      "executionTimeMs": 4374.51,
+      "executionTimeMs": 4182.28,
       "rootCauseOfPriorZeroReport": "Reporting schema mismatch: historical suite returned confusion-matrix keys (tp/tn/fp/fn) without a normalized 'passed' field, causing V1.4b PDF generator sdata.get('passed', 0) to display 0."
     },
     "v1_3_186_case": {
@@ -103,7 +103,7 @@
       "falseAcceptances": 0,
       "falseRejections": 0,
       "criticalMissedErrors": 0,
-      "executionTimeMs": 3728.3,
+      "executionTimeMs": 3741.02,
       "rootCauseOfPriorZeroReport": "Reporting schema mismatch: historical suite returned confusion-matrix keys (tp/tn/fp/fn) without a normalized 'passed' field, causing V1.4b PDF generator sdata.get('passed', 0) to display 0."
     },
     "v1_3_1_100_case_holdout": {
@@ -123,7 +123,7 @@
       "falseAcceptances": 0,
       "falseRejections": 0,
       "criticalMissedErrors": 0,
-      "executionTimeMs": 2322.19,
+      "executionTimeMs": 2136.25,
       "rootCauseOfPriorZeroReport": "Reporting schema mismatch: historical suite returned confusion-matrix keys (tp/tn/fp/fn) without a normalized 'passed' field, causing V1.4b PDF generator sdata.get('passed', 0) to display 0."
     },
     "v1_3_4a_adversarial": {
