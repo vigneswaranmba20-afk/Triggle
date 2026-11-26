@@ -1,0 +1,21 @@
+<svg xml:lang="ta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 208" role="img">
+  <title>D என்பது AB-இலும் E என்பது AC-இலும் உள்ளன. DE என்பது BC-க்கு இணை.</title>
+  <style>
+    .edge,.accent,.guide,.mark { fill:none; stroke-linecap:round; stroke-linejoin:round }
+    .edge { stroke:#273349; stroke-width:2 }
+    .accent { stroke:#155c89; stroke-width:2.5 }
+    .guide { stroke:#62778a; stroke-width:1.4; stroke-dasharray:5 4 }
+    .mark { stroke:#465369; stroke-width:1.4 }
+    .point { fill:#273349 }
+    text { fill:#202c40; font:600 15px system-ui,sans-serif; paint-order:stroke; stroke:#f8fafc; stroke-width:3px; stroke-linejoin:round }
+  </style>
+  <rect width="320" height="208" rx="8" fill="#f8fafc"/>
+  <polyline class="edge" points="125.000,25.000 43.000,156.000 269.000,156.000 125.000,25.000"/>
+<polyline class="accent" points="89.857,81.143 186.714,81.143"/>
+<circle class="point" cx="125.000" cy="25.000" r="2.200"/><text x="120.000" y="16.000">A</text>
+<circle class="point" cx="43.000" cy="156.000" r="2.200"/><text x="35.000" y="175.000">B</text>
+<circle class="point" cx="269.000" cy="156.000" r="2.200"/><text x="271.000" y="175.000">C</text>
+<circle class="point" cx="89.857" cy="81.143" r="2.200"/><text x="72.857" y="83.143">D</text>
+<circle class="point" cx="186.714" cy="81.143" r="2.200"/><text x="194.714" y="83.143">E</text>
+  <text x="10.000" y="200.000">அளவுப்படி அல்ல</text>
+</svg>

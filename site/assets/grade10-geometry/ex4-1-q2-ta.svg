@@ -1,0 +1,23 @@
+<svg xml:lang="ta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 171" role="img">
+  <title>கம்பத்துக்கும் சிறுமிக்கும் இடையே தரையில் கிடைமட்டக் கண்ணாடி உள்ளது. இரு பார்வைக் கோடுகளும் கண்ணாடியில் சந்திக்கின்றன. தரைத் தொலைவுகள் 6.6 மீ மற்றும் 2.5 மீ.</title>
+  <style>
+    .edge,.accent,.guide,.mark { fill:none; stroke-linecap:round; stroke-linejoin:round }
+    .edge { stroke:#273349; stroke-width:2 }
+    .accent { stroke:#155c89; stroke-width:2.5 }
+    .guide { stroke:#62778a; stroke-width:1.4; stroke-dasharray:5 4 }
+    .mark { stroke:#465369; stroke-width:1.4 }
+    .point { fill:#273349 }
+    text { fill:#202c40; font:600 15px system-ui,sans-serif; paint-order:stroke; stroke:#f8fafc; stroke-width:3px; stroke-linejoin:round }
+  </style>
+  <rect width="320" height="171" rx="8" fill="#f8fafc"/>
+  <polyline class="edge" points="23.000,131.000 23.000,38.600 207.800,131.000 277.800,96.000 277.800,131.000"/>
+<polyline class="edge" points="15.000,131.000 302.000,131.000"/>
+<polyline class="guide" points="207.800,67.000 207.800,131.000"/>
+<polyline class="mark" points="23.000,122.000 32.000,122.000 32.000,131.000"/>
+<polyline class="mark" points="268.800,131.000 268.800,122.000 277.800,122.000"/>
+<text x="66.000" y="154.000">6.6 m</text>
+<text x="227.000" y="154.000">2.5 m</text>
+<text x="28.000" y="82.000">H</text>
+<text x="258.000" y="88.000">1.25 m</text>
+<text x="174.000" y="124.000">கண்ணாடி</text>
+</svg>
