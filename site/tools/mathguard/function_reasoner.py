@@ -143,30 +143,42 @@ class SymbolicFunction:
         codomain: Union[TypedSet, SymbolicInfiniteSet],
     ) -> None:
         self.var = var
+        self._raw_expr = expr
         self.expr = sp.simplify(expr)
         self.domain = domain
         self.codomain = codomain
+        self._composition: Optional[Tuple[SymbolicFunction, SymbolicFunction]] = None
 
     def excluded_singularities(self) -> Set[sp.Expr]:
-        """Find denominator zeros for rational expressions."""
-        try:
-            _, den = sp.fraction(sp.together(self.expr))
-            if den == 1 or not den.has(self.var):
-                return set()
-            sols = sp.solve(sp.Eq(den, 0), self.var)
-            return {sp.simplify(s) for s in sols}
-        except Exception:
-            return set()
+        """Find real denominator zeros while retaining pre-cancellation poles."""
+        poles: Set[sp.Expr] = set()
+        denominators = [power.base for power in self._raw_expr.atoms(sp.Pow) if power.exp.is_negative]
+        for denominator in denominators:
+            roots = sp.solveset(denominator, self.var, domain=sp.S.Reals)
+            if isinstance(roots, sp.FiniteSet):
+                poles.update(roots)
+        if self._composition:
+            outer, inner = self._composition
+            poles.update(inner.excluded_singularities())
+            for outer_pole in outer.excluded_singularities():
+                preimage = sp.solveset(inner.expr - outer_pole, self.var, domain=sp.S.Reals)
+                if isinstance(preimage, sp.FiniteSet):
+                    poles.update(preimage)
+        return poles
 
     def is_input_defined(self, val: Any) -> Tuple[bool, str]:
+        if self._composition:
+            outer, inner = self._composition
+            ok, value, reason = inner.evaluate(val)
+            return outer.is_input_defined(value) if ok else (False, reason)
         # Check domain membership
         if isinstance(self.domain, TypedSet):
             if _normalize_element(val) not in self.domain:
                 return False, f"{val} ∉ domain"
         elif isinstance(self.domain, SymbolicInfiniteSet):
             c = self.domain.contains(val)
-            if c is False:
-                return False, f"{val} ∉ {self.domain.label}"
+            if c is not True:
+                return False, f"{val} is not provably in {self.domain.label}"
 
         # Check rational singularities
         sval = sp.sympify(val) if not isinstance(val, sp.Basic) else val
@@ -175,22 +187,32 @@ class SymbolicFunction:
                 return False, f"Division by zero at {self.var} = {val}"
 
         # Check real radical non-negativity when codomain is ℝ or subset
-        for pow_expr in self.expr.atoms(sp.Pow):
-            if pow_expr.exp.is_Rational and pow_expr.exp.q % 2 == 0 and pow_expr.exp > 0:
+        for pow_expr in self._raw_expr.atoms(sp.Pow):
+            if pow_expr.exp.is_Rational and pow_expr.exp.q % 2 == 0:
                 inner_val = sp.simplify(pow_expr.base.subs(self.var, sval))
-                if inner_val.is_real and inner_val < 0:
-                    return False, f"Negative radicand {inner_val} under even root"
+                if inner_val.is_nonnegative is not True:
+                    return False, f"Radicand {inner_val} is not provably nonnegative under even root"
+                if pow_expr.exp.is_negative and inner_val == 0:
+                    return False, "Zero radicand of a reciprocal root"
         return True, "Defined"
 
     def evaluate(self, val: Any) -> Tuple[bool, Optional[sp.Expr], str]:
+        if self._composition:
+            outer, inner = self._composition
+            ok, value, reason = inner.evaluate(val)
+            return outer.evaluate(value) if ok else (False, None, reason)
         ok, msg = self.is_input_defined(val)
         if not ok:
             return False, None, msg
         sval = sp.sympify(val) if not isinstance(val, sp.Basic) else val
         try:
             res = sp.simplify(self.expr.subs(self.var, sval))
-            if res.has(sp.zoo, sp.nan):
-                return False, None, "Undefined evaluation (zoo/nan)"
+            if res.has(sp.zoo, sp.nan) or res.is_finite is not True:
+                return False, None, "Evaluation has no finite value"
+            in_codomain = (_normalize_element(res) in self.codomain if isinstance(self.codomain, TypedSet)
+                           else self.codomain.contains(res))
+            if in_codomain is not True:
+                return False, None, f"Output {res} is not provably in the codomain"
             return True, res, "OK"
         except Exception as exc:
             return False, None, str(exc)
@@ -227,6 +249,19 @@ class SymbolicFunction:
                         reason=f"Not a total function on {self.domain.label}: undefined at {self.var} = {sing}",
                     )
 
+        if self.domain.kind == "R" and self.codomain.kind == "R" and not self._composition:
+            try:
+                real_domain = sp.calculus.util.continuous_domain(self._raw_expr, self.var, sp.S.Reals)
+            except (ValueError, NotImplementedError):
+                real_domain = None
+            if real_domain is not None and real_domain != sp.S.Reals:
+                return FunctionClassification(is_function=False, reason="Expression undefined on part of the stated real domain")
+
+        sample = {"N": (1, 2), "W": (0, 1), "Z": (-1, 0, 1), "Q": (0, sp.Rational(1, 2)),
+                  "R": (-1, 0, 1, sp.Rational(1, 2))}.get(self.domain.kind, ())
+        if any(not self.evaluate(value)[0] for value in sample):
+            return FunctionClassification(is_function=False, reason="A domain member has no valid codomain value")
+
         # Constant check
         if not self.expr.has(self.var):
             return FunctionClassification(
@@ -259,7 +294,8 @@ class SymbolicFunction:
                 coeff_a = poly.LC()
                 const_c = poly.EC()
                 if self.codomain.kind == "R":
-                    onto = True
+                    if self.domain.kind in ("R", "N", "W", "Z", "Q"):
+                        onto = self.domain.kind == "R"
                 elif self.domain.kind in ("N", "W", "Z") and self.codomain.kind in ("N", "W", "Z"):
                     # Test y = 1 (in N, W, Z) and y = 0 (in W, Z)
                     test_ys = [1, 2] if self.codomain.kind == "N" else [0, 1, -1] if self.codomain.kind == "Z" else [0, 1]
@@ -273,9 +309,15 @@ class SymbolicFunction:
                     if self.domain.kind == "Z" and self.codomain.kind == "Z":
                         onto = abs(coeff_a) == 1
             elif deg % 2 == 0 and deg >= 2:
-                # Even degree polynomial on R or Z is not injective (or check N)
-                if self.domain.kind in ("R", "Z"):
+                # An even-degree polynomial on R has a turning point. Integer
+                # inputs require an independent proof of a collision.
+                if self.domain.kind == "R":
                     one_to_one = False
+                elif self.domain.kind == "Z" and deg == 2:
+                    a_coeff, b_coeff, _ = poly.all_coeffs()
+                    reflected_sum = sp.simplify(-b_coeff / a_coeff)
+                    if reflected_sum.is_integer is not None:
+                        one_to_one = not reflected_sum.is_integer
                 elif self.domain.kind in ("N", "W"):
                     # e.g. x^2 is injective on N/W if vertex <= 0, check derivative or sample
                     vals = [self.expr.subs(self.var, k) for k in range(1 if self.domain.kind == "N" else 0, 10)]
@@ -334,7 +376,8 @@ class SymbolicFunction:
         """Compute (f ∘ g)(x) = f(g(x)) symbolically with domain compatibility check."""
         composed_expr = sp.simplify(self.expr.subs(self.var, g.expr))
         # Check if g's codomain/range is compatible with f's domain
-        if isinstance(g.domain, TypedSet) and isinstance(self.domain, TypedSet):
+        domain = g.domain
+        if isinstance(g.domain, TypedSet):
             valid_xs = []
             for x in g.domain:
                 ok_g, gx, _ = g.evaluate(x)
@@ -344,11 +387,18 @@ class SymbolicFunction:
                 if ok_f:
                     valid_xs.append(x)
             if len(valid_xs) < g.domain.cardinality:
-                return (
-                    SymbolicFunction(g.var, composed_expr, TypedSet(valid_xs), self.codomain),
-                    f"Restricted composition domain to {TypedSet(valid_xs)}",
-                )
-        return SymbolicFunction(g.var, composed_expr, g.domain, self.codomain), "Valid symbolic composition"
+                domain = TypedSet(valid_xs)
+        combined = SymbolicFunction(g.var, composed_expr, domain, self.codomain)
+        combined._composition = (self, g)
+        return combined, "Symbolic composition with both input restrictions retained"
+
+    def _is_real_rational_formula(self) -> bool:
+        if self._composition:
+            return all(part._is_real_rational_formula() for part in self._composition)
+        return (isinstance(self.domain, SymbolicInfiniteSet) and self.domain.kind == "R"
+                and isinstance(self.codomain, SymbolicInfiniteSet) and self.codomain.kind == "R"
+                and self._raw_expr.free_symbols <= {self.var}
+                and self._raw_expr.is_rational_function(self.var))
 
     def inverse(self) -> Tuple[Optional[sp.Expr], str]:
         cls = self.classify()
@@ -396,5 +446,8 @@ class ExtendedFunctionRegistry(FunctionRegistry):
         if isinstance(fg, FiniteFunction) and isinstance(gf, FiniteFunction):
             return fg.domain == gf.domain and fg.mapping == gf.mapping
         if isinstance(fg, SymbolicFunction) and isinstance(gf, SymbolicFunction):
-            return sp.simplify(fg.expr - gf.expr.subs(gf.var, fg.var)) == 0
+            if fg._is_real_rational_formula() and gf._is_real_rational_formula():
+                if fg.excluded_singularities() != gf.excluded_singularities():
+                    return False
+                return sp.simplify(fg.expr - gf.expr.subs(gf.var, fg.var)) == 0
         return None

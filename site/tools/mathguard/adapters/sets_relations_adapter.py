@@ -24,7 +24,7 @@ from ..set_theory_reasoner import SetTheoryReasoner
 from ..set_types import TypedSet, parse_set_literal
 from ..tamil_sets_parity import check_bilingual_set_parity
 from ..venn_reasoner import VennDiagramReasoner
-from .base import ChapterAdapter, verify_generic_answer, verify_tamil_math_parity
+from .base import ChapterAdapter, verify_tamil_math_parity
 
 
 def _extract_named_sets_from_text(text: str) -> Dict[str, TypedSet]:
@@ -124,6 +124,7 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
             env: Dict[str, TypedSet] = dict(subpart_envs[0]) if subpart_envs else _extract_named_sets_from_text(q_en)
         else:
             env = _extract_named_sets_from_text(q_en)
+        question_sets = dict(env)
         universal: Optional[TypedSet] = env.get("U")
         card_givens: List[Tuple[str, int]] = _extract_cardinality_givens(q_en)
 
@@ -167,6 +168,16 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
 
             step_sets = _extract_named_sets_from_text(combined)
             for k, v in step_sets.items():
+                if not subpart_envs and k in question_sets and v != question_sets[k]:
+                    total += 1
+                    failed += 1
+                    failed_details.append({
+                        "step": idx,
+                        "claim": f"{k} = {v}",
+                        "expected": str(question_sets[k]),
+                        "reason": "Step contradicts a set given in the question",
+                    })
+                    continue
                 env[k] = v
                 if k == "U":
                     universal = v
@@ -278,7 +289,7 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
                                 else:
                                     failed += 1
                                     failed_details.append({"step": idx, "claim": f"n({c_expr}) = {c_val}", "expected": int(vres.determined_quantities[c_expr])})
-                            elif vres.status == "INCONSISTENT":
+                            elif vres.status in {"INCONSISTENT", "INVALID_POPULATION"}:
                                 total += 1
                                 failed += 1
                                 failed_details.append({"step": idx, "claim": f"n({c_expr}) = {c_val}", "reason": vres.reason})
@@ -373,12 +384,24 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
             ans_en = str(ans_obj.get("en") if isinstance(ans_obj, dict) else (ans_obj or "")).strip()
             if not ans_en:
                 ans_status, ans_disc = "UNVERIFIABLE", "empty_answer"
-            elif work_status == "PASS":
-                ans_status, ans_disc = "PASS", "set_theory_working_verified"
             else:
-                ans_status, ans_disc = verify_generic_answer(item, base_work, is_concept=is_concept, allow_positive_domain=False)
-                if ans_status == "FAIL" and any(sym in ans_en for sym in ("{", "}", "∅", "∪", "∩", "×")):
-                    ans_status, ans_disc = "UNVERIFIABLE", "set_answer_requires_full_context"
+                target = re.search(r"\bfind\s+([A-Z]\s*[∪∩Δ×-]\s*[A-Z])\s*[.?]?\s*$", q_en, re.I)
+                if target and "(i)" not in q_en and "external_diagram_dependency" not in ambiguity_flags:
+                    givens = _extract_named_sets_from_text(q_en)
+                    expected = self.set_reasoner.evaluate(target[1], env=givens, universe=givens.get("U"))
+                    answer_expression = ans_en
+                    if "=" in ans_en:
+                        lhs, answer_expression = ans_en.split("=", 1)
+                        if re.sub(r"\s+", "", lhs) != re.sub(r"\s+", "", target[1]):
+                            answer_expression = ""
+                    observed = parse_set_literal(answer_expression.strip())
+                    if expected.ok and isinstance(expected.value, TypedSet) and isinstance(observed, TypedSet):
+                        ans_status = "PASS" if expected.value == observed else "FAIL"
+                        ans_disc = "compared_answer_to_question_sets"
+                    else:
+                        ans_status, ans_disc = "UNVERIFIABLE", "set_answer_requires_full_context"
+                else:
+                    ans_status, ans_disc = "UNVERIFIABLE", "no_dedicated_set_answer_derivation"
 
         ta_res = verify_tamil_math_parity(item, is_concept=is_concept)
         ta_flags = list(ta_res.flags)

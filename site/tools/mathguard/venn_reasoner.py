@@ -12,6 +12,9 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from fractions import Fraction
+from math import ceil, floor
+
+from sympy.solvers.simplex import InfeasibleLPError, linprog
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
 from .set_theory_reasoner import _BooleanMaskParser
@@ -157,6 +160,50 @@ class VennDiagramReasoner:
         val = Fraction(value) if not isinstance(value, Fraction) else value
         self.constraints.append((w, val, label or "custom"))
 
+    @staticmethod
+    def _has_integer_population(matrix, rhs, limit=128):
+        """Search nonnegative exact LP witnesses, branching on fractional regions."""
+        size = len(matrix[0])
+        pending = [[(0, None)] * size]
+        for _ in range(limit):
+            if not pending:
+                return False
+            bounds = pending.pop()
+            upper_rows, upper_values = [[0] * size], [0]
+            for index, (lower, upper) in enumerate(bounds):
+                if lower > 0:
+                    row = [0] * size
+                    row[index] = -1
+                    upper_rows.append(row)
+                    upper_values.append(-lower)
+                if upper is not None:
+                    row = [0] * size
+                    row[index] = 1
+                    upper_rows.append(row)
+                    upper_values.append(upper)
+            try:
+                _, values = linprog([0] * size, A=upper_rows, b=upper_values,
+                                    A_eq=matrix, b_eq=rhs)
+            except InfeasibleLPError:
+                continue
+            except ValueError:
+                return None
+            if any(value < 0 for value in values) or any(
+                sum(coef * value for coef, value in zip(row, values)) != total
+                for row, total in zip(matrix, rhs)
+            ):
+                return None
+            index = next((i for i, value in enumerate(values) if value != floor(value)), None)
+            if index is None:
+                return True
+            lower, upper = bounds[index]
+            for lo, hi in ((lower, floor(values[index])), (ceil(values[index]), upper)):
+                if hi is None or lo <= hi:
+                    child = bounds.copy()
+                    child[index] = (lo, hi)
+                    pending.append(child)
+        return None
+
     def solve(self, target_exprs: Optional[List[str]] = None) -> VennSolveResult:
         n = len(self.region_names)
         if not self.constraints:
@@ -244,6 +291,16 @@ class VennDiagramReasoner:
                 free_variables=[],
                 reason="All Venn regions uniquely solved as non-negative integers",
             )
+
+        if determined:
+            feasible = self._has_integer_population(mat, rhs)
+            if feasible is not True:
+                return VennSolveResult(
+                    status="INVALID_POPULATION" if feasible is False else "UNDERDETERMINED",
+                    num_sets=self.num_sets,
+                    reason=("No nonnegative integer population satisfies the givens" if feasible is False
+                            else "Integer population feasibility could not be certified"),
+                )
 
         # If target_exprs were requested and ALL of them are uniquely determined, still report free_variables
         free_names = [self.region_names[c] for c in free_cols]

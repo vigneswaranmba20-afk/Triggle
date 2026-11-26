@@ -117,6 +117,8 @@ def _strip_trailing_units(s: str) -> str:
 
 
 _CONV_UNITS = {
+    "kg": ("mass", Fraction(1000)), "g": ("mass", Fraction(1)),
+    "mg": ("mass", Fraction(1, 1000)),
     "mm": ("L", Fraction(1, 10)), "cm": ("L", Fraction(1)), "m": ("L", Fraction(100)), "km": ("L", Fraction(100000)),
     "mm2": ("A", Fraction(1, 100)), "cm2": ("A", Fraction(1)), "m2": ("A", Fraction(10000)),
     "mm3": ("V", Fraction(1, 1000)), "cm3": ("V", Fraction(1)), "m3": ("V", Fraction(1000000)),
@@ -1713,6 +1715,24 @@ def verify_complete_working(
                             graph.claims.append(MathClaim(s_idx, ln, "identity", "FAILED", evidence="multi_link_identity_mismatch"))
                     continue
 
+                if re.search(r"\bfor all real\b", q_stem, re.I):
+                    symbols = exprs[0].free_symbols | exprs[1].free_symbols
+                    if len(symbols) == 1:
+                        variable = next(iter(symbols))
+                        try:
+                            domains = [
+                                sp.calculus.util.continuous_domain(expr, variable, sp.S.Reals)
+                                for expr in exprs
+                            ]
+                        except (NotImplementedError, ValueError):
+                            domains = []
+                        if not domains or any(domain != sp.S.Reals for domain in domains):
+                            status = "FAILED" if domains else "UNVERIFIED"
+                            graph.claims.append(MathClaim(
+                                s_idx, ln, "identity", status, evidence="universal_real_domain_unmet"
+                            ))
+                            continue
+
                 ok, ev = _exprs_match(exprs[0], exprs[1], env, allow_pi_approx=allow_positive_domain, allow_positive_domain=allow_positive_domain)
                 if ok:
                     if ne_rhs_str is not None:
@@ -1731,7 +1751,7 @@ def verify_complete_working(
                     else:
                         graph.claims.append(MathClaim(s_idx, ln, "equation", "FAILED", evidence="contradictory_constant_equation"))
                     continue
-                if is_identity_task:
+                if is_identity_task or re.search(r"\bfor all real\b", q_stem, re.I):
                     graph.claims.append(MathClaim(s_idx, ln, "identity", "FAILED", evidence="identity_mismatch"))
                     continue
                 if not graph.active_equations:

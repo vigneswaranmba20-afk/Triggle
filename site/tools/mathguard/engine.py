@@ -30,7 +30,7 @@ from .rounding import check_numeric_match
 from .steps import extract_stem_assumptions, validate_steps
 from .symbolic import evaluate_with_pi_mode, expressions_equivalent
 from .tamil_consistency import validate_en_ta_consistency
-from .units import detect_answer_dimension
+from .units import detect_answer_dimension, convert_length
 
 
 @dataclass
@@ -127,6 +127,19 @@ def _extract_answer_numbers(answer_text: str, answer_math: Any) -> List[float]:
     return nums
 
 
+def _cylinder_dimensions_in_cm(answer: str) -> Optional[Tuple[sp.Rational, sp.Rational]]:
+    lengths = {}
+    for field in re.split(r"\s*(?:[;,]|\band\b)\s*", answer.strip().rstrip("."), flags=re.I):
+        match = re.fullmatch(r"(radius|r|height|h)\s*(?:=|is|:)\s*([+−-]?\d+(?:\.\d+)?)\s*(mm|cm|m|km)", field, re.I)
+        if not match or match[1][0].lower() in lengths:
+            return None
+        label, number, unit = match.groups()
+        lengths[label[0].lower()] = convert_length(sp.Rational(number.replace("−", "-")), unit, "cm")
+    if lengths.keys() == {"r", "h"}:
+        return lengths["r"], lengths["h"]
+    return None
+
+
 def _verify_exercise_answer(item: Dict[str, Any], derived: DerivedResult) -> Tuple[str, str, str, Dict[str, Any]]:
     """Return (answer_status, discrepancy, severity, evidence)."""
     if not derived.verifiable:
@@ -190,6 +203,13 @@ def _verify_exercise_answer(item: Dict[str, Any], derived: DerivedResult) -> Tup
 
     # 3. Multi-value answers (e.g. radius and height in Ex 7.1 Q1, Q2)
     if isinstance(derived.expr, list):
+        if derived.method in {"sympy_solve_cylinder_csa_ratio", "sympy_solve_cylinder_tsa_csa"}:
+            dimensions = _cylinder_dimensions_in_cm(ans_text)
+            if dimensions is None:
+                return "UNVERIFIABLE", "Radius and height must have distinct labels and length units.", "info", {}
+            if all(abs(actual - exact) <= derived.tolerance for actual, exact in zip(dimensions, derived.expr)):
+                return "PASS", "", "none", {"radiusHeightCm": list(map(str, dimensions))}
+            return "FAIL", f"Radius or height mismatch: expected {derived.expr} cm, got {dimensions} cm.", "critical", {}
         obs_nums = _extract_answer_numbers(ans_text, ans_math)
         expected_vals = [float(x.evalf()) for x in derived.expr]
         if len(obs_nums) >= len(expected_vals) and all(

@@ -10,7 +10,6 @@ import sympy as sp
 
 from ..parser import parse_expression
 from ..reasoning_engine import WorkingAuditResult, verify_complete_working
-from ..rounding import check_numeric_match
 from ..symbolic import expressions_equivalent
 from ..tamil_consistency import number_signature, validate_en_ta_consistency
 from ..tamil_semantic_parity import extract_semantic_values, semantic_step_parity_check
@@ -64,6 +63,17 @@ def verify_tamil_math_parity(item: Dict[str, Any], is_concept: bool = False) -> 
 
     flags: List[str] = []
     mismatches: List[Dict[str, Any]] = []
+    if q_en and not q_ta:
+        flags.append("missing_tamil_question")
+    if ans_en and not ans_ta:
+        flags.append("missing_tamil_answer")
+    if any(isinstance(step, dict) and str(step.get("en") or "").strip()
+           and not str(step.get("ta") or "").strip() for step in steps):
+        flags.append("missing_tamil_working")
+    if steps and not has_ta_steps and not any(
+        isinstance(step, dict) and step.get("math") and not step.get("en") for step in steps
+    ) and "missing_tamil_working" not in flags:
+        flags.append("missing_tamil_working")
 
     if q_ta:
         ta_q_res = validate_en_ta_consistency(q_en, q_ta)
@@ -135,40 +145,30 @@ def verify_generic_answer(
     ans_raw = item.get("answer")
     ans_en = str(ans_raw.get("en") if isinstance(ans_raw, dict) else (ans_raw or "")).strip()
     ans_math = item.get("answerMath")
-    ans_latex = ""
-    if isinstance(ans_math, dict):
-        if isinstance(ans_math.get("en"), dict):
-            ans_latex = str(ans_math["en"].get("latex") or "")
-        else:
-            ans_latex = str(ans_math.get("latex") or "")
+    if ans_math:
+        return "UNVERIFIABLE", "structured_answer_requires_dedicated_derivation"
 
     if work_res.status == "FAIL":
         return "FAIL", f"Working failed: {work_res.failed_details[:1]}"
 
-    # Compare against final step / variable declarations in ReasoningGraph
-    graph = work_res.graph
-    ans_cand = ans_latex or ans_en
-    if ans_cand:
-        ans_clean = re.sub(r"\\text\s*\{[^}]*\}", "", ans_cand).strip()
-        ans_clean = ans_clean.split("=")[-1].strip() if "=" in ans_clean else ans_clean
+    # Bind the answer to the requested expression. A correct intermediate
+    # equality or an unrelated declaration cannot establish a final answer.
+    question = str((item.get("q") or {}).get("en") or "").strip().rstrip(".?")
+    target = re.fullmatch(
+        r"(?:find(?: the value of)?|evaluate|calculate)\s+([0-9+*/^(). −–×÷-]+)"
+        r"(?:\s+in exact form)?", question, re.I,
+    )
+    if target and ans_en and re.fullmatch(r"[0-9+*/^(). −–×÷-]+", ans_en):
         try:
-            ans_expr = parse_expression(ans_clean)
-        except Exception:
-            ans_expr = None
+            expected = parse_expression(target[1].strip())
+            observed = parse_expression(ans_en)
+        except ValueError:
+            return "UNVERIFIABLE", "unsupported_answer_expression"
+        if expected.is_finite and observed.is_finite and not (expected.free_symbols or observed.free_symbols):
+            if expressions_equivalent(expected, observed):
+                return "PASS", "exact_question_expression"
+            return "FAIL", "answer_differs_from_exact_question_expression"
 
-        if ans_expr is not None:
-            for val in reversed(list(graph.variable_declarations.values())):
-                try:
-                    if expressions_equivalent(val, ans_expr):
-                        return "PASS", ""
-                    if not val.free_symbols and not ans_expr.free_symbols:
-                        if check_numeric_match(float(val.evalf()), float(ans_expr.evalf()), rel_tol=0.02):
-                            return "PASS", ""
-                except Exception:
-                    pass
-
-    if work_res.status == "PASS":
-        return "PASS", "working_verified_without_dedicated_derivation"
     return "UNVERIFIABLE", "no_dedicated_derivation"
 
 
