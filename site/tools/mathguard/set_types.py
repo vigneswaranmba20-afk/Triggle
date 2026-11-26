@@ -286,6 +286,7 @@ def normalize_set_text(text: str) -> str:
     if not text:
         return ""
     s = text.strip()
+    s = re.sub(r"\[\[([^\[\]|]+)\|([^\[\]|]+)\]\]", r"(\1)/(\2)", s)
     replacements = [
         (r"\left\{", "{"), (r"\right\}", "}"),
         (r"\left(", "("), (r"\right)", ")"),
@@ -368,7 +369,10 @@ def _parse_single_element(token: str) -> Any:
             return Fraction(int(p), int(q))
     # Try symbolic expression if numeric/radical
     if any(c in tok for c in ("√", "sqrt", "^", "/", "+", "-", "*")) and not re.search(r"[a-zA-Z]{3,}", tok):
-        expr = parse_expression(tok)
+        try:
+            expr = parse_expression(tok)
+        except Exception:
+            expr = None
         if expr is not None:
             if expr.is_Integer:
                 return Fraction(int(expr), 1)
@@ -379,13 +383,19 @@ def _parse_single_element(token: str) -> Any:
 
 
 def _parse_set_builder(inner: str) -> Optional[Union[TypedSet, SymbolicInfiniteSet]]:
-    """Parse set-builder notation like 'x : x ∈ N, x < 5' or 'x | x is prime, x < 10'."""
+    """Parse set-builder notation like 'x : x ∈ N, x < 5' or 'x ∈ W | x < 2'."""
     # Split on ':' or '|' at top level
-    m = re.match(r"^([a-zA-Z](?:\s*,\s*[a-zA-Z])*)\s*[:|]\s*(.+)$", inner.strip())
+    m = re.match(r"^([a-zA-Z](?:\s*(?:,|∈|in)\s*[a-zA-Zℕ𝕎ℤℚℝ]+)?)[\s]*[:|]\s*(.+)$", inner.strip())
     if not m:
         return None
-    var_name = m.group(1).strip()
+    lhs_decl = m.group(1).strip()
     cond_str = m.group(2).strip()
+    lhs_dom_m = re.match(r"^([a-zA-Z])\s*(?:∈|in)\s*([ℕ𝕎ℤℚℝNWZQR])\b", lhs_decl)
+    if lhs_dom_m:
+        var_name = lhs_dom_m.group(1).strip()
+        cond_str = f"{var_name} ∈ {lhs_dom_m.group(2)}, {cond_str}"
+    else:
+        var_name = lhs_decl
     if "," in var_name:
         return None  # Multi-variable set-builder handled by relation/function reasoners
 
@@ -416,7 +426,10 @@ def _parse_set_builder(inner: str) -> Optional[Union[TypedSet, SymbolicInfiniteS
         bounds = _extract_integer_bounds(pvar, rest, pdom_norm)
         if bounds is not None:
             lo, hi = bounds
-            expr = parse_expression(expr_str)
+            try:
+                expr = parse_expression(expr_str)
+            except Exception:
+                expr = None
             if expr is not None:
                 sym = sp.Symbol(pvar)
                 elems = []

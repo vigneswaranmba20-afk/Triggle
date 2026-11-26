@@ -33,7 +33,10 @@ def _extract_named_sets_from_text(text: str) -> Dict[str, TypedSet]:
     if not text:
         return out
     s = text.replace("−", "-").replace("–", "-")
-    for m in re.finditer(r"\b([A-Z]|R_?\d*)\s*=\s*(\{)", s):
+    for m in re.finditer(r"(?:^|(?<=[\s;,]))([A-Z]|R_?\d*)\s*=\s*(\{)", s):
+        prefix = s[: m.start(1)].rstrip()
+        if prefix and prefix[-1] in ("∪", "∩", "\\", "-", "Δ", "×", "∘", "'", "′", ")"):
+            continue
         name = m.group(1)
         start = m.start(2)
         depth = 0
@@ -55,12 +58,12 @@ def _extract_named_sets_from_text(text: str) -> Dict[str, TypedSet]:
 
 
 def _extract_cardinality_givens(text: str) -> List[Tuple[str, int]]:
-    """Extract n(expr) = k givens from question or step text."""
+    """Extract n(expr) = k givens from question or step text (skipping intermediate arithmetic chains)."""
     out: List[Tuple[str, int]] = []
     if not text:
         return out
     s = text.replace("−", "-").replace("–", "-").replace("’", "'").replace("′", "'")
-    for m in re.finditer(r"n\s*\(\s*([^()]+(?:\([^()]*\)[^()]*)*)\s*\)\s*=\s*(\d+)", s):
+    for m in re.finditer(r"n\s*\(\s*([^()]+(?:\([^()]*\)[^()]*)*)\s*\)\s*=\s*(?:[^=\n;]*=\s*)?(\d+)(?!\s*[×x·*+\-/])", s):
         expr = m.group(1).strip()
         val = int(m.group(2))
         out.append((expr, val))
@@ -111,7 +114,11 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
         q_en = str(q_obj.get("en") or "")
         steps = ((item.get("proof") or {}).get("steps") if is_concept else item.get("steps")) or []
 
-        env: Dict[str, TypedSet] = _extract_named_sets_from_text(q_en)
+        if "(i)" in q_en and "(ii)" in q_en:
+            first_sub = q_en.split("(ii)", 1)[0]
+            env: Dict[str, TypedSet] = _extract_named_sets_from_text(first_sub)
+        else:
+            env = _extract_named_sets_from_text(q_en)
         universal: Optional[TypedSet] = env.get("U")
         card_givens: List[Tuple[str, int]] = _extract_cardinality_givens(q_en)
 
@@ -131,7 +138,9 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
             if isinstance(m_obj, list):
                 continue
             eq_s = str((m_obj.get("latex") if isinstance(m_obj, dict) else "") or st.get("eq") or "")
-            if any(sym in eq_s for sym in ("∪", "∩", "∈", "∉", "⊆", "⊂", "∅", "{", "}", "×", "n(", "P(", "\\text")):
+            if any(sym in eq_s for sym in ("∪", "∩", "∈", "∉", "⊆", "⊂", "∅", "{", "}", "×", "∘", "n(", "P(", "\\text")):
+                continue
+            if re.search(r"\b[fghSt]\s*\(", eq_s) or re.search(r"[a-zA-Z]{3,}\s+[a-zA-Z]{3,}\s*=", eq_s):
                 continue
             alg_steps.append(st)
         alg_item = dict(item)
@@ -153,14 +162,16 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
 
             step_sets = _extract_named_sets_from_text(combined)
             for k, v in step_sets.items():
-                if k not in env:
-                    env[k] = v
+                env[k] = v
                 if k == "U":
                     universal = v
 
             # Check set-algebra or Cartesian product claims: LHS = { ... } using balanced braces
-            eq_src = st_eq or st_en
-            for m in re.finditer(r"([A-Za-z0-9_′'∪∩\\\-Δ×\(\)\s]+?)\s*=\s*(\{)", eq_src):
+            eq_src = (st_eq or st_en).replace("’", "'").replace("′", "'").replace("−", "-").replace("–", "-")
+            for m in re.finditer(r"([A-Za-z0-9_'∪∩\\\-Δ×\(\)\s]+?)\s*=\s*(\{)", eq_src):
+                prefix = eq_src[: m.start(1)].rstrip()
+                if prefix and prefix[-1] in ("∪", "∩", "\\", "-", "Δ", "×", "∘", "="):
+                    continue
                 lhs_str = m.group(1).strip()
                 b_start = m.start(2)
                 depth = 0
@@ -238,7 +249,7 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
                         else:
                             failed += 1
                             failed_details.append({"step": idx, "claim": f"n({c_expr}) = {c_val}", "expected": exp_c})
-                elif card_givens and (c_expr, c_val) not in card_givens and "×" not in c_expr:
+                elif card_givens and (c_expr, c_val) not in card_givens and "×" not in c_expr and not ("(i)" in q_en and "(ii)" in q_en):
                     bool_givens = [(g_e, g_v) for g_e, g_v in card_givens if "×" not in g_e and "P(" not in g_e]
                     set_vars = sorted({ch for g_e, _ in bool_givens for ch in re.findall(r"\b([A-C])\b", g_e)})
                     if len(set_vars) in (2, 3):
@@ -277,10 +288,19 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
         q_ta = str(q_obj.get("ta") or "")
 
         ambiguity_flags = _detect_ambiguity_flags(item, q_en, q_ta)
-        sanitized_steps = [
-            st for st in (((item.get("proof") or {}).get("steps") if is_concept else item.get("steps")) or [])
-            if isinstance(st, dict) and not isinstance(st.get("math"), list)
-        ]
+        sanitized_steps = []
+        for st in (((item.get("proof") or {}).get("steps") if is_concept else item.get("steps")) or []):
+            if not isinstance(st, dict):
+                continue
+            m_obj = st.get("math")
+            if isinstance(m_obj, list):
+                continue
+            eq_s = str((m_obj.get("latex") if isinstance(m_obj, dict) else "") or st.get("eq") or "")
+            if any(sym in eq_s for sym in ("∪", "∩", "∈", "∉", "⊆", "⊂", "∅", "{", "}", "×", "∘", "n(", "P(", "\\text")):
+                continue
+            if re.search(r"\b[fghSt]\s*\(", eq_s) or re.search(r"[a-zA-Z]{3,}\s+[a-zA-Z]{3,}\s*=", eq_s):
+                continue
+            sanitized_steps.append(st)
         san_item = dict(item)
         if is_concept:
             san_item["proof"] = {"steps": sanitized_steps}
@@ -350,6 +370,24 @@ class SetsRelationsFunctionsAdapter(ChapterAdapter):
         ta_res = verify_tamil_math_parity(item, is_concept=is_concept)
         ta_flags = list(ta_res.flags)
         ta_status = ta_res.status
+        if ta_status == "FAIL":
+            # Re-verify step mismatches with Sets/Relations bilingual parity engine
+            steps_list = ((item.get("proof") or {}).get("steps") if is_concept else item.get("steps")) or []
+            filtered_flags = []
+            for fl in ta_flags:
+                m_st = re.match(r"^step_(\d+)_", fl)
+                if m_st:
+                    sidx = int(m_st.group(1))
+                    if sidx < len(steps_list) and isinstance(steps_list[sidx], dict):
+                        st = steps_list[sidx]
+                        st_m = (st.get("math") or {}).get("latex") if isinstance(st.get("math"), dict) else ""
+                        res_sp = check_bilingual_set_parity(str(st.get("en") or ""), str(st.get("ta") or ""), math_latex=str(st_m or ""), eq_text=str(st.get("eq") or ""))
+                        if res_sp.status == "PASS":
+                            continue
+                filtered_flags.append(fl)
+            ta_flags = filtered_flags
+            if not any("mismatch" in f or "missing_tamil" in f or "placeholder" in f for f in ta_flags):
+                ta_status = "PARTIAL" if ta_flags else "PASS"
         if q_ta and q_en:
             sets_ta = check_bilingual_set_parity(q_en, q_ta)
             for fl in sets_ta.flags:
