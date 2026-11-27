@@ -122,25 +122,27 @@ function renderGlance(stage,host,lang){
       <text x="163" y="29" font-size="10" text-anchor="middle" fill="#1E5248">cos(90°−θ)=sin θ</text>
       <text x="163" y="107" font-size="10" text-anchor="middle" fill="#6E2933">OP = RQ</text>
     </svg>`,
-    'standard-angles':`<svg class="g10ch4-glance-svg" viewBox="0 0 260 112" aria-hidden="true">
-      <polygon points="24,94 102,94 102,22" fill="#F3EFE8" stroke="#6E2933" stroke-width="1.8"/>
-      <text x="63" y="106" font-size="10" text-anchor="middle" fill="#181B20">1</text>
-      <text x="108" y="62" font-size="10" fill="#181B20">√3</text>
-      <text x="52" y="54" font-size="10" fill="#6E2933">2</text>
-      <text x="80" y="88" font-size="9.5" font-weight="700" fill="#6E2933">60°</text>
+    'standard-angles':`<svg class="g10ch4-glance-svg" viewBox="0 0 260 132" aria-hidden="true">
+      <polygon points="24,94 ${24+72/Math.sqrt(3)},94 ${24+72/Math.sqrt(3)},22" fill="#F3EFE8" stroke="#6E2933" stroke-width="1.8"/>
+      <path d="M36 94 A12 12 0 0 0 30 ${94-6*Math.sqrt(3)}" fill="none" stroke="#6E2933" stroke-width="1.2"/>
+      <text x="45" y="116" font-size="10" text-anchor="middle" fill="#181B20">1</text>
+      <text x="73" y="62" font-size="10" fill="#181B20">√3</text>
+      <text x="28" y="46" font-size="10" fill="#6E2933">2</text>
+      <text x="14" y="113" font-size="9.5" font-weight="700" text-anchor="middle" fill="#6E2933">60°</text>
       <polygon points="154,94 226,94 226,22" fill="#EFF8F4" stroke="#1E5248" stroke-width="1.8"/>
-      <text x="190" y="106" font-size="10" text-anchor="middle" fill="#181B20">1</text>
+      <path d="M166 94 A12 12 0 0 0 ${154+6*Math.sqrt(2)} ${94-6*Math.sqrt(2)}" fill="none" stroke="#1E5248" stroke-width="1.2"/>
+      <text x="190" y="116" font-size="10" text-anchor="middle" fill="#181B20">1</text>
       <text x="233" y="62" font-size="10" fill="#181B20">1</text>
-      <text x="178" y="54" font-size="10" fill="#1E5248">√2</text>
-      <text x="180" y="88" font-size="9.5" font-weight="700" fill="#1E5248">45°</text>
+      <text x="168" y="44" font-size="10" fill="#1E5248">√2</text>
+      <text x="144" y="113" font-size="9.5" font-weight="700" text-anchor="middle" fill="#1E5248">45°</text>
     </svg>`,
-    'identity-sin-cos':`<svg class="g10ch4-glance-svg" viewBox="0 0 260 112" aria-hidden="true">
-      <polygon points="72,72 152,72 152,24" fill="#F3EFE8" stroke="#181B20" stroke-width="2"/>
-      <rect x="72" y="72" width="80" height="32" fill="#DCEEE8" stroke="#1E5248" stroke-width="1.5"/>
-      <rect x="152" y="24" width="48" height="48" fill="#F8E7E9" stroke="#6E2933" stroke-width="1.5"/>
-      <text x="112" y="92" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1E5248">cos²θ</text>
-      <text x="176" y="52" font-size="10.5" font-weight="700" text-anchor="middle" fill="#6E2933">sin²θ</text>
-      <text x="104" y="42" font-size="10.5" font-weight="700" fill="#181B20">1²=1</text>
+    'identity-sin-cos':`<svg class="g10ch4-glance-svg" viewBox="0 0 260 128" aria-hidden="true">
+      <polygon points="78,72 126,72 126,26" fill="#F3EFE8" stroke="#181B20" stroke-width="2"/>
+      <rect x="78" y="72" width="48" height="48" fill="#DCEEE8" stroke="#1E5248" stroke-width="1.5"/>
+      <rect x="126" y="26" width="46" height="46" fill="#F8E7E9" stroke="#6E2933" stroke-width="1.5"/>
+      <text x="102" y="99" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1E5248">cos²θ</text>
+      <text x="149" y="53" font-size="10.5" font-weight="700" text-anchor="middle" fill="#6E2933">sin²θ</text>
+      <text x="94" y="40" font-size="10.5" font-weight="700" fill="#181B20">1</text>
     </svg>`,
     'identity-sec-cosec':`<svg class="g10ch4-glance-svg" viewBox="0 0 260 112" aria-hidden="true">
       <polygon points="48,88 188,88 188,24" fill="#F3EFE8" stroke="#6E2933" stroke-width="2"/>
@@ -365,36 +367,45 @@ function mount(stage,host,lang){
       b.onclick=()=>{deg=a;draw();};
       chips.append(b);return[a,b];
     });
-    const svgWrap=el('div'),readout=el('div','g10ch4-readout g10ch4-formula');
-    lab.append(title,chips,svgWrap,readout);
+    const svgWrap=el('div'),limits=el('span','diagramguard-annotation'),readout=el('div','g10ch4-readout g10ch4-formula');
+    lab.append(title,chips,svgWrap,limits,readout);
     const draw=()=>{
       btns.forEach(([a,b])=>b.setAttribute('aria-pressed',String(a===deg)));
       const row=math.standardAngle(deg);
-      let fig='';
-      if(deg===45){
-        fig=`<polygon points="85,155 215,155 215,35" fill="#EFF8F4" stroke="#1E5248" stroke-width="2.2"/>
-          <text x="150" y="172" font-size="12" font-weight="700" text-anchor="middle" fill="#181B20">Adj = 1</text>
-          <text x="225" y="100" font-size="12" font-weight="700" fill="#181B20">Opp = 1</text>
-          <text x="130" y="88" font-size="12" font-weight="700" fill="#6E2933">Hyp = √2</text>
-          <text x="115" y="146" font-size="12" font-weight="700" fill="#1E5248">45°</text>`;
-      }else if(deg===30||deg===60){
-        const opp=deg===30?'1':'√3',adj=deg===30?'√3':'1';
-        const w=deg===30?165:95,h=deg===30?95:145;
-        fig=`<polygon points="65,160 ${65+w},160 ${65+w},${160-h}" fill="#F3EFE8" stroke="#6E2933" stroke-width="2.2"/>
-          <text x="${65+w/2}" y="176" font-size="12" font-weight="700" text-anchor="middle" fill="#181B20">Adj = ${adj}</text>
-          <text x="${65+w+8}" y="${160-h/2}" font-size="12" font-weight="700" fill="#181B20">Opp = ${opp}</text>
-          <text x="${65+w/2-22}" y="${160-h/2-8}" font-size="12" font-weight="700" fill="#6E2933">Hyp = 2</text>
-          <text x="92" y="150" font-size="12" font-weight="700" fill="#6E2933">${deg}°</text>`;
-      }else if(deg===0){
-        fig=`<line x1="60" y1="120" x2="250" y2="120" stroke="#6E2933" stroke-width="4"/>
-          <text x="155" y="142" font-size="12" font-weight="700" text-anchor="middle" fill="#181B20">θ = 0°: Opp = 0, Adj = Hyp = 1</text>
-          <text x="155" y="96" font-size="11.5" text-anchor="middle" fill="#7A1D2B">${ta?'Opp = 0 என்பதால் cosec 0°, cot 0° வரையறுக்கப்படவில்லை':'Division by Opp = 0 makes cosec 0° & cot 0° undefined'}</text>`;
-      }else{
-        fig=`<line x1="155" y1="30" x2="155" y2="165" stroke="#6E2933" stroke-width="4"/>
-          <text x="155" y="182" font-size="12" font-weight="700" text-anchor="middle" fill="#181B20">θ = 90°: Adj = 0, Opp = Hyp = 1</text>
-          <text x="155" y="20" font-size="11.5" text-anchor="middle" fill="#7A1D2B">${ta?'Adj = 0 என்பதால் tan 90°, sec 90° வரையறுக்கப்படவில்லை':'Division by Adj = 0 makes tan 90° & sec 90° undefined'}</text>`;
+      let fig,frame='0 0 310 208';
+      let description=`${ta?'சிறப்புக் கோணம்':'Standard angle'} ${deg}°`;
+      limits.hidden=deg>0&&deg<90;
+      if(!limits.hidden){
+        limits.textContent=deg===0
+          ? (ta?'எதிர்ப்பக்கம் 0 என்பதால் cosec 0°, cot 0° வரையறுக்கப்படவில்லை.':'The opposite side is 0, so cosec 0° and cot 0° are undefined.')
+          : (ta?'அடுத்த பக்கம் 0 என்பதால் tan 90°, sec 90° வரையறுக்கப்படவில்லை.':'The adjacent side is 0, so tan 90° and sec 90° are undefined.');
       }
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Standard angle diagram">${fig}</svg>`;
+      if(deg>0&&deg<90){
+        const adj=deg===30?'√3':'1',opp=deg===60?'√3':'1',hyp=deg===45?'√2':'2';
+        const x=55,y=170,s=sinD(deg),c=cosD(deg),unit=80*(deg===45?Math.sqrt(2):2);
+        const w=unit*c,h=unit*s,right=x+w;
+        const degreeX=x+(deg===30?68:deg===45?54:43);
+        description+=ta?`. அடுத்த பக்கம் ${adj}. எதிர்ப்பக்கம் ${opp}. கர்ணம் ${hyp}.`:
+          `. Adjacent side ${adj}. Opposite side ${opp}. Hypotenuse ${hyp}.`;
+        fig=`<polygon points="${x},${y} ${right},${y} ${right},${y-h}" fill="#EFF8F4" stroke="#1E5248" stroke-width="2.2"/>
+          <path d="M${right-11},${y} V${y-11} H${right}" fill="none" stroke="#1E5248" stroke-width="1.4"/>
+          <path d="M${x+22},${y} A22,22 0 0,0 ${x+22*c},${y-22*s}" fill="none" stroke="#6E2933" stroke-width="1.4"/>
+          <g font-size="15.5" font-weight="550" fill="#181B20">
+            <text x="${x+w/2}" y="193" text-anchor="middle">${adj}</text>
+            <text x="${right+14}" y="${y-h/2+3}">${opp}</text>
+            <text x="${x+w/2-22*s}" y="${y-h/2-22*c}" text-anchor="middle">${hyp}</text>
+            <text x="${degreeX}" y="${y-9}" text-anchor="middle" fill="#6E2933">${deg}°</text>
+          </g>`;
+      }else if(deg===0){
+        frame='0 0 310 100';
+        fig=`<line x1="60" y1="40" x2="250" y2="40" stroke="#6E2933" stroke-width="4"/>
+          <text x="155" y="74" font-size="15.5" text-anchor="middle" fill="#181B20">θ = 0° · Adj = Hyp = 1</text>`;
+      }else{
+        frame='0 0 310 178';
+        fig=`<line x1="155" y1="20" x2="155" y2="126" stroke="#6E2933" stroke-width="4"/>
+          <text x="155" y="156" font-size="15.5" text-anchor="middle" fill="#181B20">θ = 90° · Opp = Hyp = 1</text>`;
+      }
+      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="${frame}" role="img" aria-label="${description}">${fig}</svg>`;
       readout.innerHTML=tex(`\\begin{aligned}&\\sin ${deg}^\\circ=${row.sin},\\;\\cos ${deg}^\\circ=${row.cos}\\\\&\\tan ${deg}^\\circ=${row.tan==='undefined'?'\\text{undef.}':row.tan},\\;\\cot ${deg}^\\circ=${row.cot==='undefined'?'\\text{undef.}':row.cot}\\\\&\\sec ${deg}^\\circ=${row.sec==='undefined'?'\\text{undef.}':row.sec},\\;\\operatorname{cosec} ${deg}^\\circ=${row.cosec==='undefined'?'\\text{undef.}':row.cosec}\\end{aligned}`,true);
     };
     draw();
@@ -404,22 +415,29 @@ function mount(stage,host,lang){
   if(id==='identity-sin-cos'){
     let theta=37;
     const title=el('p','g10ch4-lab-title',ta?'θ மாறும்போது sin²θ + cos²θ சதுரப் பரப்புகளின் கூடுதல் எப்போதும் 1 என்பதைப் பார்க்க':'Slide θ and watch the squared areas sin²θ and cos²θ always sum to 1');
-    const svgWrap=el('div'),controls=el('div'),readout=el('div','g10ch4-readout g10ch4-formula');
-    lab.append(title,svgWrap,controls,readout);
+    const svgWrap=el('div'),legend=el('div','diagramguard-coordinate-legend'),controls=el('div'),readout=el('div','g10ch4-readout g10ch4-formula');
+    legend.setAttribute('role','list');
+    legend.setAttribute('aria-label',ta?'சதுரங்களின் பரப்புகள்':'Square areas');
+    lab.append(title,svgWrap,legend,controls,readout);
     const draw=()=>{
       const s=sinD(theta),c=cosD(theta),s2=s*s,c2=c*c;
-      const scale=120,xO=48,yM=122,w=scale*c,h=scale*s;
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 195" role="img" aria-label="Pythagorean areas sin^2 + cos^2 = 1">
+      const scale=81,xO=83,yM=105,w=scale*c,h=scale*s;
+      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 221" role="img" aria-label="${ta?'ஓர் அலகு கர்ணமுள்ள முக்கோணத்தின் பக்கச் சதுரங்கள்':'Squares on the legs of a triangle with a unit hypotenuse'}">
+        <rect data-dg-square="cosine" x="${xO}" y="${yM}" width="${w}" height="${w}" fill="#DCEEE8" stroke="#1E5248" stroke-width="1.5"/>
+        <rect data-dg-square="sine" x="${xO+w}" y="${yM-h}" width="${h}" height="${h}" fill="#F8E7E9" stroke="#6E2933" stroke-width="1.5"/>
         <polygon points="${xO},${yM} ${xO+w},${yM} ${xO+w},${yM-h}" fill="#FAF9F6" stroke="#181B20" stroke-width="2"/>
-        <rect x="${xO}" y="${yM}" width="${w}" height="${Math.max(10,w*0.52)}" fill="#DCEEE8" stroke="#1E5248" stroke-width="1.5"/>
-        <rect x="${xO+w}" y="${yM-h}" width="${Math.max(10,h*0.8)}" height="${h}" fill="#F8E7E9" stroke="#6E2933" stroke-width="1.5"/>
-        <text x="${xO+w/2}" y="${yM+24}" font-size="11" font-weight="700" text-anchor="middle" fill="#1E5248">cos²θ ≈ ${fmt(c2,2)}</text>
-        <text x="${xO+w+44}" y="${yM-h/2+4}" font-size="11" font-weight="700" text-anchor="middle" fill="#6E2933">sin²θ ≈ ${fmt(s2,2)}</text>
-        <text x="${xO+w/2-18}" y="${yM-h/2-6}" font-size="11" font-weight="700" fill="#181B20">1</text>
-        <rect x="28" y="168" width="${254*s2}" height="14" fill="#6E2933" rx="2"/>
-        <rect x="${28+254*s2}" y="168" width="${254*c2}" height="14" fill="#1E5248" rx="2"/>
-        <text x="155" y="163" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">sin²θ + cos²θ = 1</text>
+        <path d="M${xO+w-8},${yM} V${yM-8} H${xO+w}" fill="none" stroke="#181B20" stroke-width="1.2"/>
+        <text x="${xO+w/2-17*s}" y="${yM-h/2-17*c}" font-size="16" text-anchor="middle" dominant-baseline="middle" fill="#181B20">1</text>
+        <rect x="28" y="200" width="${254*c2}" height="12" fill="#1E5248"/>
+        <rect x="${28+254*c2}" y="200" width="${254*s2}" height="12" fill="#6E2933"/>
       </svg>`;
+      legend.replaceChildren(...[[c2,'cos','#1E5248'],[s2,'sin','#6E2933']].map(([area,name,color])=>{
+        const entry=el('span'),sample=el('span','diagramguard-line-sample');
+        entry.setAttribute('role','listitem');
+        sample.setAttribute('aria-hidden','true');sample.style.color=color;
+        entry.append(sample,`${name}²θ ≈ ${fmt(area,2)}`);
+        return entry;
+      }));
       readout.innerHTML=tex(`\\sin^2 ${theta}^\\circ+\\cos^2 ${theta}^\\circ=1`,true);
     };
     makeSlider(controls,ta?'கோணம் θ':'Angle θ',10,80,1,theta,'°',v=>{theta=v;draw();});

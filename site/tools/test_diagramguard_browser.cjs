@@ -378,6 +378,96 @@ async function legacyBoundaryCases(page){
   console.log(`DiagramGuard: ${data.length} additional SVG boundary checks and exact Grade 9 bisectors`);
 }
 
+async function trigAndBisectorGeometry(page,base,profiles){
+  const preview=page.locator('svg.g10ch4-glance-svg');
+  const lab=page.locator('.g10ch4-lab');
+  const graph=lab.locator('svg.g10ch4-svg');
+  async function shape(svg,description){
+    const data=await svg.evaluate(svg=>{
+      const project=(node,x,y)=>new DOMPoint(x,y).matrixTransform(node.getScreenCTM());
+      const pair=p=>[p.x,p.y];
+      const polygons=[...svg.querySelectorAll('polygon')].map(p=>Array.from(p.points,point=>pair(project(p,point.x,point.y))));
+      const squares=[...svg.querySelectorAll('rect')].slice(0,2).map(rect=>{
+        const {x,y,width,height}=rect.getBBox();
+        return [project(rect,x,y),project(rect,x+width,y),project(rect,x,y+height)].map(pair);
+      });
+      const line=svg.querySelector('line');
+      const segment=line?[1,2].map(i=>pair(project(line,line['x'+i].baseVal.value,line['y'+i].baseVal.value))):[];
+      const issues=window.TriggleDiagramGuard.audit(svg,{discover:true}).issues;
+      const overflow=document.documentElement.scrollWidth-document.documentElement.clientWidth;
+      return {polygons,squares,segment,issues,overflow};
+    });
+    assert.deepEqual(data.issues,[],description+' label clearance');
+    assert(data.overflow<=1,description+' reflow');
+    return data;
+  }
+  async function open(chapter,index,lang,percent){
+    await page.goto(base+`/index.html?class=10&chapter=g10-ch${chapter}&section=concepts&concept=${index}`);
+    await setLanguage(page,lang);
+    await settle(page,percent);
+  }
+  function checkSquares({polygons:[[a,b,c]],squares}){
+    const legs=[length(a,b),length(b,c)];
+    assert.equal(squares.length,2);
+    for(const [[p,q,r],side] of squares.map((set,index)=>[set,legs[index]])){
+      near(length(p,q),side);near(length(p,r),side);near(angle(p,q,r),90);
+    }
+    near((legs[0]**2+legs[1]**2)/length(a,c)**2,1);
+  }
+  let configurations=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    const label=`${lang} ${width}×${height} ${percent}%`;
+    for(const index of [6,7]){
+      await open(4,index,lang,percent);
+      const {polygons:[[a,b,c]],segment:[start,d]}=await shape(preview,label+' bisector '+index);
+      near(length(start,a),0);
+      near(length(b,d)/length(d,c),length(b,a)/length(c,a));
+      near(angle(a,b,d),angle(a,d,c));
+      assert(await page.locator('.g10ch4-glance-visual .diagramguard-annotation .katex').isVisible());
+      configurations++;
+    }
+    await open(6,3,lang,percent);
+    const {polygons:standard}=await shape(preview,label+' standard angles preview');
+    [60,45].forEach((deg,index)=>near(angle(...standard[index]),deg));
+    configurations++;
+    for(const deg of [0,30,45,60,90]){
+      await lab.getByRole('button',{name:`${deg}°`,exact:true}).click();
+      const {polygons,segment}=await shape(graph,label+' standard angle '+deg);
+      const caption=lab.locator('.diagramguard-annotation');
+      if(deg===0||deg===90){
+        const [u,v]=segment;
+        near(deg===0?u[1]-v[1]:u[0]-v[0],0);
+        const dimensions=await caption.evaluate(el=>({width:el.scrollWidth-el.clientWidth,font:parseFloat(getComputedStyle(el).fontSize),
+          below:el.getBoundingClientRect().top>=el.previousElementSibling.getBoundingClientRect().bottom-.5}));
+        assert(dimensions.below&&dimensions.width<=1,label+' wrapped boundary explanation');
+        near(dimensions.font,15*percent/100,.1);
+        assert.match(await caption.innerText(),deg===0?/cosec 0°.*cot 0°/:/tan 90°.*sec 90°/);
+      }else{
+        const [a,b,c]=polygons[0];
+        near(angle(a,b,c),deg);near(angle(b,a,c),90);
+        assert(await caption.isHidden());
+      }
+      configurations++;
+    }
+    await open(6,4,lang,percent);
+    checkSquares(await shape(preview,label+' Pythagorean squares preview'));
+    configurations++;
+    for(const value of [10,20,37,45,60,80]){
+      await lab.getByRole('slider').evaluate((slider,value)=>{
+        slider.value=String(value);slider.dispatchEvent(new Event('input',{bubbles:true}));
+      },value);
+      const data=await shape(graph,label+' square areas '+value);
+      checkSquares(data);
+      near(angle(...data.polygons[0]),value);
+      assert.equal(await lab.locator('.diagramguard-coordinate-legend [role="listitem"]').count(),2);
+      near(await lab.locator('.diagramguard-coordinate-legend').evaluate(node=>parseFloat(getComputedStyle(node).fontSize)),14*percent/100,.1);
+      configurations++;
+    }
+  }
+  return configurations;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -396,11 +486,18 @@ async function main(){
           await legacyBoundaryCases(page);
           return;
         }
+        if(process.argv.includes('--angles-and-squares')){
+          const cases=await trigAndBisectorGeometry(page,base,viewports);
+          console.log(`DiagramGuard: ${cases} bilingual and responsive bisector, angle and square-area states`);
+          return;
+        }
         if(width===390&&!live){
           await synthetic(page);
           await legacyCases(page);
           await legacyBoundaryCases(page);
           await conceptBoundaries(page,base);
+          await trigAndBisectorGeometry(page,base,[[320,844]]);
+          await page.setViewportSize({width,height});
         }
         for(const lang of ['en','ta']){
           await page.goto(base+concept(1));

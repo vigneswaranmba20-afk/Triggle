@@ -1132,7 +1132,7 @@
       return;
     }
     const viewBox=id==='bpt-thales'?'0 -7 300 111':
-      ['angle-bisector','converse-abt'].includes(id)?'0 0 300 112':'0 0 300 104';
+      ['angle-bisector','converse-abt'].includes(id)?'0 -20 300 144':'0 0 300 104';
     const svg=svgEl('svg',{viewBox,class:'g10ch4-glance-svg',role:'img','aria-label':label});
     if(id==='similar-construction'){
       svg.append(
@@ -1157,12 +1157,15 @@
         svgEl('text',{x:108,y:82,'font-size':'10','font-weight':'700',fill:'#6E2933'},'AD/DB = AE/EC ⇒ DE ∥ BC')
       );
     }else if(id==='angle-bisector'||id==='converse-abt'){
+      const A=[124,14],B=[58,90],C=[242,90];
+      const {D}=mathAPI.angleBisectorPoint(A,B,C);
       svg.append(
-        svgEl('polygon',{points:'124,14 58,90 242,90',fill:'rgba(24,27,32,0.04)',stroke:'#181B20','stroke-width':'1.8'}),
-        svgEl('line',{x1:124,y1:14,x2:142,y2:90,stroke:'#6E2933','stroke-width':'2'}),
-        svgEl('text',{x:120,y:11,'font-size':'10','font-weight':'700'},'A'),
-        svgEl('text',{x:138,y:101,'font-size':'10','font-weight':'700',fill:'#6E2933'},'D'),
-        svgEl('text',{x:172,y:50,'font-size':'10','font-weight':'700',fill:'#6E2933'},'AB/AC = BD/DC')
+        svgEl('polygon',{points:[A,B,C].map(p=>p.join(',')).join(' '),fill:'rgba(24,27,32,0.04)',stroke:'#181B20','stroke-width':'1.8'}),
+        svgEl('line',{x1:A[0],y1:A[1],x2:D[0],y2:D[1],stroke:'#6E2933','stroke-width':'2'}),
+        svgEl('text',{x:A[0],y:0,'text-anchor':'middle','font-size':'10','font-weight':'700'},'A'),
+        svgEl('text',{x:48,y:110,'font-size':'10','font-weight':'700'},'B'),
+        svgEl('text',{x:244,y:110,'font-size':'10','font-weight':'700'},'C'),
+        svgEl('text',{x:D[0],y:110,'text-anchor':'middle','font-size':'10','font-weight':'700',fill:'#6E2933'},'D')
       );
     }else if(id==='triangle-construction'){
       svg.append(
@@ -1193,6 +1196,11 @@
       );
     }
     host.append(svg);
+    if(id==='angle-bisector'||id==='converse-abt'){
+      const caption=el('span','diagramguard-annotation');
+      tex(caption,'\\dfrac{AB}{AC}=\\dfrac{BD}{DC}','AB/AC = BD/DC',false);
+      host.append(caption);
+    }
   }
 
   const REGISTRY={
