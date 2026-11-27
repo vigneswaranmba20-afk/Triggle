@@ -12,7 +12,7 @@ assert.match(reader,/grid-template-areas:"previous next"!important/,'Single mobi
 assert.match(reader,/body\.textbook-reader #allChaptersReturn\{display:none!important\}/,'Redundant chapter-return button hidden');
 assert.match(js,/\$\('allChaptersReturn'\)\.hidden=true/,'Chapter return never shown on question pages');
 assert.match(js,/function renderBreadcrumb\(chapter,exerciseIndex=null\)/,'Accessible chapter menu remains');
-assert.match(js,/b\.onclick=\(\)=>openPath\(c\.type\)/,'Breadcrumb opens class/chapter chooser');
+assert.match(js,/b\.onclick=\(\)=>openPath\(c\.type,b\)/,'Breadcrumb opens class/chapter chooser with its focus return target');
 assert.match(js,/function changeGrade\(g\)/);
 assert.match(js,/\$\('questionNavDock'\)\.hidden=!showingQuestion/);
 assert.match(focus,/!document\.body\.classList\.contains\('textbook-reader'\)/);

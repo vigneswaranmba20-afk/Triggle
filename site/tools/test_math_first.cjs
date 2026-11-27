@@ -17,8 +17,8 @@ assert(hub.includes("if(section==='exercises')"), 'Exercises card must open the 
 assert(!app.includes('current=exercises[0]'), 'Exercises section must not bypass the exercise index');
 assert(app.includes('exercises.filter(item=>item.exercise===current.exercise)'), 'Textbook Previous/Next must be exercise-scoped');
 assert(app.includes('function openChapterSection(section,chapter=chapterOverview,concept=null)'), 'Section navigation missing');
-assert(app.includes("b.onclick=()=>openPath(c.type)"), 'Chapter chevron must invoke chapter picker');
-assert(app.includes("chapterList().forEach(c=>options.push"), 'Chapter picker must list active-class chapters');
+assert(app.includes("b.onclick=()=>openPath(c.type,b)"), 'Chapter chevron must invoke chapter picker');
+assert(app.includes("for(const c of chapterList())"), 'Chapter picker must list active-class chapters');
 assert(app.includes("choose:()=>selectChapter(c)"), 'Chapter selection must open the selected chapter menu');
 assert(app.includes("openChapterSection(section,chapter);"), 'Exercise section navigation must remain available');
 assert(app.includes('if(chapterOverview)questionOrigin={grade,chapterId:chapterOverview.id,section:chapterSection}'), 'Return-to-list destination must be tracked');
@@ -51,9 +51,9 @@ assert.match(sw,/^const CACHE=['\"]triggle-[a-z0-9-]*[0-9][a-z0-9-]*['\"];?/m,'O
 assert(sw.includes("'./data/textbook-exercises/g9-ch9-ex9-1-en.js'"),'New Grade 9 textbook exercise must be cached for offline access');
 assert(css.includes('body.textbook-reader .question-return button{'),'Single quiet return control must be styled');
 assert(!css.includes('body.textbook-reader #chapterMenuBtn{'),'No leftover chapter-section visual clutter');
-assert(html.includes('id="pathHint"'),'Chapter dialog should show class-specific chapter count');
-assert(app.includes("hint.textContent=lang==='ta'"),'Chapter picker must communicate chapter count in both languages');
-assert(css.includes('.path-dialog.is-chapter-picker .path-options{'),'Chapter picker must be scrollable on small Android phones');
+assert(html.includes('id="pathHint"'),'Chapter dialog should identify the active class');
+assert(app.includes("hint.textContent=ui('class')+' '+grade"),'Chapter picker must communicate the active class in both languages');
+assert(read('assets/ver-glyph.css').includes('.ver-glyph .path-options {'),'All selection dialogs must use the shared scrollable list');
 assert(!html.includes('id="diagramCaption"'),'Remove visually cluttering metadata caption from modal');
 assert(app.includes("if(window.TriggleSetVenn?.supports(item))return false"),'Suppress redundant mini Venn cards');
 assert(!app.includes("$('diagramCaption').textContent"),'Removed figure caption must not cause a null dereference');

@@ -245,21 +245,30 @@
        b.onclick=()=>openChapterSection('exercises',exerciseIndex);
      }else{
        b.setAttribute('aria-haspopup','dialog');
-       b.onclick=()=>openPath(c.type);
+       b.setAttribute('aria-controls','pathDialog');
+       b.onclick=()=>openPath(c.type,b);
      }
      b.setAttribute('aria-label',b.title);
      nav.append(b)
    });
  }
- function openPath(type){
-   const dialog=$('pathDialog'),list=$('pathOptions');list.replaceChildren();
-   const names={en:{class:'Choose a class',chapter:'Choose a chapter',exercise:'Choose an exercise',question:'Choose a question'},ta:{class:'வகுப்பைத் தேர்வு செய்க',chapter:'அத்தியாயத்தைத் தேர்வு செய்க',exercise:'பயிற்சியைத் தேர்வு செய்க',question:'வினாவைத் தேர்வு செய்க'}};
+ function openPath(type,trigger){
+   const dialog=$('pathDialog'),list=$('pathOptions');
+   const names={en:{class:'Class',chapter:'Chapters',exercise:'Exercises',question:'Questions'},ta:{class:'வகுப்பு',chapter:'அத்தியாயங்கள்',exercise:'பயிற்சிகள்',question:'வினாக்கள்'}};
    $('pathTitle').textContent=names[lang][type];
    const options=[];
+   const chapterPicker=type==='chapter';
    if(type==='class'){
      [9,10].forEach(g=>options.push({title:ui('class')+' '+g,meta:classes[g].items.length+' '+ui('lessons'),active:g===grade,choose:()=>changeGrade(g)}));
-   }else if(type==='chapter'){
-     chapterList().forEach(c=>options.push({title:ui('chapter')+' '+c.number+' · '+tr(c.title),meta:ui(c.status)+' · '+(window.TriggleChapterHub?.textbookExercises?window.TriggleChapterHub.textbookExercises(chapterItems(c)).length:chapterItems(c).length)+' '+ui('existingQuestions'),active:c.id===selectedChapter()?.id,choose:()=>selectChapter(c)}));
+   }else if(chapterPicker){
+     const selectedId=selectedChapter()?.id;
+     for(const c of chapterList()){
+       const count=textbookExerciseList(c).length;
+       const meta=lang==='ta'
+         ? (count ? count+' '+(count===1?'வினா':'வினாக்கள்') : 'பயிற்சி வினாக்கள் இன்னும் இல்லை')
+         : (count ? count+' '+(count===1?'question':'questions') : 'No exercise questions yet');
+       options.push({number:String(c.number).padStart(2,'0'),title:tr(c.title),meta,active:c.id===selectedId,choose:()=>selectChapter(c)});
+     }
    }else if(type==='question'){
      activeList().forEach(item=>options.push({
        title:tr(item.label),meta:tr(item.title),active:item.id===catalogueId(current),choose:()=>selectLesson(item)
@@ -272,24 +281,33 @@
      navigable.filter(i=>i.exercise===current.exercise).forEach(item=>options.push({title:tr(item.label)+' · '+tr(item.title),meta:labelForGroup(item.exercise),active:item.id===current.id,choose:()=>selectLesson(item)}));
    }
    const choices=document.createDocumentFragment();
-   options.forEach(option=>{const button=document.createElement('button');button.type='button';button.className='path-option'+(option.active?' selected':'');button.innerHTML='<span><strong>'+esc(option.title)+'</strong><small>'+esc(option.meta)+'</small></span><span aria-hidden="true">'+(option.active?'✓':'›')+'</span>';
-     if(option.active&&type==='question'){
-       button.setAttribute('aria-current','true');
-       button.autofocus=true;
-     }
-     button.onclick=()=>{dialog.close();option.choose()};choices.append(button)
-   });
-   list.append(choices);
-   const chapterPicker=type==='chapter';
+   for(const option of options){
+     const button=document.createElement('button');
+     button.type='button';
+     button.className='path-option'+(option.active?' selected':'');
+     const mark='<span class="path-option-mark" aria-hidden="true">'+(option.active?'✓':'›')+'</span>';
+     const copy='<span class="path-option-copy"><strong>'+esc(option.title)+'</strong><small>'+esc(option.meta)+'</small></span>';
+     button.innerHTML=chapterPicker
+       ? '<span class="path-option-symbols"><span class="path-number">'+esc(option.number)+'</span>'+(option.active?mark:'')+'</span>'+copy
+       : copy+mark;
+     if(option.active&&type!=='exercise')button.setAttribute('aria-current','true');
+     button.autofocus=option.active&&type==='question';
+     button.onclick=()=>{dialog.close();option.choose()};
+     choices.append(button);
+   }
+   list.replaceChildren(choices);
    dialog.classList.toggle('is-chapter-picker',chapterPicker);
    const hint=$('pathHint');
    hint.hidden=!chapterPicker;
    if(chapterPicker){
-     hint.textContent=lang==='ta'
-       ?grade+' ஆம் வகுப்பு · '+options.length+' அத்தியாயங்கள் · கீழே நகர்த்திப் பார்க்கவும்'
-       :'Class '+grade+' · '+options.length+' chapters · Scroll to see all';
+     hint.textContent=ui('class')+' '+grade;
+     dialog.setAttribute('aria-describedby',hint.id);
+   }else{
+     dialog.removeAttribute('aria-describedby');
    }
    list.scrollTop=0;
+   // Native dialog dismissal restores the opener, including after a touch tap.
+   trigger.focus({preventScroll:true});
    dialog.showModal();
  }
  function renderGrades(){const data=[{num:9,icon:'◈'},{num:10,icon:'◈'}];
@@ -939,7 +957,7 @@
    element.scrollIntoView({block:'start'});
    element.focus({preventScroll:true});
  };
- $('questionPicker').onclick=()=>openPath('question');
+ $('questionPicker').onclick=e=>openPath('question',e.currentTarget);
  $('quickSolutionAction').onclick=()=>focusReaderSection($('stepsRegion'));
  $('allChaptersButton').onclick=()=>changeGrade(grade);
  $('markDone').onclick=()=>{if(completed.has(current.id))completed.delete(current.id);else completed.add(current.id);store('triggle.learned.v119',[...completed]);render()};
@@ -965,10 +983,11 @@
  $('langEn').onclick=()=>changeLanguage('en');$('langTa').onclick=()=>changeLanguage('ta');
  function changeLanguage(v){lang=v;try{localStorage.setItem('triggle-language',v)}catch{}render()}
  window.addEventListener('keydown',e=>{
+  if($('pathDialog').open)return;
   if(e.key==='Escape'&&drawerOpen){closeDrawer();return}
   if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&e.target.tagName!=='INPUT'&&e.target.tagName!=='TEXTAREA'){e.preventDefault();openDrawer($('search'));return}
   if(drawerOpen&&e.key==='Tab'){const focusable=[...$('sidebar').querySelectorAll('button:not([disabled]),input:not([disabled]),a[href],summary')].filter(el=>el.getClientRects().length);if(focusable.length){const first=focusable[0],last=focusable.at(-1);if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}}
-  if(e.target.matches('input,textarea,select,button')||e.target.closest(':is(.triggle-tex,.triggle-table-wrap)[tabindex="0"]')||$('figureDialog').open||$('pathDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
+  if(e.target.matches('input,textarea,select,button')||e.target.closest(':is(.triggle-tex,.triggle-table-wrap)[tabindex="0"]')||$('figureDialog').open||chapterOverview||drawerOpen||e.altKey||e.metaKey||e.ctrlKey)return;
   if(e.key==='ArrowRight'){e.preventDefault();navMove(1)}else if(e.key==='ArrowLeft'){e.preventDefault();navMove(-1)}
  });
  window.addEventListener('popstate',()=>{let p=new URL(location.href).searchParams;if(restrictedRoute(p)){history.replaceState(null,'',location.pathname);p=new URL(location.href).searchParams;}const g=Number(p.get('class'));grade=publicGrade(g)&&classes[g]?g:9;current=classes[grade].items.find(x=>x.id===p.get('question'))||classes[grade].items.find(x=>x.id===lastByGrade[grade])||classes[grade].items[0];homeView=!p.has('class')&&!p.has('chapter')&&!p.has('question');classIndex=!homeView&&!p.has('chapter')&&!p.has('question');chapterOverview=p.has('question')?null:chapterList().find(c=>c.id===p.get('chapter'))||null;chapterSection=chapterOverview&&validSections.has(p.get('section'))?p.get('section'):null;conceptIndex=chapterSection==='concepts'&&/^\d+$/.test(p.get('concept')||'')?Number(p.get('concept')):null;$('search').value='';render();closeDrawer();resetScroll()});

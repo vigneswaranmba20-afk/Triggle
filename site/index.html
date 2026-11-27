@@ -17,7 +17,7 @@
 <meta name="theme-color" content="#FFFFFF"><meta name="description" content="Learn mathematics clearly in English and Tamil. Free interactive lessons, chapters, exercises and guided reasoning for Classes 9–10.">
 <meta name="copyright" content="© 2026 VER labs"><link rel="manifest" href="./manifest.webmanifest">
 <title>Triggle — Mathematics Made Clear | Classes 9–10</title>
-<link rel="stylesheet" href="./assets/vendor/katex/katex.min.css?v=0.16.22"><link rel="stylesheet" href="./assets/app.css?v=exercise-index-20261115-1&geometry=20261119&af01=20261120&ver-glyph=5"><link rel="stylesheet" href="./assets/discovery.css?v=minimal-home-1&home-grades=20261123&home-studio=20261124"><link rel="stylesheet" href="./assets/chapter-hub.css?v=g9-surds-switch-top-20261119-1&aud01-font=1&lesson-footer-flow=20261121"><link rel="stylesheet" href="./assets/living-concepts.css?v=g9-living-20261114-1&af01=20261120"><link rel="stylesheet" href="./assets/math-first.css?v=standard-20261111&g10-ex81-mobile=1&activity-studio=1">
+<link rel="stylesheet" href="./assets/vendor/katex/katex.min.css?v=0.16.22"><link rel="stylesheet" href="./assets/app.css?v=exercise-index-20261115-1&geometry=20261119&af01=20261120&ver-glyph=5&path-picker=1"><link rel="stylesheet" href="./assets/discovery.css?v=minimal-home-1&home-grades=20261123&home-studio=20261124"><link rel="stylesheet" href="./assets/chapter-hub.css?v=g9-surds-switch-top-20261119-1&aud01-font=1&lesson-footer-flow=20261121"><link rel="stylesheet" href="./assets/living-concepts.css?v=g9-living-20261114-1&af01=20261120"><link rel="stylesheet" href="./assets/math-first.css?v=standard-20261111&g10-ex81-mobile=1&activity-studio=1&path-picker=1">
 <link rel="stylesheet" href="./assets/g10-ch8-concepts.css?v=g10-ch8-inline-range-20261126-1"><link rel="stylesheet" href="./assets/quiet-reader.css?v=standard-20261111"><link rel="stylesheet" href="./assets/reader-pin.css?v=standard-20261111&exercise-display=2">
 <link rel="stylesheet" href="./assets/math-typesetting.css?v=chatgpt-math-20261113-1&g9mathfirst=1&g9lessonread=1&exercise-display=2&prob-table-ta=1">
 <link rel="stylesheet" href="./assets/matrix-concepts.css?v=concepts-math-first-20261115-2">
@@ -33,7 +33,7 @@
 <link rel="stylesheet" href="./assets/g9-concept-theme.css?v=g9-distance-20261123-1">
 <link rel="stylesheet" href="./assets/g9-algebra-concepts.css?v=neon-pilot-20261123-1&ver-glyph=1">
 <link rel="stylesheet" href="./assets/home-studio.css?v=20261124-1">
-<link rel="stylesheet" href="./assets/ver-glyph.css?v=6">
+<link rel="stylesheet" href="./assets/ver-glyph.css?v=7">
 </head>
 <body class="ver-glyph ver-starting">
 <p class="ver-loading" role="status"><span lang="en">Loading Triggle…</span><span lang="ta">டிரிகிள் ஏற்றப்படுகிறது…</span></p>
@@ -107,7 +107,16 @@
   </div>
 </div>
 <nav class="class-dock" aria-label="Switch school class" id="classDock" inert></nav>
-<dialog id="pathDialog" class="path-dialog" aria-labelledby="pathTitle"><div class="dialog-header"><h3 id="pathTitle">Choose</h3><button type="button" class="dialog-close" id="pathClose" aria-label="Close navigation">✕</button></div><p id="pathHint" class="path-hint" hidden></p><div id="pathOptions" class="path-options"></div></dialog>
+<dialog id="pathDialog" class="path-dialog" aria-labelledby="pathTitle">
+  <header class="dialog-header">
+    <div class="path-heading">
+      <h3 id="pathTitle">Choose</h3>
+      <p id="pathHint" class="path-hint" hidden></p>
+    </div>
+    <button type="button" class="dialog-close" id="pathClose" aria-label="Close navigation">✕</button>
+  </header>
+  <div id="pathOptions" class="path-options"></div>
+</dialog>
 <dialog id="visualLessonDialog" class="vl-dialog" aria-labelledby="vlTitle" aria-modal="true">
   <div class="vl-shell">
     <header class="vl-header">
@@ -209,6 +218,6 @@
 <script src="./data/frontier-exercise-hints.js?v=1"></script>
 <script src="./data/textbook-tamil-formula-labels.js?v=1"></script>
 <script src="./assets/student-records.js?v=1"></script>
-<script src="./assets/app.js?v=exercise-index-all-grades-20261115-1&source-tables=2&g10-frontier-coordinate=1&difficulty-ta=1&g9-frontier-graphs=1&g10-frontier-tamil=2&real-frontier-1=1&g9-tamil-working=1&chapter1-math=20261113-1&g10-all-maths=20261113-1&g9-math=20261114-1&g9-ex32=1&g9mathfirst=1&geometry=20261119&af01=20261120&af10-prob-count=1&home-grades=20261123&higher-grade-gate=20261123&g9-ch5=20261123&g9-concepts-20261124=1&home-studio=20261124&exercise-display=2&prob-table-ta=1&numbers-tamil=1&algebra-tamil=1&geometry-tamil=1&g10-ex81-mobile=1&g10-ch8-studio=1&g10-geometry-20261125=1&g9geometry=20261125&trace-ex13=1&textbook-order=1&frontier-figure-tamil=1&frontier-capacity-index=1&frontier-geometry-alt=1&frontier-exercise-hints=1&frontier-tamil-labels=1&ver-glyph=5&student-release=1&glyph-v11=1"></script><script src="./assets/quiet-reader.js?v=adaptive-reader-1&student-release=1&glyph-v11=1"></script><script defer src="./assets/visual-lessons.js?v=question-visible-1"></script>
+<script src="./assets/app.js?v=exercise-index-all-grades-20261115-1&source-tables=2&g10-frontier-coordinate=1&difficulty-ta=1&g9-frontier-graphs=1&g10-frontier-tamil=2&real-frontier-1=1&g9-tamil-working=1&chapter1-math=20261113-1&g10-all-maths=20261113-1&g9-math=20261114-1&g9-ex32=1&g9mathfirst=1&geometry=20261119&af01=20261120&af10-prob-count=1&home-grades=20261123&higher-grade-gate=20261123&g9-ch5=20261123&g9-concepts-20261124=1&home-studio=20261124&exercise-display=2&prob-table-ta=1&numbers-tamil=1&algebra-tamil=1&geometry-tamil=1&g10-ex81-mobile=1&g10-ch8-studio=1&g10-geometry-20261125=1&g9geometry=20261125&trace-ex13=1&textbook-order=1&frontier-figure-tamil=1&frontier-capacity-index=1&frontier-geometry-alt=1&frontier-exercise-hints=1&frontier-tamil-labels=1&ver-glyph=5&student-release=1&glyph-v11=1&path-picker=1"></script><script src="./assets/quiet-reader.js?v=adaptive-reader-1&student-release=1&glyph-v11=1"></script><script defer src="./assets/visual-lessons.js?v=question-visible-1"></script>
 <script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));</script>
 </body></html>
