@@ -946,6 +946,78 @@ async function similarityResults(page,base,profiles){
   return checks;
 }
 
+async function roadMidpoint(page,base,profiles){
+  const questions=[
+    ['g10-ch6','c10-6-6-2-4',['elevation']],['g10-ch6','c10-6-6-2-5',[]],['g10-ch6','c10-6-6-2-6',['elevation']],
+    ['g10-ch6','c10-6-6-3-7',['depression']],['g10-ch6','c10-6-6-3-8',['depression']],['g10-ch6','c10-6-6-3-9',['depression']],
+    ['g10-ch6','c10-6-6-4-10',['depression','elevation']],['g10-ch6','c10-6-6-4-11',['depression','elevation']],
+    ['g10-ch6','c10-6-6-4-12',['depression','elevation']],['g10-ch5','c10-5-5-practice-20',[]]
+  ];
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta'])for(const [chapter,question,expectedAngles] of questions){
+      await page.goto(`${base}/index.html?class=10&chapter=${chapter}&question=${question}`);
+      await setLanguage(page,lang);
+      const inline=page.locator('#inlineFigureOpen');
+      const view=await inline.isVisible()?inline:page.locator('#figureBtn');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        await view.click();
+        const svg=page.locator('#diagramContent svg').first();
+        await svg.waitFor({state:'visible'});
+        if(chapter==='g10-ch6'){
+          const info=await svg.evaluate(svg=>{
+            const key=svg.parentElement.nextElementSibling;
+            const a=window.TriggleDiagramGuard.audit(svg,{discover:true});
+            return {
+              issues:a.issues,overflow:Math.max(...Object.values(a.horizontalClipping)),
+              name:svg.getAttribute('aria-label'),key:key.textContent,keyOverflow:key.scrollWidth-key.clientWidth,
+              keyBelow:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+              rays:[...svg.querySelectorAll('[data-dg-sightline]')].map(ray=>['x1','y1','x2','y2'].map(key=>Number(ray.getAttribute(key)))),
+              angles:[...svg.querySelectorAll('[data-dg-angle]')].map(path=>{
+                const color=path.getAttribute('stroke');
+                const ray=svg.querySelector(`line[stroke="${color}"]`);
+                const [x1,y1,x2,y2]=['x1','y1','x2','y2'].map(key=>Number(ray.getAttribute(key)));
+                const start=path.getPointAtLength(0),end=path.getPointAtLength(path.getTotalLength());
+                const a=[end.x-x1,end.y-y1],b=[x2-x1,y2-y1];
+                const cross=(a[0]*b[1]-a[1]*b[0])/Math.hypot(...a)/Math.hypot(...b);
+                return {id:path.dataset.dgAngle,horizontal:start.y-y1,cross};
+              })
+            };
+          });
+          assert.deepEqual(info.issues,[]);
+          assert.ok(info.overflow<=1&&info.keyOverflow<=1&&info.keyBelow);
+          assert.match(info.name,lang==='ta'?/[஀-௿]/u:/road|elevation|depression/i);
+          if(question==='c10-6-6-2-5'){
+            assert.match(info.key,/4√3.*30°/u);
+            const [left,right]=info.rays;
+            assert.equal(info.rays.length,2);
+            const [x,y,first,roof]=left;
+            const [x2,y2,second,roof2]=right;
+            near(x,x2);near(y,y2);near(roof,roof2);
+            near(x-first,second-x);
+            near(Math.atan2(y-roof,second-x)*180/Math.PI,30);
+            near((second-first)/(y-roof)*4*Math.sqrt(3),24);
+          }else{
+            assert.deepEqual(info.angles.map(entry=>entry.id),expectedAngles);
+            assert.match(info.key,/θ/u);
+            for(const {horizontal,cross} of info.angles){near(horizontal,0);near(cross,0);}
+          }
+        }else{
+          assert.match(await svg.getAttribute('aria-label'),/Midpoint of line segment from A\(2,4\)/);
+          assert.equal(await svg.locator('[data-dg-road-cross-section]').count(),0);
+        }
+        await page.keyboard.press('Escape');
+        await page.locator('#figureDialog').waitFor({state:'hidden'});
+        assert(await view.evaluate(button=>button===document.activeElement));
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -1012,6 +1084,12 @@ async function main(){
           console.log(`DiagramGuard: ${checks} bilingual and responsive similarity results states`);
           return;
         }
+        if(process.argv.includes('--road-midpoint')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await roadMidpoint(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive sightline and midpoint exercise states`);
+          return;
+        }
         if(width===390&&!live){
           await synthetic(page);
           await legacyMarkers(page);
@@ -1026,6 +1104,7 @@ async function main(){
           await vennGeometry(page,base,[[320,844]]);
           await similarityScaling(page,base,[[320,844]]);
           await similarityResults(page,base,[[320,844]]);
+          await roadMidpoint(page,base,[[320,844]]);
           await page.setViewportSize({width,height});
         }
         for(const lang of ['en','ta']){
