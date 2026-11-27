@@ -1,0 +1,1002 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.0",
+  "summary": {
+    "total": 120,
+    "tp": 96,
+    "fp": 0,
+    "fn": 0,
+    "tn": 24,
+    "precision": 1.0,
+    "recall": 1.0,
+    "falsePositives": 0,
+    "unresolved": 0,
+    "criticalMissedErrors": 0,
+    "dev": {
+      "total": 60,
+      "tp": 48,
+      "fp": 0,
+      "fn": 0,
+      "tn": 12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "falsePositives": 0,
+      "unresolved": 0,
+      "criticalMissedErrors": 0
+    },
+    "held_out": {
+      "total": 60,
+      "tp": 48,
+      "fp": 0,
+      "fn": 0,
+      "tn": 12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "falsePositives": 0,
+      "unresolved": 0,
+      "criticalMissedErrors": 0
+    }
+  },
+  "cases": [
+    {
+      "caseId": "dev-ctrl-01",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-ctrl-02",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-ctrl-03",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-ctrl-04",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-ctrl-05",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-ctrl-06",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-ctrl-07",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-ctrl-08",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-ctrl-09",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-ctrl-10",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-ctrl-11",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-ctrl-12",
+      "split": "dev",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "dev-num-01",
+      "split": "dev",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-num-02",
+      "split": "dev",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-num-03",
+      "split": "dev",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-num-04",
+      "split": "dev",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-num-05",
+      "split": "dev",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-num-06",
+      "split": "dev",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-op-01",
+      "split": "dev",
+      "category": "wrong_operator",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-op-02",
+      "split": "dev",
+      "category": "wrong_operator",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-op-03",
+      "split": "dev",
+      "category": "wrong_operator",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-op-04",
+      "split": "dev",
+      "category": "wrong_operator",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-op-05",
+      "split": "dev",
+      "category": "wrong_operator",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-pow-01",
+      "split": "dev",
+      "category": "missing_power_sqrt",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-pow-02",
+      "split": "dev",
+      "category": "missing_power_sqrt",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-pow-03",
+      "split": "dev",
+      "category": "missing_power_sqrt",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-pow-04",
+      "split": "dev",
+      "category": "missing_power_sqrt",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-pow-05",
+      "split": "dev",
+      "category": "missing_power_sqrt",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-frac-01",
+      "split": "dev",
+      "category": "wrong_fraction",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-frac-02",
+      "split": "dev",
+      "category": "wrong_fraction",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-frac-03",
+      "split": "dev",
+      "category": "wrong_fraction",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-frac-04",
+      "split": "dev",
+      "category": "wrong_fraction",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-frac-05",
+      "split": "dev",
+      "category": "wrong_fraction",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-form-01",
+      "split": "dev",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-form-02",
+      "split": "dev",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-form-03",
+      "split": "dev",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-form-04",
+      "split": "dev",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-form-05",
+      "split": "dev",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-form-06",
+      "split": "dev",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-unit-01",
+      "split": "dev",
+      "category": "unit_conversion",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-unit-02",
+      "split": "dev",
+      "category": "unit_conversion",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-unit-03",
+      "split": "dev",
+      "category": "unit_conversion",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-unit-04",
+      "split": "dev",
+      "category": "unit_conversion",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-unit-05",
+      "split": "dev",
+      "category": "unit_conversion",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-ans-01",
+      "split": "dev",
+      "category": "wrong_final_answer",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-ans-02",
+      "split": "dev",
+      "category": "wrong_final_answer",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-ans-03",
+      "split": "dev",
+      "category": "wrong_final_answer",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-ans-04",
+      "split": "dev",
+      "category": "wrong_final_answer",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-ans-05",
+      "split": "dev",
+      "category": "wrong_final_answer",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-step-01",
+      "split": "dev",
+      "category": "invalid_step_transform",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-step-02",
+      "split": "dev",
+      "category": "invalid_step_transform",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-step-03",
+      "split": "dev",
+      "category": "invalid_step_transform",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-step-04",
+      "split": "dev",
+      "category": "invalid_step_transform",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-step-05",
+      "split": "dev",
+      "category": "invalid_step_transform",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-ta-01",
+      "split": "dev",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-ta-02",
+      "split": "dev",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-ta-03",
+      "split": "dev",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-ta-04",
+      "split": "dev",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-ta-05",
+      "split": "dev",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "dev-ta-06",
+      "split": "dev",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ctrl-01",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-ctrl-02",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-ctrl-03",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-ctrl-04",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-ctrl-05",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-ctrl-06",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-ctrl-07",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-ctrl-08",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-ctrl-09",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-ctrl-10",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-ctrl-11",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-ctrl-12",
+      "split": "held_out",
+      "category": "clean_control",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho-num-01",
+      "split": "held_out",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-num-02",
+      "split": "held_out",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-num-03",
+      "split": "held_out",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-num-04",
+      "split": "held_out",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-num-05",
+      "split": "held_out",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-num-06",
+      "split": "held_out",
+      "category": "numeric_value",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-op-01",
+      "split": "held_out",
+      "category": "wrong_operator",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-op-02",
+      "split": "held_out",
+      "category": "wrong_operator",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-op-03",
+      "split": "held_out",
+      "category": "wrong_operator",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-op-04",
+      "split": "held_out",
+      "category": "wrong_operator",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-op-05",
+      "split": "held_out",
+      "category": "wrong_operator",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-pow-01",
+      "split": "held_out",
+      "category": "missing_power_sqrt",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-pow-02",
+      "split": "held_out",
+      "category": "missing_power_sqrt",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-pow-03",
+      "split": "held_out",
+      "category": "missing_power_sqrt",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-pow-04",
+      "split": "held_out",
+      "category": "missing_power_sqrt",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-pow-05",
+      "split": "held_out",
+      "category": "missing_power_sqrt",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-frac-01",
+      "split": "held_out",
+      "category": "wrong_fraction",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-frac-02",
+      "split": "held_out",
+      "category": "wrong_fraction",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-frac-03",
+      "split": "held_out",
+      "category": "wrong_fraction",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-frac-04",
+      "split": "held_out",
+      "category": "wrong_fraction",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-frac-05",
+      "split": "held_out",
+      "category": "wrong_fraction",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-form-01",
+      "split": "held_out",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-form-02",
+      "split": "held_out",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-form-03",
+      "split": "held_out",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-form-04",
+      "split": "held_out",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-form-05",
+      "split": "held_out",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-form-06",
+      "split": "held_out",
+      "category": "wrong_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-unit-01",
+      "split": "held_out",
+      "category": "unit_conversion",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-unit-02",
+      "split": "held_out",
+      "category": "unit_conversion",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-unit-03",
+      "split": "held_out",
+      "category": "unit_conversion",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-unit-04",
+      "split": "held_out",
+      "category": "unit_conversion",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-unit-05",
+      "split": "held_out",
+      "category": "unit_conversion",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ans-01",
+      "split": "held_out",
+      "category": "wrong_final_answer",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ans-02",
+      "split": "held_out",
+      "category": "wrong_final_answer",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ans-03",
+      "split": "held_out",
+      "category": "wrong_final_answer",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ans-04",
+      "split": "held_out",
+      "category": "wrong_final_answer",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ans-05",
+      "split": "held_out",
+      "category": "wrong_final_answer",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-step-01",
+      "split": "held_out",
+      "category": "invalid_step_transform",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-step-02",
+      "split": "held_out",
+      "category": "invalid_step_transform",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-step-03",
+      "split": "held_out",
+      "category": "invalid_step_transform",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-step-04",
+      "split": "held_out",
+      "category": "invalid_step_transform",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-step-05",
+      "split": "held_out",
+      "category": "invalid_step_transform",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ta-01",
+      "split": "held_out",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ta-02",
+      "split": "held_out",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ta-03",
+      "split": "held_out",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ta-04",
+      "split": "held_out",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ta-05",
+      "split": "held_out",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho-ta-06",
+      "split": "held_out",
+      "category": "tamil_discrepancy",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    }
+  ]
+}
