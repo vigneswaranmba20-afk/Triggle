@@ -148,15 +148,22 @@ for(const [chapter,entries] of Object.entries(scope.TRIGGLE_TEXTBOOK_TASKS)){
   }
 }
 
+function figureAssets(directory) {
+  return fs.readdirSync(path.join(site,directory),{withFileTypes:true}).flatMap(entry=>{
+    const file=path.posix.join(directory,entry.name);
+    return entry.isDirectory()?figureAssets(file):/\.(svg|png|webp|jpe?g)$/i.test(entry.name)?[file]:[];
+  });
+}
+
 // Record assets without a figure registry placement so an asset audit can still examine them.
 for(const dir of fs.readdirSync(path.join(site,'assets')).filter(d=>/^(grade(9|10)-|textbook-figures$)/.test(d))){
-  for(const file of fs.readdirSync(path.join(site,'assets',dir)).filter(n=>/\.(svg|png|webp|jpe?g)$/i.test(n))){
-    const asset='assets/'+dir+'/'+file;
+  for(const asset of figureAssets('assets/'+dir)){
     if(referenced.has(asset))continue;
     const chapter=dir.replace(/^grade(9|10)-ch(\d+)$/,'g$1-ch$2').replace('grade10-geometry','g10-ch4');
-    add('unregistered:'+hash(asset),{id:asset,chapter,language:file.includes('-ta.')?'ta':'undetermined',
+    const tamil=asset.includes('/ta/')||asset.includes('-ta.');
+    add('unregistered:'+hash(asset),{id:asset,chapter,language:tamil?'ta':'undetermined',
       rendering:media(asset),surface:'asset without matched figure registry placement',
-      ...(file.includes('-ta.')?{ta:asset}:{en:asset}),source:asset,qualification:'asset candidate'});
+      ...(tamil?{ta:asset}:{en:asset}),source:asset,qualification:'asset candidate'});
   }
 }
 const fields=['id','chapter','language','rendering','surface','en','ta','source','qualification'];

@@ -122,25 +122,27 @@ function renderGlance(stage,host,lang){
       <text x="163" y="29" font-size="10" text-anchor="middle" fill="#1E5248">cos(90°−θ)=sin θ</text>
       <text x="163" y="107" font-size="10" text-anchor="middle" fill="#6E2933">OP = RQ</text>
     </svg>`,
-    'standard-angles':`<svg class="g10ch4-glance-svg" viewBox="0 0 260 112" aria-hidden="true">
-      <polygon points="24,94 102,94 102,22" fill="#F3EFE8" stroke="#6E2933" stroke-width="1.8"/>
-      <text x="63" y="106" font-size="10" text-anchor="middle" fill="#181B20">1</text>
-      <text x="108" y="62" font-size="10" fill="#181B20">√3</text>
-      <text x="52" y="54" font-size="10" fill="#6E2933">2</text>
-      <text x="80" y="88" font-size="9.5" font-weight="700" fill="#6E2933">60°</text>
+    'standard-angles':`<svg class="g10ch4-glance-svg" viewBox="0 0 260 132" aria-hidden="true">
+      <polygon points="24,94 ${24+72/Math.sqrt(3)},94 ${24+72/Math.sqrt(3)},22" fill="#F3EFE8" stroke="#6E2933" stroke-width="1.8"/>
+      <path d="M36 94 A12 12 0 0 0 30 ${94-6*Math.sqrt(3)}" fill="none" stroke="#6E2933" stroke-width="1.2"/>
+      <text x="45" y="116" font-size="10" text-anchor="middle" fill="#181B20">1</text>
+      <text x="73" y="62" font-size="10" fill="#181B20">√3</text>
+      <text x="28" y="46" font-size="10" fill="#6E2933">2</text>
+      <text x="14" y="113" font-size="9.5" font-weight="700" text-anchor="middle" fill="#6E2933">60°</text>
       <polygon points="154,94 226,94 226,22" fill="#EFF8F4" stroke="#1E5248" stroke-width="1.8"/>
-      <text x="190" y="106" font-size="10" text-anchor="middle" fill="#181B20">1</text>
+      <path d="M166 94 A12 12 0 0 0 ${154+6*Math.sqrt(2)} ${94-6*Math.sqrt(2)}" fill="none" stroke="#1E5248" stroke-width="1.2"/>
+      <text x="190" y="116" font-size="10" text-anchor="middle" fill="#181B20">1</text>
       <text x="233" y="62" font-size="10" fill="#181B20">1</text>
-      <text x="178" y="54" font-size="10" fill="#1E5248">√2</text>
-      <text x="180" y="88" font-size="9.5" font-weight="700" fill="#1E5248">45°</text>
+      <text x="168" y="44" font-size="10" fill="#1E5248">√2</text>
+      <text x="144" y="113" font-size="9.5" font-weight="700" text-anchor="middle" fill="#1E5248">45°</text>
     </svg>`,
-    'identity-sin-cos':`<svg class="g10ch4-glance-svg" viewBox="0 0 260 112" aria-hidden="true">
-      <polygon points="72,72 152,72 152,24" fill="#F3EFE8" stroke="#181B20" stroke-width="2"/>
-      <rect x="72" y="72" width="80" height="32" fill="#DCEEE8" stroke="#1E5248" stroke-width="1.5"/>
-      <rect x="152" y="24" width="48" height="48" fill="#F8E7E9" stroke="#6E2933" stroke-width="1.5"/>
-      <text x="112" y="92" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1E5248">cos²θ</text>
-      <text x="176" y="52" font-size="10.5" font-weight="700" text-anchor="middle" fill="#6E2933">sin²θ</text>
-      <text x="104" y="42" font-size="10.5" font-weight="700" fill="#181B20">1²=1</text>
+    'identity-sin-cos':`<svg class="g10ch4-glance-svg" viewBox="0 0 260 128" aria-hidden="true">
+      <polygon points="78,72 126,72 126,26" fill="#F3EFE8" stroke="#181B20" stroke-width="2"/>
+      <rect x="78" y="72" width="48" height="48" fill="#DCEEE8" stroke="#1E5248" stroke-width="1.5"/>
+      <rect x="126" y="26" width="46" height="46" fill="#F8E7E9" stroke="#6E2933" stroke-width="1.5"/>
+      <text x="102" y="99" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1E5248">cos²θ</text>
+      <text x="149" y="53" font-size="10.5" font-weight="700" text-anchor="middle" fill="#6E2933">sin²θ</text>
+      <text x="94" y="40" font-size="10.5" font-weight="700" fill="#181B20">1</text>
     </svg>`,
     'identity-sec-cosec':`<svg class="g10ch4-glance-svg" viewBox="0 0 260 112" aria-hidden="true">
       <polygon points="48,88 188,88 188,24" fill="#F3EFE8" stroke="#6E2933" stroke-width="2"/>
@@ -196,6 +198,47 @@ function makeMetrics(host,items){
     grid.append(el('div','g10ch4-metric',`<span>${k}</span><strong>${v}</strong>`));
   });
   host.append(grid);
+}
+
+function sightArc(x,y,r,from,to,color){
+  const point=a=>[x+r*cosD(a),y+r*sinD(a)].join(',');
+  return `<path d="M${point(from)} A${r},${r} 0 0,${to>from?1:0} ${point(to)}" fill="none" stroke="${color}" stroke-width="1.7" data-dg-obstacle="angle-${from}"/>`;
+}
+
+function sightFigure(host,title){
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('viewBox','0 0 320 200');
+  svg.setAttribute('class','g10ch4-svg diagramguard-svg');
+  svg.setAttribute('role','img');
+  svg.setAttribute('aria-label',title);
+  const key=el('div','diagramguard-coordinate-key');
+  host.append(svg,key);
+  const guard=window.TriggleDiagramGuard;
+  let scene,marks;
+  const refresh=guard.responsive(svg,(width,rem)=>{
+    if(!scene)return;
+    const unit=rem*320/width;
+    const top=Math.max(0,1.55*unit-40), bottom=Math.max(0,1.8*unit-44);
+    svg.setAttribute('viewBox',`0 ${-top} 320 ${200+top+bottom}`);
+    svg.innerHTML=scene;
+    const matrix=svg.getScreenCTM();
+    const font=rem*.9375/Math.hypot(matrix.c,matrix.d);
+    guard.place(svg,marks.map(({id,x,y,direction})=>{
+      const label=document.createElementNS(svg.namespaceURI,'text');
+      label.dataset.dgLabel=id;
+      label.setAttribute('font-size',font);
+      label.setAttribute('text-anchor','middle');
+      label.setAttribute('dy','.34em');
+      label.setAttribute('fill','#181B20');
+      label.textContent=id;
+      return {label,anchor:[x,y],direction};
+    }));
+  });
+  return (geometry,labels,values)=>{
+    scene=geometry;marks=labels;
+    key.replaceChildren(...values.map(value=>el('span','diagramguard-named-point',value)));
+    refresh();
+  };
 }
 
 function makeSlider(host,label,min,max,step,val,unit,onInput){
@@ -365,36 +408,44 @@ function mount(stage,host,lang){
       b.onclick=()=>{deg=a;draw();};
       chips.append(b);return[a,b];
     });
-    const svgWrap=el('div'),readout=el('div','g10ch4-readout g10ch4-formula');
-    lab.append(title,chips,svgWrap,readout);
+    const svgWrap=el('div'),limits=el('span','diagramguard-annotation'),readout=el('div','g10ch4-readout g10ch4-formula');
+    lab.append(title,chips,svgWrap,limits,readout);
     const draw=()=>{
       btns.forEach(([a,b])=>b.setAttribute('aria-pressed',String(a===deg)));
       const row=math.standardAngle(deg);
-      let fig='';
-      if(deg===45){
-        fig=`<polygon points="85,155 215,155 215,35" fill="#EFF8F4" stroke="#1E5248" stroke-width="2.2"/>
-          <text x="150" y="172" font-size="12" font-weight="700" text-anchor="middle" fill="#181B20">Adj = 1</text>
-          <text x="225" y="100" font-size="12" font-weight="700" fill="#181B20">Opp = 1</text>
-          <text x="130" y="88" font-size="12" font-weight="700" fill="#6E2933">Hyp = √2</text>
-          <text x="115" y="146" font-size="12" font-weight="700" fill="#1E5248">45°</text>`;
-      }else if(deg===30||deg===60){
-        const opp=deg===30?'1':'√3',adj=deg===30?'√3':'1';
-        const w=deg===30?165:95,h=deg===30?95:145;
-        fig=`<polygon points="65,160 ${65+w},160 ${65+w},${160-h}" fill="#F3EFE8" stroke="#6E2933" stroke-width="2.2"/>
-          <text x="${65+w/2}" y="176" font-size="12" font-weight="700" text-anchor="middle" fill="#181B20">Adj = ${adj}</text>
-          <text x="${65+w+8}" y="${160-h/2}" font-size="12" font-weight="700" fill="#181B20">Opp = ${opp}</text>
-          <text x="${65+w/2-22}" y="${160-h/2-8}" font-size="12" font-weight="700" fill="#6E2933">Hyp = 2</text>
-          <text x="92" y="150" font-size="12" font-weight="700" fill="#6E2933">${deg}°</text>`;
-      }else if(deg===0){
-        fig=`<line x1="60" y1="120" x2="250" y2="120" stroke="#6E2933" stroke-width="4"/>
-          <text x="155" y="142" font-size="12" font-weight="700" text-anchor="middle" fill="#181B20">θ = 0°: Opp = 0, Adj = Hyp = 1</text>
-          <text x="155" y="96" font-size="11.5" text-anchor="middle" fill="#7A1D2B">${ta?'Opp = 0 என்பதால் cosec 0°, cot 0° வரையறுக்கப்படவில்லை':'Division by Opp = 0 makes cosec 0° & cot 0° undefined'}</text>`;
-      }else{
-        fig=`<line x1="155" y1="30" x2="155" y2="165" stroke="#6E2933" stroke-width="4"/>
-          <text x="155" y="182" font-size="12" font-weight="700" text-anchor="middle" fill="#181B20">θ = 90°: Adj = 0, Opp = Hyp = 1</text>
-          <text x="155" y="20" font-size="11.5" text-anchor="middle" fill="#7A1D2B">${ta?'Adj = 0 என்பதால் tan 90°, sec 90° வரையறுக்கப்படவில்லை':'Division by Adj = 0 makes tan 90° & sec 90° undefined'}</text>`;
+      let fig,frame='0 0 310 208';
+      let description=`${ta?'சிறப்புக் கோணம்':'Standard angle'} ${deg}°`;
+      limits.hidden=deg>0&&deg<90;
+      if(!limits.hidden){
+        limits.textContent=deg===0
+          ? (ta?'எதிர்ப்பக்கம் 0 என்பதால் cosec 0°, cot 0° வரையறுக்கப்படவில்லை.':'The opposite side is 0, so cosec 0° and cot 0° are undefined.')
+          : (ta?'அடுத்த பக்கம் 0 என்பதால் tan 90°, sec 90° வரையறுக்கப்படவில்லை.':'The adjacent side is 0, so tan 90° and sec 90° are undefined.');
       }
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Standard angle diagram">${fig}</svg>`;
+      if(deg>0&&deg<90){
+        const adj=deg===30?'√3':'1',opp=deg===60?'√3':'1',hyp=deg===45?'√2':'2';
+        const x=55,y=170,s=sinD(deg),c=cosD(deg),unit=80*(deg===45?Math.sqrt(2):2);
+        const w=unit*c,h=unit*s,right=x+w;
+        description+=ta?`. அடுத்த பக்கம் ${adj}. எதிர்ப்பக்கம் ${opp}. கர்ணம் ${hyp}.`:
+          `. Adjacent side ${adj}. Opposite side ${opp}. Hypotenuse ${hyp}.`;
+        fig=`<polygon points="${x},${y} ${right},${y} ${right},${y-h}" fill="#EFF8F4" stroke="#1E5248" stroke-width="2.2"/>
+          <path d="M${right-11},${y} V${y-11} H${right}" fill="none" stroke="#1E5248" stroke-width="1.4" data-dg-obstacle="right-angle"/>
+          <path d="M${x+22},${y} A22,22 0 0,0 ${x+22*c},${y-22*s}" fill="none" stroke="#6E2933" stroke-width="1.4" data-dg-obstacle="standard-angle-arc"/>
+          <g font-size="15.5" font-weight="550" fill="#181B20">
+            <text x="${x+w/2}" y="193" text-anchor="middle">${adj}</text>
+            <text x="${right+14}" y="${y-h/2+3}">${opp}</text>
+            <text x="${x+w/2-22*s}" y="${y-h/2-22*c}" text-anchor="middle">${hyp}</text>
+            <text x="${x-20}" y="${y-19}" text-anchor="middle" fill="#6E2933">${deg}°</text>
+          </g>`;
+      }else if(deg===0){
+        frame='0 0 310 100';
+        fig=`<line x1="60" y1="40" x2="250" y2="40" stroke="#6E2933" stroke-width="4"/>
+          <text x="155" y="74" font-size="15.5" text-anchor="middle" fill="#181B20">θ = 0° · Adj = Hyp = 1</text>`;
+      }else{
+        frame='0 0 310 178';
+        fig=`<line x1="155" y1="20" x2="155" y2="126" stroke="#6E2933" stroke-width="4"/>
+          <text x="155" y="156" font-size="15.5" text-anchor="middle" fill="#181B20">θ = 90° · Opp = Hyp = 1</text>`;
+      }
+      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="${frame}" role="img" aria-label="${description}">${fig}</svg>`;
       readout.innerHTML=tex(`\\begin{aligned}&\\sin ${deg}^\\circ=${row.sin},\\;\\cos ${deg}^\\circ=${row.cos}\\\\&\\tan ${deg}^\\circ=${row.tan==='undefined'?'\\text{undef.}':row.tan},\\;\\cot ${deg}^\\circ=${row.cot==='undefined'?'\\text{undef.}':row.cot}\\\\&\\sec ${deg}^\\circ=${row.sec==='undefined'?'\\text{undef.}':row.sec},\\;\\operatorname{cosec} ${deg}^\\circ=${row.cosec==='undefined'?'\\text{undef.}':row.cosec}\\end{aligned}`,true);
     };
     draw();
@@ -404,22 +455,29 @@ function mount(stage,host,lang){
   if(id==='identity-sin-cos'){
     let theta=37;
     const title=el('p','g10ch4-lab-title',ta?'θ மாறும்போது sin²θ + cos²θ சதுரப் பரப்புகளின் கூடுதல் எப்போதும் 1 என்பதைப் பார்க்க':'Slide θ and watch the squared areas sin²θ and cos²θ always sum to 1');
-    const svgWrap=el('div'),controls=el('div'),readout=el('div','g10ch4-readout g10ch4-formula');
-    lab.append(title,svgWrap,controls,readout);
+    const svgWrap=el('div'),legend=el('div','diagramguard-coordinate-legend'),controls=el('div'),readout=el('div','g10ch4-readout g10ch4-formula');
+    legend.setAttribute('role','list');
+    legend.setAttribute('aria-label',ta?'சதுரங்களின் பரப்புகள்':'Square areas');
+    lab.append(title,svgWrap,legend,controls,readout);
     const draw=()=>{
       const s=sinD(theta),c=cosD(theta),s2=s*s,c2=c*c;
-      const scale=120,xO=48,yM=122,w=scale*c,h=scale*s;
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 195" role="img" aria-label="Pythagorean areas sin^2 + cos^2 = 1">
+      const scale=81,xO=83,yM=105,w=scale*c,h=scale*s;
+      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 221" role="img" aria-label="${ta?'ஓர் அலகு கர்ணமுள்ள முக்கோணத்தின் பக்கச் சதுரங்கள்':'Squares on the legs of a triangle with a unit hypotenuse'}">
+        <rect data-dg-square="cosine" x="${xO}" y="${yM}" width="${w}" height="${w}" fill="#DCEEE8" stroke="#1E5248" stroke-width="1.5"/>
+        <rect data-dg-square="sine" x="${xO+w}" y="${yM-h}" width="${h}" height="${h}" fill="#F8E7E9" stroke="#6E2933" stroke-width="1.5"/>
         <polygon points="${xO},${yM} ${xO+w},${yM} ${xO+w},${yM-h}" fill="#FAF9F6" stroke="#181B20" stroke-width="2"/>
-        <rect x="${xO}" y="${yM}" width="${w}" height="${Math.max(10,w*0.52)}" fill="#DCEEE8" stroke="#1E5248" stroke-width="1.5"/>
-        <rect x="${xO+w}" y="${yM-h}" width="${Math.max(10,h*0.8)}" height="${h}" fill="#F8E7E9" stroke="#6E2933" stroke-width="1.5"/>
-        <text x="${xO+w/2}" y="${yM+24}" font-size="11" font-weight="700" text-anchor="middle" fill="#1E5248">cos²θ ≈ ${fmt(c2,2)}</text>
-        <text x="${xO+w+44}" y="${yM-h/2+4}" font-size="11" font-weight="700" text-anchor="middle" fill="#6E2933">sin²θ ≈ ${fmt(s2,2)}</text>
-        <text x="${xO+w/2-18}" y="${yM-h/2-6}" font-size="11" font-weight="700" fill="#181B20">1</text>
-        <rect x="28" y="168" width="${254*s2}" height="14" fill="#6E2933" rx="2"/>
-        <rect x="${28+254*s2}" y="168" width="${254*c2}" height="14" fill="#1E5248" rx="2"/>
-        <text x="155" y="163" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">sin²θ + cos²θ = 1</text>
+        <path d="M${xO+w-8},${yM} V${yM-8} H${xO+w}" fill="none" stroke="#181B20" stroke-width="1.2"/>
+        <text x="${xO+w/2-17*s}" y="${yM-h/2-17*c}" font-size="16" text-anchor="middle" dominant-baseline="middle" fill="#181B20">1</text>
+        <rect x="28" y="200" width="${254*c2}" height="12" fill="#1E5248"/>
+        <rect x="${28+254*c2}" y="200" width="${254*s2}" height="12" fill="#6E2933"/>
       </svg>`;
+      legend.replaceChildren(...[[c2,'cos','#1E5248'],[s2,'sin','#6E2933']].map(([area,name,color])=>{
+        const entry=el('span'),sample=el('span','diagramguard-line-sample');
+        entry.setAttribute('role','listitem');
+        sample.setAttribute('aria-hidden','true');sample.style.color=color;
+        entry.append(sample,`${name}²θ ≈ ${fmt(area,2)}`);
+        return entry;
+      }));
       readout.innerHTML=tex(`\\sin^2 ${theta}^\\circ+\\cos^2 ${theta}^\\circ=1`,true);
     };
     makeSlider(controls,ta?'கோணம் θ':'Angle θ',10,80,1,theta,'°',v=>{theta=v;draw();});
@@ -513,23 +571,28 @@ function mount(stage,host,lang){
     chips.append(bNoEye,bEye);
     const svgWrap=el('div'),controls=el('div'),readout=el('div','g10ch4-readout g10ch4-formula');
     lab.append(title,chips,svgWrap,controls,readout);
+    const figure=sightFigure(svgWrap,ta?'ஏற்றக்கோண வரைபடம்':'Angle of elevation diagram');
     const draw=()=>{
       bNoEye.setAttribute('aria-pressed',String(eye===0));
       bEye.setAttribute('aria-pressed',String(eye>0));
       const ev=math.elevation(rise,dist,eye);
-      const pxDist=Math.max(70,Math.min(185,dist*4)),pxEye=eye>0?24:0,yBase=168,yEye=yBase-pxEye,yTop=Math.max(24,yEye-rise*3.4);
-      const xObs=48,xT=xObs+pxDist;
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Angle of elevation diagram">
-        <line x1="20" y1="${yBase}" x2="290" y2="${yBase}" stroke="#525B62" stroke-width="1.6"/>
-        <rect x="${xT}" y="${yTop}" width="20" height="${yBase-yTop}" fill="#ECE7DC" stroke="#6E2933" stroke-width="1.8"/>
-        <line x1="${xObs}" y1="${yEye}" x2="${xT}" y2="${yEye}" stroke="#1E5248" stroke-width="1.5" stroke-dasharray="4 3"/>
-        <line x1="${xObs}" y1="${yEye}" x2="${xT}" y2="${yTop}" stroke="#6E2933" stroke-width="2.2"/>
-        <circle cx="${xObs}" cy="${yEye}" r="4" fill="#181B20"/>
-        ${eye>0?`<line x1="${xObs}" y1="${yEye}" x2="${xObs}" y2="${yBase}" stroke="#181B20" stroke-width="2.5"/><text x="${xObs-10}" y="${(yEye+yBase)/2}" font-size="9.5" fill="#181B20">1.8</text>`:''}
-        <text x="${xObs+26}" y="${yEye-6}" font-size="11" font-weight="700" fill="#6E2933">θ ≈ ${fmt(ev.thetaDeg,1)}°</text>
-        <text x="${(xObs+xT)/2}" y="${yBase+14}" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1E5248">d = ${dist} m</text>
-        <text x="${xT+25}" y="${(yTop+yBase)/2}" font-size="10.5" font-weight="700" fill="#6E2933">${fmt(ev.totalHeight,1)}m</text>
-      </svg>`;
+      const scale=Math.min(176/dist,133/ev.totalHeight);
+      const xObs=58,xT=xObs+dist*scale,yBase=156,yEye=yBase-eye*scale,yTop=yBase-ev.totalHeight*scale;
+      const unit=ta?'மீ':'m';
+      figure(`
+        <line x1="20" y1="${yBase}" x2="289" y2="${yBase}" stroke="#525B62" stroke-width="1.6" data-dg-obstacle="ground"/>
+        <rect x="${xT}" y="${yTop}" width="18" height="${yBase-yTop}" fill="#ECE7DC" stroke="#6E2933" stroke-width="1.8" data-dg-obstacle="target" data-dg-fill/>
+        ${eye?`<line x1="${xObs}" y1="${yEye}" x2="${xT}" y2="${yEye}" stroke="#1E5248" stroke-width="1.5" stroke-dasharray="4 3" data-dg-obstacle="horizon"/>
+          <line x1="${xObs}" y1="${yEye}" x2="${xObs}" y2="${yBase}" stroke="#181B20" stroke-width="2.5" data-dg-obstacle="eye-height"/>`:''}
+        <line x1="${xObs}" y1="${yEye}" x2="${xT}" y2="${yTop}" stroke="#6E2933" stroke-width="2.2" data-dg-obstacle="sight"/>
+        <circle cx="${xObs}" cy="${yEye}" r="3.5" fill="#181B20" data-dg-obstacle="observer" data-dg-fill/>
+        ${sightArc(xObs,yEye,20,0,-ev.thetaDeg,'#6E2933')}`,[
+        {id:'θ',x:xObs,y:yEye,direction:[[-1,-1],[0,-1],[-1,0]]},
+        {id:'d',x:(xObs+xT)/2,y:yBase,direction:[0,1]},
+        {id:'H',x:xT+18,y:(yTop+yBase)/2,direction:[1,0]},
+        ...(eye?[{id:'e',x:xObs,y:(yEye+yBase)/2,direction:[[-1,0],[-1,1]]}]:[])
+      ],[`θ ≈ ${fmt(ev.thetaDeg,1)}°`,`d = ${dist} ${unit}`,`H = ${fmt(ev.totalHeight,1)} ${unit}`,
+        ...(eye?[`e = ${eye} ${unit}`]:[])]);
       readout.innerHTML=tex(`\\begin{aligned}&\\theta=\\arctan\\left(\\dfrac{${rise}}{${dist}}\\right)\\approx ${fmt(ev.thetaDeg,1)}^\\circ\\\\&H_{\\text{total}}=${rise}+${eye}=${fmt(ev.totalHeight,1)}\\text{ m}\\end{aligned}`,true);
     };
     makeSlider(controls,ta?'கிடைமட்டத் தொலைவு d (மீ)':'Horizontal distance d (m)',12,45,1,dist,' m',v=>{dist=v;draw();});
@@ -550,28 +613,28 @@ function mount(stage,host,lang){
     chips.append(bTrue,bTrap);
     const svgWrap=el('div'),controls=el('div'),readout=el('div','g10ch4-readout g10ch4-formula');
     lab.append(title,chips,svgWrap,controls,readout);
+    const figure=sightFigure(svgWrap,ta?'இறக்கக்கோண வரைபடம்':'Angle of depression diagram');
     const draw=()=>{
       bTrue.setAttribute('aria-pressed',String(!showTrap));
       bTrap.setAttribute('aria-pressed',String(showTrap));
       const dep=math.depression(height,angle);
-      const pxH=118,pxD=Math.max(55,Math.min(185,pxH/tanD(angle)));
-      const xB=54,yB=166,yC=yB-pxH,xA=xB+pxD;
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Angle of depression diagram">
-        <line x1="20" y1="${yB}" x2="290" y2="${yB}" stroke="#1E5248" stroke-width="1.6"/>
-        <rect x="${xB-18}" y="${yC}" width="18" height="${pxH}" fill="#ECE7DC" stroke="#181B20" stroke-width="1.8"/>
-        <line x1="${xB}" y1="${yC}" x2="${xA+24}" y2="${yC}" stroke="#6E2933" stroke-width="1.6" stroke-dasharray="4 3"/>
-        <line x1="${xB}" y1="${yC}" x2="${xA}" y2="${yB}" stroke="#6E2933" stroke-width="2.2"/>
-        <circle cx="${xA}" cy="${yB}" r="4.5" fill="#1E5248"/>
-        <text x="${xB-4}" y="${yC-7}" font-size="11" font-weight="700" fill="#181B20">C</text>
-        <text x="${xA+27}" y="${yC+4}" font-size="11" font-weight="700" fill="#6E2933">X</text>
-        <text x="${xB-10}" y="${yB+14}" font-size="11" font-weight="700" fill="#181B20">B</text>
-        <text x="${xA+6}" y="${yB+14}" font-size="11" font-weight="700" fill="#1E5248">A</text>
-        <text x="${xB+30}" y="${yC+13}" font-size="11" font-weight="700" fill="#6E2933">${angle}°</text>
-        ${showTrap
-          ?`<text x="${xB+5}" y="${yC+38}" font-size="10.5" font-weight="700" fill="#7A1D2B">Wall angle = ${90-angle}° (from vertical)</text>`
-          :`<text x="${xA-38}" y="${yB-8}" font-size="11" font-weight="700" fill="#1E5248">∠CAB=${angle}°</text>`}
-        <text x="${xB-26}" y="${yC+pxH/2}" font-size="10.5" font-weight="700" fill="#181B20">${height}m</text>
-      </svg>`;
+      const scale=Math.min(169/dep.dist,114/height);
+      const xB=68,yB=154,yC=yB-height*scale,xA=xB+dep.dist*scale,xX=xA+18;
+      figure(`
+        <line x1="20" y1="${yB}" x2="289" y2="${yB}" stroke="#1E5248" stroke-width="1.6" data-dg-obstacle="ground"/>
+        <rect x="${xB-17}" y="${yC}" width="17" height="${yB-yC}" fill="#ECE7DC" stroke="#181B20" stroke-width="1.8" data-dg-obstacle="wall" data-dg-fill/>
+        <line x1="${xB}" y1="${yC}" x2="${xX}" y2="${yC}" stroke="#6E2933" stroke-width="1.6" stroke-dasharray="4 3" data-dg-obstacle="horizon"/>
+        <line x1="${xB}" y1="${yC}" x2="${xA}" y2="${yB}" stroke="#6E2933" stroke-width="2.2" data-dg-obstacle="sight"/>
+        <circle cx="${xA}" cy="${yB}" r="3.5" fill="#1E5248" data-dg-obstacle="target" data-dg-fill/>
+        ${sightArc(xB,yC,21,0,angle,'#6E2933')}
+        ${showTrap?sightArc(xB,yC,28,angle,90,'#9B4D29'):sightArc(xA,yB,21,180,180+angle,'#1E5248')}`,[
+        {id:'C',x:xB,y:yC,direction:[[0,-1],[-1,-1]]},
+        {id:'X',x:xX,y:yC,direction:[[1,0],[0,-1]]},
+        {id:'B',x:xB,y:yB,direction:[[0,1],[-1,1]]},
+        {id:'A',x:xA,y:yB,direction:[[0,1],[1,1]]},
+        {id:'h',x:xB-17,y:(yC+yB)/2,direction:[-1,0]}
+      ],[showTrap?(ta?`செங்குத்துச் சுவர் கோணம் = ${90-angle}°`:`Wall angle = ${90-angle}° (from vertical)`):
+        `∠XCA = ∠CAB = ${angle}°`,`h = ${height} ${ta?'மீ':'m'}`]);
       readout.innerHTML=showTrap
         ?tex(`\\text{Wall-angle shortcut: }h\\tan ${angle}^\\circ\\approx ${fmt(dep.wrongWallDist,1)}\\text{ m}\\;(${angle===45?'\\text{Coincides at }45^\\circ\\text{ only; use horizon angle}':'\\text{Not the horizon-angle method}'})`,true)
         :tex(`\\begin{aligned}&\\angle XCA=\\angle CAB=${angle}^\\circ\\\\&d=\\dfrac{${height}}{\\tan ${angle}^\\circ}\\approx ${fmt(dep.dist,1)}\\text{ m}\\end{aligned}`,true);

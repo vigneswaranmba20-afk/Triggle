@@ -128,6 +128,7 @@ close((3/8)*16,6); // Q5 check
 
 // 6. Converse BPT
 assert.equal(labs.math.converseBptState([160,22],[36,154],[284,154],0.40,0.62).isParallel,false);
+assert.equal(labs.math.converseBptState([160,22],[36,154],[284,154],0.40,0.41).isParallel,false);
 assert.equal(labs.math.converseBptState([160,22],[36,154],[284,154],0.40,0.40).isParallel,true);
 close((8/12)*18,12); // Q6 check
 

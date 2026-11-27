@@ -7,6 +7,7 @@ const { server, launchOptions } = require('./dashboard_test_support.cjs');
 
 const grade = process.argv.includes('--grade9') ? 9 : 10;
 const exercise = process.argv.includes('--exercise52') ? 2 : 1;
+const selected = process.argv.filter(arg=>arg.startsWith('--figure=')).map(arg=>arg.slice('--figure='.length));
 const remaining = process.argv.includes('--remaining');
 const width = 300;
 
@@ -17,14 +18,16 @@ async function build() {
     browser = await chromium.launch(launchOptions());
     const page = await browser.newPage({serviceWorkers:'block'});
     await page.goto(app.base+'/index.html?class='+grade+'&chapter=g'+grade+'-ch5');
-    const items = await page.evaluate(({grade,exercise,remaining})=>{
+    const items = await page.evaluate(({grade,exercise,remaining,selected})=>{
       const prefix=grade===9 ? 'g9-ch5-ex5.' : `c10-5-ex5-${exercise}-`;
       const candidates=window.TRIGGLE_CLASSES[grade].items
         .map(item=>window.TriggleG9Ch5Overrides?.get(item.id)||item)
         .filter(item=>(remaining?/^c10-5-(ex5-[34]|unit)-/.test(item.id):item.id.startsWith(prefix))&&item.figureSrc)
+        .filter(item=>!selected.length||selected.includes(item.id))
         .map(({id,figureSrc,figureAlt})=>({id,figureSrc,figureAlt}));
+      if(selected.some(id=>!candidates.some(item=>item.id===id)))throw Error('A requested coordinate figure is unavailable');
       return Array.from(new Map(candidates.map(item=>[item.figureSrc,item])).values());
-    },{grade,exercise,remaining});
+    },{grade,exercise,remaining,selected});
     if (!items.length) throw Error('No authored coordinate figures were loaded');
     for (const item of items) {
       const target = path.join(__dirname,'..',item.figureSrc);
@@ -92,7 +95,8 @@ async function build() {
             height += panel.children.length*22+10+extraGap;
           }
         }
-        root.setAttribute('viewBox',`0 0 ${width} ${height}`);
+        const frameHeight=Math.max(height,Math.ceil(labelBottom+10));
+        root.setAttribute('viewBox',`0 0 ${width} ${frameHeight}`);
         for (const el of root.querySelectorAll('line,circle,text,polygon,polyline')) {
           for (const attr of ['x','y','x1','x2','y1','y2','cx','cy','r','points']) {
             if (el.hasAttribute(attr)) el.setAttribute(attr,el.getAttribute(attr)

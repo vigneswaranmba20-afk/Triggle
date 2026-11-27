@@ -24,7 +24,9 @@ const proportional = (a,b,factor = sides(b)[0]/sides(a)[0]) => {
 
 async function setLanguage(page, lang) {
   if(await page.locator('html').getAttribute('lang') !== lang) {
-    await page.locator(lang==='ta'?'#langTa':'#langEn').evaluate(button=>button.click());
+    const id=lang==='ta'?'langTa':'langEn';
+    await page.waitForFunction(id=>typeof document.getElementById(id)?.onclick==='function',id);
+    await page.locator('#'+id).evaluate(button=>button.click());
   }
   await page.waitForFunction(expected=>document.documentElement.lang===expected,lang);
 }
@@ -152,6 +154,11 @@ async function synthetic(page){
     test('subpathClear','<path d="M10 55 L30 55 M210 55 L230 55" fill="none" stroke="black"/><text x="85" y="60">Between</text>');
     test('intentional','<line id="tick" x1="31" y1="50" x2="58" y2="50" stroke="black"/><text data-dg-allow="tick" x="32" y="54">Tick</text>');
     test('arrowhead','<polygon id="head" data-dg-role="arrowhead" data-dg-fill points="55,40 68,55 45,68"/><text x="53" y="60">A</text>');
+    const arrow='<defs><marker id="arrow" viewBox="0 0 20 10" markerWidth="20" markerHeight="10" refX="0" refY="5" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L20 5 L0 10 Z"/></marker></defs>';
+    test('markerEnd',arrow+'<line x1="40" y1="60" x2="100" y2="60" stroke="black" marker-end="url(#arrow)"/><text x="104" y="64">A</text>');
+    test('markerStart',arrow+'<line x1="100" y1="60" x2="200" y2="60" stroke="black" marker-start="url(#arrow)"/><text x="84" y="64">A</text>');
+    test('markerPathClear',arrow+'<path d="M40 60 Q80 40 100 60" stroke="black" fill="none" marker-end="url(#arrow)"/><text x="106" y="44">A</text>');
+    test('markerPathHit',arrow+'<path d="M40 60 Q80 40 100 60" stroke="black" fill="none" marker-end="url(#arrow)"/><text x="106" y="74">A</text>');
     test('fill','<rect id="shade" data-dg-fill x="20" y="20" width="100" height="70" fill="#ddd"/><text x="45" y="52">Inside</text>');
     test('legend','<rect id="plot" data-dg-role="plot" data-dg-fill x="20" y="20" width="100" height="70" fill="#ddd"/><text x="45" y="52">Legend</text>');
     cases.previewBefore=run(preview);
@@ -175,7 +182,8 @@ async function synthetic(page){
   const exact={
     line:['stroke'],strokeWidth:['stroke'],diagonalClear:[],label:['label'],boundary:['boundary'],
     rotated:['stroke'],transform:['angle'],tamilClear:[],tamilBoundary:['boundary'],curve:['stroke'],cssCircle:['stroke'],
-    subpathClear:[],intentional:[],arrowhead:['arrowhead'],fill:['fill'],legend:['plot']
+    subpathClear:[],intentional:[],arrowhead:['arrowhead'],markerEnd:['arrowhead'],markerStart:['arrowhead'],
+    markerPathClear:[],markerPathHit:['arrowhead'],fill:['fill'],legend:['plot']
   };
   for(const [name,expected] of Object.entries(exact)){
     assert.deepEqual(result.cases[name].map(issue=>issue.kind),expected,name);
@@ -185,7 +193,34 @@ async function synthetic(page){
   assert.throws(()=>proportional([[48,20],[22,88],[94,88]],[[190,14],[156,88],[248,88]]));
   assert(result.canvas.every(size=>size>4&&size<12),'Canvas transformed metrics');
   assert.deepEqual(result.closestPointPlacement,[82,70],'Label remains associated with its own point');
-  console.log('DiagramGuard: 18 synthetic checks, two original regressions and original unequal proportions reproduced');
+  console.log('DiagramGuard: synthetic label, marker and geometry checks, plus both original regressions');
+}
+
+async function legacyMarkers(page){
+  const stats=await page.evaluate(async()=>{
+    const host=document.createElement('div');
+    host.style.cssText='position:absolute;left:-2000px;top:0;pointer-events:none';
+    document.body.append(host);
+    const root=host.attachShadow({mode:'closed'}), reports=[];
+    await document.fonts.ready;
+    for(const name of ['ex1-2-q4','figure1-16','figure1-4-graphs']){
+      const response=await fetch('./assets/grade10-ch1/'+name+'.svg');
+      if(!response.ok)throw Error(name+' '+response.status);
+      root.innerHTML=await response.text();
+      const svg=root.querySelector('svg');
+      for(const width of [240,300,480]){
+        svg.style.width=width+'px';
+        const {issues,unmeasured}=window.TriggleDiagramGuard.audit(svg,{discover:true});
+        reports.push({name,width,issues:issues.filter(issue=>issue.kind==='arrowhead'),unmeasured});
+      }
+    }
+    host.remove();
+    return reports;
+  });
+  for(const {name,width,issues,unmeasured} of stats){
+    assert.deepEqual(unmeasured,[],name+' marker coverage');
+    assert.deepEqual(issues,[],`${name} at ${width}px clears marker labels`);
+  }
 }
 
 async function legacyCases(page){
@@ -332,6 +367,350 @@ async function conceptBoundaries(page,base){
   console.log('DiagramGuard: eight additional concept scenes checked for label bounds and construction invariants');
 }
 
+async function legacyBoundaryCases(page){
+  const files=[
+    'grade9-ch4/ex4-2-q8','grade9-ch5/ex5-1-q2-fig5-11','grade9-ch5/ex5-1-q3',
+    'grade10-ch1/ex1-4-q2-ta','grade10-geometry/ex4-1-q3-ta'
+  ];
+  const data=await page.evaluate(async files=>{
+    const host=document.body.appendChild(document.createElement('div'));
+    host.style.cssText='position:absolute;left:-2000px;top:0;pointer-events:none';
+    const root=host.attachShadow({mode:'closed'});
+    await document.fonts.load('16px "Triggle Noto Sans Tamil"','வடிவியல்');
+    await document.fonts.ready;
+    const results=[];
+    for(const file of files){
+      const response=await fetch('./assets/'+file+'.svg');
+      if(!response.ok)throw Error(file+' '+response.status);
+      root.innerHTML=await response.text();
+      const svg=root.querySelector('svg');
+      svg.style.cssText='display:block;height:auto';
+      const triangle=svg.querySelector('[data-dg-obstacle="triangle"]');
+      const bisectors=svg.querySelector('[data-dg-obstacle="bisectors"]');
+      const vertices=shape=>shape?Array.from(shape.points,p=>[p.x,p.y]):[];
+      for(const [lang,font] of [['en','system-ui, sans-serif'],['ta','"Triggle Noto Sans Tamil", system-ui, sans-serif']])
+      for(const scale of [100,200])for(const width of [240,300,480]){
+        svg.style.fontFamily=font;svg.style.fontSize=scale+'%';svg.style.width=width+'px';
+        const audit=window.TriggleDiagramGuard.audit(svg,{discover:true});
+        const issues=triangle?audit.issues:audit.issues.filter(issue=>issue.kind==='boundary');
+        results.push({file,lang,scale,width,issues,triangle:vertices(triangle),bisectors:vertices(bisectors)});
+      }
+    }
+    host.remove();
+    return results;
+  },files);
+  for(const {file,lang,scale,width,issues,triangle,bisectors} of data){
+    assert.deepEqual(issues,[],`${file} ${lang} ${scale}% at ${width}px`);
+    if(!triangle.length)continue;
+    const [a,b,c]=triangle;
+    const [start,o,end]=bisectors;
+    assert.deepEqual(start,b);
+    assert.deepEqual(end,c);
+    for(const [observed,expected] of [[angle(a,b,c),64],[angle(b,a,c),58],[angle(b,o,c),29],
+      [angle(c,a,o),29],[angle(o,b,c),122]])near(observed,expected,1e-5);
+    near(length(a,b),length(a,c),1e-5);
+  }
+  console.log(`DiagramGuard: ${data.length} additional SVG boundary checks and exact Grade 9 bisectors`);
+}
+
+async function trigAndBisectorGeometry(page,base,profiles){
+  const preview=page.locator('svg.g10ch4-glance-svg');
+  const lab=page.locator('.g10ch4-lab');
+  const graph=lab.locator('svg.g10ch4-svg');
+  async function shape(svg,description){
+    const data=await svg.evaluate(svg=>{
+      const project=(node,x,y)=>new DOMPoint(x,y).matrixTransform(node.getScreenCTM());
+      const pair=p=>[p.x,p.y];
+      const polygons=[...svg.querySelectorAll('polygon')].map(p=>Array.from(p.points,point=>pair(project(p,point.x,point.y))));
+      const squares=[...svg.querySelectorAll('rect')].slice(0,2).map(rect=>{
+        const {x,y,width,height}=rect.getBBox();
+        return [project(rect,x,y),project(rect,x+width,y),project(rect,x,y+height)].map(pair);
+      });
+      const line=svg.querySelector('line');
+      const segment=line?[1,2].map(i=>pair(project(line,line['x'+i].baseVal.value,line['y'+i].baseVal.value))):[];
+      const issues=window.TriggleDiagramGuard.audit(svg,{discover:true}).issues;
+      const overflow=document.documentElement.scrollWidth-document.documentElement.clientWidth;
+      return {polygons,squares,segment,issues,overflow};
+    });
+    assert.deepEqual(data.issues,[],description+' label clearance');
+    assert(data.overflow<=1,description+' reflow');
+    return data;
+  }
+  async function open(chapter,index,lang,percent){
+    await page.goto(base+`/index.html?class=10&chapter=g10-ch${chapter}&section=concepts&concept=${index}`);
+    await setLanguage(page,lang);
+    await settle(page,percent);
+  }
+  function checkSquares({polygons:[[a,b,c]],squares}){
+    const legs=[length(a,b),length(b,c)];
+    assert.equal(squares.length,2);
+    for(const [[p,q,r],side] of squares.map((set,index)=>[set,legs[index]])){
+      near(length(p,q),side);near(length(p,r),side);near(angle(p,q,r),90);
+    }
+    near((legs[0]**2+legs[1]**2)/length(a,c)**2,1);
+  }
+  let configurations=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    const label=`${lang} ${width}×${height} ${percent}%`;
+    for(const index of [6,7]){
+      await open(4,index,lang,percent);
+      const {polygons:[[a,b,c]],segment:[start,d]}=await shape(preview,label+' bisector '+index);
+      near(length(start,a),0);
+      near(length(b,d)/length(d,c),length(b,a)/length(c,a));
+      near(angle(a,b,d),angle(a,d,c));
+      assert(await page.locator('.g10ch4-glance-visual .diagramguard-annotation .katex').isVisible());
+      configurations++;
+    }
+    await open(6,3,lang,percent);
+    const {polygons:standard}=await shape(preview,label+' standard angles preview');
+    [60,45].forEach((deg,index)=>near(angle(...standard[index]),deg));
+    configurations++;
+    for(const deg of [0,30,45,60,90]){
+      await lab.getByRole('button',{name:`${deg}°`,exact:true}).click();
+      const {polygons,segment}=await shape(graph,label+' standard angle '+deg);
+      const caption=lab.locator('.diagramguard-annotation');
+      if(deg===0||deg===90){
+        const [u,v]=segment;
+        near(deg===0?u[1]-v[1]:u[0]-v[0],0);
+        const dimensions=await caption.evaluate(el=>({width:el.scrollWidth-el.clientWidth,font:parseFloat(getComputedStyle(el).fontSize),
+          below:el.getBoundingClientRect().top>=el.previousElementSibling.getBoundingClientRect().bottom-.5}));
+        assert(dimensions.below&&dimensions.width<=1,label+' wrapped boundary explanation');
+        near(dimensions.font,15*percent/100,.1);
+        assert.match(await caption.innerText(),deg===0?/cosec 0°.*cot 0°/:/tan 90°.*sec 90°/);
+      }else{
+        const [a,b,c]=polygons[0];
+        near(angle(a,b,c),deg);near(angle(b,a,c),90);
+        assert(await caption.isHidden());
+        if(width===320&&deg===45){
+          const issues=await graph.evaluate(svg=>{
+            const old=svg.style.fontFamily;
+            svg.style.fontFamily='monospace';
+            const issues=window.TriggleDiagramGuard.audit(svg,{discover:true}).issues;
+            svg.style.fontFamily=old;
+            return issues;
+          });
+          assert.deepEqual(issues,[],label+' 45° label and right-angle marker with a fallback font');
+        }
+      }
+      configurations++;
+    }
+    await open(6,4,lang,percent);
+    checkSquares(await shape(preview,label+' Pythagorean squares preview'));
+    configurations++;
+    for(const value of [10,20,37,45,60,80]){
+      await lab.getByRole('slider').evaluate((slider,value)=>{
+        slider.value=String(value);slider.dispatchEvent(new Event('input',{bubbles:true}));
+      },value);
+      const data=await shape(graph,label+' square areas '+value);
+      checkSquares(data);
+      near(angle(...data.polygons[0]),value);
+      assert.equal(await lab.locator('.diagramguard-coordinate-legend [role="listitem"]').count(),2);
+      near(await lab.locator('.diagramguard-coordinate-legend').evaluate(node=>parseFloat(getComputedStyle(node).fontSize)),14*percent/100,.1);
+      configurations++;
+    }
+  }
+  return configurations;
+}
+
+async function converseProportionality(page,base,profiles){
+  const values=[[.2,.8],[.8,.2],[.2,.2],[.8,.8],[.39,.4],[.4,.39],[.4,.62]];
+  let checks=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    await page.goto(base+concept(5));
+    await setLanguage(page,lang);
+    await settle(page,percent);
+    const chart=page.locator('.g10ch4-lab svg[data-dg-ready]');
+    await chart.waitFor();
+    const preview=page.locator('.g10ch4-glance-visual');
+    const caption=await preview.locator('.diagramguard-annotation').evaluate(el=>({overflow:el.scrollWidth-el.clientWidth,
+      beneath:el.getBoundingClientRect().top>=el.previousElementSibling.getBoundingClientRect().bottom-.5,
+      math:!!el.querySelector('.katex')}));
+    assert(caption.overflow<=1&&caption.beneath&&caption.math,'Localized overview equation reflows outside the triangle');
+    const sliders=page.locator('.g10ch4-slider');
+    for(const [d,e] of [...values,[.4,.4]]){
+      const snap=d===.4&&e===.4;
+      if(snap)await page.locator('.g10ch4-lab .g10ch4-chip-btn').click();
+      else for(const [i,value] of [d,e].entries())await sliders.nth(i).evaluate((input,value)=>{
+        input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));
+      },value);
+      const result=await chart.evaluate(svg=>{
+        const geometry=id=>svg.querySelector(`[data-dg-obstacle="${id}"]`);
+        const coord=(node,names)=>names.map(key=>Number(node.getAttribute(key)));
+        const triangle=Array.from(geometry('triangle').points,p=>[p.x,p.y]);
+        const actual=coord(geometry('DE'),['x1','y1','x2','y2']);
+        const reference=geometry('DF')?coord(geometry('DF'),['x1','y1','x2','y2']):null;
+        const box=svg.getBoundingClientRect();
+        const visible=box.left>=-.5&&box.right<=document.documentElement.clientWidth+.5;
+        return {triangle,actual,reference,visible,audit:window.TriggleDiagramGuard.audit(svg,{discover:true})};
+      });
+      const context=`Converse of BPT ${lang} ${width}×${height} ${percent}% ${d}/${e}`;
+      const [a,b,c]=result.triangle;
+      const section=(p,fraction)=>p.map((value,i)=>a[i]+fraction*(value-a[i]));
+      result.actual.forEach((coordinate,i)=>near(coordinate,[...section(b,d),...section(c,e)][i]));
+      if(d===e){
+        assert.equal(result.reference,null,context);
+        near(result.actual[1],result.actual[3]);
+      }else{
+        near(result.reference[1],result.reference[3]);
+        near(result.reference[3],section(c,d)[1]);
+      }
+      assert.deepEqual(result.audit.issues,[],context);
+      assert.deepEqual(result.audit.labels.map(l=>l.id),d===e?['A','B','C','D','E']:['A','B','C','D','E','F'],context);
+      result.audit.labels.forEach(label=>near(label.fontPx,.15*percent,.2));
+      assert(result.visible,context+' visible drawing');
+      checks++;
+    }
+  }
+  return checks;
+}
+
+async function sightLineGeometry(page,base,profiles){
+  const route=base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=';
+  const cases=[{index:7,values:[[26,18],[45,8],[12,36],[30,20]]},
+    {index:8,values:[[30,30],[20,60],[70,15],[45,45]]}];
+  let states=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    for(const {index,values} of cases){
+      await page.goto(route+index);
+      await setLanguage(page,lang);
+      await settle(page,percent);
+      const figure=page.locator('.g10ch4-svg[data-dg-ready]');
+      await figure.waitFor();
+      const presets=page.locator('.g10ch4-chip-btn');
+      const sliders=page.locator('.g10ch4-slider');
+      for(const mode of [0,1]){
+        await presets.nth(mode).click();
+        for(const [a,b] of values){
+          for(const [i,value] of [a,b].entries())await sliders.nth(i).evaluate((input,value)=>{
+            input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));
+          },value);
+          const result=await figure.evaluate(svg=>{
+            const line=id=>svg.querySelector(`[data-dg-obstacle="${id}"]`);
+            const point=(node,which)=>['x','y'].map(axis=>node[axis+which].baseVal.value);
+            const start=point(line('sight'),1),end=point(line('sight'),2);
+            const ground=line('ground').y1.baseVal.value;
+            const arc=line('angle-0');
+            const endpoint=arc.getPointAtLength(arc.getTotalLength());
+            const key=svg.parentElement.querySelector('.diagramguard-coordinate-key');
+            return {audit:window.TriggleDiagramGuard.audit(svg,{discover:true}),
+              horizontal:line('ground').y2.baseVal.value===ground&&(!line('horizon')||
+                line('horizon').y1.baseVal.value===line('horizon').y2.baseVal.value),
+              rise:end[1]-start[1],run:end[0]-start[0],eye:ground-start[1],
+              arc:[endpoint.x-start[0],endpoint.y-start[1]],
+              keyBelow:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+              fontsize:parseFloat(getComputedStyle(key).fontSize),
+              overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};
+          });
+          const elevation=index===7;
+          const expected=elevation?Math.atan2(b,a):a*Math.PI/180;
+          near(Math.abs(Math.atan2(result.rise,result.run)),expected,1e-6);
+          near(Math.abs(Math.atan2(result.arc[1],result.arc[0])),expected,.001);
+          if(elevation)near(result.eye/result.run,mode?1.8/a:0,1e-6);
+          const context=`${lang} ${width}×${height} ${percent}% sight scene ${index} ${mode} (${a}, ${b})`;
+          assert.deepEqual(result.audit.issues,[],context);
+          assert.equal(result.audit.labels.length,elevation?(mode===1?4:3):5,context);
+          result.audit.labels.forEach(label=>near(label.fontPx,percent*.15,.2));
+          near(result.fontsize,percent*.14,.2);
+          assert(result.horizontal&&result.keyBelow&&result.overflow<=1,context);
+          states++;
+        }
+      }
+    }
+  }
+  return states;
+}
+
+async function statisticsPlotGeometry(page, base, profiles, full=false) {
+  const route = base + '/index.html?class=10&chapter=g10-ch8&section=concepts&concept=';
+  await page.addInitScript(()=>{
+    const language=new URLSearchParams(location.search).get('diagramguardLanguage');
+    if(language==='en'||language==='ta')localStorage.setItem('triggle-language',language);
+  });
+  const kinds = ['frequency','spread','spread','spread','scale','scale','frequency'];
+  const selections = {
+    frequency: (full ? [1,2,3,4,5] : [1,5]).map(n => [n,0]),
+    spread: (full ? [1,2,3,4,5,6,7,8] : [1,8]).map(n => [n,0]),
+    scale: (full ? [-2,-1,0,1,2] : [-2,0,2]).flatMap(a => [-4,0,4].map(b => [a,b]))
+  };
+  await page.setViewportSize({width:320,height:844});
+  await page.goto(route+'4&diagramguardLanguage=en');
+  await page.locator('.g10ch8-graphic[data-dg-ready]').waitFor();
+  await settle(page,200);
+  for(const [id,lang,mean] of [['langTa','ta','சராசரி:'],['langEn','en','Mean:']]){
+    await page.locator('#'+id).click();
+    await page.locator(`html[lang="${lang}"] #${id}[aria-pressed="true"]`).waitFor({state:'attached'});
+    await settle(page,200);
+    const visible=page.locator('.g10ch8-graphic[data-dg-ready]');
+    await visible.waitFor();
+    assert((await page.locator('.g10ch8-legend').textContent()).startsWith(mean));
+    assert.deepEqual(await visible.evaluate(svg=>window.TriggleDiagramGuard.audit(svg,{discover:true}).issues),[]);
+  }
+  let checks=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    for(const index of full ? kinds.keys() : [0,1,4]){
+      const kind=kinds[index];
+      await page.goto(route+index+'&diagramguardLanguage='+lang);
+      await page.locator(`html[lang="${lang}"] #${lang==='ta'?'langTa':'langEn'}[aria-pressed="true"]`).waitFor({state:'attached'});
+      await settle(page,percent);
+      const chart=page.locator('.g10ch8-graphic[data-dg-ready]');
+      await chart.waitFor();
+      if(width===320&&percent===200&&kind==='scale'){
+        await page.addStyleTag({content:'.g10ch8-graphic [data-dg-label] { font-family:monospace; letter-spacing:.19em }'});
+        await chart.evaluate(svg=>{svg.style.width='calc(100% - 2px)';});
+        await settle(page,percent);
+      }
+      const sliders=page.locator('.g10ch8-range');
+      for(const [first,shift] of selections[kind]){
+        for(const [control,value] of (kind==='scale' ? [first,shift] : [first]).entries()){
+          await sliders.nth(control).evaluate((input,value)=>{
+            input.value=String(value);
+            input.dispatchEvent(new Event('input',{bubbles:true}));
+          },value);
+        }
+        const chartData=await chart.evaluate(svg=>{
+          const attr=(node,key)=>Number(node.getAttribute(key));
+          const axis=svg.querySelector('.g10ch8-axis'), meanLine=svg.querySelector('.g10ch8-mean');
+          const key=svg.parentElement.querySelector('.g10ch8-legend');
+          const plotBounds=svg.getBoundingClientRect();
+          const container=svg.closest('.g10ch8-lab').getBoundingClientRect();
+          return {audit:window.TriggleDiagramGuard.audit(svg,{discover:true}),
+            points:[...svg.querySelectorAll('.g10ch8-point')].map(dot=>[attr(dot,'cx'),attr(dot,'cy')]),
+            axis:[attr(axis,'x1'),attr(axis,'x2')], mean:attr(meanLine,'x1'),
+            key:key.textContent, keySize:parseFloat(getComputedStyle(key).fontSize),
+            keyBelow:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+            overflow:Math.max(container.left-plotBounds.left,plotBounds.right-container.right,
+              document.documentElement.scrollWidth-document.documentElement.clientWidth)};
+        });
+        const values=kind==='frequency' ? [4,4,4,...Array(first).fill(12)] :
+          kind==='spread' ? [10-first,9,10,11,10+first] : [2,4,6,8].map(x=>first*x+shift);
+        const [min,max]=kind==='frequency' ? [0,16] : kind==='spread' ? [0,20] : [-20,20];
+        const mean=values.reduce((sum,x)=>sum+x,0)/values.length;
+        const position=x=>chartData.axis[0]+(x-min)/(max-min)*(chartData.axis[1]-chartData.axis[0]);
+        const config=`${lang} ${width}×${height} ${percent}% '${kind}' (${first}, ${shift})`;
+        assert.deepEqual(chartData.audit.issues,[],config);
+        assert.equal(chartData.audit.labels.length,5,config);
+        chartData.audit.labels.forEach(label=>near(label.fontPx,.14*percent,.2));
+        assert.equal(chartData.points.length,values.length,config);
+        values.forEach((x,i)=>{
+          const [actualX,actualY]=chartData.points[i];
+          near(actualX,position(x));
+          near(actualY,78-13*values.slice(0,i).filter(value=>value===x).length);
+        });
+        near(chartData.mean,position(mean));
+        assert.equal(chartData.key,`${lang==='ta'?'சராசரி:':'Mean:'} ${String(Number(mean.toFixed(2))).replace('-','−')}`,config);
+        near(chartData.keySize,.14*percent,.2);
+        assert(chartData.keyBelow&&chartData.overflow<=1,config);
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -346,10 +725,47 @@ async function main(){
       try{
         const page=await context.newPage();
         await page.goto(base+concept(1));
+        if(process.argv.includes('--boundaries-only')){
+          await legacyBoundaryCases(page);
+          return;
+        }
+        if(process.argv.includes('--angles-and-squares')){
+          const cases=await trigAndBisectorGeometry(page,base,viewports);
+          console.log(`DiagramGuard: ${cases} bilingual and responsive bisector, angle and square-area states`);
+          return;
+        }
+        if(process.argv.includes('--synthetic-only')){
+          await synthetic(page);
+          await legacyMarkers(page);
+          return;
+        }
+        if(process.argv.includes('--statistics')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await statisticsPlotGeometry(page,base,profiles,true);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive statistics plot states`);
+          return;
+        }
+        if(process.argv.includes('--converse-bpt')){
+          const checks=await converseProportionality(page,base,viewports);
+          console.log(`DiagramGuard: ${checks} bilingual converse-proportionality states`);
+          return;
+        }
+        if(process.argv.includes('--sight-lines')){
+          const checks=await sightLineGeometry(page,base,viewports);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive sight-line states`);
+          return;
+        }
         if(width===390&&!live){
           await synthetic(page);
+          await legacyMarkers(page);
           await legacyCases(page);
+          await legacyBoundaryCases(page);
           await conceptBoundaries(page,base);
+          await trigAndBisectorGeometry(page,base,[[320,844]]);
+          await converseProportionality(page,base,[[320,844]]);
+          await sightLineGeometry(page,base,[[320,844]]);
+          await statisticsPlotGeometry(page,base,[[320,844]]);
+          await page.setViewportSize({width,height});
         }
         for(const lang of ['en','ta']){
           await page.goto(base+concept(1));

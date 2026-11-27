@@ -1,18 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224">
-<g stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="#263755" font-family="system-ui,sans-serif" font-size="13" font-weight="600" text-anchor="middle" dominant-baseline="middle">
-<path d="M 165.000 23.967 L 65.000 184.000 L 245.000 184.000 L 165.000 23.967" fill="none" stroke="#263755"/>
-<path d="M 65.000 184.000 L 165.000 128.569 L 245.000 184.000" fill="none" stroke="#263755"/>
-<text x="165.000" y="11.967">A</text>
-<text x="53.000" y="196.000">B</text>
-<text x="257.000" y="196.000">C</text>
-<text x="165.000" y="114.569">O</text>
-<path d="M 157.581 35.839 A 14 14 0 0 0 171.260 36.489" fill="none" stroke="#973f19"/>
-<text x="163.529" y="54.932">64°</text>
-<path d="M 94.000 184.000 A 29 29 0 0 0 80.368 159.407" fill="none" stroke="#973f19"/>
-<text x="113.979" y="156.851">58°</text>
-<path d="M 151.881 135.841 A 15 15 0 0 0 177.330 137.112" fill="none" stroke="#973f19"/>
-<text x="163.454" y="159.531">x°</text>
-<path d="M 230.692 155.377 A 32 32 0 0 0 218.697 165.775" fill="none" stroke="#973f19"/>
-<text x="201.113" y="133.374">y°</text>
-</g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 224" role="img" aria-labelledby="title desc">
+  <title id="title">Triangle ABC and its angle bisectors</title>
+  <desc id="desc">Angle A is 64 degrees. Angle ABC is 58 degrees. The bisectors BO and CO meet at O. The marked unknowns are angle BOC and angle ACO.</desc>
+  <g fill="none" stroke="#263755" stroke-width="2.2" stroke-linejoin="round">
+    <polygon data-dg-obstacle="triangle" points="160.000000,36.367885 64.000000,190.000000 256.000000,190.000000"/>
+    <polyline data-dg-obstacle="bisectors" points="64.000000,190.000000 160.000000,136.786331 256.000000,190.000000"/>
+  </g>
+  <g fill="none" stroke="#973f19" stroke-width="2" stroke-linecap="round">
+    <path data-dg-obstacle="angle-A" d="M 147.281938,56.721040 A 24 24 0 0 0 172.718062,56.721040"/>
+    <path data-dg-obstacle="angle-B" d="M 96.000000,190.000000 A 32 32 0 0 0 80.957416,162.862461"/>
+    <path data-dg-obstacle="angle-O" d="M 146.006085,144.543285 A 16 16 0 0 0 173.993915,144.543285"/>
+    <path data-dg-obstacle="angle-C" d="M 224.513691,172.546854 A 36 36 0 0 1 236.922906,159.470269"/>
+  </g>
+  <g fill="#263755" font-family="system-ui, sans-serif" font-size="15" font-weight="550" text-anchor="middle">
+    <text data-dg-label="A" x="160" y="22">A</text>
+    <text data-dg-label="B" x="54" y="210">B</text>
+    <text data-dg-label="C" x="266" y="210">C</text>
+    <text data-dg-label="O" x="160" y="123">O</text>
+    <text data-dg-label="64°" x="160" y="86">64°</text>
+    <text data-dg-label="58°" x="130" y="182">58°</text>
+    <text data-dg-label="x°" x="160" y="175">x°</text>
+    <text data-dg-label="y°" x="206" y="151">y°</text>
+  </g>
 </svg>

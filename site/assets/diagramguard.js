@@ -118,16 +118,89 @@
       if(!stroke&&!filled)return [];
       const inverse=filled?matrix.inverse():null;
       const bounds=el.getBBox();
+      const outline=segments(el,matrix,scale,bounds);
       return [{
         id:el.dataset.dgObstacle||el.id||el.localName+'-'+(index+1),
         type:el.dataset.dgRole||(filled?'fill':'stroke'),stroke,
-        box:sizes(corners(matrix,bounds)),segments:segments(el,matrix,scale,bounds),
+        box:sizes(corners(matrix,bounds)),segments:outline.map(segment=>({segment,box:sizes(segment)})),
         contains:inverse?point=>{
           const [x,y]=map(inverse,...point);
           return el.isPointInFill(new DOMPoint(x,y));
         }:null
       }];
     });
+  }
+  function markerEndpoint(edge,end) {
+    if(edge.localName==='line'){
+      const a=[localValue(edge,'x1'),localValue(edge,'y1')],b=[localValue(edge,'x2'),localValue(edge,'y2')];
+      return {point:end?b:a,dx:b[0]-a[0],dy:b[1]-a[1]};
+    }
+    if(edge.localName==='path'){
+      const length=edge.getTotalLength();
+      if(!length||((edge.getAttribute('d')||'').match(/[mM]/g)||[]).length!==1)return null;
+      const step=Math.min(length,.01);
+      const a=edge.getPointAtLength(end?length-step:0),b=edge.getPointAtLength(end?length:step);
+      return {point:end?[b.x,b.y]:[a.x,a.y],dx:b.x-a.x,dy:b.y-a.y};
+    }
+    return null;
+  }
+  function markerShapes(svg,edge,position,id) {
+    const style=getComputedStyle(edge), url=style.getPropertyValue('marker-'+position);
+    if(url==='none'||!visible(edge,style))return [];
+    const fragment=url.match(/^url\(["']?([^"')]*#[^"')]+)["']?\)$/)?.[1];
+    if(!fragment||position==='mid'||style.vectorEffect==='non-scaling-stroke')return null;
+    const target=new URL(fragment,document.baseURI), source=new URL(document.baseURI);
+    if(target.origin!==source.origin||target.pathname!==source.pathname||target.search!==source.search)return null;
+    const marker=svg.querySelector('marker#'+CSS.escape(target.hash.slice(1)));
+    const matrix=edge.getScreenCTM(), end=position==='end', endpoint=markerEndpoint(edge,end);
+    if(!marker||!matrix||!endpoint||(!endpoint.dx&&!endpoint.dy))return null;
+    const view=marker.viewBox.baseVal, aspect=marker.preserveAspectRatio.baseVal;
+    const ref=[localValue(marker,'refX'),localValue(marker,'refY')];
+    if(!view.width||!view.height||aspect.meetOrSlice===2)return null;
+    const orientation=marker.getAttribute('orient');
+    const angle=['auto','auto-start-reverse'].includes(orientation)?(Math.atan2(endpoint.dy,endpoint.dx)*180/Math.PI+
+      (orientation==='auto-start-reverse'&&!end?180:0)):marker.orientAngle.baseVal.value;
+    const unit=marker.getAttribute('markerUnits')==='userSpaceOnUse'?1:parseFloat(style.strokeWidth);
+    const ratios=[localValue(marker,'markerWidth')/view.width,localValue(marker,'markerHeight')/view.height];
+    const scales=aspect.align===1?ratios:ratios.map(()=>Math.min(...ratios));
+    const transform=new DOMMatrix([matrix.a,matrix.b,matrix.c,matrix.d,matrix.e,matrix.f])
+      .translate(...endpoint.point).rotate(angle).scale(...scales.map(n=>n*unit)).translate(-ref[0],-ref[1]);
+    const inverse=transform.inverse(), scale=matrixScale(transform), shapes=[];
+    for(const path of marker.children){
+      if(path.localName!=='path'||path.transform.baseVal.numberOfItems)return null;
+      const style=getComputedStyle(path), box=path.getBBox();
+      if(style.display==='none'||style.visibility==='hidden'||Number(style.opacity)===0)continue;
+      if(!box.width||!box.height)return null;
+      const stroke=style.stroke!=='none'&&Number(style.strokeOpacity)>0?parseFloat(style.strokeWidth)/2:0;
+      if(box.x-stroke<view.x-epsilon||box.y-stroke<view.y-epsilon||box.x+box.width+stroke>view.x+view.width+epsilon||
+        box.y+box.height+stroke>view.y+view.height+epsilon)return null;
+      const filled=style.fill!=='none'&&Number(style.fillOpacity)>0;
+      if(!stroke&&!filled)continue;
+      const outline=segments(path,transform,scale,box);
+      if(!outline.length)return null;
+      shapes.push({id,type:'arrowhead',stroke:stroke*scale,box:sizes(corners(transform,box)),
+        segments:outline.map(segment=>({segment,box:sizes(segment)})),contains:filled?point=>{
+          const [x,y]=map(inverse,...point);
+          return path.isPointInFill(new DOMPoint(x,y));
+        }:null});
+    }
+    return shapes;
+  }
+  function markers(svg,discover) {
+    const shapes=[],unmeasured=[];
+    const marked=svg.querySelectorAll('[marker-start],[marker-mid],[marker-end]');
+    for(const [index,edge] of Array.from(marked).entries()){
+      if(edge.closest('defs,clipPath,mask,marker,[data-dg-ignore]')||edge.hasAttribute('data-dg-markers-covered')||
+        (!discover&&!edge.hasAttribute('data-dg-obstacle')))continue;
+      const id=edge.dataset.dgObstacle||edge.id||edge.localName+'-marker-'+(index+1);
+      for(const position of ['start','mid','end']){
+        if(!edge.hasAttribute('marker-'+position))continue;
+        const shape=markerShapes(svg,edge,position,id+'-'+position);
+        if(shape)shapes.push(...shape);
+        else unmeasured.push(id+'-'+position);
+      }
+    }
+    return {shapes,unmeasured};
   }
   function collisions(label,boundary,shapes,earlier,gap) {
     const issues=[];
@@ -136,7 +209,8 @@
     for(const shape of shapes){
       if(label.allow.has(shape.id)||!boxesNear(label.box,shape.box,shape.stroke+gap))continue;
       if(shape.contains&&label.quad.some(shape.contains))add(shape.type,shape.id);
-      else if(shape.segments.some(segment=>segmentHits(segment,label.quad,shape.stroke+gap)))add(shape.type,shape.id);
+      else if(shape.segments.some(({segment,box})=>boxesNear(label.box,box,shape.stroke+gap)&&
+        segmentHits(segment,label.quad,shape.stroke+gap)))add(shape.type,shape.id);
     }
     for(const other of earlier){
       if(!label.allow.has(other.id)&&!other.allow.has(label.id)&&
@@ -147,7 +221,8 @@
   function audit(svg,{discover=false,gap=.55}={}) {
     const boundary=figureBounds(svg);
     if(!boundary)return {measured:false,labels:[],issues:[],unmeasured:['viewBox']};
-    const shapes=obstacles(svg,discover), labels=[], issues=[];
+    const marked=markers(svg,discover);
+    const shapes=[...obstacles(svg,discover),...marked.shapes], labels=[], issues=[];
     const nodes=svg.querySelectorAll(discover?'text':'text[data-dg-label]');
     for(const node of nodes){
       if(node.closest('defs,clipPath,mask,marker,[data-dg-ignore]'))continue;
@@ -156,10 +231,7 @@
       issues.push(...collisions(label,boundary,shapes,labels,gap));
       labels.push(label);
     }
-    const unmeasured=[...svg.querySelectorAll('[marker-start],[marker-mid],[marker-end]')]
-      .filter(node=>!node.hasAttribute('data-dg-markers-covered'))
-      .map(node=>node.dataset.dgObstacle||node.id||node.localName);
-    return {measured:true,labels:labels.map(({id,fontPx,box})=>({id,fontPx,box})),issues,unmeasured};
+    return {measured:true,labels:labels.map(({id,fontPx,box})=>({id,fontPx,box})),issues,unmeasured:marked.unmeasured};
   }
   function offsets(direction,font) {
     const n=distance(direction,[0,0]);
@@ -178,7 +250,7 @@
       fragment.append(label);
     }
     svg.append(fragment);
-    const shapes=obstacles(svg,false), boundary=figureBounds(svg), placed=[];
+    const shapes=[...obstacles(svg,false),...markers(svg,false).shapes], boundary=figureBounds(svg), placed=[];
     const origins=placements.map(({label})=>labelBounds(label));
     for(const [index,{label,anchor,direction,candidates,optional,neighborPoints}] of placements.entries()){
       const origin=origins[index];
@@ -210,6 +282,7 @@
       label.setAttribute('x',x);
       label.setAttribute('y',y);
     }
+    return placed;
   }
   function canvasLabel(ctx,text,x,y) {
     const m=ctx.measureText(text), rect=ctx.canvas.getBoundingClientRect();
