@@ -163,6 +163,11 @@ async function synthetic(page){
     test('legend','<rect id="plot" data-dg-role="plot" data-dg-fill x="20" y="20" width="100" height="70" fill="#ddd"/><text x="45" y="52">Legend</text>');
     cases.previewBefore=run(preview);
     cases.rectangleBefore=run(rectangle);
+    host.innerHTML='<div style="width:64px;overflow:hidden"><svg width="128" viewBox="0 0 128 44"><text x="76" y="25">Label</text></svg></div>';
+    const clipped=host.querySelector('svg');
+    const clipping=guard.audit(clipped,{discover:true});
+    clipped.setAttribute('width','64');
+    const reflowed=guard.audit(clipped,{discover:true});
     host.innerHTML='<svg width="420" height="140" viewBox="0 0 420 140"></svg>';
     const svg=host.firstElementChild;
     const label=document.createElementNS(svg.namespaceURI,'text');
@@ -177,7 +182,7 @@ async function synthetic(page){
     ctx.translate(10,15);
     const quad=guard.canvasLabel(ctx,'A',50,55);
     host.remove();
-    return {cases,closestPointPlacement,canvas:[quad[1][0]-quad[0][0],quad[2][1]-quad[1][1]]};
+    return {cases,clipping,reflowed,closestPointPlacement,canvas:[quad[1][0]-quad[0][0],quad[2][1]-quad[1][1]]};
   },baselines);
   const exact={
     line:['stroke'],strokeWidth:['stroke'],diagonalClear:[],label:['label'],boundary:['boundary'],
@@ -192,6 +197,9 @@ async function synthetic(page){
   assert(result.cases.rectangleBefore.some(i=>i.kind==='stroke'&&i.label==='XZ = YW'));
   assert.throws(()=>proportional([[48,20],[22,88],[94,88]],[[190,14],[156,88],[248,88]]));
   assert(result.canvas.every(size=>size>4&&size<12),'Canvas transformed metrics');
+  assert.deepEqual(result.clipping.issues,[],'The text sits inside the SVG viewBox');
+  assert.deepEqual(result.clipping.horizontalClipping,{left:0,right:64},'A parent clips the SVG');
+  assert.deepEqual(result.reflowed.horizontalClipping,{left:0,right:0},'The SVG fits the parent after reflow');
   assert.deepEqual(result.closestPointPlacement,[82,70],'Label remains associated with its own point');
   console.log('DiagramGuard: synthetic label, marker and geometry checks, plus both original regressions');
 }
@@ -513,59 +521,6 @@ async function trigAndBisectorGeometry(page,base,profiles){
   return configurations;
 }
 
-async function converseProportionality(page,base,profiles){
-  const values=[[.2,.8],[.8,.2],[.2,.2],[.8,.8],[.39,.4],[.4,.39],[.4,.62]];
-  let checks=0;
-  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
-    await page.setViewportSize({width,height});
-    await page.goto(base+concept(5));
-    await setLanguage(page,lang);
-    await settle(page,percent);
-    const chart=page.locator('.g10ch4-lab svg[data-dg-ready]');
-    await chart.waitFor();
-    const preview=page.locator('.g10ch4-glance-visual');
-    const caption=await preview.locator('.diagramguard-annotation').evaluate(el=>({overflow:el.scrollWidth-el.clientWidth,
-      beneath:el.getBoundingClientRect().top>=el.previousElementSibling.getBoundingClientRect().bottom-.5,
-      math:!!el.querySelector('.katex')}));
-    assert(caption.overflow<=1&&caption.beneath&&caption.math,'Localized overview equation reflows outside the triangle');
-    const sliders=page.locator('.g10ch4-slider');
-    for(const [d,e] of [...values,[.4,.4]]){
-      const snap=d===.4&&e===.4;
-      if(snap)await page.locator('.g10ch4-lab .g10ch4-chip-btn').click();
-      else for(const [i,value] of [d,e].entries())await sliders.nth(i).evaluate((input,value)=>{
-        input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));
-      },value);
-      const result=await chart.evaluate(svg=>{
-        const geometry=id=>svg.querySelector(`[data-dg-obstacle="${id}"]`);
-        const coord=(node,names)=>names.map(key=>Number(node.getAttribute(key)));
-        const triangle=Array.from(geometry('triangle').points,p=>[p.x,p.y]);
-        const actual=coord(geometry('DE'),['x1','y1','x2','y2']);
-        const reference=geometry('DF')?coord(geometry('DF'),['x1','y1','x2','y2']):null;
-        const box=svg.getBoundingClientRect();
-        const visible=box.left>=-.5&&box.right<=document.documentElement.clientWidth+.5;
-        return {triangle,actual,reference,visible,audit:window.TriggleDiagramGuard.audit(svg,{discover:true})};
-      });
-      const context=`Converse of BPT ${lang} ${width}×${height} ${percent}% ${d}/${e}`;
-      const [a,b,c]=result.triangle;
-      const section=(p,fraction)=>p.map((value,i)=>a[i]+fraction*(value-a[i]));
-      result.actual.forEach((coordinate,i)=>near(coordinate,[...section(b,d),...section(c,e)][i]));
-      if(d===e){
-        assert.equal(result.reference,null,context);
-        near(result.actual[1],result.actual[3]);
-      }else{
-        near(result.reference[1],result.reference[3]);
-        near(result.reference[3],section(c,d)[1]);
-      }
-      assert.deepEqual(result.audit.issues,[],context);
-      assert.deepEqual(result.audit.labels.map(l=>l.id),d===e?['A','B','C','D','E']:['A','B','C','D','E','F'],context);
-      result.audit.labels.forEach(label=>near(label.fontPx,.15*percent,.2));
-      assert(result.visible,context+' visible drawing');
-      checks++;
-    }
-  }
-  return checks;
-}
-
 async function sightLineGeometry(page,base,profiles){
   const route=base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=';
   const cases=[{index:7,values:[[26,18],[45,8],[12,36],[30,20]]},
@@ -711,6 +666,849 @@ async function statisticsPlotGeometry(page, base, profiles, full=false) {
   return checks;
 }
 
+async function converseProportionality(page,base,profiles){
+  const values=[[.2,.8],[.8,.2],[.2,.2],[.8,.8],[.39,.4],[.4,.39],[.4,.62]];
+  let checks=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    await page.goto(base+concept(5));
+    await setLanguage(page,lang);
+    await settle(page,percent);
+    const chart=page.locator('.g10ch4-lab svg[data-dg-ready]');
+    await chart.waitFor();
+    const preview=page.locator('.g10ch4-glance-visual');
+    const caption=await preview.locator('.diagramguard-annotation').evaluate(el=>({overflow:el.scrollWidth-el.clientWidth,
+      beneath:el.getBoundingClientRect().top>=el.previousElementSibling.getBoundingClientRect().bottom-.5,
+      math:!!el.querySelector('.katex')}));
+    assert(caption.overflow<=1&&caption.beneath&&caption.math,'Localized overview equation reflows outside the triangle');
+    const sliders=page.locator('.g10ch4-slider');
+    for(const [d,e] of [...values,[.4,.4]]){
+      const snap=d===.4&&e===.4;
+      if(snap)await page.locator('.g10ch4-lab .g10ch4-chip-btn').click();
+      else for(const [i,value] of [d,e].entries())await sliders.nth(i).evaluate((input,value)=>{
+        input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));
+      },value);
+      const result=await chart.evaluate(svg=>{
+        const geometry=id=>svg.querySelector(`[data-dg-obstacle="${id}"]`);
+        const coord=(node,names)=>names.map(key=>Number(node.getAttribute(key)));
+        const triangle=Array.from(geometry('triangle').points,p=>[p.x,p.y]);
+        const actual=coord(geometry('DE'),['x1','y1','x2','y2']);
+        const reference=geometry('DF')?coord(geometry('DF'),['x1','y1','x2','y2']):null;
+        return {triangle,actual,reference,audit:window.TriggleDiagramGuard.audit(svg,{discover:true})};
+      });
+      const context=`Converse of BPT ${lang} ${width}×${height} ${percent}% ${d}/${e}`;
+      const [a,b,c]=result.triangle;
+      const section=(p,fraction)=>p.map((value,i)=>a[i]+fraction*(value-a[i]));
+      result.actual.forEach((coordinate,i)=>near(coordinate,[...section(b,d),...section(c,e)][i]));
+      if(d===e){
+        assert.equal(result.reference,null,context);
+        near(result.actual[1],result.actual[3]);
+      }else{
+        near(result.reference[1],result.reference[3]);
+        near(result.reference[3],section(c,d)[1]);
+      }
+      assert.deepEqual(result.audit.issues,[],context);
+      assert.deepEqual(result.audit.labels.map(l=>l.id),d===e?['A','B','C','D','E']:['A','B','C','D','E','F'],context);
+      result.audit.labels.forEach(label=>near(label.fontPx,.15*percent,.2));
+      assert(Object.values(result.audit.horizontalClipping).every(px=>px<=.5),context+' visible drawing');
+      checks++;
+    }
+  }
+  return checks;
+}
+
+async function combinedSightLines(page,base,profiles){
+  const route=base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=9';
+  let checks=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    await page.goto(route);
+    await setLanguage(page,lang);
+    await settle(page,percent);
+    const chart=page.locator('.g10ch4-svg[data-dg-ready]');
+    const sliders=page.locator('.g10ch4-slider');
+    for(const mode of [0,1,2]){
+      await page.locator('.g10ch4-tab').nth(mode).click();
+      for(const [a,b] of [[60,30],[30,65],[75,20],[45,45],[65,60]]){
+        for(const [i,value] of [a,b].entries())await sliders.nth(i).evaluate((input,value)=>{
+          input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));
+        },value);
+        await page.evaluate(async()=>{await new Promise(requestAnimationFrame);await new Promise(requestAnimationFrame);});
+        const [alpha,beta]=await sliders.evaluateAll(inputs=>inputs.map(input=>Number(input.value)));
+        const result=await chart.evaluate(svg=>{
+          const node=id=>svg.querySelector(`[data-dg-obstacle="${id}"]`);
+          const attr=(line,key)=>Number(line.getAttribute(key));
+          const segment=id=>['x1','y1','x2','y2'].map(key=>attr(node(id),key));
+          const key=svg.parentElement.querySelector('.diagramguard-coordinate-key');
+          return {alpha:segment('alpha'),beta:segment('beta'),audit:window.TriggleDiagramGuard.audit(svg,{discover:true}),
+            output:key.textContent,font:parseFloat(getComputedStyle(key).fontSize),
+            overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};
+        });
+        const test=`Combined sight lines ${lang} ${width}×${height} ${percent}% ${mode} ${alpha}°/${beta}°`;
+        const currentAngle=([x,y,u,v])=>Math.atan2(Math.abs(v-y),Math.abs(u-x));
+        near(currentAngle(result.alpha),alpha*Math.PI/180,1e-8);
+        near(currentAngle(result.beta),beta*Math.PI/180,1e-8);
+        assert.deepEqual(result.alpha.slice(0,2),result.beta.slice(0,2),test+' shared observation point');
+        if(mode===0)assert(result.alpha[2]===result.beta[2]&&result.alpha[3]<result.alpha[1]&&result.beta[3]>result.beta[1],test);
+        else if(mode===1)assert(alpha>beta&&result.alpha[2]>result.alpha[0]&&result.alpha[2]<result.beta[2],test);
+        else assert(result.alpha[2]<result.alpha[0]&&result.beta[2]>result.beta[0],test);
+        if(mode>0)assert.equal(result.alpha[3],result.beta[3],test+' same ground plane');
+        assert(result.output.includes(`α = ${alpha}°`)&&result.output.includes(`β = ${beta}°`),test+' displayed values');
+        assert.deepEqual(result.audit.issues,[],test);
+        assert.equal(result.audit.labels.length,3,test);
+        result.audit.labels.forEach(label=>near(label.fontPx,.15*percent,.2));
+        near(result.font,.14*percent,.2);
+        assert(result.overflow<=1,test);
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
+async function vennGeometry(page,base,profiles){
+  const route=base+'/index.html?class=10&chapter=g10-ch8&section=concepts&concept=';
+  const cases={union:['2, 4, 5, 6',['only-a','both','only-b']],intersection:['4, 6',['both']],
+    onlyA:['2',['only-a']],onlyB:['5',['only-b']],neither:['1, 3',['outside']],complement:['1, 3, 5',['outside','only-b']]};
+  let checks=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    for(const index of [10,12,13]){
+      await page.goto(route+index);
+      await setLanguage(page,lang);
+      await settle(page,percent);
+      const chart=page.locator('.g10ch8-graphic[data-dg-ready]');
+      await chart.waitFor();
+      const control=page.locator('.g10ch8-control select');
+      for(const [mode,[outcomes,regions]] of Object.entries(cases)){
+        await control.selectOption(mode);
+        await page.evaluate(async()=>{await new Promise(requestAnimationFrame);await new Promise(requestAnimationFrame);});
+        const result=await chart.evaluate(svg=>{
+          const circles=[...svg.querySelectorAll('.g10ch8-circle')];
+          const interior=[...svg.querySelectorAll('path[data-region]')];
+          const locations=[...svg.querySelectorAll('text[data-region-label]')].map(node=>{
+            const p=new DOMPoint(Number(node.getAttribute('x')),Number(node.getAttribute('y')));
+            return [node.dataset.regionLabel,circles.map(circle=>circle.isPointInFill(p)),
+              interior.filter(path=>path.isPointInFill(p)).map(path=>path.dataset.region)];
+          });
+          const lab=svg.closest('.g10ch8-lab');
+          const bounds=lab.getBoundingClientRect();
+          const reaches=[svg,lab.querySelector('select'),lab.querySelector('.g10ch8-legend')].map(node=>{
+            const box=node.getBoundingClientRect();
+            return Math.max(bounds.left-box.left,box.right-bounds.right);
+          });
+          return {audit:window.TriggleDiagramGuard.audit(svg,{discover:true}),locations,
+            highlights:[...svg.querySelectorAll('[data-region].is-selected')].map(node=>node.dataset.region),
+            overflow:Math.max(...reaches,document.documentElement.scrollWidth-document.documentElement.clientWidth)};
+        });
+        const expected={a:[false,false],b:[false,false],sample:[false,false],outside:[false,false],
+          'only-a':[true,false],both:[true,true],'only-b':[false,true]};
+        const context=`Venn ${lang} ${width}×${height} ${percent}% concept ${index} ${mode}`;
+        assert.deepEqual(result.audit.issues,[],context);
+        assert.equal(result.audit.labels.length,7,context);
+        assert(Object.values(result.audit.horizontalClipping).every(px=>px<=.5),context+' complete SVG visibility');
+        result.audit.labels.forEach(label=>near(label.fontPx,.14*percent,.2));
+        for(const [location,contained,inRegions] of result.locations){
+          assert.deepEqual(contained,expected[location],context+' '+location);
+          assert.deepEqual(inRegions,contained.some(Boolean)?[location]:[],context+' exact fill for '+location);
+        }
+        assert.deepEqual(result.highlights,regions,context);
+        const readout=await page.locator('.g10ch8-result').textContent();
+        assert(readout.includes(`{${outcomes}}`)&&readout.endsWith(outcomes.split(',').length+'/6'),context);
+        assert(result.overflow<=1,context);
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
+async function grade9CoordinateActivities(page, base, profiles){
+  const endpoints = {A:[-4,-3],P:[-1,-1],Q:[2,1],B:[5,3]};
+  const ratio = P => ({A:[-4,-2],P,B:[4,2]});
+  const centroid = y => ({A:[1,1],B:[7,1],C:[1,y],D:[4,1],G:[3,(y+2)/3]});
+  const activities = new Map([
+    [1,[{P:[4,1]},{P:[4,3]}]],
+    [2,[[-3,2],[3,2],[-3,-2],[3,-2],[-3,0],[0,2]].map(P=>({P}))],
+    [3,[{A:[-4,2],B:[4,-2],M:[0,0]},{A:[-4,2],B:[3,2],M:[-.5,2]}]],
+    [4,[endpoints,endpoints]],
+    [5,[ratio([2,1]),ratio([0,0]),ratio([-2,-1])]],
+    [6,[centroid(4),centroid(7)]]
+  ]);
+  let checks=0;
+  for (const [width,height] of profiles) {
+    await page.setViewportSize({width,height});
+    for (const lang of ['en','ta']) for (const [route,states] of activities) {
+      await page.goto(base+'/index.html?class=9&chapter=g9-ch5&section=concepts&concept='+route);
+      await setLanguage(page,lang);
+      const controls=page.locator('.g9-investigation-activity .sp2-answers button');
+      const figure=page.locator('.g9-investigation-diagram svg.diagramguard-coordinate[data-dg-ready]');
+      assert.equal(await controls.count(),states.length);
+      for (const percent of [100,200]) {
+        await settle(page,percent);
+        for (const [state,expected] of states.entries()) {
+          await controls.nth(state).click();
+          const context=`Grade 9 coordinate concept ${route}, ${state}, ${lang}, ${width}×${height}, ${percent}%`;
+          assert.equal(await controls.nth(state).getAttribute('aria-pressed'),'true',context);
+          const actual=await figure.evaluate(svg=>{
+            const guard=window.TriggleDiagramGuard;
+            const x=svg.querySelector('[data-dg-obstacle="x-axis"]');
+            const y=svg.querySelector('[data-dg-obstacle="y-axis"]');
+            const key=svg.closest('.diagramguard-figure').querySelector('.diagramguard-coordinate-key');
+            const value=(node,field)=>Number(node.getAttribute(field));
+            return {
+              ...guard.audit(svg,{discover:true}),
+              origin:[value(y,'x1'),value(x,'y1')],
+              axisLength:[value(x,'x2')-value(x,'x1'),value(y,'y1')-value(y,'y2')],
+              points:Object.fromEntries([...svg.querySelectorAll('[data-dg-point]')]
+                .map(node=>[node.dataset.dgPoint,[value(node,'cx'),value(node,'cy')]])),
+              lines:Object.fromEntries([...svg.querySelectorAll('[data-dg-edge], [data-dg-obstacle$="-guide"]')]
+                .map(node=>[node.dataset.dgEdge||node.dataset.dgObstacle,['x1','y1','x2','y2'].map(field=>value(node,field))])),
+              keyBelow:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+              keyItems:[...key.querySelectorAll('[role=listitem]')].map(node=>node.textContent),
+              plotName:svg.getAttribute('aria-label'),
+              overflow:document.documentElement.scrollWidth-innerWidth
+            };
+          });
+          assert.deepEqual(actual.issues,[],context);
+          assert.ok(actual.measured&&actual.keyBelow&&actual.overflow<=1,context);
+          assert.ok(Object.values(actual.horizontalClipping).every(value=>value<=1),context);
+          if(lang==='ta')assert.match(actual.plotName,/[஀-௿]/u,context);
+          const units=route===1?[8,5]:route===2?[10,10]:route===6?[8,8]:[10,8];
+          const [sx,sy]=actual.axisLength.map((value,i)=>value/units[i]);
+          near(sx,sy);
+          const [ox,oy]=actual.origin;
+          const project=([x,y])=>[ox+x*sx,oy-y*sy];
+          assert.deepEqual(Object.keys(actual.points),Object.keys(expected),context);
+          const names=actual.labels.map(({id,fontPx})=>{
+            assert(fontPx>=13*percent/100-.25&&fontPx<=16*percent/100+.25,context+' '+id+' '+fontPx);
+            return id;
+          });
+          for(const [id,point] of Object.entries(expected)){
+            assert.ok(names.includes(id),context+' missing vertex label '+id);
+            project(point).forEach((value,i)=>near(actual.points[id][i],value));
+          }
+          const signed=value=>String(value).replace('-','−');
+          assert.deepEqual(actual.keyItems,Object.entries(expected).map(([id,xy])=>`${id} (${xy.map(signed).join(', ')})`),context);
+          const checkLine=(name,a,b)=>project(a).concat(project(b)).forEach((value,i)=>near(actual.lines[name][i],value));
+          if(route<=2){
+            const [x,y]=expected.P;
+            if(x)checkLine('P-x-guide',[0,0],[x,0]);
+            if(y)checkLine('P-y-guide',[x,0],[x,y]);
+            assert.equal(Object.keys(actual.lines).length,Number(Boolean(x))+Number(Boolean(y)),context);
+          }
+          if(route===4){
+            assert.ok(['AP','PQ','QB'].every(name=>actual.lines[name]),context);
+            near(length(actual.points.A,actual.points.P),length(actual.points.P,actual.points.Q));
+            near(length(actual.points.P,actual.points.Q),length(actual.points.Q,actual.points.B));
+          }
+          if(route===6){
+            const mid=(a,b)=>a.map((value,i)=>(value+b[i])/2);
+            checkLine('AE',expected.A,mid(expected.B,expected.C));
+            checkLine('BF',expected.B,mid(expected.C,expected.A));
+            checkLine('CD',expected.C,expected.D);
+            near(length(actual.points.C,actual.points.G),2*length(actual.points.G,actual.points.D));
+          }
+          checks++;
+        }
+        await page.locator('.g9-investigation-reset').click();
+        assert.equal(await controls.first().getAttribute('aria-pressed'),'true');
+        await figure.waitFor({state:'visible'});
+      }
+    }
+  }
+  return checks;
+}
+
+async function algebraQuadratics(page,base,profiles){
+  let checks=0;
+  const plot=page.locator('.g10ch3-plot svg[data-dg-ready]');
+  async function inspect({route,lang,percent,coefficients,points,intersection=false,legend=[]}){
+    const report=await plot.evaluate(svg=>{
+      const actual=window.TriggleDiagramGuard.audit(svg,{discover:true});
+      const order=['x1','y1','x2','y2'];
+      const read=(shape,names)=>names.map(name=>Number(shape.getAttribute(name)));
+      const query=id=>svg.querySelector(`[data-dg-obstacle="${id}"]`);
+      const key=svg.closest('.diagramguard-figure').querySelector('.diagramguard-coordinate-legend');
+      return {
+        ...actual,x:read(query('X-axis'),order),y:read(query('Y-axis'),order),
+        path:svg.querySelector('[data-dg-quadratic]').getAttribute('d'),
+        points:[...svg.querySelectorAll('[data-dg-point]')].map(dot=>read(dot,['cx','cy'])),
+        straight:query('line-linear')?read(query('line-linear'),order):null,
+        projections:[...svg.querySelectorAll('[data-dg-projection]')].map(line=>read(line,order)),
+        keyBelow:!key||key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+        expressions:key?[...key.querySelectorAll('[role=listitem]')].map(node=>node.textContent):[],
+        description:svg.getAttribute('aria-label'),overflow:document.documentElement.scrollWidth-innerWidth
+      };
+    });
+    const context=`Grade 10 algebra ${route} ${lang} ${percent}% coefficients ${coefficients}`;
+    assert.ok(report.measured&&report.keyBelow&&report.overflow<=1,context);
+    assert.deepEqual(report.issues,[],context);
+    assert.ok(Object.values(report.horizontalClipping).every(value=>value<=1),context);
+    assert.deepEqual(report.expressions,legend,context);
+    if(lang==='ta')assert.match(report.description,/[஀-௿]/u,context);
+    for(const {fontPx} of report.labels){
+      assert(fontPx>=13*percent/100-.25&&fontPx<=16*percent/100+.25,context+' '+fontPx);
+    }
+    const [x1,oy,x2]=report.x;
+    const [ox,y1,,y2]=report.y;
+    const sx=(x2-x1)/6, sy=(y1-y2)/(intersection?8:12);
+    near(sx,sy);
+    const unproject=(x,y)=>[(x-ox)/sx,(oy-y)/sy];
+    const [a,b,c]=coefficients;
+    const evaluate=x=>(a*x+b)*x+c;
+    const curves=report.path.match(/M[^M]+/g).map(segment=>{
+      assert.match(segment,/^M[^Q]+Q[^Q]+$/,context);
+      const [x0,y0,x1,y1,x2,y2]=segment.match(/-?\d+(?:\.\d+)?(?:e[-+]?\d+)?/gi).map(Number);
+      return [unproject(x0,y0),unproject(x1,y1),unproject(x2,y2)];
+    });
+    for(const [start,control,end] of curves){
+      for(const t of [0,.13,.32,.5,.81,1]){
+        const [x,y]=start.map((value,i)=>(1-t)**2*value+2*(1-t)*t*control[i]+t*t*end[i]);
+        near(y,evaluate(x));
+        assert(y>=-5-1e-9&&y<=7+1e-9,context+' curve clipped to graph window');
+      }
+    }
+    assert.equal(report.points.length,points.length,context);
+    for(const [index,point] of report.points.entries()){
+      const [x,y]=unproject(...point);
+      near(x,points[index][0]); near(y,points[index][1]); near(y,evaluate(x));
+      assert(curves.some(([start,,end])=>x>=start[0]-1e-9&&x<=end[0]+1e-9),context+' visible marker lies on curve');
+      if(intersection)near(y,x+2);
+    }
+    if(route===8&&c===4)near(2*a*points[0][0]+b,0);
+    if(intersection){
+      const [x0,y0,x1,y1]=report.straight;
+      assert.ok(['x-value--1','x-value-2'].every(id=>report.labels.some(label=>label.id===id)),context);
+      for(const value of [unproject(x0,y0),unproject(x1,y1)])near(value[1],value[0]+2);
+      for(const [index,[x0,y0,x1,y1]] of report.projections.entries()){
+        const [x,y]=points[index];
+        near(x0,x1); near(y1,oy);
+        const point=unproject(x0,y0);
+        near(point[0],x); near(point[1],y);
+      }
+      assert.equal(report.projections.length,2,context);
+    }
+    checks++;
+  }
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta'])for(const route of [8,11]){
+      await page.goto(base+'/index.html?class=10&chapter=g10-ch3&section=concepts&concept='+route);
+      await setLanguage(page,lang);
+      const controls=page.locator('.g10ch3-lab .g10ch3-tabs');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        if(route===8){
+          for(const [index,c] of [0,3,4,5,7].entries()){
+            await controls.first().locator('button').nth(index).click();
+            const points=c===0?[[0,0],[4,0]]:c===3?[[1,0],[3,0]]:c===4?[[2,0]]:[];
+            await inspect({route,lang,percent,coefficients:[1,-4,c],points,legend:[`y = x² − 4x + ${c}`]});
+          }
+        }else{
+          const modes=controls.first().locator('button');
+          await modes.first().click();
+          const curves=controls.nth(1).locator('button');
+          for(const [index,a] of [1,3,.25,-1].entries()){
+            const control=curves.nth(index);
+            await control.focus();
+            await control.press('Space');
+            assert(await control.evaluate(node=>document.activeElement===node));
+            assert.equal(await control.getAttribute('aria-pressed'),'true');
+            await inspect({route,lang,percent,coefficients:[a,0,0],points:[[0,0]]});
+          }
+          await modes.nth(1).click();
+          await inspect({route,lang,percent,coefficients:[1,0,0],points:[[-1,1],[2,4]],
+            intersection:true,legend:['y = x²','y = x + 2']});
+          await modes.first().click();
+          assert.equal(await curves.nth(3).getAttribute('aria-pressed'),'true');
+        }
+      }
+    }
+  }
+  return checks;
+}
+
+async function similarityScaling(page,base,profiles){
+  function checkScaledPair(original,scaled,factor){
+    const [ab,ac,bc]=sides(original);
+    near(ab/bc,6/8);
+    near(ab/ac,6/10);
+    proportional(original,scaled,factor);
+    for(const [A,B,C] of [original,scaled]){
+      near(angle(B,A,C),90);
+      near(angle(A,B,C),Math.atan2(8,6)*180/Math.PI);
+    }
+  }
+  const old=await fs.readFile(path.join(__dirname,'fixtures','diagramguard','similarity-scale-before.svg'),'utf8');
+  const baseline=await page.evaluate(source=>[...new DOMParser().parseFromString(source,'image/svg+xml').querySelectorAll('polygon')]
+    .map(poly=>[...poly.points].map(point=>[point.x,point.y])),old);
+  assert.throws(()=>checkScaledPair(...baseline,1.25),{code:'ERR_ASSERTION'});
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta']){
+      await page.goto(base+concept(0));
+      await setLanguage(page,lang);
+      const slider=page.locator('.g10ch4-lab input[type=range]');
+      const key=page.locator('.g10ch4-lab .diagramguard-coordinate-key');
+      const presets=page.locator('.g10ch4-preset-row button');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        let fixed;
+        const assertScale=async factor=>{
+          const selector=`[data-dg-scene="similarity-scale-lab"][data-dg-factor="${factor}"]`;
+          const {geometry,lines}=await read(page,selector,percent);
+          const [original,scaled]=geometry;
+          assert.equal(geometry.length,2);
+          checkScaledPair(original,scaled,factor);
+          assert.deepEqual(lines,{});
+          if(fixed)assert.deepEqual(original,fixed,'reference triangle holds position as k changes');
+          else fixed=original;
+          const amount=value=>Number(value.toFixed(2));
+          assert.deepEqual(await key.getByRole('listitem').allTextContents(),[
+            'AB = 6','BC = 8','CA = 10',`PQ = ${amount(6*factor)}`,`QR = ${amount(8*factor)}`,`RP = ${amount(10*factor)}`
+          ]);
+          const below=await key.evaluate(node=>node.getBoundingClientRect().top>=node.previousElementSibling.getBoundingClientRect().bottom-.5);
+          assert(below,'length key stays outside the drawing');
+          checks++;
+        };
+        for(let twentieths=10;twentieths<=30;twentieths++){
+          const factor=twentieths/20;
+          await slider.evaluate((range,k)=>{range.value=String(k);range.dispatchEvent(new Event('input',{bubbles:true}));},factor);
+          await assertScale(factor);
+        }
+        for(const [index,factor] of [.6,1,1.4].entries()){
+          await presets.nth(index).click();
+          await assertScale(factor);
+        }
+        await slider.focus();
+        await slider.press('Home');
+        assert(await slider.evaluate(node=>document.activeElement===node));
+        await assertScale(.5);
+        await slider.press('End');
+        await assertScale(1.5);
+      }
+    }
+  }
+  return checks;
+}
+
+async function similarityResults(page,base,profiles){
+  const area=([a,b,c])=>Math.abs((b[0]-a[0])*(c[1]-a[1])-(c[0]-a[0])*(b[1]-a[1]))/2;
+  function checkAltitude([outer,left,right]){
+    const [A,B,C]=outer, D=left[1];
+    near(angle(A,B,C),37);
+    near(angle(B,A,C),90);
+    near(angle(C,A,B),53);
+    near(B[0],D[0]);
+    near(D[1],A[1]);
+    near(length(B,D)**2,length(A,D)*length(D,C));
+    proportional(outer,left);
+    proportional(outer,right);
+  }
+  const old=await fs.readFile(path.join(__dirname,'fixtures','diagramguard','similarity-altitude-before.svg'),'utf8');
+  const baseline=await page.evaluate(source=>[...new DOMParser().parseFromString(source,'image/svg+xml').querySelectorAll('polygon')]
+    .map(poly=>[...poly.points].map(point=>[point.x,point.y])),old);
+  assert.throws(()=>checkAltitude(baseline),{code:'ERR_ASSERTION'});
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta']){
+      await page.goto(base+concept(2));
+      await setLanguage(page,lang);
+      const tabs=page.locator('.g10ch4-lab .g10ch4-tab');
+      const controls=page.locator('.g10ch4-lab .g10ch4-preset-row button');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        await tabs.first().click();
+        for(let k=1;k<=4;k++){
+          const button=controls.nth(k-1);
+          await button.focus();
+          await button.press('Space');
+          assert(await button.evaluate(node=>node===document.activeElement));
+          const {geometry}=await read(page,`[data-dg-scene="similarity-results-lab"][data-dg-state="area-${k}"]`,percent);
+          assert.equal(geometry.length,k*k);
+          const all=geometry.flat();
+          const top=all.reduce((a,b)=>a[1]<b[1]?a:b);
+          const bottomLeft=all.reduce((a,b)=>a[0]<b[0]?a:b);
+          const bottomRight=all.reduce((a,b)=>a[0]>b[0]?a:b);
+          const total=area([top,bottomLeft,bottomRight]);
+          for(const triangle of geometry)near(area(triangle)/total,1/(k*k));
+          checks++;
+        }
+        await tabs.nth(1).click();
+        for(let selected=0;selected<3;selected++){
+          await controls.nth(selected).click();
+          const selector=`[data-dg-scene="similarity-results-lab"][data-dg-state="altitude-${selected}"]`;
+          const {geometry,labels}=await read(page,selector,percent);
+          checkAltitude(geometry);
+          assert.deepEqual(labels.map(({id})=>id),['A','B','C','D']);
+          checks++;
+        }
+      }
+    }
+  }
+  return checks;
+}
+
+async function grade9Angles(page,base,profiles){
+  let checks=0;
+  const figures=[
+    {chapter:4,id:'c9-4-4-practice-5',angles:[55,65,60],labels:['A','B','C']},
+    {chapter:6,id:'c9-exercise-6-4-q4',angles:[24.4,90,65.6],labels:['A']}
+  ];
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta'])for(const {chapter,id,angles,labels} of figures){
+      await page.goto(`${base}/index.html?class=9&chapter=g9-ch${chapter}&question=${id}`);
+      await setLanguage(page,lang);
+      const inline=page.locator('#inlineFigureOpen');
+      const view=await inline.isVisible()?inline:page.locator('#figureBtn');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        await view.click();
+        const selector='#figureDialog svg.diagramguard-coordinate[data-dg-ready]';
+        const result=await read(page,selector,percent);
+        if(lang==='ta')assert.match(result.description,/[஀-௿]/u);
+        assert.deepEqual(result.labels.map(entry=>entry.id),labels);
+        const info=await page.locator(selector).evaluate(svg=>{
+          const key=svg.parentElement.querySelector('.diagramguard-coordinate-key');
+          return {
+            points:svg.querySelector('[data-dg-region="ABC"]').getAttribute('points').split(' ')
+              .map(p=>p.split(',').map(Number)),
+            displayed:[...svg.querySelectorAll('text')].map(text=>text.textContent),
+            key:[...key.querySelectorAll('[role=listitem]')].map(node=>node.textContent),
+            unclipped:svg.getBoundingClientRect().bottom<=key.getBoundingClientRect().top+.5,
+            intentionalCaption:document.getElementById('coordinateFigureCaption').hidden
+          };
+        });
+        assert(info.unclipped&&info.intentionalCaption);
+        const [A,B,C]=info.points;
+        [angle(A,B,C),angle(B,A,C),angle(C,A,B)].forEach((value,index)=>near(value,angles[index]));
+        if(chapter===4){
+          assert.deepEqual(info.displayed,['55°','65°','60°']);
+          assert.deepEqual(info.key,['55° + 65° + 60° = 180°']);
+        }else{
+          assert.deepEqual(info.displayed,['24°24′']);
+          assert.match(info.key.join(' '),/9\.105.*4\.131.*10/u);
+        }
+        await page.keyboard.press('Escape');
+        await page.locator('#figureDialog').waitFor({state:'hidden'});
+        assert(await view.evaluate(button=>button===document.activeElement));
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
+async function exerciseMeasurements(page,base,profiles){
+  const exercises=[[9,6,'c9-exercise-6-1-q2'],[9,6,'c9-exercise-6-1-q3'],[9,6,'c9-exercise-6-1-q9'],
+    [9,6,'c9-exercise-6-1-q10'],[9,6,'c9-exercise-6-4-q6'],[9,5,'c9-5-5-practice-6'],
+    [9,8,'c9-8-8-practice-8'],[10,5,'c10-5-5-practice-20']];
+  const split=line=>[line.slice(0,2),line.slice(2)];
+  const verify=async (figure,chapter,id,percent,lang)=>{
+    await figure.waitFor({state:'visible'});
+    const result=await figure.evaluate(svg=>{
+      const line=node=>['x1','y1','x2','y2'].map(name=>Number(node.getAttribute(name)));
+      const figures=[...svg.querySelectorAll('[data-dg-edge]')].map(node=>[node.dataset.dgEdge,line(node)]);
+      const vertices=[...svg.querySelectorAll('[data-dg-point]')].map(point=>[point.dataset.dgPoint,
+        ['cx','cy'].map(name=>Number(point.getAttribute(name)))]);
+      const bars=[...svg.querySelectorAll('[data-dg-bar]')].map(rect=>({value:+rect.dataset.dgBar,
+        height:+rect.getAttribute('height'),top:+rect.getAttribute('y')}));
+      const key=svg.parentElement.querySelector('.diagramguard-coordinate-key, .diagramguard-coordinate-legend');
+      return {audit:TriggleDiagramGuard.audit(svg,{discover:true}), edges:Object.fromEntries(figures),
+        points:Object.fromEntries(vertices),bars,keyFont:parseFloat(getComputedStyle(key).fontSize),
+        angleMarks:[...svg.querySelectorAll('[data-dg-angle-mark]')].map(node=>node.dataset.dgAngleMark),
+        mean:svg.querySelector('[data-dg-analytic-line="mean"]')?.getAttribute('y1'),
+        title:svg.getAttribute('aria-label'),key:key.textContent, keyUnderPlot:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+        keyFits:key.scrollWidth<=key.clientWidth+1};
+    });
+    assert.deepEqual(result.audit.issues,[],`${id} ${page.viewportSize().width}px ${percent}% ${lang} ${figure}`);
+    assert(Object.values(result.audit.horizontalClipping).every(amount=>amount<=1));
+    assert(result.keyUnderPlot&&result.keyFits);
+    if(lang==='ta')assert.match(result.title,/[஀-௿]/u);
+    const min=Math.min(...result.audit.labels.map(label=>label.fontPx));
+    assert(min>=13*percent/100,`${id} displayed label size ${min}`);
+    assert(result.keyFont>=13*percent/100,`${id} displayed key size ${result.keyFont}`);
+    if(chapter===8){
+      const {bars,mean,key}=result;
+      assert.deepEqual(bars.map(bar=>bar.value),[4,6,8,10]);
+      const baseline=bars[0].top+bars[0].height, scale=bars[0].height/4;
+      bars.forEach(({top,height,value})=>{near(top+height,baseline);near(height/scale,value);});
+      near((baseline-Number(mean))/scale,7);
+      assert.match(key,lang==='ta'?/சராசரி = 7/u:/Mean = 7/u);
+      return;
+    }
+    const {edges,key,points}=result;
+    if(id==='c9-5-5-practice-6'){
+      const {A,B,C}=points, scale=length(A,C)/3;
+      near(length(B,C)/scale,4);near(length(A,B)/scale,5);near(angle(C,A,B),90);
+      assert.match(key,/A \(0, 0\).*B \(3, 4\)/u);
+      return;
+    }
+    if(id==='c10-5-5-practice-20'){
+      const {A,B,M}=points;
+      for(const [index,coordinate] of M.entries())near(coordinate,(A[index]+B[index])/2);
+      near(Math.abs((A[1]-B[1])/(A[0]-B[0])),1);
+      assert.match(key,/A \(2, 4\).*M \(5, 7\).*B \(8, 10\)/u);
+      return;
+    }
+    if(id==='c9-exercise-6-1-q10'){
+      const [O,P]=split(edges.OP), [,Q]=split(edges.PQ), [M]=split(edges.MP), [N]=split(edges.NQ);
+      near(length(O,P)+length(P,Q),length(O,Q));near(angle(M,O,P),90);near(angle(N,O,Q),90);
+      near(length(O,P)/length(M,P),5);near(length(P,Q)/length(M,P),2);
+      near(length(N,Q)/length(M,P),7/5);
+      assert.match(key,/OP = 25.*PQ = 10.*PM = 5.*QN = h/u);
+      return;
+    }
+    if(id==='c9-exercise-6-4-q6'){
+      const [T,H]=split(edges.TH), [,P]=split(edges.HP);
+      near(angle(T,H,P),90);near(angle(P,T,H),42);
+      assert.match(key,/TP = 60.*∠TPH = 42°.*TH = h/u);
+      return;
+    }
+    const A=edges.AB.slice(0,2), B=edges.AB.slice(2), C=edges.BC.slice(2);
+    if(id.endsWith('q3')){
+      near(angle(A,B,C),30);near(angle(B,A,C),90);
+      const scale=length(B,C);
+      near(length(A,B)/scale,Math.sqrt(3));near(length(A,C)/scale,2);
+      assert.match(key,/θ = 30°.*√3/u);
+    }else if(id.endsWith('q2')){
+      const D=edges.AD.slice(2), scale=length(A,D)/12;
+      near(angle(D,A,B),90);near(angle(D,A,C),90);
+      near(length(A,B)/scale,13);near(length(B,D)/scale,5);near(length(D,C)/scale,16);
+      assert.match(key,/AB = 13.*BD = 5.*DC = 16/u);
+    }else{
+      const D=edges.CD.slice(2), scale=length(C,D)/12;
+      near(angle(D,A,C),90);near(angle(C,A,B),90);
+      near(length(A,C)/scale,15);near(length(B,C)/scale,20);
+      near(length(A,D)/scale,9);near(length(D,B)/scale,16);
+      near(angle(C,A,D)+angle(C,D,B),90);
+      assert.deepEqual(result.angleMarks,['CAB','CBA','ACD','DCB']);
+      assert.match(key,/AC = 15.*BC = 20.*CD = 12.*AD = 9.*DB = 16/u);
+      assert.match(key,/α = ∠CAB.*β = ∠CBA.*θ = ∠ACD.*φ = ∠DCB/u);
+    }
+  };
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta'])for(const [grade,chapter,id] of exercises){
+      await page.goto(`${base}/index.html?class=${grade}&chapter=g${grade}-ch${chapter}&question=${id}`);
+      await page.locator('body:not(.ver-starting)').waitFor();
+      await setLanguage(page,lang);
+      const inline=page.locator('#inlineFigureOpen');
+      const hasInline=await inline.isVisible();
+      const view=hasInline?inline:page.locator('#figureBtn');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        if(hasInline){
+          await verify(page.locator('#inlineFigureVisual svg[data-dg-ready]'),chapter,id,percent,lang);
+          checks++;
+        }
+        await view.click();
+        await verify(page.locator('#diagramContent svg[data-dg-ready]'),chapter,id,percent,lang);
+        await page.keyboard.press('Escape');
+        await page.locator('#figureDialog').waitFor({state:'hidden'});
+        assert(await view.evaluate(button=>button===document.activeElement));
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
+async function parallelConstruction(page,base,profiles){
+  const direction=(a,b)=>b.map((value,i)=>value-a[i]);
+  const cross=(a,b)=>a[0]*b[1]-a[1]*b[0];
+  const split=literal=>[literal.slice(0,2),literal.slice(2)];
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta']){
+      await page.goto(base+concept(3));
+      await setLanguage(page,lang);
+      const tabs=page.locator('.g10ch4-lab .g10ch4-tab');
+      const next=page.locator('.g10ch4-step-nav button').last();
+      const previous=page.locator('.g10ch4-step-nav button').first();
+      const key=page.locator('.g10ch4-lab .diagramguard-coordinate-key');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        let original;
+        for(const [index,[m,n]] of [[2,3],[4,5],[6,5],[7,3]].entries()){
+          await tabs.nth(index).click();
+          for(let step=0;step<5;step++){
+            await next.focus();
+            await next.press('Space');
+            assert(await next.evaluate(node=>node===document.activeElement));
+            assert.equal(await previous.isDisabled(),step===0);
+            const selector=`[data-dg-scene="similarity-construction-lab"][data-dg-state="${m}/${n}:${step}"]`;
+            const {geometry,lines}=await read(page,selector,percent);
+            const marks=await page.locator(selector).evaluate(svg=>[...svg.querySelectorAll('[data-dg-compass]')]
+              .map(node=>['cx','cy'].map(attribute=>Number(node.getAttribute(attribute)))));
+            const [P,Q,R]=geometry[0];
+            if(original)assert.deepEqual(geometry[0],original,'reference triangle remains fixed across construction stages and ratios');
+            else original=geometry[0];
+            if(step>=1){
+              const [start,X]=split(lines.QX);
+              assert.deepEqual(start,Q);
+              assert(angle(Q,R,X)>0&&angle(Q,R,X)<90);
+              if(m>n){
+                near(cross(direction(Q,P),direction(...split(lines['extension-P']))),0);
+                near(cross(direction(Q,R),direction(...split(lines['extension-R']))),0);
+              }
+            }
+            if(step>=2){
+              assert.equal(marks.length,Math.max(m,n));
+              const [,X]=split(lines.QX);
+              marks.forEach((point,i)=>{
+                near(cross(direction(Q,X),direction(Q,point)),0);
+                near(length(Q,point),(i+1)*length(Q,marks[0]));
+              });
+              assert.equal(await key.getByRole('listitem').count(),3);
+              assert.equal(await key.locator('.diagramguard-line-sample[aria-hidden="true"]').count(),3);
+              assert(await key.evaluate(node=>node.scrollWidth<=node.clientWidth+1),
+                `The ${m}/${n} compass key fits at ${width}px, ${percent}% text, ${lang}, step ${step+1}`);
+            }else{
+              assert.equal(marks.length,0);
+              assert(await key.isHidden());
+            }
+            if(step>=3){
+              const [den,baseEnd]=split(lines.denominator),[num,newEnd]=split(lines.numerator);
+              assert.deepEqual(den,marks[n-1]);
+              assert.deepEqual(num,marks[m-1]);
+              assert.deepEqual(baseEnd,R);
+              near(cross(direction(den,baseEnd),direction(num,newEnd)),0);
+              near(length(Q,newEnd)/length(Q,R),m/n);
+            }
+            if(step===4)proportional(geometry[0],geometry[1],m/n);
+            checks++;
+          }
+          await previous.click();
+          await page.locator(`[data-dg-scene="similarity-construction-lab"][data-dg-state="${m}/${n}:3"]`).waitFor();
+          await next.click();
+          await page.locator(`[data-dg-scene="similarity-construction-lab"][data-dg-state="${m}/${n}:4"]`).waitFor();
+        }
+      }
+    }
+  }
+  return checks;
+}
+
+async function roadMidpoint(page,base,profiles){
+  const questions=[
+    ['g10-ch6','c10-6-6-2-4',['elevation']],['g10-ch6','c10-6-6-2-5',[]],['g10-ch6','c10-6-6-2-6',['elevation']],
+    ['g10-ch6','c10-6-6-3-7',['depression']],['g10-ch6','c10-6-6-3-8',['depression']],['g10-ch6','c10-6-6-3-9',['depression']],
+    ['g10-ch6','c10-6-6-4-10',['depression','elevation']],['g10-ch6','c10-6-6-4-11',['depression','elevation']],
+    ['g10-ch6','c10-6-6-4-12',['depression','elevation']],['g10-ch5','c10-5-5-practice-20',[]]
+  ];
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta'])for(const [chapter,question,expectedAngles] of questions){
+      await page.goto(`${base}/index.html?class=10&chapter=${chapter}&question=${question}`);
+      await setLanguage(page,lang);
+      const inline=page.locator('#inlineFigureOpen');
+      const view=await inline.isVisible()?inline:page.locator('#figureBtn');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        await view.click();
+        const svg=page.locator('#diagramContent svg').first();
+        await svg.waitFor({state:'visible'});
+        if(chapter==='g10-ch6'){
+          const info=await svg.evaluate(svg=>{
+            const key=svg.parentElement.nextElementSibling;
+            const a=window.TriggleDiagramGuard.audit(svg,{discover:true});
+            return {
+              issues:a.issues,overflow:Math.max(...Object.values(a.horizontalClipping)),
+              name:svg.getAttribute('aria-label'),key:key.textContent,keyOverflow:key.scrollWidth-key.clientWidth,
+              keyBelow:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+              rays:[...svg.querySelectorAll('[data-dg-sightline]')].map(ray=>['x1','y1','x2','y2'].map(key=>Number(ray.getAttribute(key)))),
+              angles:[...svg.querySelectorAll('[data-dg-angle]')].map(path=>{
+                const color=path.getAttribute('stroke');
+                const ray=svg.querySelector(`line[stroke="${color}"]`);
+                const [x1,y1,x2,y2]=['x1','y1','x2','y2'].map(key=>Number(ray.getAttribute(key)));
+                const start=path.getPointAtLength(0),end=path.getPointAtLength(path.getTotalLength());
+                const a=[end.x-x1,end.y-y1],b=[x2-x1,y2-y1];
+                const cross=(a[0]*b[1]-a[1]*b[0])/Math.hypot(...a)/Math.hypot(...b);
+                return {id:path.dataset.dgAngle,horizontal:start.y-y1,cross};
+              })
+            };
+          });
+          assert.deepEqual(info.issues,[]);
+          assert.ok(info.overflow<=1&&info.keyOverflow<=1&&info.keyBelow);
+          assert.match(info.name,lang==='ta'?/[஀-௿]/u:/road|elevation|depression/i);
+          if(question==='c10-6-6-2-5'){
+            assert.match(info.key,/4√3.*30°/u);
+            const [left,right]=info.rays;
+            assert.equal(info.rays.length,2);
+            const [x,y,first,roof]=left;
+            const [x2,y2,second,roof2]=right;
+            near(x,x2);near(y,y2);near(roof,roof2);
+            near(x-first,second-x);
+            near(Math.atan2(y-roof,second-x)*180/Math.PI,30);
+            near((second-first)/(y-roof)*4*Math.sqrt(3),24);
+          }else{
+            assert.deepEqual(info.angles.map(entry=>entry.id),expectedAngles);
+            assert.match(info.key,/θ/u);
+            for(const {horizontal,cross} of info.angles){near(horizontal,0);near(cross,0);}
+          }
+        }else{
+          assert.match(await svg.getAttribute('aria-label'),/M \(5, 7\).*A \(2, 4\)|A \(2, 4\).*M \(5, 7\)/u);
+          assert.equal(await svg.locator('[data-dg-road-cross-section]').count(),0);
+        }
+        await page.keyboard.press('Escape');
+        await page.locator('#figureDialog').waitFor({state:'hidden'});
+        assert(await view.evaluate(button=>button===document.activeElement));
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
+async function unitCircleEndpoints(page,base,profiles){
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta']){
+      await page.goto(`${base}/index.html?class=9&chapter=g9-ch6&section=concepts&concept=1`);
+      await setLanguage(page,lang);
+      const buttons=page.locator('.g9-investigation-activity .sp2-answers button');
+      const plot='.g9-investigation-diagram svg.diagramguard-coordinate[data-dg-ready]';
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        for(const [index,angle,x,y] of [[3,0,1,0],[4,90,0,1]]){
+          await buttons.nth(index).click();
+          const result=await read(page,plot,percent);
+          if(lang==='ta')assert.match(result.description,/[஀-௿]/u);
+          assert.ok(['x','y','O','P'].every(id=>result.labels.some(label=>label.id===id)));
+          const info=await page.locator(plot).evaluate(svg=>{
+            const arc=svg.querySelector('[data-dg-quadrant]');
+            const node=svg.querySelector('[data-dg-point="P"]');
+            const key=svg.parentElement.querySelector('.diagramguard-coordinate-key');
+            return {arc:arc.getAttribute('d'),point:['cx','cy'].map(name=>Number(node.getAttribute(name))),
+              label:key.textContent,keyBelow:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5};
+          });
+          const [cx,cy]=result.lines['x-axis'];
+          const [x1,y1,x2,y2]=result.lines['y-axis'];
+          const radius=(result.lines['x-axis'][2]-cx)/1.25;
+          near(x1,x2);near(radius,(y1-y2)/1.25);
+          near(info.point[0],cx+x*radius);near(info.point[1],cy-y*radius);
+          const [left,top,rx,ry,,,sweep,right,bottom]=info.arc.match(/-?\d+(?:\.\d+)?(?:e[-+]?\d+)?/ig).map(Number);
+          near(left,cx);near(top,cy-radius);near(rx,radius);near(ry,radius);
+          near(right,cx+radius);near(bottom,cy);assert.equal(sweep,1);
+          assert(info.keyBelow);
+          assert.equal(info.label,`θ = ${angle}°`);
+          checks++;
+        }
+      }
+    }
+  }
+  return checks;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -745,14 +1543,78 @@ async function main(){
           console.log(`DiagramGuard: ${checks} bilingual and responsive statistics plot states`);
           return;
         }
+        if(process.argv.includes('--sight-lines')){
+          const checks=await sightLineGeometry(page,base,viewports);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive sight-line states`);
+          return;
+        }
+        if(process.argv.includes('--venn')){
+          const checks=await vennGeometry(page,base,viewports);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive probability Venn states`);
+          return;
+        }
+        if(process.argv.includes('--combined-sight')){
+          const checks=await combinedSightLines(page,base,viewports);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive combined sight-line states`);
+          return;
+        }
         if(process.argv.includes('--converse-bpt')){
           const checks=await converseProportionality(page,base,viewports);
           console.log(`DiagramGuard: ${checks} bilingual converse-proportionality states`);
           return;
         }
-        if(process.argv.includes('--sight-lines')){
-          const checks=await sightLineGeometry(page,base,viewports);
-          console.log(`DiagramGuard: ${checks} bilingual and responsive sight-line states`);
+        if(process.argv.includes('--grade9-coordinate-activities')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await grade9CoordinateActivities(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 9 coordinate activity states`);
+          return;
+        }
+        if(process.argv.includes('--algebra-quadratics')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await algebraQuadratics(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 10 quadratic graph states`);
+          return;
+        }
+        if(process.argv.includes('--grade9-angles')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await grade9Angles(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 9 exercise angle states`);
+          return;
+        }
+        if(process.argv.includes('--exercise-measurements')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await exerciseMeasurements(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 9 and 10 exercise figure renderings`);
+          return;
+        }
+        if(process.argv.includes('--unit-circle-endpoints')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await unitCircleEndpoints(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive unit-circle endpoint states`);
+          return;
+        }
+        if(process.argv.includes('--similarity-scaling')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await similarityScaling(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive similarity scaling states`);
+          return;
+        }
+        if(process.argv.includes('--similarity-results')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await similarityResults(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive similarity results states`);
+          return;
+        }
+        if(process.argv.includes('--parallel-construction')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await parallelConstruction(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive parallel construction states`);
+          return;
+        }
+        if(process.argv.includes('--road-midpoint')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await roadMidpoint(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive sightline and midpoint exercise states`);
           return;
         }
         if(width===390&&!live){
@@ -764,7 +1626,18 @@ async function main(){
           await trigAndBisectorGeometry(page,base,[[320,844]]);
           await converseProportionality(page,base,[[320,844]]);
           await sightLineGeometry(page,base,[[320,844]]);
+          await combinedSightLines(page,base,[[320,844]]);
           await statisticsPlotGeometry(page,base,[[320,844]]);
+          await vennGeometry(page,base,[[320,844]]);
+          await similarityScaling(page,base,[[320,844]]);
+          await similarityResults(page,base,[[320,844]]);
+          await parallelConstruction(page,base,[[320,844]]);
+          await roadMidpoint(page,base,[[320,844]]);
+          await grade9CoordinateActivities(page,base,[[320,844]]);
+          await algebraQuadratics(page,base,[[320,844]]);
+          await grade9Angles(page,base,[[320,844]]);
+          await exerciseMeasurements(page,base,[[320,844]]);
+          await unitCircleEndpoints(page,base,[[320,844]]);
           await page.setViewportSize({width,height});
         }
         for(const lang of ['en','ta']){

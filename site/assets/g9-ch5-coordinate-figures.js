@@ -4,6 +4,20 @@
   const indigo = '#443878';
   const teal = '#166353';
   const labelDirections = [[0,-1],[-1,0],[1,0],[0,1]];
+  window.TriggleCoordinateFigures.register('c9-5-5-practice-',{
+    6:{points:{A:[0,0], B:[3,4], C:[3,0]},segments:['AC','CB','AB'],rightAngle:'ACB',
+      compactAxes:true, verticalAxis:true, showOrigin:false,
+      directions:{A:[-1,1],B:[0,-1],C:[1,1]},
+      description:{en:'Distance from A (0, 0) to B (3, 4), with horizontal length 3 and vertical length 4.',
+        ta:'A (0, 0) முதல் B (3, 4) வரையிலான தொலைவு. கிடைமட்ட நீளம் 3, செங்குத்து நீளம் 4.'},
+      annotationLabel:{en:'Distance',ta:'தொலைவு'},annotations:['3² + 4² = 5²']}
+  });
+  window.TriggleCoordinateFigures.register('g9-ch5-concept-',{
+    distance:{points:{A:[1,2],B:[4,6],C:[4,2]},segments:['AC','CB','AB'],
+      segmentColors:{AC:'#994a50',CB:'#366788',AB:teal},rightAngle:'ACB',gridStep:1,
+      bounds:{xMin:-.85,xMax:5.2,yMin:-.5,yMax:7.2},showOrigin:false,
+      directions:{A:[-1,-1],B:[1,-1],C:[1,1]}}
+  });
   const part = { A:[-3,3], B:[2,3], C:[-6,-1], D:[5,-1] };
   const plots = {
     q1: {

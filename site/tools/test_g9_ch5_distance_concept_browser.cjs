@@ -30,12 +30,16 @@ async function main(){
       try{
         const url=base+'/index.html?class=9&chapter=g9-ch5&section=concepts&concept=0';
         await page.goto(url,{waitUntil:'load'});
-        await page.locator('.g9-distance-lab svg').waitFor({state:'visible'});
+        const plot=page.locator('.g9-distance-lab svg[data-dg-ready]');
+        await plot.waitFor({state:'visible'});
         assert.equal(await page.locator('.sp2-nav-button').count(),7,'The distance bookmark opens inside the seven-lesson chapter');
         assert.equal(await page.locator('.sp2-formula .katex').count(),1,'Complete radical must use KaTeX');
         assert.equal(await page.locator('.sp2-formula .mord.sqrt').count()>0,true,'Square-root notation visible');
         assert.match(await page.locator('.g9-distance-lab').innerText(),/Horizontal 3/);
-        assert.equal(await page.locator('.g9-distance-lab svg line').count(),0,'Grid segments are labelled SVG paths');
+        for(const axis of ['x','y']){
+          assert(await plot.locator(`[data-dg-reference-grid] line[data-dg-grid-axis="${axis}"]`).count()>0,
+            `The ${axis} reference grid is drawn`);
+        }
         assert.equal(await page.locator('[data-adaptive-dock]').isVisible(),true);
         assert.equal(await page.locator('.hub-back-menu').isVisible(),false);
         assert.equal(await page.locator('.sp2-concept-video-button').count(),1,'Video link exists');

@@ -65,7 +65,15 @@
   font-variant-numeric: tabular-nums;
 }
 .diagramguard-coordinate-key > span { white-space: nowrap; }
+.diagramguard-coordinate-key[hidden] { display: none; }
 .diagramguard-coordinate-key > .diagramguard-named-point { white-space: normal; }
+.diagramguard-coordinate-scale {
+  display: block;
+  margin: 0 0 .5rem;
+  text-align: center;
+  color: var(--text-secondary, #525b62);
+  font: 500 var(--diagramguard-secondary, .875rem)/1.45 var(--ver-font, system-ui, sans-serif);
+}
 
 .diagramguard-coordinate-legend {
   display: flex;

@@ -278,36 +278,18 @@
   }
 
 
-  // Compact, original point plot for the Grade 9 §5.3 distance concept.
-  // The three sides are exactly 3, 4 and 5 units; no scaled measurement
-  // or misleading drawn angle is used as a substitute for Pythagoras.
   function showG9DistanceGrid(host,lang){
     const ta=lang==='ta';
-    const grid=Array.from({length:8},(_,i)=>{
-      const x=48+27*i,y=190-27*i;
-      return '<path d="M'+x+' 14 V190 M48 '+y+' H264"/>';
-    }).join('');
+    const description=ta?'ஆயத்தொலைவுப் புள்ளிகள் A(1,2), B(4,6) இடையேயான தொலைவு':'Distance between coordinate points A(1,2) and B(4,6)';
     host.className='g9-distance-lab';
     host.setAttribute('role','group');
-    host.setAttribute('aria-label',ta?'ஆயத்தொலைவுப் புள்ளிகள் A(1,2), B(4,6) இடையேயான தொலைவு':'Distance between coordinate points A(1,2) and B(4,6)');
-    host.innerHTML='<svg viewBox="0 0 290 225" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="g9-distance-grid-title g9-distance-grid-desc">'+
-      '<title id="g9-distance-grid-title">'+(ta?'3, 4, 5 அலகுகள் கொண்ட செங்கோண முக்கோணம்':'Right triangle with sides 3, 4, 5 units')+'</title>'+
-      '<desc id="g9-distance-grid-desc">'+(ta?'A(1,2) முதல் C(4,2) வரை 3 அலகுகள்; C முதல் B(4,6) வரை 4 அலகுகள்; A முதல் B வரை 5 அலகுகள்.':'From A(1,2) to C(4,2) is 3 units; from C to B(4,6) is 4 units; the straight line AB is 5 units.')+'</desc>'+
-      '<rect x="0" y="0" width="290" height="225" rx="14" fill="#fafbfd"/>'+
-      '<g stroke="#dfe6ee" stroke-width=".85">'+grid+'</g>'+
-      '<g stroke="#66788a" stroke-width="1.5" stroke-linecap="round"><path d="M35 190 H271 M48 203 V10"/></g>'+
-      '<g fill="#56657a" font-size="10" font-family="system-ui,sans-serif"><text x="273" y="192">x</text><text x="51" y="12">y</text><text x="35" y="206">0</text><text x="72" y="206">1</text><text x="153" y="206">4</text><text x="28" y="139">2</text><text x="28" y="31">6</text></g>'+
-      '<path d="M75 136 H156" stroke="#a15354" stroke-width="3.5" stroke-linecap="round"/>'+
-      '<path d="M156 136 V28" stroke="#4a7695" stroke-width="3.5" stroke-linecap="round"/>'+
-      '<path d="M75 136 L156 28" stroke="#287b6e" stroke-width="4" stroke-linecap="round"/>'+
-      '<path d="M144 136 V124 H156" fill="none" stroke="#56657a" stroke-width="1.7"/>'+
-      '<g fill="#fff" stroke="#20324a" stroke-width="1.7"><circle cx="75" cy="136" r="4.2"/><circle cx="156" cy="28" r="4.2"/><circle cx="156" cy="136" r="3.6"/></g>'+
-      '<g font-family="system-ui,sans-serif" font-size="11" font-weight="650" fill="#233044">'+
-      '<text x="15" y="124">A(1,2)</text><text x="166" y="26">B(4,6)</text><text x="164" y="151">C</text>'+
-      '<text x="103" y="154" fill="#994a50">3 '+(ta?'அலகு':'units')+'</text>'+
-      '<text x="170" y="93" fill="#366788">4 '+(ta?'அலகு':'units')+'</text>'+
-      '<text x="57" y="79" fill="#196f64">5 '+(ta?'அலகு':'units')+'</text></g></svg>'+
-      '<p class="g9-distance-plot-note">'+(ta?'கிடைமட்டம் 3 + செங்குத்து 4; நேர்க்கோட்டுத் தொலைவு 5.':'Horizontal 3 + vertical 4; straight-line distance 5.')+'</p>';
+    host.setAttribute('aria-label',description);
+    window.TriggleCoordinateFigures.mount(host,'g9-ch5-concept-distance',description,lang);
+    const note=document.createElement('p');
+    note.className='g9-distance-plot-note';
+    note.textContent=ta?'கிடைமட்டம் 3 அலகுகள் · செங்குத்து 4 அலகுகள் · நேர்க்கோட்டுத் தொலைவு 5 அலகுகள்':
+      'Horizontal 3 units · Vertical 4 units · Straight-line distance 5 units';
+    host.append(note);
   }
 
   function showG10Ch2Visual(stage,host,lang){

@@ -31,7 +31,7 @@ const [width,height]=viewportArgument.split('x').map(Number);
       const audit=(panel)=>labels(panel).map(svg=>{
         const stat=window.TriggleDiagramGuard.audit(svg,{discover:!svg.dataset.dgScene});
         return {label:svg.getAttribute('aria-label')||svg.querySelector('title')?.textContent||svg.getAttribute('class'),
-          issues:stat.issues,unmeasured:stat.unmeasured,
+          issues:stat.issues,unmeasured:stat.unmeasured,horizontalClipping:stat.horizontalClipping,
           smallestLabelPx:stat.labels.length?Math.min(...stat.labels.map(label=>label.fontPx)):null};
       });
       const mount=async url=>{
@@ -52,7 +52,8 @@ const [width,height]=viewportArgument.split('x').map(Number);
               if(!p){report.push({locale,chapter:id,index,states:[],missing:true});continue;}
               const states=[{action:'initial',figures:audit(p)}];
               const seen=new Set();
-              for(const button of p.querySelectorAll('button[role=tab], button[class*="ch"][class*="-tab"], button[class*="-chip-btn"]')){
+              const modes='button[role=tab], button[class*="ch"][class*="-tab"], button[class*="-chip-btn"], .g9-investigation-activity .sp2-answers button';
+              for(const button of p.querySelectorAll(modes)){
                 if(seen.has(button.textContent)||!button.getClientRects().length||button.disabled)continue;
                 seen.add(button.textContent);button.click();
                 await settle();
@@ -84,7 +85,8 @@ const [width,height]=viewportArgument.split('x').map(Number);
       routesWithSvg:results.filter(route=>route.states.some(state=>state.figures.length)).length,
       states:states.length,statesWithPictures:states.filter(state=>state.figures.length).length,
       renderedInstances:figures.length,flaggedInstances:figures.filter(figure=>figure.issues.length).length,
-      boundaryFlags:figures.flatMap(figure=>figure.issues).filter(issue=>issue.kind==='boundary').length
+      boundaryFlags:figures.flatMap(figure=>figure.issues).filter(issue=>issue.kind==='boundary').length,
+      horizontallyClipped:figures.filter(figure=>Object.values(figure.horizontalClipping||{}).some(px=>px>1)).length
     };
     console.log(JSON.stringify({engine:useWebKit?'WebKit':'Chromium',viewport:{width,height},textSize,includePreviews,summary,routes:results},null,2));
   }finally{await browser?.close();await app.close()}

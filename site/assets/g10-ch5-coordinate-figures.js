@@ -4,6 +4,13 @@
   const indigo = '#443878';
   const rust = '#963f1b';
   const teal = '#166353';
+  window.TriggleCoordinateFigures.register('c10-5-5-practice-',{
+    20:{points:{A:[2,4],M:[5,7],B:[8,10]},segments:['AB'],activePoint:'M',showOrigin:false,
+      bounds:{xMin:-.8,xMax:9,yMin:-.7,yMax:11.4},
+      directions:{A:[-1,1],M:[1,1],B:[1,-1]},
+      description:{en:'The midpoint M (5, 7) lies halfway along the line segment from A (2, 4) to B (8, 10).',
+        ta:'A (2, 4), B (8, 10) ஆகிய புள்ளிகளை இணைக்கும் கோட்டுத்துண்டின் நடுப்புள்ளி M (5, 7).'}}
+  });
   const shared = {A:[-5,3], B:[-4,-2], C:[2,-1], D:[1,3], E:[1.5,1], F:[-2,3], G:[-4.5,.5]};
   const partition = highlight => ({
     points:shared, outlines:[['ABCD',indigo,.07], [highlight,rust,.23]],

@@ -12,145 +12,70 @@
   const option = (label, result, diagram, math) => ({label, result, diagram, math});
   const answer = (label, feedback, correct = false) => ({label, feedback, correct});
   const detail = (text, math) => ({text, math});
-  const escape = value => String(value).replace(/[&<>"']/g, char => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  })[char]);
-  const choose = (value, lang) => value[lang === 'ta' ? 'ta' : 'en'];
   const signed = n => String(n).replace('-', '−');
   const pair = ([x, y]) => `(${signed(x)}, ${signed(y)})`;
   const between = (a, b, fraction) => a.map((value, i) => value + (b[i] - value) * fraction);
-  const positiveGrid = {minX: 0, maxX: 8, minY: 0, maxY: 5};
-  const centeredGrid = {minX: -5, maxX: 5, minY: -4, maxY: 4};
+  const positiveGrid = {xMin: 0, xMax: 8, yMin: 0, yMax: 5};
+  const centeredGrid = {xMin: -5, xMax: 5, yMin: -4, yMax: 4};
+  const highlight = '#13594e';
+  const above = [[0, -1], [1, -1], [-1, -1], [1, 0], [-1, 0], [0, 1]];
+  const below = above.map(([x, y]) => [x, -y]);
 
-  // Use the same scale on both axes, including diagrams with negative coordinates.
-  function drawGrid(lang, {description, bounds = centeredGrid, points, lines = [], quadrants = false}) {
-    const {minX, maxX, minY, maxY} = bounds;
-    const step = Math.min(28, 248 / (maxX - minX));
-    const x = value => 170 + step * (value - (minX + maxX) / 2);
-    const y = value => 24 + step * (maxY - value);
-    const bottom = y(minY);
-    const width = 340;
-    const height = bottom + 27;
-    const desc = escape(choose(description, lang));
-    const path = (a, b) => `M${x(a[0])} ${y(a[1])}L${x(b[0])} ${y(b[1])}`;
-    const grid = [];
-    const ticks = [];
-    for (let i = minX; i <= maxX; i++) {
-      grid.push(path([i, minY], [i, maxY]));
-      if (i !== 0) ticks.push(`<text x="${x(i)}" y="${bottom + 15}" text-anchor="middle">${signed(i)}</text>`);
-    }
-    for (let i = minY; i <= maxY; i++) {
-      grid.push(path([minX, i], [maxX, i]));
-      if (i !== 0) ticks.push(`<text x="${x(minX) - 9}" y="${y(i) + 4}" text-anchor="end">${signed(i)}</text>`);
-    }
-    const quadrantLabels = quadrants
-      ? [[3.75, 3, 'I'], [-3.75, 3, 'II'], [-3.75, -3, 'III'], [3.75, -3, 'IV']]
-        .map(([a, b, label]) => `<text x="${x(a)}" y="${y(b)}" text-anchor="middle">${label}</text>`).join('')
-      : '';
-    const marks = points.map(({at, name, active = false, dx = 8, dy = -9, anchor = 'start'}) => {
-      const [a, b] = at;
-      const color = active ? '#13594e' : '#23416b';
-      return `<circle cx="${x(a)}" cy="${y(b)}" r="${active ? 5 : 4}" fill="${color}" stroke="white" stroke-width="1.3"/>` +
-        `<text x="${x(a) + dx}" y="${y(b) + dy}" text-anchor="${anchor}" fill="${color}" font-weight="650" stroke="#f8fafc" stroke-width="3" paint-order="stroke">${escape(name)}</text>`;
-    }).join('');
-    const edges = lines.map(({from, to, color = '#33698b', dashed = false}) =>
-      `<path d="${path(from, to)}" fill="none" stroke="${color}" stroke-width="${dashed ? 1.8 : 2.8}"${dashed ? ' stroke-dasharray="4 3"' : ''}/>`).join('');
-    return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" style="display:block;max-width:100%;height:auto;margin-inline:auto" role="img" aria-label="${desc}">` +
-      `<title>${desc}</title><rect width="${width}" height="${height}" rx="10" fill="#f8fafc"/>` +
-      `<path d="${grid.join(' ')}" fill="none" stroke="#dce5ed"/>` +
-      `<path d="${path([minX, 0], [maxX, 0])} ${path([0, minY], [0, maxY])}" fill="none" stroke="#475b74" stroke-width="1.5"/>` +
-      `<g fill="#475b74" font-family="system-ui,sans-serif" font-size="13">${ticks.join('')}${quadrantLabels}` +
-      `<text x="${x(maxX) + 9}" y="${y(0) + 4}">x</text><text x="${x(0) + 6}" y="17">y</text>` +
-      `<text x="${x(0) - 6}" y="${y(0) + 15}" text-anchor="end">O</text>${edges}${marks}</g></svg>`;
+  function grid(bounds, points, activePoint, options = {}) {
+    return {bounds, points, activePoint, axisNames: ['x', 'y'], gridStep: 1,
+      verticalAxis: true, ...options};
   }
 
   function mapOption(label, at, description) {
-    return option(label, description, lang => drawGrid(lang, {
-      description, bounds: positiveGrid,
-      points: [{at, name: `P${pair(at)}`, active: true}],
-      lines: [
-        {from: [0, 0], to: [at[0], 0], color: '#13594e'},
-        {from: [at[0], 0], to: at, color: '#13594e', dashed: true}
-      ]
+    return option(label, description, grid(positiveGrid, {P: at}, 'P', {
+      projections: true, walk: true, directions: {P: above}
     }));
   }
 
   function plotOption(label, at, description) {
-    return option(label, description, lang => drawGrid(lang, {
-      description, quadrants: true,
-      points: [{
-        at, name: `P${pair(at)}`, active: true,
-        dx: at[0] > 0 ? 8 : -8, anchor: at[0] > 0 ? 'start' : 'end'
-      }],
-      lines: [
-        {from: [0, 0], to: [at[0], 0], color: '#13594e'},
-        {from: [at[0], 0], to: at, color: '#13594e', dashed: true}
-      ]
+    const bounds = {...centeredGrid, yMin: -5, yMax: 5};
+    return option(label, description, grid(bounds, {P: at}, 'P', {
+      projections: true, walk: true, quadrants: true, directions: {P: at[1] < 0 ? below : above}
     }));
   }
 
   function midpointOption(label, b, description, math) {
     const a = [-4, 2];
-    const mid = between(a, b, 1 / 2);
-    return option(label, description, lang => drawGrid(lang, {
-      description,
-      points: [
-        {at: a, name: `A${pair(a)}`, dx: -4, anchor: 'end'},
-        {at: b, name: `B${pair(b)}`, dx: 6, dy: 17},
-        {at: mid, name: `M${pair(mid)}`, active: true}
-      ],
-      lines: [{from: a, to: mid}, {from: mid, to: b, color: '#13594e'}]
+    const points = {A: a, B: b, M: between(a, b, 1 / 2)};
+    return option(label, description, grid(centeredGrid, points, 'M', {
+      segments: ['AM', 'MB'], segmentColors: {MB: highlight}, associateLabels: 'ABM',
+      showOrigin: points.M.some(value => value !== 0),
+      directions: {A: above, B: below, M: above}
     }), math);
   }
 
   function trisectionOption(first, label, description, math) {
     const a = [-4, -3], b = [5, 3];
-    const p = between(a, b, 1 / 3), q = between(a, b, 2 / 3);
-    return option(label, description, lang => drawGrid(lang, {
-      description,
-      points: [
-        {at: a, name: `A${pair(a)}`, dx: -3, anchor: 'end'},
-        {at: p, name: `P${pair(p)}`, active: first},
-        {at: q, name: `Q${pair(q)}`, dy: 18, active: !first},
-        {at: b, name: `B${pair(b)}`, dx: 3, anchor: 'end'}
-      ],
-      lines: [
-        {from: a, to: p}, {from: p, to: q, color: '#13594e'},
-        {from: q, to: b}
-      ]
+    const points = {A: a, P: between(a, b, 1 / 3), Q: between(a, b, 2 / 3), B: b};
+    return option(label, description, grid(centeredGrid, points, first ? 'P' : 'Q', {
+      segments: ['AP', 'PQ', 'QB'], segmentColors: {PQ: highlight}, associateLabels: 'APQB',
+      directions: {A: below, P: above, Q: below, B: above}
     }), math);
   }
 
   function ratioOption(m, n, description, math) {
     const a = [-4, -2], b = [4, 2];
     const p = between(a, b, m / (m + n));
-    return option(copy(`${m} : ${n}`, `${m} : ${n}`), description, lang => drawGrid(lang, {
-      description,
-      points: [
-        {at: a, name: `A${pair(a)}`, dx: -4, anchor: 'end'},
-        {at: b, name: `B${pair(b)}`, dx: 4, anchor: 'end'},
-        {at: p, name: `P${pair(p)}`, active: true, dy: 18}
-      ],
-      lines: [{from: a, to: p}, {from: p, to: b, color: '#13594e'}]
+    return option(copy(`${m} : ${n}`, `${m} : ${n}`), description, grid(centeredGrid, {A: a, P: p, B: b}, 'P', {
+      segments: ['AP', 'PB'], segmentColors: {PB: highlight}, associateLabels: 'APB',
+      showOrigin: p.some(value => value !== 0), directions: {A: below, P: below, B: above}
     }), math);
   }
 
   function centroidOption(c, description, math) {
     const a = [1, 1], b = [7, 1];
-    const vertices = [a, b, c];
-    const midpoints = [between(b, c, 1 / 2), between(c, a, 1 / 2), between(a, b, 1 / 2)];
+    const d = between(a, b, 1 / 2);
     const g = a.map((value, i) => (value + b[i] + c[i]) / 3);
-    return option(copy(`C${pair(c)}`, `C${pair(c)}`), description, lang => drawGrid(lang, {
-      description, bounds: {...positiveGrid, maxY: 8},
-      points: [
-        {at: a, name: 'A', dx: -9, anchor: 'end'}, {at: b, name: 'B'},
-        {at: c, name: 'C'}, {at: midpoints[2], name: 'D', dy: 17},
-        {at: g, name: `G${pair(g)}`, active: true}
-      ],
-      lines: [
-        {from: a, to: b}, {from: b, to: c}, {from: c, to: a},
-        ...vertices.map((from, i) => ({from, to: midpoints[i], dashed: true, color: '#13594e'}))
-      ]
+    const points = {A: a, B: b, C: c, D: d, G: g};
+    return option(copy(`C${pair(c)}`, `C${pair(c)}`), description, grid({...positiveGrid, yMax: 8}, points, 'G', {
+      segments: ['AB', 'BC', 'CA'], guides: ['AE', 'BF', 'CD'], associateLabels: 'ABCDG',
+      constructionPoints: {E: between(b, c, 1 / 2), F: between(c, a, 1 / 2)},
+      directions: {A: below, B: below, C: above, D: below, G: [[0, -1], [1, 0], [0, 1], [-1, 0]]}
     }), math);
   }
 

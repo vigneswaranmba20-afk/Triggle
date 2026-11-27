@@ -105,6 +105,20 @@
     if(!matrix||!view.width||!view.height)return null;
     return corners(matrix,view);
   }
+  function horizontalClipping(element) {
+    const box=element.getBoundingClientRect();
+    const root=document.documentElement;
+    let left=0,right=root.clientWidth;
+    for(let parent=element.parentElement;parent&&parent!==root;parent=parent.parentElement){
+      if(!['auto','scroll','hidden','clip'].includes(getComputedStyle(parent).overflowX)||!parent.clientWidth)continue;
+      const rect=parent.getBoundingClientRect();
+      const scale=parent.offsetWidth?rect.width/parent.offsetWidth:1;
+      const inset=rect.left+parent.clientLeft*scale;
+      left=Math.max(left,inset);
+      right=Math.min(right,inset+parent.clientWidth*scale);
+    }
+    return {left:Math.max(0,left-box.left),right:Math.max(0,box.right-right)};
+  }
   function obstacles(svg,discover) {
     const selector=discover?geometrySelector:'[data-dg-obstacle]';
     return [...svg.querySelectorAll(selector)].flatMap((el,index)=>{
@@ -231,7 +245,8 @@
       issues.push(...collisions(label,boundary,shapes,labels,gap));
       labels.push(label);
     }
-    return {measured:true,labels:labels.map(({id,fontPx,box})=>({id,fontPx,box})),issues,unmeasured:marked.unmeasured};
+    return {measured:true,labels:labels.map(({id,fontPx,box})=>({id,fontPx,box})),issues,unmeasured:marked.unmeasured,
+      horizontalClipping:horizontalClipping(svg)};
   }
   function offsets(direction,font) {
     const n=distance(direction,[0,0]);
@@ -326,7 +341,7 @@
       fontsReady=true;
       refresh(true);
     });
-    return ()=>refresh(true);
+    return (force=true)=>refresh(force);
   }
-  window.TriggleDiagramGuard=Object.freeze({audit,place,canvasLabel,responsive});
+  window.TriggleDiagramGuard=Object.freeze({audit,place,canvasLabel,horizontalClipping,responsive});
 })();

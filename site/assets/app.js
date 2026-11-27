@@ -697,14 +697,16 @@
    renderedFigureLanguage=lang;
    const figure=$('inlineFigure');const yes=isQuestionFigure(current);
    figure.hidden=!yes; if(!yes)return;
-   const aligned=window.TriggleSetVenn?.render(current,lang);
+   const generated=window.TriggleSetVenn?.render(current,lang)||window.TriggleSightlineExercises?.render({item:current,lang});
    const figSpec=resolveFigureSpec(current);
-   const svg=figSpec?textbookFigureImage(current,66):(aligned?.html||window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)}));
+   const svg=figSpec?textbookFigureImage(current,66):(generated?.html||window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)}));
    mountFigure($('inlineFigureVisual'),svg,current);
    localizeInlineSvg($('inlineFigureVisual'),current);
    const d=current.diagram;
    const measures=d?.kind==='triangle'?((lang==='ta'?'எதிர்ப்பக்கம் ':'Opposite ')+d.opp+' · '+(lang==='ta'?'அடுத்துள்ள பக்கம் ':'Adjacent ')+d.adj+' · '+(lang==='ta'?'கர்ணம் ':'Hypotenuse ')+d.hyp+'. '):'';
-   $('inlineFigureCaption').textContent=figSpec?(figureCaption(current,figSpec)||ui('textbookFigure')):(aligned?.caption||(measures+ui('inlineFigureNote')));
+   const plottedCaption=$('inlineFigureVisual').querySelector('svg[data-dg-caption]')?.dataset.dgCaption;
+   $('inlineFigureCaption').textContent=figSpec?(figureCaption(current,figSpec)||ui('textbookFigure')):
+    (plottedCaption??(generated?.caption||(measures+ui('inlineFigureNote'))));
  }
  function renderText(){
   // Icon-only controls on narrow readers still have full bilingual names.
@@ -949,7 +951,8 @@
   if(!hasUsefulFigure(current))return;
   const context={item:current,lang,renderText:tr};
   const figSpec=resolveFigureSpec(current);
-  let graphic=figSpec?{html:textbookFigureImage(current,78),caption:figureCaption(current,figSpec)||ui('textbookFigure')}:(window.TriggleSetVenn?.render(current,lang)||window.TriggleConcept?.render(context));
+  let graphic=figSpec?{html:textbookFigureImage(current,78),caption:figureCaption(current,figSpec)||ui('textbookFigure')}:
+   (window.TriggleSetVenn?.render(current,lang)||window.TriggleSightlineExercises?.render(context)||window.TriggleConcept?.render(context));
   if(!graphic){let svg='';if(current.diagram&&typeof current.diagram==='object')svg=window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)});else svg=window.TriggleDraw.drawSimple(current.diagram||'identity');graphic={html:svg,caption:lang==='ta'?'படம் விளக்கத்திற்காக மட்டுமே; அளவுப்படி இல்லாமல் இருக்கலாம்.':'Original conceptual illustration; not necessarily drawn to scale.'}}
   mountFigure($('diagramContent'),graphic.html,current);
   if(current.geometryConstruction) {
@@ -959,7 +962,7 @@
   const coordinatePlot=$('diagramContent').querySelector('.diagramguard-coordinate');
   $('visualTitle').textContent=coordinatePlot?ui('diagram'):figSpec?graphic.caption:tr(current.title);
   const caption=$('coordinateFigureCaption');
-  caption.textContent=coordinatePlot?graphic.caption:'';
+  caption.textContent=coordinatePlot?(coordinatePlot.dataset.dgCaption??graphic.caption):'';
   caption.hidden=!caption.textContent;
   // Keep the final answer available for comparison while viewing the figure.
   $('diagramCompare').hidden=isG9GeometryExercise(current);
@@ -967,8 +970,10 @@
   $('diagramCompareLabel').textContent=ui('finalAnswer');
   figureOpener=event?.currentTarget||document.activeElement;
   $('figureDialog').showModal();
+  window.TriggleCoordinateFigures?.reflow?.($('diagramContent'));
   $('figureDialog').scrollTop=0;
-  if(grade===9)window.TriggleNotation?.prepareSvg?.($('diagramContent'),window.TriggleG9Math?.diagramLabels);
+  // Managed plots need their measured native SVG labels through every reopen.
+  if(grade===9&&!coordinatePlot)window.TriggleNotation?.prepareSvg?.($('diagramContent'),window.TriggleG9Math?.diagramLabels);
   window.TriggleNotation?.prepare?.($('diagramCompare'));
   $('closeDiagram').focus({preventScroll:true});
   window.TriggleConcept?.attach(context,$('diagramContent'));

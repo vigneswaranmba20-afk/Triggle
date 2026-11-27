@@ -44,11 +44,31 @@
     return ends.length===2?ends:null;
   }
 
-  function drawGrid(svg, toPlot, bounds, step) {
-    const labels = [...svg.querySelectorAll('text')].map(node=>node.getBBox());
+  function clipQuadratic([a,b,c],{xMin,xMax,yMin,yMax}) {
+    const height = x => (a*x+b)*x+c;
+    const cuts = [xMin,xMax];
+    for (const limit of [yMin,yMax]) {
+      const discriminant = b*b-4*a*(c-limit);
+      if (discriminant < 0) continue;
+      const root = Math.sqrt(discriminant);
+      for (const x of [(-b-root)/(2*a),(-b+root)/(2*a)]) {
+        if (x>xMin && x<xMax) cuts.push(x);
+      }
+    }
+    cuts.sort((x,y)=>x-y);
+    return cuts.slice(0,-1).flatMap((start,index)=>{
+      const end=cuts[index+1], mid=(start+end)/2;
+      if (end-start<1e-9 || height(mid)<yMin || height(mid)>yMax) return [];
+      // x is affine in t. The initial tangent fixes the control point of the exact quadratic Bézier.
+      const control=height(start)+(mid-start)*(2*a*start+b);
+      return [[[start,height(start)],[mid,control],[end,height(end)]]];
+    });
+  }
+
+  function drawGrid(svg, toPlot, bounds, step, labels=[...svg.querySelectorAll('text')].map(node=>node.getBBox())) {
     const [left,bottom] = toPlot(bounds.xMin,bounds.yMin);
     const [right,top] = toPlot(bounds.xMax,bounds.yMax);
-    const group = shape('g',{'aria-hidden':'true',stroke:grid,'stroke-width':'.8'});
+    const group = shape('g',{'aria-hidden':'true','data-dg-reference-grid':'',stroke:grid,'stroke-width':'.8'});
     // Break only reference grid lines around labels. Axes and geometric edges stay whole.
     function gridLine(fixed,start,end,vertical) {
       const gaps = labels.flatMap(({x,y,width,height})=>{
@@ -59,7 +79,7 @@
       const point = value => vertical ? [fixed,value] : [value,fixed];
       let cursor = start;
       for (const [from,to] of [...gaps,[end,end]]) {
-        if (from > cursor) group.append(line(point(cursor),point(Math.min(from,end)),{}));
+        if (from > cursor) group.append(line(point(cursor),point(Math.min(from,end)),{'data-dg-grid-axis':vertical?'x':'y'}));
         cursor = Math.max(cursor,to);
         if (cursor >= end) break;
       }
@@ -72,10 +92,11 @@
   }
 
   function draw(svg, config, width, rem) {
-    const {points,outlines=[],segments=[],guides=[],constructionPoints={},circle,rightAngle,rightAngles=[],analyticLines=[],bounds,
+    const {points,outlines=[],segments=[],segmentColors={},guides=[],constructionPoints={},circle,rightAngle,rightAngles=[],analyticLines=[],bounds,
       directions={},edgeDirections={},insideLabels='',associateLabels='',
       axes=true,showOrigin=true,fullAxes=false,labelNegativeAxes=true,axisLabelDirections={},compactAxes=false,
-      quadrants=false,projections=false,pointNames=true}=config;
+      axisNames=['X','Y'],verticalAxis=false,activePoint,
+      quadrants=false,projections=false,walk=false,pointNames=true,gridStep}=config;
     const xy = [...Object.values(points),...Object.values(constructionPoints)];
     const xs = xy.map(([x])=>x);
     const ys = xy.map(([,y])=>y);
@@ -89,12 +110,14 @@
     const xMax = bounds?.xMax ?? ((fullAxes ? Math.max(axisReach,...xs) : axes && xMin<0 ? Math.max(0,...xs) : Math.max(...xs))+(axes ? 1 : 0));
     const yMin = bounds?.yMin ?? (axes ? Math.min(0,...ys)-1 : Math.min(...ys));
     const yMax = bounds?.yMax ?? ((axes ? Math.max(0,...ys) : Math.max(...ys))+(axes ? 1 : 0));
+    const hasVerticalAxis=verticalAxis||xMin<0;
     const inset = rem*(projections ? 1.3 : 1.12);
     const verticalInset = rem*1.45;
-    const verticalRatio = projections || quadrants ? 1 : axes ? .72 : .88;
+    const bottomInset = rem*(config.bottomInset ?? 1.45);
+    const verticalRatio = config.heightRatio ?? (projections || quadrants ? 1 : axes ? .72 : .88);
     const scale = Math.min((width-2*inset)/(xMax-xMin),width*verticalRatio/(yMax-yMin));
     const edgeLabels = projections && scale<rem*1.18;
-    const height = Math.ceil((yMax-yMin)*scale+2*verticalInset);
+    const height = Math.ceil((yMax-yMin)*scale+verticalInset+bottomInset);
     const originX = (width-(xMax-xMin)*scale)/2-xMin*scale;
     const originY = verticalInset+yMax*scale;
     const toPlot = (x,y) => [originX+x*scale,originY-y*scale];
@@ -103,6 +126,20 @@
     svg.setAttribute('viewBox',`0 0 ${width} ${height}`);
     svg.replaceChildren();
 
+    for (const {x, value, width:barWidth, color=indigo} of config.bars||[]) {
+      const [left,top] = toPlot(x-barWidth/2,value);
+      const [,bottom] = toPlot(x,0);
+      svg.append(shape('rect',{x:left,y:top,width:barWidth*scale,height:bottom-top,fill:color,
+        'data-dg-bar':value,'data-dg-obstacle':'bar-'+x,'data-dg-fill':''}));
+    }
+    if (config.quarterCircle) {
+      const [cx,cy]=toPlot(0,0), [right,top]=toPlot(1,1);
+      const arc=`M${cx} ${top} A${scale} ${scale} 0 0 1 ${right} ${cy}`;
+      svg.append(shape('path',{d:`${arc}L${cx} ${cy}Z`,fill:indigo,'fill-opacity':.07,
+        'data-dg-obstacle':'quadrant-fill','data-dg-fill':''}));
+      svg.append(shape('path',{d:arc,fill:'none',stroke:indigo,'stroke-width':1.6,
+        'data-dg-obstacle':'quadrant-arc','data-dg-quadrant':''}));
+    }
     if (circle) {
       const [center,radius] = circle;
       const [cx,cy] = toPlot(...center);
@@ -120,7 +157,7 @@
     }
     const edges = new Map();
     for (const names of guides) edges.set([...names].sort().join(''),[names,axis,1.4,'4 3']);
-    for (const names of segments) edges.set([...names].sort().join(''),[names,indigo,1.4]);
+    for (const names of segments) edges.set([...names].sort().join(''),[names,segmentColors[names]||indigo,1.4]);
     for (const [index,[names,color]] of outlines.entries())
       [...names].forEach((id,i)=>{
         const edge = id+names[(i+1)%names.length];
@@ -129,6 +166,7 @@
       });
 
     const placements = [];
+    const quadrantPlacements = walk ? [] : placements;
     const secondaryTicks = [];
     for (const {id,coefficients,color=indigo,dashed=false} of analyticLines) {
       const visible=clipLine(coefficients,windowBounds);
@@ -136,6 +174,20 @@
       const [start,end]=visible.map(point=>toPlot(...point));
       svg.append(line(start,end,{stroke:color,'stroke-width':1.65,'data-dg-obstacle':'line-'+id,'data-dg-analytic-line':id,
         ...(dashed?{'stroke-dasharray':'4 3'}:{})}));
+    }
+    for (const {id,coefficients,color=indigo} of config.quadratics||[]) {
+      const parts=clipQuadratic(coefficients,windowBounds);
+      if (!parts.length) continue;
+      const d=parts.map(points=>{
+        const [start,control,end]=points.map(point=>toPlot(...point).join(' '));
+        return `M${start}Q${control} ${end}`;
+      }).join(' ');
+      svg.append(shape('path',{d,stroke:color,'stroke-width':2.05,'fill':'none',
+        'data-dg-obstacle':'curve-'+id,'data-dg-quadratic':id}));
+    }
+    for (const {id,from,to,color=axis} of config.projectionSegments||[]) {
+      svg.append(line(toPlot(...from),toPlot(...to),{stroke:color,'stroke-width':1.35,
+        'stroke-dasharray':'4 3','data-dg-obstacle':'projection-'+id,'data-dg-projection':id}));
     }
     function addArrow(id,tip,[dx,dy],showLabel=true) {
       const [x,y] = tip;
@@ -145,7 +197,7 @@
           'stroke-width':'1.1','data-dg-obstacle':id+'-arrow'}));
       if (!showLabel) return;
       let candidates;
-      if (edgeLabels && id==='X') candidates = [[.78*rem,-.21*rem]];
+      if (edgeLabels && id===axisNames[0]) candidates = [[.78*rem,-.21*rem]];
       if (id==='X′') {
         // Wider fallback fonts can use the space above or below the arrow while keeping the axis association.
         candidates = [[-.69,0],[-.4,-.78],[-.4,.78],[0,-.97],[0,.97],[.2,-1.08],[.2,1.08]]
@@ -158,22 +210,29 @@
       addArrow(id,end,direction);
       if (fullAxes) addArrow(id+'′',start,direction.map(value=>-value),labelNegativeAxes);
     }
-    if (axes) addAxes('X',toPlot(xMin,0),toPlot(xMax,0),[1,0]);
-    if (axes && xMin<0) addAxes('Y',toPlot(0,yMin),toPlot(0,yMax),[0,-1]);
-    if (projections) drawProjections(svg,points,toPlot,{width,yMin,yMax},edgeLabels,rem,placements,secondaryTicks);
+    if (axes) addAxes(axisNames[0],toPlot(xMin,0),toPlot(xMax,0),[1,0]);
+    if (axes && hasVerticalAxis) addAxes(axisNames[1],toPlot(0,yMin),toPlot(0,yMax),[0,-1]);
+    for (const value of config.xAxisValues||[]) {
+      placements.push({label:text('x-value-'+value,axis,'secondary',number(value)),anchor:toPlot(value,0),
+        candidates:[.78,.99,1.19].map(offset=>[0,offset*rem])});
+    }
+    if (projections) drawProjections(svg,points,toPlot,{width,yMin,yMax},edgeLabels,rem,placements,secondaryTicks,walk);
     if (quadrants) {
       const names = ['I','II','III','IV'];
       const centers = [[xMax,yMax],[xMin,yMax],[xMin,yMin],[xMax,yMin]];
       centers.forEach(([x,y],index)=>{
         const anchor = toPlot(x*.53,y*.55);
-        const candidates = [[0,0], ...[[.74,.41],[.72,.69],[.48,.76],[.39,.63]].map(([fx,fy])=>{
+        const nearby = [[.74,.41],[.72,.69],[.48,.76],[.39,.63]];
+        if (walk) nearby.push(...[.39,.53,.72,.88,1.04].flatMap(fx=>[.75,.91,1.08,1.22].map(fy=>[fx,fy])));
+        const candidates = [[0,0], ...nearby.map(([fx,fy])=>{
           const [px,py]=toPlot(x*fx,y*fy);
           return [px-anchor[0],py-anchor[1]];
         })];
-        placements.push({label:text(names[index],axis),anchor,candidates});
+        if (walk) candidates.sort((a,b)=>Math.hypot(...a)-Math.hypot(...b));
+        quadrantPlacements.push({label:text(names[index],axis),anchor,candidates});
       });
     }
-    if (axes && xMin<0 && showOrigin) {
+    if (axes && hasVerticalAxis && showOrigin) {
       const aroundOrigin = [[-1,1],[1,1],[-1,-1],[1,-1]];
       const candidates = [.57,.68,.79,.9,1.05].flatMap(offset=>
         aroundOrigin.map(([x,y])=>[x*offset*rem,y*offset*rem]));
@@ -182,7 +241,9 @@
 
     for (const [names,color,weight,dashes] of edges.values()) {
       const [a,b] = names;
-      svg.append(line(projected[a],projected[b],{stroke:color,'stroke-width':weight,
+      const start=projected[a]??toPlot(...constructionPoints[a]);
+      const end=projected[b]??toPlot(...constructionPoints[b]);
+      svg.append(line(start,end,{stroke:color,'stroke-width':weight,
         'stroke-linecap':'round','data-dg-obstacle':a+b,'data-dg-edge':a+b,
         ...(dashes?{'stroke-dasharray':dashes}:{})}));
     }
@@ -205,16 +266,40 @@
       svg.append(shape('polyline',{points:`${x+ax},${y+ay} ${x+ax+bx},${y+ay+by} ${x+bx},${y+by}`,
         fill:'none',stroke:axis,'stroke-width':1.25,'data-dg-obstacle':index?'right-angle-'+(index+1):'right-angle'}));
     }
+    const anglePlacements = [];
+    for (const {vertices, label} of config.angleMarks||[]) {
+      const [a,anchor,b] = [...vertices].map(id=>projected[id]);
+      const vectorTo = ([x,y]) => [x-anchor[0],y-anchor[1]];
+      const rays = [vectorTo(a),vectorTo(b)];
+      const lengths = rays.map(ray=>Math.hypot(...ray));
+      const [from,to] = rays.map(([x,y])=>Math.atan2(y,x));
+      const difference = Math.atan2(Math.sin(to-from),Math.cos(to-from));
+      const radius = Math.min(.49*rem,.32*Math.min(...lengths));
+      const atAngle = angle => [anchor[0]+radius*Math.cos(angle),anchor[1]+radius*Math.sin(angle)];
+      const start = atAngle(from), end = atAngle(to);
+      svg.append(shape('path',{d:`M${start.join(' ')}A${radius} ${radius} 0 0 ${Number(difference>0)} ${end.join(' ')}`,
+        fill:'none',stroke:axis,'stroke-width':1.25,'data-dg-obstacle':'angle-'+label,'data-dg-angle-mark':vertices}));
+      const bisector = from+difference/2;
+      const candidates = [1.05,1.18,1.32,1.48,1.65,1.84,2.05,2.24].map(offset=>
+        [Math.cos(bisector)*offset*rem,Math.sin(bisector)*offset*rem]);
+      // The angle's full name remains in the figure key when the sector is narrow.
+      anglePlacements.push({label:text(label,indigo,'measurement'),anchor,candidates,optional:true});
+    }
     const center = toPlot((Math.min(...xs)+Math.max(...xs))/2,(Math.min(...ys)+Math.max(...ys))/2);
     const innerCenter = [...insideLabels].reduce(([x,y],id)=>[
       x+projected[id][0]/insideLabels.length,y+projected[id][1]/insideLabels.length
     ],[0,0]);
     for (const [id,anchor] of Object.entries(projected)) {
       const [cx,cy] = anchor;
-      svg.append(shape('circle',{cx,cy,r:3.1,fill:ink,'data-dg-obstacle':'point-'+id,
-        'data-dg-fill':'','data-dg-point':id}));
+      const color=id===activePoint?'#13594e':ink;
+      if (config.pointMarkers!==false) {
+        svg.append(shape('circle',{cx,cy,r:id===activePoint?4.25:3.1,fill:color,'data-dg-obstacle':'point-'+id,
+          'data-dg-fill':'','data-dg-point':id}));
+      }
       if (!pointNames) continue;
-      const label = text(id,ink);
+      const name=config.pointLabels?.[id];
+      if (name===null) continue;
+      const label = text(id,color,'vertex',name??id);
       if (insideLabels.includes(id)) {
         // Keep pool labels close to their corners with equal clearance inside the pool.
         label.setAttribute('data-dg-allow','region-'+insideLabels);
@@ -226,21 +311,28 @@
       } else {
         const direction = (edgeLabels && edgeDirections[id]) || directions[id] || [cx-center[0],cy-center[1]];
         const neighborPoints = associateLabels.includes(id) ? Object.values(projected).filter(point=>point!==anchor) : undefined;
-        placements.push({label,anchor,direction,neighborPoints});
+        const candidates = config.labelOffsets?.[id]?.map(([x,y])=>[x*rem,y*rem]);
+        placements.push({label,anchor,direction,neighborPoints,candidates});
       }
     }
 
-    guard.place(svg,[...placements,...secondaryTicks]);
-    if (axes) drawGrid(svg,toPlot,{xMin,xMax,yMin,yMax},projections ? 1 : Math.max(1,Math.ceil(rem*.68/scale)));
+    if (walk) placements.push(...quadrantPlacements);
+    guard.place(svg,[...placements,...anglePlacements,...secondaryTicks],walk&&quadrants?{gap:rem*.18}:undefined);
+    if (axes && config.referenceGrid!==false) {
+      drawGrid(svg,toPlot,{xMin,xMax,yMin,yMax},gridStep??(projections ? 1 : Math.max(1,Math.ceil(rem*.68/scale))));
+    }
   }
 
-  function drawProjections(svg, points, project, bounds, edgeLabels, rem, placements, secondaryTicks) {
+  function drawProjections(svg, points, project, bounds, edgeLabels, rem, placements, secondaryTicks, walk) {
     const values = Object.values(points);
     for (const [id,xy] of Object.entries(points)) {
       const [x,y] = xy;
-      for (const [name,anchor] of [['x',[x,0]],['y',[0,y]]]) {
-        svg.append(line(project(...xy),project(...anchor),{stroke:indigo,'stroke-width':'1.4',
-          'stroke-dasharray':'4 3','data-dg-obstacle':id+'-'+name+'-guide'}));
+      const guides=walk ? [['x',[0,0],[x,0]],['y',[x,0],xy]] : [['x',xy,[x,0]],['y',xy,[0,y]]];
+      for (const [name,from,to] of guides) {
+        if (walk && from[0]===to[0] && from[1]===to[1]) continue;
+        svg.append(line(project(...from),project(...to),{stroke:walk?'#13594e':indigo,
+          'stroke-width':walk?'2':'1.4',...(walk&&name==='x'?{}:{'stroke-dasharray':'4 3'}),
+          'data-dg-obstacle':id+'-'+name+'-guide'}));
       }
     }
     for (const [i,name] of [[0,'x'],[1,'y']]) {
@@ -260,7 +352,13 @@
         if (!required && edgeLabels) continue;
         const label = text(id,axis,'secondary',number(value));
         const away = (i ? -1 : 1)*side;
-        if (edgeLabels) {
+        if (walk) {
+          // Keep each marked value next to its axis and opposite the route when there is room.
+          const signs = bounds.yMin===0 ? [i?-1:1] : [away,-away];
+          const offsets = [.65,.83,1.02,1.24].flatMap(size=>signs.map(sign=>size*rem*sign));
+          const queue = required ? placements : secondaryTicks;
+          queue.push({label,anchor,optional:!required,candidates:offsets.map(distance=>[dx*distance,dy*distance])});
+        } else if (edgeLabels) {
           // Follow the point's grid line to its nearest edge when the axis is crowded.
           if (i) {
             // Anchor the outer edge of the number so a wider minus glyph cannot clip.
@@ -283,7 +381,7 @@
   }
 
   function mount(container,id,description,lang) {
-    const plan = plotsById.get(id);
+    const plan = typeof id==='string' ? plotsById.get(id) : id;
     if (!plan) return false;
     const font=getComputedStyle(container).getPropertyValue('--ver-font');
     const previous=mountedFigures.get(container);
@@ -299,6 +397,7 @@
       figure.setAttribute('aria-label',description);
     }
     container.replaceChildren(figure);
+    const layouts=[];
     for (const plot of panels) {
       if (plot.heading) {
         const heading = document.createElement('span');
@@ -306,8 +405,10 @@
         heading.textContent = typeof plot.heading==='string'?plot.heading:plot.heading[lang];
         figure.append(heading);
       }
+      const title=typeof plot.heading==='object'?plot.heading[lang]:plot.heading;
       const svg = shape('svg',{class:'diagramguard-svg diagramguard-coordinate',role:'img',
-        'aria-label':typeof plot.heading==='object'?plot.heading[lang]:plot.heading||description});
+        'aria-label':title||plot.description?.[lang]||description});
+      if (typeof plot.caption==='string') svg.dataset.dgCaption=plot.caption;
       figure.append(svg);
       if (plot.key!==false) {
         const key = document.createElement('span');
@@ -325,12 +426,27 @@
         }
         figure.append(key);
       }
-      const equations=plot.analyticLines?.filter(line=>line.label);
-      if(equations?.length) {
+      if (plot.annotations?.length) {
+        const annotations=document.createElement('span');
+        annotations.className='diagramguard-coordinate-key';
+        annotations.setAttribute('role','list');
+        annotations.setAttribute('aria-label',plot.annotationLabel[lang]);
+        for (const part of plot.annotations) {
+          const entry=document.createElement('span');
+          entry.className='diagramguard-named-point';
+          entry.setAttribute('role','listitem');
+          entry.textContent=typeof part==='string'?part:part[lang];
+          annotations.append(entry);
+        }
+        figure.append(annotations);
+      }
+      const equations=[...(plot.quadratics||[]),...(plot.analyticLines||[])].filter(equation=>equation.label);
+      if(equations.length) {
         const legend=document.createElement('span');
         legend.className='diagramguard-coordinate-legend';
         legend.setAttribute('role','list');
-        legend.setAttribute('aria-label',lang==='ta'?'நேர்க்கோடுகள்':'Lines');
+        legend.setAttribute('aria-label',plot.quadratics?.length?
+          (lang==='ta'?'வரைபடச் சமன்பாடுகள்':'Graph equations'):(lang==='ta'?'நேர்க்கோடுகள்':'Lines'));
         for(const {label,color=indigo,dashed} of equations) {
           const entry=document.createElement('span');
           entry.setAttribute('role','listitem');
@@ -344,11 +460,15 @@
         }
         figure.append(legend);
       }
-      guard.responsive(svg,(width,rem)=>draw(svg,plot,width,rem));
+      layouts.push(guard.responsive(svg,(width,rem)=>draw(svg,plot,width,rem)));
     }
-    mountedFigures.set(container,{plan,description,lang,font,figure});
+    mountedFigures.set(container,{plan,description,lang,font,figure,layouts});
     return true;
   }
 
-  window.TriggleCoordinateFigures = Object.freeze({register,mount});
+  function reflow(container) {
+    for (const layout of mountedFigures.get(container)?.layouts||[]) layout(false);
+  }
+
+  window.TriggleCoordinateFigures = Object.freeze({register,mount,reflow,drawGrid});
 })();

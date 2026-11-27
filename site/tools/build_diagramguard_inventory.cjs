@@ -18,6 +18,12 @@ const plotRegistry={register(prefix,plots){Object.keys(plots).forEach(key=>coord
 for(const grade of [9,10]){
   vm.runInNewContext(rootFile('assets/g'+grade+'-ch5-coordinate-figures.js'),{window:{TriggleCoordinateFigures:plotRegistry}});
 }
+const angleFigures=new Set();
+for (const module of ['assets/g9-angle-exercise-figures.js','assets/g9-ch8-practice-figure.js']) {
+  vm.runInNewContext(rootFile(module),{window:{TriggleCoordinateFigures:{register(prefix,plots){
+    Object.keys(plots).forEach(key=>angleFigures.add(prefix+key));
+  }}}});
+}
 scope.TriggleG9FrontierGraphs(runtime.classes[9].items.filter(item=>coordinateFigures.has(item.id)));
 scope.TriggleG10CoordinateFrontier(runtime.classes[10].items.filter(item=>coordinateFigures.has(item.id)));
 const table=new Map(), referenced=new Set();
@@ -62,6 +68,12 @@ for(const grade of [9,10]){
     const ta=stripRoot(fixed?(fixed.srcTa||fixed.src):item.figureSrc&&(taOverride||item.figureSrcTa||item.figureSrc));
     const src=[curriculumModules.get(id),format(item.reference),item.page&&'p. '+format(item.page),
       item.sourceFidelity?.sourcePdfPage&&'PDF '+format(item.sourceFidelity.sourcePdfPage),format(item.source)].filter(Boolean).join(' | ');
+    if(angleFigures.has(id)||coordinateFigures.has(id)&&!en){
+      const inline=typeof item.diagram==='object'&&/\b(diagram|figure|labelled|labeled)\b/i.test(item.q?.en||'');
+      add(id,{id,chapter,source:src,rendering:'responsive SVG (assets/diagramguard-coordinate-plot.js)',
+        surface:inline?'inline and figure dialog':'figure dialog',qualification:'DiagramGuard browser fixture'});
+      continue;
+    }
     if(en){
       const rectangle=id==='c10-4-ex4-3-q4';
       const responsive=rectangle||coordinateFigures.has(id);
@@ -87,8 +99,9 @@ for(const grade of [9,10]){
     const kind=d.kind||d;
     const inline=typeof d==='object'&&/\b(diagram|figure|labelled|labeled)\b/i.test(item.q?.en||'');
     if(inline||shapes.has(kind)||(item.kind==='practice'&&['stats','area','sets'].includes(kind))){
+      const sightline=grade===10&&kind==='tower';
       add(id+':'+kind,{id:id+':'+kind,chapter,source:src,rendering:'generated SVG ('+kind+')',
-        surface:inline?'inline and figure dialog':'figure dialog'});
+        surface:inline?'inline and figure dialog':'figure dialog',qualification:sightline?'DiagramGuard browser fixture':'unverified'});
     }
   }
 }
@@ -118,16 +131,37 @@ for(const [chapter,modules] of Object.entries(visualModules)){
     if(!config)throw Error('Missing concept module '+module);
     const stages=config.stages||config;
     for(const stage of stages){
-      const id=stage.id||chapter+'-concept-'+(index+1), route='concept '+index++;
-      const src=[module,config.source,stage.section,format(stage.pages||stage.page)].filter(Boolean).join(' | ');
+      const id=stage.id||chapter+'-concept-'+(index+1);
+      // These lesson bookmarks were assigned before the distance lesson was put third in the index.
+      const route=chapter==='g9-ch5' ? [1,2,3,4,5,6,0][index++] : index++;
+      const quadraticSource=chapter==='g10-ch3'&&{
+        'g10-ch3-discriminant':'2025 textbook PDF EN 123, 137–140; TA 125, 139–142',
+        'g10-ch3-quad-graphs':'2025 textbook PDF EN 136–141; TA 138–143'
+      }[id];
       const graphic=typeof stage.visual==='object'?stage.visual.id||stage.visual.kind:stage.visual;
+      const similaritySource={
+        'similarity-scale':'2025 textbook PDF EN 167–168; TA 172–173',
+        'similarity-results':'2025 textbook PDF EN 169–170; TA 174–175',
+        'similar-construction':'2025 textbook PDF EN 175–177; TA 179–181'
+      }[graphic];
+      const src=[module,config.source,stage.section,format(stage.pages||stage.page),quadraticSource,similaritySource]
+        .filter(Boolean).join(' | ');
+      const coordinateActivity=key==='TRIGGLE_COORDINATE_LESSONS'&&
+        stage.activity.options.some(option=>option.diagram?.points);
+      const unitEndpoints=key==='TRIGGLE_TRIGONOMETRY_LESSONS'&&
+        stage.activity.options.some(option=>option.diagram?.quarterCircle);
       if(graphic||stage.views||stage.activity||chapter==='g9-ch2'||chapter==='g9-ch9'||chapter==='g9-ch3'){
-        add(id+':concept',{id:id+':concept',chapter,source:src,rendering:'concept renderer '+renderer,
-          surface:route+' interactive/visual',qualification:graphic==='similarity-criteria'?'DiagramGuard browser fixture':'unverified'});
+        const coordinate=coordinateActivity||id==='g9-ch5-distance-formula'||Boolean(quadraticSource);
+        add(id+':concept',{id:id+':concept',chapter,source:src,
+          rendering:coordinate?'responsive SVG (assets/diagramguard-coordinate-plot.js)':
+            unitEndpoints?'responsive SVG endpoints and acute-angle concept renderer '+renderer:'concept renderer '+renderer,
+          surface:'concept '+route+' interactive/visual',
+          qualification:coordinate||similaritySource||graphic==='similarity-criteria'?'DiagramGuard browser fixture':
+            unitEndpoints?'DiagramGuard unit-circle endpoint fixture':'unverified'});
       }
       if(stage.glanceVisual){
         const preview=stage.glanceVisual;
-        add(id+':preview',{id:id+':preview',chapter,source:src,rendering:'inline SVG '+renderer,surface:route+' overview',
+        add(id+':preview',{id:id+':preview',chapter,source:src,rendering:'inline SVG '+renderer,surface:'concept '+route+' overview',
           qualification:chapter==='g10-ch4'&&/^similarity-(scale|criteria|results)$/.test(preview)?
             'DiagramGuard browser fixture':'unverified'});
       }
