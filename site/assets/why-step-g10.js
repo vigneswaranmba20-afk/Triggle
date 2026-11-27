@@ -144,6 +144,7 @@ function mount(event){
         button.setAttribute('aria-pressed','true');
         const correct=i===check.correct;
         message.dataset.result=correct?'correct':'retry';
+        window.TriggleFeedback.evaluate(button,message,correct);
         message.textContent=(lang==='ta'&& (correct?check.success?.ta:check.wrong?.ta))||(correct?check.success?.en:check.wrong?.en)||'';
       });
       buttons.push(button);options.append(button);

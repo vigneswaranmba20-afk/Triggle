@@ -7,14 +7,27 @@
  */
 :root {
   color-scheme: light;
-  --bond-graphite: #181B20;
-  --bond-charcoal: #24282E;
-  --bond-brass: #B79253;
-  --bond-burgundy: #6E2933;
-  --bond-ivory: #F7F6F2;
-  --bond-white: #FFFFFF;
-  --bond-emerald: #166353;
-  --bond-muted: #525B62;
+  --text-primary: #181B20;
+  --text-explanation: #404650;
+  --text-secondary: #525B62;
+  --text-navigation: #6E2933;
+  --text-correct: #166353;
+  --text-incorrect: #B42318;
+  --brand-gold: #B79253;
+  --surface-page: #F7F6F2;
+  --surface-content: #FFFFFF;
+  --surface-correct: #EFF8F4;
+  --surface-incorrect: #FEF3F2;
+  --control-border: #7A7470;
+
+  --bond-graphite: var(--text-primary);
+  --bond-charcoal: var(--text-explanation);
+  --bond-brass: var(--brand-gold);
+  --bond-burgundy: var(--text-navigation);
+  --bond-ivory: var(--surface-page);
+  --bond-white: var(--surface-content);
+  --bond-emerald: var(--text-correct);
+  --bond-muted: var(--text-secondary);
   --bond-border: #D7D4CC;
   --bond-tint: #F3F0E9;
   --bond-selection: #F6EDE7;
@@ -177,8 +190,9 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
 .discover-resume-card:hover { background: #FCFBF8; border-color: var(--bond-burgundy); }
 .hub-section-menu h3, .hub-question-group h4,
 .chapter-hub .hub-question-label { color: var(--bond-graphite); }
-.hub-section-description, .hub-section-count, .hub-question-title,
-.discover-chapter-meta, .discover-grade-copy small, .crumb {
+.hub-section-description { color: var(--text-explanation); }
+.hub-question-title { color: var(--text-primary); }
+.hub-section-count, .discover-chapter-meta, .discover-grade-copy small, .crumb {
   color: var(--bond-muted);
 }
 .hub-exercise-link, .chapter-link, .chapter-question-links button {
@@ -229,11 +243,11 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
 .page-status, .crumb-link span, .hub-section-arrow { color: var(--bond-muted); }
 .page-track span { background: var(--bond-burgundy); }
 .answer-box, .lesson-card .answer-box {
-  background: #EFF8F4; border-color: #BEDFD2;
+  background: var(--surface-correct); border-color: #BEDFD2;
 }
 .answer-box>div:first-child, .math-answer { color: var(--bond-emerald); }
 .mark-button[aria-pressed=true] {
-  background: #EFF8F4; border-color: #BEDFD2; color: var(--bond-emerald);
+  background: var(--surface-correct); border-color: #BEDFD2; color: var(--bond-emerald);
 }
 
 /* Concept indexes, demos, matrices: selection is not confused with correctness. */
@@ -241,8 +255,8 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
 .chapter-hub .sp2-index-view .sp2-nav-button[aria-current=step],
 .matrix-concepts .mc-index button[aria-current=step] {
   background: var(--bond-selection);
-  color: var(--bond-graphite);
-  border-color: var(--bond-burgundy);
+  color: var(--text-navigation);
+  border-color: var(--text-navigation);
 }
 .sp2-nav-number, .chapter-hub .sp2-index-view .sp2-nav-number,
 .matrix-concepts .mc-index button span {
@@ -267,6 +281,25 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
 .matrix-concepts input[type=range] { accent-color: var(--bond-burgundy); }
 /* Mathematics plot colors (multiple sets, lines, points), warning and error
  * states are deliberately NOT overridden by this visual theme. */
+
+/* Answer groups and form controls need a visible boundary on paper. */
+.hub-quiz-answers button,
+.sp2-answers button,
+.search-field,
+.chapter-hub .hub-question-filters select {
+  border-color: var(--control-border);
+}
+.hub-quiz-answers button[aria-pressed=true],
+.sp2-answers button[aria-pressed=true] {
+  border-color: var(--text-navigation);
+  color: var(--text-navigation);
+}
+.sp2-journey :is(.sp2-formula, .sp2-demo-output, .sp2-recall > p:not([role=status])) {
+  color: var(--text-primary);
+}
+.sp2-journey :is(.sp2-idea, .sp2-example, .sp2-intro) {
+  color: var(--text-explanation);
+}
 
 /* Discoverable keyboard navigation and accessible focus on both surfaces. */
 :where(button,a,input,select,summary,[tabindex]):focus-visible,

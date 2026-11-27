@@ -4,7 +4,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=r
 const {chromium}=require('playwright');
 const {server,launchOptions}=require('./dashboard_test_support.cjs');
 const out=path.resolve(__dirname,'../../screenshots/paper-indigo');
-const graphite='rgb(24, 27, 32)',white='rgb(255, 255, 255)',paper='rgb(247, 246, 242)',tint='rgb(243, 240, 233)',indigo='rgb(55, 48, 94)';
+const graphite='rgb(24, 27, 32)',white='rgb(255, 255, 255)',paper='rgb(247, 246, 242)',tint='rgb(243, 240, 233)',burgundy='rgb(110, 41, 51)';
 const label=(page)=>page.evaluate(()=>({
   paper:getComputedStyle(document.body).backgroundColor,
   ink:getComputedStyle(document.body).color,
@@ -22,7 +22,7 @@ async function visit(page,url){
    el.addEventListener('error',()=>reject(Error('Theme stylesheet did not load')),{once:true});
  }));
  const l=await label(page);
- assert.deepEqual(l,{paper,ink:graphite,accent:'#37305E'},'Classic palette on the student shell');
+ assert.deepEqual(l,{paper,ink:graphite,accent:'#6E2933'},'Classic palette on the student shell');
  assert.equal(await page.locator('.appbar').evaluate(el=>getComputedStyle(el).backgroundColor),white,'White app bar across all routes');
  assert.equal(await page.locator('.appbar .browse-button').evaluate(el=>getComputedStyle(el).color),graphite,'Exercises control has dark text');
  assert.equal(await page.locator('.appbar .basics-link').evaluate(el=>getComputedStyle(el).backgroundColor),white,'Home button is white');
@@ -70,7 +70,7 @@ async function main(){
    await visit(p,base+'?class=10&question=c10-1-ex1-1-q1-i');
    await p.locator('.lesson-card').waitFor({state:'visible'});
    assert.equal(await p.locator('.lesson-card').evaluate(el=>getComputedStyle(el).backgroundColor),white,'Class 10 exercise uses a white surface');
-   assert.equal(await p.locator('#next').evaluate(el=>getComputedStyle(el).backgroundColor),indigo,'Exercise Next uses the original indigo');
+   assert.equal(await p.locator('#next').evaluate(el=>getComputedStyle(el).backgroundColor),burgundy,'Exercise Next uses the shared navigation accent');
    assert(await p.locator('#questionText').innerText(),'Original mathematical question preserved');
    assert.deepEqual(errors,[],'No JS page exceptions at '+width+'px');
    await ctx.close();

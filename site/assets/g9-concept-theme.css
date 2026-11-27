@@ -285,7 +285,7 @@
 }
 .chapter-hub .g9-distance-lab .g9-distance-plot-note{
   margin:3px auto 5px; padding:0 4px; text-align:center;
-  font-size:clamp(12px,2.7vw,14px); line-height:1.4; color:#536173;
+  font-size:clamp(12px,2.7vw,14px); line-height:1.4; color:var(--text-secondary);
 }
 @media(max-width:390px){
   .chapter-hub .g9-distance-lab{padding:6px 5px 4px}

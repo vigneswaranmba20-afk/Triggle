@@ -1,7 +1,7 @@
 /* The home route shares the app's navigation and language controls. */
 .home-wordmark { display: none; }
 body.home-active {
-  --studio-ink: #163e36;
+  --studio-ink: var(--text-primary);
   --studio-rule: #d9ddd4;
   --studio-width: 76rem;
 }
@@ -46,11 +46,11 @@ body.home-active {
 }
 .home-active #homeBtn .home-wordmark { display: inline-flex; align-items: center; gap: .48rem; }
 .home-wordmark img { display: block; border-radius: 24%; }
-.home-wordmark-dot { font-style: normal; color: #ab7934; }
+.home-wordmark-dot { font-style: normal; color: var(--brand-gold); }
 .home-wordmark b {
   font: 760 clamp(1.4rem, 2vw, 1.65rem)/1 system-ui, sans-serif;
   letter-spacing: -.075em;
-  color: #1b352e;
+  color: var(--text-primary);
 }
 .home-active #browseBtn {
   grid-area: menu;
@@ -116,7 +116,7 @@ body.home-active {
 .home-cover-type p {
   margin: 0 0 .6rem;
   font: 720 .78rem/1.5 system-ui, "Triggle Noto Sans Tamil", sans-serif;
-  color: #345b4f;
+  color: var(--text-secondary);
   letter-spacing: .14em;
   text-transform: uppercase;
 }
@@ -144,17 +144,17 @@ body.home-active {
   align-items: flex-start;
   min-height: clamp(6.4rem, 9.2vw, 8.3rem);
   padding: .8rem clamp(1.1rem, 2.4vw, 2rem);
-  border: 1px solid #bdd4c5;
-  background: #e2eee4;
-  color: #153f33;
+  border: 1px solid var(--bond-border);
+  background: var(--surface-content);
+  color: var(--text-primary);
   border-radius: 1.05rem;
   box-shadow: none;
   transition: transform .18s ease, box-shadow .18s ease;
 }
 .home-active .discover-grade-grid .discover-grade-10 {
-  background: #f4e9d2;
-  border-color: #dfd0ab;
-  color: #523e16;
+  background: var(--surface-content);
+  border-color: var(--bond-border);
+  color: var(--text-primary);
 }
 .home-active .discover-grade::after {
   content: "";
@@ -164,13 +164,12 @@ body.home-active {
   bottom: -5rem;
   width: 12rem;
   height: 12rem;
-  opacity: .29;
-  background: repeating-radial-gradient(circle, transparent 0 .71rem, currentColor .75rem .8rem, transparent .84rem 1.48rem);
+  background: repeating-radial-gradient(circle, transparent 0 .71rem, var(--bond-border) .75rem .8rem, transparent .84rem 1.48rem);
 }
 .home-active .discover-grade-10::after {
   border-radius: 0;
   transform: rotate(-34deg);
-  background: repeating-linear-gradient(0deg, transparent 0 .72rem, currentColor .75rem .8rem, transparent .84rem 1.48rem);
+  background: repeating-linear-gradient(0deg, transparent 0 .72rem, var(--bond-border) .75rem .8rem, transparent .84rem 1.48rem);
 }
 .home-grade-label {
   font: normal 400 clamp(1.8rem, 3.2vw, 3rem)/1.12 KaTeX_Main, Georgia, serif;
@@ -188,7 +187,7 @@ body.home-active {
 }
 .home-active .discover-home-recent h2 {
   margin: 0 !important;
-  color: #4a5a51 !important;
+  color: var(--text-secondary) !important;
   font: 620 .9rem/1.5 system-ui, "Triggle Noto Sans Tamil", sans-serif !important;
   letter-spacing: 0;
 }
@@ -199,17 +198,17 @@ body.home-active {
   border-color: #d3ddd4;
   border-radius: .8rem;
 }
-.home-active .discover-resume-name { font-size: .95rem; color: #29483b; }
-.home-active .discover-resume-action { font-size: .85rem; color: #225c47; white-space: normal; }
+.home-active .discover-resume-name { font-size: .95rem; color: var(--text-primary); }
+.home-active .discover-resume-action { font-size: .85rem; color: var(--text-navigation); white-space: normal; }
 .home-copyright {
   margin-top: clamp(1.25rem, 3vw, 2.5rem);
   padding-top: .85rem;
   border-top: 1px solid var(--studio-rule);
-  color: #536459;
+  color: var(--text-secondary);
 }
 .home-copyright small { font: 550 .83rem/1.6 system-ui, sans-serif; }
 .home-active :is(.discover-grade, .discover-resume-card, #browseBtn, #homeBtn, .lang-switch button):focus-visible {
-  outline: 3px solid #295b9c;
+  outline: 3px solid var(--text-navigation);
   outline-offset: 3px;
 }
 html[lang=ta] .home-active :is(.home-cover-type h1, .home-grade-label) {

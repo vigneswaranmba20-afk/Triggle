@@ -799,6 +799,7 @@
         mcqWrap.querySelectorAll('.triggle-mcq-btn').forEach(b=>{b.setAttribute('aria-pressed','false');b.classList.remove('is-correct','is-wrong');});
         btn.setAttribute('aria-pressed','true');
         const ok=idx===current.correctIndex;
+        window.TriggleFeedback.evaluate(btn,feedback,ok);
         btn.classList.add(ok?'is-correct':'is-wrong');
         feedback.textContent=ok?(lang==='ta'?'✓ சரியான விடை! கீழே உள்ள தீர்வைப் பார்க்கவும்.':'✓ Correct! See the worked solution below.'):(lang==='ta'?'✗ மீண்டும் முயற்சிக்கவும் அல்லது கீழே உள்ள தீர்வைப் பார்க்கவும்.':'✗ Try again or check the worked solution below.');
         feedback.className='triggle-mcq-feedback '+(ok?'is-correct':'is-wrong');

@@ -28,7 +28,7 @@
   border: 1px solid #a99a9e;
   border-radius: 8px;
   background: white;
-  color: #3c2b33;
+  color: var(--text-primary);
   font: inherit;
   font-weight: 650;
   cursor: pointer;

@@ -16,8 +16,8 @@
   padding: .3rem .5rem;
   border: 1px solid #64748b;
   border-radius: .45rem;
-  background: #fff;
-  color: #172554;
+  background: var(--surface-content);
+  color: var(--text-primary);
   font: inherit;
 }
 .g10ch8-graphic {
@@ -70,8 +70,8 @@
   padding: .45rem .65rem;
   border: 1px solid #c7d2fe;
   border-radius: .6rem;
-  background: #f5f7ff;
-  color: #312e81;
+  background: var(--bond-tint);
+  color: var(--text-navigation);
   font: inherit;
   text-align: start;
   cursor: pointer;
@@ -89,7 +89,7 @@
   overflow-wrap: anywhere;
 }
 .g10ch8-range-value {
-  color: #85384c;
+  color: var(--text-primary);
   font-weight: 700;
   font-variant-numeric: tabular-nums;
   text-align: end;
@@ -101,7 +101,7 @@
   min-width: 0;
   min-height: 44px;
   margin: 0;
-  accent-color: #85384c;
+  accent-color: var(--text-navigation);
   cursor: pointer;
 }
 .g10ch8-range-control .g10ch8-range:focus-visible {
@@ -113,7 +113,7 @@
   grid-column: 1 / -1;
   display: flex;
   justify-content: space-between;
-  color: #475569;
+  color: var(--text-secondary);
   font-size: .85rem;
   font-variant-numeric: tabular-nums;
 }

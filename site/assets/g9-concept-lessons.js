@@ -83,6 +83,7 @@
       button.setAttribute('aria-pressed', 'false');
       button.addEventListener('click', () => {
         answerButtons.forEach(answer => answer.setAttribute('aria-pressed', String(answer === button)));
+        window.TriggleFeedback.evaluate(button, feedback, option.correct);
         feedback.textContent = (option.correct ? copy.correct : copy.retry) + pick(option.feedback);
       });
       answers.append(button);
@@ -93,6 +94,7 @@
     reset.addEventListener('click', () => {
       select(lesson.activity.options[0]);
       answerButtons.forEach(answer => answer.setAttribute('aria-pressed', 'false'));
+      window.TriggleFeedback.neutral(feedback, answers);
       feedback.textContent = '';
     });
     check.append(element('legend', copy.check), element('p', pick(lesson.check.question)), answers);
@@ -100,7 +102,7 @@
     if (lesson.check.hint) {
       const hint = element('button', copy.hint);
       hint.type = 'button';
-      hint.addEventListener('click', () => { feedback.textContent = pick(lesson.check.hint); });
+      hint.addEventListener('click', () => { window.TriggleFeedback.neutral(feedback); feedback.textContent = pick(lesson.check.hint); });
       checkActions.append(hint);
     }
     checkActions.append(reset);

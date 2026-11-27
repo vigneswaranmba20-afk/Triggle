@@ -1,4 +1,18 @@
-/* Decorative mathematical glyphs. The surrounding controls supply their names. */
+/* Shared answer presentation and decorative mathematical glyphs. */
+window.TriggleFeedback = Object.freeze({
+  evaluate(choice, message, correct) {
+    const state = correct ? 'correct' : 'incorrect';
+    const previous = choice.parentElement.querySelector('[data-answer-state]');
+    if (previous) delete previous.dataset.answerState;
+    choice.dataset.answerState = state;
+    message.dataset.answerState = state;
+  },
+  neutral(message, choices) {
+    delete message.dataset.answerState;
+    const previous = choices?.querySelector('[data-answer-state]');
+    if (previous) delete previous.dataset.answerState;
+  }
+});
 (() => {
   'use strict';
 
