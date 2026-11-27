@@ -51,11 +51,9 @@ function startServer() {
       await page.waitForSelector('#lessonCard:not([hidden])');
       const overflow51 = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
       assert.equal(overflow51, false, `No horizontal overflow at ${width}px on Ex 5.1 Q2`);
-      const imgOk = await page.evaluate(() => {
-        const img = document.querySelector('#inlineFigureVisual img');
-        return img && img.complete && img.naturalWidth > 0;
-      });
-      assert.equal(imgOk, true, `Fig 5.11 SVG must render at ${width}px`);
+      const figure = page.locator('#inlineFigureVisual svg.diagramguard-coordinate[data-dg-ready]');
+      await figure.waitFor();
+      assert.equal(await figure.locator('[data-dg-point]').count(),4,`Fig 5.11 SVG must render at ${width}px`);
 
       // Switch to Tamil and verify question stays on g9-ch5-ex5.1-q2
       await page.click('#langTa');

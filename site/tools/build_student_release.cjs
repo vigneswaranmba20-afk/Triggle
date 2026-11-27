@@ -233,6 +233,10 @@ function buildStudentRelease(out) {
     // prepared records below in place of batches that only register questions.
     if (effect?.writesRecords && !/^data\/class-(?:9|10|11|12)\.js$/.test(file) &&
         effect.exports.every(key => !consumers.includes(key))) return;
+    if (file === 'assets/diagramguard-coordinate-plot.js') {
+      for (const chapter of ['g9-ch5','g10-ch5']) parts.get(chapter).push(slot+':function(){\n'+js.get(file)+'\n}');
+      return;
+    }
     const key = supportScope(file);
     if (key === 'g12') return;
     assert(parts.has(key), 'Unknown student script scope '+key+' for '+file);
