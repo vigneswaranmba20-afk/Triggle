@@ -1,0 +1,20 @@
+'use strict';
+// Grade 10 Exercise 1.2 Q5: content-only regression; no browser dependency.
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const root = path.join(__dirname, '..', 'data', 'textbook-exercises');
+const d = JSON.parse(fs.readFileSync(path.join(root, 'g10-ch1-ex1-2-q5-source-pending.json'), 'utf8'));
+assert.equal(d.id, 'g10-ch1-ex1-2-q5');
+assert.equal(d.exercise, '1.2');
+assert.equal(d.question, '5');
+const expected = [[10000,['A1','A2','A3','A4','A5']],[25000,['C1','C2','C3','C4']],[50000,['M1','M2','M3']],[100000,['E1','E2']]].flatMap(([s,es])=>es.map(e=>[s,e]));
+assert.deepEqual(d.orderedPairs, expected);
+assert.equal(expected.length, 14);
+assert.equal(new Set(expected.map(JSON.stringify)).size, 14);
+assert.equal(d.stepsEnglish.length, 8);
+assert.equal(d.review.mathVerified, true);
+for (const flag of ['englishExactQuestionVerified','diagramImageVerified','tamilVerified','merged','deployed','liveVerified']) assert.equal(d.review[flag], false);
+assert.equal(d.source.english.pageImageVerified, false);
+assert.equal(d.source.english.exactQuestionVerified, false);
+console.log('Grade 10 Exercise 1.2 Q5: 14 pairs and source/release gates PASS');

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "exercise": "1.4",
+  "question": "7",
+  "subpart": "i",
+  "kind": "conditional_mathematical_draft_not_source_certified",
+  "source": {
+    "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "edition": "2025 revised",
+    "printedPage": 25,
+    "extractedSnippet": "(i) f :  ® defined by fx() =+ 21 x",
+    "originalPageImageVerified": false,
+    "notationPending": [
+      "Confirm R to R arrows",
+      "Confirm f(x)=2x+1 against original page image"
+    ]
+  },
+  "conditionalInterpretation": {
+    "domain": "R",
+    "codomain": "R",
+    "function": "f(x)=2x+1"
+  },
+  "steps": [
+    "Assume the textbook specifies f:R→R, f(x)=2x+1; this interpretation requires page-image confirmation.",
+    "To prove one-one, suppose f(a)=f(b). Then 2a+1=2b+1.",
+    "Subtract 1 and divide by 2: a=b. So the function is one-one.",
+    "To prove onto, take any real number y. Solve y=2x+1 to obtain x=(y-1)/2.",
+    "Since x is real and f((y-1)/2)=y, every real output is reached.",
+    "Therefore, under the stated interpretation, the function is bijective."
+  ],
+  "deterministicChecks": {
+    "injectivityAlgebra": "2a+1=2b+1 implies a=b",
+    "inverse": "(y-1)/2",
+    "compositionCheck": "2*((y-1)/2)+1=y",
+    "passed": true
+  },
+  "coverageDelta": {
+    "newSourceCertifiedQuestions": 0,
+    "newSourceCertifiedSubparts": 0,
+    "newPublishedSolutions": 0,
+    "newTamilSolutions": 0
+  },
+  "publication": "BLOCKED: verify source page image and check existing canonical content before registration",
+  "verifiedExerciseDenominator": null,
+  "figuresPending": [
+    "Q1 Fig.1.39"
+  ],
+  "next": "Verify printed page 25 image, compare with existing Q7 drafts, then source-certify or correct before publication."
+}

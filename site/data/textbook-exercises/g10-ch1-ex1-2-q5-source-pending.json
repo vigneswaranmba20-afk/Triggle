@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "id": "g10-ch1-ex1-2-q5",
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.2",
+  "question": "5",
+  "kind": "English mathematical draft; PDF page-image source fidelity pending; not published",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "printedPages": [
+        9,
+        10
+      ],
+      "pdfPages": [
+        15,
+        16
+      ],
+      "pageImageVerified": false,
+      "exactQuestionVerified": false
+    },
+    "tamil": {
+      "driveFileId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pageImageVerified": false,
+      "editorial": "pending"
+    },
+    "extractedStem": "A company has four categories of employees given by Assistants (A), Clerks (C), Managers (M) and an Executive Officer (E). The company provide ₹10,000, ₹25,000, ₹50,000 and ₹1,00,000 as salaries to the people who work in the categories A, C, M and E respectively. If A1, A2, A3, A4 and A5 were Assistants; C1, C2, C3, C4 were Clerks; M1, M2, M3 were managers and E1, E2 were Executive officers and if the relation R is defined by xRy, where x is the salary given to person y, express the relation R through an ordered pair and an arrow diagram.",
+    "note": "Text extracted across the original printed-page 9–10 boundary; visual glyph/layout verification still required."
+  },
+  "salaryToEmployees": [
+    {
+      "salary": 10000,
+      "employees": [
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ]
+    },
+    {
+      "salary": 25000,
+      "employees": [
+        "C1",
+        "C2",
+        "C3",
+        "C4"
+      ]
+    },
+    {
+      "salary": 50000,
+      "employees": [
+        "M1",
+        "M2",
+        "M3"
+      ]
+    },
+    {
+      "salary": 100000,
+      "employees": [
+        "E1",
+        "E2"
+      ]
+    }
+  ],
+  "orderedPairs": [
+    [
+      10000,
+      "A1"
+    ],
+    [
+      10000,
+      "A2"
+    ],
+    [
+      10000,
+      "A3"
+    ],
+    [
+      10000,
+      "A4"
+    ],
+    [
+      10000,
+      "A5"
+    ],
+    [
+      25000,
+      "C1"
+    ],
+    [
+      25000,
+      "C2"
+    ],
+    [
+      25000,
+      "C3"
+    ],
+    [
+      25000,
+      "C4"
+    ],
+    [
+      50000,
+      "M1"
+    ],
+    [
+      50000,
+      "M2"
+    ],
+    [
+      50000,
+      "M3"
+    ],
+    [
+      100000,
+      "E1"
+    ],
+    [
+      100000,
+      "E2"
+    ]
+  ],
+  "stepsEnglish": [
+    "A relation is a set of ordered pairs. Here xRy means that x is the salary paid to employee y, so write salary first and employee second.",
+    "Assistants A1–A5 each receive ₹10,000. Write (10000,A1), (10000,A2), (10000,A3), (10000,A4), (10000,A5).",
+    "Clerks C1–C4 each receive ₹25,000. Write (25000,C1), (25000,C2), (25000,C3), (25000,C4).",
+    "Managers M1–M3 each receive ₹50,000. Write (50000,M1), (50000,M2), (50000,M3).",
+    "Executive officers E1–E2 each receive ₹1,00,000. Write (100000,E1), (100000,E2).",
+    "Combine these 5 + 4 + 3 + 2 = 14 distinct pairs to obtain R in roster form.",
+    "For the arrow diagram, put the four salary values in the left column and the fourteen employee labels in the right column. Draw one arrow from each salary to every employee in its corresponding category.",
+    "Check the direction: (10000,A1) belongs to R, but (A1,10000) is not the requested salary-to-employee ordered pair."
+  ],
+  "review": {
+    "mathVerified": true,
+    "englishExactQuestionVerified": false,
+    "diagramImageVerified": false,
+    "tamilVerified": false,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  }
+}

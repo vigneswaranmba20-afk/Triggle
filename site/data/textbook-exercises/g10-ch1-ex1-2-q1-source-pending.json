@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.2",
+  "question": "1",
+  "kind": "source-extracted English mathematical draft; page-image verification pending; NOT published",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "printedPage": 9,
+      "pdfPage": 15,
+      "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "pageImageVerified": false,
+      "exactQuestionVerified": false
+    },
+    "tamil": {
+      "driveFileId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pageImageVerified": false,
+      "exactQuestionVerified": false
+    },
+    "sourceNote": "Exercise 1.2 question 1 extracted from original 2025 English PDF. Page index inferred from printed page offset; page-image inspection required before promotion."
+  },
+  "stemExtracted": "Let A = {1,2,3,7} and B = {3,0,–1,7}, which of the following are relation from A to B ?",
+  "sets": {
+    "A": [
+      1,
+      2,
+      3,
+      7
+    ],
+    "B": [
+      3,
+      0,
+      -1,
+      7
+    ]
+  },
+  "subparts": [
+    {
+      "id": "i",
+      "pairs": [
+        [
+          2,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ],
+      "isRelation": false,
+      "stepsEnglish": [
+        "A relation from A to B must consist only of ordered pairs whose first entry belongs to A and second entry belongs to B.",
+        "Both pairs have second entry 1, but 1 is not in B.",
+        "Therefore R1 is not a relation from A to B."
+      ]
+    },
+    {
+      "id": "ii",
+      "pairs": [
+        [
+          -1,
+          1
+        ]
+      ],
+      "isRelation": false,
+      "stepsEnglish": [
+        "Check the first and second entries against A and B.",
+        "The first entry −1 is not in A and the second entry 1 is not in B.",
+        "Therefore R2 is not a relation from A to B."
+      ]
+    },
+    {
+      "id": "iii",
+      "pairs": [
+        [
+          2,
+          -1
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "isRelation": true,
+      "stepsEnglish": [
+        "For each ordered pair, check that the first entry is in A.",
+        "The first entries 2, 7 and 1 all belong to A.",
+        "The second entries −1, 7 and 3 all belong to B.",
+        "Every pair is in A×B, so R3 is a relation from A to B."
+      ]
+    },
+    {
+      "id": "iv",
+      "pairs": [
+        [
+          7,
+          -1
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "isRelation": false,
+      "stepsEnglish": [
+        "A relation from A to B must be a subset of A×B.",
+        "The first entry 0 occurs in two pairs, but 0 does not belong to A.",
+        "Therefore R4 is not a relation from A to B."
+      ]
+    }
+  ],
+  "review": {
+    "mathVerified": true,
+    "englishExactQuestionVerified": false,
+    "tamilVerified": false,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  },
+  "nextAction": "Visually inspect English PDF page 15 and Tamil corresponding page; confirm all printed pairs and punctuation; only then promote to source-exact student-facing module."
+}

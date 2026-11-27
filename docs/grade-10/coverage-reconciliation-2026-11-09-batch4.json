@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "edition": "2025 revised",
+  "date": "2026-11-09",
+  "kind": "inventory-reconciliation-not-source-certification",
+  "source": {
+    "englishDriveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "tamilDriveFileId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+    "basis": "Existing Grade 10 coverage ledger and connected Drive textbook metadata; original page images not inspected in this batch"
+  },
+  "exerciseCounts": {
+    "1.1": {
+      "questionStems": 7,
+      "atomicSlots": 12,
+      "sourceCertifiedSlots": 7,
+      "sourceImageVerified": false
+    },
+    "1.2": {
+      "questionStems": 5,
+      "atomicSlots": 9,
+      "sourceCertifiedSlots": 0,
+      "sourceImageVerified": false
+    },
+    "1.3": {
+      "questionStems": 10,
+      "atomicSlots": 26,
+      "sourceCertifiedSlots": 0,
+      "sourceImageVerified": false
+    }
+  },
+  "knownAtomicSlots": 47,
+  "uniqueAtomicSlots": 47,
+  "certifiedEnglishSlots": 7,
+  "certifiedTamilSlots": 0,
+  "fullTextbookDenominator": null,
+  "missingSourceCertifiedSlots": [
+    "1.1:6(i)",
+    "1.1:6(ii)",
+    "1.1:6(iii)",
+    "1.1:7(i)",
+    "1.1:7(ii)",
+    "1.2:1(i)",
+    "1.2:1(ii)",
+    "1.2:1(iii)",
+    "1.2:1(iv)",
+    "1.2:2",
+    "1.2:3",
+    "1.2:4(i)",
+    "1.2:4(ii)",
+    "1.2:5",
+    "1.3:1",
+    "1.3:2",
+    "1.3:3(i)",
+    "1.3:3(ii)",
+    "1.3:3(iii)",
+    "1.3:3(iv)",
+    "1.3:4(i)(a)",
+    "1.3:4(i)(b)",
+    "1.3:4(i)(c)",
+    "1.3:4(i)(d)",
+    "1.3:4(ii)",
+    "1.3:4(iii)(domain)",
+    "1.3:4(iii)(range)",
+    "1.3:4(iv)",
+    "1.3:5",
+    "1.3:6(i)",
+    "1.3:6(ii)",
+    "1.3:6(iii)",
+    "1.3:6(iv)",
+    "1.3:7",
+    "1.3:8",
+    "1.3:9",
+    "1.3:10(i)",
+    "1.3:10(ii)",
+    "1.3:10(iii)",
+    "1.3:10(iv)"
+  ],
+  "pendingFigures": [
+    "1.3 Figure 1.16",
+    "1.3 Figure 1.17"
+  ],
+  "releaseGate": "No new student-facing content; do not publish without exact page-image source certification and mandatory CI",
+  "nextBatch": "Verify original English PDF pages 19–21 (printed 13–15), resolve Exercise 1.3 figures and formulas, then generate independently checked solutions"
+}

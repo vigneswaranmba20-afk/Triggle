@@ -1,0 +1,12 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const d=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/textbook-exercises/g10-ch1-ex1-2-q4i-source-pending.json'),'utf8'));
+assert.equal(d.grade,10);assert.equal(d.exercise,'1.2');assert.equal(d.question,'4');assert.equal(d.subpart,'i');
+const expected=[];for(const x of d.sets.x)for(const y of d.sets.y)if(x===2*y)expected.push([x,y]);
+assert.deepEqual(d.pairs,expected);assert.deepEqual(expected,[[2,1],[4,2]]);
+assert.ok(d.stepsEnglish.length>=6);assert.equal(d.source.english.exactQuestionVerified,false);
+assert.equal(d.source.english.pageImageVerified,false);assert.equal(d.review.diagramImageVerified,false);
+assert.equal(d.review.tamilVerified,false);assert.equal(d.review.merged,false);assert.equal(d.review.deployed,false);
+console.log('Grade 10 Exercise 1.2 Q4(i) exact enumeration and release safeguards passed');

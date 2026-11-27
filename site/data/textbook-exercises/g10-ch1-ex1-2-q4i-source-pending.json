@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.2",
+  "question": "4",
+  "subpart": "i",
+  "kind": "English mathematical draft; exact textbook PDF page-image and diagrams pending; not published",
+  "source": {
+    "edition": "2025 revised",
+    "english": {
+      "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+      "printedPage": 9,
+      "pdfPage": 15,
+      "pageImageVerified": false,
+      "exactQuestionVerified": false
+    },
+    "tamil": {
+      "driveFileId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC",
+      "pageImageVerified": false,
+      "exactQuestionVerified": false
+    },
+    "extractedQuestion": "Represent each of the given relations by (a) an arrow diagram, (b) a graph and (c) a set in roster form, wherever possible.",
+    "extractedSubpart": "(i) {(x,y)|x = 2y, x ∈{2,3,4,5}, y ∈{1,2,3,4}}",
+    "note": "English 2025 revised source PDF extracted at Exercise 1.2 on printed page 9; figure and math glyphs need image verification."
+  },
+  "sets": {
+    "x": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "y": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "rule": "x = 2y",
+  "pairs": [
+    [
+      2,
+      1
+    ],
+    [
+      4,
+      2
+    ]
+  ],
+  "stepsEnglish": [
+    "A relation contains ordered pairs (x, y) that obey x = 2y, with x chosen from {2,3,4,5} and y chosen from {1,2,3,4}.",
+    "Try y = 1: x = 2, so (2,1) is allowed.",
+    "Try y = 2: x = 4, so (4,2) is allowed.",
+    "For y = 3 or 4, x would be 6 or 8, neither of which is in the allowed x-set.",
+    "Therefore the roster form is {(2,1), (4,2)}.",
+    "For an arrow diagram, draw arrows 2 → 1 and 4 → 2; 3 and 5 have no arrows.",
+    "For the graph, plot the points (2,1) and (4,2) on the coordinate plane; do not join them because this relation contains only those two points."
+  ],
+  "review": {
+    "mathVerified": true,
+    "englishExactQuestionVerified": false,
+    "diagramImageVerified": false,
+    "tamilVerified": false,
+    "tamilEditorial": "pending",
+    "ci": "pending",
+    "merged": false,
+    "deployed": false,
+    "liveVerified": false
+  }
+}

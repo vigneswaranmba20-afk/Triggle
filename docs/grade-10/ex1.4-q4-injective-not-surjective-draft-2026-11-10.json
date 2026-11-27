@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "grade": 10,
+  "chapter": 1,
+  "exercise": "1.4",
+  "question": 4,
+  "id": "g10-ch1-ex1-4-q4",
+  "kind": "unpublished_english_mathematical_draft",
+  "source": {
+    "driveFileId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of",
+    "edition": "2025 revised",
+    "printedPage": 25,
+    "extractedText": "Show that the function f : ℕ → ℕ defined by f(x) = 2x − 1 is one-one but not onto.",
+    "originalPageImageVerified": false,
+    "exactWordingCertified": false,
+    "notationRequiresPageImage": true,
+    "assumption": "ℕ = {1,2,3,...}; domain/codomain symbol in PDF text layer corrupt"
+  },
+  "steps": [
+    "Take two natural numbers a and b and suppose f(a)=f(b).",
+    "Then 2a−1=2b−1. Add 1 to both sides: 2a=2b.",
+    "Divide both sides by 2: a=b. Different inputs cannot give the same output, so f is one-one.",
+    "For each natural number x≥1, f(x)=2x−1 is an odd positive natural number.",
+    "The codomain also contains 2, but 2x−1=2 would require x=3/2, which is not a natural number.",
+    "Therefore 2 has no preimage. The function is not onto ℕ."
+  ],
+  "answer": "One-one but not onto (assuming positive natural numbers).",
+  "verification": {
+    "symbolicInjectivity": "2a−1=2b−1 implies a=b",
+    "surjectivityCounterexample": {
+      "target": 2,
+      "requiredInput": "3/2",
+      "inDomain": false
+    },
+    "finiteCheck": {
+      "inputs": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "outputs": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19
+      ],
+      "uniqueOutputs": 10,
+      "contains2": false
+    },
+    "checksPassed": [
+      "injectivity_algebra",
+      "counterexample_exact_rational",
+      "first_ten_distinct_images"
+    ],
+    "sourceFidelity": "pending_page_image",
+    "published": false,
+    "mandatoryCI": "not_run"
+  },
+  "coverage": {
+    "questionStemsAdded": 1,
+    "subpartsAdded": 1,
+    "sourceCertifiedQuestionsAdded": 0,
+    "sourceCertifiedSubpartsAdded": 0,
+    "publishedSolutionsAdded": 0,
+    "exerciseQuestionDenominator": "12 numbered stems visible in text extraction; full subpart denominator not image certified",
+    "figuresPending": "Exercise 1.4 Q1 graph figures need visual certification",
+    "tamil": "pending_source_and_editorial_review"
+  },
+  "next": "Verify original printed p25 page image and the natural-number convention; reconcile against current main and grade10 PR chain; run mandatory CI before any registration/merge."
+}
