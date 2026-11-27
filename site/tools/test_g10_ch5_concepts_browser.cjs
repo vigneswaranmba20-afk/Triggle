@@ -616,7 +616,7 @@ async function run(){
       // Concept 1: Mode tabs + Drag handle A
       await page.goto(base+'/index.html?class=10&chapter=g10-ch5&section=concepts&concept=0',{waitUntil:'load'});
       const before1=await page.locator('.g10ch4-readout').innerText();
-      const hA=page.locator('[data-handle="A"]');
+      const hA=page.locator('.g10ch4-lab [data-drag-handle][data-handle="A"]');
       await hA.scrollIntoViewIfNeeded();
       const boxA=await hA.boundingBox();
       await page.mouse.move(boxA.x+boxA.width/2,boxA.y+boxA.height/2);
