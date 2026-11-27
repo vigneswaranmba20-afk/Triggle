@@ -161,6 +161,11 @@ async function synthetic(page){
     test('legend','<rect id="plot" data-dg-role="plot" data-dg-fill x="20" y="20" width="100" height="70" fill="#ddd"/><text x="45" y="52">Legend</text>');
     cases.previewBefore=run(preview);
     cases.rectangleBefore=run(rectangle);
+    host.innerHTML='<div style="width:64px;overflow:hidden"><svg width="128" viewBox="0 0 128 44"><text x="76" y="25">Label</text></svg></div>';
+    const clipped=host.querySelector('svg');
+    const clipping=guard.audit(clipped,{discover:true});
+    clipped.setAttribute('width','64');
+    const reflowed=guard.audit(clipped,{discover:true});
     host.innerHTML='<svg width="420" height="140" viewBox="0 0 420 140"></svg>';
     const svg=host.firstElementChild;
     const label=document.createElementNS(svg.namespaceURI,'text');
@@ -175,7 +180,7 @@ async function synthetic(page){
     ctx.translate(10,15);
     const quad=guard.canvasLabel(ctx,'A',50,55);
     host.remove();
-    return {cases,closestPointPlacement,canvas:[quad[1][0]-quad[0][0],quad[2][1]-quad[1][1]]};
+    return {cases,clipping,reflowed,closestPointPlacement,canvas:[quad[1][0]-quad[0][0],quad[2][1]-quad[1][1]]};
   },baselines);
   const exact={
     line:['stroke'],strokeWidth:['stroke'],diagonalClear:[],label:['label'],boundary:['boundary'],
@@ -190,6 +195,9 @@ async function synthetic(page){
   assert(result.cases.rectangleBefore.some(i=>i.kind==='stroke'&&i.label==='XZ = YW'));
   assert.throws(()=>proportional([[48,20],[22,88],[94,88]],[[190,14],[156,88],[248,88]]));
   assert(result.canvas.every(size=>size>4&&size<12),'Canvas transformed metrics');
+  assert.deepEqual(result.clipping.issues,[],'The text sits inside the SVG viewBox');
+  assert.deepEqual(result.clipping.horizontalClipping,{left:0,right:64},'A parent clips the SVG');
+  assert.deepEqual(result.reflowed.horizontalClipping,{left:0,right:0},'The SVG fits the parent after reflow');
   assert.deepEqual(result.closestPointPlacement,[82,70],'Label remains associated with its own point');
   console.log('DiagramGuard: synthetic label, marker and geometry checks, plus both original regressions');
 }
@@ -480,6 +488,16 @@ async function trigAndBisectorGeometry(page,base,profiles){
         const [a,b,c]=polygons[0];
         near(angle(a,b,c),deg);near(angle(b,a,c),90);
         assert(await caption.isHidden());
+        if(width===320&&deg===45){
+          const issues=await graph.evaluate(svg=>{
+            const old=svg.style.fontFamily;
+            svg.style.fontFamily='monospace';
+            const issues=window.TriggleDiagramGuard.audit(svg,{discover:true}).issues;
+            svg.style.fontFamily=old;
+            return issues;
+          });
+          assert.deepEqual(issues,[],label+' 45° label and right-angle marker with a fallback font');
+        }
       }
       configurations++;
     }
@@ -621,6 +639,110 @@ async function statisticsPlotGeometry(page, base, profiles, full=false) {
   return checks;
 }
 
+async function combinedSightLines(page,base,profiles){
+  const route=base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=9';
+  let checks=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    await page.goto(route);
+    await setLanguage(page,lang);
+    await settle(page,percent);
+    const chart=page.locator('.g10ch4-svg[data-dg-ready]');
+    const sliders=page.locator('.g10ch4-slider');
+    for(const mode of [0,1,2]){
+      await page.locator('.g10ch4-tab').nth(mode).click();
+      for(const [a,b] of [[60,30],[30,65],[75,20],[45,45],[65,60]]){
+        for(const [i,value] of [a,b].entries())await sliders.nth(i).evaluate((input,value)=>{
+          input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));
+        },value);
+        const [alpha,beta]=await sliders.evaluateAll(inputs=>inputs.map(input=>Number(input.value)));
+        const result=await chart.evaluate(svg=>{
+          const node=id=>svg.querySelector(`[data-dg-obstacle="${id}"]`);
+          const attr=(line,key)=>Number(line.getAttribute(key));
+          const segment=id=>['x1','y1','x2','y2'].map(key=>attr(node(id),key));
+          const key=svg.parentElement.querySelector('.diagramguard-coordinate-key');
+          return {alpha:segment('alpha'),beta:segment('beta'),audit:window.TriggleDiagramGuard.audit(svg,{discover:true}),
+            output:key.textContent,font:parseFloat(getComputedStyle(key).fontSize),
+            overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};
+        });
+        const test=`Combined sight lines ${lang} ${width}×${height} ${percent}% ${mode} ${alpha}°/${beta}°`;
+        const currentAngle=([x,y,u,v])=>Math.atan2(Math.abs(v-y),Math.abs(u-x));
+        near(currentAngle(result.alpha),alpha*Math.PI/180,1e-8);
+        near(currentAngle(result.beta),beta*Math.PI/180,1e-8);
+        assert.deepEqual(result.alpha.slice(0,2),result.beta.slice(0,2),test+' shared observation point');
+        if(mode===0)assert(result.alpha[2]===result.beta[2]&&result.alpha[3]<result.alpha[1]&&result.beta[3]>result.beta[1],test);
+        else if(mode===1)assert(alpha>beta&&result.alpha[2]>result.alpha[0]&&result.alpha[2]<result.beta[2],test);
+        else assert(result.alpha[2]<result.alpha[0]&&result.beta[2]>result.beta[0],test);
+        if(mode>0)assert.equal(result.alpha[3],result.beta[3],test+' same ground plane');
+        assert(result.output.includes(`α = ${alpha}°`)&&result.output.includes(`β = ${beta}°`),test+' displayed values');
+        assert.deepEqual(result.audit.issues,[],test);
+        assert.equal(result.audit.labels.length,3,test);
+        result.audit.labels.forEach(label=>near(label.fontPx,.15*percent,.2));
+        near(result.font,.14*percent,.2);
+        assert(result.overflow<=1,test);
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
+async function vennGeometry(page,base,profiles){
+  const route=base+'/index.html?class=10&chapter=g10-ch8&section=concepts&concept=';
+  const cases={union:['2, 4, 5, 6',['only-a','both','only-b']],intersection:['4, 6',['both']],
+    onlyA:['2',['only-a']],onlyB:['5',['only-b']],neither:['1, 3',['outside']],complement:['1, 3, 5',['outside','only-b']]};
+  let checks=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    for(const index of [10,12,13]){
+      await page.goto(route+index);
+      await setLanguage(page,lang);
+      await settle(page,percent);
+      const chart=page.locator('.g10ch8-graphic[data-dg-ready]');
+      await chart.waitFor();
+      const control=page.locator('.g10ch8-control select');
+      for(const [mode,[outcomes,regions]] of Object.entries(cases)){
+        await control.selectOption(mode);
+        const result=await chart.evaluate(svg=>{
+          const circles=[...svg.querySelectorAll('.g10ch8-circle')];
+          const interior=[...svg.querySelectorAll('path[data-region]')];
+          const locations=[...svg.querySelectorAll('text[data-region-label]')].map(node=>{
+            const p=new DOMPoint(Number(node.getAttribute('x')),Number(node.getAttribute('y')));
+            return [node.dataset.regionLabel,circles.map(circle=>circle.isPointInFill(p)),
+              interior.filter(path=>path.isPointInFill(p)).map(path=>path.dataset.region)];
+          });
+          const lab=svg.closest('.g10ch8-lab');
+          const bounds=lab.getBoundingClientRect();
+          const reaches=[svg,lab.querySelector('select'),lab.querySelector('.g10ch8-legend')].map(node=>{
+            const box=node.getBoundingClientRect();
+            return Math.max(bounds.left-box.left,box.right-bounds.right);
+          });
+          return {audit:window.TriggleDiagramGuard.audit(svg,{discover:true}),locations,
+            highlights:[...svg.querySelectorAll('[data-region].is-selected')].map(node=>node.dataset.region),
+            overflow:Math.max(...reaches,document.documentElement.scrollWidth-document.documentElement.clientWidth)};
+        });
+        const expected={a:[false,false],b:[false,false],sample:[false,false],outside:[false,false],
+          'only-a':[true,false],both:[true,true],'only-b':[false,true]};
+        const context=`Venn ${lang} ${width}×${height} ${percent}% concept ${index} ${mode}`;
+        assert.deepEqual(result.audit.issues,[],context);
+        assert.equal(result.audit.labels.length,7,context);
+        assert(Object.values(result.audit.horizontalClipping).every(px=>px<=.5),context+' complete SVG visibility');
+        result.audit.labels.forEach(label=>near(label.fontPx,.14*percent,.2));
+        for(const [location,contained,inRegions] of result.locations){
+          assert.deepEqual(contained,expected[location],context+' '+location);
+          assert.deepEqual(inRegions,contained.some(Boolean)?[location]:[],context+' exact fill for '+location);
+        }
+        assert.deepEqual(result.highlights,regions,context);
+        const readout=await page.locator('.g10ch8-result').textContent();
+        assert(readout.includes(`{${outcomes}}`)&&readout.endsWith(outcomes.split(',').length+'/6'),context);
+        assert(result.overflow<=1,context);
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -659,6 +781,16 @@ async function main(){
           console.log(`DiagramGuard: ${checks} bilingual and responsive sight-line states`);
           return;
         }
+        if(process.argv.includes('--venn')){
+          const checks=await vennGeometry(page,base,viewports);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive probability Venn states`);
+          return;
+        }
+        if(process.argv.includes('--combined-sight')){
+          const checks=await combinedSightLines(page,base,viewports);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive combined sight-line states`);
+          return;
+        }
         if(width===390&&!live){
           await synthetic(page);
           await legacyMarkers(page);
@@ -667,7 +799,9 @@ async function main(){
           await conceptBoundaries(page,base);
           await trigAndBisectorGeometry(page,base,[[320,844]]);
           await sightLineGeometry(page,base,[[320,844]]);
+          await combinedSightLines(page,base,[[320,844]]);
           await statisticsPlotGeometry(page,base,[[320,844]]);
+          await vennGeometry(page,base,[[320,844]]);
           await page.setViewportSize({width,height});
         }
         for(const lang of ['en','ta']){

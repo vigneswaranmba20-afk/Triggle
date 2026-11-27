@@ -1,8 +1,10 @@
 .g10ch8-lab {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: .55rem;
   min-width: 0;
 }
+.g10ch8-lab > * { min-width: 0; }
 .g10ch8-control {
   display: flex;
   flex-wrap: wrap;
@@ -10,6 +12,7 @@
   gap: .4rem .6rem;
   margin: .3rem 0;
 }
+.g10ch8-control > span { min-width: 0; overflow-wrap: anywhere; }
 .g10ch8-control select {
   min-height: 2.75rem;
   max-width: 100%;

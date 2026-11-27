@@ -31,7 +31,7 @@ const [width,height]=viewportArgument.split('x').map(Number);
       const audit=(panel)=>labels(panel).map(svg=>{
         const stat=window.TriggleDiagramGuard.audit(svg,{discover:!svg.dataset.dgScene});
         return {label:svg.getAttribute('aria-label')||svg.querySelector('title')?.textContent||svg.getAttribute('class'),
-          issues:stat.issues,unmeasured:stat.unmeasured,
+          issues:stat.issues,unmeasured:stat.unmeasured,horizontalClipping:stat.horizontalClipping,
           smallestLabelPx:stat.labels.length?Math.min(...stat.labels.map(label=>label.fontPx)):null};
       });
       const mount=async url=>{
@@ -84,7 +84,8 @@ const [width,height]=viewportArgument.split('x').map(Number);
       routesWithSvg:results.filter(route=>route.states.some(state=>state.figures.length)).length,
       states:states.length,statesWithPictures:states.filter(state=>state.figures.length).length,
       renderedInstances:figures.length,flaggedInstances:figures.filter(figure=>figure.issues.length).length,
-      boundaryFlags:figures.flatMap(figure=>figure.issues).filter(issue=>issue.kind==='boundary').length
+      boundaryFlags:figures.flatMap(figure=>figure.issues).filter(issue=>issue.kind==='boundary').length,
+      horizontallyClipped:figures.filter(figure=>Object.values(figure.horizontalClipping||{}).some(px=>px>1)).length
     };
     console.log(JSON.stringify({engine:useWebKit?'WebKit':'Chromium',viewport:{width,height},textSize,includePreviews,summary,routes:results},null,2));
   }finally{await browser?.close();await app.close()}

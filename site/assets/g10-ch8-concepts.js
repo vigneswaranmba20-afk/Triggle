@@ -226,6 +226,8 @@
   function venn(host, t) {
     const controls = element('div', '', host);
     const chart = element('div', '', host);
+    const svg = graphic(chart, `${t.venn}. A: ${t.even}. B: ${t.aboveThree}.`, 200);
+    svg.classList.add('diagramguard-svg');
     const result = output(host);
     const mode = {
       union: [t.union, (a,b) => a || b],
@@ -237,29 +239,45 @@
     };
     const memberA = n => n % 2 === 0;
     const memberB = n => n > 3;
+    let regions = [];
     const render = () => {
-      chart.replaceChildren();
       const [name, condition] = mode[selection.value];
-      const eligible = n => condition(memberA(n), memberB(n));
-      const svg = graphic(chart, `${t.venn}. A: ${t.even}. B: ${t.aboveThree}.`, 162);
-      const path = (d, selected) => vector('path', {d,class: selected ? 'g10ch8-region is-selected' : 'g10ch8-region'}, svg);
-      vector('rect', {x: 5, y: 7, width: 290, height: 148, rx: 8,
-        class: condition(false, false) ? 'g10ch8-region is-selected' : 'g10ch8-region'}, svg);
-      path('M150 32 A54 54 0 1 0 150 132 A54 54 0 0 1 150 32Z', condition(true,false));
-      path('M150 32 A54 54 0 0 1 150 132 A54 54 0 0 1 150 32Z', condition(true,true));
-      path('M150 32 A54 54 0 1 1 150 132 A54 54 0 0 0 150 32Z', condition(false,true));
-      [130,170].forEach(cx => vector('circle', {cx, cy: 82, r: 54, class: 'g10ch8-circle'}, svg));
-      label(svg, 93, 50, 'A');
-      label(svg, 207, 50, 'B');
-      label(svg, 99, 88, '2');
-      label(svg, 150, 88, '4, 6');
-      label(svg, 200, 88, '5');
-      label(svg, 34, 134, '1, 3');
-      const selected = die.filter(eligible);
+      for (const [node, a, b] of regions) node.classList.toggle('is-selected', condition(a, b));
+      const selected = die.filter(n => condition(memberA(n), memberB(n)));
       result.textContent = `${name} · {${selected.join(', ')}} · ${t.probability} ${selected.length}/${die.length}`;
     };
-    element('p', `A: ${t.even}. B: ${t.aboveThree}.`, host).className = 'g10ch8-legend';
+    const legend = element('div', '', host);
+    legend.className = 'g10ch8-legend diagramguard-coordinate-legend';
+    element('span', `A: ${t.even}`, legend);
+    element('span', `B: ${t.aboveThree}`, legend);
     const selection = control(controls, t.region, Object.entries(mode).map(([key, [name]]) => [key, name]), 'union', render);
+    window.TriggleDiagramGuard.responsive(svg, (width, rem) => {
+      const font = .875 * rem * 300 / width;
+      const radius = 69, offset = 29, center = 100 + 1.25 * font;
+      const delta = Math.sqrt(radius ** 2 - offset ** 2);
+      const height = center + radius + 1.85 * font + 10;
+      const arc = (y, large, sweep) => `A${radius} ${radius} 0 ${large} ${sweep} 150 ${y}`;
+      svg.setAttribute('viewBox', `0 0 300 ${height}`);
+      svg.replaceChildren();
+      const outside=vector('rect',{x:5,y:5,width:290,height:height-10,rx:8,class:'g10ch8-region','data-region':'outside'},svg);
+      const diagram=vector('g',{transform:`translate(0 ${center})`},svg);
+      const region=(d,name)=>vector('path',{d,class:'g10ch8-region','data-region':name},diagram);
+      regions = [
+        [outside,false,false],
+        [region(`M150 ${-delta} ${arc(delta,1,0)} ${arc(-delta,0,1)} Z`,'only-a'),true,false],
+        [region(`M150 ${-delta} ${arc(delta,0,1)} ${arc(-delta,0,1)} Z`,'both'),true,true],
+        [region(`M150 ${-delta} ${arc(delta,1,1)} ${arc(-delta,0,0)} Z`,'only-b'),false,true]
+      ];
+      for (const cx of [150-offset,150+offset]) vector('circle',{cx,cy:0,r:radius,class:'g10ch8-circle'},diagram);
+      const title = -radius - 1.1*font;
+      for (const [x,y,value,location] of [[121,title,'A','a'],[179,title,'B','b'],[268,title,'S','sample'],
+        [86,0,'2','only-a'],[150,0,'4, 6','both'],[214,0,'5','only-b'],[45,radius+.9*font,'1, 3','outside']]) {
+        const text=label(diagram,x,y,value,{dy:'.35em','data-dg-label':value,'data-region-label':location});
+        text.style.fontSize=font+'px';
+        text.style.fontWeight='500';
+      }
+      render();
+    });
     render();
   }
 

@@ -44,11 +44,10 @@
     return ends.length===2?ends:null;
   }
 
-  function drawGrid(svg, toPlot, bounds, step) {
-    const labels = [...svg.querySelectorAll('text')].map(node=>node.getBBox());
+  function drawGrid(svg, toPlot, bounds, step, labels=[...svg.querySelectorAll('text')].map(node=>node.getBBox())) {
     const [left,bottom] = toPlot(bounds.xMin,bounds.yMin);
     const [right,top] = toPlot(bounds.xMax,bounds.yMax);
-    const group = shape('g',{'aria-hidden':'true',stroke:grid,'stroke-width':'.8'});
+    const group = shape('g',{'aria-hidden':'true','data-dg-reference-grid':'',stroke:grid,'stroke-width':'.8'});
     // Break only reference grid lines around labels. Axes and geometric edges stay whole.
     function gridLine(fixed,start,end,vertical) {
       const gaps = labels.flatMap(({x,y,width,height})=>{
@@ -59,7 +58,7 @@
       const point = value => vertical ? [fixed,value] : [value,fixed];
       let cursor = start;
       for (const [from,to] of [...gaps,[end,end]]) {
-        if (from > cursor) group.append(line(point(cursor),point(Math.min(from,end)),{}));
+        if (from > cursor) group.append(line(point(cursor),point(Math.min(from,end)),{'data-dg-grid-axis':vertical?'x':'y'}));
         cursor = Math.max(cursor,to);
         if (cursor >= end) break;
       }
@@ -350,5 +349,5 @@
     return true;
   }
 
-  window.TriggleCoordinateFigures = Object.freeze({register,mount});
+  window.TriggleCoordinateFigures = Object.freeze({register,mount,drawGrid});
 })();

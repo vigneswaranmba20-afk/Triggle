@@ -425,17 +425,16 @@ function mount(stage,host,lang){
         const adj=deg===30?'√3':'1',opp=deg===60?'√3':'1',hyp=deg===45?'√2':'2';
         const x=55,y=170,s=sinD(deg),c=cosD(deg),unit=80*(deg===45?Math.sqrt(2):2);
         const w=unit*c,h=unit*s,right=x+w;
-        const degreeX=x+(deg===30?68:deg===45?54:43);
         description+=ta?`. அடுத்த பக்கம் ${adj}. எதிர்ப்பக்கம் ${opp}. கர்ணம் ${hyp}.`:
           `. Adjacent side ${adj}. Opposite side ${opp}. Hypotenuse ${hyp}.`;
         fig=`<polygon points="${x},${y} ${right},${y} ${right},${y-h}" fill="#EFF8F4" stroke="#1E5248" stroke-width="2.2"/>
-          <path d="M${right-11},${y} V${y-11} H${right}" fill="none" stroke="#1E5248" stroke-width="1.4"/>
-          <path d="M${x+22},${y} A22,22 0 0,0 ${x+22*c},${y-22*s}" fill="none" stroke="#6E2933" stroke-width="1.4"/>
+          <path d="M${right-11},${y} V${y-11} H${right}" fill="none" stroke="#1E5248" stroke-width="1.4" data-dg-obstacle="right-angle"/>
+          <path d="M${x+22},${y} A22,22 0 0,0 ${x+22*c},${y-22*s}" fill="none" stroke="#6E2933" stroke-width="1.4" data-dg-obstacle="standard-angle-arc"/>
           <g font-size="15.5" font-weight="550" fill="#181B20">
             <text x="${x+w/2}" y="193" text-anchor="middle">${adj}</text>
             <text x="${right+14}" y="${y-h/2+3}">${opp}</text>
             <text x="${x+w/2-22*s}" y="${y-h/2-22*c}" text-anchor="middle">${hyp}</text>
-            <text x="${degreeX}" y="${y-9}" text-anchor="middle" fill="#6E2933">${deg}°</text>
+            <text x="${x-20}" y="${y-19}" text-anchor="middle" fill="#6E2933">${deg}°</text>
           </g>`;
       }else if(deg===0){
         frame='0 0 310 100';
@@ -662,54 +661,58 @@ function mount(stage,host,lang){
   });
   const svgWrap=el('div'),controls=el('div'),readout=el('div','g10ch4-readout g10ch4-formula');
   lab.append(title,tabs,svgWrap,controls,readout);
+  const figure=sightFigure(svgWrap,ta?'இரு செங்கோண முக்கோணங்களின் பார்வைக்கோடுகள்':'Lines of sight in two right triangles');
+  const unit=ta?'மீ':'m';
   const draw=()=>{
     btns.forEach(([k,b])=>b.setAttribute('aria-pressed',String(k===mode)));
-    if(mode==='two-same'&&alpha<=beta)alpha=Math.min(75,beta+15);
+    if(mode==='two-same'&&alpha<=beta)alpha=Math.min(75,beta+5);
+    for(const [control,angle] of [[alphaSlider,alpha],[betaSlider,beta]]){
+      control.input.value=String(angle);
+      control.out.textContent=angle+'°';
+    }
     const res=math.combinedTwoTriangles(mode,h1,alpha,beta);
+    const y=154;
+    const ground=`<line x1="20" y1="${y}" x2="289" y2="${y}" stroke="#1E5248" stroke-width="1.6" data-dg-obstacle="ground"/>`;
+    const ray=(x1,y1,x2,y2,id,color)=>`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="2" data-dg-obstacle="${id}"/>`;
+    const red='#6E2933',green='#1E5248';
+    const values=[`α = ${alpha}°`,`β = ${beta}°`,`h₁ = ${h1} ${unit}`];
     if(mode==='deck-hill'){
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Deck to hilltop and base">
-        <line x1="20" y1="168" x2="290" y2="168" stroke="#1E5248" stroke-width="1.6"/>
-        <rect x="44" y="114" width="22" height="54" fill="#DCEEE8" stroke="#1E5248" stroke-width="1.6"/>
-        <rect x="234" y="26" width="26" height="142" fill="#F3EFE8" stroke="#6E2933" stroke-width="1.8"/>
-        <line x1="66" y1="114" x2="234" y2="114" stroke="#181B20" stroke-width="1.6" stroke-dasharray="4 3"/>
-        <line x1="66" y1="114" x2="234" y2="26" stroke="#6E2933" stroke-width="2.2"/>
-        <line x1="66" y1="114" x2="234" y2="168" stroke="#1E5248" stroke-width="2.2"/>
-        <text x="176" y="109" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20" stroke="#FAF9F6" stroke-width="2.5" paint-order="stroke">x ≈ ${fmt(res.x,1)} m</text>
-        <text x="92" y="106" font-size="10.5" font-weight="700" fill="#6E2933">α=${alpha}°</text>
-        <text x="92" y="130" font-size="10.5" font-weight="700" fill="#1E5248">β=${beta}°</text>
-        <text x="26" y="146" font-size="10" font-weight="700" fill="#181B20">${h1}m</text>
-      </svg>`;
+      const scale=Math.min(178/res.x,128/res.total);
+      const observer=59,target=observer+res.x*scale,eye=y-h1*scale,top=y-res.total*scale;
+      figure(`${ground}
+        <rect x="42" y="${eye}" width="17" height="${y-eye}" fill="#DCEEE8" stroke="${green}" data-dg-obstacle="deck" data-dg-fill/>
+        <rect x="${target}" y="${top}" width="17" height="${y-top}" fill="#F3EFE8" stroke="${red}" data-dg-obstacle="target" data-dg-fill/>
+        <line x1="${observer}" y1="${eye}" x2="${target}" y2="${eye}" stroke="#181B20" stroke-dasharray="4 3" data-dg-obstacle="horizon"/>
+        ${ray(observer,eye,target,top,'alpha',red)}${ray(observer,eye,target,y,'beta',green)}
+        ${sightArc(observer,eye,17,0,-alpha,red)}${sightArc(observer,eye,21,beta,0,green)}`,[
+        {id:'α',x:observer,y:eye,direction:[[0,-1],[-1,-1],[1,-1]]},
+        {id:'β',x:observer+20,y:eye+14,direction:[[0,1],[1,1],[1,0]]},
+        {id:'x',x:(observer+target)/2,y,direction:[0,1]}
+      ],[...values,`x ≈ ${fmt(res.x,1)} ${unit}`,`H ≈ ${fmt(res.total,1)} ${unit}`]);
       readout.innerHTML=tex(`\\begin{aligned}&x=\\dfrac{${h1}}{\\tan ${beta}^\\circ}\\approx ${fmt(res.x,1)}\\text{ m}\\\\&H=${h1}+x\\tan ${alpha}^\\circ\\approx ${fmt(res.total,1)}\\text{ m}\\end{aligned}`,true);
-    }else if(mode==='two-same'){
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Two boats same side">
-        <line x1="20" y1="162" x2="290" y2="162" stroke="#1E5248" stroke-width="1.6"/>
-        <rect x="40" y="42" width="18" height="120" fill="#F3EFE8" stroke="#6E2933" stroke-width="1.8"/>
-        <line x1="58" y1="42" x2="142" y2="162" stroke="#6E2933" stroke-width="2"/>
-        <line x1="58" y1="42" x2="262" y2="162" stroke="#1E5248" stroke-width="2"/>
-        <circle cx="142" cy="162" r="4" fill="#6E2933"/><circle cx="262" cy="162" r="4" fill="#1E5248"/>
-        <text x="22" y="106" font-size="10" font-weight="700" fill="#181B20">${h1}m</text>
-        <text x="108" y="156" font-size="10" font-weight="700" fill="#6E2933">α=${alpha}°</text>
-        <text x="216" y="156" font-size="10" font-weight="700" fill="#1E5248">β=${beta}°</text>
-        <text x="202" y="176" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">Gap d ≈ ${fmt(res.gap,1)} m</text>
-      </svg>`;
-      readout.innerHTML=tex(`\\begin{aligned}&x_1\\approx ${fmt(res.xFar,1)}\\text{ m},\\;x_2\\approx ${fmt(res.xNear,1)}\\text{ m}\\\\&\\text{Gap}=x_1-x_2\\approx ${fmt(res.gap,1)}\\text{ m}\\end{aligned}`,true);
     }else{
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Two ships opposite sides">
-        <line x1="20" y1="162" x2="290" y2="162" stroke="#1E5248" stroke-width="1.6"/>
-        <rect x="148" y="42" width="14" height="120" fill="#F3EFE8" stroke="#6E2933" stroke-width="1.8"/>
-        <line x1="155" y1="42" x2="46" y2="162" stroke="#6E2933" stroke-width="2"/>
-        <line x1="155" y1="42" x2="264" y2="162" stroke="#1E5248" stroke-width="2"/>
-        <circle cx="46" cy="162" r="4" fill="#6E2933"/><circle cx="264" cy="162" r="4" fill="#1E5248"/>
-        <text x="155" y="34" font-size="10" font-weight="700" text-anchor="middle" fill="#181B20">${h1}m</text>
-        <text x="72" y="156" font-size="10" font-weight="700" fill="#6E2933">α=${alpha}°</text>
-        <text x="210" y="156" font-size="10" font-weight="700" fill="#1E5248">β=${beta}°</text>
-        <text x="155" y="178" font-size="10.5" font-weight="700" text-anchor="middle" fill="#181B20">Total = x₁ + x₂ ≈ ${fmt(res.gap,1)} m</text>
-      </svg>`;
-      readout.innerHTML=tex(`\\begin{aligned}&x_1\\approx ${fmt(res.xLeft,1)}\\text{ m},\\;x_2\\approx ${fmt(res.xRight,1)}\\text{ m}\\\\&\\text{Gap}=x_1+x_2\\approx ${fmt(res.gap,1)}\\text{ m}\\end{aligned}`,true);
+      const same=mode==='two-same';
+      const left=same?res.xNear:res.xLeft,right=same?res.xFar:res.xRight;
+      const scale=Math.min(182/(same?right:left+right),112/h1);
+      const tower=59+(same?0:left*scale),eye=y-h1*scale;
+      const x1=tower+(same?1:-1)*left*scale,x2=tower+right*scale;
+      const dot=(x,id,color)=>`<circle cx="${x}" cy="${y}" r="3.2" fill="${color}" data-dg-obstacle="${id}" data-dg-fill/>`;
+      figure(`${ground}
+        <rect x="${tower-7}" y="${eye}" width="14" height="${y-eye}" fill="#F3EFE8" stroke="${red}" data-dg-obstacle="tower" data-dg-fill/>
+        ${ray(tower,eye,x1,y,'alpha',red)}${ray(tower,eye,x2,y,'beta',green)}
+        ${dot(x1,'first-position',red)}${dot(x2,'second-position',green)}
+        ${same?sightArc(x1,y,17,180,180+alpha,red):sightArc(x1,y,17,0,-alpha,red)}
+        ${sightArc(x2,y,19,180,180+beta,green)}`,[
+        {id:'α',x:x1,y,direction:[[-1,1],[0,1],[-1,0]]},
+        {id:'β',x:x2,y,direction:[[1,1],[0,1],[1,0]]},
+        {id:'h₁',x:tower,y:eye,direction:[[0,-1],[-1,-1],[1,-1]]}
+      ],[...values,`d ≈ ${fmt(res.gap,1)} ${unit}`]);
+      const first=same?right:left,second=same?left:right;
+      readout.innerHTML=tex(`\\begin{aligned}&x_1\\approx ${fmt(first,1)}\\text{ m},\\;x_2\\approx ${fmt(second,1)}\\text{ m}\\\\&\\text{Gap}=x_1${same?'-':'+'}x_2\\approx ${fmt(res.gap,1)}\\text{ m}\\end{aligned}`,true);
     }
   };
-  makeSlider(controls,ta?'மேல் / அருகில் கோணம் α':'Angle α',30,75,5,alpha,'°',v=>{alpha=v;draw();});
-  makeSlider(controls,ta?'கீழ் / தொலைவு கோணம் β':'Angle β',20,65,5,beta,'°',v=>{beta=v;draw();});
+  const alphaSlider=makeSlider(controls,ta?'மேல் / அருகில் கோணம் α':'Angle α',30,75,5,alpha,'°',v=>{alpha=v;draw();});
+  const betaSlider=makeSlider(controls,ta?'கீழ் / தொலைவு கோணம் β':'Angle β',20,65,5,beta,'°',v=>{beta=v;draw();});
   draw();
 }
 
