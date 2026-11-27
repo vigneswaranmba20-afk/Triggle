@@ -170,21 +170,24 @@ async function verifySelection(page, chapterTrigger, grade, chapter) {
       execFileSync('adb', ['reverse', port, port]);
       console.log('Android ' + (await device.shell('getprop ro.build.version.release')).toString().trim());
     }
+    const androidContext = await device?.launchBrowser({
+      isMobile: true, hasTouch: true, serviceWorkers: 'block', reducedMotion: 'reduce', timeout: 90000
+    });
+    const androidPage = await androidContext?.newPage();
+    if (androidPage) assert.match(await androidPage.evaluate(() => navigator.userAgent), /Android.*Chrome\//);
     for (const [width, height] of sizes) {
       const options = {viewport: {width, height}, serviceWorkers: 'block', reducedMotion: 'reduce'};
-      const context = device
-        ? await device.launchBrowser({...options, isMobile: true, hasTouch: true, timeout: 90000})
-        : await browser.newContext({...phone, ...options});
-      const page = await context.newPage();
-      if (device) {
+      const context = androidContext || await browser.newContext({...phone, ...options});
+      const page = androidPage || await context.newPage();
+      if (androidPage) {
+        await page.setViewportSize({width, height});
         console.log('Testing ' + width + 'px with ' + await page.evaluate(() => navigator.userAgent));
-        assert.match(await page.evaluate(() => navigator.userAgent), /Android.*Chrome\//);
       }
       const crumb = page.locator('#crumb .crumb-link');
       const questionTrigger = page.locator('#questionPicker');
       for (const {grade, chapter, question, practice} of readers) {
         for (const [route, pickers] of [[question, ['chapter', 'question']], [practice, ['class', 'exercise']]]) {
-          await page.goto(readerUrl(base, grade, route));
+          await page.goto(readerUrl(base, grade, route), {waitUntil: 'domcontentloaded'});
           await page.locator('body:not(.ver-starting)').waitFor();
           assert.equal(new URL(page.url()).searchParams.get('question'), route);
           for (const lang of ['en', 'ta']) {
@@ -233,8 +236,9 @@ async function verifySelection(page, chapterTrigger, grade, chapter) {
           await verifySelection(page, crumb.nth(1), grade, grade === 9 ? 9 : 8);
         }
       }
-      await context.close();
+      if (!androidContext) await context.close();
     }
+    await androidContext?.close();
   } finally {
     await device?.close();
     await browser?.close();
