@@ -50,9 +50,13 @@
     },
     quadSegmentsCross:(a,b,c,d)=>{
       const cross=(p,q,r)=>(q[0]-p[0])*(r[1]-p[1])-(q[1]-p[1])*(r[0]-p[0]);
+      const onSegment=(p,q,r,value)=>Math.abs(value)<1e-9&&r.every((n,i)=>
+        n>=Math.min(p[i],q[i])-1e-9&&n<=Math.max(p[i],q[i])+1e-9);
       const segHit=(p1,p2,p3,p4)=>{
         const d1=cross(p3,p4,p1),d2=cross(p3,p4,p2),d3=cross(p1,p2,p3),d4=cross(p1,p2,p4);
-        return ((d1>1e-9&&d2<-1e-9)||(d1<-1e-9&&d2>1e-9))&&((d3>1e-9&&d4<-1e-9)||(d3<-1e-9&&d4>1e-9));
+        const straddles=(u,v)=>(u>1e-9&&v<-1e-9)||(u<-1e-9&&v>1e-9);
+        return (straddles(d1,d2)&&straddles(d3,d4))||onSegment(p3,p4,p1,d1)||onSegment(p3,p4,p2,d2)||
+          onSegment(p1,p2,p3,d3)||onSegment(p1,p2,p4,d4);
       };
       return segHit(a,b,c,d)||segHit(b,c,d,a);
     },
@@ -150,8 +154,10 @@
   }
 
   function makePlane(W=320,H=208,xMin=-6,xMax=6,yMin=-4,yMax=4){
-    const padL=24,padR=14,padT=12,padB=18;
-    const pw=W-padL-padR,ph=H-padT-padB;
+    const availableWidth=W-38,availableHeight=H-30;
+    const unit=Math.min(availableWidth/(xMax-xMin),availableHeight/(yMax-yMin));
+    const pw=(xMax-xMin)*unit,ph=(yMax-yMin)*unit;
+    const padL=24+(availableWidth-pw)/2,padT=12+(availableHeight-ph)/2;
     const sx=x=>padL+((x-xMin)/(xMax-xMin))*pw;
     const sy=y=>padT+((yMax-y)/(yMax-yMin))*ph;
     const mx=px=>xMin+((px-padL)/pw)*(xMax-xMin);
@@ -164,20 +170,20 @@
       g.append(svgEl('rect',{x:padL,y:padT,width:pw,height:ph,rx:6,fill:'#FDFCF9',stroke:'#E4DFD4','stroke-width':1}));
       for(let x=Math.ceil(xMin);x<=Math.floor(xMax);x++){
         const px=sx(x),zero=x===0;
-        g.append(svgEl('line',{x1:px,y1:padT,x2:px,y2:padT+ph,stroke:zero?'#6E7781':'#ECE7DD','stroke-width':zero?1.35:0.85}));
+        g.append(svgEl('line',{x1:px,y1:padT,x2:px,y2:padT+ph,'data-dg-grid-axis':'x',stroke:zero?'#6E7781':'#ECE7DD','stroke-width':zero?1.35:0.85}));
         if(!zero&&x%2===0){
           g.append(svgEl('text',{x:px,y:sy(0)+11,'text-anchor':'middle',fill:'#6E7781','font-size':8.5,'font-weight':600},String(x)));
         }
       }
       for(let y=Math.ceil(yMin);y<=Math.floor(yMax);y++){
         const py=sy(y),zero=y===0;
-        g.append(svgEl('line',{x1:padL,y1:py,x2:padL+pw,y2:py,stroke:zero?'#6E7781':'#ECE7DD','stroke-width':zero?1.35:0.85}));
+        g.append(svgEl('line',{x1:padL,y1:py,x2:padL+pw,y2:py,'data-dg-grid-axis':'y',stroke:zero?'#6E7781':'#ECE7DD','stroke-width':zero?1.35:0.85}));
         if(!zero&&y%2===0){
           g.append(svgEl('text',{x:sx(0)-5,y:py+3,'text-anchor':'end',fill:'#6E7781','font-size':8.5,'font-weight':600},String(y)));
         }
       }
-      g.append(svgEl('text',{x:padL+pw-4,y:sy(0)-4,'text-anchor':'end',fill:'#525B62','font-size':9,'font-weight':700},'X'));
-      g.append(svgEl('text',{x:sx(0)+5,y:padT+9,fill:'#525B62','font-size':9,'font-weight':700},'Y'));
+      g.append(svgEl('text',{x:padL+pw+5,y:sy(0)+3,fill:'#525B62','font-size':9,'font-weight':700},'X'));
+      g.append(svgEl('text',{x:sx(0)+6,y:padT+2,fill:'#525B62','font-size':9,'font-weight':700},'Y'));
       g.append(svgEl('text',{x:sx(0)-4,y:sy(0)+10,'text-anchor':'end',fill:'#525B62','font-size':8.5,'font-weight':700},'O'));
     }
     function clipLine(a,b,c){
@@ -196,10 +202,10 @@
   }
 
   function svgPoint(svg,evt){
-    const r=svg.getBoundingClientRect();
-    const vb=svg.viewBox.baseVal;
-    if(r.width>0&&r.height>0&&vb&&vb.width>0){
-      return [(evt.clientX-r.left)*(vb.width/r.width)+vb.x,(evt.clientY-r.top)*(vb.height/r.height)+vb.y];
+    const matrix=svg.getScreenCTM();
+    if(matrix){
+      const point=new DOMPoint(evt.clientX,evt.clientY).matrixTransform(matrix.inverse());
+      if(Number.isFinite(point.x)&&Number.isFinite(point.y))return [point.x,point.y];
     }
     return [160,104];
   }
@@ -242,7 +248,8 @@
     wrap.append(svgEl('circle',{cx:x,cy:y,r:6.2,fill:color,stroke:'#FFFFFF','stroke-width':2}));
     const nearRightEdge=x>g.ownerSVGElement.viewBox.baseVal.width-58;
     const nearXAxisTicks=y>=114&&y<=134;
-    wrap.append(svgEl('text',{x:x+(nearRightEdge?-11:11),y:y+(nearXAxisTicks?15:-9),'text-anchor':nearRightEdge?'end':'start',
+    const labelBelow=y<19||nearXAxisTicks;
+    wrap.append(svgEl('text',{x:x+(nearRightEdge?-11:11),y:y+(labelBelow?15:-9),'text-anchor':nearRightEdge?'end':'start',
       fill:color,stroke:'#FDFCF9','stroke-width':3,'stroke-linejoin':'round','paint-order':'stroke',
       'font-size':10.5,'font-weight':800},label));
     g.append(wrap);
@@ -436,7 +443,7 @@
       },
       ta?'முனை வரிசை':'Vertex order'
     );
-    const note=el('p','g10ch4-drag-note',ta?'முனைகள் A, B, C, D-ஐ இழுக்கவும்; AC மூலைவிட்டம் இரு முக்கோணங்களாகப் பிரிக்கிறது.':'Drag A, B, C, D; diagonal AC splits the quad into two triangles.');
+    const note=el('p','g10ch4-drag-note',ta?'முனைகள் A, B, C, D-ஐ இழுக்கவும். உட்புற மூலைவிட்டம் நாற்கரத்தை இரு முக்கோணங்களாகப் பிரிக்கும்.':'Drag A, B, C or D. An interior diagonal divides the quadrilateral into two triangles.');
     const readout=el('div','g10ch4-readout');
     host.append(tabs.bar,svg,note,readout);
 
@@ -444,17 +451,26 @@
       sceneG.replaceChildren();
       const res=math.quadArea(A,B,C,D);
       const pts=[A,B,C,D].map(p=>`${pl.sx(p[0])},${pl.sy(p[1])}`).join(' ');
-      sceneG.append(svgEl('polygon',{points:pts,fill:res.selfIntersecting?'rgba(170,52,41,.22)':'rgba(31,94,114,.15)',stroke:res.selfIntersecting?'#AA3429':'#1F5E72','stroke-width':2}));
-      sceneG.append(svgEl('line',{x1:pl.sx(A[0]),y1:pl.sy(A[1]),x2:pl.sx(C[0]),y2:pl.sy(C[1]),stroke:'#6E2933','stroke-width':1.4,'stroke-dasharray':'4 3'}));
+      const boundary=svgEl('polygon',{points:pts,fill:res.selfIntersecting?'rgba(170,52,41,.22)':'rgba(31,94,114,.15)',
+        stroke:res.selfIntersecting?'#AA3429':'#1F5E72','stroke-width':2});
+      sceneG.append(boundary);
       drawHandle(sceneG,pl.sx(A[0]),pl.sy(A[1]),'A','#6E2933','A');
       drawHandle(sceneG,pl.sx(B[0]),pl.sy(B[1]),'B','#1F5E72','B');
       drawHandle(sceneG,pl.sx(C[0]),pl.sy(C[1]),'C','#6E2933','C');
       drawHandle(sceneG,pl.sx(D[0]),pl.sy(D[1]),'D','#3F5D3A','D');
       if(res.selfIntersecting){
-        tex(readout,`\\begin{aligned}\\text{Crossed edges! }\\Delta_{\\text{raw}}&=${fmt(res.area,2)}\\;(\\text{INVALID})\\\\\\text{Fix order }&\\text{so edges do not cross.}\\end{aligned}`,`Crossed polygon! Fix vertex order.`);
+        const message=ta?'எதிரெதிர் பக்கங்கள் சந்திக்கின்றன. முனைகளைச் சரிசெய்யவும்.':'Opposite sides meet. Adjust the vertices.';
+        tex(readout,`\\Delta_{\\mathrm{raw}}=${fmt(res.area,2)}\\quad\\text{${ta?'செல்லாது':'Invalid'}}`,message);
+        readout.append(el('p','g10ch4-drag-note',message));
       }else{
-        const t1=math.triangleArea(A,B,C).area,t2=math.triangleArea(A,C,D).area;
-        tex(readout,`\\begin{aligned}\\Delta_{ABC}+\\Delta_{ACD}&=${fmt(t1,2)}+${fmt(t2,2)}=${fmt(t1+t2,2)}\\\\\\text{Shoelace Area}&=${fmt(res.area,2)}\\text{ sq. units}\\end{aligned}`,`Area = ${fmt(res.area)} sq. units`);
+        const abc=math.triangleArea(A,B,C),acd=math.triangleArea(A,C,D);
+        const useAC=abc.signed*acd.signed>=0;
+        const [start,end,diagonal]=useAC?[A,C,'AC']:[B,D,'BD'];
+        const [first,second,t1,t2]=useAC?['ABC','ACD',abc.area,acd.area]:
+          ['ABD','BCD',math.triangleArea(A,B,D).area,math.triangleArea(B,C,D).area];
+        boundary.after(svgEl('line',{x1:pl.sx(start[0]),y1:pl.sy(start[1]),x2:pl.sx(end[0]),y2:pl.sy(end[1]),
+          'data-dg-area-diagonal':diagonal,stroke:'#6E2933','stroke-width':1.4,'stroke-dasharray':'4 3'}));
+        tex(readout,`\\begin{aligned}\\Delta_{${first}}+\\Delta_{${second}}&=${fmt(t1,2)}+${fmt(t2,2)}=${fmt(t1+t2,2)}\\\\\\text{Shoelace Area}&=${fmt(res.area,2)}\\text{ sq. units}\\end{aligned}`,`Area = ${fmt(res.area)} sq. units`);
       }
     }
     attachMultiDrag(svg,pt=>{
@@ -497,7 +513,7 @@
       if(seg)sceneG.append(svgEl('line',{x1:pl.sx(seg[0][0]),y1:pl.sy(seg[0][1]),x2:pl.sx(seg[1][0]),y2:pl.sy(seg[1][1]),stroke:'#1F5E72','stroke-width':1.7}));
       sceneG.append(svgEl('line',{x1:pl.sx(A[0]),y1:pl.sy(A[1]),x2:pl.sx(B[0]),y2:pl.sy(A[1]),stroke:'#525B62','stroke-width':1.4,'stroke-dasharray':'3 3'}));
       sceneG.append(svgEl('line',{x1:pl.sx(B[0]),y1:pl.sy(A[1]),x2:pl.sx(B[0]),y2:pl.sy(B[1]),stroke:'#6E2933','stroke-width':1.4,'stroke-dasharray':'3 3'}));
-      sceneG.append(svgEl('line',{x1:pl.sx(A[0]),y1:pl.sy(A[1]),x2:pl.sx(B[0]),y2:pl.sy(B[1]),stroke:'#6E2933','stroke-width':2.6}));
+      sceneG.append(svgEl('line',{x1:pl.sx(A[0]),y1:pl.sy(A[1]),x2:pl.sx(B[0]),y2:pl.sy(B[1]),stroke:'#6E2933','stroke-width':2.6,'data-dg-slope-line':'inclination'}));
       drawHandle(sceneG,pl.sx(A[0]),pl.sy(A[1]),`A(${A[0]},${A[1]})`,'#1F5E72','A');
       drawHandle(sceneG,pl.sx(B[0]),pl.sy(B[1]),`B(${B[0]},${B[1]})`,'#6E2933','B');
       if(!s.defined){
@@ -516,7 +532,9 @@
     },(id,pt)=>{
       const g=pl.clampSnap(pl.mx(pt[0]),pl.my(pt[1]),1);
       if(id==='A')A=g; else B=g;
-      if(A[0]===B[0]&&A[1]===B[1])B=[A[0]+1,A[1]+1];
+      if(A[0]===B[0]&&A[1]===B[1]){
+        B=[A[0]+(A[0]===pl.xMax?-1:1),A[1]+(A[1]===pl.yMax?-1:1)];
+      }
       paint();
     });
     paint();
@@ -544,13 +562,13 @@
       sceneG.replaceChildren();
       const s1=math.slopeBetween([0,0],P);
       const a1=P[1],b1=-P[0],seg1=pl.clipLine(a1,b1,0);
-      if(seg1)sceneG.append(svgEl('line',{x1:pl.sx(seg1[0][0]),y1:pl.sy(seg1[0][1]),x2:pl.sx(seg1[1][0]),y2:pl.sy(seg1[1][1]),stroke:'#1F5E72','stroke-width':2.4}));
+      if(seg1)sceneG.append(svgEl('line',{x1:pl.sx(seg1[0][0]),y1:pl.sy(seg1[0][1]),x2:pl.sx(seg1[1][0]),y2:pl.sy(seg1[1][1]),stroke:'#1F5E72','stroke-width':2.4,'data-dg-slope-line':'first'}));
       let a2,b2,c2;
-      if(mode===0){a2=a1;b2=b1;c2=2*b1;} // shifted parallel through (0,2) or right
+      if(mode===0){a2=a1;b2=b1;c2=b1===0?-2*a1:2*b1;} // shift vertical lines two units along X
       else{a2=-b1;b2=a1;c2=0;} // perpendicular rotated 90 deg through origin
       const seg2=pl.clipLine(a2,b2,c2);
-      if(seg2)sceneG.append(svgEl('line',{x1:pl.sx(seg2[0][0]),y1:pl.sy(seg2[0][1]),x2:pl.sx(seg2[1][0]),y2:pl.sy(seg2[1][1]),stroke:'#6E2933','stroke-width':2.4}));
-      if(mode===1&&P[0]!==0&&P[1]!==0){
+      if(seg2)sceneG.append(svgEl('line',{x1:pl.sx(seg2[0][0]),y1:pl.sy(seg2[0][1]),x2:pl.sx(seg2[1][0]),y2:pl.sy(seg2[1][1]),stroke:'#6E2933','stroke-width':2.4,'data-dg-slope-line':'second'}));
+      if(mode===1&&P[0]!==0&&P[1]!==0&&Math.abs(P[0])<=pl.yMax){
         const Q=[-P[1],P[0]];
         sceneG.append(svgEl('line',{x1:pl.sx(0),y1:pl.sy(0),x2:pl.sx(Q[0]),y2:pl.sy(Q[1]),stroke:'#6E2933','stroke-width':1.5,'stroke-dasharray':'3 3'}));
         sceneG.append(svgEl('circle',{cx:pl.sx(Q[0]),cy:pl.sy(Q[1]),r:4,fill:'#6E2933'}));
@@ -635,9 +653,9 @@
       const seg=pl.clipLine(m,-1,c);
       if(seg)sceneG.append(svgEl('line',{x1:pl.sx(seg[0][0]),y1:pl.sy(seg[0][1]),x2:pl.sx(seg[1][0]),y2:pl.sy(seg[1][1]),stroke:'#1F5E72','stroke-width':2.5}));
       if(c>=-4&&c<=4){
-        const p1=[1,m+c];
-        sceneG.append(svgEl('line',{x1:pl.sx(0),y1:pl.sy(c),x2:pl.sx(1),y2:pl.sy(c),stroke:'#525B62','stroke-width':1.4,'stroke-dasharray':'3 2'}));
-        sceneG.append(svgEl('line',{x1:pl.sx(1),y1:pl.sy(c),x2:pl.sx(1),y2:pl.sy(p1[1]),stroke:'#6E2933','stroke-width':1.4,'stroke-dasharray':'3 2'}));
+        const x=c+m<pl.yMin||c+m>pl.yMax?-1:1;
+        sceneG.append(svgEl('line',{x1:pl.sx(0),y1:pl.sy(c),x2:pl.sx(x),y2:pl.sy(c),stroke:'#525B62','stroke-width':1.4,'stroke-dasharray':'3 2'}));
+        sceneG.append(svgEl('line',{x1:pl.sx(x),y1:pl.sy(c),x2:pl.sx(x),y2:pl.sy(c+x*m),stroke:'#6E2933','stroke-width':1.4,'stroke-dasharray':'3 2'}));
         sceneG.append(svgEl('circle',{cx:pl.sx(0),cy:pl.sy(c),r:5,fill:'#6E2933',stroke:'#FFFFFF','stroke-width':1.5}));
         sceneG.append(svgEl('text',{x:pl.sx(0)+7,y:pl.sy(c)-6,fill:'#6E2933','font-size':9.5,'font-weight':800},`(0,${c})`));
       }
@@ -660,7 +678,7 @@
       0,idx=>{mode=idx;tabs.sync(idx);sM.row.hidden=(idx!==0);paint();},
       ta?'கோடு வடிவம்':'Line mode'
     );
-    const sM=makeSlider(ta?'சாய்வு m':'Slope m',-2,2,0.5,m,v=>{m=v;paint();});
+    const sM=makeSlider(ta?'சாய்வு m':'Slope m',-2,2,0.25,m,v=>{m=v;paint();});
     const note=el('p','g10ch4-drag-note',ta?'புள்ளி A-ஐ (மற்றும் இரு புள்ளி முறையில் B-ஐ) இழுக்கவும்.':'Drag anchor A (and B in Two-Point mode) across the grid.');
     const readout=el('div','g10ch4-readout');
     host.append(tabs.bar,sM.row,svg,note,readout);
@@ -751,8 +769,8 @@
     const svg=svgEl('svg',{viewBox:'0 0 320 206',class:'g10ch4-svg',role:'img','aria-label':ta?'பொது வடிவம் ax + by + c = 0 வரைபடம்':'Interactive general form ax + by + c = 0 plane'});
     const gridG=svgEl('g'),sceneG=svgEl('g');pl.drawGrid(gridG);svg.append(gridG,sceneG);
 
-    const sA=makeSlider('a (x coeff)',-4,4,1,a,v=>{if(v===0&&b===0)return;a=v;paint();});
-    const sB=makeSlider('b (y coeff)',-4,4,1,b,v=>{if(v===0&&a===0)return;b=v;paint();});
+    const sA=makeSlider('a (x coeff)',-4,4,1,a,v=>{if(v===0&&b===0){sA.setVal(a);return;}a=v;paint();});
+    const sB=makeSlider('b (y coeff)',-4,4,1,b,v=>{if(v===0&&a===0){sB.setVal(b);return;}b=v;paint();});
     const sC=makeSlider('c (constant)',-8,8,1,c,v=>{c=v;paint();});
     const readout=el('div','g10ch4-readout');
     host.append(sA.row,sB.row,sC.row,svg,readout);
@@ -803,9 +821,13 @@
       if(seg1)sceneG.append(svgEl('line',{x1:pl.sx(seg1[0][0]),y1:pl.sy(seg1[0][1]),x2:pl.sx(seg1[1][0]),y2:pl.sy(seg1[1][1]),stroke:'#1F5E72','stroke-width':2.4}));
       const a2=mode===0?a:2,b2=mode===0?b:3;
       const seg2=pl.clipLine(a2,b2,k);
-      if(seg2)sceneG.append(svgEl('line',{x1:pl.sx(seg2[0][0]),y1:pl.sy(seg2[0][1]),x2:pl.sx(seg2[1][0]),y2:pl.sy(seg2[1][1]),stroke:'#6E2933','stroke-width':2.4}));
       const rel=math.generalRelation(a,b,c,a2,b2,k);
-      if(mode===0){
+      if(seg2&&rel.kind!=='coincident')sceneG.append(svgEl('line',{x1:pl.sx(seg2[0][0]),y1:pl.sy(seg2[0][1]),x2:pl.sx(seg2[1][0]),y2:pl.sy(seg2[1][1]),stroke:'#6E2933','stroke-width':2.4}));
+      if(rel.kind==='coincident'){
+        const title=ta?'இரு கோடுகளும் ஒன்றே':'The two lines coincide';
+        tex(readout,'L_1=L_2:\\quad 3x-2y+2=0',title);
+        readout.append(el('p','g10ch4-drag-note',title));
+      }else if(mode===0){
         tex(readout,`\\begin{aligned}L_1:&\\;3x-2y+2=0\\\\L_2:&\\;3x-2y${k>=0?'+'+k:k}=0\\\\a_1b_2-a_2b_1&=${rel.det}\\;(\\parallel)\\end{aligned}`,`Parallel family: 3x − 2y + (${k}) = 0 (a₁b₂ − a₂b₁ = ${rel.det})`);
       }else{
         tex(readout,`\\begin{aligned}L_1:&\\;3x-2y+2=0\\\\L_2:&\\;2x+3y${k>=0?'+'+k:k}=0\\\\a_1a_2+b_1b_2&=${rel.dot}\\;(\\perp)\\end{aligned}`,`Perpendicular family: 2x + 3y + (${k}) = 0 (a₁a₂ + b₁b₂ = ${rel.dot})`);
@@ -836,6 +858,9 @@
     const pl=makePlane(240,118,-4,4,-2.5,2.5);
     const svg=svgEl('svg',{viewBox:'0 0 240 118',class:'g10ch4-glance-svg',role:'img','aria-label':stage.title?.[lang]||stage.title?.en||'Coordinate diagram'});
     const g=svgEl('g');pl.drawGrid(g);
+    const previewLine=([x1,y1],[x2,y2],id,stroke,width=2.2)=>svgEl('line',{
+      x1:pl.sx(x1),y1:pl.sy(y1),x2:pl.sx(x2),y2:pl.sy(y2),'data-dg-preview-line':id,stroke,'stroke-width':width
+    });
     if(id==='distance-midpoint'){
       g.append(svgEl('line',{x1:pl.sx(-3),y1:pl.sy(-1),x2:pl.sx(3),y2:pl.sy(-1),stroke:'#525B62','stroke-width':1.1,'stroke-dasharray':'3 2'}));
       g.append(svgEl('line',{x1:pl.sx(3),y1:pl.sy(-1),x2:pl.sx(3),y2:pl.sy(2),stroke:'#525B62','stroke-width':1.1,'stroke-dasharray':'3 2'}));
@@ -849,18 +874,27 @@
     }else if(id==='area-quadrilateral'){
       g.append(svgEl('polygon',{points:`${pl.sx(-2.5)},${pl.sy(-1.5)} ${pl.sx(2.5)},${pl.sy(-1.5)} ${pl.sx(2)},${pl.sy(1.8)} ${pl.sx(-1.5)},${pl.sy(1.5)}`,fill:'rgba(31,94,114,.16)',stroke:'#1F5E72','stroke-width':2}));
     }else if(id==='inclination-slope'){
-      g.append(svgEl('line',{x1:pl.sx(-3),y1:pl.sy(-1),x2:pl.sx(3),y2:pl.sy(2),stroke:'#6E2933','stroke-width':2.2}));
-      g.append(svgEl('path',{d:`M ${pl.sx(-1)+16} ${pl.sy(0)} A 16 16 0 0 0 ${pl.sx(-1)+14} ${pl.sy(0)-8}`,fill:'none',stroke:'#1F5E72','stroke-width':1.5}));
+      const start=[-3,-1],end=[3,2];
+      const dx=end[0]-start[0],dy=end[1]-start[1];
+      const cx=pl.sx(start[0]-start[1]*dx/dy),cy=pl.sy(0),radius=16;
+      const scale=radius/Math.hypot(dx,dy);
+      g.append(previewLine(start,end,'inclination','#6E2933'));
+      g.append(svgEl('path',{d:`M ${cx+radius} ${cy} A ${radius} ${radius} 0 0 0 ${cx+dx*scale} ${cy-dy*scale}`,
+        'data-dg-inclination-arc':'',fill:'none',stroke:'#1F5E72','stroke-width':1.5}));
     }else if(id==='parallel-perp-slopes'||id==='general-family'){
-      g.append(svgEl('line',{x1:pl.sx(-3),y1:pl.sy(-1.5),x2:pl.sx(3),y2:pl.sy(1.5),stroke:'#1F5E72','stroke-width':2.1}));
-      g.append(svgEl('line',{x1:pl.sx(-1.5),y1:pl.sy(2.2),x2:pl.sx(1.5),y2:pl.sy(-2.2),stroke:'#6E2933','stroke-width':2.1}));
+      const vector=[3,1.5];
+      const normal=[-vector[1]*2.2/vector[0],2.2];
+      g.append(previewLine(vector.map(n=>-n),vector,'reference','#1F5E72',2.1));
+      g.append(previewLine(normal,normal.map(n=>-n),'perpendicular','#6E2933',2.1));
     }else if(id==='axes-parallel'){
       g.append(svgEl('line',{x1:pl.sx(-3.5),y1:pl.sy(1.5),x2:pl.sx(3.5),y2:pl.sy(1.5),stroke:'#6E2933','stroke-width':2.2}));
       g.append(svgEl('line',{x1:pl.sx(2),y1:pl.sy(-2.2),x2:pl.sx(2),y2:pl.sy(2.2),stroke:'#1F5E72','stroke-width':2.2}));
     }else if(id==='intercept-form'){
-      g.append(svgEl('line',{x1:pl.sx(-1),y1:pl.sy(2.2),x2:pl.sx(3.5),y2:pl.sy(-0.8),stroke:'#1F5E72','stroke-width':2.2}));
-      g.append(svgEl('circle',{cx:pl.sx(2.3),cy:pl.sy(0),r:3.8,fill:'#6E2933'}));
-      g.append(svgEl('circle',{cx:pl.sx(0),cy:pl.sy(1.5),r:3.8,fill:'#3F5D3A'}));
+      const a=2.3,b=1.5;
+      const point=x=>[x,b*(1-x/a)];
+      g.append(previewLine(point(-1),point(3.5),'intercept','#1F5E72'));
+      g.append(svgEl('circle',{cx:pl.sx(a),cy:pl.sy(0),r:3.8,fill:'#6E2933','data-dg-preview-intercept':'x'}));
+      g.append(svgEl('circle',{cx:pl.sx(0),cy:pl.sy(b),r:3.8,fill:'#3F5D3A','data-dg-preview-intercept':'y'}));
     }else{
       g.append(svgEl('line',{x1:pl.sx(-3),y1:pl.sy(-1),x2:pl.sx(3),y2:pl.sy(2),stroke:'#1F5E72','stroke-width':2.2}));
       g.append(svgEl('circle',{cx:pl.sx(0),cy:pl.sy(0.5),r:3.8,fill:'#6E2933'}));

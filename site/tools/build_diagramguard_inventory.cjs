@@ -19,6 +19,7 @@ for(const grade of [9,10]){
   vm.runInNewContext(rootFile('assets/g'+grade+'-ch5-coordinate-figures.js'),{window:{TriggleCoordinateFigures:plotRegistry}});
 }
 scope.TriggleG9FrontierGraphs(runtime.classes[9].items.filter(item=>coordinateFigures.has(item.id)));
+scope.TriggleG10CoordinateFrontier(runtime.classes[10].items.filter(item=>coordinateFigures.has(item.id)));
 const table=new Map(), referenced=new Set();
 const stripRoot=file=>file?.replace(/^\.\//,'')||'';
 const media=file=>file.endsWith('.svg')?'SVG asset':'raster asset';

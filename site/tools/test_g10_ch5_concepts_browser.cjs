@@ -2,7 +2,7 @@
 /* Real Chromium verification for all 12 Grade 10 Ch5 Coordinate Geometry Concepts at 320/360/390/412/430 px (EN + TA + Drag + Offline + Keyboard). */
 const assert=require('node:assert/strict');
 const http=require('node:http'),fs=require('node:fs/promises'),path=require('node:path');
-const {chromium}=require('playwright');
+const {chromium,webkit}=require('playwright');
 
 const SITE=path.resolve(__dirname,'..');
 const MIME={
@@ -45,7 +45,17 @@ async function assertStudioAndLayout(page,ctxLabel){
     const cards=document.querySelectorAll('.g10ch4-studio > .g10ch4-card').length;
     const refText=document.querySelector('.sp2-stage-reference')?.textContent||'';
     const svgCollisions=[];
+    const gridRatios=[];
     for(const svg of [...document.querySelectorAll('.g10ch4-lab svg, .g10ch4-glance-visual svg')].filter(s=>!s.closest('.katex'))){
+      const unit=axis=>{
+        const lines=svg.querySelectorAll(`[data-dg-grid-axis="${axis}"]`);
+        if(lines.length<2)return null;
+        const [a,b]=Array.from(lines).slice(0,2).map(line=>new DOMPoint(
+          Number(line.getAttribute('x1')),Number(line.getAttribute('y1'))).matrixTransform(line.getScreenCTM()));
+        return Math.hypot(b.x-a.x,b.y-a.y);
+      };
+      const xUnit=unit('x'),yUnit=unit('y');
+      if(xUnit&&yUnit)gridRatios.push(xUnit/yUnit);
       const texts=[...svg.querySelectorAll('text')].filter(t=>t.textContent.trim().length>0);
       for(let i=0;i<texts.length;i++){
         for(let j=i+1;j<texts.length;j++){
@@ -62,12 +72,13 @@ async function assertStudioAndLayout(page,ctxLabel){
       mathErrors:errors,
       clippedTex,
       katexCount:document.querySelectorAll('.g10ch4-studio .katex').length,
-      svgs,smallButtons,cards,refText,svgCollisions
+      svgs,smallButtons,cards,refText,svgCollisions,gridRatios
     };
   });
   assert.equal(check.cards,6,`${ctxLabel}: expected all 6 mandatory concept cards`);
   assert(check.refText.includes('EN p.')&&check.refText.includes('TA p.'),`${ctxLabel}: missing 2025 EN/TA page citation: ${check.refText}`);
   assert.deepEqual(check.svgCollisions,[],`${ctxLabel}: SVG text collisions: ${JSON.stringify(check.svgCollisions)}`);
+  assert(check.gridRatios.length&&check.gridRatios.every(ratio=>Math.abs(ratio-1)<1e-6),`${ctxLabel}: equal scales on both axes`);
   assert(check.overflow<=1,`${ctxLabel}: horizontal overflow ${check.overflow}px (${check.scrollW} > ${check.clientW})`);
   assert.equal(check.mathErrors,0,`${ctxLabel}: KaTeX math errors detected`);
   assert.deepEqual(check.clippedTex,[],`${ctxLabel}: clipped display formulas: ${JSON.stringify(check.clippedTex)}`);
@@ -76,16 +87,199 @@ async function assertStudioAndLayout(page,ctxLabel){
   assert.deepEqual(check.smallButtons,[],`${ctxLabel}: touch targets below 44px: ${JSON.stringify(check.smallButtons)}`);
 }
 
+async function renderedVectors(page) {
+  return page.locator('svg.g10ch4-svg line[data-dg-slope-line]').evaluateAll(lines=>lines.map(line=>{
+    const matrix=line.getScreenCTM();
+    const end=index=>new DOMPoint(Number(line.getAttribute('x'+index)),
+      Number(line.getAttribute('y'+index))).matrixTransform(matrix);
+    const start=end(1),finish=end(2);
+    return [finish.x-start.x,start.y-finish.y];
+  }));
+}
+
+async function assertRenderedPreviews(page,base) {
+  for(const lang of ['en','ta'])for(const percent of [100,200])for(const index of [4,5,9,11]){
+    await page.goto(base+'/index.html?class=10&chapter=g10-ch5&section=concepts&concept='+index);
+    if(await page.locator('html').getAttribute('lang')!==lang)await page.locator(lang==='ta'?'#langTa':'#langEn').evaluate(button=>button.click());
+    await page.evaluate(percent=>{document.documentElement.style.fontSize=percent+'%';},percent);
+    const deviations=await page.locator('svg.g10ch4-glance-svg').evaluate((svg,index)=>{
+      const project=(node,x,y)=>new DOMPoint(x,y).matrixTransform(node.getScreenCTM());
+      const select=name=>svg.querySelector(`[data-dg-preview-line="${name}"]`);
+      const linePoints=node=>[1,2].map(i=>project(node,node['x'+i].baseVal.value,node['y'+i].baseVal.value));
+      const vector=(s,t)=>[t.x-s.x,t.y-s.y];
+      const distance=(p,line)=>{
+        const [s,t]=linePoints(line), [dx,dy]=vector(s,t);
+        return Math.abs((p.x-s.x)*dy-(p.y-s.y)*dx)/Math.hypot(dx,dy);
+      };
+      const axis=name=>svg.querySelector(`[data-dg-grid-axis="${name}"][stroke="#6E7781"]`);
+      if(index===5||index===11){
+        const [a,b]=vector(...linePoints(select('reference')));
+        const [c,d]=vector(...linePoints(select('perpendicular')));
+        return [Math.abs(a*c+b*d)/(Math.hypot(a,b)*Math.hypot(c,d))];
+      }
+      if(index===9)return ['x','y'].flatMap(name=>{
+        const node=svg.querySelector(`[data-dg-preview-intercept="${name}"]`);
+        const point=project(node,node.cx.baseVal.value,node.cy.baseVal.value);
+        return [distance(point,select('intercept')),distance(point,axis(name==='x'?'y':'x'))];
+      });
+      const arc=svg.querySelector('[data-dg-inclination-arc]');
+      const start=arc.getPointAtLength(0),end=arc.getPointAtLength(arc.getTotalLength());
+      return [distance(project(arc,start.x,start.y),axis('y')),distance(project(arc,end.x,end.y),select('inclination'))];
+    },index);
+    assert(deviations.every(value=>value<.001),`${lang} ${percent}% preview ${index} geometry deviations: ${deviations}`);
+  }
+}
+
+async function assertInteractiveEdges(page,base) {
+  const graph=page.locator('svg.g10ch4-svg');
+  const readout=page.locator('.g10ch4-readout');
+  async function open(index,lang,percent){
+    await page.goto(base+'/index.html?class=10&chapter=g10-ch5&section=concepts&concept='+index);
+    if(await page.locator('html').getAttribute('lang')!==lang)await page.locator(lang==='ta'?'#langTa':'#langEn').evaluate(button=>button.click());
+    await page.evaluate(percent=>{document.documentElement.style.fontSize=percent+'%';},percent);
+  }
+  async function point(id){
+    const box=await graph.locator(`[data-handle="${id}"] circle[stroke]`).boundingBox();
+    return [box.x+box.width/2,box.y+box.height/2];
+  }
+  async function drag(id,target){
+    await page.mouse.move(...await point(id));await page.mouse.down();
+    await page.mouse.move(...target,{steps:5});await page.mouse.up();
+  }
+  async function slide(index,value){
+    return page.locator('.g10ch4-slider').nth(index).evaluate((input,value)=>{
+      input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));return Number(input.value);
+    },value);
+  }
+  for(const lang of ['en','ta'])for(const percent of [100,200]){
+    const context=`${lang} at ${percent}%`;
+    await open(3,lang,percent);
+    await graph.scrollIntoViewIfNeeded();
+    assert.equal(await graph.locator('[data-dg-area-diagonal]').getAttribute('data-dg-area-diagonal'),'AC');
+    const a=await point('A'),c=await point('C'),unit=(c[0]-a[0])/5;
+    await drag('B',[a[0]+2*unit,a[1]-3*unit]); // B = (−1, 1) inside triangle ACD
+    assert.equal(await graph.locator('[data-dg-area-diagonal]').getAttribute('data-dg-area-diagonal'),'BD',context+' concave diagonal');
+    assert.match((await readout.locator('.katex-html').innerText()).replace(/[\s\u200b]+/g,''),/=5=5sq/,context+' both concave area calculations equal five');
+    await drag('B',a);
+    assert.equal(await graph.locator('[data-dg-area-diagonal]').count(),0,context+' repeated vertex');
+    await page.locator('.g10ch4-tab').nth(1).click();
+    assert.equal(await graph.locator('[data-dg-area-diagonal]').count(),0,context+' crossed polygon');
+
+    await open(5,lang,percent);
+    await page.locator('.g10ch4-tab').first().click();
+    await graph.scrollIntoViewIfNeeded();
+    const verticalPoint=await graph.evaluate(svg=>{
+      const axis=svg.querySelector('[data-dg-grid-axis="x"][stroke="#6E7781"]');
+      const y=axis.y1.baseVal.value+(axis.y2.baseVal.value-axis.y1.baseVal.value)/4;
+      const point=new DOMPoint(axis.x1.baseVal.value,y).matrixTransform(axis.getScreenCTM());return [point.x,point.y];
+    });
+    await drag('P',verticalPoint);
+    const lines=await graph.locator('[data-dg-slope-line]').evaluateAll(nodes=>nodes.map(line=>[line.x1.baseVal.value,line.x2.baseVal.value]));
+    assert(lines.length===2&&lines.every(([x,y])=>x===y)&&lines[0][0]!==lines[1][0],context+' distinct parallel vertical lines');
+
+    await open(7,lang,percent);
+    for(const m of [-2,2])for(const c of [-3,3]){
+      await slide(0,m);await slide(1,c);
+      const test=await graph.evaluate(svg=>{
+        const [run,rise]=svg.querySelectorAll('line[stroke-dasharray="3 2"]');
+        const tip=rise.y2.baseVal.value;
+        return {inside:tip>=0&&tip<=svg.viewBox.baseVal.height,
+          slope:(rise.y1.baseVal.value-tip)/(run.x2.baseVal.value-run.x1.baseVal.value)};
+      });
+      assert(test.inside&&test.slope===m,context+' full auxiliary slope triangle');
+    }
+
+    await open(8,lang,percent);
+    assert.equal(await page.locator('.g10ch4-slider').inputValue(),'0.75',context+' exact initial slope');
+
+    await open(10,lang,percent);
+    assert.equal(await slide(0,0),0);
+    assert.equal(await slide(1,0),3,context+' last valid coefficient retained');
+    await slide(0,2);await slide(1,0);
+    assert.equal(await slide(0,0),2,context+' symmetric coefficient constraint');
+
+    await open(11,lang,percent);
+    await page.locator('.g10ch4-tab').first().click();
+    await slide(0,2);
+    assert.match(await readout.innerText(),lang==='ta'?/இரு கோடுகளும் ஒன்றே/:/The two lines coincide/);
+    await slide(0,3);
+    assert.match(await readout.innerText(),/∥/,context+' distinct parallel family');
+  }
+}
+
+async function assertRenderedAngles(page,base) {
+  const near=(actual,expected,label)=>assert(Math.abs(actual-expected)<1e-6,`${label}: ${actual} ≠ ${expected}`);
+  for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.goto(base+'/index.html?class=10&chapter=g10-ch5&section=concepts&concept=4');
+    await page.locator(lang==='ta'?'#langTa':'#langEn').evaluate(button=>button.click());
+    await page.evaluate(percent=>{document.documentElement.style.fontSize=percent+'%';},percent);
+    for(const [index,angle] of [0,45,90,135].entries()){
+      await page.locator('.g10ch4-chip-btn').nth(index).click();
+      const [[x,y]]=await renderedVectors(page);
+      near((Math.atan2(y,x)*180/Math.PI+180)%180,angle,lang+' '+percent+'% inclination');
+    }
+    if(lang==='en'&&percent===100){
+      const graph=page.locator('svg.g10ch4-svg');
+      await graph.scrollIntoViewIfNeeded();
+      const corner=await graph.evaluate(svg=>{
+        const [edge]=Array.from(svg.querySelectorAll('[data-dg-grid-axis="x"]')).slice(-1);
+        const point=new DOMPoint(Number(edge.getAttribute('x1')),Number(edge.getAttribute('y1'))).matrixTransform(edge.getScreenCTM());
+        return [point.x,point.y];
+      });
+      for(const id of ['A','B']){
+        const handle=await graph.locator(`[data-handle="${id}"] circle[stroke]`).boundingBox();
+        await page.mouse.move(handle.x+handle.width/2,handle.y+handle.height/2);
+        await page.mouse.down();await page.mouse.move(...corner,{steps:4});await page.mouse.up();
+      }
+      const positions=await graph.locator('[data-drag-handle] circle[stroke]').evaluateAll(nodes=>nodes.map(node=>{
+        const point=new DOMPoint(Number(node.getAttribute('cx')),Number(node.getAttribute('cy'))).matrixTransform(node.getScreenCTM());
+        return [point.x,point.y];
+      }));
+      near(Math.hypot(positions[0][0]-corner[0],positions[0][1]-corner[1]),0,'first point reaches the corner');
+      assert(positions[1][0]<corner[0]&&positions[1][1]>corner[1],'coincident endpoint stays inside the graph');
+      assert.deepEqual(await graph.evaluate(svg=>window.TriggleDiagramGuard.audit(svg,{discover:true}).issues.filter(issue=>issue.kind==='boundary')),[],
+        'corner drag keeps point labels in view');
+    }
+    await page.goto(base+'/index.html?class=10&chapter=g10-ch5&section=concepts&concept=5');
+    await page.evaluate(percent=>{document.documentElement.style.fontSize=percent+'%';},percent);
+    for(const [tab,expected] of ['parallel','perpendicular'].entries()){
+      await page.locator('.g10ch4-tab').nth(tab).click();
+      const measure=async()=>{
+        const [[x1,y1],[x2,y2]]=await renderedVectors(page);
+        const cosine=Math.abs(x1*x2+y1*y2)/(Math.hypot(x1,y1)*Math.hypot(x2,y2));
+        near(cosine,tab===0?1:0,lang+' '+percent+'% '+expected);
+      };
+      await measure();
+      const handle=page.locator('svg.g10ch4-svg [data-handle="P"] circle[stroke]');
+      await handle.scrollIntoViewIfNeeded();
+      const box=await handle.boundingBox();
+      const x=box.x+box.width/2,y=box.y+box.height/2;
+      await page.mouse.move(x,y);await page.mouse.down();
+      await page.mouse.move(x-34,y+27,{steps:3});await page.mouse.up();
+      await measure();
+    }
+  }
+}
+
 async function run(){
   const srv=await startServer();
   const base='http://127.0.0.1:'+srv.address().port;
   let browser;
   try{
-    browser=await chromium.launch({
+    browser=process.argv.includes('--webkit')?await webkit.launch({headless:true}):await chromium.launch({
       headless:true,
       ...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),
       args:['--no-sandbox']
     });
+
+    if(process.argv.includes('--angles-only')){
+      const page=await browser.newPage({viewport:{width:320,height:844},serviceWorkers:'block'});
+      await assertRenderedAngles(page,base);
+      await assertRenderedPreviews(page,base);
+      await assertInteractiveEdges(page,base);
+      console.log('PASS rendered Grade 10 concept angles, previews and interaction edges in both languages at 100% and 200% text');
+      return;
+    }
 
     /* 1. Discovery + Chapter Overview + Index + Keyboard + Deep Links + Practice Connect + Back */
     {
@@ -201,7 +395,17 @@ async function run(){
       await ctx.close();
     }
 
-    /* 5. Real Service Worker offline reload */
+    /* 5. Angles measured in actual rendered SVG after presets and drags */
+    {
+      const ctx=await browser.newContext({viewport:{width:320,height:844},serviceWorkers:'block'});
+      const page=await ctx.newPage();
+      await assertRenderedAngles(page,base);
+      await assertRenderedPreviews(page,base);
+      await assertInteractiveEdges(page,base);
+      await ctx.close();
+    }
+
+    /* 6. Real Service Worker offline reload */
     {
       const ctx=await browser.newContext({viewport:{width:390,height:844},serviceWorkers:'allow'});
       const page=await ctx.newPage();
@@ -218,7 +422,7 @@ async function run(){
       await ctx.close();
     }
 
-    console.log('PASS Grade 10 Chapter 5 Concepts Browser Suite: 12 interactive 6-part labs, pointer drag, 320/360/390/412/430px, EN/TA, keyboard nav, KaTeX & offline SW');
+    console.log('PASS Grade 10 Chapter 5 Concepts Browser Suite: 12 interactive 6-part labs, equal grid scales and rendered angles, pointer drag, 320/360/390/412/430px, EN/TA, keyboard nav, KaTeX & offline SW');
   }finally{
     if(browser)await browser.close();
     srv.close();

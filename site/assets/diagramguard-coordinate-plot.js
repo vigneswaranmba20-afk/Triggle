@@ -56,9 +56,10 @@
   }
 
   function draw(svg, config, width, rem) {
-    const {points,outlines=[],segments=[],guides=[],circle,rightAngle,directions={},edgeDirections={},insideLabels='',associateLabels='',
-      axes=true,showOrigin=true,fullAxes=false,labelNegativeAxes=true,compactAxes=false,quadrants=false,projections=false,pointNames=true}=config;
-    const xy = Object.values(points);
+    const {points,outlines=[],segments=[],guides=[],constructionPoints={},circle,rightAngle,directions={},edgeDirections={},insideLabels='',associateLabels='',
+      axes=true,showOrigin=true,fullAxes=false,labelNegativeAxes=true,axisLabelDirections={},compactAxes=false,
+      quadrants=false,projections=false,pointNames=true}=config;
+    const xy = [...Object.values(points),...Object.values(constructionPoints)];
     const xs = xy.map(([x])=>x);
     const ys = xy.map(([,y])=>y);
     if (circle) {
@@ -125,7 +126,7 @@
         candidates = [[-.69,0],[-.4,-.78],[-.4,.78],[0,-.97],[0,.97],[.2,-1.08],[.2,1.08]]
           .map(([x,y])=>[x*rem,y*rem]);
       }
-      placements.push({label:text(id,axis),anchor:tip,direction:[dx,dy],candidates});
+      placements.push({label:text(id,axis),anchor:tip,direction:axisLabelDirections[id]||[dx,dy],candidates});
     }
     function addAxes(id,start,end,direction) {
       svg.append(line(start,end,{stroke:axis,'stroke-width':'1.1','data-dg-obstacle':id+'-axis'}));
@@ -159,6 +160,11 @@
       svg.append(line(projected[a],projected[b],{stroke:color,'stroke-width':weight,
         'stroke-linecap':'round','data-dg-obstacle':a+b,'data-dg-edge':a+b,
         ...(dashes?{'stroke-dasharray':dashes}:{})}));
+    }
+    for (const [name,point] of Object.entries(constructionPoints)) {
+      const [cx,cy]=toPlot(...point);
+      svg.append(shape('circle',{cx,cy,r:3,fill:axis,'data-dg-construction-point':name,
+        'data-dg-obstacle':'construction-'+name,'data-dg-fill':''}));
     }
     if (rightAngle) {
       const [a,vertex,b] = [...rightAngle].map(id=>projected[id]);
