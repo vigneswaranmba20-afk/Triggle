@@ -50,7 +50,7 @@
     ],
     q11:{
       points:{C:[11,2],P:[1,2],Q:[3,-4],R:[5,-6]},circle:[[11,2],10],guides:['CP','CQ','CR'],
-      fullAxes:true,compactAxes:true,showOrigin:false,associateLabels:'PQ',
+      fullAxes:true,showOrigin:false,associateLabels:'PQ',
       directions:{P:labelDirections,Q:labelDirections,R:[.2,1]}
     }
   });
