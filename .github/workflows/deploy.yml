@@ -132,6 +132,12 @@ jobs:
           files=(
             index.html
             service-worker.js
+            manifest.webmanifest
+            sitemap.xml
+            icons/icon-192-v2.png
+            icons/icon-512-v2.png
+            icons/icon-192-maskable.png
+            icons/icon-512-maskable.png
             data/class-9.js
             data/textbook-exercises/g9-ch6-ex6-4-q2-q3-en.js
             data/g9-clear-math.js

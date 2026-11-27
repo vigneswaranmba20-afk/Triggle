@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <script>
 // Redirect retired higher-grade student routes before the app renders.
 (()=>{const p=new URLSearchParams(location.search),g=p.get('class'),ch=p.get('chapter')||'',q=p.get('question')||'';
@@ -8,15 +10,41 @@
    document.documentElement.style.visibility='hidden';location.replace('./index.html');
  }
  try {
-   const saved=localStorage.getItem('triggle-language');
+   const saved=p.get('lang')||localStorage.getItem('triggle-language');
    if(saved==='ta'||saved==='"ta"')document.documentElement.lang='ta';
  }catch{}
+ if(!p.has('class')&&!p.has('chapter')&&!p.has('question')){
+   const small=matchMedia('(max-width: 680px)').matches;
+   const image=document.createElement('link');
+   image.rel='preload';image.as='image';image.fetchPriority='high';
+   image.href=small?'./assets/home-studio-mobile.webp':'./assets/home-studio.webp';
+   document.head.append(image);
+ }
 })();
 </script>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#FFFFFF"><meta name="description" content="Learn mathematics clearly in English and Tamil. Free interactive lessons, chapters, exercises and guided reasoning for Classes 9–10.">
-<meta name="copyright" content="© 2026 VER labs"><link rel="manifest" href="./manifest.webmanifest">
-<title>Triggle — Mathematics Made Clear | Classes 9–10</title>
+<meta name="theme-color" content="#FFFFFF">
+<meta name="description" content="Study Tamil Nadu Samacheer Kalvi Mathematics for Grades 9 and 10 in English and Tamil. Explore free concept lessons, diagrams, quizzes and step-by-step exercise solutions.">
+<meta name="application-name" content="Triggle"><meta name="apple-mobile-web-app-title" content="Triggle">
+<meta name="author" content="VER labs"><meta name="copyright" content="© 2026 VER labs">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="icon" href="./icons/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="./icons/icon-192-v2.png">
+<link rel="canonical" href="https://vigneswaranmba20-afk.github.io/Triggle/site/index.html">
+<link rel="alternate" hreflang="en" href="https://vigneswaranmba20-afk.github.io/Triggle/site/index.html">
+<link rel="alternate" hreflang="ta" href="https://vigneswaranmba20-afk.github.io/Triggle/site/index.html?lang=ta">
+<link rel="alternate" hreflang="x-default" href="https://vigneswaranmba20-afk.github.io/Triggle/site/index.html">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Triggle">
+<meta property="og:title" content="Triggle — Samacheer Kalvi Mathematics (Grades 9 &amp; 10)">
+<meta property="og:description" content="Study Tamil Nadu Samacheer Kalvi Mathematics for Grades 9 and 10 in English and Tamil. Explore free concept lessons, diagrams, quizzes and step-by-step exercise solutions.">
+<meta property="og:url" content="https://vigneswaranmba20-afk.github.io/Triggle/site/index.html">
+<meta property="og:image" content="https://vigneswaranmba20-afk.github.io/Triggle/site/assets/home-studio.webp">
+<meta property="og:image:alt" content="Triggle visual mathematics lesson artwork">
+<meta property="og:locale" content="en_IN"><meta property="og:locale:alternate" content="ta_IN">
+<meta name="twitter:card" content="summary_large_image">
+<title>Triggle — Samacheer Kalvi Mathematics (Grades 9 &amp; 10)</title>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Triggle — Samacheer Kalvi Mathematics (Grades 9 & 10)","alternateName":"Triggle","url":"https://vigneswaranmba20-afk.github.io/Triggle/site/index.html","applicationCategory":"EducationalApplication","browserRequirements":"JavaScript for interactive lessons","inLanguage":["en","ta"],"isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"VER labs"}}
+</script>
 <link rel="stylesheet" href="./assets/vendor/katex/katex.min.css?v=0.16.22"><link rel="stylesheet" href="./assets/app.css?v=exercise-index-20261115-1&geometry=20261119&af01=20261120&ver-glyph=5&path-picker=1&chroma=1"><link rel="stylesheet" href="./assets/discovery.css?v=minimal-home-1&home-grades=20261123&home-studio=20261124&chroma=1"><link rel="stylesheet" href="./assets/chapter-hub.css?v=g9-surds-switch-top-20261119-1&aud01-font=1&lesson-footer-flow=20261121&chroma=1"><link rel="stylesheet" href="./assets/living-concepts.css?v=g9-living-20261114-1&af01=20261120&chroma=1"><link rel="stylesheet" href="./assets/math-first.css?v=standard-20261111&g10-ex81-mobile=1&activity-studio=1&path-picker=1&chroma=1">
 <link rel="stylesheet" href="./assets/g10-ch8-concepts.css?v=g10-ch8-inline-range-20261126-1&chroma=1&diagramguard=2"><link rel="stylesheet" href="./assets/quiet-reader.css?v=standard-20261111"><link rel="stylesheet" href="./assets/reader-pin.css?v=standard-20261111&exercise-display=2">
 <link rel="stylesheet" href="./assets/math-typesetting.css?v=chatgpt-math-20261113-1&g9mathfirst=1&g9lessonread=1&exercise-display=2&prob-table-ta=1&chroma=1">
@@ -35,8 +63,17 @@
 <link rel="stylesheet" href="./assets/home-studio.css?v=20261124-1&chroma=1">
 <link rel="stylesheet" href="./assets/ver-glyph.css?v=7&chroma=1">
 <link rel="stylesheet" href="./assets/diagramguard.css?v=7">
+<link rel="stylesheet" href="./assets/triggle-pwa.css?v=1">
 </head>
 <body class="ver-glyph ver-starting">
+<section id="triggleUnavailable" class="triggle-unavailable" aria-label="Triggle" hidden>
+  <div lang="en"><h1 tabindex="-1">Triggle</h1><p>Samacheer Kalvi Mathematics — Grades 9 &amp; 10</p>
+    <p role="status">This lesson couldn’t open. Connect to the internet to open a lesson for the first time. Previously downloaded lessons are available offline.</p>
+    <a href="./index.html">Open Triggle home</a></div>
+  <div lang="ta"><h1 tabindex="-1">Triggle</h1><p>சமச்சீர் கல்வி கணிதம் — 9 மற்றும் 10 ஆம் வகுப்புகள்</p>
+    <p role="status">இந்தப் பாடத்தைத் திறக்க முடியவில்லை. பாடத்தை முதல் முறையாகத் திறக்க இணைய இணைப்பு தேவை. ஏற்கெனவே பதிவிறக்கம் செய்த பாடங்களை இணையமின்றிப் படிக்கலாம்.</p>
+    <a href="./index.html">Triggle முகப்பைத் திறக்கவும்</a></div>
+</section>
 <p class="ver-loading" role="status"><span lang="en">Loading Triggle…</span><span lang="ta">டிரிகிள் ஏற்றப்படுகிறது…</span></p>
 <div class="app-shell" inert>
   <aside class="sidebar" id="sidebar" aria-label="Class and exercise navigation">
@@ -50,6 +87,7 @@
     <div class="side-browse" id="browseDirectory" tabindex="-1"><span data-i18n="exploreExercise">Browse chapters and sections</span><span class="side-count" id="sideCount">0 chapters</span></div>
     
     <nav id="exerciseList" class="exercise-list" aria-label="Classes, chapters and sections"></nav>
+    <button type="button" class="triggle-app-info" data-triggle-install hidden>Install Triggle</button>
     <div class="sidebar-search-bottom"><p data-i18n="searchOptional">Search (optional)</p><label class="search-field"><span aria-hidden="true">⌕</span><input type="search" id="search" autocomplete="off" placeholder="Search exercise, question..." aria-label="Search lessons"><kbd>/</kbd></label><p id="sidebarSearchStatus" role="status" hidden></p></div>
     <div class="sidebar-foot"><p><span aria-hidden="true">✦</span> <span data-i18n="saveNote">Your progress stays on this device</span></p></div>
   </aside>
@@ -58,9 +96,10 @@
     <header class="appbar">
       <div class="brand-mobile"><span class="logo" aria-hidden="true">✳</span><b>Triggle<span class="gold" aria-hidden="true">.</span></b></div>
       <button type="button" id="browseBtn" class="browse-button" aria-expanded="false" aria-controls="sidebar"><span class="browse-symbol" data-ver-icon="exercises" aria-hidden="true"></span><span data-i18n="browse">Exercises</span><span id="browseChevron" aria-hidden="true">⌄</span></button>
-      <div class="appbar-actions"><a href="./index.html" id="homeBtn" class="basics-link home-link"><strong class="home-wordmark" aria-hidden="true"><img src="./icons/icon-192.png" width="40" height="40" alt=""><b>Triggle<i class="home-wordmark-dot" aria-hidden="true">.</i></b></strong><span class="home-icon" data-ver-icon="home" aria-hidden="true"></span> <span data-i18n="home">Home</span></a><div class="lang-switch" role="group" aria-label="Language"><button type="button" id="langEn" lang="en" class="active" aria-pressed="true">EN</button><button type="button" id="langTa" lang="ta" aria-pressed="false">தமிழ்</button></div></div>
+      <div class="appbar-actions"><a href="./index.html" id="homeBtn" class="basics-link home-link"><strong class="home-wordmark" aria-hidden="true"><img src="./icons/icon-80.png" width="40" height="40" alt=""><b>Triggle<i class="home-wordmark-dot" aria-hidden="true">.</i></b></strong><span class="home-icon" data-ver-icon="home" aria-hidden="true"></span> <span data-i18n="home">Home</span></a><div class="lang-switch" role="group" aria-label="Language"><button type="button" id="langEn" lang="en" class="active" aria-pressed="true">EN</button><button type="button" id="langTa" lang="ta" aria-pressed="false">தமிழ்</button></div></div>
     </header>
     <div class="lesson-container">
+      <p id="triggleOffline" class="triggle-offline" role="status" hidden></p>
       <div class="welcome"><div><div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="studyMode">YOUR LEARNING SPACE</span></div><h1><span id="classHeading">Class 9</span><span class="heading-star" aria-hidden="true"> ✦</span></h1><p id="classSubtitle">Choose a topic, understand every step, go at your own pace.</p></div><div class="class-emblem" id="classEmblem" aria-hidden="true"><span>9</span><svg viewBox="0 0 85 85"><circle cx="42.5" cy="42.5" r="35" fill="none" stroke="currentColor" stroke-width="1.2" stroke-dasharray="2 5"/><circle cx="42.5" cy="42.5" r="22" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></div></div>
       <div class="status-row"><nav class="crumb" id="crumb" aria-label="Navigate class, chapter, and exercise"></nav><div class="small-total" id="gradeTotal">53 lessons</div></div>
       <main id="discoveryView" class="discovery-view" aria-label="Triggle home and chapters" tabindex="-1" hidden></main>
@@ -108,6 +147,17 @@
   </div>
 </div>
 <nav class="class-dock" aria-label="Switch school class" id="classDock" inert></nav>
+<dialog id="triggleInstallDialog" class="triggle-install-dialog" aria-labelledby="triggleInstallTitle">
+  <form method="dialog"><button type="submit" id="triggleInstallClose" aria-label="Close">×</button></form>
+  <img src="./icons/icon-192-v2.png" width="56" height="56" alt="" loading="lazy">
+  <h2 id="triggleInstallTitle">Install Triggle</h2>
+  <p id="triggleInstallSubtitle"></p>
+  <p id="triggleInstallBenefits"></p>
+  <p id="triggleInstallHelp"></p>
+  <p id="triggleInstallStatus" role="status"></p>
+  <button type="button" id="triggleNativeInstall" hidden>Install Triggle</button>
+  <p id="triggleInstallPublisher" class="triggle-install-publisher"></p>
+</dialog>
 <dialog id="pathDialog" class="path-dialog" aria-labelledby="pathTitle">
   <header class="dialog-header">
     <div class="path-heading">
@@ -220,5 +270,5 @@
 <script src="./data/textbook-tamil-formula-labels.js?v=1"></script>
 <script src="./assets/student-records.js?v=1"></script>
 <script src="./assets/app.js?v=exercise-index-all-grades-20261115-1&source-tables=2&g10-frontier-coordinate=1&difficulty-ta=1&g9-frontier-graphs=1&g10-frontier-tamil=2&real-frontier-1=1&g9-tamil-working=1&chapter1-math=20261113-1&g10-all-maths=20261113-1&g9-math=20261114-1&g9-ex32=1&g9mathfirst=1&geometry=20261119&af01=20261120&af10-prob-count=1&home-grades=20261123&higher-grade-gate=20261123&g9-ch5=20261123&g9-concepts-20261124=1&home-studio=20261124&exercise-display=2&prob-table-ta=1&numbers-tamil=1&algebra-tamil=1&geometry-tamil=1&g10-ex81-mobile=1&g10-ch8-studio=1&g10-geometry-20261125=1&g9geometry=20261125&trace-ex13=1&textbook-order=1&frontier-figure-tamil=1&frontier-capacity-index=1&frontier-geometry-alt=1&frontier-exercise-hints=1&frontier-tamil-labels=1&ver-glyph=5&student-release=1&glyph-v11=1&path-picker=1&diagramguard=1&coordinate-figures=3&chroma=1"></script><script src="./assets/quiet-reader.js?v=adaptive-reader-1&student-release=1&glyph-v11=1"></script><script defer src="./assets/visual-lessons.js?v=question-visible-1"></script>
-<script>if('serviceWorker' in navigator)window.addEventListener('load',()=>navigator.serviceWorker.register('./service-worker.js').catch(()=>{}));</script>
+<script defer src="./assets/triggle-pwa.js?v=1"></script>
 </body></html>
