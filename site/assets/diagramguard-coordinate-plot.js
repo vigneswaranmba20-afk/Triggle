@@ -57,7 +57,7 @@
 
   function draw(svg, config, width, rem) {
     const {points,outlines=[],segments=[],guides=[],circle,rightAngle,directions={},edgeDirections={},insideLabels='',associateLabels='',
-      axes=true,showOrigin=true,fullAxes=false,compactAxes=false,quadrants=false,projections=false,pointNames=true}=config;
+      axes=true,showOrigin=true,fullAxes=false,labelNegativeAxes=true,compactAxes=false,quadrants=false,projections=false,pointNames=true}=config;
     const xy = Object.values(points);
     const xs = xy.map(([x])=>x);
     const ys = xy.map(([,y])=>y);
@@ -111,12 +111,13 @@
 
     const placements = [];
     const secondaryTicks = [];
-    function addArrow(id,tip,[dx,dy]) {
+    function addArrow(id,tip,[dx,dy],showLabel=true) {
       const [x,y] = tip;
       const arrow = [[x-5*dx-2.5*dy,y-5*dy+2.5*dx],tip,[x-5*dx+2.5*dy,y-5*dy-2.5*dx]];
       svg.append(
         shape('polyline',{points:arrow.map(point=>point.join(',')).join(' '),fill:'none',stroke:axis,
           'stroke-width':'1.1','data-dg-obstacle':id+'-arrow'}));
+      if (!showLabel) return;
       let candidates;
       if (edgeLabels && id==='X') candidates = [[.78*rem,-.21*rem]];
       if (id==='X′') {
@@ -129,7 +130,7 @@
     function addAxes(id,start,end,direction) {
       svg.append(line(start,end,{stroke:axis,'stroke-width':'1.1','data-dg-obstacle':id+'-axis'}));
       addArrow(id,end,direction);
-      if (fullAxes) addArrow(id+'′',start,direction.map(value=>-value));
+      if (fullAxes) addArrow(id+'′',start,direction.map(value=>-value),labelNegativeAxes);
     }
     if (axes) addAxes('X',toPlot(xMin,0),toPlot(xMax,0),[1,0]);
     if (axes && xMin<0) addAxes('Y',toPlot(0,yMin),toPlot(0,yMax),[0,-1]);

@@ -10,7 +10,7 @@ The eight figures below use a single Cartesian scale and the same measured label
 | 5.5 Q5 | 217 / 223 | 232 / 238 | Euler line with AB : BC = 2 : 1, A and C on the circumference, and M at the centre of the diameter circle |
 | 5.6 Q3–Q4 | 218 / 224 | 232 / 238 | Parallel sides of the plotted trapezium and correct Cartesian quadrants |
 
-The source pages are from the user's 2025 revised SCERT English and Tamil books. The figures are Triggle drawings. The printed Tamil locator for 5.5 Q5 was also corrected to page 232.
+The source pages are from the user's 2025 revised SCERT English and Tamil books. The figures are Triggle drawings. The printed Tamil locator for 5.5 Q5 was also corrected to page 232. The three-radius plot labels each axis once and keeps arrowheads at both ends, leaving more room for the point names at 200% text size.
 
 ## Browser and SVG evidence
 

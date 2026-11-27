@@ -77,6 +77,7 @@ async function verify(figure, question, panels, lang, percent, context) {
       yAxis:values(svg.querySelector('[data-dg-obstacle="Y-axis"]'),['x1','y1','x2','y2']),
       guides:lines('line[data-dg-obstacle$="-guide"]'),
       ticks:lines('line[data-dg-obstacle*="-tick-"]'),
+      arrows:[...svg.querySelectorAll('polyline[data-dg-obstacle$="-arrow"]')].map(el=>el.dataset.dgObstacle),
       regions:[...svg.querySelectorAll('[data-dg-region]')].map(el=>el.dataset.dgRegion),
       labelPositions:Object.fromEntries([...svg.querySelectorAll('text')].map(el=>[el.dataset.dgLabel,values(el,['x','y'])])),
       description:svg.getAttribute('aria-label'),
@@ -113,7 +114,7 @@ async function verify(figure, question, panels, lang, percent, context) {
         assert(label,tag+' point '+id+' has a visible label');
         const distance=hypot(label,point);
         const nearest=Math.min(...points.filter(([other])=>other!==id).map(([,other])=>hypot(label,other)));
-        const location=JSON.stringify({id,point,label,font:panel.font});
+        const location=JSON.stringify({id,point,label,font:panel.font,labels:panel.audit.labels});
         assert(distance<=30*percent/100+1,tag+' point label too far '+location);
         assert(distance<=nearest+3*percent/100,tag+' point label closer to a different vertex '+location);
       }
@@ -149,6 +150,11 @@ async function verify(figure, question, panels, lang, percent, context) {
     for (const {id,fontPx} of panel.audit.labels) {
       const target=(id.includes('-tick-')?14:15)*percent/100;
       assert(Math.abs(fontPx-target)<.2,tag+' '+id+' font');
+    }
+    if (question==='5.2-q11') {
+      assert.deepEqual(panel.arrows,['X-arrow','X′-arrow','Y-arrow','Y′-arrow'],tag+' arrowheads in both directions');
+      const axisLabels=Object.keys(panel.labelPositions).filter(id=>/^[XY]′?$/.test(id));
+      assert.deepEqual(axisLabels,['X','Y'],tag+' one label per axis');
     }
     if (question===1||expected.quadrants) {
       for (const [id,[x,y]] of Object.entries({I:[1,-1],II:[-1,-1],III:[-1,1],IV:[1,1]})) {
