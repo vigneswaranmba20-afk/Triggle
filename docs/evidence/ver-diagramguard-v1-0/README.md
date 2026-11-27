@@ -51,6 +51,8 @@ Matched before/after browser captures were made at 390 × 844 using Chromium's A
 
 ## Qualified figures scorecard
 
+A warmed Chromium sample of 80 switches per locale measured a post-change median of 3.0 ms in English and 3.8 ms in Tamil (before 2.1 and 2.4 ms). The post-change 95th percentiles were 4.1 and 10.2 ms. These timings measure the click and synchronous layout work on the test machine.
+
 The scores are for the five full-matrix fixtures only. Mathematical invariants, collisions, label sizes, viewport overflow and focus checks inform the ratings. Aesthetics remains a visual judgment.
 
 | Category | Weight | Before | After |
