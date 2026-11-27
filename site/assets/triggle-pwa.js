@@ -143,6 +143,7 @@
   dialog.addEventListener('close', () => {
     if (opener?.isConnected) opener.focus({preventScroll:true});
     opener = undefined;
+    outcome = undefined;
   });
   standalone.addEventListener('change', update);
   for (const event of ['online', 'offline']) window.addEventListener(event, update);

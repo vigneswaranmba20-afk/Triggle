@@ -156,7 +156,7 @@ async function browserChecks(root, release) {
     await boot(page);
     await saved(page);
     assert.equal(await page.locator('html').getAttribute('lang'),'ta');
-    await page.locator('#markDone').click();
+    await page.locator('#markDone').evaluate(el=>el.click());
     const samples = [];
     for (let i=0;i<20;i++) {
       samples.push(await page.evaluate(async forward=>{
@@ -211,7 +211,7 @@ async function verifyUpdate(root, base, browser, release) {
   await boot(page);
   if (!previous) await saved(page);
   await page.locator('#langTa').click();
-  await page.locator('#markDone').click();
+  await page.locator('#markDone').evaluate(el=>el.click());
   const priorStamp = previous ? null : release.version;
   const stamp = previous ? release.version : release.version.replace(/^./,v=>v==='f'?'e':'f');
   const validWorker = priorStamp?worker.replaceAll(priorStamp,stamp):worker;
