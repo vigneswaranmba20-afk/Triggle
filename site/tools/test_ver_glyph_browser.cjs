@@ -99,8 +99,10 @@ async function testActions(page, base) {
   await page.goto(base + route(9, 'g9-ch1-ex1.1-q1-i'));
   await page.locator('#g9GeometryHint summary').click();
   assert.equal(await page.locator('#g9GeometryHint').evaluate(el => el.open), true);
-  await page.locator('#deepSolutionAction').click();
-  assert.ok(await page.locator('#stepsList details[open] summary:focus').count());
+  assert.equal(await page.locator('#deepSolutionAction').count(), 0);
+  const reasoning = page.locator('#stepsList details.why-step-g9').first();
+  await reasoning.locator('summary').click();
+  assert.equal(await reasoning.evaluate(el => el.open), true);
   await page.locator('#quickSolutionAction').click();
   assert.equal(await page.locator('#stepsRegion').evaluate(el => el === document.activeElement), true);
   await page.goto(base + route(9, 'g9-ch3-ex3.2-q1-i'));

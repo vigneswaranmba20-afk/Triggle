@@ -742,7 +742,6 @@
   $('itemPosition').textContent=position+' / '+list.length;
   $('questionTrack').firstElementChild.style.inlineSize=(position/list.length*100)+'%';
   $('quickSolutionAction').lastElementChild.textContent=lang==='ta'?'விரைவுத் தீர்வு':'Quick Solution';
-  $('deepSolutionAction').lastElementChild.textContent=lang==='ta'?'ஆழமாகப் புரிந்துகொள்':'Understand Deeply';
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
   const questionMath=grade9Presentation(current)?.questionMath||current.questionMath||window.TriggleChapter1Math?.getQuestion?.(current,lang)||(!isGeometryExercise(current)&&window.TriggleG10RemainingMath?.getQuestion?.(current,lang));
   const renderDataTableHtml=dt=>{
@@ -872,7 +871,6 @@
   $('solutionReview').lang='en';
   renderList();
   window.dispatchEvent(new CustomEvent('triggle:lessonchange',{detail:{item:current,lang,grade}}));
-  $('deepSolutionAction').hidden=!firstReasoningDetail();
   observeLessonMath();
  }
  function syncDrawer(){
@@ -928,19 +926,12 @@
  }
  $('previous').onclick=$('questionTopPrevious').onclick=()=>navMove(-1);
  $('next').onclick=$('questionTopNext').onclick=()=>navMove(1);
- const firstReasoningDetail=()=>$('stepsList').querySelector('details.why-step-g9, details.why-step-g10');
  const focusReaderSection=element=>{
    element.scrollIntoView({block:'start'});
    element.focus({preventScroll:true});
  };
  $('questionPicker').onclick=()=>openPath('question');
  $('quickSolutionAction').onclick=()=>focusReaderSection($('stepsRegion'));
- $('deepSolutionAction').onclick=()=>{
-   const detail=firstReasoningDetail();
-   if(!detail)return;
-   detail.open=true;
-   focusReaderSection(detail.querySelector('summary'));
- };
  $('allChaptersButton').onclick=()=>changeGrade(grade);
  $('markDone').onclick=()=>{if(completed.has(current.id))completed.delete(current.id);else completed.add(current.id);store('triggle.learned.v119',[...completed]);render()};
  $('homeBtn').onclick=e=>{e.preventDefault();goHome()};
