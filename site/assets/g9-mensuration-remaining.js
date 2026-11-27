@@ -35,7 +35,7 @@
     // Scaled construction: diagonal AC=8 (240 px); all four sides=5 (150 px).
     // B and D are 3 units above/below midpoint; A and C 4 units away.
     const unit=ta?'செ.மீ.':'cm';
-    diagram.innerHTML='<svg viewBox="0 0 340 222" class="g9m-quad-svg" role="img" aria-label="'+
+    diagram.innerHTML='<svg viewBox="0 -10 340 244" class="g9m-quad-svg" role="img" aria-label="'+
       (ta?'நான்கு பக்கங்களும் 5 செ.மீ., மூலைவிட்டம் 8 செ.மீ. கொண்ட சாய்சதுரம்':
        'Rhombus with four 5 cm sides and an 8 cm diagonal')+'">'+
       '<polygon points="45,110 165,20 285,110 165,200" class="g9m-quad-outline"/>'+

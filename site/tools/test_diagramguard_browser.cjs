@@ -254,6 +254,76 @@ async function legacyCases(page){
   console.log('DiagramGuard: '+Object.keys(data).length+' legacy SVG variants and source geometry checked at 240/300/480 CSS px');
 }
 
+async function conceptBoundaries(page,base){
+  const stages=[
+    {chapter:'g9-ch2',index:0},
+    {chapter:'g9-ch7',index:1},
+    {chapter:'g10-ch3',index:10,tab:1},
+    {chapter:'g10-ch4',index:3,tab:3},
+    {chapter:'g10-ch4',index:4},
+    {chapter:'g10-ch4',index:7},
+    {chapter:'g10-ch4',index:8},
+    {chapter:'g10-ch4',index:11,tab:1}
+  ];
+  const panel=page.locator('.sp2-journey[data-view=lesson] [data-panel]');
+  const boundaryCheck=async stage=>{
+    const issues=await panel.evaluate(panel=>[...panel.querySelectorAll('svg')].flatMap(svg=>{
+      if(svg.closest('.katex')||!svg.getBoundingClientRect().height)return [];
+      return window.TriggleDiagramGuard.audit(svg,{discover:true}).issues.filter(issue=>issue.kind==='boundary');
+    }));
+    assert.deepEqual(issues,[],stage+' SVG label bounds');
+  };
+  const geometry=async()=>panel.locator('.g10ch4-lab svg').evaluate(svg=>{
+    const polygon=svg.querySelector('polygon');
+    const vertices=polygon?.getAttribute('points').trim().split(/\s+/).map(pair=>pair.split(',').map(Number));
+    const names=Object.fromEntries([...svg.querySelectorAll('text')].map(t=>[
+      t.textContent,[Number(t.getAttribute('x')),Number(t.getAttribute('y'))]
+    ]));
+    const dots=[...svg.querySelectorAll('circle')].map(circle=>
+      ['cx','cy'].map(attr=>Number(circle.getAttribute(attr))));
+    return {vertices,names,dots};
+  });
+  for(const {chapter,index,tab} of stages){
+    const grade=chapter.split('-')[0].slice(1);
+    await page.goto(base+`/index.html?class=${grade}&chapter=${chapter}&section=concepts&concept=${index}`);
+    for(const language of ['en','ta']){
+      await setLanguage(page,language);
+      await settle(page,100);
+      if(tab!==undefined)await panel.locator('button[class*="ch"][class*="-tab"]').nth(tab).click();
+      const stage=chapter+' concept '+index+' '+language;
+      await boundaryCheck(stage);
+      if(chapter!=='g10-ch4')continue;
+      if(index===7){
+        const {vertices:[A,B,C]}=await geometry();
+        near(length(A,B)/length(B,C),4/5);
+        near(length(A,C)/length(B,C),6/5);
+        await panel.locator('.g10ch4-preset-row button').nth(2).click();
+        const {names}=await geometry();
+        assert(names.A[0]<names.B[0]&&names.B[0]<names.C[0],stage+' flat-line order');
+        near(length(names.A,names.B),length(names.B,names.C));
+        await boundaryCheck(stage+' trap');
+      }
+      if(index===8){
+        const slider=panel.locator('input[type=range]');
+        for(const value of ['-135','-90','-45']){
+          await slider.fill(value);
+          const {vertices:[P,Q,R]}=await geometry();
+          near(angle(P,Q,R),40);
+          await boundaryCheck(stage+' '+value);
+        }
+      }
+      if(index===11){
+        const {vertices:[A,B,C],dots:[P,Q,R]}=await geometry();
+        assert(P[0]>C[0],stage+' external point');
+        near(P[1],B[1]);
+        near(length(P,R),length(P,Q)+length(Q,R));
+        near(-length(B,P)/length(P,C)*length(C,Q)/length(Q,A)*length(A,R)/length(R,B),-1);
+      }
+    }
+  }
+  console.log('DiagramGuard: eight additional concept scenes checked for label bounds and construction invariants');
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -271,6 +341,7 @@ async function main(){
         if(width===390&&!live){
           await synthetic(page);
           await legacyCases(page);
+          await conceptBoundaries(page,base);
         }
         for(const lang of ['en','ta']){
           await page.goto(base+concept(1));

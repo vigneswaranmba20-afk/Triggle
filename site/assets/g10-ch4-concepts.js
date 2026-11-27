@@ -406,7 +406,7 @@
     host.append(el('h5','g10ch4-lab-title',copy.title));
     let rIdx=0,step=4;
     const ratioTabs=makeTabs(copy.ratios.map(r=>r.lbl),0,i=>{rIdx=i;ratioTabs.sync(i);paint();},copy.title);
-    const svg=svgEl('svg',{viewBox:'0 0 320 190',class:'g10ch4-svg',role:'img','aria-label':copy.title});
+    const svg=svgEl('svg',{viewBox:'0 -32 320 222',class:'g10ch4-svg',role:'img','aria-label':copy.title});
     const nav=el('div','g10ch4-step-nav');
     const prev=el('button','g10ch4-chip-btn',copy.prev);prev.type='button';
     const prog=el('span','g10ch4-progress','5 / 5');
@@ -693,7 +693,7 @@
     };
     host.append(el('h5','g10ch4-lab-title',copy.title));
     let bd=2.0,degenerate=false;
-    const svg=svgEl('svg',{viewBox:'0 0 320 176',class:'g10ch4-svg',role:'img','aria-label':copy.title});
+    const svg=svgEl('svg',{viewBox:'0 0 320 188',class:'g10ch4-svg',role:'img','aria-label':copy.title});
     const metrics=el('div','g10ch4-metrics');
     const slider=makeSlider(copy.slider,1.0,4.0,0.1,bd,v=>{degenerate=false;bd=v;paint();});
     const row=el('div','g10ch4-preset-row');
@@ -713,7 +713,7 @@
     function paint(){
       svg.replaceChildren();
       if(degenerate){
-        const B=[28,108],A=[160,108],C=[292,108],D=[28+1.5/5*(A[0]-B[0]),108];
+        const A=[28,108],B=[160,108],C=[292,108],D=lerp(B,C,1.5/5);
         svg.append(
           svgEl('line',{x1:B[0],y1:B[1],x2:C[0],y2:C[1],stroke:'#6E2933','stroke-width':'3'}),
           svgEl('circle',{cx:B[0],cy:B[1],r:4.5,fill:'#181B20'}),
@@ -723,8 +723,7 @@
           svgEl('text',{x:B[0]-4,y:B[1]-12,'font-size':'11','font-weight':'700'},'B'),
           svgEl('text',{x:D[0]-4,y:D[1]+18,'font-size':'11','font-weight':'700',fill:'#6E2933'},'D (1.5)'),
           svgEl('text',{x:A[0]-4,y:A[1]-12,'font-size':'11','font-weight':'700',fill:'#6E2933'},'A'),
-          svgEl('text',{x:C[0]-4,y:C[1]-12,'font-size':'11','font-weight':'700'},'C'),
-          svgEl('text',{x:86,y:76,'font-size':'11','font-weight':'700',fill:'#6E2933'},'AB (5) + BC (5) = AC (10) → Flat Line!')
+          svgEl('text',{x:C[0]-4,y:C[1]-12,'font-size':'11','font-weight':'700'},'C')
         );
         metrics.innerHTML=`
           <div class="g10ch4-metric"><span>Triangle inequality</span><strong>5 + 5 = 10 (Fails!)</strong></div>
@@ -734,10 +733,10 @@
         return;
       }
       // Valid triangle AB=4, BC=5, AC=6 -> solve exact coords
-      const B=[42,150],C=[262,150];
-      const sc=44; // 5 units = 220px
+      const B=[60,158],C=[225,158];
+      const sc=33; // 5 units = 165 SVG units
       // x = (25 + 16 - 36)/10 = 0.5 units from B, y = sqrt(16 - 0.25) = 3.9686 units
-      const A=[B[0]+0.5*sc,B[1]-Math.sqrt(16-0.25)*sc*0.82];
+      const A=[B[0]+0.5*sc,B[1]-Math.sqrt(16-0.25)*sc];
       const dc=5-bd;
       const D=lerp(B,C,bd/5);
       const ang1=angleDeg(A,B,D),ang2=angleDeg(A,D,C);
@@ -788,7 +787,7 @@
     const Q=[102,126],R=[218,126],theta=40;
     const arc=mathAPI.circumcircleArc(Q,R,theta);
     const tabs=makeTabs(copy.tabs,0,i=>{mode=i;tabs.sync(i);paint();},copy.title);
-    const svg=svgEl('svg',{viewBox:'0 0 320 198',class:'g10ch4-svg',role:'img','aria-label':copy.title});
+    const svg=svgEl('svg',{viewBox:'-12 -54 344 260',class:'g10ch4-svg',role:'img','aria-label':copy.title});
     const metrics=el('div','g10ch4-metrics');
     const slider=makeSlider(copy.slider,-135,-45,1,phiDeg,v=>{phiDeg=v;paint();});
     const note=el('p','g10ch4-status is-match');note.setAttribute('aria-live','polite');
@@ -811,7 +810,7 @@
       if(mode===0){
         const rMed=dist(P,G);
         svg.append(
-          svgEl('circle',{cx:G[0],cy:G[1],r:rMed,fill:'none',stroke:'#6E2933','stroke-width':'1.4','stroke-dasharray':'4 3'}),
+          svgEl('path',{d:`M ${G[0]-rMed} ${G[1]} A ${rMed} ${rMed} 0 0 1 ${G[0]+rMed} ${G[1]}`,fill:'none',stroke:'#6E2933','stroke-width':'1.4','stroke-dasharray':'4 3'}),
           svgEl('line',{x1:P[0],y1:P[1],x2:G[0],y2:G[1],stroke:'#6E2933','stroke-width':'2'}),
           svgEl('circle',{cx:G[0],cy:G[1],r:3.2,fill:'#6E2933'}),
           svgEl('text',{x:G[0]-4,y:G[1]+13,'font-size':'10','font-weight':'700',fill:'#6E2933'},'G')
@@ -1099,12 +1098,12 @@
         note.textContent=st.concurrent?copy.concurrent:copy.notConcurrent(st.prod);
       }else{
         const A=[154,48],B=[88,150],C=[256,150];
-        const R=lerp(A,B,0.45),Q=lerp(A,C,0.60);
+        const R=lerp(A,B,0.45),Q=lerp(A,C,0.80);
         const P=lineIntersect(R,Q,B,C)||[40,150];
         svg.append(
-          svgEl('line',{x1:26,y1:150,x2:262,y2:150,stroke:'#D7D4CC','stroke-width':'1.5','stroke-dasharray':'4 3'}),
+          svgEl('line',{x1:26,y1:150,x2:P[0]+12,y2:150,stroke:'#D7D4CC','stroke-width':'1.5','stroke-dasharray':'4 3'}),
           svgEl('polygon',{points:`${A} ${B} ${C}`,fill:'rgba(24,27,32,0.04)',stroke:'#181B20','stroke-width':'2'}),
-          svgEl('line',{x1:P[0]-8,y1:P[1]+3,x2:Q[0]+18,y2:Q[1]-8,stroke:'#6E2933','stroke-width':'2.2'}),
+          svgEl('line',{x1:P[0],y1:P[1],x2:R[0],y2:R[1],stroke:'#6E2933','stroke-width':'2.2'}),
           svgEl('circle',{cx:P[0],cy:P[1],r:4,fill:'#6E2933'}),
           svgEl('circle',{cx:Q[0],cy:Q[1],r:4,fill:'#6E2933'}),
           svgEl('circle',{cx:R[0],cy:R[1],r:4,fill:'#6E2933'}),
@@ -1132,7 +1131,7 @@
       window.TriggleG10DiagramGuard.preview(host,label,id,lang);
       return;
     }
-    const svg=svgEl('svg',{viewBox:'0 0 300 104',class:'g10ch4-glance-svg',role:'img','aria-label':label});
+    const svg=svgEl('svg',{viewBox:id==='bpt-thales'?'0 -7 300 111':'0 0 300 104',class:'g10ch4-glance-svg',role:'img','aria-label':label});
     if(id==='similar-construction'){
       svg.append(
         svgEl('polygon',{points:'96,18 42,72 198,72',fill:'rgba(24,27,32,0.05)',stroke:'#181B20','stroke-width':'1.8'}),

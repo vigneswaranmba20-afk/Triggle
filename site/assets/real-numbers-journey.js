@@ -23,7 +23,7 @@ function numberLine(min,max,points,ta,divisions=4){
    (i%labelEvery===0?'<text x="'+x(n)+'" y="113" fill="#5c5b73" font-size="13" text-anchor="middle">'+esc(Number(n.toFixed(precision)).toFixed(precision))+'</text>':'');}
  points.forEach((p,i)=>{const px=x(p.value);out+='<line x1="'+px+'" y1="'+(y-29)+'" x2="'+px+'" y2="'+y+'" stroke="'+(i===0?'#bf467d':'#527ab2')+'" stroke-width="3"/>'+
   '<circle cx="'+px+'" cy="'+y+'" r="5" fill="'+(i===0?'#bf467d':'#527ab2')+'"/>'+
-  '<text x="'+px+'" y="'+(i===0?'32':i%2?'49':'16')+'" font-weight="750" font-size="15" text-anchor="middle" fill="#5c3272">'+esc(p.label)+'</text>';});
+  '<text x="'+px+'" y="'+(i===0?'32':i%2?'49':'23')+'" font-weight="750" font-size="15" text-anchor="middle" fill="#5c3272">'+esc(p.label)+'</text>';});
  return out+'</svg>';
 }
 function mount(container,chapter,language,onBack,initialConcept=null,onConcept=null,{onQuestion,chapterQuestions=[]}={}){
