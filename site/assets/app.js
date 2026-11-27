@@ -46,7 +46,7 @@
  const lastByGrade=load('triggle.lastByGrade.v119',{});
  // Resume across grades uses the most recently opened lesson, not grade order.
  let lastOpened=load('triggle.lastOpened.v1',null);
- let lang='en';try{const saved=localStorage.getItem('triggle-language');if(saved==='ta'||saved==='"ta"')lang='ta'}catch{}
+ let lang='en';try{const saved=new URLSearchParams(location.search).get('lang')||localStorage.getItem('triggle-language');if(saved==='ta'||saved==='"ta"')lang='ta'}catch{}
  const url=new URL(location.href);
  if(restrictedRoute(url.searchParams)){history.replaceState(null,'',location.pathname);url.search='';}
  const requested=Number(url.searchParams.get('class'));
@@ -564,9 +564,8 @@
  }
  const prepareLessonMath=()=>window.TriggleNotation?.prepare?.($('lessonCard'));
  const lessonMathObserver=typeof ResizeObserver==='function'?new ResizeObserver(prepareLessonMath):null;
- function renderSteps(){
+ function renderSteps(authored){
   lessonMathObserver?.disconnect();
-  const authored=window.TriggleWorkedDisplay?.get(current,lang);
   $('lessonCard').classList.toggle('twd-lesson',!!authored);
   $('questionText').classList.toggle('twd-question',!!authored);
   $('answerText').classList.toggle('twd-answer',!!authored);
@@ -649,13 +648,13 @@
   'g9-ch4-ex4.3-q4':{src:'./assets/grade9-ch4/ex4-3-q4.svg',alt:'Circle centre O, radius 15 cm, perpendicular distance 12 cm to chord AB.',altTa:'ஆரம் 15 செ.மீ, தொலைவு 12 செ.மீ, நாண் நீளம் AB = ?',caption:'Radius 15 cm, distance 12 cm, full chord AB = ?',captionTa:'ஆரம் 15 செ.மீ, தொலைவு 12 செ.மீ, நாண் நீளம் AB = ?'},
   'g9-ch4-ex4.3-q6':{src:'./assets/grade9-ch4/ex4-3-q6.svg',alt:'Two intersecting circles of radii 5 cm and 3 cm with centre distance 4 cm.',altTa:'ஆரங்கள் 5 செ.மீ, 3 செ.மீ; மையத் தொலைவு 4 செ.மீ',caption:'Radii 5 cm and 3 cm, centre distance 4 cm (3-4-5 right triangle)',captionTa:'ஆரங்கள் 5 செ.மீ, 3 செ.மீ; மையத் தொலைவு 4 செ.மீ'}
  };
- const figureOverride=item=>{
+ const figureOverride=(item,language=lang)=>{
   const figures=window.TriggleFrontierFigureTamil?.[item.id];
-  return lang==='ta'?figures:figures?.en;
+  return language==='ta'?figures:figures?.en;
  };
- const resolveFigureSpec=item=>item&&ch1SvgFigures[item.id]
-  ?{src:lang==='ta'&&ch1SvgFigures[item.id].srcTa?ch1SvgFigures[item.id].srcTa:ch1SvgFigures[item.id].src,alt:{en:ch1SvgFigures[item.id].alt,ta:ch1SvgFigures[item.id].altTa||ch1SvgFigures[item.id].alt},caption:{en:ch1SvgFigures[item.id].caption,ta:ch1SvgFigures[item.id].captionTa||ch1SvgFigures[item.id].caption}}
-  :(item?.figureSrc?{src:figureOverride(item)?.src||(lang==='ta'&&item.figureSrcTa?item.figureSrcTa:item.figureSrc),alt:item.figureAlt,caption:item.figureCaption}:null);
+ const resolveFigureSpec=(item,language=lang)=>item&&ch1SvgFigures[item.id]
+  ?{src:language==='ta'&&ch1SvgFigures[item.id].srcTa?ch1SvgFigures[item.id].srcTa:ch1SvgFigures[item.id].src,alt:{en:ch1SvgFigures[item.id].alt,ta:ch1SvgFigures[item.id].altTa||ch1SvgFigures[item.id].alt},caption:{en:ch1SvgFigures[item.id].caption,ta:ch1SvgFigures[item.id].captionTa||ch1SvgFigures[item.id].caption}}
+  :(item?.figureSrc?{src:figureOverride(item,language)?.src||(language==='ta'&&item.figureSrcTa?item.figureSrcTa:item.figureSrc),alt:item.figureAlt,caption:item.figureCaption}:null);
  const figureCaption=(item,spec)=>figureOverride(item)?.caption||tr(spec?.caption);
  const localizeInlineSvg=(container,item)=>{
   const description=figureOverride(item)?.description;
@@ -691,7 +690,11 @@
    container.innerHTML=markup;
   }
  }
+ let renderedFigureItem, renderedFigureLanguage;
  function renderInlineFigure(){
+   if(renderedFigureItem===current&&renderedFigureLanguage===lang)return;
+   renderedFigureItem=current;
+   renderedFigureLanguage=lang;
    const figure=$('inlineFigure');const yes=isQuestionFigure(current);
    figure.hidden=!yes; if(!yes)return;
    const aligned=window.TriggleSetVenn?.render(current,lang);
@@ -871,6 +874,7 @@
   $('markDone').setAttribute('aria-pressed',String(completed.has(current.id)));$('markDone').setAttribute('aria-label',ui(completed.has(current.id)?'learned':'markDone'));$('markDone').innerHTML=(completed.has(current.id)?'✓ ':'○ ')+'<span>'+esc(ui(completed.has(current.id)?'learned':'markDone'))+'</span>';
 
   renderInlineFigure();
+  chapterRelease?.rememberOfflineAssets(['en','ta'].map(language=>resolveFigureSpec(current,language)?.src));
   $('figureBtn').hidden=!$('inlineFigure').hidden||!hasUsefulFigure(current);
   $('pageStatus').textContent=position+' '+ui('of')+' '+list.length;$('pageFill').style.width=(position/list.length*100)+'%';
   $('previous').disabled=n===0;$('next').disabled=n===list.length-1;
@@ -891,7 +895,7 @@
   $('next').setAttribute('aria-label',ui(exerciseEnd?'exerciseEnd':'nextShort'));
   $('previous').innerHTML=icon('previous')+'<span>'+esc(ui('previous'))+'</span>';
   $('next').innerHTML='<span>'+esc(ui(exerciseEnd?'exerciseEnd':'nextShort'))+'</span>'+icon(exerciseEnd?'check':'next');
-  renderSteps();
+  renderSteps(workedDisplay);
   const difficulty=window.TriggleDifficulty?.get(current);
   const indicator=$('difficultyIndicator');
   const difficultyLabels=lang==='ta'?
@@ -1002,7 +1006,7 @@
    if(opener?.isConnected)opener.focus({preventScroll:true});
  });
  $('langEn').onclick=()=>changeLanguage('en');$('langTa').onclick=()=>changeLanguage('ta');
- function changeLanguage(v){lang=v;try{localStorage.setItem('triggle-language',v)}catch{}render()}
+ function changeLanguage(v){lang=v;const u=new URL(location.href);if(u.searchParams.has('lang')){u.searchParams.set('lang',v);history.replaceState(history.state,'',u)}try{localStorage.setItem('triggle-language',v)}catch{}render()}
  window.addEventListener('keydown',e=>{
   if($('pathDialog').open)return;
   if(e.key==='Escape'&&drawerOpen){closeDrawer();return}

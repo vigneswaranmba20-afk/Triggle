@@ -21,7 +21,7 @@
       featured:'Try the interactive Set Language lesson',
       featuredDesc:'Seven short ideas, a Venn-diagram lab, and step-by-step reasoning.',
       view:'Open chapter',empty:'No matching chapters. Try another word.',
-      board:'Tamil Nadu State Board',homeChapterCount:'chapters',mathematics:'Mathematics',chapterCount:'chapters',
+      board:'Tamil Nadu State Board',subtitle:'Samacheer Kalvi Mathematics — Grades 9 & 10',install:'Install Triggle',homeChapterCount:'chapters',mathematics:'Mathematics',chapterCount:'chapters',
       yourClass:'Your class',pick:'Pick a chapter and start with what is available today.',
       back:'All classes',chooseClass:'Change class',allChapters:'All chapters in this class',
       tip:'You can always use the Chapters menu or the class numbers below.',
@@ -46,7 +46,7 @@
       featured:'செயல்வழிக் கண மொழிப் பாடத்தை முயலுங்கள்',
       featuredDesc:'ஏழு சிறு கருத்துகள், வென் பட ஆய்வகம், படிப்படியான காரண விளக்கம்.',
       view:'அத்தியாயத்தைத் திறக்கவும்',empty:'பொருந்தும் அத்தியாயம் இல்லை. வேறு சொல்லை முயலுங்கள்.',
-      board:'தமிழ்நாடு மாநிலப் பாடத்திட்டம்',homeChapterCount:'இயல்கள்',mathematics:'கணிதம்',chapterCount:'அத்தியாயங்கள்',
+      board:'தமிழ்நாடு மாநிலப் பாடத்திட்டம்',subtitle:'சமச்சீர் கல்வி கணிதம் — 9 மற்றும் 10 ஆம் வகுப்புகள்',install:'Triggle செயலியை நிறுவுக',homeChapterCount:'இயல்கள்',mathematics:'கணிதம்',chapterCount:'அத்தியாயங்கள்',
       yourClass:'உங்கள் வகுப்பு',pick:'இப்போது கிடைக்கும் பாடங்களிலிருந்து கற்க ஒரு அத்தியாயத்தைத் தேர்ந்தெடுக்கவும்.',
       back:'அனைத்து வகுப்புகள்',chooseClass:'வகுப்பை மாற்றுக',allChapters:'இந்த வகுப்பின் எல்லா அத்தியாயங்களும்',
       tip:'மேலுள்ள அத்தியாயப் பட்டியலையோ கீழுள்ள வகுப்பு எண்களையோ எப்போதும் பயன்படுத்தலாம்.',
@@ -126,6 +126,7 @@
           <div class="home-cover-type">
             <p>${escapeHtml(t.board)}</p>
             <h1>${escapeHtml(t.mathematics)}</h1>
+            <p class="home-cover-subtitle">${escapeHtml(t.subtitle)}</p>
           </div>
         </header>
         <section class="discover-home-classes" aria-labelledby="discover-classes-title">
@@ -136,6 +137,7 @@
           <h2 id="discover-recent-title">${escapeHtml(t.continueLabel)}</h2>
           ${recentCard}
         </section>
+        <div class="home-app-info"><button type="button" class="triggle-app-info" data-triggle-install>${escapeHtml(t.install)}</button></div>
         <footer class="home-copyright"><small>© 2026 VER labs</small></footer>
       </div>`;
     }else{
@@ -156,7 +158,14 @@
         '<label for="discover-jump">'+escapeHtml(t.quick)+'</label>'+
         '<select id="discover-jump" data-jump>'+jumpOptions(g.grade)+'</select></section>';
     }
-    root.innerHTML=body;
+    const staticHome=root.querySelector('[data-static-home]');
+    if (mode==='home' && staticHome) {
+      const template=document.createElement('template');
+      template.innerHTML=body;
+      const next=template.content.firstElementChild;
+      staticHome.replaceChildren(staticHome.firstElementChild,...[...next.children].slice(1));
+      staticHome.removeAttribute('data-static-home');
+    } else root.innerHTML=body;
     const switchClass=root.querySelector('[data-switch-class]');
     const classOptions=root.querySelector('#discover-class-options');
     if(switchClass&&classOptions){

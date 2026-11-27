@@ -1,3 +1,8 @@
+Triggle — Samacheer Kalvi Mathematics (Grades 9 & 10)
+சமச்சீர் கல்வி கணிதம் — 9 மற்றும் 10 ஆம் வகுப்புகள்
+Independent learning application aligned with the Tamil Nadu State Board curriculum.
+Published by VER labs · © 2026 VER labs
+
 TRIGGLE — VISUAL MATHEMATICS · v1.23
 © 2026 VIGNESWARAN E R. All rights reserved.
 

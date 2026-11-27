@@ -1,24 +1,38 @@
 {
-  "name": "Triggle — Free Mathematics Learning Lab",
+  "name": "Triggle — Samacheer Kalvi Mathematics (Grades 9 & 10)",
   "short_name": "Triggle",
-  "description": "Free bilingual Mathematics for Classes 9–10. Discover chapters, explore visual lessons and practise offline after first visit.",
+  "description": "Free Samacheer Kalvi Mathematics for Grades 9 and 10 in English and Tamil. Open previously cached lessons offline.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
   "background_color": "#F7F6F2",
-  "theme_color": "#FFFFFF",
+  "theme_color": "#181B20",
   "icons": [
     {
-      "src": "./icons/icon-192.png",
+      "src": "./icons/icon-192-v2.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
-      "src": "./icons/icon-512.png",
+      "src": "./icons/icon-512-v2.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "./icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
-  ]
+  ],
+  "id": "./index.html",
+  "lang": "en"
 }
