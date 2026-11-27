@@ -1,0 +1,719 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.3.1 Holdout",
+  "summary": {
+    "total": 100,
+    "tp": 75,
+    "fp": 0,
+    "fn": 0,
+    "tn": 25,
+    "precision": 1.0,
+    "recall": 1.0,
+    "falsePositives": 0,
+    "falseNegatives": 0,
+    "criticalMissedErrors": 0,
+    "executionTimeMs": 1837.49
+  },
+  "cases": [
+    {
+      "caseId": "ho131-ctrl-01",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-02",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-03",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-04",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-05",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-06",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-07",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-08",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-09",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-10",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-11",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-12",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-13",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-14",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-15",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-16",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-17",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-18",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-19",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-20",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-21",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-22",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-23",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-24",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-ctrl-25",
+      "category": "clean_holdout",
+      "is_error": false,
+      "critical": false,
+      "flagged": false
+    },
+    {
+      "caseId": "ho131-canc-01",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-canc-02",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-canc-03",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-canc-04",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-canc-05",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-canc-06",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-canc-07",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-canc-08",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-canc-09",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-canc-10",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-canc-11",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-canc-12",
+      "category": "algebraic_cancellation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-01",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-02",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-03",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-04",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-05",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-06",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-07",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-08",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-09",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-10",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-11",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-12",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-disc-13",
+      "category": "discriminant_sign_error",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-div0-01",
+      "category": "domain_violation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-div0-02",
+      "category": "domain_violation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-div0-03",
+      "category": "domain_violation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-div0-04",
+      "category": "domain_violation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-div0-05",
+      "category": "domain_violation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-div0-06",
+      "category": "domain_violation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-div0-07",
+      "category": "domain_violation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-div0-08",
+      "category": "domain_violation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-div0-09",
+      "category": "domain_violation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-loss-01",
+      "category": "loss_of_roots",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-loss-02",
+      "category": "loss_of_roots",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-loss-03",
+      "category": "loss_of_roots",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-loss-04",
+      "category": "loss_of_roots",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-loss-05",
+      "category": "loss_of_roots",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-loss-06",
+      "category": "loss_of_roots",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-loss-07",
+      "category": "loss_of_roots",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-loss-08",
+      "category": "loss_of_roots",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-extr-01",
+      "category": "extraneous_root",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-extr-02",
+      "category": "extraneous_root",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-extr-03",
+      "category": "extraneous_root",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-extr-04",
+      "category": "extraneous_root",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-extr-05",
+      "category": "extraneous_root",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-extr-06",
+      "category": "extraneous_root",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-extr-07",
+      "category": "extraneous_root",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-extr-08",
+      "category": "extraneous_root",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-form-01",
+      "category": "invalid_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-form-02",
+      "category": "invalid_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-form-03",
+      "category": "invalid_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-form-04",
+      "category": "invalid_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-form-05",
+      "category": "invalid_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-form-06",
+      "category": "invalid_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-form-07",
+      "category": "invalid_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-form-08",
+      "category": "invalid_formula",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-apx-01",
+      "category": "misleading_approximation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-apx-02",
+      "category": "misleading_approximation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-apx-03",
+      "category": "misleading_approximation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-apx-04",
+      "category": "misleading_approximation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-apx-05",
+      "category": "misleading_approximation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-apx-06",
+      "category": "misleading_approximation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-apx-07",
+      "category": "misleading_approximation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-apx-08",
+      "category": "misleading_approximation",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-corr-01",
+      "category": "safe_corrector_e2e",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-corr-02",
+      "category": "safe_corrector_e2e",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-corr-03",
+      "category": "safe_corrector_e2e",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-corr-04",
+      "category": "safe_corrector_e2e",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-corr-05",
+      "category": "safe_corrector_e2e",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-corr-06",
+      "category": "safe_corrector_e2e",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-corr-07",
+      "category": "safe_corrector_e2e",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-corr-08",
+      "category": "safe_corrector_e2e",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    },
+    {
+      "caseId": "ho131-corr-09",
+      "category": "safe_corrector_e2e",
+      "is_error": true,
+      "critical": true,
+      "flagged": true
+    }
+  ]
+}
