@@ -36,6 +36,41 @@ const questionMarkup = page => page.evaluate(() => {
   };
 });
 
+
+async function verifyStatisticsDirectory(page,base,language) {
+  await page.goto(base+'/index.html?class=10');
+  await ready(page);
+  await page.locator(language==='ta'?'#langTa':'#langEn').click();
+  const card=page.locator('.discover-chapter[data-chapter="g10-ch8"]');
+  const meta=card.locator('.discover-chapter-meta.is-ready');
+  await meta.waitFor();
+  assert.equal(await meta.textContent(),language==='ta'?'✦ 15 சிறு செயல்வழிப் பாடங்கள் உள்ளன':'✦ 15 Interactive mini-lessons available');
+  assert.equal(await page.locator('html').getAttribute('lang'),language);
+  const directory=await page.evaluate(()=>({
+    staged:!!window.TriggleStudentRelease,
+    count:window.TriggleStudentRelease?.conceptCounts['g10-ch8'],
+    chapter:window.TriggleStudentRelease?.chapter,
+    viewer:!!window.TriggleG10Ch8Labs,
+    data:!!window.TRIGGLE_G10_CH8_PATH
+  }));
+  if(directory.staged) {
+    assert.equal(directory.count,15);
+    assert.equal(directory.chapter,null);
+    assert.equal(directory.viewer,false);
+    assert.equal(directory.data,false);
+  }
+  await card.click();
+  await page.waitForURL(matches('chapter','g10-ch8'));
+  await ready(page);
+  await page.locator('[data-hub-section="concepts"]').click();
+  await page.waitForURL(matches('section','concepts'));
+  await ready(page);
+  await page.locator('[data-nav] button').first().waitFor();
+  assert.equal(await page.locator('[data-nav] button').count(),15);
+  assert.equal(await page.evaluate(()=>typeof window.TriggleG10Ch8Labs?.mount),'function');
+  assert.equal(await page.locator('html').getAttribute('lang'),language);
+}
+
 async function compareChapters(browser, authored, staged) {
   const context = await browser.newContext({viewport,isMobile:true,hasTouch:true,serviceWorkers:'block',reducedMotion:'reduce'});
   try {
@@ -43,6 +78,7 @@ async function compareChapters(browser, authored, staged) {
     const errors = [];
     packed.on('pageerror',error=>errors.push(error.message));
     packed.on('console',entry=>{if(entry.type()==='error'&&entry.text().startsWith('Triggle startup'))errors.push(entry.text());});
+    for (const language of ['en','ta']) await verifyStatisticsDirectory(packed,staged,language);
     const runtime = loadRuntime();
     const chapters = runtime.curriculum.grades.filter(grade=>[9,10].includes(grade.grade));
     let compared=0;
@@ -95,6 +131,7 @@ async function navigateOffline(browser, base) {
     await page.waitForFunction(()=>navigator.serviceWorker.controller,null,{timeout:40000});
     assert((await page.evaluate(()=>caches.keys())).some(key=>key.includes('-student-')),'Versioned release worker');
     await context.setOffline(true);
+    for (const language of ['en','ta']) await verifyStatisticsDirectory(page,base,language);
     await page.goto(base+link(10,'question',geometry));
     await ready(page);
     await page.locator('#langTa').click();

@@ -67,7 +67,7 @@
     // Only advertise a lab when both its lesson data and interactive viewer are loaded.
     const interactiveCount=id=>{
       const cached=window.TriggleStudentRelease?.conceptCounts[id];
-      if(cached!==undefined&&id!=='g10-ch8')return cached;
+      if(cached!==undefined)return cached;
       const stages=window.TriggleChapterHub?.grade9Stages?.(id)??(id==='g9-ch1'&&window.TriggleSetJourney?window.TRIGGLE_SET_PATH?.stages:
         id==='g9-ch2'&&window.TriggleRealJourney?window.TRIGGLE_REAL_PATH?.stages:
         id==='g9-ch9'&&window.TriggleProbabilityConcepts?window.TRIGGLE_PROB_PATH?.stages:
@@ -77,6 +77,7 @@
         id==='g10-ch5'&&window.TriggleG10Ch5Labs?window.TRIGGLE_G10_CH5_PATH?.stages:
         id==='g10-ch6'&&window.TriggleG10Ch6Labs?window.TRIGGLE_G10_CH6_PATH?.stages:
         id==='g10-ch7'&&window.TriggleG10Ch7Labs?window.TRIGGLE_G10_CH7_PATH?.stages:
+        id==='g10-ch8'&&typeof window.TriggleG10Ch8Labs?.mount==='function'?window.TRIGGLE_G10_CH8_PATH?.stages:
         id==='g12-ch1'&&lang==='en'?window.TriggleMatrixConcepts?.scenes:null);
       return Array.isArray(stages)?stages.length:0;
     };
