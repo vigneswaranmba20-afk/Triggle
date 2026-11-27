@@ -18,6 +18,11 @@ const plotRegistry={register(prefix,plots){Object.keys(plots).forEach(key=>coord
 for(const grade of [9,10]){
   vm.runInNewContext(rootFile('assets/g'+grade+'-ch5-coordinate-figures.js'),{window:{TriggleCoordinateFigures:plotRegistry}});
 }
+const angleFigures=new Set();
+const angleModule='assets/g9-angle-exercise-figures.js';
+vm.runInNewContext(rootFile(angleModule),{window:{TriggleCoordinateFigures:{register(prefix,plots){
+  Object.keys(plots).forEach(key=>angleFigures.add(prefix+key));
+}}}});
 scope.TriggleG9FrontierGraphs(runtime.classes[9].items.filter(item=>coordinateFigures.has(item.id)));
 scope.TriggleG10CoordinateFrontier(runtime.classes[10].items.filter(item=>coordinateFigures.has(item.id)));
 const table=new Map(), referenced=new Set();
@@ -62,6 +67,11 @@ for(const grade of [9,10]){
     const ta=stripRoot(fixed?(fixed.srcTa||fixed.src):item.figureSrc&&(taOverride||item.figureSrcTa||item.figureSrc));
     const src=[curriculumModules.get(id),format(item.reference),item.page&&'p. '+format(item.page),
       item.sourceFidelity?.sourcePdfPage&&'PDF '+format(item.sourceFidelity.sourcePdfPage),format(item.source)].filter(Boolean).join(' | ');
+    if(angleFigures.has(id)){
+      add(id,{id,chapter,source:src,rendering:'responsive SVG (assets/diagramguard-coordinate-plot.js)',
+        surface:'figure dialog',qualification:'DiagramGuard browser fixture'});
+      continue;
+    }
     if(en){
       const rectangle=id==='c10-4-ex4-3-q4';
       const responsive=rectangle||coordinateFigures.has(id);

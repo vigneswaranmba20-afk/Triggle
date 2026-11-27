@@ -1152,6 +1152,57 @@ async function similarityResults(page,base,profiles){
   return checks;
 }
 
+async function grade9Angles(page,base,profiles){
+  let checks=0;
+  const figures=[
+    {chapter:4,id:'c9-4-4-practice-5',angles:[55,65,60],labels:['A','B','C']},
+    {chapter:6,id:'c9-exercise-6-4-q4',angles:[24.4,90,65.6],labels:['A']}
+  ];
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta'])for(const {chapter,id,angles,labels} of figures){
+      await page.goto(`${base}/index.html?class=9&chapter=g9-ch${chapter}&question=${id}`);
+      await setLanguage(page,lang);
+      const inline=page.locator('#inlineFigureOpen');
+      const view=await inline.isVisible()?inline:page.locator('#figureBtn');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        await view.click();
+        const selector='#figureDialog svg.diagramguard-coordinate[data-dg-ready]';
+        const result=await read(page,selector,percent);
+        if(lang==='ta')assert.match(result.description,/[஀-௿]/u);
+        assert.deepEqual(result.labels.map(entry=>entry.id),labels);
+        const info=await page.locator(selector).evaluate(svg=>{
+          const key=svg.parentElement.querySelector('.diagramguard-coordinate-key');
+          return {
+            points:svg.querySelector('[data-dg-region="ABC"]').getAttribute('points').split(' ')
+              .map(p=>p.split(',').map(Number)),
+            displayed:[...svg.querySelectorAll('text')].map(text=>text.textContent),
+            key:[...key.querySelectorAll('[role=listitem]')].map(node=>node.textContent),
+            unclipped:svg.getBoundingClientRect().bottom<=key.getBoundingClientRect().top+.5,
+            intentionalCaption:document.getElementById('coordinateFigureCaption').hidden
+          };
+        });
+        assert(info.unclipped&&info.intentionalCaption);
+        const [A,B,C]=info.points;
+        [angle(A,B,C),angle(B,A,C),angle(C,A,B)].forEach((value,index)=>near(value,angles[index]));
+        if(chapter===4){
+          assert.deepEqual(info.displayed,['55°','65°','60°']);
+          assert.deepEqual(info.key,['55° + 65° + 60° = 180°']);
+        }else{
+          assert.deepEqual(info.displayed,['24°24′']);
+          assert.match(info.key.join(' '),/9\.105.*4\.131.*10/u);
+        }
+        await page.keyboard.press('Escape');
+        await page.locator('#figureDialog').waitFor({state:'hidden'});
+        assert(await view.evaluate(button=>button===document.activeElement));
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -1218,6 +1269,12 @@ async function main(){
           console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 10 quadratic graph states`);
           return;
         }
+        if(process.argv.includes('--grade9-angles')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await grade9Angles(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 9 exercise angle states`);
+          return;
+        }
         if(process.argv.includes('--similarity-scaling')){
           const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
           const checks=await similarityScaling(page,base,profiles);
@@ -1246,6 +1303,7 @@ async function main(){
           await similarityResults(page,base,[[320,844]]);
           await grade9CoordinateActivities(page,base,[[320,844]]);
           await algebraQuadratics(page,base,[[320,844]]);
+          await grade9Angles(page,base,[[320,844]]);
           await page.setViewportSize({width,height});
         }
         for(const lang of ['en','ta']){

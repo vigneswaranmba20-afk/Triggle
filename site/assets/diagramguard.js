@@ -105,11 +105,11 @@
     if(!matrix||!view.width||!view.height)return null;
     return corners(matrix,view);
   }
-  function horizontalClipping(svg) {
-    const box=svg.getBoundingClientRect();
+  function horizontalClipping(element) {
+    const box=element.getBoundingClientRect();
     const root=document.documentElement;
     let left=0,right=root.clientWidth;
-    for(let parent=svg.parentElement;parent&&parent!==root;parent=parent.parentElement){
+    for(let parent=element.parentElement;parent&&parent!==root;parent=parent.parentElement){
       if(!['auto','scroll','hidden','clip'].includes(getComputedStyle(parent).overflowX)||!parent.clientWidth)continue;
       const rect=parent.getBoundingClientRect();
       const scale=parent.offsetWidth?rect.width/parent.offsetWidth:1;
@@ -341,7 +341,7 @@
       fontsReady=true;
       refresh(true);
     });
-    return ()=>refresh(true);
+    return (force=true)=>refresh(force);
   }
-  window.TriggleDiagramGuard=Object.freeze({audit,place,canvasLabel,responsive});
+  window.TriggleDiagramGuard=Object.freeze({audit,place,canvasLabel,horizontalClipping,responsive});
 })();

@@ -258,10 +258,14 @@
     for (const [id,anchor] of Object.entries(projected)) {
       const [cx,cy] = anchor;
       const color=id===activePoint?'#13594e':ink;
-      svg.append(shape('circle',{cx,cy,r:id===activePoint?4.25:3.1,fill:color,'data-dg-obstacle':'point-'+id,
-        'data-dg-fill':'','data-dg-point':id}));
+      if (config.pointMarkers!==false) {
+        svg.append(shape('circle',{cx,cy,r:id===activePoint?4.25:3.1,fill:color,'data-dg-obstacle':'point-'+id,
+          'data-dg-fill':'','data-dg-point':id}));
+      }
       if (!pointNames) continue;
-      const label = text(id,color);
+      const name=config.pointLabels?.[id];
+      if (name===null) continue;
+      const label = text(id,color,'vertex',name??id);
       if (insideLabels.includes(id)) {
         // Keep pool labels close to their corners with equal clearance inside the pool.
         label.setAttribute('data-dg-allow','region-'+insideLabels);
@@ -356,6 +360,7 @@
       figure.setAttribute('aria-label',description);
     }
     container.replaceChildren(figure);
+    const layouts=[];
     for (const plot of panels) {
       if (plot.heading) {
         const heading = document.createElement('span');
@@ -363,8 +368,10 @@
         heading.textContent = typeof plot.heading==='string'?plot.heading:plot.heading[lang];
         figure.append(heading);
       }
+      const title=typeof plot.heading==='object'?plot.heading[lang]:plot.heading;
       const svg = shape('svg',{class:'diagramguard-svg diagramguard-coordinate',role:'img',
-        'aria-label':typeof plot.heading==='object'?plot.heading[lang]:plot.heading||description});
+        'aria-label':title||plot.description?.[lang]||description});
+      if (typeof plot.caption==='string') svg.dataset.dgCaption=plot.caption;
       figure.append(svg);
       if (plot.key!==false) {
         const key = document.createElement('span');
@@ -381,6 +388,20 @@
           key.append(entry);
         }
         figure.append(key);
+      }
+      if (plot.annotations?.length) {
+        const annotations=document.createElement('span');
+        annotations.className='diagramguard-coordinate-key';
+        annotations.setAttribute('role','list');
+        annotations.setAttribute('aria-label',plot.annotationLabel[lang]);
+        for (const part of plot.annotations) {
+          const entry=document.createElement('span');
+          entry.className='diagramguard-named-point';
+          entry.setAttribute('role','listitem');
+          entry.textContent=typeof part==='string'?part:part[lang];
+          annotations.append(entry);
+        }
+        figure.append(annotations);
       }
       const equations=[...(plot.quadratics||[]),...(plot.analyticLines||[])].filter(equation=>equation.label);
       if(equations.length) {
@@ -402,11 +423,15 @@
         }
         figure.append(legend);
       }
-      guard.responsive(svg,(width,rem)=>draw(svg,plot,width,rem));
+      layouts.push(guard.responsive(svg,(width,rem)=>draw(svg,plot,width,rem)));
     }
-    mountedFigures.set(container,{plan,description,lang,font,figure});
+    mountedFigures.set(container,{plan,description,lang,font,figure,layouts});
     return true;
   }
 
-  window.TriggleCoordinateFigures = Object.freeze({register,mount,drawGrid});
+  function reflow(container) {
+    for (const layout of mountedFigures.get(container)?.layouts||[]) layout(false);
+  }
+
+  window.TriggleCoordinateFigures = Object.freeze({register,mount,reflow,drawGrid});
 })();

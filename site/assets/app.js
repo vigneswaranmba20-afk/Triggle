@@ -959,7 +959,7 @@
   const coordinatePlot=$('diagramContent').querySelector('.diagramguard-coordinate');
   $('visualTitle').textContent=coordinatePlot?ui('diagram'):figSpec?graphic.caption:tr(current.title);
   const caption=$('coordinateFigureCaption');
-  caption.textContent=coordinatePlot?graphic.caption:'';
+  caption.textContent=coordinatePlot?(coordinatePlot.dataset.dgCaption??graphic.caption):'';
   caption.hidden=!caption.textContent;
   // Keep the final answer available for comparison while viewing the figure.
   $('diagramCompare').hidden=isG9GeometryExercise(current);
@@ -967,6 +967,7 @@
   $('diagramCompareLabel').textContent=ui('finalAnswer');
   figureOpener=event?.currentTarget||document.activeElement;
   $('figureDialog').showModal();
+  window.TriggleCoordinateFigures?.reflow?.($('diagramContent'));
   $('figureDialog').scrollTop=0;
   if(grade===9)window.TriggleNotation?.prepareSvg?.($('diagramContent'),window.TriggleG9Math?.diagramLabels);
   window.TriggleNotation?.prepare?.($('diagramCompare'));
