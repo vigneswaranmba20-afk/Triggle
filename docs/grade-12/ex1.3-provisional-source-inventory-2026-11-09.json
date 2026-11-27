@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "edition": "2025 revised",
+  "chapter": 1,
+  "exercise": "1.3",
+  "source": {
+    "englishDriveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "volume": 1,
+    "extraction": "Connected PDF text layer",
+    "pageImageVerified": false
+  },
+  "inventoryCompleteForExercise": false,
+  "questionStemsObserved": 5,
+  "provisionalSubpartSlots": 8,
+  "items": [
+    {
+      "id": "g12-c1-ex1.3-q1-i",
+      "question": "1",
+      "subpart": "i",
+      "fidelity": "math_notation_corrupted"
+    },
+    {
+      "id": "g12-c1-ex1.3-q1-ii",
+      "question": "1",
+      "subpart": "ii",
+      "fidelity": "math_notation_corrupted"
+    },
+    {
+      "id": "g12-c1-ex1.3-q1-iii",
+      "question": "1",
+      "subpart": "iii",
+      "fidelity": "math_notation_corrupted"
+    },
+    {
+      "id": "g12-c1-ex1.3-q1-iv",
+      "question": "1",
+      "subpart": "iv",
+      "fidelity": "math_notation_corrupted"
+    },
+    {
+      "id": "g12-c1-ex1.3-q2",
+      "question": "2",
+      "fidelity": "matrix_layout_corrupted"
+    },
+    {
+      "id": "g12-c1-ex1.3-q3",
+      "question": "3",
+      "fidelity": "text_layer_readable_image_pending",
+      "existingDraft": "docs/grade12-ex1-3-q3-matrix-salary-draft.json"
+    },
+    {
+      "id": "g12-c1-ex1.3-q4",
+      "question": "4",
+      "fidelity": "text_layer_readable_image_pending",
+      "existingDraft": "docs/grade12-ex1-3-q4-work-rate-draft.json"
+    },
+    {
+      "id": "g12-c1-ex1.3-q5",
+      "question": "5",
+      "fidelity": "wording_text_layer_readable_image_pending"
+    }
+  ],
+  "verifiedQuestionCountThisBatch": 0,
+  "verifiedSubpartCountThisBatch": 0,
+  "certifiedEnglishSolutionsThisBatch": 0,
+  "certifiedTamilSolutionsThisBatch": 0,
+  "figuresPending": "unknown_until_page_image_review",
+  "nextActions": [
+    "Check original English PDF page images for all eight slots, especially Q1 equation signs and Q2 matrix rows",
+    "Independently solve and test Q5 commodity system after source-image certification",
+    "Do not publish or register provisional entries until source fidelity and required CI pass"
+  ],
+  "note": "This is an extraction-level inventory, not a source-image certification or claim of complete Exercise 1.3 coverage."
+}

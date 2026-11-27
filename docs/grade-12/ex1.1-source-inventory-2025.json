@@ -1,0 +1,225 @@
+{
+  "grade": 12,
+  "edition": "2025 revised",
+  "chapter": 1,
+  "exercise": "1.1",
+  "inventoryScope": "exercise-only",
+  "source": {
+    "english": {
+      "volume": 1,
+      "printedPages": [
+        15,
+        16
+      ],
+      "pdfPages": [
+        23,
+        24
+      ]
+    },
+    "tamil": {
+      "volume": 1,
+      "printedPages": [
+        16,
+        17
+      ],
+      "pdfPages": [
+        24,
+        25
+      ]
+    }
+  },
+  "sourceNote": "Exercise 1.1 numbering cross-checked against both 2025 revised volumes. Q1(i-iii) matrix glyphs independently checked on page images; remaining unverified matrices must not be transcribed from distorted PDF text extraction.",
+  "items": [
+    {
+      "id": "g12-ch1-ex1.1-q1-i",
+      "question": 1,
+      "subpart": "i",
+      "status": "mathematically_verified",
+      "matrixSourceImageChecked": true,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q1-ii",
+      "question": 1,
+      "subpart": "ii",
+      "status": "mathematically_verified",
+      "matrixSourceImageChecked": true,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q1-iii",
+      "question": 1,
+      "subpart": "iii",
+      "status": "mathematically_verified",
+      "matrixSourceImageChecked": true,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false,
+      "sourceImageEvidence": "English Vol I printed p15 PDF p23; Tamil Vol I printed p16 PDF p24; both page images visually checked 2026-11-08"
+    },
+    {
+      "id": "g12-ch1-ex1.1-q2-i",
+      "question": 2,
+      "subpart": "i",
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q2-ii",
+      "question": 2,
+      "subpart": "ii",
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q2-iii",
+      "question": 2,
+      "subpart": "iii",
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q3",
+      "question": 3,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q4",
+      "question": 4,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q5",
+      "question": 5,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q6",
+      "question": 6,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q7",
+      "question": 7,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q8",
+      "question": 8,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q9",
+      "question": 9,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q10",
+      "question": 10,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q11",
+      "question": 11,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q12",
+      "question": 12,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q13",
+      "question": 13,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q14",
+      "question": 14,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    },
+    {
+      "id": "g12-ch1-ex1.1-q15",
+      "question": 15,
+      "subpart": null,
+      "status": "missing",
+      "matrixSourceImageChecked": false,
+      "tamilEditorialReview": "pending",
+      "merged": false,
+      "liveVerified": false
+    }
+  ]
+}

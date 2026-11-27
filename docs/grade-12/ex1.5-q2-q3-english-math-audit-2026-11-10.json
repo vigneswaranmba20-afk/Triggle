@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "edition": "2025 revised",
+  "exercise": "1.5",
+  "date": "2026-11-10",
+  "source": {
+    "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "printedQuestionPage": 37,
+    "printedAnswerPage": 282,
+    "textLayerInspected": true,
+    "pageImageVerified": false
+  },
+  "inventory": {
+    "questionStemsObserved": 4,
+    "subpartSlotsProvisional": 5,
+    "question1Subparts": [
+      "i",
+      "ii"
+    ],
+    "otherQuestions": [
+      "2",
+      "3",
+      "4"
+    ],
+    "denominatorCertified": false
+  },
+  "drafts": [
+    {
+      "id": "g12-c1-ex1.5-q2",
+      "status": "mathematically_verified_source_image_pending",
+      "publishable": false,
+      "sourceTextLayer": "If ax²+bx+c is divided by x+3, x−5, and x−1, the remainders are 21, 61 and 9 respectively. Find a, b and c (Use Gaussian elimination method.)",
+      "fidelityWarning": "Signs and polynomial formatting normalized from corrupt extracted text; image certification required.",
+      "steps": [
+        "By the remainder theorem, P(-3)=21, P(5)=61 and P(1)=9.",
+        "Write 9a−3b+c=21, 25a+5b+c=61 and a+b+c=9.",
+        "Subtract the third equation from the first: 8a−4b=12, so 2a−b=3.",
+        "Subtract the third equation from the second: 24a+4b=52, so 6a+b=13.",
+        "Add the last two equations: 8a=16, giving a=2.",
+        "Then b=1 and c=9−2−1=6.",
+        "Check P(-3)=18−3+6=21; P(5)=50+5+6=61; P(1)=2+1+6=9."
+      ],
+      "answer": {
+        "a": 2,
+        "b": 1,
+        "c": 6
+      },
+      "independentChecks": {
+        "evaluations": [
+          21,
+          61,
+          9
+        ],
+        "passed": true
+      }
+    },
+    {
+      "id": "g12-c1-ex1.5-q3",
+      "status": "mathematically_verified_source_image_pending",
+      "publishable": false,
+      "sourceTextLayer": "An amount of ₹65,000 is invested in three bonds at the rates of 6%, 8% and 9% per annum respectively. The total annual income is ₹4,800. The income from the third bond is ₹600 more than that from the second bond. Determine the price of each bond. (Use Gaussian elimination method.)",
+      "fidelityWarning": "Rates and currency glyphs reconstructed using answer-key arithmetic; original image verification mandatory.",
+      "steps": [
+        "Let x, y and z be the three investments in rupees.",
+        "Total investment: x+y+z=65000.",
+        "Annual income: 0.06x+0.08y+0.09z=4800.",
+        "Third income exceeds second by ₹600: 0.09z−0.08y=600.",
+        "Multiply the income equations by 100 to avoid decimals: 6x+8y+9z=480000 and −8y+9z=60000.",
+        "Eliminate x using x=65000−y−z: 2y+3z=90000.",
+        "Together with −8y+9z=60000, multiply the first by 4 and add: 21z=420000, hence z=20000.",
+        "Then 2y+60000=90000 gives y=15000; x=65000−15000−20000=30000.",
+        "Check the three incomes: ₹1800+₹1200+₹1800=₹4800 and ₹1800−₹1200=₹600."
+      ],
+      "answer": {
+        "firstRupees": 30000,
+        "secondRupees": 15000,
+        "thirdRupees": 20000
+      },
+      "independentChecks": {
+        "total": 65000,
+        "income": 4800,
+        "thirdMinusSecond": 600,
+        "passed": true
+      }
+    }
+  ],
+  "unresolved": [
+    "Question 1(i–ii) equations corrupted in PDF text extraction; page image needed.",
+    "Question 4 parabola and coordinate notation corrupted; do not transcribe as certified.",
+    "Questions 2–3 image fidelity not certified.",
+    "Tamil editorial review not performed.",
+    "No student-facing registration before source certification and mandatory CI."
+  ],
+  "newCertifiedQuestions": 0,
+  "newCertifiedSubparts": 0,
+  "newPublishedSolutions": 0,
+  "wholeTextbookQuestionDenominator": null,
+  "wholeTextbookSubpartDenominator": null,
+  "nextBatch": "Visually inspect English PDF printed p37, verify Q1(i–ii), Q2–Q4 exact symbols and rates; then certify and register eligible English solutions with required CI."
+}

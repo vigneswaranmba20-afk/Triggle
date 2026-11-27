@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "grade": 12,
+  "edition": "2025 revised",
+  "date": "2026-11-10",
+  "source": {
+    "driveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+    "volume": 1,
+    "printedPages": [
+      48,
+      49,
+      50
+    ],
+    "textLayerInspected": true,
+    "pageImagesInspected": false
+  },
+  "exercise": "1.8",
+  "questionCountObserved": 25,
+  "questionCountCertified": false,
+  "provisionalOptionSlots": 100,
+  "optionSlotsAreNotSolutionSubparts": true,
+  "certifiedQuestionDenominator": null,
+  "certifiedSubpartDenominator": null,
+  "questions": [
+    {
+      "id": "g12-ex1.8-q1",
+      "number": 1,
+      "format": "single-choice-four-alternatives",
+      "topic": "adjugate determinant and matrix order",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q2",
+      "number": 2,
+      "format": "single-choice-four-alternatives",
+      "topic": "nonsingular matrix and transpose identities",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q3",
+      "number": 3,
+      "format": "single-choice-four-alternatives",
+      "topic": "adjugate and scalar matrix determinants",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q4",
+      "number": 4,
+      "format": "single-choice-four-alternatives",
+      "topic": "solve a 2x2 matrix equation",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q5",
+      "number": 5,
+      "format": "single-choice-four-alternatives",
+      "topic": "Cayley-Hamilton inverse identity",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q6",
+      "number": 6,
+      "format": "single-choice-four-alternatives",
+      "topic": "determinant of adjugate of a matrix product",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q7",
+      "number": 7,
+      "format": "single-choice-four-alternatives",
+      "topic": "adjugate of a 3x3 matrix",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q8",
+      "number": 8,
+      "format": "single-choice-four-alternatives",
+      "topic": "inverse matrix entry",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q9",
+      "number": 9,
+      "format": "single-choice-four-alternatives",
+      "topic": "inverse and adjugate identities",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q10",
+      "number": 10,
+      "format": "single-choice-four-alternatives",
+      "topic": "inverse of matrix product",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q11",
+      "number": 11,
+      "format": "single-choice-four-alternatives",
+      "topic": "symmetric matrix identity",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q12",
+      "number": 12,
+      "format": "single-choice-four-alternatives",
+      "topic": "transpose of inverse matrix",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q13",
+      "number": 13,
+      "format": "single-choice-four-alternatives",
+      "topic": "orthogonal matrix parameter",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q14",
+      "number": 14,
+      "format": "single-choice-four-alternatives",
+      "topic": "inverse of trigonometric matrix",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q15",
+      "number": 15,
+      "format": "single-choice-four-alternatives",
+      "topic": "adjugate and matrix power",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q16",
+      "number": 16,
+      "format": "single-choice-four-alternatives",
+      "topic": "scalar multiple of inverse matrix",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q17",
+      "number": 17,
+      "format": "single-choice-four-alternatives",
+      "topic": "adjugate of matrix product",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q18",
+      "number": 18,
+      "format": "single-choice-four-alternatives",
+      "topic": "matrix rank",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q19",
+      "number": 19,
+      "format": "single-choice-four-alternatives",
+      "topic": "Cramer's rule with exponentials",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q20",
+      "number": 20,
+      "format": "single-choice-four-alternatives",
+      "topic": "truth of adjugate statements",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q21",
+      "number": 21,
+      "format": "single-choice-four-alternatives",
+      "topic": "Rouché-Capelli consistency",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q22",
+      "number": 22,
+      "format": "single-choice-four-alternatives",
+      "topic": "homogeneous system trigonometric parameter",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q23",
+      "number": 23,
+      "format": "single-choice-four-alternatives",
+      "topic": "augmented matrix infinite solutions",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q24",
+      "number": 24,
+      "format": "single-choice-four-alternatives",
+      "topic": "inverse matrix unknown entry",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    },
+    {
+      "id": "g12-ex1.8-q25",
+      "number": 25,
+      "format": "single-choice-four-alternatives",
+      "topic": "double adjugate identity",
+      "questionTextCertified": false,
+      "optionTextCertified": false,
+      "solutionCertified": false,
+      "needsPageImage": true
+    }
+  ],
+  "checks": {
+    "uniqueIds": true,
+    "contiguousNumbers": true,
+    "provisionalQuestions": 25,
+    "newSourceCertifiedQuestions": 0,
+    "newPublishedSolutions": 0,
+    "newTamilSolutions": 0,
+    "mathVerification": "not applicable; mathematical expressions in PDF text layer ambiguous",
+    "mandatoryCI": "not run; inventory-only unpublished file"
+  },
+  "publicationAllowed": false,
+  "unresolved": [
+    "Page-image inspect pages 48-50 before transcription of matrices, exponents, determinants, symbols and options.",
+    "Verify exact wording and all four options for each question before solution work.",
+    "Some numbered MCQs include roman-numeral statements; do not count these as exercise answer subparts without source verification."
+  ],
+  "nextBatch": "Page-image certify Exercise 1.8 Q1-Q10, then solve and validate with SymPy; continue Q11-Q25."
+}

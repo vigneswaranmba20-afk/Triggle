@@ -1,0 +1,78 @@
+{
+  "grade": 12,
+  "edition": "2025 revised",
+  "chapter": 1,
+  "exercise": "1.1",
+  "scope": "English printed pages 15–16, PDF pages 23–24",
+  "sourceDriveFileId": "1_auJ33Wb1pI2_DxahdqJ1poiRUh6hqvm",
+  "sourceTamilDriveFileId": "1fzvsKbCtL8QoqXO7bO-VzcPEez5L4Q2c",
+  "extractionStatus": "text-layer-only; NOT page-image verified; NOT student-facing",
+  "questionStems": [
+    {
+      "question": 2,
+      "stem": "Find the inverse (if it exists) of the following:",
+      "subparts": [
+        "i",
+        "ii",
+        "iii"
+      ],
+      "blocked": "All matrix entries and signs require page-image verification."
+    },
+    {
+      "question": 3,
+      "blocked": "F(alpha) matrix and identity symbols require page-image verification."
+    },
+    {
+      "question": 4,
+      "blocked": "A matrix and polynomial identity require page-image verification."
+    },
+    {
+      "question": 5,
+      "blocked": "A matrix and transpose identity require page-image verification."
+    },
+    {
+      "question": 6,
+      "blocked": "A matrix and adjugate identity require page-image verification."
+    },
+    {
+      "question": 7,
+      "blocked": "Both A and B matrices and inverse identity require page-image verification."
+    },
+    {
+      "question": 8,
+      "blocked": "adj(A) matrix requires page-image verification."
+    },
+    {
+      "question": 9,
+      "blocked": "adj(A) matrix requires page-image verification."
+    },
+    {
+      "question": 10,
+      "blocked": "adj(A) matrix and requested expression require page-image verification."
+    },
+    {
+      "question": 11,
+      "blocked": "A(x) matrix and trigonometric identity require page-image verification."
+    },
+    {
+      "question": 12,
+      "blocked": "Matrix product equation requires page-image verification."
+    },
+    {
+      "question": 13,
+      "blocked": "A, B, C matrices require page-image verification."
+    },
+    {
+      "question": 14,
+      "blocked": "A matrix and polynomial identity require page-image verification."
+    },
+    {
+      "question": 15,
+      "blocked": "Encoded vectors and encryption matrix require page-image verification."
+    }
+  ],
+  "sourceFidelityCertified": false,
+  "mathematicallyVerifiedNewSubparts": 0,
+  "tamilEditorialReview": "pending",
+  "next": "Visually inspect English PDF page 23 and Tamil PDF page 24 for Exercise 1.1 Q2(i–iii), then independently solve and test."
+}
