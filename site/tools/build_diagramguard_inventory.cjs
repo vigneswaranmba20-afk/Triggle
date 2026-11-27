@@ -120,11 +120,14 @@ for(const [chapter,modules] of Object.entries(visualModules)){
     for(const stage of stages){
       const id=stage.id||chapter+'-concept-'+(index+1), route='concept '+index++;
       const graphic=typeof stage.visual==='object'?stage.visual.id||stage.visual.kind:stage.visual;
-      const sourcePages=graphic==='similarity-scale'?'2025 textbook PDF EN 167–168; TA 172–173':null;
+      const sourcePages={
+        'similarity-scale':'2025 textbook PDF EN 167–168; TA 172–173',
+        'similarity-results':'2025 textbook PDF EN 169–170; TA 174–175'
+      }[graphic];
       const src=[module,config.source,stage.section,format(stage.pages||stage.page),sourcePages].filter(Boolean).join(' | ');
       if(graphic||stage.views||stage.activity||chapter==='g9-ch2'||chapter==='g9-ch9'||chapter==='g9-ch3'){
         add(id+':concept',{id:id+':concept',chapter,source:src,rendering:'concept renderer '+renderer,
-          surface:route+' interactive/visual',qualification:['similarity-criteria','similarity-scale'].includes(graphic)?
+          surface:route+' interactive/visual',qualification:['similarity-criteria','similarity-scale','similarity-results'].includes(graphic)?
             'DiagramGuard browser fixture':'unverified'});
       }
       if(stage.glanceVisual){
