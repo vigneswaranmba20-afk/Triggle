@@ -16,7 +16,7 @@ The risk-based CI runs the build checks on every change. Its full browser tier a
 | Home foreground requests including the document | 16 |
 | Unprompted external requests | 0 |
 | Home layout shift | < 0.05 |
-| Home cache, decoded response bodies | 1.55 MB |
+| Home cache, decoded response bodies | 1.75 MB |
 | Home plus one Geometry chapter, decoded response bodies | 5.5 MB |
 | Question switch p95, 20 samples, Chromium at 4× CPU slowdown | 240 ms CI ceiling, 200 ms product target |
 

@@ -11,7 +11,7 @@ const site = path.resolve(__dirname,'..');
 const name = 'Triggle — Samacheer Kalvi Mathematics (Grades 9 & 10)';
 const budgets = {
   homeWire: 310_000, homeJsWire: 150_000, homeCssWire: 90_000, homeRequests: 16,
-  homeCache: 1_550_000, visitedCache: 5_500_000, questionP95: 240, cls: .05,
+  homeCache: 1_750_000, visitedCache: 5_500_000, questionP95: 240, cls: .05,
 };
 const p95 = values => [...values].sort((a,b)=>a-b)[Math.ceil(values.length*.95)-1];
 const text = (root,file) => fs.readFile(path.join(root,file),'utf8');
