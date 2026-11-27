@@ -362,7 +362,11 @@ function buildStudentRelease(out) {
       const isActive = ({questionId}) => activeChapters.has(questionId);
       const lessons = videos.lessons.filter(isActive);
       const plans = production.plans.filter(isActive).map(({questionId})=>({questionId}));
-      code = 'const TriggleStudentMedia='+json([{lessons},{plans}])+';\n'+code;
+      const metadata = {'./data/video-lessons.json':{lessons}, './data/video-production-plan.json':{plans}};
+      // Keep the verified player source intact. Only its small metadata reads
+      // resolve from this chapter release. Actual media still loads on demand.
+      code = 'const metadata='+json(metadata)+';\n'+
+        'const fetch=(url,...options)=>Object.hasOwn(metadata,url)?Promise.resolve({ok:true,json:()=>metadata[url]}):window.fetch(url,...options);\n'+code;
     }
     if (file === appFile) {
       code = 'window.TRIGGLE_CLASSES=JSON.parse('+json(JSON.stringify(catalog))+');\n'+

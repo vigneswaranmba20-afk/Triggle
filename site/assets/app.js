@@ -563,9 +563,19 @@
   body.append(title,result);li.append(number,body);steps.append(li);
  }
  const prepareLessonMath=()=>window.TriggleNotation?.prepare?.($('lessonCard'));
+ const pendingMathResize=new Set();
+ let mathResizeFrame=0;
  const lessonMathObserver=typeof ResizeObserver==='function'?new ResizeObserver(entries=>{
-  const changed=new Set(entries.map(entry=>entry.target.closest('.triggle-tex, .triggle-table-wrap')).filter(Boolean));
-  window.TriggleNotation?.prepare?.($('lessonCard'),changed);
+  for(const {target} of entries){
+    const expression=target.closest('.triggle-tex, .triggle-table-wrap');
+    if(expression)pendingMathResize.add(expression);
+  }
+  if(!mathResizeFrame)mathResizeFrame=requestAnimationFrame(()=>{
+    mathResizeFrame=0;
+    const visible=[...pendingMathResize].filter(expression=>expression.isConnected&&!expression.closest('[hidden]'));
+    pendingMathResize.clear();
+    window.TriggleNotation?.prepare?.($('lessonCard'),visible);
+  });
  }):null;
  function renderSteps(authored){
   lessonMathObserver?.disconnect();

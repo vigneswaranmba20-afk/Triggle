@@ -145,16 +145,15 @@
  video.addEventListener('waiting',()=>{$('vlLoading').hidden=false;});
  video.addEventListener('playing',()=>{$('vlLoading').hidden=true;});
  // Use the production shortlist for a quiet Coming Soon indicator. It is NOT a playable video.
- const metadata=typeof TriggleStudentMedia==='undefined'?Promise.all([
+ Promise.all([
    fetch('./data/video-lessons.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('manifest '+r.status);return r.json()}).catch(err=>{console.warn('Triggle: no video manifest yet',err);return {lessons:[]}}),
    fetch('./data/video-production-plan.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('plan '+r.status);return r.json()}).catch(err=>{console.warn('Triggle: no video production plan',err);return {plans:[]}})
- ]):Promise.resolve(TriggleStudentMedia);
- metadata.then(([d,plan])=>{
+ ]).then(([d,plan])=>{
    catalog=(d.lessons||[]).filter(validRec);
    plannedIds=new Set((plan.plans||[]).map(r=>r.questionId).filter(Boolean));
    const params=new URL(location.href).searchParams,g=Number(params.get('class'))||9;
    item=(window.TRIGGLE_CLASSES?.[g]?.items||[]).find(i=>i.id===params.get('question'))||null;
-   lang=document.documentElement?.lang==='ta'?'ta':'en';
+   try{const v=localStorage.getItem('triggle-language');lang=v==='ta'||v==='"ta"'?'ta':'en'}catch{}
    refresh();
  });
  window.TriggleVisualPlayer={get status(){return {active:!!selected,questionId:selected?.questionId||null,open:modal.open}}};
