@@ -121,12 +121,16 @@ for(const [chapter,modules] of Object.entries(visualModules)){
       const id=stage.id||chapter+'-concept-'+(index+1);
       // These lesson bookmarks were assigned before the distance lesson was put third in the index.
       const route=chapter==='g9-ch5' ? [1,2,3,4,5,6,0][index++] : index++;
-      const src=[module,config.source,stage.section,format(stage.pages||stage.page)].filter(Boolean).join(' | ');
+      const quadraticSource=chapter==='g10-ch3'&&{
+        'g10-ch3-discriminant':'2025 textbook PDF EN 123, 137–140; TA 125, 139–142',
+        'g10-ch3-quad-graphs':'2025 textbook PDF EN 136–141; TA 138–143'
+      }[id];
+      const src=[module,config.source,stage.section,format(stage.pages||stage.page),quadraticSource].filter(Boolean).join(' | ');
       const graphic=typeof stage.visual==='object'?stage.visual.id||stage.visual.kind:stage.visual;
       const coordinateActivity=key==='TRIGGLE_COORDINATE_LESSONS'&&
         stage.activity.options.some(option=>option.diagram?.points);
       if(graphic||stage.views||stage.activity||chapter==='g9-ch2'||chapter==='g9-ch9'||chapter==='g9-ch3'){
-        const coordinate=coordinateActivity||id==='g9-ch5-distance-formula';
+        const coordinate=coordinateActivity||id==='g9-ch5-distance-formula'||Boolean(quadraticSource);
         add(id+':concept',{id:id+':concept',chapter,source:src,
           rendering:coordinate?'responsive SVG (assets/diagramguard-coordinate-plot.js)':'concept renderer '+renderer,
           surface:'concept '+route+' interactive/visual',

@@ -222,10 +222,13 @@ async function run(){
 
       // Lab 9 (idx 8): discriminant
       await page.goto(base+'/index.html?class=10&chapter=g10-ch3&section=concepts&concept=8',{waitUntil:'load'});
+      await page.locator('.g10ch3-lab svg[data-dg-ready]').waitFor();
       assert.equal(await page.locator('.g10ch3-lab svg circle').count(),2,'c=3 gives 2 real roots');
       await page.locator('.g10ch3-tab').nth(2).click(); // c=4
+      await page.locator('.g10ch3-lab svg[data-dg-ready]').waitFor();
       assert.equal(await page.locator('.g10ch3-lab svg circle').count(),1,'c=4 gives 1 tangent root');
       await page.locator('.g10ch3-tab').nth(3).click(); // c=5
+      await page.locator('.g10ch3-lab svg[data-dg-ready]').waitFor();
       assert.equal(await page.locator('.g10ch3-lab svg circle').count(),0,'c=5 gives 0 real roots');
 
       // Lab 10 (idx 9): roots-coeff
@@ -241,6 +244,7 @@ async function run(){
       // Lab 12 (idx 11): quad-graphs
       await page.goto(base+'/index.html?class=10&chapter=g10-ch3&section=concepts&concept=11',{waitUntil:'load'});
       await page.locator('.g10ch3-tabs').first().locator('.g10ch3-tab').nth(1).click();
+      await page.locator('.g10ch3-lab svg[data-dg-ready]').waitFor();
       assert.equal(await page.locator('.g10ch3-lab svg circle').count(),2,'2 intersection points');
       assert.match(await page.locator('.g10ch3-lab .g10ch3-note').innerText(),/x = −1 and x = 2/);
 

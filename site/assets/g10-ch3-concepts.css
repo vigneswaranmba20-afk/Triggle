@@ -136,6 +136,11 @@
   padding:8px;
   margin:8px 0;
 }
+.g10ch3-plot{
+  min-inline-size:0;
+  margin-block:.625rem;
+}
+.g10ch3-tabs[hidden]{display:none}
 .g10ch3-svg{
   display:block;
   width:100%;
