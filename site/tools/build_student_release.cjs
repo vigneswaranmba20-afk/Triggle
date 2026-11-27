@@ -163,7 +163,7 @@ function bootSource(index) {
     document.querySelector('.app-shell').style.display='none';
     const fallback=document.querySelector('#triggleUnavailable');
     fallback.hidden=false;
-    fallback.focus();
+    fallback.querySelector('div[lang="'+document.documentElement.lang+'"] h1').focus();
   }
   function saveOffline(){
     const worker=navigator.serviceWorker?.controller;
@@ -401,7 +401,9 @@ function buildStudentRelease(out) {
   const media = fs.readdirSync(path.join(source,'assets'),{recursive:true})
     .filter(file=>/\.(?:svg|png|webp|jpe?g|woff2?)$/i.test(file))
     .map(file=>'./assets/'+file).sort();
-  const stylesAndIcons = ['./assets/vendor/katex/katex.min.css?v=0.16.22','./manifest.webmanifest',
+  const katexStyle = html.match(/href="(\.\/assets\/vendor\/katex\/katex\.min\.css[^"]*)"/)?.[1];
+  assert(katexStyle,'Missing KaTeX stylesheet');
+  const stylesAndIcons = [katexStyle,'./manifest.webmanifest',
     './icons/favicon.ico','./icons/icon-80.png', ...manifest.icons.map(icon=>icon.src)];
   const shell = [style,pwa,packs.common,packs.directory,'./assets/home-studio.webp','./assets/home-studio-mobile.webp',
     './assets/vendor/katex/fonts/KaTeX_Main-Regular.woff2','./assets/vendor/noto-sans-tamil/tamil.woff2',...stylesAndIcons];

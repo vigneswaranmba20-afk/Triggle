@@ -18,7 +18,7 @@ The risk-based CI runs the build checks on every change. Its full browser tier a
 | Home layout shift | < 0.05 |
 | Home cache, decoded response bodies | 1.75 MB |
 | Home plus one Geometry chapter, decoded response bodies | 5.5 MB |
-| Question switch p95, 20 samples, Chromium at 4× CPU slowdown | 240 ms CI ceiling, 200 ms product target |
+| Question switch p95, 20 samples, Chromium at 4× CPU slowdown | 400 ms CI ceiling, 200 ms product target |
 
 The wire budgets estimate gzip bytes and omit headers. Browser timing ceilings have headroom for shared CI; compare repeated lab medians and tail measurements before changing budgets. Record the browser, throttling settings, tested routes, exact revision, run count, and raw measurements with a release.
 

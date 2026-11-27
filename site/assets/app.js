@@ -563,7 +563,10 @@
   body.append(title,result);li.append(number,body);steps.append(li);
  }
  const prepareLessonMath=()=>window.TriggleNotation?.prepare?.($('lessonCard'));
- const lessonMathObserver=typeof ResizeObserver==='function'?new ResizeObserver(prepareLessonMath):null;
+ const lessonMathObserver=typeof ResizeObserver==='function'?new ResizeObserver(entries=>{
+  const changed=new Set(entries.map(entry=>entry.target.closest('.triggle-tex, .triggle-table-wrap')).filter(Boolean));
+  window.TriggleNotation?.prepare?.($('lessonCard'),changed);
+ }):null;
  function renderSteps(authored){
   lessonMathObserver?.disconnect();
   $('lessonCard').classList.toggle('twd-lesson',!!authored);
@@ -609,8 +612,7 @@
   $('lessonCard').classList.toggle('many-steps',all.length>3);
  }
  function observeLessonMath(){
-  // Keep wide expressions keyboard reachable as soon as the question changes.
-  prepareLessonMath();
+  // Measure at the initial layout, then recheck only resized expressions.
   if(lessonMathObserver){
    for(const block of $('lessonCard').querySelectorAll('.triggle-tex, .triggle-table-wrap')){
     if(block.closest('[hidden]'))continue;
@@ -918,8 +920,10 @@
    if(!collapsible)drawerOpen=false;
    const sidebarHadFocus=sidebar.contains(document.activeElement);
    document.body.classList.toggle('drawer-open',drawerOpen);
-   document.querySelector('.workspace').inert=drawerOpen;
-   sidebar.inert=collapsible&&!drawerOpen;
+   const workspace=document.querySelector('.workspace');
+   if(workspace.inert!==drawerOpen)workspace.inert=drawerOpen;
+   const sidebarInert=collapsible&&!drawerOpen;
+   if(sidebar.inert!==sidebarInert)sidebar.inert=sidebarInert;
    $('browseBtn').setAttribute('aria-expanded',String(drawerOpen));
    if(drawerOpen){
      sidebar.setAttribute('role','dialog');

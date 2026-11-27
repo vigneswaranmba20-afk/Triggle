@@ -75,6 +75,7 @@
 .triggle-unavailable a { display: inline-block; min-block-size: 44px; padding-block: .55rem; color: #6e2933; }
 html[lang=en] .triggle-unavailable [lang=ta], html[lang=ta] .triggle-unavailable [lang=en] { display: none; }
 
+.triggle-unavailable:not([hidden]) ~ .class-dock { display: none !important; }
 .ver-static-home.ver-starting .app-shell { opacity: 1; }
 .ver-static-home :is(.ver-loading, #lessonCard) { display: none; }
 a.discover-grade { text-decoration: none; }

@@ -62,6 +62,7 @@ async function saveInBatches(current, addresses) {
 async function carryForward(current) {
   const visited = new Set();
   const supporting = new Set();
+  const legacyFigures = new Map();
   for (const name of await caches.keys()) {
     if (name === cacheName || (!legacy(name) && !name.startsWith(prefix))) continue;
     const prior = await caches.open(name);
@@ -80,12 +81,22 @@ async function carryForward(current) {
         if (chapters.includes(key)) visited.add(key);
       }
       const file = canonical(address.href);
-      if (file && !shellAssets.includes(file) && (!legacy(name) || address.search)) supporting.add(file);
+      if (!file || shellAssets.includes(file)) continue;
+      if (!legacy(name)) supporting.add(file);
+      else if (media.has(file)) {
+        const folder = new URL(file).pathname.slice(new URL(scope).pathname.length);
+        const match = folder.match(/^assets\/grade(9|10)-ch([1-9])\//);
+        const owner = match ? 'g'+match[1]+'-ch'+match[2] : folder.startsWith('assets/grade10-geometry/') ? 'g10-ch4' : null;
+        if (owner) legacyFigures.set(file,owner);
+      }
     }
   }
   const required = [...visited].flatMap(key => release.chapters[key].map(url));
-  // Revalidate the URLs used by the last release against the current files.
-  // Legacy precached figures have no visit history, so do not retain those.
+  if (visited.size) required.push(...fonts);
+  for (const [file,owner] of legacyFigures) {
+    if (visited.has(owner)) supporting.add(file);
+  }
+  // Revalidate visited releases' dependencies against the current files.
   await saveInBatches(current, [...required, ...supporting]);
   if (!(await Promise.all(required.map(file => current.match(file)))).every(Boolean)) {
     throw Error('Triggle could not migrate previously opened chapters');
