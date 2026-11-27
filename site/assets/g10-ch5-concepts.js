@@ -150,8 +150,10 @@
   }
 
   function makePlane(W=320,H=208,xMin=-6,xMax=6,yMin=-4,yMax=4){
-    const padL=24,padR=14,padT=12,padB=18;
-    const pw=W-padL-padR,ph=H-padT-padB;
+    const availableWidth=W-38,availableHeight=H-30;
+    const unit=Math.min(availableWidth/(xMax-xMin),availableHeight/(yMax-yMin));
+    const pw=(xMax-xMin)*unit,ph=(yMax-yMin)*unit;
+    const padL=24+(availableWidth-pw)/2,padT=12+(availableHeight-ph)/2;
     const sx=x=>padL+((x-xMin)/(xMax-xMin))*pw;
     const sy=y=>padT+((yMax-y)/(yMax-yMin))*ph;
     const mx=px=>xMin+((px-padL)/pw)*(xMax-xMin);
@@ -164,20 +166,20 @@
       g.append(svgEl('rect',{x:padL,y:padT,width:pw,height:ph,rx:6,fill:'#FDFCF9',stroke:'#E4DFD4','stroke-width':1}));
       for(let x=Math.ceil(xMin);x<=Math.floor(xMax);x++){
         const px=sx(x),zero=x===0;
-        g.append(svgEl('line',{x1:px,y1:padT,x2:px,y2:padT+ph,stroke:zero?'#6E7781':'#ECE7DD','stroke-width':zero?1.35:0.85}));
+        g.append(svgEl('line',{x1:px,y1:padT,x2:px,y2:padT+ph,'data-dg-grid-axis':'x',stroke:zero?'#6E7781':'#ECE7DD','stroke-width':zero?1.35:0.85}));
         if(!zero&&x%2===0){
           g.append(svgEl('text',{x:px,y:sy(0)+11,'text-anchor':'middle',fill:'#6E7781','font-size':8.5,'font-weight':600},String(x)));
         }
       }
       for(let y=Math.ceil(yMin);y<=Math.floor(yMax);y++){
         const py=sy(y),zero=y===0;
-        g.append(svgEl('line',{x1:padL,y1:py,x2:padL+pw,y2:py,stroke:zero?'#6E7781':'#ECE7DD','stroke-width':zero?1.35:0.85}));
+        g.append(svgEl('line',{x1:padL,y1:py,x2:padL+pw,y2:py,'data-dg-grid-axis':'y',stroke:zero?'#6E7781':'#ECE7DD','stroke-width':zero?1.35:0.85}));
         if(!zero&&y%2===0){
           g.append(svgEl('text',{x:sx(0)-5,y:py+3,'text-anchor':'end',fill:'#6E7781','font-size':8.5,'font-weight':600},String(y)));
         }
       }
-      g.append(svgEl('text',{x:padL+pw-4,y:sy(0)-4,'text-anchor':'end',fill:'#525B62','font-size':9,'font-weight':700},'X'));
-      g.append(svgEl('text',{x:sx(0)+5,y:padT+9,fill:'#525B62','font-size':9,'font-weight':700},'Y'));
+      g.append(svgEl('text',{x:padL+pw+5,y:sy(0)+3,fill:'#525B62','font-size':9,'font-weight':700},'X'));
+      g.append(svgEl('text',{x:sx(0)+6,y:padT+2,fill:'#525B62','font-size':9,'font-weight':700},'Y'));
       g.append(svgEl('text',{x:sx(0)-4,y:sy(0)+10,'text-anchor':'end',fill:'#525B62','font-size':8.5,'font-weight':700},'O'));
     }
     function clipLine(a,b,c){
@@ -196,10 +198,10 @@
   }
 
   function svgPoint(svg,evt){
-    const r=svg.getBoundingClientRect();
-    const vb=svg.viewBox.baseVal;
-    if(r.width>0&&r.height>0&&vb&&vb.width>0){
-      return [(evt.clientX-r.left)*(vb.width/r.width)+vb.x,(evt.clientY-r.top)*(vb.height/r.height)+vb.y];
+    const matrix=svg.getScreenCTM();
+    if(matrix){
+      const point=new DOMPoint(evt.clientX,evt.clientY).matrixTransform(matrix.inverse());
+      if(Number.isFinite(point.x)&&Number.isFinite(point.y))return [point.x,point.y];
     }
     return [160,104];
   }
@@ -242,7 +244,8 @@
     wrap.append(svgEl('circle',{cx:x,cy:y,r:6.2,fill:color,stroke:'#FFFFFF','stroke-width':2}));
     const nearRightEdge=x>g.ownerSVGElement.viewBox.baseVal.width-58;
     const nearXAxisTicks=y>=114&&y<=134;
-    wrap.append(svgEl('text',{x:x+(nearRightEdge?-11:11),y:y+(nearXAxisTicks?15:-9),'text-anchor':nearRightEdge?'end':'start',
+    const labelBelow=y<19||nearXAxisTicks;
+    wrap.append(svgEl('text',{x:x+(nearRightEdge?-11:11),y:y+(labelBelow?15:-9),'text-anchor':nearRightEdge?'end':'start',
       fill:color,stroke:'#FDFCF9','stroke-width':3,'stroke-linejoin':'round','paint-order':'stroke',
       'font-size':10.5,'font-weight':800},label));
     g.append(wrap);
@@ -497,7 +500,7 @@
       if(seg)sceneG.append(svgEl('line',{x1:pl.sx(seg[0][0]),y1:pl.sy(seg[0][1]),x2:pl.sx(seg[1][0]),y2:pl.sy(seg[1][1]),stroke:'#1F5E72','stroke-width':1.7}));
       sceneG.append(svgEl('line',{x1:pl.sx(A[0]),y1:pl.sy(A[1]),x2:pl.sx(B[0]),y2:pl.sy(A[1]),stroke:'#525B62','stroke-width':1.4,'stroke-dasharray':'3 3'}));
       sceneG.append(svgEl('line',{x1:pl.sx(B[0]),y1:pl.sy(A[1]),x2:pl.sx(B[0]),y2:pl.sy(B[1]),stroke:'#6E2933','stroke-width':1.4,'stroke-dasharray':'3 3'}));
-      sceneG.append(svgEl('line',{x1:pl.sx(A[0]),y1:pl.sy(A[1]),x2:pl.sx(B[0]),y2:pl.sy(B[1]),stroke:'#6E2933','stroke-width':2.6}));
+      sceneG.append(svgEl('line',{x1:pl.sx(A[0]),y1:pl.sy(A[1]),x2:pl.sx(B[0]),y2:pl.sy(B[1]),stroke:'#6E2933','stroke-width':2.6,'data-dg-slope-line':'inclination'}));
       drawHandle(sceneG,pl.sx(A[0]),pl.sy(A[1]),`A(${A[0]},${A[1]})`,'#1F5E72','A');
       drawHandle(sceneG,pl.sx(B[0]),pl.sy(B[1]),`B(${B[0]},${B[1]})`,'#6E2933','B');
       if(!s.defined){
@@ -516,7 +519,9 @@
     },(id,pt)=>{
       const g=pl.clampSnap(pl.mx(pt[0]),pl.my(pt[1]),1);
       if(id==='A')A=g; else B=g;
-      if(A[0]===B[0]&&A[1]===B[1])B=[A[0]+1,A[1]+1];
+      if(A[0]===B[0]&&A[1]===B[1]){
+        B=[A[0]+(A[0]===pl.xMax?-1:1),A[1]+(A[1]===pl.yMax?-1:1)];
+      }
       paint();
     });
     paint();
@@ -544,12 +549,12 @@
       sceneG.replaceChildren();
       const s1=math.slopeBetween([0,0],P);
       const a1=P[1],b1=-P[0],seg1=pl.clipLine(a1,b1,0);
-      if(seg1)sceneG.append(svgEl('line',{x1:pl.sx(seg1[0][0]),y1:pl.sy(seg1[0][1]),x2:pl.sx(seg1[1][0]),y2:pl.sy(seg1[1][1]),stroke:'#1F5E72','stroke-width':2.4}));
+      if(seg1)sceneG.append(svgEl('line',{x1:pl.sx(seg1[0][0]),y1:pl.sy(seg1[0][1]),x2:pl.sx(seg1[1][0]),y2:pl.sy(seg1[1][1]),stroke:'#1F5E72','stroke-width':2.4,'data-dg-slope-line':'first'}));
       let a2,b2,c2;
       if(mode===0){a2=a1;b2=b1;c2=2*b1;} // shifted parallel through (0,2) or right
       else{a2=-b1;b2=a1;c2=0;} // perpendicular rotated 90 deg through origin
       const seg2=pl.clipLine(a2,b2,c2);
-      if(seg2)sceneG.append(svgEl('line',{x1:pl.sx(seg2[0][0]),y1:pl.sy(seg2[0][1]),x2:pl.sx(seg2[1][0]),y2:pl.sy(seg2[1][1]),stroke:'#6E2933','stroke-width':2.4}));
+      if(seg2)sceneG.append(svgEl('line',{x1:pl.sx(seg2[0][0]),y1:pl.sy(seg2[0][1]),x2:pl.sx(seg2[1][0]),y2:pl.sy(seg2[1][1]),stroke:'#6E2933','stroke-width':2.4,'data-dg-slope-line':'second'}));
       if(mode===1&&P[0]!==0&&P[1]!==0){
         const Q=[-P[1],P[0]];
         sceneG.append(svgEl('line',{x1:pl.sx(0),y1:pl.sy(0),x2:pl.sx(Q[0]),y2:pl.sy(Q[1]),stroke:'#6E2933','stroke-width':1.5,'stroke-dasharray':'3 3'}));

@@ -14,7 +14,7 @@
     "status:build": "node site/tools/build_project_status.cjs",
     "status:check": "node site/tools/build_project_status.cjs --check",
     "test:security": "firebase emulators:exec --config teacher-review/firebase.json --project demo-triggle-review --only firestore \"node site/tools/test_teacher_security.cjs\"",
-    "test:webkit": "node site/tools/test_dashboard_webkit.cjs && node site/tools/test_diagramguard_browser.cjs --webkit && node site/tools/test_g10_ch5_coordinate_figures_browser.cjs --webkit && node site/tools/test_g9_ch5_coordinate_figures_browser.cjs --webkit",
+    "test:webkit": "node site/tools/test_dashboard_webkit.cjs && node site/tools/test_diagramguard_browser.cjs --webkit && node site/tools/test_g10_ch5_coordinate_figures_browser.cjs --webkit && node site/tools/test_g9_ch5_coordinate_figures_browser.cjs --webkit && node site/tools/test_g10_ch5_concepts_browser.cjs --webkit --angles-only",
     "test:g12-concepts": "node site/tools/test_g12_matrix_math.cjs && node site/tools/test_g12_matrix_concepts_browser.cjs",
     "trace:progress": "node site/tools/bulk/trace_progress.cjs",
     "trace:pilot": "node site/tools/bulk/trace_pilot.cjs --offline --dry-run",

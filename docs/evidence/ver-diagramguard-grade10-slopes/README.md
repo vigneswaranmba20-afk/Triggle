@@ -19,3 +19,16 @@ The scan found 50 candidates in the old SVGs, including contacts with reference 
 | Q13 · Tamil | [Old midpoint plot](figures/q13-ta-before.png) | [Midpoint parallelogram](figures/q13-ta-after.png) |
 
 [Diagram inventory](../ver-diagramguard-v1-0/inventory.csv) · [Browser regression](../../../site/tools/test_g10_ch5_coordinate_figures_browser.cjs)
+
+## Interactive coordinate scale
+
+The 2025 textbook defines inclination from the positive x-axis and illustrates perpendicular lines in Figure 5.22. Reviewed English printed pages 212 and 216 (PDF 218 and 222) and Tamil printed pages 219 and 223 (PDF 225 and 229).
+
+The twelve labs and their previews now use the same number of CSS pixels per unit on both axes. The coordinate transform used for dragging reads the rendered SVG matrix. The browser test measures all four inclination presets and the parallel and perpendicular modes before and after a drag. It also checks equal grid spacing on both axes in the other labs.
+
+| Tamil browser fixture at 390 CSS px | Original | Equal axis scale |
+| --- | ---: | ---: |
+| 45° inclination | [37.959°](figures/concept-angle-4-before.png) | [45.000°](figures/concept-angle-4-after.png) |
+| Perpendicular lines | [76.963°](figures/concept-angle-5-before.png) | [90.000°](figures/concept-angle-5-after.png) |
+
+A separate Chromium sweep found equal grid scales in all 196 sampled states of the revised plots, including 32 pointer drags. Label-boundary contacts fell from eight to zero. The raw label-overlap candidates fell from 80 to 72 and remain under review. Collision-free qualification in this batch covers the Exercise 5.2 figures above.

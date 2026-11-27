@@ -2,7 +2,7 @@
 /* Real Chromium verification for all 12 Grade 10 Ch5 Coordinate Geometry Concepts at 320/360/390/412/430 px (EN + TA + Drag + Offline + Keyboard). */
 const assert=require('node:assert/strict');
 const http=require('node:http'),fs=require('node:fs/promises'),path=require('node:path');
-const {chromium}=require('playwright');
+const {chromium,webkit}=require('playwright');
 
 const SITE=path.resolve(__dirname,'..');
 const MIME={
@@ -45,7 +45,17 @@ async function assertStudioAndLayout(page,ctxLabel){
     const cards=document.querySelectorAll('.g10ch4-studio > .g10ch4-card').length;
     const refText=document.querySelector('.sp2-stage-reference')?.textContent||'';
     const svgCollisions=[];
+    const gridRatios=[];
     for(const svg of [...document.querySelectorAll('.g10ch4-lab svg, .g10ch4-glance-visual svg')].filter(s=>!s.closest('.katex'))){
+      const unit=axis=>{
+        const lines=svg.querySelectorAll(`[data-dg-grid-axis="${axis}"]`);
+        if(lines.length<2)return null;
+        const [a,b]=Array.from(lines).slice(0,2).map(line=>new DOMPoint(
+          Number(line.getAttribute('x1')),Number(line.getAttribute('y1'))).matrixTransform(line.getScreenCTM()));
+        return Math.hypot(b.x-a.x,b.y-a.y);
+      };
+      const xUnit=unit('x'),yUnit=unit('y');
+      if(xUnit&&yUnit)gridRatios.push(xUnit/yUnit);
       const texts=[...svg.querySelectorAll('text')].filter(t=>t.textContent.trim().length>0);
       for(let i=0;i<texts.length;i++){
         for(let j=i+1;j<texts.length;j++){
@@ -62,12 +72,13 @@ async function assertStudioAndLayout(page,ctxLabel){
       mathErrors:errors,
       clippedTex,
       katexCount:document.querySelectorAll('.g10ch4-studio .katex').length,
-      svgs,smallButtons,cards,refText,svgCollisions
+      svgs,smallButtons,cards,refText,svgCollisions,gridRatios
     };
   });
   assert.equal(check.cards,6,`${ctxLabel}: expected all 6 mandatory concept cards`);
   assert(check.refText.includes('EN p.')&&check.refText.includes('TA p.'),`${ctxLabel}: missing 2025 EN/TA page citation: ${check.refText}`);
   assert.deepEqual(check.svgCollisions,[],`${ctxLabel}: SVG text collisions: ${JSON.stringify(check.svgCollisions)}`);
+  assert(check.gridRatios.length&&check.gridRatios.every(ratio=>Math.abs(ratio-1)<1e-6),`${ctxLabel}: equal scales on both axes`);
   assert(check.overflow<=1,`${ctxLabel}: horizontal overflow ${check.overflow}px (${check.scrollW} > ${check.clientW})`);
   assert.equal(check.mathErrors,0,`${ctxLabel}: KaTeX math errors detected`);
   assert.deepEqual(check.clippedTex,[],`${ctxLabel}: clipped display formulas: ${JSON.stringify(check.clippedTex)}`);
@@ -76,16 +87,87 @@ async function assertStudioAndLayout(page,ctxLabel){
   assert.deepEqual(check.smallButtons,[],`${ctxLabel}: touch targets below 44px: ${JSON.stringify(check.smallButtons)}`);
 }
 
+async function renderedVectors(page) {
+  return page.locator('svg.g10ch4-svg line[data-dg-slope-line]').evaluateAll(lines=>lines.map(line=>{
+    const matrix=line.getScreenCTM();
+    const end=index=>new DOMPoint(Number(line.getAttribute('x'+index)),
+      Number(line.getAttribute('y'+index))).matrixTransform(matrix);
+    const start=end(1),finish=end(2);
+    return [finish.x-start.x,start.y-finish.y];
+  }));
+}
+
+async function assertRenderedAngles(page,base) {
+  const near=(actual,expected,label)=>assert(Math.abs(actual-expected)<1e-6,`${label}: ${actual} ≠ ${expected}`);
+  for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.goto(base+'/index.html?class=10&chapter=g10-ch5&section=concepts&concept=4');
+    await page.locator(lang==='ta'?'#langTa':'#langEn').evaluate(button=>button.click());
+    await page.evaluate(percent=>{document.documentElement.style.fontSize=percent+'%';},percent);
+    for(const [index,angle] of [0,45,90,135].entries()){
+      await page.locator('.g10ch4-chip-btn').nth(index).click();
+      const [[x,y]]=await renderedVectors(page);
+      near((Math.atan2(y,x)*180/Math.PI+180)%180,angle,lang+' '+percent+'% inclination');
+    }
+    if(lang==='en'&&percent===100){
+      const graph=page.locator('svg.g10ch4-svg');
+      await graph.scrollIntoViewIfNeeded();
+      const corner=await graph.evaluate(svg=>{
+        const [edge]=Array.from(svg.querySelectorAll('[data-dg-grid-axis="x"]')).slice(-1);
+        const point=new DOMPoint(Number(edge.getAttribute('x1')),Number(edge.getAttribute('y1'))).matrixTransform(edge.getScreenCTM());
+        return [point.x,point.y];
+      });
+      for(const id of ['A','B']){
+        const handle=await graph.locator(`[data-handle="${id}"] circle[stroke]`).boundingBox();
+        await page.mouse.move(handle.x+handle.width/2,handle.y+handle.height/2);
+        await page.mouse.down();await page.mouse.move(...corner,{steps:4});await page.mouse.up();
+      }
+      const positions=await graph.locator('[data-drag-handle] circle[stroke]').evaluateAll(nodes=>nodes.map(node=>{
+        const point=new DOMPoint(Number(node.getAttribute('cx')),Number(node.getAttribute('cy'))).matrixTransform(node.getScreenCTM());
+        return [point.x,point.y];
+      }));
+      near(Math.hypot(positions[0][0]-corner[0],positions[0][1]-corner[1]),0,'first point reaches the corner');
+      assert(positions[1][0]<corner[0]&&positions[1][1]>corner[1],'coincident endpoint stays inside the graph');
+      assert.deepEqual(await graph.evaluate(svg=>window.TriggleDiagramGuard.audit(svg,{discover:true}).issues.filter(issue=>issue.kind==='boundary')),[],
+        'corner drag keeps point labels in view');
+    }
+    await page.goto(base+'/index.html?class=10&chapter=g10-ch5&section=concepts&concept=5');
+    await page.evaluate(percent=>{document.documentElement.style.fontSize=percent+'%';},percent);
+    for(const [tab,expected] of ['parallel','perpendicular'].entries()){
+      await page.locator('.g10ch4-tab').nth(tab).click();
+      const measure=async()=>{
+        const [[x1,y1],[x2,y2]]=await renderedVectors(page);
+        const cosine=Math.abs(x1*x2+y1*y2)/(Math.hypot(x1,y1)*Math.hypot(x2,y2));
+        near(cosine,tab===0?1:0,lang+' '+percent+'% '+expected);
+      };
+      await measure();
+      const handle=page.locator('svg.g10ch4-svg [data-handle="P"] circle[stroke]');
+      await handle.scrollIntoViewIfNeeded();
+      const box=await handle.boundingBox();
+      const x=box.x+box.width/2,y=box.y+box.height/2;
+      await page.mouse.move(x,y);await page.mouse.down();
+      await page.mouse.move(x-34,y+27,{steps:3});await page.mouse.up();
+      await measure();
+    }
+  }
+}
+
 async function run(){
   const srv=await startServer();
   const base='http://127.0.0.1:'+srv.address().port;
   let browser;
   try{
-    browser=await chromium.launch({
+    browser=process.argv.includes('--webkit')?await webkit.launch({headless:true}):await chromium.launch({
       headless:true,
       ...(process.env.CHROMIUM_PATH?{executablePath:process.env.CHROMIUM_PATH}:{}),
       args:['--no-sandbox']
     });
+
+    if(process.argv.includes('--angles-only')){
+      const page=await browser.newPage({viewport:{width:320,height:844},serviceWorkers:'block'});
+      await assertRenderedAngles(page,base);
+      console.log('PASS rendered Grade 10 concept angles and corner drags in both languages at 100% and 200% text');
+      return;
+    }
 
     /* 1. Discovery + Chapter Overview + Index + Keyboard + Deep Links + Practice Connect + Back */
     {
@@ -201,7 +283,14 @@ async function run(){
       await ctx.close();
     }
 
-    /* 5. Real Service Worker offline reload */
+    /* 5. Angles measured in actual rendered SVG after presets and drags */
+    {
+      const ctx=await browser.newContext({viewport:{width:320,height:844},serviceWorkers:'block'});
+      await assertRenderedAngles(await ctx.newPage(),base);
+      await ctx.close();
+    }
+
+    /* 6. Real Service Worker offline reload */
     {
       const ctx=await browser.newContext({viewport:{width:390,height:844},serviceWorkers:'allow'});
       const page=await ctx.newPage();
@@ -218,7 +307,7 @@ async function run(){
       await ctx.close();
     }
 
-    console.log('PASS Grade 10 Chapter 5 Concepts Browser Suite: 12 interactive 6-part labs, pointer drag, 320/360/390/412/430px, EN/TA, keyboard nav, KaTeX & offline SW');
+    console.log('PASS Grade 10 Chapter 5 Concepts Browser Suite: 12 interactive 6-part labs, equal grid scales and rendered angles, pointer drag, 320/360/390/412/430px, EN/TA, keyboard nav, KaTeX & offline SW');
   }finally{
     if(browser)await browser.close();
     srv.close();
