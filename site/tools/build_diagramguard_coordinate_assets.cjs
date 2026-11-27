@@ -6,6 +6,7 @@ const { chromium } = require('playwright');
 const { server, launchOptions } = require('./dashboard_test_support.cjs');
 
 const grade = process.argv.includes('--grade9') ? 9 : 10;
+const exercise = process.argv.includes('--exercise52') ? 2 : 1;
 const width = 300;
 
 async function build() {
@@ -15,13 +16,13 @@ async function build() {
     browser = await chromium.launch(launchOptions());
     const page = await browser.newPage({serviceWorkers:'block'});
     await page.goto(app.base+'/index.html?class='+grade+'&chapter=g'+grade+'-ch5');
-    const items = await page.evaluate(grade=>{
-      const pattern=grade===9 ? /^g9-ch5-ex5\./ : /^c10-5-ex5-1-/;
+    const items = await page.evaluate(({grade,exercise})=>{
+      const prefix=grade===9 ? 'g9-ch5-ex5.' : `c10-5-ex5-${exercise}-`;
       return window.TRIGGLE_CLASSES[grade].items
         .map(item=>window.TriggleG9Ch5Overrides?.get(item.id)||item)
-        .filter(item=>pattern.test(item.id)&&item.figureSrc)
+        .filter(item=>item.id.startsWith(prefix)&&item.figureSrc)
         .map(({id,figureSrc,figureAlt})=>({id,figureSrc,figureAlt}));
-    },grade);
+    },{grade,exercise});
     if (!items.length) throw Error('No authored coordinate figures were loaded');
     for (const item of items) {
       const target = path.join(__dirname,'..',item.figureSrc);

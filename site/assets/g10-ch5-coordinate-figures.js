@@ -1,4 +1,4 @@
-/* Grade 10 Exercise 5.1 source coordinates and figure topology. */
+/* Grade 10 coordinate exercise source coordinates and figure topology. */
 (() => {
   'use strict';
   const indigo = '#443878';
@@ -28,4 +28,26 @@
   };
 
   window.TriggleCoordinateFigures.register('c10-5-ex5-1-',plots);
+
+  const polygon = (points,boundary,color=teal) => ({
+    points,outlines:[[boundary,color,.12]],fullAxes:true,showOrigin:false
+  });
+  const directions = [[0,-1],[-1,0],[1,0],[0,1]];
+  window.TriggleCoordinateFigures.register('c10-5-ex5-2-',{
+    'q9-i': {...polygon({A:[1,-4],B:[2,-3],C:[4,-7]},'ABC'),rightAngle:'BAC',
+      directions:{A:directions,B:[0,-1],C:[1,1]},associateLabels:'A'},
+    'q9-ii': {...polygon({L:[0,5],M:[9,12],N:[3,14]},'LMN',indigo),rightAngle:'LNM',
+      directions:{L:[1,1],N:[0,-1]}},
+    q10: {...polygon({A:[2.5,3.5],B:[10,-4],C:[2.5,-2.5],D:[-5,5]},'ABCD'),directions:{C:[0,1]}},
+    q12: {...polygon({A:[3,-4],B:[9,-4],C:[5,-7],D:[7,-7]},'ABDC',rust),
+      guides:['BC','DA'],constructionPoints:{crossing:[6,-25/4]},
+      directions:{A:[-1,-.5],B:[1,-.5],C:[-1,1],D:[1,1]}},
+    q13: {
+      points:{A:[-4,-2],B:[5,-1],C:[6,5],D:[-7,6],P:[.5,-1.5],Q:[5.5,2],R:[-.5,5.5],S:[-5.5,2]},
+      outlines:[['ABCD',indigo,.09],['PQRS',teal,.22]],fullAxes:true,labelNegativeAxes:false,
+      showOrigin:false,axisLabelDirections:{X:[.45,1]},
+      directions:{B:[0,1],C:[.2,-1],P:[0,1],Q:[[1,-.5],[1,0],[0,-1]],R:[0,-1],S:[[-1,-.5],[-1,0],[0,-1]]},
+      associateLabels:'PQRS'
+    }
+  });
 })();

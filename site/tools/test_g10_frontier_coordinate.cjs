@@ -71,7 +71,8 @@ function check(){
   assert.match(trapezium.answer,/ABCD gives crossing sides/);
   assert.match(trapezium.answer,/ABDC forms a trapezium/);
   const svg=fs.readFileSync(path.join(__dirname,'../assets/grade10-ch5/ex5-2-q12.svg'),'utf8');
-  assert.match(svg,/stroke-dasharray="5 4"/);
+  for (const side of ['BC','DA']) assert.match(svg,new RegExp(`data-dg-edge="${side}" stroke-dasharray="[1-9][0-9]* [1-9][0-9]*"`));
+  assert.match(svg,/data-dg-construction-point="crossing"/);
   assert.match(svg,/\(6, −25\/4\)/);
   console.log('Grade 10 Coordinate Geometry: 92 source-matched hints, two orientation cases, two crossed polygon exclusions, and the printed trapezium order checked independently.');
 }
