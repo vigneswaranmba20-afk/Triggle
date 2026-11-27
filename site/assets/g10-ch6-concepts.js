@@ -425,17 +425,16 @@ function mount(stage,host,lang){
         const adj=deg===30?'√3':'1',opp=deg===60?'√3':'1',hyp=deg===45?'√2':'2';
         const x=55,y=170,s=sinD(deg),c=cosD(deg),unit=80*(deg===45?Math.sqrt(2):2);
         const w=unit*c,h=unit*s,right=x+w;
-        const degreeX=x+(deg===30?68:deg===45?54:43);
         description+=ta?`. அடுத்த பக்கம் ${adj}. எதிர்ப்பக்கம் ${opp}. கர்ணம் ${hyp}.`:
           `. Adjacent side ${adj}. Opposite side ${opp}. Hypotenuse ${hyp}.`;
         fig=`<polygon points="${x},${y} ${right},${y} ${right},${y-h}" fill="#EFF8F4" stroke="#1E5248" stroke-width="2.2"/>
-          <path d="M${right-11},${y} V${y-11} H${right}" fill="none" stroke="#1E5248" stroke-width="1.4"/>
-          <path d="M${x+22},${y} A22,22 0 0,0 ${x+22*c},${y-22*s}" fill="none" stroke="#6E2933" stroke-width="1.4"/>
+          <path d="M${right-11},${y} V${y-11} H${right}" fill="none" stroke="#1E5248" stroke-width="1.4" data-dg-obstacle="right-angle"/>
+          <path d="M${x+22},${y} A22,22 0 0,0 ${x+22*c},${y-22*s}" fill="none" stroke="#6E2933" stroke-width="1.4" data-dg-obstacle="standard-angle-arc"/>
           <g font-size="15.5" font-weight="550" fill="#181B20">
             <text x="${x+w/2}" y="193" text-anchor="middle">${adj}</text>
             <text x="${right+14}" y="${y-h/2+3}">${opp}</text>
             <text x="${x+w/2-22*s}" y="${y-h/2-22*c}" text-anchor="middle">${hyp}</text>
-            <text x="${degreeX}" y="${y-9}" text-anchor="middle" fill="#6E2933">${deg}°</text>
+            <text x="${x-20}" y="${y-19}" text-anchor="middle" fill="#6E2933">${deg}°</text>
           </g>`;
       }else if(deg===0){
         frame='0 0 310 100';

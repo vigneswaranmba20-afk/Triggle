@@ -480,6 +480,16 @@ async function trigAndBisectorGeometry(page,base,profiles){
         const [a,b,c]=polygons[0];
         near(angle(a,b,c),deg);near(angle(b,a,c),90);
         assert(await caption.isHidden());
+        if(width===320&&deg===45){
+          const issues=await graph.evaluate(svg=>{
+            const old=svg.style.fontFamily;
+            svg.style.fontFamily='monospace';
+            const issues=window.TriggleDiagramGuard.audit(svg,{discover:true}).issues;
+            svg.style.fontFamily=old;
+            return issues;
+          });
+          assert.deepEqual(issues,[],label+' 45° label and right-angle marker with a fallback font');
+        }
       }
       configurations++;
     }
