@@ -44,6 +44,27 @@
     return ends.length===2?ends:null;
   }
 
+  function clipQuadratic([a,b,c],{xMin,xMax,yMin,yMax}) {
+    const height = x => (a*x+b)*x+c;
+    const cuts = [xMin,xMax];
+    for (const limit of [yMin,yMax]) {
+      const discriminant = b*b-4*a*(c-limit);
+      if (discriminant < 0) continue;
+      const root = Math.sqrt(discriminant);
+      for (const x of [(-b-root)/(2*a),(-b+root)/(2*a)]) {
+        if (x>xMin && x<xMax) cuts.push(x);
+      }
+    }
+    cuts.sort((x,y)=>x-y);
+    return cuts.slice(0,-1).flatMap((start,index)=>{
+      const end=cuts[index+1], mid=(start+end)/2;
+      if (end-start<1e-9 || height(mid)<yMin || height(mid)>yMax) return [];
+      // x is affine in t. The initial tangent fixes the control point of the exact quadratic Bézier.
+      const control=height(start)+(mid-start)*(2*a*start+b);
+      return [[[start,height(start)],[mid,control],[end,height(end)]]];
+    });
+  }
+
   function drawGrid(svg, toPlot, bounds, step, labels=[...svg.querySelectorAll('text')].map(node=>node.getBBox())) {
     const [left,bottom] = toPlot(bounds.xMin,bounds.yMin);
     const [right,top] = toPlot(bounds.xMax,bounds.yMax);
@@ -90,7 +111,7 @@
     const yMax = bounds?.yMax ?? ((axes ? Math.max(0,...ys) : Math.max(...ys))+(axes ? 1 : 0));
     const inset = rem*(projections ? 1.3 : 1.12);
     const verticalInset = rem*1.45;
-    const verticalRatio = projections || quadrants ? 1 : axes ? .72 : .88;
+    const verticalRatio = config.heightRatio ?? (projections || quadrants ? 1 : axes ? .72 : .88);
     const scale = Math.min((width-2*inset)/(xMax-xMin),width*verticalRatio/(yMax-yMin));
     const edgeLabels = projections && scale<rem*1.18;
     const height = Math.ceil((yMax-yMin)*scale+2*verticalInset);
@@ -136,6 +157,20 @@
       svg.append(line(start,end,{stroke:color,'stroke-width':1.65,'data-dg-obstacle':'line-'+id,'data-dg-analytic-line':id,
         ...(dashed?{'stroke-dasharray':'4 3'}:{})}));
     }
+    for (const {id,coefficients,color=indigo} of config.quadratics||[]) {
+      const parts=clipQuadratic(coefficients,windowBounds);
+      if (!parts.length) continue;
+      const d=parts.map(points=>{
+        const [start,control,end]=points.map(point=>toPlot(...point).join(' '));
+        return `M${start}Q${control} ${end}`;
+      }).join(' ');
+      svg.append(shape('path',{d,stroke:color,'stroke-width':2.05,'fill':'none',
+        'data-dg-obstacle':'curve-'+id,'data-dg-quadratic':id}));
+    }
+    for (const {id,from,to,color=axis} of config.projectionSegments||[]) {
+      svg.append(line(toPlot(...from),toPlot(...to),{stroke:color,'stroke-width':1.35,
+        'stroke-dasharray':'4 3','data-dg-obstacle':'projection-'+id,'data-dg-projection':id}));
+    }
     function addArrow(id,tip,[dx,dy],showLabel=true) {
       const [x,y] = tip;
       const arrow = [[x-5*dx-2.5*dy,y-5*dy+2.5*dx],tip,[x-5*dx+2.5*dy,y-5*dy-2.5*dx]];
@@ -159,6 +194,10 @@
     }
     if (axes) addAxes('X',toPlot(xMin,0),toPlot(xMax,0),[1,0]);
     if (axes && xMin<0) addAxes('Y',toPlot(0,yMin),toPlot(0,yMax),[0,-1]);
+    for (const value of config.xAxisValues||[]) {
+      placements.push({label:text('x-value-'+value,axis,'secondary',number(value)),anchor:toPlot(value,0),
+        candidates:[.78,.99,1.19].map(offset=>[0,offset*rem])});
+    }
     if (projections) drawProjections(svg,points,toPlot,{width,yMin,yMax},edgeLabels,rem,placements,secondaryTicks);
     if (quadrants) {
       const names = ['I','II','III','IV'];
@@ -282,7 +321,7 @@
   }
 
   function mount(container,id,description,lang) {
-    const plan = plotsById.get(id);
+    const plan = typeof id==='string' ? plotsById.get(id) : id;
     if (!plan) return false;
     const font=getComputedStyle(container).getPropertyValue('--ver-font');
     const previous=mountedFigures.get(container);
@@ -324,12 +363,13 @@
         }
         figure.append(key);
       }
-      const equations=plot.analyticLines?.filter(line=>line.label);
-      if(equations?.length) {
+      const equations=[...(plot.quadratics||[]),...(plot.analyticLines||[])].filter(equation=>equation.label);
+      if(equations.length) {
         const legend=document.createElement('span');
         legend.className='diagramguard-coordinate-legend';
         legend.setAttribute('role','list');
-        legend.setAttribute('aria-label',lang==='ta'?'நேர்க்கோடுகள்':'Lines');
+        legend.setAttribute('aria-label',plot.quadratics?.length?
+          (lang==='ta'?'வரைபடச் சமன்பாடுகள்':'Graph equations'):(lang==='ta'?'நேர்க்கோடுகள்':'Lines'));
         for(const {label,color=indigo,dashed} of equations) {
           const entry=document.createElement('span');
           entry.setAttribute('role','listitem');

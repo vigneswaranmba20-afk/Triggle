@@ -476,6 +476,14 @@
     paint();
   }
 
+  const parabolaColor='#6E2933';
+  const intersectionLineColor='#2C4B8B';
+  function quadraticPlot(host,ta,description,plot){
+    window.TriggleCoordinateFigures.mount(host,{
+      pointNames:false,key:false,showOrigin:false,heightRatio:.92,...plot
+    },description,ta?'ta':'en');
+  }
+
   /* 9. Discriminant & SVG Parabola Crossing Count */
   function renderDiscriminant(host,ta){
     const cs=[0,3,4,5,7];
@@ -493,37 +501,21 @@
     host.append(el('h5','g10ch3-lab-title',copy.title));
     let idx=1;
     const tabs=makeTabs(cs.map(c=>`c = ${c}`),idx,i=>{idx=i;tabs.sync(i);paint();},copy.title);
-    const svgWrap=el('div','g10ch3-svg-card');
+    const svgWrap=el('div','g10ch3-plot');
     const mathBox=el('div','g10ch3-math-box');
     const note=el('p','g10ch3-note');note.setAttribute('aria-live','polite');
     host.append(tabs.bar,svgWrap,mathBox,note);
     function paint(){
       const c=cs[idx],delta=mathAPI.discriminantC(c);
-      // Coordinate mapping: x in [-1, 5] -> [30, 270] (scale 40px/unit), y in [-4.5, 6] -> [150, 15]
-      const mapX=x=>30+(x+1)*40, mapY=y=>105-y*14;
-      let pts='';
-      for(let x=-0.6;x<=4.61;x+=0.15){
-        const y=x*x-4*x+c;
-        if(y>=-5&&y<=7)pts+=(pts?' ':'')+mapX(x).toFixed(1)+','+mapY(y).toFixed(1);
-      }
-      let rootsSvg='';
-      if(delta>0){
-        const r1=2-Math.sqrt(delta)/2,r2=2+Math.sqrt(delta)/2;
-        rootsSvg=`<circle cx="${mapX(r1).toFixed(1)}" cy="${mapY(0)}" r="5" fill="#166353" stroke="#fff" stroke-width="1.5"/>`+
-          `<circle cx="${mapX(r2).toFixed(1)}" cy="${mapY(0)}" r="5" fill="#166353" stroke="#fff" stroke-width="1.5"/>`;
-      }else if(delta===0){
-        rootsSvg=`<circle cx="${mapX(2)}" cy="${mapY(0)}" r="5.5" fill="#B79253" stroke="#181B20" stroke-width="1.5"/>`;
-      }
-      svgWrap.innerHTML=`<svg viewBox="0 0 280 165" class="g10ch3-svg" role="img" aria-label="Parabola y = x squared minus 4x plus ${c}, discriminant ${delta}">
-        <line x1="20" y1="${mapY(0)}" x2="265" y2="${mapY(0)}" stroke="#181B20" stroke-width="1.4"/>
-        <line x1="${mapX(0)}" y1="12" x2="${mapX(0)}" y2="155" stroke="#B6B1A6" stroke-width="1" stroke-dasharray="3 3"/>
-        <text x="256" y="${mapY(0)-5}" font-size="10" font-weight="700" fill="#181B20">x</text>
-        <polyline fill="none" stroke="#6E2933" stroke-width="2.4" points="${pts}"/>
-        ${rootsSvg}
-        <rect x="8" y="8" width="108" height="36" rx="6" fill="rgba(255,255,255,0.94)"/>
-        <text x="14" y="22" font-size="11" font-weight="750" fill="#181B20">y = x² − 4x + ${c}</text>
-        <text x="14" y="38" font-size="11" font-weight="750" fill="${delta>0?'#166353':delta===0?'#8A6728':'#6E2933'}">Δ = ${delta}</text>
-      </svg>`;
+      const equation=`y = x² − 4x + ${c}`;
+      const points=delta>0?{left:[2-Math.sqrt(delta)/2,0],right:[2+Math.sqrt(delta)/2,0]}:
+        delta===0?{tangent:[2,0]}:{};
+      const description=ta?`${equation} பரவளையம், தன்மைக்காட்டி ${delta}`:
+        `${equation} parabola, discriminant ${delta}`;
+      quadraticPlot(svgWrap,ta,description,{
+        bounds:{xMin:-1,xMax:5,yMin:-5,yMax:7},points,
+        quadratics:[{id:'discriminant',coefficients:[1,-4,c],color:parabolaColor,label:equation}]
+      });
       tex(mathBox,`\\begin{aligned}\\Delta&=(-4)^2-4(1)(${c})\\\\&=16-${4*c}=${delta}\\end{aligned}`,`Δ = 16 − 4(${c}) = ${delta}`,true);
       note.textContent=delta>0?copy.pos:delta===0?copy.zero:copy.neg;
     }
@@ -647,57 +639,39 @@
       interNote:'Subtracting x² − x − 2 = 0 from y = x² gives the straight line y = x + 2. They intersect at (−1, 1) and (2, 4) — drop vertically to read roots x = −1 and x = 2 (NOT y-values 1, 4!).'
     };
     host.append(el('h5','g10ch3-lab-title',copy.title));
-    let mode=1,cIdx=0; // Default to Intersection mode or switch freely! Wait: let's open on mode 0 or 1? Let's make mode 1 (intersection) super clear, or mode 0 first in logical order: let's check both! Actually mode 1 is the signature skill of Sec 3.8.2; let's keep mode 0 first so progression is Shape -> Solve by Intersection, tabs both visible!
-    mode=0;
+    let mode=0,cIdx=0;
     const modeTabs=makeTabs(copy.modes,mode,i=>{mode=i;modeTabs.sync(i);paint();},copy.title);
+    const variants=makeTabs(copy.curves.map(curve=>curve.lbl),cIdx,i=>{cIdx=i;variants.sync(i);paint();},copy.modes[0]);
     const body=el('div','g10ch3-stage');
+    const svgWrap=el('div','g10ch3-plot');
+    const mathBox=el('div','g10ch3-math-box');
+    const note=el('p','g10ch3-note');
+    note.setAttribute('aria-live','polite');
+    body.append(variants.bar,svgWrap,mathBox,note);
     host.append(modeTabs.bar,body);
+    const bounds={xMin:-3,xMax:3,yMin:-5,yMax:7};
     function paint(){
-      body.replaceChildren();
-      const svgWrap=el('div','g10ch3-svg-card');
-      const mathBox=el('div','g10ch3-math-box');
-      const note=el('p','g10ch3-note');note.setAttribute('aria-live','polite');
+      variants.bar.hidden=mode===1;
       if(mode===0){
-        const sub=makeTabs(copy.curves.map(c=>c.lbl),cIdx,i=>{cIdx=i;paint();},copy.modes[0]);
-        const cur=copy.curves[cIdx];
-        const mx=x=>140+x*35,my=y=>105-y*14;
-        let pts='';
-        for(let x=-2.8;x<=2.85;x+=0.15){
-          const y=cur.a*x*x;
-          if(y>=-5&&y<=6.8)pts+=(pts?' ':'')+mx(x).toFixed(1)+','+my(y).toFixed(1);
-        }
-        svgWrap.innerHTML=`<svg viewBox="0 0 280 165" class="g10ch3-svg" role="img" aria-label="${cur.lbl} parabola">
-          <line x1="20" y1="${my(0)}" x2="260" y2="${my(0)}" stroke="#181B20" stroke-width="1.3"/>
-          <line x1="${mx(0)}" y1="10" x2="${mx(0)}" y2="155" stroke="#181B20" stroke-width="1.3"/>
-          <polyline fill="none" stroke="#6E2933" stroke-width="2.5" points="${pts}"/>
-          <circle cx="${mx(0)}" cy="${my(0)}" r="4" fill="#166353"/>
-          <rect x="8" y="8" width="124" height="22" rx="6" fill="rgba(255,255,255,0.94)"/>
-          <text x="14" y="23" font-size="11" font-weight="750" fill="#6E2933">${cur.lbl}</text>
-        </svg>`;
-        tex(mathBox,`y=${cur.a===1?'':cur.a===-1?'-':cur.a===0.25?'\\tfrac{1}{4}':cur.a}x^2`,cur.lbl,true);
-        note.textContent=cur.desc;
-        body.append(sub.bar,svgWrap,mathBox,note);
+        const curve=copy.curves[cIdx];
+        const description=ta?`${curve.lbl} பரவளையம்`:`${curve.lbl} parabola`;
+        quadraticPlot(svgWrap,ta,description,{
+          bounds,points:{vertex:[0,0]},quadratics:[{id:'shape',coefficients:[curve.a,0,0],color:parabolaColor}]
+        });
+        tex(mathBox,`y=${curve.a===1?'':curve.a===-1?'-':curve.a===0.25?'\\tfrac{1}{4}':curve.a}x^2`,curve.lbl,true);
+        note.textContent=curve.desc;
       }else{
-        const mx=x=>125+x*38,my=y=>132-y*19;
-        let pts='';
-        for(let x=-2.4;x<=2.65;x+=0.12)pts+=(pts?' ':'')+mx(x).toFixed(1)+','+my(x*x).toFixed(1);
-        svgWrap.innerHTML=`<svg viewBox="0 0 280 165" class="g10ch3-svg" role="img" aria-label="Intersection of y = x squared and y = x + 2 at (-1, 1) and (2, 4)">
-          <line x1="20" y1="${my(0)}" x2="265" y2="${my(0)}" stroke="#181B20" stroke-width="1.4"/>
-          <line x1="${mx(0)}" y1="12" x2="${mx(0)}" y2="155" stroke="#9EA2AA" stroke-width="1"/>
-          <polyline fill="none" stroke="#6E2933" stroke-width="2.3" points="${pts}"/>
-          <line x1="${mx(-2.2)}" y1="${my(-0.2)}" x2="${mx(2.7)}" y2="${my(4.7)}" stroke="#2C4B8B" stroke-width="2.2"/>
-          <line x1="${mx(-1)}" y1="${my(1)}" x2="${mx(-1)}" y2="${my(0)}" stroke="#166353" stroke-width="1.8" stroke-dasharray="3 3"/>
-          <line x1="${mx(2)}" y1="${my(4)}" x2="${mx(2)}" y2="${my(0)}" stroke="#166353" stroke-width="1.8" stroke-dasharray="3 3"/>
-          <circle cx="${mx(-1)}" cy="${my(1)}" r="4.5" fill="#166353" stroke="#fff" stroke-width="1.4"/>
-          <circle cx="${mx(2)}" cy="${my(4)}" r="4.5" fill="#166353" stroke="#fff" stroke-width="1.4"/>
-          <text x="${mx(-1)+8}" y="${my(1)+4}" font-size="10.5" font-weight="750" fill="#181B20" paint-order="stroke" stroke="#FCFBF8" stroke-width="3.5" stroke-linejoin="round">(−1, 1)</text>
-          <text x="${mx(2)+7}" y="${my(4)+4}" font-size="10.5" font-weight="750" fill="#181B20" paint-order="stroke" stroke="#FCFBF8" stroke-width="3.5" stroke-linejoin="round">(2, 4)</text>
-          <text x="${mx(-1)-12}" y="${my(0)+15}" font-size="11" font-weight="800" fill="#166353" paint-order="stroke" stroke="#FCFBF8" stroke-width="3">x=−1</text>
-          <text x="${mx(2)-10}" y="${my(0)+15}" font-size="11" font-weight="800" fill="#166353" paint-order="stroke" stroke="#FCFBF8" stroke-width="3">x=2</text>
-        </svg>`;
+        const description=ta?'y = x², y = x + 2 ஆகியவற்றின் வெட்டுப்புள்ளிகள் (−1, 1), (2, 4)':
+          'Intersection of y = x² and y = x + 2 at (−1, 1) and (2, 4)';
+        const points={left:[-1,1],right:[2,4]};
+        const projectionSegments=Object.entries(points).map(([id,from])=>({id,from,to:[from[0],0],color:'#166353'}));
+        quadraticPlot(svgWrap,ta,description,{
+          bounds:{...bounds,yMin:-1},points,projectionSegments,xAxisValues:[-1,2],
+          quadratics:[{id:'intersection',coefficients:[1,0,0],color:parabolaColor,label:'y = x²'}],
+          analyticLines:[{id:'linear',coefficients:[1,-1,2],color:intersectionLineColor,label:'y = x + 2'}]
+        });
         tex(mathBox,'\\begin{aligned}y&=x^2-(x^2-x-2)=x+2\\\\&\\implies x=-1,\\;2\\end{aligned}','y = x + 2 intersects y = x² ⇒ x = −1, 2',true);
         note.textContent=copy.interNote;
-        body.append(svgWrap,mathBox,note);
       }
     }
     paint();

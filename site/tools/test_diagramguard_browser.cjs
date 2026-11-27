@@ -823,6 +823,115 @@ async function vennGeometry(page,base,profiles){
   return checks;
 }
 
+async function algebraQuadratics(page,base,profiles){
+  let checks=0;
+  const plot=page.locator('.g10ch3-plot svg[data-dg-ready]');
+  async function inspect({route,lang,percent,coefficients,points,intersection=false,legend=[]}){
+    const report=await plot.evaluate(svg=>{
+      const actual=window.TriggleDiagramGuard.audit(svg,{discover:true});
+      const order=['x1','y1','x2','y2'];
+      const read=(shape,names)=>names.map(name=>Number(shape.getAttribute(name)));
+      const query=id=>svg.querySelector(`[data-dg-obstacle="${id}"]`);
+      const key=svg.closest('.diagramguard-figure').querySelector('.diagramguard-coordinate-legend');
+      return {
+        ...actual,x:read(query('X-axis'),order),y:read(query('Y-axis'),order),
+        path:svg.querySelector('[data-dg-quadratic]').getAttribute('d'),
+        points:[...svg.querySelectorAll('[data-dg-point]')].map(dot=>read(dot,['cx','cy'])),
+        straight:query('line-linear')?read(query('line-linear'),order):null,
+        projections:[...svg.querySelectorAll('[data-dg-projection]')].map(line=>read(line,order)),
+        keyBelow:!key||key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+        expressions:key?[...key.querySelectorAll('[role=listitem]')].map(node=>node.textContent):[],
+        description:svg.getAttribute('aria-label'),overflow:document.documentElement.scrollWidth-innerWidth
+      };
+    });
+    const context=`Grade 10 algebra ${route} ${lang} ${percent}% coefficients ${coefficients}`;
+    assert.ok(report.measured&&report.keyBelow&&report.overflow<=1,context);
+    assert.deepEqual(report.issues,[],context);
+    assert.ok(Object.values(report.horizontalClipping).every(value=>value<=1),context);
+    assert.deepEqual(report.expressions,legend,context);
+    if(lang==='ta')assert.match(report.description,/[஀-௿]/u,context);
+    for(const {fontPx} of report.labels){
+      assert(fontPx>=13*percent/100-.25&&fontPx<=16*percent/100+.25,context+' '+fontPx);
+    }
+    const [x1,oy,x2]=report.x;
+    const [ox,y1,,y2]=report.y;
+    const sx=(x2-x1)/6, sy=(y1-y2)/(intersection?8:12);
+    near(sx,sy);
+    const unproject=(x,y)=>[(x-ox)/sx,(oy-y)/sy];
+    const [a,b,c]=coefficients;
+    const evaluate=x=>(a*x+b)*x+c;
+    const curves=report.path.match(/M[^M]+/g).map(segment=>{
+      assert.match(segment,/^M[^Q]+Q[^Q]+$/,context);
+      const [x0,y0,x1,y1,x2,y2]=segment.match(/-?\d+(?:\.\d+)?(?:e[-+]?\d+)?/gi).map(Number);
+      return [unproject(x0,y0),unproject(x1,y1),unproject(x2,y2)];
+    });
+    for(const [start,control,end] of curves){
+      for(const t of [0,.13,.32,.5,.81,1]){
+        const [x,y]=start.map((value,i)=>(1-t)**2*value+2*(1-t)*t*control[i]+t*t*end[i]);
+        near(y,evaluate(x));
+        assert(y>=-5-1e-9&&y<=7+1e-9,context+' curve clipped to graph window');
+      }
+    }
+    assert.equal(report.points.length,points.length,context);
+    for(const [index,point] of report.points.entries()){
+      const [x,y]=unproject(...point);
+      near(x,points[index][0]); near(y,points[index][1]); near(y,evaluate(x));
+      assert(curves.some(([start,,end])=>x>=start[0]-1e-9&&x<=end[0]+1e-9),context+' visible marker lies on curve');
+      if(intersection)near(y,x+2);
+    }
+    if(route===8&&c===4)near(2*a*points[0][0]+b,0);
+    if(intersection){
+      const [x0,y0,x1,y1]=report.straight;
+      assert.ok(['x-value--1','x-value-2'].every(id=>report.labels.some(label=>label.id===id)),context);
+      for(const value of [unproject(x0,y0),unproject(x1,y1)])near(value[1],value[0]+2);
+      for(const [index,[x0,y0,x1,y1]] of report.projections.entries()){
+        const [x,y]=points[index];
+        near(x0,x1); near(y1,oy);
+        const point=unproject(x0,y0);
+        near(point[0],x); near(point[1],y);
+      }
+      assert.equal(report.projections.length,2,context);
+    }
+    checks++;
+  }
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta'])for(const route of [8,11]){
+      await page.goto(base+'/index.html?class=10&chapter=g10-ch3&section=concepts&concept='+route);
+      await setLanguage(page,lang);
+      const controls=page.locator('.g10ch3-lab .g10ch3-tabs');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        if(route===8){
+          for(const [index,c] of [0,3,4,5,7].entries()){
+            await controls.first().locator('button').nth(index).click();
+            const points=c===0?[[0,0],[4,0]]:c===3?[[1,0],[3,0]]:c===4?[[2,0]]:[];
+            await inspect({route,lang,percent,coefficients:[1,-4,c],points,legend:[`y = x² − 4x + ${c}`]});
+          }
+        }else{
+          const modes=controls.first().locator('button');
+          await modes.first().click();
+          const curves=controls.nth(1).locator('button');
+          for(const [index,a] of [1,3,.25,-1].entries()){
+            const control=curves.nth(index);
+            await control.focus();
+            await control.press('Space');
+            assert(await control.evaluate(node=>document.activeElement===node));
+            assert.equal(await control.getAttribute('aria-pressed'),'true');
+            await inspect({route,lang,percent,coefficients:[a,0,0],points:[[0,0]]});
+          }
+          await modes.nth(1).click();
+          await inspect({route,lang,percent,coefficients:[1,0,0],points:[[-1,1],[2,4]],
+            intersection:true,legend:['y = x²','y = x + 2']});
+          await modes.first().click();
+          assert.equal(await curves.nth(3).getAttribute('aria-pressed'),'true');
+        }
+      }
+    }
+  }
+  return checks;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -877,6 +986,12 @@ async function main(){
           console.log(`DiagramGuard: ${checks} bilingual converse-proportionality states`);
           return;
         }
+        if(process.argv.includes('--algebra-quadratics')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await algebraQuadratics(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 10 quadratic graph states`);
+          return;
+        }
         if(width===390&&!live){
           await synthetic(page);
           await legacyMarkers(page);
@@ -889,6 +1004,7 @@ async function main(){
           await combinedSightLines(page,base,[[320,844]]);
           await statisticsPlotGeometry(page,base,[[320,844]]);
           await vennGeometry(page,base,[[320,844]]);
+          await algebraQuadratics(page,base,[[320,844]]);
           await page.setViewportSize({width,height});
         }
         for(const lang of ['en','ta']){
