@@ -513,6 +513,59 @@ async function trigAndBisectorGeometry(page,base,profiles){
   return configurations;
 }
 
+async function converseProportionality(page,base,profiles){
+  const values=[[.2,.8],[.8,.2],[.2,.2],[.8,.8],[.39,.4],[.4,.39],[.4,.62]];
+  let checks=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    await page.goto(base+concept(5));
+    await setLanguage(page,lang);
+    await settle(page,percent);
+    const chart=page.locator('.g10ch4-lab svg[data-dg-ready]');
+    await chart.waitFor();
+    const preview=page.locator('.g10ch4-glance-visual');
+    const caption=await preview.locator('.diagramguard-annotation').evaluate(el=>({overflow:el.scrollWidth-el.clientWidth,
+      beneath:el.getBoundingClientRect().top>=el.previousElementSibling.getBoundingClientRect().bottom-.5,
+      math:!!el.querySelector('.katex')}));
+    assert(caption.overflow<=1&&caption.beneath&&caption.math,'Localized overview equation reflows outside the triangle');
+    const sliders=page.locator('.g10ch4-slider');
+    for(const [d,e] of [...values,[.4,.4]]){
+      const snap=d===.4&&e===.4;
+      if(snap)await page.locator('.g10ch4-lab .g10ch4-chip-btn').click();
+      else for(const [i,value] of [d,e].entries())await sliders.nth(i).evaluate((input,value)=>{
+        input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));
+      },value);
+      const result=await chart.evaluate(svg=>{
+        const geometry=id=>svg.querySelector(`[data-dg-obstacle="${id}"]`);
+        const coord=(node,names)=>names.map(key=>Number(node.getAttribute(key)));
+        const triangle=Array.from(geometry('triangle').points,p=>[p.x,p.y]);
+        const actual=coord(geometry('DE'),['x1','y1','x2','y2']);
+        const reference=geometry('DF')?coord(geometry('DF'),['x1','y1','x2','y2']):null;
+        const box=svg.getBoundingClientRect();
+        const visible=box.left>=-.5&&box.right<=document.documentElement.clientWidth+.5;
+        return {triangle,actual,reference,visible,audit:window.TriggleDiagramGuard.audit(svg,{discover:true})};
+      });
+      const context=`Converse of BPT ${lang} ${width}×${height} ${percent}% ${d}/${e}`;
+      const [a,b,c]=result.triangle;
+      const section=(p,fraction)=>p.map((value,i)=>a[i]+fraction*(value-a[i]));
+      result.actual.forEach((coordinate,i)=>near(coordinate,[...section(b,d),...section(c,e)][i]));
+      if(d===e){
+        assert.equal(result.reference,null,context);
+        near(result.actual[1],result.actual[3]);
+      }else{
+        near(result.reference[1],result.reference[3]);
+        near(result.reference[3],section(c,d)[1]);
+      }
+      assert.deepEqual(result.audit.issues,[],context);
+      assert.deepEqual(result.audit.labels.map(l=>l.id),d===e?['A','B','C','D','E']:['A','B','C','D','E','F'],context);
+      result.audit.labels.forEach(label=>near(label.fontPx,.15*percent,.2));
+      assert(result.visible,context+' visible drawing');
+      checks++;
+    }
+  }
+  return checks;
+}
+
 async function sightLineGeometry(page,base,profiles){
   const route=base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=';
   const cases=[{index:7,values:[[26,18],[45,8],[12,36],[30,20]]},
@@ -582,6 +635,19 @@ async function statisticsPlotGeometry(page, base, profiles, full=false) {
     spread: (full ? [1,2,3,4,5,6,7,8] : [1,8]).map(n => [n,0]),
     scale: (full ? [-2,-1,0,1,2] : [-2,0,2]).flatMap(a => [-4,0,4].map(b => [a,b]))
   };
+  await page.setViewportSize({width:320,height:844});
+  await page.goto(route+'4&diagramguardLanguage=en');
+  await page.locator('.g10ch8-graphic[data-dg-ready]').waitFor();
+  await settle(page,200);
+  for(const [id,lang,mean] of [['langTa','ta','சராசரி:'],['langEn','en','Mean:']]){
+    await page.locator('#'+id).click();
+    await page.locator(`html[lang="${lang}"] #${id}[aria-pressed="true"]`).waitFor({state:'attached'});
+    await settle(page,200);
+    const visible=page.locator('.g10ch8-graphic[data-dg-ready]');
+    await visible.waitFor();
+    assert((await page.locator('.g10ch8-legend').textContent()).startsWith(mean));
+    assert.deepEqual(await visible.evaluate(svg=>window.TriggleDiagramGuard.audit(svg,{discover:true}).issues),[]);
+  }
   let checks=0;
   for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
     await page.setViewportSize({width,height});
@@ -679,6 +745,11 @@ async function main(){
           console.log(`DiagramGuard: ${checks} bilingual and responsive statistics plot states`);
           return;
         }
+        if(process.argv.includes('--converse-bpt')){
+          const checks=await converseProportionality(page,base,viewports);
+          console.log(`DiagramGuard: ${checks} bilingual converse-proportionality states`);
+          return;
+        }
         if(process.argv.includes('--sight-lines')){
           const checks=await sightLineGeometry(page,base,viewports);
           console.log(`DiagramGuard: ${checks} bilingual and responsive sight-line states`);
@@ -691,6 +762,7 @@ async function main(){
           await legacyBoundaryCases(page);
           await conceptBoundaries(page,base);
           await trigAndBisectorGeometry(page,base,[[320,844]]);
+          await converseProportionality(page,base,[[320,844]]);
           await sightLineGeometry(page,base,[[320,844]]);
           await statisticsPlotGeometry(page,base,[[320,844]]);
           await page.setViewportSize({width,height});

@@ -121,7 +121,7 @@
     converseBptState(A,B,C,tD,tE){
       const D=lerp(A,B,tD),E=lerp(A,C,tE),F=lerp(A,C,tD);
       const rL=tD/(1-tD),rR=tE/(1-tE);
-      const isParallel=Math.abs(tD-tE)<=0.025;
+      const isParallel=Math.abs(tD-tE)<=1e-9;
       return {D,E,F,rL,rR,isParallel,gap:dist(E,F)};
     },
     angleBisectorPoint(A,B,C){
@@ -561,9 +561,9 @@
       notParallel:()=>'Ratios differ! Dashed parallel DF hits F instead of E, so DE is NOT parallel to BC.'
     };
     host.append(el('h5','g10ch4-lab-title',copy.title));
-    const A=[160,22],B=[36,154],C=[284,154];
+    const A=[160,34],B=[50,148],C=[270,148];
     let tD=0.40,tE=0.62;
-    const svg=svgEl('svg',{viewBox:'0 0 320 178',class:'g10ch4-svg',role:'img','aria-label':copy.title});
+    const svg=svgEl('svg',{viewBox:'0 0 320 192',class:'g10ch4-svg diagramguard-svg',role:'img','aria-label':copy.title});
     const metrics=el('div','g10ch4-metrics');
     const sD=makeSlider(copy.sliderD,0.20,0.80,0.01,tD,v=>{tD=v;paint();});
     const sE=makeSlider(copy.sliderE,0.20,0.80,0.01,tE,v=>{tE=v;paint();});
@@ -571,25 +571,40 @@
     snapBtn.onclick=()=>{tE=tD;sE.input.value=fmt(tE,2);sE.out.textContent=fmt(tE,2);paint();};
     const status=el('p','g10ch4-status');status.setAttribute('aria-live','polite');
     host.append(svg,metrics,sD.row,sE.row,snapBtn,status);
+    const guard=window.TriggleDiagramGuard;
+    let font=0;
+    guard.responsive(svg,(width,rem)=>{
+      const unit=320*rem/width;
+      const extra=Math.max(0,1.8*unit-36);
+      svg.setAttribute('viewBox',`0 ${-extra} 320 ${192+extra*2}`);
+      const matrix=svg.getScreenCTM();
+      font=.9375*rem/Math.hypot(matrix.c,matrix.d);
+      paint();
+    });
 
     function paint(){
       svg.replaceChildren();
       const st=mathAPI.converseBptState(A,B,C,tD,tE);
       const col=st.isParallel?'#166353':'#6E2933';
+      const dot=(point,id,fill)=>svgEl('circle',{cx:point[0],cy:point[1],r:4.5,fill,
+        'data-dg-obstacle':'point-'+id,'data-dg-fill':''});
       svg.append(
-        svgEl('polygon',{points:`${A} ${B} ${C}`,fill:'rgba(24,27,32,0.04)',stroke:'#181B20','stroke-width':'2'}),
-        svgEl('line',{x1:st.D[0],y1:st.D[1],x2:st.F[0],y2:st.F[1],stroke:'#166353','stroke-width':'1.6','stroke-dasharray':'4 3'}),
-        svgEl('line',{x1:st.D[0],y1:st.D[1],x2:st.E[0],y2:st.E[1],stroke:col,'stroke-width':'2.4'}),
-        svgEl('circle',{cx:st.F[0],cy:st.F[1],r:3.8,fill:'#166353'}),
-        svgEl('circle',{cx:st.D[0],cy:st.D[1],r:5,fill:'#181B20'}),
-        svgEl('circle',{cx:st.E[0],cy:st.E[1],r:5,fill:col}),
-        svgEl('text',{x:A[0]-4,y:A[1]-6,'font-size':'11','font-weight':'700'},'A'),
-        svgEl('text',{x:B[0]-12,y:B[1]+13,'font-size':'11','font-weight':'700'},'B'),
-        svgEl('text',{x:C[0]+4,y:C[1]+13,'font-size':'11','font-weight':'700'},'C'),
-        svgEl('text',{x:st.D[0]-16,y:st.D[1]+4,'font-size':'11','font-weight':'700'},'D'),
-        svgEl('text',{x:st.F[0]+8,y:st.F[1]-4,'font-size':'10','font-weight':'700',fill:'#166353'},'F'),
-        svgEl('text',{x:st.E[0]+8,y:st.E[1]+10,'font-size':'11','font-weight':'700',fill:col},'E')
+        svgEl('polygon',{points:`${A} ${B} ${C}`,fill:'rgba(24,27,32,0.04)',stroke:'#181B20','stroke-width':'2','data-dg-obstacle':'triangle'}),
+        svgEl('line',{x1:st.D[0],y1:st.D[1],x2:st.E[0],y2:st.E[1],stroke:col,'stroke-width':'2.4','data-dg-obstacle':'DE'}),
+        dot(st.D,'D','#181B20'),dot(st.E,'E',col)
       );
+      if(!st.isParallel)svg.append(svgEl('line',{x1:st.D[0],y1:st.D[1],x2:st.F[0],y2:st.F[1],stroke:'#166353',
+        'stroke-width':'1.6','stroke-dasharray':'4 3','data-dg-obstacle':'DF'}),dot(st.F,'F','#166353'));
+      if(font){
+        const order=st.E[1]>=st.F[1]?1:-1;
+        const pointLabels=[['A',A,[0,-1]],['B',B,[-1,1]],['C',C,[1,1]],['D',st.D,[-1,0]],
+          ['E',st.E,[1,st.isParallel?0:order],col],
+          ...(!st.isParallel?[['F',st.F,[1,-order],'#166353']]:[])];
+        guard.place(svg,pointLabels.map(([id,anchor,direction,fill='#181B20'])=>({
+          label:svgEl('text',{'data-dg-label':id,'text-anchor':'middle',dy:'.35em','font-size':font,fill},id),anchor,direction,
+          neighborPoints:pointLabels.filter(([,other])=>other!==anchor).map(([,other])=>other)
+        })));
+      }
       metrics.innerHTML=`
         <div class="g10ch4-metric"><span>AD / DB</span><strong>${fmt(st.rL,2)}</strong></div>
         <div class="g10ch4-metric"><span>AE / EC</span><strong>${fmt(st.rR,2)}</strong></div>`;
@@ -1153,8 +1168,7 @@
     }else if(id==='converse-bpt'){
       svg.append(
         svgEl('polygon',{points:'150,12 64,92 236,92',fill:'rgba(24,27,32,0.04)',stroke:'#181B20','stroke-width':'1.8'}),
-        svgEl('line',{x1:107,y1:52,x2:193,y2:52,stroke:'#166353','stroke-width':'2'}),
-        svgEl('text',{x:108,y:82,'font-size':'10','font-weight':'700',fill:'#6E2933'},'AD/DB = AE/EC ⇒ DE ∥ BC')
+        svgEl('line',{x1:107,y1:52,x2:193,y2:52,stroke:'#166353','stroke-width':'2'})
       );
     }else if(id==='angle-bisector'||id==='converse-abt'){
       const A=[124,14],B=[58,90],C=[242,90];
@@ -1199,6 +1213,12 @@
     if(id==='angle-bisector'||id==='converse-abt'){
       const caption=el('span','diagramguard-annotation');
       tex(caption,'\\dfrac{AB}{AC}=\\dfrac{BD}{DC}','AB/AC = BD/DC',false);
+      host.append(caption);
+    }
+    if(id==='converse-bpt'){
+      const caption=el('span','diagramguard-annotation');
+      tex(caption,'\\begin{aligned}\\dfrac{AD}{DB}&=\\dfrac{AE}{EC}\\\\ &\\implies DE\\parallel BC\\end{aligned}',
+        'AD/DB = AE/EC ⇒ DE ∥ BC',true);
       host.append(caption);
     }
   }
