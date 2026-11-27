@@ -97,6 +97,39 @@ async function renderedVectors(page) {
   }));
 }
 
+async function assertRenderedPreviews(page,base) {
+  for(const lang of ['en','ta'])for(const percent of [100,200])for(const index of [4,5,9,11]){
+    await page.goto(base+'/index.html?class=10&chapter=g10-ch5&section=concepts&concept='+index);
+    if(await page.locator('html').getAttribute('lang')!==lang)await page.locator(lang==='ta'?'#langTa':'#langEn').evaluate(button=>button.click());
+    await page.evaluate(percent=>{document.documentElement.style.fontSize=percent+'%';},percent);
+    const deviations=await page.locator('svg.g10ch4-glance-svg').evaluate((svg,index)=>{
+      const project=(node,x,y)=>new DOMPoint(x,y).matrixTransform(node.getScreenCTM());
+      const select=name=>svg.querySelector(`[data-dg-preview-line="${name}"]`);
+      const linePoints=node=>[1,2].map(i=>project(node,node['x'+i].baseVal.value,node['y'+i].baseVal.value));
+      const vector=(s,t)=>[t.x-s.x,t.y-s.y];
+      const distance=(p,line)=>{
+        const [s,t]=linePoints(line), [dx,dy]=vector(s,t);
+        return Math.abs((p.x-s.x)*dy-(p.y-s.y)*dx)/Math.hypot(dx,dy);
+      };
+      const axis=name=>svg.querySelector(`[data-dg-grid-axis="${name}"][stroke="#6E7781"]`);
+      if(index===5||index===11){
+        const [a,b]=vector(...linePoints(select('reference')));
+        const [c,d]=vector(...linePoints(select('perpendicular')));
+        return [Math.abs(a*c+b*d)/(Math.hypot(a,b)*Math.hypot(c,d))];
+      }
+      if(index===9)return ['x','y'].flatMap(name=>{
+        const node=svg.querySelector(`[data-dg-preview-intercept="${name}"]`);
+        const point=project(node,node.cx.baseVal.value,node.cy.baseVal.value);
+        return [distance(point,select('intercept')),distance(point,axis(name==='x'?'y':'x'))];
+      });
+      const arc=svg.querySelector('[data-dg-inclination-arc]');
+      const start=arc.getPointAtLength(0),end=arc.getPointAtLength(arc.getTotalLength());
+      return [distance(project(arc,start.x,start.y),axis('y')),distance(project(arc,end.x,end.y),select('inclination'))];
+    },index);
+    assert(deviations.every(value=>value<.001),`${lang} ${percent}% preview ${index} geometry deviations: ${deviations}`);
+  }
+}
+
 async function assertRenderedAngles(page,base) {
   const near=(actual,expected,label)=>assert(Math.abs(actual-expected)<1e-6,`${label}: ${actual} ≠ ${expected}`);
   for(const lang of ['en','ta'])for(const percent of [100,200]){
@@ -165,7 +198,8 @@ async function run(){
     if(process.argv.includes('--angles-only')){
       const page=await browser.newPage({viewport:{width:320,height:844},serviceWorkers:'block'});
       await assertRenderedAngles(page,base);
-      console.log('PASS rendered Grade 10 concept angles and corner drags in both languages at 100% and 200% text');
+      await assertRenderedPreviews(page,base);
+      console.log('PASS rendered Grade 10 concept angles, previews and corner drags in both languages at 100% and 200% text');
       return;
     }
 
@@ -286,7 +320,9 @@ async function run(){
     /* 5. Angles measured in actual rendered SVG after presets and drags */
     {
       const ctx=await browser.newContext({viewport:{width:320,height:844},serviceWorkers:'block'});
-      await assertRenderedAngles(await ctx.newPage(),base);
+      const page=await ctx.newPage();
+      await assertRenderedAngles(page,base);
+      await assertRenderedPreviews(page,base);
       await ctx.close();
     }
 

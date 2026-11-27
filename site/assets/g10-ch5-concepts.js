@@ -841,6 +841,9 @@
     const pl=makePlane(240,118,-4,4,-2.5,2.5);
     const svg=svgEl('svg',{viewBox:'0 0 240 118',class:'g10ch4-glance-svg',role:'img','aria-label':stage.title?.[lang]||stage.title?.en||'Coordinate diagram'});
     const g=svgEl('g');pl.drawGrid(g);
+    const previewLine=([x1,y1],[x2,y2],id,stroke,width=2.2)=>svgEl('line',{
+      x1:pl.sx(x1),y1:pl.sy(y1),x2:pl.sx(x2),y2:pl.sy(y2),'data-dg-preview-line':id,stroke,'stroke-width':width
+    });
     if(id==='distance-midpoint'){
       g.append(svgEl('line',{x1:pl.sx(-3),y1:pl.sy(-1),x2:pl.sx(3),y2:pl.sy(-1),stroke:'#525B62','stroke-width':1.1,'stroke-dasharray':'3 2'}));
       g.append(svgEl('line',{x1:pl.sx(3),y1:pl.sy(-1),x2:pl.sx(3),y2:pl.sy(2),stroke:'#525B62','stroke-width':1.1,'stroke-dasharray':'3 2'}));
@@ -854,18 +857,27 @@
     }else if(id==='area-quadrilateral'){
       g.append(svgEl('polygon',{points:`${pl.sx(-2.5)},${pl.sy(-1.5)} ${pl.sx(2.5)},${pl.sy(-1.5)} ${pl.sx(2)},${pl.sy(1.8)} ${pl.sx(-1.5)},${pl.sy(1.5)}`,fill:'rgba(31,94,114,.16)',stroke:'#1F5E72','stroke-width':2}));
     }else if(id==='inclination-slope'){
-      g.append(svgEl('line',{x1:pl.sx(-3),y1:pl.sy(-1),x2:pl.sx(3),y2:pl.sy(2),stroke:'#6E2933','stroke-width':2.2}));
-      g.append(svgEl('path',{d:`M ${pl.sx(-1)+16} ${pl.sy(0)} A 16 16 0 0 0 ${pl.sx(-1)+14} ${pl.sy(0)-8}`,fill:'none',stroke:'#1F5E72','stroke-width':1.5}));
+      const start=[-3,-1],end=[3,2];
+      const dx=end[0]-start[0],dy=end[1]-start[1];
+      const cx=pl.sx(start[0]-start[1]*dx/dy),cy=pl.sy(0),radius=16;
+      const scale=radius/Math.hypot(dx,dy);
+      g.append(previewLine(start,end,'inclination','#6E2933'));
+      g.append(svgEl('path',{d:`M ${cx+radius} ${cy} A ${radius} ${radius} 0 0 0 ${cx+dx*scale} ${cy-dy*scale}`,
+        'data-dg-inclination-arc':'',fill:'none',stroke:'#1F5E72','stroke-width':1.5}));
     }else if(id==='parallel-perp-slopes'||id==='general-family'){
-      g.append(svgEl('line',{x1:pl.sx(-3),y1:pl.sy(-1.5),x2:pl.sx(3),y2:pl.sy(1.5),stroke:'#1F5E72','stroke-width':2.1}));
-      g.append(svgEl('line',{x1:pl.sx(-1.5),y1:pl.sy(2.2),x2:pl.sx(1.5),y2:pl.sy(-2.2),stroke:'#6E2933','stroke-width':2.1}));
+      const vector=[3,1.5];
+      const normal=[-vector[1]*2.2/vector[0],2.2];
+      g.append(previewLine(vector.map(n=>-n),vector,'reference','#1F5E72',2.1));
+      g.append(previewLine(normal,normal.map(n=>-n),'perpendicular','#6E2933',2.1));
     }else if(id==='axes-parallel'){
       g.append(svgEl('line',{x1:pl.sx(-3.5),y1:pl.sy(1.5),x2:pl.sx(3.5),y2:pl.sy(1.5),stroke:'#6E2933','stroke-width':2.2}));
       g.append(svgEl('line',{x1:pl.sx(2),y1:pl.sy(-2.2),x2:pl.sx(2),y2:pl.sy(2.2),stroke:'#1F5E72','stroke-width':2.2}));
     }else if(id==='intercept-form'){
-      g.append(svgEl('line',{x1:pl.sx(-1),y1:pl.sy(2.2),x2:pl.sx(3.5),y2:pl.sy(-0.8),stroke:'#1F5E72','stroke-width':2.2}));
-      g.append(svgEl('circle',{cx:pl.sx(2.3),cy:pl.sy(0),r:3.8,fill:'#6E2933'}));
-      g.append(svgEl('circle',{cx:pl.sx(0),cy:pl.sy(1.5),r:3.8,fill:'#3F5D3A'}));
+      const a=2.3,b=1.5;
+      const point=x=>[x,b*(1-x/a)];
+      g.append(previewLine(point(-1),point(3.5),'intercept','#1F5E72'));
+      g.append(svgEl('circle',{cx:pl.sx(a),cy:pl.sy(0),r:3.8,fill:'#6E2933','data-dg-preview-intercept':'x'}));
+      g.append(svgEl('circle',{cx:pl.sx(0),cy:pl.sy(b),r:3.8,fill:'#3F5D3A','data-dg-preview-intercept':'y'}));
     }else{
       g.append(svgEl('line',{x1:pl.sx(-3),y1:pl.sy(-1),x2:pl.sx(3),y2:pl.sy(2),stroke:'#1F5E72','stroke-width':2.2}));
       g.append(svgEl('circle',{cx:pl.sx(0),cy:pl.sy(0.5),r:3.8,fill:'#6E2933'}));

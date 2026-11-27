@@ -32,3 +32,16 @@ The twelve labs and their previews now use the same number of CSS pixels per uni
 | Perpendicular lines | [76.963°](figures/concept-angle-5-before.png) | [90.000°](figures/concept-angle-5-after.png) |
 
 A separate Chromium sweep found equal grid scales in all 196 sampled states of the revised plots, including 32 pointer drags. Label-boundary contacts fell from eight to zero. The raw label-overlap candidates fell from 80 to 72 and remain under review. Collision-free qualification in this batch covers the Exercise 5.2 figures above.
+
+## Preview geometry
+
+Four additional previews have rendered geometry checks in both languages at 100% and 200% text. The inclination arc starts on the positive x-axis and ends on its line. Both perpendicular previews use negative-reciprocal slopes. The intercept marks lie on the intercept-form line and on their designated axes. The 2025 SCERT sources include Figure 5.35 on English printed page 225 (PDF 231) and Tamil printed page 232 (PDF 238), and section 5.6.2 on English printed page 230 (PDF 236) and Tamil printed page 238 (PDF 244).
+
+| Matched Tamil capture at 390 CSS px | Before | After |
+| --- | --- | --- |
+| Inclination | [Arc endpoint 1.118 CSS px from line](figures/preview-4-ta-before.png) | [Arc meets line](figures/preview-4-ta-after.png) |
+| Parallel and perpendicular slopes | [82.278°](figures/preview-5-ta-before.png) | [90.000°](figures/preview-5-ta-after.png) |
+| Intercept form | [Y-intercept marker 0.610 CSS px from line](figures/preview-9-ta-before.png) | [Both markers on the line and axes](figures/preview-9-ta-after.png) |
+| Lines in general form | [82.278°](figures/preview-11-ta-before.png) | [90.000°](figures/preview-11-ta-after.png) |
+
+The revised rendered offsets are under 0.00001 CSS px on the captured Chromium profile. Both browser engines enforce a 0.001 CSS px tolerance for the incidence checks. The four previews remain outside full typography qualification.
