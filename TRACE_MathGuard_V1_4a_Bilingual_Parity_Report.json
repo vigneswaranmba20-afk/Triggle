@@ -1,0 +1,283 @@
+{
+ "schemaVersion": 1,
+ "tamilFailCount": 39,
+ "items": [
+  {
+   "id": "g9-ch3-ex3.1-q3-ii",
+   "flags": [
+    "step_2_number_mismatch:en=['0'],ta=['4']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.1-q6-i",
+   "flags": [
+    "step_1_number_mismatch:en=['0'],ta=['7']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.3-q10",
+   "flags": [
+    "step_1_number_mismatch:en=['4'],ta=['0']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.4-q2-ii",
+   "flags": [
+    "step_1_number_mismatch:en=['2'],ta=['32']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.4-q10",
+   "flags": [
+    "step_2_number_mismatch:en=['1'],ta=['110']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.4-q14",
+   "flags": [
+    "step_1_number_mismatch:en=['0'],ta=['4']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.6-q3-vi",
+   "flags": [
+    "step_0_number_mismatch:en=['2'],ta=['1']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.10-q3",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.11-q2",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.12-q3",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.13-q2",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.14-q6",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch3-ex3.15-q13",
+   "flags": [
+    "missing_tamil_script"
+   ],
+   "kind": "tamil_placeholder_or_untranslated"
+  },
+  {
+   "id": "g9-ch3-ex3.15-q14",
+   "flags": [
+    "missing_tamil_script"
+   ],
+   "kind": "tamil_placeholder_or_untranslated"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q2",
+   "flags": [
+    "missing_tamil_script"
+   ],
+   "kind": "tamil_placeholder_or_untranslated"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q3",
+   "flags": [
+    "missing_tamil_script"
+   ],
+   "kind": "tamil_placeholder_or_untranslated"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q5",
+   "flags": [
+    "missing_tamil_script"
+   ],
+   "kind": "tamil_placeholder_or_untranslated"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q6",
+   "flags": [
+    "missing_tamil_script"
+   ],
+   "kind": "tamil_placeholder_or_untranslated"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q7",
+   "flags": [
+    "missing_tamil_script"
+   ],
+   "kind": "tamil_placeholder_or_untranslated"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q8",
+   "flags": [
+    "missing_tamil_script"
+   ],
+   "kind": "tamil_placeholder_or_untranslated"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q9",
+   "flags": [
+    "missing_tamil_script"
+   ],
+   "kind": "tamil_placeholder_or_untranslated"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q11",
+   "flags": [
+    "missing_tamil_script"
+   ],
+   "kind": "tamil_placeholder_or_untranslated"
+  },
+  {
+   "id": "g9-ch5-ex5.2-q12",
+   "flags": [
+    "step_1_number_mismatch:en=['900'],ta=['1800']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch7-ex7.2-q2",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch7-ex7.2-q6",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch7-ex7.3-q3",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch7-ex7.3-q6",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch7-ex7.3-q7",
+   "flags": [
+    "step_2_number_mismatch:en=['3.5'],ta=['5']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g9-ch7-ex7.3-q8",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "c10-3-ex3-2-q2-v",
+   "flags": [
+    "step_1_number_mismatch:en=['36'],ta=['9']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "c10-3-ex3-10-q2",
+   "flags": [
+    "step_2_number_mismatch:en=['30'],ta=['36']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "c10-3-ex3-14-q5",
+   "flags": [
+    "step_3_number_mismatch:en=['4'],ta=['24']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "c10-3-ex3-15-q4-i",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "c10-3-ex3-unit-q2",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "c10-3-ex3-unit-q13",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "g10-ch3-variations",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "c10-5-unit-q7",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "c10-7-ex7-3-q3",
+   "flags": [
+    "step_3_number_mismatch:en=['2.464'],ta=['464']"
+   ],
+   "kind": "tamil_number_token_difference"
+  },
+  {
+   "id": "c10-7-ex7-5-q5",
+   "flags": [
+    "en_ta_number_mismatch"
+   ],
+   "kind": "tamil_number_token_difference"
+  }
+ ],
+ "kindCounts": {
+  "tamil_number_token_difference": 29,
+  "tamil_placeholder_or_untranslated": 10
+ }
+}
