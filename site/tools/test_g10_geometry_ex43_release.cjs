@@ -50,7 +50,10 @@ for (const evidence of items) {
     assert.ok(row.figureSrc,evidence.id+' missing source-referenced figure');
     assert.ok(offline.includes('./'+row.figureSrc),row.figureSrc+' missing from offline cache');
     const svg = fs.readFileSync('site/'+row.figureSrc,'utf8');
-    assert.match(svg,/viewBox="0 0 320 220"/);
+    if (row.id === 'c10-4-ex4-3-q4') {
+      assert.match(svg,/viewBox="0 0 320 180"/);
+      assert.match(svg,/<rect x="48" y="42" width="216" height="90"/);
+    } else assert.match(svg,/viewBox="0 0 320 220"/);
     assert.match(svg,/<title/);
     assert.match(svg,/<desc/);
     assert.match(svg,/role="img"/);

@@ -42,7 +42,8 @@ const weights=Object.freeze({
   'test_paper_indigo_theme_browser.cjs':6.5,
   'test_g10_ch2_trace_browser.cjs':8.5,
   'test_g10_ch2_ex2_3_modular_browser.cjs':3.9,
-  'test_g10_ch2_ex2_4_browser.cjs':9.0
+  'test_g10_ch2_ex2_4_browser.cjs':9.0,
+  'test_diagramguard_browser.cjs':95.0
 });
 function plan(total){
   const tasks=commands.map((command,originalIndex)=>{
@@ -62,7 +63,7 @@ function plan(total){
       ['test_standard_solutions_browser.cjs',0],
       ['test_katex_browser.cjs',2]
     ]);
-    costs[0]=12; // Separate WebKit/mobile dock smoke still runs on shard 0.
+    costs[0]=107; // Separate WebKit checks and the mobile dock smoke run on shard 0.
     const remaining=[];
     for(const task of tasks){
       const shard=pinned.get(path.basename(task.file));

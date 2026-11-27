@@ -209,12 +209,6 @@ jobs:
           else
             npx playwright install --with-deps --only-shell chromium
           fi
-      - name: Run assigned browser partition without repeating unit tests
-        env:
-          BROWSER_SHARD_INDEX: ${{ matrix.shard }}
-          BROWSER_SHARD_TOTAL: '4'
-          CHROMIUM_PATH: ''
-        run: node site/tools/run_browser_shard.cjs
       - name: WebKit and mobile dock checks
         if: matrix.shard == 0
         env:
@@ -222,6 +216,12 @@ jobs:
         run: |
           npm run test:webkit
           node site/tools/test_g9_adaptive_dock_browser.cjs
+      - name: Run assigned browser partition without repeating unit tests
+        env:
+          BROWSER_SHARD_INDEX: ${{ matrix.shard }}
+          BROWSER_SHARD_TOTAL: '4'
+          CHROMIUM_PATH: ''
+        run: node site/tools/run_browser_shard.cjs
       - name: Verify the staged Pages student build
         if: matrix.shard == 3
         run: node site/tools/test_student_release_browser.cjs

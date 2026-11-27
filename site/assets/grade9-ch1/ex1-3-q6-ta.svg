@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 550" width="336" height="550" role="img" xml:lang="ta">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 336 574" width="336" height="574" role="img" xml:lang="ta">
   <title>படம் 1.26–1.28</title>
   <g fill="#2b2145" font-family="system-ui, sans-serif" font-weight="600">
   <g transform="translate(8 6)">
@@ -13,7 +13,7 @@
     <ellipse cx="119" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/>
     <text x="51" y="29" text-anchor="middle" font-size="16">A</text><text x="269" y="29" text-anchor="middle" font-size="16">B</text><text x="300" y="26" text-anchor="middle" font-size="16">U</text><text x="160.0" y="176" text-anchor="middle" font-size="19">படம் 1.26</text>
   </g>
-  <g transform="translate(8 188)">
+  <g transform="translate(8 196)">
     <defs>
       <clipPath id="q6-1-right"><ellipse cx="201" cy="76" rx="65" ry="48" /></clipPath>
       <mask id="q6-1-left-only"><ellipse cx="119" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>
@@ -25,7 +25,7 @@
     <ellipse cx="119" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/>
     <text x="51" y="29" text-anchor="middle" font-size="16">A</text><text x="269" y="29" text-anchor="middle" font-size="16">B</text><text x="300" y="26" text-anchor="middle" font-size="16">U</text><text x="160.0" y="176" text-anchor="middle" font-size="19">படம் 1.27</text>
   </g>
-  <g transform="translate(8 370)">
+  <g transform="translate(8 386)">
     <defs>
       <clipPath id="q6-2-right"><ellipse cx="201" cy="76" rx="65" ry="48" /></clipPath>
       <mask id="q6-2-left-only"><ellipse cx="119" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>

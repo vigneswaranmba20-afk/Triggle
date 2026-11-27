@@ -14,11 +14,11 @@
 <polyline class="accent" points="124.000,153.000 71.648,106.193"/>
 <circle class="point" cx="28.000" cy="153.000" r="2.200"/><text x="12.000" y="170.000">A</text>
 <circle class="point" cx="284.000" cy="153.000" r="2.200"/><text x="287.000" y="170.000">B</text>
-<circle class="point" cx="148.032" cy="24.282" r="2.200"/><text x="143.032" y="14.282">C</text>
+<circle class="point" cx="148.032" cy="24.282" r="2.200"/><text x="156" y="19">C</text>
 <circle class="point" cx="124.000" cy="153.000" r="2.200"/><text x="119.000" y="172.000">D</text>
 <circle class="point" cx="71.648" cy="106.193" r="2.200"/><text x="56.648" y="101.193">E</text>
 <text x="72.000" y="145.000">3</text>
 <text x="192.000" y="145.000">5</text>
-<text x="39.000" y="130.000">2</text>
-<text x="101.000" y="72.000">3½</text>
+<text x="29" y="133">2</text>
+<text x="63" y="67">3½</text>
 </svg>

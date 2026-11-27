@@ -1,20 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t desc">
-  <title id="t">Aeroplane at 1800 m observing two boats at 60 and 30 degrees depression for Exercise 6.3 Q4</title>
-  <desc id="desc">Two boats on same side of vertical projection below plane at 1800 m seen at 60 and 30 degrees depression.</desc>
-  <style>text{paint-order:stroke;stroke:#F7F6F2;stroke-width:3px;stroke-linejoin:round;}</style>
-  <rect width="320" height="220" rx="10" fill="#F7F6F2"/>
-  <line x1="24" y1="186" x2="296" y2="186" stroke="#525B62" stroke-width="1.5"/>
-  <line x1="66" y1="44" x2="66" y2="186" stroke="#181B20" stroke-width="1.6" stroke-dasharray="3,3"/>
-  <line x1="66" y1="44" x2="274" y2="44" stroke="#525B62" stroke-width="1.2" stroke-dasharray="3,2"/>
-  <line x1="66" y1="44" x2="146" y2="186" stroke="#6E2933" stroke-width="1.8"/>
-  <line x1="66" y1="44" x2="268" y2="186" stroke="#166353" stroke-width="1.8"/>
-  <circle cx="66" cy="44" r="3.5" fill="#181B20"/>
-  <circle cx="146" cy="186" r="3.5" fill="#6E2933"/>
-  <circle cx="268" cy="186" r="3.5" fill="#166353"/>
-  <path d="M128.0,44.0 A62,62 0 0,1 116.7,79.7" fill="none" stroke="#166353" stroke-width="1.3"/>
-  <path d="M100.0,44.0 A34,34 0 0,1 82.7,73.6" fill="none" stroke="#6E2933" stroke-width="1.3"/>
-  <text x="152" y="60" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#166353">30°</text>
-  <text x="158" y="78" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#6E2933">60°</text>
-  <text x="50" y="115" transform="rotate(-90 50 115)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">1800 m</text>
-  <text x="207" y="203" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#6E2933">Boat distance</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="t d">
+  <title id="t">Two boats viewed from an aeroplane at 1800 m</title>
+  <desc id="d">The boats are on the same side of the vertical projection of the aeroplane. Their angles of depression are 60 and 30 degrees.</desc>
+  <g stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="21.00000" y1="176.00000" x2="304.00000" y2="176.00000" stroke="#706977"/>
+<line x1="56.00000" y1="46.00000" x2="56.00000" y2="176.00000" stroke="#272836" stroke-dasharray="4 3"/>
+<line x1="56.00000" y1="46.00000" x2="302.00000" y2="46.00000" stroke="#706977" stroke-dasharray="4 3"/>
+<line x1="56.00000" y1="46.00000" x2="131.05553" y2="176.00000" stroke="#70384b"/>
+<line x1="56.00000" y1="46.00000" x2="281.16660" y2="176.00000" stroke="#166353"/>
+<path d="M 118.00000 46.00000 A 62 62 0 0 1 109.69358 77.00000" fill="none" stroke="#166353" stroke-width="1.35"/>
+<path d="M 91.00000 46.00000 A 35 35 0 0 1 73.50000 76.31089" fill="none" stroke="#70384b" stroke-width="1.35"/>
+<circle cx="131.05553" cy="176" r="3.3" fill="#70384b"/>
+<circle cx="281.16660" cy="176" r="3.3" fill="#166353"/>
+<line x1="131.05553" y1="185.00000" x2="131.05553" y2="195.00000" stroke="#706977"/>
+<line x1="281.16660" y1="185.00000" x2="281.16660" y2="195.00000" stroke="#706977"/>
+<line x1="131.05553" y1="190.00000" x2="281.16660" y2="190.00000" stroke="#706977"/>
+  </g>
+  <g font-family="system-ui,sans-serif" font-size="15" font-weight="550" text-anchor="middle" dominant-baseline="central">
+    <text x="37" y="111" fill="#272836" transform="rotate(-90 37 111)">1800 m</text>
+<text x="142" y="67" fill="#166353">30°</text>
+<text x="112" y="104" fill="#70384b">60°</text>
+<text x="207" y="207" fill="#272836">d</text>
+  </g>
 </svg>

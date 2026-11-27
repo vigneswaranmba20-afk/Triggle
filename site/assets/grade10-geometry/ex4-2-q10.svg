@@ -15,10 +15,10 @@
 <polyline class="edge" points="145.000,23.000 95.707,140.952"/>
 <polyline class="edge" points="145.000,23.000 213.407,140.952"/>
 <polyline class="accent" points="95.707,140.952 213.407,140.952"/>
-<circle class="point" cx="145.000" cy="23.000" r="2.200"/><text x="140.000" y="14.000">A</text>
-<circle class="point" cx="37.000" cy="105.000" r="2.200"/><text x="24.000" y="107.000">B</text>
+<circle class="point" cx="145.000" cy="23.000" r="2.200"/><text x="157" y="18">A</text>
+<circle class="point" cx="37.000" cy="105.000" r="2.200"/><text x="26" y="109" text-anchor="end">B</text>
 <circle class="point" cx="166.000" cy="184.000" r="2.200"/><text x="163.000" y="202.000">C</text>
 <circle class="point" cx="253.000" cy="105.000" r="2.200"/><text x="260.000" y="108.000">D</text>
-<circle class="point" cx="95.707" cy="140.952" r="2.200"/><text x="77.707" y="146.952">E</text>
-<circle class="point" cx="213.407" cy="140.952" r="2.200"/><text x="221.407" y="147.952">F</text>
+<circle class="point" cx="95.707" cy="140.952" r="2.200"/><text x="74" y="154">E</text>
+<circle class="point" cx="213.407" cy="140.952" r="2.200"/><text x="225" y="154">F</text>
 </svg>

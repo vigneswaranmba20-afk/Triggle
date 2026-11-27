@@ -605,14 +605,13 @@
       }).join('');
       const ptX=direct?(xVal===1?mx(xVal)+9:mx(xVal)-38):Math.min(218,mx(xVal)+9);
       const ptY=Math.max(24,my(yVal)-9);
-      const capX=direct?42:142;
       svgWrap.innerHTML=`<svg viewBox="0 0 280 160" class="g10ch3-svg" role="img" aria-label="${direct?'Direct variation line y=2x':'Inverse variation curve xy=12'} highlighted at (${xVal}, ${yVal})">
         <line x1="32" y1="142" x2="266" y2="142" stroke="#181B20" stroke-width="1.3"/>
         <line x1="32" y1="12" x2="32" y2="142" stroke="#181B20" stroke-width="1.3"/>
         ${path}${dots}
         <text x="${ptX}" y="${ptY}" font-size="11" font-weight="750" fill="#181B20">(${xVal}, ${yVal})</text>
-        <text x="${capX}" y="22" font-size="11" font-weight="750" fill="${direct?'#166353':'#6E2933'}">${direct?copy.dirLbl:copy.invLbl}</text>
       </svg>`;
+      svgWrap.append(el('p','diagramguard-annotation',direct?copy.dirLbl:copy.invLbl));
       if(direct){
         tex(mathBox,`\\begin{aligned}\\dfrac{y}{x}&=\\dfrac{${yVal}}{${xVal}}=2\\\\\\text{constant }k&=2\\end{aligned}`,`y/x = ${yVal}/${xVal} = 2`,true);
         note.textContent=ta?`x = ${xVal} எனில் y = ${yVal}; விகிதம் y/x எப்போதும் 2 ஆகவும் கோடு (0, 0) வழியாகவும் செல்கிறது.`:`At x = ${xVal}, y = ${yVal}. Scaling x scales y identically; y/x = 2 stays constant and the line passes through (0, 0).`;

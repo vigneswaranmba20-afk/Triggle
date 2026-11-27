@@ -13,7 +13,7 @@
   <polyline class="edge" points="92.984,18.458 28.000,197.000 256.000,197.000 92.984,18.458"/>
 <path class="mark" d="M46 197 A18 18 0 0 0 34.156 180.086 M124 197 A18 18 0 0 1 148.156 180.086"/>
   <polyline class="accent" points="142.000,197.000 174.492,107.729"/>
-<circle class="point" cx="92.984" cy="18.458" r="2.200"/><text x="87.984" y="8.458">A</text>
+<circle class="point" cx="92.984" cy="18.458" r="2.200"/><text x="64" y="19">A</text>
 <circle class="point" cx="28.000" cy="197.000" r="2.200"/><text x="17.000" y="216.000">B</text>
 <circle class="point" cx="256.000" cy="197.000" r="2.200"/><text x="261.000" y="214.000">C</text>
 <circle class="point" cx="174.492" cy="107.729" r="2.200"/><text x="177.492" y="98.729">P</text>
@@ -23,5 +23,5 @@
 <text x="80.000" y="215.000">3</text>
 <text x="191.000" y="215.000">3</text>
 <text x="51.000" y="188.000">70°</text>
-<text x="95.000" y="188.000">110°</text>
+<text x="104" y="168">110°</text>
 </svg>

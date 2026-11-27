@@ -353,8 +353,8 @@ const entries = [
     },
     "figureSrc": "assets/grade10-geometry/ex4-3-q4.svg",
     "figureAlt": {
-      "en": "Rectangle WXYZ with W at top left, X at lower left, Y at lower right and Z at upper right, showing both equal diagonals XZ and YW.",
-      "ta": "பாடநூல் படத்தின் கருத்தைப் பின்பற்றிய வடிவியல் வரைபடம்"
+      "en": "Rectangle WXYZ with W at bottom left, X at bottom right, Y at top right and Z at top left, showing both equal diagonals XZ and YW.",
+      "ta": "செவ்வகம் WXYZ. கீழ் இடப்புறம் W, கீழ் வலப்புறம் X, மேல் வலப்புறம் Y, மேல் இடப்புறம் Z. சம மூலைவிட்டங்கள் XZ, YW."
     },
     "figureCaption": {
       "en": "Geometry figure",

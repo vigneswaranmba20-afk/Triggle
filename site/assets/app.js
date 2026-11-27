@@ -683,13 +683,20 @@
   const alt=figureOverride(item)?.description||tr(spec?.alt)||tr(item.label)+' textbook figure';
   return '<img src="'+esc(encodeURI(spec?.src||''))+'" alt="'+esc(alt)+'" style="display:block;max-width:100%;max-height:'+maxHeight+'vh;width:auto;height:auto;margin:auto;object-fit:contain">';
  }
+ function mountFigure(container,markup,item){
+  if(item.id==='c10-4-ex4-3-q4'&&window.TriggleG10DiagramGuard){
+   window.TriggleG10DiagramGuard.rectangle(container,figureOverride(item)?.description||tr(item.figureAlt));
+  }else{
+   container.innerHTML=markup;
+  }
+ }
  function renderInlineFigure(){
    const figure=$('inlineFigure');const yes=isQuestionFigure(current);
    figure.hidden=!yes; if(!yes)return;
    const aligned=window.TriggleSetVenn?.render(current,lang);
    const figSpec=resolveFigureSpec(current);
    const svg=figSpec?textbookFigureImage(current,66):(aligned?.html||window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)}));
-   $('inlineFigureVisual').innerHTML=svg;
+   mountFigure($('inlineFigureVisual'),svg,current);
    localizeInlineSvg($('inlineFigureVisual'),current);
    const d=current.diagram;
    const measures=d?.kind==='triangle'?((lang==='ta'?'எதிர்ப்பக்கம் ':'Opposite ')+d.opp+' · '+(lang==='ta'?'அடுத்துள்ள பக்கம் ':'Adjacent ')+d.adj+' · '+(lang==='ta'?'கர்ணம் ':'Hypotenuse ')+d.hyp+'. '):'';
@@ -935,7 +942,7 @@
   const figSpec=resolveFigureSpec(current);
   let graphic=figSpec?{html:textbookFigureImage(current,78),caption:figureCaption(current,figSpec)||ui('textbookFigure')}:(window.TriggleSetVenn?.render(current,lang)||window.TriggleConcept?.render(context));
   if(!graphic){let svg='';if(current.diagram&&typeof current.diagram==='object')svg=window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)});else svg=window.TriggleDraw.drawSimple(current.diagram||'identity');graphic={html:svg,caption:lang==='ta'?'படம் விளக்கத்திற்காக மட்டுமே; அளவுப்படி இல்லாமல் இருக்கலாம்.':'Original conceptual illustration; not necessarily drawn to scale.'}}
-  $('diagramContent').innerHTML=graphic.html;
+  mountFigure($('diagramContent'),graphic.html,current);
   if(current.geometryConstruction) {
    window.TriggleGeometryConstruction.mount($('diagramContent'),current.geometryConstruction,current.steps,lang);
   }
