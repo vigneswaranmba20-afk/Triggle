@@ -27,9 +27,12 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
     assert(state.scope,'Grade 10 Chapter 2 typography missing for '+id);
     const expectedQuestion=Math.max(18,Math.min(22,16.8 + width * .004));
     assert(Math.abs(state.questionSize-expectedQuestion)<.01&&state.reasonSize>=16&&state.equationSize>=17,'Readability regression '+JSON.stringify(state));
-    assert(state.textFont.includes('Inter')&&state.mathFont.includes('KaTeX_Main'),'Font family missing '+JSON.stringify(state));
+    assert(state.textFont.includes('system-ui')&&state.mathFont.includes('KaTeX_Main'),'Text and math faces missing '+JSON.stringify(state));
     assert(state.scroll<=state.viewport+1,'Horizontal page overflow '+JSON.stringify(state));
     assert(state.count>=2,'No full solution '+id);
+    await page.locator('#langTa').click();
+    assert.match(await page.locator('#questionText').evaluate(el=>getComputedStyle(el).fontFamily),/Triggle Noto Sans Tamil/);
+    await page.locator('#langEn').click();
    }
   }
   await page.goto(http.base+'/index.html?class=10&chapter=g10-ch2');

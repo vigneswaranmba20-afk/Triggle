@@ -271,6 +271,7 @@ body.ver-glyph.g10-ch2-type { --g10-ch2-text: var(--ver-font); }
   max-block-size: 74dvh !important;
 }
 .ver-glyph #figureDialog .diagram-compare { background: var(--ver-tint); border-color: var(--ver-divider); }
+.ver-glyph #figureDialog :is(#diagramCompareLabel, #diagramCompareAnswer) { color: var(--ver-indigo); }
 .ver-glyph #visualLessonDialog .vl-shell { background: var(--ver-paper); }
 .ver-glyph #visualLessonDialog .vl-header { background: var(--ver-white); border-color: var(--ver-divider); }
 
@@ -704,7 +705,7 @@ body.ver-glyph.textbook-reader #questionNavDock #questionJump {
   background: var(--ver-white);
   color: var(--ver-indigo);
   box-shadow: none;
-  font: 650 var(--ver-text-small)/1.4 var(--ver-font) !important;
+  font: 650 var(--ver-dock-text, var(--ver-text-body))/1.4 var(--ver-font) !important;
   overflow-wrap: break-word;
 }
 .ver-glyph.textbook-reader #questionNavDock .page-button.next {
@@ -725,6 +726,7 @@ body.ver-glyph.textbook-reader #questionNavDock #questionJump {
 }
 
 @media (max-width: 800px) {
+  .ver-glyph.textbook-reader #questionNavDock { --ver-dock-text: var(--ver-text-small); }
   :root:has(body.ver-glyph.textbook-reader) {
     scroll-padding-block-end: calc(var(--triggle-reader-dock-height, 4rem) + .5rem);
   }
@@ -761,7 +763,7 @@ body.ver-glyph.textbook-reader #questionNavDock #questionJump {
   body.ver-glyph:not(.home-active) .appbar #homeBtn { grid-column: 3; }
   body.ver-glyph:not(.home-active) .appbar .lang-switch { grid-area: 1 / 4; }
   body.ver-glyph:not(.home-active) .appbar :is([data-i18n="browse"], [data-i18n="home"], #browseChevron) {
-    display: none;
+    display: none !important;
   }
   body.ver-glyph:not(.home-active) .appbar .lang-switch button {
     min-height: var(--ver-touch) !important;

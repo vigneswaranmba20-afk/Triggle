@@ -181,7 +181,7 @@ async function main() {
       assert.equal(await desktop.locator('body').evaluate(el=>el.classList.contains('textbook-reader')),true);
       assert.equal(await desktop.locator('#focusNavToggle').isVisible(),false);
       assert.notEqual(await desktop.locator('#questionNavDock').evaluate(el=>getComputedStyle(el).position),'fixed');
-      assert.ok((await desktop.locator('#questionNavDock button').evaluateAll(nodes=>nodes.map(x=>parseFloat(getComputedStyle(x).fontSize)))).every(x=>Math.abs(x-16)<.25));
+      assert.ok((await desktop.locator('#questionNavDock button:visible').evaluateAll(nodes=>nodes.map(x=>parseFloat(getComputedStyle(x).fontSize)))).every(x=>Math.abs(x-16)<.25));
     });
     for(const width of [320,390,1280]){
       await check('Home, class directory, chapter jump, browser Back and Tamil at '+width+'px', async()=>{

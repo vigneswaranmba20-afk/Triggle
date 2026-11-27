@@ -741,8 +741,8 @@
   const group=labelForGroup(current.exercise);
   $('questionHead').textContent=label.startsWith(group+' · ')?label.slice(group.length+3):label;
   $('questionPickerLabel').textContent=lang==='ta'?'வினாக்கள்':'Questions';
-  $('questionPicker').setAttribute('aria-label',$('questionPickerLabel').textContent);
   $('itemPosition').textContent=position+' / '+list.length;
+  $('questionPicker').setAttribute('aria-label',$('questionPickerLabel').textContent+' '+$('itemPosition').textContent);
   $('questionTrack').firstElementChild.style.inlineSize=(position/list.length*100)+'%';
   $('quickSolutionAction').lastElementChild.textContent=lang==='ta'?'தீர்வைக் காண்க':'View worked solution';
   const workedDisplay=window.TriggleWorkedDisplay?.get(current,lang);
@@ -857,7 +857,7 @@
   const icon=name=>window.TriggleGlyph?.icon(name)||'';
   const exerciseEnd=isTextbookExercise&&n===list.length-1;
   $('previous').setAttribute('aria-label',ui('previous'));
-  $('next').setAttribute('aria-label',ui(exerciseEnd?'exerciseEnd':'nextQuestion'));
+  $('next').setAttribute('aria-label',ui(exerciseEnd?'exerciseEnd':'nextShort'));
   $('previous').innerHTML=icon('previous')+'<span>'+esc(ui('previous'))+'</span>';
   $('next').innerHTML='<span>'+esc(ui(exerciseEnd?'exerciseEnd':'nextShort'))+'</span>'+icon(exerciseEnd?'check':'next');
   renderSteps();

@@ -763,9 +763,11 @@
     const chapterKinds=inlineChecks?baseKinds.filter(kind=>kind!=='quizzes'):baseKinds;
     const kinds=activityEntries.length?[...chapterKinds,'activities']:chapterKinds;
     const quizInConcepts=inlineChecks||matrixConcepts||['g9-ch3','g10-ch2','g10-ch3','g10-ch4','g10-ch5','g10-ch6','g10-ch7'].includes(chapter.id);
-    const quizStages=quizInConcepts?[]:stages.filter(stage=>
-      !(stage.activity?.options&&stage.check)&&(stage.quiz||stage).choices?.length>0);
-    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:quizStages.length,activities:activityEntries.length};
+    const quizStages=stages.filter(stage=>{
+      const choices=(stage.quiz||stage).choices;
+      return !(stage.activity?.options&&stage.check)&&Array.isArray(choices)&&choices.length>0;
+    });
+    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:quizInConcepts?0:quizStages.length,activities:activityEntries.length};
     const symbols={concepts:'concept',exercises:'exercises',quizzes:'check',activities:'explore'};
     const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0,activities:counts.activities>0};
     const labelFor=kind=>({concepts:t.concepts,examples:t.examples,exercises:t.exercises,quizzes:t.quizzes,activities:t.activities})[kind];
@@ -887,12 +889,10 @@
         // not a repeated appendix on the Concepts page.
       }else{info(t.noneConcept);}
     }
-    if(section==='activities'){
-      if(activityEntries.length&&window.TriggleTextbookActivities){
-        window.TriggleTextbookActivities.mount(panel,chapter,lang);
-      }else{
-        info(lang==='ta'?'இந்த அத்தியாயத்திற்கான செயல்பாடுகள் இன்னும் கிடைக்கவில்லை.':'Activities for this chapter are coming soon.');
-      }
+    if(section==='activities'&&activityEntries.length&&window.TriggleTextbookActivities){
+      window.TriggleTextbookActivities.mount(panel,chapter,lang);
+    }else if(section==='activities'){
+      info(lang==='ta'?'இந்த அத்தியாயத்திற்கான செயல்பாடுகள் இன்னும் கிடைக்கவில்லை.':'Activities for this chapter are coming soon.');
     }
     if(section==='exercises'){
       // One index of exercise numbers per chapter. No huge question catalog.
@@ -925,7 +925,6 @@
           const count=document.createElement('small');count.textContent=items.length+' '+t.questions+' '+t.available;
           const arrow=document.createElement('span');arrow.className='hub-exercise-arrow';arrow.textContent='›';arrow.setAttribute('aria-hidden','true');
           button.append(label,count,arrow);
-          button.setAttribute('aria-label',name+' · '+count.textContent);
           button.addEventListener('click',()=>onQuestion(items[0]));
           index.append(button);
         }
@@ -933,7 +932,7 @@
       }
     }
     if(section==='quizzes'){
-      if(!quizStages.length){
+      if(!quizStages.length||inlineChecks){
         info(t.noQuiz);
       }else{
         const status=document.createElement('p');status.className='hub-quiz-progress';
