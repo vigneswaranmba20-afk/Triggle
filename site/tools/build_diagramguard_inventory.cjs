@@ -8,6 +8,8 @@ const {ROOT,loadRuntime}=require('./curriculum_bulk.cjs');
 const site=path.join(ROOT,'site');
 const rootFile=(file)=>fs.readFileSync(path.join(site,file),'utf8');
 const runtime=loadRuntime(undefined,{trace:true});
+const coordinateFigures=new Set(require('../data/textbook-fidelity/g10-ch5-ex5-1.json').items
+  .filter(item=>item.figure.asset).map(item=>item.id));
 const scope={};
 const sandbox=vm.createContext({window:scope,console});
 for(const file of [...runtime.loaded,'assets/set-venn-figures.js']) {
@@ -56,10 +58,11 @@ for(const grade of [9,10]){
       item.sourceFidelity?.sourcePdfPage&&'PDF '+format(item.sourceFidelity.sourcePdfPage),format(item.source)].filter(Boolean).join(' | ');
     if(en){
       const rectangle=id==='c10-4-ex4-3-q4';
+      const responsive=rectangle||coordinateFigures.has(id);
       add(rectangle?'wxyz-rectangle':'asset:'+hash(en)+':'+hash(ta),{
-        id,chapter,en,ta,source:src,rendering:rectangle?'responsive inline SVG; SVG fallback':media(en),
+        id,chapter,en,ta,source:src,rendering:responsive?'responsive inline SVG; SVG fallback':media(en),
         surface:item.figureInSolution?'solution and figure dialog':'inline and figure dialog',
-        qualification:rectangle?'DiagramGuard browser fixture':'unverified'
+        qualification:responsive?'DiagramGuard browser fixture':'unverified'
       });
     }
     if(item.geometryConstruction){

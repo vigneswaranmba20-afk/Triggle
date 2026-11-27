@@ -132,6 +132,17 @@ async function navigateOffline(browser, base) {
     assert((await page.evaluate(()=>caches.keys())).some(key=>key.includes('-student-')),'Versioned release worker');
     await context.setOffline(true);
     for (const language of ['en','ta']) await verifyStatisticsDirectory(page,base,language);
+    await page.goto(base+link(10,'question','c10-5-ex5-1-q9'));
+    await ready(page);
+    assert.equal(await page.evaluate(()=>window.TriggleStudentRelease.chapter),'g10-ch5');
+    assert.equal(await page.locator('html').getAttribute('lang'),'ta');
+    await page.locator('#inlineFigureVisual svg.diagramguard-coordinate[data-dg-ready]').waitFor();
+    await page.locator('#inlineFigureOpen').click();
+    const coordinateFigure = page.locator('#figureDialog svg.diagramguard-coordinate[data-dg-ready]');
+    await coordinateFigure.waitFor();
+    assert.equal(await coordinateFigure.locator('[data-dg-point]').count(),8);
+    assert.deepEqual(await coordinateFigure.evaluate(svg=>window.TriggleDiagramGuard.audit(svg,{discover:true}).issues),[]);
+    await page.keyboard.press('Escape');
     await page.goto(base+link(10,'question',geometry));
     await ready(page);
     await page.locator('#langTa').click();
