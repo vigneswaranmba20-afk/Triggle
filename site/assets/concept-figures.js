@@ -10,8 +10,6 @@ const text=(x,y,v,size=16,color='#47466d',anchor='middle',weight=750)=>`<text x=
 const dot=(x,y,color='#7954cb',r=6)=>`<circle cx="${x}" cy="${y}" r="${r}" fill="${color}" stroke="white" stroke-width="2"/>`;
 const pack=(html,caption)=>({html,caption});
 const legend=(arr)=>`<div class="concept-key">${arr.map(a=>`<span>${e(a)}</span>`).join('')}</div>`;
-const measuredKey=(values,ta)=>`<div class="diagramguard-coordinate-key" role="list" aria-label="${ta?'படக் குறிப்புகள்':'Figure key'}">`+
-  values.map(value=>`<span class="diagramguard-named-point" role="listitem">${e(value)}</span>`).join('')+'</div>';
 const intro=(desc,ta)=>`<div class="concept-note">${e(ta?desc.ta||desc.en:desc.en)}</div>`;
 function findAngle(item){
   const q=item.q?.en||'';
@@ -85,63 +83,15 @@ function inverse(item,lang){const q=item.q.en,ans=item.answer||'',domain=/domain
  info.caption=lang==='ta'?'முதன்மைக் கோணத்தை விளக்கும் காட்சி.':'Principal-angle illustration for the selected inverse-trigonometry expression.';
  return info;
 }
-function roadCrossSection(lang){
- const ground=260,mid=310,scale=14,angle=Math.PI/6;
- const wall=4*Math.sqrt(3)*scale,halfWidth=wall/Math.tan(angle);
- const left=mid-halfWidth,right=mid+halfWidth,roof=ground-wall;
- const ink='#272836',teal='#166353',plum='#70384b',gold='#856222';
- const radius=36;
- const ta=lang==='ta';
- const name=ta?'சாலையின் நடுப்புள்ளியிலிருந்து 30° ஏற்றக்கோணத்தில் இரு வீடுகளின் கூரைகள்':
-  'Two roofs seen at a 30° angle of elevation from the road midpoint';
- let body='<g data-dg-road-cross-section>';
- body+=`<path d="M${left-25} ${ground}V${roof}H${left}V${ground} M${right} ${ground}V${roof}H${right+25}V${ground}"
-   fill="#edf6f2" stroke="${teal}" stroke-width="2.4"/>`;
- body+=line(left-42,ground,right+42,ground,ink,2);
- for(const [id,x] of [['left',left],['right',right]]){
-  body+=`<line data-dg-sightline="${id}" x1="${mid}" y1="${ground}" x2="${x}" y2="${roof}" stroke="${plum}" stroke-width="3"/>`;
- }
- body+=`<path d="M${left} ${ground-11}h11v11 M${right} ${ground-11}h-11v11" stroke="${ink}" fill="none" stroke-width="1.8"/>`;
- body+=`<path d="M${mid+radius} ${ground} A${radius} ${radius} 0 0 0 ${mid+radius*Math.cos(angle)} ${ground-radius*Math.sin(angle)}"
-  stroke="${gold}" fill="none" stroke-width="2.5"/>`;
- body+=dot(mid,ground,ink,5)+'</g>';
- const labels=ta?['இரு வீடுகளின் உயரம் 4√3 மீ','ஏற்றக்கோணம் 30°','சாலையின் நடுப்புள்ளி']:
-  ['House heights 4√3 m','Angle of elevation 30°','Road midpoint'];
- return pack(svg(body,name)+measuredKey(labels,ta),name);
-}
-function tower(item,lang){
- if(item.id==='c10-6-6-2-5')return roadCrossSection(lang);
- const q=item.q.en,ta=lang==='ta',dep=/depression/i.test(q),elev=/elevation/i.test(q)||!dep;
- const left=134,right=488,ground=270,roof=60,eye=80,r=52;
- let body=`<g data-dg-sightline-schematic><rect x="89" y="${roof}" width="45" height="${ground-roof}"
-  fill="#edf6f2" stroke="#166353" stroke-width="2"/>`+line(44,ground,574,ground,'#272836',3);
- if(dep){
-  const angle=Math.atan2(ground-eye,right-left);
-  body+=line(left,eye,right,eye,'#706977',2.5,'7 6')+line(left,eye,right,ground,'#70384b',3.5)+
-   `<path data-dg-angle="depression" d="M${left+r} ${eye} A${r} ${r} 0 0 1 ${left+r*Math.cos(angle)} ${eye+r*Math.sin(angle)}"
-    fill="none" stroke="#70384b" stroke-width="2.4"/>`;
- }
- if(elev){
-  const angle=Math.atan2(ground-roof,right-left);
-  body+=line(right,ground,left,roof,'#166353',3.5,dep?'6 6':'')+
-   `<path data-dg-angle="elevation" d="M${right-r} ${ground} A${r} ${r} 0 0 1 ${right-r*Math.cos(angle)} ${ground-r*Math.sin(angle)}"
-    fill="none" stroke="#166353" stroke-width="2.4"/>`;
- }
- body+=`<path d="M${left} ${ground-16}h16v16" fill="none" stroke="#272836" stroke-width="2"/></g>`;
- const note=ta?'செங்குத்து உயரம், தரைத் தூரம், பார்வைக் கோணம் ஆகியவை ஒரு செங்கோண முக்கோணத்தை உருவாக்குகின்றன. tan θ = உயரம் / கிடைமட்டத் தூரம்.':
-  'The vertical difference, horizontal distance and sightline form a right triangle. tan θ = vertical difference / horizontal distance.';
- const noteEye=/1\.8 m/.test(q)?(ta?' பார்வையாளரின் 1.8 மீ கண் உயரத்தையும் கணக்கில் எடுத்துக்கொள்ளுங்கள்.':
-  ' Account for the observer’s 1.8 m eye level when calculating the window height.'):'';
+function tower(item,lang){const q=item.q.en,dep=/depression/i.test(q),elev=/elevation/i.test(q)||!dep,mult=(dep&&elev);
+ let body=`<rect x="89" y="60" width="45" height="210" rx="5" fill="#b7c1dc" stroke="#8492b6" stroke-width="2"/>`+line(44,270,574,270,'#78c9b2',6)+text(108,294,'vertical',17,'#6d618a')+text(358,296,'horizontal distance',17,'#5579b0')+line(133,270,488,270,'#4c87da',5);
+ if(dep){body+=line(133,80,488,80,'#98a3ba',2.5,'7 6')+line(133,80,488,270,'#dfab46',5)+text(349,91,'horizontal eye line',15,'#777c91')+`<path d="M190 80A57 57 0 0 1 183 106" fill="none" stroke="#765cc7" stroke-width="4"/>`+text(218,121,'depression θ',17,'#6853aa')}
+ if(elev){body+=line(488,270,133,60,'#ed6d9b',dep?3.5:5,dep?'6 6':'')+`<path d="M436 270A52 52 0 0 1 444 244" fill="none" stroke="#765cc7" stroke-width="4"/>`+text(454,225,'elevation θ',17,'#6853aa')}
+ body+=text(108,41,'H',20,'#b3487b')+`<path d="M134 253h16v17" fill="none" stroke="#4b648f" stroke-width="3"/>`;
+ const note=lang==='ta'?'செங்குத்து உயரம், தரைத் தூரம், பார்வைக் கோணம் ஆகியவை ஒரு செங்கோண முக்கோணத்தை உருவாக்குகின்றன. tan θ = உயரம் / கிடைமட்டத் தூரம்.':'The vertical difference, horizontal distance and sightline form a right triangle. tan θ = vertical difference / horizontal distance.';
+ const noteEye=/1\.8 m/.test(q)?' Account for the observer’s 1.8 m eye level when calculating the window height.':'';
  const given=[...new Set([...(q.match(/\d+(?:\.\d+)?(?:√3)?\s*m\b/g)||[]),...(q.match(/\d+°/g)||[])])].slice(0,7);
- const key=[...(given.length?[given.join(' · ')]:[])];
- if(dep)key.push(ta?'கோடிட்ட கிடைமட்டக் கண்மட்டம்':'Dashed eye-level horizontal',
-  ta?'ஊதா பார்வைக்கோடு · இறக்கக்கோணம் θ':'Plum sightline · angle of depression θ');
- if(elev)key.push(ta?'பச்சைப் பார்வைக்கோடு · ஏற்றக்கோணம் θ':'Green sightline · angle of elevation θ');
- key.push(ta?'பார்வைக் கோடுகளின் திட்டப்படம்':'Schematic of the viewing directions');
- const description=dep&&elev?(ta?'ஏற்றக்கோணம் மற்றும் இறக்கக்கோணம்':'Angles of elevation and depression'):
-  dep?(ta?'இறக்கக்கோணப் பார்வைக்கோடு':'Angle of depression sightline'):
-  (ta?'ஏற்றக்கோணப் பார்வைக்கோடு':'Angle of elevation sightline');
- return pack(svg(body,description)+measuredKey(key,ta)+intro({en:note+noteEye},false),description);
+ return pack(svg(body,'Elevation and depression right-triangle construction')+intro({en:note+noteEye},false)+legend([...(given.length?['Question values: '+given.join(' · ')]:[]),dep?'Angle of depression':'Angle of elevation',mult?'Both viewing directions':'Right angle at the base','Not to scale']),lang==='ta'?'கேள்வியிலுள்ள பார்வைக் கோணங்களுக்கான கட்டமைப்புக் காட்சி; அளவுப்படி இல்லை.':'Conceptual construction for the sightlines in this question; deliberately not to scale.');
 }
 function triangles(item,lang){const q=item.q.en;
  if(/15\/17/.test(q)&&/12\/13/.test(q)){
@@ -223,13 +173,12 @@ function practice(item,lang){const q=item.q.en;
  return null;
 }
 function render(ctx){const {item,lang}=ctx;const q=item.q?.en||'',d=item.diagram;
- if(item.classNum===10&&d==='tower')return tower(item,lang);
  const special=practice(item,lang);if(special)return special;
  if(item.classNum===9&&!['stats','area','triangle','identity','sets'].includes(d)&&d!==null)return null;
  if(/midpoint|x²−5x\+6/.test(q))return practice(item,lang);
  if(item.classNum===11){if(d==='circle')return circle(item,lang);if(d==='inverse')return inverse(item,lang);if(d==='identity')return triangles(item,lang)}
  if(item.classNum===12){if(d==='wave')return wave(item,lang);if(d==='inverse')return inverse(item,lang);if(d==='circle')return roots(item,lang)}
- if(item.classNum===10&&(d==='identity'||d==='triangle'))return triangles(item,lang);
+ if(item.classNum===10){if(d==='tower')return tower(item,lang);if(d==='identity'||d==='triangle')return triangles(item,lang)}
  return null;
 }
 function attach(ctx,root){const slider=root.querySelector('#conceptAngle');if(!slider)return;slider.oninput=()=>{

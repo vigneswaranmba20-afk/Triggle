@@ -697,14 +697,14 @@
    renderedFigureLanguage=lang;
    const figure=$('inlineFigure');const yes=isQuestionFigure(current);
    figure.hidden=!yes; if(!yes)return;
-   const aligned=window.TriggleSetVenn?.render(current,lang);
+   const generated=window.TriggleSetVenn?.render(current,lang)||window.TriggleSightlineExercises?.render({item:current,lang});
    const figSpec=resolveFigureSpec(current);
-   const svg=figSpec?textbookFigureImage(current,66):(aligned?.html||window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)}));
+   const svg=figSpec?textbookFigureImage(current,66):(generated?.html||window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)}));
    mountFigure($('inlineFigureVisual'),svg,current);
    localizeInlineSvg($('inlineFigureVisual'),current);
    const d=current.diagram;
    const measures=d?.kind==='triangle'?((lang==='ta'?'எதிர்ப்பக்கம் ':'Opposite ')+d.opp+' · '+(lang==='ta'?'அடுத்துள்ள பக்கம் ':'Adjacent ')+d.adj+' · '+(lang==='ta'?'கர்ணம் ':'Hypotenuse ')+d.hyp+'. '):'';
-   $('inlineFigureCaption').textContent=figSpec?(figureCaption(current,figSpec)||ui('textbookFigure')):(aligned?.caption||(measures+ui('inlineFigureNote')));
+   $('inlineFigureCaption').textContent=figSpec?(figureCaption(current,figSpec)||ui('textbookFigure')):(generated?.caption||(measures+ui('inlineFigureNote')));
  }
  function renderText(){
   // Icon-only controls on narrow readers still have full bilingual names.
@@ -949,7 +949,8 @@
   if(!hasUsefulFigure(current))return;
   const context={item:current,lang,renderText:tr};
   const figSpec=resolveFigureSpec(current);
-  let graphic=figSpec?{html:textbookFigureImage(current,78),caption:figureCaption(current,figSpec)||ui('textbookFigure')}:(window.TriggleSetVenn?.render(current,lang)||window.TriggleConcept?.render(context));
+  let graphic=figSpec?{html:textbookFigureImage(current,78),caption:figureCaption(current,figSpec)||ui('textbookFigure')}:
+   (window.TriggleSetVenn?.render(current,lang)||window.TriggleSightlineExercises?.render(context)||window.TriggleConcept?.render(context));
   if(!graphic){let svg='';if(current.diagram&&typeof current.diagram==='object')svg=window.TriggleDraw.drawClassic({demo:current.diagram,ref:tr(current.label),title:tr(current.title)});else svg=window.TriggleDraw.drawSimple(current.diagram||'identity');graphic={html:svg,caption:lang==='ta'?'படம் விளக்கத்திற்காக மட்டுமே; அளவுப்படி இல்லாமல் இருக்கலாம்.':'Original conceptual illustration; not necessarily drawn to scale.'}}
   mountFigure($('diagramContent'),graphic.html,current);
   if(current.geometryConstruction) {
