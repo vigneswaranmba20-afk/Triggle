@@ -103,12 +103,27 @@ async function openAndCheck(page, trigger, label, width, scale) {
   const headerBefore = await header.boundingBox();
   const pageScroll = await page.evaluate(() => window.scrollY);
   await last.scrollIntoViewIfNeeded();
+  const [rowBounds, listBounds] = await Promise.all([last.boundingBox(), list.boundingBox()]);
+  if (rowBounds.height > listBounds.height + 1) {
+    // A row may exceed the scrollport in a short window at large text sizes.
+    const edges = await list.evaluate(el => {
+      const last = el.lastElementChild;
+      const clip = el.getBoundingClientRect();
+      el.scrollTop += last.getBoundingClientRect().top - clip.top;
+      const top = last.getBoundingClientRect().top;
+      el.scrollTop = el.scrollHeight;
+      return {top, bottom: last.getBoundingClientRect().bottom, clipTop: clip.top, clipBottom: clip.bottom};
+    });
+    assert.ok(edges.top >= edges.clipTop - 1 && edges.top < edges.clipBottom &&
+      edges.bottom <= edges.clipBottom + 1 && edges.bottom > edges.clipTop,
+    label + ' both edges of the tall row are reachable ' + JSON.stringify(edges));
+  } else {
+    assert.ok(rowBounds.y >= listBounds.y - 1 &&
+      rowBounds.y + rowBounds.height <= listBounds.y + listBounds.height + 1,
+    label + ' last row is fully reachable ' + JSON.stringify({rowBounds, listBounds}));
+  }
   assert.deepEqual(await header.boundingBox(), headerBefore, label + ' header stays in place');
   assert.equal(await page.evaluate(() => window.scrollY), pageScroll, label + ' page stays in place');
-  const [rowBounds, listBounds] = await Promise.all([last.boundingBox(), list.boundingBox()]);
-  assert.ok(rowBounds.y >= listBounds.y - 1 &&
-    rowBounds.y + rowBounds.height <= listBounds.y + listBounds.height + 1,
-  label + ' last row is fully reachable ' + JSON.stringify({rowBounds, listBounds}));
   if (result.scrolls && result.rows.length > 2) {
     assert.ok(await list.evaluate(el => el.scrollTop > 0), label + ' options scroll independently');
   }
