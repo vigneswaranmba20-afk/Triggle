@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 230" role="img" aria-labelledby="t d">
   <title id="t">Shaded right triangle ABD inside triangle ABC (Fig. 7.8)</title>
   <desc id="d">C is left of A on the horizontal 34 cm side. BC is 42 cm, BD is 16 cm and DA is 12 cm. The right angle at D lies in shaded triangle ABD.</desc>
   <polygon points="29,157 233,157 251.35294,38.41176" fill="none" stroke="#272836" stroke-width="1.75"/>
@@ -9,7 +9,6 @@
     <text x="158" y="109" fill="#166353">D</text>
     <text x="131" y="181">34 cm</text>
     <text x="124" y="91" transform="rotate(-28 124 91)">42 cm</text>
-    <text x="220.38" y="86.84" transform="rotate(-44.3 220.38 86.84)" dominant-baseline="central" fill="#166353">16 cm</text>
-    <text x="182" y="129" transform="rotate(45.7 182 129)" dominant-baseline="central" fill="#166353">12 cm</text>
+    <text x="160" y="211" fill="#166353">AD = 12 cm · BD = 16 cm</text>
   </g>
 </svg>
