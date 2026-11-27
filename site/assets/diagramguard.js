@@ -171,7 +171,9 @@
       const origin=origins[index];
       if(!origin)continue;
       const font=parseFloat(getComputedStyle(label).fontSize);
-      const trials=candidates||offsets(direction,font);
+      const trials=candidates||(Array.isArray(direction?.[0])
+        ? direction.flatMap(heading=>offsets(heading,font)).sort((a,b)=>Math.hypot(...a)-Math.hypot(...b))
+        : offsets(direction,font));
       let best=null;
       for(const [x,y] of trials){
         const {a,b,c,d}=origin.matrix;

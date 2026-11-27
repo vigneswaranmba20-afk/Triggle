@@ -8,13 +8,17 @@ const {ROOT,loadRuntime}=require('./curriculum_bulk.cjs');
 const site=path.join(ROOT,'site');
 const rootFile=(file)=>fs.readFileSync(path.join(site,file),'utf8');
 const runtime=loadRuntime(undefined,{trace:true});
-const coordinateFigures=new Set(require('../data/textbook-fidelity/g10-ch5-ex5-1.json').items
-  .filter(item=>item.figure.asset).map(item=>item.id));
 const scope={};
 const sandbox=vm.createContext({window:scope,console});
 for(const file of [...runtime.loaded,'assets/set-venn-figures.js']) {
   vm.runInContext(rootFile(file),sandbox,{filename:file,timeout:5000});
 }
+const coordinateFigures=new Set();
+const plotRegistry={register(prefix,plots){Object.keys(plots).forEach(key=>coordinateFigures.add(prefix+key));}};
+for(const grade of [9,10]){
+  vm.runInNewContext(rootFile('assets/g'+grade+'-ch5-coordinate-figures.js'),{window:{TriggleCoordinateFigures:plotRegistry}});
+}
+scope.TriggleG9FrontierGraphs(runtime.classes[9].items.filter(item=>coordinateFigures.has(item.id)));
 const table=new Map(), referenced=new Set();
 const stripRoot=file=>file?.replace(/^\.\//,'')||'';
 const media=file=>file.endsWith('.svg')?'SVG asset':'raster asset';
@@ -47,7 +51,8 @@ const fixedFigures=vm.runInNewContext('('+rootFile('assets/app.js').match(/const
 const shapes=new Set(['triangle','two-triangles','two-right','kite','tree','unitcircle','complement-pairs','tower',
   'circle','wave','inverse','real-number-line','real-number-arrows']);
 for(const grade of [9,10]){
-  for(const item of runtime.classes[grade].items){
+  for(const record of runtime.classes[grade].items){
+    const item=coordinateFigures.has(record.id)?scope.TriggleG9Ch5Overrides.get(record.id)||record:record;
     const {id}=item, chapter='g'+grade+'-ch'+item.chapter;
     const enOverride=scope.TriggleFrontierFigureTamil[id]?.en?.src;
     const taOverride=scope.TriggleFrontierFigureTamil[id]?.src;
@@ -58,10 +63,10 @@ for(const grade of [9,10]){
       item.sourceFidelity?.sourcePdfPage&&'PDF '+format(item.sourceFidelity.sourcePdfPage),format(item.source)].filter(Boolean).join(' | ');
     if(en){
       const rectangle=id==='c10-4-ex4-3-q4';
-      const responsive=rectangle||coordinateFigures.has(id)||/^g9-ch5-ex5\.1-q[1-4]$/.test(id);
+      const responsive=rectangle||coordinateFigures.has(id);
       add(rectangle?'wxyz-rectangle':'asset:'+hash(en)+':'+hash(ta),{
         id,chapter,en,ta,source:src,rendering:responsive?'responsive inline SVG; SVG fallback':media(en),
-        surface:item.figureInSolution?'solution and figure dialog':'inline and figure dialog',
+        surface:item.figureInSolution?(responsive?'figure dialog':'solution and figure dialog'):'inline and figure dialog',
         qualification:responsive?'DiagramGuard browser fixture':'unverified'
       });
     }

@@ -139,6 +139,15 @@ async function navigateOffline(browser, base) {
     await projection.waitFor();
     assert.equal(await projection.locator('line[data-dg-obstacle$="-guide"]').count(),8);
     assert.deepEqual(await projection.evaluate(svg=>window.TriggleDiagramGuard.audit(svg,{discover:true}).issues),[]);
+    await page.goto(base+link(9,'question','g9-ch5-ex5.2-q11'));
+    await ready(page);
+    assert(await page.locator('#inlineFigure').isHidden());
+    await page.locator('#figureBtn').click();
+    const radii = page.locator('#figureDialog svg.diagramguard-coordinate[data-dg-ready]');
+    await radii.waitFor();
+    assert.equal(await radii.locator('[data-dg-circle]').count(),1);
+    assert.equal(await radii.locator('[data-dg-edge]').count(),3);
+    await page.keyboard.press('Escape');
     await page.goto(base+link(10,'question','c10-5-ex5-1-q9'));
     await ready(page);
     assert.equal(await page.evaluate(()=>window.TriggleStudentRelease.chapter),'g10-ch5');

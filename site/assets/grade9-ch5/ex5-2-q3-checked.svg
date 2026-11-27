@@ -1,82 +1,120 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 270 536" role="img" aria-labelledby="title desc" font-family="system-ui, sans-serif">
-<title id="title">Isosceles triangles in parts (i) and (ii)</title>
-<desc id="desc">The first triangle has equal sides AB and BC. The second has equal sides BC and CA.</desc>
-<g transform="translate(0,0)">
-<rect x="8" y="8" width="256" height="252" rx="12" fill="#fffeff" stroke="#ded6ea"/>
-<text x="21.00" y="29.00" text-anchor="start" fill="#292440" font-size="15" font-weight="700">(i)</text>
-<line x1="54.78" y1="201.83" x2="54.78" y2="59.17" stroke="#e8e3f2" stroke-width="1"/>
-<text x="54.78" y="215.83" text-anchor="middle" fill="#292440" font-size="12">−2</text>
-<line x1="102.33" y1="201.83" x2="102.33" y2="59.17" stroke="#e8e3f2" stroke-width="1"/>
-<line x1="149.89" y1="201.83" x2="149.89" y2="59.17" stroke="#e8e3f2" stroke-width="1"/>
-<text x="149.89" y="215.83" text-anchor="middle" fill="#292440" font-size="12">2</text>
-<line x1="197.44" y1="201.83" x2="197.44" y2="59.17" stroke="#e8e3f2" stroke-width="1"/>
-<text x="197.44" y="215.83" text-anchor="middle" fill="#292440" font-size="12">4</text>
-<line x1="245.00" y1="201.83" x2="245.00" y2="59.17" stroke="#e8e3f2" stroke-width="1"/>
-<text x="245.00" y="215.83" text-anchor="middle" fill="#292440" font-size="12">6</text>
-<line x1="31.00" y1="201.83" x2="245.00" y2="201.83" stroke="#e8e3f2" stroke-width="1"/>
-<text x="25.00" y="205.83" text-anchor="end" fill="#292440" font-size="11">−1</text>
-<line x1="31.00" y1="178.06" x2="245.00" y2="178.06" stroke="#e8e3f2" stroke-width="1"/>
-<line x1="31.00" y1="154.28" x2="245.00" y2="154.28" stroke="#e8e3f2" stroke-width="1"/>
-<text x="25.00" y="158.28" text-anchor="end" fill="#292440" font-size="11">1</text>
-<line x1="31.00" y1="130.50" x2="245.00" y2="130.50" stroke="#e8e3f2" stroke-width="1"/>
-<text x="25.00" y="134.50" text-anchor="end" fill="#292440" font-size="11">2</text>
-<line x1="31.00" y1="106.72" x2="245.00" y2="106.72" stroke="#e8e3f2" stroke-width="1"/>
-<text x="25.00" y="110.72" text-anchor="end" fill="#292440" font-size="11">3</text>
-<line x1="31.00" y1="82.94" x2="245.00" y2="82.94" stroke="#e8e3f2" stroke-width="1"/>
-<text x="25.00" y="86.94" text-anchor="end" fill="#292440" font-size="11">4</text>
-<line x1="31.00" y1="59.17" x2="245.00" y2="59.17" stroke="#e8e3f2" stroke-width="1"/>
-<text x="25.00" y="63.17" text-anchor="end" fill="#292440" font-size="11">5</text>
-<line x1="31.00" y1="178.06" x2="245.00" y2="178.06" stroke="#9b91ae" stroke-width="1.6"/>
-<line x1="102.33" y1="201.83" x2="102.33" y2="59.17" stroke="#9b91ae" stroke-width="1.6"/>
-<text x="252.00" y="173.06" text-anchor="middle" fill="#292440" font-size="13">x</text>
-<text x="111.33" y="61.17" text-anchor="middle" fill="#292440" font-size="13">y</text>
-<text x="95.33" y="191.06" text-anchor="end" fill="#292440" font-size="11">0</text>
-<polygon points="221.22,82.94 149.89,178.06 54.78,106.72" fill="#ece2f8" fill-opacity=".55" stroke="#693d9c" stroke-width="2.3" stroke-linejoin="round"/>
-<circle cx="221.22" cy="82.94" r="3.6" fill="#53307f" stroke="white" stroke-width="1.3"/>
-<text x="229.22" y="75.94" text-anchor="middle" fill="#292440" font-size="14" font-weight="700">A</text>
-<circle cx="149.89" cy="178.06" r="3.6" fill="#53307f" stroke="white" stroke-width="1.3"/>
-<text x="157.89" y="195.06" text-anchor="middle" fill="#292440" font-size="14" font-weight="700">B</text>
-<circle cx="54.78" cy="106.72" r="3.6" fill="#53307f" stroke="white" stroke-width="1.3"/>
-<text x="46.78" y="98.72" text-anchor="middle" fill="#292440" font-size="14" font-weight="700">C</text>
-</g>
-<g transform="translate(0,268)">
-<rect x="8" y="8" width="256" height="252" rx="12" fill="#fffeff" stroke="#ded6ea"/>
-<text x="21.00" y="29.00" text-anchor="start" fill="#292440" font-size="15" font-weight="700">(ii)</text>
-<line x1="89.25" y1="228.00" x2="89.25" y2="33.00" stroke="#e8e3f2" stroke-width="1"/>
-<text x="89.25" y="242.00" text-anchor="middle" fill="#292440" font-size="12">−2</text>
-<line x1="113.62" y1="228.00" x2="113.62" y2="33.00" stroke="#e8e3f2" stroke-width="1"/>
-<line x1="138.00" y1="228.00" x2="138.00" y2="33.00" stroke="#e8e3f2" stroke-width="1"/>
-<text x="138.00" y="242.00" text-anchor="middle" fill="#292440" font-size="12">2</text>
-<line x1="162.38" y1="228.00" x2="162.38" y2="33.00" stroke="#e8e3f2" stroke-width="1"/>
-<text x="162.38" y="242.00" text-anchor="middle" fill="#292440" font-size="12">4</text>
-<line x1="186.75" y1="228.00" x2="186.75" y2="33.00" stroke="#e8e3f2" stroke-width="1"/>
-<text x="186.75" y="242.00" text-anchor="middle" fill="#292440" font-size="12">6</text>
-<line x1="77.06" y1="215.81" x2="198.94" y2="215.81" stroke="#e8e3f2" stroke-width="1"/>
-<text x="71.06" y="219.81" text-anchor="end" fill="#292440" font-size="11">−4</text>
-<line x1="77.06" y1="191.44" x2="198.94" y2="191.44" stroke="#e8e3f2" stroke-width="1"/>
-<text x="71.06" y="195.44" text-anchor="end" fill="#292440" font-size="11">−2</text>
-<line x1="77.06" y1="167.06" x2="198.94" y2="167.06" stroke="#e8e3f2" stroke-width="1"/>
-<line x1="77.06" y1="142.69" x2="198.94" y2="142.69" stroke="#e8e3f2" stroke-width="1"/>
-<text x="71.06" y="146.69" text-anchor="end" fill="#292440" font-size="11">2</text>
-<line x1="77.06" y1="118.31" x2="198.94" y2="118.31" stroke="#e8e3f2" stroke-width="1"/>
-<text x="71.06" y="122.31" text-anchor="end" fill="#292440" font-size="11">4</text>
-<line x1="77.06" y1="93.94" x2="198.94" y2="93.94" stroke="#e8e3f2" stroke-width="1"/>
-<text x="71.06" y="97.94" text-anchor="end" fill="#292440" font-size="11">6</text>
-<line x1="77.06" y1="69.56" x2="198.94" y2="69.56" stroke="#e8e3f2" stroke-width="1"/>
-<text x="71.06" y="73.56" text-anchor="end" fill="#292440" font-size="11">8</text>
-<line x1="77.06" y1="45.19" x2="198.94" y2="45.19" stroke="#e8e3f2" stroke-width="1"/>
-<text x="71.06" y="49.19" text-anchor="end" fill="#292440" font-size="11">10</text>
-<line x1="77.06" y1="167.06" x2="198.94" y2="167.06" stroke="#9b91ae" stroke-width="1.6"/>
-<line x1="113.62" y1="228.00" x2="113.62" y2="33.00" stroke="#9b91ae" stroke-width="1.6"/>
-<text x="205.94" y="162.06" text-anchor="middle" fill="#292440" font-size="13">x</text>
-<text x="122.62" y="35.00" text-anchor="middle" fill="#292440" font-size="13">y</text>
-<text x="106.62" y="180.06" text-anchor="end" fill="#292440" font-size="11">0</text>
-<polygon points="186.75,215.81 89.25,215.81 138.00,45.19" fill="#ece2f8" fill-opacity=".55" stroke="#693d9c" stroke-width="2.3" stroke-linejoin="round"/>
-<circle cx="186.75" cy="215.81" r="3.6" fill="#53307f" stroke="white" stroke-width="1.3"/>
-<text x="193.75" y="232.81" text-anchor="middle" fill="#292440" font-size="14" font-weight="700">A</text>
-<circle cx="89.25" cy="215.81" r="3.6" fill="#53307f" stroke="white" stroke-width="1.3"/>
-<text x="81.25" y="232.81" text-anchor="middle" fill="#292440" font-size="14" font-weight="700">B</text>
-<circle cx="138.00" cy="45.19" r="3.6" fill="#53307f" stroke="white" stroke-width="1.3"/>
-<text x="146.00" y="38.19" text-anchor="middle" fill="#292440" font-size="14" font-weight="700">C</text>
-</g>
+<!-- Generated by site/tools/build_diagramguard_coordinate_assets.cjs -->
+<svg xmlns="http://www.w3.org/2000/svg" role="img" font-family="system-ui, sans-serif" font-weight="550" aria-labelledby="t desc" viewBox="0 0 300 611">
+  <title id="t">Isosceles triangles in parts (i) and (ii)</title>
+  <desc id="desc">The first triangle has equal sides AB and BC. The second has equal sides BC and CA.</desc>
+  <text x="150" y="22" text-anchor="middle" font-size="15" fill="#24203c">(i)</text>
+  <g transform="translate(0 34)">
+    <g aria-hidden="true" stroke="#dedbe4" stroke-width=".8">
+      <line x1="17.92" y1="23.2" x2="17.92" y2="129.05"/>
+      <line x1="17.92" y1="155.05" x2="17.92" y2="181.696"/>
+      <line x1="44.336" y1="23.2" x2="44.336" y2="181.696"/>
+      <line x1="70.752" y1="23.2" x2="70.752" y2="181.696"/>
+      <line x1="97.168" y1="23.2" x2="97.168" y2="181.696"/>
+      <line x1="150" y1="23.2" x2="150" y2="181.696"/>
+      <line x1="176.416" y1="23.2" x2="176.416" y2="156.888"/>
+      <line x1="202.832" y1="23.2" x2="202.832" y2="181.696"/>
+      <line x1="229.248" y1="23.2" x2="229.248" y2="181.696"/>
+      <line x1="255.664" y1="23.2" x2="255.664" y2="181.696"/>
+      <line x1="282.08" y1="23.2" x2="282.08" y2="181.696"/>
+      <line x1="17.92" y1="181.696" x2="113.631" y2="181.696"/>
+      <line x1="133.991" y1="181.696" x2="162.598" y2="181.696"/>
+      <line x1="178.691" y1="181.696" x2="282.08" y2="181.696"/>
+      <line x1="17.92" y1="128.864" x2="282.08" y2="128.864"/>
+      <line x1="17.92" y1="102.448" x2="282.08" y2="102.448"/>
+      <line x1="17.92" y1="76.032" x2="53.019" y2="76.032"/>
+      <line x1="69.019" y1="76.032" x2="282.08" y2="76.032"/>
+      <line x1="17.92" y1="49.616" x2="258.346" y2="49.616"/>
+      <line x1="275.346" y1="49.616" x2="282.08" y2="49.616"/>
+      <line x1="17.92" y1="23.2" x2="108.337" y2="23.2"/>
+      <line x1="124.337" y1="23.2" x2="282.08" y2="23.2"/>
+    </g>
+    <polygon points="255.664,49.616 176.416,155.28 70.752,76.032" fill="#443878" fill-opacity="0.11" data-dg-region="ABC"/>
+    <line x1="17.92" y1="155.28" x2="282.08" y2="155.28" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="X-axis"/>
+    <polyline points="277.08,157.78 282.08,155.28 277.08,152.78" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="X-arrow"/>
+    <polyline points="22.92,152.78 17.92,155.28 22.92,157.78" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="X′-arrow"/>
+    <line x1="123.584" y1="181.696" x2="123.584" y2="23.2" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="Y-axis"/>
+    <polyline points="126.084,28.2 123.584,23.2 121.084,28.2" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="Y-arrow"/>
+    <polyline points="121.084,176.696 123.584,181.696 126.084,176.696" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="Y′-arrow"/>
+    <line x1="255.664" y1="49.616" x2="176.416" y2="155.28" stroke="#443878" stroke-width="1.65" stroke-linecap="round" data-dg-obstacle="AB" data-dg-edge="AB"/>
+    <line x1="176.416" y1="155.28" x2="70.752" y2="76.032" stroke="#443878" stroke-width="1.65" stroke-linecap="round" data-dg-obstacle="BC" data-dg-edge="BC"/>
+    <line x1="70.752" y1="76.032" x2="255.664" y2="49.616" stroke="#443878" stroke-width="1.65" stroke-linecap="round" data-dg-obstacle="CA" data-dg-edge="CA"/>
+    <circle cx="255.664" cy="49.616" r="3.1" fill="#24203c" data-dg-obstacle="point-A" data-dg-fill="" data-dg-point="A"/>
+    <circle cx="176.416" cy="155.28" r="3.1" fill="#24203c" data-dg-obstacle="point-B" data-dg-fill="" data-dg-point="B"/>
+    <circle cx="70.752" cy="76.032" r="3.1" fill="#24203c" data-dg-obstacle="point-C" data-dg-fill="" data-dg-point="C"/>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X" data-dg-font="vertex" x="292.43" y="155.28" font-size="15">X</text>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X′" data-dg-font="vertex" x="11.52" y="142.8" font-size="15">X′</text>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y" data-dg-font="vertex" x="116.024" y="12.85" font-size="15">Y</text>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y′" data-dg-font="vertex" x="123.584" y="195.196" font-size="15">Y′</text>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="O" data-dg-font="vertex" x="110.944" y="142.64" font-size="15">O</text>
+    <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="A" data-dg-font="vertex" x="266.526" y="47.763" font-size="15">A</text>
+    <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="B" data-dg-font="vertex" x="170.645" y="170.638" font-size="15">B</text>
+    <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="C" data-dg-font="vertex" x="60.8" y="73.189" font-size="15">C</text>
+  </g>
+  <text x="50" y="260" text-anchor="middle" font-size="14" fill="#24203c">A (5, 4)</text>
+  <text x="150" y="260" text-anchor="middle" font-size="14" fill="#24203c">B (2, 0)</text>
+  <text x="250" y="260" text-anchor="middle" font-size="14" fill="#24203c">C (−2, 3)</text>
+  <text x="150" y="299" text-anchor="middle" font-size="15" fill="#24203c">(ii)</text>
+  <g transform="translate(0 311)">
+    <g aria-hidden="true" stroke="#dedbe4" stroke-width=".8">
+      <line x1="75.75" y1="23.2" x2="75.75" y2="239.2"/>
+      <line x1="89.25" y1="23.2" x2="89.25" y2="217.186"/>
+      <line x1="102.75" y1="23.2" x2="102.75" y2="239.2"/>
+      <line x1="116.25" y1="25.1" x2="116.25" y2="239.2"/>
+      <line x1="143.25" y1="38.6" x2="143.25" y2="145.31"/>
+      <line x1="143.25" y1="171.31" x2="143.25" y2="239.2"/>
+      <line x1="156.75" y1="23.2" x2="156.75" y2="239.2"/>
+      <line x1="170.25" y1="23.2" x2="170.25" y2="239.2"/>
+      <line x1="183.75" y1="23.2" x2="183.75" y2="239.2"/>
+      <line x1="197.25" y1="23.2" x2="197.25" y2="239.2"/>
+      <line x1="210.75" y1="23.2" x2="210.75" y2="239.2"/>
+      <line x1="224.25" y1="23.2" x2="224.25" y2="217.186"/>
+      <line x1="75.75" y1="239.2" x2="83.004" y2="239.2"/>
+      <line x1="99.098" y1="239.2" x2="119.797" y2="239.2"/>
+      <line x1="140.157" y1="239.2" x2="214.269" y2="239.2"/>
+      <line x1="75.75" y1="225.7" x2="83.004" y2="225.7"/>
+      <line x1="99.098" y1="225.7" x2="214.269" y2="225.7"/>
+      <line x1="75.75" y1="212.2" x2="224.25" y2="212.2"/>
+      <line x1="75.75" y1="198.7" x2="224.25" y2="198.7"/>
+      <line x1="75.75" y1="185.2" x2="224.25" y2="185.2"/>
+      <line x1="75.75" y1="158.2" x2="133.413" y2="158.2"/>
+      <line x1="151.413" y1="158.2" x2="224.25" y2="158.2"/>
+      <line x1="75.75" y1="144.7" x2="224.25" y2="144.7"/>
+      <line x1="75.75" y1="131.2" x2="224.25" y2="131.2"/>
+      <line x1="75.75" y1="117.7" x2="224.25" y2="117.7"/>
+      <line x1="75.75" y1="104.2" x2="224.25" y2="104.2"/>
+      <line x1="75.75" y1="90.7" x2="224.25" y2="90.7"/>
+      <line x1="75.75" y1="77.2" x2="224.25" y2="77.2"/>
+      <line x1="75.75" y1="63.7" x2="224.25" y2="63.7"/>
+      <line x1="75.75" y1="50.2" x2="224.25" y2="50.2"/>
+      <line x1="75.75" y1="36.7" x2="137.494" y2="36.7"/>
+      <line x1="153.494" y1="36.7" x2="224.25" y2="36.7"/>
+      <line x1="75.75" y1="23.2" x2="114.503" y2="23.2"/>
+      <line x1="130.503" y1="23.2" x2="137.494" y2="23.2"/>
+      <line x1="153.494" y1="23.2" x2="224.25" y2="23.2"/>
+    </g>
+    <polygon points="210.75,225.7 102.75,225.7 156.75,36.7" fill="#443878" fill-opacity="0.11" data-dg-region="ABC"/>
+    <line x1="75.75" y1="171.7" x2="224.25" y2="171.7" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="X-axis"/>
+    <polyline points="219.25,174.2 224.25,171.7 219.25,169.2" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="X-arrow"/>
+    <polyline points="80.75,169.2 75.75,171.7 80.75,174.2" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="X′-arrow"/>
+    <line x1="129.75" y1="239.2" x2="129.75" y2="23.2" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="Y-axis"/>
+    <polyline points="132.25,28.2 129.75,23.2 127.25,28.2" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="Y-arrow"/>
+    <polyline points="127.25,234.2 129.75,239.2 132.25,234.2" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="Y′-arrow"/>
+    <line x1="210.75" y1="225.7" x2="102.75" y2="225.7" stroke="#443878" stroke-width="1.65" stroke-linecap="round" data-dg-obstacle="AB" data-dg-edge="AB"/>
+    <line x1="102.75" y1="225.7" x2="156.75" y2="36.7" stroke="#443878" stroke-width="1.65" stroke-linecap="round" data-dg-obstacle="BC" data-dg-edge="BC"/>
+    <line x1="156.75" y1="36.7" x2="210.75" y2="225.7" stroke="#443878" stroke-width="1.65" stroke-linecap="round" data-dg-obstacle="CA" data-dg-edge="CA"/>
+    <circle cx="210.75" cy="225.7" r="3.1" fill="#24203c" data-dg-obstacle="point-A" data-dg-fill="" data-dg-point="A"/>
+    <circle cx="102.75" cy="225.7" r="3.1" fill="#24203c" data-dg-obstacle="point-B" data-dg-fill="" data-dg-point="B"/>
+    <circle cx="156.75" cy="36.7" r="3.1" fill="#24203c" data-dg-obstacle="point-C" data-dg-fill="" data-dg-point="C"/>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X" data-dg-font="vertex" x="234.6" y="171.7" font-size="15">X</text>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X′" data-dg-font="vertex" x="64.71" y="171.7" font-size="15">X′</text>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y" data-dg-font="vertex" x="122.19" y="12.85" font-size="15">Y</text>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y′" data-dg-font="vertex" x="129.75" y="252.7" font-size="15">Y′</text>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="O" data-dg-font="vertex" x="142.39" y="159.06" font-size="15">O</text>
+    <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="A" data-dg-font="vertex" x="222.449" y="230.936" font-size="15">A</text>
+    <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="B" data-dg-font="vertex" x="91.051" y="230.936" font-size="15">B</text>
+    <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="C" data-dg-font="vertex" x="145.275" y="26.35" font-size="15">C</text>
+  </g>
+  <text x="50" y="594" text-anchor="middle" font-size="14" fill="#24203c">A (6, −4)</text>
+  <text x="150" y="594" text-anchor="middle" font-size="14" fill="#24203c">B (−2, −4)</text>
+  <text x="250" y="594" text-anchor="middle" font-size="14" fill="#24203c">C (2, 10)</text>
 </svg>
