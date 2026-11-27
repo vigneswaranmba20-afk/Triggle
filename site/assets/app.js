@@ -704,7 +704,9 @@
    localizeInlineSvg($('inlineFigureVisual'),current);
    const d=current.diagram;
    const measures=d?.kind==='triangle'?((lang==='ta'?'எதிர்ப்பக்கம் ':'Opposite ')+d.opp+' · '+(lang==='ta'?'அடுத்துள்ள பக்கம் ':'Adjacent ')+d.adj+' · '+(lang==='ta'?'கர்ணம் ':'Hypotenuse ')+d.hyp+'. '):'';
-   $('inlineFigureCaption').textContent=figSpec?(figureCaption(current,figSpec)||ui('textbookFigure')):(generated?.caption||(measures+ui('inlineFigureNote')));
+   const plottedCaption=$('inlineFigureVisual').querySelector('svg[data-dg-caption]')?.dataset.dgCaption;
+   $('inlineFigureCaption').textContent=figSpec?(figureCaption(current,figSpec)||ui('textbookFigure')):
+    (plottedCaption??(generated?.caption||(measures+ui('inlineFigureNote'))));
  }
  function renderText(){
   // Icon-only controls on narrow readers still have full bilingual names.

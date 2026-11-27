@@ -113,10 +113,11 @@
     const hasVerticalAxis=verticalAxis||xMin<0;
     const inset = rem*(projections ? 1.3 : 1.12);
     const verticalInset = rem*1.45;
+    const bottomInset = rem*(config.bottomInset ?? 1.45);
     const verticalRatio = config.heightRatio ?? (projections || quadrants ? 1 : axes ? .72 : .88);
     const scale = Math.min((width-2*inset)/(xMax-xMin),width*verticalRatio/(yMax-yMin));
     const edgeLabels = projections && scale<rem*1.18;
-    const height = Math.ceil((yMax-yMin)*scale+2*verticalInset);
+    const height = Math.ceil((yMax-yMin)*scale+verticalInset+bottomInset);
     const originX = (width-(xMax-xMin)*scale)/2-xMin*scale;
     const originY = verticalInset+yMax*scale;
     const toPlot = (x,y) => [originX+x*scale,originY-y*scale];
@@ -125,6 +126,12 @@
     svg.setAttribute('viewBox',`0 0 ${width} ${height}`);
     svg.replaceChildren();
 
+    for (const {x, value, width:barWidth, color=indigo} of config.bars||[]) {
+      const [left,top] = toPlot(x-barWidth/2,value);
+      const [,bottom] = toPlot(x,0);
+      svg.append(shape('rect',{x:left,y:top,width:barWidth*scale,height:bottom-top,fill:color,
+        'data-dg-bar':value,'data-dg-obstacle':'bar-'+x,'data-dg-fill':''}));
+    }
     if (config.quarterCircle) {
       const [cx,cy]=toPlot(0,0), [right,top]=toPlot(1,1);
       const arc=`M${cx} ${top} A${scale} ${scale} 0 0 1 ${right} ${cy}`;
@@ -259,6 +266,25 @@
       svg.append(shape('polyline',{points:`${x+ax},${y+ay} ${x+ax+bx},${y+ay+by} ${x+bx},${y+by}`,
         fill:'none',stroke:axis,'stroke-width':1.25,'data-dg-obstacle':index?'right-angle-'+(index+1):'right-angle'}));
     }
+    const anglePlacements = [];
+    for (const {vertices, label} of config.angleMarks||[]) {
+      const [a,anchor,b] = [...vertices].map(id=>projected[id]);
+      const vectorTo = ([x,y]) => [x-anchor[0],y-anchor[1]];
+      const rays = [vectorTo(a),vectorTo(b)];
+      const lengths = rays.map(ray=>Math.hypot(...ray));
+      const [from,to] = rays.map(([x,y])=>Math.atan2(y,x));
+      const difference = Math.atan2(Math.sin(to-from),Math.cos(to-from));
+      const radius = Math.min(.49*rem,.32*Math.min(...lengths));
+      const atAngle = angle => [anchor[0]+radius*Math.cos(angle),anchor[1]+radius*Math.sin(angle)];
+      const start = atAngle(from), end = atAngle(to);
+      svg.append(shape('path',{d:`M${start.join(' ')}A${radius} ${radius} 0 0 ${Number(difference>0)} ${end.join(' ')}`,
+        fill:'none',stroke:axis,'stroke-width':1.25,'data-dg-obstacle':'angle-'+label,'data-dg-angle-mark':vertices}));
+      const bisector = from+difference/2;
+      const candidates = [1.05,1.18,1.32,1.48,1.65,1.84,2.05,2.24].map(offset=>
+        [Math.cos(bisector)*offset*rem,Math.sin(bisector)*offset*rem]);
+      // The angle's full name remains in the figure key when the sector is narrow.
+      anglePlacements.push({label:text(label,indigo,'measurement'),anchor,candidates,optional:true});
+    }
     const center = toPlot((Math.min(...xs)+Math.max(...xs))/2,(Math.min(...ys)+Math.max(...ys))/2);
     const innerCenter = [...insideLabels].reduce(([x,y],id)=>[
       x+projected[id][0]/insideLabels.length,y+projected[id][1]/insideLabels.length
@@ -285,12 +311,13 @@
       } else {
         const direction = (edgeLabels && edgeDirections[id]) || directions[id] || [cx-center[0],cy-center[1]];
         const neighborPoints = associateLabels.includes(id) ? Object.values(projected).filter(point=>point!==anchor) : undefined;
-        placements.push({label,anchor,direction,neighborPoints});
+        const candidates = config.labelOffsets?.[id]?.map(([x,y])=>[x*rem,y*rem]);
+        placements.push({label,anchor,direction,neighborPoints,candidates});
       }
     }
 
     if (walk) placements.push(...quadrantPlacements);
-    guard.place(svg,[...placements,...secondaryTicks],walk&&quadrants?{gap:rem*.18}:undefined);
+    guard.place(svg,[...placements,...anglePlacements,...secondaryTicks],walk&&quadrants?{gap:rem*.18}:undefined);
     if (axes && config.referenceGrid!==false) {
       drawGrid(svg,toPlot,{xMin,xMax,yMin,yMax},gridStep??(projections ? 1 : Math.max(1,Math.ceil(rem*.68/scale))));
     }

@@ -1203,6 +1203,82 @@ async function grade9Angles(page,base,profiles){
   return checks;
 }
 
+async function grade9MeasurementFigures(page,base,profiles){
+  const exercises=[[6,'c9-exercise-6-1-q2'],[6,'c9-exercise-6-1-q9'],[8,'c9-8-8-practice-8']];
+  const verify=async (figure,chapter,id,percent,lang)=>{
+    await figure.waitFor({state:'visible'});
+    const result=await figure.evaluate(svg=>{
+      const line=node=>['x1','y1','x2','y2'].map(name=>Number(node.getAttribute(name)));
+      const figures=[...svg.querySelectorAll('[data-dg-edge]')].map(node=>[node.dataset.dgEdge,line(node)]);
+      const bars=[...svg.querySelectorAll('[data-dg-bar]')].map(rect=>({value:+rect.dataset.dgBar,
+        height:+rect.getAttribute('height'),top:+rect.getAttribute('y')}));
+      const key=svg.parentElement.querySelector('.diagramguard-coordinate-key, .diagramguard-coordinate-legend');
+      return {audit:TriggleDiagramGuard.audit(svg,{discover:true}), edges:Object.fromEntries(figures),bars,
+        angleMarks:[...svg.querySelectorAll('[data-dg-angle-mark]')].map(node=>node.dataset.dgAngleMark),
+        mean:svg.querySelector('[data-dg-analytic-line="mean"]')?.getAttribute('y1'),
+        title:svg.getAttribute('aria-label'),key:key.textContent, keyUnderPlot:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+        keyFits:key.scrollWidth<=key.clientWidth+1};
+    });
+    assert.deepEqual(result.audit.issues,[],`${id} ${page.viewportSize().width}px ${percent}% ${lang} ${figure}`);
+    assert(Object.values(result.audit.horizontalClipping).every(amount=>amount<=1));
+    assert(result.keyUnderPlot&&result.keyFits);
+    if(lang==='ta')assert.match(result.title,/[஀-௿]/u);
+    const min=Math.min(...result.audit.labels.map(label=>label.fontPx));
+    assert(min>=13*percent/100,`${id} displayed label size ${min}`);
+    if(chapter===8){
+      const {bars,mean,key}=result;
+      assert.deepEqual(bars.map(bar=>bar.value),[4,6,8,10]);
+      const baseline=bars[0].top+bars[0].height, scale=bars[0].height/4;
+      bars.forEach(({top,height,value})=>{near(top+height,baseline);near(height/scale,value);});
+      near((baseline-Number(mean))/scale,7);
+      assert.match(key,lang==='ta'?/சராசரி = 7/u:/Mean = 7/u);
+      return;
+    }
+    const {edges,key}=result;
+    const A=edges.AB.slice(0,2), B=edges.AB.slice(2), C=edges.BC.slice(2);
+    if(id.endsWith('q2')){
+      const D=edges.AD.slice(2), scale=length(A,D)/12;
+      near(angle(D,A,B),90);near(angle(D,A,C),90);
+      near(length(A,B)/scale,13);near(length(B,D)/scale,5);near(length(D,C)/scale,16);
+      assert.match(key,/AB = 13.*BD = 5.*DC = 16/u);
+    }else{
+      const D=edges.CD.slice(2), scale=length(C,D)/12;
+      near(angle(D,A,C),90);near(angle(C,A,B),90);
+      near(length(A,C)/scale,15);near(length(B,C)/scale,20);
+      near(length(A,D)/scale,9);near(length(D,B)/scale,16);
+      near(angle(C,A,D)+angle(C,D,B),90);
+      assert.deepEqual(result.angleMarks,['CAB','CBA','ACD','DCB']);
+      assert.match(key,/AC = 15.*BC = 20.*CD = 12.*AD = 9.*DB = 16/u);
+      assert.match(key,/α = ∠CAB.*β = ∠CBA.*θ = ∠ACD.*φ = ∠DCB/u);
+    }
+  };
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta'])for(const [chapter,id] of exercises){
+      await page.goto(`${base}/index.html?class=9&chapter=g9-ch${chapter}&question=${id}`);
+      await page.locator('body:not(.ver-starting)').waitFor();
+      await setLanguage(page,lang);
+      const inline=page.locator('#inlineFigureOpen');
+      const view=await inline.isVisible()?inline:page.locator('#figureBtn');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        if(chapter===6){
+          await verify(page.locator('#inlineFigureVisual svg[data-dg-ready]'),chapter,id,percent,lang);
+          checks++;
+        }
+        await view.click();
+        await verify(page.locator('#diagramContent svg[data-dg-ready]'),chapter,id,percent,lang);
+        await page.keyboard.press('Escape');
+        await page.locator('#figureDialog').waitFor({state:'hidden'});
+        assert(await view.evaluate(button=>button===document.activeElement));
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
 async function parallelConstruction(page,base,profiles){
   const direction=(a,b)=>b.map((value,i)=>value-a[i]);
   const cross=(a,b)=>a[0]*b[1]-a[1]*b[0];
@@ -1462,6 +1538,12 @@ async function main(){
           console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 9 exercise angle states`);
           return;
         }
+        if(process.argv.includes('--grade9-measurements')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await grade9MeasurementFigures(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 9 trigonometry and mean practice figures`);
+          return;
+        }
         if(process.argv.includes('--unit-circle-endpoints')){
           const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
           const checks=await unitCircleEndpoints(page,base,profiles);
@@ -1511,6 +1593,7 @@ async function main(){
           await grade9CoordinateActivities(page,base,[[320,844]]);
           await algebraQuadratics(page,base,[[320,844]]);
           await grade9Angles(page,base,[[320,844]]);
+          await grade9MeasurementFigures(page,base,[[320,844]]);
           await unitCircleEndpoints(page,base,[[320,844]]);
           await page.setViewportSize({width,height});
         }
