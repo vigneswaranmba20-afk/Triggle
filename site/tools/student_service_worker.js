@@ -87,6 +87,9 @@ async function carryForward(current) {
   // Revalidate the URLs used by the last release against the current files.
   // Legacy precached figures have no visit history, so do not retain those.
   await saveInBatches(current, [...required, ...supporting]);
+  if (!(await Promise.all(required.map(file => current.match(file)))).every(Boolean)) {
+    throw Error('Triggle could not migrate previously opened chapters');
+  }
 }
 
 self.addEventListener('install', event => {
@@ -100,12 +103,12 @@ self.addEventListener('install', event => {
       // Cache.addAll is atomic. A partial shell never becomes an active worker.
       await current.addAll(shellAssets);
       await current.put(shell, response);
+      await carryForward(current);
     } catch (error) {
       await caches.delete(cacheName);
       throw error;
     }
-    // Keep the currently active release in control until its clients close.
-    await carryForward(current).catch(() => {});
+    // The currently active release stays in control until its clients close.
   })());
 });
 
@@ -157,7 +160,7 @@ self.addEventListener('message', event => {
       .map(canonical).filter(Boolean);
     const required = chapter ? [...release.chapters[chapter].map(url), ...fonts] : [];
     await saveInBatches(current, [...required, ...requested]);
-    const saved = (await Promise.all(required.map(file => current.match(file)))).every(Boolean);
+    const saved = (await Promise.all([...required, ...requested].map(file => current.match(file)))).every(Boolean);
     event.ports[0]?.postMessage({saved});
   })().catch(() => event.ports[0]?.postMessage({saved:false})));
 });
