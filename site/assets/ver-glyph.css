@@ -226,8 +226,133 @@ body.ver-glyph.g10-ch2-type { --g10-ch2-text: var(--ver-font); }
   background: var(--ver-paper);
   border-radius: var(--ver-radius);
 }
-.ver-glyph .path-dialog { background: var(--ver-paper); }
-.ver-glyph .path-dialog :is(.path-option strong, .path-option small, .path-hint) { color: var(--ver-ink); }
+.ver-glyph:has(.path-dialog[open]) { overflow: hidden; }
+.ver-glyph .path-dialog {
+  inline-size: min(520px, calc(100% - 16px));
+  max-inline-size: none;
+  inset-block: env(safe-area-inset-top) env(safe-area-inset-bottom);
+  max-block-size: min(92vh, 820px);
+  max-block-size: min(92dvh, 820px, calc(100dvh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 16px));
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--ver-divider);
+  border-radius: var(--ver-radius-surface);
+  background: var(--ver-paper);
+  color: var(--ver-ink);
+  font: 1rem/1.45 var(--ver-font);
+}
+.ver-glyph .path-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+.ver-glyph .path-dialog .dialog-header {
+  flex: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 8px;
+  padding: 10px 12px;
+  border-color: var(--ver-divider);
+  background: var(--ver-white);
+}
+.ver-glyph .path-heading {
+  align-self: center;
+  overflow-wrap: anywhere;
+}
+.ver-glyph .path-heading h3 {
+  margin: 0;
+  font-size: 1.3125rem;
+  font-weight: 600;
+}
+.ver-glyph .path-hint {
+  margin: 0;
+  color: var(--ver-muted);
+  font-size: .875rem;
+}
+.ver-glyph .path-dialog .dialog-close {
+  min-inline-size: var(--ver-touch);
+  padding: 0;
+  background: var(--ver-tint);
+  color: var(--ver-indigo);
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+.ver-glyph .path-options {
+  display: flex;
+  flex-direction: column;
+  min-block-size: 0;
+  gap: 6px;
+  padding: 10px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scroll-padding-block: 10px;
+}
+.ver-glyph .path-option {
+  flex: none;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--ver-divider);
+  color: var(--ver-ink);
+  font: inherit;
+  text-align: start;
+  white-space: normal;
+}
+.ver-glyph .is-chapter-picker .path-option {
+  display: flex;
+  flex-wrap: wrap;
+}
+.ver-glyph .is-chapter-picker .path-option-copy {
+  flex: 1 1 min(100%, 9rem);
+  min-inline-size: 0;
+}
+.ver-glyph .path-option-copy {
+  align-self: center;
+  display: grid;
+  gap: 2px;
+}
+.ver-glyph .path-option strong {
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+.ver-glyph .path-option small {
+  color: var(--ver-muted);
+  font-size: .875rem;
+}
+.ver-glyph .path-option-symbols {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.ver-glyph .path-number {
+  min-inline-size: 1.8em;
+  padding: .125em .2em;
+  border-radius: var(--ver-radius);
+  background: var(--ver-tint);
+  color: var(--ver-indigo);
+  font-size: .8125rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.6;
+  text-align: center;
+}
+.ver-glyph .path-option-mark {
+  align-self: center;
+  min-inline-size: 1em;
+  color: var(--ver-indigo);
+  font-size: 1rem;
+  text-align: center;
+}
+.ver-glyph .path-option-symbols .path-option-mark {
+  min-inline-size: 0;
+  font-size: .875rem;
+}
+.ver-glyph .path-option.selected .path-number {
+  background: var(--ver-indigo);
+  color: var(--ver-white);
+}
 .ver-glyph #figureDialog {
   inset: 0 !important;
   width: min(96vw, 48rem) !important;

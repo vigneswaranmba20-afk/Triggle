@@ -31,14 +31,6 @@
 .answer-box{margin-top:12px;padding:11px 14px}
 .math-answer{line-height:1.35;margin-top:3px}
 .lesson-bottom{margin-top:11px;padding-top:8px}
-.path-dialog{border:1px solid #e4dff0;background:#fff;border-radius:23px;padding:0;width:min(94vw,470px);max-height:min(82dvh,690px);color:#282a45;box-shadow:0 22px 65px #1d1c3955}
-.path-dialog::backdrop{background:#1d1c3899;backdrop-filter:blur(3px)}
-.path-dialog .dialog-header{padding:17px 18px}.path-dialog h3{font-size:19px;margin:0}
-.path-options{padding:10px;overflow-y:auto;max-height:65dvh;display:grid;gap:7px}
-.path-option{display:flex;justify-content:space-between;align-items:center;gap:15px;text-align:left;border:1px solid #ebe8f4;border-radius:15px;padding:12px 15px;background:#fff;color:#474261;min-height:55px}
-.path-option strong{font-size:14px;display:block;line-height:1.4}.path-option small{font-size:11px;color:#85859d;display:block;margin-top:4px}
-.path-option.selected{border-color:#afa0e9;background:#f3efff;color:#5443a1}
-.path-option:hover{background:#f7f5fe}
 .diagram-content{display:block;max-height:min(68dvh,620px);overflow-y:auto;overflow-x:hidden;padding:14px 19px 0}
 .figure-dialog{width:min(96vw,770px);max-height:94dvh}
 .diagram-wrap svg{max-height:50dvh}

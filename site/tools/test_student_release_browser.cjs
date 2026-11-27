@@ -174,10 +174,12 @@ async function navigateOffline(browser, base) {
     browser = await chromium.launch(launchOptions());
     await compareChapters(browser,source.base,generated.base);
     await navigateOffline(browser,generated.base);
-    const result=await promisify(execFile)(process.execPath,[path.join(__dirname,'test_ver_glyph_browser.cjs')],{
-      env:{...process.env,TRIGGLE_QA_URL:generated.base,TRIGGLE_BEFORE:'0'},
-    });
-    process.stdout.write(result.stdout);
+    for (const test of ['test_ver_glyph_browser.cjs','test_selection_dialogs_browser.cjs']) {
+      const result=await promisify(execFile)(process.execPath,[path.join(__dirname,test)],{
+        env:{...process.env,TRIGGLE_QA_URL:generated.base,TRIGGLE_BEFORE:'0'},
+      });
+      process.stdout.write(result.stdout);
+    }
   } finally {
     await browser?.close();
     await Promise.all([source?.close(),generated?.close()]);
