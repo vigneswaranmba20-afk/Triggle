@@ -61,10 +61,10 @@
     document.title = chapter ? chapter+' | '+title : grade ? (language === 'ta' ? grade+' ஆம் வகுப்பு' : 'Grade '+grade)+' | '+title : title;
     for (const link of document.querySelectorAll('link[hreflang]')) {
       const alternate = new URL(target);
-      if (link.hreflang !== 'x-default') alternate.searchParams.set('lang',link.hreflang);
+      if (link.hreflang === 'ta') alternate.searchParams.set('lang','ta');
       link.href = alternate.href;
     }
-    if (language === 'ta' || route.get('lang') === 'en') target.searchParams.set('lang',language);
+    if (language === 'ta') target.searchParams.set('lang','ta');
     canonical.href = target.href;
     document.querySelector('meta[property="og:url"]').content = target.href;
     document.querySelector('meta[property="og:title"]').content = document.title;
@@ -155,6 +155,10 @@
   if (!worker) return;
   const release = window.TriggleStudentRelease;
   function register() {
+    if (!navigator.onLine) {
+      window.addEventListener('online',register,{once:true});
+      return;
+    }
     worker.register('./service-worker.js', {updateViaCache:'none'}).then(() => {
       if (release) return worker.ready.then(() => release.saveOffline());
     }).catch(() => {});

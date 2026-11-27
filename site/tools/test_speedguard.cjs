@@ -90,7 +90,7 @@ async function browserChecks(root, release) {
     await cdp.send('Emulation.setCPUThrottlingRate',{rate:4});
     const errors = [];
     page.on('pageerror',e=>errors.push(e.message));
-    page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+    page.on('console',m=>{if(m.type()==='error')errors.push(m.text()+' '+(m.location().url||''));});
     await page.addInitScript(()=>{
       window.speedGuardCls=0;
       new PerformanceObserver(list=>{

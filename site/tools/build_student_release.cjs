@@ -356,6 +356,14 @@ function buildStudentRelease(out) {
     if (key === 'g12') return;
     assert(parts.has(key), 'Unknown student script scope '+key+' for '+file);
     let code = file === mathFile ? math.script : file === 'data/curriculum.js' ? reducedCurriculum : js.get(file);
+    if (file === 'assets/visual-lessons.js') {
+      const videos = JSON.parse(read('data/video-lessons.json'));
+      const production = JSON.parse(read('data/video-production-plan.json'));
+      const isActive = ({questionId}) => activeChapters.has(questionId);
+      const lessons = videos.lessons.filter(isActive);
+      const plans = production.plans.filter(isActive).map(({questionId})=>({questionId}));
+      code = 'const TriggleStudentMedia='+json([{lessons},{plans}])+';\n'+code;
+    }
     if (file === appFile) {
       code = 'window.TRIGGLE_CLASSES=JSON.parse('+json(JSON.stringify(catalog))+');\n'+
         'const fields='+json(catalogFields)+';\n'+
