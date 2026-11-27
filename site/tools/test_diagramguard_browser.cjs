@@ -1029,6 +1029,129 @@ async function algebraQuadratics(page,base,profiles){
   return checks;
 }
 
+async function similarityScaling(page,base,profiles){
+  function checkScaledPair(original,scaled,factor){
+    const [ab,ac,bc]=sides(original);
+    near(ab/bc,6/8);
+    near(ab/ac,6/10);
+    proportional(original,scaled,factor);
+    for(const [A,B,C] of [original,scaled]){
+      near(angle(B,A,C),90);
+      near(angle(A,B,C),Math.atan2(8,6)*180/Math.PI);
+    }
+  }
+  const old=await fs.readFile(path.join(__dirname,'fixtures','diagramguard','similarity-scale-before.svg'),'utf8');
+  const baseline=await page.evaluate(source=>[...new DOMParser().parseFromString(source,'image/svg+xml').querySelectorAll('polygon')]
+    .map(poly=>[...poly.points].map(point=>[point.x,point.y])),old);
+  assert.throws(()=>checkScaledPair(...baseline,1.25),{code:'ERR_ASSERTION'});
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta']){
+      await page.goto(base+concept(0));
+      await setLanguage(page,lang);
+      const slider=page.locator('.g10ch4-lab input[type=range]');
+      const key=page.locator('.g10ch4-lab .diagramguard-coordinate-key');
+      const presets=page.locator('.g10ch4-preset-row button');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        let fixed;
+        const assertScale=async factor=>{
+          const selector=`[data-dg-scene="similarity-scale-lab"][data-dg-factor="${factor}"]`;
+          const {geometry,lines}=await read(page,selector,percent);
+          const [original,scaled]=geometry;
+          assert.equal(geometry.length,2);
+          checkScaledPair(original,scaled,factor);
+          assert.deepEqual(lines,{});
+          if(fixed)assert.deepEqual(original,fixed,'reference triangle holds position as k changes');
+          else fixed=original;
+          const amount=value=>Number(value.toFixed(2));
+          assert.deepEqual(await key.getByRole('listitem').allTextContents(),[
+            'AB = 6','BC = 8','CA = 10',`PQ = ${amount(6*factor)}`,`QR = ${amount(8*factor)}`,`RP = ${amount(10*factor)}`
+          ]);
+          const below=await key.evaluate(node=>node.getBoundingClientRect().top>=node.previousElementSibling.getBoundingClientRect().bottom-.5);
+          assert(below,'length key stays outside the drawing');
+          checks++;
+        };
+        for(let twentieths=10;twentieths<=30;twentieths++){
+          const factor=twentieths/20;
+          await slider.evaluate((range,k)=>{range.value=String(k);range.dispatchEvent(new Event('input',{bubbles:true}));},factor);
+          await assertScale(factor);
+        }
+        for(const [index,factor] of [.6,1,1.4].entries()){
+          await presets.nth(index).click();
+          await assertScale(factor);
+        }
+        await slider.focus();
+        await slider.press('Home');
+        assert(await slider.evaluate(node=>document.activeElement===node));
+        await assertScale(.5);
+        await slider.press('End');
+        await assertScale(1.5);
+      }
+    }
+  }
+  return checks;
+}
+
+async function similarityResults(page,base,profiles){
+  const area=([a,b,c])=>Math.abs((b[0]-a[0])*(c[1]-a[1])-(c[0]-a[0])*(b[1]-a[1]))/2;
+  function checkAltitude([outer,left,right]){
+    const [A,B,C]=outer, D=left[1];
+    near(angle(A,B,C),37);
+    near(angle(B,A,C),90);
+    near(angle(C,A,B),53);
+    near(B[0],D[0]);
+    near(D[1],A[1]);
+    near(length(B,D)**2,length(A,D)*length(D,C));
+    proportional(outer,left);
+    proportional(outer,right);
+  }
+  const old=await fs.readFile(path.join(__dirname,'fixtures','diagramguard','similarity-altitude-before.svg'),'utf8');
+  const baseline=await page.evaluate(source=>[...new DOMParser().parseFromString(source,'image/svg+xml').querySelectorAll('polygon')]
+    .map(poly=>[...poly.points].map(point=>[point.x,point.y])),old);
+  assert.throws(()=>checkAltitude(baseline),{code:'ERR_ASSERTION'});
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta']){
+      await page.goto(base+concept(2));
+      await setLanguage(page,lang);
+      const tabs=page.locator('.g10ch4-lab .g10ch4-tab');
+      const controls=page.locator('.g10ch4-lab .g10ch4-preset-row button');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        await tabs.first().click();
+        for(let k=1;k<=4;k++){
+          const button=controls.nth(k-1);
+          await button.focus();
+          await button.press('Space');
+          assert(await button.evaluate(node=>node===document.activeElement));
+          const {geometry}=await read(page,`[data-dg-scene="similarity-results-lab"][data-dg-state="area-${k}"]`,percent);
+          assert.equal(geometry.length,k*k);
+          const all=geometry.flat();
+          const top=all.reduce((a,b)=>a[1]<b[1]?a:b);
+          const bottomLeft=all.reduce((a,b)=>a[0]<b[0]?a:b);
+          const bottomRight=all.reduce((a,b)=>a[0]>b[0]?a:b);
+          const total=area([top,bottomLeft,bottomRight]);
+          for(const triangle of geometry)near(area(triangle)/total,1/(k*k));
+          checks++;
+        }
+        await tabs.nth(1).click();
+        for(let selected=0;selected<3;selected++){
+          await controls.nth(selected).click();
+          const selector=`[data-dg-scene="similarity-results-lab"][data-dg-state="altitude-${selected}"]`;
+          const {geometry,labels}=await read(page,selector,percent);
+          checkAltitude(geometry);
+          assert.deepEqual(labels.map(({id})=>id),['A','B','C','D']);
+          checks++;
+        }
+      }
+    }
+  }
+  return checks;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -1095,6 +1218,18 @@ async function main(){
           console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 10 quadratic graph states`);
           return;
         }
+        if(process.argv.includes('--similarity-scaling')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await similarityScaling(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive similarity scaling states`);
+          return;
+        }
+        if(process.argv.includes('--similarity-results')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await similarityResults(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive similarity results states`);
+          return;
+        }
         if(width===390&&!live){
           await synthetic(page);
           await legacyMarkers(page);
@@ -1107,6 +1242,8 @@ async function main(){
           await combinedSightLines(page,base,[[320,844]]);
           await statisticsPlotGeometry(page,base,[[320,844]]);
           await vennGeometry(page,base,[[320,844]]);
+          await similarityScaling(page,base,[[320,844]]);
+          await similarityResults(page,base,[[320,844]]);
           await grade9CoordinateActivities(page,base,[[320,844]]);
           await algebraQuadratics(page,base,[[320,844]]);
           await page.setViewportSize({width,height});

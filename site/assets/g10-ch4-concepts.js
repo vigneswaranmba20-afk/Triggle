@@ -195,9 +195,10 @@
     };
     host.append(el('h5','g10ch4-lab-title',copy.title));
     let k=1.25;
-    const svg=svgEl('svg',{viewBox:'0 0 320 176',class:'g10ch4-svg',role:'img','aria-label':copy.title});
+    const maxFactor=1.5;
+    const diagram=window.TriggleG10DiagramGuard.scaleLab(copy.title,ta?'ta':'en',maxFactor,()=>mathAPI.scaleTriangle(k));
     const metrics=el('div','g10ch4-metrics');
-    const slider=makeSlider(copy.slider,0.5,1.5,0.05,k,v=>{k=v;paint();});
+    const slider=makeSlider(copy.slider,0.5,maxFactor,0.05,k,v=>{k=v;paint();});
     const presetRow=el('div','g10ch4-preset-row');
     [0.6,1.0,1.4].forEach(val=>{
       const b=el('button','g10ch4-chip-btn',val===1?copy.congruentBtn:'k = '+val);b.type='button';
@@ -205,37 +206,18 @@
       presetRow.append(b);
     });
     const status=el('p','g10ch4-status');status.setAttribute('aria-live','polite');
-    host.append(svg,metrics,slider.row,presetRow,status);
+    host.append(diagram.svg,diagram.key,metrics,slider.row,presetRow,status);
+    const redraw=diagram.observe();
 
     function paint(){
-      svg.replaceChildren();
       const s=mathAPI.scaleTriangle(k);
-      // Fixed △ABC on left: right-ish triangle scaled for display
-      const A=[30,52],B=[30,148],C=[102,148];
-      const w=56*k,h=74*k;
-      const P=[166,148-h],Q=[166,148],R=[166+w,148];
-      const accent=s.isCongruent?'#166353':'#6E2933';
-      svg.append(
-        svgEl('polygon',{points:`${A} ${B} ${C}`,fill:'rgba(24,27,32,0.06)',stroke:'#181B20','stroke-width':'2'}),
-        svgEl('text',{x:A[0]-4,y:A[1]-7,'font-size':'11','font-weight':'700',fill:'#181B20'},'A'),
-        svgEl('text',{x:B[0]-12,y:B[1]+12,'font-size':'11','font-weight':'700',fill:'#181B20'},'B'),
-        svgEl('text',{x:C[0]+4,y:C[1]+12,'font-size':'11','font-weight':'700',fill:'#181B20'},'C'),
-        svgEl('text',{x:B[0]-20,y:104,'font-size':'10',fill:'#525B62'},'6'),
-        svgEl('text',{x:62,y:163,'font-size':'10',fill:'#525B62'},'8'),
-        svgEl('text',{x:70,y:96,'font-size':'10',fill:'#525B62'},'10'),
-        svgEl('polygon',{points:`${P} ${Q} ${R}`,fill:s.isCongruent?'rgba(22,99,83,0.12)':'rgba(110,41,51,0.10)',stroke:accent,'stroke-width':'2'}),
-        svgEl('text',{x:P[0]-4,y:P[1]-7,'font-size':'11','font-weight':'700',fill:accent},'P'),
-        svgEl('text',{x:Q[0]-12,y:Q[1]+12,'font-size':'11','font-weight':'700',fill:accent},'Q'),
-        svgEl('text',{x:R[0]+4,y:R[1]+12,'font-size':'11','font-weight':'700',fill:accent},'R'),
-        svgEl('text',{x:Q[0]-26,y:(P[1]+Q[1])/2+4,'font-size':'10','font-weight':'700',fill:accent},fmt(s.scaled[0],1)),
-        svgEl('text',{x:(Q[0]+R[0])/2-8,y:163,'font-size':'10','font-weight':'700',fill:accent},fmt(s.scaled[1],1)),
-        svgEl('text',{x:(P[0]+R[0])/2+5,y:(P[1]+R[1])/2,'font-size':'10','font-weight':'700',fill:accent},fmt(s.scaled[2],1))
-      );
+      const leftAngle=Math.atan2(s.base[1],s.base[0])*180/Math.PI;
       metrics.innerHTML=`
         <div class="g10ch4-metric"><span>PQ/AB = QR/BC = RP/CA</span><strong>${fmt(k,2)}</strong></div>
-        <div class="g10ch4-metric"><span>${e(copy.angLbl)}</span><strong>53° · 90° · 37°</strong></div>`;
+        <div class="g10ch4-metric"><span>${e(copy.angLbl)}</span><strong>≈ ${fmt(leftAngle,1)}° · 90° · ≈ ${fmt(90-leftAngle,1)}°</strong></div>`;
       status.className='g10ch4-status'+(s.isCongruent?' is-match':'');
       status.textContent=s.isCongruent?copy.cong:copy.sim+` (k = ${fmt(k,2)})`;
+      redraw();
     }
     paint();
   }
@@ -293,7 +275,7 @@
     const copy=ta?{
       title:'பரப்பளவு k² மடங்கும், செங்கோணக் குத்துயரமும்',
       tabs:['பரப்பளவு = k²','செங்கோணக் குத்துயரம்'],
-      scale:'அளவுக் காரணி k',
+      perimeter:'சுற்றளவு விகிதம்',area:'பரப்பளவு விகிதம்',rightAngles:'செங்கோணங்கள்',order:'ஒத்த முனைகளின் வரிசை',
       areaNote:(k)=>`பக்கங்களும் சுற்றளவும் ${k} மடங்காகும்போது, உள்ளே ${k*k} சிறிய முக்கோணங்கள் பொருந்துகின்றன — பரப்பளவு = ${k}² = ${k*k} மடங்கு!`,
       altBtns:['முழு △ABC','இடது △ADB','வலது △BDC'],
       altNotes:[
@@ -304,7 +286,7 @@
     }:{
       title:'Why Area scales as k² & Right-Triangle Altitude Similarity',
       tabs:['Area = k² Tiling','Right-Angle Altitude'],
-      scale:'Scale factor k',
+      perimeter:'Perimeter ratio',area:'Area ratio (tiles)',rightAngles:'Right angles',order:'Corresponding vertex order',
       areaNote:(k)=>`Scaling each side by ${k} scales the perimeter by ${k}, while ${k*k} unit triangles tile the interior — Area ratio = ${k}² = ${k*k}!`,
       altBtns:['Full △ABC','Left △ADB','Right △BDC'],
       altNotes:[
@@ -316,64 +298,41 @@
     host.append(el('h5','g10ch4-lab-title',copy.title));
     let mode=0,k=2,triIdx=0;
     const tabs=makeTabs(copy.tabs,0,i=>{mode=i;tabs.sync(i);paint();},copy.title);
-    const svg=svgEl('svg',{viewBox:'0 0 320 175',class:'g10ch4-svg',role:'img','aria-label':copy.title});
+    const diagram=window.TriggleG10DiagramGuard.similarityResultsLab(copy.title,()=>({mode,k,selected:triIdx}));
     const controls=el('div','g10ch4-preset-row');
     const metrics=el('div','g10ch4-metrics');
     const note=el('p','g10ch4-status is-match');note.setAttribute('aria-live','polite');
-    host.append(tabs.bar,svg,controls,metrics,note);
+    const areaButtons=[1,2,3,4].map(value=>{
+      const button=el('button','g10ch4-chip-btn',`k = ${value}`);
+      button.type='button';
+      button.onclick=()=>{k=value;paint();};
+      return button;
+    });
+    const altitudeButtons=copy.altBtns.map((name,index)=>{
+      const button=el('button','g10ch4-chip-btn',name);
+      button.type='button';
+      button.onclick=()=>{triIdx=index;paint();};
+      return button;
+    });
+    host.append(tabs.bar,diagram.svg,controls,metrics,note);
+    const redraw=diagram.observe();
 
     function paint(){
-      svg.replaceChildren();controls.replaceChildren();metrics.replaceChildren();
+      const buttons=mode===0?areaButtons:altitudeButtons;
+      if(controls.firstChild!==buttons[0])controls.replaceChildren(...buttons);
+      buttons.forEach((button,index)=>button.setAttribute('aria-pressed',String(index===(mode===0?k-1:triIdx))));
       if(mode===0){
-        [1,2,3,4].forEach(val=>{
-          const b=el('button','g10ch4-chip-btn',`k = ${val}`);b.type='button';
-          b.setAttribute('aria-pressed',String(k===val));
-          b.onclick=()=>{k=val;paint();};
-          controls.append(b);
-        });
-        // Tile an equilateral-like triangle with k^2 small triangles
-        const cx=160,topY=18,H=136,W=156;
-        const rows=k;
-        for(let r=0;r<rows;r++){
-          const y0=topY+(H*r)/rows,y1=topY+(H*(r+1))/rows;
-          const xL0=cx-(W*r)/(2*rows),xL1=cx-(W*(r+1))/(2*rows);
-          const step=W/rows;
-          for(let c=0;c<=r;c++){
-            const p1=[xL0+c*step,y0],p2=[xL1+c*step,y1],p3=[xL1+(c+1)*step,y1];
-            svg.append(svgEl('polygon',{points:`${p1} ${p2} ${p3}`,fill:'rgba(22,99,83,0.14)',stroke:'#166353','stroke-width':'1.4'}));
-            if(c<r){
-              const q1=[xL0+c*step,y0],q2=[xL0+(c+1)*step,y0],q3=[xL1+(c+1)*step,y1];
-              svg.append(svgEl('polygon',{points:`${q1} ${q2} ${q3}`,fill:'rgba(110,41,51,0.11)',stroke:'#6E2933','stroke-width':'1.2'}));
-            }
-          }
-        }
         metrics.innerHTML=`
-          <div class="g10ch4-metric"><span>Perimeter ratio</span><strong>${k}×</strong></div>
-          <div class="g10ch4-metric"><span>Area ratio (tiles)</span><strong>${k*k}× (${k}²)</strong></div>`;
+          <div class="g10ch4-metric"><span>${e(copy.perimeter)}</span><strong>${k}×</strong></div>
+          <div class="g10ch4-metric"><span>${e(copy.area)}</span><strong>${k*k}× (${k}²)</strong></div>`;
         note.textContent=copy.areaNote(k);
       }else{
-        copy.altBtns.forEach((lbl,idx)=>{
-          const b=el('button','g10ch4-chip-btn',lbl);b.type='button';
-          b.setAttribute('aria-pressed',String(triIdx===idx));
-          b.onclick=()=>{triIdx=idx;paint();};
-          controls.append(b);
-        });
-        const A=[30,144],C=[290,144],B=[123.6,39.2],D=[123.6,144];
-        svg.append(
-          svgEl('polygon',{points:`${A} ${B} ${D}`,fill:triIdx===1?'rgba(110,41,51,0.20)':'rgba(24,27,32,0.04)',stroke:triIdx===1?'#6E2933':'#181B20','stroke-width':triIdx===1?'2.5':'1.5'}),
-          svgEl('polygon',{points:`${B} ${D} ${C}`,fill:triIdx===2?'rgba(22,99,83,0.20)':'rgba(24,27,32,0.04)',stroke:triIdx===2?'#166353':'#181B20','stroke-width':triIdx===2?'2.5':'1.5'}),
-          svgEl('polygon',{points:`${A} ${B} ${C}`,fill:triIdx===0?'rgba(183,146,83,0.12)':'none',stroke:'#181B20','stroke-width':triIdx===0?'2.4':'1.5'}),
-          svgEl('polyline',{points:`${D[0]},${D[1]-10} ${D[0]+10},${D[1]-10} ${D[0]+10},${D[1]}`,fill:'none',stroke:'#181B20','stroke-width':'1.4'}),
-          svgEl('text',{x:A[0]-12,y:A[1]+14,'font-size':'11','font-weight':'700'},'A (37°)'),
-          svgEl('text',{x:B[0]-6,y:B[1]-8,'font-size':'11','font-weight':'700'},'B (90°)'),
-          svgEl('text',{x:C[0]-18,y:C[1]+14,'font-size':'11','font-weight':'700'},'C (53°)'),
-          svgEl('text',{x:D[0]-6,y:D[1]+15,'font-size':'11','font-weight':'700'},'D')
-        );
         metrics.innerHTML=`
-          <div class="g10ch4-metric"><span>Shared right angle</span><strong>∠B = ∠ADB = ∠BDC = 90°</strong></div>
-          <div class="g10ch4-metric"><span>Order</span><strong>△ADB ∼ △BDC ∼ △ABC</strong></div>`;
+          <div class="g10ch4-metric"><span>${e(copy.rightAngles)}</span><strong>∠B = ∠ADB = ∠BDC = 90°</strong></div>
+          <div class="g10ch4-metric"><span>${e(copy.order)}</span><strong>△ADB ∼ △BDC ∼ △ABC</strong></div>`;
         note.textContent=copy.altNotes[triIdx];
       }
+      redraw();
     }
     paint();
   }

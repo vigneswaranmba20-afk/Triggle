@@ -60,6 +60,13 @@
     svg.append(shape('path',{d:'M '+a.join(' ')+' A '+r+' '+r+' 0 0 '+sweep+' '+b.join(' '),fill:'none',stroke:color,
       'stroke-width':'1.4','data-dg-obstacle':id,'data-dg-role':'angle'}));
   }
+  function rightAngle(svg,id,at,to1,to2,color,rem){
+    const u=subtract(to1,at),v=subtract(to2,at);
+    const size=Math.min(rem*.47,length(u)*.26,length(v)*.26);
+    const a=multiply(unit(u),size),b=multiply(unit(v),size);
+    svg.append(shape('polyline',{points:pointsOf([add(at,a),add(add(at,a),b),add(at,b)]),stroke:color,fill:'none',
+      'stroke-width':'1.25','data-dg-obstacle':id}));
+  }
   const bounds=points=>{
     const xs=points.map(p=>p[0]),ys=points.map(p=>p[1]);
     return {x0:Math.min(...xs),x1:Math.max(...xs),y0:Math.min(...ys),y1:Math.max(...ys)};
@@ -160,6 +167,88 @@
     })};
   }
 
+  function scaleLab(description,language,maxFactor,getScale){
+    const svg=scene('similarity-scale-lab',description,'g10ch4-svg');
+    const key=document.createElement('div');
+    key.className='diagramguard-coordinate-key';
+    key.setAttribute('role','list');
+    key.setAttribute('aria-label',language==='ta'?'ஒத்த பக்கங்களின் நீளங்கள்':'Corresponding side lengths');
+    const corresponding=[['AB','BC','CA'],['PQ','QR','RP']];
+    const entries=corresponding.map(names=>names.map(()=>{
+      const entry=document.createElement('span');
+      entry.setAttribute('role','listitem');
+      key.append(entry);
+      return entry;
+    }));
+    return {svg,key,observe:()=>guard.responsive(svg,(width,rem)=>{
+      const {base,scaled,k,isCongruent}=getScale();
+      const sideBySide=width>=22*rem;
+      const slot=sideBySide?width/2:width;
+      const rim=Math.min(rem*2,slot*.24);
+      const scale=Math.min((slot-2*rim)/(maxFactor*base[1]),width*.48/(maxFactor*base[0]));
+      const rowHeight=maxFactor*base[0]*scale+2*rim;
+      setFrame(svg,width,sideBySide?rowHeight:2*rowHeight);
+      const placements=[];
+      for(const [index,lengths] of [base,scaled].entries()){
+        const [height,span]=lengths.map(value=>value*scale);
+        const left=(sideBySide?slot*(index+.5):width/2)-span/2;
+        const bottom=rowHeight-rim+(!sideBySide?index*rowHeight:0);
+        const vertices=[[left,bottom-height],[left,bottom],[left+span,bottom]];
+        const names=index?'PQR':'ABC';
+        const color=index?(isCongruent?teal:plum):ink;
+        polygon(svg,names,vertices,color,index?(isCongruent?largeFill:'#f8edf1'):smallFill);
+        rightAngle(svg,'right-angle-'+names[1],vertices[1],vertices[0],vertices[2],color,rem);
+        const mid=center(vertices);
+        [...names].forEach((name,i)=>placements.push(label(name,name,vertices[i],subtract(vertices[i],mid),'vertex',color)));
+        corresponding[index].forEach((name,i)=>{
+          entries[index][i].textContent=`${name} = ${Number(lengths[i].toFixed(2))}`;
+        });
+      }
+      svg.dataset.dgFactor=String(k);
+      guard.place(svg,placements);
+    })};
+  }
+
+  function similarityResultsLab(description,getState){
+    const svg=scene('similarity-results-lab',description,'g10ch4-svg');
+    return {svg,observe:()=>guard.responsive(svg,(width,rem)=>{
+      const {mode,k,selected}=getState();
+      const rim=Math.min(rem*1.72,width*.24);
+      const span=Math.min(width-2*rim,330);
+      const left=(width-span)/2;
+      if(mode===0){
+        const height=span*.78;
+        setFrame(svg,width,height+2*rim);
+        const dx=span/k,dy=height/k;
+        for(let row=0;row<k;row++){
+          const y=rim+row*dy, x=width/2-row*dx/2;
+          for(let col=0;col<=row;col++){
+            const a=x+col*dx;
+            polygon(svg,`up-${row}-${col}`,[[a,y],[a-dx/2,y+dy],[a+dx/2,y+dy]],teal,largeFill);
+            if(col<row)polygon(svg,`down-${row}-${col}`,[[a,y],[a+dx,y],[a+dx/2,y+dy]],plum,'#f8edf1');
+          }
+        }
+        svg.dataset.dgState='area-'+k;
+        return;
+      }
+      const alpha=degrees(37);
+      const height=span*Math.cos(alpha)*Math.sin(alpha);
+      setFrame(svg,width,height+2*rim);
+      const A=[left,rim+height],C=[left+span,rim+height];
+      const D=[left+span*Math.cos(alpha)**2,A[1]],B=[D[0],rim];
+      polygon(svg,'ABC',[A,B,C],ink,selected===0?smallFill:'none');
+      polygon(svg,'ADB',[A,D,B],selected===1?plum:ink,selected===1?'#f8edf1':'none');
+      polygon(svg,'BDC',[B,D,C],selected===2?teal:ink,selected===2?largeFill:'none');
+      rightAngle(svg,'right-angle-B',B,A,C,ink,rem);
+      rightAngle(svg,'right-angle-D',D,B,C,ink,rem);
+      guard.place(svg,[
+        label('A','A',A,[-1,1],'vertex'),label('B','B',B,[0,-1],'vertex'),
+        label('C','C',C,[1,1],'vertex'),label('D','D',D,[0,1],'vertex')
+      ]);
+      svg.dataset.dgState='altitude-'+selected;
+    })};
+  }
+
   function preview(host,description,id,language){
     const svg=scene(id+'-preview',description,'g10ch4-glance-svg');
     setFrame(svg,300,97);
@@ -200,5 +289,5 @@
       guard.place(svg,placements);
     });
   }
-  window.TriggleG10DiagramGuard=Object.freeze({lab,preview,rectangle});
+  window.TriggleG10DiagramGuard=Object.freeze({lab,scaleLab,similarityResultsLab,preview,rectangle});
 })();
