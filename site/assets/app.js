@@ -972,7 +972,8 @@
   $('figureDialog').showModal();
   window.TriggleCoordinateFigures?.reflow?.($('diagramContent'));
   $('figureDialog').scrollTop=0;
-  if(grade===9)window.TriggleNotation?.prepareSvg?.($('diagramContent'),window.TriggleG9Math?.diagramLabels);
+  // Managed plots need their measured native SVG labels through every reopen.
+  if(grade===9&&!coordinatePlot)window.TriggleNotation?.prepareSvg?.($('diagramContent'),window.TriggleG9Math?.diagramLabels);
   window.TriggleNotation?.prepare?.($('diagramCompare'));
   $('closeDiagram').focus({preventScroll:true});
   window.TriggleConcept?.attach(context,$('diagramContent'));
