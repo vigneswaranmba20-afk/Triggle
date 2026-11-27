@@ -4,6 +4,7 @@ const fs = require('node:fs/promises');
 const os = require('node:os');
 const path = require('node:path');
 const {gzipSync} = require('node:zlib');
+const {setTimeout:delay} = require('node:timers/promises');
 const {buildStudentRelease} = require('./build_student_release.cjs');
 const {server,launchOptions} = require('./dashboard_test_support.cjs');
 
@@ -207,61 +208,78 @@ async function browserChecks(root, release) {
   }
 }
 
+async function waitForState(read, label) {
+  const deadline = Date.now()+30_000;
+  while (Date.now()<deadline) {
+    if (await read()) return;
+    await delay(100);
+  }
+  assert.fail(label);
+}
+
 async function verifyUpdate(root, base, browser, release) {
   const previous = process.env.TRIGGLE_PREVIOUS_STAGE;
   const [html,worker] = await Promise.all([text(root,'index.html'),text(root,'service-worker.js')]);
   if (previous) await fs.cp(previous,root,{recursive:true});
   const context = await browser.newContext();
-  const page = await context.newPage();
-  await page.goto(base);
-  await boot(page);
-  await page.waitForFunction(()=>navigator.serviceWorker.controller);
-  await page.goto(base+question);
-  await boot(page);
-  if (!previous) await saved(page);
-  await page.locator('#langTa').click();
-  await page.locator('#markDone').evaluate(el=>el.click());
-  const priorStamp = previous ? null : release.version;
-  const stamp = previous ? release.version : release.version.replace(/^./,v=>v==='f'?'e':'f');
-  const validWorker = priorStamp?worker.replaceAll(priorStamp,stamp):worker;
-  const nextHTML = priorStamp?html.replaceAll(priorStamp,stamp):html;
-  if (priorStamp) {
-    const brokenWorker = validWorker.replace(release.shell[0],'./assets/missing-atomic-install.css');
-    await fs.writeFile(path.join(root,'index.html'),nextHTML);
-    await fs.writeFile(path.join(root,'service-worker.js'),brokenWorker);
-    await page.evaluate(async()=>{
-      const registration = await navigator.serviceWorker.ready;
-      await registration.update();
-      const installer = registration.installing;
-      if (installer && installer.state !== 'redundant') await new Promise(resolve=>{
-        installer.addEventListener('statechange',()=>{if(installer.state==='redundant')resolve();});
-      });
-    });
-    assert.equal(await page.evaluate(async()=>!!(await navigator.serviceWorker.ready).waiting),false);
-    await page.reload();
+  try {
+    const page = await context.newPage();
+    await page.goto(base);
     await boot(page);
-    assert.equal(await page.locator('html').getAttribute('data-student-release'),priorStamp);
-  } else await fs.writeFile(path.join(root,'index.html'),nextHTML);
-  await fs.writeFile(path.join(root,'service-worker.js'),validWorker);
-  await page.evaluate(async()=>{await (await navigator.serviceWorker.ready).update();});
-  await page.waitForFunction(async()=>!!(await navigator.serviceWorker.getRegistration()).waiting);
-  await page.close();
-  const next = await context.newPage();
-  await next.goto(base+question);
-  await boot(next);
-  await next.waitForFunction(stamp=>caches.has('triggle-lightspeed-'+stamp),stamp);
-  await next.waitForFunction(()=>navigator.serviceWorker.controller);
-  await context.setOffline(true);
-  await next.reload();
-  await boot(next);
-  assert.equal(await next.locator('html').getAttribute('data-student-release'),stamp);
-  assert.equal(await next.locator('html').getAttribute('lang'),'ta');
-  assert.equal(await next.locator('#markDone').getAttribute('aria-pressed'),'true');
-  assert(await next.locator('#stepsList .katex').count());
-  await next.locator('#inlineFigureVisual img').evaluate(img=>img.decode());
-  assert.deepEqual(await next.evaluate(()=>caches.keys()),['triggle-lightspeed-'+stamp]);
-  await context.close();
-  console.log('PASS VER SpeedGuard worker upgrade, offline recovery, language and learned progress');
+    await page.waitForFunction(()=>navigator.serviceWorker.controller);
+    await page.goto(base+question);
+    await boot(page);
+    if (!previous) await saved(page);
+    await page.locator('#langTa').click();
+    await page.locator('#markDone').evaluate(el=>el.click());
+    const priorStamp = previous ? null : release.version;
+    const stamp = previous ? release.version : release.version.replace(/^./,v=>v==='f'?'e':'f');
+    const validWorker = priorStamp ? worker.replaceAll(priorStamp,stamp) : worker;
+    const nextHTML = priorStamp ? html.replaceAll(priorStamp,stamp) : html;
+    await fs.writeFile(path.join(root,'index.html'),nextHTML);
+    if (priorStamp) {
+      await fs.writeFile(path.join(root,'service-worker.js'),validWorker.replace(release.shell[0],'./assets/missing-atomic-install.css'));
+      await page.evaluate(async()=>{
+        const registration = await navigator.serviceWorker.ready;
+        await registration.update();
+        const installer = registration.installing;
+        if (installer && installer.state !== 'redundant') await new Promise(resolve=>{
+          installer.addEventListener('statechange',()=>{if(installer.state==='redundant')resolve();});
+        });
+      });
+      assert.equal(await page.evaluate(async()=>!!(await navigator.serviceWorker.ready).waiting),false);
+      await page.reload();
+      await boot(page);
+      assert.equal(await page.locator('html').getAttribute('data-student-release'),priorStamp);
+    }
+    await fs.writeFile(path.join(root,'service-worker.js'),validWorker);
+    await page.evaluate(async()=>{await (await navigator.serviceWorker.ready).update();});
+    await waitForState(()=>page.evaluate(async()=>!!(await navigator.serviceWorker.getRegistration()).waiting),
+      'The verified update reaches the waiting state');
+    const probe = await context.newPage();
+    const probeFile = 'triggle-worker-probe.html';
+    await fs.writeFile(path.join(path.dirname(path.dirname(root)),probeFile),'<!doctype html><title>Worker test</title>');
+    await probe.goto(new URL('/'+probeFile,base).href);
+    await page.close();
+    await waitForState(()=>probe.evaluate(async ({base,stamp})=>{
+      const registration = await navigator.serviceWorker.getRegistration(base);
+      const keys = await caches.keys();
+      return registration?.active?.state==='activated' && !registration.waiting &&
+        keys.length===1 && keys[0]==='triggle-lightspeed-'+stamp;
+    },{base,stamp}),'The new release activates after the last app tab closes');
+    await context.setOffline(true);
+    await probe.goto(base+question);
+    await boot(probe);
+    assert.equal(await probe.locator('html').getAttribute('data-student-release'),stamp);
+    assert.equal(await probe.locator('html').getAttribute('lang'),'ta');
+    assert.equal(await probe.locator('#markDone').getAttribute('aria-pressed'),'true');
+    assert(await probe.locator('#stepsList .katex').count());
+    await probe.locator('#inlineFigureVisual img').evaluate(img=>img.decode());
+    assert.deepEqual(await probe.evaluate(()=>caches.keys()),['triggle-lightspeed-'+stamp]);
+    console.log('PASS VER SpeedGuard worker upgrade, offline recovery, language and learned progress');
+  } finally {
+    await context.close();
+  }
 }
 
 (async()=>{
@@ -272,6 +290,12 @@ async function verifyUpdate(root, base, browser, release) {
     await fs.cp(site,root,{recursive:true});
     buildStudentRelease(root);
     const release = await checkBuild(root);
-    if (process.argv.includes('--browser')) await browserChecks(root,release);
+    if (process.argv.includes('--upgrade-only')) {
+      const {chromium} = require('playwright');
+      const app = await server(temp);
+      const browser = await chromium.launch(launchOptions());
+      try { await verifyUpdate(root,app.base+'/Triggle/site/index.html',browser,release); }
+      finally { await browser.close(); await app.close(); }
+    } else if (process.argv.includes('--browser')) await browserChecks(root,release);
   } finally { await fs.rm(temp,{recursive:true,force:true}); }
 })().catch(error=>{console.error(error);process.exitCode=1;});
