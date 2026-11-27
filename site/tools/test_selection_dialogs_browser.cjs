@@ -150,12 +150,13 @@ async function verifySelection(page, chapterTrigger, grade, chapter) {
 }
 
 (async () => {
-  const app = process.env.TRIGGLE_QA_URL ? null : await server();
-  const base = process.env.TRIGGLE_QA_URL || app.base;
   const browser = useWebKit ? await webkit.launch() : await chromium.launch(launchOptions());
+  let app;
   let chapterRows = 0;
   let otherDialogs = 0;
   try {
+    app = process.env.TRIGGLE_QA_URL ? null : await server();
+    const base = process.env.TRIGGLE_QA_URL || app.base;
     for (const [width, height] of sizes) {
       const context = await browser.newContext({
         ...phone, viewport: {width, height}, serviceWorkers: 'block',
