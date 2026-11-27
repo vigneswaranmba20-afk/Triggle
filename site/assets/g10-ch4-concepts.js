@@ -365,68 +365,22 @@
     host.append(el('h5','g10ch4-lab-title',copy.title));
     let rIdx=0,step=4;
     const ratioTabs=makeTabs(copy.ratios.map(r=>r.lbl),0,i=>{rIdx=i;ratioTabs.sync(i);paint();},copy.title);
-    const svg=svgEl('svg',{viewBox:'0 -32 320 222',class:'g10ch4-svg',role:'img','aria-label':copy.title});
+    const diagram=window.TriggleG10DiagramGuard.similarConstructionLab(copy.title,ta?'ta':'en',()=>({...copy.ratios[rIdx],step}));
     const nav=el('div','g10ch4-step-nav');
     const prev=el('button','g10ch4-chip-btn',copy.prev);prev.type='button';
     const prog=el('span','g10ch4-progress','5 / 5');
     const next=el('button','g10ch4-chip-btn g10ch4-btn-primary',copy.replay);next.type='button';
     nav.append(prev,prog,next);
     const note=el('p','g10ch4-status is-match');note.setAttribute('aria-live','polite');
-    host.append(ratioTabs.bar,svg,nav,note);
+    host.append(ratioTabs.bar,diagram.svg,diagram.key,nav,note);
+    const redraw=diagram.observe();
 
     prev.onclick=()=>{if(step>0){step--;paint();}};
     next.onclick=()=>{step=(step+1)%5;paint();};
 
     function paint(){
-      svg.replaceChildren();
       const {m,n}=copy.ratios[rIdx];
-      const maxN=Math.max(m,n),f=m/n;
-      const Q=[36,104];
-      const baseLen=m>n?90:155;
-      const R=[Q[0]+baseLen,104];
-      const P=[Q[0]+baseLen*0.38,104-(m>n?46:72)];
-      const R2=[Q[0]+baseLen*f,104];
-      const P2=[Q[0]+(P[0]-Q[0])*f,Q[1]+(P[1]-Q[1])*f];
-      const rayEnd=[Q[0]+180,176];
-      const qPts=Array.from({length:maxN},(_,i)=>lerp(Q,rayEnd,(i+1)/(maxN+0.5)));
-
-      if(step>=1){
-        svg.append(svgEl('line',{x1:Q[0],y1:Q[1],x2:rayEnd[0],y2:rayEnd[1],stroke:'#8A6728','stroke-width':'1.5'}));
-        if(m>n)svg.append(svgEl('line',{x1:R[0],y1:R[1],x2:R2[0]+14,y2:R2[1],stroke:'#D7D4CC','stroke-width':'1.4','stroke-dasharray':'3 3'}));
-        if(m>n)svg.append(svgEl('line',{x1:P[0],y1:P[1],x2:P2[0]+(P2[0]-Q[0])*0.1,y2:P2[1]-8,stroke:'#D7D4CC','stroke-width':'1.4','stroke-dasharray':'3 3'}));
-      }
-      svg.append(
-        svgEl('polygon',{points:`${P} ${Q} ${R}`,fill:'rgba(24,27,32,0.05)',stroke:'#181B20','stroke-width':'2'}),
-        svgEl('text',{x:P[0]-4,y:P[1]-6,'font-size':'10.5','font-weight':'700'},'P'),
-        svgEl('text',{x:Q[0]-12,y:Q[1]+4,'font-size':'10.5','font-weight':'700'},'Q'),
-        svgEl('text',{x:R[0]+3,y:R[1]+13,'font-size':'10.5','font-weight':'700'},'R')
-      );
-      if(step>=2){
-        qPts.forEach((pt,i)=>{
-          const isDen=(i+1===n),isNum=(i+1===m);
-          svg.append(
-            svgEl('circle',{cx:pt[0],cy:pt[1],r:isDen||isNum?3.5:2.2,fill:isNum?'#6E2933':isDen?'#166353':'#8A6728'}),
-            svgEl('text',{x:pt[0]-10,y:pt[1]+12,'font-size':'9','font-weight':isDen||isNum?'700':'400',fill:isNum?'#6E2933':isDen?'#166353':'#525B62'},`Q${i+1}`)
-          );
-        });
-      }
-      if(step>=3){
-        const qDen=qPts[n-1],qNum=qPts[m-1];
-        svg.append(
-          svgEl('line',{x1:qDen[0],y1:qDen[1],x2:R[0],y2:R[1],stroke:'#166353','stroke-width':'1.6','stroke-dasharray':'4 3'}),
-          svgEl('line',{x1:qNum[0],y1:qNum[1],x2:R2[0],y2:R2[1],stroke:'#6E2933','stroke-width':'2'}),
-          svgEl('circle',{cx:R2[0],cy:R2[1],r:3.6,fill:'#6E2933'}),
-          svgEl('text',{x:R2[0]+2,y:R2[1]+13,'font-size':'10.5','font-weight':'700',fill:'#6E2933'},"R'")
-        );
-      }
-      if(step>=4){
-        svg.append(
-          svgEl('line',{x1:R2[0],y1:R2[1],x2:P2[0],y2:P2[1],stroke:'#6E2933','stroke-width':'2.2'}),
-          svgEl('polygon',{points:`${P2} ${Q} ${R2}`,fill:'rgba(110,41,51,0.11)',stroke:'#6E2933','stroke-width':'2'}),
-          svgEl('circle',{cx:P2[0],cy:P2[1],r:3.6,fill:'#6E2933'}),
-          svgEl('text',{x:P2[0]-5,y:P2[1]-7,'font-size':'10.5','font-weight':'700',fill:'#6E2933'},"P'")
-        );
-      }
+      redraw();
       prev.disabled=step===0;
       next.textContent=step===4?copy.replay:copy.next;
       prog.textContent=`${step+1} / 5`;

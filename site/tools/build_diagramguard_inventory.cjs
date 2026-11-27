@@ -128,7 +128,8 @@ for(const [chapter,modules] of Object.entries(visualModules)){
       const graphic=typeof stage.visual==='object'?stage.visual.id||stage.visual.kind:stage.visual;
       const similaritySource={
         'similarity-scale':'2025 textbook PDF EN 167–168; TA 172–173',
-        'similarity-results':'2025 textbook PDF EN 169–170; TA 174–175'
+        'similarity-results':'2025 textbook PDF EN 169–170; TA 174–175',
+        'similar-construction':'2025 textbook PDF EN 175–177; TA 179–181'
       }[graphic];
       const src=[module,config.source,stage.section,format(stage.pages||stage.page),quadraticSource,similaritySource]
         .filter(Boolean).join(' | ');

@@ -249,6 +249,80 @@
     })};
   }
 
+  function similarConstructionLab(description,language,getState){
+    const svg=scene('similarity-construction-lab',description,'g10ch4-svg');
+    const key=document.createElement('div');
+    key.className='diagramguard-coordinate-key';
+    key.setAttribute('role','list');
+    key.setAttribute('aria-label',language==='ta'?'கதிரில் சம இடைவெளிப் புள்ளிகள்':'Equal compass divisions');
+    const inkEntry=(text,color)=>{
+      const entry=document.createElement('span');
+      entry.setAttribute('role','listitem');
+      entry.style.color=color;
+      entry.textContent=text;
+      return entry;
+    };
+    const subscript=value=>String(value).replace(/\d/g,digit=>'₀₁₂₃₄₅₆₇₈₉'[digit]);
+    const names=value=>'Q'+subscript(value);
+    return {svg,key,observe:()=>guard.responsive(svg,(width,rem)=>{
+      const {m,n,step}=getState();
+      const ratio=m/n, count=Math.max(m,n);
+      const rim=Math.min(rem*1.85,width*.22);
+      const scale=(width-2*rim)/25;
+      const baseY=rim+11.2*scale;
+      const project=([x,y])=>[rim+x*scale,baseY+y*scale];
+      const p=[3.8,-4.8],r=[10,0],rayEnd=[12,5.4];
+      const Q=project([0,0]),P=project(p),R=project(r),X=project(rayEnd);
+      const P2=project(multiply(p,ratio)),R2=project(multiply(r,ratio));
+      const marks=Array.from({length:count},(_,i)=>project(multiply(rayEnd,(i+1)/(count+.58))));
+      setFrame(svg,width,baseY+rayEnd[1]*scale+rim);
+      svg.dataset.dgState=`${m}/${n}:${step}`;
+      polygon(svg,'PQR',[P,Q,R],ink,smallFill);
+      const originalP=label('P','P',P,[-.3,-1],'vertex');
+      const originalR=label('R','R',R,[.15,-1],'vertex');
+      const placements=[originalP,label('Q','Q',Q,[-1,.15],'vertex'),originalR];
+      if(step>=1){
+        line(svg,'QX',Q,X,gold);
+        placements.push(label('X','X',X,[1,.25],'vertex',gold));
+        if(ratio>1){
+          const dashes={'stroke-dasharray':'4 3'};
+          line(svg,'extension-P',P,project(multiply(p,ratio*1.04)),muted,dashes);
+          line(svg,'extension-R',R,project(multiply(r,ratio*1.04)),muted,dashes);
+        }
+      }
+      if(step>=2){
+        marks.forEach(([cx,cy],i)=>{
+          const value=i+1;
+          const color=value===m?plum:value===n?teal:gold;
+          svg.append(shape('circle',{cx,cy,r:value===m||value===n?3.35:1.85,fill:color,
+            'data-dg-obstacle':'compass-'+value,'data-dg-fill':'','data-dg-compass':value}));
+          const mark=label(names(value),names(value),[cx,cy],[-.4,1],'secondary',color);
+          placements.push({...mark,optional:true});
+        });
+      }
+      if(step>=3){
+        line(svg,'denominator',marks[n-1],R,teal,{'stroke-dasharray':'4 3'});
+        line(svg,'numerator',marks[m-1],R2,plum);
+        originalR.neighborPoints=[R2];
+        placements.push({...label('R-prime','R′',R2,[.6,1],'vertex',plum),neighborPoints:[R]});
+      }
+      if(step>=4){
+        polygon(svg,'P′QR′',[P2,Q,R2],plum,'none');
+        originalP.neighborPoints=[P2];
+        placements.push({...label('P-prime','P′',P2,ratio>1?[.3,-1]:[-1,-.35],'vertex',plum),neighborPoints:[P]});
+      }
+      const first=placements.filter(({optional})=>!optional);
+      const marksToLabel=placements.filter(({optional})=>optional).sort((a,b)=>{
+        const importance=entry=>[names(m),names(n)].includes(entry.label.textContent)?0:1;
+        return importance(a)-importance(b);
+      });
+      guard.place(svg,[...first,...marksToLabel],{gap:rem*.16});
+      key.hidden=step<2;
+      if(step>=2)key.replaceChildren(inkEntry(`${names(1)}–${names(count)}`,gold),
+        inkEntry(`n = ${n} · ${names(n)}`,teal),inkEntry(`m = ${m} · ${names(m)}`,plum));
+    })};
+  }
+
   function preview(host,description,id,language){
     const svg=scene(id+'-preview',description,'g10ch4-glance-svg');
     setFrame(svg,300,97);
@@ -289,5 +363,5 @@
       guard.place(svg,placements);
     });
   }
-  window.TriggleG10DiagramGuard=Object.freeze({lab,scaleLab,similarityResultsLab,preview,rectangle});
+  window.TriggleG10DiagramGuard=Object.freeze({lab,scaleLab,similarityResultsLab,similarConstructionLab,preview,rectangle});
 })();

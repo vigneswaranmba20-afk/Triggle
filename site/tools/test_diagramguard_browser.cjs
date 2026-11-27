@@ -1152,6 +1152,80 @@ async function similarityResults(page,base,profiles){
   return checks;
 }
 
+async function parallelConstruction(page,base,profiles){
+  const direction=(a,b)=>b.map((value,i)=>value-a[i]);
+  const cross=(a,b)=>a[0]*b[1]-a[1]*b[0];
+  const split=literal=>[literal.slice(0,2),literal.slice(2)];
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta']){
+      await page.goto(base+concept(3));
+      await setLanguage(page,lang);
+      const tabs=page.locator('.g10ch4-lab .g10ch4-tab');
+      const next=page.locator('.g10ch4-step-nav button').last();
+      const previous=page.locator('.g10ch4-step-nav button').first();
+      const key=page.locator('.g10ch4-lab .diagramguard-coordinate-key');
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        let original;
+        for(const [index,[m,n]] of [[2,3],[4,5],[6,5],[7,3]].entries()){
+          await tabs.nth(index).click();
+          for(let step=0;step<5;step++){
+            await next.focus();
+            await next.press('Space');
+            assert(await next.evaluate(node=>node===document.activeElement));
+            assert.equal(await previous.isDisabled(),step===0);
+            const selector=`[data-dg-scene="similarity-construction-lab"][data-dg-state="${m}/${n}:${step}"]`;
+            const {geometry,lines}=await read(page,selector,percent);
+            const marks=await page.locator(selector).evaluate(svg=>[...svg.querySelectorAll('[data-dg-compass]')]
+              .map(node=>['cx','cy'].map(attribute=>Number(node.getAttribute(attribute)))));
+            const [P,Q,R]=geometry[0];
+            if(original)assert.deepEqual(geometry[0],original,'reference triangle remains fixed across construction stages and ratios');
+            else original=geometry[0];
+            if(step>=1){
+              const [start,X]=split(lines.QX);
+              assert.deepEqual(start,Q);
+              assert(angle(Q,R,X)>0&&angle(Q,R,X)<90);
+              if(m>n){
+                near(cross(direction(Q,P),direction(...split(lines['extension-P']))),0);
+                near(cross(direction(Q,R),direction(...split(lines['extension-R']))),0);
+              }
+            }
+            if(step>=2){
+              assert.equal(marks.length,Math.max(m,n));
+              const [,X]=split(lines.QX);
+              marks.forEach((point,i)=>{
+                near(cross(direction(Q,X),direction(Q,point)),0);
+                near(length(Q,point),(i+1)*length(Q,marks[0]));
+              });
+              assert.equal(await key.getByRole('listitem').count(),3);
+            }else{
+              assert.equal(marks.length,0);
+              assert(await key.isHidden());
+            }
+            if(step>=3){
+              const [den,baseEnd]=split(lines.denominator),[num,newEnd]=split(lines.numerator);
+              assert.deepEqual(den,marks[n-1]);
+              assert.deepEqual(num,marks[m-1]);
+              assert.deepEqual(baseEnd,R);
+              near(cross(direction(den,baseEnd),direction(num,newEnd)),0);
+              near(length(Q,newEnd)/length(Q,R),m/n);
+            }
+            if(step===4)proportional(geometry[0],geometry[1],m/n);
+            checks++;
+          }
+          await previous.click();
+          await page.locator(`[data-dg-scene="similarity-construction-lab"][data-dg-state="${m}/${n}:3"]`).waitFor();
+          await next.click();
+          await page.locator(`[data-dg-scene="similarity-construction-lab"][data-dg-state="${m}/${n}:4"]`).waitFor();
+        }
+      }
+    }
+  }
+  return checks;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -1230,6 +1304,12 @@ async function main(){
           console.log(`DiagramGuard: ${checks} bilingual and responsive similarity results states`);
           return;
         }
+        if(process.argv.includes('--parallel-construction')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await parallelConstruction(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive parallel construction states`);
+          return;
+        }
         if(width===390&&!live){
           await synthetic(page);
           await legacyMarkers(page);
@@ -1244,6 +1324,7 @@ async function main(){
           await vennGeometry(page,base,[[320,844]]);
           await similarityScaling(page,base,[[320,844]]);
           await similarityResults(page,base,[[320,844]]);
+          await parallelConstruction(page,base,[[320,844]]);
           await grade9CoordinateActivities(page,base,[[320,844]]);
           await algebraQuadratics(page,base,[[320,844]]);
           await page.setViewportSize({width,height});
