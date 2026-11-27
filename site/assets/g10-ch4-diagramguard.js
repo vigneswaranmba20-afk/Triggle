@@ -252,14 +252,17 @@
   function similarConstructionLab(description,language,getState){
     const svg=scene('similarity-construction-lab',description,'g10ch4-svg');
     const key=document.createElement('div');
-    key.className='diagramguard-coordinate-key';
+    key.className='diagramguard-coordinate-key diagramguard-coordinate-legend';
     key.setAttribute('role','list');
     key.setAttribute('aria-label',language==='ta'?'கதிரில் சம இடைவெளிப் புள்ளிகள்':'Equal compass divisions');
-    const inkEntry=(text,color)=>{
+    const legendEntry=(text,color)=>{
       const entry=document.createElement('span');
       entry.setAttribute('role','listitem');
-      entry.style.color=color;
-      entry.textContent=text;
+      const sample=document.createElement('span');
+      sample.className='diagramguard-line-sample';
+      sample.style.color=color;
+      sample.setAttribute('aria-hidden','true');
+      entry.append(sample,text);
       return entry;
     };
     const subscript=value=>String(value).replace(/\d/g,digit=>'₀₁₂₃₄₅₆₇₈₉'[digit]);
@@ -318,8 +321,8 @@
       });
       guard.place(svg,[...first,...marksToLabel],{gap:rem*.16});
       key.hidden=step<2;
-      if(step>=2)key.replaceChildren(inkEntry(`${names(1)}–${names(count)}`,gold),
-        inkEntry(`n = ${n} · ${names(n)}`,teal),inkEntry(`m = ${m} · ${names(m)}`,plum));
+      if(step>=2)key.replaceChildren(legendEntry(`${names(1)}–${names(count)}`,gold),
+        legendEntry(`n = ${n} · ${names(n)}`,teal),legendEntry(`m = ${m} · ${names(m)}`,plum));
     })};
   }
 

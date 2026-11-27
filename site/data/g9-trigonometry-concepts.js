@@ -53,7 +53,7 @@
       segments: ['OP'], segmentColors: {OP: '#9a4d1e'}, activePoint: 'P',
       directions: {P: angle === 0 ? [[0, -1], [1, 0], [0, 1]] : [[1, 0], [-1, 0], [0, -1]]},
       description: words(
-        `First quadrant of a unit circle at ${angle}°. The x-coordinate of P gives cosine and the y-coordinate gives sine.`,
+        `First quadrant of a unit circle. The selected angle is ${angle}°. The x-coordinate of P gives cosine and the y-coordinate gives sine.`,
         `ஓரலகு வட்டத்தின் முதல் காற்பகுதியில் ${angle}° கோணம். P புள்ளியின் x ஆயத்தொலைவு cos மதிப்பு, y ஆயத்தொலைவு sin மதிப்பு.`
       ),
       annotationLabel: words('Selected angle', 'தேர்ந்தெடுத்த கோணம்'),
