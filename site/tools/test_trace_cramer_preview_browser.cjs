@@ -26,7 +26,7 @@ async function main(){
     assert((await authored(page.locator('#stepsList .final-answer-step'))).includes(record.answer));
     assert(await page.locator('#stepsList math').count()>5,'Native determinant/fraction structures');
     assert.equal(await page.locator('.katex-error').count(),0);
-    assert.equal(await page.locator('#figureBtn').isVisible(),false);
+    assert.equal(await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').isVisible(),false);
     assert(await page.locator('#stepsRegion').isVisible());
     assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No page overflow '+record.id+' '+width);
     if(i+1<batch.records.length)await page.locator('#next').click();

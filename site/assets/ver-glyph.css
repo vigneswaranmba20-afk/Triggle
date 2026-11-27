@@ -1,4 +1,4 @@
-/* VER Glyph v1. Shared student surfaces, controls and exercise reader. */
+/* VER Glyph v1.1. Shared student surfaces, controls and exercise reader. */
 body.ver-glyph {
   /* The original ivory, graphite and indigo colours on the current layout. */
   --ver-paper: var(--bond-ivory);
@@ -30,6 +30,7 @@ body.ver-glyph {
   --ver-text-small: .875rem;
   --ver-text-body: 1rem;
   --ver-text-question: clamp(1.125rem, 1.05rem + .4vw, 1.375rem);
+  --ver-question-weight: 580;
   --ver-text-math: clamp(1.1875rem, 1.14rem + .25vw, 1.375rem);
   --ver-prose-leading: 1.55;
   --ver-font: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -40,10 +41,16 @@ body.ver-glyph {
   font-family: var(--ver-font);
 }
 
-.ver-glyph.lang-ta {
+body.ver-glyph.lang-ta {
   --ver-font: "Triggle Noto Sans Tamil", system-ui, sans-serif;
-  --ver-prose-leading: 1.7;
-  --ver-text-question: clamp(1.0625rem, 1rem + .45vw, 1.3125rem);
+  --ver-prose-leading: 1.64;
+  --ver-text-question: clamp(1.0625rem, 1.025rem + .18vw, 1.25rem);
+  --ver-text-question-math: clamp(1.0625rem, 1rem + .45vw, 1.3125rem);
+  --ver-question-weight: 530;
+}
+
+:root:has(body.ver-glyph.textbook-reader) {
+  scroll-padding-block-start: calc(var(--triggle-reader-header-height, 4rem) + .5rem);
 }
 
 .ver-starting :is(.app-shell, .class-dock) { opacity: 0; }
@@ -118,7 +125,7 @@ html[lang="ta"] .ver-loading [lang="en"] { display: none; }
 .ver-glyph :is(.appbar button, .appbar a, .dialog-close, .path-option, .sidebar button,
   .discover-grade, .discover-chapter, .hub-section-card, .hub-exercise-link,
   #questionNavDock button, .question-top-nav button, .ver-question-picker,
-  .ver-question-tools button, .ver-question-tools summary, .ver-solution-actions button) {
+  .ver-question-tools button, .ver-question-tools summary) {
   transition: background-color var(--ver-motion) ease, color var(--ver-motion) ease,
     border-color var(--ver-motion) ease;
 }
@@ -148,7 +155,11 @@ html[lang="ta"] .ver-loading [lang="en"] { display: none; }
   min-block-size: var(--ver-touch);
   border-radius: var(--ver-radius);
 }
+.ver-glyph .appbar { background: var(--ver-white); backdrop-filter: none; }
 .ver-glyph .appbar :is(.home-icon, .browse-symbol) { place-items: center; }
+
+/* Chapter 2 retains its math face and uses the shared face for prose and controls. */
+body.ver-glyph.g10-ch2-type { --g10-ch2-text: var(--ver-font); }
 
 .ver-glyph :is(.discover-grade, .discover-chapter, .hub-section-card, .hub-exercise-link, .path-option) {
   background: var(--ver-white);
@@ -162,13 +173,29 @@ html[lang="ta"] .ver-loading [lang="en"] { display: none; }
   border-color: var(--ver-control-edge);
   box-shadow: none;
 }
-.ver-glyph .discover-chapter {
+.ver-glyph .discover-chapter:not([hidden]) {
+  display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
-  column-gap: var(--ver-space-3);
+  gap: var(--ver-space-1) var(--ver-space-3);
+  align-content: center;
+  min-block-size: 6rem;
+  padding: var(--ver-space-3);
 }
 .ver-glyph .discover-chapter .ver-emblem { grid-column: 1; grid-row: 1 / span 3; align-self: center; }
-.ver-glyph .discover-chapter :is(.discover-chapter-number, strong, .discover-chapter-meta) { grid-column: 2; }
-.ver-glyph .discover-chapter .discover-card-arrow { grid-column: 3; }
+.ver-glyph .discover-chapter :is(.discover-chapter-number, strong, .discover-chapter-meta) {
+  grid-column: 2;
+  overflow-wrap: anywhere;
+}
+.ver-glyph .discover-chapter .discover-card-arrow {
+  position: static;
+  grid-column: 3;
+  grid-row: 1 / span 3;
+  align-self: center;
+}
+.ver-glyph :is(.discover-card-arrow, .hub-section-arrow) {
+  --ver-icon: 1rem;
+  color: var(--ver-muted);
+}
 .ver-glyph .discover-chapter .discover-chapter-number { color: var(--ver-muted); }
 .ver-glyph .ver-chapter-heading {
   display: grid;
@@ -200,11 +227,48 @@ html[lang="ta"] .ver-loading [lang="en"] { display: none; }
 }
 .ver-glyph .path-dialog { background: var(--ver-paper); }
 .ver-glyph .path-dialog :is(.path-option strong, .path-option small, .path-hint) { color: var(--ver-ink); }
-.ver-glyph #figureDialog { background: var(--ver-paper) !important; backdrop-filter: none !important; }
+.ver-glyph #figureDialog {
+  inset: 0 !important;
+  width: min(96vw, 48rem) !important;
+  max-width: none;
+  max-height: 94dvh !important;
+  margin: auto !important;
+  border-color: var(--ver-divider) !important;
+  border-radius: var(--ver-radius-surface) !important;
+  background: var(--ver-paper) !important;
+  box-shadow: none !important;
+  transform: none;
+  backdrop-filter: none !important;
+  scroll-padding-block: 5rem var(--ver-space-4);
+}
+.ver-glyph #figureDialog::backdrop { background: rgb(30 26 47 / 48%) !important; }
+.ver-glyph #figureDialog .dialog-header {
+  align-items: start;
+  background: var(--ver-white);
+  border-color: var(--ver-divider);
+  backdrop-filter: none;
+}
+.ver-glyph #figureDialog .dialog-header h3 {
+  overflow-wrap: anywhere;
+  font: 650 var(--ver-text-body)/var(--ver-prose-leading) var(--ver-font) !important;
+}
 .ver-glyph #figureDialog .dialog-close {
+  flex: 0 0 auto;
+  min-block-size: var(--ver-touch) !important;
   background: var(--ver-tint) !important;
   color: var(--ver-indigo) !important;
   border-color: var(--ver-divider) !important;
+}
+.ver-glyph #figureDialog .diagram-content {
+  max-block-size: none;
+  min-block-size: 0;
+  padding: var(--ver-space-3) !important;
+}
+.ver-glyph #figureDialog .diagram-content > :is(img, svg) {
+  inline-size: auto !important;
+  max-inline-size: 100% !important;
+  block-size: auto;
+  max-block-size: 74dvh !important;
 }
 .ver-glyph #figureDialog .diagram-compare { background: var(--ver-tint); border-color: var(--ver-divider); }
 .ver-glyph #visualLessonDialog .vl-shell { background: var(--ver-paper); }
@@ -215,7 +279,8 @@ html[lang="ta"] .ver-loading [lang="en"] { display: none; }
 .ver-glyph.textbook-reader .lesson-container {
   inline-size: 100%;
   max-inline-size: var(--ver-reader-width);
-  padding: var(--ver-space-1) var(--ver-reader-edge) var(--ver-space-4) !important;
+  padding: var(--ver-space-1) max(var(--ver-reader-edge), env(safe-area-inset-right))
+    var(--ver-space-4) max(var(--ver-reader-edge), env(safe-area-inset-left)) !important;
   margin-inline: auto;
 }
 
@@ -258,6 +323,7 @@ body.ver-glyph.textbook-reader .status-row .crumb-link {
 }
 .ver-glyph.textbook-reader .status-row .crumb-link:hover { background: var(--ver-tint); }
 .ver-glyph.textbook-reader .crumb-link .ver-crumb-label { color: inherit; font-size: inherit; }
+.ver-glyph.textbook-reader #exerciseIndexLink > [aria-hidden] { display: none; }
 body.ver-glyph.textbook-reader .status-row .crumb-sep { display: inline !important; color: var(--ver-muted); }
 
 .ver-glyph.textbook-reader #lessonCard.lesson-card {
@@ -292,8 +358,9 @@ body.ver-glyph.textbook-reader .status-row .crumb-sep { display: inline !importa
 .ver-glyph.textbook-reader #lessonCard #questionHead {
   margin: 0;
   color: var(--ver-ink);
-  font: 700 clamp(1.125rem, 1rem + .7vw, 1.625rem)/1.25 var(--ver-font) !important;
-  overflow-wrap: anywhere;
+  font: 700 clamp(1.125rem, 1rem + .7vw, 1.625rem)/1.35 var(--ver-font) !important;
+  overflow-wrap: normal;
+  word-break: normal;
 }
 
 .ver-glyph .ver-question-picker {
@@ -319,6 +386,7 @@ body.ver-glyph.textbook-reader .status-row .crumb-sep { display: inline !importa
   color: var(--ver-muted) !important;
   font: 500 .8125rem/1.3 var(--ver-font) !important;
   font-variant-numeric: tabular-nums !important;
+  white-space: nowrap;
 }
 
 .ver-glyph.textbook-reader #lessonCard .question-top-nav { gap: 0; }
@@ -375,34 +443,61 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
   background: var(--ver-question-surface);
   box-shadow: none;
   color: var(--ver-ink);
+  font-family: var(--ver-font);
   font-size: var(--ver-text-question) !important;
-  font-weight: 580;
+  font-weight: var(--ver-question-weight);
   line-height: var(--ver-prose-leading) !important;
   overflow-wrap: anywhere;
-  scroll-margin-top: calc(var(--ver-nav-height) + var(--ver-space-2)) !important;
+  scroll-margin-top: 0 !important;
+}
+.ver-glyph.lang-ta #questionText :is(.triggle-tex:not(.triggle-tex-display), math:not(.katex-mathml math)) {
+  font-size: var(--ver-text-question-math);
 }
 
 .ver-glyph.textbook-reader #lessonCard > #inlineFigure {
   order: 4 !important;
   margin: var(--ver-space-2) 0 !important;
-  padding: var(--ver-space-2) !important;
-  border-color: var(--ver-divider);
-  border-radius: var(--ver-radius-surface);
+  padding: 0 !important;
+  border: 0;
   background: var(--ver-white);
   box-shadow: none;
 }
 .ver-glyph #lessonCard #inlineFigure figcaption {
+  display: block;
+  padding: var(--ver-space-1) var(--ver-space-2) 0;
   color: var(--ver-muted);
   font-size: var(--ver-text-small) !important;
   line-height: var(--ver-prose-leading) !important;
 }
-.ver-glyph #lessonCard #inlineFigureOpen { color: var(--ver-indigo); }
-.ver-glyph #lessonCard .inline-figure-visual svg { max-height: min(45dvh, 19rem) !important; }
+.ver-glyph #lessonCard #inlineFigureOpen {
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ver-space-1);
+  color: var(--ver-indigo);
+}
+.ver-glyph #lessonCard .inline-figure-visual {
+  flex: 0 1 auto;
+  inline-size: min(100%, 36rem);
+  overflow: visible;
+}
+.ver-glyph #lessonCard .inline-figure-visual svg {
+  block-size: auto !important;
+  max-height: min(55dvh, 23rem) !important;
+  inline-size: auto;
+  max-inline-size: 100%;
+}
+.ver-glyph #lessonCard .inline-figure-action {
+  flex: none;
+  max-inline-size: 100%;
+  padding-inline: var(--ver-space-2);
+  font: 600 var(--ver-text-small)/var(--ver-prose-leading) var(--ver-font);
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
 .ver-glyph #lessonCard .inline-figure-visual:has(img) {
   position: relative;
-  flex: 0 1 auto;
-  inline-size: min(100%, 28rem);
-  block-size: clamp(10rem, 42vw, 16rem);
+  block-size: clamp(10rem, 58cqi, 22rem);
 }
 .ver-glyph #lessonCard #inlineFigureVisual > img {
   position: absolute;
@@ -413,17 +508,16 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
 }
 
 
-.ver-question-tools, .ver-solution-actions {
+.ver-question-tools {
   display: flex;
   flex-wrap: wrap;
   align-items: start;
   gap: 0 var(--ver-space-2);
   min-inline-size: 0;
 }
-.ver-question-tools { order: 5; }
+.ver-question-tools { order: 5; margin-block-start: var(--ver-space-1); }
 .ver-question-tools:not(:has(> :not([hidden]))) { display: none; }
-.ver-solution-actions { order: 6; margin-block-start: var(--ver-space-1); }
-.ver-glyph #lessonCard :is(.ver-question-tools, .ver-solution-actions) :is(button, summary):not([hidden]) {
+.ver-glyph #lessonCard .ver-question-tools :is(button, summary):not([hidden]) {
   display: inline-flex;
   align-items: center;
   gap: var(--ver-space-2);
@@ -441,7 +535,7 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
   white-space: normal;
   overflow-wrap: anywhere;
 }
-.ver-glyph #lessonCard :is(.ver-question-tools, .ver-solution-actions) :is(button, summary):hover {
+.ver-glyph #lessonCard .ver-question-tools :is(button, summary):hover {
   background: var(--ver-tint);
 }
 .ver-glyph #lessonCard #quickSolutionAction:not([hidden]) { background: var(--ver-tint); }
@@ -467,7 +561,7 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
   min-width: 0;
   margin: var(--ver-space-3) 0 0 !important;
   padding: 0 !important;
-  scroll-margin-block-start: calc(var(--ver-nav-height) + var(--ver-space-2));
+  scroll-margin-block-start: 0;
 }
 .ver-glyph.textbook-reader #lessonCard .lesson-divider {
   gap: var(--ver-space-2);
@@ -502,6 +596,7 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
 body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
   margin: 0 0 var(--ver-space-1);
   color: var(--ver-ink);
+  font-family: var(--ver-font);
   font-size: var(--ver-text-body) !important;
   line-height: var(--ver-prose-leading) !important;
   overflow-wrap: anywhere;
@@ -528,6 +623,7 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
   overflow-y: hidden !important;
   scrollbar-width: thin;
   scrollbar-color: var(--ver-control-edge) var(--ver-tint);
+  scroll-margin-block: 0;
 }
 .ver-glyph #lessonCard .triggle-tex-display :is(.katex, .katex-display) {
   text-align: start;
@@ -542,7 +638,7 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
   color: var(--ver-focus);
 }
 .ver-glyph.textbook-reader #lessonCard .worked-step :is(details, summary) {
-  scroll-margin-block: calc(var(--ver-nav-height) + var(--ver-space-2)) 5rem;
+  scroll-margin-block: 0;
 }
 
 .ver-glyph.textbook-reader #lessonCard .final-answer-step {
@@ -562,11 +658,39 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
 .ver-glyph #lessonCard :is(.final-answer-label, .final-answer-value) { color: var(--ver-indigo); }
 .ver-glyph #lessonCard .final-answer-label { font-size: var(--ver-text-small); }
 .ver-glyph #lessonCard .twd-part-solution { background: var(--ver-tint); border-color: var(--ver-divider); }
+.ver-glyph .triggle-table-wrap {
+  border-color: var(--ver-divider);
+  border-radius: var(--ver-radius);
+  background: var(--ver-white);
+  overscroll-behavior-inline: contain;
+}
+.ver-glyph .triggle-data-table {
+  font: 400 var(--ver-text-small)/var(--ver-prose-leading) var(--ver-font);
+}
+.ver-glyph .triggle-data-table :is(th, td) { border-color: var(--ver-divider); }
+.ver-glyph .triggle-data-table thead th { background: var(--ver-tint); color: var(--ver-indigo); }
 
 .ver-glyph.textbook-reader #questionNavDock {
+  container: ver-dock / inline-size;
   max-inline-size: var(--ver-reader-width);
   background: var(--ver-paper) !important;
   border-color: var(--ver-divider) !important;
+}
+.ver-glyph.textbook-reader #questionNavDock:not([hidden]):has(#questionJump:not([hidden])) {
+  grid-template-areas: "previous question next" !important;
+  grid-template-columns: minmax(0, 1fr) var(--ver-touch) minmax(0, 1fr) !important;
+}
+body.ver-glyph.textbook-reader #questionNavDock #questionJump {
+  grid-area: question;
+  position: static;
+  inline-size: var(--ver-touch);
+  min-block-size: var(--ver-touch);
+  max-inline-size: none;
+  border-color: var(--ver-divider);
+  border-radius: var(--ver-radius);
+  background: var(--ver-white);
+  color: var(--ver-indigo);
+  font: 600 1.25rem/1 var(--ver-font);
 }
 .ver-glyph.textbook-reader #questionNavDock .page-button {
   display: inline-flex;
@@ -578,7 +702,8 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
   background: var(--ver-white);
   color: var(--ver-indigo);
   box-shadow: none;
-  overflow-wrap: anywhere;
+  font: 650 var(--ver-text-small)/1.4 var(--ver-font) !important;
+  overflow-wrap: break-word;
 }
 .ver-glyph.textbook-reader #questionNavDock .page-button.next {
   background: var(--ver-indigo);
@@ -593,18 +718,36 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
   border-color: var(--ver-divider);
   opacity: 1;
 }
+@container ver-dock (max-width: 17rem) {
+  .ver-glyph.textbook-reader #questionNavDock .page-button span { display: none; }
+}
 
 @media (max-width: 800px) {
-  .ver-glyph.textbook-reader .appbar {
-    grid-template-columns: minmax(1.875rem, 1fr) var(--ver-touch) var(--ver-touch) auto !important;
+  :root:has(body.ver-glyph.textbook-reader) {
+    scroll-padding-block-end: calc(var(--triggle-reader-dock-height, 4rem) + .5rem);
+  }
+  body.ver-glyph.textbook-reader { touch-action: auto !important; }
+  body.ver-glyph:not(.home-active) .appbar {
+    grid-template-columns: minmax(0, 1fr) var(--ver-touch) var(--ver-touch) auto !important;
+    grid-template-rows: auto;
     height: auto !important;
     min-height: var(--ver-nav-height) !important;
-    padding: var(--ver-space-1) var(--ver-space-2) !important;
+    padding: calc(var(--ver-space-1) + env(safe-area-inset-top))
+      max(var(--ver-space-2), env(safe-area-inset-right)) var(--ver-space-1)
+      max(var(--ver-space-2), env(safe-area-inset-left)) !important;
     gap: var(--ver-space-1) !important;
   }
-  .ver-glyph.textbook-reader .appbar .brand-mobile { overflow: hidden; }
-  .ver-glyph.textbook-reader .appbar .brand-mobile b { display: block; }
-  .ver-glyph.textbook-reader .appbar :is(.browse-button, .home-link) {
+  body.ver-glyph:not(.home-active) .appbar .brand-mobile { overflow: hidden; }
+  body.ver-glyph:not(.home-active) .appbar .brand-mobile .logo { flex: 0 0 auto; }
+  body.ver-glyph:not(.home-active) .appbar .brand-mobile b {
+    display: block;
+    font-size: clamp(.9375rem, .75rem + 1vw, 1.125rem);
+    white-space: nowrap;
+  }
+  body.ver-glyph:not(.home-active) .appbar :is(.browse-button, .home-link) {
+    display: inline-grid;
+    place-items: center;
+    grid-row: 1;
     width: var(--ver-touch) !important;
     min-width: var(--ver-touch) !important;
     height: auto !important;
@@ -612,20 +755,15 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
     border: 0;
     box-shadow: none;
   }
-  .ver-glyph.textbook-reader .appbar .lang-switch button {
+  body.ver-glyph:not(.home-active) .appbar #browseBtn { grid-column: 2; }
+  body.ver-glyph:not(.home-active) .appbar #homeBtn { grid-column: 3; }
+  body.ver-glyph:not(.home-active) .appbar .lang-switch { grid-area: 1 / 4; }
+  body.ver-glyph:not(.home-active) .appbar :is([data-i18n="browse"], [data-i18n="home"], #browseChevron) {
+    display: none;
+  }
+  body.ver-glyph:not(.home-active) .appbar .lang-switch button {
     min-height: var(--ver-touch) !important;
     font-size: var(--ver-text-small) !important;
-  }
-  .ver-glyph.textbook-reader .workspace #questionJump {
-    position: fixed;
-    z-index: 45;
-    right: var(--ver-space-2);
-    bottom: calc(var(--triggle-reader-dock-height, 3.75rem) + var(--ver-space-2));
-    max-width: none;
-    min-height: var(--ver-touch);
-    border-color: var(--ver-control-edge);
-    background: var(--ver-paper);
-    color: var(--ver-indigo);
   }
   .ver-glyph.textbook-reader #lessonCard .triggle-tex[tabindex] { touch-action: pan-x pan-y; }
   .ver-glyph.textbook-reader #lessonCard .worked-step .structured-equation .triggle-tex-display {
@@ -633,25 +771,45 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
     max-width: calc(100% + 2rem);
     margin-inline-start: -2rem !important;
   }
+  .ver-glyph #figureDialog {
+    width: 100% !important;
+    max-height: 100dvh !important;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right)
+      env(safe-area-inset-bottom) env(safe-area-inset-left);
+    border: 0 !important;
+    border-radius: 0 !important;
+  }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 430px) {
   .ver-glyph .ver-question-identity .ver-emblem { inline-size: 2rem; block-size: 2rem; }
   .ver-glyph .ver-question-identity .ver-icon { --ver-icon: 1.375rem; }
-  .ver-glyph.textbook-reader #lessonCard .question-top { gap: 0 var(--ver-space-1); }
-  .ver-glyph .ver-question-picker { gap: var(--ver-space-1); padding-inline: var(--ver-space-1); }
-}
-@container ver-reader (max-width: 16rem) {
-  .ver-glyph.textbook-reader #lessonCard > .question-top {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .ver-question-identity { max-width: 100%; }
+  .ver-glyph.textbook-reader #lessonCard > .question-top { gap: 0 var(--ver-space-1); }
   .ver-glyph .ver-question-picker {
-    flex-shrink: 1;
-    min-width: 0;
-    overflow-wrap: anywhere;
+    flex-direction: column;
+    gap: 0;
+    min-inline-size: var(--ver-touch);
+    padding-inline: var(--ver-space-1);
+  }
+  .ver-glyph #questionPickerLabel { display: none; }
+}
+
+@container ver-reader (max-width: 16.5rem) {
+  .ver-glyph.textbook-reader #lessonCard > .question-top {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .ver-glyph .ver-question-identity { grid-column: 1 / -1; }
+  .ver-glyph .ver-question-picker { justify-self: start; }
+}
+
+@media (max-width: 800px) and (max-height: 480px) {
+  :root:has(body.ver-glyph.textbook-reader) { scroll-padding-block: .5rem; }
+  body.ver-glyph.textbook-reader .appbar { position: static !important; }
+  body.ver-glyph.textbook-reader .workspace {
+    padding-bottom: env(safe-area-inset-bottom) !important;
+  }
+  body.ver-glyph.textbook-reader #questionNavDock:not([hidden]) {
+    position: static !important;
   }
 }
 

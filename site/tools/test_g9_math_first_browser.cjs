@@ -211,7 +211,7 @@ async function navigation(page, base) {
   await load(page, base, sets);
   assert.match(await page.locator('#questionText').innerText(), /\p{Script=Tamil}/u);
   await load(page, base, 'g9-ch2-ex3-q1-i');
-  await page.locator('#figureBtn').click();
+  await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
   assert(await page.locator('#figureDialog').isVisible());
   assert.equal(await page.locator('#closeDiagram').evaluate(el => el === document.activeElement), true);
   await page.keyboard.press('Escape');

@@ -78,7 +78,7 @@ async function checkQuestion(page, row, lang) {
           if (await image.count()) {
             await image.evaluate(img=>img.decode());
             if(row===subset[1]) {
-              await page.locator('#figureBtn').tap();
+              await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').tap();
               await page.locator('#diagramContent img').evaluate(img=>img.decode());
               await page.locator('#closeDiagram').tap();
             }

@@ -153,12 +153,15 @@
   function prepare(root=document) {
     const tamil=(root.closest?.('[lang]')?.lang||document.documentElement.lang)==='ta';
     const label=tamil?'உருட்டிப் பார்க்கக்கூடிய கணிதக் கோவை':'Scrollable mathematical expression';
-    const measurements=Array.from(root.querySelectorAll('.triggle-tex'),el=>[el,el.scrollWidth>el.clientWidth+1]);
+    const tableLabel=tamil?'உருட்டிப் பார்க்கக்கூடிய அட்டவணை':'Scrollable table';
+    const measurements=Array.from(root.querySelectorAll('.triggle-tex, .triggle-table-wrap'),
+      el=>[el,el.scrollWidth>el.clientWidth+1]);
     for(const [el,wide] of measurements){
       if(wide){
+        const scrollLabel=el.classList.contains('triggle-table-wrap')?tableLabel:label;
         if(el.tabIndex!==0)el.tabIndex=0;
         if(el.getAttribute('role')!=='group')el.setAttribute('role','group');
-        if(el.getAttribute('aria-label')!==label)el.setAttribute('aria-label',label);
+        if(el.getAttribute('aria-label')!==scrollLabel)el.setAttribute('aria-label',scrollLabel);
       }else if(el.hasAttribute('tabindex')){
         el.removeAttribute('tabindex');
         el.removeAttribute('role');

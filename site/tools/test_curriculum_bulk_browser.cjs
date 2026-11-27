@@ -52,7 +52,7 @@ async function main(){
     assert.equal(await final.locator('.triggle-tex').getAttribute('data-math-fallback'),record.answer,'Exact authored final answer retained for accessibility');
     assert.ok(await final.locator('math').count()>0,'Authored final answer rendered as semantic maths');
     assert.ok(await page.locator('#stepsRegion').isVisible());
-    assert.equal(await page.locator('#figureBtn').isVisible(),false,'No invented compulsory diagram');
+    assert.equal(await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').isVisible(),false,'No invented compulsory diagram');
     assert.equal(await page.locator('#answerBox').isVisible(),false,'Existing final-answer presentation');
     const metrics=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,overflow:getComputedStyle(document.querySelector('#stepsRegion')).overflowY}));
     assert.ok(metrics.scroll<=metrics.width+1,'No page overflow at '+width+' '+record.id);

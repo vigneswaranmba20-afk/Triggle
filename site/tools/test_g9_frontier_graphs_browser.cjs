@@ -12,7 +12,7 @@ async function checkGraph(page,record,lang) {
   const why=page.locator('#stepsList .why-step-g9 summary').last();
   await why.click();
   assert.match(await page.locator('.why-step-g9[open] .why-step-panel').innerText(),lang==='ta'?/\p{Script=Tamil}/u:/[a-z]{4}/i);
-  await page.locator('#figureBtn').click();
+  await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
   const dialog=page.locator('#figureDialog');
   const graphic=dialog.locator('#diagramContent img');
   await graphic.evaluate(image=>image.decode());

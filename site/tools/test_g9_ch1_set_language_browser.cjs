@@ -65,7 +65,7 @@ async function checkReader(page, row, lang, section) {
       assert.equal(await inline.getAttribute('src'), expected);
       await inline.evaluate(node => node.decode());
     }
-    await page.locator('#figureBtn').click();
+    await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
     const image = page.locator('#diagramContent img');
     await image.evaluate(node => node.decode());
     assert.equal(await image.getAttribute('src'), expected);

@@ -41,7 +41,7 @@ async function main(batch){
     assert.equal(await page.locator('#stepsList .final-answer-step').count(),1,'One final answer in How It Works');
     const authoredAnswer=await page.locator('#stepsList .final-answer-step').evaluate(el=>{const copy=el.cloneNode(true);copy.querySelectorAll('.triggle-tex').forEach(m=>m.replaceWith(document.createTextNode(m.dataset.mathFallback)));copy.querySelectorAll('math[aria-label]').forEach(m=>m.replaceWith(document.createTextNode(m.getAttribute('aria-label'))));copy.querySelectorAll('.frac').forEach(f=>f.replaceWith(document.createTextNode('[['+f.children[0].textContent+'|'+f.children[1].textContent+']]')));copy.querySelectorAll('sup').forEach(n=>n.replaceWith(document.createTextNode(n.textContent.replace(/[0-9]/g,c=>'⁰¹²³⁴⁵⁶⁷⁸⁹'[+c]))));return copy.textContent;});assert.ok(authoredAnswer.includes(record.answer),'Authored final answer rendered');
     assert.ok(await page.locator('#stepsRegion').isVisible());
-    assert.equal(await page.locator('#figureBtn').isVisible(),false,'No invented compulsory diagram');
+    assert.equal(await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').isVisible(),false,'No invented compulsory diagram');
     assert.equal(await page.locator('#answerBox').isVisible(),false,'Existing final-answer presentation');
     const metrics=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,overflow:getComputedStyle(document.querySelector('#stepsRegion')).overflowY}));
     assert.ok(metrics.scroll<=metrics.width+1,'No page overflow at '+width+' '+record.id);

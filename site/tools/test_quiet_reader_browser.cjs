@@ -76,24 +76,24 @@ async function main(){
    for(const qid of ['c9-exercise-6-1-q1','c9-exercise-6-1-q2']){
     await page.goto(url+'/index.html?class=9&question='+qid);
     await page.locator('#questionHead').waitFor({state:'visible'});
-    assert.equal(await page.locator('#figureBtn').isVisible(),true,
+    assert.equal(await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').isVisible(),true,
       'Relevant Figure icon hidden before touch at '+width+' for '+qid);
-    assert.equal(await page.locator('#figureBtn').evaluate(el=>el.inert),false,
+    assert.equal(await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').evaluate(el=>el.inert),false,
       'Relevant Figure icon must not be inert');
     if(width<=800){
      assert.equal(await page.evaluate(()=>window.TriggleQuietReader.isVisible()),true,
        'Figure and supplemental actions already visible');
     }
-    await page.locator('#figureBtn').click();
+    await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
     assert.equal(await page.locator('#figureDialog').evaluate(el=>el.open),true,
       'Figure should open its question-specific diagram');
     await page.locator('#closeDiagram').click();
-    assert.equal(await page.locator('#figureBtn').isVisible(),true,
+    assert.equal(await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').isVisible(),true,
       'Figure must remain discoverable after closing its dialog');
    }
    await page.goto(url+'/index.html?class=9&question=g9-ch9-ex9.1-q4');
    await page.locator('#questionHead').waitFor({state:'visible'});
-   assert.equal(await page.locator('#figureBtn').isVisible(),false,
+   assert.equal(await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').isVisible(),false,
      'Do not show misleading Figure action for a question without a useful diagram');
    if(width<=800){
     await page.goto(url+'/index.html?class=9&question=g9-ch9-ex9.1-q4');

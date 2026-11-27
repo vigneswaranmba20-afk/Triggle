@@ -90,7 +90,7 @@
         '<strong>'+escapeHtml(tr(c.title))+'</strong>'+
         '<span class="discover-chapter-meta'+(available?' is-ready':'')+'">'+
         (available?'✦ '+count+' '+escapeHtml(t.readytag):escapeHtml(t.planned))+'</span>'+
-        '<span class="discover-card-arrow" aria-hidden="true">↗</span></button>';
+        '<span class="discover-card-arrow" aria-hidden="true">'+(window.TriggleGlyph?.icon('next')||'→')+'</span></button>';
     }
     function jumpOptions(selectedGrade){
       return '<option value="">'+escapeHtml(t.choose)+'</option>'+visibleGrades.filter(g=>!selectedGrade||selectedGrade===g.grade)

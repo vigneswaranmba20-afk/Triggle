@@ -824,7 +824,7 @@
           '<strong>'+e(labelFor(kind))+'</strong>'+
           '<span class="hub-section-description">'+e(noteFor(kind))+'</span>'+
           '<span class="hub-section-count">'+e(countFor(kind))+'</span>'+
-          '<span class="hub-section-arrow" aria-hidden="true">↗</span>';
+          '<span class="hub-section-arrow" aria-hidden="true">'+(window.TriggleGlyph?.icon('next')||'→')+'</span>';
         b.addEventListener('click',()=>onSection(kind));
         grid.append(b);
       });

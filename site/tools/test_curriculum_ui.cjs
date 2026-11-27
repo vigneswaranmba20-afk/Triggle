@@ -933,7 +933,7 @@ async function main() {
       assert.equal(await page.locator('#markDone').getAttribute('aria-pressed'), 'true');
       await page.reload();
       assert.equal(await page.locator('#markDone').getAttribute('aria-pressed'), 'true');
-      await page.locator('#figureBtn').click();
+      await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
       assert.equal(await page.locator('#figureDialog').evaluate(el => el.open), true);
       assert.ok(await page.locator('#diagramContent svg').count() > 0);
       await page.locator('#closeDiagram').click();

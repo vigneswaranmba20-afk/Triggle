@@ -44,7 +44,7 @@ async function geometry(page,id){
   await page.locator('#previous').click();assert.equal(new URL(page.url()).searchParams.get('question'),'g9-ch2-ex7-q1-i');
   await page.reload();assert.equal(await page.locator('#markDone').getAttribute('aria-pressed'),'true','Existing saved progress survives reload');
   await page.goto(app.base+'/index.html?class=9&question=g9-ch2-ex3-q1-i');
-  await page.locator('#figureBtn').click();assert(await page.locator('#figureDialog').isVisible(),'Existing question figure remains available');await page.keyboard.press('Escape');
+  await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();assert(await page.locator('#figureDialog').isVisible(),'Existing question figure remains available');await page.keyboard.press('Escape');
   assert.deepEqual(errors,[]);await context.close();
   const offline=await browser.newContext({viewport:{width:390,height:844},serviceWorkers:'allow'}),cached=await offline.newPage();
   await cached.goto(app.base+'/index.html?class=9&question=g9-ch2-ex7-q2-i');

@@ -69,7 +69,7 @@ async function checkGeometry(page, id) {
         assert.equal(await page.locator('#difficultyIndicator').isVisible(), true);
         assert.equal(await card.locator('.math-fallback').count(), 0);
         assert.ok(await card.locator('.katex math').count() > 0);
-        assert.equal(await page.locator('#figureBtn').isVisible(), Boolean(record.figureSrc));
+        assert.equal(await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').isVisible(), Boolean(record.figureSrc));
         if (record.figureSrc) {
           const image = page.locator('#inlineFigureVisual img');
           assert.equal(await image.getAttribute('alt'), record.figureAlt.en);

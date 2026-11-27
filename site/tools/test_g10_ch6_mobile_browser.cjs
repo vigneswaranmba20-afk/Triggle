@@ -111,7 +111,7 @@ const { loadRuntime } = require('./curriculum_bulk.cjs');
 
         // Test figure modal on first diagram of each section
         if (item.figureSrc && /q1$|q5$|q6$/.test(item.id) && runCfg.width === 390) {
-          const figBtn = page.locator('#figureBtn, #inlineFigureOpen').first();
+          const figBtn = page.locator('#inlineFigureOpen:visible, #figureBtn:visible');
           if (await figBtn.count() && await figBtn.isVisible()) {
             await figBtn.click();
             await page.locator('#figureDialog[open]').waitFor({ state: 'visible', timeout: 2000 });
