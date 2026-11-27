@@ -81,6 +81,68 @@ for(const lang of ['en','ta']){
  assert.equal(first.children[1].innerHTML,'Original question');
  assert.equal(first.children[2].children[1].children[0].textContent,'Original answer');
 }
+
+// MQ-02: mount the real bilingual Set Language Activity 4; never drop worked notes.
+{
+ const walk=(node,predicate)=>[...(predicate(node)?[node]:[]),...node.children.flatMap(child=>walk(child,predicate))];
+ const byClass=(node,cls)=>walk(node,n=>n.className===cls);
+ const rows=[[1,30,45,65,10,20,35],[2,20,45,55,10,10,35],[3,50,65,90,25,25,40],[4,30,43,70,3,27,40]];
+ const equations=['45=55−20+10','90=50+65−25','3=30+43−70'];
+ const item=catalog['g9-ch1'][17];
+ assert.equal(item.page,30);
+ function renderCards(registry,chapter,lang){
+  const ctx={document:doc,window:{TRIGGLE_TEXTBOOK_TASKS:registry,TriggleNotation:{render:t=>t}}};
+  vm.runInNewContext(renderer,ctx);
+  const parent=new TestElement('div');
+  assert.equal(ctx.window.TriggleTextbookActivities.mount(parent,{id:chapter},lang),true);
+  return parent.children[0].children.slice(1);
+ }
+ for(const lang of ['en','ta']){
+  const cards=renderCards(catalog,'g9-ch1',lang),card=cards[17];
+  assert.equal(card.dataset.textbookItem,'18');
+  const tables=walk(card,n=>n.tagName==='table');
+  assert.equal(tables.length,1);
+  const table=tables[0],tbody=walk(table,n=>n.tagName==='tbody')[0];
+  assert.equal(tbody.children.length,4);
+  assert.deepEqual(tbody.children.map(row=>row.children.map(cell=>Number(cell.textContent))),rows);
+  assert.equal(walk(table,n=>n.tagName==='th').length,7);
+  for(const heading of walk(table,n=>n.tagName==='th'))assert.equal(heading.scope,'col');
+  const region=byClass(card,'activity-table-scroll')[0];
+  assert.equal(region.tabIndex,0);
+  assert.equal(region.attrs.role,'region');
+  assert.equal(region.attrs['aria-label'],walk(table,n=>n.tagName==='caption')[0].textContent);
+  const notes=byClass(card,'task-answer-check').map(p=>p.textContent).join(' ');
+  for(const eq of equations)assert(notes.includes(eq),lang+' lost worked note '+eq);
+  assert(notes.includes(lang==='ta'?'எனச் சரிபார்க்கவும்.':'Verify each row'));
+  const lead=byClass(card,'task-answer-lead')[0].textContent;
+  assert(lead.includes(lang==='ta'?'ஒவ்வொரு வரியிலும்':'For every row'));
+  assert(lead.includes('n(A∩B)=n(A)+n(B)−n(A∪B)'));
+  for(const [,a,b,u,i,onlyA,onlyB] of rows){
+   assert.equal(a+b-u,i);assert.equal(a-i,onlyA);assert.equal(b-i,onlyB);assert.equal(onlyA+i+onlyB,u);
+  }
+  for(const [chapter,items] of Object.entries(catalog)){
+   const mounted=chapter==='g9-ch1'?cards:renderCards(catalog,chapter,lang);
+   items.forEach((other,j)=>{
+    if(chapter==='g9-ch1'&&j===17)return;
+    assert.equal(byClass(mounted[j],'task-answer-text')[0].textContent,other.answer[lang].trim());
+   });
+  }
+  const raw=item.answer[lang];
+  for(const malformed of [
+   raw.replace('[20,45,55,10,10,35]','[20,45,,10,10,35]'),
+   raw.replace('[20,45,55,10,10,35]','[20,45,55,10,10]'),
+   raw.replace('[20,45,55,10,10,35]','[20,45,55,10,10,35'),
+   raw.replace(lang==='ta'?'வரி 2 [':'row 2 [',lang==='ta'?'வரி 1 [':'row 1 [')
+  ]){
+   assert.notEqual(malformed,raw);
+   const fallback={...item,answer:{...item.answer,[lang]:malformed}};
+   const rendered=renderCards({test:[fallback]},'test',lang)[0];
+   assert.equal(walk(rendered,n=>n.tagName==='table').length,0);
+   assert.equal(byClass(rendered,'task-answer-text')[0].textContent,malformed);
+  }
+ }
+}
+
 const activityCSS=read('assets/math-first.css');
 assert(activityCSS.includes('min-height:56px!important')&&activityCSS.includes('summary:focus-visible'),'Large touch targets and keyboard focus retained');
 assert(renderer.includes('data-textbook')===false,'No unreviewed tracking or network');
