@@ -152,6 +152,11 @@ async function synthetic(page){
     test('subpathClear','<path d="M10 55 L30 55 M210 55 L230 55" fill="none" stroke="black"/><text x="85" y="60">Between</text>');
     test('intentional','<line id="tick" x1="31" y1="50" x2="58" y2="50" stroke="black"/><text data-dg-allow="tick" x="32" y="54">Tick</text>');
     test('arrowhead','<polygon id="head" data-dg-role="arrowhead" data-dg-fill points="55,40 68,55 45,68"/><text x="53" y="60">A</text>');
+    const arrow='<defs><marker id="arrow" viewBox="0 0 20 10" markerWidth="20" markerHeight="10" refX="0" refY="5" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M0 0 L20 5 L0 10 Z"/></marker></defs>';
+    test('markerEnd',arrow+'<line x1="40" y1="60" x2="100" y2="60" stroke="black" marker-end="url(#arrow)"/><text x="104" y="64">A</text>');
+    test('markerStart',arrow+'<line x1="100" y1="60" x2="200" y2="60" stroke="black" marker-start="url(#arrow)"/><text x="84" y="64">A</text>');
+    test('markerPathClear',arrow+'<path d="M40 60 Q80 40 100 60" stroke="black" fill="none" marker-end="url(#arrow)"/><text x="106" y="44">A</text>');
+    test('markerPathHit',arrow+'<path d="M40 60 Q80 40 100 60" stroke="black" fill="none" marker-end="url(#arrow)"/><text x="106" y="74">A</text>');
     test('fill','<rect id="shade" data-dg-fill x="20" y="20" width="100" height="70" fill="#ddd"/><text x="45" y="52">Inside</text>');
     test('legend','<rect id="plot" data-dg-role="plot" data-dg-fill x="20" y="20" width="100" height="70" fill="#ddd"/><text x="45" y="52">Legend</text>');
     cases.previewBefore=run(preview);
@@ -175,7 +180,8 @@ async function synthetic(page){
   const exact={
     line:['stroke'],strokeWidth:['stroke'],diagonalClear:[],label:['label'],boundary:['boundary'],
     rotated:['stroke'],transform:['angle'],tamilClear:[],tamilBoundary:['boundary'],curve:['stroke'],cssCircle:['stroke'],
-    subpathClear:[],intentional:[],arrowhead:['arrowhead'],fill:['fill'],legend:['plot']
+    subpathClear:[],intentional:[],arrowhead:['arrowhead'],markerEnd:['arrowhead'],markerStart:['arrowhead'],
+    markerPathClear:[],markerPathHit:['arrowhead'],fill:['fill'],legend:['plot']
   };
   for(const [name,expected] of Object.entries(exact)){
     assert.deepEqual(result.cases[name].map(issue=>issue.kind),expected,name);
@@ -185,7 +191,34 @@ async function synthetic(page){
   assert.throws(()=>proportional([[48,20],[22,88],[94,88]],[[190,14],[156,88],[248,88]]));
   assert(result.canvas.every(size=>size>4&&size<12),'Canvas transformed metrics');
   assert.deepEqual(result.closestPointPlacement,[82,70],'Label remains associated with its own point');
-  console.log('DiagramGuard: 18 synthetic checks, two original regressions and original unequal proportions reproduced');
+  console.log('DiagramGuard: synthetic label, marker and geometry checks, plus both original regressions');
+}
+
+async function legacyMarkers(page){
+  const stats=await page.evaluate(async()=>{
+    const host=document.createElement('div');
+    host.style.cssText='position:absolute;left:-2000px;top:0;pointer-events:none';
+    document.body.append(host);
+    const root=host.attachShadow({mode:'closed'}), reports=[];
+    await document.fonts.ready;
+    for(const name of ['ex1-2-q4','figure1-16','figure1-4-graphs']){
+      const response=await fetch('./assets/grade10-ch1/'+name+'.svg');
+      if(!response.ok)throw Error(name+' '+response.status);
+      root.innerHTML=await response.text();
+      const svg=root.querySelector('svg');
+      for(const width of [240,300,480]){
+        svg.style.width=width+'px';
+        const {issues,unmeasured}=window.TriggleDiagramGuard.audit(svg,{discover:true});
+        reports.push({name,width,issues:issues.filter(issue=>issue.kind==='arrowhead'),unmeasured});
+      }
+    }
+    host.remove();
+    return reports;
+  });
+  for(const {name,width,issues,unmeasured} of stats){
+    assert.deepEqual(unmeasured,[],name+' marker coverage');
+    assert.deepEqual(issues,[],`${name} at ${width}px clears marker labels`);
+  }
 }
 
 async function legacyCases(page){
@@ -491,8 +524,14 @@ async function main(){
           console.log(`DiagramGuard: ${cases} bilingual and responsive bisector, angle and square-area states`);
           return;
         }
+        if(process.argv.includes('--synthetic-only')){
+          await synthetic(page);
+          await legacyMarkers(page);
+          return;
+        }
         if(width===390&&!live){
           await synthetic(page);
+          await legacyMarkers(page);
           await legacyCases(page);
           await legacyBoundaryCases(page);
           await conceptBoundaries(page,base);
