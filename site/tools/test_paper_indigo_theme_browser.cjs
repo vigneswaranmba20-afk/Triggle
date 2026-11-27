@@ -1,14 +1,14 @@
 'use strict';
-/* VER Glyph surfaces across the retained lesson and navigation templates. */
+/* Classic Triggle colours across the current lesson and navigation templates. */
 const assert=require('node:assert/strict'),fs=require('node:fs/promises'),path=require('node:path');
 const {chromium}=require('playwright');
 const {server,launchOptions}=require('./dashboard_test_support.cjs');
 const out=path.resolve(__dirname,'../../screenshots/paper-indigo');
-const forest='rgb(38, 56, 44)',white='rgb(255, 255, 255)',paper='rgb(253, 253, 250)',mist='rgb(237, 240, 232)';
+const graphite='rgb(24, 27, 32)',white='rgb(255, 255, 255)',paper='rgb(247, 246, 242)',tint='rgb(243, 240, 233)',indigo='rgb(55, 48, 94)';
 const label=(page)=>page.evaluate(()=>({
   paper:getComputedStyle(document.body).backgroundColor,
   ink:getComputedStyle(document.body).color,
-  accent:getComputedStyle(document.body).getPropertyValue('--violet').trim()
+  accent:getComputedStyle(document.body).getPropertyValue('--ver-indigo').trim()
 }));
 async function visit(page,url){
  const r=await page.goto(url);
@@ -22,12 +22,12 @@ async function visit(page,url){
    el.addEventListener('error',()=>reject(Error('Theme stylesheet did not load')),{once:true});
  }));
  const l=await label(page);
- assert.deepEqual(l,{paper,ink:'rgb(35, 44, 38)',accent:'#26382C'},'VER Glyph student shell');
+ assert.deepEqual(l,{paper,ink:graphite,accent:'#37305E'},'Classic palette on the student shell');
  assert.equal(await page.locator('.appbar').evaluate(el=>getComputedStyle(el).backgroundColor),white,'White app bar across all routes');
- assert.equal(await page.locator('.appbar .browse-button').evaluate(el=>getComputedStyle(el).color),forest,'Exercises control has dark text');
+ assert.equal(await page.locator('.appbar .browse-button').evaluate(el=>getComputedStyle(el).color),graphite,'Exercises control has dark text');
  assert.equal(await page.locator('.appbar .basics-link').evaluate(el=>getComputedStyle(el).backgroundColor),white,'Home button is white');
- assert.equal(await page.locator('.appbar .lang-switch').evaluate(el=>getComputedStyle(el).backgroundColor),mist,'Language toggle has a Mist background');
- assert.equal(await page.locator('.appbar .lang-switch button.active').evaluate(el=>getComputedStyle(el).backgroundColor),forest,'Selected language has a Forest Green background');
+ assert.equal(await page.locator('.appbar .lang-switch').evaluate(el=>getComputedStyle(el).backgroundColor),tint,'Language toggle has the warm neutral background');
+ assert.equal(await page.locator('.appbar .lang-switch button.active').evaluate(el=>getComputedStyle(el).backgroundColor),white,'Selected language has a white background');
 
  const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-innerWidth);
  assert.ok(overflow<=1,'No horizontal scroll: '+overflow+' '+url);
@@ -48,32 +48,33 @@ async function main(){
    await p.locator('.sp2-nav-button').first().waitFor({state:'visible'});
    assert.equal(await p.locator('.sp2-nav-button').first().evaluate(el=>getComputedStyle(el).backgroundColor),white,'Set Language concept card paper');
    await p.locator('.sp2-nav-button').first().click();
-   assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).backgroundColor),forest,'Set Language Next uses Forest Green');
+   assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).backgroundColor),graphite,'Set Language Next uses graphite');
    await visit(p,base+'?class=9&chapter=g9-ch2&section=concepts');
    const index=p.locator('.sp2-index-view'),buttons=index.locator('.sp2-nav-button');
    assert.equal(await buttons.count(),8,'All Real Numbers ideas retained');
    assert.equal(await buttons.first().evaluate(el=>getComputedStyle(el).backgroundColor),white,'Real Numbers index paper');
    await buttons.first().click();
    assert.equal(await p.locator('.sp2-demo').count(),1,'Mathematical demo stays intact');
-   assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).backgroundColor),forest,'Real Numbers Next uses Forest Green');
+   assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).backgroundColor),graphite,'Real Numbers Next uses graphite');
    assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).color),white,'Next label stays readable');
    assert.equal(await p.locator('.sp2-demo').evaluate(el=>getComputedStyle(el).backgroundColor),'rgba(122, 140, 167, 0.055)','Grade 9 demo uses Mensuration-inspired soft-tinted learning surface');
    await p.locator('#langTa').click();
    assert(await p.locator('.sp2-concept-heading').innerText().then(t=>/[\u0B80-\u0BFF]/.test(t)),'Tamil math lesson stays visible');
-   assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).backgroundColor),forest,'Tamil Next uses same color');
+   assert.equal(await p.locator('.sp2-footer-next').evaluate(el=>getComputedStyle(el).backgroundColor),graphite,'Tamil Next uses same color');
    if(width===390)await p.screenshot({path:path.join(out,'g9-real-numbers-tamil-390.png'),fullPage:false});
    await visit(p,base+'?class=10&chapter=g10-ch1&section=exercises');
    await p.locator('.hub-exercise-link').first().waitFor({state:'visible'});
    assert.equal(await p.locator('.hub-exercise-link').first().evaluate(el=>getComputedStyle(el).backgroundColor),white,'Grade 10 numbered exercise index is white');
-   assert.equal(await p.locator('.hub-exercise-link').first().evaluate(el=>getComputedStyle(el).color),forest,'Grade 10 index uses forest text');
+   assert.equal(await p.locator('.hub-exercise-link').first().evaluate(el=>getComputedStyle(el).color),graphite,'Grade 10 index uses graphite text');
    if(width===390)await p.screenshot({path:path.join(out,'g10-relations-functions-exercise-index-light-390.png'),fullPage:false});
    await visit(p,base+'?class=10&question=c10-1-ex1-1-q1-i');
    await p.locator('.lesson-card').waitFor({state:'visible'});
-   assert.equal(await p.locator('.lesson-card').evaluate(el=>getComputedStyle(el).backgroundColor),paper,'Class 10 exercise paper');
+   assert.equal(await p.locator('.lesson-card').evaluate(el=>getComputedStyle(el).backgroundColor),white,'Class 10 exercise uses a white surface');
+   assert.equal(await p.locator('#next').evaluate(el=>getComputedStyle(el).backgroundColor),indigo,'Exercise Next uses the original indigo');
    assert(await p.locator('#questionText').innerText(),'Original mathematical question preserved');
    assert.deepEqual(errors,[],'No JS page exceptions at '+width+'px');
    await ctx.close();
-   console.log('PASS VER Glyph white header, Tamil switch, Grade 10 chapter index + maths at '+width+'px');
+   console.log('PASS classic palette, white header, Tamil switch, Grade 10 chapter index + maths at '+width+'px');
   }
  }finally{await browser.close();await app.close();}
 }
