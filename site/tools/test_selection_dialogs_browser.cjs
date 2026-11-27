@@ -98,12 +98,20 @@ async function openAndCheck(page, trigger, label, width, scale) {
   assert.equal(result.titleWeight, 500, label + ' medium title weight');
   assert.ok(result.rows.length, label + ' contains options');
 
-  const header = dialog.locator('header');
   const list = page.locator('#pathOptions');
   const last = list.locator('button').last();
-  const headerBefore = await header.boundingBox();
+  const headerPosition = () => dialog.evaluate(el => {
+    const frame = el.getBoundingClientRect();
+    const header = el.querySelector('header').getBoundingClientRect();
+    return {
+      x: header.x - frame.x, y: header.y - frame.y, width: header.width, height: header.height,
+      frameY: frame.y, viewportHeight: visualViewport.height, viewportTop: visualViewport.offsetTop
+    };
+  });
+  const headerBefore = await headerPosition();
   const pageScroll = await page.evaluate(() => window.scrollY);
-  await last.scrollIntoViewIfNeeded();
+  // Scroll the list itself so the browser cannot scroll an ancestor on its behalf.
+  await list.evaluate(el => { el.scrollTop = el.scrollHeight; });
   const [rowBounds, listBounds] = await Promise.all([last.boundingBox(), list.boundingBox()]);
   if (rowBounds.height > listBounds.height + 1) {
     // A row may exceed the scrollport in a short window at large text sizes.
@@ -123,7 +131,12 @@ async function openAndCheck(page, trigger, label, width, scale) {
       rowBounds.y + rowBounds.height <= listBounds.y + listBounds.height + 1,
     label + ' last row is fully reachable ' + JSON.stringify({rowBounds, listBounds}));
   }
-  assert.deepEqual(await header.boundingBox(), headerBefore, label + ' header stays in place');
+  const headerAfter = await headerPosition();
+  const sameViewport = Math.abs(headerAfter.viewportHeight - headerBefore.viewportHeight) <= 1 &&
+    Math.abs(headerAfter.viewportTop - headerBefore.viewportTop) <= 1;
+  const headerCoordinates = sameViewport ? ['x', 'y', 'width', 'height', 'frameY'] : ['x', 'y', 'width', 'height'];
+  assert.ok(headerCoordinates.every(coordinate => Math.abs(headerAfter[coordinate] - headerBefore[coordinate]) <= 1),
+    label + ' header stays in place ' + JSON.stringify({headerBefore, headerAfter}));
   assert.equal(await page.evaluate(() => window.scrollY), pageScroll, label + ' page stays in place');
   if (result.scrolls && result.rows.length > 2) {
     assert.ok(await list.evaluate(el => el.scrollTop > 0), label + ' options scroll independently');
