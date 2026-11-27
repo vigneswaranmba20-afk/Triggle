@@ -118,10 +118,11 @@
       if(!stroke&&!filled)return [];
       const inverse=filled?matrix.inverse():null;
       const bounds=el.getBBox();
+      const outline=segments(el,matrix,scale,bounds);
       return [{
         id:el.dataset.dgObstacle||el.id||el.localName+'-'+(index+1),
         type:el.dataset.dgRole||(filled?'fill':'stroke'),stroke,
-        box:sizes(corners(matrix,bounds)),segments:segments(el,matrix,scale,bounds),
+        box:sizes(corners(matrix,bounds)),segments:outline.map(segment=>({segment,box:sizes(segment)})),
         contains:inverse?point=>{
           const [x,y]=map(inverse,...point);
           return el.isPointInFill(new DOMPoint(x,y));
@@ -208,7 +209,8 @@
     for(const shape of shapes){
       if(label.allow.has(shape.id)||!boxesNear(label.box,shape.box,shape.stroke+gap))continue;
       if(shape.contains&&label.quad.some(shape.contains))add(shape.type,shape.id);
-      else if(shape.segments.some(segment=>segmentHits(segment,label.quad,shape.stroke+gap)))add(shape.type,shape.id);
+      else if(shape.segments.some(({segment,box})=>boxesNear(label.box,box,shape.stroke+gap)&&
+        segmentHits(segment,label.quad,shape.stroke+gap)))add(shape.type,shape.id);
     }
     for(const other of earlier){
       if(!label.allow.has(other.id)&&!other.allow.has(label.id)&&
@@ -280,6 +282,7 @@
       label.setAttribute('x',x);
       label.setAttribute('y',y);
     }
+    return placed;
   }
   function canvasLabel(ctx,text,x,y) {
     const m=ctx.measureText(text), rect=ctx.canvas.getBoundingClientRect();
