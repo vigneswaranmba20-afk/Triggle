@@ -72,3 +72,12 @@
   color: #24203c;
   font: 550 .9375rem/1.4 var(--ver-font, system-ui, sans-serif);
 }
+
+.coordinate-figure-caption {
+  max-inline-size: 480px;
+  margin: 0 auto var(--ver-space-3, .75rem);
+  padding-inline: var(--ver-space-3, .75rem);
+  color: #24203c;
+  font: 500 .875rem/1.6 var(--ver-font, system-ui, sans-serif);
+  overflow-wrap: anywhere;
+}

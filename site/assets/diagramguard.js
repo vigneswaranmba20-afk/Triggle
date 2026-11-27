@@ -167,11 +167,13 @@
     svg.append(fragment);
     const shapes=obstacles(svg,false), boundary=figureBounds(svg), placed=[];
     const origins=placements.map(({label})=>labelBounds(label));
-    for(const [index,{label,anchor,direction,candidates,optional}] of placements.entries()){
+    for(const [index,{label,anchor,direction,candidates,optional,neighborPoints}] of placements.entries()){
       const origin=origins[index];
       if(!origin)continue;
       const font=parseFloat(getComputedStyle(label).fontSize);
-      const trials=candidates||offsets(direction,font);
+      const trials=candidates||(Array.isArray(direction?.[0])
+        ? direction.flatMap(heading=>offsets(heading,font)).sort((a,b)=>Math.hypot(...a)-Math.hypot(...b))
+        : offsets(direction,font));
       let best=null;
       for(const [x,y] of trials){
         const {a,b,c,d}=origin.matrix;
@@ -179,13 +181,17 @@
         const quad=origin.quad.map(([px,py])=>[px+dx,py+dy]);
         const box={...origin,quad,box:sizes(quad)};
         const count=collisions(box,boundary,shapes,placed,gap).length;
-        if(!best||count<best.count)best={x,y,count,box};
-        if(count===0)break;
+        const position=[anchor[0]+x,anchor[1]+y];
+        const nearNeighbor=neighborPoints?.some(point=>distance(position,point)+epsilon<Math.hypot(x,y));
+        // Among equally clear placements, keep the label nearest to its own point.
+        const rank=count*2+Number(!!nearNeighbor);
+        if(!best||rank<best.rank)best={position,count,rank,box};
+        if(rank===0)break;
       }
       if(!best)continue;
       // A reference tick may keep its mark without repeating a number.
       if(optional&&best.count){label.remove();continue;}
-      placed.push({...best.box,label,position:[anchor[0]+best.x,anchor[1]+best.y]});
+      placed.push({...best.box,label,position:best.position});
     }
     for(const {label,position:[x,y]} of placed){
       label.setAttribute('x',x);

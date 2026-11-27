@@ -155,6 +155,12 @@ async function synthetic(page){
     test('legend','<rect id="plot" data-dg-role="plot" data-dg-fill x="20" y="20" width="100" height="70" fill="#ddd"/><text x="45" y="52">Legend</text>');
     cases.previewBefore=run(preview);
     cases.rectangleBefore=run(rectangle);
+    host.innerHTML='<svg width="420" height="140" viewBox="0 0 420 140"></svg>';
+    const svg=host.firstElementChild;
+    const label=document.createElementNS(svg.namespaceURI,'text');
+    label.textContent='Q';
+    guard.place(svg,[{label,anchor:[100,70],candidates:[[14,0],[-18,0]],neighborPoints:[[108,70]]}]);
+    const closestPointPlacement=[Number(label.getAttribute('x')),Number(label.getAttribute('y'))];
     const canvas=document.createElement('canvas');
     canvas.style.width='150px';
     host.append(canvas);
@@ -163,7 +169,7 @@ async function synthetic(page){
     ctx.translate(10,15);
     const quad=guard.canvasLabel(ctx,'A',50,55);
     host.remove();
-    return {cases,canvas:[quad[1][0]-quad[0][0],quad[2][1]-quad[1][1]]};
+    return {cases,closestPointPlacement,canvas:[quad[1][0]-quad[0][0],quad[2][1]-quad[1][1]]};
   },baselines);
   const exact={
     line:['stroke'],strokeWidth:['stroke'],diagonalClear:[],label:['label'],boundary:['boundary'],
@@ -177,7 +183,8 @@ async function synthetic(page){
   assert(result.cases.rectangleBefore.some(i=>i.kind==='stroke'&&i.label==='XZ = YW'));
   assert.throws(()=>proportional([[48,20],[22,88],[94,88]],[[190,14],[156,88],[248,88]]));
   assert(result.canvas.every(size=>size>4&&size<12),'Canvas transformed metrics');
-  console.log('DiagramGuard: 16 synthetic checks, two original regressions and original unequal proportions reproduced');
+  assert.deepEqual(result.closestPointPlacement,[82,70],'Label remains associated with its own point');
+  console.log('DiagramGuard: 17 synthetic checks, two original regressions and original unequal proportions reproduced');
 }
 
 async function legacyCases(page){

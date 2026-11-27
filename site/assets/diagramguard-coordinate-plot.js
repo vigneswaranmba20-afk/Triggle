@@ -56,13 +56,19 @@
   }
 
   function draw(svg, config, width, rem) {
-    const {points,outlines=[],segments=[],directions={},edgeDirections={},insideLabels='',axes=true,showOrigin=true,
-      fullAxes=false,quadrants=false,projections=false,pointNames=true}=config;
+    const {points,outlines=[],segments=[],guides=[],circle,rightAngle,directions={},edgeDirections={},insideLabels='',associateLabels='',
+      axes=true,showOrigin=true,fullAxes=false,labelNegativeAxes=true,compactAxes=false,quadrants=false,projections=false,pointNames=true}=config;
     const xy = Object.values(points);
     const xs = xy.map(([x])=>x);
     const ys = xy.map(([,y])=>y);
-    const xMin = (fullAxes ? Math.min(-3,...xs) : Math.min(...xs))-(axes ? 1 : 0);
-    const xMax = (fullAxes ? Math.max(3,...xs) : axes && xMin<0 ? Math.max(0,...xs) : Math.max(...xs))+(axes ? 1 : 0);
+    if (circle) {
+      const [[x,y],radius] = circle;
+      xs.push(x-radius,x+radius);
+      ys.push(y-radius,y+radius);
+    }
+    const axisReach = compactAxes ? 0 : 3;
+    const xMin = (fullAxes ? Math.min(-axisReach,...xs) : Math.min(...xs))-(axes ? 1 : 0);
+    const xMax = (fullAxes ? Math.max(axisReach,...xs) : axes && xMin<0 ? Math.max(0,...xs) : Math.max(...xs))+(axes ? 1 : 0);
     const yMin = axes ? Math.min(0,...ys)-1 : Math.min(...ys);
     const yMax = (axes ? Math.max(0,...ys) : Math.max(...ys))+(axes ? 1 : 0);
     const inset = rem*(projections ? 1.3 : 1.12);
@@ -78,6 +84,12 @@
     svg.setAttribute('viewBox',`0 0 ${width} ${height}`);
     svg.replaceChildren();
 
+    if (circle) {
+      const [center,radius] = circle;
+      const [cx,cy] = toPlot(...center);
+      svg.append(shape('circle',{cx,cy,r:radius*scale,fill:indigo,'fill-opacity':.07,stroke:indigo,
+        'stroke-width':1.65,'data-dg-obstacle':'circumference','data-dg-circle':''}));
+    }
     for (const [index,[names,color,opacity]] of outlines.entries()) {
       const region = shape('polygon',{points:[...names].map(id=>projected[id].join(',')).join(' '),
         fill:color,'fill-opacity':opacity,'data-dg-region':names});
@@ -88,6 +100,7 @@
       svg.append(region);
     }
     const edges = new Map();
+    for (const names of guides) edges.set([...names].sort().join(''),[names,axis,1.4,'4 3']);
     for (const names of segments) edges.set([...names].sort().join(''),[names,indigo,1.4]);
     for (const [index,[names,color]] of outlines.entries())
       [...names].forEach((id,i)=>{
@@ -98,12 +111,13 @@
 
     const placements = [];
     const secondaryTicks = [];
-    function addArrow(id,tip,[dx,dy]) {
+    function addArrow(id,tip,[dx,dy],showLabel=true) {
       const [x,y] = tip;
       const arrow = [[x-5*dx-2.5*dy,y-5*dy+2.5*dx],tip,[x-5*dx+2.5*dy,y-5*dy-2.5*dx]];
       svg.append(
         shape('polyline',{points:arrow.map(point=>point.join(',')).join(' '),fill:'none',stroke:axis,
           'stroke-width':'1.1','data-dg-obstacle':id+'-arrow'}));
+      if (!showLabel) return;
       let candidates;
       if (edgeLabels && id==='X') candidates = [[.78*rem,-.21*rem]];
       if (id==='X′') {
@@ -116,7 +130,7 @@
     function addAxes(id,start,end,direction) {
       svg.append(line(start,end,{stroke:axis,'stroke-width':'1.1','data-dg-obstacle':id+'-axis'}));
       addArrow(id,end,direction);
-      if (fullAxes) addArrow(id+'′',start,direction.map(value=>-value));
+      if (fullAxes) addArrow(id+'′',start,direction.map(value=>-value),labelNegativeAxes);
     }
     if (axes) addAxes('X',toPlot(xMin,0),toPlot(xMax,0),[1,0]);
     if (axes && xMin<0) addAxes('Y',toPlot(0,yMin),toPlot(0,yMax),[0,-1]);
@@ -126,7 +140,11 @@
       const centers = [[xMax,yMax],[xMin,yMax],[xMin,yMin],[xMax,yMin]];
       centers.forEach(([x,y],index)=>{
         const anchor = toPlot(x*.53,y*.55);
-        placements.push({label:text(names[index],axis),anchor,candidates:[[0,0]]});
+        const candidates = [[0,0], ...[[.74,.41],[.72,.69],[.48,.76],[.39,.63]].map(([fx,fy])=>{
+          const [px,py]=toPlot(x*fx,y*fy);
+          return [px-anchor[0],py-anchor[1]];
+        })];
+        placements.push({label:text(names[index],axis),anchor,candidates});
       });
     }
     if (axes && xMin<0 && showOrigin) {
@@ -136,10 +154,24 @@
       placements.push({label:text('O',axis),anchor:toPlot(0,0),candidates});
     }
 
-    for (const [names,color,weight] of edges.values()) {
+    for (const [names,color,weight,dashes] of edges.values()) {
       const [a,b] = names;
       svg.append(line(projected[a],projected[b],{stroke:color,'stroke-width':weight,
-        'stroke-linecap':'round','data-dg-obstacle':a+b,'data-dg-edge':a+b}));
+        'stroke-linecap':'round','data-dg-obstacle':a+b,'data-dg-edge':a+b,
+        ...(dashes?{'stroke-dasharray':dashes}:{})}));
+    }
+    if (rightAngle) {
+      const [a,vertex,b] = [...rightAngle].map(id=>projected[id]);
+      const offsets = [a,b].map(([x,y])=>{
+        const dx=x-vertex[0],dy=y-vertex[1];
+        const length=Math.hypot(dx,dy);
+        const ratio=Math.min(8/length,1/3);
+        return [dx*ratio,dy*ratio];
+      });
+      const [[ax,ay],[bx,by]]=offsets;
+      const [x,y]=vertex;
+      svg.append(shape('polyline',{points:`${x+ax},${y+ay} ${x+ax+bx},${y+ay+by} ${x+bx},${y+by}`,
+        fill:'none',stroke:axis,'stroke-width':1.25,'data-dg-obstacle':'right-angle'}));
     }
     const center = toPlot((Math.min(...xs)+Math.max(...xs))/2,(Math.min(...ys)+Math.max(...ys))/2);
     const innerCenter = [...insideLabels].reduce(([x,y],id)=>[
@@ -161,7 +193,8 @@
         placements.push({label,anchor,candidates});
       } else {
         const direction = (edgeLabels && edgeDirections[id]) || directions[id] || [cx-center[0],cy-center[1]];
-        placements.push({label,anchor,direction});
+        const neighborPoints = associateLabels.includes(id) ? Object.values(projected).filter(point=>point!==anchor) : undefined;
+        placements.push({label,anchor,direction,neighborPoints});
       }
     }
 

@@ -195,6 +195,7 @@
       '3\\sqrt{\\dfrac{5}{2}}\\text{ units}',
       {
         ansLatexTa: '3\\sqrt{\\dfrac{5}{2}}\\text{ அலகுகள்}',
+        taPdf: 238, taPrint: 232,
         figureSrc: 'assets/grade9-ch5/ex5-5-q5.svg',
         figureAlt: {
           en: 'Euler line showing orthocentre A(-3,5), centroid B(3,3) dividing AC in 2:1, circumcentre C(6,2), and circle with diameter AC',

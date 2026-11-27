@@ -45,7 +45,7 @@ const weights=Object.freeze({
   'test_g10_ch2_ex2_4_browser.cjs':9.0,
   'test_diagramguard_browser.cjs':95.0,
   'test_g10_ch5_coordinate_figures_browser.cjs':65.0,
-  'test_g9_ch5_coordinate_figures_browser.cjs':60.0
+  'test_g9_ch5_coordinate_figures_browser.cjs':110.0
 });
 function plan(total){
   const tasks=commands.map((command,originalIndex)=>{

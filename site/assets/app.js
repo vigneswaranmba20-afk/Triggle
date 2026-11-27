@@ -937,7 +937,8 @@
    syncDrawer();
    $('browseBtn').focus({preventScroll:true});
  }
- function showDiagram(){
+ let figureOpener;
+ function showDiagram(event){
   if(!hasUsefulFigure(current))return;
   const context={item:current,lang,renderText:tr};
   const figSpec=resolveFigureSpec(current);
@@ -948,12 +949,18 @@
    window.TriggleGeometryConstruction.mount($('diagramContent'),current.geometryConstruction,current.steps,lang);
   }
   localizeInlineSvg($('diagramContent'),current);
-  $('visualTitle').textContent=figSpec?graphic.caption:tr(current.title);
+  const coordinatePlot=$('diagramContent').querySelector('.diagramguard-coordinate');
+  $('visualTitle').textContent=coordinatePlot?ui('diagram'):figSpec?graphic.caption:tr(current.title);
+  const caption=$('coordinateFigureCaption');
+  caption.textContent=coordinatePlot?graphic.caption:'';
+  caption.hidden=!caption.textContent;
   // Keep the final answer available for comparison while viewing the figure.
   $('diagramCompare').hidden=isG9GeometryExercise(current);
   $('diagramCompareAnswer').innerHTML=$('answerText').innerHTML;
   $('diagramCompareLabel').textContent=ui('finalAnswer');
+  figureOpener=event?.currentTarget||document.activeElement;
   $('figureDialog').showModal();
+  $('figureDialog').scrollTop=0;
   if(grade===9)window.TriggleNotation?.prepareSvg?.($('diagramContent'),window.TriggleG9Math?.diagramLabels);
   window.TriggleNotation?.prepare?.($('diagramCompare'));
   $('closeDiagram').focus({preventScroll:true});
@@ -988,6 +995,11 @@
  $('inlineFigureOpen').onclick=showDiagram;
  $('figureBtn').onclick=showDiagram;$('closeDiagram').onclick=()=>$('figureDialog').close();
  $('figureDialog').addEventListener('click',ev=>{if(ev.target===$('figureDialog'))$('figureDialog').close()});
+ $('figureDialog').addEventListener('close',()=>{
+   const opener=figureOpener;
+   figureOpener=null;
+   if(opener?.isConnected)opener.focus({preventScroll:true});
+ });
  $('langEn').onclick=()=>changeLanguage('en');$('langTa').onclick=()=>changeLanguage('ta');
  function changeLanguage(v){lang=v;try{localStorage.setItem('triggle-language',v)}catch{}render()}
  window.addEventListener('keydown',e=>{
