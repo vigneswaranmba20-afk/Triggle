@@ -34,8 +34,14 @@ jobs:
         run: |
           set -euo pipefail
           sudo setfacl -m "u:$(id -un):rw" /dev/kvm
+          export ANDROID_HOME="${ANDROID_HOME:-/usr/local/lib/android/sdk}"
+          sdkmanager="$(find "$ANDROID_HOME/cmdline-tools" -type f -name sdkmanager -print -quit)"
+          test -x "$sdkmanager"
+          cmdline_bin="$(dirname "$sdkmanager")"
+          export PATH="$cmdline_bin:$ANDROID_HOME/platform-tools:$PATH"
+          printf '%s\n' "$ANDROID_HOME/platform-tools" >> "$GITHUB_PATH"
           image='system-images;android-35;google_apis_playstore;x86_64'
-          sdkmanager --install "$image" emulator platform-tools
+          "$sdkmanager" --install "$image" emulator platform-tools
           echo no | avdmanager create avd --force --name triggle-qa --package "$image"
           "$ANDROID_HOME/emulator/emulator" -avd triggle-qa -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect > "$RUNNER_TEMP/triggle-android-evidence/emulator.log" 2>&1 &
           timeout 240 bash -c 'adb wait-for-device; until [ "$(adb shell getprop sys.boot_completed | tr -d "\r")" = 1 ]; do sleep 2; done'
