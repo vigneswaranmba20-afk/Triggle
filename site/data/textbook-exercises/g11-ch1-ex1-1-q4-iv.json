@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "grade": 11,
+  "chapterId": "g11-ch1",
+  "chapterTitle": "Sets, Relations and Functions",
+  "exercise": "1.1",
+  "questions": [
+    {
+      "id": "g11-ch1-ex1.1-q4-iv",
+      "question": 4,
+      "subpart": "iv",
+      "prompt": {
+        "en": "4. By taking suitable sets A, B, C, verify the following results:\n(iv) C − (B − A) = (C ∩ A) ∪ (C ∩ B′).",
+        "ta": "4. பின்வருவனவற்றை, தகுந்த A, B, C கணங்களைக் கொண்டு சரிபார்க்கவும்.\n(iv) C − (B − A) = (C ∩ A) ∪ (C ∩ B′)."
+      },
+      "steps": {
+        "en": [
+          "Take the universal set U = {1, 2, 3, 4}, with A = {1, 2}, B = {2, 3}, and C = {1, 2, 3}.",
+          "First find B − A = {3}, since 3 belongs to B but not A.",
+          "Subtract this from C: C − (B − A) = {1, 2}. This is the left-hand side.",
+          "Compute C ∩ A = {1, 2}. Also B′ = U − B = {1, 4}, so C ∩ B′ = {1}.",
+          "Therefore (C ∩ A) ∪ (C ∩ B′) = {1, 2} ∪ {1} = {1, 2}, matching the left-hand side.",
+          "For any x, x ∈ C − (B − A) means x ∈ C and NOT (x ∈ B and x ∉ A). By De Morgan's law this is x ∈ C and (x ∉ B or x ∈ A), equivalently x ∈ (C ∩ B′) ∪ (C ∩ A). Thus the identity holds for all sets relative to U."
+        ],
+        "ta": [
+          "முழுக் கணம் U = {1, 2, 3, 4} எனவும் A = {1, 2}, B = {2, 3}, C = {1, 2, 3} எனவும் எடுத்துக்கொள்வோம்.",
+          "A-இல் இல்லாமல் B-இல் உள்ள உறுப்பு 3 மட்டுமே. எனவே B − A = {3}.",
+          "இடப்புறம்: C − (B − A) = {1, 2, 3} − {3} = {1, 2}.",
+          "C ∩ A = {1, 2}. மேலும் B′ = U − B = {1, 4}; ஆகவே C ∩ B′ = {1}.",
+          "வலப்புறம்: (C ∩ A) ∪ (C ∩ B′) = {1, 2} ∪ {1} = {1, 2}. எனவே இருபுறமும் சமம்.",
+          "பொதுவாக x ∈ C − (B − A) என்றால் x ∈ C மற்றும் (x ∈ B, x ∉ A) என்பது உண்மையல்ல. டி மார்கன் விதியால் x ∈ C மற்றும் (x ∉ B அல்லது x ∈ A). இதுவே x ∈ (C ∩ B′) ∪ (C ∩ A). எனவே முற்றொருமை எல்லாக் கணங்களுக்கும் உண்மை."
+        ]
+      },
+      "answer": {
+        "en": "Both sides are {1, 2} for the chosen sets; the element-membership proof establishes the identity in general.",
+        "ta": "தேர்ந்தெடுத்த கணங்களுக்கு இருபுறமும் {1, 2}. உறுப்பு அடிப்படையிலான நிரூபணம் பொதுவாகவும் முற்றொருமையை உறுதிப்படுத்துகிறது."
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "driveFileIds": {
+          "en": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+          "ta": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A"
+        },
+        "page": {
+          "en": 7,
+          "ta": 10
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 18
+        },
+        "pageImagesVisuallyChecked": {
+          "en": true,
+          "ta": true
+        },
+        "sourceExactMath": "C − (B − A) = (C ∩ A) ∪ (C ∩ B′).",
+        "transcriptionNote": "Both original 2025 revised textbook PDF pages visually inspected; Tamil stem follows the page-checked Q4 common stem. Tamil independent human editorial pending."
+      },
+      "review": {
+        "publication": "testing-preview-unmerged",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    }
+  ]
+}

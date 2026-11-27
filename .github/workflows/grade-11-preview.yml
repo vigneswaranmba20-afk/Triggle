@@ -1,0 +1,42 @@
+name: Grade 11 bilingual curriculum preview checks
+
+on:
+  push:
+    branches: [curriculum/grade-11-workstream]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  grade-11:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Full curriculum unit and integrity suite
+        run: npm test
+      - name: Grade 11 content and mathematical regressions (discover all)
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t tests < <(find site/tools -maxdepth 1 -type f -name 'test_grade11_*.cjs' ! -name 'test_grade11_browser.cjs' | sort)
+          if (( ${#tests[@]} == 0 )); then
+            echo 'No Grade 11 regression tests discovered' >&2
+            exit 1
+          fi
+          printf 'Running %s Grade 11 regression files\\n' "${#tests[@]}"
+          for test_file in "${tests[@]}"; do
+            echo "::group::$test_file"
+            node "$test_file"
+            echo '::endgroup::'
+          done
+      - run: npx playwright install --with-deps chromium
+      - name: Grade 11 mobile keyboard bilingual and recovery browser checks
+        run: node site/tools/test_grade11_browser.cjs
+      - name: Shared cross-grade browser regression
+        run: npm run test:browser

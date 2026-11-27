@@ -1,0 +1,66 @@
+{
+  "schema": "triggle.grade11.answer-appendix-reconciliation.v1",
+  "grade": 11,
+  "exercise": "1.2",
+  "date": "2026-11-10",
+  "source": {
+    "driveFileId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "edition": "2025 revised",
+    "volume": "English I",
+    "printedAnswerPage": 290,
+    "pageImageVerified": false
+  },
+  "reconciled": [
+    {
+      "id": "g11-c1-ex1.2-q7",
+      "appendixPairCount": 15,
+      "independentCheck": "For positive natural numbers a,b, a+b<=6 yields sum_{a=1}^5(6-a)=15; symmetric by commutativity; not reflexive since (4,4) absent; not transitive since (5,1),(1,5) present and (5,5) absent.",
+      "appendixProperties": {
+        "reflexive": false,
+        "symmetric": true,
+        "transitive": false,
+        "equivalence": false
+      },
+      "matchesExistingDraft": true
+    },
+    {
+      "id": "g11-c1-ex1.2-q8",
+      "appendixSmallestRelation": [
+        [
+          "a",
+          "a"
+        ],
+        [
+          "b",
+          "b"
+        ],
+        [
+          "c",
+          "c"
+        ]
+      ],
+      "appendixLargestRelation": "A × A",
+      "independentCheck": "Identity relation has 3 pairs; universal relation on a three-element set has 3×3=9 pairs; both reflexive symmetric transitive.",
+      "matchesExistingDraft": true
+    }
+  ],
+  "appendixGaps": [
+    "Q4, Q6, Q9 have no listed answer in extracted Exercise 1.2 appendix; absence is not evidence questions are missing."
+  ],
+  "coverage": {
+    "newSourceImageCertifiedQuestions": 0,
+    "newPublishedQuestions": 0,
+    "newSolutionDrafts": 0,
+    "newAppendixCrossCheckedQuestionStems": 2,
+    "newAppendixCrossCheckedSubparts": 4,
+    "exerciseQuestionDenominator": null,
+    "exerciseSubpartDenominator": null,
+    "gradeQuestionDenominator": null,
+    "gradeSubpartDenominator": null
+  },
+  "publication": {
+    "studentFacing": false,
+    "reason": "Question page images and answer appendix page image not inspected; appendix reconciliation is not question-wording certification."
+  },
+  "next": "Inspect printed p18 and p290 images, reconcile Q7 and Q8 against original typography; then register certified English solutions and run required CI."
+}

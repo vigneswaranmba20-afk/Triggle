@@ -1,0 +1,17 @@
+'use strict';
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const q=JSON.parse(fs.readFileSync(path.join(__dirname,'../data/textbook-exercises/g11-ch1-ex1-1-q2.json'),'utf8')).questions[0];
+assert.equal(q.id,'g11-ch1-ex1.1-q2');
+assert.equal(q.source.page.en,7);assert.equal(q.source.page.ta,9);
+assert.equal(q.source.pdfPage.en,15);assert.equal(q.source.pdfPage.ta,17);
+assert.equal(q.review.tamilEditorial,'pending');
+assert.ok(q.steps.en.length>=3&&q.steps.ta.length>=3);
+for(const x of [-1,1])assert.equal(x*x,1);
+for(let x=-100;x<=100;x++)assert.equal(x*x===1,x===-1||x===1);
+assert.match(q.answer.en,/x² = 1/);assert.equal(q.answer.en,q.answer.ta);
+const html=fs.readFileSync(path.join(__dirname,'../grade-11/sets-q2-preview.html'),'utf8');
+assert.match(html,/g11-ch1-ex1-1-q2\.json/);assert.match(html,/aria-pressed/);
+assert.match(html,/role="alert"/);assert.match(html,/tamilEditorial|editorial review pending/i);
+console.log('PASS Grade 11 Exercise 1.1 Question 2 bilingual math, source and preview assertions');

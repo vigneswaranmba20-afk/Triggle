@@ -1,0 +1,116 @@
+{
+  "schema": "triggle.grade11.english-source-extracted-drafts.v1",
+  "grade": 11,
+  "chapter": 1,
+  "exercise": "1.2",
+  "date": "2026-11-10",
+  "source": {
+    "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "edition": "2025 revised",
+    "volume": "English I",
+    "originalQuestionPage": "18",
+    "answerAppendixPage": "290",
+    "pageImageVerified": false
+  },
+  "questions": [
+    {
+      "id": "g11-c1-ex1.2-q8",
+      "question": "Let A = {a, b, c}. What is the equivalence relation of smallest cardinality on A? What is the equivalence relation of largest cardinality on A?",
+      "answer": {
+        "smallest": [
+          [
+            "a",
+            "a"
+          ],
+          [
+            "b",
+            "b"
+          ],
+          [
+            "c",
+            "c"
+          ]
+        ],
+        "largest": [
+          [
+            "a",
+            "a"
+          ],
+          [
+            "a",
+            "b"
+          ],
+          [
+            "a",
+            "c"
+          ],
+          [
+            "b",
+            "a"
+          ],
+          [
+            "b",
+            "b"
+          ],
+          [
+            "b",
+            "c"
+          ],
+          [
+            "c",
+            "a"
+          ],
+          [
+            "c",
+            "b"
+          ],
+          [
+            "c",
+            "c"
+          ]
+        ]
+      },
+      "steps": [
+        "An equivalence relation must be reflexive, symmetric and transitive.",
+        "Reflexivity forces (a,a), (b,b) and (c,c).",
+        "These three pairs alone are symmetric and transitive, so the smallest relation has 3 pairs.",
+        "Every relation on A is a subset of A × A.",
+        "A × A contains all nine ordered pairs and is itself reflexive, symmetric and transitive.",
+        "Thus the largest equivalence relation is A × A, containing 9 pairs."
+      ],
+      "verification": {
+        "smallestCardinality": 3,
+        "largestCardinality": 9,
+        "identityEquivalence": true,
+        "universalEquivalence": true
+      }
+    },
+    {
+      "id": "g11-c1-ex1.2-q9",
+      "question": "In the set Z of integers, define mRn if m − n is divisible by 7. Prove that R is an equivalence relation.",
+      "steps": [
+        "Reflexive: m − m = 0 = 7 × 0, so mRm for every integer m.",
+        "Symmetric: if m − n = 7k, then n − m = 7(−k), so nRm.",
+        "Transitive: if m − n = 7k and n − p = 7j, then m − p = 7(k+j), so mRp.",
+        "Therefore R is reflexive, symmetric and transitive, hence an equivalence relation."
+      ],
+      "verification": {
+        "symbolicArgument": true,
+        "finiteSampleModulo7": true
+      }
+    }
+  ],
+  "coverage": {
+    "questionStemsExtracted": 2,
+    "subpartsVerified": 0,
+    "questionPageImageCertified": 0,
+    "studentFacingPublished": 0,
+    "tamilCertified": 0,
+    "fullGradeDenominator": null
+  },
+  "publication": {
+    "studentFacing": false,
+    "reason": "Question-page image not inspected; preserve as extracted draft pending visual source fidelity review."
+  },
+  "next": "Visually verify printed page 18 Q8–Q9; certify wording; register solutions only after mandatory CI."
+}

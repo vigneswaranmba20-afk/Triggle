@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "grade": 11,
+  "chapterId": "g11-ch1",
+  "chapterTitle": "Sets, Relations and Functions",
+  "exercise": "1.1",
+  "sourceAccess": "2025 revised English and Tamil Volume I PDFs directly inspected",
+  "questions": [
+    {
+      "id": "g11-ch1-ex1.1-q3-iii",
+      "exercise": "1.1",
+      "question": 3,
+      "subpart": "iii",
+      "prompt": {
+        "en": "Determine whether the set of even integers less than 10 is finite or infinite.",
+        "ta": "10-ஐ விடக் குறைவான இரட்டைப்படை முழு எண்களின் கணம் முடிவுள்ளதா அல்லது முடிவில்லாததா எனக் கண்டறிக."
+      },
+      "steps": {
+        "en": [
+          "Let S = {x ∈ ℤ : x is even and x < 10}. The domain ℤ includes negative integers; it is not restricted to natural numbers.",
+          "Every even integer is 2k for an integer k. The inequality 2k < 10 is equivalent to k < 5.",
+          "Thus k can be 4, 3, 2, … and also any negative integer. So S = {…, −6, −4, −2, 0, 2, 4, 6, 8}.",
+          "For each positive integer n, −2n belongs to S. These values are all distinct, so S contains infinitely many elements."
+        ],
+        "ta": [
+          "S = {x ∈ ℤ : x இரட்டைப்படை மற்றும் x < 10} என்க. ℤ என்பது எதிர்மறை முழு எண்களையும் உள்ளடக்கியது; இயல் எண்கள் மட்டும் அல்ல.",
+          "ஒவ்வோர் இரட்டைப்படை முழு எண்ணையும் 2k (k ∈ ℤ) என எழுதலாம். 2k < 10 எனில் k < 5.",
+          "எனவே k = 4, 3, 2, … மற்றும் அனைத்து எதிர்மறை முழு எண்களாகவும் இருக்கலாம். ஆகவே S = {…, −6, −4, −2, 0, 2, 4, 6, 8}.",
+          "ஒவ்வொரு மிகை முழு எண் n-க்கும் −2n ∈ S. இவை ஒன்றுக்கொன்று வேறுபட்டவை. ஆகவே S-இல் முடிவில்லாத எண்ணிக்கையிலான உறுப்புகள் உள்ளன."
+        ]
+      },
+      "answer": {
+        "en": "Infinite set (even integers less than 10 extend without bound in the negative direction).",
+        "ta": "முடிவில்லாத கணம் (10-ஐ விடக் குறைவான எதிர்மறை இரட்டைப்படை முழு எண்கள் முடிவின்றித் தொடர்கின்றன)."
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "page": {
+          "en": 7,
+          "ta": 10
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 18
+        },
+        "verifiedAgainst": [
+          "2025 English Volume I",
+          "2025 Tamil Volume I"
+        ]
+      },
+      "review": {
+        "publication": "draft",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    }
+  ]
+}

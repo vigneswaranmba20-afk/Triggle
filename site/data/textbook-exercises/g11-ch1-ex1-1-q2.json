@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "grade": 11,
+  "chapterId": "g11-ch1",
+  "chapterTitle": "Sets, Relations and Functions",
+  "exercise": "1.1",
+  "sourceAccess": "2025 revised English and Tamil Volume I PDFs directly inspected",
+  "questions": [
+    {
+      "id": "g11-ch1-ex1.1-q2",
+      "exercise": "1.1",
+      "question": 2,
+      "subpart": null,
+      "prompt": {
+        "en": "Express the set {−1, 1} using set-builder notation.",
+        "ta": "{−1, 1} என்ற கணத்தை கணக் கட்டமைப்பு முறையில் எழுதுக."
+      },
+      "steps": {
+        "en": [
+          "Both listed elements are real numbers and each has square equal to 1: (−1)²=1 and 1²=1.",
+          "Conversely, if x is real and x²=1, then x²−1=(x−1)(x+1)=0.",
+          "The zero-product property gives x=1 or x=−1; there are no other real solutions.",
+          "Therefore the set-builder description contains exactly the two original elements."
+        ],
+        "ta": [
+          "கொடுக்கப்பட்ட −1 மற்றும் 1 ஆகிய இரு மெய்யெண்களுக்கும் வர்க்கம் 1: (−1)²=1 மற்றும் 1²=1.",
+          "மாறாக, மெய்யெண் x-க்கு x²=1 எனில் x²−1=(x−1)(x+1)=0.",
+          "பூச்சியப் பெருக்கல் விதியின்படி x=1 அல்லது x=−1; வேறு மெய்த் தீர்வுகள் இல்லை.",
+          "ஆகவே கணக் கட்டமைப்பு வடிவம் கொடுக்கப்பட்ட இரண்டு உறுப்புகளையும் மட்டுமே குறிக்கிறது."
+        ]
+      },
+      "answer": {
+        "en": "{x ∈ ℝ : x² = 1}",
+        "ta": "{x ∈ ℝ : x² = 1}"
+      },
+      "source": {
+        "edition": "2025 revised",
+        "volume": 1,
+        "page": {
+          "en": 7,
+          "ta": 9
+        },
+        "pdfPage": {
+          "en": 15,
+          "ta": 17
+        },
+        "verifiedAgainst": [
+          "2025 English Volume I",
+          "2025 Tamil Volume I"
+        ]
+      },
+      "review": {
+        "publication": "draft",
+        "mathematics": "independently checked",
+        "tamilEditorial": "pending",
+        "browser": "not run",
+        "ci": "not run"
+      }
+    }
+  ]
+}

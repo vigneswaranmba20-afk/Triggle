@@ -1,0 +1,134 @@
+{
+  "schema": "triggle.grade11.source-extracted-math-audit.v1",
+  "grade": 11,
+  "chapter": 1,
+  "exercise": "1.2",
+  "date": "2026-11-10",
+  "source": {
+    "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "edition": "2025 revised",
+    "volume": "English I",
+    "printedPage": 18,
+    "pageImageVerified": false
+  },
+  "questions": [
+    {
+      "id": "g11-c1-ex1.2-q6",
+      "extractedQuestion": "Prove that the relation “friendship” is not an equivalence relation on the set of all people in Chennai.",
+      "steps": [
+        "An equivalence relation must be reflexive, symmetric, and transitive.",
+        "Consider three people A, B, C in Chennai: A and B are friends, and B and C are friends, but A and C are not friends.",
+        "Then A R B and B R C hold, but A R C does not hold.",
+        "Thus friendship need not be transitive, so it is not an equivalence relation. This single counterexample is enough; we do not need to decide whether everyone is a friend of themselves."
+      ],
+      "verification": {
+        "method": "logical counterexample to transitivity",
+        "counterexample": {
+          "AB": true,
+          "BC": true,
+          "AC": false
+        },
+        "mathematicallyChecked": true
+      },
+      "status": "unpublished-source-extracted-draft"
+    },
+    {
+      "id": "g11-c1-ex1.2-q7",
+      "extractedQuestion": "On the set of natural numbers let R be the relation defined by aRb if a + b ≤ 6. Write down the relation by listing all the pairs. Check whether it is (i) reflexive (ii) symmetric (iii) transitive (iv) equivalence",
+      "pairs": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "steps": [
+        "Assume natural numbers are 1, 2, 3, ... . Since a+b≤6, both a and b must be at most 5.",
+        "List every ordered pair of positive integers whose sum is at most 6; there are 15 pairs.",
+        "Not reflexive: (4,4) is missing because 4+4=8>6.",
+        "Symmetric: whenever a+b≤6, b+a≤6, so reversing a pair stays in R.",
+        "Not transitive: (5,1) and (1,5) are in R, but (5,5) is not.",
+        "Therefore R is not an equivalence relation."
+      ],
+      "verification": {
+        "method": "exhaustive finite pair enumeration for a,b in 1..5",
+        "pairCount": 15,
+        "reflexive": false,
+        "symmetric": true,
+        "transitive": false,
+        "equivalence": false,
+        "mathematicallyChecked": true
+      },
+      "status": "unpublished-source-extracted-draft"
+    }
+  ],
+  "coverage": {
+    "newDraftQuestionStems": 2,
+    "newDraftExplicitSubparts": 4,
+    "newSourceImageCertifiedQuestions": 0,
+    "newPublishedQuestions": 0,
+    "gradeDenominator": null,
+    "exerciseQuestionStemsFromExtraction": 9,
+    "exerciseSubpartDenominatorCertified": false
+  },
+  "publication": {
+    "studentFacing": false,
+    "reason": "Original PDF page image not inspected; exact wording remains uncertified."
+  },
+  "next": "Verify printed page 18 image for Q6-Q7; certify natural-number convention and four subpart labels; then register after mandatory checks."
+}

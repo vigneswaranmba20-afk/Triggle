@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "grade": 11,
+  "chapter": 1,
+  "exercise": "1.1",
+  "question": 4,
+  "subpart": "iii",
+  "source": {
+    "en": {
+      "driveFileId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+      "edition": "2025 revised",
+      "volume": 1,
+      "printedPage": 7,
+      "pdfPage": 15,
+      "stemExact": "4. By taking suitable sets A, B, C, verify the following results:",
+      "subpartExact": "(iii) (A × B) ∩ (B × A) = (A ∩ B) × (B ∩ A).",
+      "textExtractChecked": true,
+      "pageImageChecked": true
+    },
+    "ta": {
+      "driveFileId": "1GMWimYfgDs59fCNkV3pNiLTPt4eDa48A",
+      "edition": "2025 revised",
+      "volume": 1,
+      "printedPage": 10,
+      "pdfPage": 18,
+      "stemExtracted": "4. பின்்வருவனவற்்றறை, தகுந்்த A, B, C கணங்்களைக் கொொண்டு சரிபார்்க்்கவும்.",
+      "subpartExtractionCorrupt": true,
+      "pageImageChecked": true,
+      "stemExact": "4. பின்வருவனவற்றை, தகுந்த A, B, C கணங்களைக் கொண்டு சரிபார்க்கவும்.",
+      "subpartExact": "(iii) (A × B) ∩ (B × A) = (A ∩ B) × (B ∩ A)."
+    }
+  },
+  "status": "source-image-verified-bilingual-math-draft",
+  "studentFacingPublished": false,
+  "editorial": "pending",
+  "next": "Execute CI and browser/mobile/offline checks; reconcile latest main before merge. Then inspect Q4(iv) source images."
+}

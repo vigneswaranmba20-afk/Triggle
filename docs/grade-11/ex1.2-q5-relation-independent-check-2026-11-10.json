@@ -1,0 +1,79 @@
+{
+  "schema": "triggle.grade11.relation-answer-independent-audit.v1",
+  "grade": 11,
+  "chapter": 1,
+  "exercise": "1.2",
+  "question": 5,
+  "date": "2026-11-10",
+  "source": {
+    "driveId": "12u6WLVsxzxvSRUa6KlaQz4vi8cxwZ6xS",
+    "edition": "2025 revised",
+    "location": "English Volume I answer appendix, printed page 290",
+    "originalQuestionPageImageVerified": false
+  },
+  "answerKeyExtract": "{(3, 8),(6, 6),(9, 4),(12, 2)}; not reflexive; not symmetric; transitive; not an equivalence relation",
+  "relationPairs": [
+    [
+      3,
+      8
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      12,
+      2
+    ]
+  ],
+  "verification": {
+    "uniquePairs": true,
+    "symmetric": false,
+    "transitive": true,
+    "reflexiveOnObservedElements": false,
+    "observedElements": [
+      2,
+      3,
+      4,
+      6,
+      8,
+      9,
+      12
+    ],
+    "symmetricCounterexample": {
+      "present": [
+        3,
+        8
+      ],
+      "absent": [
+        8,
+        3
+      ]
+    },
+    "reflexiveCounterexampleOnObservedElements": [
+      3,
+      3
+    ],
+    "transitiveReason": "No pair starts with 8, 4 or 2; the only composable pair is (6,6) followed by (6,6), yielding (6,6), which exists.",
+    "consistentWithExtractedAnswerKey": true
+  },
+  "childFriendlyDraftSteps": [
+    "List the four ordered pairs in the relation.",
+    "To test symmetry, reverse (3,8). Since (8,3) is missing, symmetry fails.",
+    "To test transitivity, look for two pairs (a,b) and (b,c). The only possible chain is (6,6) then (6,6); its required pair (6,6) is present.",
+    "Reflexivity requires every (a,a) for the textbook's underlying set. In particular (3,3) is absent, so any underlying set containing 3 fails reflexivity.",
+    "Since the relation is not symmetric, it cannot be an equivalence relation."
+  ],
+  "publication": {
+    "studentFacing": false,
+    "certifiedQuestionsAdded": 0,
+    "certifiedSubpartsAdded": 0,
+    "tamilCertified": false,
+    "reason": "Original question page and underlying set not visually verified; answer-key-only audit."
+  },
+  "next": "Inspect original Exercise 1.2 Q5 page image; verify underlying set and exact question wording before registration."
+}
