@@ -50,4 +50,53 @@
       associateLabels:'PQRS'
     }
   });
+
+  const plot = (points,options) => ({points,fullAxes:true,labelNegativeAxes:false,showOrigin:false,...options});
+  const equations = (id,coefficients,label,color) => ({id,coefficients,label,color});
+  const medianAndAltitude = plot({A:[6,2],B:[-5,-1],C:[1,9],D:[-2,4],E:[-13/17,103/17]},{
+    outlines:[['ABC',teal,.09]],guides:['AD'],segments:['AE'],rightAngle:'AEC',
+    keyPoints:['A','B','C','D'],directions:{D:directions,E:directions},associateLabels:'DE'
+  });
+  window.TriggleCoordinateFigures.register('c10-5-ex5-3-',{
+    q8:plot({P:[-6,-4],Q:[5,11]},{segments:['PQ'],
+      pointMeanings:{P:{en:'Cat',ta:'பூனை'},Q:{en:'Milk bottle',ta:'பால் புட்டி'}}}),
+    'q9-i':medianAndAltitude,
+    'q9-ii':medianAndAltitude
+  });
+  window.TriggleCoordinateFigures.register('c10-5-ex5-4-',{
+    q7:plot({A:[-3,0],B:[10,-2],C:[12,3],D:[258/29,-138/29],E:[237/26,63/26]},{
+      outlines:[['ABC',teal,.09]],guides:['BD'],segments:['AD','BE'],rightAngles:['ADB','BEC'],
+      keyPoints:['A','B','C'],directions:{A:directions,B:directions,E:[0,-1],D:[0,1]},associateLabels:'ABD'
+    }),
+    q8:plot({A:[-4,2],B:[6,-4],M:[1,-1]},{segments:['AB'],
+      analyticLines:[equations('bisector',[5,-3,-8],'5x − 3y − 8 = 0',teal)],
+      rightAngle:['A','M',[4,4]],directions:{M:directions},associateLabels:'M'
+    })
+  });
+  const junction = [-1/17,22/17];
+  const foot = [59/1445,1702/1445];
+  const target = equations('target',[6,-7,8],'6x − 7y + 8 = 0',teal);
+  window.TriggleCoordinateFigures.register('c10-5-unit-',{
+    q1:plot({P:[-1,-1],Q:[-1,4],R:[5,4],S:[5,-1],A:[-1,1.5],B:[2,4],C:[5,1.5],D:[2,-1]},{
+      outlines:[['PQRS',indigo,.09],['ABCD',teal,.22]],
+      directions:{A:directions,B:[0,-1],C:directions,D:[0,1]},associateLabels:'ABCD'
+    }),
+    q8:plot({P:[3,8],M:[1,2],Q:[-1,-4]},{segments:['PQ'],
+      analyticLines:[equations('mirror',[1,3,-7],'x + 3y = 7',teal)],
+      rightAngle:['P','M',[4,1]],directions:{M:directions},associateLabels:'M',
+      pointMeanings:{Q:{en:'Image',ta:'பிம்பம்'}}
+    }),
+    q10:[
+      plot({P:junction},{heading:{en:'Junction and target path',ta:'சந்திப்பும் இலக்குப் பாதையும்'},key:false,
+        bounds:{xMin:-3,xMax:3,yMin:-2,yMax:3},
+        analyticLines:[equations('first',[2,-3,4],'2x − 3y + 4 = 0',indigo),
+          {...equations('second',[3,4,-5],'3x + 4y − 5 = 0',rust),dashed:true},target],directions:{P:directions}
+      }),
+      plot({P:junction,H:foot},{heading:{en:'Perpendicular path close-up',ta:'செங்குத்துப் பாதையின் பெரிதாக்கம்'},
+        key:false,axes:false,bounds:{xMin:-.30,xMax:.33,yMin:.91,yMax:1.48},segments:['PH'],
+        analyticLines:[target],rightAngle:['P','H',[foot[0]+.21,foot[1]+.18]],
+        directions:{P:[-1,-1],H:[1,1]}
+      })
+    ]
+  });
 })();

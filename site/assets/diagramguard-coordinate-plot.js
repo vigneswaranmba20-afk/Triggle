@@ -9,6 +9,7 @@
   const indigo = '#443878';
 
   const plotsById = new Map();
+  const mountedFigures = new WeakMap();
 
   function register(prefix, plots) {
     for (const [suffix,plot] of Object.entries(plots)) plotsById.set(prefix+suffix,plot);
@@ -27,6 +28,21 @@
     return node;
   };
   const number = value => String(value).replace('-','−');
+
+  function clipLine([a,b,c],{xMin,xMax,yMin,yMax}) {
+    const tolerance=1e-9;
+    const points=[];
+    if (b) for (const x of [xMin,xMax]) {
+      const y=(-a*x-c)/b;
+      if(y>=yMin-tolerance&&y<=yMax+tolerance)points.push([x,Math.max(yMin,Math.min(yMax,y))]);
+    }
+    if (a) for (const y of [yMin,yMax]) {
+      const x=(-b*y-c)/a;
+      if(x>=xMin-tolerance&&x<=xMax+tolerance)points.push([Math.max(xMin,Math.min(xMax,x)),y]);
+    }
+    const ends=points.filter(([x,y],index)=>!points.slice(0,index).some(([u,v])=>Math.hypot(x-u,y-v)<tolerance));
+    return ends.length===2?ends:null;
+  }
 
   function drawGrid(svg, toPlot, bounds, step) {
     const labels = [...svg.querySelectorAll('text')].map(node=>node.getBBox());
@@ -56,7 +72,8 @@
   }
 
   function draw(svg, config, width, rem) {
-    const {points,outlines=[],segments=[],guides=[],constructionPoints={},circle,rightAngle,directions={},edgeDirections={},insideLabels='',associateLabels='',
+    const {points,outlines=[],segments=[],guides=[],constructionPoints={},circle,rightAngle,rightAngles=[],analyticLines=[],bounds,
+      directions={},edgeDirections={},insideLabels='',associateLabels='',
       axes=true,showOrigin=true,fullAxes=false,labelNegativeAxes=true,axisLabelDirections={},compactAxes=false,
       quadrants=false,projections=false,pointNames=true}=config;
     const xy = [...Object.values(points),...Object.values(constructionPoints)];
@@ -68,10 +85,10 @@
       ys.push(y-radius,y+radius);
     }
     const axisReach = compactAxes ? 0 : 3;
-    const xMin = (fullAxes ? Math.min(-axisReach,...xs) : Math.min(...xs))-(axes ? 1 : 0);
-    const xMax = (fullAxes ? Math.max(axisReach,...xs) : axes && xMin<0 ? Math.max(0,...xs) : Math.max(...xs))+(axes ? 1 : 0);
-    const yMin = axes ? Math.min(0,...ys)-1 : Math.min(...ys);
-    const yMax = (axes ? Math.max(0,...ys) : Math.max(...ys))+(axes ? 1 : 0);
+    const xMin = bounds?.xMin ?? ((fullAxes ? Math.min(-axisReach,...xs) : Math.min(...xs))-(axes ? 1 : 0));
+    const xMax = bounds?.xMax ?? ((fullAxes ? Math.max(axisReach,...xs) : axes && xMin<0 ? Math.max(0,...xs) : Math.max(...xs))+(axes ? 1 : 0));
+    const yMin = bounds?.yMin ?? (axes ? Math.min(0,...ys)-1 : Math.min(...ys));
+    const yMax = bounds?.yMax ?? ((axes ? Math.max(0,...ys) : Math.max(...ys))+(axes ? 1 : 0));
     const inset = rem*(projections ? 1.3 : 1.12);
     const verticalInset = rem*1.45;
     const verticalRatio = projections || quadrants ? 1 : axes ? .72 : .88;
@@ -81,6 +98,7 @@
     const originX = (width-(xMax-xMin)*scale)/2-xMin*scale;
     const originY = verticalInset+yMax*scale;
     const toPlot = (x,y) => [originX+x*scale,originY-y*scale];
+    const windowBounds={xMin,xMax,yMin,yMax};
     const projected = Object.fromEntries(Object.entries(points).map(([id,[x,y]])=>[id,toPlot(x,y)]));
     svg.setAttribute('viewBox',`0 0 ${width} ${height}`);
     svg.replaceChildren();
@@ -112,6 +130,13 @@
 
     const placements = [];
     const secondaryTicks = [];
+    for (const {id,coefficients,color=indigo,dashed=false} of analyticLines) {
+      const visible=clipLine(coefficients,windowBounds);
+      if(!visible)continue;
+      const [start,end]=visible.map(point=>toPlot(...point));
+      svg.append(line(start,end,{stroke:color,'stroke-width':1.65,'data-dg-obstacle':'line-'+id,'data-dg-analytic-line':id,
+        ...(dashed?{'stroke-dasharray':'4 3'}:{})}));
+    }
     function addArrow(id,tip,[dx,dy],showLabel=true) {
       const [x,y] = tip;
       const arrow = [[x-5*dx-2.5*dy,y-5*dy+2.5*dx],tip,[x-5*dx+2.5*dy,y-5*dy-2.5*dx]];
@@ -166,8 +191,9 @@
       svg.append(shape('circle',{cx,cy,r:3,fill:axis,'data-dg-construction-point':name,
         'data-dg-obstacle':'construction-'+name,'data-dg-fill':''}));
     }
-    if (rightAngle) {
-      const [a,vertex,b] = [...rightAngle].map(id=>projected[id]);
+    const angles=rightAngle?[rightAngle]:rightAngles;
+    for(const [index,angle] of angles.entries()) {
+      const [a,vertex,b] = [...angle].map(endpoint=>Array.isArray(endpoint)?toPlot(...endpoint):projected[endpoint]);
       const offsets = [a,b].map(([x,y])=>{
         const dx=x-vertex[0],dy=y-vertex[1];
         const length=Math.hypot(dx,dy);
@@ -177,7 +203,7 @@
       const [[ax,ay],[bx,by]]=offsets;
       const [x,y]=vertex;
       svg.append(shape('polyline',{points:`${x+ax},${y+ay} ${x+ax+bx},${y+ay+by} ${x+bx},${y+by}`,
-        fill:'none',stroke:axis,'stroke-width':1.25,'data-dg-obstacle':'right-angle'}));
+        fill:'none',stroke:axis,'stroke-width':1.25,'data-dg-obstacle':index?'right-angle-'+(index+1):'right-angle'}));
     }
     const center = toPlot((Math.min(...xs)+Math.max(...xs))/2,(Math.min(...ys)+Math.max(...ys))/2);
     const innerCenter = [...insideLabels].reduce(([x,y],id)=>[
@@ -259,6 +285,10 @@
   function mount(container,id,description,lang) {
     const plan = plotsById.get(id);
     if (!plan) return false;
+    const font=getComputedStyle(container).getPropertyValue('--ver-font');
+    const previous=mountedFigures.get(container);
+    if(previous?.plan===plan&&previous.description===description&&previous.lang===lang&&previous.font===font&&
+       previous.figure===container.firstElementChild)return true;
     const figure = document.createElement('span');
     figure.className = 'diagramguard-figure';
     const inline = Boolean(container.closest('button'));
@@ -273,27 +303,50 @@
       if (plot.heading) {
         const heading = document.createElement('span');
         heading.className = 'diagramguard-coordinate-heading';
-        heading.textContent = plot.heading;
+        heading.textContent = typeof plot.heading==='string'?plot.heading:plot.heading[lang];
         figure.append(heading);
       }
       const svg = shape('svg',{class:'diagramguard-svg diagramguard-coordinate',role:'img',
-        'aria-label':plot.heading || description});
+        'aria-label':typeof plot.heading==='object'?plot.heading[lang]:plot.heading||description});
       figure.append(svg);
       if (plot.key!==false) {
         const key = document.createElement('span');
         key.className = 'diagramguard-coordinate-key';
         key.setAttribute('role','list');
         key.setAttribute('aria-label',lang==='ta' ? 'ஆயத்தொலைகள்' : 'Coordinates');
-        for (const [name,[x,y]] of Object.entries(plot.points)) {
+        for (const name of plot.keyPoints||Object.keys(plot.points)) {
+          const [x,y]=plot.points[name];
+          const meaning=plot.pointMeanings?.[name]?.[lang];
           const entry = document.createElement('span');
           entry.setAttribute('role','listitem');
-          entry.textContent = `${name} (${number(x)}, ${number(y)})`;
+          if(meaning)entry.className='diagramguard-named-point';
+          entry.textContent = `${name}${meaning?' · '+meaning:''} (${number(x)}, ${number(y)})`;
           key.append(entry);
         }
         figure.append(key);
       }
+      const equations=plot.analyticLines?.filter(line=>line.label);
+      if(equations?.length) {
+        const legend=document.createElement('span');
+        legend.className='diagramguard-coordinate-legend';
+        legend.setAttribute('role','list');
+        legend.setAttribute('aria-label',lang==='ta'?'நேர்க்கோடுகள்':'Lines');
+        for(const {label,color=indigo,dashed} of equations) {
+          const entry=document.createElement('span');
+          entry.setAttribute('role','listitem');
+          const sample=document.createElement('span');
+          sample.className='diagramguard-line-sample';
+          sample.style.color=color;
+          if(dashed)sample.dataset.dashed='';
+          sample.setAttribute('aria-hidden','true');
+          entry.append(sample,typeof label==='string'?label:label[lang]);
+          legend.append(entry);
+        }
+        figure.append(legend);
+      }
       guard.responsive(svg,(width,rem)=>draw(svg,plot,width,rem));
     }
+    mountedFigures.set(container,{plan,description,lang,font,figure});
     return true;
   }
 

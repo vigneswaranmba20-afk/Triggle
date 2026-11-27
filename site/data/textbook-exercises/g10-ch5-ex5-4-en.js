@@ -930,7 +930,11 @@ const entries = [
         "ta": 248
       }
     },
-    "figureSrc": "assets/grade10-ch5/ex5-4-q7.svg"
+    "figureSrc": "assets/grade10-ch5/ex5-4-q7.svg",
+    "figureAlt": {
+      "en": "Altitudes from A to D on the extension of BC and from B to E on AC. Right-angle markers show where they meet the sides.",
+      "ta": "A-இலிருந்து BC-யின் நீட்டிப்பில் D வரையும், B-இலிருந்து AC-யில் E வரையும் செல்லும் செங்குத்துகள். அவை சந்திக்கும் இடங்களில் செங்கோணக் குறிகள் உள்ளன."
+    }
   },
   {
     "id": "c10-5-ex5-4-q8",
@@ -1022,7 +1026,11 @@ const entries = [
         "ta": 249
       }
     },
-    "figureSrc": "assets/grade10-ch5/ex5-4-q8.svg"
+    "figureSrc": "assets/grade10-ch5/ex5-4-q8.svg",
+    "figureAlt": {
+      "en": "The perpendicular bisector meets segment AB at its midpoint M (1, −1).",
+      "ta": "A, B புள்ளிகளை இணைக்கும் கோட்டுத்துண்டின் நடுப்புள்ளி M (1, −1) வழியாகச் செல்லும் மையக் குத்துக்கோடு."
+    }
   },
   {
     "id": "c10-5-ex5-4-q9",
