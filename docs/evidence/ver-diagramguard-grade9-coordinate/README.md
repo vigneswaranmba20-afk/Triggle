@@ -14,7 +14,7 @@ At larger text sizes Fig. 5.11 places the required tick values at the nearest gr
 
 Both standalone scans used Chromium at 300 CSS px. Baseline counts include contacts with the reference grid. The broader legacy scan still flags 136 distinct renderings after the two coordinate passes.
 
-The [permanent browser tests](../../../site/tools/test_g9_ch5_coordinate_figures_browser.cjs) check the point coordinates at a single Cartesian scale, render both projections per point at the correct ticks, verify the panel-specific edges and regions, and check for intersections and reflow in both languages and both figure surfaces at 100% and 200% text size. The [inventory](../ver-diagramguard-v1-0/inventory.csv) records the four asset groups and their source references. Physical Android inspection remains outstanding.
+The [permanent browser tests](../../../site/tools/test_g9_ch5_coordinate_figures_browser.cjs) check the point coordinates at a single Cartesian scale, render both projections per point at the correct ticks, verify the panel-specific edges and regions, and check for intersections and reflow in both languages and both figure surfaces at 100% and 200% text size. The [inventory](../ver-diagramguard-v1-0/inventory.csv) records the four asset groups and their source references. An additional Grade 9 Q1 regression uses wider fallback font metrics to verify the X′ label stays inside the drawing. Physical Android inspection remains outstanding.
 
 ## Matched captures
 

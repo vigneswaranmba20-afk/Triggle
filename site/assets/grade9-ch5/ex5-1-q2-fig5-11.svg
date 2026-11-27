@@ -3,8 +3,7 @@
   <title id="t">Original coordinate grid reproducing Fig. 5.11 with points P(-4,4), Q(3,3), R(4,-2), and S(-5,-3)</title>
   <desc id="desc">Original coordinate grid reproducing Fig. 5.11 with points P(-4,4), Q(3,3), R(4,-2), and S(-5,-3)</desc>
   <g aria-hidden="true" stroke="#dedbe4" stroke-width=".8">
-    <line x1="20.8" y1="23.2" x2="20.8" y2="126.905"/>
-    <line x1="20.8" y1="152.905" x2="20.8" y2="234.618"/>
+    <line x1="20.8" y1="23.2" x2="20.8" y2="234.618"/>
     <line x1="44.291" y1="23.2" x2="44.291" y2="112.995"/>
     <line x1="44.291" y1="137.995" x2="44.291" y2="234.618"/>
     <line x1="67.782" y1="23.2" x2="67.782" y2="142.115"/>
@@ -88,7 +87,7 @@
   <circle cx="255.709" cy="187.636" r="3.1" fill="#24203c" data-dg-obstacle="point-R" data-dg-fill="" data-dg-point="R"/>
   <circle cx="44.291" cy="211.127" r="3.1" fill="#24203c" data-dg-obstacle="point-S" data-dg-fill="" data-dg-point="S"/>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X" data-dg-font="vertex" x="289.55" y="140.655" font-size="15">X</text>
-  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X′" data-dg-font="vertex" x="10.45" y="140.655" font-size="15">X′</text>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X′" data-dg-font="vertex" x="9.76" y="140.655" font-size="15">X′</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y" data-dg-font="vertex" x="154.185" y="12.85" font-size="15">Y</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y′" data-dg-font="vertex" x="161.745" y="248.118" font-size="15">Y′</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick--5" data-dg-font="secondary" x="44.291" y="126.095" font-size="14">−5</text>

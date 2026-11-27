@@ -5,8 +5,8 @@
   <text x="150" y="22" text-anchor="middle" font-size="15" fill="#24203c">(i)</text>
   <g transform="translate(0 34)">
     <g aria-hidden="true" stroke="#dedbe4" stroke-width=".8">
-      <line x1="17.92" y1="23.2" x2="17.92" y2="97.503"/>
-      <line x1="17.92" y1="123.503" x2="17.92" y2="133.267"/>
+      <line x1="17.92" y1="23.2" x2="17.92" y2="85.023"/>
+      <line x1="17.92" y1="111.023" x2="17.92" y2="133.267"/>
       <line x1="39.933" y1="23.2" x2="39.933" y2="133.267"/>
       <line x1="61.947" y1="23.2" x2="61.947" y2="133.267"/>
       <line x1="83.96" y1="23.2" x2="83.96" y2="133.267"/>
@@ -20,7 +20,7 @@
       <line x1="282.08" y1="23.2" x2="282.08" y2="133.267"/>
       <line x1="17.92" y1="133.267" x2="140.047" y2="133.267"/>
       <line x1="160.407" y1="133.267" x2="282.08" y2="133.267"/>
-      <line x1="17.92" y1="89.24" x2="128.383" y2="89.24"/>
+      <line x1="22.244" y1="89.24" x2="128.383" y2="89.24"/>
       <line x1="146.383" y1="89.24" x2="282.08" y2="89.24"/>
       <line x1="17.92" y1="67.227" x2="282.08" y2="67.227"/>
       <line x1="17.92" y1="45.213" x2="282.08" y2="45.213"/>
@@ -39,7 +39,7 @@
     <circle cx="150" cy="45.213" r="3.1" fill="#24203c" data-dg-obstacle="point-C" data-dg-fill="" data-dg-point="C"/>
     <circle cx="260.067" cy="45.213" r="3.1" fill="#24203c" data-dg-obstacle="point-D" data-dg-fill="" data-dg-point="D"/>
     <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X" data-dg-font="vertex" x="292.43" y="111.253" font-size="15">X</text>
-    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X′" data-dg-font="vertex" x="7.57" y="111.253" font-size="15">X′</text>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X′" data-dg-font="vertex" x="11.52" y="98.773" font-size="15">X′</text>
     <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y" data-dg-font="vertex" x="142.44" y="12.85" font-size="15">Y</text>
     <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y′" data-dg-font="vertex" x="150" y="146.767" font-size="15">Y′</text>
     <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="O" data-dg-font="vertex" x="137.36" y="98.613" font-size="15">O</text>
@@ -47,8 +47,7 @@
   <text x="150" y="213" text-anchor="middle" font-size="15" fill="#24203c">(ii)</text>
   <g transform="translate(0 225)">
     <g aria-hidden="true" stroke="#dedbe4" stroke-width=".8">
-      <line x1="71.455" y1="23.2" x2="71.455" y2="127.268"/>
-      <line x1="71.455" y1="153.268" x2="71.455" y2="239.2"/>
+      <line x1="71.455" y1="23.2" x2="71.455" y2="239.2"/>
       <line x1="91.091" y1="23.2" x2="91.091" y2="239.2"/>
       <line x1="110.727" y1="23.2" x2="110.727" y2="239.2"/>
       <line x1="130.364" y1="23.2" x2="130.364" y2="114.628"/>
@@ -84,7 +83,7 @@
     <circle cx="150" cy="62.473" r="3.1" fill="#24203c" data-dg-obstacle="point-G" data-dg-fill="" data-dg-point="G"/>
     <circle cx="150" cy="42.836" r="3.1" fill="#24203c" data-dg-obstacle="point-H" data-dg-fill="" data-dg-point="H"/>
     <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X" data-dg-font="vertex" x="238.895" y="141.018" font-size="15">X</text>
-    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X′" data-dg-font="vertex" x="61.105" y="141.018" font-size="15">X′</text>
+    <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X′" data-dg-font="vertex" x="60.415" y="141.018" font-size="15">X′</text>
     <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y" data-dg-font="vertex" x="142.44" y="12.85" font-size="15">Y</text>
     <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y′" data-dg-font="vertex" x="150" y="252.7" font-size="15">Y′</text>
     <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="O" data-dg-font="vertex" x="137.36" y="128.378" font-size="15">O</text>

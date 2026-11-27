@@ -103,7 +103,13 @@
       svg.append(
         shape('polyline',{points:arrow.map(point=>point.join(',')).join(' '),fill:'none',stroke:axis,
           'stroke-width':'1.1','data-dg-obstacle':id+'-arrow'}));
-      const candidates = edgeLabels && id==='X' ? [[.78*rem,-.21*rem]] : undefined;
+      let candidates;
+      if (edgeLabels && id==='X') candidates = [[.78*rem,-.21*rem]];
+      if (id==='X′') {
+        // Wider fallback fonts can use the space above or below the arrow while keeping the axis association.
+        candidates = [[-.69,0],[-.4,-.78],[-.4,.78],[0,-.97],[0,.97],[.2,-1.08],[.2,1.08]]
+          .map(([x,y])=>[x*rem,y*rem]);
+      }
       placements.push({label:text(id,axis),anchor:tip,direction:[dx,dy],candidates});
     }
     function addAxes(id,start,end,direction) {
@@ -114,12 +120,6 @@
     if (axes) addAxes('X',toPlot(xMin,0),toPlot(xMax,0),[1,0]);
     if (axes && xMin<0) addAxes('Y',toPlot(0,yMin),toPlot(0,yMax),[0,-1]);
     if (projections) drawProjections(svg,points,toPlot,{xMin,xMax,yMin,yMax},edgeLabels,scale,rem,placements);
-    if (axes && xMin<0 && showOrigin) {
-      const quadrants = [[-1,1],[1,1],[-1,-1],[1,-1]];
-      const candidates = [.57,.68,.79,.9,1.05].flatMap(offset=>
-        quadrants.map(([x,y])=>[x*offset*rem,y*offset*rem]));
-      placements.push({label:text('O',axis),anchor:toPlot(0,0),candidates});
-    }
     if (quadrants) {
       const names = ['I','II','III','IV'];
       const centers = [[xMax,yMax],[xMin,yMax],[xMin,yMin],[xMax,yMin]];
@@ -127,6 +127,12 @@
         const anchor = toPlot(x*.53,y*.55);
         placements.push({label:text(names[index],axis),anchor,candidates:[[0,0]]});
       });
+    }
+    if (axes && xMin<0 && showOrigin) {
+      const aroundOrigin = [[-1,1],[1,1],[-1,-1],[1,-1]];
+      const candidates = [.57,.68,.79,.9,1.05].flatMap(offset=>
+        aroundOrigin.map(([x,y])=>[x*offset*rem,y*offset*rem]));
+      placements.push({label:text('O',axis),anchor:toPlot(0,0),candidates});
     }
 
     for (const [names,color,weight] of edges.values()) {

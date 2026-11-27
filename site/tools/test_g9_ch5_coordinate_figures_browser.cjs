@@ -114,6 +114,10 @@ async function main() {
         if(await page.locator('html').getAttribute('lang')!==lang)
           await page.locator(lang==='ta'?'#langTa':'#langEn').evaluate(button=>button.click());
         await page.waitForFunction(lang=>document.documentElement.lang===lang,lang);
+        if (process.env.TRIGGLE_COORDINATE_FALLBACK_FONT) {
+          await page.evaluate(()=>document.body.style.setProperty('--ver-font','monospace'));
+          await settle(page,150);
+        }
         for (const [width,height] of viewports) {
           await page.setViewportSize({width,height});
           for (const percent of [100,200]) {
@@ -131,6 +135,15 @@ async function main() {
           }
         }
       }
+    }
+    await page.goto(app.base+route(1));
+    await page.setViewportSize({width:320,height:844});
+    await page.evaluate(()=>document.body.style.setProperty('--ver-font','monospace'));
+    await settle(page,150);
+    const lang=await page.locator('html').getAttribute('lang');
+    for (const percent of [100,200]) {
+      await settle(page,percent);
+      await verify(page.locator('#inlineFigureVisual'),1,fixtures[0][1],lang,percent,'Q1 wide fallback font '+percent+'%');
     }
     console.log(`PASS Grade 9 Exercise 5.1 coordinate figures in ${isWebKit?'WebKit':'Chromium'} (${count} bilingual panel renderings)`);
   } finally {
