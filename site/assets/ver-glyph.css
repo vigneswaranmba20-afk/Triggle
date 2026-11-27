@@ -468,6 +468,8 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
   color: var(--ver-muted);
   font-size: var(--ver-text-small) !important;
   line-height: var(--ver-prose-leading) !important;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .ver-glyph #lessonCard #inlineFigureOpen {
   flex-direction: column;
