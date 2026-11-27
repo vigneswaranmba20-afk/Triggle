@@ -45,3 +45,16 @@ Four additional previews have rendered geometry checks in both languages at 100%
 | Lines in general form | [82.278°](figures/preview-11-ta-before.png) | [90.000°](figures/preview-11-ta-after.png) |
 
 The revised rendered offsets are under 0.00001 CSS px on the captured Chromium profile. Both browser engines enforce a 0.001 CSS px tolerance for the incidence checks. The four previews remain outside full typography qualification.
+
+## Interactive boundary states
+
+The quadrilateral lab now selects an interior diagonal after dragging. For the reproduced concave example, the two triangles along BD each have area 2.5, so their total agrees with the shoelace area of 5. Crossed polygons and repeated vertices get an invalid-state message. The textbook requires triangles with no shared area (English page 208, PDF 214, and Tamil page 214, PDF 220).
+
+The vertical-parallel case draws two distinct vertical lines. Equal general-form equations are shown as coincident. The slope–intercept construction stays within the plot at all four slider endpoint combinations. The point–slope slider starts at exactly 0.75, and the coefficient controls retain the last valid pair when the other coefficient is zero.
+
+| Matched Tamil capture at 390 CSS px | Before | After |
+| --- | --- | --- |
+| Concave quadrilateral | [Areas of 10 and 5](figures/state-3-ta-before.png) | [Both calculations give 5](figures/state-3-ta-after.png) |
+| Parallel vertical lines | [Lines drawn at the same x](figures/state-5-ta-before.png) | [Separated vertical lines](figures/state-5-ta-after.png) |
+| Slope construction | [Off-plot construction](figures/state-7-ta-before.png) | [Complete construction inside the plot](figures/state-7-ta-after.png) |
+| Equal general-form equations | [Coincidence shown as parallel](figures/state-11-ta-before.png) | [One line with an explicit coincidence explanation](figures/state-11-ta-after.png) |

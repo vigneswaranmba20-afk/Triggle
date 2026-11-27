@@ -130,6 +130,83 @@ async function assertRenderedPreviews(page,base) {
   }
 }
 
+async function assertInteractiveEdges(page,base) {
+  const graph=page.locator('svg.g10ch4-svg');
+  const readout=page.locator('.g10ch4-readout');
+  async function open(index,lang,percent){
+    await page.goto(base+'/index.html?class=10&chapter=g10-ch5&section=concepts&concept='+index);
+    if(await page.locator('html').getAttribute('lang')!==lang)await page.locator(lang==='ta'?'#langTa':'#langEn').evaluate(button=>button.click());
+    await page.evaluate(percent=>{document.documentElement.style.fontSize=percent+'%';},percent);
+  }
+  async function point(id){
+    const box=await graph.locator(`[data-handle="${id}"] circle[stroke]`).boundingBox();
+    return [box.x+box.width/2,box.y+box.height/2];
+  }
+  async function drag(id,target){
+    await page.mouse.move(...await point(id));await page.mouse.down();
+    await page.mouse.move(...target,{steps:5});await page.mouse.up();
+  }
+  async function slide(index,value){
+    return page.locator('.g10ch4-slider').nth(index).evaluate((input,value)=>{
+      input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));return Number(input.value);
+    },value);
+  }
+  for(const lang of ['en','ta'])for(const percent of [100,200]){
+    const context=`${lang} at ${percent}%`;
+    await open(3,lang,percent);
+    await graph.scrollIntoViewIfNeeded();
+    assert.equal(await graph.locator('[data-dg-area-diagonal]').getAttribute('data-dg-area-diagonal'),'AC');
+    const a=await point('A'),c=await point('C'),unit=(c[0]-a[0])/5;
+    await drag('B',[a[0]+2*unit,a[1]-3*unit]); // B = (−1, 1) inside triangle ACD
+    assert.equal(await graph.locator('[data-dg-area-diagonal]').getAttribute('data-dg-area-diagonal'),'BD',context+' concave diagonal');
+    assert.match((await readout.locator('.katex-html').innerText()).replace(/[\s\u200b]+/g,''),/=5=5sq/,context+' both concave area calculations equal five');
+    await drag('B',a);
+    assert.equal(await graph.locator('[data-dg-area-diagonal]').count(),0,context+' repeated vertex');
+    await page.locator('.g10ch4-tab').nth(1).click();
+    assert.equal(await graph.locator('[data-dg-area-diagonal]').count(),0,context+' crossed polygon');
+
+    await open(5,lang,percent);
+    await page.locator('.g10ch4-tab').first().click();
+    await graph.scrollIntoViewIfNeeded();
+    const verticalPoint=await graph.evaluate(svg=>{
+      const axis=svg.querySelector('[data-dg-grid-axis="x"][stroke="#6E7781"]');
+      const y=axis.y1.baseVal.value+(axis.y2.baseVal.value-axis.y1.baseVal.value)/4;
+      const point=new DOMPoint(axis.x1.baseVal.value,y).matrixTransform(axis.getScreenCTM());return [point.x,point.y];
+    });
+    await drag('P',verticalPoint);
+    const lines=await graph.locator('[data-dg-slope-line]').evaluateAll(nodes=>nodes.map(line=>[line.x1.baseVal.value,line.x2.baseVal.value]));
+    assert(lines.length===2&&lines.every(([x,y])=>x===y)&&lines[0][0]!==lines[1][0],context+' distinct parallel vertical lines');
+
+    await open(7,lang,percent);
+    for(const m of [-2,2])for(const c of [-3,3]){
+      await slide(0,m);await slide(1,c);
+      const test=await graph.evaluate(svg=>{
+        const [run,rise]=svg.querySelectorAll('line[stroke-dasharray="3 2"]');
+        const tip=rise.y2.baseVal.value;
+        return {inside:tip>=0&&tip<=svg.viewBox.baseVal.height,
+          slope:(rise.y1.baseVal.value-tip)/(run.x2.baseVal.value-run.x1.baseVal.value)};
+      });
+      assert(test.inside&&test.slope===m,context+' full auxiliary slope triangle');
+    }
+
+    await open(8,lang,percent);
+    assert.equal(await page.locator('.g10ch4-slider').inputValue(),'0.75',context+' exact initial slope');
+
+    await open(10,lang,percent);
+    assert.equal(await slide(0,0),0);
+    assert.equal(await slide(1,0),3,context+' last valid coefficient retained');
+    await slide(0,2);await slide(1,0);
+    assert.equal(await slide(0,0),2,context+' symmetric coefficient constraint');
+
+    await open(11,lang,percent);
+    await page.locator('.g10ch4-tab').first().click();
+    await slide(0,2);
+    assert.match(await readout.innerText(),lang==='ta'?/இரு கோடுகளும் ஒன்றே/:/The two lines coincide/);
+    await slide(0,3);
+    assert.match(await readout.innerText(),/∥/,context+' distinct parallel family');
+  }
+}
+
 async function assertRenderedAngles(page,base) {
   const near=(actual,expected,label)=>assert(Math.abs(actual-expected)<1e-6,`${label}: ${actual} ≠ ${expected}`);
   for(const lang of ['en','ta'])for(const percent of [100,200]){
@@ -199,7 +276,8 @@ async function run(){
       const page=await browser.newPage({viewport:{width:320,height:844},serviceWorkers:'block'});
       await assertRenderedAngles(page,base);
       await assertRenderedPreviews(page,base);
-      console.log('PASS rendered Grade 10 concept angles, previews and corner drags in both languages at 100% and 200% text');
+      await assertInteractiveEdges(page,base);
+      console.log('PASS rendered Grade 10 concept angles, previews and interaction edges in both languages at 100% and 200% text');
       return;
     }
 
@@ -323,6 +401,7 @@ async function run(){
       const page=await ctx.newPage();
       await assertRenderedAngles(page,base);
       await assertRenderedPreviews(page,base);
+      await assertInteractiveEdges(page,base);
       await ctx.close();
     }
 
