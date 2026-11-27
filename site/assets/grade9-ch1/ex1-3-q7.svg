@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 664 552" width="664" height="552" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 664 574" width="664" height="574" role="img">
   <title>A, B, U · (i)–(vi)</title>
   <g fill="#2b2145" font-family="system-ui, sans-serif" font-weight="600">
   <g transform="translate(6 6)">
@@ -25,7 +25,7 @@
     <ellipse cx="119" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/>
     <text x="51" y="29" text-anchor="middle" font-size="16">A</text><text x="269" y="29" text-anchor="middle" font-size="16">B</text><text x="300" y="26" text-anchor="middle" font-size="16">U</text><text x="160.0" y="176" text-anchor="middle" font-size="19">(ii) A∩B</text>
   </g>
-  <g transform="translate(6 188)">
+  <g transform="translate(6 196)">
     <defs>
       <clipPath id="q7-2-right"><ellipse cx="201" cy="76" rx="65" ry="48" /></clipPath>
       <mask id="q7-2-left-only"><ellipse cx="119" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>
@@ -37,7 +37,7 @@
     <ellipse cx="119" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/>
     <text x="51" y="29" text-anchor="middle" font-size="16">A</text><text x="269" y="29" text-anchor="middle" font-size="16">B</text><text x="300" y="26" text-anchor="middle" font-size="16">U</text><text x="160.0" y="176" text-anchor="middle" font-size="19">(iii) (A∩B)′</text>
   </g>
-  <g transform="translate(338 188)">
+  <g transform="translate(338 196)">
     <defs>
       <clipPath id="q7-3-right"><ellipse cx="201" cy="76" rx="65" ry="48" /></clipPath>
       <mask id="q7-3-left-only"><ellipse cx="119" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>
@@ -49,7 +49,7 @@
     <ellipse cx="119" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/>
     <text x="51" y="29" text-anchor="middle" font-size="16">A</text><text x="269" y="29" text-anchor="middle" font-size="16">B</text><text x="300" y="26" text-anchor="middle" font-size="16">U</text><text x="160.0" y="176" text-anchor="middle" font-size="19">(iv) (B−A)′</text>
   </g>
-  <g transform="translate(6 370)">
+  <g transform="translate(6 386)">
     <defs>
       <clipPath id="q7-4-right"><ellipse cx="201" cy="76" rx="65" ry="48" /></clipPath>
       <mask id="q7-4-left-only"><ellipse cx="119" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>
@@ -61,7 +61,7 @@
     <ellipse cx="119" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="none" stroke="#574588" stroke-width="2"/>
     <text x="51" y="29" text-anchor="middle" font-size="16">A</text><text x="269" y="29" text-anchor="middle" font-size="16">B</text><text x="300" y="26" text-anchor="middle" font-size="16">U</text><text x="160.0" y="176" text-anchor="middle" font-size="19">(v) A′∪B′</text>
   </g>
-  <g transform="translate(338 370)">
+  <g transform="translate(338 386)">
     <defs>
       <clipPath id="q7-5-right"><ellipse cx="201" cy="76" rx="65" ry="48" /></clipPath>
       <mask id="q7-5-left-only"><ellipse cx="119" cy="76" rx="65" ry="48" fill="white"/><ellipse cx="201" cy="76" rx="65" ry="48" fill="black"/></mask>

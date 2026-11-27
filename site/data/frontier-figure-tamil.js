@@ -41,9 +41,9 @@
     },
     'c10-4-ex4-3-q4': {
       src:'./assets/grade10-geometry/ex4-3-q4-ta.svg',
-      description:'செவ்வகம் WXYZ. மேல் இடப்புறம் W, கீழ் இடப்புறம் X, கீழ் வலப்புறம் Y, மேல் வலப்புறம் Z. சம நீளமுள்ள XZ, YW மூலைவிட்டங்கள் செவ்வகத்திற்குள் வெட்டிக்கொள்கின்றன.',
+      description:'செவ்வகம் WXYZ. கீழ் இடப்புறம் W, கீழ் வலப்புறம் X, மேல் வலப்புறம் Y, மேல் இடப்புறம் Z. சம நீளமுள்ள XZ, YW மூலைவிட்டங்கள் மையத்தில் வெட்டிக்கொள்கின்றன.',
       caption:'WXYZ செவ்வகத்தின் பக்கங்கள் XY, YZ மற்றும் சம மூலைவிட்டங்கள் XZ, YW',
-      en:{description:'Rectangle WXYZ has W at top left, X at bottom left, Y at bottom right and Z at top right. Its equal diagonals XZ and YW cross inside the rectangle.',caption:'Adjacent sides XY and YZ and equal diagonals XZ and YW'}
+      en:{description:'Rectangle WXYZ has W at bottom left, X at bottom right, Y at top right and Z at top left. Its equal diagonals XZ and YW cross at the centre.',caption:'Adjacent sides XY and YZ and equal diagonals XZ and YW'}
     },
     'c10-4-ex4-3-q8': {
       description:'ABC முக்கோணத்தில் B-இல் செங்கோணம் உள்ளது. AB செங்குத்தாகவும் BC கிடைமட்டமாகவும் உள்ளன. BC மீது B, D, E, C வரிசையில் உள்ளன. BD, DE, EC சம நீளமுள்ளவை. A இலிருந்து D, E, C வரை கோட்டுத்துண்டுகள் வரையப்பட்டுள்ளன.',

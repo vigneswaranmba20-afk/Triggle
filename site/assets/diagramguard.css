@@ -1,0 +1,55 @@
+.diagramguard-svg {
+  --diagramguard-vertex: .9375rem;
+  --diagramguard-measurement: .875rem;
+  --diagramguard-expression: .9375rem;
+  --diagramguard-secondary: .875rem;
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  margin-inline: auto;
+  font-family: var(--ver-font, system-ui, sans-serif);
+  overflow: hidden;
+}
+.diagramguard-svg text { font-weight: 550; }
+.diagramguard-svg [data-dg-font="vertex"] { font-size: var(--diagramguard-vertex); }
+.diagramguard-svg [data-dg-font="measurement"] { font-size: var(--diagramguard-measurement); }
+.diagramguard-svg [data-dg-font="expression"] { font-size: var(--diagramguard-expression); }
+.diagramguard-svg [data-dg-font="secondary"] { font-size: var(--diagramguard-secondary); }
+.diagramguard-annotation {
+  display: block;
+  margin: 0;
+  padding: .375rem .625rem .5rem;
+  color: var(--ver-indigo, #37305e);
+  font: 550 .9375rem/var(--ver-prose-leading, 1.55) var(--ver-font, system-ui, sans-serif);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.diagramguard-annotation[hidden] { display: none; }
+.diagramguard-font-probe {
+  position: absolute;
+  visibility: hidden;
+  inline-size: 1rem;
+  block-size: 0;
+  pointer-events: none;
+}
+.g10ch4-lab .diagramguard-svg {
+  max-inline-size: 480px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  touch-action: auto;
+}
+.g10ch4-glance-visual .diagramguard-svg { max-inline-size: 300px; }
+.diagramguard-figure {
+  display: block;
+  inline-size: min(100%, 480px);
+  min-inline-size: 0;
+  margin-inline: auto;
+}
+.ver-glyph #lessonCard #inlineFigureVisual .diagramguard-rectangle,
+.ver-glyph #figureDialog .diagram-content .diagramguard-rectangle {
+  inline-size: 100% !important;
+  max-inline-size: 480px !important;
+  max-block-size: none !important;
+  max-height: none !important;
+}

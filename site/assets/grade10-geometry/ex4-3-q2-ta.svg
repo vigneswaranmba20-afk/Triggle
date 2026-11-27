@@ -10,12 +10,12 @@
     .hint{fill:#57687a;font-size:12px}
   </style>
   <rect width="320" height="220" rx="8" fill="#f8fafc"/>
-  <polyline class="edge" points="39,179 275,179 275,34"/>
-  <line class="accent" x1="39" y1="179" x2="275" y2="34"/>
-  <polyline class="mark" points="261,179 261,165 275,165"/>
-  <circle cx="39" cy="179" r="3" fill="#273349"/><circle cx="275" cy="34" r="3" fill="#273349"/>
-  <text x="9" y="202">சாரா</text><text x="238" y="24">ஜேம்ஸ்</text>
-  <text x="130" y="198">B தெரு</text><text x="129" y="215" class="hint">2 மைல்</text>
-  <text x="207" y="116" transform="rotate(-31 207 116)">C தெரு</text>
-  <text x="280" y="86">A</text><text x="280" y="101">தெரு</text><text x="280" y="118" class="hint">1.5</text><text x="280" y="132" class="hint">மைல்</text>
+  <polyline class="edge" points="53,179 249,179 249,32"/>
+  <line class="accent" x1="53" y1="179" x2="249" y2="32"/>
+  <polyline class="mark" points="235,179 235,165 249,165"/>
+  <circle cx="53" cy="179" r="3" fill="#273349"/><circle cx="249" cy="32" r="3" fill="#273349"/>
+  <text x="9" y="202">சாரா</text><text x="249" y="19" text-anchor="middle">ஜேம்ஸ்</text>
+  <text x="151" y="202" text-anchor="middle">B தெரு · 2 மைல்</text>
+  <text x="108" y="110" transform="rotate(-36.87 108 110)">C தெரு</text>
+  <text x="240" y="108" text-anchor="end">A தெரு</text><text x="240" y="132" text-anchor="end" class="hint">1.5 மைல்</text>
 </svg>

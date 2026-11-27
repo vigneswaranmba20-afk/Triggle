@@ -23,14 +23,16 @@ async function inspect(page,record,locale){
       await image.decode();
       return {description:image.alt,src:image.getAttribute('src')};
     }
-    return {description:content.querySelector('svg[role="img"]')?.getAttribute('aria-label')};
+    const svg=content.querySelector('svg[role="img"]');
+    return {description:svg?.getAttribute('aria-label'),scene:svg?.dataset.dgScene};
   });
   const caption=await page.locator('#visualTitle').innerText();
   assert((figure.description+' '+caption).toLowerCase().includes(record[locale].toLowerCase()), record.id+' '+locale);
   assert(figure.description.length>55,record.id+' description');
   if(record.asset) {
     const pathname=locale==='ta'?record.asset:record.asset.replace('-ta.svg','.svg');
-    assert.equal(figure.src.replace(/^\.\//,''),pathname);
+    if(record.id==='c10-4-ex4-3-q4')assert.equal(figure.scene,'wxyz-rectangle');
+    else assert.equal(figure.src.replace(/^\.\//,''),pathname);
   }
   assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
   await page.locator('#closeDiagram').evaluate(button=>button.click());

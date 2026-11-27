@@ -266,78 +266,24 @@
     host.append(el('h5','g10ch4-lab-title',copy.title));
     let mode=0,ssaIdx=0;
     const tabs=makeTabs(copy.tabs,0,i=>{mode=i;tabs.sync(i);paint();},copy.title);
-    const svg=svgEl('svg',{viewBox:'0 0 320 170',class:'g10ch4-svg',role:'img','aria-label':copy.title});
+    const diagram=window.TriggleG10DiagramGuard.lab(copy.title,()=>({
+      mode,active:ssaIdx,ssa:mathAPI.ssaAmbiguous(8,5.5,35)
+    }));
     const flipBtn=el('button','g10ch4-chip-btn',copy.flip);flipBtn.type='button';
     flipBtn.onclick=()=>{ssaIdx=1-ssaIdx;paint();};
+    const angles=['∠A = ∠P = 50° · ∠B = ∠Q = ∠C = ∠R = 65°','∠A = ∠P = 50°','','∠B = 35°'];
+    const key=el('p','diagramguard-annotation');
     const note=el('p','g10ch4-status');note.setAttribute('aria-live','polite');
-    host.append(tabs.bar,svg,flipBtn,note);
+    host.append(tabs.bar,diagram.svg,key,flipBtn,note);
+    const draw=diagram.observe();
 
     function paint(){
-      svg.replaceChildren();
       flipBtn.hidden=mode!==3;
-      if(mode<3){
-        const A=[42,40],B=[24,142],C=[118,142];
-        const P=[186,24],Q=[160,152],R=[296,152];
-        svg.append(
-          svgEl('polygon',{points:`${A} ${B} ${C}`,fill:'rgba(24,27,32,0.06)',stroke:'#181B20','stroke-width':'2'}),
-          svgEl('polygon',{points:`${P} ${Q} ${R}`,fill:'rgba(22,99,83,0.10)',stroke:'#166353','stroke-width':'2'}),
-          svgEl('text',{x:A[0]-3,y:A[1]-6,'font-size':'11','font-weight':'700'},'A'),
-          svgEl('text',{x:B[0]-12,y:B[1]+12,'font-size':'11','font-weight':'700'},'B'),
-          svgEl('text',{x:C[0]+4,y:C[1]+12,'font-size':'11','font-weight':'700'},'C'),
-          svgEl('text',{x:P[0]-3,y:P[1]-6,'font-size':'11','font-weight':'700',fill:'#166353'},'P'),
-          svgEl('text',{x:Q[0]-12,y:Q[1]+12,'font-size':'11','font-weight':'700',fill:'#166353'},'Q'),
-          svgEl('text',{x:R[0]+4,y:R[1]+12,'font-size':'11','font-weight':'700',fill:'#166353'},'R')
-        );
-        if(mode===0){
-          svg.append(
-            svgEl('text',{x:42,y:62,'font-size':'10','font-weight':'700',fill:'#6E2933'},'50°'),
-            svgEl('text',{x:34,y:135,'font-size':'10','font-weight':'700',fill:'#166353'},'65°'),
-            svgEl('text',{x:186,y:48,'font-size':'10','font-weight':'700',fill:'#6E2933'},'50°'),
-            svgEl('text',{x:172,y:144,'font-size':'10','font-weight':'700',fill:'#166353'},'65°'),
-            svgEl('text',{x:96,y:135,'font-size':'9.5',fill:'#525B62'},'65°'),
-            svgEl('text',{x:268,y:144,'font-size':'9.5',fill:'#525B62'},'65°')
-          );
-        }else if(mode===1){
-          svg.append(
-            svgEl('text',{x:42,y:62,'font-size':'10','font-weight':'700',fill:'#6E2933'},'50°'),
-            svgEl('text',{x:186,y:48,'font-size':'10','font-weight':'700',fill:'#6E2933'},'50°'),
-            svgEl('text',{x:20,y:92,'font-size':'10',fill:'#181B20'},'4'),
-            svgEl('text',{x:86,y:90,'font-size':'10',fill:'#181B20'},'6'),
-            svgEl('text',{x:158,y:88,'font-size':'10','font-weight':'700',fill:'#166353'},'6'),
-            svgEl('text',{x:250,y:86,'font-size':'10','font-weight':'700',fill:'#166353'},'9')
-          );
-        }else{
-          svg.append(
-            svgEl('text',{x:20,y:92,'font-size':'10'},'3'),svgEl('text',{x:68,y:156,'font-size':'10'},'4'),svgEl('text',{x:88,y:90,'font-size':'10'},'5'),
-            svgEl('text',{x:158,y:88,'font-size':'10',fill:'#166353'},'6'),svgEl('text',{x:225,y:156,'font-size':'10',fill:'#166353'},'8'),svgEl('text',{x:252,y:86,'font-size':'10',fill:'#166353'},'10')
-          );
-        }
-        note.className='g10ch4-status is-match';
-      }else{
-        const ssa=mathAPI.ssaAmbiguous(8,5.5,35);
-        const scale=24,bx=36,by=140;
-        const B=[bx,by];
-        const A=[bx+ssa.c*scale*Math.cos(35*Math.PI/180),by-ssa.c*scale*Math.sin(35*Math.PI/180)];
-        const C1=[bx+ssa.a1*scale,by],C2=[bx+ssa.a2*scale,by];
-        const curC=ssaIdx===0?C1:C2;
-        const rPx=ssa.b*scale;
-        svg.append(
-          svgEl('line',{x1:B[0],y1:B[1],x2:300,y2:by,stroke:'#D7D4CC','stroke-width':'1.5'}),
-          svgEl('circle',{cx:A[0],cy:A[1],r:rPx,fill:'none',stroke:'#B79253','stroke-width':'1.3','stroke-dasharray':'4 4'}),
-          svgEl('polygon',{points:`${A} ${B} ${C1}`,fill:'rgba(24,27,32,0.04)',stroke:'#999','stroke-width':'1.2','stroke-dasharray':'3 3'}),
-          svgEl('polygon',{points:`${A} ${B} ${curC}`,fill:'rgba(110,41,51,0.12)',stroke:'#6E2933','stroke-width':'2.2'}),
-          svgEl('circle',{cx:C1[0],cy:C1[1],r:4,fill:ssaIdx===0?'#6E2933':'#888'}),
-          svgEl('circle',{cx:C2[0],cy:C2[1],r:4,fill:ssaIdx===1?'#6E2933':'#888'}),
-          svgEl('text',{x:B[0]-12,y:B[1]+14,'font-size':'10.5','font-weight':'700'},'B (35°)'),
-          svgEl('text',{x:A[0]-4,y:A[1]-8,'font-size':'10.5','font-weight':'700'},'A'),
-          svgEl('text',{x:C1[0]-6,y:C1[1]+14,'font-size':'10.5','font-weight':'700',fill:ssaIdx===0?'#6E2933':'#666'},'C₁'),
-          svgEl('text',{x:C2[0]-6,y:C2[1]+14,'font-size':'10.5','font-weight':'700',fill:ssaIdx===1?'#6E2933':'#666'},'C₂'),
-          svgEl('text',{x:100,y:86,'font-size':'10',fill:'#181B20'},'AB = 8'),
-          svgEl('text',{x:(A[0]+curC[0])/2+6,y:(A[1]+curC[1])/2,'font-size':'10','font-weight':'700',fill:'#6E2933'},'AC = 5.5')
-        );
-        note.className='g10ch4-status is-warn';
-      }
+      key.textContent=angles[mode];
+      key.hidden=!angles[mode];
+      note.className='g10ch4-status '+(mode===3?'is-warn':'is-match');
       note.textContent=copy.notes[mode];
+      draw();
     }
     paint();
   }
@@ -1182,28 +1128,12 @@
   function renderGlance(stage,host,lang){
     const id=stage.glanceVisual||stage.visual?.id;
     const label=(lang==='ta'?stage.firstGlance?.ta:stage.firstGlance?.en)||'Geometry overview diagram';
+    if(['similarity-scale','similarity-criteria','similarity-results'].includes(id)){
+      window.TriggleG10DiagramGuard.preview(host,label,id,lang);
+      return;
+    }
     const svg=svgEl('svg',{viewBox:'0 0 300 104',class:'g10ch4-glance-svg',role:'img','aria-label':label});
-    if(id==='similarity-scale'){
-      svg.append(
-        svgEl('polygon',{points:'42,24 22,88 94,88',fill:'rgba(24,27,32,0.06)',stroke:'#181B20','stroke-width':'1.8'}),
-        svgEl('polygon',{points:'186,12 154,92 268,92',fill:'rgba(110,41,51,0.10)',stroke:'#6E2933','stroke-width':'1.8'}),
-        svgEl('text',{x:108,y:58,'font-size':'12','font-weight':'700',fill:'#6E2933'},'× k'),
-        svgEl('text',{x:54,y:82,'font-size':'10',fill:'#525B62'},'△ABC'),
-        svgEl('text',{x:196,y:84,'font-size':'10','font-weight':'700',fill:'#6E2933'},'△PQR')
-      );
-    }else if(id==='similarity-criteria'){
-      svg.append(
-        svgEl('polygon',{points:'48,20 22,88 94,88',fill:'rgba(22,99,83,0.08)',stroke:'#181B20','stroke-width':'1.8'}),
-        svgEl('polygon',{points:'190,14 156,88 248,88',fill:'rgba(22,99,83,0.12)',stroke:'#166353','stroke-width':'1.8'}),
-        svgEl('text',{x:106,y:58,'font-size':'11','font-weight':'700',fill:'#166353'},'AA · SAS · SSS')
-      );
-    }else if(id==='similarity-results'){
-      svg.append(
-        svgEl('polygon',{points:'46,28 24,84 82,84',fill:'rgba(22,99,83,0.14)',stroke:'#166353','stroke-width':'1.8'}),
-        svgEl('polygon',{points:'180,14 136,88 252,88',fill:'rgba(110,41,51,0.10)',stroke:'#6E2933','stroke-width':'1.8'}),
-        svgEl('text',{x:92,y:58,'font-size':'11','font-weight':'700',fill:'#6E2933'},'Side k → Area k²')
-      );
-    }else if(id==='similar-construction'){
+    if(id==='similar-construction'){
       svg.append(
         svgEl('polygon',{points:'96,18 42,72 198,72',fill:'rgba(24,27,32,0.05)',stroke:'#181B20','stroke-width':'1.8'}),
         svgEl('line',{x1:42,y1:72,x2:232,y2:98,stroke:'#8A6728','stroke-width':'1.5'}),
