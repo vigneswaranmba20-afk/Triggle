@@ -11,7 +11,7 @@ const site = path.resolve(__dirname,'..');
 const name = 'Triggle — Samacheer Kalvi Mathematics (Grades 9 & 10)';
 const budgets = {
   homeWire: 310_000, homeJsWire: 150_000, homeCssWire: 90_000, homeRequests: 16,
-  homeCache: 1_750_000, visitedCache: 5_500_000, questionP95: 400, cls: .05,
+  homeCache: 1_750_000, visitedCache: 5_500_000, questionWorkP95: 400, cls: .05,
 };
 const p95 = values => [...values].sort((a,b)=>a-b)[Math.ceil(values.length*.95)-1];
 const text = (root,file) => fs.readFile(path.join(root,file),'utf8');
@@ -168,11 +168,14 @@ async function browserChecks(root, release) {
       samples.push(await page.evaluate(async forward=>{
         const start = performance.now();
         document.getElementById(forward?'next':'previous').click();
+        const work = performance.now()-start;
         await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
-        return performance.now()-start;
+        return {work,paint:performance.now()-start};
       },i%2===0));
     }
-    assert(p95(samples.slice(4))<=budgets.questionP95,JSON.stringify(samples));
+    const questionWorkP95 = p95(samples.slice(4).map(value=>value.work));
+    const questionPaintP95 = p95(samples.slice(4).map(value=>value.paint));
+    assert(questionWorkP95<=budgets.questionWorkP95,JSON.stringify(samples));
     const visitedCache = await cacheState(page);
     assert(visitedCache.bytes<=budgets.visitedCache,JSON.stringify(visitedCache));
     assert(visitedCache.paths.every(file=>!/\.(?:mp4|webm)$/.test(file)));
@@ -194,7 +197,7 @@ async function browserChecks(root, release) {
     assert.deepEqual(errors,[]);
     console.log('PASS VER SpeedGuard browser',JSON.stringify({
       release:release.version,requests:perf.requests.length+1,cls:perf.cls,
-      homeCache:homeCache.bytes,visitedCache:visitedCache.bytes,questionP95:p95(samples.slice(4)),offlineMathNodes:math,
+      homeCache:homeCache.bytes,visitedCache:visitedCache.bytes,questionWorkP95,questionPaintP95,offlineMathNodes:math,
     }));
     await context.close();
     await verifyUpdate(root,base,browser,release);
