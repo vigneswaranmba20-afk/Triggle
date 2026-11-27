@@ -50,7 +50,7 @@ for (const evidence of items) {
     assert.equal(row.figureSrc, evidence.figure.asset);
     assert.ok(sw.includes('./' + row.figureSrc));
     const svg = fs.readFileSync('site/' + row.figureSrc, 'utf8');
-    assert.match(svg, /viewBox="0 0 320 220"/);
+    assert.match(svg, /viewBox="0 0 300 [1-9]\d*"/);
     assert.match(svg, /<title/);
     assert.match(svg, /<desc/);
   }

@@ -148,6 +148,7 @@ async function synthetic(page){
     test('tamilClear','<text x="10" y="77">ஒத்த முக்கோணங்களின் பக்கங்களின் விகிதம்</text>');
     test('tamilBoundary','<text x="395" y="77">ஒத்த முக்கோணங்களின் பக்கங்களின் விகிதம்</text>');
     test('curve','<path id="curve" d="M20 95 Q75 20 145 95" fill="none" stroke="black"/><text x="65" y="65">Arc</text>');
+    test('cssCircle','<circle id="circle" cx="100" cy="71" r="3" style="r:22px" fill="none" stroke="black"/><text x="116" y="78">Edge</text>');
     test('subpathClear','<path d="M10 55 L30 55 M210 55 L230 55" fill="none" stroke="black"/><text x="85" y="60">Between</text>');
     test('intentional','<line id="tick" x1="31" y1="50" x2="58" y2="50" stroke="black"/><text data-dg-allow="tick" x="32" y="54">Tick</text>');
     test('arrowhead','<polygon id="head" data-dg-role="arrowhead" data-dg-fill points="55,40 68,55 45,68"/><text x="53" y="60">A</text>');
@@ -173,7 +174,7 @@ async function synthetic(page){
   },baselines);
   const exact={
     line:['stroke'],strokeWidth:['stroke'],diagonalClear:[],label:['label'],boundary:['boundary'],
-    rotated:['stroke'],transform:['angle'],tamilClear:[],tamilBoundary:['boundary'],curve:['stroke'],
+    rotated:['stroke'],transform:['angle'],tamilClear:[],tamilBoundary:['boundary'],curve:['stroke'],cssCircle:['stroke'],
     subpathClear:[],intentional:[],arrowhead:['arrowhead'],fill:['fill'],legend:['plot']
   };
   for(const [name,expected] of Object.entries(exact)){
@@ -184,7 +185,7 @@ async function synthetic(page){
   assert.throws(()=>proportional([[48,20],[22,88],[94,88]],[[190,14],[156,88],[248,88]]));
   assert(result.canvas.every(size=>size>4&&size<12),'Canvas transformed metrics');
   assert.deepEqual(result.closestPointPlacement,[82,70],'Label remains associated with its own point');
-  console.log('DiagramGuard: 17 synthetic checks, two original regressions and original unequal proportions reproduced');
+  console.log('DiagramGuard: 18 synthetic checks, two original regressions and original unequal proportions reproduced');
 }
 
 async function legacyCases(page){

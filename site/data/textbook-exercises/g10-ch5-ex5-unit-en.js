@@ -168,7 +168,11 @@ const entries = [
         "ta": 250
       }
     },
-    "figureSrc": "assets/grade10-ch5/ex5-unit-q1.svg"
+    "figureSrc": "assets/grade10-ch5/ex5-unit-q1.svg",
+    "figureAlt": {
+      "en": "The four side midpoints of rectangle PQRS are joined to form rhombus ABCD.",
+      "ta": "PQRS செவ்வகத்தின் பக்க நடுப்புள்ளிகளை இணைத்தால் ABCD சாய்சதுரம் அமைகிறது."
+    }
   },
   {
     "id": "c10-5-unit-q2",
@@ -901,7 +905,11 @@ const entries = [
         "ta": 251
       }
     },
-    "figureSrc": "assets/grade10-ch5/ex5-unit-q8.svg"
+    "figureSrc": "assets/grade10-ch5/ex5-unit-q8.svg",
+    "figureAlt": {
+      "en": "Q is the reflection of P across the mirror line x + 3y = 7, which bisects PQ at right angles at M (1, 2).",
+      "ta": "x + 3y = 7 கண்ணாடிக் கோட்டில் P-யின் பிம்பம் Q. கண்ணாடிக் கோடு PQ-ஐ M (1, 2) புள்ளியில் செங்குத்தாகச் சமமாகப் பிரிக்கிறது."
+    }
   },
   {
     "id": "c10-5-unit-q9",
@@ -1096,7 +1104,15 @@ const entries = [
         "ta": 251
       }
     },
-    "figureSrc": "assets/grade10-ch5/ex5-unit-q10.svg"
+    "figureSrc": "assets/grade10-ch5/ex5-unit-q10.svg",
+    "figureAlt": {
+      "en": "The paths cross at P. The close-up shows the shortest route from P to H, where it meets the target path at a right angle.",
+      "ta": "இரு பாதைகள் P-யில் சந்திக்கின்றன. பெரிதாக்கிய படத்தில் P-இலிருந்து இலக்குப் பாதையில் உள்ள H வரை செல்லும் குறுகிய வழி செங்குத்தாக உள்ளது."
+    },
+    "figureCaption": {
+      "en": "The close-up uses a larger scale to show the distance from P to H.",
+      "ta": "P-க்கும் H-க்கும் இடையிலான தொலைவைத் தெளிவாகக் காட்ட இரண்டாம் படம் பெரிதாக்கப்பட்டுள்ளது."
+    }
   }
 ];
 

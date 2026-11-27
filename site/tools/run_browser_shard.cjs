@@ -1,6 +1,7 @@
 'use strict';
 // Balanced, reproducible partitions based on a successful full browser run.
-// Profiling data: GitHub Actions 43784590384 (2026-11-16), seconds per command.
+// Profiling data: successful GitHub Actions run 45981456495, seconds per command.
+// The new coordinate-line fixtures use a conservative estimate until their first hosted run.
 // New tests are never skipped: unknown commands receive a conservative estimate.
 const fs=require('node:fs');
 const path=require('node:path');
@@ -11,41 +12,86 @@ const full=manifest.scripts['test:browser'];
 if(!full||typeof full!=='string')throw Error('Missing complete browser-test script');
 const commands=full.split(/\s+&&\s+/).map(s=>s.trim()).filter(Boolean);
 const weights=Object.freeze({
-  'test_sticky_example_layout_browser.cjs':7.8,
-  'test_exercise_direct_browser.cjs':16.7,
-  'test_quiet_reader_browser.cjs':8.4,
-  'test_curriculum_ui.cjs':84.2,
-  'test_g9_ch9_probability_browser.cjs':3.3,
-  'test_curriculum_bulk_browser.cjs':4.4,
-  'test_g12_ex1_1_bulk_browser.cjs':14.2,
-  'test_teacher_startup_browser.cjs':2.9,
-  'test_dashboard_browser.cjs':1.7,
-  'test_teacher_workflow_browser.cjs':4.0,
-  'test_katex_browser.cjs':47.8,
-  'test_matrix_pilot_browser.cjs':0.8,
-  'test_standard_solutions_browser.cjs':213.7,
-  'test_g12_matrix_concepts_browser.cjs':19.3,
-  'test_trace_cramer_preview_browser.cjs':3.5,
-  'test_g10_ch2_typography_browser.cjs':4.0,
-  'test_g10_ch2_scroll_browser.cjs':9.7,
-  'test_g10_stats_browser.cjs':4.5,
-  'test_chatgpt_math_g10_browser.cjs':5.3,
-  'test_g10_ch1_chatgpt_math_browser.cjs':24.0,
-  'test_g10_remaining_math_browser.cjs':20.2,
-  'test_g10_ch2_power_baseline_browser.cjs':2.0,
-  'test_g9_clear_math_browser.cjs':41.0,
-  'test_why_step_g10_browser.cjs':33.4,
-  'test_why_step_g10_coverage_browser.cjs':40.7,
-  'test_why_step_g9_browser.cjs':31.5,
-  'test_g9_typography_browser.cjs':37.4,
-  'test_g9_concepts_typography_browser.cjs':47.3,
-  'test_paper_indigo_theme_browser.cjs':6.5,
-  'test_g10_ch2_trace_browser.cjs':8.5,
-  'test_g10_ch2_ex2_3_modular_browser.cjs':3.9,
-  'test_g10_ch2_ex2_4_browser.cjs':9.0,
-  'test_diagramguard_browser.cjs':95.0,
-  'test_g10_ch5_coordinate_figures_browser.cjs':65.0,
-  'test_g9_ch5_coordinate_figures_browser.cjs':110.0
+  'test_chatgpt_math_g10_browser.cjs':9.2,
+  'test_curriculum_bulk_browser.cjs':11.4,
+  'test_curriculum_ui.cjs':91.3,
+  'test_dashboard_browser.cjs':1.9,
+  'test_diagramguard_browser.cjs':79.1,
+  'test_exercise_direct_browser.cjs':15.3,
+  'test_g10_ch1_chatgpt_math_browser.cjs':42.6,
+  'test_g10_ch2_ex2_3_modular_browser.cjs':8.2,
+  'test_g10_ch2_ex2_4_browser.cjs':20.1,
+  'test_g10_ch2_gp_sum_browser.cjs':4.8,
+  'test_g10_ch2_power_baseline_browser.cjs':3.4,
+  'test_g10_ch2_scroll_browser.cjs':12.3,
+  'test_g10_ch2_trace_browser.cjs':62.8,
+  'test_g10_ch2_typography_browser.cjs':6.8,
+  'test_g10_ch2_unit_and_ex31_browser.cjs':35.5,
+  'test_g10_ch3_concepts_browser.cjs':33.8,
+  'test_g10_ch3_ex310_to_312_browser.cjs':60.0,
+  'test_g10_ch3_ex313_to_314_browser.cjs':37.5,
+  'test_g10_ch3_ex315_browser.cjs':32.0,
+  'test_g10_ch3_ex32_to_36_browser.cjs':57.0,
+  'test_g10_ch3_ex37_to_39_browser.cjs':36.4,
+  'test_g10_ch3_final_browser.cjs':28.4,
+  'test_g10_ch4_concepts_browser.cjs':53.4,
+  'test_g10_ch5_concepts_browser.cjs':19.4,
+  'test_g10_ch5_coordinate_figures_browser.cjs':48.2,
+  'test_g10_ch5_line_figures_browser.cjs':110.0,
+  'test_g10_ch6_concepts_browser.cjs':82.8,
+  'test_g10_ch6_mobile_browser.cjs':101.1,
+  'test_g10_ch7_concepts_browser.cjs':49.9,
+  'test_g10_ch7_ex71_mobile_browser.cjs':10.5,
+  'test_g10_ch7_ex71_q6_q10_mobile_browser.cjs':10.8,
+  'test_g10_ch7_ex72_ex73_mobile_browser.cjs':38.9,
+  'test_g10_ch7_ex74_browser.cjs':12.0,
+  'test_g10_ch7_ex75_browser.cjs':31.5,
+  'test_g10_ch7_unit7_browser.cjs':14.5,
+  'test_g10_ch8_concepts_browser.cjs':57.2,
+  'test_g10_ch8_ex8_1_bilingual_browser.cjs':48.5,
+  'test_g10_ch8_ex8_4_browser.cjs':22.8,
+  'test_g10_ch8_ex8_5_browser.cjs':35.8,
+  'test_g10_ch8_unit_browser.cjs':17.8,
+  'test_g10_geometry_browser.cjs':110.6,
+  'test_g10_geometry_completion_browser.cjs':31.6,
+  'test_g10_prob_ex8_3_browser.cjs':32.5,
+  'test_g10_relations_concepts_browser.cjs':65.5,
+  'test_g10_remaining_math_browser.cjs':27.5,
+  'test_g10_stats_browser.cjs':9.6,
+  'test_g10_stats_ex8_2_browser.cjs':27.3,
+  'test_g9_algebra_concept_browser.cjs':9.5,
+  'test_g9_aud14_03_source_options_browser.cjs':22.6,
+  'test_g9_cardinality_aud01_browser.cjs':4.7,
+  'test_g9_ch1_set_language_browser.cjs':189.9,
+  'test_g9_ch3_complete_browser.cjs':16.2,
+  'test_g9_ch5_complete_browser.cjs':14.1,
+  'test_g9_ch5_coordinate_figures_browser.cjs':88.3,
+  'test_g9_ch5_distance_concept_browser.cjs':3.0,
+  'test_g9_ch7_heron_browser.cjs':6.0,
+  'test_g9_ch9_probability_browser.cjs':102.2,
+  'test_g9_clear_math_browser.cjs':353.3,
+  'test_g9_concepts_typography_browser.cjs':69.6,
+  'test_g9_ex3_2_browser.cjs':19.2,
+  'test_g9_existing_concepts_browser.cjs':79.5,
+  'test_g9_geometry_completion_browser.cjs':140.0,
+  'test_g9_geometry_tamil_browser.cjs':16.5,
+  'test_g9_math_first_browser.cjs':51.5,
+  'test_g9_new_concepts_browser.cjs':67.2,
+  'test_g9_statistics_concepts_browser.cjs':47.8,
+  'test_g9_trigonometry_concepts.cjs':27.0,
+  'test_g9_typography_browser.cjs':165.7,
+  'test_g9_venn_aud01_browser.cjs':28.6,
+  'test_matrix_pilot_browser.cjs':1.9,
+  'test_paper_indigo_theme_browser.cjs':10.6,
+  'test_quiet_reader_browser.cjs':9.4,
+  'test_selection_dialogs_browser.cjs':56.6,
+  'test_sticky_example_layout_browser.cjs':13.6,
+  'test_teacher_startup_browser.cjs':3.8,
+  'test_teacher_workflow_browser.cjs':7.0,
+  'test_ver_glyph_browser.cjs':34.3,
+  'test_why_step_g10_browser.cjs':38.4,
+  'test_why_step_g10_coverage_browser.cjs':36.6,
+  'test_why_step_g9_browser.cjs':54.5
 });
 function plan(total){
   const tasks=commands.map((command,originalIndex)=>{
@@ -65,7 +111,9 @@ function plan(total){
       ['test_standard_solutions_browser.cjs',0],
       ['test_katex_browser.cjs',2]
     ]);
-    costs[0]=107; // Separate WebKit checks and the mobile dock smoke run on shard 0.
+    costs[0]=425; // WebKit core suite and mobile dock checks.
+    costs[2]=140; // WebKit line and construction figures.
+    costs[3]=80;  // Staged student build and offline checks.
     const remaining=[];
     for(const task of tasks){
       const shard=pinned.get(path.basename(task.file));
