@@ -24,7 +24,9 @@ const proportional = (a,b,factor = sides(b)[0]/sides(a)[0]) => {
 
 async function setLanguage(page, lang) {
   if(await page.locator('html').getAttribute('lang') !== lang) {
-    await page.locator(lang==='ta'?'#langTa':'#langEn').evaluate(button=>button.click());
+    const id=lang==='ta'?'langTa':'langEn';
+    await page.waitForFunction(id=>typeof document.getElementById(id)?.onclick==='function',id);
+    await page.locator('#'+id).evaluate(button=>button.click());
   }
   await page.waitForFunction(expected=>document.documentElement.lang===expected,lang);
 }
@@ -655,6 +657,7 @@ async function combinedSightLines(page,base,profiles){
         for(const [i,value] of [a,b].entries())await sliders.nth(i).evaluate((input,value)=>{
           input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));
         },value);
+        await page.evaluate(async()=>{await new Promise(requestAnimationFrame);await new Promise(requestAnimationFrame);});
         const [alpha,beta]=await sliders.evaluateAll(inputs=>inputs.map(input=>Number(input.value)));
         const result=await chart.evaluate(svg=>{
           const node=id=>svg.querySelector(`[data-dg-obstacle="${id}"]`);
@@ -703,6 +706,7 @@ async function vennGeometry(page,base,profiles){
       const control=page.locator('.g10ch8-control select');
       for(const [mode,[outcomes,regions]] of Object.entries(cases)){
         await control.selectOption(mode);
+        await page.evaluate(async()=>{await new Promise(requestAnimationFrame);await new Promise(requestAnimationFrame);});
         const result=await chart.evaluate(svg=>{
           const circles=[...svg.querySelectorAll('.g10ch8-circle')];
           const interior=[...svg.querySelectorAll('path[data-region]')];
