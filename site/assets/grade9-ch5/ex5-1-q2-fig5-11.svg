@@ -12,9 +12,11 @@
     <line x1="91.273" y1="137.995" x2="91.273" y2="234.618"/>
     <line x1="114.764" y1="23.2" x2="114.764" y2="112.995"/>
     <line x1="114.764" y1="137.995" x2="114.764" y2="234.618"/>
-    <line x1="138.255" y1="23.2" x2="138.255" y2="174.536"/>
+    <line x1="138.255" y1="23.2" x2="138.255" y2="142.115"/>
+    <line x1="138.255" y1="167.115" x2="138.255" y2="174.536"/>
     <line x1="138.255" y1="199.536" x2="138.255" y2="234.618"/>
-    <line x1="185.236" y1="23.2" x2="185.236" y2="198.027"/>
+    <line x1="185.236" y1="23.2" x2="185.236" y2="142.115"/>
+    <line x1="185.236" y1="167.115" x2="185.236" y2="198.027"/>
     <line x1="185.236" y1="223.027" x2="185.236" y2="234.618"/>
     <line x1="208.727" y1="23.2" x2="208.727" y2="142.115"/>
     <line x1="208.727" y1="167.115" x2="208.727" y2="234.618"/>
@@ -32,14 +34,17 @@
     <line x1="158.279" y1="187.636" x2="258.639" y2="187.636"/>
     <line x1="274.639" y1="187.636" x2="279.2" y2="187.636"/>
     <line x1="20.8" y1="164.145" x2="56.688" y2="164.145"/>
-    <line x1="78.876" y1="164.145" x2="201.719" y2="164.145"/>
+    <line x1="78.876" y1="164.145" x2="127.161" y2="164.145"/>
+    <line x1="149.348" y1="164.145" x2="178.229" y2="164.145"/>
+    <line x1="192.244" y1="164.145" x2="201.719" y2="164.145"/>
     <line x1="215.735" y1="164.145" x2="225.21" y2="164.145"/>
     <line x1="239.226" y1="164.145" x2="279.2" y2="164.145"/>
     <line x1="20.8" y1="117.164" x2="33.197" y2="117.164"/>
     <line x1="55.385" y1="117.164" x2="80.179" y2="117.164"/>
     <line x1="102.366" y1="117.164" x2="103.67" y2="117.164"/>
     <line x1="125.857" y1="117.164" x2="140.129" y2="117.164"/>
-    <line x1="158.129" y1="117.164" x2="248.701" y2="117.164"/>
+    <line x1="158.129" y1="117.164" x2="166.578" y2="117.164"/>
+    <line x1="180.593" y1="117.164" x2="248.701" y2="117.164"/>
     <line x1="262.717" y1="117.164" x2="279.2" y2="117.164"/>
     <line x1="20.8" y1="93.673" x2="166.578" y2="93.673"/>
     <line x1="180.593" y1="93.673" x2="279.2" y2="93.673"/>
@@ -92,14 +97,10 @@
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y′" data-dg-font="vertex" x="161.745" y="248.118" font-size="15">Y′</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick--5" data-dg-font="secondary" x="44.291" y="126.095" font-size="14">−5</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick--4" data-dg-font="secondary" x="67.782" y="155.215" font-size="14">−4</text>
-  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick--3" data-dg-font="secondary" x="91.273" y="126.095" font-size="14">−3</text>
-  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick--2" data-dg-font="secondary" x="114.764" y="126.095" font-size="14">−2</text>
-  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick-2" data-dg-font="secondary" x="208.727" y="155.215" font-size="14">2</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick-3" data-dg-font="secondary" x="232.218" y="155.215" font-size="14">3</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick-4" data-dg-font="secondary" x="255.709" y="126.095" font-size="14">4</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="y-tick--3" data-dg-font="secondary" x="176.305" y="211.127" font-size="14">−3</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="y-tick--2" data-dg-font="secondary" x="147.185" y="187.636" font-size="14">−2</text>
-  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="y-tick-2" data-dg-font="secondary" x="173.585" y="93.673" font-size="14">2</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="y-tick-3" data-dg-font="secondary" x="149.905" y="70.182" font-size="14">3</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="y-tick-4" data-dg-font="secondary" x="173.585" y="46.691" font-size="14">4</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="O" data-dg-font="vertex" x="149.105" y="128.015" font-size="15">O</text>
@@ -107,4 +108,11 @@
   <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="Q" data-dg-font="vertex" x="242.837" y="67.242" font-size="15">Q</text>
   <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="R" data-dg-font="vertex" x="266.592" y="189.358" font-size="15">R</text>
   <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="S" data-dg-font="vertex" x="33.8" y="214.498" font-size="15">S</text>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick--3" data-dg-font="secondary" x="91.273" y="126.095" font-size="14">−3</text>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick--2" data-dg-font="secondary" x="114.764" y="126.095" font-size="14">−2</text>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick--1" data-dg-font="secondary" x="138.255" y="155.215" font-size="14">−1</text>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick-1" data-dg-font="secondary" x="185.236" y="155.215" font-size="14">1</text>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="x-tick-2" data-dg-font="secondary" x="208.727" y="155.215" font-size="14">2</text>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="y-tick-1" data-dg-font="secondary" x="173.585" y="117.164" font-size="14">1</text>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="y-tick-2" data-dg-font="secondary" x="173.585" y="93.673" font-size="14">2</text>
 </svg>

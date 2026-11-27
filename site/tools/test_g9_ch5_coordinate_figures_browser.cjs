@@ -46,6 +46,7 @@ async function verify(figure, question, panels, lang, percent, context) {
       xAxis:values(svg.querySelector('[data-dg-obstacle="X-axis"]'),['x1','y1','x2','y2']),
       yAxis:values(svg.querySelector('[data-dg-obstacle="Y-axis"]'),['x1','y1','x2','y2']),
       guides:lines('line[data-dg-obstacle$="-guide"]'),
+      ticks:lines('line[data-dg-obstacle*="-tick-"]'),
       regions:[...svg.querySelectorAll('[data-dg-region]')].map(el=>el.dataset.dgRegion),
       labelPositions:Object.fromEntries([...svg.querySelectorAll('text')].map(el=>[el.dataset.dgLabel,values(el,['x','y'])])),
       description:svg.getAttribute('aria-label'),
@@ -92,6 +93,11 @@ async function verify(figure, question, panels, lang, percent, context) {
       }
     }
     if (question===2) {
+      assert.equal(Object.keys(panel.ticks).length,16,tag+' all unit tick marks');
+      for (const [id,[x,y,u,v]] of Object.entries(panel.ticks)) {
+        const axis=id[0], value=Number(id.slice(7));
+        near(hypot([(x+u)/2,(y+v)/2],project(axis==='x'?[value,0]:[0,value])),0,tag+' unit tick '+id);
+      }
       for (const [id,[x,y]] of Object.entries(expected.points)) {
         const [[px,py],[xx,xy],[yx,yy]]=[[x,y],[x,0],[0,y]].map(project);
         assert.deepEqual(panel.guides[id+'-x-guide'].map(v=>v.toFixed(4)),[px,py,xx,xy].map(v=>v.toFixed(4)),tag+' x guide '+id);

@@ -2,7 +2,7 @@
 
 Four exercise figures contain seven coordinate plots. The 2025 SCERT English edition, printed pp. 192–193, and Tamil edition, printed pp. 205–206, agree on the coordinates and the printed plotting order. Fig. 5.11 preserves the four labeled points and both projections per point. Q3 separates the horizontal and vertical cases. The earlier Q1–Q3 SVGs used different horizontal and vertical scales. The revised plots use one scale for both axes. Q4 shows the square, the self-crossing printed order ABCDA, and the perimeter order ABDCA in separate plots.
 
-At larger text sizes Fig. 5.11 places the required tick values at the nearest grid edges. The projections remain continuous in meaning and the question still asks the learner to read the values. The figure preserves unit tick marks and uses fewer secondary numbers where space is limited.
+At larger text sizes Fig. 5.11 places the required tick values at the nearest grid edges. The projections remain continuous in meaning and the question still asks the learner to read the values. All sixteen unit tick marks and eight required values stay visible. The renderer places additional tick numbers only where it can measure sufficient clearance.
 
 | Figure | Baseline SVG intersections flagged | Revised SVG intersections flagged |
 | --- | ---: | ---: |

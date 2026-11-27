@@ -97,6 +97,7 @@
       });
 
     const placements = [];
+    const secondaryTicks = [];
     function addArrow(id,tip,[dx,dy]) {
       const [x,y] = tip;
       const arrow = [[x-5*dx-2.5*dy,y-5*dy+2.5*dx],tip,[x-5*dx+2.5*dy,y-5*dy-2.5*dx]];
@@ -119,7 +120,7 @@
     }
     if (axes) addAxes('X',toPlot(xMin,0),toPlot(xMax,0),[1,0]);
     if (axes && xMin<0) addAxes('Y',toPlot(0,yMin),toPlot(0,yMax),[0,-1]);
-    if (projections) drawProjections(svg,points,toPlot,{width,yMin,yMax},edgeLabels,scale,rem,placements);
+    if (projections) drawProjections(svg,points,toPlot,{width,yMin,yMax},edgeLabels,rem,placements,secondaryTicks);
     if (quadrants) {
       const names = ['I','II','III','IV'];
       const centers = [[xMax,yMax],[xMin,yMax],[xMin,yMin],[xMax,yMin]];
@@ -164,11 +165,11 @@
       }
     }
 
-    guard.place(svg,placements);
+    guard.place(svg,[...placements,...secondaryTicks]);
     if (axes) drawGrid(svg,toPlot,{xMin,xMax,yMin,yMax},projections ? 1 : Math.max(1,Math.ceil(rem*.68/scale)));
   }
 
-  function drawProjections(svg, points, project, bounds, edgeLabels, scale, rem, placements) {
+  function drawProjections(svg, points, project, bounds, edgeLabels, rem, placements, secondaryTicks) {
     const values = Object.values(points);
     for (const [id,xy] of Object.entries(points)) {
       const [x,y] = xy;
@@ -190,7 +191,8 @@
         const side = ticks.get(value) || (i ? -Math.sign(value) : Math.sign(value));
         svg.append(line([x-2*dx,y-2*dy],[x+2*dx,y+2*dy],{stroke:axis,'stroke-width':'1.1',
           'data-dg-obstacle':id}));
-        if (!ticks.has(value) && (edgeLabels || Math.abs(value)===1 && scale<rem*1.65)) continue;
+        const required = ticks.has(value);
+        if (!required && edgeLabels) continue;
         const label = text(id,axis,'secondary',number(value));
         const away = (i ? -1 : 1)*side;
         if (edgeLabels) {
@@ -206,9 +208,10 @@
             placements.push({label,anchor:edge,candidates:[[0,-.71*rem*away]]});
           }
         } else {
-          const signs = ticks.has(value) ? [away] : [away,-away];
+          const signs = required ? [away] : [away,-away];
           const offsets = [.74,.91,1.08,1.35,1.62].flatMap(size=>signs.map(sign=>size*rem*sign));
-          placements.push({label,anchor,candidates:offsets.map(distance=>[dx*distance,dy*distance])});
+          const queue = required ? placements : secondaryTicks;
+          queue.push({label,anchor,optional:!required,candidates:offsets.map(distance=>[dx*distance,dy*distance])});
         }
       }
     }

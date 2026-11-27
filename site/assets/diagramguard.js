@@ -167,7 +167,7 @@
     svg.append(fragment);
     const shapes=obstacles(svg,false), boundary=figureBounds(svg), placed=[];
     const origins=placements.map(({label})=>labelBounds(label));
-    for(const [index,{label,anchor,direction,candidates}] of placements.entries()){
+    for(const [index,{label,anchor,direction,candidates,optional}] of placements.entries()){
       const origin=origins[index];
       if(!origin)continue;
       const font=parseFloat(getComputedStyle(label).fontSize);
@@ -183,6 +183,8 @@
         if(count===0)break;
       }
       if(!best)continue;
+      // A reference tick may keep its mark without repeating a number.
+      if(optional&&best.count){label.remove();continue;}
       placed.push({...best.box,label,position:[anchor[0]+best.x,anchor[1]+best.y]});
     }
     for(const {label,position:[x,y]} of placed){
