@@ -169,6 +169,7 @@ async function verifySelection(page, chapterTrigger, grade, chapter) {
       port = 'tcp:' + new URL(base).port;
       execFileSync('adb', ['reverse', port, port]);
       console.log('Android ' + (await device.shell('getprop ro.build.version.release')).toString().trim());
+      await device.shell('wm density 160');
     }
     const androidContext = await device?.launchBrowser({
       isMobile: true, hasTouch: true, serviceWorkers: 'block', reducedMotion: 'reduce', timeout: 90000
@@ -180,7 +181,9 @@ async function verifySelection(page, chapterTrigger, grade, chapter) {
       const context = androidContext || await browser.newContext({...phone, ...options});
       const page = androidPage || await context.newPage();
       if (androidPage) {
-        await page.setViewportSize({width, height});
+        // Chrome for Android uses the virtual device display for layout.
+        await device.shell('wm size ' + width + 'x' + height);
+        await page.waitForFunction(expected => screen.width === expected, width, {timeout: 15000});
         console.log('Testing ' + width + 'px with ' + await page.evaluate(() => navigator.userAgent));
       }
       const crumb = page.locator('#crumb .crumb-link');
@@ -240,6 +243,10 @@ async function verifySelection(page, chapterTrigger, grade, chapter) {
     }
     await androidContext?.close();
   } finally {
+    if (device) {
+      await device.shell('wm size reset');
+      await device.shell('wm density reset');
+    }
     await device?.close();
     await browser?.close();
     await app?.close();
