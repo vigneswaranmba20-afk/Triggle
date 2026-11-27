@@ -150,11 +150,11 @@
     for(let i=tokens.length-1;i>=0;i--) s=s.replace('\uE000N'+i+'\uE001',tokens[i]);
     return s;
   }
-  function prepare(root=document, expressions=root.querySelectorAll('.triggle-tex, .triggle-table-wrap')) {
+  function prepare(root=document) {
     const tamil=(root.closest?.('[lang]')?.lang||document.documentElement.lang)==='ta';
     const label=tamil?'உருட்டிப் பார்க்கக்கூடிய கணிதக் கோவை':'Scrollable mathematical expression';
     const tableLabel=tamil?'உருட்டிப் பார்க்கக்கூடிய அட்டவணை':'Scrollable table';
-    const measurements=Array.from(expressions,
+    const measurements=Array.from(root.querySelectorAll('.triggle-tex, .triggle-table-wrap'),
       el=>[el,el.scrollWidth>el.clientWidth+1]);
     for(const [el,wide] of measurements){
       if(wide){
