@@ -11,6 +11,16 @@ const prepareRecords = require('../assets/student-records.js');
 const source = path.resolve(__dirname, '..');
 const mathFile = 'data/g9-clear-math.js';
 const appFile = 'assets/app.js';
+const pwaFile = 'assets/triggle-pwa.js';
+const workerFile = path.join(__dirname, 'student_service_worker.js');
+const publicUrl = 'https://vigneswaranmba20-afk.github.io/Triggle/site/index.html';
+const lessonScripts = new Set([
+  'diagrams.js', 'probability-spinner.js', 'real-number-line.js', 'concept-figures.js',
+  'katex.min.js', 'math-notation.js', 'phase2-lab.js', 'textbook-activities.js',
+  'living-concepts.js', 'set-venn-figures.js', 'diagramguard.js',
+  'worked-example-display.js', 'quiet-reader.js', 'visual-lessons.js',
+  'frontier-figure-tamil.js', 'frontier-exercise-hints.js', 'textbook-tamil-formula-labels.js',
+]);
 const classicTag = /<script(?: defer)? src="\.\/([^"?]+)(?:\?[^"<>]*)?"><\/script>/g;
 const cssTag = /<link rel="stylesheet" href="\.\/assets\/([^"/?]+)(?:\?[^"<>]*)?">/g;
 const grades = [9, 10];
@@ -72,6 +82,8 @@ const grade10Topics = {
 
 function supportScope(file) {
   const name = path.basename(file);
+  if (/^class-(?:9|10)\.js$/.test(name)) return 'g'+name.match(/\d+/)[0];
+  if (lessonScripts.has(name)) return 'lesson';
   // These viewers capture their chapter's data as the script initializes.
   if (file.startsWith('assets/')) {
     if (/^real-numbers-(?:journey|foundations)\.js$/.test(name)) return 'g9-ch2';
@@ -136,16 +148,62 @@ function bootSource(index) {
     return chapter(grade,question)||chapter(grade,last)||chapter(grade,index.first[grade]);
   }
   const current=initialChapter();
-  const keys=current?['common','g'+grade,current]:['common','directory'];
+  const keys=current?['common','lesson','g'+grade,current]:['common','directory'];
+  const home=!params.has('class')&&!params.has('chapter')&&!params.has('question');
+  if(home){
+    const preload=document.createElement('link');
+    preload.rel='preload';preload.as='image';
+    preload.href=matchMedia('(max-width: 680px)').matches?'./assets/home-studio-mobile.webp':'./assets/home-studio.webp';
+    preload.fetchPriority='high';document.head.append(preload);
+  }
   const inputs=keys.map(key=>index.packs[key]);
   const searched=new Set();
   const pending=new Map();
-  for(const href of inputs){
+  const offlineAssets=new Set();
+  const savedAssets=new Set();
+  let savedChapter=false;
+  let offlineTimer;
+  function showUnavailable(){
+    document.body.classList.remove('ver-starting','ver-static-home','home-active','discovery-active');
+    document.querySelector('.app-shell').hidden=true;
+    document.querySelector('.app-shell').style.display='none';
+    document.querySelector('#triggleUnavailable').hidden=false;
+  }
+  function saveOffline(){
+    const worker=navigator.serviceWorker?.controller;
+    if(!worker||!navigator.onLine||document.body.classList.contains('ver-starting'))return;
+    const resources=[...new Set([...offlineAssets,...performance.getEntriesByType('resource').map(entry=>entry.name)])]
+      .filter(address=>!savedAssets.has(address));
+    if(savedChapter&&!resources.length)return;
+    const channel=new MessageChannel();
+    const timeout=setTimeout(()=>channel.port1.close(),20000);
+    channel.port1.onmessage=event=>{
+      clearTimeout(timeout);
+      channel.port1.close();
+      if(event.data?.saved){
+        savedChapter=true;
+        for(const address of resources)savedAssets.add(address);
+        document.documentElement.dataset.offlineReady='true';
+      }
+    };
+    worker.postMessage({
+      type:'triggle-save-offline',version:document.documentElement.dataset.studentRelease,
+      chapter:current,resources
+    },[channel.port2]);
+  }
+  for(const href of navigator.onLine&&!home?inputs:[]){
     const preload=document.createElement('link');
     preload.rel='preload';preload.as='script';preload.href=href;document.head.append(preload);
   }
   window.TriggleStudentRelease={
     chapter:current,
+    saveOffline,
+    rememberOfflineAssets(files){
+      for(const file of files)if(file)offlineAssets.add(new URL(file,location.href).href);
+      clearTimeout(offlineTimer);
+      offlineTimer=setTimeout(saveOffline,500);
+    },
+    home,
     conceptCounts:index.conceptCounts,
     searchReady:g=>searched.has(g),
     loadSearch(g,items){
@@ -171,31 +229,76 @@ function bootSource(index) {
     start(){
       const read=src=>new Promise((resolve,reject)=>{
         const script=document.createElement('script');script.src=src;
+        if(home)script.fetchPriority='low';
         script.onload=resolve;script.onerror=reject;document.head.append(script);
       });
-      Promise.all(inputs.map(read)).then(()=>{
+      const available=async()=>{
+        if(navigator.onLine||!window.caches)return true;
+        const name='triggle-lightspeed-'+document.documentElement.dataset.studentRelease;
+        if(!(await caches.has(name)))return false;
+        const cache=await caches.open(name);
+        return (await Promise.all(inputs.map(input=>cache.match(input)))).every(Boolean);
+      };
+      available().then(ok=>ok?Promise.all(inputs.map(read)):Promise.reject()).then(()=>{
         const scripts=Object.assign({},...keys.map(key=>window.TriggleStudentInputs[key]));
         for(const script of Object.values(scripts))script.call(window);
         delete window.TriggleStudentInputs;
         delete window.TriggleChapterPayload;
+        document.body.classList.remove('ver-static-home');
+        window.dispatchEvent(new Event('triggle:ready'));
       }).catch(error=>{
-        console.error('Triggle startup',error);
-        const status=document.querySelector('.ver-loading');
-        status.textContent=document.documentElement.lang==='ta'?'டிரிகிளை ஏற்ற முடியவில்லை. பக்கத்தை மீண்டும் திறக்கவும்.':'Triggle could not load. Reload this page to try again.';
+        if(error && navigator.onLine)console.error('Triggle startup',error);
+        showUnavailable();
       });
     }
   };
 })();`;
 }
 
-function publicPageAssets() {
-  const files = fs.readdirSync(source,{recursive:true}).filter(file=>file.endsWith('.html')&&file!=='index.html');
-  const kept = new Set();
-  for (const file of files) for (const match of read(file).matchAll(/\b(?:src|href)=["']([^"']+)["']/g)) {
-    const url=new URL(match[1],new URL(file,'https://triggle.invalid/'));
-    if(url.origin==='https://triggle.invalid')kept.add('.'+url.pathname);
+const escape = value => String(value).replace(/[&<>"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[char]);
+function staticHome(html,curriculum,discovery) {
+  const window = {};
+  vm.runInNewContext(discovery,{window});
+  const templates = ['en','ta'].map(lang=>{
+    const root = {querySelector:()=>null,querySelectorAll:()=>[]};
+    window.TriggleDiscovery.mount(root,{mode:'home',lang,curriculum,classes:{}});
+    const content = root.innerHTML.replace('class="discover-home-minimal"','class="discover-home-minimal" data-static-home').replace(/<button type="button" data-grade="(9|10)" ([^>]+)>([\s\S]*?)<\/button>/g,
+      (_,grade,attrs,label)=>'<a href="./index.html?class='+grade+'&amp;lang='+lang+'" '+attrs+'>'+label+'</a>');
+    return '<template id="startup-'+lang+'">'+content+'</template>';
+  }).join('');
+  const chapters = curriculum.grades.map(row=>'<h2>Grade '+row.grade+' · '+row.grade+' ஆம் வகுப்பு</h2><ul>'+
+    row.chapters.map(chapter=>'<li><a href="./index.html?class='+row.grade+'&amp;chapter='+chapter.id+'">'+
+      escape(chapter.title.en)+'</a> · <a lang="ta" href="./index.html?class='+row.grade+'&amp;chapter='+chapter.id+'&amp;lang=ta">'+
+      escape(chapter.title.ta)+'</a></li>').join('')+'</ul>').join('');
+  return html.replace('tabindex="-1" hidden></main>','tabindex="-1" hidden></main>'+templates+`
+      <script>
+      if(window.TriggleStudentRelease.home){
+        const main=document.getElementById('discoveryView');
+        main.append(document.getElementById('startup-'+document.documentElement.lang).content.cloneNode(true));
+        main.hidden=false;
+        document.body.classList.add('home-active','discovery-active','ver-static-home');
+        document.querySelector('.app-shell').inert=false;
+        for(const id of ['browseBtn','langEn','langTa'])document.getElementById(id).setAttribute('inert','');
+        window.addEventListener('triggle:ready',()=>{
+          for(const id of ['browseBtn','langEn','langTa'])document.getElementById(id).removeAttribute('inert');
+        },{once:true});
+      }
+      </script>
+      <noscript><style>.ver-starting .app-shell,.ver-loading{display:none}</style>
+      <main class="triggle-unavailable"><h1>Samacheer Kalvi Mathematics — Grades 9 &amp; 10</h1>
+      <p lang="ta">சமச்சீர் கல்வி கணிதம் — 9 மற்றும் 10 ஆம் வகுப்புகள்</p><p>Enable JavaScript to open interactive lessons.</p>
+      ${chapters}</main></noscript>`);
+}
+
+function writeSitemap(out,curriculum) {
+  const routes = [''];
+  for(const row of curriculum.grades){
+    routes.push('?class='+row.grade);
+    for(const chapter of row.chapters)routes.push('?class='+row.grade+'&chapter='+chapter.id);
   }
-  return kept;
+  const xml = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'+
+    routes.flatMap(route=>[route,route+(route?'&':'?')+'lang=ta']).map(route=>'  <url><loc>'+escape(publicUrl+route)+'</loc></url>').join('\n')+'\n</urlset>\n';
+  fs.writeFileSync(path.join(out,'sitemap.xml'),xml);
 }
 
 function buildStudentRelease(out) {
@@ -204,11 +307,11 @@ function buildStudentRelease(out) {
   const files = [...html.matchAll(classicTag)].map(match => match[1]);
   assert(files.includes(mathFile) && files.includes(appFile) && files.includes('assets/visual-lessons.js'), 'Incomplete student script roster');
   const js = new Map(files.map(file => [file, read(file)]));
-  const {classes, curriculum, changes, window} = sourceData(files, js);
+  const {classes, curriculum: fullCurriculum, changes, window} = sourceData(files, js);
+  const curriculum = {...fullCurriculum, grades:fullCurriculum.grades.filter(row => grades.includes(row.grade))};
   const {ids, first, chapterKeys, lessons} = lessonScopes(classes, curriculum);
-  const catalog = Object.fromEntries(Object.entries(classes).map(([grade, info]) => [grade, {
-    ...info, items: grades.includes(Number(grade)) ? info.items.map(item => Object.fromEntries(
-      catalogFields.filter(key => Object.hasOwn(item,key)).map(key => [key,item[key]]))) : [],
+  const catalog = Object.fromEntries(Object.entries(classes).filter(([grade])=>grades.includes(Number(grade))).map(([grade, info]) => [grade, {
+    ...info, items: info.items.map(item => catalogFields.map(key => item[key] ?? null)),
   }]));
   const assets = [];
   fs.mkdirSync(path.join(out, 'assets'), {recursive:true});
@@ -224,10 +327,26 @@ function buildStudentRelease(out) {
   assert(!/^\s*@import\b/m.test(css), 'CSS imports require separate files');
   const style = writeAsset('styles','css',css);
   const math = grade9Math(js.get(mathFile));
-  const parts = new Map(['common','directory','g9','g10',...chapterKeys].map(key=>[key,[]]));
+  const parts = new Map(['common','directory','lesson','g9','g10',...chapterKeys].map(key=>[key,[]]));
   const consumers = files.filter(file=>file.startsWith('assets/')&&file!=='assets/student-records.js').map(file=>js.get(file)).join('\n');
+  const difficultyFile = 'data/problem-difficulty.js';
+  const difficultySource = js.get(difficultyFile);
+  const difficultyShape = /const metadata=(\{[\s\S]*?\n\});/;
+  const difficulty = JSON.parse(difficultySource.match(difficultyShape)[1]);
+  const activeChapters = new Map(Object.entries(ids).flatMap(([,rows])=>Object.entries(rows)));
+  const reducedCurriculum = 'window.TRIGGLE_CURRICULUM=JSON.parse('+json(JSON.stringify(curriculum))+');';
   files.forEach((file, slot) => {
-    if (file === 'assets/student-records.js') return;
+    if (file === 'assets/student-records.js' || file === pwaFile ||
+        /^data\/class-1[12]\.js$/.test(file) || /^assets\/matrix-(?:core|concepts)\.js$/.test(file)) return;
+    if (file === difficultyFile) {
+      for (const chapter of chapterKeys) {
+        const filter = values => Object.fromEntries(Object.entries(values).filter(([id]) => activeChapters.get(id) === chapter));
+        const metadata = {...difficulty, entries:filter(difficulty.entries), solutionReviews:filter(difficulty.solutionReviews)};
+        const code = difficultySource.replace(difficultyShape, () => 'const metadata='+json(metadata)+';');
+        parts.get(chapter).push(slot+':function(){\n'+code+'\n}');
+      }
+      return;
+    }
     const effect = changes.get(file);
     // Keep initial class objects for supporting scripts. Materialize the exact
     // prepared records below in place of batches that only register questions.
@@ -240,10 +359,11 @@ function buildStudentRelease(out) {
     const key = supportScope(file);
     if (key === 'g12') return;
     assert(parts.has(key), 'Unknown student script scope '+key+' for '+file);
-    let code = file === mathFile ? math.script : js.get(file);
+    let code = file === mathFile ? math.script : file === 'data/curriculum.js' ? reducedCurriculum : js.get(file);
     if (file === appFile) {
-      code = 'window.TRIGGLE_CURRICULUM=JSON.parse('+json(JSON.stringify(curriculum))+');\n'+
-        'window.TRIGGLE_CLASSES=JSON.parse('+json(JSON.stringify(catalog))+');\n'+
+      code = 'window.TRIGGLE_CLASSES=JSON.parse('+json(JSON.stringify(catalog))+');\n'+
+        'const fields='+json(catalogFields)+';\n'+
+        'for(const grade of [9,10])window.TRIGGLE_CLASSES[grade].items=window.TRIGGLE_CLASSES[grade].items.map(row=>{const item={};row.forEach((value,i)=>{if(value!==null)item[fields[i]]=value;});return item;});\n'+
         'const completeRecords=new Map(window.TriggleChapterPayload.items.map(item=>[item.id,item]));\n'+
         'if(window.TriggleChapterPayload.overrides)window.TriggleG9Ch5Overrides=new Map(window.TriggleChapterPayload.overrides);\n'+
         'for(const grade of [9,10])window.TRIGGLE_CLASSES[grade].items=window.TRIGGLE_CLASSES[grade].items.map(item=>completeRecords.get(item.id)||item);\n'+code;
@@ -263,6 +383,7 @@ function buildStudentRelease(out) {
     const code = 'window.TriggleStudentInputs=window.TriggleStudentInputs||{};\nwindow.TriggleStudentInputs['+json(key)+']={\n'+scripts.join(',\n')+'\n};\n';
     packs[key] = writeAsset(key,'js',payload+code);
   }
+  const pwa = writeAsset('pwa','js',js.get(pwaFile));
   const search = Object.fromEntries(grades.map(grade=>[grade,writeAsset('search-g'+grade,'json',json(
     Object.fromEntries(classes[grade].items.map(item=>[item.id,item.q]))))]));
   const index = {ids,first,chapters:chapterKeys,conceptCounts:counts(window),packs,search};
@@ -270,21 +391,32 @@ function buildStudentRelease(out) {
   new vm.Script(boot,{filename:'student bootstrap'});
   let stylesInserted = false;
   let scriptsInserted = false;
-  const staged = html.replace('<title>','<script>\n'+boot+'\n</script>\n<title>')
+  const staged = staticHome(html, curriculum, js.get('assets/discovery.js'))
+    .replace('</head>','<link rel="sitemap" type="application/xml" href="./sitemap.xml">\n<script>\n'+boot+'\n</script>\n</head>')
     .replace(cssTag,()=>{if(stylesInserted)return '';stylesInserted=true;return '<link rel="stylesheet" href="'+style+'">';})
-    .replace(classicTag,()=>{if(scriptsInserted)return '';scriptsInserted=true;return '<script>window.TriggleStudentRelease.start();</script>';});
-  fs.writeFileSync(path.join(out,'index.html'),staged);
-  const worker = read('service-worker.js');
-  const hook = "self.addEventListener('install'";
-  assert(worker.includes(hook), 'Missing service worker installation');
-  const kept = publicPageAssets();
-  const bundled = [...files,...styles].map(file=>'./'+file).filter(file=>!kept.has(file));
-  const stamp = digest(staged + assets.join('') + bundled.join(''));
-  const stagedWorker = worker.replace(/^const CACHE='([^']+)';/, (_line,key)=>`const CACHE='${key}-student-${stamp}';`)
-    .replace(hook, 'const bundled=new Set('+json(bundled)+');\n'+
-      'CORE.splice(0,CORE.length,...CORE.filter(url=>!bundled.has(url.split(\'?\')[0])),...'+json(assets)+');\n'+hook)
-    .replace('const STUDENT_FILES=[];', 'const STUDENT_FILES='+json(assets)+';');
-  fs.writeFileSync(path.join(out,'service-worker.js'),stagedWorker);
+    .replace(classicTag,(_tag,file)=>{
+      if(file===pwaFile)return '<script defer src="'+pwa+'"></script>';
+      if(scriptsInserted)return '';
+      scriptsInserted=true;
+      return '<script>window.TriggleStudentRelease.start();</script>';
+    });
+  const manifest = JSON.parse(read('manifest.webmanifest'));
+  const fonts = fs.readdirSync(path.join(source,'assets/vendor/katex/fonts')).map(name=>'./assets/vendor/katex/fonts/'+name);
+  const media = fs.readdirSync(path.join(source,'assets'),{recursive:true})
+    .filter(file=>/\.(?:svg|png|webp|jpe?g|woff2?)$/i.test(file))
+    .map(file=>'./assets/'+file).sort();
+  const stylesAndIcons = ['./assets/vendor/katex/katex.min.css?v=0.16.22','./manifest.webmanifest',
+    './icons/favicon.ico','./icons/icon-80.png', ...manifest.icons.map(icon=>icon.src)];
+  const shell = [style,pwa,packs.common,packs.directory,'./assets/home-studio.webp','./assets/home-studio-mobile.webp',
+    './assets/vendor/katex/fonts/KaTeX_Main-Regular.woff2','./assets/vendor/noto-sans-tamil/tamil.woff2',...stylesAndIcons];
+  const chapterAssets = Object.fromEntries(chapterKeys.map(key=>[key,[packs.lesson,packs[key.split('-')[0]],packs[key]]]));
+  const worker = fs.readFileSync(workerFile,'utf8');
+  const stamp = digest(staged+assets.join('')+worker+[...stylesAndIcons,...media].map(file=>digest(
+    fs.readFileSync(path.join(source,file.split('?')[0])))).join(''));
+  fs.writeFileSync(path.join(out,'index.html'),staged.replace('<html lang="en">','<html lang="en" data-student-release="'+stamp+'">'));
+  const workerConfig = {version:stamp, shell, immutable:[...assets,...stylesAndIcons], media, chapters:chapterAssets, fonts, ids};
+  fs.writeFileSync(path.join(out,'service-worker.js'),worker.replace('/* STUDENT_RELEASE */ null',()=>json(workerConfig)));
+  writeSitemap(out,curriculum);
   return assets;
 }
 
