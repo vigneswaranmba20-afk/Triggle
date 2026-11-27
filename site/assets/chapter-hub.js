@@ -717,12 +717,14 @@
           button.setAttribute('aria-pressed','false');
           button.addEventListener('click',()=>{
             holder.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-            feedback.textContent=j===stage.correct?(ta?'சரி!':'Correct!'):
+            const right=j===stage.correct;
+            window.TriggleFeedback.evaluate(button,feedback,right);
+            feedback.textContent=right?(ta?'சரி!':'Correct!'):
               (ta?'மீண்டும் முயற்சிக்கவும். ':'Try again. ')+pick(stage.incorrectFeedback?.[j]||stage.hint);
             whyButton.disabled=false;
           });holder.append(button);
         });
-        panel.querySelector('[data-hint]').onclick=()=>{feedback.innerHTML=typeset(pick(stage.hint));};
+        panel.querySelector('[data-hint]').onclick=()=>{window.TriggleFeedback.neutral(feedback);feedback.innerHTML=typeset(pick(stage.hint));};
         whyButton.onclick=()=>{
           if(whyButton.disabled)return;
           if(response.hidden){
@@ -947,16 +949,18 @@
           if(qItem.questionMath)h.insertAdjacentHTML('afterend',displayMath(qItem.questionMath));
           const answers=document.createElement('div');answers.className='hub-quiz-answers';answers.setAttribute('role','group');
           answers.setAttribute('aria-label',text(qItem.question));
-          const feedback=document.createElement('p');feedback.setAttribute('aria-live','polite');feedback.className='hub-quiz-feedback';
+          const feedback=document.createElement('p');feedback.setAttribute('role','status');feedback.setAttribute('aria-atomic','true');feedback.className='hub-quiz-feedback';
           const worked=document.createElement('div');worked.hidden=true;
           worked.innerHTML='<p>'+chapterTypeset(text(qItem.why))+'</p>'+(qItem.whyMath?displayMath(qItem.whyMath):'');
           let wrongAttempts=0;
           qItem.choices.forEach((choice,i)=>{
             const button=document.createElement('button');button.type='button';button.innerHTML=chapterTypeset(text(choice));if(grade===9)button.setAttribute('aria-label',text(choice));
+            button.setAttribute('aria-pressed','false');
             button.addEventListener('click',()=>{
               answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
               worked.hidden=false;
               const right=i===qItem.correct;
+              window.TriggleFeedback.evaluate(button,feedback,right);
               if(right){feedback.textContent=t.correct;correct.add(stage.id);update();}
               else{wrongAttempts++;const clue=qItem.incorrectFeedback?.[i]?text(qItem.incorrectFeedback[i]):wrongAttempts===2?text(qItem.hint):wrongAttempts>=3?text(qItem.why):'';feedback.innerHTML=e(t.incorrect)+(clue?' '+chapterTypeset(clue):'');}
             });

@@ -188,7 +188,7 @@
         if (typeof selection === 'boolean') {
           const correct = selection === item.answer;
           feedback.textContent = (correct ? text('Correct. ', 'சரி. ', lang) : text('Check again. ', 'மீண்டும் சரிபார். ', lang)) + (ta ? item.ta : item.en);
-          feedback.classList.toggle('g9a-incorrect', !correct);
+          window.TriggleFeedback.evaluate(selection ? yes : no, feedback, correct);
         }
       }
       row.append(formula, answers, feedback);
@@ -320,7 +320,7 @@
           if (typeof selection === 'boolean') {
             const correct = selection === item.answer;
             feedback.textContent = (correct ? text('Correct. ', 'சரி. ', lang) : text('Check again. ', 'மீண்டும் சரிபார். ', lang)) + (ta ? item.ta : item.en);
-            feedback.classList.toggle('g9a-incorrect', !correct);
+            window.TriggleFeedback.evaluate(selection ? yes : no, feedback, correct);
           }
         }
         row.append(formula, answers, feedback);

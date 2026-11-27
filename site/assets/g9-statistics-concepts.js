@@ -342,10 +342,13 @@
       notation.prepare(notes);
       find('[data-stats-question]').textContent = pick(practice.question);
       const feedback = find('[data-stats-feedback]');
+      window.TriggleFeedback.neutral(feedback);
       feedback.textContent = '';
       const answers = find('[data-answers]');
       buttons(answers, practice.choices.map(pick), answer => {
-        feedback.textContent = (answer === practice.correct ? tr('Correct. ', 'சரி. ') : tr('Try again. ', 'மீண்டும் முயல். ')) +
+        const correct = answer === practice.correct;
+        window.TriggleFeedback.evaluate(answers.children[answer], feedback, correct);
+        feedback.textContent = (correct ? tr('Correct. ', 'சரி. ') : tr('Try again. ', 'மீண்டும் முயல். ')) +
           pick(practice.feedback[answer]);
       });
       answers.querySelectorAll('button').forEach(button => button.setAttribute('aria-pressed', 'false'));

@@ -4,17 +4,17 @@
 .triggle-tex .katex-display{margin:0}
 .triggle-tex .katex{font-size:1.1em;text-align:initial;white-space:nowrap}
 .triggle-tex-display .katex{text-align:center}
-.triggle-tex:focus-visible{outline:2px solid #7163ad;outline-offset:2px}
+.triggle-tex:focus-visible{outline:2px solid var(--text-navigation);outline-offset:2px}
 .structured-equation{min-width:0;font-size:clamp(16px,2vw,20px);line-height:1.6}
 .structured-equation .triggle-tex-display + .triggle-tex-display{margin-top:.65em}
 .worked-step>div,.final-answer-content,.final-answer-value{min-width:0;max-width:100%}
 .question-text .triggle-tex-display,.final-answer-value .triggle-tex-display{font-size:clamp(17px,2vw,21px)}
 .math-fallback{font-weight:normal;overflow-wrap:anywhere}
 /* Keep the longer derivation's small labels and two-digit step numbers readable. */
-#lessonCard:has(.triggle-tex) :is(#questionLabel,#itemPosition,#stepCount){color:#6b5a7d}
-#lessonCard:has(.triggle-tex) .worked-step:not(.final-answer-step) .step-circle{color:#65528f}
-#lessonCard:has(.triggle-tex) .step-reason{color:#555f73}
-#lessonCard:has(.triggle-tex) :is(#questionTitle,[data-i18n="stepByStep"]){color:#665778}
+#lessonCard:has(.triggle-tex) :is(#questionLabel,#itemPosition,#stepCount){color:var(--text-secondary)}
+#lessonCard:has(.triggle-tex) .worked-step:not(.final-answer-step) .step-circle{color:var(--text-secondary)}
+#lessonCard:has(.triggle-tex) .step-reason{color:var(--text-explanation)}
+#lessonCard:has(.triggle-tex) :is(#questionTitle,[data-i18n="stepByStep"]){color:var(--text-primary)}
 
 /* Triggle mathematics typography contract (2026-11-13):
    offline KaTeX as the primary display, not plain-text slash fractions.
@@ -162,7 +162,7 @@ body.g9-math-first #lessonCard .final-answer-step {
   background: transparent;
 }
 body.g9-math-first #lessonCard .final-answer-step .step-circle {
-  background: #EFF8F4;
+  background: var(--surface-correct);
   color: var(--bond-emerald);
 }
 body.g9-math-first #lessonCard .final-answer-label {

@@ -15,7 +15,7 @@
   border-radius:10px;
   background:#FFF7EA;
   border:1px solid #E3C996;
-  color:#5B4116;
+  color:var(--text-secondary);
   font-size:12.5px;
   line-height:1.45;
   font-weight:650;
@@ -100,10 +100,10 @@
   margin:8px 0 0;
   font-size:13.5px!important;
   line-height:1.55!important;
-  color:#2E3640!important;
+  color:var(--text-secondary)!important;
 }
 .g10ch3-note.is-danger{
-  color:#7A1D2B!important;
+  color:var(--text-incorrect)!important;
   font-weight:650;
 }
 .g10ch3-callout{
@@ -316,7 +316,7 @@
   gap:8px;
   font-size:13.5px;
   line-height:1.58;
-  color:#2D3540;
+  color:var(--text-explanation);
 }
 .g10ch3-exercise-row{
   display:flex;

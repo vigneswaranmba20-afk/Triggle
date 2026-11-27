@@ -148,12 +148,16 @@
       section.querySelector('[data-explain]').textContent = t[operation];
     }
     section.querySelectorAll('[data-op]').forEach(button => button.addEventListener('click', () => choose(button.dataset.op)));
+    const feedback = section.querySelector('[data-feedback]');
     section.querySelectorAll('[data-choice]').forEach(button => button.addEventListener('click', () => {
       section.querySelectorAll('[data-choice]').forEach(x => x.setAttribute('aria-pressed',String(x === button)));
-      section.querySelector('[data-feedback]').textContent = button.dataset.choice === '1' ? t.correct : t.incorrect;
+      const correct = button.dataset.choice === '1';
+      window.TriggleFeedback.evaluate(button, feedback, correct);
+      feedback.textContent = correct ? t.correct : t.incorrect;
     }));
     section.querySelector('[data-hint]').addEventListener('click', () => {
-      section.querySelector('[data-feedback]').textContent = t.hint;
+      window.TriggleFeedback.neutral(feedback);
+      feedback.textContent = t.hint;
     });
     let revealed = 0;
     section.querySelector('[data-next-reason]').addEventListener('click', () => {

@@ -10,7 +10,7 @@
   border-radius:10px;
   background:#FFF7EA;
   border:1px solid #E3C996;
-  color:#5B4116;
+  color:var(--text-explanation);
   font-size:12.5px;
   line-height:1.45;
   font-weight:650;
@@ -226,12 +226,12 @@
 .g10ch4-status.is-match{
   background:#EFF8F4;
   border-color:#BEDFD2;
-  color:#125445!important;
+  color:var(--text-correct)!important;
 }
 .g10ch4-status.is-warn{
   background:#FDF2F3;
   border-color:#E7BCC1;
-  color:#7A1D2B!important;
+  color:var(--text-incorrect)!important;
 }
 .g10ch4-step-nav{
   display:flex;
@@ -252,7 +252,7 @@
   margin:0 0 10px;
   font-size:13.5px;
   line-height:1.55;
-  color:#2E3640;
+  color:var(--text-explanation);
 }
 .g10ch4-symbol-list{
   display:grid;
@@ -278,7 +278,7 @@
   margin:0;
   font-size:13px;
   line-height:1.52;
-  color:#2E3640;
+  color:var(--text-explanation);
 }
 .g10ch4-watchout{
   margin:10px 0 0;
@@ -288,7 +288,7 @@
   border-left:3px solid #B79253;
   font-size:13px;
   line-height:1.52;
-  color:#4E3812;
+  color:var(--text-explanation);
 }
 
 /* Why it works (Visual Proof) */
@@ -323,7 +323,7 @@
   margin:0;
   font-size:13px;
   line-height:1.52;
-  color:#2E3640;
+  color:var(--text-explanation);
 }
 
 /* Connect section */
@@ -331,7 +331,7 @@
   margin:0 0 10px;
   font-size:13.5px;
   line-height:1.55;
-  color:#2E3640;
+  color:var(--text-explanation);
 }
 .g10ch4-exercise-row{
   display:flex;

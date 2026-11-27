@@ -69,7 +69,7 @@ body.g10-ch2-type .lesson-card .worked-step .step-equation{
   font-weight:500;
   line-height:1.68;
   letter-spacing:0;
-  color:#26344a;
+  color:var(--text-primary);
   max-width:100%;
   min-width:0;
   overflow-x:auto;

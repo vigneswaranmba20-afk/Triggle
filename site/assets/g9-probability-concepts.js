@@ -302,12 +302,14 @@
     holder.setAttribute('aria-label', labels.answers);
     const feedback = panel.querySelector('.probability-feedback');
     panel.querySelector('[data-probability-actions]').append(button(labels.hint, () => {
+      window.TriggleFeedback.neutral(feedback);
       feedback.textContent = content.hint;
     }));
     const choices = content.choices.map((choice, i) => {
       const control = button(choice, () => {
         choices.forEach(option => option.setAttribute('aria-pressed', String(option === control)));
         const correct = i === lesson.correct;
+        window.TriggleFeedback.evaluate(control, feedback, correct);
         feedback.textContent = correct ? labels.correct : labels.retry;
         if (correct && content.practiceMath) {
           feedback.insertAdjacentHTML('beforeend', window.TriggleNotation.render(content.practiceMath));
