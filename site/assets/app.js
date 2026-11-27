@@ -271,10 +271,15 @@
      [...group.values()].forEach(g=>options.push({title:labelForGroup(g.key),meta:g.count+' '+ui('lessons'),active:g.key===current.exercise,choose:()=>selectLesson(g.first)}));
      navigable.filter(i=>i.exercise===current.exercise).forEach(item=>options.push({title:tr(item.label)+' · '+tr(item.title),meta:labelForGroup(item.exercise),active:item.id===current.id,choose:()=>selectLesson(item)}));
    }
+   const choices=document.createDocumentFragment();
    options.forEach(option=>{const button=document.createElement('button');button.type='button';button.className='path-option'+(option.active?' selected':'');button.innerHTML='<span><strong>'+esc(option.title)+'</strong><small>'+esc(option.meta)+'</small></span><span aria-hidden="true">'+(option.active?'✓':'›')+'</span>';
-     if(option.active&&type==='question')button.setAttribute('aria-current','true');
-     button.onclick=()=>{dialog.close();option.choose()};list.append(button)
+     if(option.active&&type==='question'){
+       button.setAttribute('aria-current','true');
+       button.autofocus=true;
+     }
+     button.onclick=()=>{dialog.close();option.choose()};choices.append(button)
    });
+   list.append(choices);
    const chapterPicker=type==='chapter';
    dialog.classList.toggle('is-chapter-picker',chapterPicker);
    const hint=$('pathHint');
@@ -286,7 +291,6 @@
    }
    list.scrollTop=0;
    dialog.showModal();
-   if(type==='question')list.querySelector('[aria-current=true]')?.focus();
  }
  function renderGrades(){const data=[{num:9,icon:'◈'},{num:10,icon:'◈'}];
   for(const type of ['side','dock']){

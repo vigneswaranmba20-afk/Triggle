@@ -13,6 +13,7 @@ body.ver-glyph {
   --ver-focus: #60547A;
   --ver-question-surface: #FAF9F6;
   --ver-muted-gold: #745C29;
+  --ver-dialog-backdrop: rgb(30 26 47 / 48%);
   --ver-space-1: .25rem;
   --ver-space-2: .5rem;
   --ver-space-3: .75rem;
@@ -241,7 +242,10 @@ body.ver-glyph.g10-ch2-type { --g10-ch2-text: var(--ver-font); }
   backdrop-filter: none !important;
   scroll-padding-block: 5rem var(--ver-space-4);
 }
-.ver-glyph #figureDialog::backdrop { background: rgb(30 26 47 / 48%) !important; }
+.ver-glyph :is(#figureDialog, .path-dialog)::backdrop {
+  background: var(--ver-dialog-backdrop) !important;
+  backdrop-filter: none !important;
+}
 .ver-glyph #figureDialog .dialog-header {
   align-items: start;
   background: var(--ver-white);
