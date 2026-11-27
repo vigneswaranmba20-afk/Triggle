@@ -1368,7 +1368,8 @@ async function parallelConstruction(page,base,profiles){
               });
               assert.equal(await key.getByRole('listitem').count(),3);
               assert.equal(await key.locator('.diagramguard-line-sample[aria-hidden="true"]').count(),3);
-              assert(await key.evaluate(node=>node.scrollWidth<=node.clientWidth+1),'The compass key fits');
+              assert(await key.evaluate(node=>node.scrollWidth<=node.clientWidth+1),
+                `The ${m}/${n} compass key fits at ${width}px, ${percent}% text, ${lang}, step ${step+1}`);
             }else{
               assert.equal(marks.length,0);
               assert(await key.isHidden());

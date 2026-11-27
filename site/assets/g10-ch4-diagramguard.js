@@ -257,6 +257,7 @@
     key.setAttribute('aria-label',language==='ta'?'கதிரில் சம இடைவெளிப் புள்ளிகள்':'Equal compass divisions');
     const legendEntry=(text,color)=>{
       const entry=document.createElement('span');
+      entry.className='diagramguard-named-point';
       entry.setAttribute('role','listitem');
       const sample=document.createElement('span');
       sample.className='diagramguard-line-sample';
