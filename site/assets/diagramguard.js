@@ -42,7 +42,7 @@
   const visible = (node,style) => node.getClientRects().length&&style.visibility!=='hidden'&&
     style.visibility!=='collapse'&&style.display!=='none'&&Number(style.opacity)>0;
   const localValue = (el,name) => el[name].baseVal.value;
-  function segments(el,matrix,scale) {
+  function segments(el,matrix,scale,bounds) {
     if(el.localName==='line')return [[
       map(matrix,localValue(el,'x1'),localValue(el,'y1')),
       map(matrix,localValue(el,'x2'),localValue(el,'y2'))
@@ -51,6 +51,18 @@
       const points=Array.from(el.points,p=>map(matrix,p.x,p.y));
       if(el.localName==='polygon'&&points.length)points.push(points[0]);
       return points.slice(1).map((p,i)=>[points[i],p]);
+    }
+    if(el.localName==='circle'||el.localName==='ellipse'){
+      const rx=bounds.width/2, ry=bounds.height/2;
+      const cx=bounds.x+rx, cy=bounds.y+ry;
+      if(!rx||!ry)return [];
+      // Use the rendered radii and transform directly for these closed curves.
+      const count=Math.min(768,Math.max(8,Math.ceil(Math.PI*Math.max(rx,ry)*scale)));
+      const points=Array.from({length:count},(_,i)=>{
+        const t=i*2*Math.PI/count;
+        return map(matrix,cx+rx*Math.cos(t),cy+ry*Math.sin(t));
+      });
+      return edges(points);
     }
     const length=el.getTotalLength();
     if(!length)return [];
@@ -105,10 +117,11 @@
       const filled=el.hasAttribute('data-dg-fill')&&style.fill!=='none'&&Number(style.fillOpacity)>0;
       if(!stroke&&!filled)return [];
       const inverse=filled?matrix.inverse():null;
+      const bounds=el.getBBox();
       return [{
         id:el.dataset.dgObstacle||el.id||el.localName+'-'+(index+1),
         type:el.dataset.dgRole||(filled?'fill':'stroke'),stroke,
-        box:sizes(corners(matrix,el.getBBox())),segments:segments(el,matrix,scale),
+        box:sizes(corners(matrix,bounds)),segments:segments(el,matrix,scale,bounds),
         contains:inverse?point=>{
           const [x,y]=map(inverse,...point);
           return el.isPointInFill(new DOMPoint(x,y));
@@ -224,7 +237,16 @@
       draw(width,rem);
       svg.setAttribute('data-dg-ready','');
     };
-    const observer=new ResizeObserver(()=>refresh());
+    let scheduled=false;
+    const observer=new ResizeObserver(()=>{
+      if(scheduled)return;
+      scheduled=true;
+      // Changing the viewBox can change the height being observed.
+      requestAnimationFrame(()=>{
+        scheduled=false;
+        refresh();
+      });
+    });
     observer.observe(svg);
     observer.observe(probe);
     document.fonts.ready.then(()=>{

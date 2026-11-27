@@ -65,6 +65,27 @@
   font-variant-numeric: tabular-nums;
 }
 .diagramguard-coordinate-key > span { white-space: nowrap; }
+.diagramguard-coordinate-key > .diagramguard-named-point { white-space: normal; }
+
+.diagramguard-coordinate-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .3rem .8rem;
+  padding: .125rem .25rem .5rem;
+  color: var(--text-primary, #24203c);
+  font: 500 var(--diagramguard-secondary, .875rem)/1.45 var(--ver-font, system-ui, sans-serif);
+}
+.diagramguard-coordinate-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+}
+.diagramguard-line-sample {
+  flex: 0 0 .8rem;
+  border-block-start: 2px solid currentColor;
+}
+.diagramguard-line-sample[data-dashed] { border-block-start-style: dashed; }
 
 .diagramguard-coordinate-heading {
   display: block;

@@ -190,6 +190,15 @@ async function navigateOffline(browser, base) {
     assert.equal(await trapezium.locator('[data-dg-construction-point="crossing"]').count(),1);
     assert.deepEqual(await trapezium.evaluate(svg=>window.TriggleDiagramGuard.audit(svg,{discover:true}).issues),[]);
     await page.keyboard.press('Escape');
+    await page.goto(base+link(10,'question','c10-5-unit-q10'));
+    await ready(page);
+    await page.locator('#inlineFigureOpen').click();
+    const shortestRoute=page.locator('#figureDialog svg.diagramguard-coordinate[data-dg-ready]');
+    await shortestRoute.nth(1).waitFor();
+    assert.equal(await shortestRoute.count(),2);
+    assert.equal(await shortestRoute.nth(1).locator('[data-dg-obstacle="right-angle"]').count(),1);
+    assert.deepEqual(await shortestRoute.evaluateAll(plots=>plots.flatMap(svg=>window.TriggleDiagramGuard.audit(svg).issues)),[]);
+    await page.keyboard.press('Escape');
     await page.goto(base+link(10,'question',geometry));
     await ready(page);
     await page.locator('#langTa').click();
