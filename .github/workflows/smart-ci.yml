@@ -87,6 +87,8 @@ jobs:
       - run: npm ci
       - name: Check site syntax, links, bilingual UI and offline assets
         run: node site/tools/check_site.cjs
+      - name: Check VER SpeedGuard asset and manifest budgets
+        run: node site/tools/test_speedguard.cjs
       - name: Run precisely scoped unit and curriculum tests
         env:
           TEST_TIER: ${{ needs.plan.outputs.tier }}
@@ -224,7 +226,9 @@ jobs:
         run: node site/tools/run_browser_shard.cjs
       - name: Verify the staged Pages student build
         if: matrix.shard == 3
-        run: node site/tools/test_student_release_browser.cjs
+        run: |
+          node site/tools/test_speedguard.cjs --browser
+          node site/tools/test_student_release_browser.cjs
       - name: Save failure evidence only
         if: failure()
         uses: actions/upload-artifact@v4

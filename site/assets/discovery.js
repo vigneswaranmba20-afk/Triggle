@@ -21,7 +21,7 @@
       featured:'Try the interactive Set Language lesson',
       featuredDesc:'Seven short ideas, a Venn-diagram lab, and step-by-step reasoning.',
       view:'Open chapter',empty:'No matching chapters. Try another word.',
-      board:'Tamil Nadu State Board',subtitle:'Samacheer Kalvi Mathematics — Grades 9 & 10',install:'Install Triggle',homeChapterCount:'chapters',mathematics:'Mathematics',chapterCount:'chapters',
+      board:'Tamil Nadu State Board curriculum',subtitle:'Samacheer Kalvi Mathematics — Grades 9 & 10',install:'Install Triggle',homeChapterCount:'chapters',mathematics:'Mathematics',chapterCount:'chapters',
       yourClass:'Your class',pick:'Pick a chapter and start with what is available today.',
       back:'All classes',chooseClass:'Change class',allChapters:'All chapters in this class',
       tip:'You can always use the Chapters menu or the class numbers below.',

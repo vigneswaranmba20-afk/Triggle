@@ -12,6 +12,13 @@
    const saved=p.get('lang')||localStorage.getItem('triggle-language');
    if(saved==='ta'||saved==='"ta"')document.documentElement.lang='ta';
  }catch{}
+ if(!p.has('class')&&!p.has('chapter')&&!p.has('question')){
+   const small=matchMedia('(max-width: 680px)').matches;
+   const image=document.createElement('link');
+   image.rel='preload';image.as='image';image.fetchPriority='high';
+   image.href=small?'./assets/home-studio-mobile.webp':'./assets/home-studio.webp';
+   document.head.append(image);
+ }
 })();
 </script>
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -59,7 +66,7 @@
 <link rel="stylesheet" href="./assets/triggle-pwa.css?v=1">
 </head>
 <body class="ver-glyph ver-starting">
-<section id="triggleUnavailable" class="triggle-unavailable" aria-label="Triggle" hidden>
+<section id="triggleUnavailable" class="triggle-unavailable" aria-label="Triggle" tabindex="-1" hidden>
   <div lang="en"><h1>Triggle</h1><p>Samacheer Kalvi Mathematics — Grades 9 &amp; 10</p>
     <p role="status">This lesson couldn’t open. Connect to the internet to open a lesson for the first time. Previously downloaded lessons are available offline.</p>
     <a href="./index.html">Open Triggle home</a></div>

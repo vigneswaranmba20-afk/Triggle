@@ -150,12 +150,6 @@ function bootSource(index) {
   const current=initialChapter();
   const keys=current?['common','lesson','g'+grade,current]:['common','directory'];
   const home=!params.has('class')&&!params.has('chapter')&&!params.has('question');
-  if(home){
-    const preload=document.createElement('link');
-    preload.rel='preload';preload.as='image';
-    preload.href=matchMedia('(max-width: 680px)').matches?'./assets/home-studio-mobile.webp':'./assets/home-studio.webp';
-    preload.fetchPriority='high';document.head.append(preload);
-  }
   const inputs=keys.map(key=>index.packs[key]);
   const searched=new Set();
   const pending=new Map();
@@ -167,7 +161,9 @@ function bootSource(index) {
     document.body.classList.remove('ver-starting','ver-static-home','home-active','discovery-active');
     document.querySelector('.app-shell').hidden=true;
     document.querySelector('.app-shell').style.display='none';
-    document.querySelector('#triggleUnavailable').hidden=false;
+    const fallback=document.querySelector('#triggleUnavailable');
+    fallback.hidden=false;
+    fallback.focus();
   }
   function saveOffline(){
     const worker=navigator.serviceWorker?.controller;
