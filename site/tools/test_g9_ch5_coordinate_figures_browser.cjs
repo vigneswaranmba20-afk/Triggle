@@ -207,7 +207,8 @@ async function verifyDistanceConcept(page,base) {
         const context=`Distance Formula ${lang} ${width}×${height} ${percent}%`;
         count+=await verify(plot,'distance concept',panels,lang,percent,context);
         assert.equal(await caption.textContent(),lang==='ta'?
-          'AC = 3 அலகுகள் · CB = 4 அலகுகள் · AB = 5 அலகுகள்':'AC = 3 units · CB = 4 units · AB = 5 units',context);
+          'கிடைமட்டம் 3 அலகுகள் · செங்குத்து 4 அலகுகள் · நேர்க்கோட்டுத் தொலைவு 5 அலகுகள்':
+          'Horizontal 3 units · Vertical 4 units · Straight-line distance 5 units',context);
         const measured=await caption.evaluate(node=>({font:parseFloat(getComputedStyle(node).fontSize),
           overflow:node.scrollWidth-node.clientWidth,below:node.getBoundingClientRect().top>=
             node.previousElementSibling.getBoundingClientRect().bottom-.5}));
