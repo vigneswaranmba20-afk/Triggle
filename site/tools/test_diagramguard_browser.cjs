@@ -377,6 +377,7 @@ async function main(){
               [second.geometry[1],second.geometry[0]],'return to first SSA layout');
             if(width===390&&percent===200&&!live){
               await page.setViewportSize({width:667,height:375});
+              await settle(page,percent);
               checkLab(await read(page,'[data-dg-state="ssa-1"]',percent));
               await page.setViewportSize({width,height});
               await settle(page,percent);
