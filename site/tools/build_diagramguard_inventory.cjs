@@ -68,7 +68,7 @@ for(const grade of [9,10]){
     const ta=stripRoot(fixed?(fixed.srcTa||fixed.src):item.figureSrc&&(taOverride||item.figureSrcTa||item.figureSrc));
     const src=[curriculumModules.get(id),format(item.reference),item.page&&'p. '+format(item.page),
       item.sourceFidelity?.sourcePdfPage&&'PDF '+format(item.sourceFidelity.sourcePdfPage),format(item.source)].filter(Boolean).join(' | ');
-    if(angleFigures.has(id)){
+    if(angleFigures.has(id)||coordinateFigures.has(id)&&!en){
       const inline=typeof item.diagram==='object'&&/\b(diagram|figure|labelled|labeled)\b/i.test(item.q?.en||'');
       add(id,{id,chapter,source:src,rendering:'responsive SVG (assets/diagramguard-coordinate-plot.js)',
         surface:inline?'inline and figure dialog':'figure dialog',qualification:'DiagramGuard browser fixture'});
