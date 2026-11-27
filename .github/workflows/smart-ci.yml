@@ -221,6 +221,9 @@ jobs:
       - name: WebKit coordinate line and construction figures
         if: matrix.shard == 2
         run: node site/tools/test_g10_ch5_line_figures_browser.cjs --webkit
+      - name: Check VER SpeedGuard in Chromium
+        if: matrix.shard == 3
+        run: node site/tools/test_speedguard.cjs --browser
       - name: Run assigned browser partition without repeating unit tests
         env:
           BROWSER_SHARD_INDEX: ${{ matrix.shard }}
@@ -229,9 +232,7 @@ jobs:
         run: node site/tools/run_browser_shard.cjs
       - name: Verify the staged Pages student build
         if: matrix.shard == 3
-        run: |
-          node site/tools/test_speedguard.cjs --browser
-          node site/tools/test_student_release_browser.cjs
+        run: node site/tools/test_student_release_browser.cjs
       - name: Save failure evidence only
         if: failure()
         uses: actions/upload-artifact@v4

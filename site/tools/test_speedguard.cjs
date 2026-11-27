@@ -102,10 +102,10 @@ async function browserChecks(root, release) {
     await page.goto(base);
     await boot(page);
     await saved(page);
-    const appId = await cdp.send('Page.getAppId');
-    assert.equal(appId.appId,base,'Chrome must resolve the same application identity as the previous manifest');
     const manifest = await cdp.send('Page.getAppManifest');
     assert.deepEqual(manifest.errors,[]);
+    // Chromium's headless shell parses the manifest but has no installed-app registry.
+    assert.equal(manifest.manifest.id,base,'Chrome must resolve the same application identity as the previous manifest');
     const {installabilityErrors} = await cdp.send('Page.getInstallabilityErrors');
     assert(installabilityErrors.every(error=>error.errorId==='in-incognito'),JSON.stringify(installabilityErrors));
     const perf = await page.evaluate(()=>({
