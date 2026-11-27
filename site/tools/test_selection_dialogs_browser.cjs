@@ -1,8 +1,9 @@
 'use strict';
 
 const assert = require('node:assert/strict');
+const {execFileSync} = require('node:child_process');
 const path = require('node:path');
-const {chromium, devices, webkit} = require('playwright');
+const {_android, chromium, devices, webkit} = require('playwright');
 const {server, launchOptions} = require('./dashboard_test_support.cjs');
 
 const sizes = [[320, 568], [360, 640], [390, 844], [412, 915], [430, 932]];
@@ -11,6 +12,7 @@ const readers = [
   {grade: 10, chapter: 2, question: 'c10-2-ex2-1-q1', practice: 'c10-2-2-practice-19'}
 ];
 const useWebKit = process.env.TRIGGLE_BROWSER === 'webkit';
+const androidStage = process.env.TRIGGLE_ANDROID_STAGE;
 const phone = devices[useWebKit ? 'iPhone 13' : 'Pixel 7'];
 const screenshots = process.env.TRIGGLE_SELECTION_SCREENSHOTS;
 const readerUrl = (base, grade, id) => base + '/index.html?' + new URLSearchParams({class: grade, question: id});
@@ -150,19 +152,34 @@ async function verifySelection(page, chapterTrigger, grade, chapter) {
 }
 
 (async () => {
-  const browser = useWebKit ? await webkit.launch() : await chromium.launch(launchOptions());
-  let app;
+  let app, browser, device, port;
   let chapterRows = 0;
   let otherDialogs = 0;
   try {
-    app = process.env.TRIGGLE_QA_URL ? null : await server();
+    if (androidStage) {
+      const connected = await _android.devices();
+      assert.equal(connected.length, 1, 'Expected exactly one Android test device');
+      device = connected[0];
+    } else {
+      browser = useWebKit ? await webkit.launch() : await chromium.launch(launchOptions());
+    }
+    app = process.env.TRIGGLE_QA_URL ? null : await server(androidStage);
     const base = process.env.TRIGGLE_QA_URL || app.base;
+    if (device) {
+      port = 'tcp:' + new URL(base).port;
+      execFileSync('adb', ['reverse', port, port]);
+      console.log('Android ' + (await device.shell('getprop ro.build.version.release')).toString().trim());
+    }
     for (const [width, height] of sizes) {
-      const context = await browser.newContext({
-        ...phone, viewport: {width, height}, serviceWorkers: 'block',
-        reducedMotion: 'reduce'
-      });
+      const options = {viewport: {width, height}, serviceWorkers: 'block', reducedMotion: 'reduce'};
+      const context = device
+        ? await device.launchBrowser({...options, isMobile: true, hasTouch: true, timeout: 90000})
+        : await browser.newContext({...phone, ...options});
       const page = await context.newPage();
+      if (device) {
+        console.log('Testing ' + width + 'px with ' + await page.evaluate(() => navigator.userAgent));
+        assert.match(await page.evaluate(() => navigator.userAgent), /Android.*Chrome\//);
+      }
       const crumb = page.locator('#crumb .crumb-link');
       const questionTrigger = page.locator('#questionPicker');
       for (const {grade, chapter, question, practice} of readers) {
@@ -219,9 +236,11 @@ async function verifySelection(page, chapterTrigger, grade, chapter) {
       await context.close();
     }
   } finally {
-    await browser.close();
+    await device?.close();
+    await browser?.close();
     await app?.close();
+    if (port) execFileSync('adb', ['reverse', '--remove', port]);
   }
   assert.equal(chapterRows, 340, 'Every Grade 9 and 10 chapter in both languages at five widths and two text sizes');
-  console.log('PASS selection dialogs · ' + (useWebKit ? 'WebKit' : 'Chromium') + ' · ' + chapterRows + ' chapter rows and ' + otherDialogs + ' class, exercise and question dialogs');
+  console.log('PASS selection dialogs · ' + (device ? 'Chrome for Android' : useWebKit ? 'WebKit' : 'Chromium') + ' · ' + chapterRows + ' chapter rows and ' + otherDialogs + ' class, exercise and question dialogs');
 })().catch(error => { console.error(error); process.exitCode = 1; });
