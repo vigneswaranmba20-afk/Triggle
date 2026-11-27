@@ -58,7 +58,7 @@ for(const grade of [9,10]){
       item.sourceFidelity?.sourcePdfPage&&'PDF '+format(item.sourceFidelity.sourcePdfPage),format(item.source)].filter(Boolean).join(' | ');
     if(en){
       const rectangle=id==='c10-4-ex4-3-q4';
-      const responsive=rectangle||coordinateFigures.has(id);
+      const responsive=rectangle||coordinateFigures.has(id)||/^g9-ch5-ex5\.1-q[1-4]$/.test(id);
       add(rectangle?'wxyz-rectangle':'asset:'+hash(en)+':'+hash(ta),{
         id,chapter,en,ta,source:src,rendering:responsive?'responsive inline SVG; SVG fallback':media(en),
         surface:item.figureInSolution?'solution and figure dialog':'inline and figure dialog',

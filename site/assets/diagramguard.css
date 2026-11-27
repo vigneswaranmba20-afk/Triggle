@@ -65,3 +65,10 @@
   font-variant-numeric: tabular-nums;
 }
 .diagramguard-coordinate-key > span { white-space: nowrap; }
+
+.diagramguard-coordinate-heading {
+  display: block;
+  margin-block: .4rem .15rem;
+  color: #24203c;
+  font: 550 .9375rem/1.4 var(--ver-font, system-ui, sans-serif);
+}
