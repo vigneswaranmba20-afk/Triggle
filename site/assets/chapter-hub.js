@@ -287,7 +287,8 @@
     window.TriggleCoordinateFigures.mount(host,'g9-ch5-concept-distance',description,lang);
     const note=document.createElement('p');
     note.className='g9-distance-plot-note';
-    note.textContent=ta?'AC = 3 அலகுகள் · CB = 4 அலகுகள் · AB = 5 அலகுகள்':'AC = 3 units · CB = 4 units · AB = 5 units';
+    note.textContent=ta?'கிடைமட்டம் 3 அலகுகள் · செங்குத்து 4 அலகுகள் · நேர்க்கோட்டுத் தொலைவு 5 அலகுகள்':
+      'Horizontal 3 units · Vertical 4 units · Straight-line distance 5 units';
     host.append(note);
   }
 
