@@ -129,7 +129,28 @@ async function navigateOffline(browser, base) {
     await page.goto(base+link(9,'question',algebra));
     await ready(page);
     await page.waitForFunction(()=>navigator.serviceWorker.controller,null,{timeout:40000});
-    assert((await page.evaluate(()=>caches.keys())).some(key=>key.includes('-student-')),'Versioned release worker');
+    assert((await page.evaluate(()=>caches.keys())).some(key=>key.startsWith('triggle-lightspeed-')),'Versioned release worker');
+    await page.waitForSelector('html[data-offline-ready="true"]');
+    const visits = [
+      link(10,'chapter','g10-ch8')+'&section=concepts',
+      link(9,'question','g9-ch5-ex5.1-q2'),
+      link(9,'question','g9-ch5-ex5.2-q11'),
+      link(10,'question','c10-5-ex5-1-q9'),
+      link(10,'question',geometry),
+    ];
+    for (const route of visits) {
+      await page.goto(base+route);
+      await ready(page);
+      await page.waitForSelector('html[data-offline-ready="true"]');
+    }
+    await page.goto(base+link(9,'question',algebra));
+    await ready(page);
+    await page.locator('#browseBtn').click();
+    await page.locator('#search').fill('Venn diagram');
+    const found = page.locator('#exerciseList .exercise-question[data-question-id^="g9-ch1-"]').first();
+    await found.click();
+    await ready(page);
+    await page.waitForSelector('html[data-offline-ready="true"]');
     await context.setOffline(true);
     for (const language of ['en','ta']) await verifyStatisticsDirectory(page,base,language);
     await page.goto(base+link(9,'question','g9-ch5-ex5.1-q2'));
@@ -206,7 +227,7 @@ async function navigateOffline(browser, base) {
     assert.notEqual(new URL(page.url()).searchParams.get('question'),algebra);
     await page.locator('#previous').click();
     assert.equal(new URL(page.url()).searchParams.get('question'),algebra);
-    console.log('PASS staged product offline cross-grade and cross-chapter routes, localized figure, resume, search, Back and question navigation.');
+    console.log('PASS staged product reopens visited offline cross-grade and cross-chapter routes, localized figure, resume, search, Back and question navigation.');
   } finally { await context.close(); }
 }
 
