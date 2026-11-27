@@ -181,11 +181,14 @@ async function checkFeedback(page, add, lang) {
       const state = right ? 'correct' : 'incorrect';
       seen.add(state);
       await option.evaluate(el => Promise.all(el.getAnimations().map(animation => animation.finished)));
-      const actual = await result.evaluate(el => ({
-        state: el.dataset.answerState, color: getComputedStyle(el).color,
-        announced: el.matches('[role=status],[aria-live=polite]'),
-        icon: getComputedStyle(el, '::before').content
-      }));
+      const actual = await result.evaluate(async el => {
+        await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        return {
+          state: el.dataset.answerState, color: getComputedStyle(el).color,
+          announced: el.matches('[role=status],[aria-live=polite]'),
+          icon: getComputedStyle(el, '::before').content
+        };
+      });
       const active = await options.evaluateAll(elements => elements.map(el => ({
         state: el.dataset.answerState, color: getComputedStyle(el).color, selected: el.getAttribute('aria-pressed') === 'true'
       })).filter(el => el.state || el.selected));
@@ -245,18 +248,22 @@ async function checkPlayground(browser, base, add) {
       await page.locator('#quizRestart').click();
       const options = page.locator('#quizAnswers button');
       const message = page.locator('#quizFeedback');
+      const paintedFeedback = () => message.evaluate(async el => {
+        await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        return { color: getComputedStyle(el).color, sample: el.textContent };
+      });
       await options.nth(1).click();
       if (!(await options.nth(0).isEnabled())) {
         add({ kind: 'feedback', key: 'Basics retry is locked' }, route, lang);
         await page.locator('#quizRestart').click();
-      } else if (await message.evaluate(el => getComputedStyle(el).color) !== palette.incorrect) {
-        add({ kind: 'feedback', key: 'Basics incorrect message colour' }, route, lang);
+      } else {
+        const result = await paintedFeedback();
+        if (result.color !== palette.incorrect) {
+          add({ kind: 'feedback', key: 'Basics incorrect message colour', ...result }, route, lang);
+        }
       }
       await options.nth(0).click();
-      const result = await message.evaluate(async el => {
-        await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-        return { color: getComputedStyle(el).color, sample: el.textContent };
-      });
+      const result = await paintedFeedback();
       if (result.color !== palette.correct) {
         add({ kind: 'feedback', key: 'Basics correct message colour', ...result }, route, lang);
       }
