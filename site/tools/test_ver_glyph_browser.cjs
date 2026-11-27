@@ -3,7 +3,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs/promises');
 const path = require('node:path');
-const {chromium} = require('playwright');
+const {chromium, webkit} = require('playwright');
 const {server, launchOptions} = require('./dashboard_test_support.cjs');
 
 const pilot = [
@@ -19,6 +19,7 @@ const viewports = [320, 360, 375, 390, 412, 430, 768, 1280]
   .concat({name: 'landscape', width: 667, height: 375});
 const output = process.env.TRIGGLE_SCREENSHOTS;
 const before = process.env.TRIGGLE_BEFORE === '1';
+const useWebKit = process.env.TRIGGLE_BROWSER === 'webkit';
 const route = (grade, id) => '/index.html?class=' + grade + '&question=' + encodeURIComponent(id);
 
 function readerMetrics() {
@@ -34,6 +35,10 @@ function readerMetrics() {
     }
   }
   const style = getComputedStyle(paragraph);
+  const heading = document.querySelector('#questionHead');
+  const firstWord = document.createRange();
+  firstWord.setStart(heading.firstChild, 0);
+  firstWord.setEnd(heading.firstChild, heading.textContent.split(/\s/)[0].length);
   const rect = paragraph.getBoundingClientRect();
   const bounds = el => el.getBoundingClientRect();
   const formulas = [...lesson.querySelectorAll('.triggle-tex')].filter(el => el.offsetWidth && el.offsetHeight);
@@ -61,11 +66,12 @@ function readerMetrics() {
     promptSize: parseFloat(style.fontSize),
     promptText: paragraph.innerText,
     question: new URL(location.href).searchParams.get('question'),
-    documentOverflow: document.documentElement.scrollWidth - innerWidth,
+    documentOverflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
     readerOverflow: lesson.scrollWidth - lesson.clientWidth,
     overlap: overlapping('.question-top > :not([hidden])') ||
       overlapping('.appbar .brand-mobile, .appbar #browseBtn, .appbar #homeBtn, .appbar .lang-switch'),
     replacementGlyphs: /�/.test(lesson.innerText),
+    firstWordLines: firstWord.getClientRects().length,
     visibleQuestionHeadings: [...lesson.querySelectorAll('h1, h2')].filter(el => el.offsetWidth).map(el => el.innerText),
     displayMathSizes: [...new Set(formulas.filter(el => el.classList.contains('triggle-tex-display'))
       .map(el => Math.round(parseFloat(getComputedStyle(el.querySelector('.katex')).fontSize) * 10) / 10))],
@@ -112,24 +118,40 @@ async function testActions(page, base) {
   await page.locator('#exerciseIndexLink').click();
   assert.equal(new URL(page.url()).searchParams.get('section'), 'exercises');
   await page.goto(base + route(10, 'c10-4-ex4-1-q1-i'));
-  await page.locator('#figureBtn').click();
+  assert.equal(await page.locator('#figureBtn').isVisible(), false, 'One enlargement control for an inline figure');
+  assert.match(await page.locator('#inlineFigureCaption').innerText(), /\(ii\).*PQ/);
+  await page.locator('#inlineFigureOpen').focus();
+  await page.keyboard.press('Enter');
   assert.equal(await page.locator('#figureDialog').evaluate(dialog => dialog.open), true);
   await page.keyboard.press('Escape');
   assert.equal(await page.locator('#figureDialog').evaluate(dialog => dialog.open), false);
-  // Browser text enlargement still allows the geometry heading and all controls to reflow.
-  await page.setViewportSize({width: 320, height: 844});
-  for (const language of ['#langEn', '#langTa']) {
-    await page.locator(language).click();
-    const zoomed = await page.evaluate(() => {
-      document.documentElement.style.fontSize = '200%';
-      const dimensions = {viewport: innerWidth, page: document.documentElement.scrollWidth};
-      document.documentElement.style.fontSize = '';
-      return dimensions;
-    });
-    assert.ok(zoomed.page <= zoomed.viewport + 1, language + ' 200% text enlargement overflow');
+  assert.ok(await page.locator('#inlineFigureOpen').evaluate(el => el === document.activeElement));
+  // Check 200% enlargement independently of the 320 CSS px reflow matrix.
+  for (const width of [640, 320]) {
+    await page.setViewportSize({width, height: 844});
+    for (const language of ['#langEn', '#langTa']) {
+      await page.locator(language).click();
+      const zoomed = await page.evaluate(() => {
+        const root = document.documentElement;
+        root.style.fontSize = '200%';
+        const dimensions = {viewport: root.clientWidth, page: root.scrollWidth};
+        root.style.fontSize = '';
+        return dimensions;
+      });
+      assert.ok(zoomed.page <= zoomed.viewport + 1, language + ' 200% text enlargement overflow at ' + width);
+    }
   }
   await page.locator('#homeBtn').click();
   assert.equal(await page.locator('.home-copyright').innerText(), '© 2026 VER labs');
+  for (const section of ['quizzes', 'activities']) {
+    await page.goto(base + '/index.html?class=9&chapter=g9-ch3&section=' + section);
+    for (const language of ['#langEn', '#langTa']) {
+      await page.locator(language).click();
+      const panel = page.locator('#chapterSectionContent');
+      assert.ok((await panel.innerText()).trim(), section + ' has a localized empty state');
+      assert.equal(await panel.locator('.hub-quiz-question').count(), 0);
+    }
+  }
   for (const grade of [11, 12]) {
     await page.goto(base + '/index.html?class=' + grade + '&chapter=g' + grade + '-ch1');
     await page.waitForURL(url => !url.search);
@@ -140,7 +162,7 @@ async function testActions(page, base) {
 (async () => {
   const app = process.env.TRIGGLE_QA_URL ? null : await server();
   const base = process.env.TRIGGLE_QA_URL || app.base;
-  const browser = await chromium.launch(launchOptions());
+  const browser = useWebKit ? await webkit.launch() : await chromium.launch(launchOptions());
   const rows = [], failures = [];
   try {
     for (const {name, width, height} of viewports) {
@@ -171,6 +193,7 @@ async function testActions(page, base) {
           check(metrics.question === id, 'question changed or deep link failed');
           check(metrics.documentOverflow <= 1 && metrics.readerOverflow <= 1, 'page or reader overflowed');
           check(!metrics.overlap && !metrics.replacementGlyphs, 'controls overlap or a glyph is missing');
+          check(metrics.firstWordLines === 1, 'question heading begins with a split word');
           check(metrics.mathErrors === 0 && metrics.clips === 0, 'invalid or clipped mathematics');
           check(metrics.wideWithoutKeyboard === 0, 'wide formula has no keyboard access');
           check(metrics.visibleQuestionHeadings.length === 1, 'expected one question heading');
@@ -192,7 +215,7 @@ async function testActions(page, base) {
     await app?.close();
   }
   assert.deepEqual(failures, []);
-  console.log('PASS VER Glyph pilot · ' + rows.length + ' bilingual viewport snapshots');
+  console.log('PASS VER Glyph · ' + (useWebKit ? 'WebKit' : 'Chromium') + ' · ' + rows.length + ' bilingual viewport snapshots');
 })().catch(error => {
   console.error(error);
   process.exitCode = 1;

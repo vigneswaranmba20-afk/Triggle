@@ -22,7 +22,7 @@ async function exercise(page,row,lang){
     assert.match(answer,lang==='ta'?/இடஞ்சுழி/:/anticlockwise/);
   }else if(row.figureFiles) {
     assert.match(answer,/ABCD.*ABDC/s);
-    await page.locator('#figureBtn').click();
+    await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
     const image=page.locator('#diagramContent img');
     await image.evaluate(el=>el.decode());
     assert.match(await image.getAttribute('alt'),/ABDC.*ABCD.*25\/4/s);

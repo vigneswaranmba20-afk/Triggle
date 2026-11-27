@@ -198,7 +198,7 @@ for(const lang of ['en','ta'])for(const chapter of [1,2,9]){
  }
 }
 for(const id of ['c9-exercise-6-1-q1','c9-1-1-practice-1']){
- await page.goto(app.base+'/index.html?class=9&question='+id);if(await page.evaluate(()=>window.TriggleQuietReader?.isActive()))await page.keyboard.press('Tab');await page.locator('#figureBtn').click();await check('figure '+id);
+ await page.goto(app.base+'/index.html?class=9&question='+id);if(await page.evaluate(()=>window.TriggleQuietReader?.isActive()))await page.keyboard.press('Tab');await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();await check('figure '+id);
  assert(await page.locator('#figureDialog').isVisible());assert.equal(await page.locator('#figureDialog [data-math-error]').count(),0);await page.keyboard.press('Escape');
 }
 console.log('PASS concepts, dynamic controls, both languages, figures '+width+'px');

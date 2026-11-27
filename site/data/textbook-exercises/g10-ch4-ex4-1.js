@@ -97,8 +97,8 @@ const entries = [
       "ta": "E புள்ளி AC மீதும் D புள்ளி AB மீதும் உள்ளன. AE = 2, EC = 3½, AD = 3, DB = 5."
     },
     "figureCaption": {
-      "en": "Geometry figure",
-      "ta": "வடிவியல் படம்"
+      "en": "Only part (ii) marks x, on segment PQ.",
+      "ta": "(ii) படத்தில் உள்ள PQ கோட்டுத்துண்டில் மட்டுமே x குறிக்கப்பட்டுள்ளது."
     }
   },
   {

@@ -81,7 +81,7 @@ const {server,launchOptions}=require('./dashboard_test_support.cjs');
      if(f.scroll>f.width+1)assert.equal(f.tab,0,'Wide formula must be keyboard-focusable '+id);
     }
     if(figureItems.has(id)){
-     assert(await page.locator('#figureBtn').isVisible(),'Useful figure button visible '+id);
+     assert(await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').isVisible(),'Useful figure button visible '+id);
      assert(await page.locator('#inlineFigure').isVisible(),'Inline figure visible '+id);
      assert(check.imgReady,'Figure SVG loaded cleanly '+id+' @'+width);
     }else{

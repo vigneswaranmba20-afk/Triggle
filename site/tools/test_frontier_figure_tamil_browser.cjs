@@ -67,7 +67,7 @@ async function checkLabelsInBounds(page, path) {
           await openQuestion(page, base, id);
           for (const [language, toggle] of [['en','#langEn'], ['ta','#langTa']]) {
             await page.locator(toggle).evaluate(button => button.click());
-            await page.locator('#figureBtn').evaluate(button => button.click());
+            await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').evaluate(button => button.click());
             assert.equal(await page.locator('#figureDialog').evaluate(dialog => dialog.open), true);
             const observed = await figure(page);
             assert(observed.description, id + ' accessible name in ' + language);
@@ -96,7 +96,7 @@ async function checkLabelsInBounds(page, path) {
           await context.setOffline(true);
           await openQuestion(page, base, 'c10-3-ex3-12-q7');
           await page.reload();
-          await page.locator('#figureBtn').evaluate(button => button.click());
+          await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').evaluate(button => button.click());
           assert.equal((await figure(page)).image, descriptions['c10-3-ex3-12-q7'].src);
         }
         console.log(`37 original figures have bilingual descriptions and 14 Tamil-label assets at ${width}px.`);

@@ -762,8 +762,12 @@
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
     const chapterKinds=inlineChecks?baseKinds.filter(kind=>kind!=='quizzes'):baseKinds;
     const kinds=activityEntries.length?[...chapterKinds,'activities']:chapterKinds;
-    const quizStages=stages.filter(stage=>!(stage.activity?.options&&stage.check));
-    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(inlineChecks||matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'||chapter.id==='g10-ch7'||chapter.id==='g9-ch3')?0:quizStages.length,activities:activityEntries.length};
+    const quizInConcepts=inlineChecks||matrixConcepts||['g9-ch3','g10-ch2','g10-ch3','g10-ch4','g10-ch5','g10-ch6','g10-ch7'].includes(chapter.id);
+    const quizStages=stages.filter(stage=>{
+      const choices=(stage.quiz||stage).choices;
+      return !(stage.activity?.options&&stage.check)&&Array.isArray(choices)&&choices.length>0;
+    });
+    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:quizInConcepts?0:quizStages.length,activities:activityEntries.length};
     const symbols={concepts:'concept',exercises:'exercises',quizzes:'check',activities:'explore'};
     const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0,activities:counts.activities>0};
     const labelFor=kind=>({concepts:t.concepts,examples:t.examples,exercises:t.exercises,quizzes:t.quizzes,activities:t.activities})[kind];
@@ -824,7 +828,7 @@
           '<strong>'+e(labelFor(kind))+'</strong>'+
           '<span class="hub-section-description">'+e(noteFor(kind))+'</span>'+
           '<span class="hub-section-count">'+e(countFor(kind))+'</span>'+
-          '<span class="hub-section-arrow" aria-hidden="true">↗</span>';
+          '<span class="hub-section-arrow" aria-hidden="true">'+(window.TriggleGlyph?.icon('next')||'→')+'</span>';
         b.addEventListener('click',()=>onSection(kind));
         grid.append(b);
       });
@@ -887,6 +891,8 @@
     }
     if(section==='activities'&&activityEntries.length&&window.TriggleTextbookActivities){
       window.TriggleTextbookActivities.mount(panel,chapter,lang);
+    }else if(section==='activities'){
+      info(lang==='ta'?'இந்த அத்தியாயத்திற்கான செயல்பாடுகள் இன்னும் கிடைக்கவில்லை.':'Activities for this chapter are coming soon.');
     }
     if(section==='exercises'){
       // One index of exercise numbers per chapter. No huge question catalog.
@@ -919,7 +925,6 @@
           const count=document.createElement('small');count.textContent=items.length+' '+t.questions+' '+t.available;
           const arrow=document.createElement('span');arrow.className='hub-exercise-arrow';arrow.textContent='›';arrow.setAttribute('aria-hidden','true');
           button.append(label,count,arrow);
-          button.setAttribute('aria-label',name+' · '+count.textContent);
           button.addEventListener('click',()=>onQuestion(items[0]));
           index.append(button);
         }

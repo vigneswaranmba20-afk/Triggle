@@ -13,7 +13,7 @@ async function checkFigure(page, language) {
   assert.equal(await page.locator('#lessonCard [data-math-error="true"],#lessonCard .katex-error').count(),0);
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1),false);
   assert.equal(await page.locator('#stepsList details[class*=why-step]').count(),1);
-  await page.locator('#figureBtn').click();
+  await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
   const figure = page.locator('#diagramContent img');
   await figure.evaluate(image => image.decode());
   assert.equal(await figure.getAttribute('src'),source.figure);

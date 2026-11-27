@@ -15,7 +15,7 @@ async function open(page,base,id){
 
 async function inspect(page,record,locale){
   await page.locator(locale==='en'?'#langEn':'#langTa').evaluate(button=>button.click());
-  await page.locator('#figureBtn').evaluate(button=>button.click());
+  await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').evaluate(button=>button.click());
   assert(await page.locator('#figureDialog').evaluate(dialog=>dialog.open));
   const figure=await page.locator('#diagramContent').evaluate(async content=>{
     const image=content.querySelector('img');

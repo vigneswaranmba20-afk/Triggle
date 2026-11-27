@@ -35,7 +35,7 @@ async function checkTable(page,id,lang) {
 
 async function checkFigure(page,id,lang) {
   if(id==='c10-1-1-3-q10')assert(await page.locator('#inlineFigure').isHidden());
-  await page.locator('#figureBtn').click();
+  await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
   const img=page.locator('#diagramContent img');
   await img.evaluate(image=>image.decode());
   assert.equal(await img.getAttribute('src'),'./assets/grade10-ch1/'+localizedFigures[id]+(lang==='ta'?'-ta':'')+'.svg');

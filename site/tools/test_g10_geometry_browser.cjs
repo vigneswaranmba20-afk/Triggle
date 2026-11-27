@@ -87,7 +87,7 @@ async function checkLayout(page, id, width) {
             await page.locator('#questionTopPrevious').tap();
             assert.equal(new URL(page.url()).searchParams.get('question'), id);
             if (item.figure.inTextbooks) {
-              await page.locator('#figureBtn').tap();
+              await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').tap();
               assert.ok(await page.locator('#figureDialog').isVisible());
               await page.locator('#diagramContent img').evaluate(img => img.decode());
               await page.locator('#closeDiagram').tap();
@@ -105,7 +105,7 @@ async function checkLayout(page, id, width) {
           const reasons = await page.locator('#stepsList .worked-step:not(.final-answer-step) .step-reason').allInnerTexts();
           assert.ok(reasons.length && reasons.every(text => /[அ-ஹ]/.test(text)), id + ' visible Tamil working');
           if (i === 0 && item.figure.inTextbooks) {
-            await page.locator('#figureBtn').tap();
+            await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').tap();
             await page.locator('#diagramContent img').evaluate(img => img.decode());
             await page.locator('#closeDiagram').tap();
           }

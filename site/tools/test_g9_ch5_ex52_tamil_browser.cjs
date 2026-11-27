@@ -23,7 +23,7 @@ async function reader(page,lang,row){
   assert(await page.locator('#lessonCard .katex').count()>1);
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   if(row.figureFiles.length){
-    await page.locator('#figureBtn').click();
+    await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
     const image=page.locator('#diagramContent img');
     await image.evaluate(img=>img.decode());
     assert.equal(await image.getAttribute('src'),row.figureFiles[0]);

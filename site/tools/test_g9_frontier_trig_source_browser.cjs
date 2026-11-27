@@ -23,7 +23,7 @@ async function examineReader(page, number, language) {
   }
   if (number === 9) {
     assert.match(prompt,tamil ? /மேலும் இரு செங்கோண முக்கோணங்கள்/ : /two other right angled triangles/);
-    await page.locator('#figureBtn').click();
+    await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
     assert(await page.locator('#diagramContent svg,#diagramContent img').count()>0);
     await page.locator('#closeDiagram').click();
   }

@@ -74,7 +74,7 @@ function labelIssues(svg) {
 async function construction(page,id) {
   const stage = page.locator('#diagramContent svg');
   const dialog = page.locator('#figureDialog');
-  await page.locator('#figureBtn').tap();
+  await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').tap();
   assert(await dialog.isVisible(),id+' fullscreen Figure');
   assert(!await dialog.locator('#diagramCompare').isVisible(),id+' construction without answer reveal');
   assert(await stage.isVisible(),id+' construction stage');
@@ -131,7 +131,7 @@ async function main() {
             assert.match(await img.getAttribute('alt'),/\p{Script=Tamil}/u);
             if (exercise==='4.5'||exercise==='4.6') await construction(page,id);
             else if(i===0||i===1) {
-              await page.locator('#figureBtn').tap();
+              await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').tap();
               await page.locator('#diagramContent img').evaluate(img=>img.decode());
               await page.locator('#closeDiagram').tap();
             }
