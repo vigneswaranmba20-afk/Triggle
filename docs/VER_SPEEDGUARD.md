@@ -20,7 +20,7 @@ The risk-based CI runs the build checks on every change. Its full browser tier a
 | Home plus one Geometry chapter, decoded response bodies | 5.5 MB |
 | Question handler p95, 20 samples, Chromium at 4× CPU slowdown | 400 ms CI ceiling |
 
-The wire budgets estimate gzip bytes and omit headers. The question test also records time through the next paint without using frame scheduling as a shared-runner gate. The product target for question switching is 200 ms at p95. Browser timing ceilings have headroom for shared CI; compare repeated lab medians and tail measurements before changing budgets. Record the browser, throttling settings, tested routes, exact revision, run count, and raw measurements with a release.
+The wire budgets estimate gzip bytes and omit headers. The question test also records time through the next paint without using frame scheduling as a shared-runner gate. The product target for question switching is 200 ms at p95. Browser timing ceilings have headroom for shared CI. Compare repeated lab medians and tail measurements before changing budgets. Record the browser, throttling settings, tested routes, exact revision, run count, and raw measurements with a release.
 
 ## Cache lifecycle
 
