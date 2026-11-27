@@ -823,6 +823,103 @@ async function vennGeometry(page,base,profiles){
   return checks;
 }
 
+async function grade9CoordinateActivities(page, base, profiles){
+  const endpoints = {A:[-4,-3],P:[-1,-1],Q:[2,1],B:[5,3]};
+  const ratio = P => ({A:[-4,-2],P,B:[4,2]});
+  const centroid = y => ({A:[1,1],B:[7,1],C:[1,y],D:[4,1],G:[3,(y+2)/3]});
+  const activities = new Map([
+    [1,[{P:[4,1]},{P:[4,3]}]],
+    [2,[[-3,2],[3,2],[-3,-2],[3,-2],[-3,0],[0,2]].map(P=>({P}))],
+    [3,[{A:[-4,2],B:[4,-2],M:[0,0]},{A:[-4,2],B:[3,2],M:[-.5,2]}]],
+    [4,[endpoints,endpoints]],
+    [5,[ratio([2,1]),ratio([0,0]),ratio([-2,-1])]],
+    [6,[centroid(4),centroid(7)]]
+  ]);
+  let checks=0;
+  for (const [width,height] of profiles) {
+    await page.setViewportSize({width,height});
+    for (const lang of ['en','ta']) for (const [route,states] of activities) {
+      await page.goto(base+'/index.html?class=9&chapter=g9-ch5&section=concepts&concept='+route);
+      await setLanguage(page,lang);
+      const controls=page.locator('.g9-investigation-activity .sp2-answers button');
+      const figure=page.locator('.g9-investigation-diagram svg.diagramguard-coordinate[data-dg-ready]');
+      assert.equal(await controls.count(),states.length);
+      for (const percent of [100,200]) {
+        await settle(page,percent);
+        for (const [state,expected] of states.entries()) {
+          await controls.nth(state).click();
+          const context=`Grade 9 coordinate concept ${route}, ${state}, ${lang}, ${width}×${height}, ${percent}%`;
+          assert.equal(await controls.nth(state).getAttribute('aria-pressed'),'true',context);
+          const actual=await figure.evaluate(svg=>{
+            const guard=window.TriggleDiagramGuard;
+            const x=svg.querySelector('[data-dg-obstacle="x-axis"]');
+            const y=svg.querySelector('[data-dg-obstacle="y-axis"]');
+            const key=svg.closest('.diagramguard-figure').querySelector('.diagramguard-coordinate-key');
+            const value=(node,field)=>Number(node.getAttribute(field));
+            return {
+              ...guard.audit(svg,{discover:true}),
+              origin:[value(y,'x1'),value(x,'y1')],
+              axisLength:[value(x,'x2')-value(x,'x1'),value(y,'y1')-value(y,'y2')],
+              points:Object.fromEntries([...svg.querySelectorAll('[data-dg-point]')]
+                .map(node=>[node.dataset.dgPoint,[value(node,'cx'),value(node,'cy')]])),
+              lines:Object.fromEntries([...svg.querySelectorAll('[data-dg-edge], [data-dg-obstacle$="-guide"]')]
+                .map(node=>[node.dataset.dgEdge||node.dataset.dgObstacle,['x1','y1','x2','y2'].map(field=>value(node,field))])),
+              keyBelow:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+              keyItems:[...key.querySelectorAll('[role=listitem]')].map(node=>node.textContent),
+              plotName:svg.getAttribute('aria-label'),
+              overflow:document.documentElement.scrollWidth-innerWidth
+            };
+          });
+          assert.deepEqual(actual.issues,[],context);
+          assert.ok(actual.measured&&actual.keyBelow&&actual.overflow<=1,context);
+          assert.ok(Object.values(actual.horizontalClipping).every(value=>value<=1),context);
+          if(lang==='ta')assert.match(actual.plotName,/[஀-௿]/u,context);
+          const units=route===1?[8,5]:route===2?[10,10]:route===6?[8,8]:[10,8];
+          const [sx,sy]=actual.axisLength.map((value,i)=>value/units[i]);
+          near(sx,sy);
+          const [ox,oy]=actual.origin;
+          const project=([x,y])=>[ox+x*sx,oy-y*sy];
+          assert.deepEqual(Object.keys(actual.points),Object.keys(expected),context);
+          const names=actual.labels.map(({id,fontPx})=>{
+            assert(fontPx>=13*percent/100-.25&&fontPx<=16*percent/100+.25,context+' '+id+' '+fontPx);
+            return id;
+          });
+          for(const [id,point] of Object.entries(expected)){
+            assert.ok(names.includes(id),context+' missing vertex label '+id);
+            project(point).forEach((value,i)=>near(actual.points[id][i],value));
+          }
+          const signed=value=>String(value).replace('-','−');
+          assert.deepEqual(actual.keyItems,Object.entries(expected).map(([id,xy])=>`${id} (${xy.map(signed).join(', ')})`),context);
+          const checkLine=(name,a,b)=>project(a).concat(project(b)).forEach((value,i)=>near(actual.lines[name][i],value));
+          if(route<=2){
+            const [x,y]=expected.P;
+            if(x)checkLine('P-x-guide',[0,0],[x,0]);
+            if(y)checkLine('P-y-guide',[x,0],[x,y]);
+            assert.equal(Object.keys(actual.lines).length,Number(Boolean(x))+Number(Boolean(y)),context);
+          }
+          if(route===4){
+            assert.ok(['AP','PQ','QB'].every(name=>actual.lines[name]),context);
+            near(length(actual.points.A,actual.points.P),length(actual.points.P,actual.points.Q));
+            near(length(actual.points.P,actual.points.Q),length(actual.points.Q,actual.points.B));
+          }
+          if(route===6){
+            const mid=(a,b)=>a.map((value,i)=>(value+b[i])/2);
+            checkLine('AE',expected.A,mid(expected.B,expected.C));
+            checkLine('BF',expected.B,mid(expected.C,expected.A));
+            checkLine('CD',expected.C,expected.D);
+            near(length(actual.points.C,actual.points.G),2*length(actual.points.G,actual.points.D));
+          }
+          checks++;
+        }
+        await page.locator('.g9-investigation-reset').click();
+        assert.equal(await controls.first().getAttribute('aria-pressed'),'true');
+        await figure.waitFor({state:'visible'});
+      }
+    }
+  }
+  return checks;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -877,6 +974,12 @@ async function main(){
           console.log(`DiagramGuard: ${checks} bilingual converse-proportionality states`);
           return;
         }
+        if(process.argv.includes('--grade9-coordinate-activities')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await grade9CoordinateActivities(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 9 coordinate activity states`);
+          return;
+        }
         if(width===390&&!live){
           await synthetic(page);
           await legacyMarkers(page);
@@ -889,6 +992,7 @@ async function main(){
           await combinedSightLines(page,base,[[320,844]]);
           await statisticsPlotGeometry(page,base,[[320,844]]);
           await vennGeometry(page,base,[[320,844]]);
+          await grade9CoordinateActivities(page,base,[[320,844]]);
           await page.setViewportSize({width,height});
         }
         for(const lang of ['en','ta']){

@@ -52,7 +52,8 @@ const [width,height]=viewportArgument.split('x').map(Number);
               if(!p){report.push({locale,chapter:id,index,states:[],missing:true});continue;}
               const states=[{action:'initial',figures:audit(p)}];
               const seen=new Set();
-              for(const button of p.querySelectorAll('button[role=tab], button[class*="ch"][class*="-tab"], button[class*="-chip-btn"]')){
+              const modes='button[role=tab], button[class*="ch"][class*="-tab"], button[class*="-chip-btn"], .g9-investigation-activity .sp2-answers button';
+              for(const button of p.querySelectorAll(modes)){
                 if(seen.has(button.textContent)||!button.getClientRects().length||button.disabled)continue;
                 seen.add(button.textContent);button.click();
                 await settle();

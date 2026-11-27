@@ -50,7 +50,7 @@
     "site/data/g9-algebra-chapter.js": "13b62ccfd65b6d0e48d1b2cb0e50dfd0220e5c0572e9a7a81a5cafd6749bbbb9",
     "site/data/g9-ch5-distance-concept.js": "a275ff38a7230ce3e3010cc2d2f66a0fe835435706e34a03094a6ce0e4b4ee12",
     "site/data/g9-clear-math.js": "60145639a2815f3471811cd5d561d7cf304df03dc9fe6e2347f6fc3819d25e69",
-    "site/data/g9-coordinates-concepts.js": "3332cf001ed529d624f33e388ea6426ab5210daae394d0ab35370726e7a5a1ed",
+    "site/data/g9-coordinates-concepts.js": "6a721a521b40c23b866987160b13dcb16fe42da87444f415110daf3a198abcfc",
     "site/data/g9-geometry-concepts.js": "d830ca80742ce4f9e78ced05e6db197b0169d5c33ec4c60c47d3b6b4f56a1e1f",
     "site/data/g9-mensuration-chapter.js": "6fd6136c6a2de67eacfc51c320ea1df0364612839a173707e6319128bc51cef9",
     "site/data/g9-mensuration-remaining.js": "377a9cc9adcbdae2d7e46201e8a19930da204966f2c3846c61ef3bbfd62200e3",
@@ -224,7 +224,7 @@
     "site/data/why-step-g9-ex3-2.js": "39cfd6e5f1706c837dcbf3db2b29ae591f4d1af74478ec4e67c1d8cc411d4060",
     "site/data/why-step-g9-frontier.js": "d598f9622e04022df11638a56ece19ad5136657d26f6f341356ddd7092ce6ce8",
     "site/data/why-step-g9.js": "2f50c267f609b46b57ce74320e92f440713b14a04e63bef1f63c2838076df127",
-    "site/index.html": "ff72c361732a47a48bbac2a6edefb387b2f6532d933068b5a1d47a22c97ed266",
+    "site/index.html": "ee46ebbfc178bd4c0411817ef5d4a7edc403e1944451170881dc688c8da7d437",
     "site/tools/test_g9_geometry_completion.cjs": "f943394ba001f2aea4d80444997d4cbb7e96e457c3679d1838d9446a5ed3af6b",
     "site/tools/test_grade10_ch1_complete.cjs": "9026856132e6ec58a013b4ced02d0c4b1106375ec8f1484f3a9775b697a70028"
   },

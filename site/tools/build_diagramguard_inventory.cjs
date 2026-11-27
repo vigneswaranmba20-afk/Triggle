@@ -118,16 +118,23 @@ for(const [chapter,modules] of Object.entries(visualModules)){
     if(!config)throw Error('Missing concept module '+module);
     const stages=config.stages||config;
     for(const stage of stages){
-      const id=stage.id||chapter+'-concept-'+(index+1), route='concept '+index++;
+      const id=stage.id||chapter+'-concept-'+(index+1);
+      // These lesson bookmarks were assigned before the distance lesson was put third in the index.
+      const route=chapter==='g9-ch5' ? [1,2,3,4,5,6,0][index++] : index++;
       const src=[module,config.source,stage.section,format(stage.pages||stage.page)].filter(Boolean).join(' | ');
       const graphic=typeof stage.visual==='object'?stage.visual.id||stage.visual.kind:stage.visual;
+      const coordinateActivity=key==='TRIGGLE_COORDINATE_LESSONS'&&
+        stage.activity.options.some(option=>option.diagram?.points);
       if(graphic||stage.views||stage.activity||chapter==='g9-ch2'||chapter==='g9-ch9'||chapter==='g9-ch3'){
-        add(id+':concept',{id:id+':concept',chapter,source:src,rendering:'concept renderer '+renderer,
-          surface:route+' interactive/visual',qualification:graphic==='similarity-criteria'?'DiagramGuard browser fixture':'unverified'});
+        const coordinate=coordinateActivity||id==='g9-ch5-distance-formula';
+        add(id+':concept',{id:id+':concept',chapter,source:src,
+          rendering:coordinate?'responsive SVG (assets/diagramguard-coordinate-plot.js)':'concept renderer '+renderer,
+          surface:'concept '+route+' interactive/visual',
+          qualification:coordinate||graphic==='similarity-criteria'?'DiagramGuard browser fixture':'unverified'});
       }
       if(stage.glanceVisual){
         const preview=stage.glanceVisual;
-        add(id+':preview',{id:id+':preview',chapter,source:src,rendering:'inline SVG '+renderer,surface:route+' overview',
+        add(id+':preview',{id:id+':preview',chapter,source:src,rendering:'inline SVG '+renderer,surface:'concept '+route+' overview',
           qualification:chapter==='g10-ch4'&&/^similarity-(scale|criteria|results)$/.test(preview)?
             'DiagramGuard browser fixture':'unverified'});
       }

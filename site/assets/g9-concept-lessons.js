@@ -55,8 +55,13 @@
       activityButtons.forEach((button, index) => {
         button.setAttribute('aria-pressed', String(lesson.activity.options[index] === option));
       });
-      diagram.innerHTML = option.diagram?.(lang) || '';
-      diagram.hidden = !option.diagram;
+      const visual = option.diagram;
+      diagram.hidden = !visual;
+      if (visual && typeof visual !== 'function') {
+        window.TriggleCoordinateFigures.mount(diagram, visual, pick(option.result), lang);
+      } else {
+        diagram.innerHTML = visual?.(lang) || '';
+      }
       result.replaceChildren(element('p', pick(option.result)));
       addMath(result, option.math);
     }
