@@ -590,6 +590,19 @@ async function statisticsPlotGeometry(page, base, profiles, full=false) {
     spread: (full ? [1,2,3,4,5,6,7,8] : [1,8]).map(n => [n,0]),
     scale: (full ? [-2,-1,0,1,2] : [-2,0,2]).flatMap(a => [-4,0,4].map(b => [a,b]))
   };
+  await page.setViewportSize({width:320,height:844});
+  await page.goto(route+'4&diagramguardLanguage=en');
+  await page.locator('.g10ch8-graphic[data-dg-ready]').waitFor();
+  await settle(page,200);
+  for(const [id,lang,mean] of [['langTa','ta','சராசரி:'],['langEn','en','Mean:']]){
+    await page.locator('#'+id).click();
+    await page.locator(`html[lang="${lang}"] #${id}[aria-pressed="true"]`).waitFor({state:'attached'});
+    await settle(page,200);
+    const visible=page.locator('.g10ch8-graphic[data-dg-ready]');
+    await visible.waitFor();
+    assert((await page.locator('.g10ch8-legend').textContent()).startsWith(mean));
+    assert.deepEqual(await visible.evaluate(svg=>window.TriggleDiagramGuard.audit(svg,{discover:true}).issues),[]);
+  }
   let checks=0;
   for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
     await page.setViewportSize({width,height});

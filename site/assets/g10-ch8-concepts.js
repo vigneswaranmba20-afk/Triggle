@@ -93,6 +93,7 @@
     const chartNumber = value => display(value).replace('-', '−');
     let model;
     let paintData;
+    let waitingForFonts = false;
     const refresh = window.TriggleDiagramGuard.responsive(svg, (width, rem) => {
       svg.replaceChildren();
       const axes = vector('g', {}, svg);
@@ -142,7 +143,10 @@
         }
       };
       paintData();
-      if (document.fonts.status === 'loading') document.fonts.ready.then(refresh);
+      if (!waitingForFonts && document.fonts.status === 'loading') {
+        waitingForFonts = true;
+        document.fonts.addEventListener('loadingdone', () => refresh(), {once:true});
+      }
     });
     return (values, mean) => {
       model = {values, mean};
