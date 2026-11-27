@@ -143,6 +143,15 @@ async function testActions(page, base) {
   }
   await page.locator('#homeBtn').click();
   assert.equal(await page.locator('.home-copyright').innerText(), '© 2026 VER labs');
+  for (const section of ['quizzes', 'activities']) {
+    await page.goto(base + '/index.html?class=9&chapter=g9-ch3&section=' + section);
+    for (const language of ['#langEn', '#langTa']) {
+      await page.locator(language).click();
+      const panel = page.locator('#chapterSectionContent');
+      assert.ok((await panel.innerText()).trim(), section + ' has a localized empty state');
+      assert.equal(await panel.locator('.hub-quiz-question').count(), 0);
+    }
+  }
   for (const grade of [11, 12]) {
     await page.goto(base + '/index.html?class=' + grade + '&chapter=g' + grade + '-ch1');
     await page.waitForURL(url => !url.search);

@@ -762,8 +762,10 @@
     const activityEntries=window.TRIGGLE_TEXTBOOK_TASKS?.[chapter.id]||[];
     const chapterKinds=inlineChecks?baseKinds.filter(kind=>kind!=='quizzes'):baseKinds;
     const kinds=activityEntries.length?[...chapterKinds,'activities']:chapterKinds;
-    const quizStages=stages.filter(stage=>!(stage.activity?.options&&stage.check));
-    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:(inlineChecks||matrixConcepts||chapter.id==='g10-ch2'||chapter.id==='g10-ch3'||chapter.id==='g10-ch4'||chapter.id==='g10-ch5'||chapter.id==='g10-ch6'||chapter.id==='g10-ch7'||chapter.id==='g9-ch3')?0:quizStages.length,activities:activityEntries.length};
+    const quizInConcepts=inlineChecks||matrixConcepts||['g9-ch3','g10-ch2','g10-ch3','g10-ch4','g10-ch5','g10-ch6','g10-ch7'].includes(chapter.id);
+    const quizStages=quizInConcepts?[]:stages.filter(stage=>
+      !(stage.activity?.options&&stage.check)&&(stage.quiz||stage).choices?.length>0);
+    const counts={concepts:stages.length,examples:sets.examples.length,exercises:sets.exercises.length,quizzes:quizStages.length,activities:activityEntries.length};
     const symbols={concepts:'concept',exercises:'exercises',quizzes:'check',activities:'explore'};
     const available={concepts:stages.length>0,examples:counts.examples>0,exercises:counts.exercises>0,quizzes:counts.quizzes>0,activities:counts.activities>0};
     const labelFor=kind=>({concepts:t.concepts,examples:t.examples,exercises:t.exercises,quizzes:t.quizzes,activities:t.activities})[kind];
@@ -885,8 +887,12 @@
         // not a repeated appendix on the Concepts page.
       }else{info(t.noneConcept);}
     }
-    if(section==='activities'&&activityEntries.length&&window.TriggleTextbookActivities){
-      window.TriggleTextbookActivities.mount(panel,chapter,lang);
+    if(section==='activities'){
+      if(activityEntries.length&&window.TriggleTextbookActivities){
+        window.TriggleTextbookActivities.mount(panel,chapter,lang);
+      }else{
+        info(lang==='ta'?'இந்த அத்தியாயத்திற்கான செயல்பாடுகள் இன்னும் கிடைக்கவில்லை.':'Activities for this chapter are coming soon.');
+      }
     }
     if(section==='exercises'){
       // One index of exercise numbers per chapter. No huge question catalog.
@@ -927,7 +933,7 @@
       }
     }
     if(section==='quizzes'){
-      if(!quizStages.length||inlineChecks){
+      if(!quizStages.length){
         info(t.noQuiz);
       }else{
         const status=document.createElement('p');status.className='hub-quiz-progress';
