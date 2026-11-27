@@ -195,9 +195,10 @@
     };
     host.append(el('h5','g10ch4-lab-title',copy.title));
     let k=1.25;
-    const svg=svgEl('svg',{viewBox:'0 0 320 176',class:'g10ch4-svg',role:'img','aria-label':copy.title});
+    const maxFactor=1.5;
+    const diagram=window.TriggleG10DiagramGuard.scaleLab(copy.title,ta?'ta':'en',maxFactor,()=>mathAPI.scaleTriangle(k));
     const metrics=el('div','g10ch4-metrics');
-    const slider=makeSlider(copy.slider,0.5,1.5,0.05,k,v=>{k=v;paint();});
+    const slider=makeSlider(copy.slider,0.5,maxFactor,0.05,k,v=>{k=v;paint();});
     const presetRow=el('div','g10ch4-preset-row');
     [0.6,1.0,1.4].forEach(val=>{
       const b=el('button','g10ch4-chip-btn',val===1?copy.congruentBtn:'k = '+val);b.type='button';
@@ -205,37 +206,18 @@
       presetRow.append(b);
     });
     const status=el('p','g10ch4-status');status.setAttribute('aria-live','polite');
-    host.append(svg,metrics,slider.row,presetRow,status);
+    host.append(diagram.svg,diagram.key,metrics,slider.row,presetRow,status);
+    const redraw=diagram.observe();
 
     function paint(){
-      svg.replaceChildren();
       const s=mathAPI.scaleTriangle(k);
-      // Fixed △ABC on left: right-ish triangle scaled for display
-      const A=[30,52],B=[30,148],C=[102,148];
-      const w=56*k,h=74*k;
-      const P=[166,148-h],Q=[166,148],R=[166+w,148];
-      const accent=s.isCongruent?'#166353':'#6E2933';
-      svg.append(
-        svgEl('polygon',{points:`${A} ${B} ${C}`,fill:'rgba(24,27,32,0.06)',stroke:'#181B20','stroke-width':'2'}),
-        svgEl('text',{x:A[0]-4,y:A[1]-7,'font-size':'11','font-weight':'700',fill:'#181B20'},'A'),
-        svgEl('text',{x:B[0]-12,y:B[1]+12,'font-size':'11','font-weight':'700',fill:'#181B20'},'B'),
-        svgEl('text',{x:C[0]+4,y:C[1]+12,'font-size':'11','font-weight':'700',fill:'#181B20'},'C'),
-        svgEl('text',{x:B[0]-20,y:104,'font-size':'10',fill:'#525B62'},'6'),
-        svgEl('text',{x:62,y:163,'font-size':'10',fill:'#525B62'},'8'),
-        svgEl('text',{x:70,y:96,'font-size':'10',fill:'#525B62'},'10'),
-        svgEl('polygon',{points:`${P} ${Q} ${R}`,fill:s.isCongruent?'rgba(22,99,83,0.12)':'rgba(110,41,51,0.10)',stroke:accent,'stroke-width':'2'}),
-        svgEl('text',{x:P[0]-4,y:P[1]-7,'font-size':'11','font-weight':'700',fill:accent},'P'),
-        svgEl('text',{x:Q[0]-12,y:Q[1]+12,'font-size':'11','font-weight':'700',fill:accent},'Q'),
-        svgEl('text',{x:R[0]+4,y:R[1]+12,'font-size':'11','font-weight':'700',fill:accent},'R'),
-        svgEl('text',{x:Q[0]-26,y:(P[1]+Q[1])/2+4,'font-size':'10','font-weight':'700',fill:accent},fmt(s.scaled[0],1)),
-        svgEl('text',{x:(Q[0]+R[0])/2-8,y:163,'font-size':'10','font-weight':'700',fill:accent},fmt(s.scaled[1],1)),
-        svgEl('text',{x:(P[0]+R[0])/2+5,y:(P[1]+R[1])/2,'font-size':'10','font-weight':'700',fill:accent},fmt(s.scaled[2],1))
-      );
+      const leftAngle=Math.atan2(s.base[1],s.base[0])*180/Math.PI;
       metrics.innerHTML=`
         <div class="g10ch4-metric"><span>PQ/AB = QR/BC = RP/CA</span><strong>${fmt(k,2)}</strong></div>
-        <div class="g10ch4-metric"><span>${e(copy.angLbl)}</span><strong>53° · 90° · 37°</strong></div>`;
+        <div class="g10ch4-metric"><span>${e(copy.angLbl)}</span><strong>≈ ${fmt(leftAngle,1)}° · 90° · ≈ ${fmt(90-leftAngle,1)}°</strong></div>`;
       status.className='g10ch4-status'+(s.isCongruent?' is-match':'');
       status.textContent=s.isCongruent?copy.cong:copy.sim+` (k = ${fmt(k,2)})`;
+      redraw();
     }
     paint();
   }

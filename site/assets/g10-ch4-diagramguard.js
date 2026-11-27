@@ -160,6 +160,50 @@
     })};
   }
 
+  function scaleLab(description,language,maxFactor,getScale){
+    const svg=scene('similarity-scale-lab',description,'g10ch4-svg');
+    const key=document.createElement('div');
+    key.className='diagramguard-coordinate-key';
+    key.setAttribute('role','list');
+    key.setAttribute('aria-label',language==='ta'?'ஒத்த பக்கங்களின் நீளங்கள்':'Corresponding side lengths');
+    const corresponding=[['AB','BC','CA'],['PQ','QR','RP']];
+    const entries=corresponding.map(names=>names.map(()=>{
+      const entry=document.createElement('span');
+      entry.setAttribute('role','listitem');
+      key.append(entry);
+      return entry;
+    }));
+    return {svg,key,observe:()=>guard.responsive(svg,(width,rem)=>{
+      const {base,scaled,k,isCongruent}=getScale();
+      const sideBySide=width>=22*rem;
+      const slot=sideBySide?width/2:width;
+      const rim=Math.min(rem*2,slot*.24);
+      const scale=Math.min((slot-2*rim)/(maxFactor*base[1]),width*.48/(maxFactor*base[0]));
+      const rowHeight=maxFactor*base[0]*scale+2*rim;
+      setFrame(svg,width,sideBySide?rowHeight:2*rowHeight);
+      const placements=[];
+      for(const [index,lengths] of [base,scaled].entries()){
+        const [height,span]=lengths.map(value=>value*scale);
+        const left=(sideBySide?slot*(index+.5):width/2)-span/2;
+        const bottom=rowHeight-rim+(!sideBySide?index*rowHeight:0);
+        const vertices=[[left,bottom-height],[left,bottom],[left+span,bottom]];
+        const names=index?'PQR':'ABC';
+        const color=index?(isCongruent?teal:plum):ink;
+        polygon(svg,names,vertices,color,index?(isCongruent?largeFill:'#f8edf1'):smallFill);
+        const square=Math.min(rem*.47,height*.26,span*.26);
+        svg.append(shape('polyline',{points:pointsOf([[left,bottom-square],[left+square,bottom-square],[left+square,bottom]]),
+          stroke:color,fill:'none','stroke-width':'1.25','data-dg-obstacle':'right-angle-'+names[1]}));
+        const mid=center(vertices);
+        [...names].forEach((name,i)=>placements.push(label(name,name,vertices[i],subtract(vertices[i],mid),'vertex',color)));
+        corresponding[index].forEach((name,i)=>{
+          entries[index][i].textContent=`${name} = ${Number(lengths[i].toFixed(2))}`;
+        });
+      }
+      svg.dataset.dgFactor=String(k);
+      guard.place(svg,placements);
+    })};
+  }
+
   function preview(host,description,id,language){
     const svg=scene(id+'-preview',description,'g10ch4-glance-svg');
     setFrame(svg,300,97);
@@ -200,5 +244,5 @@
       guard.place(svg,placements);
     });
   }
-  window.TriggleG10DiagramGuard=Object.freeze({lab,preview,rectangle});
+  window.TriggleG10DiagramGuard=Object.freeze({lab,scaleLab,preview,rectangle});
 })();
