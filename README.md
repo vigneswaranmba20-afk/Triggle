@@ -1,6 +1,12 @@
-# Triggle
+# Triggle — Samacheer Kalvi Mathematics (Grades 9 & 10)
 
-Triggle — Mathematics Made Clear. The public student site currently supports Tamil Nadu State Board Grades **9 and 10** in English and Tamil.
+Triggle is an independent, free learning application from VER labs for Tamil Nadu State Board Samacheer Kalvi Mathematics in English and Tamil.
+
+**சமச்சீர் கல்வி கணிதம் — 9 மற்றும் 10 ஆம் வகுப்புகள்**
+
+Open Triggle in Chrome on Android and select **Install Triggle** on the home page. Follow the browser’s installation prompt or its menu instructions. Previously opened lessons can reopen offline after the device finishes caching them. Progress and language preferences stay on the device. [Open Triggle](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html) · [Release and recovery](docs/VER_SPEEDGUARD.md)
+
+© 2026 VER labs
 
 Grades 11 and 12 are deferred while the new syllabus is pending (tentatively revisited around May 2027). Existing higher-grade source records remain in the repository for historical reference, but their student routes are disabled. The student interface for active Grades 9–10 shows Exercises and Unit Exercises, not a separate Worked Examples section. Original authored example records remain archived in source for preservation. Each available exercise question has one standard worked solution and a compact Easy, Medium or Difficult indicator. Difficulty reflects mathematical demands and never hides required working. Explanation-mode switching is discontinued. See [the implementation audit and review notes](docs/STANDARD_SOLUTIONS_2026-11-11.md).
 

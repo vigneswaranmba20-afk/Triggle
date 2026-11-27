@@ -253,7 +253,7 @@ html[lang=ta] .home-active .home-grade-label { font-size: clamp(1.25rem, 2.4vw, 
     width: 100%;
     mask-image: none;
     background: linear-gradient(180deg, #f0f3e8fa, #f0f3e8e8 23%, #f0f3e82a 48%, transparent 63%),
-                url("home-studio.webp") right 60% / cover no-repeat;
+                url("home-studio-mobile.webp") right 60% / cover no-repeat;
   }
   .home-cover-type { padding: clamp(.9rem, 4.4vw, 1.6rem); }
   .home-cover-type p { font-size: .72rem; margin-bottom: .22rem; letter-spacing: .1em; }

@@ -87,6 +87,8 @@ jobs:
       - run: npm ci
       - name: Check site syntax, links, bilingual UI and offline assets
         run: node site/tools/check_site.cjs
+      - name: Check VER SpeedGuard asset and manifest budgets
+        run: node site/tools/test_speedguard.cjs
       - name: Run precisely scoped unit and curriculum tests
         env:
           TEST_TIER: ${{ needs.plan.outputs.tier }}
@@ -219,6 +221,9 @@ jobs:
       - name: WebKit coordinate line and construction figures
         if: matrix.shard == 2
         run: node site/tools/test_g10_ch5_line_figures_browser.cjs --webkit
+      - name: Check VER SpeedGuard in Chromium
+        if: matrix.shard == 3
+        run: node site/tools/test_speedguard.cjs --browser
       - name: Run assigned browser partition without repeating unit tests
         env:
           BROWSER_SHARD_INDEX: ${{ matrix.shard }}
