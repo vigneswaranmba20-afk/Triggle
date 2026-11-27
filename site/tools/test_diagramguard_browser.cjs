@@ -572,6 +572,10 @@ async function sightLineGeometry(page,base,profiles){
 
 async function statisticsPlotGeometry(page, base, profiles, full=false) {
   const route = base + '/index.html?class=10&chapter=g10-ch8&section=concepts&concept=';
+  await page.addInitScript(()=>{
+    const language=new URLSearchParams(location.search).get('diagramguardLanguage');
+    if(language==='en'||language==='ta')localStorage.setItem('triggle-language',language);
+  });
   const kinds = ['frequency','spread','spread','spread','scale','scale','frequency'];
   const selections = {
     frequency: (full ? [1,2,3,4,5] : [1,5]).map(n => [n,0]),
@@ -583,8 +587,8 @@ async function statisticsPlotGeometry(page, base, profiles, full=false) {
     await page.setViewportSize({width,height});
     for(const index of full ? kinds.keys() : [0,1,4]){
       const kind=kinds[index];
-      await page.goto(route+index);
-      await setLanguage(page,lang);
+      await page.goto(route+index+'&diagramguardLanguage='+lang);
+      await page.locator(`html[lang="${lang}"] #${lang==='ta'?'langTa':'langEn'}[aria-pressed="true"]`).waitFor({state:'attached'});
       await settle(page,percent);
       const chart=page.locator('.g10ch8-graphic[data-dg-ready]');
       await chart.waitFor();
