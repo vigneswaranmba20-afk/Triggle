@@ -56,6 +56,7 @@ async function verify(container, points, regions, options, lang, percent, contex
     const keyBox=key.getBoundingClientRect();
     const angle=svg.querySelector('[data-dg-obstacle="right-angle"]');
     const crossing=svg.querySelector('[data-dg-construction-point="crossing"]');
+    const caption=svg.closest('dialog')?.querySelector('#coordinateFigureCaption');
     return {
       audit, desc:svg.getAttribute('aria-label'),
       plot:Object.fromEntries([...svg.querySelectorAll('[data-dg-point]')].map(el=>[el.dataset.dgPoint,point(el)])),
@@ -72,6 +73,7 @@ async function verify(container, points, regions, options, lang, percent, contex
       })),
       keyLabel:key.getAttribute('aria-label'), keyEntries:children.map(el=>el.textContent),
       keyFont:parseFloat(getComputedStyle(key).fontSize),
+      keyColor:getComputedStyle(key).color,captionColor:caption?getComputedStyle(caption).color:null,
       keyBelow:keyBox.top>=box.bottom-.5, keyOverflow:key.scrollWidth-key.clientWidth,
       titleClear:!svg.closest('dialog')||svg.closest('dialog').querySelector('.dialog-header')
         .getBoundingClientRect().bottom<=box.top+.5,
@@ -87,6 +89,8 @@ async function verify(container, points, regions, options, lang, percent, contex
   assert(actual.desc.length>15 && (lang==='en'||/[\u0B80-\u0BFF]/.test(actual.desc)),context+' localized description');
   assert(actual.keyBelow && actual.keyOverflow<=1 && actual.pageOverflow<=1 && actual.titleClear,context+' reflow');
   near(actual.keyFont,14*percent/100,context+' key font');
+  assert.equal(actual.keyColor,'rgb(24, 27, 32)',context+' Chroma primary text');
+  if(actual.captionColor)assert.equal(actual.captionColor,'rgb(64, 70, 80)',context+' Chroma caption');
   assert(Math.abs(actual.aspect[0]-actual.aspect[1])<.005,context+' viewport aspect');
   const entries=Object.entries(points);
   const [[first,a],[second,b]]=entries;
