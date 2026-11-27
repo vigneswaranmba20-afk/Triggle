@@ -48,11 +48,16 @@ jobs:
           "$sdkmanager" --install "$image" emulator platform-tools
           echo no | avdmanager create avd --force --name triggle-qa --package "$image" --path "$ANDROID_AVD_HOME/triggle-qa.avd"
           "$ANDROID_HOME/emulator/emulator" -list-avds | grep -Fx triggle-qa
-          "$ANDROID_HOME/emulator/emulator" -avd triggle-qa -no-window -no-audio -no-boot-anim -no-snapshot -gpu swiftshader_indirect > "$RUNNER_TEMP/triggle-android-evidence/emulator.log" 2>&1 &
+          adb kill-server
+          adb keygen "$ANDROID_USER_HOME/adbkey"
+          export ADB_VENDOR_KEYS="$ANDROID_USER_HOME/adbkey"
+          adb start-server
+          "$ANDROID_HOME/emulator/emulator" -avd triggle-qa -no-window -no-audio -no-boot-anim -no-snapshot -no-metrics -gpu swiftshader_indirect > "$RUNNER_TEMP/triggle-android-evidence/emulator.log" 2>&1 &
           emulator_pid=$!
           deadline=$((SECONDS + 240))
           until [ "$(adb shell getprop sys.boot_completed 2>/dev/null | tr -d '\r')" = 1 ]; do
             if ! kill -0 "$emulator_pid" 2>/dev/null || ((SECONDS >= deadline)); then
+              adb devices -l
               tail -90 "$RUNNER_TEMP/triggle-android-evidence/emulator.log"
               exit 1
             fi
