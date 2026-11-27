@@ -332,6 +332,52 @@ async function conceptBoundaries(page,base){
   console.log('DiagramGuard: eight additional concept scenes checked for label bounds and construction invariants');
 }
 
+async function legacyBoundaryCases(page){
+  const files=[
+    'grade9-ch4/ex4-2-q8','grade9-ch5/ex5-1-q2-fig5-11','grade9-ch5/ex5-1-q3',
+    'grade10-ch1/ex1-4-q2-ta','grade10-geometry/ex4-1-q3-ta'
+  ];
+  const data=await page.evaluate(async files=>{
+    const host=document.body.appendChild(document.createElement('div'));
+    host.style.cssText='position:absolute;left:-2000px;top:0;pointer-events:none';
+    const root=host.attachShadow({mode:'closed'});
+    await document.fonts.load('16px "Triggle Noto Sans Tamil"','வடிவியல்');
+    await document.fonts.ready;
+    const results=[];
+    for(const file of files){
+      const response=await fetch('./assets/'+file+'.svg');
+      if(!response.ok)throw Error(file+' '+response.status);
+      root.innerHTML=await response.text();
+      const svg=root.querySelector('svg');
+      svg.style.cssText='display:block;height:auto';
+      const triangle=svg.querySelector('[data-dg-obstacle="triangle"]');
+      const bisectors=svg.querySelector('[data-dg-obstacle="bisectors"]');
+      const vertices=shape=>shape?Array.from(shape.points,p=>[p.x,p.y]):[];
+      for(const [lang,font] of [['en','system-ui, sans-serif'],['ta','"Triggle Noto Sans Tamil", system-ui, sans-serif']])
+      for(const scale of [100,200])for(const width of [240,300,480]){
+        svg.style.fontFamily=font;svg.style.fontSize=scale+'%';svg.style.width=width+'px';
+        const audit=window.TriggleDiagramGuard.audit(svg,{discover:true});
+        const issues=triangle?audit.issues:audit.issues.filter(issue=>issue.kind==='boundary');
+        results.push({file,lang,scale,width,issues,triangle:vertices(triangle),bisectors:vertices(bisectors)});
+      }
+    }
+    host.remove();
+    return results;
+  },files);
+  for(const {file,lang,scale,width,issues,triangle,bisectors} of data){
+    assert.deepEqual(issues,[],`${file} ${lang} ${scale}% at ${width}px`);
+    if(!triangle.length)continue;
+    const [a,b,c]=triangle;
+    const [start,o,end]=bisectors;
+    assert.deepEqual(start,b);
+    assert.deepEqual(end,c);
+    for(const [observed,expected] of [[angle(a,b,c),64],[angle(b,a,c),58],[angle(b,o,c),29],
+      [angle(c,a,o),29],[angle(o,b,c),122]])near(observed,expected,1e-5);
+    near(length(a,b),length(a,c),1e-5);
+  }
+  console.log(`DiagramGuard: ${data.length} additional SVG boundary checks and exact Grade 9 bisectors`);
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -346,9 +392,14 @@ async function main(){
       try{
         const page=await context.newPage();
         await page.goto(base+concept(1));
+        if(process.argv.includes('--boundaries-only')){
+          await legacyBoundaryCases(page);
+          return;
+        }
         if(width===390&&!live){
           await synthetic(page);
           await legacyCases(page);
+          await legacyBoundaryCases(page);
           await conceptBoundaries(page,base);
         }
         for(const lang of ['en','ta']){

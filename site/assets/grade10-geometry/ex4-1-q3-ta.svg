@@ -19,8 +19,8 @@
 <text x="112.000" y="89.000">H</text>
 <text x="130.000" y="151.000">28 m</text>
 <polyline class="guide" points="95.000,127.000 95.000,50.000"/>
-<text x="198.000" y="58.000">ஒளிக்கதிர்கள்</text>
-<text x="198.000" y="78.000">ஒரே திசை</text>
+<text x="235.000" text-anchor="middle" y="58.000">ஒளிக்கதிர்கள்</text>
+<text x="235.000" text-anchor="middle" y="78.000">ஒரே திசை</text>
 <polyline class="accent" points="220.000,90.000 246.000,129.000"/>
 <polyline class="accent" points="251.000,90.000 277.000,129.000"/>
   <text x="10.000" y="172.000">அளவுப்படி அல்ல</text>
