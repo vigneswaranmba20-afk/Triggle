@@ -1131,7 +1131,9 @@
       window.TriggleG10DiagramGuard.preview(host,label,id,lang);
       return;
     }
-    const svg=svgEl('svg',{viewBox:id==='bpt-thales'?'0 -7 300 111':'0 0 300 104',class:'g10ch4-glance-svg',role:'img','aria-label':label});
+    const viewBox=id==='bpt-thales'?'0 -7 300 111':
+      ['angle-bisector','converse-abt'].includes(id)?'0 0 300 112':'0 0 300 104';
+    const svg=svgEl('svg',{viewBox,class:'g10ch4-glance-svg',role:'img','aria-label':label});
     if(id==='similar-construction'){
       svg.append(
         svgEl('polygon',{points:'96,18 42,72 198,72',fill:'rgba(24,27,32,0.05)',stroke:'#181B20','stroke-width':'1.8'}),

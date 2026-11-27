@@ -19,6 +19,7 @@
 | Additional figure groups checked as standalone SVGs | 16 |
 | SVG variants in the standalone regression suite, including fallbacks | 23 |
 | Figures visually inspected through the student UI | 21 |
+| Archived raster figures visually inspected | 4 |
 | Interactive mode configurations across viewport, locale, text size and engine | 360 |
 | Known screenshot collisions reproduced and corrected | 2 of 2 |
 | Legacy SVG boundary flags before → after | 10 → 0 |
