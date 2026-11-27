@@ -146,12 +146,16 @@ for(const [chapter,modules] of Object.entries(visualModules)){
         .filter(Boolean).join(' | ');
       const coordinateActivity=key==='TRIGGLE_COORDINATE_LESSONS'&&
         stage.activity.options.some(option=>option.diagram?.points);
+      const unitEndpoints=key==='TRIGGLE_TRIGONOMETRY_LESSONS'&&
+        stage.activity.options.some(option=>option.diagram?.quarterCircle);
       if(graphic||stage.views||stage.activity||chapter==='g9-ch2'||chapter==='g9-ch9'||chapter==='g9-ch3'){
         const coordinate=coordinateActivity||id==='g9-ch5-distance-formula'||Boolean(quadraticSource);
         add(id+':concept',{id:id+':concept',chapter,source:src,
-          rendering:coordinate?'responsive SVG (assets/diagramguard-coordinate-plot.js)':'concept renderer '+renderer,
+          rendering:coordinate?'responsive SVG (assets/diagramguard-coordinate-plot.js)':
+            unitEndpoints?'responsive SVG endpoints and acute-angle concept renderer '+renderer:'concept renderer '+renderer,
           surface:'concept '+route+' interactive/visual',
-          qualification:coordinate||similaritySource||graphic==='similarity-criteria'?'DiagramGuard browser fixture':'unverified'});
+          qualification:coordinate||similaritySource||graphic==='similarity-criteria'?'DiagramGuard browser fixture':
+            unitEndpoints?'DiagramGuard unit-circle endpoint fixture':'unverified'});
       }
       if(stage.glanceVisual){
         const preview=stage.glanceVisual;

@@ -45,25 +45,20 @@
     90: ['1', '0', null, '1', null, '0']
   };
 
-  function unitCircle(angle, lang) {
-    const radius = 86;
-    const radians = angle * Math.PI / 180;
-    const x = Math.round(50 + radius * Math.cos(radians));
-    const y = Math.round(117 - radius * Math.sin(radians));
-    const description = lang === 'ta'
-      ? `ஆரம் 1 அலகு கொண்ட வட்டத்தின் முதல் காற்பகுதி. தேர்ந்தெடுத்த கோணம் ${angle} பாகை. P புள்ளியின் x ஆயத்தொலைவு cos மதிப்பு, y ஆயத்தொலைவு sin மதிப்பு.`
-      : `First quadrant of a circle of radius 1. The selected angle is ${angle} degrees. The x-coordinate of P gives cosine and the y-coordinate gives sine.`;
-    return `<svg viewBox="0 0 178 145" role="img" aria-label="${description}" xmlns="http://www.w3.org/2000/svg">
-      <path d="M50 117 L50 31 A86 86 0 0 1 136 117 Z" fill="#eef6ff" stroke="#286093" stroke-width="1.6"/>
-      <path d="M50 117 H152 M50 117 V17" fill="none" stroke="#286093" stroke-width="1.6"/>
-      <path d="M${x} ${y} V117" fill="none" stroke="#286093" stroke-width="1.6" stroke-dasharray="3 3"/>
-      <path d="M50 117 L${x} ${y}" stroke="#a44315" stroke-width="2.5"/>
-      <circle cx="${x}" cy="${y}" r="3.5" fill="#a44315"/>
-      <g fill="#153653" font-size="12">
-        <text x="37" y="132">O</text><text x="155" y="121">x</text><text x="46" y="13">y</text>
-        <text x="${x + 7}" y="${y - 5}">P</text><text x="110" y="136">${angle}°</text>
-      </g>
-    </svg>`;
+  function unitCircle(angle) {
+    return {
+      bounds: {xMin: 0, xMax: 1.25, yMin: 0, yMax: 1.25},
+      quarterCircle: true, referenceGrid: false, verticalAxis: true, axisNames: ['x', 'y'], key: false,
+      points: {P: angle === 0 ? [1, 0] : [0, 1]}, constructionPoints: {O: [0, 0]},
+      segments: ['OP'], segmentColors: {OP: '#9a4d1e'}, activePoint: 'P',
+      directions: {P: angle === 0 ? [[0, -1], [1, 0], [0, 1]] : [[1, 0], [-1, 0], [0, -1]]},
+      description: words(
+        `First quadrant of a unit circle at ${angle}°. The x-coordinate of P gives cosine and the y-coordinate gives sine.`,
+        `ஓரலகு வட்டத்தின் முதல் காற்பகுதியில் ${angle}° கோணம். P புள்ளியின் x ஆயத்தொலைவு cos மதிப்பு, y ஆயத்தொலைவு sin மதிப்பு.`
+      ),
+      annotationLabel: words('Selected angle', 'தேர்ந்தெடுத்த கோணம்'),
+      annotations: [`θ = ${angle}°`]
+    };
   }
 
   function specialTriangle(angle, lang) {
@@ -105,7 +100,7 @@
       label: words(`${angle}°`, `${angle}°`),
       result,
       math: '\\begin{gathered}' + lines.join('\\\\') + '\\end{gathered}',
-      diagram: lang => angle === 0 || angle === 90 ? unitCircle(angle, lang) : specialTriangle(angle, lang)
+      diagram: angle === 0 || angle === 90 ? unitCircle(angle) : lang => specialTriangle(angle, lang)
     };
   }
 

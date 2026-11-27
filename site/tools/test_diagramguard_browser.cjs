@@ -1349,6 +1349,47 @@ async function roadMidpoint(page,base,profiles){
   return checks;
 }
 
+async function unitCircleEndpoints(page,base,profiles){
+  let checks=0;
+  for(const [width,height] of profiles){
+    await page.setViewportSize({width,height});
+    for(const lang of ['en','ta']){
+      await page.goto(`${base}/index.html?class=9&chapter=g9-ch6&section=concepts&concept=1`);
+      await setLanguage(page,lang);
+      const buttons=page.locator('.g9-investigation-activity .sp2-answers button');
+      const plot='.g9-investigation-diagram svg.diagramguard-coordinate[data-dg-ready]';
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        for(const [index,angle,x,y] of [[3,0,1,0],[4,90,0,1]]){
+          await buttons.nth(index).click();
+          const result=await read(page,plot,percent);
+          if(lang==='ta')assert.match(result.description,/[஀-௿]/u);
+          assert.ok(['x','y','O','P'].every(id=>result.labels.some(label=>label.id===id)));
+          const info=await page.locator(plot).evaluate(svg=>{
+            const arc=svg.querySelector('[data-dg-quadrant]');
+            const node=svg.querySelector('[data-dg-point="P"]');
+            const key=svg.parentElement.querySelector('.diagramguard-coordinate-key');
+            return {arc:arc.getAttribute('d'),point:['cx','cy'].map(name=>Number(node.getAttribute(name))),
+              label:key.textContent,keyBelow:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5};
+          });
+          const [cx,cy]=result.lines['x-axis'];
+          const [x1,y1,x2,y2]=result.lines['y-axis'];
+          const radius=(result.lines['x-axis'][2]-cx)/1.25;
+          near(x1,x2);near(radius,(y1-y2)/1.25);
+          near(info.point[0],cx+x*radius);near(info.point[1],cy-y*radius);
+          const [left,top,rx,ry,,,sweep,right,bottom]=info.arc.match(/-?\d+(?:\.\d+)?(?:e[-+]?\d+)?/ig).map(Number);
+          near(left,cx);near(top,cy-radius);near(rx,radius);near(ry,radius);
+          near(right,cx+radius);near(bottom,cy);assert.equal(sweep,1);
+          assert(info.keyBelow);
+          assert.equal(info.label,`θ = ${angle}°`);
+          checks++;
+        }
+      }
+    }
+  }
+  return checks;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -1421,6 +1462,12 @@ async function main(){
           console.log(`DiagramGuard: ${checks} bilingual and responsive Grade 9 exercise angle states`);
           return;
         }
+        if(process.argv.includes('--unit-circle-endpoints')){
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await unitCircleEndpoints(page,base,profiles);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive unit-circle endpoint states`);
+          return;
+        }
         if(process.argv.includes('--similarity-scaling')){
           const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
           const checks=await similarityScaling(page,base,profiles);
@@ -1464,6 +1511,7 @@ async function main(){
           await grade9CoordinateActivities(page,base,[[320,844]]);
           await algebraQuadratics(page,base,[[320,844]]);
           await grade9Angles(page,base,[[320,844]]);
+          await unitCircleEndpoints(page,base,[[320,844]]);
           await page.setViewportSize({width,height});
         }
         for(const lang of ['en','ta']){

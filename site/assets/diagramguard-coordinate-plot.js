@@ -125,6 +125,14 @@
     svg.setAttribute('viewBox',`0 0 ${width} ${height}`);
     svg.replaceChildren();
 
+    if (config.quarterCircle) {
+      const [cx,cy]=toPlot(0,0), [right,top]=toPlot(1,1);
+      const arc=`M${cx} ${top} A${scale} ${scale} 0 0 1 ${right} ${cy}`;
+      svg.append(shape('path',{d:`${arc}L${cx} ${cy}Z`,fill:indigo,'fill-opacity':.07,
+        'data-dg-obstacle':'quadrant-fill','data-dg-fill':''}));
+      svg.append(shape('path',{d:arc,fill:'none',stroke:indigo,'stroke-width':1.6,
+        'data-dg-obstacle':'quadrant-arc','data-dg-quadrant':''}));
+    }
     if (circle) {
       const [center,radius] = circle;
       const [cx,cy] = toPlot(...center);
@@ -283,7 +291,9 @@
 
     if (walk) placements.push(...quadrantPlacements);
     guard.place(svg,[...placements,...secondaryTicks],walk&&quadrants?{gap:rem*.18}:undefined);
-    if (axes) drawGrid(svg,toPlot,{xMin,xMax,yMin,yMax},gridStep??(projections ? 1 : Math.max(1,Math.ceil(rem*.68/scale))));
+    if (axes && config.referenceGrid!==false) {
+      drawGrid(svg,toPlot,{xMin,xMax,yMin,yMax},gridStep??(projections ? 1 : Math.max(1,Math.ceil(rem*.68/scale))));
+    }
   }
 
   function drawProjections(svg, points, project, bounds, edgeLabels, rem, placements, secondaryTicks, walk) {
