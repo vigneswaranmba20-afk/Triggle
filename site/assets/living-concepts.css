@@ -5,9 +5,9 @@
 }
 .chapter-hub .lc-lab .lc-lab-title{
   margin:0 0 8px;font-size:11px!important;letter-spacing:.07em;
-  color:#5c4e83;text-transform:uppercase;font-weight:800
+  color:var(--text-secondary);text-transform:uppercase;font-weight:800
 }
-.chapter-hub .lc-instruction{font-size:14px;line-height:1.5;font-weight:750;margin:4px 0;color:#4e416e}
+.chapter-hub .lc-instruction{font-size:14px;line-height:1.5;font-weight:750;margin:4px 0;color:var(--text-explanation)}
 .chapter-hub .lc-scene{display:block;width:100%;height:auto;max-height:252px;margin:7px auto}
 .chapter-hub .lc-boundary{stroke:#8e7abc;fill:#fffefa;stroke-width:2.5}
 .chapter-hub .lc-set-label,.chapter-hub .lc-count-label{font:750 15px/1 system-ui,sans-serif;fill:#5a487c}
@@ -15,27 +15,27 @@
 .chapter-hub .lc-selected .lc-node{fill:#dff3e9;stroke:#37896e;stroke-width:3}
 .chapter-hub .lc-outsider{fill:#fff0e7;stroke:#ce8c68;stroke-width:2.5}
 .chapter-hub .lc-number{font:24px Georgia,serif;fill:#413658;text-anchor:middle}
-.chapter-hub .lc-vis-description{font-size:11px;line-height:1.45;color:#635776;margin:0 0 10px}
+.chapter-hub .lc-vis-description{font-size:11px;line-height:1.45;color:var(--text-secondary);margin:0 0 10px}
 .chapter-hub .lc-equation{
   display:flex;flex-wrap:wrap;gap:9px 14px;justify-content:center;align-items:center;
   background:#fff;border:1px solid #e4ddec;border-radius:12px;
   margin:12px 0 4px;padding:12px 8px;font-size:18px;min-height:52px;
 }
-.chapter-hub .lc-meaning{font:650 12px/1.5 system-ui,sans-serif;color:#645a77}
+.chapter-hub .lc-meaning{font:650 12px/1.5 system-ui,sans-serif;color:var(--text-secondary)}
 .chapter-hub .lc-tag{
   font:800 11px/1.4 system-ui,sans-serif;letter-spacing:.055em;
-  color:#6d5b99;margin:0 0 7px
+  color:var(--text-secondary);margin:0 0 7px
 }
 .chapter-hub .lc-detective{
   margin:12px 0 14px;border:1px solid #e3ddeb;border-radius:17px;
   padding:14px;background:#fff
 }
-.chapter-hub .lc-detective h5{font-size:17px;line-height:1.4;color:#362c52;margin:0 0 11px}
+.chapter-hub .lc-detective h5{font-size:17px;line-height:1.4;color:var(--text-primary);margin:0 0 11px}
 .chapter-hub .lc-rules{display:grid;gap:8px}
 .chapter-hub .lc-rules button{
   width:100%;min-height:48px;border:1px solid #dcd5e6;background:#fefcff;
   border-radius:11px;text-align:left;padding:10px 12px;font:700 13px/1.4 system-ui,sans-serif;
-  color:#443756;cursor:pointer
+  color:var(--text-primary);cursor:pointer
 }
 .chapter-hub .lc-rules button[aria-pressed=true]{
   background:#f1ebfb;border-color:#8d72c4;box-shadow:inset 0 0 0 1px #8d72c4
@@ -44,7 +44,7 @@
   margin:10px 0 0;padding:10px 12px;background:#faf1e9;
   border-radius:10px;font-size:13px;line-height:1.5;color:#65482e
 }
-.chapter-hub .lc-rule-feedback[data-correct=true]{background:#e9f5ee;color:#275a45}
+.chapter-hub .lc-rule-feedback[data-correct=true]{background:#e9f5ee;color:var(--text-correct)}
 .chapter-hub .lc-count-a,.chapter-hub .lc-count-b{
   fill:rgba(137,107,204,.13);stroke:#8069b4;stroke-width:2.5
 }
@@ -63,7 +63,7 @@
   font:750 16px Georgia,serif;fill:#46375d;text-anchor:middle
 }
 .chapter-hub .lc-d-legend{
-  color:#514466;font-size:12px;line-height:1.5;margin:0 2px 8px;text-align:center
+  color:var(--text-explanation);font-size:12px;line-height:1.5;margin:0 2px 8px;text-align:center
 }
 .chapter-hub .sp2-journey .lc-lab .sp2-demo-controls button{
   min-width:44px;min-height:47px;font-size:16px
@@ -75,7 +75,7 @@
 .chapter-hub .sp2-explanation summary,
 .chapter-hub .rnlab-pitfall summary{
   min-height:45px;padding:11px 14px;cursor:pointer;display:flex;align-items:center;
-  font:750 13px/1.5 system-ui,sans-serif;color:#5a4c78
+  font:750 13px/1.5 system-ui,sans-serif;color:var(--text-explanation)
 }
 .chapter-hub .rnlab-pitfall{
   margin:10px 0 4px;border:1px solid #e5deec;border-radius:13px;background:#fff;overflow:hidden

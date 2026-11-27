@@ -11,9 +11,9 @@
   --g9-ui-border: var(--bond-border, #d7d4cc);
   --g9-ui-ink: var(--bond-graphite, #22283b);
   --g9-ui-muted: var(--bond-muted, #566275);
-  --g9-ui-selected: rgba(160, 78, 80, .09);
-  --g9-ui-selected-border: #a04e50;
-  --g9-ui-focus: #ad5a58;
+  --g9-ui-selected: var(--bond-selection);
+  --g9-ui-selected-border: var(--text-navigation);
+  --g9-ui-focus: var(--text-navigation);
   --g9-ui-result: rgba(126, 139, 160, .1);
 }
 
@@ -47,7 +47,7 @@
   min-height: 46px;
   max-width: 100%;
   padding: .55rem .9rem;
-  border: 1px solid rgba(68, 82, 113, .35);
+  border: 1px solid var(--control-border);
   border-radius: 13px;
   background: var(--g9-ui-card);
   color: var(--g9-ui-ink);
@@ -285,7 +285,7 @@
 }
 .chapter-hub .g9-distance-lab .g9-distance-plot-note{
   margin:3px auto 5px; padding:0 4px; text-align:center;
-  font-size:clamp(12px,2.7vw,14px); line-height:1.4; color:#536173;
+  font-size:clamp(12px,2.7vw,14px); line-height:1.4; color:var(--text-secondary);
 }
 @media(max-width:390px){
   .chapter-hub .g9-distance-lab{padding:6px 5px 4px}

@@ -1,19 +1,18 @@
 /* VER Glyph v1.1. Shared student surfaces, controls and exercise reader. */
 body.ver-glyph {
-  /* The original ivory, graphite and indigo colours on the current layout. */
+  /* Keep the current layout connected to the shared textbook palette. */
   --ver-paper: var(--bond-ivory);
-  --ver-indigo: #37305E;
+  --ver-indigo: var(--text-navigation);
   --ver-gold: var(--bond-brass);
-  --ver-tint: #F6F1FD;
+  --ver-tint: var(--bond-tint);
   --ver-ink: var(--bond-graphite);
   --ver-white: var(--bond-white);
   --ver-muted: var(--bond-muted);
   --ver-divider: var(--bond-border);
-  --ver-control-edge: #82778F;
-  --ver-focus: #60547A;
+  --ver-control-edge: var(--control-border);
+  --ver-focus: var(--text-navigation);
   --ver-question-surface: #FAF9F6;
-  --ver-muted-gold: #745C29;
-  --ver-dialog-backdrop: rgb(30 26 47 / 48%);
+  --ver-dialog-backdrop: rgb(24 27 32 / 48%);
   --ver-space-1: .25rem;
   --ver-space-2: .5rem;
   --ver-space-3: .75rem;
@@ -331,7 +330,7 @@ body.ver-glyph.g10-ch2-type { --g10-ch2-text: var(--ver-font); }
   padding: .125em .2em;
   border-radius: var(--ver-radius);
   background: var(--ver-tint);
-  color: var(--ver-indigo);
+  color: var(--text-secondary);
   font-size: .8125rem;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
@@ -400,7 +399,7 @@ body.ver-glyph.g10-ch2-type { --g10-ch2-text: var(--ver-font); }
   max-block-size: 74dvh !important;
 }
 .ver-glyph #figureDialog .diagram-compare { background: var(--ver-tint); border-color: var(--ver-divider); }
-.ver-glyph #figureDialog :is(#diagramCompareLabel, #diagramCompareAnswer) { color: var(--ver-indigo); }
+.ver-glyph #figureDialog :is(#diagramCompareLabel, #diagramCompareAnswer) { color: var(--text-correct); }
 .ver-glyph #visualLessonDialog .vl-shell { background: var(--ver-paper); }
 .ver-glyph #visualLessonDialog .vl-header { background: var(--ver-white); border-color: var(--ver-divider); }
 
@@ -444,7 +443,7 @@ body.ver-glyph.textbook-reader .status-row .crumb-link {
   padding: var(--ver-space-1) 2px !important;
   border: 0;
   background: transparent;
-  color: var(--ver-indigo);
+  color: var(--text-secondary);
   font: 600 var(--ver-text-small)/1.35 var(--ver-font) !important;
   text-align: start;
   white-space: normal !important;
@@ -542,7 +541,7 @@ body.ver-glyph.textbook-reader .status-row .crumb-sep { display: inline !importa
 .ver-question-track span {
   display: block;
   block-size: 100%;
-  background: var(--ver-muted-gold);
+  background: var(--text-navigation);
   transition: inline-size var(--ver-motion) ease-out;
 }
 
@@ -706,7 +705,7 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
   text-transform: none;
 }
 .ver-glyph.textbook-reader #lessonCard .lesson-divider [data-i18n="stepByStep"] {
-  color: var(--ver-indigo) !important;
+  color: var(--text-primary) !important;
 }
 .ver-glyph #lessonCard #stepCount { color: var(--ver-muted); text-transform: none; }
 .ver-glyph.textbook-reader #lessonCard .worked-step {
@@ -721,13 +720,13 @@ body.ver-glyph.textbook-reader #lessonCard.lesson-card > #questionText {
   border: 0;
   border-radius: var(--ver-space-1);
   background: var(--bond-tint);
-  color: var(--ver-indigo);
+  color: var(--text-secondary);
   font-size: .8125rem;
   font-variant-numeric: tabular-nums;
 }
 body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
   margin: 0 0 var(--ver-space-1);
-  color: var(--ver-ink);
+  color: var(--text-explanation);
   font-family: var(--ver-font);
   font-size: var(--ver-text-body) !important;
   line-height: var(--ver-prose-leading) !important;
@@ -777,17 +776,19 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
   margin: var(--ver-space-2) 0 0;
   padding: var(--ver-space-2) !important;
   border: 0;
-  border-inline-start: 2px solid var(--ver-control-edge);
+  border-inline-start: 2px solid var(--text-correct);
   border-radius: var(--ver-space-1);
-  background: var(--ver-tint);
+  background: var(--surface-correct);
 }
 .ver-glyph.textbook-reader #lessonCard .final-answer-step .step-circle {
   background: transparent;
-  color: var(--ver-indigo);
+  color: var(--text-correct);
   font-size: 1.375rem;
   font-weight: 500;
 }
-.ver-glyph #lessonCard :is(.final-answer-label, .final-answer-value) { color: var(--ver-indigo); }
+.ver-glyph #lessonCard :is(.final-answer-label, .final-answer-value, .final-answer-value .triggle-tex-display) {
+  color: var(--text-correct);
+}
 .ver-glyph #lessonCard .final-answer-label { font-size: var(--ver-text-small); }
 .ver-glyph #lessonCard .twd-part-solution { background: var(--ver-tint); border-color: var(--ver-divider); }
 .ver-glyph .triggle-table-wrap {
@@ -800,7 +801,7 @@ body.ver-glyph.textbook-reader #lessonCard .worked-step .step-reason {
   font: 400 var(--ver-text-small)/var(--ver-prose-leading) var(--ver-font);
 }
 .ver-glyph .triggle-data-table :is(th, td) { border-color: var(--ver-divider); }
-.ver-glyph .triggle-data-table thead th { background: var(--ver-tint); color: var(--ver-indigo); }
+.ver-glyph .triggle-data-table thead th { background: var(--ver-tint); color: var(--text-primary); }
 
 .ver-glyph.textbook-reader #questionNavDock {
   container: ver-dock / inline-size;
@@ -950,4 +951,28 @@ body.ver-glyph.textbook-reader #questionNavDock #questionJump {
   .ver-glyph :is(.appbar *, .sidebar *, .discover-chapter, .discover-grade, .path-option,
     .hub-section-card, .hub-exercise-link, #lessonCard, #lessonCard button, #lessonCard summary,
     .ver-question-track span, #questionNavDock button) { transition: none !important; }
+}
+
+/* Apply the same evaluated states after chapter-specific choice styling. */
+.ver-glyph [data-answer-state="correct"] {
+  --answer-ink: var(--text-correct);
+  --answer-surface: var(--surface-correct);
+}
+.ver-glyph [data-answer-state="incorrect"] {
+  --answer-ink: var(--text-incorrect);
+  --answer-surface: var(--surface-incorrect);
+}
+.ver-glyph [data-answer-state] {
+  color: var(--answer-ink) !important;
+}
+.ver-glyph button[aria-pressed=true][data-answer-state] {
+  background: var(--answer-surface);
+  border-color: var(--answer-ink);
+  box-shadow: inset 0 0 0 1px var(--answer-ink);
+}
+.ver-glyph :is([role=status], [aria-live]):not(.triggle-mcq-feedback)[data-answer-state="correct"]::before {
+  content: "✓ " / "";
+}
+.ver-glyph :is([role=status], [aria-live]):not(.triggle-mcq-feedback)[data-answer-state="incorrect"]::before {
+  content: "✕ " / "";
 }

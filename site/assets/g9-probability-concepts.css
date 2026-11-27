@@ -28,7 +28,7 @@
   border: 1px solid #a99a9e;
   border-radius: 8px;
   background: #fff;
-  color: #3c2b33;
+  color: var(--text-primary);
   font: inherit;
   font-size: 0.94rem;
   font-weight: 650;
@@ -64,7 +64,7 @@
   border: 1px solid #d2c7cb;
   border-radius: 7px;
   background: #fff;
-  color: #3c2b33;
+  color: var(--text-primary);
   text-align: center;
   font-size: 0.94rem;
 }

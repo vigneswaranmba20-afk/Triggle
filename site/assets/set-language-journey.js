@@ -391,17 +391,21 @@
         '<p data-extra-feedback role="status" aria-live="polite"></p>'+
         '<div class="sp2-why" data-extra-why hidden>'+htmlMath(pick(item.why,lang))+'</div></div></details>';
       const choices=holder.querySelector('[data-extra-answers]');
+      const feedback=holder.querySelector('[data-extra-feedback]');
       item.choices.forEach((choice,i)=>{
         const button=document.createElement('button');
-        button.type='button';button.dataset.extraChoice=String(i);button.innerHTML=htmlMath(pick(choice,lang));button.setAttribute('aria-label',plain(pick(choice,lang)));
+        button.type='button';button.dataset.extraChoice=String(i);button.setAttribute('aria-pressed','false');button.innerHTML=htmlMath(pick(choice,lang));button.setAttribute('aria-label',plain(pick(choice,lang)));
         button.addEventListener('click',()=>{
           choices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
-          holder.querySelector('[data-extra-feedback]').textContent=i===item.correct?t.correct:t.retry;
+          const correct=i===item.correct;
+          window.TriggleFeedback.evaluate(button,feedback,correct);
+          feedback.textContent=correct?t.correct:t.retry;
         });
         choices.append(button);
       });
       holder.querySelector('[data-extra-hint]').addEventListener('click',()=>{
-        holder.querySelector('[data-extra-feedback]').textContent=pick(item.hint,lang);
+        window.TriggleFeedback.neutral(feedback);
+        feedback.textContent=pick(item.hint,lang);
       });
       holder.querySelector('[data-extra-why-button]').addEventListener('click',()=>{
         const target=holder.querySelector('[data-extra-why]');target.hidden=!target.hidden;
@@ -488,21 +492,24 @@
         '<div class="sp2-stage-reference">'+esc(t.source)+' '+esc(stage.section)+
         ' · '+esc(t.enPage)+' '+stage.page.en+' · '+esc(t.taPage)+' '+stage.page.ta+'</div>';
       const answers=panel.querySelector('[data-answers]');
+      const feedback=panel.querySelector('[data-feedback]');
       let wrongAttempts=0;
       stage.choices.forEach((choice,i)=>{
         const button=document.createElement('button');
-        button.type='button';button.dataset.choice=String(i);button.innerHTML=htmlMath(pick(choice,lang));button.setAttribute('aria-label',plain(pick(choice,lang)));
+        button.type='button';button.dataset.choice=String(i);button.setAttribute('aria-pressed','false');button.innerHTML=htmlMath(pick(choice,lang));button.setAttribute('aria-label',plain(pick(choice,lang)));
         button.addEventListener('click',()=>{
           answers.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
           const good=i===stage.correct;
-          if(good){panel.querySelector('[data-feedback]').textContent=t.correct;done.add(stage.id);save(done);updateProgress();}
+          window.TriggleFeedback.evaluate(button,feedback,good);
+          if(good){feedback.textContent=t.correct;done.add(stage.id);save(done);updateProgress();}
           else{wrongAttempts++;const guidance=' '+pick(wrongAttempts===1?stage.hint:stage.why,lang);
-            panel.querySelector('[data-feedback]').innerHTML=htmlMath(t.retry+guidance);}
+            feedback.innerHTML=htmlMath(t.retry+guidance);}
         });
         answers.append(button);
       });
       panel.querySelector('[data-hint]').addEventListener('click',()=>{
-        panel.querySelector('[data-feedback]').textContent=pick(stage.hint,lang);
+        window.TriggleFeedback.neutral(feedback);
+        feedback.textContent=pick(stage.hint,lang);
       });
       panel.querySelector('[data-why-button]').addEventListener('click',()=>{
         const target=panel.querySelector('[data-why]');target.hidden=!target.hidden;

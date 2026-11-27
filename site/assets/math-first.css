@@ -12,22 +12,22 @@
 .chapter-hub .hub-top-actions .hub-back-class{
  border:0!important;background:transparent!important;box-shadow:none!important;
  min-height:44px!important;padding:7px 2px!important;border-radius:6px!important;
- color:#4a3577!important;font-weight:750!important;text-decoration:none!important
+ color:var(--text-navigation)!important;font-weight:750!important;text-decoration:none!important
 }
 .chapter-hub .hub-top-actions button:hover{text-decoration:underline!important}
 .chapter-hub .hub-panel{padding-top:0!important}
 .chapter-hub .hub-quiz-progress{
  display:inline-flex;align-items:center;background:transparent!important;
  padding:4px 0!important;margin:0 0 7px!important;
- color:#5e526e!important;font-size:13px!important
+ color:var(--text-secondary)!important;font-size:13px!important
 }
 .chapter-hub .hub-quiz-question:first-of-type{margin-top:3px}
 .chapter-hub .hub-quiz-question{padding:12px!important}
 .chapter-hub .hub-quiz-question h4{font-size:16px!important;line-height:1.5!important}
 .chapter-hub .hub-quiz-answers button{font-size:15px!important}
 .chapter-hub .hub-content-status{border-top:1px solid #ebe8f0;padding:8px 0;margin:12px 0 0}
-.chapter-hub .hub-content-status summary{min-height:44px;font-size:13px;font-weight:720;cursor:pointer;color:#65567d;display:flex;align-items:center}
-.chapter-hub .hub-content-status p{font-size:13px!important;color:#5f576c;line-height:1.55}
+.chapter-hub .hub-content-status summary{min-height:44px;font-size:13px;font-weight:720;cursor:pointer;color:var(--text-navigation);display:flex;align-items:center}
+.chapter-hub .hub-content-status p{font-size:13px!important;color:var(--text-explanation);line-height:1.55}
 
 /* Textbook thinking activities: single card, question, answer. No nested
    'Show worked answer' disclosure and no duplicate section introduction. */
@@ -38,7 +38,7 @@
 }
 .chapter-hub .activity-index-heading{
  font-size:18px!important;line-height:1.35!important;letter-spacing:-.02em;
- font-weight:680!important;color:#25243a!important;margin:2px 0 8px!important
+ font-weight:680!important;color:var(--text-primary)!important;margin:2px 0 8px!important
 }
 .chapter-hub .textbook-extra{
  margin:0!important;border:0!important;border-bottom:1px solid #e8e5ed!important;
@@ -48,7 +48,7 @@
 .chapter-hub .textbook-extra>summary{
  min-height:56px!important;box-sizing:border-box;padding:10px 3px!important;margin:0!important;
  font-size:15px!important;line-height:1.4!important;font-weight:550!important;
- color:#2e2d40!important;cursor:pointer;display:grid!important;
+ color:var(--text-primary)!important;cursor:pointer;display:grid!important;
  grid-template-columns:34px minmax(0,1fr) 20px;gap:10px;align-items:center;list-style:none!important;
  text-align:start;background:transparent!important;border:0!important;border-radius:8px!important
 }
@@ -62,11 +62,11 @@
 .chapter-hub .textbook-extra[data-activity-kind="thinking"] .activity-mark{background:#f7edd9;color:#795616}
 .chapter-hub .textbook-extra[data-activity-kind="progress"] .activity-mark{background:#e6f0e9;color:#285a43}
 .chapter-hub .textbook-extra>summary .activity-copy{display:grid;gap:2px;min-width:0;overflow-wrap:anywhere}
-.chapter-hub .textbook-extra>summary .activity-kicker{font-size:11px;line-height:1.4;font-weight:600;color:#61596f}
+.chapter-hub .textbook-extra>summary .activity-kicker{font-size:11px;line-height:1.4;font-weight:600;color:var(--text-secondary)}
 .chapter-hub .textbook-extra>summary .activity-title{font-size:15px;line-height:1.4;font-weight:550}
-.chapter-hub .textbook-extra>summary .activity-translation-note{font-size:11px;line-height:1.4;font-weight:500;color:#6a4f19}
+.chapter-hub .textbook-extra>summary .activity-translation-note{font-size:11px;line-height:1.4;font-weight:500;color:var(--text-secondary)}
 .chapter-hub .textbook-extra>summary .activity-toggle{
- width:20px;height:20px;display:grid;place-items:center;color:#736a81;font-size:18px;line-height:1;font-weight:400
+ width:20px;height:20px;display:grid;place-items:center;color:var(--text-secondary);font-size:18px;line-height:1;font-weight:400
 }
 .chapter-hub .textbook-extra>summary .activity-toggle::before{content:"+"}
 .chapter-hub .textbook-extra[open]>summary .activity-toggle::before{content:"−"}
@@ -74,7 +74,7 @@
 @media(hover:hover){.chapter-hub .textbook-extra>summary:hover{background:#f8f7fa!important}}
 .chapter-hub .textbook-extra>.task-question{
  margin:12px 4px 8px!important;font-size:16px!important;
- line-height:1.6!important;font-weight:600;color:#302d44!important;
+ line-height:1.6!important;font-weight:600;color:var(--text-primary)!important;
  white-space:pre-line;overflow-wrap:anywhere
 }
 .chapter-hub .textbook-extra .task-solution{
@@ -82,10 +82,10 @@
  background:#f8f6fd;border-radius:0 8px 8px 0;padding:12px;min-width:0
 }
 .chapter-hub .textbook-extra .task-solution-label{
- font-size:13px;line-height:1.3;color:#58417f;margin:0 0 7px;font-weight:800
+ font-size:13px;line-height:1.3;color:var(--text-primary);margin:0 0 7px;font-weight:800
 }
 .chapter-hub .textbook-extra .task-answer{
- color:#343148;font-size:15px;line-height:1.65;overflow-wrap:anywhere
+ color:var(--text-explanation);font-size:15px;line-height:1.65;overflow-wrap:anywhere
 }
 .chapter-hub .textbook-extra .task-answer p{
  font-size:15px!important;line-height:1.65!important;
@@ -97,21 +97,21 @@
 }
 .chapter-hub .task-source-details summary{
  min-height:32px!important;font-size:12px!important;font-weight:700!important;
- color:#645a71!important;list-style-position:inside;cursor:pointer
+ color:var(--text-navigation)!important;list-style-position:inside;cursor:pointer
 }
 .chapter-hub .task-source-details p{
- color:#625773!important;font-size:12px!important;line-height:1.5!important;margin:5px 0!important
+ color:var(--text-explanation)!important;font-size:12px!important;line-height:1.5!important;margin:5px 0!important
 }
 .activity-table-scroll{max-width:100%;overflow-x:auto;scrollbar-width:thin;outline-offset:3px}
 .activity-cardinality-table{
  width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums;
  min-width:360px;text-align:center;background:#fff;border-radius:8px;overflow:hidden
 }
-.activity-cardinality-table caption{font-size:12px;font-weight:800;color:#564574;text-align:left;padding:4px 0 8px}
+.activity-cardinality-table caption{font-size:12px;font-weight:800;color:var(--text-secondary);text-align:left;padding:4px 0 8px}
 .activity-cardinality-table th,.activity-cardinality-table td{
  border:1px solid #ddd4ea;padding:7px 5px;white-space:nowrap
 }
-.activity-cardinality-table th{background:#eee9f9;color:#45335f;font-weight:800}
+.activity-cardinality-table th{background:#eee9f9;color:var(--text-primary);font-weight:800}
 .activity-cardinality-table tbody tr:nth-child(even){background:#faf8fe}
 
 /* The figure is a compact, translucent comparison sheet. The underlying
@@ -122,7 +122,7 @@
  width:min(96vw,660px)!important;max-width:660px;
  max-height:min(76dvh,650px)!important;overflow-y:auto!important;
  border:1px solid rgba(147,120,196,.75)!important;border-radius:20px!important;
- background:rgba(239,232,250,.68)!important;color:#2e2847;
+ background:rgba(239,232,250,.68)!important;color:var(--text-explanation);
  -webkit-backdrop-filter:blur(14px) saturate(1.15);
  backdrop-filter:blur(14px) saturate(1.15);
  box-shadow:0 10px 40px rgba(42,29,84,.17),inset 0 1px 0 rgba(255,255,255,.75)!important
@@ -137,21 +137,21 @@
 }
 .figure-dialog .dialog-header h3{font-size:16px!important;margin:2px 0!important}
 .figure-dialog .dialog-close{
- color:#b61949!important;background:#fff0f4!important;
- border:1px solid #df8da5!important;font-size:14px!important;
+ color:var(--text-navigation)!important;background:var(--surface-content)!important;
+ border:1px solid var(--control-border)!important;font-size:14px!important;
  min-height:44px!important;min-width:72px!important
 }
 .figure-dialog .diagram-content{padding:8px 12px 0!important;overflow-x:auto}
 .figure-dialog .diagram-content svg{max-height:280px;width:100%;height:auto}
 .figure-dialog .diagram-caption{
- font-size:12px!important;line-height:1.5!important;margin:5px 12px!important;color:#685e7b!important
+ font-size:12px!important;line-height:1.5!important;margin:5px 12px!important;color:var(--text-secondary)!important
 }
 .figure-dialog .diagram-compare{
  margin:8px 12px 12px;padding:10px 12px;border:1px solid #cfdfd6;
  border-radius:12px;background:rgba(244,252,248,.88)
 }
-.figure-dialog .diagram-compare strong{display:block;font-size:12px;color:#327d61;margin-bottom:5px}
-.figure-dialog .diagram-compare .math-answer{font-size:16px;line-height:1.5;color:#203b31}
+.figure-dialog .diagram-compare strong{display:block;font-size:12px;color:var(--text-correct);margin-bottom:5px}
+.figure-dialog .diagram-compare .math-answer{font-size:16px;line-height:1.5;color:var(--text-correct)}
 .figure-dialog button:focus-visible,.activity-table-scroll:focus-visible{outline:3px solid #7351b9;outline-offset:2px}
 
 @media(max-width:800px){
@@ -248,7 +248,7 @@
  body.textbook-reader .page-controls .all-chapters-button{
   min-height:48px!important;padding:5px!important;font-size:16px!important;
   border:0!important;box-shadow:none!important;background:transparent!important;
-  color:#5b447c!important
+  color:var(--text-navigation)!important
  }
  body.textbook-reader .page-controls .all-chapters-button .nav-arrow{font-size:16px!important}
  body.textbook-reader .page-controls .page-button{
@@ -292,7 +292,7 @@ body.textbook-reader .question-return button{
  width:auto!important;max-width:100%!important;min-height:44px!important;
  padding:6px 8px!important;font-size:15px!important;line-height:1.35!important;
  font-weight:750!important;text-align:left!important;white-space:normal!important;
- color:#584677!important;border:0!important;border-radius:9px!important;
+ color:var(--text-navigation)!important;border:0!important;border-radius:9px!important;
  background:transparent!important;box-shadow:none!important
 }
 body.textbook-reader .question-return button:hover{background:#f3eefb!important}

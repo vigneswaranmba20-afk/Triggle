@@ -329,17 +329,18 @@ function mount(container,chapter,language,onBack,initialConcept=null,onConcept=n
   const choices=panel.querySelector('[data-answers]'),feedback=panel.querySelector('[data-feedback]'),explanation=panel.querySelector('[data-explanation]');
   let wrongAttempts=0;
   stage.choices.forEach((opt,j)=>{
-   const button=document.createElement('button');button.type='button';button.dataset.choice=String(j);
+   const button=document.createElement('button');button.type='button';button.dataset.choice=String(j);button.setAttribute('aria-pressed','false');
    button.innerHTML=notation(pick(opt,lang));button.setAttribute('aria-label',pick(opt,lang));
    button.addEventListener('click',()=>{
     const correct=j===stage.correct;
     choices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+    window.TriggleFeedback.evaluate(button,feedback,correct);
     if(correct){feedback.textContent=t.right;done.add(stage.id);save(done);update();explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=false;}
     else{wrongAttempts++;const clue=' '+pick(wrongAttempts===1?stage.hint:stage.why,lang);
       feedback.innerHTML=notation(t.wrong+clue);}
    });choices.append(button);
   });
-  panel.querySelector('[data-hint]').addEventListener('click',()=>{feedback.innerHTML=notation(pick(stage.hint,lang));});
+  panel.querySelector('[data-hint]').addEventListener('click',()=>{window.TriggleFeedback.neutral(feedback);feedback.innerHTML=notation(pick(stage.hint,lang));});
   panel.querySelector('[data-why]').addEventListener('click',()=>{explanation.innerHTML=notation(pick(stage.why,lang));explanation.hidden=!explanation.hidden;});
   const related=chapterQuestions.find(question=>question.id===stage.practiceId);
   if(related&&typeof onQuestion==='function'){
