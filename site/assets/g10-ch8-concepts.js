@@ -79,7 +79,7 @@
     return value;
   }
 
-  function dotPlot(host, title, meanLabel) {
+  function dotPlot(host, title, meanLabel, [min, max]) {
     const svg = graphic(host, title, 126);
     svg.classList.add('diagramguard-svg');
     const legend = element('div', '', host);
@@ -92,59 +92,84 @@
     const meanText = element('span', '', entry);
     const chartNumber = value => display(value).replace('-', '−');
     let model;
+    let paintData;
     const refresh = window.TriggleDiagramGuard.responsive(svg, (width, rem) => {
-      if (!model) return;
-      const {values, limits: [min, max], mean} = model;
-      const tickFont = .875 * rem * 300 / width;
-      const inset = Math.max(24, tickFont);
-      const x = value => inset + (value - min) / (max - min) * (300 - 2 * inset);
-      svg.setAttribute('viewBox', `0 0 300 ${105 + tickFont * 1.58}`);
       svg.replaceChildren();
-      vector('line', {x1: x(min), x2: x(max), y1: 90, y2: 90, class: 'g10ch8-axis'}, svg);
-      for (const i of range(0, 4)) {
-        const tick = min + i * (max - min) / 4;
-        vector('line', {x1: x(tick), x2: x(tick), y1: 90, y2: 97, class: 'g10ch8-axis'}, svg);
-        const text = label(svg, x(tick), 102 + tickFont * 1.08, chartNumber(tick), {'data-dg-label': chartNumber(tick)});
+      const axes = vector('g', {}, svg);
+      const marks = vector('g', {}, svg);
+      const unit = 300 / width;
+      const tickFont = .875 * rem * unit;
+      const padding = 3 * unit;
+      const ticks = range(0, 4).map(i => min + i * (max - min) / 4);
+      const labels = ticks.map(value => {
+        const name = chartNumber(value);
+        const text = label(svg, 0, 0, name, {'data-dg-label': name});
         text.style.fontSize = tickFont + 'px';
         text.style.fontWeight = '500';
+        return text;
+      });
+      const boxes = labels.map(text => text.getBBox());
+      const insetLeft = Math.max(24, -boxes[0].x + padding);
+      const insetRight = Math.max(24, boxes[4].x + boxes[4].width + padding);
+      const x = value => insetLeft + (value - min) / (max - min) * (300 - insetLeft - insetRight);
+      const ascent = Math.max(...boxes.map(box => -box.y));
+      const descent = Math.max(...boxes.map(box => box.y + box.height));
+      const rowHeight = ascent + descent + padding;
+      const rightEdges = [];
+      vector('line', {x1: x(min), x2: x(max), y1: 90, y2: 90, class: 'g10ch8-axis'}, axes);
+      for (const [index, value] of ticks.entries()) {
+        const anchor = x(value);
+        const box = boxes[index];
+        let row = rightEdges.findIndex(edge => edge + padding <= anchor + box.x);
+        if (row < 0) row = rightEdges.length;
+        rightEdges[row] = anchor + box.x + box.width;
+        vector('line', {x1: anchor, x2: anchor, y1: 90, y2: 97, class: 'g10ch8-axis'}, axes);
+        labels[index].setAttribute('x', anchor);
+        labels[index].setAttribute('y', 97 + padding + ascent + row * rowHeight);
       }
-      const meanX = x(mean);
-      vector('line', {x1: meanX, x2: meanX, y1: 18, y2: 90, class: 'g10ch8-mean'}, svg);
-      const occurrences = new Map();
-      for (const value of values) {
-        const level = occurrences.get(value) || 0;
-        vector('circle', {cx: x(value), cy: 78 - level * 13, r: 5, class: 'g10ch8-point'}, svg);
-        occurrences.set(value, level + 1);
-      }
+      svg.setAttribute('viewBox', `0 0 300 ${97 + padding + rightEdges.length * rowHeight}`);
+      paintData = () => {
+        marks.replaceChildren();
+        if (!model) return;
+        const {values, mean} = model;
+        const meanX = x(mean);
+        vector('line', {x1: meanX, x2: meanX, y1: 18, y2: 90, class: 'g10ch8-mean'}, marks);
+        const occurrences = new Map();
+        for (const value of values) {
+          const level = occurrences.get(value) || 0;
+          vector('circle', {cx: x(value), cy: 78 - level * 13, r: 5, class: 'g10ch8-point'}, marks);
+          occurrences.set(value, level + 1);
+        }
+      };
+      paintData();
+      if (document.fonts.status === 'loading') document.fonts.ready.then(refresh);
     });
-    return (values, limits, mean) => {
-      model = {values, limits, mean};
+    return (values, mean) => {
+      model = {values, mean};
       meanText.textContent = `${meanLabel} ${chartNumber(mean)}`;
-      refresh();
+      paintData?.();
     };
   }
 
   function distribution(host, kind, t) {
     const controls = element('div', '', host);
     const chart = element('div', '', host);
-    const updatePlot = dotPlot(chart, t.distribution, t.mean);
+    const limits = {frequency:[0,16],spread:[0,20],scale:[-20,20]}[kind];
+    const updatePlot = dotPlot(chart, t.distribution, t.mean, limits);
     const result = output(host);
     const render = () => {
-      let values, limits;
+      let values;
       if (kind === 'frequency') {
         values = [...Array(3).fill(4), ...Array(Number(primary.value)).fill(12)];
-        limits = [0, 16];
       } else if (kind === 'spread') {
         const d = Number(primary.value);
         values = [10 - d, 9, 10, 11, 10 + d];
-        limits = [0, 20];
       } else {
         const a = Number(primary.value), b = Number(shift.value);
         values = [2, 4, 6, 8].map(x => a * x + b);
-        limits = [-20, 20];
       }
       const summary = stats(values);
-      updatePlot(values, limits, summary.mean);
+      updatePlot(values, summary.mean);
       result.textContent = `${t.values} ${values.join(', ')}. ${t.mean} ${display(summary.mean)}. ${t.range} ${display(summary.range)}. ${t.variance} ${display(summary.variance)}. ${t.sd} ${display(summary.deviation)}.`;
     };
     const options = kind === 'frequency' ? [1, 2, 3, 4, 5] : kind === 'spread' ? [1, 2, 3, 4, 5, 6, 7, 8] : [-2, -1, 0, 1, 2];

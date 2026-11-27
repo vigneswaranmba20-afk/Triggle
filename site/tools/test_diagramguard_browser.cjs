@@ -596,6 +596,11 @@ async function statisticsPlotGeometry(page, base, profiles, full=false) {
       await settle(page,percent);
       const chart=page.locator('.g10ch8-graphic[data-dg-ready]');
       await chart.waitFor();
+      if(width===320&&percent===200&&kind==='scale'){
+        await page.addStyleTag({content:'.g10ch8-graphic [data-dg-label] { font-family:monospace; letter-spacing:.19em }'});
+        await chart.evaluate(svg=>{svg.style.width='calc(100% - 2px)';});
+        await settle(page,percent);
+      }
       const sliders=page.locator('.g10ch8-range');
       for(const [first,shift] of selections[kind]){
         for(const [control,value] of (kind==='scale' ? [first,shift] : [first]).entries()){
@@ -608,12 +613,15 @@ async function statisticsPlotGeometry(page, base, profiles, full=false) {
           const attr=(node,key)=>Number(node.getAttribute(key));
           const axis=svg.querySelector('.g10ch8-axis'), meanLine=svg.querySelector('.g10ch8-mean');
           const key=svg.parentElement.querySelector('.g10ch8-legend');
+          const plotBounds=svg.getBoundingClientRect();
+          const container=svg.closest('.g10ch8-lab').getBoundingClientRect();
           return {audit:window.TriggleDiagramGuard.audit(svg,{discover:true}),
             points:[...svg.querySelectorAll('.g10ch8-point')].map(dot=>[attr(dot,'cx'),attr(dot,'cy')]),
             axis:[attr(axis,'x1'),attr(axis,'x2')], mean:attr(meanLine,'x1'),
             key:key.textContent, keySize:parseFloat(getComputedStyle(key).fontSize),
             keyBelow:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
-            overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};
+            overflow:Math.max(container.left-plotBounds.left,plotBounds.right-container.right,
+              document.documentElement.scrollWidth-document.documentElement.clientWidth)};
         });
         const values=kind==='frequency' ? [4,4,4,...Array(first).fill(12)] :
           kind==='spread' ? [10-first,9,10,11,10+first] : [2,4,6,8].map(x=>first*x+shift);
@@ -776,7 +784,8 @@ async function main(){
           return;
         }
         if(process.argv.includes('--statistics')){
-          const checks=await statisticsPlotGeometry(page,base,viewports,true);
+          const profiles=process.argv.includes('--mobile-only')?[[320,844]]:viewports;
+          const checks=await statisticsPlotGeometry(page,base,profiles,true);
           console.log(`DiagramGuard: ${checks} bilingual and responsive statistics plot states`);
           return;
         }
