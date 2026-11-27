@@ -1,0 +1,154 @@
+{
+ "schemaVersion": 1,
+ "engine": "TRACE MathGuard V1.4c",
+ "gitCommit": "1300f61",
+ "confirmedMathematicalErrors": [],
+ "confirmedTamilPlaceholderQueue": [
+  {
+   "questionId": "g9-ch5-ex5.2-q2",
+   "grade": 9,
+   "chapter": "5",
+   "contentHash": "2e50ef8721ae2d39",
+   "issueType": "missing_or_placeholder_tamil_explanation",
+   "tamilFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script"
+   ],
+   "recommendedAction": "Codex to author verified Tamil translation for question and steps from 2025 Tamil textbook.",
+   "status": "PROPOSED_DO_NOT_AUTO_APPLY"
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q3",
+   "grade": 9,
+   "chapter": "5",
+   "contentHash": "44080641a2129c6f",
+   "issueType": "missing_or_placeholder_tamil_explanation",
+   "tamilFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ],
+   "recommendedAction": "Codex to author verified Tamil translation for question and steps from 2025 Tamil textbook.",
+   "status": "PROPOSED_DO_NOT_AUTO_APPLY"
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q5",
+   "grade": 9,
+   "chapter": "5",
+   "contentHash": "3f85573f78392f21",
+   "issueType": "missing_or_placeholder_tamil_explanation",
+   "tamilFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script",
+    "step_7_missing_tamil_script",
+    "step_8_missing_tamil_script"
+   ],
+   "recommendedAction": "Codex to author verified Tamil translation for question and steps from 2025 Tamil textbook.",
+   "status": "PROPOSED_DO_NOT_AUTO_APPLY"
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q6",
+   "grade": 9,
+   "chapter": "5",
+   "contentHash": "e523913214ef09ee",
+   "issueType": "missing_or_placeholder_tamil_explanation",
+   "tamilFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script",
+    "step_5_missing_tamil_script",
+    "step_6_missing_tamil_script",
+    "step_7_missing_tamil_script",
+    "step_8_missing_tamil_script",
+    "step_9_missing_tamil_script"
+   ],
+   "recommendedAction": "Codex to author verified Tamil translation for question and steps from 2025 Tamil textbook.",
+   "status": "PROPOSED_DO_NOT_AUTO_APPLY"
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q7",
+   "grade": 9,
+   "chapter": "5",
+   "contentHash": "62863d1a4383640f",
+   "issueType": "missing_or_placeholder_tamil_explanation",
+   "tamilFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script"
+   ],
+   "recommendedAction": "Codex to author verified Tamil translation for question and steps from 2025 Tamil textbook.",
+   "status": "PROPOSED_DO_NOT_AUTO_APPLY"
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q8",
+   "grade": 9,
+   "chapter": "5",
+   "contentHash": "78adde0d1a7ea51f",
+   "issueType": "missing_or_placeholder_tamil_explanation",
+   "tamilFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ],
+   "recommendedAction": "Codex to author verified Tamil translation for question and steps from 2025 Tamil textbook.",
+   "status": "PROPOSED_DO_NOT_AUTO_APPLY"
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q9",
+   "grade": 9,
+   "chapter": "5",
+   "contentHash": "ea25231ddf05db5a",
+   "issueType": "missing_or_placeholder_tamil_explanation",
+   "tamilFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script"
+   ],
+   "recommendedAction": "Codex to author verified Tamil translation for question and steps from 2025 Tamil textbook.",
+   "status": "PROPOSED_DO_NOT_AUTO_APPLY"
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q11",
+   "grade": 9,
+   "chapter": "5",
+   "contentHash": "87d8f9dd11e2d2a9",
+   "issueType": "missing_or_placeholder_tamil_explanation",
+   "tamilFlags": [
+    "missing_tamil_script",
+    "step_0_missing_tamil_script",
+    "step_1_missing_tamil_script",
+    "step_2_missing_tamil_script",
+    "step_3_missing_tamil_script",
+    "step_4_missing_tamil_script"
+   ],
+   "recommendedAction": "Codex to author verified Tamil translation for question and steps from 2025 Tamil textbook.",
+   "status": "PROPOSED_DO_NOT_AUTO_APPLY"
+  }
+ ],
+ "policy": "Zero confirmed mathematical errors in audited Grade 9/10 Ch 3, 5, 7. Placeholder Tamil items queued for Codex without overwriting active curriculum files."
+}

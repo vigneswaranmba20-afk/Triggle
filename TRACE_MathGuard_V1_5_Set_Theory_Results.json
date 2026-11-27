@@ -1,0 +1,3509 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.5",
+  "gitCommit": "0b7b1fa",
+  "grade": 9,
+  "chapter": "1",
+  "title": "Set Language",
+  "inventoryCounts": {
+    "totalRuntimeItems": 156,
+    "exercises": 120,
+    "nonExercises": 36,
+    "concepts": 7
+  },
+  "summary": {
+    "totalItems": 127,
+    "workingStatusCounts": {
+      "UNVERIFIABLE": 60,
+      "PARTIAL": 12,
+      "FAIL": 19,
+      "PASS": 36
+    },
+    "answerStatusCounts": {
+      "UNVERIFIABLE": 74,
+      "FAIL": 17,
+      "PASS": 36
+    },
+    "tamilStatusCounts": {
+      "PASS": 121,
+      "PARTIAL": 4,
+      "FAIL": 2
+    },
+    "claims": {
+      "total": 247,
+      "verified": 95,
+      "failed": 30,
+      "unsupported": 122,
+      "verifiedRatePct": 38.46
+    },
+    "ambiguityFlagCounts": {
+      "external_diagram_dependency": 3,
+      "possible_missing_universal_set": 3
+    }
+  },
+  "exercisesSummary": {
+    "totalItems": 120,
+    "workingStatusCounts": {
+      "UNVERIFIABLE": 53,
+      "PARTIAL": 12,
+      "FAIL": 19,
+      "PASS": 36
+    },
+    "answerStatusCounts": {
+      "UNVERIFIABLE": 67,
+      "FAIL": 17,
+      "PASS": 36
+    },
+    "tamilStatusCounts": {
+      "PASS": 114,
+      "PARTIAL": 4,
+      "FAIL": 2
+    },
+    "claims": {
+      "total": 247,
+      "verified": 95,
+      "failed": 30,
+      "unsupported": 122,
+      "verifiedRatePct": 38.46
+    },
+    "ambiguityFlagCounts": {
+      "external_diagram_dependency": 3,
+      "possible_missing_universal_set": 3
+    }
+  },
+  "conceptsSummary": {
+    "totalItems": 7,
+    "workingStatusCounts": {
+      "UNVERIFIABLE": 7
+    },
+    "answerStatusCounts": {
+      "UNVERIFIABLE": 7
+    },
+    "tamilStatusCounts": {
+      "PASS": 7
+    },
+    "claims": {
+      "total": 0,
+      "verified": 0,
+      "failed": 0,
+      "unsupported": 0,
+      "verifiedRatePct": 0.0
+    },
+    "ambiguityFlagCounts": {}
+  },
+  "records": [
+    {
+      "id": "g9-ch1-ex1.1-q1-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "A prime number is an integer greater than 1 with exactly two positive divisors.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "The condition is objective: for each integer from 1 to 100, divisibility decides",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Therefore the collection is well-defined and is a set.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "The description gives no fixed wealth threshold for the word 'rich'.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "Different people can classify the same person differently; membership is not una",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Therefore this description is not a well-defined set.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "The description uses a geographical criterion: a river is included when it is in",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "For a given river, its location can be checked against that criterion.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Hence the collection is treated as a well-defined set in this textbook context.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q1-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "The word 'good' has no stated objective performance standard.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "Different observers may disagree about whether a player qualifies.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Thus membership is subjective, so this is not a well-defined set.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Read the word INDIA and identify its letters.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "A set contains each distinct element only once, so remove any repeated letters.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Write the remaining letters inside curly brackets: {I, N, D, A}.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Read the word PARALLELOGRAM and identify its letters.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "A set contains each distinct element only once, so remove any repeated letters.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Write the remaining letters inside curly brackets: {P, A, R, L, E, O, G, M}.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Read the word MISSISSIPPI and identify its letters.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "A set contains each distinct element only once, so remove any repeated letters.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Write the remaining letters inside curly brackets: {M, I, S, P}.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q2-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Read the word CZECHOSLOVAKIA and identify its letters.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "A set contains each distinct element only once, so remove any repeated letters.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Write the remaining letters inside curly brackets: {C, Z, E, H, O, S, L, V, A, K",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "List the elements of C: {12, 14, 18, 20}.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "18 belongs to C.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Because ∈ means belongs to, the statement is true.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "List the elements of A: {0, 3, 5, 8}.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "6 does not belong to A.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Because ∉ means does not belong to, the statement is true.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "List the elements of C: {12, 14, 18, 20}.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "14 belongs to C.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Because ∉ means does not belong to, the statement is false.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "List the elements of B: {2, 4, 6, 10}.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "10 belongs to B.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Because ∈ means belongs to, the statement is true.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-v",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "List the elements of B: {2, 4, 6, 10}.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "5 does not belong to B.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Because ∈ means belongs to, the statement is false.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-a-vi",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "List the elements of B: {2, 4, 6, 10}.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "0 does not belong to B.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Because ∈ means belongs to, the statement is false.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Inspect the given set A = {0, 3, 5, 8}.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "3 is an element of A.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Fill the blank with A; the completed statement 3 ∈ A is true.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Inspect the given set C = {12, 14, 18, 20}.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "14 is an element of C.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Fill the blank with C; the completed statement 14 ∈ C is true.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Inspect the given set B = {2, 4, 6, 10}.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "18 is not an element of B.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Fill the blank with ∉; the completed statement 18 ∉ B is true.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q3-b-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Inspect the given set B = {2, 4, 6, 10}.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "4 is an element of B.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Fill the blank with ∈; the completed statement 4 ∈ B is true.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Even natural numbers are the positive whole numbers divisible by 2.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "List the even natural numbers less than 20: 2, 4, 6, 8, 10, 12, 14, 16 and 18.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Write the roster as A = {2, 4, 6, 8, 10, 12, 14, 16, 18}.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Here n is a natural number not greater than 5, so n = 1, 2, 3, 4, 5.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "Substitute each value of n into y = 1/(2n), giving 1/2, 1/4, 1/6, 1/8 and 1/10.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Write B = {[[1|2]], [[1|4]], [[1|6]], [[1|8]], [[1|10]]}.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Perfect cubes near the interval are 3³ = 27, 4³ = 64, 5³ = 125 and 6³ = 216.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "Because both inequalities are strict, exclude 27 and 216.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Only 64 and 125 remain, so C = {64, 125}.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q4-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "The symbol ℤ means integers, including negative numbers and zero.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "List all integers greater than –5 and at most 2: –4, –3, –2, –1, 0, 1, 2.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "The roster is D = {–4, –3, –2, –1, 0, 1, 2}.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Identify the common condition: the person is an Indian cricket player.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "Only include players with a double century in a One Day International, not other",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Use x for a qualifying player and state the membership rule inside braces.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Observe the pattern: numerators are 1, 2, 3 and denominators are one greater.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "For each natural number n, the fraction is n/(n+1).",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "The set-builder rule includes every such fraction as n runs through the natural ",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "The members are the named Tamil months of a year.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "Describe the property shared by every member instead of listing their names.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Use x to stand for a Tamil month and put that condition inside braces.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q5-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Whole numbers are 0, 1, 2 and so on; odd whole numbers below 9 are 1, 3, 5, 7.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "State both conditions: x is a whole number and x is odd, with x < 9.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Use the full rule to define E, retaining the strict upper bound.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Read the three members: January, June, and July.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "Each is the English name of a month beginning with the letter J.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Describe the common property in words without listing the individual months.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Check that every listed number is prime and larger than 5.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "The next prime after 29 is 31, so all displayed members lie strictly between 5 a",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Describe Q using that common numerical property.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "The symbol ℕ represents natural numbers.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "The restriction x < 5 allows 1, 2, 3, and 4.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Write the common property of these numbers in words.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.1-q6-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "The rule describes letters of the English alphabet.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 1,
+          "line": "The elements are the consonants, not the vowels.",
+          "evidence": "prose_only_unverified"
+        },
+        {
+          "step": 2,
+          "line": "Express this set in words as the set of English consonants.",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PARTIAL",
+      "tamil_flags": [
+        "en_ta_unit_mismatch"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "p,\\ q,\\ r,\\ s,\\ t,\\ u",
+          "evidence": "no_equality_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "n=0,1,2,3,4",
+          "evidence": "unparsed_rhs"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 1,
+      "unsupported_claims": 1,
+      "failed_details": [
+        {
+          "step": 2,
+          "claim": "n(Q) = 3",
+          "expected": 1,
+          "reason": "Cardinality mismatch"
+        }
+      ],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "n=3,4,5",
+          "evidence": "unparsed_rhs"
+        }
+      ],
+      "discrepancy": "Working failed: [{'step': 2, 'claim': 'n(Q) = 3', 'expected': 1, 'reason': 'Cardinality mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 1,
+      "unsupported_claims": 1,
+      "failed_details": [
+        {
+          "step": 2,
+          "claim": "n(R) = 4",
+          "expected": 10,
+          "reason": "Cardinality mismatch"
+        }
+      ],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "-5\\le x<5",
+          "evidence": "unverified_inequality"
+        }
+      ],
+      "discrepancy": "Working failed: [{'step': 2, 'claim': 'n(R) = 4', 'expected': 10, 'reason': 'Cardinality mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q1-v",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "1900\\div400\\notin\\mathbb Z",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "m=0,1,2,3,\\ldots",
+          "evidence": "unparsed_rhs"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 3,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "x\\in\\mathbb Z,\\quad x<5",
+          "evidence": "no_equality_relation"
+        },
+        {
+          "step": 1,
+          "line": "\\ldots,-3,-2,-1,0,1,2,3,4",
+          "evidence": "no_equality_relation"
+        },
+        {
+          "step": 2,
+          "line": "x<5\\ \\Rightarrow\\ x-1<5",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q2-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 2,
+      "failed_claims": 1,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 3,
+          "claim": "n(B) = 2",
+          "expected": 0,
+          "reason": "Cardinality mismatch"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 3, 'claim': 'n(B) = 2', 'expected': 0, 'reason': 'Cardinality mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q5-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "FAIL",
+      "tamil_flags": [
+        "step_1_semantic_number_mismatch:en=['5'],ta=['4']"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q6-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "\\varnothing",
+          "evidence": "no_equality_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q3-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "1<x<2,\\quad x\\in\\mathbb N",
+          "evidence": "no_equality_relation"
+        },
+        {
+          "step": 1,
+          "line": "A=\\varnothing",
+          "evidence": "unparsed_rhs"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q4-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "D=\\varnothing",
+          "evidence": "unparsed_rhs"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q5-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q5-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "2\\notin C",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q7",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q8-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q8-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q8-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q8-iv",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "E=\\varnothing",
+          "evidence": "unparsed_rhs"
+        },
+        {
+          "step": 1,
+          "line": "\\varnothing\\subseteq\\varnothing",
+          "evidence": "no_equality_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q9-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q9-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "x=1,2,\\ldots,10",
+          "evidence": "unparsed_rhs"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q10-i",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q10-ii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.2-q10-iii",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.3-q1",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [
+        "external_diagram_dependency",
+        "possible_missing_universal_set"
+      ],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.3-q2",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 8,
+      "verified_claims": 2,
+      "failed_claims": 6,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 1,
+          "claim": "A∪B = {2, 5, 6, 10, 14, 16}",
+          "expected": "{Fraction(0, 1), Fraction(1, 1), Fraction(10, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1), Fraction(6, 1), Fraction(7, 1), Fraction(8, 1), Fraction(9, 1)}",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 1,
+          "claim": "A∩B = {2, 14}",
+          "expected": "{Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1)}",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 3,
+          "claim": "A∪B = {a, b, c, e, i, o, u}",
+          "expected": "{Fraction(0, 1), Fraction(1, 1), Fraction(10, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1), Fraction(6, 1), Fraction(7, 1), Fraction(8, 1), Fraction(9, 1)}",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 3,
+          "claim": "A∩B = {a, e, u}",
+          "expected": "{Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1)}",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 7,
+          "claim": "A∪B = {a, c, e, g, h, i, m, o, r, s, t, y}",
+          "expected": "{Fraction(0, 1), Fraction(1, 1), Fraction(10, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1), Fraction(6, 1), Fraction(7, 1), Fraction(8, 1), Fraction(9, 1)}",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 7,
+          "claim": "A∩B = {e, m, t}",
+          "expected": "{Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1)}",
+          "reason": "Set operation mismatch"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 1, 'claim': 'A∪B = {2, 5, 6, 10, 14, 16}', 'expected': '{Fraction(0, 1), Fraction(1, 1), Fraction(10, 1), Fraction(2, 1), Fraction(3, 1), Fraction(4, 1), Fraction(5, 1), Fraction(6, 1), Fraction(7, 1), Fraction(8, 1), Fraction(9, 1)}', 'reason': 'Set operation mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.3-q3",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.3-q4",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.3-q5",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PARTIAL",
+      "tamil_flags": [
+        "en_ta_unit_mismatch"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.3-q6",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Y-X",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "(X-Y)\\cup(Y-X)",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.3-q7",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [
+        "external_diagram_dependency"
+      ],
+      "total_claims": 1,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Draw a rectangle for U and two overlapping circles within it. Label the left cir",
+          "evidence": "prose_only_unverified"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.4-q1",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 3,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.4-q2",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.4-q3",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PARTIAL",
+      "tamil_flags": [
+        "en_ta_unit_mismatch"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 4,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.4-q4",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 4,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.4-q5",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 0,
+      "failed_claims": 4,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 1,
+          "claim": "A∩B = {2,4,8}",
+          "expected": "∅",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 1,
+          "claim": "(A∩B)∩C = {2}",
+          "expected": "∅",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 2,
+          "claim": "B∩C = {2,6}",
+          "expected": "∅",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 2,
+          "claim": "A∩(B∩C) = {2}",
+          "expected": "∅",
+          "reason": "Set operation mismatch"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 1, 'claim': 'A∩B = {2,4,8}', 'expected': '∅', 'reason': 'Set operation mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.5-q1",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [
+        "external_diagram_dependency",
+        "possible_missing_universal_set"
+      ],
+      "total_claims": 6,
+      "verified_claims": 4,
+      "failed_claims": 2,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 3,
+          "claim": "(B∪C) = {4, 6}",
+          "expected": "{Fraction(-1, 1), Fraction(-2, 1), Fraction(-3, 1), Fraction(0, 1), Fraction(3, 1), Fraction(5, 1), Fraction(7, 1), Fraction(8, 1)}",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 4,
+          "claim": "(B∩C) = {−1, 3, 4, 6}",
+          "expected": "{Fraction(-2, 1), Fraction(8, 1)}",
+          "reason": "Set operation mismatch"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 3, 'claim': '(B∪C) = {4, 6}', 'expected': '{Fraction(-1, 1), Fraction(-2, 1), Fraction(-3, 1), Fraction(0, 1), Fraction(3, 1), Fraction(5, 1), Fraction(7, 1), Fraction(8, 1)}', 'reason': 'Set operation mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.5-q2",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PARTIAL",
+      "tamil_flags": [
+        "en_ta_unit_mismatch"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 6,
+      "verified_claims": 6,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.5-q3",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 5,
+      "verified_claims": 5,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.5-q4",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_answer_requires_full_context"
+    },
+    {
+      "id": "g9-ch1-ex1.5-q5",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 1,
+      "failed_claims": 1,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 0,
+          "claim": "(B∩C) = {b, c, e, h}",
+          "expected": "{'a', 'd', 'g'}",
+          "reason": "Set operation mismatch"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 0, 'claim': '(B∩C) = {b, c, e, h}', 'expected': \"{'a', 'd', 'g'}\", 'reason': 'Set operation mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.5-q6",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 2,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 1,
+          "claim": "B∩C = {12, 18}",
+          "expected": "∅",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 1,
+          "claim": "(B∩C) = {0, 6, 24, 30}",
+          "expected": "∅",
+          "reason": "Set operation mismatch"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 1, 'claim': 'B∩C = {12, 18}', 'expected': '∅', 'reason': 'Set operation mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.5-q7",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 1,
+      "failed_claims": 1,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 0,
+          "claim": "(B∪C) = {−2, 1, 3}",
+          "expected": "{Fraction(-1, 1), Fraction(0, 1), Fraction(2, 1), Fraction(5, 1), Fraction(6, 1), Fraction(7, 1)}",
+          "reason": "Set operation mismatch"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 0, 'claim': '(B∪C) = {−2, 1, 3}', 'expected': '{Fraction(-1, 1), Fraction(0, 1), Fraction(2, 1), Fraction(5, 1), Fraction(6, 1), Fraction(7, 1)}', 'reason': 'Set operation mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.5-q8",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 2,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 1,
+          "claim": "B∪C = {−1, −1/2, 1/2, 1, 3/2, 2, 5/2, 7/2}",
+          "expected": "{Fraction(-1, 1), Fraction(-1, 2), Fraction(1, 1), Fraction(2, 1), Fraction(3, 2), n - 1/2}",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 1,
+          "claim": "(B∪C) = {3}",
+          "expected": "{Fraction(-1, 1), Fraction(-1, 2), Fraction(1, 1), Fraction(2, 1), Fraction(3, 2), n - 1/2}",
+          "reason": "Set operation mismatch"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 1, 'claim': 'B∪C = {−1, −1/2, 1/2, 1, 3/2, 2, 5/2, 7/2}', 'expected': '{Fraction(-1, 1), Fraction(-1, 2), Fraction(1, 1), Fraction(2, 1), Fraction(3, 2), n - 1/2}', 'reason': 'Set operation mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.5-q9",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_answer_requires_full_context"
+    },
+    {
+      "id": "g9-ch1-ex1.5-q10",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 8,
+      "verified_claims": 8,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.5-q11",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [
+        "possible_missing_universal_set"
+      ],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q1",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 4,
+      "verified_claims": 0,
+      "failed_claims": 4,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 0,
+          "claim": "n(A∩B) = 25",
+          "reason": "Given cardinality constraints are mathematically inconsistent"
+        },
+        {
+          "step": 1,
+          "claim": "n(U) = 40",
+          "reason": "Given cardinality constraints are mathematically inconsistent"
+        },
+        {
+          "step": 2,
+          "claim": "n(B) = 500",
+          "reason": "Given cardinality constraints are mathematically inconsistent"
+        },
+        {
+          "step": 3,
+          "claim": "n(U) = 250",
+          "reason": "Given cardinality constraints are mathematically inconsistent"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 0, 'claim': 'n(A∩B) = 25', 'reason': 'Given cardinality constraints are mathematically inconsistent'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q2",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q3",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 12,
+      "verified_claims": 7,
+      "failed_claims": 5,
+      "unsupported_claims": 0,
+      "failed_details": [
+        {
+          "step": 0,
+          "claim": "A∪B∪C = {a,b,c,d,e,f,h}",
+          "expected": "{Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(5, 1), Fraction(6, 1), Fraction(7, 1)}",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 0,
+          "claim": "A∩B = {c,e,f}",
+          "expected": "{Fraction(3, 1), Fraction(5, 1)}",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 0,
+          "claim": "B∩C = {c,f}",
+          "expected": "{Fraction(5, 1), Fraction(6, 1)}",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 0,
+          "claim": "A∩C = {a,c,f}",
+          "expected": "{Fraction(1, 1), Fraction(5, 1)}",
+          "reason": "Set operation mismatch"
+        },
+        {
+          "step": 0,
+          "claim": "A∩B∩C = {c,f}",
+          "expected": "{Fraction(5, 1)}",
+          "reason": "Set operation mismatch"
+        }
+      ],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 0, 'claim': 'A∪B∪C = {a,b,c,d,e,f,h}', 'expected': '{Fraction(1, 1), Fraction(2, 1), Fraction(3, 1), Fraction(5, 1), Fraction(6, 1), Fraction(7, 1)}', 'reason': 'Set operation mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q4",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "FAIL",
+      "tamil_flags": [
+        "step_1_semantic_number_mismatch:en=['2'],ta=['3']"
+      ],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 0, 'line': '&\\\\text{(ii)}\\\\quad30-8=22', 'evidence': 'invalid_equation_transformation'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q5",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 1, 'line': '&\\\\text{(ii)}\\\\quad45-35=10', 'evidence': 'invalid_equation_transformation'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q6",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q7",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 1, 'line': 'n(A)=n(B)=48', 'evidence': 'multi_link_identity_mismatch'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q8",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q9",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 2, 'line': '&\\\\text{(ii)}\\\\quad122+14+2+3=141', 'evidence': 'invalid_equation_transformation'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q10",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q11",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q12",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "FAIL",
+      "answer_status": "FAIL",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "Working failed: [{'step': 2, 'line': '&\\\\text{(ii)}\\\\quad22-5-4-6=7', 'evidence': 'invalid_equation_transformation'}]"
+    },
+    {
+      "id": "g9-ch1-ex1.6-q13",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q1",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q2",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q3",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q4",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q5",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q6",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q7",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "A \\subseteq  B",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "B\\subseteq A\\Rightarrow A=B",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q8",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 1,
+          "line": "A\\cap B = \\varnothing",
+          "evidence": "unparsed_equation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q9",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q10",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q11",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q12",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 3,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "35+20-x\\le50\\Rightarrow x\\ge5",
+          "evidence": "unverified_implication"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q13",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q14",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PARTIAL",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "(Q\\cap R)' = Q'\\cup R'",
+          "evidence": "unparsed_equation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q15",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "(A\\cap B)' = A'\\cup B'",
+          "evidence": "unparsed_equation"
+        },
+        {
+          "step": 1,
+          "line": "(A\\cup B)' = A'\\cap B'",
+          "evidence": "unparsed_equation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q16",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 1,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q17",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 1,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 1,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "(A-B)\\cap (B-C) = \\varnothing",
+          "evidence": "unparsed_equation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q18",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "J\\cap K",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "J\\cap K\\cap L",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q19",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 2,
+      "failed_details": [],
+      "unsupported_details": [
+        {
+          "step": 0,
+          "line": "Z",
+          "evidence": "standalone_expression_no_relation"
+        },
+        {
+          "step": 1,
+          "line": "Z-(X\\cap Y)",
+          "evidence": "standalone_expression_no_relation"
+        }
+      ],
+      "discrepancy": "no_dedicated_derivation"
+    },
+    {
+      "id": "g9-ch1-ex1.7-q20",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "exercise",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "PASS",
+      "answer_status": "PASS",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 2,
+      "verified_claims": 2,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "set_theory_working_verified"
+    },
+    {
+      "id": "set",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "forms",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "types",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "operations",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "properties",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "demorgan",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    },
+    {
+      "id": "cardinality",
+      "grade": 9,
+      "chapter": "1",
+      "domain": "sets_and_relations",
+      "item_type": "concept",
+      "validation_method": "set_relations_functions_reasoner",
+      "working_status": "UNVERIFIABLE",
+      "answer_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "tamil_flags": [],
+      "ambiguity_flags": [],
+      "total_claims": 0,
+      "verified_claims": 0,
+      "failed_claims": 0,
+      "unsupported_claims": 0,
+      "failed_details": [],
+      "unsupported_details": [],
+      "discrepancy": "empty_answer"
+    }
+  ]
+}
