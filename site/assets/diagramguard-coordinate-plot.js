@@ -56,7 +56,7 @@
   }
 
   function draw(svg, config, width, rem) {
-    const {points,outlines=[],segments=[],guides=[],circle,rightAngle,directions={},edgeDirections={},insideLabels='',
+    const {points,outlines=[],segments=[],guides=[],circle,rightAngle,directions={},edgeDirections={},insideLabels='',associateLabels='',
       axes=true,showOrigin=true,fullAxes=false,compactAxes=false,quadrants=false,projections=false,pointNames=true}=config;
     const xy = Object.values(points);
     const xs = xy.map(([x])=>x);
@@ -192,7 +192,8 @@
         placements.push({label,anchor,candidates});
       } else {
         const direction = (edgeLabels && edgeDirections[id]) || directions[id] || [cx-center[0],cy-center[1]];
-        placements.push({label,anchor,direction});
+        const neighborPoints = associateLabels.includes(id) ? Object.values(projected).filter(point=>point!==anchor) : undefined;
+        placements.push({label,anchor,direction,neighborPoints});
       }
     }
 

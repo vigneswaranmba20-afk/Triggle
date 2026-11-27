@@ -15,8 +15,9 @@
     <line x1="208.909" y1="23.2" x2="208.909" y2="239.2"/>
     <line x1="228.545" y1="23.2" x2="228.545" y2="130.95"/>
     <line x1="228.545" y1="156.95" x2="228.545" y2="239.2"/>
-    <line x1="248.182" y1="23.2" x2="248.182" y2="83.372"/>
-    <line x1="248.182" y1="109.372" x2="248.182" y2="239.2"/>
+    <line x1="248.182" y1="23.2" x2="248.182" y2="48.191"/>
+    <line x1="248.182" y1="74.191" x2="248.182" y2="78.671"/>
+    <line x1="248.182" y1="104.671" x2="248.182" y2="239.2"/>
     <line x1="42" y1="229.382" x2="258" y2="229.382"/>
     <line x1="42" y1="209.745" x2="258" y2="209.745"/>
     <line x1="42" y1="190.109" x2="258" y2="190.109"/>
@@ -26,11 +27,11 @@
     <line x1="242.076" y1="150.836" x2="258" y2="150.836"/>
     <line x1="42" y1="111.564" x2="172.629" y2="111.564"/>
     <line x1="192.785" y1="111.564" x2="258" y2="111.564"/>
-    <line x1="42" y1="91.927" x2="245.551" y2="91.927"/>
-    <line x1="42" y1="72.291" x2="231.166" y2="72.291"/>
-    <line x1="248.166" y1="72.291" x2="258" y2="72.291"/>
-    <line x1="42" y1="52.655" x2="231.166" y2="52.655"/>
-    <line x1="248.166" y1="52.655" x2="258" y2="52.655"/>
+    <line x1="42" y1="91.927" x2="243.309" y2="91.927"/>
+    <line x1="42" y1="72.291" x2="231.841" y2="72.291"/>
+    <line x1="248.841" y1="72.291" x2="258" y2="72.291"/>
+    <line x1="42" y1="52.655" x2="231.841" y2="52.655"/>
+    <line x1="248.841" y1="52.655" x2="258" y2="52.655"/>
     <line x1="42" y1="33.018" x2="258" y2="33.018"/>
   </g>
   <circle cx="150" cy="131.2" r="98.182" fill="#443878" fill-opacity="0.07" stroke="#443878" stroke-width="1.65" data-dg-obstacle="circumference" data-dg-circle=""/>
@@ -53,9 +54,9 @@
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y" data-dg-font="vertex" x="142.44" y="12.85" font-size="15">Y</text>
   <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y′" data-dg-font="vertex" x="150" y="252.7" font-size="15">Y′</text>
   <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="O" data-dg-font="vertex" x="135.151" y="146.049" font-size="15">O</text>
-  <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="A" data-dg-font="vertex" x="239.345" y="64.191" font-size="15">A</text>
+  <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="A" data-dg-font="vertex" x="240.02" y="61.941" font-size="15">A</text>
   <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="B" data-dg-font="vertex" x="234.029" y="144.7" font-size="15">B</text>
-  <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="D" data-dg-font="vertex" x="254.106" y="97.122" font-size="15">D</text>
+  <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="D" data-dg-font="vertex" x="251.864" y="92.421" font-size="15">D</text>
   <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="M" data-dg-font="vertex" x="182.707" y="106.123" font-size="15">M</text>
   <text x="50" y="283" text-anchor="middle" font-size="14" fill="#24203c">O (0, 0)</text>
   <text x="150" y="283" text-anchor="middle" font-size="14" fill="#24203c">A (8, 6)</text>

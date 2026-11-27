@@ -50,15 +50,15 @@
     ],
     q11:{
       points:{C:[11,2],P:[1,2],Q:[3,-4],R:[5,-6]},circle:[[11,2],10],guides:['CP','CQ','CR'],
-      fullAxes:true,compactAxes:true,showOrigin:false,
+      fullAxes:true,compactAxes:true,showOrigin:false,associateLabels:'PQ',
       directions:{P:labelDirections,Q:labelDirections,R:[.2,1]}
     }
   });
   window.TriggleCoordinateFigures.register('g9-ch5-ex5.3-',{
     q5:{
       points:{O:[0,0],A:[8,6],B:[10,0],D:[9,3],M:[4.5,1.5]},
-      circle:[[0,0],10],segments:['AB'],guides:['OD'],rightAngle:'ADO',fullAxes:true,showOrigin:false,
-      directions:{B:[0,1],D:[1,.33],M:[0,-1],O:[-1,1]}
+      circle:[[0,0],10],segments:['AB'],guides:['OD'],rightAngle:'ADO',fullAxes:true,showOrigin:false,associateLabels:'DM',
+      directions:{A:[0,-1],B:[0,1],D:[1,0],M:labelDirections,O:[-1,1]}
     }
   });
   const diameterMidpoint = [1.5,3.5];

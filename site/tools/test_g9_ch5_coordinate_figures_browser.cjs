@@ -113,8 +113,9 @@ async function verify(figure, question, panels, lang, percent, context) {
         assert(label,tag+' point '+id+' has a visible label');
         const distance=hypot(label,point);
         const nearest=Math.min(...points.filter(([other])=>other!==id).map(([,other])=>hypot(label,other)));
-        assert(distance<=30*percent/100+1,tag+' point '+id+' label distance '+distance.toFixed(1));
-        assert(distance<=nearest+3*percent/100,tag+' point '+id+' label is associated with its vertex');
+        const location=JSON.stringify({id,point,label,font:panel.font});
+        assert(distance<=30*percent/100+1,tag+' point label too far '+location);
+        assert(distance<=nearest+3*percent/100,tag+' point label closer to a different vertex '+location);
       }
     }
     const outline=expected.region?[...expected.region].map((v,i)=>v+expected.region[(i+1)%expected.region.length]):[];
@@ -243,14 +244,17 @@ async function main() {
       }
     }
     await page.setViewportSize({width:320,height:844});
-    for (const [question,panels] of [...fixtures.slice(0,2),...fixtures.filter(([id])=>['5.3-q5','5.5-q5'].includes(id))]) {
+    const fallbackCases = [1,2,'5.2-q11','5.3-q5','5.5-q5'];
+    for (const [question,panels,solutionOnly] of fixtures.filter(([id])=>fallbackCases.includes(id))) {
       await page.goto(app.base+route(question));
       await page.evaluate(()=>document.body.style.setProperty('--ver-font','monospace'));
       await settle(page,150);
       const lang=await page.locator('html').getAttribute('lang');
+      if(solutionOnly)await page.locator('#figureBtn').click();
+      const figure=page.locator(solutionOnly?'#figureDialog .diagram-content':'#inlineFigureVisual');
       for (const percent of [100,200]) {
         await settle(page,percent);
-        await verify(page.locator('#inlineFigureVisual'),question,panels,lang,percent,'Q'+question+' wide fallback font '+percent+'%');
+        await verify(figure,question,panels,lang,percent,'Q'+question+' wide fallback font '+percent+'%');
       }
     }
     assert.deepEqual(errors,[]);
