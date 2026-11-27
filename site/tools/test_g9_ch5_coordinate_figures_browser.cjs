@@ -14,12 +14,37 @@ const fixtures = [
        {points:{E:[0,-4], F:[0,-2], G:[0,4], H:[0,5]}, edges:['EH']}]],
   [4,[{points:{P:[0,0], Q:[-4,0], R:[-4,-4], S:[0,-4]}, edges:['PQ','QR','RS','SP'], region:'PQRS'},
        {points:printed, edges:['AB','BC','CD','DA']},
-       {points:printed, edges:['AB','BD','DC','CA'], region:'ABDC'}]]
+       {points:printed, edges:['AB','BD','DC','CA'], region:'ABDC'}]],
+  ['5.2-q3',[
+    {points:{A:[5,4],B:[2,0],C:[-2,3]},region:'ABC',squares:{AB:25,BC:25,CA:50}},
+    {points:{A:[6,-4],B:[-2,-4],C:[2,10]},region:'ABC',squares:{AB:64,BC:212,CA:212}}
+  ],true],
+  ['5.2-q5',[
+    {points:{A:[-3,1],B:[-6,-7],C:[3,-9],D:[6,-1]},region:'ABCD',squares:{AB:73,BC:85,CD:73,DA:85}},
+    {points:{A:[-7,-3],B:[5,10],C:[15,8],D:[3,-5]},region:'ABCD',squares:{AB:313,BC:104,CD:313,DA:104}}
+  ],true],
+  ['5.2-q6',[
+    {points:{A:[3,-2],B:[7,6],C:[-1,2],D:[-5,-6]},region:'ABCD',dashed:['AC','BD'],
+      squares:{AB:80,BC:80,CD:80,DA:80,AC:32,BD:288}},
+    {points:{A:[1,1],B:[2,1],C:[2,2],D:[1,2]},region:'ABCD',dashed:['AC','BD'],
+      squares:{AB:1,BC:1,CD:1,DA:1,AC:2,BD:2}}
+  ],true],
+  ['5.2-q11',[{points:{C:[11,2],P:[1,2],Q:[3,-4],R:[5,-6]},dashed:['CP','CQ','CR'],
+    circle:[11,2,10],onCircle:'PQR',squares:{CP:100,CQ:100,CR:100}}],true],
+  ['5.3-q5',[{points:{O:[0,0],A:[8,6],B:[10,0],D:[9,3],M:[4.5,1.5]},edges:['AB'],dashed:['OD'],
+    circle:[0,0,10],onCircle:'AB',rightAngle:'ADO',midpoints:{D:'AB',M:'OD'}}]],
+  ['5.5-q5',[{points:{A:[-3,5],M:[1.5,3.5],B:[3,3],C:[6,2]},edges:['AC'],
+    circle:[1.5,3.5,Math.sqrt(22.5)],onCircle:'AC',midpoints:{M:'AC'},squares:{AB:40,BC:10,AC:90}}]],
+  ['5.6-q3',[{points:{O:[0,0],A:[3,-4],B:[3,4],C:[0,4]},region:'OABC',squares:{OA:25,AB:64,BC:9,CO:16}}]],
+  ['5.6-q4',[{points:{P:[-1,1],Q:[3,-4],R:[1,-1],S:[-2,-3],T:[-4,4]},quadrants:true}],true]
 ];
 const allWidths = [[320,844],[360,844],[375,844],[390,844],[412,844],[430,844],[768,1024],[1280,900],[667,375]];
 const viewports = process.env.TRIGGLE_G9_COORDINATE_SMOKE ? [[320,844],[390,844]] : allWidths;
-const route = question => '/index.html?class=9&chapter=g9-ch5&question=g9-ch5-ex5.1-q'+question;
+const route = question => '/index.html?class=9&chapter=g9-ch5&question=g9-ch5-ex'+
+  (typeof question==='number'?'5.1-q'+question:question);
 const hypot = (a,b) => Math.hypot(a[0]-b[0],a[1]-b[1]);
+const subtract = (a,b) => a.map((value,index)=>value-b[index]);
+const dot = (a,b) => a.reduce((sum,value,index)=>sum+value*b[index],0);
 const near = (actual,expected,context) => assert(Math.abs(actual-expected)<1e-4,`${context} ${actual} ≠ ${expected}`);
 
 async function settle(page,percent) {
@@ -39,19 +64,26 @@ async function verify(figure, question, panels, lang, percent, context) {
       el.dataset.dgObstacle,values(el,['x1','y1','x2','y2'])
     ]));
     const bounds = svg.getBoundingClientRect();
+    const circle = svg.querySelector('[data-dg-circle]');
+    const angle = svg.querySelector('[data-dg-obstacle="right-angle"]');
     return {
       audit:window.TriggleDiagramGuard.audit(svg,{discover:true}),
       points:Object.fromEntries([...svg.querySelectorAll('circle[data-dg-point]')].map(el=>[el.dataset.dgPoint,values(el,['cx','cy'])])),
       edges:lines('[data-dg-edge]'),
+      dashed:[...svg.querySelectorAll('[data-dg-edge][stroke-dasharray]')].map(el=>el.dataset.dgEdge),
+      circle:circle?values(circle,['cx','cy','r']):null,
+      angle:angle?angle.getAttribute('points').split(' ').map(point=>point.split(',').map(Number)):null,
       xAxis:values(svg.querySelector('[data-dg-obstacle="X-axis"]'),['x1','y1','x2','y2']),
       yAxis:values(svg.querySelector('[data-dg-obstacle="Y-axis"]'),['x1','y1','x2','y2']),
       guides:lines('line[data-dg-obstacle$="-guide"]'),
       ticks:lines('line[data-dg-obstacle*="-tick-"]'),
+      arrows:[...svg.querySelectorAll('polyline[data-dg-obstacle$="-arrow"]')].map(el=>el.dataset.dgObstacle),
       regions:[...svg.querySelectorAll('[data-dg-region]')].map(el=>el.dataset.dgRegion),
       labelPositions:Object.fromEntries([...svg.querySelectorAll('text')].map(el=>[el.dataset.dgLabel,values(el,['x','y'])])),
       description:svg.getAttribute('aria-label'),
       font:getComputedStyle(svg).fontFamily,
       bounds:[bounds.left,bounds.top,bounds.right,bounds.bottom],
+      viewBox:[svg.viewBox.baseVal.width,svg.viewBox.baseVal.height],
       aspect:[bounds.width/svg.viewBox.baseVal.width,bounds.height/svg.viewBox.baseVal.height],
       overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth
     };
@@ -75,17 +107,56 @@ async function verify(figure, question, panels, lang, percent, context) {
     const project=([x,y])=>[origin[0]+x*scale,origin[1]-y*scale];
     for (const [id,source] of Object.entries(expected.points))
       near(hypot(panel.points[id],project(source)),0,tag+' point '+id);
-    for (const id of expected.edges||[]) {
+    if(typeof question==='string'){
+      const points=Object.entries(panel.points);
+      for(const [id,point] of points){
+        const label=panel.labelPositions[id];
+        assert(label,tag+' point '+id+' has a visible label');
+        const distance=hypot(label,point);
+        const nearest=Math.min(...points.filter(([other])=>other!==id).map(([,other])=>hypot(label,other)));
+        const location=JSON.stringify({id,point,label,font:panel.font,labels:panel.audit.labels});
+        assert(distance<=30*percent/100+1,tag+' point label too far '+location);
+        assert(distance<=nearest+3*percent/100,tag+' point label closer to a different vertex '+location);
+      }
+    }
+    const outline=expected.region?[...expected.region].map((v,i)=>v+expected.region[(i+1)%expected.region.length]):[];
+    for (const id of new Set([...outline,...(expected.edges||[]),...(expected.dashed||[])])) {
       const [x,y,u,v]=panel.edges[id];
       near(hypot([x,y],panel.points[id[0]]),0,tag+' '+id+' start');
       near(hypot([u,v],panel.points[id[1]]),0,tag+' '+id+' end');
     }
+    assert.deepEqual(panel.dashed.sort(),(expected.dashed||[]).slice().sort(),tag+' dashed constructions');
     assert.deepEqual(panel.regions,expected.region?[expected.region]:[],tag+' regions');
+    for(const [id,squared] of Object.entries(expected.squares||{}))
+      near((hypot(panel.points[id[0]],panel.points[id[1]])/scale)**2,squared,tag+' length squared '+id);
+    for(const [id,[a,b]] of Object.entries(expected.midpoints||{}))
+      panel.points[id].forEach((value,index)=>near(2*value,panel.points[a][index]+panel.points[b][index],tag+' midpoint '+id));
+    if (expected.circle) {
+      const [cx,cy,radius]=expected.circle;
+      const [x,y,r]=panel.circle;
+      near(hypot([x,y],project([cx,cy])),0,tag+' centre');
+      near(r/scale,radius,tag+' radius');
+      assert(x-r>=0&&y-r>=0&&x+r<=panel.viewBox[0]&&y+r<=panel.viewBox[1],tag+' entire circumference fits');
+      for(const id of expected.onCircle)near(hypot(panel.points[id],[x,y]),r,tag+' on circumference '+id);
+    }
+    if (expected.rightAngle) {
+      const [a,vertex,b]=[...expected.rightAngle].map(id=>panel.points[id]);
+      const [first,corner,last]=panel.angle;
+      near(dot(subtract(a,vertex),subtract(b,vertex)),0,tag+' perpendicular lines');
+      near(dot(subtract(first,corner),subtract(last,corner)),0,tag+' right-angle mark');
+      near(dot(subtract(first,vertex),subtract(b,vertex)),0,tag+' first mark meets its line');
+      near(dot(subtract(last,vertex),subtract(a,vertex)),0,tag+' last mark meets its line');
+    }
     for (const {id,fontPx} of panel.audit.labels) {
       const target=(id.includes('-tick-')?14:15)*percent/100;
       assert(Math.abs(fontPx-target)<.2,tag+' '+id+' font');
     }
-    if (question===1) {
+    if (question==='5.2-q11') {
+      assert.deepEqual(panel.arrows,['X-arrow','X′-arrow','Y-arrow','Y′-arrow'],tag+' arrowheads in both directions');
+      const axisLabels=Object.keys(panel.labelPositions).filter(id=>/^[XY]′?$/.test(id));
+      assert.deepEqual(axisLabels,['X','Y'],tag+' one label per axis');
+    }
+    if (question===1||expected.quadrants) {
       for (const [id,[x,y]] of Object.entries({I:[1,-1],II:[-1,-1],III:[-1,1],IV:[1,1]})) {
         const [px,py]=panel.labelPositions[id];
         assert.equal(Math.sign(px-origin[0]),x,tag+' '+id+' x');
@@ -107,7 +178,16 @@ async function verify(figure, question, panels, lang, percent, context) {
       }
     }
   }
-  assert.equal(await figure.locator('.diagramguard-coordinate-key').count(),question===1?1:0,context+' key visibility');
+  const keyCount=question===1||typeof question==='string'?panels.length:0;
+  const keys=figure.locator('.diagramguard-coordinate-key');
+  assert.equal(await keys.count(),keyCount,context+' key visibility');
+  const text=await keys.evaluateAll(lists=>lists.map(key=>{
+    if(key.scrollWidth>key.clientWidth+1)throw Error('Coordinate key overflows');
+    return [...key.querySelectorAll('[role=listitem]')].map(entry=>entry.textContent);
+  }));
+  const number=value=>String(value).replace('-','−');
+  assert.deepEqual(text,panels.slice(0,keyCount).map(({points})=>Object.entries(points)
+    .map(([name,[x,y]])=>`${name} (${number(x)}, ${number(y)})`)),context+' coordinate key order and values');
   return measured.length;
 }
 
@@ -120,7 +200,9 @@ async function main() {
     browser=await (isWebKit?webkit:chromium).launch(isWebKit?{headless:true}:launchOptions());
     const page=await browser.newPage({viewport:{width:390,height:844},serviceWorkers:'block'});
     page.setDefaultTimeout(10000);
-    for (const [question,panels] of fixtures) {
+    const errors=[];
+    page.on('pageerror',error=>errors.push(error.message));
+    for (const [question,panels,solutionOnly] of fixtures) {
       await page.goto(app.base+route(question));
       for (const lang of ['en','ta']) {
         if(await page.locator('html').getAttribute('lang')!==lang)
@@ -134,32 +216,55 @@ async function main() {
           await page.setViewportSize({width,height});
           for (const percent of [100,200]) {
             await settle(page,percent);
-            const name=`Q${question} ${lang} ${width}×${height} ${percent}%`;
-            count+=await verify(page.locator('#inlineFigureVisual'),question,panels,lang,percent,name+' inline');
-            const expand=page.locator('#inlineFigureOpen');
+            const name=`${question} ${lang} ${width}×${height} ${percent}%`;
+            if(solutionOnly)assert(await page.locator('#inlineFigure').isHidden(),name+' figure only in dialog');
+            else count+=await verify(page.locator('#inlineFigureVisual'),question,panels,lang,percent,name+' inline');
+            const expand=page.locator(solutionOnly?'#figureBtn':'#inlineFigureOpen');
             await expand.click();
             await settle(page,percent);
             const dialog=page.locator('#figureDialog');
             assert(await dialog.locator('#closeDiagram').evaluate(node=>document.activeElement===node),name+' initial focus');
             count+=await verify(dialog.locator('.diagram-content'),question,panels,lang,percent,name+' enlarged');
+            if(percent===200&&(width===320||height===375)){
+              const reachable=await dialog.evaluate(dialog=>{
+                const header=dialog.querySelector('.dialog-header');
+                const content=dialog.querySelector('#diagramContent');
+                const caption=dialog.querySelector('#coordinateFigureCaption');
+                const close=dialog.querySelector('#closeDiagram').getBoundingClientRect();
+                const top=header.getBoundingClientRect().top;
+                const captionBelow=!caption.hidden&&caption.getBoundingClientRect().top>=content.getBoundingClientRect().bottom-1;
+                const last=Array.from(content.querySelectorAll('.diagramguard-coordinate')).at(-1);
+                dialog.scrollTop+=last.getBoundingClientRect().bottom-dialog.getBoundingClientRect().bottom+6;
+                const box=last.getBoundingClientRect();
+                const hit=document.elementFromPoint(box.left+box.width/2,box.bottom-3);
+                return {captionBelow,closeFits:close.width>=44&&close.height>=44&&close.top>=-1&&close.bottom<=innerHeight+1,
+                  headerStays:Math.abs(header.getBoundingClientRect().top-top)<=1,
+                  plotReachable:!!hit&&last.parentElement.contains(hit)};
+              });
+              assert.deepEqual(reachable,{captionBelow:true,closeFits:true,headerStays:true,plotReachable:true},name+' viewer scroll');
+            }
             await page.keyboard.press('Escape');
-            assert(await expand.evaluate(node=>document.activeElement===node),name+' returned focus');
+            await page.waitForFunction(id=>document.activeElement?.id===id,solutionOnly?'figureBtn':'inlineFigureOpen');
           }
         }
       }
     }
     await page.setViewportSize({width:320,height:844});
-    for (const [question,panels] of fixtures.slice(0,2)) {
+    const fallbackCases = [1,2,'5.2-q11','5.3-q5','5.5-q5'];
+    for (const [question,panels,solutionOnly] of fixtures.filter(([id])=>fallbackCases.includes(id))) {
       await page.goto(app.base+route(question));
       await page.evaluate(()=>document.body.style.setProperty('--ver-font','monospace'));
       await settle(page,150);
       const lang=await page.locator('html').getAttribute('lang');
+      if(solutionOnly)await page.locator('#figureBtn').click();
+      const figure=page.locator(solutionOnly?'#figureDialog .diagram-content':'#inlineFigureVisual');
       for (const percent of [100,200]) {
         await settle(page,percent);
-        await verify(page.locator('#inlineFigureVisual'),question,panels,lang,percent,'Q'+question+' wide fallback font '+percent+'%');
+        await verify(figure,question,panels,lang,percent,'Q'+question+' wide fallback font '+percent+'%');
       }
     }
-    console.log(`PASS Grade 9 Exercise 5.1 coordinate figures in ${isWebKit?'WebKit':'Chromium'} (${count} bilingual panel renderings)`);
+    assert.deepEqual(errors,[]);
+    console.log(`PASS Grade 9 Chapter 5 coordinate figures in ${isWebKit?'WebKit':'Chromium'} (${count} bilingual panel renderings)`);
   } finally {
     await browser?.close();
     await app.close();

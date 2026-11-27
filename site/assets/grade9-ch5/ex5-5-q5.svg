@@ -1,92 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 400" width="440" height="400" role="img" aria-label="Euler line connecting orthocentre A(-3,5), centroid B(3,3), circumcentre C(6,2) with circle on diameter AC">
-  <rect width="440" height="400" rx="12" fill="#fbfaf7" stroke="#d8d5ce"/>
-  <line x1="34.0" y1="24" x2="34.0" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="63.4" y1="24" x2="63.4" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="92.8" y1="24" x2="92.8" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="122.2" y1="24" x2="122.2" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="151.5" y1="24" x2="151.5" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="180.9" y1="24" x2="180.9" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="210.3" y1="24" x2="210.3" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="239.7" y1="24" x2="239.7" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="269.1" y1="24" x2="269.1" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="298.5" y1="24" x2="298.5" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="327.8" y1="24" x2="327.8" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="357.2" y1="24" x2="357.2" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="386.6" y1="24" x2="386.6" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="416.0" y1="24" x2="416.0" y2="370" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="370.0" x2="416" y2="370.0" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="338.5" x2="416" y2="338.5" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="307.1" x2="416" y2="307.1" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="275.6" x2="416" y2="275.6" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="244.2" x2="416" y2="244.2" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="212.7" x2="416" y2="212.7" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="181.3" x2="416" y2="181.3" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="149.8" x2="416" y2="149.8" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="118.4" x2="416" y2="118.4" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="86.9" x2="416" y2="86.9" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="55.5" x2="416" y2="55.5" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="34" y1="24.0" x2="416" y2="24.0" stroke="#e7e4dc" stroke-width="1"/>
-  <line x1="180.9" y1="18" x2="180.9" y2="376" stroke="#1d3557" stroke-width="1.8"/>
-  <text x="186.9" y="30" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#1d3557">Y</text>
-  <text x="186.9" y="384" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#1d3557">Y′</text>
-  <line x1="28" y1="307.1" x2="422" y2="307.1" stroke="#1d3557" stroke-width="1.8"/>
-  <text x="424" y="311.1" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#1d3557">X</text>
-  <text x="16" y="311.1" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#1d3557">X′</text>
-  <line x1="34.0" y1="304.1" x2="34.0" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="34.0" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-5</text>
-  <line x1="63.4" y1="304.1" x2="63.4" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="63.4" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-4</text>
-  <line x1="92.8" y1="304.1" x2="92.8" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="92.8" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-3</text>
-  <line x1="122.2" y1="304.1" x2="122.2" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="122.2" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-2</text>
-  <line x1="151.5" y1="304.1" x2="151.5" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="151.5" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-1</text>
-  <line x1="210.3" y1="304.1" x2="210.3" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="210.3" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">1</text>
-  <line x1="239.7" y1="304.1" x2="239.7" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="239.7" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">2</text>
-  <line x1="269.1" y1="304.1" x2="269.1" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="269.1" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">3</text>
-  <line x1="298.5" y1="304.1" x2="298.5" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="298.5" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">4</text>
-  <line x1="327.8" y1="304.1" x2="327.8" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="327.8" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">5</text>
-  <line x1="357.2" y1="304.1" x2="357.2" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="357.2" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">6</text>
-  <line x1="386.6" y1="304.1" x2="386.6" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="386.6" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">7</text>
-  <line x1="416.0" y1="304.1" x2="416.0" y2="310.1" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="416.0" y="321.1" text-anchor="middle" font-family="system-ui,sans-serif" font-size="10" fill="#495057">8</text>
-  <line x1="177.9" y1="370.0" x2="183.9" y2="370.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="174.9" y="373.0" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-2</text>
-  <line x1="177.9" y1="338.5" x2="183.9" y2="338.5" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="174.9" y="341.5" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">-1</text>
-  <line x1="177.9" y1="275.6" x2="183.9" y2="275.6" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="174.9" y="278.6" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">1</text>
-  <line x1="177.9" y1="244.2" x2="183.9" y2="244.2" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="174.9" y="247.2" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">2</text>
-  <line x1="177.9" y1="212.7" x2="183.9" y2="212.7" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="174.9" y="215.7" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">3</text>
-  <line x1="177.9" y1="181.3" x2="183.9" y2="181.3" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="174.9" y="184.3" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">4</text>
-  <line x1="177.9" y1="149.8" x2="183.9" y2="149.8" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="174.9" y="152.8" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">5</text>
-  <line x1="177.9" y1="118.4" x2="183.9" y2="118.4" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="174.9" y="121.4" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">6</text>
-  <line x1="177.9" y1="86.9" x2="183.9" y2="86.9" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="174.9" y="89.9" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">7</text>
-  <line x1="177.9" y1="55.5" x2="183.9" y2="55.5" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="174.9" y="58.5" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">8</text>
-  <line x1="177.9" y1="24.0" x2="183.9" y2="24.0" stroke="#1d3557" stroke-width="1.2"/>
-  <text x="174.9" y="27.0" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#495057">9</text>
-  <text x="174.9" y="320.1" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" font-weight="600" fill="#1d3557">O</text>
-  <circle cx="225.0" cy="197.0" r="132.2" fill="rgba(42,157,143,0.08)" stroke="#2a9d8f" stroke-width="1.8" stroke-dasharray="5 3"/>
-  <line x1="92.8" y1="149.8" x2="357.2" y2="244.2" stroke="#1d3557" stroke-width="2.2"/>
-  <circle cx="92.8" cy="149.8" r="4.5" fill="#e63946" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="82.8" y="139.8" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#14213d">A(−3,5) H</text>
-  <circle cx="269.1" cy="212.7" r="4.5" fill="#2a9d8f" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="275.1" y="204.7" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#14213d">B(3,3) G</text>
-  <circle cx="357.2" cy="244.2" r="4.5" fill="#1d3557" stroke="#ffffff" stroke-width="1.5"/>
-  <text x="363.2" y="256.2" font-family="system-ui,sans-serif" font-size="11.5" font-weight="700" fill="#14213d">C(6,2) O</text>
+<!-- Generated by site/tools/build_diagramguard_coordinate_assets.cjs -->
+<svg xmlns="http://www.w3.org/2000/svg" role="img" font-family="system-ui, sans-serif" font-weight="550" aria-labelledby="t desc" viewBox="0 0 300 322">
+  <title id="t">Euler line showing orthocentre A(-3,5), centroid B(3,3) dividing AC in 2:1, circumcentre C(6,2), and circle with diameter AC</title>
+  <desc id="desc">Euler line showing orthocentre A(-3,5), centroid B(3,3) dividing AC in 2:1, circumcentre C(6,2), and circle with diameter AC</desc>
+  <g aria-hidden="true" stroke="#dedbe4" stroke-width=".8">
+    <line x1="46.577" y1="23.2" x2="46.577" y2="89.557"/>
+    <line x1="46.577" y1="115.557" x2="46.577" y2="239.2"/>
+    <line x1="65.381" y1="23.2" x2="65.381" y2="239.2"/>
+    <line x1="84.186" y1="23.2" x2="84.186" y2="239.2"/>
+    <line x1="102.99" y1="23.2" x2="102.99" y2="239.2"/>
+    <line x1="140.598" y1="23.2" x2="140.598" y2="239.2"/>
+    <line x1="159.402" y1="23.2" x2="159.402" y2="107.1"/>
+    <line x1="159.402" y1="133.1" x2="159.402" y2="239.2"/>
+    <line x1="178.206" y1="23.2" x2="178.206" y2="239.2"/>
+    <line x1="197.01" y1="23.2" x2="197.01" y2="239.2"/>
+    <line x1="215.814" y1="23.2" x2="215.814" y2="239.2"/>
+    <line x1="234.619" y1="23.2" x2="234.619" y2="239.2"/>
+    <line x1="253.423" y1="23.2" x2="253.423" y2="239.2"/>
+    <line x1="42" y1="234.623" x2="258" y2="234.623"/>
+    <line x1="42" y1="215.819" x2="258" y2="215.819"/>
+    <line x1="42" y1="178.21" x2="258" y2="178.21"/>
+    <line x1="42" y1="159.406" x2="160.835" y2="159.406"/>
+    <line x1="176.929" y1="159.406" x2="236.656" y2="159.406"/>
+    <line x1="252.656" y1="159.406" x2="258" y2="159.406"/>
+    <line x1="42" y1="140.602" x2="160.835" y2="140.602"/>
+    <line x1="176.929" y1="140.602" x2="258" y2="140.602"/>
+    <line x1="42" y1="121.798" x2="151.397" y2="121.798"/>
+    <line x1="171.553" y1="121.798" x2="258" y2="121.798"/>
+    <line x1="42" y1="102.994" x2="46.187" y2="102.994"/>
+    <line x1="63.187" y1="102.994" x2="258" y2="102.994"/>
+    <line x1="42" y1="84.19" x2="258" y2="84.19"/>
+    <line x1="42" y1="65.386" x2="258" y2="65.386"/>
+    <line x1="42" y1="46.581" x2="258" y2="46.581"/>
+    <line x1="42" y1="27.777" x2="258" y2="27.777"/>
+  </g>
+  <circle cx="150" cy="131.2" r="89.196" fill="#443878" fill-opacity="0.07" stroke="#443878" stroke-width="1.65" data-dg-obstacle="circumference" data-dg-circle=""/>
+  <line x1="42" y1="197.014" x2="258" y2="197.014" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="X-axis"/>
+  <polyline points="253,199.514 258,197.014 253,194.514" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="X-arrow"/>
+  <polyline points="47,194.514 42,197.014 47,199.514" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="X′-arrow"/>
+  <line x1="121.794" y1="239.2" x2="121.794" y2="23.2" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="Y-axis"/>
+  <polyline points="124.294,28.2 121.794,23.2 119.294,28.2" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="Y-arrow"/>
+  <polyline points="119.294,234.2 121.794,239.2 124.294,234.2" fill="none" stroke="#5c566e" stroke-width="1.1" data-dg-obstacle="Y′-arrow"/>
+  <line x1="65.381" y1="102.994" x2="234.619" y2="159.406" stroke="#443878" stroke-width="1.4" stroke-linecap="round" data-dg-obstacle="AC" data-dg-edge="AC"/>
+  <circle cx="65.381" cy="102.994" r="3.1" fill="#24203c" data-dg-obstacle="point-A" data-dg-fill="" data-dg-point="A"/>
+  <circle cx="150" cy="131.2" r="3.1" fill="#24203c" data-dg-obstacle="point-M" data-dg-fill="" data-dg-point="M"/>
+  <circle cx="178.206" cy="140.602" r="3.1" fill="#24203c" data-dg-obstacle="point-B" data-dg-fill="" data-dg-point="B"/>
+  <circle cx="234.619" cy="159.406" r="3.1" fill="#24203c" data-dg-obstacle="point-C" data-dg-fill="" data-dg-point="C"/>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X" data-dg-font="vertex" x="268.35" y="197.014" font-size="15">X</text>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="X′" data-dg-font="vertex" x="30.96" y="197.014" font-size="15">X′</text>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y" data-dg-font="vertex" x="114.234" y="12.85" font-size="15">Y</text>
+  <text text-anchor="middle" dy=".35em" fill="#5c566e" data-dg-label="Y′" data-dg-font="vertex" x="121.794" y="252.7" font-size="15">Y′</text>
+  <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="A" data-dg-font="vertex" x="54.367" y="103.307" font-size="15">A</text>
+  <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="M" data-dg-font="vertex" x="161.475" y="120.85" font-size="15">M</text>
+  <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="B" data-dg-font="vertex" x="168.882" y="154.102" font-size="15">B</text>
+  <text text-anchor="middle" dy=".35em" fill="#24203c" data-dg-label="C" data-dg-font="vertex" x="244.437" y="162.679" font-size="15">C</text>
+  <text x="50" y="283" text-anchor="middle" font-size="14" fill="#24203c">A (−3, 5)</text>
+  <text x="150" y="283" text-anchor="middle" font-size="14" fill="#24203c">M (1.5, 3.5)</text>
+  <text x="250" y="283" text-anchor="middle" font-size="14" fill="#24203c">B (3, 3)</text>
+  <text x="50" y="305" text-anchor="middle" font-size="14" fill="#24203c">C (6, 2)</text>
 </svg>

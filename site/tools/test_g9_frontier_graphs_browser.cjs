@@ -14,12 +14,20 @@ async function checkGraph(page,record,lang) {
   assert.match(await page.locator('.why-step-g9[open] .why-step-panel').innerText(),lang==='ta'?/\p{Script=Tamil}/u:/[a-z]{4}/i);
   await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
   const dialog=page.locator('#figureDialog');
-  const graphic=dialog.locator('#diagramContent img');
-  await graphic.evaluate(image=>image.decode());
   assert(await dialog.isVisible());
-  assert.equal(await graphic.getAttribute('src'),record.figureFiles[0]);
-  assert.equal(await graphic.getAttribute('alt'),record.description[lang]);
-  assert(await graphic.evaluate(img=>img.clientWidth<=innerWidth&&img.clientHeight>100));
+  if(record.id==='g9-ch5-ex5.6-q4'){
+    const graph=dialog.locator('svg.diagramguard-coordinate[data-dg-ready]');
+    await graph.waitFor();
+    assert.equal(await graph.getAttribute('aria-label'),record.description[lang]);
+    assert.equal(await graph.locator('[data-dg-point]').count(),5);
+    assert(await graph.evaluate(svg=>svg.clientWidth<=innerWidth&&svg.clientHeight>100));
+  }else{
+    const graphic=dialog.locator('#diagramContent img');
+    await graphic.evaluate(image=>image.decode());
+    assert.equal(await graphic.getAttribute('src'),record.figureFiles[0]);
+    assert.equal(await graphic.getAttribute('alt'),record.description[lang]);
+    assert(await graphic.evaluate(img=>img.clientWidth<=innerWidth&&img.clientHeight>100));
+  }
   await page.locator('#closeDiagram').click();
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
 }

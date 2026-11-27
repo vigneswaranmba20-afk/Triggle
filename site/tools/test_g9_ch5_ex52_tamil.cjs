@@ -84,9 +84,12 @@ function verify(){
       assert.match(item.figureAlt.ta,/\p{Script=Tamil}/u);
       assert.ok(sw.includes(figure));
       const svg=fs.readFileSync(path.join(site,figure),'utf8');
-      assert.match(svg,/aria-labelledby="title desc"/);
-      assert.match(svg,/<text[^>]*>x<\/text>/);
-      assert.match(svg,/<text[^>]*>y<\/text>/);
+      const labelledBy=svg.match(/aria-labelledby="(\w+) (\w+)"/);
+      assert(labelledBy,figure+' carries an accessible title and description');
+      assert(svg.includes('<title id="'+labelledBy[1]+'">'));
+      assert(svg.includes('<desc id="'+labelledBy[2]+'">'));
+      assert.match(svg,/<text[^>]*>x<\/text>/i);
+      assert.match(svg,/<text[^>]*>y<\/text>/i);
     }
     return {recordId:row.id,parts:row.parts,passed:true,recordSha256:createHash('sha256').update(JSON.stringify(item)).digest('hex')};
   });

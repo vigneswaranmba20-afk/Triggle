@@ -24,10 +24,12 @@ async function reader(page,lang,row){
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   if(row.figureFiles.length){
     await page.locator('#inlineFigureOpen:visible, #figureBtn:visible').click();
-    const image=page.locator('#diagramContent img');
-    await image.evaluate(img=>img.decode());
-    assert.equal(await image.getAttribute('src'),row.figureFiles[0]);
-    assert.match(await image.getAttribute('alt'),lang==='ta'?/\p{Script=Tamil}/u:/[a-z]{4}/i);
+    const content=page.locator('#diagramContent');
+    const plot=content.locator('svg.diagramguard-coordinate[data-dg-ready]');
+    await plot.last().waitFor();
+    const label=content.locator('[role=group][aria-label], :scope > span > svg[aria-label]').first();
+    assert.match(await label.getAttribute('aria-label'),lang==='ta'?/\p{Script=Tamil}/u:/[a-z]{4}/i);
+    assert(await plot.first().locator('[data-dg-point]').count()>=3);
     await page.locator('#closeDiagram').click();
   }
 }

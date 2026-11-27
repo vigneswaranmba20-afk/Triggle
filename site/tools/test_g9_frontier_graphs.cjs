@@ -34,6 +34,26 @@ function check() {
     assert(q.figureInSolution);
     assert(q.steps.at(-1).why.en&&q.steps.at(-1).why.ta);
     const raw=read(q.figureSrc);
+    assert(read('service-worker.js').includes(q.figureSrc));
+    if(q.exercise==='5.6') {
+      assert.match(raw,/<svg[^>]*viewBox="0 0 300 [1-9]\d*"/);
+      const axis=name=>raw.match(new RegExp('<line [^>]*data-dg-obstacle="'+name+'-axis"[^>]*>'))[0];
+      const number=(tag,name)=>Number(tag.match(new RegExp(' '+name+'="([^"]+)"'))[1]);
+      const origin=[number(axis('Y'),'x1'),number(axis('X'),'y1')];
+      const names='PQRST';
+      const dots=[...raw.matchAll(/<circle [^>]*data-dg-point="([A-Z])"[^>]*>/g)];
+      assert.equal(dots.map(dot=>dot[1]).join(''),names);
+      const scale=origin[1]-number(dots[0][0],'cy');
+      assert(scale>0);
+      dots.forEach(([tag],index)=>{
+        const [x,y]=record.points[index];
+        assert(Math.abs(number(tag,'cx')-origin[0]-x*scale)<.004);
+        assert(Math.abs(number(tag,'cy')-origin[1]+y*scale)<.004);
+      });
+      assert.deepEqual(record.points.flatMap(([x,y],i)=>x>0&&y<0?[names[i]]:[]),['Q','R']);
+      assert.equal(q.answer,'(2) Q and R');
+      continue;
+    }
     assert.match(raw,/<svg[^>]*viewBox="0 0 360 370"/);
     assert.equal((raw.match(/class="axis"/g)||[]).length,2);
     const lines=[...raw.matchAll(/data-line="([^"]+)" data-start="([^"]+)" data-end="([^"]+)"/g)];
@@ -66,12 +86,6 @@ function check() {
         assert(q.answer.replace(/−/g,'-').includes(intersection.join(', '))||intersection.join(',')==='75,25'&&q.answer.includes('75 miles/hr and 25 miles/hr'));
       }
     }
-    if(q.exercise==='5.6') {
-      const quadrant4=record.points.flatMap(([x,y],i)=>x>0&&y<0?['PQRST'[i]]:[]);
-      assert.deepEqual(quadrant4,['Q','R']);
-      assert.equal(q.answer,'(2) Q and R');
-    }
-    assert(read('service-worker.js').includes(q.figureSrc));
   }
   console.log('Grade 9 graphical solutions: 12 checked plots, exact line segments, all intersections and quadrants, bilingual accessibility and offline assets.');
 }
