@@ -28,7 +28,7 @@ async function checkBuild(root) {
   assert.equal(manifest.display,'standalone');
   const scope = new URL('https://example.com/Triggle/site/');
   assert.equal(new URL(manifest.start_url,scope).href,new URL('index.html',scope).href);
-  assert.equal(new URL(manifest.id,new URL(manifest.start_url,scope)).href,new URL(manifest.start_url,scope).href);
+  assert.equal(new URL(manifest.id,scope.origin).href,new URL(manifest.start_url,scope).href);
   assert.equal(new URL(manifest.scope,scope).href,scope.href);
   for (const size of [192,512]) for (const purpose of ['any','maskable']) {
     const icon = manifest.icons.find(i=>i.sizes===size+'x'+size&&i.purpose===purpose);
@@ -80,7 +80,7 @@ const cacheState = page => page.evaluate(async()=>{
 
 async function browserChecks(root, release) {
   const {chromium} = require('playwright');
-  const app = await server(root);
+  const app = await server(path.dirname(path.dirname(root)));
   const browser = await chromium.launch(launchOptions());
   try {
     const context = await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true,
@@ -97,10 +97,16 @@ async function browserChecks(root, release) {
         for(const e of list.getEntries())if(!e.hadRecentInput)window.speedGuardCls+=e.value;
       }).observe({type:'layout-shift',buffered:true});
     });
-    const base = app.base+'/index.html';
+    const base = app.base+'/Triggle/site/index.html';
     await page.goto(base);
     await boot(page);
     await saved(page);
+    const appId = await cdp.send('Page.getAppId');
+    assert.equal(appId.appId,base,'Chrome must resolve the same application identity as the previous manifest');
+    const manifest = await cdp.send('Page.getAppManifest');
+    assert.deepEqual(manifest.errors,[]);
+    const {installabilityErrors} = await cdp.send('Page.getInstallabilityErrors');
+    assert(installabilityErrors.every(error=>error.errorId==='in-incognito'),JSON.stringify(installabilityErrors));
     const perf = await page.evaluate(()=>({
       cls:window.speedGuardCls,
       requests:performance.getEntriesByType('resource').map(entry=>entry.name),
@@ -255,11 +261,13 @@ async function verifyUpdate(root, base, browser, release) {
 }
 
 (async()=>{
-  const root = await fs.mkdtemp(path.join(os.tmpdir(),'triggle-speedguard-'));
+  const temp = await fs.mkdtemp(path.join(os.tmpdir(),'triggle-speedguard-'));
+  const root = path.join(temp,'Triggle','site');
   try {
+    await fs.mkdir(root,{recursive:true});
     await fs.cp(site,root,{recursive:true});
     buildStudentRelease(root);
     const release = await checkBuild(root);
     if (process.argv.includes('--browser')) await browserChecks(root,release);
-  } finally { await fs.rm(root,{recursive:true,force:true}); }
+  } finally { await fs.rm(temp,{recursive:true,force:true}); }
 })().catch(error=>{console.error(error);process.exitCode=1;});
