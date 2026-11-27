@@ -11,7 +11,7 @@
 
 ## Evidence and coverage
 
-[Inventory](inventory.csv) lists 522 registered figure groups and 22 additional asset-only groups. It groups shared assets and inline/enlarged presentations, tracks locale-specific files, and identifies generated figures, interactive stages and their curriculum sources. A stage or composite asset can contain multiple panels. It is a source inventory, with no claim that every state or panel was rendered during validation.
+The initial version of [the inventory](inventory.csv) recorded 522 registered figure groups and 22 additional asset-only groups. The current inventory records 527 registered figure groups and 17 additional asset-only groups. It groups shared assets and inline/enlarged presentations, tracks locale-specific files, and identifies generated figures, interactive stages and their curriculum sources. A stage or composite asset can contain multiple panels. It is a source inventory, with no claim that every state or panel was rendered during validation.
 
 | Measure | Result |
 | --- | ---: |
@@ -65,6 +65,12 @@ The scores are for the five full-matrix fixtures only. Mathematical invariants, 
 | Interactive stability | 5% | 6.0 | 9.0 |
 | Accessibility | 5% | 6.0 | 8.5 |
 | **Weighted result** | | **5.1** | **9.6** |
+
+## Later browser verification
+
+The [Grade 9 coordinate exercises](../ver-diagramguard-grade9-distance/README.md), [Grade 10 slope exercises](../ver-diagramguard-grade10-slopes/README.md) and [Grade 10 line constructions](../ver-diagramguard-grade10-lines/README.md) bring the full-matrix figure count to 36. All 31 registered Grade 9 and 10 Chapter 5 exercise figures are included. The remaining 491 registered groups need their full per-figure audit. The estimates in these reports cover the figures identified in each report.
+
+A separate exploratory scan at 320 CSS px and 200% text included 310 concept routes across the two languages. Each browser rendered 1,266 SVG instances in 726 image-bearing states, including previews. The next local batch recorded zero label boundary flags and zero horizontal clipping flags in that sample. Other candidates still appeared in 458 Chromium and 426 WebKit instances. They include reference-line contacts and require individual review. The scan exercises initial views, tabs and representative slider values.
 
 ## Running checks
 
