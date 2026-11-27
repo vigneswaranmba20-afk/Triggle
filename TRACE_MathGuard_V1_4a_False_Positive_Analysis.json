@@ -1,0 +1,1475 @@
+{
+ "schemaVersion": 1,
+ "engine": "TRACE MathGuard V1.4a",
+ "total": 72,
+ "summary": {
+  "engine_false_positive": 5,
+  "unresolved_finding": 61,
+  "explanation_deficiency": 6
+ },
+ "items": [
+  {
+   "questionId": "g9-ch3-ex3.2-q4",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "contradictory_constant_equation"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "PASS"
+   },
+   "classification": "engine_false_positive",
+   "reason": "Working no longer fails after reusable parser fixes (custom [[a|b]] fractions / unit-conversion facts); not a student-content error."
+  },
+  {
+   "questionId": "g9-ch3-ex3.1-q3-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.1",
+   "v1_4": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_2_number_mismatch:en=['0'],ta=['4']"
+    ]
+   },
+   "v1_4a": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch3-ex3.1-q6-i",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.1",
+   "v1_4": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['0'],ta=['7']"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q1-iii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "contradictory_constant_equation"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q2",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "aligned_chain_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q5-i",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q5-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q5-iii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q5-iv",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.3-q7-i",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.3",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.3-q7-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.3",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.3-q8",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.3",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.3-q9",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.3",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PARTIAL",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": [
+     "en_ta_unit_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PARTIAL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.3-q10",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.3",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['4'],ta=['0']"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch3-ex3.4-q2-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.4",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['2'],ta=['32']"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch3-ex3.4-q10",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.4",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_2_number_mismatch:en=['1'],ta=['110']"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch3-ex3.4-q14",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.4",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['0'],ta=['4']"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch3-ex3.6-q3-vi",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.6",
+   "v1_4": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_0_number_mismatch:en=['2'],ta=['1']"
+    ]
+   },
+   "v1_4a": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch3-ex3.10-q2-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.10",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.10-q3",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.10",
+   "v1_4": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch3-ex3.11-q1-iii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.11",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "overwrites_established_given"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.11-q1-iv",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.11",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "overwrites_established_given"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.11-q2",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.11",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch3-ex3.12-q1-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.12",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "overwrites_established_given"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.12-q3",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.12",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch3-ex3.13-q1-i",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.13",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.13-q1-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.13",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.13-q1-iii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.13",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.13-q2",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.13",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.13-q3",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.13",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.14-q6",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.14",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch3-ex3.15-q1",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.15",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.15-q13",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.15",
+   "v1_4": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL"
+   },
+   "classification": "explanation_deficiency",
+   "reason": "Tamil step text is an English placeholder ('Tamil unchanged'); maths is not mistranslated, Tamil prose is missing. Do not auto-fill without Tamil review."
+  },
+  {
+   "questionId": "g9-ch3-ex3.15-q14",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.15",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "explanation_deficiency",
+   "reason": "Tamil step text is an English placeholder ('Tamil unchanged'); maths is not mistranslated, Tamil prose is missing. Do not auto-fill without Tamil review."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q2",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "v1_4": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "explanation_deficiency",
+   "reason": "Tamil step text is an English placeholder ('Tamil unchanged'); maths is not mistranslated, Tamil prose is missing. Do not auto-fill without Tamil review."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q3",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q5",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q6",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "identity_mismatch",
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q7",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "explanation_deficiency",
+   "reason": "Tamil step text is an English placeholder ('Tamil unchanged'); maths is not mistranslated, Tamil prose is missing. Do not auto-fill without Tamil review."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q8",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "v1_4": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "explanation_deficiency",
+   "reason": "Tamil step text is an English placeholder ('Tamil unchanged'); maths is not mistranslated, Tamil prose is missing. Do not auto-fill without Tamil review."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q9",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "explanation_deficiency",
+   "reason": "Tamil step text is an English placeholder ('Tamil unchanged'); maths is not mistranslated, Tamil prose is missing. Do not auto-fill without Tamil review."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q11",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q12",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "v1_4": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['900'],ta=['1800']"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch5-ex5.3-q2",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.3",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch5-ex5.3-q4",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.3",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "contradictory_constant_equation",
+     "overwrites_established_given"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch7-ex7.2-q1",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch7-ex7.2-q2",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "contradictory_constant_equation"
+    ],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "engine_false_positive",
+   "reason": "Working no longer fails after reusable parser fixes (custom [[a|b]] fractions / unit-conversion facts); not a student-content error."
+  },
+  {
+   "questionId": "g9-ch7-ex7.2-q5",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.2",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch7-ex7.2-q6",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.2",
+   "v1_4": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q3",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q4",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PARTIAL",
+    "evidence": [
+     "contradictory_constant_equation"
+    ],
+    "tamilFlags": [
+     "en_ta_unit_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "PARTIAL"
+   },
+   "classification": "engine_false_positive",
+   "reason": "Working no longer fails after reusable parser fixes (custom [[a|b]] fractions / unit-conversion facts); not a student-content error."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q5",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "contradictory_constant_equation"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "PASS"
+   },
+   "classification": "engine_false_positive",
+   "reason": "Working no longer fails after reusable parser fixes (custom [[a|b]] fractions / unit-conversion facts); not a student-content error."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q6",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "chain_mismatch"
+    ],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "engine_false_positive",
+   "reason": "Working no longer fails after reusable parser fixes (custom [[a|b]] fractions / unit-conversion facts); not a student-content error."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q7",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_2_number_mismatch:en=['3.5'],ta=['5']"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q8",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "chain_mismatch",
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q9",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "g9-ch7-ex7.4-q8",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.4",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "invalid_formula_dimension"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "c10-3-ex3-2-q2-v",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.2",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['36'],ta=['9']"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "c10-3-ex3-10-q2",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.10",
+   "v1_4": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_2_number_mismatch:en=['30'],ta=['36']"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "c10-3-ex3-14-q5",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.14",
+   "v1_4": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_3_number_mismatch:en=['4'],ta=['24']"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "c10-3-ex3-15-q4-i",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.15",
+   "v1_4": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "c10-3-ex3-18-q8",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.18",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "invalid_root_set"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "c10-3-ex3-20-q9",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.20",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "invalid_equation_transformation"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "c10-3-ex3-unit-q2",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.unit",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "c10-3-ex3-unit-q5",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.unit",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "c10-3-ex3-unit-q9",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.unit",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "aligned_chain_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "c10-3-ex3-unit-q10",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.unit",
+   "v1_4": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "invalid_equation_transformation"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Still flagged. Not auto-confirmed: remaining patterns (function evaluation p(x) without binding, multi-variable chains, aligned chains, given overwrite) are known false-positive risks; needs manual/textbook review."
+  },
+  {
+   "questionId": "c10-3-ex3-unit-q13",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.unit",
+   "v1_4": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "g10-ch3-variations",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.7",
+   "v1_4": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "c10-5-unit-q7",
+   "grade": 10,
+   "chapter": 5,
+   "exercise": "5.unit",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "c10-7-ex7-3-q3",
+   "grade": 10,
+   "chapter": 7,
+   "exercise": "7.3",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_3_number_mismatch:en=['2.464'],ta=['464']"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  },
+  {
+   "questionId": "c10-7-ex7-5-q5",
+   "grade": 10,
+   "chapter": 7,
+   "exercise": "7.5",
+   "v1_4": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "classification": "unresolved_finding",
+   "reason": "Number tokens differ between EN/TA step; may be a different valid method, not confirmed mistranslation."
+  }
+ ]
+}

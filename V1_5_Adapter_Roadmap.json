@@ -1,0 +1,218 @@
+{
+ "schemaVersion": 1,
+ "engine": "TRACE MathGuard V1.4c",
+ "firstImplementationDomain": "sets_and_relations",
+ "productionCertificationExpanded": false,
+ "gatingPolicy": "No V1.5 domain may be marked certified until all V1.4c reliability gates and Gemini Neon independent review pass.",
+ "domains": [
+  {
+   "priorityRank": 1,
+   "domain": "sets_and_relations",
+   "adapterClass": "SetsRelationsFunctionsAdapter",
+   "adapterStatus": "planned_v1_5",
+   "certified": false,
+   "targetChapters": [
+    {
+     "grade": 9,
+     "chapter": "1",
+     "title": "Set Language",
+     "discoveredExercises": 120
+    },
+    {
+     "grade": 10,
+     "chapter": "1",
+     "title": "Relations and Functions",
+     "discoveredExercises": 74
+    }
+   ],
+   "requiredInvariants": [
+    "Set equality invariance under element permutation and deduplication",
+    "De Morgan laws, distributive laws, and cardinality inclusion-exclusion |A ∪ B| = |A| + |B| - |A ∩ B|",
+    "Cartesian product cardinality |A × B| = |A|·|B| and ordered-pair non-commutativity",
+    "Relation properties (reflexive, symmetric, transitive) and function well-definedness (unique image)",
+    "Composition domain/codomain compatibility (f ∘ g requires range(g) ⊆ domain(f))"
+   ],
+   "representativeTestCases": [
+    "sets_and_relations-pos-equiv-01",
+    "sets_and_relations-adv-mutation-01",
+    "sets_and_relations-bilingual-parity-01",
+    "sets_and_relations-abstention-01"
+   ]
+  },
+  {
+   "priorityRank": 2,
+   "domain": "real_numbers",
+   "adapterClass": "RealNumbersAdapter",
+   "adapterStatus": "planned_v1_5",
+   "certified": false,
+   "targetChapters": [
+    {
+     "grade": 9,
+     "chapter": "2",
+     "title": "Real Numbers",
+     "discoveredExercises": 120
+    }
+   ],
+   "requiredInvariants": [
+    "Exact rational vs irrational classification and surd simplification equivalence",
+    "Law of indices and rationalisation of denominators without sign loss",
+    "Scientific notation mantissa-exponent normalisation (1 ≤ m < 10)"
+   ],
+   "representativeTestCases": [
+    "real_numbers-pos-equiv-01",
+    "real_numbers-adv-mutation-01",
+    "real_numbers-bilingual-parity-01",
+    "real_numbers-abstention-01"
+   ]
+  },
+  {
+   "priorityRank": 3,
+   "domain": "number_sequences",
+   "adapterClass": "NumbersSequencesAdapter",
+   "adapterStatus": "planned_v1_5",
+   "certified": false,
+   "targetChapters": [
+    {
+     "grade": 10,
+     "chapter": "2",
+     "title": "Numbers and Sequences",
+     "discoveredExercises": 150
+    }
+   ],
+   "requiredInvariants": [
+    "Euclid division lemma (a = bq + r, 0 ≤ r < |b|) and modular arithmetic congruence",
+    "AP/GP nth term and partial sum closed forms with r ≠ 1 / |r| < 1 domain guards",
+    "Special series identities (Σk, Σk², Σk³) exact polynomial verification"
+   ],
+   "representativeTestCases": [
+    "number_sequences-pos-equiv-01",
+    "number_sequences-adv-mutation-01",
+    "number_sequences-bilingual-parity-01",
+    "number_sequences-abstention-01"
+   ]
+  },
+  {
+   "priorityRank": 4,
+   "domain": "euclidean_geometry",
+   "adapterClass": "EuclideanGeometryAdapter",
+   "adapterStatus": "planned_v1_5",
+   "certified": false,
+   "targetChapters": [
+    {
+     "grade": 9,
+     "chapter": "4",
+     "title": "Geometry",
+     "discoveredExercises": 86
+    },
+    {
+     "grade": 10,
+     "chapter": "4",
+     "title": "Geometry",
+     "discoveredExercises": 85
+    }
+   ],
+   "requiredInvariants": [
+    "Triangle similarity/congruence criteria (SSS, SAS, AA/ASA) with vertex correspondence",
+    "Thales (BPT), angle-bisector, Pythagoras, and alternate-segment theorem preconditions",
+    "Angle-sum and cyclic quadrilateral opposite-angle supplementary constraints"
+   ],
+   "representativeTestCases": [
+    "euclidean_geometry-pos-equiv-01",
+    "euclidean_geometry-adv-mutation-01",
+    "euclidean_geometry-bilingual-parity-01",
+    "euclidean_geometry-abstention-01"
+   ]
+  },
+  {
+   "priorityRank": 5,
+   "domain": "trigonometry",
+   "adapterClass": "TrigonometryAdapter",
+   "adapterStatus": "planned_v1_5",
+   "certified": false,
+   "targetChapters": [
+    {
+     "grade": 9,
+     "chapter": "6",
+     "title": "Trigonometry",
+     "discoveredExercises": 47
+    },
+    {
+     "grade": 10,
+     "chapter": "6",
+     "title": "Trigonometry",
+     "discoveredExercises": 86
+    }
+   ],
+   "requiredInvariants": [
+    "Pythagorean, reciprocal, and complementary-angle identities over valid domains",
+    "Exact special-angle table (0°, 30°, 45°, 60°, 90°) without premature rounding",
+    "Heights-and-distances right-triangle tangent/sine ratio consistency"
+   ],
+   "representativeTestCases": [
+    "trigonometry-pos-equiv-01",
+    "trigonometry-adv-mutation-01",
+    "trigonometry-bilingual-parity-01",
+    "trigonometry-abstention-01"
+   ]
+  },
+  {
+   "priorityRank": 6,
+   "domain": "statistics",
+   "adapterClass": "StatisticsAdapter",
+   "adapterStatus": "planned_v1_5",
+   "certified": false,
+   "targetChapters": [
+    {
+     "grade": 9,
+     "chapter": "8",
+     "title": "Statistics",
+     "discoveredExercises": 30
+    },
+    {
+     "grade": 10,
+     "chapter": "8",
+     "title": "Statistics and Probability",
+     "discoveredExercises": 92
+    }
+   ],
+   "requiredInvariants": [
+    "Grouped/ungrouped mean, median, mode, range, variance, and standard deviation",
+    "Coefficient of variation (CV = σ/x̄ × 100%) with x̄ ≠ 0 guard",
+    "Step-deviation scaling invariance"
+   ],
+   "representativeTestCases": [
+    "statistics-pos-equiv-01",
+    "statistics-adv-mutation-01",
+    "statistics-bilingual-parity-01",
+    "statistics-abstention-01"
+   ]
+  },
+  {
+   "priorityRank": 7,
+   "domain": "probability",
+   "adapterClass": "ProbabilityAdapter",
+   "adapterStatus": "planned_v1_5",
+   "certified": false,
+   "targetChapters": [
+    {
+     "grade": 9,
+     "chapter": "9",
+     "title": "Probability",
+     "discoveredExercises": 25
+    }
+   ],
+   "requiredInvariants": [
+    "Kolmogorov bounds 0 ≤ P(E) ≤ 1 and complement rule P(E') = 1 - P(E)",
+    "Addition theorem P(A ∪ B) = P(A) + P(B) - P(A ∩ B) and mutually exclusive special case",
+    "Sample-space cardinality exactness for coins, dice, and cards"
+   ],
+   "representativeTestCases": [
+    "probability-pos-equiv-01",
+    "probability-adv-mutation-01",
+    "probability-bilingual-parity-01",
+    "probability-abstention-01"
+   ]
+  }
+ ],
+ "gitCommit": "1300f61"
+}

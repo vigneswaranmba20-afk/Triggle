@@ -1,0 +1,2637 @@
+{
+  "v1_3_5_summary": {
+    "schemaVersion": 1,
+    "engine": "TRACE MathGuard V1.3.5",
+    "performance": {
+      "totalExecutionTimeMs": 89895.67,
+      "peakMemoryMB": 74.99
+    },
+    "chapters": {
+      "ch3_algebra": {
+        "counts": {
+          "exercises": 139,
+          "concepts": 14,
+          "total": 153
+        },
+        "answerVerificationCounts": {
+          "PASS": 149,
+          "UNVERIFIABLE": 4
+        },
+        "intermediateStepCounts": {
+          "UNVERIFIABLE": 34,
+          "FAIL": 45,
+          "PARTIAL": 35,
+          "PASS": 39
+        },
+        "workingVerificationCounts": {
+          "PARTIAL": 52,
+          "PASS": 94,
+          "FAIL": 4,
+          "UNVERIFIABLE": 3
+        },
+        "tamilValidationCounts": {
+          "PASS": 140,
+          "MISSING": 9,
+          "PARTIAL": 2,
+          "FAIL": 2
+        }
+      },
+      "ch5_coord_geometry": {
+        "counts": {
+          "exercises": 98,
+          "concepts": 12,
+          "total": 110
+        },
+        "answerVerificationCounts": {
+          "PASS": 108,
+          "UNVERIFIABLE": 2
+        },
+        "intermediateStepCounts": {
+          "PASS": 10,
+          "FAIL": 60,
+          "PARTIAL": 18,
+          "UNVERIFIABLE": 22
+        },
+        "workingVerificationCounts": {
+          "PASS": 83,
+          "PARTIAL": 19,
+          "FAIL": 5,
+          "UNVERIFIABLE": 3
+        },
+        "tamilValidationCounts": {
+          "PASS": 108,
+          "PARTIAL": 1,
+          "FAIL": 1
+        }
+      },
+      "ch7_mensuration": {
+        "counts": {
+          "exercises": 62,
+          "concepts": 9,
+          "total": 71
+        },
+        "answerVerificationCounts": {
+          "PASS": 70,
+          "FAIL": 0,
+          "UNVERIFIABLE": 1
+        },
+        "intermediateStepCounts": {
+          "PASS": 34,
+          "FAIL": 2,
+          "PARTIAL": 19,
+          "UNVERIFIABLE": 16
+        },
+        "workingVerificationCounts": {
+          "PASS": 40,
+          "FAIL": 10,
+          "PARTIAL": 20,
+          "UNVERIFIABLE": 1
+        },
+        "tamilValidationCounts": {
+          "PASS": 50,
+          "FAIL": 1,
+          "PARTIAL": 10,
+          "MISSING": 10
+        }
+      }
+    },
+    "totalAuditedItems": 334
+  },
+  "v1_3_5_runtime_sec": 89.92,
+  "v1_3_5_peak_mb": 75.49,
+  "v1_3_4a_totals": {
+    "total_claims": 1731,
+    "verified_claims": 1544,
+    "failed_claims": 19,
+    "unsupported_claims": 168,
+    "statuses": {
+      "PASS": 218,
+      "PARTIAL": 91,
+      "FAIL": 18,
+      "UNVERIFIABLE": 7
+    }
+  },
+  "v1_3_5_totals": {
+    "total_claims": 1734,
+    "verified_claims": 1540,
+    "failed_claims": 28,
+    "unsupported_claims": 166,
+    "statuses": {
+      "PASS": 217,
+      "PARTIAL": 91,
+      "FAIL": 19,
+      "UNVERIFIABLE": 7
+    }
+  },
+  "diff_count": 22,
+  "diffs": [
+    {
+      "id": "c10-3-ex3-3-q2-i",
+      "chapter": "3",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "FAIL",
+        "total_claims": 4,
+        "verified_claims": 3,
+        "failed_claims": 1,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "f(a)=(a+6)(a-2)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "g(a)=(a-2)(a-3)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "\\text{LCM}=\\dfrac{f(a)\\times g(a)}{\\text{GCD}}=\\dfrac{(a+6)(a-2)(a-2)(a-3)}{a-2}",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "chain_mismatch"
+          },
+          {
+            "step_index": 2,
+            "line": "\\text{LCM}=(a+6)(a-2)(a-3)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "PARTIAL",
+        "total_claims": 4,
+        "verified_claims": 3,
+        "failed_claims": 0,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "f(a)=(a+6)(a-2)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "g(a)=(a-2)(a-3)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "\\text{LCM}=\\dfrac{f(a)\\times g(a)}{\\text{GCD}}=\\dfrac{(a+6)(a-2)(a-2)(a-3)}{a-2}",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 2,
+            "line": "\\text{LCM}=(a+6)(a-2)(a-3)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          }
+        ],
+        "givens": {}
+      }
+    },
+    {
+      "id": "c10-3-ex3-3-q3-i",
+      "chapter": "3",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "FAIL",
+        "total_claims": 4,
+        "verified_claims": 3,
+        "failed_claims": 1,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "f(x)&=12x^3(x-1)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "g(x)&=8x^2(x^2-3x+2)=8x^2(x-1)(x-2)",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "\\text{GCD}=\\dfrac{f(x)\\times g(x)}{\\text{LCM}}=\\dfrac{12x^3(x-1)\\times 8x^2(x-1)(x-2)}{24x^3(x-1)(x-2)}",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "chain_mismatch"
+          },
+          {
+            "step_index": 2,
+            "line": "\\text{GCD}=4x^2(x-1)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "PARTIAL",
+        "total_claims": 4,
+        "verified_claims": 3,
+        "failed_claims": 0,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "f(x)&=12x^3(x-1)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "g(x)&=8x^2(x^2-3x+2)=8x^2(x-1)(x-2)",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "\\text{GCD}=\\dfrac{f(x)\\times g(x)}{\\text{LCM}}=\\dfrac{12x^3(x-1)\\times 8x^2(x-1)(x-2)}{24x^3(x-1)(x-2)}",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 2,
+            "line": "\\text{GCD}=4x^2(x-1)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          }
+        ],
+        "givens": {}
+      }
+    },
+    {
+      "id": "c10-3-ex3-3-q4-i",
+      "chapter": "3",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "FAIL",
+        "total_claims": 4,
+        "verified_claims": 3,
+        "failed_claims": 1,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "p(x)&=(a-7)(a-5)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "\\text{LCM}&=a^3-10a^2+11a+70=(a-7)(a-5)(a+2)",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "q(x)=\\dfrac{\\text{LCM}\\times\\text{GCD}}{p(x)}=\\dfrac{(a-7)(a-5)(a+2)(a-7)}{(a-7)(a-5)}",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "chain_mismatch"
+          },
+          {
+            "step_index": 2,
+            "line": "q(x)=(a+2)(a-7)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "PARTIAL",
+        "total_claims": 4,
+        "verified_claims": 3,
+        "failed_claims": 0,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "p(x)&=(a-7)(a-5)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "\\text{LCM}&=a^3-10a^2+11a+70=(a-7)(a-5)(a+2)",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "q(x)=\\dfrac{\\text{LCM}\\times\\text{GCD}}{p(x)}=\\dfrac{(a-7)(a-5)(a+2)(a-7)}{(a-7)(a-5)}",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 2,
+            "line": "q(x)=(a+2)(a-7)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          }
+        ],
+        "givens": {}
+      }
+    },
+    {
+      "id": "c10-3-ex3-6-q6",
+      "chapter": "3",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PASS",
+        "total_claims": 5,
+        "verified_claims": 5,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "A+B=\\dfrac{x+1}{x+1}=1",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "multi_link_verified"
+          },
+          {
+            "step_index": 0,
+            "line": "A-B=\\dfrac{x-1}{x+1}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 0,
+            "line": "A\\div B=\\dfrac{x}{x+1}\\times\\dfrac{x+1}{1}=x",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "multi_link_verified"
+          },
+          {
+            "step_index": 1,
+            "line": "(A+B)^2+(A-B)^2=1+\\dfrac{(x-1)^2}{(x+1)^2}=\\dfrac{(x+1)^2+(x-1)^2}{(x+1)^2}=\\dfrac{2(x^2+1)}{(x+1)^2}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "multi_link_verified"
+          },
+          {
+            "step_index": 2,
+            "line": "\\text{LHS}=\\dfrac{2(x^2+1)}{(x+1)^2}\\div x=\\dfrac{2(x^2+1)}{x(x+1)^2}=\\text{RHS}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {
+          "B": "1/(x + 1)",
+          "A": "x/(x + 1)"
+        }
+      },
+      "v1_3_5": {
+        "status": "FAIL",
+        "total_claims": 5,
+        "verified_claims": 2,
+        "failed_claims": 2,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "A+B=\\dfrac{x+1}{x+1}=1",
+            "claim_type": "identity",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 0,
+            "line": "A-B=\\dfrac{x-1}{x+1}",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 0,
+            "line": "A\\div B=\\dfrac{x}{x+1}\\times\\dfrac{x+1}{1}=x",
+            "claim_type": "identity",
+            "status": "FAILED",
+            "evidence": "multi_link_identity_mismatch"
+          },
+          {
+            "step_index": 1,
+            "line": "(A+B)^2+(A-B)^2=1+\\dfrac{(x-1)^2}{(x+1)^2}=\\dfrac{(x+1)^2+(x-1)^2}{(x+1)^2}=\\dfrac{2(x^2+1)}{(x+1)^2}",
+            "claim_type": "identity",
+            "status": "FAILED",
+            "evidence": "multi_link_identity_mismatch"
+          },
+          {
+            "step_index": 2,
+            "line": "\\text{LHS}=\\dfrac{2(x^2+1)}{(x+1)^2}\\div x=\\dfrac{2(x^2+1)}{x(x+1)^2}=\\text{RHS}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {
+          "B": "1",
+          "A": "x/(x + 1)"
+        }
+      }
+    },
+    {
+      "id": "c10-3-ex3-6-q7",
+      "chapter": "3",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "FAIL",
+        "total_claims": 4,
+        "verified_claims": 3,
+        "failed_claims": 1,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\text{Pari's 1-hour work}=\\dfrac{1}{4}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "\\text{Yuvan's 1-hour work}=\\dfrac{1}{6}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "\\text{Combined 1-hour work}=\\dfrac{1}{4}+\\dfrac{1}{6}=\\dfrac{3+2}{12}=\\dfrac{5}{12}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence+symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "\\text{Time}=\\dfrac{12}{5}\\text{ hours}=2\\dfrac{2}{5}\\text{ hours}=2\\text{ hrs }24\\text{ minutes}",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "chain_mismatch"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "PASS",
+        "total_claims": 4,
+        "verified_claims": 4,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\text{Pari's 1-hour work}=\\dfrac{1}{4}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "\\text{Yuvan's 1-hour work}=\\dfrac{1}{6}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "\\text{Combined 1-hour work}=\\dfrac{1}{4}+\\dfrac{1}{6}=\\dfrac{3+2}{12}=\\dfrac{5}{12}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence+symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "\\text{Time}=\\dfrac{12}{5}\\text{ hours}=2\\dfrac{2}{5}\\text{ hours}=2\\text{ hrs }24\\text{ minutes}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence+symbolic_equivalence"
+          }
+        ],
+        "givens": {}
+      }
+    },
+    {
+      "id": "c10-3-ex3-10-q1-i",
+      "chapter": "3",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PARTIAL",
+        "total_claims": 7,
+        "verified_claims": 6,
+        "failed_claims": 0,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "a\\times c=4\\times(-2)=-8",
+            "claim_type": "identity",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 0,
+            "line": "-8+1=-7",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "4x^2-8x+x-2&=0",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 1,
+            "line": "4x(x-2)+1(x-2)&=0",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 1,
+            "line": "(4x+1)(x-2)&=0",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 2,
+            "line": "4x+1=0&\\implies x=-\\dfrac{1}{4}",
+            "claim_type": "implication",
+            "status": "VERIFIED",
+            "evidence": "logical_implication_verified"
+          },
+          {
+            "step_index": 2,
+            "line": "x-2=0&\\implies x=2",
+            "claim_type": "implication",
+            "status": "VERIFIED",
+            "evidence": "logical_implication_verified"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "PASS",
+        "total_claims": 7,
+        "verified_claims": 7,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "a\\times c=4\\times(-2)=-8",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "multi_link_verified"
+          },
+          {
+            "step_index": 0,
+            "line": "-8+1=-7",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "4x^2-8x+x-2&=0",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 1,
+            "line": "4x(x-2)+1(x-2)&=0",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 1,
+            "line": "(4x+1)(x-2)&=0",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 2,
+            "line": "4x+1=0&\\implies x=-\\dfrac{1}{4}",
+            "claim_type": "implication",
+            "status": "VERIFIED",
+            "evidence": "logical_implication_verified"
+          },
+          {
+            "step_index": 2,
+            "line": "x-2=0&\\implies x=2",
+            "claim_type": "implication",
+            "status": "VERIFIED",
+            "evidence": "logical_implication_verified"
+          }
+        ],
+        "givens": {
+          "a": "4",
+          "b": "-7",
+          "c": "-2",
+          "A": "4",
+          "B": "-7",
+          "C": "-2"
+        }
+      }
+    },
+    {
+      "id": "c10-5-ex5-5-q2",
+      "chapter": "5",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "FAIL",
+        "total_claims": 2,
+        "verified_claims": 1,
+        "failed_claims": 1,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\text{Wall: } x = 0\\quad\\text{gives path at distance 10:}\\quad x = 10",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "chain_mismatch"
+          },
+          {
+            "step_index": 1,
+            "line": "x = 10\\quad(\\text{Option (A)})",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          }
+        ],
+        "givens": {
+          "x": "10",
+          "y": "10"
+        }
+      },
+      "v1_3_5": {
+        "status": "FAIL",
+        "total_claims": 3,
+        "verified_claims": 2,
+        "failed_claims": 1,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\text{Wall: } x = 0\\quad\\text{gives path at distance 10:}\\quad x = 10",
+            "claim_type": "definition",
+            "status": "FAILED",
+            "evidence": "overwrites_established_given"
+          },
+          {
+            "step_index": 0,
+            "line": "\\text{Wall: } x = 0\\quad\\text{gives path at distance 10:}\\quad x = 10",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "x = 10\\quad(\\text{Option (A)})",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          }
+        ],
+        "givens": {
+          "x": "10",
+          "y": "10"
+        }
+      }
+    },
+    {
+      "id": "c10-5-unit-q1",
+      "chapter": "5",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "FAIL",
+        "total_claims": 4,
+        "verified_claims": 2,
+        "failed_claims": 1,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "A\\left(-1,\\dfrac{3}{2}\\right),\\quad B(2,4),\\quad C\\left(5,\\dfrac{3}{2}\\right),\\quad D(2,-1)",
+            "claim_type": "tuple_assignment",
+            "status": "VERIFIED",
+            "evidence": "labeled_point_declaration"
+          },
+          {
+            "step_index": 1,
+            "line": "AB &= BC = CD = DA = \\sqrt{3^2 + \\left(\\dfrac{5}{2}\\right)^2} = \\dfrac{\\sqrt{61}}{2}",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "chain_mismatch"
+          },
+          {
+            "step_index": 1,
+            "line": "AC &= 6 \\neq BD = 5",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 1,
+            "line": "m_{AB}\\cdot m_{BC} = -\\dfrac{25}{36}\\neq -1\\quad(\\text{Rhombus})",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "PARTIAL",
+        "total_claims": 4,
+        "verified_claims": 3,
+        "failed_claims": 0,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "A\\left(-1,\\dfrac{3}{2}\\right),\\quad B(2,4),\\quad C\\left(5,\\dfrac{3}{2}\\right),\\quad D(2,-1)",
+            "claim_type": "tuple_assignment",
+            "status": "VERIFIED",
+            "evidence": "labeled_point_declaration"
+          },
+          {
+            "step_index": 1,
+            "line": "AB &= BC = CD = DA = \\sqrt{3^2 + \\left(\\dfrac{5}{2}\\right)^2} = \\dfrac{\\sqrt{61}}{2}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "AC &= 6 \\neq BD = 5",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 1,
+            "line": "m_{AB}\\cdot m_{BC} = -\\dfrac{25}{36}\\neq -1\\quad(\\text{Rhombus})",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          }
+        ],
+        "givens": {
+          "P_x": "-1",
+          "P_y": "-1",
+          "Q_x": "-1",
+          "Q_y": "4",
+          "R_x": "5",
+          "R_y": "4",
+          "S_x": "5",
+          "S_y": "-1"
+        }
+      }
+    },
+    {
+      "id": "c10-5-unit-q3",
+      "chapter": "5",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PASS",
+        "total_claims": 5,
+        "verified_claims": 5,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "(3x+y-2)+(2x-y-3) &= 0",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 0,
+            "line": "5x - 5 = 0\\quad",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 0,
+            "line": "x &= 1",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "y = -1",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "5(1)+2(-1)-3 = 0\\quad\\text{gives Area} = 0 \\text{sq.units}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "multi_link_verified"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "PASS",
+        "total_claims": 6,
+        "verified_claims": 6,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "(3x+y-2)+(2x-y-3) &= 0",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 0,
+            "line": "5x - 5 = 0\\quad",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 0,
+            "line": "x &= 1",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "y = -1",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "5(1)+2(-1)-3 = 0\\quad\\text{gives Area} = 0 \\text{sq.units}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "5(1)+2(-1)-3 = 0\\quad\\text{gives Area} = 0 \\text{sq.units}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {}
+      }
+    },
+    {
+      "id": "c10-5-unit-q8",
+      "chapter": "5",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "FAIL",
+        "total_claims": 7,
+        "verified_claims": 4,
+        "failed_claims": 1,
+        "unsupported_claims": 2,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\text{Mirror slope } &= -\\dfrac{1}{3}\\quad\\text{gives perpendicular slope } = 3",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "chain_mismatch"
+          },
+          {
+            "step_index": 0,
+            "line": "y - 8 &= 3(x - 3)\\quad",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 0,
+            "line": "\\quad 3x - y = 1",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 1,
+            "line": "x + 3(3x-1) &= 7\\quad",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "multi_variable_system_equation"
+          },
+          {
+            "step_index": 1,
+            "line": "\\quad M(1,2)",
+            "claim_type": "tuple_assignment",
+            "status": "VERIFIED",
+            "evidence": "labeled_point_declaration"
+          },
+          {
+            "step_index": 1,
+            "line": "\\left(\\dfrac{3+h}{2}, \\dfrac{8+k}{2}\\right) &= (1,2)\\quad",
+            "claim_type": "identity",
+            "status": "UNVERIFIED",
+            "evidence": "unparsed_equation"
+          },
+          {
+            "step_index": 1,
+            "line": "\\quad (h,k) = (-1,-4)",
+            "claim_type": "identity",
+            "status": "UNVERIFIED",
+            "evidence": "unparsed_equation"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "FAIL",
+        "total_claims": 8,
+        "verified_claims": 5,
+        "failed_claims": 1,
+        "unsupported_claims": 2,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\text{Mirror slope } &= -\\dfrac{1}{3}\\quad\\text{gives perpendicular slope } = 3",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "\\text{Mirror slope } &= -\\dfrac{1}{3}\\quad\\text{gives perpendicular slope } = 3",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "aligned_chain_mismatch"
+          },
+          {
+            "step_index": 0,
+            "line": "y - 8 &= 3(x - 3)\\quad",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 0,
+            "line": "\\quad 3x - y = 1",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 1,
+            "line": "x + 3(3x-1) &= 7\\quad",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "multi_variable_system_equation"
+          },
+          {
+            "step_index": 1,
+            "line": "\\quad M(1,2)",
+            "claim_type": "tuple_assignment",
+            "status": "VERIFIED",
+            "evidence": "labeled_point_declaration"
+          },
+          {
+            "step_index": 1,
+            "line": "\\left(\\dfrac{3+h}{2}, \\dfrac{8+k}{2}\\right) &= (1,2)\\quad",
+            "claim_type": "identity",
+            "status": "UNVERIFIED",
+            "evidence": "unparsed_equation"
+          },
+          {
+            "step_index": 1,
+            "line": "\\quad (h,k) = (-1,-4)",
+            "claim_type": "identity",
+            "status": "UNVERIFIED",
+            "evidence": "unparsed_equation"
+          }
+        ],
+        "givens": {}
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q4",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PARTIAL",
+        "total_claims": 10,
+        "verified_claims": 9,
+        "failed_claims": 0,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "PQ=\\sqrt{PR^2-QR^2}=\\sqrt{20^2-16^2}=12 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence+symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "\\text{Axis }QR:\\quad r=12",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 1,
+            "line": "h=16",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "\\ell=20",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 2,
+            "line": "\\mathrm{CSA}_{QR}=\\pi r\\ell=\\pi(12)(20)=240\\pi \\mathrm{cm}^2",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 3,
+            "line": "\\text{Axis }PQ:\\quad r=16",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "multi_variable_system_equation"
+          },
+          {
+            "step_index": 3,
+            "line": "h=12",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 3,
+            "line": "\\ell=20",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 4,
+            "line": "\\mathrm{CSA}_{PQ}=320\\pi \\mathrm{cm}^2",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 4,
+            "line": "\\mathrm{CSA}_{QR}:\\mathrm{CSA}_{PQ}=3:4",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "multi_variable_system_equation"
+          }
+        ],
+        "givens": {
+          "Q": "90",
+          "QR": "16",
+          "PR": "20"
+        }
+      },
+      "v1_3_5": {
+        "status": "PARTIAL",
+        "total_claims": 10,
+        "verified_claims": 8,
+        "failed_claims": 0,
+        "unsupported_claims": 2,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "PQ=\\sqrt{PR^2-QR^2}=\\sqrt{20^2-16^2}=12 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 1,
+            "line": "\\text{Axis }QR:\\quad r=12",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 1,
+            "line": "h=16",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "\\ell=20",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 2,
+            "line": "\\mathrm{CSA}_{QR}=\\pi r\\ell=\\pi(12)(20)=240\\pi \\mathrm{cm}^2",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 3,
+            "line": "\\text{Axis }PQ:\\quad r=16",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "multi_variable_system_equation"
+          },
+          {
+            "step_index": 3,
+            "line": "h=12",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 3,
+            "line": "\\ell=20",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 4,
+            "line": "\\mathrm{CSA}_{PQ}=320\\pi \\mathrm{cm}^2",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 4,
+            "line": "\\mathrm{CSA}_{QR}:\\mathrm{CSA}_{PQ}=3:4",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "multi_variable_system_equation"
+          }
+        ],
+        "givens": {}
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q6",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PARTIAL",
+        "total_claims": 8,
+        "verified_claims": 6,
+        "failed_claims": 0,
+        "unsupported_claims": 2,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\ell&=\\sqrt{r^2+h^2}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "&=\\sqrt{5^2+12^2}",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 0,
+            "line": "&=13 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "A_{\\mathrm{cap}}&=\\pi r\\ell",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\pi(5)(13)",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 1,
+            "line": "&=65\\pi \\mathrm{cm}^2",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "N=\\dfrac{5720}{65\\pi}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 3,
+            "line": "N=\\dfrac{5720\\times7}{65\\times22}=28",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "PASS",
+        "total_claims": 8,
+        "verified_claims": 8,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\ell&=\\sqrt{r^2+h^2}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "&=\\sqrt{5^2+12^2}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 0,
+            "line": "&=13 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "A_{\\mathrm{cap}}&=\\pi r\\ell",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\pi(5)(13)",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "&=65\\pi \\mathrm{cm}^2",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "N=\\dfrac{5720}{65\\pi}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 3,
+            "line": "N=\\dfrac{5720\\times7}{65\\times22}=28",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {
+          "r": "5",
+          "h": "12"
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-1-q10",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "FAIL",
+        "total_claims": 14,
+        "verified_claims": 13,
+        "failed_claims": 1,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "r&=6 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "R=12 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "h&=8 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "\\ell&=\\sqrt{8^2+(12-6)^2}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\sqrt{100}=10 \\mathrm{cm}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "A=\\pi(R+r)\\ell+\\pi r^2",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 3,
+            "line": "A&=\\pi(18)(10)+\\pi(36)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 3,
+            "line": "&=180\\pi+36\\pi",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 3,
+            "line": "&=216\\pi \\mathrm{cm}^2",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 4,
+            "line": "A&=216\\times\\frac{22}{7}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 4,
+            "line": "&=678.857\\ldots",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "aligned_chain_mismatch"
+          },
+          {
+            "step_index": 4,
+            "line": "&\\approx678.86 \\mathrm{cm}^2",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "numeric_tolerance"
+          },
+          {
+            "step_index": 5,
+            "line": "C&=678.86\\times2",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 5,
+            "line": "&=\\text{Rs.} 1357.72",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "PASS",
+        "total_claims": 14,
+        "verified_claims": 14,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "r&=6 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "R=12 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "h&=8 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "\\ell&=\\sqrt{8^2+(12-6)^2}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\sqrt{100}=10 \\mathrm{cm}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "A=\\pi(R+r)\\ell+\\pi r^2",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 3,
+            "line": "A&=\\pi(18)(10)+\\pi(36)",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 3,
+            "line": "&=180\\pi+36\\pi",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 3,
+            "line": "&=216\\pi \\mathrm{cm}^2",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 4,
+            "line": "A&=216\\times\\frac{22}{7}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 4,
+            "line": "&=678.857\\ldots",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "numeric_tolerance"
+          },
+          {
+            "step_index": 4,
+            "line": "&\\approx678.86 \\mathrm{cm}^2",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "numeric_tolerance"
+          },
+          {
+            "step_index": 5,
+            "line": "C&=678.86\\times2",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 5,
+            "line": "&=\\text{Rs.} 1357.72",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {}
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q3",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PARTIAL",
+        "total_claims": 7,
+        "verified_claims": 6,
+        "failed_claims": 0,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "2\\pi r&=484",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 0,
+            "line": "2\\times\\dfrac{22}{7}\\times r&=484",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 0,
+            "line": "r&=\\dfrac{484\\times7}{44}=77 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "V&=\\dfrac{1}{3}\\pi r^2 h",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\dfrac{1}{3}\\times\\dfrac{22}{7}\\times77\\times77\\times105",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 2,
+            "line": "V&=22\\times11\\times77\\times35",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 2,
+            "line": "&=652190 \\mathrm{cm}^3",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "PASS",
+        "total_claims": 7,
+        "verified_claims": 7,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "2\\pi r&=484",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 0,
+            "line": "2\\times\\dfrac{22}{7}\\times r&=484",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 0,
+            "line": "r&=\\dfrac{484\\times7}{44}=77 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "V&=\\dfrac{1}{3}\\pi r^2 h",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\dfrac{1}{3}\\times\\dfrac{22}{7}\\times77\\times77\\times105",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "pi_mode_22/7"
+          },
+          {
+            "step_index": 2,
+            "line": "V&=22\\times11\\times77\\times35",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 2,
+            "line": "&=652190 \\mathrm{cm}^3",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {
+          "h": "105"
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-2-q4",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "FAIL",
+        "total_claims": 6,
+        "verified_claims": 4,
+        "failed_claims": 1,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "V&=\\dfrac{1}{3}\\pi r^2 h",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "&=\\dfrac{1}{3}\\times\\dfrac{22}{7}\\times10^2\\times15",
+            "claim_type": "substitution",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 0,
+            "line": "&=\\dfrac{11000}{7} \\mathrm{m}^3\\approx1571.43 \\mathrm{m}^3",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "numeric_tolerance"
+          },
+          {
+            "step_index": 1,
+            "line": "\\text{Time}&=\\dfrac{11000}{7}\\div25",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\dfrac{440}{7}\\approx62.86\\text{ min}",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "numeric_tolerance"
+          },
+          {
+            "step_index": 2,
+            "line": "\\text{Time}\\approx63\\text{ minutes (approx)}",
+            "claim_type": "approximation",
+            "status": "FAILED",
+            "evidence": "approx_mismatch"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "FAIL",
+        "total_claims": 6,
+        "verified_claims": 5,
+        "failed_claims": 1,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "V&=\\dfrac{1}{3}\\pi r^2 h",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "&=\\dfrac{1}{3}\\times\\dfrac{22}{7}\\times10^2\\times15",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "pi_mode_22/7"
+          },
+          {
+            "step_index": 0,
+            "line": "&=\\dfrac{11000}{7} \\mathrm{m}^3\\approx1571.43 \\mathrm{m}^3",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "numeric_tolerance"
+          },
+          {
+            "step_index": 1,
+            "line": "\\text{Time}&=\\dfrac{11000}{7}\\div25",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\dfrac{440}{7}\\approx62.86\\text{ min}",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "numeric_tolerance"
+          },
+          {
+            "step_index": 2,
+            "line": "\\text{Time}\\approx63\\text{ minutes (approx)}",
+            "claim_type": "approximation",
+            "status": "FAILED",
+            "evidence": "approx_mismatch"
+          }
+        ],
+        "givens": {
+          "r": "10",
+          "h": "15"
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-4-q7",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PASS",
+        "total_claims": 6,
+        "verified_claims": 6,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "V=\\dfrac{4}{3}\\pi(6)^3=288\\pi \\mathrm{cm}^3",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "32\\pi(25-r^2)=288\\pi",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 2,
+            "line": "25-r^2&=9",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 2,
+            "line": "r^2&=16",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "equivalent_equation_transform"
+          },
+          {
+            "step_index": 2,
+            "line": "r&=4",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 2,
+            "line": "t&=5-4=1 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "FAIL",
+        "total_claims": 6,
+        "verified_claims": 3,
+        "failed_claims": 3,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "V=\\dfrac{4}{3}\\pi(6)^3=288\\pi \\mathrm{cm}^3",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "32\\pi(25-r^2)=288\\pi",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 2,
+            "line": "25-r^2&=9",
+            "claim_type": "equation",
+            "status": "FAILED",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step_index": 2,
+            "line": "r^2&=16",
+            "claim_type": "equation",
+            "status": "FAILED",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step_index": 2,
+            "line": "r&=4",
+            "claim_type": "definition",
+            "status": "FAILED",
+            "evidence": "overwrites_established_given"
+          },
+          {
+            "step_index": 2,
+            "line": "t&=5-4=1 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {
+          "r": "5",
+          "h": "32"
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q3",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PASS",
+        "total_claims": 3,
+        "verified_claims": 3,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\ell^2=r^2+h^2",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 1,
+            "line": "h&=\\sqrt{13^2-5^2}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\sqrt{144}=12 \\mathrm{cm}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "FAIL",
+        "total_claims": 3,
+        "verified_claims": 1,
+        "failed_claims": 2,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\ell^2=r^2+h^2",
+            "claim_type": "equation",
+            "status": "FAILED",
+            "evidence": "contradictory_constant_equation"
+          },
+          {
+            "step_index": 1,
+            "line": "h&=\\sqrt{13^2-5^2}",
+            "claim_type": "definition",
+            "status": "FAILED",
+            "evidence": "overwrites_established_given"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\sqrt{144}=12 \\mathrm{cm}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {
+          "l": "13",
+          "r": "5",
+          "h": "5"
+        }
+      }
+    },
+    {
+      "id": "c10-7-ex7-5-q14",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PARTIAL",
+        "total_claims": 2,
+        "verified_claims": 1,
+        "failed_claims": 0,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "h_1-h_2=h_1-\\dfrac{h_1}{2}=\\dfrac{h_1}{2}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "multi_link_verified"
+          },
+          {
+            "step_index": 1,
+            "line": "\\dfrac{r_2}{r_1}=\\dfrac{h_1-h_2}{h_1}=\\dfrac12",
+            "claim_type": "identity",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          }
+        ],
+        "givens": {
+          "h_2": "h_1/2"
+        }
+      },
+      "v1_3_5": {
+        "status": "FAIL",
+        "total_claims": 2,
+        "verified_claims": 0,
+        "failed_claims": 2,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "h_1-h_2=h_1-\\dfrac{h_1}{2}=\\dfrac{h_1}{2}",
+            "claim_type": "identity",
+            "status": "FAILED",
+            "evidence": "multi_link_identity_mismatch"
+          },
+          {
+            "step_index": 1,
+            "line": "\\dfrac{r_2}{r_1}=\\dfrac{h_1-h_2}{h_1}=\\dfrac12",
+            "claim_type": "identity",
+            "status": "FAILED",
+            "evidence": "multi_link_identity_mismatch"
+          }
+        ],
+        "givens": {}
+      }
+    },
+    {
+      "id": "c10-7-unit-q2",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PARTIAL",
+        "total_claims": 6,
+        "verified_claims": 4,
+        "failed_claims": 0,
+        "unsupported_claims": 2,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "V&=\\dfrac23\\pi r^3",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "&\\approx\\dfrac23\\times\\dfrac{22}{7}\\left(\\dfrac74\\right)^3",
+            "claim_type": "approximation",
+            "status": "UNVERIFIED",
+            "evidence": "missing_variable_bindings"
+          },
+          {
+            "step_index": 0,
+            "line": "&=\\dfrac{539}{48} \\mathrm{m}^3",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "t&\\approx\\dfrac{539\\times1000}{48\\times7}",
+            "claim_type": "approximation",
+            "status": "UNVERIFIED",
+            "evidence": "unjustified_approximation"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\dfrac{9625}{6} \\mathrm{s}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "t\\approx\\dfrac{9625}{360}=26.74 \\mathrm{min}",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "verified_approx_chain_definition"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "PARTIAL",
+        "total_claims": 6,
+        "verified_claims": 5,
+        "failed_claims": 0,
+        "unsupported_claims": 1,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "V&=\\dfrac23\\pi r^3",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "&\\approx\\dfrac23\\times\\dfrac{22}{7}\\left(\\dfrac74\\right)^3",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "pi_mode_22/7"
+          },
+          {
+            "step_index": 0,
+            "line": "&=\\dfrac{539}{48} \\mathrm{m}^3",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "t&\\approx\\dfrac{539\\times1000}{48\\times7}",
+            "claim_type": "approximation",
+            "status": "UNVERIFIED",
+            "evidence": "unjustified_approximation"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\dfrac{9625}{6} \\mathrm{s}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "t\\approx\\dfrac{9625}{360}=26.74 \\mathrm{min}",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "verified_approx_chain_definition"
+          }
+        ],
+        "givens": {
+          "r": "7/4"
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q4",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PASS",
+        "total_claims": 9,
+        "verified_claims": 9,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "r&=4",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "R=9",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "h&=22-10=12 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 1,
+            "line": "\\ell&=\\sqrt{h^2+(R-r)^2}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\sqrt{12^2+5^2}=13 \\mathrm{cm}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "A&=2\\pi r(10)+\\pi(R+r)\\ell",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 2,
+            "line": "&=80\\pi+169\\pi",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "&=249\\pi \\mathrm{cm}^2",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 3,
+            "line": "A\\approx\\dfrac{5478}{7}=782.57 \\mathrm{cm}^2",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "pi_mode_22/7"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "FAIL",
+        "total_claims": 9,
+        "verified_claims": 6,
+        "failed_claims": 3,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "r&=4",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "R=9",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "h&=22-10=12 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "overwrites_established_given"
+          },
+          {
+            "step_index": 1,
+            "line": "\\ell&=\\sqrt{h^2+(R-r)^2}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "&=\\sqrt{12^2+5^2}=13 \\mathrm{cm}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "A&=2\\pi r(10)+\\pi(R+r)\\ell",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 2,
+            "line": "&=80\\pi+169\\pi",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "aligned_chain_mismatch"
+          },
+          {
+            "step_index": 2,
+            "line": "&=249\\pi \\mathrm{cm}^2",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 3,
+            "line": "A\\approx\\dfrac{5478}{7}=782.57 \\mathrm{cm}^2",
+            "claim_type": "approximation",
+            "status": "FAILED",
+            "evidence": "approx_mismatch"
+          }
+        ],
+        "givens": {
+          "d_1": "8",
+          "d_2": "18",
+          "h": "22"
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q5",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PASS",
+        "total_claims": 7,
+        "verified_claims": 7,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "r&=0.75 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "t&=0.2 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "R&=2.25 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "H=10 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "N\\pi r^2t=\\pi R^2H",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 2,
+            "line": "N&=\\left(\\dfrac{2.25}{0.75}\\right)^2\\dfrac{10}{0.2}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 2,
+            "line": "&=3^2\\times50=450",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "FAIL",
+        "total_claims": 7,
+        "verified_claims": 6,
+        "failed_claims": 1,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "r&=0.75 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "FAILED",
+            "evidence": "overwrites_established_given"
+          },
+          {
+            "step_index": 0,
+            "line": "t&=0.2 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "R&=2.25 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "H=10 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "N\\pi r^2t=\\pi R^2H",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 2,
+            "line": "N&=\\left(\\dfrac{2.25}{0.75}\\right)^2\\dfrac{10}{0.2}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 2,
+            "line": "&=3^2\\times50=450",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          }
+        ],
+        "givens": {
+          "d": "9/2",
+          "r": "9/4",
+          "h": "10"
+        }
+      }
+    },
+    {
+      "id": "c10-7-unit-q10",
+      "chapter": "7",
+      "item_type": "exercise",
+      "v1_3_4a": {
+        "status": "PASS",
+        "total_claims": 10,
+        "verified_claims": 10,
+        "failed_claims": 0,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\ell=21 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "\\theta=216^\\circ",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "2\\pi r&=\\dfrac{216}{360}(2\\pi\\times21)",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 1,
+            "line": "r&=\\dfrac35(21)=12.6 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 2,
+            "line": "h&=\\sqrt{21^2-12.6^2}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 2,
+            "line": "&=\\sqrt{282.24}=16.8 \\mathrm{cm}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 3,
+            "line": "V&=\\dfrac13\\pi r^2h",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 3,
+            "line": "&\\approx\\dfrac13\\times\\dfrac{22}{7}(12.6)^2(16.8)",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "pi_mode_22/7"
+          },
+          {
+            "step_index": 3,
+            "line": "&=2794.176 \\mathrm{cm}^3",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 3,
+            "line": "&\\approx2794.18 \\mathrm{cm}^3",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "numeric_tolerance"
+          }
+        ],
+        "givens": {}
+      },
+      "v1_3_5": {
+        "status": "FAIL",
+        "total_claims": 10,
+        "verified_claims": 8,
+        "failed_claims": 2,
+        "unsupported_claims": 0,
+        "claims": [
+          {
+            "step_index": 0,
+            "line": "\\ell=21 \\mathrm{cm}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 0,
+            "line": "\\theta=216^\\circ",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 1,
+            "line": "2\\pi r&=\\dfrac{216}{360}(2\\pi\\times21)",
+            "claim_type": "equation",
+            "status": "VERIFIED",
+            "evidence": "conditional_equation_stated"
+          },
+          {
+            "step_index": 1,
+            "line": "r&=\\dfrac35(21)=12.6 \\mathrm{cm}",
+            "claim_type": "substitution",
+            "status": "FAILED",
+            "evidence": "overwrites_established_given"
+          },
+          {
+            "step_index": 2,
+            "line": "h&=\\sqrt{21^2-12.6^2}",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 2,
+            "line": "&=\\sqrt{282.24}=16.8 \\mathrm{cm}",
+            "claim_type": "identity",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 3,
+            "line": "V&=\\dfrac13\\pi r^2h",
+            "claim_type": "definition",
+            "status": "VERIFIED",
+            "evidence": "variable_definition"
+          },
+          {
+            "step_index": 3,
+            "line": "&\\approx\\dfrac13\\times\\dfrac{22}{7}(12.6)^2(16.8)",
+            "claim_type": "approximation",
+            "status": "FAILED",
+            "evidence": "approx_mismatch"
+          },
+          {
+            "step_index": 3,
+            "line": "&=2794.176 \\mathrm{cm}^3",
+            "claim_type": "substitution",
+            "status": "VERIFIED",
+            "evidence": "symbolic_equivalence"
+          },
+          {
+            "step_index": 3,
+            "line": "&\\approx2794.18 \\mathrm{cm}^3",
+            "claim_type": "approximation",
+            "status": "VERIFIED",
+            "evidence": "numeric_tolerance"
+          }
+        ],
+        "givens": {
+          "r": "21"
+        }
+      }
+    }
+  ]
+}

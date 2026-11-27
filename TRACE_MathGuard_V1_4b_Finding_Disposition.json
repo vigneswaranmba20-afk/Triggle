@@ -1,0 +1,2533 @@
+{
+ "schemaVersion": 1,
+ "engine": "TRACE MathGuard V1.4b",
+ "gitCommit": "2187c00",
+ "total72QueueSummary": {
+  "Engine false positive": 55,
+  "Unresolved with explicit evidence": 6,
+  "Explanation deficiency": 11
+ },
+ "unresolved61Summary": {
+  "Engine false positive": 50,
+  "Unresolved with explicit evidence": 6,
+  "Explanation deficiency": 5
+ },
+ "items": [
+  {
+   "questionId": "g9-ch3-ex3.2-q4",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "99508a742dc8c644",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "contradictory_constant_equation"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "engine_false_positive",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "step_2_missing_tamil_script"
+    ]
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Already resolved in V1.4a; V1.4b maintains working=PASS, tamil=FAIL."
+  },
+  {
+   "questionId": "g9-ch3-ex3.1-q3-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.1",
+   "curriculumCommit": "2187c00",
+   "contentHash": "bd99460e46944104",
+   "v1_4_status": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_2_number_mismatch:en=['0'],ta=['4']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "UNVERIFIABLE",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "\\frac{x^3}{x^2}-\\frac{x^4}{x^2}+\\frac{6x^6}{x^2}",
+      "evidence": "standalone_expression_no_relation"
+     },
+     {
+      "step": 1,
+      "line": "x-x^2+6x^4",
+      "evidence": "standalone_expression_no_relation"
+     },
+     {
+      "step": 2,
+      "line": "\\deg=4,\\quad x\\ne0",
+      "evidence": "unparsed_equation"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch3-ex3.1-q6-i",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.1",
+   "curriculumCommit": "2187c00",
+   "contentHash": "2e15b23dcb0cfe7a",
+   "v1_4_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['0'],ta=['7']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 2,
+      "line": "\\deg=2",
+      "evidence": "unparsed_equation"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q1-iii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "4500a7fd7d336d7e",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "contradictory_constant_equation"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q2",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "c7ecce92c37ea15e",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "aligned_chain_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q5-i",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "adaaa2b0f25be4c0",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q5-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "ab3afef670de10ad",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q5-iii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "be412956171d4efa",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "a\\ne0",
+      "evidence": "standalone_expression_no_relation"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PARTIAL, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.2-q5-iv",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "e14925b2f9622c9b",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.3-q7-i",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "c2db16023d67c647",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.3-q7-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "0fbe93e5aa245ae2",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.3-q8",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "0a401086313263dc",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.3-q9",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "b5a1e42156a56107",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PARTIAL",
+    "evidence": [
+     "identity_mismatch"
+    ],
+    "tamilFlags": [
+     "en_ta_unit_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PARTIAL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PARTIAL",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 2,
+      "line": "3m = 30 \\implies m = 10",
+      "evidence": "unverified_implication"
+     }
+    ],
+    "tamilFlags": [
+     "en_ta_unit_mismatch"
+    ]
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PARTIAL, tamil=PARTIAL) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.3-q10",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "1f090a90cd8017fa",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['4'],ta=['0']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "step_2_semantic_number_mismatch:en=['4', '10'],ta=['2']"
+    ]
+   },
+   "disposition": "Unresolved with explicit evidence",
+   "evidence": "Tamil parity difference remains flagged for manual bilingual review: [\"step_2_semantic_number_mismatch:en=['4', '10'],ta=['2']\"]."
+  },
+  {
+   "questionId": "g9-ch3-ex3.4-q2-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.4",
+   "curriculumCommit": "2187c00",
+   "contentHash": "fe85641609989ba8",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['2'],ta=['32']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch3-ex3.4-q10",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.4",
+   "curriculumCommit": "2187c00",
+   "contentHash": "42065319b2a8be2c",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_2_number_mismatch:en=['1'],ta=['110']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch3-ex3.4-q14",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.4",
+   "curriculumCommit": "2187c00",
+   "contentHash": "5b5417514586f3e2",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['0'],ta=['4']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "step_1_missing_tamil_script"
+    ]
+   },
+   "disposition": "Explanation deficiency",
+   "evidence": "Tamil prose absent/placeholder in reader item: ['step_1_missing_tamil_script']."
+  },
+  {
+   "questionId": "g9-ch3-ex3.6-q3-vi",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.6",
+   "curriculumCommit": "2187c00",
+   "contentHash": "c6898e61ac2ddbce",
+   "v1_4_status": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_0_number_mismatch:en=['2'],ta=['1']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "UNVERIFIABLE",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "\\left(\\dfrac{1}{x}\\right)^2 + 2\\left(\\dfrac{1}{x}\\right)\\left(\\dfrac{1}{y}\\right) + \\left(\\dfrac{1}{y}\\right)^2",
+      "evidence": "standalone_expression_no_relation"
+     },
+     {
+      "step": 1,
+      "line": "\\left(\\dfrac{1}{x} + \\dfrac{1}{y}\\right)^2",
+      "evidence": "standalone_expression_no_relation"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch3-ex3.10-q2-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.10",
+   "curriculumCommit": "2187c00",
+   "contentHash": "761ffc5dc65d9743",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 1,
+      "line": "Every point on 3x + 2y = 4 is a solution.",
+      "evidence": "prose_only_unverified"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PARTIAL, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.10-q3",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.10",
+   "curriculumCommit": "2187c00",
+   "contentHash": "cc09ee21036273be",
+   "v1_4_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 2,
+      "line": "(75, 25)",
+      "evidence": "no_equality_relation"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch3-ex3.11-q1-iii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.11",
+   "curriculumCommit": "2187c00",
+   "contentHash": "6a77a64d3594572e",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "overwrites_established_given"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.11-q1-iv",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.11",
+   "curriculumCommit": "2187c00",
+   "contentHash": "c3b290616ac8fe43",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "overwrites_established_given"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.11-q2",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.11",
+   "curriculumCommit": "2187c00",
+   "contentHash": "f122a882c492ca96",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch3-ex3.12-q1-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.12",
+   "curriculumCommit": "2187c00",
+   "contentHash": "6a9a533de04068ca",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "overwrites_established_given"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.12-q3",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.12",
+   "curriculumCommit": "2187c00",
+   "contentHash": "51df13544efcf2ba",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch3-ex3.13-q1-i",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.13",
+   "curriculumCommit": "2187c00",
+   "contentHash": "3f91508866bd4a06",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.13-q1-ii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.13",
+   "curriculumCommit": "2187c00",
+   "contentHash": "71062203069bed73",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.13-q1-iii",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.13",
+   "curriculumCommit": "2187c00",
+   "contentHash": "82f02fba307005b2",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.13-q2",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.13",
+   "curriculumCommit": "2187c00",
+   "contentHash": "a6137f9609387e5c",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.13-q3",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.13",
+   "curriculumCommit": "2187c00",
+   "contentHash": "b006791eee5de0a8",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "disposition": "Unresolved with explicit evidence",
+   "evidence": "Working fixed (working=PASS), but Tamil parity still flagged: ['en_ta_number_mismatch']."
+  },
+  {
+   "questionId": "g9-ch3-ex3.14-q6",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.14",
+   "curriculumCommit": "2187c00",
+   "contentHash": "3c1712ea4e5d6f3a",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch3-ex3.15-q1",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.15",
+   "curriculumCommit": "2187c00",
+   "contentHash": "25f3fdadb470a8c7",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "p(-2) = -8 + 24 - 2k + 6 = 0",
+      "evidence": "missing_variable_bindings"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PARTIAL, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch3-ex3.15-q13",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.15",
+   "curriculumCommit": "2187c00",
+   "contentHash": "b06abaeb734dfe95",
+   "v1_4_status": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "explanation_deficiency",
+   "v1_4b_status": {
+    "working": "UNVERIFIABLE",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "x^3 + y^3",
+      "evidence": "standalone_expression_no_relation"
+     }
+    ],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "disposition": "Explanation deficiency",
+   "evidence": "Missing/placeholder Tamil prose in reader item (working=UNVERIFIABLE, tamil=FAIL); not a mathematical error."
+  },
+  {
+   "questionId": "g9-ch3-ex3.15-q14",
+   "grade": 9,
+   "chapter": 3,
+   "exercise": "3.15",
+   "curriculumCommit": "2187c00",
+   "contentHash": "2d0351c48b223aaf",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "explanation_deficiency",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "disposition": "Explanation deficiency",
+   "evidence": "Missing/placeholder Tamil prose in reader item (working=PASS, tamil=FAIL); not a mathematical error."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q2",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "2e50ef8721ae2d39",
+   "v1_4_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "explanation_deficiency",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 4,
+      "line": "(i) Collinear",
+      "evidence": "standalone_expression_no_relation"
+     },
+     {
+      "step": 6,
+      "line": "(ii) Collinear",
+      "evidence": "standalone_expression_no_relation"
+     }
+    ],
+    "tamilFlags": [
+     "missing_tamil_script",
+     "step_0_missing_tamil_script",
+     "step_1_missing_tamil_script",
+     "step_2_missing_tamil_script",
+     "step_3_missing_tamil_script",
+     "step_4_missing_tamil_script",
+     "step_5_missing_tamil_script",
+     "step_6_missing_tamil_script"
+    ]
+   },
+   "disposition": "Explanation deficiency",
+   "evidence": "Missing/placeholder Tamil prose in reader item (working=PARTIAL, tamil=FAIL); not a mathematical error."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q3",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "44080641a2129c6f",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "missing_tamil_script",
+     "step_0_missing_tamil_script",
+     "step_1_missing_tamil_script",
+     "step_2_missing_tamil_script",
+     "step_3_missing_tamil_script",
+     "step_4_missing_tamil_script"
+    ]
+   },
+   "disposition": "Explanation deficiency",
+   "evidence": "Working false positive eliminated (working=PASS); Tamil prose missing/untranslated (['missing_tamil_script', 'step_0_missing_tamil_script', 'step_1_missing_tamil_script', 'step_2_missing_tamil_script', 'step_3_missing_tamil_script', 'step_4_missing_tamil_script'])."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q5",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "3f85573f78392f21",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 5,
+      "line": "(i) Parallelogram",
+      "evidence": "standalone_expression_no_relation"
+     },
+     {
+      "step": 8,
+      "line": "(ii) Parallelogram",
+      "evidence": "standalone_expression_no_relation"
+     }
+    ],
+    "tamilFlags": [
+     "missing_tamil_script",
+     "step_0_missing_tamil_script",
+     "step_1_missing_tamil_script",
+     "step_2_missing_tamil_script",
+     "step_3_missing_tamil_script",
+     "step_4_missing_tamil_script",
+     "step_5_missing_tamil_script",
+     "step_6_missing_tamil_script",
+     "step_7_missing_tamil_script",
+     "step_8_missing_tamil_script"
+    ]
+   },
+   "disposition": "Explanation deficiency",
+   "evidence": "Working false positive eliminated (working=PARTIAL); Tamil prose missing/untranslated (['missing_tamil_script', 'step_0_missing_tamil_script', 'step_1_missing_tamil_script', 'step_2_missing_tamil_script', 'step_3_missing_tamil_script', 'step_4_missing_tamil_script', 'step_5_missing_tamil_script', 'step_6_missing_tamil_script', 'step_7_missing_tamil_script', 'step_8_missing_tamil_script'])."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q6",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "e523913214ef09ee",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "identity_mismatch",
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 6,
+      "line": "AC≠BD",
+      "evidence": "standalone_expression_no_relation"
+     },
+     {
+      "step": 6,
+      "line": "(i) Rhombus, not square",
+      "evidence": "no_equality_relation"
+     },
+     {
+      "step": 9,
+      "line": "AB⊥BC",
+      "evidence": "standalone_expression_no_relation"
+     }
+    ],
+    "tamilFlags": [
+     "missing_tamil_script",
+     "step_0_missing_tamil_script",
+     "step_1_missing_tamil_script",
+     "step_2_missing_tamil_script",
+     "step_3_missing_tamil_script",
+     "step_4_missing_tamil_script",
+     "step_5_missing_tamil_script",
+     "step_6_missing_tamil_script",
+     "step_7_missing_tamil_script",
+     "step_8_missing_tamil_script",
+     "step_9_missing_tamil_script"
+    ]
+   },
+   "disposition": "Explanation deficiency",
+   "evidence": "Working false positive eliminated (working=PARTIAL); Tamil prose missing/untranslated (['missing_tamil_script', 'step_0_missing_tamil_script', 'step_1_missing_tamil_script', 'step_2_missing_tamil_script', 'step_3_missing_tamil_script', 'step_4_missing_tamil_script', 'step_5_missing_tamil_script', 'step_6_missing_tamil_script', 'step_7_missing_tamil_script', 'step_8_missing_tamil_script', 'step_9_missing_tamil_script'])."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q7",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "62863d1a4383640f",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "explanation_deficiency",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "missing_tamil_script",
+     "step_0_missing_tamil_script",
+     "step_1_missing_tamil_script",
+     "step_2_missing_tamil_script",
+     "step_3_missing_tamil_script"
+    ]
+   },
+   "disposition": "Explanation deficiency",
+   "evidence": "Missing/placeholder Tamil prose in reader item (working=PASS, tamil=FAIL); not a mathematical error."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q8",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "78adde0d1a7ea51f",
+   "v1_4_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "explanation_deficiency",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "A=(t,t)",
+      "evidence": "unparsed_rhs"
+     },
+     {
+      "step": 3,
+      "line": "(t−9)(t+5)=0 ⇒ t=9 or −5",
+      "evidence": "unverified_implication"
+     },
+     {
+      "step": 4,
+      "line": "A=(9,9) or (−5,−5)",
+      "evidence": "unparsed_rhs"
+     }
+    ],
+    "tamilFlags": [
+     "missing_tamil_script",
+     "step_0_missing_tamil_script",
+     "step_1_missing_tamil_script",
+     "step_2_missing_tamil_script",
+     "step_3_missing_tamil_script",
+     "step_4_missing_tamil_script"
+    ]
+   },
+   "disposition": "Explanation deficiency",
+   "evidence": "Missing/placeholder Tamil prose in reader item (working=PARTIAL, tamil=FAIL); not a mathematical error."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q9",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "ea25231ddf05db5a",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "explanation_deficiency",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "missing_tamil_script",
+     "step_0_missing_tamil_script",
+     "step_1_missing_tamil_script",
+     "step_2_missing_tamil_script",
+     "step_3_missing_tamil_script"
+    ]
+   },
+   "disposition": "Explanation deficiency",
+   "evidence": "Missing/placeholder Tamil prose in reader item (working=PASS, tamil=FAIL); not a mathematical error."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q11",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "87d8f9dd11e2d2a9",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "missing_tamil_script"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "O=(11,2)",
+      "evidence": "unparsed_rhs"
+     }
+    ],
+    "tamilFlags": [
+     "missing_tamil_script",
+     "step_0_missing_tamil_script",
+     "step_1_missing_tamil_script",
+     "step_2_missing_tamil_script",
+     "step_3_missing_tamil_script",
+     "step_4_missing_tamil_script"
+    ]
+   },
+   "disposition": "Explanation deficiency",
+   "evidence": "Working false positive eliminated (working=PARTIAL); Tamil prose missing/untranslated (['missing_tamil_script', 'step_0_missing_tamil_script', 'step_1_missing_tamil_script', 'step_2_missing_tamil_script', 'step_3_missing_tamil_script', 'step_4_missing_tamil_script'])."
+  },
+  {
+   "questionId": "g9-ch5-ex5.2-q12",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "844f0e057f0b90ca",
+   "v1_4_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['900'],ta=['1800']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "\\text{Axis points: }(30,0), (-30,0), (0,30), (0,-30)",
+      "evidence": "no_equality_relation"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch5-ex5.3-q2",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "27bec3a3ca4c9c94",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch5-ex5.3-q4",
+   "grade": 9,
+   "chapter": 5,
+   "exercise": "5.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "85dee9e112efcaec",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "contradictory_constant_equation",
+     "overwrites_established_given"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch7-ex7.2-q1",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "0ed6b1f957e38875",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 2,
+      "line": "LSA = 2(l+b)h = 2(20+15)×8 = 560 cm²",
+      "evidence": "missing_variable_bindings"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PARTIAL, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch7-ex7.2-q2",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "0128e88e0539affb",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "contradictory_constant_equation"
+    ],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "engine_false_positive",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 2,
+      "line": "Cost = 78×22 = ₹1716",
+      "evidence": "missing_variable_bindings"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Already resolved in V1.4a; V1.4b maintains working=PARTIAL, tamil=PASS."
+  },
+  {
+   "questionId": "g9-ch7-ex7.2-q5",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "1c19f1b85f353fa1",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 2,
+      "line": "LSA=4a²=4×400=1600 cm²",
+      "evidence": "missing_variable_bindings"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PARTIAL, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch7-ex7.2-q6",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "26533ecfd72e09a4",
+   "v1_4_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 2,
+      "line": "Cost=253.5×24=₹6084",
+      "evidence": "missing_variable_bindings"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q3",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "cc33de5e1a1cca64",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q4",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "ee29a065b5204e57",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PARTIAL",
+    "evidence": [
+     "contradictory_constant_equation"
+    ],
+    "tamilFlags": [
+     "en_ta_unit_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "PARTIAL"
+   },
+   "v1_4a_classification": "engine_false_positive",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PARTIAL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "en_ta_unit_mismatch"
+    ]
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Already resolved in V1.4a; V1.4b maintains working=PASS, tamil=PARTIAL."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q5",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "c9beb3854a42ee0e",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "contradictory_constant_equation"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "engine_false_positive",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 1,
+      "line": "Vwall = 2000 × 48 × 600 = 57,600,000 cm³",
+      "evidence": "missing_variable_bindings"
+     },
+     {
+      "step": 2,
+      "line": "Vbrick = 24 × 12 × 8 = 2304 cm³",
+      "evidence": "missing_variable_bindings"
+     },
+     {
+      "step": 3,
+      "line": "Number = [[57,600,000|2304]] = 25,000",
+      "evidence": "missing_variable_bindings"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Already resolved in V1.4a; V1.4b maintains working=PARTIAL, tamil=PASS."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q6",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "7cdf8cf8b59d44bd",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "chain_mismatch"
+    ],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "engine_false_positive",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Already resolved in V1.4a; V1.4b maintains working=PASS, tamil=PASS."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q7",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "fe3a48b7d1925133",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_2_number_mismatch:en=['3.5'],ta=['5']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q8",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "f5b09ba59dd29980",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "FAIL",
+    "evidence": [
+     "chain_mismatch",
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "disposition": "Unresolved with explicit evidence",
+   "evidence": "Working fixed (working=PASS), but Tamil parity still flagged: ['en_ta_number_mismatch']."
+  },
+  {
+   "questionId": "g9-ch7-ex7.3-q9",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "e36638005f81c302",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "Vcube = 15³ = 3375 cm³",
+      "evidence": "missing_variable_bindings"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PARTIAL, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "g9-ch7-ex7.4-q8",
+   "grade": 9,
+   "chapter": 7,
+   "exercise": "7.4",
+   "curriculumCommit": "2187c00",
+   "contentHash": "3bf8772a80ed6b3f",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "invalid_formula_dimension"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 2,
+      "line": "Correct option (3)",
+      "evidence": "standalone_expression_no_relation"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PARTIAL, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "c10-3-ex3-2-q2-v",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.2",
+   "curriculumCommit": "2187c00",
+   "contentHash": "28f408ea24462d6d",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_1_number_mismatch:en=['36'],ta=['9']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "c10-3-ex3-10-q2",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.10",
+   "curriculumCommit": "2187c00",
+   "contentHash": "13d1302dd54e0a00",
+   "v1_4_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_2_number_mismatch:en=['30'],ta=['36']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 1,
+      "line": "(n-6)(n+5)=0\\implies n=6",
+      "evidence": "unverified_implication"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "c10-3-ex3-14-q5",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.14",
+   "curriculumCommit": "2187c00",
+   "contentHash": "5c39926e123f6340",
+   "v1_4_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_3_number_mismatch:en=['4'],ta=['24']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "\\text{Roots}=\\alpha, 2\\alpha",
+      "evidence": "unparsed_rhs"
+     },
+     {
+      "step": 3,
+      "line": "\\alpha=-4&: a=6(-4)=-24",
+      "evidence": "missing_variable_bindings"
+     },
+     {
+      "step": 3,
+      "line": "\\alpha=4&: a=6(4)=24",
+      "evidence": "missing_variable_bindings"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "c10-3-ex3-15-q4-i",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.15",
+   "curriculumCommit": "2187c00",
+   "contentHash": "bf7a5ef785bb72d6",
+   "v1_4_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "xy = 2\\times 45 = 3\\times 30 = 6\\times 15 = 9\\times 10 = 90",
+      "evidence": "missing_variable_bindings"
+     },
+     {
+      "step": 1,
+      "line": "(2,45),\\ (3,30),\\ (6,15),\\ (9,10)",
+      "evidence": "no_equality_relation"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "c10-3-ex3-18-q8",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.18",
+   "curriculumCommit": "2187c00",
+   "contentHash": "7ac800e4331255b4",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "invalid_root_set"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "c10-3-ex3-20-q9",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.20",
+   "curriculumCommit": "2187c00",
+   "contentHash": "711ee93838cba238",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "invalid_equation_transformation"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "c10-3-ex3-unit-q2",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.unit",
+   "curriculumCommit": "2187c00",
+   "contentHash": "3ec1509dedfa6f1c",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "disposition": "Unresolved with explicit evidence",
+   "evidence": "Tamil parity difference remains flagged for manual bilingual review: ['en_ta_number_mismatch']."
+  },
+  {
+   "questionId": "c10-3-ex3-unit-q5",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.unit",
+   "curriculumCommit": "2187c00",
+   "contentHash": "19ec8d9c3ed8e3cf",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "multi_link_identity_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 1,
+      "line": "Q-xR&=x^2+2x+1=R",
+      "evidence": "missing_variable_bindings"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PARTIAL, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "c10-3-ex3-unit-q9",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.unit",
+   "curriculumCommit": "2187c00",
+   "contentHash": "58c84912e9a1a17f",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "aligned_chain_mismatch"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Working no longer fails (V1.4b working=PASS, tamil=PASS) after V1.4b symbolic function binding, aligned/multi-link equation-chain, subpart-scoping, and dimensional reasoning upgrades."
+  },
+  {
+   "questionId": "c10-3-ex3-unit-q10",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.unit",
+   "curriculumCommit": "2187c00",
+   "contentHash": "81aee4163fa7959f",
+   "v1_4_status": {
+    "working": "FAIL",
+    "tamil": "PASS",
+    "evidence": [
+     "invalid_equation_transformation"
+    ],
+    "tamilFlags": []
+   },
+   "v1_4a_status": {
+    "working": "FAIL",
+    "tamil": "PASS"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "\\dfrac52\\le y\\le7",
+      "evidence": "unverified_inequality"
+     }
+    ],
+    "tamilFlags": [
+     "step_0_semantic_number_mismatch:en=['3'],ta=['2']"
+    ]
+   },
+   "disposition": "Unresolved with explicit evidence",
+   "evidence": "Working fixed (working=PARTIAL), but Tamil parity still flagged: [\"step_0_semantic_number_mismatch:en=['3'],ta=['2']\"]."
+  },
+  {
+   "questionId": "c10-3-ex3-unit-q13",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.unit",
+   "curriculumCommit": "2187c00",
+   "contentHash": "75a1bd8ecfb41480",
+   "v1_4_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "60-t=\\dfrac{t^2}{4}-3,\\quad 0\\le t\\le60",
+      "evidence": "unparsed_equation"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "g10-ch3-variations",
+   "grade": 10,
+   "chapter": 3,
+   "exercise": "3.7",
+   "curriculumCommit": "2187c00",
+   "contentHash": "a75afe67a754d513",
+   "v1_4_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PARTIAL",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PARTIAL",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [
+     {
+      "step": 0,
+      "line": "xy&=4\\times 6=24",
+      "evidence": "missing_variable_bindings"
+     }
+    ],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "c10-5-unit-q7",
+   "grade": 10,
+   "chapter": 5,
+   "exercise": "5.unit",
+   "curriculumCommit": "2187c00",
+   "contentHash": "1bfd0fbd7b261280",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "disposition": "Unresolved with explicit evidence",
+   "evidence": "Tamil parity difference remains flagged for manual bilingual review: ['en_ta_number_mismatch']."
+  },
+  {
+   "questionId": "c10-7-ex7-3-q3",
+   "grade": 10,
+   "chapter": 7,
+   "exercise": "7.3",
+   "curriculumCommit": "2187c00",
+   "contentHash": "442cff451952611a",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "step_3_number_mismatch:en=['2.464'],ta=['464']"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  },
+  {
+   "questionId": "c10-7-ex7-5-q5",
+   "grade": 10,
+   "chapter": 7,
+   "exercise": "7.5",
+   "curriculumCommit": "2187c00",
+   "contentHash": "7cee9dc212bbea22",
+   "v1_4_status": {
+    "working": "PASS",
+    "tamil": "FAIL",
+    "evidence": [],
+    "tamilFlags": [
+     "en_ta_number_mismatch"
+    ]
+   },
+   "v1_4a_status": {
+    "working": "PASS",
+    "tamil": "FAIL"
+   },
+   "v1_4a_classification": "unresolved_finding",
+   "v1_4b_status": {
+    "working": "PASS",
+    "tamil": "PASS",
+    "failedDetails": [],
+    "unsupportedDetails": [],
+    "tamilFlags": []
+   },
+   "disposition": "Engine false positive",
+   "evidence": "Tamil parity false alarm eliminated (V1.4b tamil=PASS) by semantic number-word/unit/LaTeX-grounded parity engine."
+  }
+ ]
+}

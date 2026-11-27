@@ -1,0 +1,213 @@
+{
+ "schemaVersion": 1,
+ "engine": "TRACE MathGuard V1.4b",
+ "gitCommit": "2187c00",
+ "suites": {
+  "v1_0_120_case": {
+   "total": 120,
+   "tp": 96,
+   "fp": 0,
+   "fn": 0,
+   "tn": 24,
+   "precision": 1.0,
+   "recall": 1.0,
+   "falsePositives": 0,
+   "unresolved": 0,
+   "criticalMissedErrors": 0,
+   "dev": {
+    "total": 60,
+    "tp": 48,
+    "fp": 0,
+    "fn": 0,
+    "tn": 12,
+    "precision": 1.0,
+    "recall": 1.0,
+    "falsePositives": 0,
+    "unresolved": 0,
+    "criticalMissedErrors": 0
+   },
+   "held_out": {
+    "total": 60,
+    "tp": 48,
+    "fp": 0,
+    "fn": 0,
+    "tn": 12,
+    "precision": 1.0,
+    "recall": 1.0,
+    "falsePositives": 0,
+    "unresolved": 0,
+    "criticalMissedErrors": 0
+   }
+  },
+  "v1_1_108_case": {
+   "total": 108,
+   "tp": 84,
+   "fp": 0,
+   "fn": 0,
+   "tn": 24,
+   "precision": 1.0,
+   "recall": 1.0,
+   "falsePositives": 0,
+   "falseNegatives": 0,
+   "criticalMissedErrors": 0,
+   "executionTimeMs": 1689.92
+  },
+  "v1_2_300_case": {
+   "total": 300,
+   "tp": 240,
+   "fp": 0,
+   "fn": 0,
+   "tn": 60,
+   "precision": 1.0,
+   "recall": 1.0,
+   "falsePositives": 0,
+   "falseNegatives": 0,
+   "criticalMissedErrors": 0,
+   "executionTimeMs": 4092.9
+  },
+  "v1_3_186_case": {
+   "total": 186,
+   "tp": 156,
+   "fp": 0,
+   "fn": 0,
+   "tn": 30,
+   "precision": 1.0,
+   "recall": 1.0,
+   "falsePositives": 0,
+   "falseNegatives": 0,
+   "criticalMissedErrors": 0,
+   "executionTimeMs": 3489.78
+  },
+  "v1_3_1_100_case_holdout": {
+   "total": 100,
+   "tp": 75,
+   "fp": 0,
+   "fn": 0,
+   "tn": 25,
+   "precision": 1.0,
+   "recall": 1.0,
+   "falsePositives": 0,
+   "falseNegatives": 0,
+   "criticalMissedErrors": 0,
+   "executionTimeMs": 2031.68
+  },
+  "v1_3_4a_adversarial": {
+   "total": 20,
+   "passed": 20,
+   "confirmedDetections": 11,
+   "falseAcceptances": 0,
+   "falseRejections": 0,
+   "abstentions": 4
+  },
+  "v1_3_5_adversarial": {
+   "totalCases": 125,
+   "passed": 125,
+   "failed": 0,
+   "falseAcceptances": 0,
+   "falseRejections": 0,
+   "main": {
+    "total": 100,
+    "passed": 100,
+    "confirmedDetections": 70,
+    "falseAcceptances": 0,
+    "falseRejections": 0,
+    "abstentions": 5
+   },
+   "holdout": {
+    "total": 25,
+    "passed": 25,
+    "confirmedDetections": 15,
+    "falseAcceptances": 0,
+    "falseRejections": 0,
+    "abstentions": 0
+   }
+  },
+  "v1_3_5a_185_case": {
+   "total": 185,
+   "passed": 185,
+   "confirmedDetections": 150,
+   "falseAcceptances": 0,
+   "falseRejections": 0,
+   "abstentions": 10
+  },
+  "v1_4_270_case": {
+   "schemaVersion": 1,
+   "suite": "TRACE MathGuard V1.4 Adversarial Suite",
+   "totalCases": 270,
+   "passed": 270,
+   "failed": 0,
+   "falseAcceptances": 0,
+   "falseRejections": 0,
+   "byCategory": {
+    "incorrect_signs": {
+     "total": 25,
+     "passed": 25,
+     "failed": 0
+    },
+    "incorrect_formulas": {
+     "total": 25,
+     "passed": 25,
+     "failed": 0
+    },
+    "invalid_cancellation": {
+     "total": 25,
+     "passed": 25,
+     "failed": 0
+    },
+    "division_by_zero": {
+     "total": 25,
+     "passed": 25,
+     "failed": 0
+    },
+    "extraneous_roots": {
+     "total": 25,
+     "passed": 25,
+     "failed": 0
+    },
+    "incorrect_units": {
+     "total": 25,
+     "passed": 25,
+     "failed": 0
+    },
+    "geometric_impossibilities": {
+     "total": 25,
+     "passed": 25,
+     "failed": 0
+    },
+    "missing_solution_branches": {
+     "total": 25,
+     "passed": 25,
+     "failed": 0
+    },
+    "incorrect_tamil_values": {
+     "total": 25,
+     "passed": 25,
+     "failed": 0
+    },
+    "equivalent_positive_control": {
+     "total": 25,
+     "passed": 25,
+     "failed": 0
+    },
+    "legitimate_abstention": {
+     "total": 10,
+     "passed": 10,
+     "failed": 0
+    },
+    "unsupported_domain_abstention": {
+     "total": 10,
+     "passed": 10,
+     "failed": 0
+    }
+   }
+  },
+  "v1_4b_240_case": {
+   "totalCases": 240,
+   "passed": 240,
+   "failed": 0,
+   "falseAcceptances": 0,
+   "falseRejections": 0,
+   "abstentions": 0
+  }
+ }
+}
