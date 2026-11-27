@@ -16,11 +16,11 @@
   <text x="132" y="79" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#6E2933">θ₁</text>
   <text x="118" y="102" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="start" fill="#166353">θ₂</text>
   <text x="55" y="100" transform="rotate(-90 55 100)" font-family="system-ui,sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="central" fill="#181B20">h</text>
-  <text x="244" y="34" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#166353">Cloud C</text>
-  <text x="244" y="198" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#525B62">Image C'</text>
+  <text x="244" y="34" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#166353">C</text>
+  <text x="244" y="198" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="start" fill="#525B62">C′</text>
   <path d="M226 30 H234 M230 30 V86 M226 86 H234 M226 114 H234 M230 114 V198 M226 198 H234" fill="none" stroke="#525B62" stroke-width="1.2"/>
   <line x1="210" y1="86" x2="230" y2="86" stroke="#525B62" stroke-width="1" stroke-dasharray="3 3"/>
   <text x="242" y="61" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#181B20">x</text>
   <text x="242" y="158" font-family="system-ui,sans-serif" font-size="10" font-weight="700" fill="#181B20">h + x</text>
-  <text x="168" y="129" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#1F6FEB">Lake level</text>
+  <text x="168" y="129" font-family="system-ui,sans-serif" font-size="9.5" font-weight="700" text-anchor="middle" fill="#1F6FEB">Waterline</text>
 </svg>

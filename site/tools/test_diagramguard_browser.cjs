@@ -223,7 +223,9 @@ async function legacyCases(page){
     host.remove();
     return measured;
   },files);
-  for(const [id,result] of Object.entries(data))assert.deepEqual(result.issues,[],'Legacy SVG '+id);
+  const findings=Object.fromEntries(Object.entries(data).filter(([,result])=>result.issues.length)
+    .map(([id,result])=>[id,result.issues]));
+  assert.deepEqual(findings,{},'Legacy SVG collision checks');
   const [[C,A,B],[, ,D],[cornerA,corner,cornerB]]=data.shadedTriangle.points;
   near(length(C,A)/6,34);near(length(C,B)/6,42);
   near(length(D,A)/6,12);near(length(D,B)/6,16);
