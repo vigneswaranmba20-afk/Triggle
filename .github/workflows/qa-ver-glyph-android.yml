@@ -9,9 +9,26 @@ permissions:
 
 jobs:
   android:
-    name: Test the staged picker in Chrome on Android
+    name: Android Chrome at ${{ matrix.width }} px
     runs-on: ubuntu-24.04
     timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - width: 320
+            height: 568
+          - width: 360
+            height: 640
+          - width: 390
+            height: 844
+          - width: 412
+            height: 915
+          - width: 430
+            height: 932
+    env:
+      TRIGGLE_ANDROID_WIDTH: ${{ matrix.width }}
+      TRIGGLE_ANDROID_HEIGHT: ${{ matrix.height }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -52,7 +69,7 @@ jobs:
           adb keygen "$ANDROID_USER_HOME/adbkey"
           export ADB_VENDOR_KEYS="$ANDROID_USER_HOME/adbkey"
           adb start-server
-          "$ANDROID_HOME/emulator/emulator" -avd triggle-qa -no-window -no-audio -no-boot-anim -no-snapshot -no-metrics -gpu swiftshader_indirect > "$RUNNER_TEMP/triggle-android-evidence/emulator.log" 2>&1 &
+          "$ANDROID_HOME/emulator/emulator" -avd triggle-qa -no-window -no-audio -no-boot-anim -no-snapshot -no-metrics -memory 4096 -cores 2 -gpu swiftshader_indirect > "$RUNNER_TEMP/triggle-android-evidence/emulator.log" 2>&1 &
           emulator_pid=$!
           deadline=$((SECONDS + 240))
           until [ "$(adb shell getprop sys.boot_completed 2>/dev/null | tr -d '\r')" = 1 ]; do
@@ -68,20 +85,25 @@ jobs:
           adb shell settings put global transition_animation_scale 0
           adb shell settings put global animator_duration_scale 0
           adb shell settings put system font_scale 1.0
+          adb shell wm density 160
+          adb shell wm size "${TRIGGLE_ANDROID_WIDTH}x${TRIGGLE_ANDROID_HEIGHT}"
           adb shell pm list packages com.android.chrome | tr -d '\r' | grep -Fx 'package:com.android.chrome'
           adb shell am set-debug-app --persistent com.android.chrome
           adb shell dumpsys package com.android.chrome | awk '/versionName/ && !shown++'
-      - name: Run all five widths with separate 200% text scaling
+      - name: Run the bilingual checks with separate 200% text scaling
         shell: bash
         run: |
           set -euo pipefail
           export TRIGGLE_ANDROID_STAGE="$RUNNER_TEMP/triggle-android-stage"
           export TRIGGLE_SELECTION_SCREENSHOTS="$RUNNER_TEMP/triggle-android-evidence"
-          node site/tools/test_selection_dialogs_browser.cjs 2>&1 | tee "$TRIGGLE_SELECTION_SCREENSHOTS/results.txt"
+          if ! node site/tools/test_selection_dialogs_browser.cjs 2>&1 | tee "$TRIGGLE_SELECTION_SCREENSHOTS/results.txt"; then
+            adb logcat -d -t 150 > "$TRIGGLE_SELECTION_SCREENSHOTS/logcat.txt"
+            exit 1
+          fi
       - name: Save Android QA evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ver-glyph-android-chrome
+          name: ver-glyph-android-chrome-${{ matrix.width }}
           path: ${{ runner.temp }}/triggle-android-evidence
           retention-days: 14

@@ -13,6 +13,7 @@ const readers = [
 ];
 const useWebKit = process.env.TRIGGLE_BROWSER === 'webkit';
 const androidStage = process.env.TRIGGLE_ANDROID_STAGE;
+const viewports = androidStage ? sizes.filter(([width]) => width === Number(process.env.TRIGGLE_ANDROID_WIDTH)) : sizes;
 const phone = devices[useWebKit ? 'iPhone 13' : 'Pixel 7'];
 const screenshots = process.env.TRIGGLE_SELECTION_SCREENSHOTS;
 const readerUrl = (base, grade, id) => base + '/index.html?' + new URLSearchParams({class: grade, question: id});
@@ -172,6 +173,7 @@ async function verifySelection(page, chapterTrigger, grade, chapter) {
   let otherDialogs = 0;
   try {
     if (androidStage) {
+      assert.equal(viewports.length, 1, 'An Android emulator is configured for one viewport width');
       const connected = await _android.devices();
       assert.equal(connected.length, 1, 'Expected exactly one Android test device');
       device = connected[0];
@@ -184,20 +186,17 @@ async function verifySelection(page, chapterTrigger, grade, chapter) {
       port = 'tcp:' + new URL(base).port;
       execFileSync('adb', ['reverse', port, port]);
       console.log('Android ' + (await device.shell('getprop ro.build.version.release')).toString().trim());
-      await device.shell('wm density 160');
     }
     const androidContext = await device?.launchBrowser({
       isMobile: true, hasTouch: true, serviceWorkers: 'block', reducedMotion: 'reduce', timeout: 90000
     });
     const androidPage = await androidContext?.newPage();
     if (androidPage) assert.match(await androidPage.evaluate(() => navigator.userAgent), /Android.*Chrome\//);
-    for (const [width, height] of sizes) {
+    for (const [width, height] of viewports) {
       const options = {viewport: {width, height}, serviceWorkers: 'block', reducedMotion: 'reduce'};
       const context = androidContext || await browser.newContext({...phone, ...options});
       const page = androidPage || await context.newPage();
       if (androidPage) {
-        // Chrome for Android uses the virtual device display for layout.
-        await device.shell('wm size ' + width + 'x' + height);
         await page.waitForFunction(expected => screen.width === expected, width, {timeout: 15000});
         console.log('Testing ' + width + 'px with ' + await page.evaluate(() => navigator.userAgent));
       }
@@ -267,6 +266,7 @@ async function verifySelection(page, chapterTrigger, grade, chapter) {
     await app?.close();
     if (port) execFileSync('adb', ['reverse', '--remove', port]);
   }
-  assert.equal(chapterRows, 340, 'Every Grade 9 and 10 chapter in both languages at five widths and two text sizes');
+  assert.equal(chapterRows, 68 * viewports.length, 'Every Grade 9 and 10 chapter in both languages at each width and two text sizes');
+  assert.equal(otherDialogs, 24 * viewports.length, 'Every other picker in both languages and grades at each width and two text sizes');
   console.log('PASS selection dialogs · ' + (device ? 'Chrome for Android' : useWebKit ? 'WebKit' : 'Chromium') + ' · ' + chapterRows + ' chapter rows and ' + otherDialogs + ' class, exercise and question dialogs');
 })().catch(error => { console.error(error); process.exitCode = 1; });
