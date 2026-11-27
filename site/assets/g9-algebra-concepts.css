@@ -110,7 +110,7 @@
   min-width:0;
   min-height:46px;
   padding:7px;
-  border:1px solid #d6c4c4;
+  border:1px solid var(--control-border);
   background:#fff;
   border-radius:10px;
   color:var(--text-primary);
@@ -118,7 +118,7 @@
   font-size:.86rem;
   cursor:pointer;
 }
-.g9a-answer-options button[aria-pressed="true"] {border:2px solid #883b46;background:#f8e4e2;font-weight:700;}
+.g9a-answer-options button[aria-pressed="true"] {border:2px solid var(--text-navigation);background:var(--bond-selection);font-weight:700;}
 .g9a-feedback {margin:7px 0 0;font-size:.87rem;color:var(--text-explanation);line-height:1.4;}
 .g9a-feedback:empty {display:none;}
 .g9a-deep {margin:10px 0;border:1px solid #e2d9db;border-radius:12px;padding:10px 12px;font-size:.9rem;}

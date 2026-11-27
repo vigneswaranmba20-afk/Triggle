@@ -11,9 +11,9 @@
   --g9-ui-border: var(--bond-border, #d7d4cc);
   --g9-ui-ink: var(--bond-graphite, #22283b);
   --g9-ui-muted: var(--bond-muted, #566275);
-  --g9-ui-selected: rgba(160, 78, 80, .09);
-  --g9-ui-selected-border: #a04e50;
-  --g9-ui-focus: #ad5a58;
+  --g9-ui-selected: var(--bond-selection);
+  --g9-ui-selected-border: var(--text-navigation);
+  --g9-ui-focus: var(--text-navigation);
   --g9-ui-result: rgba(126, 139, 160, .1);
 }
 
@@ -47,7 +47,7 @@
   min-height: 46px;
   max-width: 100%;
   padding: .55rem .9rem;
-  border: 1px solid rgba(68, 82, 113, .35);
+  border: 1px solid var(--control-border);
   border-radius: 13px;
   background: var(--g9-ui-card);
   color: var(--g9-ui-ink);

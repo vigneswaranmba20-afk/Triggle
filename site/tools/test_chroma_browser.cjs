@@ -39,6 +39,10 @@ function scan({ palette }) {
     const v = value / 255;
     return sum + [.2126, .7152, .0722][i] * (v <= .04045 ? v / 12.92 : ((v + .055) / 1.055) ** 2.4);
   }, 0);
+  const contrast = (front, back) => {
+    const levels = [light(front), light(back)].sort((a, b) => b - a);
+    return (levels[0] + .05) / (levels[1] + .05);
+  };
   const classes = el => [...el.classList].filter(c => !/^(?:is-|has-|active$|current$|hidden$)/.test(c));
   const selector = el => el.id ? '#' + el.id : classes(el).length ? '.' + classes(el).join('.') : el.localName;
   const cache = new Map();
@@ -79,8 +83,7 @@ function scan({ palette }) {
     const key = selector(el) + (el.id || !parent ? '' : ' in ' + selector(parent));
     const bg = backdrop(el);
     const fg = blend(rgb(css.color), bg);
-    const levels = [light(fg), light(bg)].sort((a, b) => b - a);
-    const ratio = (levels[0] + .05) / (levels[1] + .05);
+    const ratio = contrast(fg, bg);
     const large = parseFloat(css.fontSize) >= (Number(css.fontWeight) >= 700 ? 18.66 : 24);
     const data = { color: css.color, background: bg.map(v => Math.round(v)).join(','), ratio: +ratio.toFixed(2), sample: node.textContent.trim().slice(0, 72) };
     const minimum = large ? 3 : 4.5;
@@ -95,9 +98,22 @@ function scan({ palette }) {
       if (css.color !== palette[role]) report('role', roleKey, data);
     }
   }
+  const answerControls = '.hub-quiz-answers button, .sp2-answers button, .triggle-mcq-btn, .probability-answers button, .g9a-answer-options button, .why-step-transfer-choice, #quizAnswers button';
+  let controlMinimum = Infinity;
+  for (const el of document.querySelectorAll(answerControls)) {
+    if (el.disabled || el.closest('[hidden],[inert]') || !el.getClientRects().length) continue;
+    const css = styleFor(el);
+    const bg = backdrop(el);
+    const boundary = blend(rgb(css.borderTopColor), bg);
+    const ratio = Math.min(contrast(boundary, bg), contrast(boundary, backdrop(el.parentElement)));
+    controlMinimum = Math.min(controlMinimum, ratio);
+    if (ratio < 3) report('control contrast', selector(el) + ' in ' + selector(el.parentElement), {
+      color: css.borderTopColor, background: bg.map(v => Math.round(v)).join(','), ratio: +ratio.toFixed(2)
+    });
+  }
   return {
     failures: [...failures.values()], roles: Array.from(measured, ([key, values]) => [key, [...values].sort()]),
-    reading: [...reading], overflow: document.documentElement.scrollWidth - innerWidth,
+    reading: [...reading], controlMinimum, overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
     math: document.querySelectorAll('#questionText .katex, #stepsList .katex, .chapter-hub .katex').length
   };
 }
@@ -195,6 +211,65 @@ async function checkFeedback(page, add, lang) {
   }
 }
 
+async function checkPlayground(browser, base, add) {
+  const context = await browser.newContext({ ...devices['Pixel 5'], viewport: { width: 390, height: 844 }, reducedMotion: 'reduce', serviceWorkers: 'block' });
+  try {
+    await context.route('**/*', route => {
+      if (new URL(route.request().url()).origin === base) return route.continue();
+      return route.abort();
+    });
+    const page = await context.newPage();
+    const url = '/playground.html';
+    await page.goto(base + url);
+    for (const lang of ['en', 'ta']) {
+      await page.locator(lang === 'en' ? '#basicLangEn' : '#basicLangTa').click();
+      await page.setViewportSize({ width: 320, height: 844 });
+      for (const tab of await page.getByRole('tab').all()) {
+        await tab.click();
+        await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+        const route = url + '#' + await tab.getAttribute('id');
+        const clipped = await page.locator('.scene.active .lesson-copy').evaluateAll(paragraphs =>
+          paragraphs.some(p => p.scrollHeight > p.clientHeight + 1));
+        if (clipped) add({ kind: 'clipped instructions', key: route }, route, lang);
+      }
+      await page.setViewportSize({ width: 390, height: 844 });
+      for (const tab of await page.getByRole('tab').all()) {
+        await tab.click();
+        await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+        const view = await page.evaluate(scan, { palette });
+        const route = url + '#' + await tab.getAttribute('id');
+        for (const issue of view.failures) add({ ...issue, key: 'Basics ' + issue.key }, route, lang);
+      }
+      const route = url + '#tab-game';
+      await page.locator('#tab-game').click();
+      await page.locator('#quizRestart').click();
+      const options = page.locator('#quizAnswers button');
+      const message = page.locator('#quizFeedback');
+      await options.nth(1).click();
+      if (!(await options.nth(0).isEnabled())) {
+        add({ kind: 'feedback', key: 'Basics retry is locked' }, route, lang);
+        await page.locator('#quizRestart').click();
+      } else if (await message.evaluate(el => getComputedStyle(el).color) !== palette.incorrect) {
+        add({ kind: 'feedback', key: 'Basics incorrect message colour' }, route, lang);
+      }
+      await options.nth(0).click();
+      const result = await message.evaluate(async el => {
+        await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        return { color: getComputedStyle(el).color, sample: el.textContent };
+      });
+      if (result.color !== palette.correct) {
+        add({ kind: 'feedback', key: 'Basics correct message colour', ...result }, route, lang);
+      }
+      await page.locator('#quizRestart').click();
+      if (await message.getAttribute('data-answer-state') || await options.locator('..').first().locator('.wrong,.correct').count()) {
+        add({ kind: 'feedback', key: 'Basics quiz reset' }, route, lang);
+      }
+    }
+  } finally {
+    await context.close();
+  }
+}
+
 async function checkOffline(browser, base) {
   const context = await browser.newContext({ ...devices['Pixel 5'], viewport: { width: 390, height: 844 } });
   try {
@@ -220,7 +295,7 @@ async function main() {
   const out = process.env.CHROMA_OUTPUT;
   const app = await server(process.env.CHROMA_SITE_ROOT);
   const browser = await chromium.launch(launchOptions());
-  const totals = { issues: {}, routes: { en: 0, ta: 0 }, chapters: {}, minima: {}, mathViews: 0, overflow: [], errors: [] };
+  const totals = { issues: {}, routes: { en: 0, ta: 0 }, chapters: {}, minima: {}, controlMinimum: Infinity, mathViews: 0, overflow: [], errors: [] };
   const add = (row, route, lang) => {
     const key = JSON.stringify([row.kind, row.key, row.color, row.background]);
     const issue = totals.issues[key] ??= { ...row, locations: 0, example: route, lang };
@@ -245,6 +320,7 @@ async function main() {
         totals.mathViews += Number(summary.math > 0);
         for (const failure of summary.failures) add(failure, route, lang);
         for (const [role, ratio] of summary.reading) totals.minima[role] = Math.min(totals.minima[role] ?? Infinity, ratio);
+        totals.controlMinimum = Math.min(totals.controlMinimum, summary.controlMinimum);
         if (width === 390) {
           if (lang === 'en') routeColors.set(route, new Map(summary.roles));
           else {
@@ -280,6 +356,7 @@ async function main() {
       }
       await checkFeedback(page, add, lang);
     }
+    await checkPlayground(browser, app.base, add);
     if (out) {
       await fs.mkdir(out, { recursive: true });
       for (const [name, route, lang] of screenshots) {
@@ -305,9 +382,10 @@ async function main() {
       result[issue.kind] = (result[issue.kind] ?? 0) + 1;
       return result;
     }, {});
-    console.log(JSON.stringify({ counts, routes: totals.routes, chapters: Object.keys(totals.chapters).length, minima: totals.minima, overflow: totals.overflow.length, mathViews: totals.mathViews, errors: totals.errors.length }));
+    console.log(JSON.stringify({ counts, routes: totals.routes, chapters: Object.keys(totals.chapters).length, minima: totals.minima, controlMinimum: totals.controlMinimum, overflow: totals.overflow.length, mathViews: totals.mathViews, errors: totals.errors.length }));
     if (!reportOnly) {
       assert.deepEqual(totals.errors, [], 'No browser exceptions');
+      assert.deepEqual(totals.overflow, [], 'Student views fit their viewport');
       await checkOffline(browser, app.base + '/index.html');
       assert.deepEqual(counts, {}, JSON.stringify(Object.values(totals.issues).slice(0, 15)));
     }

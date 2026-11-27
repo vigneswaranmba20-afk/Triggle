@@ -98,11 +98,11 @@
 #stepsList .why-step-transfer-options{display:flex;flex-wrap:wrap;gap:7px;min-width:0}
 #stepsList .why-step-transfer-choice{
   appearance:none;min-width:61px;min-height:36px;max-width:100%;
-  padding:7px 11px;border:1px solid #bbb2cd;border-radius:8px;
+  padding:7px 11px;border:1px solid var(--control-border);border-radius:8px;
   background:#fff;color:var(--text-primary);font:inherit;font-size:13px;font-weight:650;
   cursor:pointer;touch-action:manipulation;overflow-wrap:anywhere
 }
-#stepsList .why-step-transfer-choice[aria-pressed="true"]{border-color:#655684;background:#f0edf6}
-#stepsList .why-step-transfer-choice:focus-visible{outline:2px solid #66548e;outline-offset:2px}
+#stepsList .why-step-transfer-choice[aria-pressed="true"]{border-color:var(--text-navigation);background:var(--bond-selection)}
+#stepsList .why-step-transfer-choice:focus-visible{outline:2px solid var(--text-navigation);outline-offset:2px}
 #stepsList .why-step-transfer-feedback{margin:7px 0 0;font-size:12px;line-height:1.45}
 #stepsList .why-step-transfer-feedback:empty{display:none}
