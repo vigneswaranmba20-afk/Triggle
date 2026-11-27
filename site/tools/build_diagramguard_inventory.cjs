@@ -97,8 +97,9 @@ for(const grade of [9,10]){
     const kind=d.kind||d;
     const inline=typeof d==='object'&&/\b(diagram|figure|labelled|labeled)\b/i.test(item.q?.en||'');
     if(inline||shapes.has(kind)||(item.kind==='practice'&&['stats','area','sets'].includes(kind))){
+      const sightline=grade===10&&kind==='tower';
       add(id+':'+kind,{id:id+':'+kind,chapter,source:src,rendering:'generated SVG ('+kind+')',
-        surface:inline?'inline and figure dialog':'figure dialog'});
+        surface:inline?'inline and figure dialog':'figure dialog',qualification:sightline?'DiagramGuard browser fixture':'unverified'});
     }
   }
 }
