@@ -684,6 +684,7 @@
   return '<img src="'+esc(encodeURI(spec?.src||''))+'" alt="'+esc(alt)+'" style="display:block;max-width:100%;max-height:'+maxHeight+'vh;width:auto;height:auto;margin:auto;object-fit:contain">';
  }
  function mountFigure(container,markup,item){
+  if(window.TriggleCoordinateFigures?.mount(container,item.id,figureOverride(item)?.description||tr(item.figureAlt),lang))return;
   if(item.id==='c10-4-ex4-3-q4'&&window.TriggleG10DiagramGuard){
    window.TriggleG10DiagramGuard.rectangle(container,figureOverride(item)?.description||tr(item.figureAlt));
   }else{

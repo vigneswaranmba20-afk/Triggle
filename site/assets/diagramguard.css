@@ -46,10 +46,22 @@
   min-inline-size: 0;
   margin-inline: auto;
 }
-.ver-glyph #lessonCard #inlineFigureVisual .diagramguard-rectangle,
-.ver-glyph #figureDialog .diagram-content .diagramguard-rectangle {
+.ver-glyph #lessonCard #inlineFigureVisual :is(.diagramguard-rectangle, .diagramguard-coordinate),
+.ver-glyph #figureDialog .diagram-content :is(.diagramguard-rectangle, .diagramguard-coordinate) {
   inline-size: 100% !important;
   max-inline-size: 480px !important;
   max-block-size: none !important;
   max-height: none !important;
 }
+
+.diagramguard-coordinate-key {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .35rem .8rem;
+  padding: .125rem .25rem .5rem;
+  color: #24203c;
+  font: 500 var(--diagramguard-secondary, .875rem)/1.45 var(--ver-font, system-ui, sans-serif);
+  font-variant-numeric: tabular-nums;
+}
+.diagramguard-coordinate-key > span { white-space: nowrap; }
