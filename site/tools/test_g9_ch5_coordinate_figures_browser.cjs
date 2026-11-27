@@ -191,6 +191,33 @@ async function verify(figure, question, panels, lang, percent, context) {
   return measured.length;
 }
 
+async function verifyDistanceConcept(page,base) {
+  await page.goto(base+'/index.html?class=9&chapter=g9-ch5&section=concepts&concept=0');
+  const plot=page.locator('.g9-distance-lab');
+  const caption=plot.locator('.g9-distance-plot-note');
+  const panels=[{points:{A:[1,2],B:[4,6],C:[4,2]},edges:['AC','CB','AB'],squares:{AC:9,CB:16,AB:25},rightAngle:'ACB'}];
+  let count=0;
+  for(const lang of ['en','ta']){
+    if(await page.locator('html').getAttribute('lang')!==lang)
+      await page.locator(lang==='ta'?'#langTa':'#langEn').evaluate(button=>button.click());
+    for(const [width,height] of viewports){
+      await page.setViewportSize({width,height});
+      for(const percent of [100,200]){
+        await settle(page,percent);
+        const context=`Distance Formula ${lang} ${width}×${height} ${percent}%`;
+        count+=await verify(plot,'distance concept',panels,lang,percent,context);
+        assert.equal(await caption.textContent(),lang==='ta'?
+          'AC = 3 அலகுகள் · CB = 4 அலகுகள் · AB = 5 அலகுகள்':'AC = 3 units · CB = 4 units · AB = 5 units',context);
+        const measured=await caption.evaluate(node=>({font:parseFloat(getComputedStyle(node).fontSize),
+          overflow:node.scrollWidth-node.clientWidth,below:node.getBoundingClientRect().top>=
+            node.previousElementSibling.getBoundingClientRect().bottom-.5}));
+        assert(Math.abs(measured.font-.14*percent)<.2&&measured.overflow<=1&&measured.below,context+' measurements');
+      }
+    }
+  }
+  return count;
+}
+
 async function main() {
   const isWebKit = process.argv.includes('--webkit');
   const live = process.env.TRIGGLE_G9_COORDINATE_BASE;
@@ -202,6 +229,12 @@ async function main() {
     page.setDefaultTimeout(10000);
     const errors=[];
     page.on('pageerror',error=>errors.push(error.message));
+    if(process.argv.includes('--concept-only')){
+      const conceptCount=await verifyDistanceConcept(page,app.base);
+      assert.deepEqual(errors,[]);
+      console.log(`PASS ${conceptCount} bilingual Grade 9 distance-concept renderings`);
+      return;
+    }
     for (const [question,panels,solutionOnly] of fixtures) {
       await page.goto(app.base+route(question));
       for (const lang of ['en','ta']) {
@@ -263,6 +296,7 @@ async function main() {
         await verify(figure,question,panels,lang,percent,'Q'+question+' wide fallback font '+percent+'%');
       }
     }
+    count+=await verifyDistanceConcept(page,app.base);
     assert.deepEqual(errors,[]);
     console.log(`PASS Grade 9 Chapter 5 coordinate figures in ${isWebKit?'WebKit':'Chromium'} (${count} bilingual panel renderings)`);
   } finally {

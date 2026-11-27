@@ -72,10 +72,10 @@
   }
 
   function draw(svg, config, width, rem) {
-    const {points,outlines=[],segments=[],guides=[],constructionPoints={},circle,rightAngle,rightAngles=[],analyticLines=[],bounds,
+    const {points,outlines=[],segments=[],segmentColors={},guides=[],constructionPoints={},circle,rightAngle,rightAngles=[],analyticLines=[],bounds,
       directions={},edgeDirections={},insideLabels='',associateLabels='',
       axes=true,showOrigin=true,fullAxes=false,labelNegativeAxes=true,axisLabelDirections={},compactAxes=false,
-      quadrants=false,projections=false,pointNames=true}=config;
+      quadrants=false,projections=false,pointNames=true,gridStep}=config;
     const xy = [...Object.values(points),...Object.values(constructionPoints)];
     const xs = xy.map(([x])=>x);
     const ys = xy.map(([,y])=>y);
@@ -120,7 +120,7 @@
     }
     const edges = new Map();
     for (const names of guides) edges.set([...names].sort().join(''),[names,axis,1.4,'4 3']);
-    for (const names of segments) edges.set([...names].sort().join(''),[names,indigo,1.4]);
+    for (const names of segments) edges.set([...names].sort().join(''),[names,segmentColors[names]||indigo,1.4]);
     for (const [index,[names,color]] of outlines.entries())
       [...names].forEach((id,i)=>{
         const edge = id+names[(i+1)%names.length];
@@ -231,7 +231,7 @@
     }
 
     guard.place(svg,[...placements,...secondaryTicks]);
-    if (axes) drawGrid(svg,toPlot,{xMin,xMax,yMin,yMax},projections ? 1 : Math.max(1,Math.ceil(rem*.68/scale)));
+    if (axes) drawGrid(svg,toPlot,{xMin,xMax,yMin,yMax},gridStep??(projections ? 1 : Math.max(1,Math.ceil(rem*.68/scale))));
   }
 
   function drawProjections(svg, points, project, bounds, edgeLabels, rem, placements, secondaryTicks) {

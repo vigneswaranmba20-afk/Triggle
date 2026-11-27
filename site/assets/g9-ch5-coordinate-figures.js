@@ -4,6 +4,12 @@
   const indigo = '#443878';
   const teal = '#166353';
   const labelDirections = [[0,-1],[-1,0],[1,0],[0,1]];
+  window.TriggleCoordinateFigures.register('g9-ch5-concept-',{
+    distance:{points:{A:[1,2],B:[4,6],C:[4,2]},segments:['AC','CB','AB'],
+      segmentColors:{AC:'#994a50',CB:'#366788',AB:teal},rightAngle:'ACB',gridStep:1,
+      bounds:{xMin:-.85,xMax:5.2,yMin:-.5,yMax:7.2},showOrigin:false,
+      directions:{A:[-1,-1],B:[1,-1],C:[1,1]}}
+  });
   const part = { A:[-3,3], B:[2,3], C:[-6,-1], D:[5,-1] };
   const plots = {
     q1: {
