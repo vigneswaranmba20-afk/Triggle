@@ -49,6 +49,8 @@ async function verify(figure, question, panels, lang, percent, context) {
       regions:[...svg.querySelectorAll('[data-dg-region]')].map(el=>el.dataset.dgRegion),
       labelPositions:Object.fromEntries([...svg.querySelectorAll('text')].map(el=>[el.dataset.dgLabel,values(el,['x','y'])])),
       description:svg.getAttribute('aria-label'),
+      font:getComputedStyle(svg).fontFamily,
+      bounds:[bounds.left,bounds.top,bounds.right,bounds.bottom],
       aspect:[bounds.width/svg.viewBox.baseVal.width,bounds.height/svg.viewBox.baseVal.height],
       overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth
     };
@@ -58,7 +60,11 @@ async function verify(figure, question, panels, lang, percent, context) {
     const panel = measured[index];
     const tag = context+' panel '+(index+1);
     assert(panel.audit.measured,tag);
-    assert.deepEqual(panel.audit.issues,[],tag+' intersections');
+    if (panel.audit.issues.length) {
+      const ids=new Set(panel.audit.issues.flatMap(({label,with:withId})=>[label,withId]));
+      const labels=panel.audit.labels.filter(({id})=>ids.has(id));
+      assert.fail(tag+' intersections '+JSON.stringify({font:panel.font,bounds:panel.bounds,labels,issues:panel.audit.issues}));
+    }
     assert.deepEqual(panel.audit.unmeasured,[],tag+' unmeasured obstacles');
     assert(panel.overflow<=1 && Math.abs(panel.aspect[0]-panel.aspect[1])<.005,tag+' reflow');
     if (panels.length===1) assert(panel.description.length>15&&(lang==='en'||/[\u0B80-\u0BFF]/.test(panel.description)),tag+' localized image');
@@ -136,14 +142,16 @@ async function main() {
         }
       }
     }
-    await page.goto(app.base+route(1));
     await page.setViewportSize({width:320,height:844});
-    await page.evaluate(()=>document.body.style.setProperty('--ver-font','monospace'));
-    await settle(page,150);
-    const lang=await page.locator('html').getAttribute('lang');
-    for (const percent of [100,200]) {
-      await settle(page,percent);
-      await verify(page.locator('#inlineFigureVisual'),1,fixtures[0][1],lang,percent,'Q1 wide fallback font '+percent+'%');
+    for (const [question,panels] of fixtures.slice(0,2)) {
+      await page.goto(app.base+route(question));
+      await page.evaluate(()=>document.body.style.setProperty('--ver-font','monospace'));
+      await settle(page,150);
+      const lang=await page.locator('html').getAttribute('lang');
+      for (const percent of [100,200]) {
+        await settle(page,percent);
+        await verify(page.locator('#inlineFigureVisual'),question,panels,lang,percent,'Q'+question+' wide fallback font '+percent+'%');
+      }
     }
     console.log(`PASS Grade 9 Exercise 5.1 coordinate figures in ${isWebKit?'WebKit':'Chromium'} (${count} bilingual panel renderings)`);
   } finally {

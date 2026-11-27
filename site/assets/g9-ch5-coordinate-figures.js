@@ -12,7 +12,7 @@
     q2: {
       // Fig. 5.11 asks learners to read the projections, so there is no coordinate key.
       points:{ P:[-4,4], Q:[3,3], R:[4,-2], S:[-5,-3] },
-      projections:true, fullAxes:true, key:false
+      projections:true, fullAxes:true, key:false, edgeDirections:{S:[1,-1]}
     },
     q3: [
       { heading:'(i)', points:{ A:[-5,3], B:[-1,3], C:[0,3], D:[5,3] },

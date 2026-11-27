@@ -56,7 +56,7 @@
   }
 
   function draw(svg, config, width, rem) {
-    const {points,outlines=[],segments=[],directions={},insideLabels='',axes=true,showOrigin=true,
+    const {points,outlines=[],segments=[],directions={},edgeDirections={},insideLabels='',axes=true,showOrigin=true,
       fullAxes=false,quadrants=false,projections=false,pointNames=true}=config;
     const xy = Object.values(points);
     const xs = xy.map(([x])=>x);
@@ -119,7 +119,7 @@
     }
     if (axes) addAxes('X',toPlot(xMin,0),toPlot(xMax,0),[1,0]);
     if (axes && xMin<0) addAxes('Y',toPlot(0,yMin),toPlot(0,yMax),[0,-1]);
-    if (projections) drawProjections(svg,points,toPlot,{xMin,xMax,yMin,yMax},edgeLabels,scale,rem,placements);
+    if (projections) drawProjections(svg,points,toPlot,{width,yMin,yMax},edgeLabels,scale,rem,placements);
     if (quadrants) {
       const names = ['I','II','III','IV'];
       const centers = [[xMax,yMax],[xMin,yMax],[xMin,yMin],[xMax,yMin]];
@@ -159,7 +159,7 @@
           towardCenter.map(value=>value*Math.min(.62,offset*rem/length)));
         placements.push({label,anchor,candidates});
       } else {
-        const direction = directions[id] || [cx-center[0],cy-center[1]];
+        const direction = (edgeLabels && edgeDirections[id]) || directions[id] || [cx-center[0],cy-center[1]];
         placements.push({label,anchor,direction});
       }
     }
@@ -195,10 +195,16 @@
         const away = (i ? -1 : 1)*side;
         if (edgeLabels) {
           // Follow the point's grid line to its nearest edge when the axis is crowded.
-          const edge = i ? project(away>0?bounds.xMin:bounds.xMax,value) :
-            project(value,away>0?bounds.yMax:bounds.yMin);
-          const position = -(i ? .63 : .71)*rem*away;
-          placements.push({label,anchor:edge,candidates:[[dx*position,dy*position]]});
+          if (i) {
+            // Anchor the outer edge of the number so a wider minus glyph cannot clip.
+            const left = away>0;
+            label.setAttribute('text-anchor',left?'start':'end');
+            const gutter = rem*.19;
+            placements.push({label,anchor:[left?gutter:bounds.width-gutter,y],candidates:[[0,0]]});
+          } else {
+            const edge = project(value,away>0?bounds.yMax:bounds.yMin);
+            placements.push({label,anchor:edge,candidates:[[0,-.71*rem*away]]});
+          }
         } else {
           const signs = ticks.has(value) ? [away] : [away,-away];
           const offsets = [.74,.91,1.08,1.35,1.62].flatMap(size=>signs.map(sign=>size*rem*sign));
