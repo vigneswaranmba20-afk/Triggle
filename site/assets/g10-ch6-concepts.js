@@ -200,6 +200,47 @@ function makeMetrics(host,items){
   host.append(grid);
 }
 
+function sightArc(x,y,r,from,to,color){
+  const point=a=>[x+r*cosD(a),y+r*sinD(a)].join(',');
+  return `<path d="M${point(from)} A${r},${r} 0 0,${to>from?1:0} ${point(to)}" fill="none" stroke="${color}" stroke-width="1.7" data-dg-obstacle="angle-${from}"/>`;
+}
+
+function sightFigure(host,title){
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('viewBox','0 0 320 200');
+  svg.setAttribute('class','g10ch4-svg diagramguard-svg');
+  svg.setAttribute('role','img');
+  svg.setAttribute('aria-label',title);
+  const key=el('div','diagramguard-coordinate-key');
+  host.append(svg,key);
+  const guard=window.TriggleDiagramGuard;
+  let scene,marks;
+  const refresh=guard.responsive(svg,(width,rem)=>{
+    if(!scene)return;
+    const unit=rem*320/width;
+    const top=Math.max(0,1.55*unit-40), bottom=Math.max(0,1.8*unit-44);
+    svg.setAttribute('viewBox',`0 ${-top} 320 ${200+top+bottom}`);
+    svg.innerHTML=scene;
+    const matrix=svg.getScreenCTM();
+    const font=rem*.9375/Math.hypot(matrix.c,matrix.d);
+    guard.place(svg,marks.map(({id,x,y,direction})=>{
+      const label=document.createElementNS(svg.namespaceURI,'text');
+      label.dataset.dgLabel=id;
+      label.setAttribute('font-size',font);
+      label.setAttribute('text-anchor','middle');
+      label.setAttribute('dy','.34em');
+      label.setAttribute('fill','#181B20');
+      label.textContent=id;
+      return {label,anchor:[x,y],direction};
+    }));
+  });
+  return (geometry,labels,values)=>{
+    scene=geometry;marks=labels;
+    key.replaceChildren(...values.map(value=>el('span','diagramguard-named-point',value)));
+    refresh();
+  };
+}
+
 function makeSlider(host,label,min,max,step,val,unit,onInput){
   const row=el('div','g10ch4-slider-row');
   const lbl=el('label','g10ch4-slider-label',label);
@@ -531,23 +572,28 @@ function mount(stage,host,lang){
     chips.append(bNoEye,bEye);
     const svgWrap=el('div'),controls=el('div'),readout=el('div','g10ch4-readout g10ch4-formula');
     lab.append(title,chips,svgWrap,controls,readout);
+    const figure=sightFigure(svgWrap,ta?'ஏற்றக்கோண வரைபடம்':'Angle of elevation diagram');
     const draw=()=>{
       bNoEye.setAttribute('aria-pressed',String(eye===0));
       bEye.setAttribute('aria-pressed',String(eye>0));
       const ev=math.elevation(rise,dist,eye);
-      const pxDist=Math.max(70,Math.min(185,dist*4)),pxEye=eye>0?24:0,yBase=168,yEye=yBase-pxEye,yTop=Math.max(24,yEye-rise*3.4);
-      const xObs=48,xT=xObs+pxDist;
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Angle of elevation diagram">
-        <line x1="20" y1="${yBase}" x2="290" y2="${yBase}" stroke="#525B62" stroke-width="1.6"/>
-        <rect x="${xT}" y="${yTop}" width="20" height="${yBase-yTop}" fill="#ECE7DC" stroke="#6E2933" stroke-width="1.8"/>
-        <line x1="${xObs}" y1="${yEye}" x2="${xT}" y2="${yEye}" stroke="#1E5248" stroke-width="1.5" stroke-dasharray="4 3"/>
-        <line x1="${xObs}" y1="${yEye}" x2="${xT}" y2="${yTop}" stroke="#6E2933" stroke-width="2.2"/>
-        <circle cx="${xObs}" cy="${yEye}" r="4" fill="#181B20"/>
-        ${eye>0?`<line x1="${xObs}" y1="${yEye}" x2="${xObs}" y2="${yBase}" stroke="#181B20" stroke-width="2.5"/><text x="${xObs-10}" y="${(yEye+yBase)/2}" font-size="9.5" fill="#181B20">1.8</text>`:''}
-        <text x="${xObs+26}" y="${yEye-6}" font-size="11" font-weight="700" fill="#6E2933">θ ≈ ${fmt(ev.thetaDeg,1)}°</text>
-        <text x="${(xObs+xT)/2}" y="${yBase+14}" font-size="10.5" font-weight="700" text-anchor="middle" fill="#1E5248">d = ${dist} m</text>
-        <text x="${xT+25}" y="${(yTop+yBase)/2}" font-size="10.5" font-weight="700" fill="#6E2933">${fmt(ev.totalHeight,1)}m</text>
-      </svg>`;
+      const scale=Math.min(176/dist,133/ev.totalHeight);
+      const xObs=58,xT=xObs+dist*scale,yBase=156,yEye=yBase-eye*scale,yTop=yBase-ev.totalHeight*scale;
+      const unit=ta?'மீ':'m';
+      figure(`
+        <line x1="20" y1="${yBase}" x2="289" y2="${yBase}" stroke="#525B62" stroke-width="1.6" data-dg-obstacle="ground"/>
+        <rect x="${xT}" y="${yTop}" width="18" height="${yBase-yTop}" fill="#ECE7DC" stroke="#6E2933" stroke-width="1.8" data-dg-obstacle="target" data-dg-fill/>
+        ${eye?`<line x1="${xObs}" y1="${yEye}" x2="${xT}" y2="${yEye}" stroke="#1E5248" stroke-width="1.5" stroke-dasharray="4 3" data-dg-obstacle="horizon"/>
+          <line x1="${xObs}" y1="${yEye}" x2="${xObs}" y2="${yBase}" stroke="#181B20" stroke-width="2.5" data-dg-obstacle="eye-height"/>`:''}
+        <line x1="${xObs}" y1="${yEye}" x2="${xT}" y2="${yTop}" stroke="#6E2933" stroke-width="2.2" data-dg-obstacle="sight"/>
+        <circle cx="${xObs}" cy="${yEye}" r="3.5" fill="#181B20" data-dg-obstacle="observer" data-dg-fill/>
+        ${sightArc(xObs,yEye,20,0,-ev.thetaDeg,'#6E2933')}`,[
+        {id:'θ',x:xObs,y:yEye,direction:[[-1,-1],[0,-1],[-1,0]]},
+        {id:'d',x:(xObs+xT)/2,y:yBase,direction:[0,1]},
+        {id:'H',x:xT+18,y:(yTop+yBase)/2,direction:[1,0]},
+        ...(eye?[{id:'e',x:xObs,y:(yEye+yBase)/2,direction:[[-1,0],[-1,1]]}]:[])
+      ],[`θ ≈ ${fmt(ev.thetaDeg,1)}°`,`d = ${dist} ${unit}`,`H = ${fmt(ev.totalHeight,1)} ${unit}`,
+        ...(eye?[`e = ${eye} ${unit}`]:[])]);
       readout.innerHTML=tex(`\\begin{aligned}&\\theta=\\arctan\\left(\\dfrac{${rise}}{${dist}}\\right)\\approx ${fmt(ev.thetaDeg,1)}^\\circ\\\\&H_{\\text{total}}=${rise}+${eye}=${fmt(ev.totalHeight,1)}\\text{ m}\\end{aligned}`,true);
     };
     makeSlider(controls,ta?'கிடைமட்டத் தொலைவு d (மீ)':'Horizontal distance d (m)',12,45,1,dist,' m',v=>{dist=v;draw();});
@@ -568,28 +614,28 @@ function mount(stage,host,lang){
     chips.append(bTrue,bTrap);
     const svgWrap=el('div'),controls=el('div'),readout=el('div','g10ch4-readout g10ch4-formula');
     lab.append(title,chips,svgWrap,controls,readout);
+    const figure=sightFigure(svgWrap,ta?'இறக்கக்கோண வரைபடம்':'Angle of depression diagram');
     const draw=()=>{
       bTrue.setAttribute('aria-pressed',String(!showTrap));
       bTrap.setAttribute('aria-pressed',String(showTrap));
       const dep=math.depression(height,angle);
-      const pxH=118,pxD=Math.max(55,Math.min(185,pxH/tanD(angle)));
-      const xB=54,yB=166,yC=yB-pxH,xA=xB+pxD;
-      svgWrap.innerHTML=`<svg class="g10ch4-svg" viewBox="0 0 310 190" role="img" aria-label="Angle of depression diagram">
-        <line x1="20" y1="${yB}" x2="290" y2="${yB}" stroke="#1E5248" stroke-width="1.6"/>
-        <rect x="${xB-18}" y="${yC}" width="18" height="${pxH}" fill="#ECE7DC" stroke="#181B20" stroke-width="1.8"/>
-        <line x1="${xB}" y1="${yC}" x2="${xA+24}" y2="${yC}" stroke="#6E2933" stroke-width="1.6" stroke-dasharray="4 3"/>
-        <line x1="${xB}" y1="${yC}" x2="${xA}" y2="${yB}" stroke="#6E2933" stroke-width="2.2"/>
-        <circle cx="${xA}" cy="${yB}" r="4.5" fill="#1E5248"/>
-        <text x="${xB-4}" y="${yC-7}" font-size="11" font-weight="700" fill="#181B20">C</text>
-        <text x="${xA+27}" y="${yC+4}" font-size="11" font-weight="700" fill="#6E2933">X</text>
-        <text x="${xB-10}" y="${yB+14}" font-size="11" font-weight="700" fill="#181B20">B</text>
-        <text x="${xA+6}" y="${yB+14}" font-size="11" font-weight="700" fill="#1E5248">A</text>
-        <text x="${xB+30}" y="${yC+13}" font-size="11" font-weight="700" fill="#6E2933">${angle}°</text>
-        ${showTrap
-          ?`<text x="${xB+5}" y="${yC+38}" font-size="10.5" font-weight="700" fill="#7A1D2B">Wall angle = ${90-angle}° (from vertical)</text>`
-          :`<text x="${xA-38}" y="${yB-8}" font-size="11" font-weight="700" fill="#1E5248">∠CAB=${angle}°</text>`}
-        <text x="${xB-26}" y="${yC+pxH/2}" font-size="10.5" font-weight="700" fill="#181B20">${height}m</text>
-      </svg>`;
+      const scale=Math.min(169/dep.dist,114/height);
+      const xB=68,yB=154,yC=yB-height*scale,xA=xB+dep.dist*scale,xX=xA+18;
+      figure(`
+        <line x1="20" y1="${yB}" x2="289" y2="${yB}" stroke="#1E5248" stroke-width="1.6" data-dg-obstacle="ground"/>
+        <rect x="${xB-17}" y="${yC}" width="17" height="${yB-yC}" fill="#ECE7DC" stroke="#181B20" stroke-width="1.8" data-dg-obstacle="wall" data-dg-fill/>
+        <line x1="${xB}" y1="${yC}" x2="${xX}" y2="${yC}" stroke="#6E2933" stroke-width="1.6" stroke-dasharray="4 3" data-dg-obstacle="horizon"/>
+        <line x1="${xB}" y1="${yC}" x2="${xA}" y2="${yB}" stroke="#6E2933" stroke-width="2.2" data-dg-obstacle="sight"/>
+        <circle cx="${xA}" cy="${yB}" r="3.5" fill="#1E5248" data-dg-obstacle="target" data-dg-fill/>
+        ${sightArc(xB,yC,21,0,angle,'#6E2933')}
+        ${showTrap?sightArc(xB,yC,28,angle,90,'#9B4D29'):sightArc(xA,yB,21,180,180+angle,'#1E5248')}`,[
+        {id:'C',x:xB,y:yC,direction:[[0,-1],[-1,-1]]},
+        {id:'X',x:xX,y:yC,direction:[[1,0],[0,-1]]},
+        {id:'B',x:xB,y:yB,direction:[[0,1],[-1,1]]},
+        {id:'A',x:xA,y:yB,direction:[[0,1],[1,1]]},
+        {id:'h',x:xB-17,y:(yC+yB)/2,direction:[-1,0]}
+      ],[showTrap?(ta?`செங்குத்துச் சுவர் கோணம் = ${90-angle}°`:`Wall angle = ${90-angle}° (from vertical)`):
+        `∠XCA = ∠CAB = ${angle}°`,`h = ${height} ${ta?'மீ':'m'}`]);
       readout.innerHTML=showTrap
         ?tex(`\\text{Wall-angle shortcut: }h\\tan ${angle}^\\circ\\approx ${fmt(dep.wrongWallDist,1)}\\text{ m}\\;(${angle===45?'\\text{Coincides at }45^\\circ\\text{ only; use horizon angle}':'\\text{Not the horizon-angle method}'})`,true)
         :tex(`\\begin{aligned}&\\angle XCA=\\angle CAB=${angle}^\\circ\\\\&d=\\dfrac{${height}}{\\tan ${angle}^\\circ}\\approx ${fmt(dep.dist,1)}\\text{ m}\\end{aligned}`,true);

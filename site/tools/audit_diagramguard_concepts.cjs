@@ -3,6 +3,7 @@
 const {chromium,webkit}=require('playwright');
 const {server,launchOptions}=require('./dashboard_test_support.cjs');
 const useWebKit=process.argv.includes('--webkit');
+const includePreviews=process.argv.includes('--include-previews');
 const viewportArgument=process.env.TRIGGLE_DIAGRAMGUARD_VIEWPORT||'390x844';
 const textSize=Number(process.env.TRIGGLE_DIAGRAMGUARD_TEXT_PERCENT||100);
 if(!/^\d+x\d+$/.test(viewportArgument)||![100,200].includes(textSize))throw Error('Use a WIDTHxHEIGHT viewport and 100 or 200 percent text');
@@ -15,7 +16,7 @@ const [width,height]=viewportArgument.split('x').map(Number);
     const context=await browser.newContext({viewport:{width,height},isMobile:width<=850,hasTouch:width<=850,serviceWorkers:'block'});
     const page=await context.newPage();
     await page.goto(app.base+'/index.html?class=9&chapter=g9-ch1&section=concepts&concept=0');
-    const results=await page.evaluate(async textSize=>{
+    const results=await page.evaluate(async ({textSize,includePreviews})=>{
       const report=[];
       const grades=window.TRIGGLE_CURRICULUM.grades.filter(({grade})=>grade===9||grade===10);
       const raf=()=>new Promise(requestAnimationFrame);
@@ -25,7 +26,8 @@ const [width,height]=viewportArgument.split('x').map(Number);
       await document.fonts.ready;
       const labels=(panel)=>[...panel.querySelectorAll('svg')].filter(svg=>
         svg.viewBox?.baseVal.width&&svg.getBoundingClientRect().height>24&&
-        !svg.closest('.katex, [aria-hidden=true]')&&svg.querySelector('path,polygon,line,circle'));
+        !svg.closest('.katex')&&(!svg.closest('[aria-hidden=true]')||
+          (includePreviews&&svg.closest('.g10ch4-glance-visual')))&&svg.querySelector('path,polygon,line,circle'));
       const audit=(panel)=>labels(panel).map(svg=>{
         const stat=window.TriggleDiagramGuard.audit(svg,{discover:!svg.dataset.dgScene});
         return {label:svg.getAttribute('aria-label')||svg.querySelector('title')?.textContent||svg.getAttribute('class'),
@@ -74,7 +76,7 @@ const [width,height]=viewportArgument.split('x').map(Number);
         }
       }
       return report;
-    },textSize);
+    },{textSize,includePreviews});
     const states=results.flatMap(route=>route.states);
     const figures=states.flatMap(state=>state.figures);
     const summary={
@@ -84,6 +86,6 @@ const [width,height]=viewportArgument.split('x').map(Number);
       renderedInstances:figures.length,flaggedInstances:figures.filter(figure=>figure.issues.length).length,
       boundaryFlags:figures.flatMap(figure=>figure.issues).filter(issue=>issue.kind==='boundary').length
     };
-    console.log(JSON.stringify({engine:useWebKit?'WebKit':'Chromium',viewport:{width,height},textSize,summary,routes:results},null,2));
+    console.log(JSON.stringify({engine:useWebKit?'WebKit':'Chromium',viewport:{width,height},textSize,includePreviews,summary,routes:results},null,2));
   }finally{await browser?.close();await app.close()}
 })().catch(error=>{console.error(error);process.exitCode=1});

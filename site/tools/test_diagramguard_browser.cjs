@@ -501,6 +501,126 @@ async function trigAndBisectorGeometry(page,base,profiles){
   return configurations;
 }
 
+async function sightLineGeometry(page,base,profiles){
+  const route=base+'/index.html?class=10&chapter=g10-ch6&section=concepts&concept=';
+  const cases=[{index:7,values:[[26,18],[45,8],[12,36],[30,20]]},
+    {index:8,values:[[30,30],[20,60],[70,15],[45,45]]}];
+  let states=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    for(const {index,values} of cases){
+      await page.goto(route+index);
+      await setLanguage(page,lang);
+      await settle(page,percent);
+      const figure=page.locator('.g10ch4-svg[data-dg-ready]');
+      await figure.waitFor();
+      const presets=page.locator('.g10ch4-chip-btn');
+      const sliders=page.locator('.g10ch4-slider');
+      for(const mode of [0,1]){
+        await presets.nth(mode).click();
+        for(const [a,b] of values){
+          for(const [i,value] of [a,b].entries())await sliders.nth(i).evaluate((input,value)=>{
+            input.value=String(value);input.dispatchEvent(new Event('input',{bubbles:true}));
+          },value);
+          const result=await figure.evaluate(svg=>{
+            const line=id=>svg.querySelector(`[data-dg-obstacle="${id}"]`);
+            const point=(node,which)=>['x','y'].map(axis=>node[axis+which].baseVal.value);
+            const start=point(line('sight'),1),end=point(line('sight'),2);
+            const ground=line('ground').y1.baseVal.value;
+            const arc=line('angle-0');
+            const endpoint=arc.getPointAtLength(arc.getTotalLength());
+            const key=svg.parentElement.querySelector('.diagramguard-coordinate-key');
+            return {audit:window.TriggleDiagramGuard.audit(svg,{discover:true}),
+              horizontal:line('ground').y2.baseVal.value===ground&&(!line('horizon')||
+                line('horizon').y1.baseVal.value===line('horizon').y2.baseVal.value),
+              rise:end[1]-start[1],run:end[0]-start[0],eye:ground-start[1],
+              arc:[endpoint.x-start[0],endpoint.y-start[1]],
+              keyBelow:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+              fontsize:parseFloat(getComputedStyle(key).fontSize),
+              overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};
+          });
+          const elevation=index===7;
+          const expected=elevation?Math.atan2(b,a):a*Math.PI/180;
+          near(Math.abs(Math.atan2(result.rise,result.run)),expected,1e-6);
+          near(Math.abs(Math.atan2(result.arc[1],result.arc[0])),expected,.001);
+          if(elevation)near(result.eye/result.run,mode?1.8/a:0,1e-6);
+          const context=`${lang} ${width}×${height} ${percent}% sight scene ${index} ${mode} (${a}, ${b})`;
+          assert.deepEqual(result.audit.issues,[],context);
+          assert.equal(result.audit.labels.length,elevation?(mode===1?4:3):5,context);
+          result.audit.labels.forEach(label=>near(label.fontPx,percent*.15,.2));
+          near(result.fontsize,percent*.14,.2);
+          assert(result.horizontal&&result.keyBelow&&result.overflow<=1,context);
+          states++;
+        }
+      }
+    }
+  }
+  return states;
+}
+
+async function statisticsPlotGeometry(page, base, profiles, full=false) {
+  const route = base + '/index.html?class=10&chapter=g10-ch8&section=concepts&concept=';
+  const kinds = ['frequency','spread','spread','spread','scale','scale','frequency'];
+  const selections = {
+    frequency: (full ? [1,2,3,4,5] : [1,5]).map(n => [n,0]),
+    spread: (full ? [1,2,3,4,5,6,7,8] : [1,8]).map(n => [n,0]),
+    scale: (full ? [-2,-1,0,1,2] : [-2,0,2]).flatMap(a => [-4,0,4].map(b => [a,b]))
+  };
+  let checks=0;
+  for(const [width,height] of profiles)for(const lang of ['en','ta'])for(const percent of [100,200]){
+    await page.setViewportSize({width,height});
+    for(const index of full ? kinds.keys() : [0,1,4]){
+      const kind=kinds[index];
+      await page.goto(route+index);
+      await setLanguage(page,lang);
+      await settle(page,percent);
+      const chart=page.locator('.g10ch8-graphic[data-dg-ready]');
+      await chart.waitFor();
+      const sliders=page.locator('.g10ch8-range');
+      for(const [first,shift] of selections[kind]){
+        for(const [control,value] of (kind==='scale' ? [first,shift] : [first]).entries()){
+          await sliders.nth(control).evaluate((input,value)=>{
+            input.value=String(value);
+            input.dispatchEvent(new Event('input',{bubbles:true}));
+          },value);
+        }
+        const chartData=await chart.evaluate(svg=>{
+          const attr=(node,key)=>Number(node.getAttribute(key));
+          const axis=svg.querySelector('.g10ch8-axis'), meanLine=svg.querySelector('.g10ch8-mean');
+          const key=svg.parentElement.querySelector('.g10ch8-legend');
+          return {audit:window.TriggleDiagramGuard.audit(svg,{discover:true}),
+            points:[...svg.querySelectorAll('.g10ch8-point')].map(dot=>[attr(dot,'cx'),attr(dot,'cy')]),
+            axis:[attr(axis,'x1'),attr(axis,'x2')], mean:attr(meanLine,'x1'),
+            key:key.textContent, keySize:parseFloat(getComputedStyle(key).fontSize),
+            keyBelow:key.getBoundingClientRect().top>=svg.getBoundingClientRect().bottom-.5,
+            overflow:document.documentElement.scrollWidth-document.documentElement.clientWidth};
+        });
+        const values=kind==='frequency' ? [4,4,4,...Array(first).fill(12)] :
+          kind==='spread' ? [10-first,9,10,11,10+first] : [2,4,6,8].map(x=>first*x+shift);
+        const [min,max]=kind==='frequency' ? [0,16] : kind==='spread' ? [0,20] : [-20,20];
+        const mean=values.reduce((sum,x)=>sum+x,0)/values.length;
+        const position=x=>chartData.axis[0]+(x-min)/(max-min)*(chartData.axis[1]-chartData.axis[0]);
+        const config=`${lang} ${width}×${height} ${percent}% '${kind}' (${first}, ${shift})`;
+        assert.deepEqual(chartData.audit.issues,[],config);
+        assert.equal(chartData.audit.labels.length,5,config);
+        chartData.audit.labels.forEach(label=>near(label.fontPx,.14*percent,.2));
+        assert.equal(chartData.points.length,values.length,config);
+        values.forEach((x,i)=>{
+          const [actualX,actualY]=chartData.points[i];
+          near(actualX,position(x));
+          near(actualY,78-13*values.slice(0,i).filter(value=>value===x).length);
+        });
+        near(chartData.mean,position(mean));
+        assert.equal(chartData.key,`${lang==='ta'?'சராசரி:':'Mean:'} ${String(Number(mean.toFixed(2))).replace('-','−')}`,config);
+        near(chartData.keySize,.14*percent,.2);
+        assert(chartData.keyBelow&&chartData.overflow<=1,config);
+        checks++;
+      }
+    }
+  }
+  return checks;
+}
+
 async function main(){
   const app=live?null:await server(process.env.TRIGGLE_DIAGRAMGUARD_SITE);
   const base=live||app.base;
@@ -529,6 +649,16 @@ async function main(){
           await legacyMarkers(page);
           return;
         }
+        if(process.argv.includes('--statistics')){
+          const checks=await statisticsPlotGeometry(page,base,viewports,true);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive statistics plot states`);
+          return;
+        }
+        if(process.argv.includes('--sight-lines')){
+          const checks=await sightLineGeometry(page,base,viewports);
+          console.log(`DiagramGuard: ${checks} bilingual and responsive sight-line states`);
+          return;
+        }
         if(width===390&&!live){
           await synthetic(page);
           await legacyMarkers(page);
@@ -536,6 +666,8 @@ async function main(){
           await legacyBoundaryCases(page);
           await conceptBoundaries(page,base);
           await trigAndBisectorGeometry(page,base,[[320,844]]);
+          await sightLineGeometry(page,base,[[320,844]]);
+          await statisticsPlotGeometry(page,base,[[320,844]]);
           await page.setViewportSize({width,height});
         }
         for(const lang of ['en','ta']){

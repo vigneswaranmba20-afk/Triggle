@@ -79,30 +79,55 @@
     return value;
   }
 
-  function dotPlot(host, values, title, meanLabel, limits) {
-    host.replaceChildren();
+  function dotPlot(host, title, meanLabel) {
     const svg = graphic(host, title, 126);
-    const [min, max] = limits;
-    const x = value => 24 + (value - min) / (max - min) * 252;
-    vector('line', {x1: 24, x2: 276, y1: 90, y2: 90, class: 'g10ch8-axis'}, svg);
-    for (const value of range(0, 4).map(i => min + i * (max - min) / 4)) {
-      vector('line', {x1: x(value), x2: x(value), y1: 90, y2: 97, class: 'g10ch8-axis'}, svg);
-      label(svg, x(value), 113, display(value));
-    }
-    const meanX = x(stats(values).mean);
-    vector('line', {x1: meanX, x2: meanX, y1: 18, y2: 90, class: 'g10ch8-mean'}, svg);
-    label(svg, Math.max(55, Math.min(245, meanX)), 14, meanLabel, {class: 'g10ch8-mean-label'});
-    const occurrences = new Map();
-    for (const value of values) {
-      const level = occurrences.get(value) || 0;
-      vector('circle', {cx: x(value), cy: 78 - level * 13, r: 5, class: 'g10ch8-point'}, svg);
-      occurrences.set(value, level + 1);
-    }
+    svg.classList.add('diagramguard-svg');
+    const legend = element('div', '', host);
+    legend.className = 'g10ch8-legend diagramguard-coordinate-legend';
+    const entry = element('span', '', legend);
+    const sample = element('span', '', entry);
+    sample.className = 'diagramguard-line-sample g10ch8-mean-sample';
+    sample.dataset.dashed = '';
+    sample.setAttribute('aria-hidden', 'true');
+    const meanText = element('span', '', entry);
+    const chartNumber = value => display(value).replace('-', '−');
+    let model;
+    const refresh = window.TriggleDiagramGuard.responsive(svg, (width, rem) => {
+      if (!model) return;
+      const {values, limits: [min, max], mean} = model;
+      const tickFont = .875 * rem * 300 / width;
+      const inset = Math.max(24, tickFont);
+      const x = value => inset + (value - min) / (max - min) * (300 - 2 * inset);
+      svg.setAttribute('viewBox', `0 0 300 ${105 + tickFont * 1.58}`);
+      svg.replaceChildren();
+      vector('line', {x1: x(min), x2: x(max), y1: 90, y2: 90, class: 'g10ch8-axis'}, svg);
+      for (const i of range(0, 4)) {
+        const tick = min + i * (max - min) / 4;
+        vector('line', {x1: x(tick), x2: x(tick), y1: 90, y2: 97, class: 'g10ch8-axis'}, svg);
+        const text = label(svg, x(tick), 102 + tickFont * 1.08, chartNumber(tick), {'data-dg-label': chartNumber(tick)});
+        text.style.fontSize = tickFont + 'px';
+        text.style.fontWeight = '500';
+      }
+      const meanX = x(mean);
+      vector('line', {x1: meanX, x2: meanX, y1: 18, y2: 90, class: 'g10ch8-mean'}, svg);
+      const occurrences = new Map();
+      for (const value of values) {
+        const level = occurrences.get(value) || 0;
+        vector('circle', {cx: x(value), cy: 78 - level * 13, r: 5, class: 'g10ch8-point'}, svg);
+        occurrences.set(value, level + 1);
+      }
+    });
+    return (values, limits, mean) => {
+      model = {values, limits, mean};
+      meanText.textContent = `${meanLabel} ${chartNumber(mean)}`;
+      refresh();
+    };
   }
 
   function distribution(host, kind, t) {
     const controls = element('div', '', host);
     const chart = element('div', '', host);
+    const updatePlot = dotPlot(chart, t.distribution, t.mean);
     const result = output(host);
     const render = () => {
       let values, limits;
@@ -119,7 +144,7 @@
         limits = [-20, 20];
       }
       const summary = stats(values);
-      dotPlot(chart, values, t.distribution, t.mean, limits);
+      updatePlot(values, limits, summary.mean);
       result.textContent = `${t.values} ${values.join(', ')}. ${t.mean} ${display(summary.mean)}. ${t.range} ${display(summary.range)}. ${t.variance} ${display(summary.variance)}. ${t.sd} ${display(summary.deviation)}.`;
     };
     const options = kind === 'frequency' ? [1, 2, 3, 4, 5] : kind === 'spread' ? [1, 2, 3, 4, 5, 6, 7, 8] : [-2, -1, 0, 1, 2];

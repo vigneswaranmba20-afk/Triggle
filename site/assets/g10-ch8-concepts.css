@@ -38,7 +38,7 @@
   stroke-width: 1.5;
   stroke-dasharray: 4 3;
 }
-.g10ch8-mean-label { fill: #7c2d12; }
+.g10ch8-mean-sample { color: #7c2d12; }
 .g10ch8-point { fill: #3730a3; }
 .g10ch8-tree-muted { stroke: #cbd5e1; stroke-width: 1.5; }
 .g10ch8-region { fill: #fff; stroke: #64748b; }
