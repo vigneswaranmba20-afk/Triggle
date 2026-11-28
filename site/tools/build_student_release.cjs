@@ -257,7 +257,7 @@ function staticHome(html,curriculum,discovery) {
   vm.runInNewContext(discovery,{window});
   const templates = ['en','ta'].map(lang=>{
     const root = {querySelector:()=>null,querySelectorAll:()=>[]};
-    window.TriggleDiscovery.mount(root,{mode:'home',lang,curriculum,classes:{}});
+    window.TriggleDiscovery.mount(root,{mode:'home',lang,curriculum});
     const content = root.innerHTML.replace('class="discover-home-minimal"','class="discover-home-minimal" data-static-home').replace(/<button type="button" data-grade="(9|10)" ([^>]+)>([\s\S]*?)<\/button>/g,
       (_,grade,attrs,label)=>'<a href="./index.html?class='+grade+'&amp;lang='+lang+'" '+attrs+'>'+label+'</a>');
     return '<template id="startup-'+lang+'">'+content+'</template>';

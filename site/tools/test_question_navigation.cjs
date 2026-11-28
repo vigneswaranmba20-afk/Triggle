@@ -2,7 +2,7 @@
 const assert=require('node:assert/strict'),fs=require('node:fs');
 const html=fs.readFileSync('site/index.html','utf8'),js=fs.readFileSync('site/assets/app.js','utf8'),sw=fs.readFileSync('site/service-worker.js','utf8');
 for(const id of ['questionText','previous','next','langEn','langTa','figureDialog'])assert.ok(html.includes('id="'+id+'"'));
-for(const contract of ['function navMove(delta)','function remember()',"lastOpened={grade,questionId:current.id}","store('triggle.lastByGrade.v119',lastByGrade)","window.addEventListener('popstate'"])assert.ok(js.includes(contract),'Preserve '+contract);
+for(const contract of ['function navMove(delta)','function remember()',"store('triggle.lastOpened.v1',{grade,questionId:current.id})","store('triggle.lastByGrade.v119',lastByGrade)","window.addEventListener('popstate'"])assert.ok(js.includes(contract),'Preserve '+contract);
 assert.ok(!/removeItem|localStorage.clear/.test(js),'Never delete existing progress');
 assert.match(sw,/^const CACHE=['"]triggle-[a-z0-9-]*[0-9][a-z0-9-]*['"];?/m,'Keep a versioned Triggle offline cache namespace');
 new Function(js);

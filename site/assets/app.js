@@ -44,8 +44,6 @@
  const store=(key,value)=>{try{localStorage.setItem(key,JSON.stringify(value))}catch{}};
  const completed=new Set(load('triggle.learned.v119',[]));
  const lastByGrade=load('triggle.lastByGrade.v119',{});
- // Resume across grades uses the most recently opened lesson, not grade order.
- let lastOpened=load('triggle.lastOpened.v1',null);
  let lang='en';try{const saved=new URLSearchParams(location.search).get('lang')||localStorage.getItem('triggle-language');if(saved==='ta'||saved==='"ta"')lang='ta'}catch{}
  const url=new URL(location.href);
  if(restrictedRoute(url.searchParams)){history.replaceState(null,'',location.pathname);url.search='';}
@@ -151,7 +149,7 @@
  function remember(){
    if(homeView||classIndex||chapterOverview)return;
    lastByGrade[grade]=current.id;store('triggle.lastByGrade.v119',lastByGrade);
-   lastOpened={grade,questionId:current.id};store('triggle.lastOpened.v1',lastOpened);
+   store('triggle.lastOpened.v1',{grade,questionId:current.id});
  }
  function resetScroll(){
   // Both the workspace and the mobile lesson container can scroll.
@@ -209,14 +207,6 @@
    grade=g;current=classes[g].items.find(x=>x.id===lastByGrade[g])||classes[g].items[0];
    selectChapter(chapter);
  }
- function openQuestionFor(g,item){
-   if(!publicGrade(g)||!classes[g])return;
-   if(chapterRelease?.open(g,{question:item.id}))return;
-   grade=g;homeView=false;classIndex=false;chapterOverview=null;chapterSection=null;conceptIndex=null;questionOrigin=null;current=item;
-   updateUrl();remember();render();closeDrawer();resetScroll();
-   $('lessonCard').focus({preventScroll:true});
- }
-
  function navMove(delta){if(homeView||classIndex||chapterOverview)return;const list=activeList(),i=currentIndex(list)+(current.duplicateOf&&delta<0?0:delta);if(i<0||i>=list.length)return;selectLesson(list[i])}
 
  let breadcrumbView;
@@ -719,8 +709,8 @@
   document.documentElement.lang=lang;document.body.classList.toggle('lang-ta',lang==='ta');document.querySelectorAll('[data-i18n]').forEach(el=>el.textContent=ui(el.dataset.i18n));$('search').placeholder=ui('search');$('classSubtitle').textContent=ui('subtitle');$('langEn').classList.toggle('active',lang==='en');$('langTa').classList.toggle('active',lang==='ta');$('langEn').setAttribute('aria-pressed',String(lang==='en'));$('langTa').setAttribute('aria-pressed',String(lang==='ta'))}
  function renderDiscovery(){
    window.TriggleDiscovery?.mount($('discoveryView'),{
-     mode:homeView?'home':'class',grade,lang,curriculum,classes,lastByGrade,lastOpened,
-     openGrade:changeGrade,openChapter:openChapterFor,openQuestion:openQuestionFor,goHome
+     mode:homeView?'home':'class',grade,lang,curriculum,
+     openGrade:changeGrade,openChapter:openChapterFor,goHome
    });
  }
  let chromeView;

@@ -32,7 +32,7 @@ body { background: var(--bg); color: var(--ink); }
 
 /* The surrounding UI reads like paper, not a second interactive activity. */
 .sidebar, .appbar, .class-dock, .lesson-card, .chapter-hub,
-.path-dialog, .figure-dialog, .discover-resume-card {
+.path-dialog, .figure-dialog {
   background-color: var(--paper-white);
   color: var(--paper-ink);
 }
@@ -94,36 +94,32 @@ body { background: var(--bg); color: var(--ink); }
   box-shadow: none;
 }
 .discover-secondary { background: transparent; color: white; border-color: #E3DFFF; }
-.discover-grade, .discover-chapter, .discover-recent, .discover-feature,
-.discover-no-recent, .discover-resume-card {
+.discover-grade, .discover-chapter, .discover-feature {
   background: var(--paper-white); color: var(--paper-ink);
   border-color: var(--paper-rule);
 }
 .discover-grade-copy b, .discover-chapter strong, .discover-section h2,
-.discover-feature h2, .discover-directory-head h1,
-.discover-resume-name, .discover-recent strong { color: var(--paper-ink); }
+.discover-feature h2, .discover-directory-head h1 { color: var(--paper-ink); }
 .discover-grade-copy small, .discover-chapter-meta,
-.discover-feature p, .discover-no-recent,
-.discover-recent small { color: var(--paper-muted); }
+.discover-feature p { color: var(--paper-muted); }
 .discover-grade-number, .discover-grade-10 .discover-grade-number,
 .discover-grade-11 .discover-grade-number,
 .discover-grade-12 .discover-grade-number, .discover-feature-icon {
   background: var(--paper-tint); color: var(--paper-indigo);
 }
-.discover-grade-arrow, .discover-card-arrow, .discover-resume-action {
+.discover-grade-arrow, .discover-card-arrow {
   color: var(--paper-indigo);
 }
-.discover-grade:hover, .discover-chapter:hover, .discover-resume-card:hover {
+.discover-grade:hover, .discover-chapter:hover {
   background: #FBFAFF; border-color: var(--paper-indigo);
 }
 .discover-find input, .discover-find select {
   background: var(--paper-white); color: var(--paper-ink); border-color: var(--paper-rule);
 }
-.discover-back, .discover-change, .discover-recent button,
+.discover-back, .discover-change,
 .discover-feature button, .discover-feature-tag {
   color: var(--paper-indigo);
 }
-.discover-recent button { background: var(--paper-tint); border-color: var(--paper-rule); }
 .discover-feature { background: #FFFFFF; }
 .discover-feature button {
   background: var(--paper-indigo); color: #FFFFFF;
