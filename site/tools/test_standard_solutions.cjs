@@ -438,14 +438,14 @@ for(const [grade,data] of Object.entries(classes)){
    assert.equal(item.edition,'2025');
    assert.equal(item.translationReview,'pending');
    assert.equal(item.sourceFidelity?.status,'page-visual-checked');
-   assert(!item.q.ta,'Do not invent unreviewed Tamil teaching copy '+item.id);
+   assert.ok(item.q?.ta&&item.answerTa&&item.steps.every(s=>s.ta),'Bilingual 2025 Tamil question, steps and answer '+item.id);
   }else if(grade==='10'&&ch7BById.has(item.id)){
    const passport=ch7BById.get(item.id);
    assert.equal(item.q.en,passport.englishQuestion,'G10 2025 Mensuration 7.1 Q6-Q10 English source fidelity '+item.id);
    assert.equal(item.edition,'2025');
    assert.equal(item.translationReview,'pending');
    assert.equal(item.sourceFidelity?.status,'page-visual-checked');
-   assert(!item.q.ta,'Do not manufacture unreviewed Tamil authored teaching copy '+item.id);
+   assert.ok(item.q?.ta&&item.answerTa&&item.steps.every(s=>s.ta),'Bilingual 2025 Tamil question, steps and answer '+item.id);
   }else if(grade==='10'&&(ch7Ex72Ids.includes(item.id)||ch7Ex73Ids.includes(item.id))){
    assert.equal(item.edition,'2025');
    assert.equal(item.sourceFidelity?.status,'page-visual-checked');
