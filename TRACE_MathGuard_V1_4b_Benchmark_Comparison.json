@@ -1,0 +1,427 @@
+{
+ "schemaVersion": 1,
+ "engine": "TRACE MathGuard V1.4b",
+ "gitCommit": "2187c00",
+ "externalLlmApiCostUSD": 0.0,
+ "frozenBenchmark": {
+  "datasetSha256": "e72571d9be9c0978cab84762b5c21f356a78d04c799d2ba6a75d060093005f9b",
+  "totalItems": 334,
+  "v1_4a": {
+   "statuses": {
+    "PARTIAL": 78,
+    "PASS": 252,
+    "UNVERIFIABLE": 4
+   },
+   "passRatePct": 75.45,
+   "claimVerifiedPct": 93.25,
+   "answerPassRatePct": 100.0
+  },
+  "v1_4b": {
+   "statuses": {
+    "PARTIAL": 77,
+    "PASS": 253,
+    "UNVERIFIABLE": 4
+   },
+   "passRatePct": 75.75,
+   "claimVerifiedPct": 93.3,
+   "claims": {
+    "total": 1716,
+    "verified": 1601,
+    "failed": 0,
+    "unsupported": 115,
+    "verifiedRatePct": 93.3
+   },
+   "answerStatuses": {
+    "PASS": 328,
+    "UNVERIFIABLE": 6
+   },
+   "answerPassRatePct": 100.0,
+   "byChapter": {
+    "3": {
+     "total": 153,
+     "statuses": {
+      "PARTIAL": 37,
+      "PASS": 115,
+      "UNVERIFIABLE": 1
+     },
+     "total_claims": 766,
+     "verified_claims": 716,
+     "failed_claims": 0,
+     "unsupported_claims": 50
+    },
+    "5": {
+     "total": 110,
+     "statuses": {
+      "PASS": 90,
+      "PARTIAL": 18,
+      "UNVERIFIABLE": 2
+     },
+     "total_claims": 533,
+     "verified_claims": 504,
+     "failed_claims": 0,
+     "unsupported_claims": 29
+    },
+    "7": {
+     "total": 71,
+     "statuses": {
+      "PASS": 48,
+      "PARTIAL": 22,
+      "UNVERIFIABLE": 1
+     },
+     "total_claims": 417,
+     "verified_claims": 381,
+     "failed_claims": 0,
+     "unsupported_claims": 36
+    }
+   },
+   "regressionsVsV1_3_5a": [],
+   "runtimeSec": 81.78,
+   "peakMemoryMB": 92.4
+  }
+ },
+ "expandedBenchmark": {
+  "totalAuditedItems": 765,
+  "v1_4a": {
+   "workingStatusCounts": {
+    "PARTIAL": 240,
+    "PASS": 369,
+    "UNVERIFIABLE": 120,
+    "FAIL": 36
+   },
+   "tamilStatusCounts": {
+    "PASS": 669,
+    "PARTIAL": 22,
+    "FAIL": 39,
+    "UNVERIFIABLE": 35
+   },
+   "claims": {
+    "total": 3127,
+    "verified": 2444,
+    "verifiedRatePct": 78.16
+   }
+  },
+  "v1_4b": {
+   "workingStatusCounts": {
+    "PARTIAL": 238,
+    "PASS": 404,
+    "UNVERIFIABLE": 120,
+    "FAIL": 3
+   },
+   "answerStatusCounts": {
+    "UNVERIFIABLE": 262,
+    "PASS": 500,
+    "FAIL": 3
+   },
+   "tamilStatusCounts": {
+    "PASS": 656,
+    "FAIL": 55,
+    "PARTIAL": 19,
+    "UNVERIFIABLE": 35
+   },
+   "claims": {
+    "total": 3120,
+    "verified": 2537,
+    "verifiedRatePct": 81.31
+   },
+   "auditedChapters": {
+    "g9-ch3": {
+     "grade": 9,
+     "chapter": 3,
+     "domain": "algebra",
+     "title": "Algebra",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 224,
+      "concepts": 10,
+      "total": 234
+     },
+     "workingStatusCounts": {
+      "PARTIAL": 73,
+      "PASS": 80,
+      "UNVERIFIABLE": 79,
+      "FAIL": 2
+     },
+     "answerStatusCounts": {
+      "UNVERIFIABLE": 147,
+      "PASS": 85,
+      "FAIL": 2
+     },
+     "tamilStatusCounts": {
+      "PASS": 199,
+      "FAIL": 23,
+      "PARTIAL": 2,
+      "UNVERIFIABLE": 10
+     },
+     "claims": {
+      "total": 596,
+      "verified": 359,
+      "failed": 2,
+      "unsupported": 235,
+      "verifiedRatePct": 60.23
+     }
+    },
+    "g9-ch5": {
+     "grade": 9,
+     "chapter": 5,
+     "domain": "coordinate_geometry",
+     "title": "Coordinate Geometry",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 58,
+      "concepts": 7,
+      "total": 65
+     },
+     "workingStatusCounts": {
+      "PARTIAL": 20,
+      "PASS": 32,
+      "UNVERIFIABLE": 13
+     },
+     "answerStatusCounts": {
+      "UNVERIFIABLE": 31,
+      "PASS": 34
+     },
+     "tamilStatusCounts": {
+      "FAIL": 12,
+      "PASS": 47,
+      "UNVERIFIABLE": 6
+     },
+     "claims": {
+      "total": 225,
+      "verified": 180,
+      "failed": 0,
+      "unsupported": 45,
+      "verifiedRatePct": 80.0
+     }
+    },
+    "g9-ch7": {
+     "grade": 9,
+     "chapter": 7,
+     "domain": "mensuration",
+     "title": "Mensuration",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 36,
+      "concepts": 1,
+      "total": 37
+     },
+     "workingStatusCounts": {
+      "PASS": 12,
+      "PARTIAL": 25
+     },
+     "answerStatusCounts": {
+      "PASS": 21,
+      "UNVERIFIABLE": 16
+     },
+     "tamilStatusCounts": {
+      "PASS": 30,
+      "PARTIAL": 4,
+      "FAIL": 3
+     },
+     "claims": {
+      "total": 146,
+      "verified": 104,
+      "failed": 0,
+      "unsupported": 42,
+      "verifiedRatePct": 71.23
+     }
+    },
+    "g10-ch3": {
+     "grade": 10,
+     "chapter": 3,
+     "domain": "algebra",
+     "title": "Algebra",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 235,
+      "concepts": 14,
+      "total": 249
+     },
+     "workingStatusCounts": {
+      "PASS": 143,
+      "PARTIAL": 80,
+      "FAIL": 1,
+      "UNVERIFIABLE": 25
+     },
+     "answerStatusCounts": {
+      "PASS": 182,
+      "UNVERIFIABLE": 66,
+      "FAIL": 1
+     },
+     "tamilStatusCounts": {
+      "UNVERIFIABLE": 9,
+      "PASS": 225,
+      "FAIL": 11,
+      "PARTIAL": 4
+     },
+     "claims": {
+      "total": 1205,
+      "verified": 1011,
+      "failed": 1,
+      "unsupported": 193,
+      "verifiedRatePct": 83.9
+     }
+    },
+    "g10-ch5": {
+     "grade": 10,
+     "chapter": 5,
+     "domain": "coordinate_geometry",
+     "title": "Coordinate Geometry",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 97,
+      "concepts": 12,
+      "total": 109
+     },
+     "workingStatusCounts": {
+      "PASS": 89,
+      "PARTIAL": 18,
+      "UNVERIFIABLE": 2
+     },
+     "answerStatusCounts": {
+      "PASS": 108,
+      "UNVERIFIABLE": 1
+     },
+     "tamilStatusCounts": {
+      "PASS": 107,
+      "PARTIAL": 1,
+      "FAIL": 1
+     },
+     "claims": {
+      "total": 531,
+      "verified": 502,
+      "failed": 0,
+      "unsupported": 29,
+      "verifiedRatePct": 94.54
+     }
+    },
+    "g10-ch7": {
+     "grade": 10,
+     "chapter": 7,
+     "domain": "mensuration",
+     "title": "Mensuration",
+     "adapterStatus": "verified_v1_4",
+     "counts": {
+      "exercises": 62,
+      "concepts": 9,
+      "total": 71
+     },
+     "workingStatusCounts": {
+      "PASS": 48,
+      "PARTIAL": 22,
+      "UNVERIFIABLE": 1
+     },
+     "answerStatusCounts": {
+      "PASS": 70,
+      "UNVERIFIABLE": 1
+     },
+     "tamilStatusCounts": {
+      "UNVERIFIABLE": 10,
+      "FAIL": 5,
+      "PASS": 48,
+      "PARTIAL": 8
+     },
+     "claims": {
+      "total": 417,
+      "verified": 381,
+      "failed": 0,
+      "unsupported": 36,
+      "verifiedRatePct": 91.37
+     }
+    }
+   },
+   "runtimeSec": 115.9
+  }
+ },
+ "latestCurriculumInventory": {
+  "9": {
+   "1": {
+    "title": "Set Language",
+    "totalItems": 156,
+    "exercises": 120
+   },
+   "2": {
+    "title": "Real Numbers",
+    "totalItems": 152,
+    "exercises": 120
+   },
+   "3": {
+    "title": "Algebra",
+    "totalItems": 226,
+    "exercises": 224
+   },
+   "4": {
+    "title": "Geometry",
+    "totalItems": 87,
+    "exercises": 86
+   },
+   "5": {
+    "title": "Coordinate Geometry",
+    "totalItems": 59,
+    "exercises": 58
+   },
+   "6": {
+    "title": "Trigonometry",
+    "totalItems": 51,
+    "exercises": 47
+   },
+   "7": {
+    "title": "Mensuration",
+    "totalItems": 37,
+    "exercises": 36
+   },
+   "8": {
+    "title": "Statistics",
+    "totalItems": 31,
+    "exercises": 30
+   },
+   "9": {
+    "title": "Probability",
+    "totalItems": 31,
+    "exercises": 25
+   }
+  },
+  "10": {
+   "1": {
+    "title": "Relations and Functions",
+    "totalItems": 74,
+    "exercises": 74
+   },
+   "2": {
+    "title": "Numbers and Sequences",
+    "totalItems": 151,
+    "exercises": 150
+   },
+   "3": {
+    "title": "Algebra",
+    "totalItems": 236,
+    "exercises": 235
+   },
+   "4": {
+    "title": "Geometry",
+    "totalItems": 85,
+    "exercises": 85
+   },
+   "5": {
+    "title": "Coordinate Geometry",
+    "totalItems": 98,
+    "exercises": 97
+   },
+   "6": {
+    "title": "Trigonometry",
+    "totalItems": 86,
+    "exercises": 86
+   },
+   "7": {
+    "title": "Mensuration",
+    "totalItems": 62,
+    "exercises": 62
+   },
+   "8": {
+    "title": "Statistics and Probability",
+    "totalItems": 92,
+    "exercises": 92
+   }
+  }
+ },
+ "peakMemoryMB": 106.59
+}

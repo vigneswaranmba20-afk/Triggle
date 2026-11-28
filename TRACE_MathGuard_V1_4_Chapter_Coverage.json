@@ -1,0 +1,342 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.4",
+  "benchmarkSeparationPolicy": {
+    "frozenBenchmark": "docs/trace/mathguard/v1_3_5_frozen_dataset.json",
+    "frozenItemCount": 334,
+    "frozenDatasetSha256": "e72571d9be9c0978cab84762b5c21f356a78d04c799d2ba6a75d060093005f9b",
+    "note": "Frozen 334-item benchmark is reported separately from the expanded 765-item Grade 9/10 dataset."
+  },
+  "expandedDatasetSummary": {
+    "totalAuditedItems": 765,
+    "workingStatusCounts": {
+      "PARTIAL": 237,
+      "PASS": 367,
+      "FAIL": 41,
+      "UNVERIFIABLE": 120
+    },
+    "tamilStatusCounts": {
+      "PASS": 669,
+      "PARTIAL": 22,
+      "FAIL": 39,
+      "UNVERIFIABLE": 35
+    },
+    "claims": {
+      "total": 3127,
+      "verified": 2436,
+      "verifiedRatePct": 77.9
+    },
+    "runtimeSec": 90.31
+  },
+  "auditedChapters": {
+    "g9-ch3": {
+      "grade": 9,
+      "chapter": 3,
+      "domain": "algebra",
+      "title": "Algebra",
+      "adapterStatus": "verified_v1_4",
+      "counts": {
+        "exercises": 224,
+        "concepts": 10,
+        "total": 234
+      },
+      "workingStatusCounts": {
+        "PARTIAL": 74,
+        "PASS": 60,
+        "FAIL": 21,
+        "UNVERIFIABLE": 79
+      },
+      "answerStatusCounts": {
+        "UNVERIFIABLE": 147,
+        "PASS": 66,
+        "FAIL": 21
+      },
+      "tamilStatusCounts": {
+        "PASS": 207,
+        "PARTIAL": 3,
+        "FAIL": 14,
+        "UNVERIFIABLE": 10
+      },
+      "claims": {
+        "total": 596,
+        "verified": 324,
+        "failed": 28,
+        "unsupported": 244,
+        "verifiedRatePct": 54.36
+      }
+    },
+    "g9-ch5": {
+      "grade": 9,
+      "chapter": 5,
+      "domain": "coordinate_geometry",
+      "title": "Coordinate Geometry",
+      "adapterStatus": "verified_v1_4",
+      "counts": {
+        "exercises": 58,
+        "concepts": 7,
+        "total": 65
+      },
+      "workingStatusCounts": {
+        "PARTIAL": 17,
+        "FAIL": 6,
+        "PASS": 29,
+        "UNVERIFIABLE": 13
+      },
+      "answerStatusCounts": {
+        "UNVERIFIABLE": 28,
+        "FAIL": 6,
+        "PASS": 31
+      },
+      "tamilStatusCounts": {
+        "FAIL": 9,
+        "PASS": 50,
+        "UNVERIFIABLE": 6
+      },
+      "claims": {
+        "total": 222,
+        "verified": 138,
+        "failed": 21,
+        "unsupported": 63,
+        "verifiedRatePct": 62.16
+      }
+    },
+    "g9-ch7": {
+      "grade": 9,
+      "chapter": 7,
+      "domain": "mensuration",
+      "title": "Mensuration",
+      "adapterStatus": "verified_v1_4",
+      "counts": {
+        "exercises": 36,
+        "concepts": 1,
+        "total": 37
+      },
+      "workingStatusCounts": {
+        "PARTIAL": 23,
+        "PASS": 5,
+        "FAIL": 9
+      },
+      "answerStatusCounts": {
+        "UNVERIFIABLE": 16,
+        "PASS": 12,
+        "FAIL": 9
+      },
+      "tamilStatusCounts": {
+        "PASS": 27,
+        "PARTIAL": 4,
+        "FAIL": 6
+      },
+      "claims": {
+        "total": 146,
+        "verified": 84,
+        "failed": 11,
+        "unsupported": 51,
+        "verifiedRatePct": 57.53
+      }
+    },
+    "g10-ch3": {
+      "grade": 10,
+      "chapter": 3,
+      "domain": "algebra",
+      "title": "Algebra",
+      "adapterStatus": "verified_v1_4",
+      "counts": {
+        "exercises": 235,
+        "concepts": 14,
+        "total": 249
+      },
+      "workingStatusCounts": {
+        "PASS": 136,
+        "PARTIAL": 83,
+        "UNVERIFIABLE": 25,
+        "FAIL": 5
+      },
+      "answerStatusCounts": {
+        "PASS": 175,
+        "UNVERIFIABLE": 69,
+        "FAIL": 5
+      },
+      "tamilStatusCounts": {
+        "UNVERIFIABLE": 9,
+        "PASS": 229,
+        "FAIL": 7,
+        "PARTIAL": 4
+      },
+      "claims": {
+        "total": 1215,
+        "verified": 1007,
+        "failed": 8,
+        "unsupported": 200,
+        "verifiedRatePct": 82.88
+      }
+    },
+    "g10-ch5": {
+      "grade": 10,
+      "chapter": 5,
+      "domain": "coordinate_geometry",
+      "title": "Coordinate Geometry",
+      "adapterStatus": "verified_v1_4",
+      "counts": {
+        "exercises": 97,
+        "concepts": 12,
+        "total": 109
+      },
+      "workingStatusCounts": {
+        "PASS": 89,
+        "PARTIAL": 18,
+        "UNVERIFIABLE": 2
+      },
+      "answerStatusCounts": {
+        "PASS": 108,
+        "UNVERIFIABLE": 1
+      },
+      "tamilStatusCounts": {
+        "PASS": 107,
+        "PARTIAL": 1,
+        "FAIL": 1
+      },
+      "claims": {
+        "total": 531,
+        "verified": 502,
+        "failed": 0,
+        "unsupported": 29,
+        "verifiedRatePct": 94.54
+      }
+    },
+    "g10-ch7": {
+      "grade": 10,
+      "chapter": 7,
+      "domain": "mensuration",
+      "title": "Mensuration",
+      "adapterStatus": "verified_v1_4",
+      "counts": {
+        "exercises": 62,
+        "concepts": 9,
+        "total": 71
+      },
+      "workingStatusCounts": {
+        "PASS": 48,
+        "PARTIAL": 22,
+        "UNVERIFIABLE": 1
+      },
+      "answerStatusCounts": {
+        "PASS": 70,
+        "UNVERIFIABLE": 1
+      },
+      "tamilStatusCounts": {
+        "UNVERIFIABLE": 10,
+        "PARTIAL": 10,
+        "PASS": 49,
+        "FAIL": 2
+      },
+      "claims": {
+        "total": 417,
+        "verified": 381,
+        "failed": 0,
+        "unsupported": 36,
+        "verifiedRatePct": 91.37
+      }
+    }
+  },
+  "plannedUnsupportedChapters": {
+    "g9-ch1": {
+      "grade": 9,
+      "chapter": 1,
+      "domain": "sets_and_relations",
+      "title": "Set Language",
+      "adapterStatus": "planned_v1_4",
+      "discoveredExercises": 120,
+      "certified": false
+    },
+    "g9-ch2": {
+      "grade": 9,
+      "chapter": 2,
+      "domain": "real_numbers",
+      "title": "Real Numbers",
+      "adapterStatus": "planned_v1_4",
+      "discoveredExercises": 120,
+      "certified": false
+    },
+    "g9-ch4": {
+      "grade": 9,
+      "chapter": 4,
+      "domain": "euclidean_geometry",
+      "title": "Geometry",
+      "adapterStatus": "planned_v1_4",
+      "discoveredExercises": 86,
+      "certified": false
+    },
+    "g9-ch6": {
+      "grade": 9,
+      "chapter": 6,
+      "domain": "trigonometry",
+      "title": "Trigonometry",
+      "adapterStatus": "planned_v1_4",
+      "discoveredExercises": 47,
+      "certified": false
+    },
+    "g9-ch8": {
+      "grade": 9,
+      "chapter": 8,
+      "domain": "statistics",
+      "title": "Statistics",
+      "adapterStatus": "planned_v1_4",
+      "discoveredExercises": 30,
+      "certified": false
+    },
+    "g9-ch9": {
+      "grade": 9,
+      "chapter": 9,
+      "domain": "probability",
+      "title": "Probability",
+      "adapterStatus": "planned_v1_4",
+      "discoveredExercises": 25,
+      "certified": false
+    },
+    "g10-ch1": {
+      "grade": 10,
+      "chapter": 1,
+      "domain": "sets_and_relations",
+      "title": "Relations and Functions",
+      "adapterStatus": "planned_v1_4",
+      "discoveredExercises": 74,
+      "certified": false
+    },
+    "g10-ch2": {
+      "grade": 10,
+      "chapter": 2,
+      "domain": "number_sequences",
+      "title": "Numbers and Sequences",
+      "adapterStatus": "planned_v1_4",
+      "discoveredExercises": 150,
+      "certified": false
+    },
+    "g10-ch4": {
+      "grade": 10,
+      "chapter": 4,
+      "domain": "euclidean_geometry",
+      "title": "Geometry",
+      "adapterStatus": "planned_v1_4",
+      "discoveredExercises": 85,
+      "certified": false
+    },
+    "g10-ch6": {
+      "grade": 10,
+      "chapter": 6,
+      "domain": "trigonometry",
+      "title": "Trigonometry",
+      "adapterStatus": "planned_v1_4",
+      "discoveredExercises": 86,
+      "certified": false
+    },
+    "g10-ch8": {
+      "grade": 10,
+      "chapter": 8,
+      "domain": "statistics_and_probability",
+      "title": "Statistics and Probability",
+      "adapterStatus": "planned_v1_4",
+      "discoveredExercises": 92,
+      "certified": false
+    }
+  }
+}

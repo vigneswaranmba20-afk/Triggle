@@ -1,0 +1,1881 @@
+{
+  "created": "2026-11-28",
+  "mainCommit": "810a437623561c8765f109c0a6b608ee4826300d",
+  "mathguardCommit": "985a9bbf6c34a9cd069a3cba3c04c078a0f3c0a1",
+  "mathguardPR": 467,
+  "purpose": "reference-only export; never merge",
+  "included": [
+    {
+      "path": "AGENTS.md",
+      "sha": "6cfeab8741c7740fa4f2d56d053e1f1b6c1a0208",
+      "type": "blob"
+    },
+    {
+      "path": "ANTIGRAVITY_AUDIT_CLOSURE_REPORT.md",
+      "sha": "19b4e2cec9a6123549fe8b38dd821ca717bda7e1",
+      "type": "blob"
+    },
+    {
+      "path": "G9_CH3_PROGRESS_LEDGER.md",
+      "sha": "9eea83df054b6468534ec3d935e2c454dbc19ee7",
+      "type": "blob"
+    },
+    {
+      "path": "README.md",
+      "sha": "2123e592188714714d39991234b71b12e2713e39",
+      "type": "blob"
+    },
+    {
+      "path": "index.html",
+      "sha": "4e7f1845ae45299163bb696dff6b3b8f3e5da494",
+      "type": "blob"
+    },
+    {
+      "path": "package-lock.json",
+      "sha": "013571a09bc086b594e62da039fba3a26969db66",
+      "type": "blob"
+    },
+    {
+      "path": "package.json",
+      "sha": "cc71d44e3569fffb71d099cad9330c513ed2e9e4",
+      "type": "blob"
+    },
+    {
+      "path": "site/README.txt",
+      "sha": "51f7ebd806d837ce1b6016828ad372b4bfc9636d",
+      "type": "blob"
+    },
+    {
+      "path": "site/assets",
+      "sha": "f400dc70edafe601c49f7d98a4208508fc81e2de",
+      "type": "tree"
+    },
+    {
+      "path": "site/data",
+      "sha": "63e21c42030d031c6301d52c434bd37e6c4250e8",
+      "type": "tree"
+    },
+    {
+      "path": "site/grades.html",
+      "sha": "988c58124c25e92ecef33540c9e45b07731f84f8",
+      "type": "blob"
+    },
+    {
+      "path": "site/icons",
+      "sha": "a3a497491a78d3d76c8ec51dc152eb8766f4ad1f",
+      "type": "tree"
+    },
+    {
+      "path": "site/index.html",
+      "sha": "92a1c2eb88a4f2dd1c2280f334e33d5cafc917aa",
+      "type": "blob"
+    },
+    {
+      "path": "site/manifest.webmanifest",
+      "sha": "e5fb04db1695af2bd55005a0c692cabe06feeac8",
+      "type": "blob"
+    },
+    {
+      "path": "site/playground.html",
+      "sha": "89ad0b01e6b6737b46721dd9c58c7c158afed241",
+      "type": "blob"
+    },
+    {
+      "path": "site/service-worker.js",
+      "sha": "a6f94765feba9e82b605c7838938544dea5aa144",
+      "type": "blob"
+    },
+    {
+      "path": "docs/CHATGPT_STYLE_MATH_NOTATION_STANDARD.md",
+      "sha": "202567c3c5bc95efc98df3d310f5ee91a4c03f61",
+      "type": "blob"
+    },
+    {
+      "path": "docs/CONCEPTS_UX_SCHEMA.md",
+      "sha": "1596171bef4968ba5861081d2c2e6710301ab6e0",
+      "type": "blob"
+    },
+    {
+      "path": "docs/CONCEPT_PSYCHOLOGY_REVIEW_STANDARD.md",
+      "sha": "f658ecd4cc4c52ecb3c70cee9646d2d93803623d",
+      "type": "blob"
+    },
+    {
+      "path": "docs/G9_CH1_2025_SOURCE_GAP_REGISTER.md",
+      "sha": "2bc0cfe0648eb8b8bedfb487715864b5af972ce8",
+      "type": "blob"
+    },
+    {
+      "path": "docs/G9_ENGLISH_2025_COVERAGE.md",
+      "sha": "44d5c66bb154fc178555851db6c1567cfb39e2b4",
+      "type": "blob"
+    },
+    {
+      "path": "docs/G9_TEXTBOOK_FIDELITY_REPAIR_MASTER_PROMPT.md",
+      "sha": "7830fa6fb1595c318b81cbc85e06f03644dae823",
+      "type": "blob"
+    },
+    {
+      "path": "docs/STANDARD_SOLUTIONS_2026-11-11.md",
+      "sha": "b3898e2cdf4b3586228b5ea015204bd3497c3aa9",
+      "type": "blob"
+    },
+    {
+      "path": "docs/TRIGGLE_MASTER_PROMPT.md",
+      "sha": "8ec1590fabad53cead87b765a90beb64479391d4",
+      "type": "blob"
+    },
+    {
+      "path": "docs/audit",
+      "sha": "9bcf49196d5da042d15f86409411efaf6c9874fc",
+      "type": "tree"
+    },
+    {
+      "path": "docs/audits",
+      "sha": "ac5caa7282bed84a28c500913ffff61e39605c2a",
+      "type": "tree"
+    },
+    {
+      "path": "docs/grade10-checkpoints",
+      "sha": "f7098c8da2e18d9a3d9fd3fd425591cd2580fcff",
+      "type": "tree"
+    },
+    {
+      "path": "docs/phase-0-audit.md",
+      "sha": "402716067f8e5a5f560d9e3fec02a34dbaf03c24",
+      "type": "blob"
+    },
+    {
+      "path": "docs/phase2-learning-lab-strategy.md",
+      "sha": "7270a7fa28fb0fea8474a7299b2e54594001d37a",
+      "type": "blob"
+    },
+    {
+      "path": "docs/quality",
+      "sha": "850faeddf184c8d7fbdca7915042a1af380503d4",
+      "type": "tree"
+    },
+    {
+      "path": "docs/reference-library",
+      "sha": "e2391bed715e6a4fbced7398d8290716db1bbd17",
+      "type": "tree"
+    },
+    {
+      "path": "docs/standard-solution-preservation.json",
+      "sha": "931fc8cd734eabf46b337e6727fdba221163d243",
+      "type": "blob"
+    },
+    {
+      "path": "docs/curriculum/README.md",
+      "sha": "75b055c4d50e008377556310b18c37be40abf0c2",
+      "type": "blob"
+    },
+    {
+      "path": "docs/curriculum/SCHEMA.md",
+      "sha": "91e155849ad290df04da0c6356765f0d051bf195",
+      "type": "blob"
+    },
+    {
+      "path": "docs/curriculum/audit-2026-11-10.json",
+      "sha": "74edca702337e2f1bdb3ba94ea7f567df1eea8d2",
+      "type": "blob"
+    },
+    {
+      "path": "docs/curriculum/grade-10",
+      "sha": "2909dabcc08e7b83f3dd683da112b5ba8ccb5ebc",
+      "type": "tree"
+    },
+    {
+      "path": "docs/curriculum/grade-9",
+      "sha": "411d836bd3c0976b4f8a34e18645bafda7285a10",
+      "type": "tree"
+    },
+    {
+      "path": "docs/curriculum/release-2026-11-10.json",
+      "sha": "5932c1f72d1a345628a2af81e4db6ee9a24adc92",
+      "type": "blob"
+    },
+    {
+      "path": "docs/curriculum/sources.json",
+      "sha": "94982f2f9456ea1d35be2f340b556126b09f7814",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/audit_af01.cjs",
+      "sha": "de34effcbabfab56e7a75f7db0e36d44cce022be",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/audit_diagramguard_assets.cjs",
+      "sha": "f5b0cbf2a0c2f39c5a33812ec86a166a95765261",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/audit_diagramguard_concepts.cjs",
+      "sha": "882cc24dabc83fd75776e4f7449afd13978cc1fa",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/audit_diagramguard_exercises.cjs",
+      "sha": "4c92c23680325fe98e20af76d7e6a33c9955aebf",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/audit_g9_usability.cjs",
+      "sha": "da5d35ca9dfa771ee58d104c9d73db08564fdee8",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/build_diagramguard_coordinate_assets.cjs",
+      "sha": "e595a53406ce2812266660a803426633eecb150c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/build_diagramguard_inventory.cjs",
+      "sha": "8720bf9bad35eaaa544d5015e6d8d47feb7c7499",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/build_g9_ex1_2_candidates.cjs",
+      "sha": "fc1c8b59ecfe56d09ceb946d892a11f1454b774f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/build_g9_math.cjs",
+      "sha": "f0e5b97bb83a14d98bebbb91ff84959f5199096d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/build_project_status.cjs",
+      "sha": "4580dae53c9943ee6cd38b0de3929023c9cc25e0",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/bulk",
+      "sha": "7b4060cc0e4fb042f5a437d1f9b1b36f150c15e6",
+      "type": "tree"
+    },
+    {
+      "path": "site/tools/check_site.cjs",
+      "sha": "5d6ed35cbf94676b5ca1de47afc829f1d06383f1",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/ci",
+      "sha": "f4dfc989997b64a635e640d33dbadd2f5f40f267",
+      "type": "tree"
+    },
+    {
+      "path": "site/tools/compare_math_reference_browser.cjs",
+      "sha": "b258957d881a756f51406d3b4abe690fa33cba8f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/curriculum_bulk.cjs",
+      "sha": "bf7e6d230efcb28a27dd63cf6cadb83306ae460f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/dashboard_test_support.cjs",
+      "sha": "f8f0e5048e8747bfcc4c80072d38459b78ab2f38",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/draw_g9_geometry.py",
+      "sha": "cef268b2d7fe0393bc81f78a7b89c506e9bf50dd",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/fixtures",
+      "sha": "f5f9c5ff47d2604c449895fa60ce0780e86e7711",
+      "type": "tree"
+    },
+    {
+      "path": "site/tools/g9_math_compiler.cjs",
+      "sha": "429553ddc0adbfb79a114cb74fa33a1ffea4ecc3",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/run_browser_shard.cjs",
+      "sha": "21d7ee45fcc7ac3cb830f3968df2eca46657b7af",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/smoke_g9_typography_live.cjs",
+      "sha": "9e1ef8cb4521c6174c381fde02a3f28d7889fa0d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_af01_remediations.cjs",
+      "sha": "423a1e87b305973c3ce8fba1f04a11f7bbd27f1c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_af09_batch3_fixes.cjs",
+      "sha": "cb2544a91c8d6ba0f21b391a16ddcbb67fbed5e4",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_af09_ch6_fixes.cjs",
+      "sha": "fc0d8b971ea3e3742e9213ae0a31fc697538f1ad",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_af09_p0_fixes.cjs",
+      "sha": "edf7c5edd520898011dacc633da572a5eb411ea0",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_back_to_chapters.cjs",
+      "sha": "107bf3eca0c2246ff1acacfaba759300d05b3c94",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_bond_light_theme.cjs",
+      "sha": "4306c5311680a6ee0139b04052daaa8b4b57af25",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_ch1_worked_examples.cjs",
+      "sha": "7a79b88c18a9b2ae58a1d47ab7924101bbb7c6e8",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_chatgpt_math_g10.cjs",
+      "sha": "4c049bb797719bcbb9b1c03f728fb13c029bcc8b",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_chatgpt_math_g10_browser.cjs",
+      "sha": "4a19c84a15f2daffced5b23182d0496fdeab5605",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_chroma_browser.cjs",
+      "sha": "87ec2acb1fa4d63c446742922d015e1337697a09",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_curriculum_bulk.cjs",
+      "sha": "9f69c0ceecd637db7ac7a44ff43a96df2663de60",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_curriculum_bulk_browser.cjs",
+      "sha": "5d18c1d7ac22fea7a45100adb667c9c76b5c7cd3",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_curriculum_ui.cjs",
+      "sha": "4cd092336e8b287da5455dab72f0947436e8c615",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_curriculum_validation.cjs",
+      "sha": "53d8d6e7cdd1fd5a2facfe17ae3c5a7ab1f5d426",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_dashboard_browser.cjs",
+      "sha": "e5fc9512223a2b5eedfde104edbf9ad93a5627af",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_dashboard_webkit.cjs",
+      "sha": "d0c24eb96a7a3f73ad86a904c0e7fc5888401886",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_diagramguard_browser.cjs",
+      "sha": "83a53b85030bfe1549dec2d17294fca001a53d6f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_exact_textbook_fidelity.cjs",
+      "sha": "a799723a2dd47f90d0f1b5f74aa410ace00e851a",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_exercise_direct.cjs",
+      "sha": "4c3e819564ab73aa707a2499b3898217350443e9",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_exercise_direct_browser.cjs",
+      "sha": "ca6e40d1bc59e420a085bf74484c65f591e94272",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_frontier_answer_tamil_browser.cjs",
+      "sha": "7092e2df52f5f33dc504033b3eadd40905ffd5c8",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_frontier_exercise_hints_browser.cjs",
+      "sha": "0be1db0087756817da9f32bc0c93cf105325e52c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_frontier_figure_tamil_browser.cjs",
+      "sha": "1cb3d0955d7ad2dc2aef46c7c4f48acb72eaf5b4",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_frontier_geometry_descriptions_browser.cjs",
+      "sha": "5c9649423fab984b9e65874979fa93ced7675324",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_frontier_navigation_browser.cjs",
+      "sha": "a580bc380e39af022b890ccdcd460b29e203971e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_frontier_tamil_formula_labels_browser.cjs",
+      "sha": "7b30be0ebbd0818f37488b3e27ba8b4cda7550cf",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch1_chatgpt_math.cjs",
+      "sha": "799dda89df67177f0cedba0cc650e8e9545327b6",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch1_chatgpt_math_browser.cjs",
+      "sha": "28cd8700ae19e60b8bff7bb29bf6bfff01c86df4",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_concept_quality.cjs",
+      "sha": "03946c1877896a1c59d8b197506d5a0bf12d5ee0",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_discovery.cjs",
+      "sha": "49aadb307a957958a27f1897c047ef906889347d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_ex2_2_release.cjs",
+      "sha": "023915354e7797b9d9c00f5865c173fc2b38be26",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_ex2_3_modular.cjs",
+      "sha": "953f7f005aeedd99a4b72abffab3dd0f883f69d8",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_ex2_3_modular_browser.cjs",
+      "sha": "37ae4ecd3acf8346e4367ea93385b3ccaca256ae",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_ex2_4_browser.cjs",
+      "sha": "f2c219be4e515e12a8410b074d3cef2e939c4c8f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_ex2_4_staging.cjs",
+      "sha": "e911682fa65b0f02f8367f2694ee2d7506d895da",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_ex2_5_release.cjs",
+      "sha": "700fc42533745ac6697724d3762b21b0635f4eff",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_ex2_6_release.cjs",
+      "sha": "8c308265b71e18404bd1fb8b8e28a51bf7f6c294",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_ex2_7_release.cjs",
+      "sha": "0d873e8e86cb4ed7608b744c2dd5029693c78e20",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_ex2_8_release.cjs",
+      "sha": "082970db8f5cb0df7f8b4e1942309c0a15e0c15a",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_ex2_9_release.cjs",
+      "sha": "37d9fc52f2c8405c84543c94f8fe8ce27a03b152",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_gp_sum.cjs",
+      "sha": "f1b46a39923ce0cbd30a6f821005e0c3b276a70c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_gp_sum_browser.cjs",
+      "sha": "cc4264a126ddd7b466746228ad9a7af108bd7a62",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_power_baseline.cjs",
+      "sha": "66391484480ad339a90de4be60e2341a57edee38",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_power_baseline_browser.cjs",
+      "sha": "395cba224571407e73692beac07d027f6776822b",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_scroll_browser.cjs",
+      "sha": "24dee78a2d8dcee3d35cb8b852a51d6e507a96be",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_top_next.cjs",
+      "sha": "879f2ac1e631674ffc03d46cdba7cddf3652f08c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_trace.cjs",
+      "sha": "a482987bfd6e55e357dec507f0aef835494c3a25",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_trace_browser.cjs",
+      "sha": "6bec83f823c2392d28c8df3f1fc51ed7417b4dc1",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_trace_release.cjs",
+      "sha": "7b09034a057f9aff507e5bc707caeed46209f0da",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_typography.cjs",
+      "sha": "19951f4e27ec6953944170207212e85233f8b524",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_typography_browser.cjs",
+      "sha": "5e15550dcde70cc1ac96742059305fb4fe1f53aa",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_unit_and_ex31_browser.cjs",
+      "sha": "f7c1133cb88f72728b5e382c451af5003112af3e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch2_unit_and_ex31_release.cjs",
+      "sha": "d5307bf7c9e8842ea141da4f2699f049f01b3551",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_concepts.cjs",
+      "sha": "7912b1075d2c8ec42d0de985254a02a60b8694d6",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_concepts_browser.cjs",
+      "sha": "e9caf7cef7afec28fc971168949004112a7ee584",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_ex310_to_312_browser.cjs",
+      "sha": "028563d131744c83ba75272a1f59994000017d34",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_ex310_to_312_release.cjs",
+      "sha": "c110062e0efe284564bd3439343c955dd959f6f9",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_ex313_to_314_browser.cjs",
+      "sha": "b51da6d2721d646ba195b581a574c75811aa1c2e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_ex313_to_314_release.cjs",
+      "sha": "f21781ae154681ae972facab55f7d637d8d7c6be",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_ex315_browser.cjs",
+      "sha": "8441c9a0f881ce6168987567aa05cd0966371677",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_ex315_release.cjs",
+      "sha": "3b424d0df19f2270adc97581d59c6aca6be9faf9",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_ex32_to_36_browser.cjs",
+      "sha": "f2e0bd80016f056aeba7507f0525617f91e2f446",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_ex32_to_36_release.cjs",
+      "sha": "95980a5ff1d9e054cee3eb3e0fe32ee1025661d6",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_ex37_to_39_browser.cjs",
+      "sha": "3148274ed57e3ee791a46ffcf0f5490646b4fec8",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_ex37_to_39_release.cjs",
+      "sha": "ffe64a4fdaab861aa6c01c6d86285650e7405c7b",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_final_browser.cjs",
+      "sha": "82cf23e04d45c2aa7a77ae0f5ed0b9f23a35c37e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch3_final_release.cjs",
+      "sha": "d03eef7d873266c490be0d53c3885b1e8a03a2ba",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch4_concepts.cjs",
+      "sha": "bea6f09f642469f2d72b929a378e4d5b56c113f0",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch4_concepts_browser.cjs",
+      "sha": "c523106c1e773cab7f6701b74472d55859394f45",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch5_concepts.cjs",
+      "sha": "fc3e3d89f2eb28d02345e4005634ecfdffe6ead0",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch5_concepts_browser.cjs",
+      "sha": "8234c4c4174afc9cf96ee9c78be1795b569c8077",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch5_coordinate_figures_browser.cjs",
+      "sha": "5bf4e8f55f7845b96d6b51e003216cd4afaefe93",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch5_ex51_release.cjs",
+      "sha": "a515f07c7275712780c3788cd6c72f58584ef23b",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch5_ex52_release.cjs",
+      "sha": "798944195d83c0dc8f4a387d37ed132c8e9d4f19",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch5_ex53_release.cjs",
+      "sha": "22eb466f4bbd4df843b394eafdfc8ab7369db9b8",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch5_ex54_release.cjs",
+      "sha": "444fd19741ad583f98a0403e5ac0afcddec3d304",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch5_ex55_unit_release.cjs",
+      "sha": "ab11f2eb65efd96a9e429ac41566cc22cd596b6e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch5_line_figures_browser.cjs",
+      "sha": "64662321af1911458b1941650aac2bb3aa76abc7",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch6_concepts.cjs",
+      "sha": "51c4e660ec8464aabf88abb0796090c8a745f543",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch6_concepts_browser.cjs",
+      "sha": "e2ab8e773d98dcc32b21c9b4659d3af93a2058a3",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch6_ex61_release.cjs",
+      "sha": "414b6ce7db76e6e9757ef984034c2e98bf26cf2d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch6_ex62_ex63_release.cjs",
+      "sha": "3b0695481fc124f87e7ee11d3a08e3e729e27477",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch6_ex64_ex65_release.cjs",
+      "sha": "24f98d4877e553ae86fb4969d40ae578758f17c3",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch6_mobile_browser.cjs",
+      "sha": "7044ac3e523189f5706a4f2a08d5106de8fc9c14",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch6_unit_release.cjs",
+      "sha": "1ca7bd1ac6014daecb64f63c693b72d0eb324a0e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_concepts.cjs",
+      "sha": "a7ac3c4331203ecc11a6bcf8d883304331fa7d7e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_concepts_browser.cjs",
+      "sha": "00e6a78aef0e44d9ea3b38628305cba9292ac348",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_ex71_mobile_browser.cjs",
+      "sha": "b7605cb5abf544c5dadac96c5d234ac084ee90ec",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_ex71_pilot.cjs",
+      "sha": "92a1f89ca5ce341d0e97801543c1abc69b0fd50c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_ex71_q6_q10_draft.cjs",
+      "sha": "748e175441a543a3084bb762b37509b5681a3c6d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_ex71_q6_q10_mobile_browser.cjs",
+      "sha": "b5e626cd610a946407dd0a94b741c4d6e03d5b35",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_ex72_ex73.cjs",
+      "sha": "c5d77f5db4f404144f248286607e346948dd8357",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_ex72_ex73_mobile_browser.cjs",
+      "sha": "5d6607a5f53c13ff4495ee8541c1a7dc7be4ecb0",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_ex74.cjs",
+      "sha": "f03993a77bcdb3984bd1060158c3d9131b4eba8f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_ex74_browser.cjs",
+      "sha": "c629f0619d6f44b2632b406fde097db5a2a9f282",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_ex75.cjs",
+      "sha": "eaf50db6ade2cb4789219f59e3f7901144ddc5d5",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_ex75_browser.cjs",
+      "sha": "03dea1dbdbfb148c5a2032eec36a5ce200722d79",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_unit7.cjs",
+      "sha": "a9e2cd599f3e0357695e06f8b1b9b790dd0d4292",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch7_unit7_browser.cjs",
+      "sha": "6afcb728177490381022f04969309af4202dfc5d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch8_concepts.cjs",
+      "sha": "2a7f78bd92813c15dc1da0b6c3b78ca9ad855ecc",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch8_concepts_browser.cjs",
+      "sha": "81fe224b54c940b906c79acd79475a0797400bb2",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch8_ex8_1_bilingual_browser.cjs",
+      "sha": "f5d7a9ceeaf9bb6c393fd5fb40eb0dd545a3fa2d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch8_ex8_4.cjs",
+      "sha": "b63e59640a1eb9f28a15258319718e47ccd72443",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch8_ex8_4_browser.cjs",
+      "sha": "369233eccbd6173b389bc5b38c794ad2b3ab2ce4",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch8_ex8_5.cjs",
+      "sha": "b04875c0acb3d36513b5e54e80549734280f298e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch8_ex8_5_browser.cjs",
+      "sha": "8969ae9b986c1e33628a907b9d7154531aa61ac3",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch8_unit.cjs",
+      "sha": "ff562706fa61f815feb77d6304b4430f62af2414",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_ch8_unit_browser.cjs",
+      "sha": "788e2528e279d1fb37dbe6290af81e7870a41578",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_checkpoint_20261110.cjs",
+      "sha": "836737261fb12fe8ad6de75c1cbe47d0afdf34b1",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_capacity_index.cjs",
+      "sha": "a8b5a3826d8392ce895c546075cd2cb2158cc41c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_capacity_index_browser.cjs",
+      "sha": "ad7e521b1ace580b09337121514dbddf413148b1",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_compositions.cjs",
+      "sha": "09f63f58112ee6decbb904344048e916c1ddc316",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_compositions_browser.cjs",
+      "sha": "e7a482c8c2aae48752a6ffe9cea238d54662f91f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_coordinate.cjs",
+      "sha": "eafe4a0bd21b278981bc686cde85c838d2a6336c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_coordinate_browser.cjs",
+      "sha": "45e83289e8f793366e410f0ae792e1550a14bad1",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_hints.cjs",
+      "sha": "b82c08df33c12cfd0edfd4d6ddb6fd2771b01535",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_hints_browser.cjs",
+      "sha": "f43641d5e7b88d0c591d3ecc48031f31247b64b0",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_numbers_hints.cjs",
+      "sha": "05a6261ba057731cfc895da7a539b9fabf7ac8d8",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_numbers_hints_browser.cjs",
+      "sha": "4a6a7c434b4c5f7d360ed41fd766e21a89da59a6",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_salary.cjs",
+      "sha": "d0f88eaadeb56f18e13626ef9b74c1da248bb72f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_salary_browser.cjs",
+      "sha": "441e12c9c5801f260756353d745e9e9731cacc55",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_source_tables.cjs",
+      "sha": "627c9b1bf58146251f5173e5d8b9d86b202d45e5",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_source_tables_browser.cjs",
+      "sha": "b6163c4608f906eec0ea7db6b67701956087bcba",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_tamil_answers.cjs",
+      "sha": "ad0c8a618d20bc581d488a347651001158830a2c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_frontier_tamil_answers_browser.cjs",
+      "sha": "da79e8c964537ccfca8a6d885293a75703ea7442",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_geometry_browser.cjs",
+      "sha": "1ef85f4adde45d19b94470a3e3d977948f303867",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_geometry_completion.cjs",
+      "sha": "29463b19bfcc08f99ab64b5a73f72934dd25bf2e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_geometry_completion_browser.cjs",
+      "sha": "a88ee9bcb341097a1ed5eaa6317de02eedf7c194",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_geometry_ex43_release.cjs",
+      "sha": "0bf0b4e9342668d1da9c6958b6f44e2be4ca081e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_geometry_release.cjs",
+      "sha": "0f419e6be89a8b7c257b5dd56f80dc568fb97c2c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_prob_ex8_3.cjs",
+      "sha": "4f0439915c96c40c035059fe32fed31d3d290fce",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_prob_ex8_3_browser.cjs",
+      "sha": "0453ca53a165d5b9fbefc67ae3a6c25d301bcec6",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_relations_concepts_browser.cjs",
+      "sha": "e01e2b93e447d46bbeec0843a09ad53ad8b86a60",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_remaining_math.cjs",
+      "sha": "33c4464d816d595b4613e271178d222377cd5dde",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_remaining_math_browser.cjs",
+      "sha": "26fd4b9bd30a03eecf4a925fc0c3de839e4dd695",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_seven_recovery.cjs",
+      "sha": "53102ee5fb5e831ace5dfb72c7fb5a59bd169ffd",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_statistics_q5_q10.cjs",
+      "sha": "e5c5eaa3b44a9dfa0d3d2d5ef614226ff69d0a61",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_stats_browser.cjs",
+      "sha": "4de41a75990503e1d8c42e6073df0f3e7182a61e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_stats_ex8_2_browser.cjs",
+      "sha": "513ae573da1fbae2cdd7036d7fb16d35ded2edeb",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_stats_ex8_2_q1_q3.cjs",
+      "sha": "25a812b5f6c4c373b9adf96135ba5ad3e11aa51d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_stats_ex8_2_q4_q8.cjs",
+      "sha": "24f305bd98152c40a729769dbc5265d6500b1208",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g10_stats_q11_q15.cjs",
+      "sha": "f587c62d344f2f88f8f6e40c903916142c183bd2",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_adaptive_dock_browser.cjs",
+      "sha": "760913fbffc9551a5aee8f937e776b67588a2bad",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_algebra_concept.cjs",
+      "sha": "d5d0a91b54965b2b120bd8c40b50d970c66350fd",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_algebra_concept_browser.cjs",
+      "sha": "c16393511e86d62fa83021eb995829cc19b2d17d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_aud14_03_source_options.cjs",
+      "sha": "21777f0b6e5c8590e75e661172eda15a9695c161",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_aud14_03_source_options_browser.cjs",
+      "sha": "f0b12716f0b7e84621ebb2b0ea36cf4cf4aab4a5",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_bulk_content_only.cjs",
+      "sha": "0f6f8050232bd06e805981ffc4ea575ac317bd47",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_cardinality_aud01_browser.cjs",
+      "sha": "1c205cf77da6958f957d021a10dc698c1ba35874",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch1_ex13.cjs",
+      "sha": "d771dda8050f2f884c2e5d4eb1ee8a54871a62a3",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch1_ex14.cjs",
+      "sha": "3d0ab15a71e781b8a4f782401c304ed56e8747a9",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch1_ex15.cjs",
+      "sha": "38f2c6e0f2764af3605cfc67c53ffc0fca582b86",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch1_ex16.cjs",
+      "sha": "a7668cef2ffb47a2527ba99ec72b47c55daaec47",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch1_ex17.cjs",
+      "sha": "a1bc0fc13e9306e0e0ded5522dfd5469c6eec606",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch1_set_language_browser.cjs",
+      "sha": "2d7d687f4d1c40c1673e0fe7f1eeb61bfe8c981f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch2_frontier.cjs",
+      "sha": "49de25317219ca77a71c0a07334339eec8349743",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch2_frontier_browser.cjs",
+      "sha": "b895542693fadf48af9c7e24db6224a0efcc83b6",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch3_complete.cjs",
+      "sha": "61f9808525652939b6582208318b49e58fc3b323",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch3_complete_browser.cjs",
+      "sha": "5bf685d5078f9cd7dda1895963cd5a4b608d5d49",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch5_aud13_02.cjs",
+      "sha": "6e36a609ee02c4b11d113fb5b450acfa70e45713",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch5_complete.cjs",
+      "sha": "4e113dbbead73f658375bb67e2c17053680ccc76",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch5_complete_browser.cjs",
+      "sha": "84fcc3d2d9ec508623672dd35f52a665ecf4aae0",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch5_coordinate_figures_browser.cjs",
+      "sha": "12bc2b970573ac62475c7d33a22e856285ba73dc",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch5_distance_concept.cjs",
+      "sha": "5a4c289ed33f5cd75a538cf71242913c3a91b645",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch5_distance_concept_browser.cjs",
+      "sha": "f6fd95ccfa5138adf38439af2aad0f782bacef31",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch5_ex52_tamil.cjs",
+      "sha": "92678964d792bfaa17c49996a6a4657bd8e5f25b",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch5_ex52_tamil_browser.cjs",
+      "sha": "37382b6829803b2e0e4b15ae835f6d9ae815220b",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch6_aud14_02.cjs",
+      "sha": "4a7cf4b5df1a4c878c6c664bb7c8bbf512d126fe",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch6_aud14_02_q4_q6.cjs",
+      "sha": "d60876d53cf6983c36ae298e204b548fea6268cf",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch7_heron.cjs",
+      "sha": "94f72d98b29a2170e4ed5c59d6d44921d3262e1e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch7_heron_browser.cjs",
+      "sha": "4f35795e08804b9f46b78f3e4aca7d857632bcc2",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch9_complete_content.cjs",
+      "sha": "d61dba30430a904968ded3fa904fd749d09c2150",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch9_probability_2025.cjs",
+      "sha": "ee03326d576c614c2fc120a256d3147565d07e16",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ch9_probability_browser.cjs",
+      "sha": "c01fa1a2de78e0a475a9c6ddbcdf97b6b517ddb3",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_clear_math.cjs",
+      "sha": "4ef80209ed04b562b9ac6a67a3ea62f4db70bb2f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_clear_math_browser.cjs",
+      "sha": "55b7729d733b69803cde5e815602458556038dda",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_compact_concepts.cjs",
+      "sha": "dcb262dae636ab4dc5bd39bd156c5b4daf854332",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_concepts_typography_browser.cjs",
+      "sha": "db732485f5d37e350b46fbc06f4f2858ecd487d8",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_english_bulk_20261109.cjs",
+      "sha": "9e29b6912287dac7d5613140d2738da92efe6c96",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex1_2_candidates.cjs",
+      "sha": "54081be5efdfadf1c1a6fcd31ef87e967be56a29",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex1_2_combined_release.cjs",
+      "sha": "35af9e810732dfe1efb01c1aa786d76980e0ccd9",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex1_2_q1_release.cjs",
+      "sha": "8a91907cc849f7396518a02b28adc71f85b8ce08",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex1_2_q2_draft.cjs",
+      "sha": "8b247813d04ba16ef70d248ecdbcc20693aed7ba",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex1_2_q3_q5_batch1.cjs",
+      "sha": "df2fc2321e9949e896b01e51cd351fb49939d0b1",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex1_2_q5_iii_q6_batch.cjs",
+      "sha": "3358b24f9d5e01c8adec735a61b0e4774e1524dc",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex1_2_q7_q10_batch.cjs",
+      "sha": "fbf457de985956fc02d9f8ef034760cef50f5040",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex3_1_q1_q2_release.cjs",
+      "sha": "412ee31e45a9cb8e5c1cc851a39a1b84a06fb8ce",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex3_1_q3_q9_release.cjs",
+      "sha": "dead2521d68a13dcfd22f43fca31370a0d018bce",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex3_2_browser.cjs",
+      "sha": "91e42afe4f65a9b55627db99129575060837fd45",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex3_2_release.cjs",
+      "sha": "b815d6eb354b6af11f18a3be8aa4d26234f04969",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex64_q2_q3_browser.cjs",
+      "sha": "46657b6a6ddf5332945c15c714040c1c1e7f5bdc",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_ex64_q2_q3_stage.cjs",
+      "sha": "79c5a6c8ea5237035a41d37a9a7f0127bbdc0e14",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_existing_concepts_browser.cjs",
+      "sha": "30c19430ed2351e88b2357f144e831a1409798f0",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_frontier_algebra_mcq.cjs",
+      "sha": "d33f187d9e3daa750fb0f5bf2fea3bcfc3df579f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_frontier_algebra_mcq_browser.cjs",
+      "sha": "89e1f263cbe6aa7bdf6be2777fe3913fe7e31645",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_frontier_graphs.cjs",
+      "sha": "c2ff302b228459e4e32992f8582278e7e17a3b88",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_frontier_graphs_browser.cjs",
+      "sha": "9cf4971c1d0490403bc59577fed11a1774cff513",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_frontier_hints.cjs",
+      "sha": "afc050cf93a7b57a37b1d467c414778252b63792",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_frontier_hints_browser.cjs",
+      "sha": "e412d432e1f250e25786ec11f5906931fe74d5cc",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_frontier_plot_order.cjs",
+      "sha": "c98ba79c45e579e7e199ea57e6fad1708448961e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_frontier_plot_order_browser.cjs",
+      "sha": "fbbd06627c5e5785a9ae5b4aa98fc54526c4b09e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_frontier_trig_source.cjs",
+      "sha": "b7612a4e5d6dd666542c49d7c06bb1bda3c6008e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_frontier_trig_source_browser.cjs",
+      "sha": "cf11c77a68527cf72e9963c33651c77fcdf8eaf2",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_geometry_completion.cjs",
+      "sha": "b05f1d9e871c3fe96b870cab5a477cb9930fe37d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_geometry_completion_browser.cjs",
+      "sha": "678a76c39d8211bb2e1f66f2d2650de31142b06c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_geometry_tamil_browser.cjs",
+      "sha": "c26db1efc33d58c92fa8ac1831ea72dba5f7fcf5",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_math_compiler.cjs",
+      "sha": "190b9f1ca055cfe4d9a901cb3f39566117fca33d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_math_first_browser.cjs",
+      "sha": "cbf008894b6898d0af6f16aa373fc2d70e47e65c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_mensuration_ratio_browser.cjs",
+      "sha": "3f901cd27c207d21db3b84635c4e97df938072e5",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_neon_visual_qa_browser.cjs",
+      "sha": "0bcd37653613acf0a5034c061fab7fa64db98a2f",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_new_concepts_browser.cjs",
+      "sha": "6585ef67da5df0ab5d52b40cd025572d092380a9",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_rationalisation_teaching.cjs",
+      "sha": "99c80d5670440a68c32cb7e17eba19ef45723383",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_real_numbers.cjs",
+      "sha": "6a34158280a52b9b89c1ffbf1df7fb49e8694655",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_real_source_pages.cjs",
+      "sha": "08c1e7232674df3ba3c264be9570c9aa8060ab46",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_statistics_concepts_browser.cjs",
+      "sha": "185b2e2228e9e79061e5bab120102bfde8a5ad25",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_statistics_frontier.cjs",
+      "sha": "4e0851302fa55c7fc912fd8f9293bed37c610249",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_statistics_frontier_browser.cjs",
+      "sha": "22b08349492239540111ed2b11735d7ecb81b5e1",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_statistics_meaning.cjs",
+      "sha": "584ecc4085f7c4ec9570a2b27336af5cab3154ff",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_tamil_working.cjs",
+      "sha": "0e41b28a1b066d2caff482ed2459d9891720089a",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_textbook_activities.cjs",
+      "sha": "4832024f06e962c32ad2aad0ad79b56a46780467",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_trigonometry_concepts.cjs",
+      "sha": "c5835f540dbaa3fe40d0c421c5cfe5b77cfe2809",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_typography_browser.cjs",
+      "sha": "adbab574809e491f5a742a87c8594ab8a0af61d4",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_g9_venn_aud01_browser.cjs",
+      "sha": "c957c2ca2895c73e2a58c669e2dfeca2c69195ad",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_grade10_ch1_complete.cjs",
+      "sha": "3874714e4ccc0f78dd5bd8a926887b2c1ac94f9b",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_grade10_exercise_1_1.cjs",
+      "sha": "477a897d01b0f9f481781ff7537cfeaf7c4acccd",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_katex_browser.cjs",
+      "sha": "df75ee01fb921635cfc6e3608a3ee5bda53f04c7",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_katex_notation.cjs",
+      "sha": "0d0b90d32b67977a7f977a6f2a2759fae23ed469",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_math_first.cjs",
+      "sha": "ffa25d1691e90ac21efe827cdb53452908ea4590",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_math_notation.cjs",
+      "sha": "8427ae75627f8a3241e9e8d9e17fa108894cdb63",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_matrix_pilot.cjs",
+      "sha": "7e3a5c14ce69323d2b2732eca26746c54388cfc1",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_matrix_pilot_browser.cjs",
+      "sha": "f455ffd367f70ca4cfc755161c56b61f461d2cd0",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_neon_m03_live_browser.cjs",
+      "sha": "d6c48d37346fd9907efdfd010599a21bb665fc25",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_paper_indigo_theme.cjs",
+      "sha": "17c770ecdca925c655d9f0c976685d19f20f143d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_paper_indigo_theme_browser.cjs",
+      "sha": "e5400288b0baed21f387bdfcf3520ec230d80230",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_persistent_question.cjs",
+      "sha": "aef817d5d2f3e77e7a214856ae16c144aed4d26b",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_phase2_pilot.cjs",
+      "sha": "10038ba08934c27630277f0f0bf5c38284f443c5",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_pinned_reader.cjs",
+      "sha": "5e325f837b88d51581d62a9a4c41cfcda8c193d7",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_player_mock.cjs",
+      "sha": "e64f1cdcfc7b39ab31d61cfed075b191a8ba6992",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_project_status.cjs",
+      "sha": "1adda2b8e7412a87f4a1396afd779ee8c40c0ebd",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_question_navigation.cjs",
+      "sha": "ce61cb803025f2ffb0985616dfcb92a2e9cd68bb",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_quiet_reader.cjs",
+      "sha": "7c614412bf02122ee5bc7eb877118ff050f7f1d8",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_quiet_reader_browser.cjs",
+      "sha": "fad7e7330aa8e45e6fa54679408483b2e112901a",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_real_numbers_ch2.cjs",
+      "sha": "c5a00d14b5d13a3bfab24680261d42f404ee9a1d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_selection_dialogs_browser.cjs",
+      "sha": "63a796ac9cf98f87c417d874a64b283517d10c15",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_set_language_journey.cjs",
+      "sha": "4fc0c0691d6274493b99029b43d2f39ede7b2749",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_set_venn_figures.cjs",
+      "sha": "b248159a1f24bef7e091eadf84f1b4a4d6d89a32",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_speedguard.cjs",
+      "sha": "222e57855bf44f367846012dfafd1493bf31bc4d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_standard_solutions.cjs",
+      "sha": "5c0ee2b582648cebe98cc0c44f2e85dd77bc3a26",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_standard_solutions_browser.cjs",
+      "sha": "38746899fc0780f735ac5a3b7e34ea8c2fc135e7",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_sticky_example_layout.cjs",
+      "sha": "a7e509c028256791b3ffc7f77938fccec70f3ac5",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_sticky_example_layout_browser.cjs",
+      "sha": "543311e689fd64b1b6647958175d346db597570e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_student_release_browser.cjs",
+      "sha": "73bc7da2190a448327b354d445cd95421d0193f1",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_teacher_portal_loader.cjs",
+      "sha": "e355ee6583146d44486c8d345447304f02912b70",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_teacher_security.cjs",
+      "sha": "3c14f41227c23e7709440f37a60cb13994be879b",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_teacher_startup_browser.cjs",
+      "sha": "954676c8359af54a2fba616e3b0b05e0e3ae9b1c",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_teacher_workflow_browser.cjs",
+      "sha": "366e120641f73b37d3ffd6643c46a49a5cbd3a65",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_textbook_ex1_1_integration.cjs",
+      "sha": "bd2def7f930f64c28c517afe91d53048e9e7e61a",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_textbook_ex1_1_q1.cjs",
+      "sha": "b1f938b5fe436702190c57f7c702333b550d9a83",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_textbook_ex1_1_q2.cjs",
+      "sha": "3a895388517e696f1af4c4f5471ddb7a206cbf90",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_textbook_ex1_1_q3a.cjs",
+      "sha": "1ae2b0ec9ee3ec06d4ac1410c6c84b4c23b8b49a",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_textbook_ex1_1_q3b.cjs",
+      "sha": "5c7ad606357ff09cff68772a686484305faee05b",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_trace_area_m06_release.py",
+      "sha": "9ea170b1c034d088617f192ea550ae9bb9de9493",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_trace_cramer_preview_browser.cjs",
+      "sha": "e5aa0020bc5cbaa499841f45d9b05bc94a762b81",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_trace_discriminant_release.py",
+      "sha": "ca315b6e141041ef337df285514ea20fd7fa465d",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_trace_thales_release.py",
+      "sha": "27882b1ff5e9d5c6becb25e3e845eb4366ec16f6",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_trace_voice_pack_import.py",
+      "sha": "c348eea6393ba3712c968fbcebb9083b3a1cecd2",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_trace_voice_policy.py",
+      "sha": "7426db58d83a5b2c1fd8d1ee5d82817081b4f5c5",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_ver_glyph_browser.cjs",
+      "sha": "82abe521465e4c0c5a9bc52ebe7f358675582aff",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_why_step_g10.cjs",
+      "sha": "6dcbe90942a431a646379bf1e53cfe1520effc24",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_why_step_g10_browser.cjs",
+      "sha": "2b28a211b0bb0b19ff312d4925a5a95d227438f8",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_why_step_g10_coverage_browser.cjs",
+      "sha": "c9dce15be136366255d296f939cce42a35a9add3",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_why_step_g9.cjs",
+      "sha": "42cbe9ff383b859aef9f15bfeb9783c0d175bef6",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_why_step_g9_browser.cjs",
+      "sha": "2dd5c556ac3e60be686b11fd7dfa4670a5e33c34",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/test_worked_example_display.cjs",
+      "sha": "da7c420159b4d554161e7475ac5d085adb1974ed",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/trace_mensuration_artwork.py",
+      "sha": "3b2fb8d0f950ebadbb7af840dc76e39a14c3396b",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/trace_mensuration_batch.py",
+      "sha": "973de7f4a90c2187e153377d139aed395b3a7b8e",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/trace_mensuration_math.cjs",
+      "sha": "b89d3237a8b75ec63b078b7554f7f858e14889bb",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/trace_voice_pack_import.py",
+      "sha": "c93c3cce425133418f822bee5da1d6bad7bc6981",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/validate_curriculum.cjs",
+      "sha": "c8787df7a0b6e8c7b571102dd260589e18140609",
+      "type": "blob"
+    },
+    {
+      "path": "site/tools/mathguard",
+      "sha": "f8241af810233620f524995b54354fd0c24bad87",
+      "type": "tree"
+    },
+    {
+      "path": "docs/trace/mathguard",
+      "sha": "b71958f9f31504d03b7e8f9e86c0a305b55d2c49",
+      "type": "tree"
+    },
+    {
+      "path": "Bilingual_Parity_Report.json",
+      "sha": "39ca1fe422adfb2b371f780889cfee34f4bdbd61",
+      "type": "blob"
+    },
+    {
+      "path": "Complete_Regression_Results.json",
+      "sha": "ef17905b69468cb39e986fcf637f07f41aea554e",
+      "type": "blob"
+    },
+    {
+      "path": "Confirmed_Correction_Queue.json",
+      "sha": "42b22d9736bed92b015d191b63725294f0ea82a8",
+      "type": "blob"
+    },
+    {
+      "path": "Historical_Regression_Recovery.json",
+      "sha": "30ccaf2fe6010b717088847c3c30dd3345ba7825",
+      "type": "blob"
+    },
+    {
+      "path": "Latest_Curriculum_Audit.json",
+      "sha": "f885fde4fce9b8c96f55d91535485cc5725778ac",
+      "type": "blob"
+    },
+    {
+      "path": "Relations_Functions_Verification_Report.json",
+      "sha": "ff88b7d5b9d0ab6c7442d3f8d7df4cc363b6b40c",
+      "type": "blob"
+    },
+    {
+      "path": "Set_Theory_Verification_Report.json",
+      "sha": "f140a8dcd12ca75e056b342df2ec5f26bb5791b3",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_Confirmed_Correction_Queue.json",
+      "sha": "f6b85f28734327bab145568932b2cde5308eb7c3",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_3_5a_Regression_Matrix.json",
+      "sha": "a8229f5b6cfdc587cf808b6389b287911394f5b5",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4_Chapter_Coverage.json",
+      "sha": "0e3d18771bc0b69248f297a2c623f4f7b7f5f877",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4_Confirmed_Correction_Queue.json",
+      "sha": "ac64c7f2df9aca2c39ce7cdd1d8da70dc8f97ad6",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4_Readiness.json",
+      "sha": "dd951b547ed8acb3afb4d30da41f3541158b99f8",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4_Regression_Matrix.json",
+      "sha": "ad898099baf9aeff4b83973838eb4d585aab965f",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4a_Bilingual_Parity_Report.json",
+      "sha": "f1630391014a6bd6ee9ec772e435e043a57c1fe6",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4a_Confirmed_Correction_Queue.json",
+      "sha": "380e9df8a79c693d7af7acef8ae30be5adfb6c0c",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4a_False_Positive_Analysis.json",
+      "sha": "a5ecb10db06322e41949ffd38c4b8258a9bce394",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4a_Regression_Matrix.json",
+      "sha": "8a6971f13d67a8e71f3950830d778a536086d47b",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4b_Benchmark_Comparison.json",
+      "sha": "ca2017ff61051edb81fbda105dc74f0c554e02b7",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4b_Bilingual_Parity_Report.json",
+      "sha": "b082bf55550fe84b458eeb3431734f570af734d5",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4b_Confirmed_Correction_Queue.json",
+      "sha": "5756abf744525b2ce672a78e75c3ca85a93df2a3",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4b_Finding_Disposition.json",
+      "sha": "317da9f55d413ddcde635f475ea88bc1a86c9a7e",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_4b_Regression_Results.json",
+      "sha": "3ca62a474ccf9ee47002496a5f1f840f6b590713",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_5_Bilingual_Parity_Report.json",
+      "sha": "6da51078c104695ea1e28e7a27e08e80e9dc812e",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_5_Confirmed_Correction_Queue.json",
+      "sha": "2c2b14e7235b27a0ec7aa3fe120d1859896ce78a",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_5_Domain_Coverage.json",
+      "sha": "3a97b1aaa66fc76d28362076fbbe3ff95fdb11cf",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_5_Regression_Results.json",
+      "sha": "35a89d29feff6923526764e4bbfb766f2d9b408f",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_5_Relations_Functions_Results.json",
+      "sha": "dcaf7ff0cbd1d762a6e1c76bc2148e7cbf1fc984",
+      "type": "blob"
+    },
+    {
+      "path": "TRACE_MathGuard_V1_5_Set_Theory_Results.json",
+      "sha": "59a57207ac46795009291c497e8d48de873453ce",
+      "type": "blob"
+    },
+    {
+      "path": "Tamil_Parity_Transition_Matrix.json",
+      "sha": "93865931175c990c40c631fb2a70d45c6dac733d",
+      "type": "blob"
+    },
+    {
+      "path": "V1_4d_Baseline_Reconciliation.json",
+      "sha": "c79b8b60ec52a8bed7d269df5837e38a02e68612",
+      "type": "blob"
+    },
+    {
+      "path": "V1_5_Adapter_Roadmap.json",
+      "sha": "840901c3076bb6bfccac3d3d4a38a38e0f5b2351",
+      "type": "blob"
+    }
+  ],
+  "omitted": [
+    ".github workflows",
+    "video media",
+    "historical zip and pdf reports",
+    "grade 11/12 curriculum ledgers",
+    "unrelated release infrastructure"
+  ],
+  "limitations": [
+    "Not a complete deployable checkout",
+    "Textbook PDFs must be obtained via authorized source registry",
+    "MathGuard code is unmerged evidence, not production certification"
+  ]
+}

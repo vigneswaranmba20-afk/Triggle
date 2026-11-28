@@ -1,0 +1,5113 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.3.5",
+  "chapter": "3",
+  "name": "Algebra",
+  "counts": {
+    "exercises": 139,
+    "concepts": 14,
+    "total": 153
+  },
+  "answerVerificationCounts": {
+    "PASS": 149,
+    "UNVERIFIABLE": 4
+  },
+  "intermediateStepCounts": {
+    "UNVERIFIABLE": 34,
+    "FAIL": 45,
+    "PARTIAL": 35,
+    "PASS": 39
+  },
+  "workingVerificationCounts": {
+    "PARTIAL": 52,
+    "PASS": 94,
+    "FAIL": 4,
+    "UNVERIFIABLE": 3
+  },
+  "tamilValidationCounts": {
+    "PASS": 140,
+    "MISSING": 9,
+    "PARTIAL": 2,
+    "FAIL": 2
+  },
+  "records": [
+    {
+      "id": "c10-3-3-practice-18",
+      "item_type": "exercise",
+      "section": "3.practice",
+      "validation_method": "alg_quad_solve",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "x=2, 3",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-1-q1-i",
+      "item_type": "exercise",
+      "section": "3.1",
+      "validation_method": "alg_linear_3x3",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "MISSING",
+      "existing_result": "(x, y, z) = (2, −1, 4)",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': '- (1): x - 2y = 4', 'lhs': '-2*y - 1/x', 'rhs': '4'}]",
+      "stepChecks": {
+        "checkedChains": 6,
+        "passedChains": 5,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "- (1): x - 2y = 4",
+            "lhs": "-2*y - 1/x",
+            "rhs": "4"
+          }
+        ],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 10,
+        "verifiedClaims": 10,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "missing_tamil_prompt"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-1-q1-ii",
+      "item_type": "exercise",
+      "section": "3.1",
+      "validation_method": "alg_linear_3x3_recip",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "MISSING",
+      "existing_result": "(x, y, z) = (1/2, 1/3, 1/4)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 3,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          3
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 16,
+        "verifiedClaims": 16,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "missing_tamil_prompt"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-1-q1-iii",
+      "item_type": "exercise",
+      "section": "3.1",
+      "validation_method": "alg_linear_3x3",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "MISSING",
+      "existing_result": "(x, y, z) = (35, 30, 25)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 6,
+        "passedChains": 6,
+        "failedChains": [],
+        "unparsedSteps": [
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 15,
+        "verifiedClaims": 15,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "missing_tamil_prompt"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-1-q2-i",
+      "item_type": "exercise",
+      "section": "3.1",
+      "validation_method": "alg_linear_rank",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "MISSING",
+      "existing_result": "infinitely many solutions.",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': '-(3): (x-2z)-(x-2z)=3-3', 'lhs': '-x + 2*z - 3/(x - 2*z)', 'rhs': '0'}]",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 1,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "-(3): (x-2z)-(x-2z)=3-3",
+            "lhs": "-x + 2*z - 3/(x - 2*z)",
+            "rhs": "0"
+          }
+        ],
+        "unparsedSteps": [
+          0,
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "missing_tamil_prompt"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-1-q2-ii",
+      "item_type": "exercise",
+      "section": "3.1",
+      "validation_method": "alg_linear_rank",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "MISSING",
+      "existing_result": "no solution.",
+      "discrepancy": "Step=[{'stepIndex': 1, 'line': '-(3): (3x+2y+z)-(3x+2y+z)=3-(-\\\\dfrac{1}{2})', 'lhs': '-3*x - 2*y - z - 3/(3*x + 2*y + z)', 'rhs': '7/2'}]",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 1,
+            "line": "-(3): (3x+2y+z)-(3x+2y+z)=3-(-\\dfrac{1}{2})",
+            "lhs": "-3*x - 2*y - z - 3/(3*x + 2*y + z)",
+            "rhs": "7/2"
+          }
+        ],
+        "unparsedSteps": [
+          0
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "missing_tamil_prompt"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-1-q2-iii",
+      "item_type": "exercise",
+      "section": "3.1",
+      "validation_method": "alg_linear_rank",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "MISSING",
+      "existing_result": "unique solution.",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 8,
+        "verifiedClaims": 8,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "missing_tamil_prompt"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-1-q3",
+      "item_type": "exercise",
+      "section": "3.1",
+      "validation_method": "alg_word_ages_3x3",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "MISSING",
+      "existing_result": "24 years, 51 years, 84 years.",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 9,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "missing_tamil_prompt"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-1-q4",
+      "item_type": "exercise",
+      "section": "3.1",
+      "validation_method": "alg_word_3digit",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "MISSING",
+      "existing_result": "137.",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': '100z+10y+x=5(100x+10y+z)+46', 'lhs': 'x + 10*y + 100*z', 'rhs': '500*x + 50*y + 5*z + 46'}]",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 2,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "100z+10y+x=5(100x+10y+z)+46",
+            "lhs": "x + 10*y + 100*z",
+            "rhs": "500*x + 50*y + 5*z + 46"
+          }
+        ],
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 9,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "missing_tamil_prompt"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-1-q5",
+      "item_type": "exercise",
+      "section": "3.1",
+      "validation_method": "alg_word_currency_3x3",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "MISSING",
+      "existing_result": "7, 3, 2.",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 10,
+        "verifiedClaims": 10,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "missing_tamil_prompt"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-2-q1-i",
+      "item_type": "exercise",
+      "section": "3.2",
+      "validation_method": "alg_poly_gcd",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "x² + 2x − 3",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 3,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-2-q1-ii",
+      "item_type": "exercise",
+      "section": "3.2",
+      "validation_method": "alg_poly_gcd",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "x² + 1",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 3,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-2-q1-iii",
+      "item_type": "exercise",
+      "section": "3.2",
+      "validation_method": "alg_poly_gcd",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "x(x² + 4x + 4)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          0
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 4,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-2-q1-iv",
+      "item_type": "exercise",
+      "section": "3.2",
+      "validation_method": "alg_poly_gcd",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "3(x² + 1)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          0
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 4,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-2-q2-i",
+      "item_type": "exercise",
+      "section": "3.2",
+      "validation_method": "alg_poly_lcm",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "8x³y²",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-2-q2-ii",
+      "item_type": "exercise",
+      "section": "3.2",
+      "validation_method": "alg_poly_lcm",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "36a³b²c",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-2-q2-iii",
+      "item_type": "exercise",
+      "section": "3.2",
+      "validation_method": "alg_poly_lcm",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "48m²n²",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-2-q2-iv",
+      "item_type": "exercise",
+      "section": "3.2",
+      "validation_method": "alg_poly_lcm",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(p − 1)(p − 2)(p + 2)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 3,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-2-q2-v",
+      "item_type": "exercise",
+      "section": "3.2",
+      "validation_method": "alg_poly_lcm",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "4(x + 3)(2x + 1)(x − 3)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 4,
+        "passedChains": 4,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-2-q2-vi",
+      "item_type": "exercise",
+      "section": "3.2",
+      "validation_method": "alg_poly_lcm",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "2³x²(2x − 3y)³(4x² + 6xy + 9y²)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 5,
+        "passedChains": 5,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 4,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-3-q1-i",
+      "item_type": "exercise",
+      "section": "3.3",
+      "validation_method": "alg_gcd_lcm_pair",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "7xy, 105x²y²",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': 'LCM \\\\times GCD =(105x^2y^2)(7xy)=735x^3y^3', 'lhs': 'C**2*D*G*L*M', 'rhs': '735*x**3*y**3'}]",
+      "stepChecks": {
+        "checkedChains": 7,
+        "passedChains": 6,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "LCM \\times GCD =(105x^2y^2)(7xy)=735x^3y^3",
+            "lhs": "C**2*D*G*L*M",
+            "rhs": "735*x**3*y**3"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 6,
+        "verifiedClaims": 6,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-3-q1-ii",
+      "item_type": "exercise",
+      "section": "3.3",
+      "validation_method": "alg_gcd_lcm_pair",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(x + 1), (x − 1)(x + 1)(x² + x + 1)(x² − x + 1)",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': 'f_x\\\\times g_x=(x^3-1)(x^3+1)(x+1)= LCM \\\\times GCD', 'lhs': '(x + 1)*(x**3 - 1)*(x**3 + 1)', 'rhs': 'C**2*D*G*L*M'}]",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 1,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "f_x\\times g_x=(x^3-1)(x^3+1)(x+1)= LCM \\times GCD",
+            "lhs": "(x + 1)*(x**3 - 1)*(x**3 + 1)",
+            "rhs": "C**2*D*G*L*M"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-3-q1-iii",
+      "item_type": "exercise",
+      "section": "3.3",
+      "validation_method": "alg_gcd_lcm_pair",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "x(x + y), xy(x + y)",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': 'f_x\\\\times g_x=(xy(x+y))(x(x+y))=x^2y(x+y)^2= LCM \\\\times GCD', 'lhs': 'x**2*y*(x + y)**2', 'rhs': 'C**2*D*G*L*M'}]",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 2,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "f_x\\times g_x=(xy(x+y))(x(x+y))=x^2y(x+y)^2= LCM \\times GCD",
+            "lhs": "x**2*y*(x + y)**2",
+            "rhs": "C**2*D*G*L*M"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-3-q2-i",
+      "item_type": "exercise",
+      "section": "3.3",
+      "validation_method": "alg_lcm_from_gcd",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "(a + 6)(a − 2)(a − 3)",
+      "discrepancy": "Step=[{'stepIndex': 1, 'line': 'LCM =\\\\dfrac{f_a\\\\times g_a}{ GCD }=\\\\dfrac{(a+6)(a-2)(a-2)(a-3)}{a-2}', 'lhs': 'C*L*M', 'rhs': 'f_a*g_a/(C*D*G)'}, {'stepIndex': 1, 'line': 'LCM =\\\\dfrac{f_a\\\\times g_a}{ GCD }=\\\\dfrac{(a+6)(a-2)(a-2)(a-3)}{a-2}', 'lhs': 'f_a*g_a/(C*D*G)', 'rhs': '(a - 3)*(a - 2)*(a + 6)'}]",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 1,
+            "line": "LCM =\\dfrac{f_a\\times g_a}{ GCD }=\\dfrac{(a+6)(a-2)(a-2)(a-3)}{a-2}",
+            "lhs": "C*L*M",
+            "rhs": "f_a*g_a/(C*D*G)"
+          },
+          {
+            "stepIndex": 1,
+            "line": "LCM =\\dfrac{f_a\\times g_a}{ GCD }=\\dfrac{(a+6)(a-2)(a-2)(a-3)}{a-2}",
+            "lhs": "f_a*g_a/(C*D*G)",
+            "rhs": "(a - 3)*(a - 2)*(a + 6)"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-3-q2-ii",
+      "item_type": "exercise",
+      "section": "3.3",
+      "validation_method": "alg_lcm_from_gcd",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "x(x − 3a)²(x² + 3ax + 9a²)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-3-q3-i",
+      "item_type": "exercise",
+      "section": "3.3",
+      "validation_method": "alg_gcd_from_lcm",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "4x²(x − 1)",
+      "discrepancy": "Step=[{'stepIndex': 1, 'line': 'GCD =\\\\dfrac{f_x\\\\times g_x}{ LCM }=\\\\dfrac{12x^3(x-1)\\\\times 8x^2(x-1)(x-2)}{24x^3(x-1)(x-2)}', 'lhs': 'C*D*G', 'rhs': 'f_x*g_x/(C*L*M)'}, {'stepIndex': 1, 'line': 'GCD =\\\\dfrac{f_x\\\\times g_x}{ LCM }=\\\\dfrac{12x^3(x-1)\\\\times 8x^2(x-1)(x-2)}{24x^3(x-1)(x-2)}', 'lhs': 'f_x*g_x/(C*L*M)', 'rhs': '4*x**2*(x - 1)'}]",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 1,
+        "failedChains": [
+          {
+            "stepIndex": 1,
+            "line": "GCD =\\dfrac{f_x\\times g_x}{ LCM }=\\dfrac{12x^3(x-1)\\times 8x^2(x-1)(x-2)}{24x^3(x-1)(x-2)}",
+            "lhs": "C*D*G",
+            "rhs": "f_x*g_x/(C*L*M)"
+          },
+          {
+            "stepIndex": 1,
+            "line": "GCD =\\dfrac{f_x\\times g_x}{ LCM }=\\dfrac{12x^3(x-1)\\times 8x^2(x-1)(x-2)}{24x^3(x-1)(x-2)}",
+            "lhs": "f_x*g_x/(C*L*M)",
+            "rhs": "4*x**2*(x - 1)"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-3-q3-ii",
+      "item_type": "exercise",
+      "section": "3.3",
+      "validation_method": "alg_gcd_from_lcm",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "x² − xy + y²",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-3-q4-i",
+      "item_type": "exercise",
+      "section": "3.3",
+      "validation_method": "alg_unknown_poly",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "(a + 2)(a − 7)",
+      "discrepancy": "Step=[{'stepIndex': 1, 'line': 'q(x)=\\\\dfrac{ LCM \\\\times GCD }{p_x}=\\\\dfrac{(a-7)(a-5)(a+2)(a-7)}{(a-7)(a-5)}', 'lhs': 'q*x', 'rhs': 'C**2*D*G*L*M/p_x'}, {'stepIndex': 1, 'line': 'q(x)=\\\\dfrac{ LCM \\\\times GCD }{p_x}=\\\\dfrac{(a-7)(a-5)(a+2)(a-7)}{(a-7)(a-5)}', 'lhs': 'C**2*D*G*L*M/p_x', 'rhs': '(a - 7)*(a + 2)'}]",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 1,
+        "failedChains": [
+          {
+            "stepIndex": 1,
+            "line": "q(x)=\\dfrac{ LCM \\times GCD }{p_x}=\\dfrac{(a-7)(a-5)(a+2)(a-7)}{(a-7)(a-5)}",
+            "lhs": "q*x",
+            "rhs": "C**2*D*G*L*M/p_x"
+          },
+          {
+            "stepIndex": 1,
+            "line": "q(x)=\\dfrac{ LCM \\times GCD }{p_x}=\\dfrac{(a-7)(a-5)(a+2)(a-7)}{(a-7)(a-5)}",
+            "lhs": "C**2*D*G*L*M/p_x",
+            "rhs": "(a - 7)*(a + 2)"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-3-q4-ii",
+      "item_type": "exercise",
+      "section": "3.3",
+      "validation_method": "alg_unknown_poly",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(x² − y²)(x² + xy + y²)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-4-q1-i",
+      "item_type": "exercise",
+      "section": "3.4",
+      "validation_method": "alg_rational_reduce",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(x − 1)/x",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-4-q1-ii",
+      "item_type": "exercise",
+      "section": "3.4",
+      "validation_method": "alg_rational_reduce",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(x − 9)/(x − 2)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-4-q1-iii",
+      "item_type": "exercise",
+      "section": "3.4",
+      "validation_method": "alg_rational_reduce",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "9/(x − 1)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-4-q1-iv",
+      "item_type": "exercise",
+      "section": "3.4",
+      "validation_method": "alg_rational_reduce",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(p + 5)/[2p(p − 4)]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-4-q2-i",
+      "item_type": "exercise",
+      "section": "3.4",
+      "validation_method": "alg_excluded_values",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "−5, 5",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-4-q2-ii",
+      "item_type": "exercise",
+      "section": "3.4",
+      "validation_method": "alg_excluded_values",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "2, 3",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-4-q2-iii",
+      "item_type": "exercise",
+      "section": "3.4",
+      "validation_method": "alg_excluded_values_reduced",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "1",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 3,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-4-q2-iv",
+      "item_type": "exercise",
+      "section": "3.4",
+      "validation_method": "alg_excluded_values",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "0, −3, 2",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-5-q1-i",
+      "item_type": "exercise",
+      "section": "3.5",
+      "validation_method": "alg_rational_mul",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(3x³z)/(5y³)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-5-q1-ii",
+      "item_type": "exercise",
+      "section": "3.5",
+      "validation_method": "alg_rational_mul",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "p + 4",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-5-q1-iii",
+      "item_type": "exercise",
+      "section": "3.5",
+      "validation_method": "alg_rational_mul",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "(3t²)/4",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-5-q2-i",
+      "item_type": "exercise",
+      "section": "3.5",
+      "validation_method": "alg_rational_mul",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "(3x − 4y)/(2x − 5)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-5-q2-ii",
+      "item_type": "exercise",
+      "section": "3.5",
+      "validation_method": "alg_rational_mul",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "(x² + xy + y²)/[3(x + 2y)]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-5-q3-i",
+      "item_type": "exercise",
+      "section": "3.5",
+      "validation_method": "alg_rational_div",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "−5",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-5-q3-ii",
+      "item_type": "exercise",
+      "section": "3.5",
+      "validation_method": "alg_rational_div",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "(b − 4)/(b + 2)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-5-q3-iii",
+      "item_type": "exercise",
+      "section": "3.5",
+      "validation_method": "alg_rational_div",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "(3y)/(x − 3)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-5-q3-iv",
+      "item_type": "exercise",
+      "section": "3.5",
+      "validation_method": "alg_rational_div",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "4(2t − 1)/3",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-5-q4",
+      "item_type": "exercise",
+      "section": "3.5",
+      "validation_method": "alg_rational_pow",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "4/9",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 7,
+        "passedChains": 7,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 4,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-5-q5",
+      "item_type": "exercise",
+      "section": "3.5",
+      "validation_method": "alg_poly_div_recover",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "x² + 4x + 4",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': '\\\\dfrac{p_x}{q(x)}=\\\\dfrac{x-7}{x+2}', 'lhs': 'p_x/(q*x)', 'rhs': '(x - 7)/(x + 2)'}, {'stepIndex': 0, 'line': '\\\\dfrac{(x-7)(x+2)}{q(x)}=\\\\dfrac{x-7}{x+2}', 'lhs': '(x - 7)*(x + 2)/(q*x)', 'rhs': '(x - 7)/(x + 2)'}, {'stepIndex': 1, 'line': 'q(x)=\\\\dfrac{(x-7)(x+2)(x+2)}{x-7}=(x+2)^2', 'lhs': 'q*x', 'rhs': '(x + 2)**2'}, {'stepIndex': 2, 'line': 'q(x)=x^2+4x+4', 'lhs': 'q*x', 'rhs': 'x**2 + 4*x + 4'}]",
+      "stepChecks": {
+        "checkedChains": 5,
+        "passedChains": 1,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "\\dfrac{p_x}{q(x)}=\\dfrac{x-7}{x+2}",
+            "lhs": "p_x/(q*x)",
+            "rhs": "(x - 7)/(x + 2)"
+          },
+          {
+            "stepIndex": 0,
+            "line": "\\dfrac{(x-7)(x+2)}{q(x)}=\\dfrac{x-7}{x+2}",
+            "lhs": "(x - 7)*(x + 2)/(q*x)",
+            "rhs": "(x - 7)/(x + 2)"
+          },
+          {
+            "stepIndex": 1,
+            "line": "q(x)=\\dfrac{(x-7)(x+2)(x+2)}{x-7}=(x+2)^2",
+            "lhs": "q*x",
+            "rhs": "(x + 2)**2"
+          },
+          {
+            "stepIndex": 2,
+            "line": "q(x)=x^2+4x+4",
+            "lhs": "q*x",
+            "rhs": "x**2 + 4*x + 4"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-6-q1-i",
+      "item_type": "exercise",
+      "section": "3.6",
+      "validation_method": "alg_rational_add",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(2x)/(x − 2)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-6-q1-ii",
+      "item_type": "exercise",
+      "section": "3.6",
+      "validation_method": "alg_rational_add",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "(2x² + 2x − 7)/[(x + 3)(x − 2)]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-6-q1-iii",
+      "item_type": "exercise",
+      "section": "3.6",
+      "validation_method": "alg_rational_add",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "x² + xy + y²",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-6-q2-i",
+      "item_type": "exercise",
+      "section": "3.6",
+      "validation_method": "alg_rational_sub",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "2(x − 2)/(x − 4)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-6-q2-ii",
+      "item_type": "exercise",
+      "section": "3.6",
+      "validation_method": "alg_rational_sub",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(1 − x)/(1 + x)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-6-q3",
+      "item_type": "exercise",
+      "section": "3.6",
+      "validation_method": "alg_rational_sub",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(2x³ + 1)/(x² + 2)²",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-6-q4",
+      "item_type": "exercise",
+      "section": "3.6",
+      "validation_method": "alg_rational_sub",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(x + 1)/(x² − 2x + 4)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 3,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-6-q5",
+      "item_type": "exercise",
+      "section": "3.6",
+      "validation_method": "alg_rational_sub",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(4x² − 1)/[2(4x² + 1)]",
+      "discrepancy": "Step=[{'stepIndex': 1, 'line': 'A+B=\\\\dfrac{(2x+1)^2+(2x-1)^2}{4x^2-1}=\\\\dfrac{2(4x^2+1)}{4x^2-1}', 'lhs': 'A + B', 'rhs': '((2*x - 1)**2 + (2*x + 1)**2)/(4*x**2 - 1)'}]",
+      "stepChecks": {
+        "checkedChains": 5,
+        "passedChains": 4,
+        "failedChains": [
+          {
+            "stepIndex": 1,
+            "line": "A+B=\\dfrac{(2x+1)^2+(2x-1)^2}{4x^2-1}=\\dfrac{2(4x^2+1)}{4x^2-1}",
+            "lhs": "A + B",
+            "rhs": "((2*x - 1)**2 + (2*x + 1)**2)/(4*x**2 - 1)"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-6-q6",
+      "item_type": "exercise",
+      "section": "3.6",
+      "validation_method": "alg_rational_proof",
+      "answer_status": "UNVERIFIABLE",
+      "step_status": "FAIL",
+      "working_status": "FAIL",
+      "tamil_status": "PASS",
+      "existing_result": "Hence proved: [(A + B)² + (A − B)²]/(A ÷ B) = 2(x² + 1)/[x(x + 1)²]",
+      "discrepancy": "Proposition=TRUE; Conclusion=PASS; ProofSteps=FAIL (separate statuses)",
+      "stepChecks": {
+        "checkedChains": 8,
+        "passedChains": 5,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "A\\div B=\\dfrac{x}{x+1}\\times\\dfrac{x+1}{1}=x",
+            "lhs": "A/B",
+            "rhs": "x"
+          },
+          {
+            "stepIndex": 1,
+            "line": "(A+B)^2+(A-B)^2=1+\\dfrac{(x-1)^2}{(x+1)^2}=\\dfrac{(x+1)^2+(x-1)^2}{(x+1)^2}=\\dfrac{2(x^2+1)}{(x+1)^2}",
+            "lhs": "(A - B)**2 + (A + B)**2",
+            "rhs": "(x - 1)**2/(x + 1)**2 + 1"
+          },
+          {
+            "stepIndex": 2,
+            "line": "LHS =\\dfrac{2(x^2+1)}{(x+1)^2}\\div x=\\dfrac{2(x^2+1)}{x(x+1)^2}= RHS",
+            "lhs": "(2*x**2 + 2)/(x*(x + 1)**2)",
+            "rhs": "H*R*S"
+          }
+        ],
+        "unparsedSteps": [
+          0
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 2,
+        "failedClaims": 2,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-6-q7",
+      "item_type": "exercise",
+      "section": "3.6",
+      "validation_method": "alg_work_rate",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "2 hrs 24 minutes",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': 'Time =\\\\dfrac{12}{5}  hours =2\\\\dfrac{2}{5}  hours =2  hrs  24  minutes', 'lhs': '12/5', 'rhs': '4/5'}, {'stepIndex': 2, 'line': 'Time =\\\\dfrac{12}{5}  hours =2\\\\dfrac{2}{5}  hours =2  hrs  24  minutes', 'lhs': '4/5', 'rhs': '48'}]",
+      "stepChecks": {
+        "checkedChains": 4,
+        "passedChains": 2,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "Time =\\dfrac{12}{5}  hours =2\\dfrac{2}{5}  hours =2  hrs  24  minutes",
+            "lhs": "12/5",
+            "rhs": "4/5"
+          },
+          {
+            "stepIndex": 2,
+            "line": "Time =\\dfrac{12}{5}  hours =2\\dfrac{2}{5}  hours =2  hrs  24  minutes",
+            "lhs": "4/5",
+            "rhs": "48"
+          }
+        ],
+        "unparsedSteps": [
+          0
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 4,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-6-q8",
+      "item_type": "exercise",
+      "section": "3.6",
+      "validation_method": "alg_word_fruits",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "30 kgs, 20 kgs",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': 'Apples =\\\\dfrac{1800}{2x}=\\\\dfrac{900}{x}  kg', 'lhs': '900/x', 'rhs': '900*g*k/x'}, {'stepIndex': 1, 'line': '\\\\dfrac{900}{x}+\\\\dfrac{600}{x}=50', 'lhs': '1500/x', 'rhs': '50'}, {'stepIndex': 1, 'line': '\\\\dfrac{1500}{x}=50', 'lhs': '1500/x', 'rhs': '50'}, {'stepIndex': 2, 'line': 'Apples =\\\\dfrac{900}{30}=30  kgs', 'lhs': '30', 'rhs': '30*g*k*s'}, {'stepIndex': 2, 'line': 'Bananas =\\\\dfrac{600}{30}=20  kgs', 'lhs': '20', 'rhs': '20*g*k*s'}]",
+      "stepChecks": {
+        "checkedChains": 7,
+        "passedChains": 2,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "Apples =\\dfrac{1800}{2x}=\\dfrac{900}{x}  kg",
+            "lhs": "900/x",
+            "rhs": "900*g*k/x"
+          },
+          {
+            "stepIndex": 1,
+            "line": "\\dfrac{900}{x}+\\dfrac{600}{x}=50",
+            "lhs": "1500/x",
+            "rhs": "50"
+          },
+          {
+            "stepIndex": 1,
+            "line": "\\dfrac{1500}{x}=50",
+            "lhs": "1500/x",
+            "rhs": "50"
+          },
+          {
+            "stepIndex": 2,
+            "line": "Apples =\\dfrac{900}{30}=30  kgs",
+            "lhs": "30",
+            "rhs": "30*g*k*s"
+          },
+          {
+            "stepIndex": 2,
+            "line": "Bananas =\\dfrac{600}{30}=20  kgs",
+            "lhs": "20",
+            "rhs": "20*g*k*s"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-7-q1-i",
+      "item_type": "exercise",
+      "section": "3.7",
+      "validation_method": "alg_sqrt_rational",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "2 |y⁴z⁶ / x²|",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-7-q1-ii",
+      "item_type": "exercise",
+      "section": "3.7",
+      "validation_method": "alg_sqrt_rational",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "4 |(√7 x + √2)/(4x − 1)|",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': '\\\\sqrt{\\\\dfrac{16(\\\\sqrt{7}x+\\\\sqrt{2})^2}{(4x-1)^2}}=4|\\\\dfrac{\\\\sqrt{7}x+\\\\sqrt{2}}{4x-1}|', 'lhs': '4*Abs(sqrt(7)*x + sqrt(2))/Abs(4*x - 1)', 'rhs': '4*(sqrt(7)*x + sqrt(2))/(4*x - 1)'}]",
+      "stepChecks": {
+        "checkedChains": 4,
+        "passedChains": 3,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "\\sqrt{\\dfrac{16(\\sqrt{7}x+\\sqrt{2})^2}{(4x-1)^2}}=4|\\dfrac{\\sqrt{7}x+\\sqrt{2}}{4x-1}|",
+            "lhs": "4*Abs(sqrt(7)*x + sqrt(2))/Abs(4*x - 1)",
+            "rhs": "4*(sqrt(7)*x + sqrt(2))/(4*x - 1)"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-7-q1-iii",
+      "item_type": "exercise",
+      "section": "3.7",
+      "validation_method": "alg_sqrt_rational",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(11/9) |(a + b)⁴(x + y)⁴ / (a − b)⁶|",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-7-q2-i",
+      "item_type": "exercise",
+      "section": "3.7",
+      "validation_method": "alg_sqrt_poly",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "|2x + 5|",
+      "discrepancy": "Step=[{'stepIndex': 1, 'line': '\\\\sqrt{4x^2+20x+25}=\\\\sqrt{(2x+5)^2}=|2x+5|', 'lhs': 'sqrt(4*x**2 + 20*x + 25)', 'rhs': 'Abs(2*x + 5)'}, {'stepIndex': 1, 'line': '\\\\sqrt{4x^2+20x+25}=\\\\sqrt{(2x+5)^2}=|2x+5|', 'lhs': 'Abs(2*x + 5)', 'rhs': '2*x + 5'}]",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 1,
+        "failedChains": [
+          {
+            "stepIndex": 1,
+            "line": "\\sqrt{4x^2+20x+25}=\\sqrt{(2x+5)^2}=|2x+5|",
+            "lhs": "sqrt(4*x**2 + 20*x + 25)",
+            "rhs": "Abs(2*x + 5)"
+          },
+          {
+            "stepIndex": 1,
+            "line": "\\sqrt{4x^2+20x+25}=\\sqrt{(2x+5)^2}=|2x+5|",
+            "lhs": "Abs(2*x + 5)",
+            "rhs": "2*x + 5"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-7-q2-ii",
+      "item_type": "exercise",
+      "section": "3.7",
+      "validation_method": "alg_sqrt_poly",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "|3x − 4y + 5z|",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': '9x^2-24xy+30xz-40yz+25z^2+16y^2=(3x)^2+(-4y)^2+(5z)^2', 'lhs': '9*x**2 - 24*x*y + 30*x*z + 16*y**2 - 40*y*z + 25*z**2', 'rhs': '9*x**2 + 16*y**2 + 25*z**2'}, {'stepIndex': 1, 'line': '\\\\sqrt{(3x-4y+5z)^2}=|3x-4y+5z|', 'lhs': 'Abs(3*x - 4*y + 5*z)', 'rhs': '3*x - 4*y + 5*z'}]",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "9x^2-24xy+30xz-40yz+25z^2+16y^2=(3x)^2+(-4y)^2+(5z)^2",
+            "lhs": "9*x**2 - 24*x*y + 30*x*z + 16*y**2 - 40*y*z + 25*z**2",
+            "rhs": "9*x**2 + 16*y**2 + 25*z**2"
+          },
+          {
+            "stepIndex": 1,
+            "line": "\\sqrt{(3x-4y+5z)^2}=|3x-4y+5z|",
+            "lhs": "Abs(3*x - 4*y + 5*z)",
+            "rhs": "3*x - 4*y + 5*z"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-7-q2-iii",
+      "item_type": "exercise",
+      "section": "3.7",
+      "validation_method": "alg_sqrt_poly",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "|(x − 2)(7x + 1)(4x − 1)|",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': '\\\\sqrt{(x-2)^2(7x+1)^2(4x-1)^2}=|(x-2)(7x+1)(4x-1)|', 'lhs': 'Abs(x - 2)*Abs(4*x - 1)*Abs(7*x + 1)', 'rhs': '(x - 2)*(4*x - 1)*(7*x + 1)'}]",
+      "stepChecks": {
+        "checkedChains": 8,
+        "passedChains": 7,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "\\sqrt{(x-2)^2(7x+1)^2(4x-1)^2}=|(x-2)(7x+1)(4x-1)|",
+            "lhs": "Abs(x - 2)*Abs(4*x - 1)*Abs(7*x + 1)",
+            "rhs": "(x - 2)*(4*x - 1)*(7*x + 1)"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-7-q2-iv",
+      "item_type": "exercise",
+      "section": "3.7",
+      "validation_method": "alg_sqrt_poly",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(1/6)|(4x + 3)(3x + 2)(x + 2)|",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': '\\\\sqrt{\\\\dfrac{1}{36}(4x+3)^2(3x+2)^2(x+2)^2}=\\\\dfrac{1}{6}|(4x+3)(3x+2)(x+2)|', 'lhs': 'Abs(x + 2)*Abs(3*x + 2)*Abs(4*x + 3)/6', 'rhs': '(2*x/3 + 1/2)*(x + 2)*(3*x + 2)'}]",
+      "stepChecks": {
+        "checkedChains": 7,
+        "passedChains": 6,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "\\sqrt{\\dfrac{1}{36}(4x+3)^2(3x+2)^2(x+2)^2}=\\dfrac{1}{6}|(4x+3)(3x+2)(x+2)|",
+            "lhs": "Abs(x + 2)*Abs(3*x + 2)*Abs(4*x + 3)/6",
+            "rhs": "(2*x/3 + 1/2)*(x + 2)*(3*x + 2)"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-8-q1-i",
+      "item_type": "exercise",
+      "section": "3.8",
+      "validation_method": "alg_sqrt_div",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "|x² − 6x + 3|",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': '(2x^2-12x+3)(3)=6x^2-36x+9 ( remainder  0)', 'lhs': '6*x**2 - 36*x + 9', 'rhs': '6*x**2 - 36*x'}, {'stepIndex': 2, 'line': '\\\\sqrt{x^4-12x^3+42x^2-36x+9}=|x^2-6x+3|', 'lhs': 'sqrt(x**4 - 12*x**3 + 42*x**2 - 36*x + 9)', 'rhs': 'x**2 - 6*x + 3'}]",
+      "stepChecks": {
+        "checkedChains": 8,
+        "passedChains": 6,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "(2x^2-12x+3)(3)=6x^2-36x+9 ( remainder  0)",
+            "lhs": "6*x**2 - 36*x + 9",
+            "rhs": "6*x**2 - 36*x"
+          },
+          {
+            "stepIndex": 2,
+            "line": "\\sqrt{x^4-12x^3+42x^2-36x+9}=|x^2-6x+3|",
+            "lhs": "sqrt(x**4 - 12*x**3 + 42*x**2 - 36*x + 9)",
+            "rhs": "x**2 - 6*x + 3"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 9,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-8-q1-ii",
+      "item_type": "exercise",
+      "section": "3.8",
+      "validation_method": "alg_sqrt_div",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "|2x² − 7x − 3|",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': '(4x^2-14x-3)(-3)=-12x^2+42x+9 ( remainder  0)', 'lhs': '-12*x**2 + 42*x + 9', 'rhs': '-12*x**2 + 42*x'}, {'stepIndex': 2, 'line': '\\\\sqrt{4x^4-28x^3+37x^2+42x+9}=|2x^2-7x-3|', 'lhs': 'sqrt(4*x**4 - 28*x**3 + 37*x**2 + 42*x + 9)', 'rhs': '2*x**2 - 7*x - 3'}]",
+      "stepChecks": {
+        "checkedChains": 8,
+        "passedChains": 6,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "(4x^2-14x-3)(-3)=-12x^2+42x+9 ( remainder  0)",
+            "lhs": "-12*x**2 + 42*x + 9",
+            "rhs": "-12*x**2 + 42*x"
+          },
+          {
+            "stepIndex": 2,
+            "line": "\\sqrt{4x^4-28x^3+37x^2+42x+9}=|2x^2-7x-3|",
+            "lhs": "sqrt(4*x**4 - 28*x**3 + 37*x**2 + 42*x + 9)",
+            "rhs": "2*x**2 - 7*x - 3"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 9,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-8-q1-iii",
+      "item_type": "exercise",
+      "section": "3.8",
+      "validation_method": "alg_sqrt_div",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "|4x² + 1|",
+      "discrepancy": "Step=[{'stepIndex': 1, 'line': '(8x^2+1)(1)=8x^2+1 ( remainder  0)', 'lhs': '8*x**2 + 1', 'rhs': '8*x**2'}, {'stepIndex': 1, 'line': '\\\\sqrt{16x^4+8x^2+1}=|4x^2+1|', 'lhs': 'sqrt(16*x**4 + 8*x**2 + 1)', 'rhs': '4*x**2 + 1'}]",
+      "stepChecks": {
+        "checkedChains": 6,
+        "passedChains": 4,
+        "failedChains": [
+          {
+            "stepIndex": 1,
+            "line": "(8x^2+1)(1)=8x^2+1 ( remainder  0)",
+            "lhs": "8*x**2 + 1",
+            "rhs": "8*x**2"
+          },
+          {
+            "stepIndex": 1,
+            "line": "\\sqrt{16x^4+8x^2+1}=|4x^2+1|",
+            "lhs": "sqrt(16*x**4 + 8*x**2 + 1)",
+            "rhs": "4*x**2 + 1"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 6,
+        "verifiedClaims": 6,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-8-q1-iv",
+      "item_type": "exercise",
+      "section": "3.8",
+      "validation_method": "alg_sqrt_div",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "|11x² − 9x − 12|",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': '(22x^2-18x-12)(-12)=-264x^2+216x+144 ( remainder  0)', 'lhs': '-264*x**2 + 216*x + 144', 'rhs': '-264*x**2 + 216*x'}, {'stepIndex': 2, 'line': '\\\\sqrt{121x^4-198x^3-183x^2+216x+144}=|11x^2-9x-12|', 'lhs': 'sqrt(121*x**4 - 198*x**3 - 183*x**2 + 216*x + 144)', 'rhs': '11*x**2 - 9*x - 12'}]",
+      "stepChecks": {
+        "checkedChains": 8,
+        "passedChains": 6,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "(22x^2-18x-12)(-12)=-264x^2+216x+144 ( remainder  0)",
+            "lhs": "-264*x**2 + 216*x + 144",
+            "rhs": "-264*x**2 + 216*x"
+          },
+          {
+            "stepIndex": 2,
+            "line": "\\sqrt{121x^4-198x^3-183x^2+216x+144}=|11x^2-9x-12|",
+            "lhs": "sqrt(121*x**4 - 198*x**3 - 183*x**2 + 216*x + 144)",
+            "rhs": "11*x**2 - 9*x - 12"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 9,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-8-q2-i",
+      "item_type": "exercise",
+      "section": "3.8",
+      "validation_method": "alg_perfect_square_ab",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "a = 49, b = −42",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 8,
+        "passedChains": 8,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 9,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-8-q2-ii",
+      "item_type": "exercise",
+      "section": "3.8",
+      "validation_method": "alg_perfect_square_ab",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "a = 144, b = 264",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 8,
+        "passedChains": 8,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 10,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-8-q3-i",
+      "item_type": "exercise",
+      "section": "3.8",
+      "validation_method": "alg_perfect_square_mn",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PARTIAL",
+      "existing_result": "m = 30, n = 9",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 7,
+        "passedChains": 7,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 9,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "en_ta_unit_mismatch"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-8-q3-ii",
+      "item_type": "exercise",
+      "section": "3.8",
+      "validation_method": "alg_perfect_square_mn_multi",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PARTIAL",
+      "existing_result": "m = 24, n = −32 or m = 8, n = 32",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 7,
+        "passedChains": 7,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 9,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "en_ta_unit_mismatch"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-9-q1-i",
+      "item_type": "exercise",
+      "section": "3.9",
+      "validation_method": "alg_quad_form",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "x² + 9x + 20 = 0",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          0
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 4,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-9-q1-ii",
+      "item_type": "exercise",
+      "section": "3.9",
+      "validation_method": "alg_quad_form",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "3x² − 5x + 12 = 0",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-9-q1-iii",
+      "item_type": "exercise",
+      "section": "3.9",
+      "validation_method": "alg_quad_form",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "2x² + 3x − 2 = 0",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-9-q1-iv",
+      "item_type": "exercise",
+      "section": "3.9",
+      "validation_method": "alg_quad_form",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "x² + (2 − a)²x + (a + 5)² = 0",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 4,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-9-q2-i",
+      "item_type": "exercise",
+      "section": "3.9",
+      "validation_method": "alg_sum_prod",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "−3, −28",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-9-q2-ii",
+      "item_type": "exercise",
+      "section": "3.9",
+      "validation_method": "alg_sum_prod",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "−3, 0",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-9-q2-iii",
+      "item_type": "exercise",
+      "section": "3.9",
+      "validation_method": "alg_sum_prod",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "−1/3, −10/3",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': '3a^2+a=10', 'lhs': '310', 'rhs': '10'}, {'stepIndex': 0, 'line': '3a^2+a-10=0', 'lhs': '300', 'rhs': '0'}]",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "3a^2+a=10",
+            "lhs": "310",
+            "rhs": "10"
+          },
+          {
+            "stepIndex": 0,
+            "line": "3a^2+a-10=0",
+            "lhs": "300",
+            "rhs": "0"
+          }
+        ],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-9-q2-iv",
+      "item_type": "exercise",
+      "section": "3.9",
+      "validation_method": "alg_sum_prod",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "1/3, −4/3",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-10-q1-i",
+      "item_type": "exercise",
+      "section": "3.10",
+      "validation_method": "alg_quad_solve",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "−1/4, 2",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': 'x-2=0', 'lhs': '-9/4', 'rhs': '0'}, {'stepIndex': 2, 'line': 'x=-\\\\dfrac{1}{4} => x-2=0', 'lhs': 'x=[-1/4]', 'rhs': 'x=[2]'}]",
+      "stepChecks": {
+        "checkedChains": 6,
+        "passedChains": 4,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "x-2=0",
+            "lhs": "-9/4",
+            "rhs": "0"
+          },
+          {
+            "stepIndex": 2,
+            "line": "x=-\\dfrac{1}{4} => x-2=0",
+            "lhs": "x=[-1/4]",
+            "rhs": "x=[2]"
+          }
+        ],
+        "unparsedSteps": [
+          0,
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-10-q1-ii",
+      "item_type": "exercise",
+      "section": "3.10",
+      "validation_method": "alg_quad_solve",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "−2, 9/2",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': '3p^2-18=p^2+5p', 'lhs': '3*p**2 - 18', 'rhs': 'p**2 + 5*p'}, {'stepIndex': 2, 'line': '2p-9=0', 'lhs': '-13', 'rhs': '0'}, {'stepIndex': 2, 'line': 'p=-2 => 2p-9=0', 'lhs': 'p=[-2]', 'rhs': 'p=[9/2]'}]",
+      "stepChecks": {
+        "checkedChains": 5,
+        "passedChains": 2,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "3p^2-18=p^2+5p",
+            "lhs": "3*p**2 - 18",
+            "rhs": "p**2 + 5*p"
+          },
+          {
+            "stepIndex": 2,
+            "line": "2p-9=0",
+            "lhs": "-13",
+            "rhs": "0"
+          },
+          {
+            "stepIndex": 2,
+            "line": "p=-2 => 2p-9=0",
+            "lhs": "p=[-2]",
+            "rhs": "p=[9/2]"
+          }
+        ],
+        "unparsedSteps": [
+          0,
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 8,
+        "verifiedClaims": 8,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-10-q1-iii",
+      "item_type": "exercise",
+      "section": "3.10",
+      "validation_method": "alg_quad_solve_radical",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "−2, 9",
+      "discrepancy": "Step=[{'stepIndex': 1, 'line': '(a-9)(a+2)=0 => a=9', 'lhs': 'a=[-2, 9]', 'rhs': 'a=[9]'}, {'stepIndex': 1, 'line': 'a=9 => a=-2', 'lhs': 'a=[9]', 'rhs': 'a=[-2]'}, {'stepIndex': 2, 'line': 'a=-2: \\\\sqrt{(-2)(-9)}=\\\\sqrt{18}=3\\\\sqrt{2}', 'lhs': '-sqrt(2)/3', 'rhs': '3*sqrt(2)'}, {'stepIndex': 2, 'line': 'a=9: \\\\sqrt{9\\\\times 2}=\\\\sqrt{18}=3\\\\sqrt{2}', 'lhs': '3*sqrt(2)/2', 'rhs': '3*sqrt(2)'}]",
+      "stepChecks": {
+        "checkedChains": 7,
+        "passedChains": 3,
+        "failedChains": [
+          {
+            "stepIndex": 1,
+            "line": "(a-9)(a+2)=0 => a=9",
+            "lhs": "a=[-2, 9]",
+            "rhs": "a=[9]"
+          },
+          {
+            "stepIndex": 1,
+            "line": "a=9 => a=-2",
+            "lhs": "a=[9]",
+            "rhs": "a=[-2]"
+          },
+          {
+            "stepIndex": 2,
+            "line": "a=-2: \\sqrt{(-2)(-9)}=\\sqrt{18}=3\\sqrt{2}",
+            "lhs": "-sqrt(2)/3",
+            "rhs": "3*sqrt(2)"
+          },
+          {
+            "stepIndex": 2,
+            "line": "a=9: \\sqrt{9\\times 2}=\\sqrt{18}=3\\sqrt{2}",
+            "lhs": "3*sqrt(2)/2",
+            "rhs": "3*sqrt(2)"
+          }
+        ],
+        "unparsedSteps": [
+          0,
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-10-q1-iv",
+      "item_type": "exercise",
+      "section": "3.10",
+      "validation_method": "alg_quad_solve",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "−√2, −5/√2",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': '\\\\sqrt{2} x+5=0', 'lhs': '3', 'rhs': '0'}, {'stepIndex': 2, 'line': 'x=-\\\\sqrt{2} => \\\\sqrt{2} x+5=0', 'lhs': 'x=[-sqrt(2)]', 'rhs': 'x=[-5*sqrt(2)/2]'}]",
+      "stepChecks": {
+        "checkedChains": 7,
+        "passedChains": 5,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "\\sqrt{2} x+5=0",
+            "lhs": "3",
+            "rhs": "0"
+          },
+          {
+            "stepIndex": 2,
+            "line": "x=-\\sqrt{2} => \\sqrt{2} x+5=0",
+            "lhs": "x=[-sqrt(2)]",
+            "rhs": "x=[-5*sqrt(2)/2]"
+          }
+        ],
+        "unparsedSteps": [
+          0,
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 6,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-10-q1-v",
+      "item_type": "exercise",
+      "section": "3.10",
+      "validation_method": "alg_quad_solve",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "1/4, 1/4",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-10-q2",
+      "item_type": "exercise",
+      "section": "3.10",
+      "validation_method": "alg_word_volleyball",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "6",
+      "discrepancy": "Step=[{'stepIndex': 1, 'line': '(n-6)(n+5)=0 => n=6', 'lhs': 'n=[-5, 6]', 'rhs': 'n=[6]'}, {'stepIndex': 1, 'line': 'n=6 => n=-5', 'lhs': 'n=[6]', 'rhs': 'n=[-5]'}]",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 1,
+            "line": "(n-6)(n+5)=0 => n=6",
+            "lhs": "n=[-5, 6]",
+            "rhs": "n=[6]"
+          },
+          {
+            "stepIndex": 1,
+            "line": "n=6 => n=-5",
+            "lhs": "n=[6]",
+            "rhs": "n=[-5]"
+          }
+        ],
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 6,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-11-q1-i",
+      "item_type": "exercise",
+      "section": "3.11",
+      "validation_method": "alg_quad_solve",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "2/3, 2/3",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 5,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-11-q1-ii",
+      "item_type": "exercise",
+      "section": "3.11",
+      "validation_method": "alg_quad_solve_rational",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "−1, 3",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': '5x+7=(3x+2)(x-1)', 'lhs': '5*x + 7', 'rhs': '(x - 1)*(3*x + 2)'}, {'stepIndex': 0, 'line': '5x+7=3x^2-3x+2x-2', 'lhs': '5*x + 7', 'rhs': '3*x**2 - x - 2'}, {'stepIndex': 0, 'line': '5x+7=3x^2-x-2', 'lhs': '5*x + 7', 'rhs': '3*x**2 - x - 2'}]",
+      "stepChecks": {
+        "checkedChains": 5,
+        "passedChains": 2,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "5x+7=(3x+2)(x-1)",
+            "lhs": "5*x + 7",
+            "rhs": "(x - 1)*(3*x + 2)"
+          },
+          {
+            "stepIndex": 0,
+            "line": "5x+7=3x^2-3x+2x-2",
+            "lhs": "5*x + 7",
+            "rhs": "3*x**2 - x - 2"
+          },
+          {
+            "stepIndex": 0,
+            "line": "5x+7=3x^2-x-2",
+            "lhs": "5*x + 7",
+            "rhs": "3*x**2 - x - 2"
+          }
+        ],
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 11,
+        "verifiedClaims": 11,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-11-q2-i",
+      "item_type": "exercise",
+      "section": "3.11",
+      "validation_method": "alg_quad_solve",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "2, 1/2",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 5,
+        "passedChains": 5,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-11-q2-ii",
+      "item_type": "exercise",
+      "section": "3.11",
+      "validation_method": "alg_quad_solve",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(3 + √3)/√2, (3 − √3)/√2",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 6,
+        "verifiedClaims": 6,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-11-q2-iii",
+      "item_type": "exercise",
+      "section": "3.11",
+      "validation_method": "alg_quad_solve",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "−1, 23/3",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 5,
+        "passedChains": 5,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-11-q2-iv",
+      "item_type": "exercise",
+      "section": "3.11",
+      "validation_method": "alg_quad_solve_param",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "FAIL",
+      "tamil_status": "PASS",
+      "existing_result": "(a + b)/6, (a − b)/6",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': 'y=\\\\dfrac{12(a\\\\pm b)}{72}=\\\\dfrac{a+b}{6}', 'lhs': 'a*b/6', 'rhs': 'a/6 + b/6'}]",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "y=\\dfrac{12(a\\pm b)}{72}=\\dfrac{a+b}{6}",
+            "lhs": "a*b/6",
+            "rhs": "a/6 + b/6"
+          }
+        ],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 6,
+        "failedClaims": 1,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-11-q3",
+      "item_type": "exercise",
+      "section": "3.11",
+      "validation_method": "alg_word_ball_slope",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "3.75 seconds",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 6,
+        "verifiedClaims": 6,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-12-q1",
+      "item_type": "exercise",
+      "section": "3.12",
+      "validation_method": "alg_word_reciprocal",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "5, −1/5",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': 'x-\\\\dfrac{1}{x}=\\\\dfrac{24}{5}', 'lhs': 'x - 1/x', 'rhs': '24/5'}, {'stepIndex': 1, 'line': '5x(x-\\\\dfrac{1}{x})=5x(\\\\dfrac{24}{5})', 'lhs': '5*x*(x - 1/x)', 'rhs': '24*x'}, {'stepIndex': 1, 'line': '5x^2-5=24x', 'lhs': '5*x**2 - 5', 'rhs': '24*x'}]",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "x-\\dfrac{1}{x}=\\dfrac{24}{5}",
+            "lhs": "x - 1/x",
+            "rhs": "24/5"
+          },
+          {
+            "stepIndex": 1,
+            "line": "5x(x-\\dfrac{1}{x})=5x(\\dfrac{24}{5})",
+            "lhs": "5*x*(x - 1/x)",
+            "rhs": "24*x"
+          },
+          {
+            "stepIndex": 1,
+            "line": "5x^2-5=24x",
+            "lhs": "5*x**2 - 5",
+            "rhs": "24*x"
+          }
+        ],
+        "unparsedSteps": [
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 9,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-12-q2",
+      "item_type": "exercise",
+      "section": "3.12",
+      "validation_method": "alg_word_pathway",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "1.5 m",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 8,
+        "verifiedClaims": 8,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-12-q3",
+      "item_type": "exercise",
+      "section": "3.12",
+      "validation_method": "alg_word_bus_speed",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "45 km/hr",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': '\\\\dfrac{90}{x}-\\\\dfrac{90}{x+15}=\\\\dfrac{1}{2}', 'lhs': '-90/(x + 15) + 90/x', 'rhs': '1/2'}, {'stepIndex': 1, 'line': '\\\\dfrac{90(x+15)-90x}{x(x+15)}=\\\\dfrac{1}{2}', 'lhs': '1350/(x*(x + 15))', 'rhs': '1/2'}, {'stepIndex': 1, 'line': '\\\\dfrac{1350}{x^2+15x}=\\\\dfrac{1}{2}', 'lhs': '1350/(x**2 + 15*x)', 'rhs': '1/2'}]",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "\\dfrac{90}{x}-\\dfrac{90}{x+15}=\\dfrac{1}{2}",
+            "lhs": "-90/(x + 15) + 90/x",
+            "rhs": "1/2"
+          },
+          {
+            "stepIndex": 1,
+            "line": "\\dfrac{90(x+15)-90x}{x(x+15)}=\\dfrac{1}{2}",
+            "lhs": "1350/(x*(x + 15))",
+            "rhs": "1/2"
+          },
+          {
+            "stepIndex": 1,
+            "line": "\\dfrac{1350}{x^2+15x}=\\dfrac{1}{2}",
+            "lhs": "1350/(x**2 + 15*x)",
+            "rhs": "1/2"
+          }
+        ],
+        "unparsedSteps": [
+          2,
+          3
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-12-q4",
+      "item_type": "exercise",
+      "section": "3.12",
+      "validation_method": "alg_word_ages_quad",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "20 years, 10 years",
+      "discrepancy": "Step=[{'stepIndex': 3, 'line': 'Girl =2x=20  years', 'lhs': '2*x', 'rhs': '20*a*e*r*s*y'}, {'stepIndex': 3, 'line': 'Sister =x=10  years', 'lhs': 'x', 'rhs': '10*a*e*r*s*y'}]",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 3,
+            "line": "Girl =2x=20  years",
+            "lhs": "2*x",
+            "rhs": "20*a*e*r*s*y"
+          },
+          {
+            "stepIndex": 3,
+            "line": "Sister =x=10  years",
+            "lhs": "x",
+            "rhs": "10*a*e*r*s*y"
+          }
+        ],
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 8,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-12-q5",
+      "item_type": "exercise",
+      "section": "3.12",
+      "validation_method": "alg_word_circle_pole",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "Yes, 12 m, 16 m",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': '(x + 16)(x - 12) = 0 => x = 12', 'lhs': 'x=[-16, 12]', 'rhs': 'x=[12]'}, {'stepIndex': 2, 'line': 'x = 12 => x = -16', 'lhs': 'x=[12]', 'rhs': 'x=[-16]'}]",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "(x + 16)(x - 12) = 0 => x = 12",
+            "lhs": "x=[-16, 12]",
+            "rhs": "x=[12]"
+          },
+          {
+            "stepIndex": 2,
+            "line": "x = 12 => x = -16",
+            "lhs": "x=[12]",
+            "rhs": "x=[-16]"
+          }
+        ],
+        "unparsedSteps": [
+          1,
+          2,
+          3
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 12,
+        "verifiedClaims": 10,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-12-q6",
+      "item_type": "exercise",
+      "section": "3.12",
+      "validation_method": "alg_word_bees",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "72",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': '\\\\sqrt{\\\\dfrac{2x^2}{2}}+\\\\dfrac{8}{9}(2x^2)+2=2x^2', 'lhs': '16*x**2/9 + Abs(x) + 2', 'rhs': '2*x**2'}, {'stepIndex': 0, 'line': 'x+\\\\dfrac{16}{9}x^2+2=2x^2', 'lhs': '16*x**2/9 + x + 2', 'rhs': '2*x**2'}, {'stepIndex': 0, 'line': '\\\\sqrt{\\\\dfrac{2x^2}{2}}+\\\\dfrac{8}{9}(2x^2)+2=2x^2 => x+\\\\dfrac{16}{9}x^2+2=2x^2', 'lhs': 'x=[-6, 6]', 'rhs': 'x=[-3/2, 6]'}, {'stepIndex': 1, 'line': '9x+16x^2+18=18x^2', 'lhs': '16*x**2 + 9*x + 18', 'rhs': '18*x**2'}]",
+      "stepChecks": {
+        "checkedChains": 6,
+        "passedChains": 2,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "\\sqrt{\\dfrac{2x^2}{2}}+\\dfrac{8}{9}(2x^2)+2=2x^2",
+            "lhs": "16*x**2/9 + Abs(x) + 2",
+            "rhs": "2*x**2"
+          },
+          {
+            "stepIndex": 0,
+            "line": "x+\\dfrac{16}{9}x^2+2=2x^2",
+            "lhs": "16*x**2/9 + x + 2",
+            "rhs": "2*x**2"
+          },
+          {
+            "stepIndex": 0,
+            "line": "\\sqrt{\\dfrac{2x^2}{2}}+\\dfrac{8}{9}(2x^2)+2=2x^2 => x+\\dfrac{16}{9}x^2+2=2x^2",
+            "lhs": "x=[-6, 6]",
+            "rhs": "x=[-3/2, 6]"
+          },
+          {
+            "stepIndex": 1,
+            "line": "9x+16x^2+18=18x^2",
+            "lhs": "16*x**2 + 9*x + 18",
+            "rhs": "18*x**2"
+          }
+        ],
+        "unparsedSteps": [
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 8,
+        "verifiedClaims": 6,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-12-q7",
+      "item_type": "exercise",
+      "section": "3.12",
+      "validation_method": "alg_word_sound_intensity",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "28 m, 42 m",
+      "discrepancy": "Step=[{'stepIndex': 1, 'line': '4(4900-140x+x^2)=9x^2', 'lhs': '4*x**2 - 560*x + 19600', 'rhs': '9*x**2'}, {'stepIndex': 1, 'line': '19600-560x+4x^2=9x^2', 'lhs': '4*x**2 - 560*x + 19600', 'rhs': '9*x**2'}]",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 1,
+        "failedChains": [
+          {
+            "stepIndex": 1,
+            "line": "4(4900-140x+x^2)=9x^2",
+            "lhs": "4*x**2 - 560*x + 19600",
+            "rhs": "9*x**2"
+          },
+          {
+            "stepIndex": 1,
+            "line": "19600-560x+4x^2=9x^2",
+            "lhs": "4*x**2 - 560*x + 19600",
+            "rhs": "9*x**2"
+          }
+        ],
+        "unparsedSteps": [
+          1,
+          2,
+          3
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 8,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-12-q8",
+      "item_type": "exercise",
+      "section": "3.12",
+      "validation_method": "alg_word_gravel_path",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "2 m",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          1,
+          2,
+          3
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 9,
+        "verifiedClaims": 8,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-12-q9",
+      "item_type": "exercise",
+      "section": "3.12",
+      "validation_method": "alg_word_right_tri",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "7 cm",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': '(x-7)(x-24)=0 => x=7', 'lhs': 'x=[7, 24]', 'rhs': 'x=[7]'}, {'stepIndex': 2, 'line': 'x=7 => x=24', 'lhs': 'x=[7]', 'rhs': 'x=[24]'}]",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "(x-7)(x-24)=0 => x=7",
+            "lhs": "x=[7, 24]",
+            "rhs": "x=[7]"
+          },
+          {
+            "stepIndex": 2,
+            "line": "x=7 => x=24",
+            "lhs": "x=[7]",
+            "rhs": "x=[24]"
+          }
+        ],
+        "unparsedSteps": [
+          0,
+          1,
+          2,
+          3
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 8,
+        "verifiedClaims": 6,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-13-q1-i",
+      "item_type": "exercise",
+      "section": "3.13",
+      "validation_method": "alg_discriminant",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "Real and unequal",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 3,
+        "failedChains": [],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-13-q1-ii",
+      "item_type": "exercise",
+      "section": "3.13",
+      "validation_method": "alg_discriminant",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "Real and unequal",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 3,
+        "failedChains": [],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-13-q1-iii",
+      "item_type": "exercise",
+      "section": "3.13",
+      "validation_method": "alg_discriminant",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "Not real",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-13-q1-iv",
+      "item_type": "exercise",
+      "section": "3.13",
+      "validation_method": "alg_discriminant",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "Real and equal",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 8,
+        "verifiedClaims": 8,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-13-q1-v",
+      "item_type": "exercise",
+      "section": "3.13",
+      "validation_method": "alg_discriminant_sym",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "Real and equal",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 8,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-13-q2-i",
+      "item_type": "exercise",
+      "section": "3.13",
+      "validation_method": "alg_discriminant_k",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "2, 3",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 10,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-13-q2-ii",
+      "item_type": "exercise",
+      "section": "3.13",
+      "validation_method": "alg_discriminant_k",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "1, 1/9",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 12,
+        "verifiedClaims": 12,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-13-q3",
+      "item_type": "exercise",
+      "section": "3.13",
+      "validation_method": "alg_discriminant_ap_proof",
+      "answer_status": "UNVERIFIABLE",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "Hence proved: b, a, c are in arithmetic progression.",
+      "discrepancy": "Proposition=TRUE; Conclusion=PASS; ProofSteps=UNVERIFIABLE (separate statuses)",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          1,
+          2,
+          3
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 11,
+        "verifiedClaims": 11,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-13-q4",
+      "item_type": "exercise",
+      "section": "3.13",
+      "validation_method": "alg_discriminant_pos_proof",
+      "answer_status": "UNVERIFIABLE",
+      "step_status": "PARTIAL",
+      "working_status": "FAIL",
+      "tamil_status": "PASS",
+      "existing_result": "Hence proved: the roots are real and unequal.",
+      "discrepancy": "Proposition=TRUE; Conclusion=PASS; ProofSteps=PARTIAL (separate statuses)",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 11,
+        "verifiedClaims": 7,
+        "failedClaims": 1,
+        "unsupportedClaims": 3,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-13-q5",
+      "item_type": "exercise",
+      "section": "3.13",
+      "validation_method": "alg_discriminant_cubic_proof",
+      "answer_status": "UNVERIFIABLE",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "Hence proved: either a = 0 or a³ + b³ + c³ = 3abc.",
+      "discrepancy": "Proposition=TRUE; Conclusion=PASS; ProofSteps=FAIL (separate statuses)",
+      "stepChecks": {
+        "checkedChains": 6,
+        "passedChains": 5,
+        "failedChains": [
+          {
+            "stepIndex": 3,
+            "line": "a^3+b^3+c^3=3abc",
+            "lhs": "a**3 + b**3 + c**3",
+            "rhs": "3*a*b*c"
+          }
+        ],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 12,
+        "verifiedClaims": 11,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q1-i",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_sym",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "((α + β)² − 2αβ)/(3αβ)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q1-ii",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_sym",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "(α + β)/(αβ)²",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q1-iii",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_sym",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "9αβ − 3(α + β) + 1",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q1-iv",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_sym",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "((α + β)² − 2αβ + 3(α + β))/(αβ)",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q2-i",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_eval",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "7/5",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': '1/α + 1/β = (α + β)/(αβ) = (7/2)/(5/2) = 7/5', 'lhs': '(α + β)/(α*β)', 'rhs': '7/5'}]",
+      "stepChecks": {
+        "checkedChains": 4,
+        "passedChains": 3,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "1/α + 1/β = (α + β)/(αβ) = (7/2)/(5/2) = 7/5",
+            "lhs": "(α + β)/(α*β)",
+            "rhs": "7/5"
+          }
+        ],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q2-ii",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_eval",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "29/10",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 4,
+        "passedChains": 4,
+        "failedChains": [],
+        "unparsedSteps": [
+          0
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 6,
+        "verifiedClaims": 5,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q2-iii",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_eval",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "13/6",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 7,
+        "passedChains": 7,
+        "failedChains": [],
+        "unparsedSteps": [
+          0
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 8,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q3-i",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_new_quad",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "x² − 44x + 16 = 0",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 5,
+        "passedChains": 5,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 6,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 3,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q3-ii",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_new_quad",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "x² − 3x − 1 = 0",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 3,
+        "passedChains": 3,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 6,
+        "verifiedClaims": 4,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q3-iii",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_new_quad",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "x² − 24x − 64 = 0",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 7,
+        "verifiedClaims": 7,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q4",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_solve_a",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "−15, 15",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 11,
+        "verifiedClaims": 9,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q5",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_solve_a",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "−24, 24",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 2,
+        "passedChains": 2,
+        "failedChains": [],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 11,
+        "verifiedClaims": 8,
+        "failedClaims": 0,
+        "unsupportedClaims": 3,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-14-q6",
+      "item_type": "exercise",
+      "section": "3.14",
+      "validation_method": "alg_roots_solve_k",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "FAIL",
+      "tamil_status": "PASS",
+      "existing_result": "−36",
+      "discrepancy": "Step=[{'stepIndex': 3, 'line': 'Check:  3(x-3)(x-9)=3x^2-36x+81=0', 'lhs': 'C*c*e*h*k*(x - 9)*(x - 3)/3', 'rhs': '3*x**2 - 36*x + 81'}]",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 3,
+            "line": "Check:  3(x-3)(x-9)=3x^2-36x+81=0",
+            "lhs": "C*c*e*h*k*(x - 9)*(x - 3)/3",
+            "rhs": "3*x**2 - 36*x + 81"
+          }
+        ],
+        "unparsedSteps": [
+          1,
+          3
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 10,
+        "verifiedClaims": 7,
+        "failedClaims": 1,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-15-q1-i",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_discount",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "₹6500",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-15-q1-ii",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_discount",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "₹1250",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-15-q2-i",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_inv",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "y = 8",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-15-q2-ii",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_inv",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "x = 4",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          0,
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-15-q3-i",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_direct_mp",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "k = 1/2; y = 4.5",
+      "discrepancy": "Step=[{'stepIndex': 1, 'line': 'k = \\\\dfrac{y}{x} = \\\\dfrac{1}{2} = \\\\dfrac{2}{4} = \\\\dfrac{3}{6} = \\\\dfrac{6}{12} = \\\\dfrac{1}{2}', 'lhs': 'y/x', 'rhs': '1/2'}]",
+      "stepChecks": {
+        "checkedChains": 5,
+        "passedChains": 4,
+        "failedChains": [
+          {
+            "stepIndex": 1,
+            "line": "k = \\dfrac{y}{x} = \\dfrac{1}{2} = \\dfrac{2}{4} = \\dfrac{3}{6} = \\dfrac{6}{12} = \\dfrac{1}{2}",
+            "lhs": "y/x",
+            "rhs": "1/2"
+          }
+        ],
+        "unparsedSteps": [
+          0,
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-15-q3-ii",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_direct",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "x = 15",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 4,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-15-q4-i",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_table_inv",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PARTIAL",
+      "tamil_status": "FAIL",
+      "existing_result": "y = 18 minutes",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 4,
+        "passedChains": 4,
+        "failedChains": [],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "en_ta_number_mismatch"
+      ]
+    },
+    {
+      "id": "c10-3-ex3-15-q4-ii",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_table_inv",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "10 pipes",
+      "discrepancy": "Step=[{'stepIndex': 2, 'line': 'x = \\\\dfrac{90}{9} = 10  pipes', 'lhs': '10', 'rhs': '10*e*i*p**2*s'}]",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 0,
+        "failedChains": [
+          {
+            "stepIndex": 2,
+            "line": "x = \\dfrac{90}{9} = 10  pipes",
+            "lhs": "10",
+            "rhs": "10*e*i*p**2*s"
+          }
+        ],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-15-q5-i",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_table_k",
+      "answer_status": "PASS",
+      "step_status": "PASS",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "360",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 4,
+        "passedChains": 4,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 4,
+        "verifiedClaims": 4,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-15-q5-ii",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_table_inv",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "₹30",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-15-q6-i",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_table_mp",
+      "answer_status": "PASS",
+      "step_status": "FAIL",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "Direct variation; ₹90",
+      "discrepancy": "Step=[{'stepIndex': 0, 'line': 'y/x = 60/4 = 120/8 = 180/12 = 360/24 = 15', 'lhs': 'y/x', 'rhs': '15'}]",
+      "stepChecks": {
+        "checkedChains": 5,
+        "passedChains": 4,
+        "failedChains": [
+          {
+            "stepIndex": 0,
+            "line": "y/x = 60/4 = 120/8 = 180/12 = 360/24 = 15",
+            "lhs": "y/x",
+            "rhs": "15"
+          }
+        ],
+        "unparsedSteps": [
+          2
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 2,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "c10-3-ex3-15-q6-ii",
+      "item_type": "exercise",
+      "section": "3.15",
+      "validation_method": "alg_variation_table_dir",
+      "answer_status": "PASS",
+      "step_status": "PARTIAL",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "10 hrs",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 1,
+        "passedChains": 1,
+        "failedChains": [],
+        "unparsedSteps": [
+          1
+        ]
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-linear-3vars",
+      "item_type": "concept",
+      "section": "3.1–3.2",
+      "validation_method": "concept_linear_3vars",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "choice[1]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 3,
+        "verifiedClaims": 3,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-poly-gcd",
+      "item_type": "concept",
+      "section": "3.3.1",
+      "validation_method": "concept_poly_gcd",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "choice[2]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 1,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-poly-lcm-law",
+      "item_type": "concept",
+      "section": "3.3.2–3.3.3",
+      "validation_method": "concept_poly_lcm_law",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "choice[0]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-rational-excluded",
+      "item_type": "concept",
+      "section": "3.4.1–3.4.2",
+      "validation_method": "concept_rational_excluded",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "choice[1]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-rational-ops",
+      "item_type": "concept",
+      "section": "3.4.3",
+      "validation_method": "concept_rational_ops",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "choice[2]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 1,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-poly-sqrt",
+      "item_type": "concept",
+      "section": "3.5",
+      "validation_method": "concept_poly_sqrt",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "PASS",
+      "existing_result": "choice[1]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-quad-form",
+      "item_type": "concept",
+      "section": "3.6.1–3.6.3",
+      "validation_method": "concept_quad_form",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "existing_result": "choice[0]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 1,
+        "verifiedClaims": 0,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-quad-solve",
+      "item_type": "concept",
+      "section": "3.6.4–3.6.5",
+      "validation_method": "concept_completing_square",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "choice[2]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-discriminant",
+      "item_type": "concept",
+      "section": "3.6.6",
+      "validation_method": "concept_discriminant",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "choice[1]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-roots-coeff",
+      "item_type": "concept",
+      "section": "3.6.7",
+      "validation_method": "concept_roots_coeff",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "choice[2]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 2,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-variations",
+      "item_type": "concept",
+      "section": "3.7",
+      "validation_method": "concept_variations",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PARTIAL",
+      "tamil_status": "FAIL",
+      "existing_result": "choice[0]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 2,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": [
+        "en_ta_number_mismatch"
+      ]
+    },
+    {
+      "id": "g10-ch3-quad-graphs",
+      "item_type": "concept",
+      "section": "3.8",
+      "validation_method": "concept_quad_graphs",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "PASS",
+      "tamil_status": "PASS",
+      "existing_result": "choice[2]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 1,
+        "verifiedClaims": 1,
+        "failedClaims": 0,
+        "unsupportedClaims": 0,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-matrix-types",
+      "item_type": "concept",
+      "section": "3.9.1–3.9.2",
+      "validation_method": "concept_matrix_transpose_order",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "existing_result": "choice[1]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 1,
+        "verifiedClaims": 0,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    },
+    {
+      "id": "g10-ch3-matrix-ops",
+      "item_type": "concept",
+      "section": "3.9.3",
+      "validation_method": "concept_matrix_product_order",
+      "answer_status": "PASS",
+      "step_status": "UNVERIFIABLE",
+      "working_status": "UNVERIFIABLE",
+      "tamil_status": "PASS",
+      "existing_result": "choice[0]",
+      "discrepancy": "",
+      "stepChecks": {
+        "checkedChains": 0,
+        "passedChains": 0,
+        "failedChains": [],
+        "unparsedSteps": []
+      },
+      "claimChecks": {
+        "totalClaims": 1,
+        "verifiedClaims": 0,
+        "failedClaims": 0,
+        "unsupportedClaims": 1,
+        "assumptions": [
+          "real_valued_variables"
+        ]
+      },
+      "tamilFlags": []
+    }
+  ]
+}

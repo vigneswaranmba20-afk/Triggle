@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.5",
+  "gitCommit": "0b7b1fa",
+  "expandedV1_4TamilCounts": {
+    "PASS": 677,
+    "FAIL": 34,
+    "PARTIAL": 19,
+    "UNVERIFIABLE": 35
+  },
+  "newDomainV1_5TamilCounts": {
+    "PASS": 191,
+    "PARTIAL": 8,
+    "FAIL": 2,
+    "UNVERIFIABLE": 10
+  },
+  "grade9Chapter1TamilCounts": {
+    "PASS": 121,
+    "PARTIAL": 4,
+    "FAIL": 2
+  },
+  "grade10Chapter1TamilCounts": {
+    "PASS": 70,
+    "PARTIAL": 4,
+    "UNVERIFIABLE": 10
+  },
+  "newDomainTamilFails": [
+    {
+      "id": "g9-ch1-ex1.2-q6-ii",
+      "grade": 9,
+      "flags": [
+        "step_1_semantic_number_mismatch:en=['5'],ta=['4']"
+      ]
+    },
+    {
+      "id": "g9-ch1-ex1.6-q4",
+      "grade": 9,
+      "flags": [
+        "step_1_semantic_number_mismatch:en=['2'],ta=['3']"
+      ]
+    }
+  ]
+}

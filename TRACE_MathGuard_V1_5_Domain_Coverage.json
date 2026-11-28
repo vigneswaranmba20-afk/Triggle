@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.5",
+  "gitCommit": "0b7b1fa",
+  "frozenBenchmark": {
+    "total": 334,
+    "statuses": {
+      "PARTIAL": 74,
+      "PASS": 256,
+      "UNVERIFIABLE": 4
+    },
+    "claims": {
+      "total": 1708,
+      "verified": 1595,
+      "failed": 0,
+      "unsupported": 113,
+      "verifiedRatePct": 93.38
+    },
+    "answerStatuses": {
+      "PASS": 328,
+      "UNVERIFIABLE": 6
+    },
+    "runtimeSec": 78.86,
+    "peakMemoryMB": 97.42
+  },
+  "expandedV1_4Benchmark": {
+    "total": 765,
+    "workingStatusCounts": {
+      "PARTIAL": 240,
+      "PASS": 406,
+      "UNVERIFIABLE": 119
+    },
+    "answerStatusCounts": {
+      "UNVERIFIABLE": 266,
+      "PASS": 499
+    },
+    "tamilStatusCounts": {
+      "PASS": 677,
+      "FAIL": 34,
+      "PARTIAL": 19,
+      "UNVERIFIABLE": 35
+    },
+    "claims": {
+      "total": 3119,
+      "verified": 2536,
+      "verifiedRatePct": 81.31
+    },
+    "runtimeSec": 116.15
+  },
+  "newDomainV1_5": {
+    "grade9Chapter1": {
+      "inventory": {
+        "totalRuntimeItems": 156,
+        "exercises": 120,
+        "nonExercises": 36,
+        "concepts": 7
+      },
+      "summary": {
+        "totalItems": 127,
+        "workingStatusCounts": {
+          "UNVERIFIABLE": 60,
+          "PARTIAL": 12,
+          "FAIL": 19,
+          "PASS": 36
+        },
+        "answerStatusCounts": {
+          "UNVERIFIABLE": 74,
+          "FAIL": 17,
+          "PASS": 36
+        },
+        "tamilStatusCounts": {
+          "PASS": 121,
+          "PARTIAL": 4,
+          "FAIL": 2
+        },
+        "claims": {
+          "total": 247,
+          "verified": 95,
+          "failed": 30,
+          "unsupported": 122,
+          "verifiedRatePct": 38.46
+        },
+        "ambiguityFlagCounts": {
+          "external_diagram_dependency": 3,
+          "possible_missing_universal_set": 3
+        }
+      }
+    },
+    "grade10Chapter1": {
+      "inventory": {
+        "totalRuntimeItems": 74,
+        "exercises": 74,
+        "nonExercises": 0,
+        "concepts": 10
+      },
+      "summary": {
+        "totalItems": 84,
+        "workingStatusCounts": {
+          "FAIL": 11,
+          "PASS": 15,
+          "UNVERIFIABLE": 29,
+          "PARTIAL": 29
+        },
+        "answerStatusCounts": {
+          "FAIL": 12,
+          "PASS": 15,
+          "UNVERIFIABLE": 57
+        },
+        "tamilStatusCounts": {
+          "PASS": 70,
+          "PARTIAL": 4,
+          "UNVERIFIABLE": 10
+        },
+        "claims": {
+          "total": 281,
+          "verified": 118,
+          "failed": 19,
+          "unsupported": 144,
+          "verifiedRatePct": 41.99
+        },
+        "ambiguityFlagCounts": {
+          "external_diagram_dependency": 1
+        }
+      }
+    },
+    "combinedSummary": {
+      "totalItems": 211,
+      "workingStatusCounts": {
+        "UNVERIFIABLE": 89,
+        "PARTIAL": 41,
+        "FAIL": 30,
+        "PASS": 51
+      },
+      "answerStatusCounts": {
+        "UNVERIFIABLE": 131,
+        "FAIL": 29,
+        "PASS": 51
+      },
+      "tamilStatusCounts": {
+        "PASS": 191,
+        "PARTIAL": 8,
+        "FAIL": 2,
+        "UNVERIFIABLE": 10
+      },
+      "claims": {
+        "total": 528,
+        "verified": 213,
+        "failed": 49,
+        "unsupported": 266,
+        "verifiedRatePct": 40.34
+      },
+      "ambiguityFlagCounts": {
+        "external_diagram_dependency": 4,
+        "possible_missing_universal_set": 3
+      }
+    }
+  }
+}

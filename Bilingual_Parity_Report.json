@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.5a",
+  "gitCommit": "f026a79",
+  "expandedV1_4TamilCounts": {
+    "PASS": 677,
+    "FAIL": 34,
+    "PARTIAL": 19,
+    "UNVERIFIABLE": 35
+  },
+  "grade9Chapter1TamilCounts": {
+    "PASS": 117,
+    "PARTIAL": 4,
+    "UNVERIFIABLE": 6
+  },
+  "grade10Chapter1TamilCounts": {
+    "PASS": 68,
+    "PARTIAL": 4,
+    "UNVERIFIABLE": 12
+  },
+  "newDomainTamilFails": []
+}
