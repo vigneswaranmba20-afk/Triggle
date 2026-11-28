@@ -1,4 +1,4 @@
-"""Apply only Cloudflare-specific public metadata to an already verified release."""
+"""Adapt an already verified release to Cloudflare Pages routes and identity."""
 import hashlib
 import json
 import re
@@ -12,11 +12,13 @@ PRIMARY = "https://samacheermaths.in/site/"
 
 def adapt(root):
     site = root / "site"
+    root_path = root / "index.html"
     html_path = site / "index.html"
     manifest_path = site / "manifest.webmanifest"
     sitemap_path = site / "sitemap.xml"
     worker_path = site / "service-worker.js"
     html = html_path.read_text(encoding="utf-8")
+    root_html = root_path.read_text(encoding="utf-8")
     worker = worker_path.read_text(encoding="utf-8")
     sitemap = sitemap_path.read_text(encoding="utf-8")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
@@ -29,6 +31,10 @@ def adapt(root):
     old = stamp.group(1)
     assert worker.count(f'"version":"{old}"') == 1, "Worker/cache stamp mismatch"
     head = head.replace(LEGACY + "index.html", PRIMARY).replace(LEGACY, PRIMARY)
+    head = head.replace("location.replace('./index.html')", "location.replace('./')")
+    body = body.replace('href="./index.html', 'href="./')
+    assert "./site/index.html" in root_html
+    root_html = root_html.replace("./site/index.html", "./site/")
     assert LEGACY not in head
     assert f'<link rel="canonical" href="{PRIMARY}">' in head
     assert f'hreflang="ta" href="{PRIMARY}?lang=ta"' in head
@@ -43,16 +49,18 @@ def adapt(root):
     assert sum("lang=ta" in u for u in urls) == 20
     assert sum("class=9" in u for u in urls) == 20
     assert sum("class=10" in u for u in urls) == 18
-    # The published worker must acquire a new cache even if only identity changed.
-    new = hashlib.sha256((head + manifest_text + sitemap + old).encode()).hexdigest()[:16]
+    # Include the host entry in the cache identity and use it to fetch the shell.
+    entry = '"entry":"./"'
+    new = hashlib.sha256((head + body + manifest_text + sitemap + entry + old).encode()).hexdigest()[:16]
     assert new != old
     head = head.replace(f'data-student-release="{old}"', f'data-student-release="{new}"', 1)
-    worker = worker.replace(f'"version":"{old}"', f'"version":"{new}"', 1)
+    worker = worker.replace(f'"version":"{old}"', f'"version":"{new}",{entry}', 1)
+    root_path.write_text(root_html, encoding="utf-8")
     html_path.write_text(head + sep + body, encoding="utf-8")
     manifest_path.write_text(manifest_text, encoding="utf-8")
     sitemap_path.write_text(sitemap, encoding="utf-8")
     worker_path.write_text(worker, encoding="utf-8")
-    print("PASS Cloudflare canonical, language alternates, 40 sitemap URLs, PWA scope/identity and synchronized cache revision")
+    print("PASS Cloudflare entry routes, public metadata, PWA identity and synchronized cache revision")
 
 if __name__ == "__main__":
     adapt(Path(sys.argv[1]))

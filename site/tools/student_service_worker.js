@@ -7,6 +7,7 @@ const prefix = 'triggle-lightspeed-';
 const cacheName = prefix + release.version;
 const url = file => new URL(file, scope).href;
 const shell = url('./index.html');
+const entry = url(release.entry || './index.html');
 const immutable = new Set(release.immutable.map(url));
 const media = new Set(release.media.map(url));
 const shellAssets = release.shell.map(url);
@@ -34,7 +35,7 @@ function canonical(address) {
 
 async function fetchAsset(address, current, request = address) {
   const response = await fetch(request);
-  if (response.ok && response.type !== 'opaque') {
+  if (response.ok && !response.redirected) {
     // Storage quota or browser eviction must never prevent online learning.
     try { await current.put(address, response.clone()); } catch {}
   }
@@ -63,16 +64,18 @@ async function carryForward(current) {
   const visited = new Set();
   const supporting = new Set();
   const legacyFigures = new Map();
+  let brokenShell = false;
   for (const name of await caches.keys()) {
     if (name === cacheName || (!legacy(name) && !name.startsWith(prefix))) continue;
     const prior = await caches.open(name);
+    if (entry !== shell && (await prior.match(shell))?.redirected) brokenShell = true;
     for (const entry of await prior.keys()) {
       const address = new URL(entry.url);
       if (!address.href.startsWith(scope)) continue;
       if (legacy(name)) {
         // Previous releases precached every chapter. Only keep chapters for
         // which an actual navigation was stored, plus the current visit.
-        if (address.pathname === new URL(shell).pathname && address.search) {
+        if ([scope, shell].includes(address.origin + address.pathname) && address.search) {
           const chapter = pageChapter(address);
           if (chapter) visited.add(chapter);
         }
@@ -101,25 +104,39 @@ async function carryForward(current) {
   if (!(await Promise.all(required.map(file => current.match(file)))).every(Boolean)) {
     throw Error('Triggle could not migrate previously opened chapters');
   }
+  return brokenShell;
+}
+
+function fetchShell() {
+  // A followed redirect cannot be replayed to a browser navigation in manual
+  // redirect mode. Fetch the host's direct entry even for legacy deep links.
+  return fetch(entry, {cache:'reload', redirect:'error'});
+}
+
+async function matchesRelease(response) {
+  return response.ok && !response.redirected &&
+    (await response.clone().text()).includes('data-student-release="' + release.version + '"');
 }
 
 self.addEventListener('install', event => {
   event.waitUntil((async () => {
     const current = await cache();
     try {
-      const response = await fetch(new Request(shell, {cache:'reload'}));
-      if (!response.ok || !(await response.clone().text()).includes('data-student-release="' + release.version + '"')) {
+      const response = await fetchShell();
+      if (!await matchesRelease(response)) {
         throw Error('Triggle release shell mismatch');
       }
       // Cache.addAll is atomic. A partial shell never becomes an active worker.
       await current.addAll(shellAssets);
       await current.put(shell, response);
-      await carryForward(current);
+      // A worker with a poisoned shell cannot navigate its open clients away.
+      // Once their saved chapters are ready, replace that worker immediately.
+      if (await carryForward(current)) await self.skipWaiting();
     } catch (error) {
       await caches.delete(cacheName);
       throw error;
     }
-    // The currently active release stays in control until its clients close.
+    // Healthy releases keep control until their clients close.
   })());
 });
 
@@ -131,13 +148,16 @@ self.addEventListener('activate', event => {
   })());
 });
 
-async function navigation(request) {
+async function navigation(address) {
+  if (entry !== shell && address.origin + address.pathname === shell) {
+    return Response.redirect(entry + address.search, 308);
+  }
   const current = await cache();
   const saved = await current.match(shell);
-  if (saved) return saved;
+  if (saved && !saved.redirected) return saved;
   // Browser storage can evict this cache. The normal online visit can recover.
-  const response = await fetch(request);
-  if (response.ok && (await response.clone().text()).includes('data-student-release="' + release.version + '"')) {
+  const response = await fetchShell();
+  if (await matchesRelease(response)) {
     try { await current.put(shell, response.clone()); } catch {}
   }
   return response;
@@ -149,7 +169,7 @@ self.addEventListener('fetch', event => {
       request.headers.has('range') || request.destination === 'video') return;
   const address = new URL(request.url);
   if (request.mode === 'navigate' && [scope, shell].includes(address.origin + address.pathname)) {
-    event.respondWith(navigation(request));
+    event.respondWith(navigation(address));
     return;
   }
   const key = canonical(request.url);

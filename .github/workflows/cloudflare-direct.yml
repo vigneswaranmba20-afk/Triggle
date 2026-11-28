@@ -5,8 +5,13 @@ on:
     branches: [main]
     paths:
       - '.github/workflows/cloudflare-direct.yml'
+      - 'index.html'
+      - 'site/index.html'
+      - 'site/manifest.webmanifest'
       - 'site/tools/adapt_cloudflare_release.py'
       - 'site/tools/test_cloudflare_release_browser.cjs'
+      - 'site/tools/student_service_worker.js'
+      - 'site/tools/build_student_release.cjs'
   workflow_run:
     workflows: ["Triggle risk-based quality"]
     branches: [main]
@@ -35,25 +40,17 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps --only-shell chromium
+      - run: npx playwright install --with-deps --no-shell chromium
       - name: Stage and adapt the actual student release
         run: |
           set -euo pipefail
           mkdir -p cf-release/site
+          cp index.html cf-release/
           cp -a site/. cf-release/site/
           node site/tools/build_student_release.cjs cf-release/site
           python3 site/tools/adapt_cloudflare_release.py cf-release
       - name: Exercise adapted release in a mobile browser
-        run: |
-          set -euo pipefail
-          python3 -m http.server 8765 --bind 127.0.0.1 --directory cf-release > /tmp/triggle-cf-http.log 2>&1 &
-          server=$!
-          trap 'kill "$server" || true' EXIT
-          for attempt in $(seq 1 15); do
-            if curl -fsS http://127.0.0.1:8765/site/ -o /dev/null; then break; fi
-            sleep 1
-          done
-          node site/tools/test_cloudflare_release_browser.cjs http://127.0.0.1:8765/site/
+        run: node site/tools/test_cloudflare_release_browser.cjs --local cf-release
 
   mirror:
     name: Mirror validated main release
@@ -150,7 +147,7 @@ jobs:
         working-directory: release-tools
         run: |
           npm ci
-          npx playwright install --with-deps --only-shell chromium
+          npx playwright install --with-deps --no-shell chromium
 
       - name: Recheck release head immediately before upload
         id: final_head
@@ -185,7 +182,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          files=(site/index.html site/manifest.webmanifest site/service-worker.js site/sitemap.xml
+          files=(index.html site/index.html site/manifest.webmanifest site/service-worker.js site/sitemap.xml
                  site/data/class-9.js site/assets/app.js)
           for file in cf-release/site/assets/student-*.*.*; do
             files+=("${file#cf-release/}")
