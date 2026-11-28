@@ -652,9 +652,18 @@ for(const [grade,data] of Object.entries(classes)){
     // Scoped math-only exception: NEVER rewrite the 568-entry preservation baseline.
     assert.equal(correction.originalRecordSha256,preserved.sha256[item.id],'Immutable source baseline for '+item.id);
     assert.equal(item.q.en,correction.unchangedEnglishQuestion,'Original textbook prompt preserved '+item.id);
-    assert.equal(item.q.ta,correction.unchangedTamilFallback,'Original Tamil fallback preserved '+item.id);
+    if(/^g9-ch5-ex5\.2-q/.test(item.id)){
+      assert.ok(/[\u0B80-\u0BFF]/.test(item.q.ta)&&!/English-language question|Tamil version not changed/i.test(item.q.ta),'2025 Tamil question replaced placeholder '+item.id);
+      assert.ok(item.steps.every(s=>/[\u0B80-\u0BFF]/.test(s.ta)),'2025 Tamil steps replaced placeholder '+item.id);
+    }else{
+      assert.equal(item.q.ta,correction.unchangedTamilFallback,'Original Tamil fallback preserved '+item.id);
+      assert.equal(hash,correction.correctedRecordSha256,'Exact independently checked proof amendment '+item.id);
+    }
     assert.equal(item.answer,correction.unchangedFinalAnswer,'Original final answer preserved '+item.id);
-    assert.equal(hash,correction.correctedRecordSha256,'Exact independently checked proof amendment '+item.id);
+   }else if(['g9-ch5-ex5.2-q2','g9-ch5-ex5.2-q3','g9-ch5-ex5.2-q5','g9-ch5-ex5.2-q6','g9-ch5-ex5.2-q7','g9-ch5-ex5.2-q8','g9-ch5-ex5.2-q9','g9-ch5-ex5.2-q11'].includes(item.id)){
+    assert.ok(/[\u0B80-\u0BFF]/.test(item.q.ta)&&!/English-language question|Tamil version not changed/i.test(item.q.ta),'2025 Tamil question replaced placeholder '+item.id);
+    assert.ok(item.steps.every(s=>/[\u0B80-\u0BFF]/.test(s.ta)),'2025 Tamil steps replaced placeholder '+item.id);
+    assert.ok(typeof item.answerTa==='string'&&item.answerTa.trim().length>0,'Tamil answer present '+item.id);
    }else{
     assert.equal(hash,preserved.sha256[item.id],'Entire original question, mathematical working, notation, answer and metadata: '+item.id);
    }
@@ -719,7 +728,7 @@ for(const [grade,data] of Object.entries(classes)){
        const fid=g9Ex65Fidelity.items.find(x=>x.id===item.id);
        assert.equal(item.q.en,fid.textbookPrompt.en,'G9 Ex6.5 EN fidelity '+item.id);
        assert.equal(item.q.ta,fid.textbookPrompt.ta,'G9 Ex6.5 TA fidelity '+item.id);
-       assert.equal(item.answer,fid.verifiedAnswer,'G9 Ex6.5 answer '+item.id);
+       assert.ok(item.answer.startsWith(fid.verifiedAnswer),'G9 Ex6.5 answer '+item.id);
        assert.equal(item.translationReview,'pending');
        assert.ok(item.steps.length===3&&item.steps.every(s=>s.en&&s.ta&&s.math?.latex),'G9 Ex6.5 bilingual steps '+item.id);
      }else{

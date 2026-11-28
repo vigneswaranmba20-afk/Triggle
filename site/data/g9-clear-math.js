@@ -21970,19 +21970,26 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version not changed. Determine whether the given set of points in each case are collinear or not.\n(i) ",
+        {
+          "latex": "2",
+          "fallback": "2"
+        },
+        ". தரப்பட்டுள்ள புள்ளிகள் ஒரு கோடமையும் புள்ளிகளா என ஆராய்க.\n(i) ",
         {
           "latex": "\\left(7, - 2\\right), \\left(5, 1\\right), \\left(3, 4\\right)",
-          "fallback": "(7,–2),(5,1),(3,4)"
+          "fallback": "(7,–2), (5,1), (3,4)"
         },
-        " (ii) ",
+        "   (ii) ",
         {
           "latex": "\\left(a, - 2\\right), \\left(a, 3\\right), \\left(a, 0\\right)",
           "fallback": "(a,–2), (a,3), (a,0)"
         }
       ]
     },
-    "answerMath": "(i) Collinear; (ii) Collinear",
+    "answerMath": {
+      "en": "(i) Collinear; (ii) Collinear",
+      "ta": "(i) ஒரு கோடமையும் புள்ளிகள்; (ii) ஒரு கோடமையும் புள்ளிகள்"
+    },
     "steps": [
       {
         "math": {
@@ -22000,12 +22007,12 @@ const records=[
             " distance formula to find the length between them."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): For any two points, use the Class ",
+            "இரு புள்ளிகளுக்கு இடையேயான தொலைவைக் காண ",
             {
               "latex": "9",
               "fallback": "9"
             },
-            " distance formula to find the length between them."
+            "-ஆம் வகுப்பு தொலைவு வாய்ப்பாட்டைப் பயன்படுத்துக."
           ]
         }
       },
@@ -22030,17 +22037,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Part (i): find the distance from ",
+            "பகுதி (i): ",
             {
               "latex": "A \\left(7, - 2\\right)",
-              "fallback": "A(7,−2)"
+              "fallback": "A(7, −2)"
             },
-            " to ",
+            " முதல் ",
             {
               "latex": "B \\left(5, 1\\right)",
-              "fallback": "B(5,1)"
+              "fallback": "B(5, 1)"
             },
-            "."
+            " வரையிலான தொலைவைக் காண்க."
           ]
         }
       },
@@ -22065,17 +22072,16 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Find the distance from ",
             {
               "latex": "B \\left(5, 1\\right)",
-              "fallback": "B(5,1)"
+              "fallback": "B(5, 1)"
             },
-            " to ",
+            " முதல் ",
             {
               "latex": "C \\left(3, 4\\right)",
-              "fallback": "C(3,4)"
+              "fallback": "C(3, 4)"
             },
-            "."
+            " வரையிலான தொலைவைக் காண்க."
           ]
         }
       },
@@ -22095,12 +22101,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Now measure the full distance from A to ",
+            "இப்போது A முதல் ",
             {
               "latex": "C",
               "fallback": "C"
             },
-            "."
+            " வரையிலான முழுத் தொலைவைக் காண்க."
           ]
         }
       },
@@ -22128,17 +22134,21 @@ const records=[
             ". The three points are collinear."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Since ",
             {
-              "latex": "AB + BC = AC, B",
-              "fallback": "AB + BC = AC, B"
+              "latex": "AB + BC = AC",
+              "fallback": "AB + BC = AC"
             },
-            " lies on the segment ",
+            " என்பதால், ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " என்பது ",
             {
               "latex": "AC",
               "fallback": "AC"
             },
-            ". The three points are collinear."
+            " கோட்டுத்துண்டில் அமைகிறது. எனவே மூன்று புள்ளிகளும் ஒரு கோடமையும் புள்ளிகள் ஆகும்."
           ]
         }
       },
@@ -22174,12 +22184,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Part (ii): all three points have ",
+            "பகுதி (ii): மூன்று புள்ளிகளின் ",
             {
               "latex": "x",
               "fallback": "x"
             },
-            "-coordinate a. The vertical distances are ",
+            "-அச்சுத்தொலைவும் a ஆகும். செங்குத்துத் தொலைவுகள் ",
             {
               "latex": "AB = 5",
               "fallback": "AB = 5"
@@ -22190,12 +22200,12 @@ const records=[
               "latex": "BC = 3",
               "fallback": "BC = 3"
             },
-            " and ",
+            " மற்றும் ",
             {
               "latex": "CA = 2",
               "fallback": "CA = 2"
             },
-            "."
+            " ஆகும்."
           ]
         }
       },
@@ -22227,22 +22237,26 @@ const records=[
             ". These points are also collinear."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Since ",
             {
-              "latex": "BC + CA = AB, C",
-              "fallback": "BC + CA = AB, C"
+              "latex": "BC + CA = AB",
+              "fallback": "BC + CA = AB"
             },
-            " is between ",
+            " என்பதால், ",
             {
-              "latex": "B",
-              "fallback": "B"
+              "latex": "C",
+              "fallback": "C"
             },
-            " and A on the line ",
+            " என்பது ",
             {
               "latex": "x = a",
               "fallback": "x = a"
             },
-            ". These points are also collinear."
+            " என்ற கோட்டில் ",
+            {
+              "latex": "B",
+              "fallback": "B"
+            },
+            " மற்றும் A-க்கு இடையே அமைகிறது. இப்புள்ளிகளும் ஒரு கோடமையும் புள்ளிகள் ஆகும்."
           ]
         }
       }
@@ -22264,31 +22278,50 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version not changed. Show that the following points taken in order form an isosceles triangle.\n(i) ",
+        {
+          "latex": "3",
+          "fallback": "3"
+        },
+        ". பின்வரும் புள்ளிகள் வரிசைப்படி எடுத்துக்கொள்ளப்பட்டால், அது ஓர் இரு சமபக்க முக்கோணத்தை அமைக்கும் என நிறுவுக.\n(i) ",
         {
           "latex": "A \\left(5, 4\\right), B \\left(2, 0\\right), C \\left(- 2, 3\\right)",
-          "fallback": "A (5,4), B(2,0), C (–2,3)"
+          "fallback": "A(5,4), B(2,0), C(–2,3)"
         },
-        " (ii) ",
+        "   (ii) ",
         {
           "latex": "A \\left(6, - 4\\right), B \\left(- 2, - 4\\right), C \\left(2, 10\\right)",
-          "fallback": "A (6,–4), B (–2, –4), C (2,10)"
+          "fallback": "A(6,–4), B(–2, –4), C(2,10)"
         }
       ]
     },
-    "answerMath": [
-      "(i) ",
-      {
-        "latex": "AB = BC = 5",
-        "fallback": "AB=BC=5"
-      },
-      "; (ii) ",
-      {
-        "latex": "BC = CA = 2\\,\\sqrt{53}",
-        "fallback": "BC=CA=2√53"
-      },
-      " — both triangles are isosceles"
-    ],
+    "answerMath": {
+      "en": [
+        "(i) ",
+        {
+          "latex": "AB = BC = 5",
+          "fallback": "AB=BC=5"
+        },
+        "; (ii) ",
+        {
+          "latex": "BC = CA = 2\\,\\sqrt{53}",
+          "fallback": "BC=CA=2√53"
+        },
+        " — both triangles are isosceles"
+      ],
+      "ta": [
+        "(i) ",
+        {
+          "latex": "AB = BC = 5",
+          "fallback": "AB = BC = 5"
+        },
+        "; (ii) ",
+        {
+          "latex": "BC = CA = 2\\,\\sqrt{53}",
+          "fallback": "BC = CA = 2√53"
+        },
+        " — இரு முக்கோணங்களும் இரு சமபக்க முக்கோணங்கள் ஆகும்"
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -22298,7 +22331,7 @@ const records=[
         },
         "reasonMath": {
           "en": "To identify equal sides, compare squared distances and avoid unnecessary square roots.",
-          "ta": "English explanation (Tamil unchanged): To identify equal sides, compare squared distances and avoid unnecessary square roots."
+          "ta": "சம பக்கங்களை அடையாளம் காண, தேவையற்ற வர்க்கமூலங்களைத் தவிர்த்துத் தொலைவுகளின் வர்க்கங்களை ஒப்பிடுக."
         }
       },
       {
@@ -22309,7 +22342,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Part (i): calculate all three squared side lengths.",
-          "ta": "English explanation (Tamil unchanged): Part (i): calculate all three squared side lengths."
+          "ta": "பகுதி (i): மூன்று பக்கங்களின் வர்க்க நீளங்களையும் கணக்கிடுக."
         }
       },
       {
@@ -22330,12 +22363,11 @@ const records=[
             ", the first triangle is isosceles."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Because ",
             {
               "latex": "AB = BC",
-              "fallback": "AB=BC"
+              "fallback": "AB = BC"
             },
-            ", the first triangle is isosceles."
+            " என்பதால், முதல் முக்கோணம் இரு சமபக்க முக்கோணம் ஆகும்."
           ]
         }
       },
@@ -22347,7 +22379,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Part (ii): calculate corresponding squared lengths.",
-          "ta": "English explanation (Tamil unchanged): Part (ii): calculate corresponding squared lengths."
+          "ta": "பகுதி (ii): தொடர்புடைய பக்கங்களின் வர்க்க நீளங்களைக் கணக்கிடுக."
         }
       },
       {
@@ -22369,12 +22401,11 @@ const records=[
             ", the second triangle is isosceles."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Because ",
             {
               "latex": "BC = CA",
-              "fallback": "BC=CA"
+              "fallback": "BC = CA"
             },
-            ", the second triangle is isosceles."
+            " என்பதால், இரண்டாவது முக்கோணமும் இரு சமபக்க முக்கோணம் ஆகும்."
           ]
         }
       }
@@ -22396,19 +22427,26 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version not changed. Show that the following points taken in order form the vertices of a parallelogram.\n(i) ",
+        {
+          "latex": "5",
+          "fallback": "5"
+        },
+        ". பின்வரும் புள்ளிகள் வரிசைப்படி எடுத்துக்கொள்ளப்பட்டால், அது ஓர் இணைகரத்தை அமைக்கும் என நிறுவுக.\n(i) ",
         {
           "latex": "A \\left(- 3, 1\\right), B \\left(- 6, - 7\\right), C \\left(3, - 9\\right), D \\left(6, - 1\\right)",
           "fallback": "A(–3, 1), B(–6, –7), C(3, –9), D(6, –1)"
         },
-        " (ii) ",
+        "   (ii) ",
         {
           "latex": "A \\left(- 7, - 3\\right), B \\left(5, 10\\right), C \\left(15, 8\\right), D \\left(3, - 5\\right)",
-          "fallback": "A (–7, –3), B(5,10), C(15,8), D(3, –5)"
+          "fallback": "A(–7, –3), B(5,10), C(15,8), D(3, –5)"
         }
       ]
     },
-    "answerMath": "(i) Parallelogram; (ii) Parallelogram",
+    "answerMath": {
+      "en": "(i) Parallelogram; (ii) Parallelogram",
+      "ta": "(i) இணைகரம்; (ii) இணைகரம்"
+    },
     "steps": [
       {
         "math": {
@@ -22425,14 +22463,7 @@ const records=[
             },
             " distance formula. If both pairs of opposite sides of a non-degenerate quadrilateral have equal lengths, it is a parallelogram."
           ],
-          "ta": [
-            "English explanation (Tamil unchanged): Use the Class ",
-            {
-              "latex": "9",
-              "fallback": "9"
-            },
-            " distance formula. If both pairs of opposite sides of a non-degenerate quadrilateral have equal lengths, it is a parallelogram."
-          ]
+          "ta": "தொலைவு வாய்ப்பாட்டைப் பயன்படுத்துக. ஒரு நாற்கரத்தின் இரு சோடி எதிர்ப்பக்கங்களின் நீளங்களும் சமமாக இருந்தால் அது ஓர் இணைகரம் ஆகும்."
         }
       },
       {
@@ -22451,12 +22482,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Part (i): find the squared length of ",
+            "பகுதி (i): ",
             {
               "latex": "AB",
               "fallback": "AB"
             },
-            "."
+            " பக்கத்தின் வர்க்க நீளத்தைக் காண்க."
           ]
         }
       },
@@ -22476,12 +22507,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Find the squared length of the opposite side ",
+            "எதிர்ப்பக்கம் ",
             {
               "latex": "CD",
               "fallback": "CD"
             },
-            "."
+            "-இன் வர்க்க நீளத்தைக் காண்க."
           ]
         }
       },
@@ -22501,12 +22532,11 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Find the squared length of ",
             {
               "latex": "BC",
               "fallback": "BC"
             },
-            "."
+            " பக்கத்தின் வர்க்க நீளத்தைக் காண்க."
           ]
         }
       },
@@ -22526,12 +22556,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Find the squared length of the opposite side ",
+            "எதிர்ப்பக்கம் ",
             {
               "latex": "DA",
               "fallback": "DA"
             },
-            "."
+            "-இன் வர்க்க நீளத்தைக் காண்க."
           ]
         }
       },
@@ -22546,7 +22576,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Both opposite side pairs are equal, so the first quadrilateral is a parallelogram.",
-          "ta": "English explanation (Tamil unchanged): Both opposite side pairs are equal, so the first quadrilateral is a parallelogram."
+          "ta": "இரு சோடி எதிர்ப்பக்கங்களும் சமம் என்பதால் முதல் நாற்கரம் ஓர் இணைகரம் ஆகும்."
         }
       },
       {
@@ -22570,17 +22600,17 @@ const records=[
             " with the same distance formula."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Part (ii): calculate ",
+            "பகுதி (ii): அதே தொலைவு வாய்ப்பாட்டைப் பயன்படுத்தி ",
             {
               "latex": "AB",
               "fallback": "AB"
             },
-            " and ",
+            " மற்றும் ",
             {
               "latex": "CD",
               "fallback": "CD"
             },
-            " with the same distance formula."
+            "-ஐக் கணக்கிடுக."
           ]
         }
       },
@@ -22605,17 +22635,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Calculate the other opposite pair, ",
+            "மற்றொரு எதிர்ப்பக்கச் சோடியான ",
             {
               "latex": "BC",
               "fallback": "BC"
             },
-            " and ",
+            " மற்றும் ",
             {
               "latex": "DA",
               "fallback": "DA"
             },
-            "."
+            "-ஐக் கணக்கிடுக."
           ]
         }
       },
@@ -22630,7 +22660,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Again both pairs of opposite sides are equal; the second quadrilateral is a parallelogram.",
-          "ta": "English explanation (Tamil unchanged): Again both pairs of opposite sides are equal; the second quadrilateral is a parallelogram."
+          "ta": "மீண்டும் இரு சோடி எதிர்ப்பக்கங்களும் சமம் என்பதால் இரண்டாவது நாற்கரமும் ஓர் இணைகரம் ஆகும்."
         }
       }
     ]
@@ -22651,30 +22681,48 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version not changed. Verify that the following points taken in order form the vertices of a rhombus.\n(i) ",
+        {
+          "latex": "6",
+          "fallback": "6"
+        },
+        ". பின்வரும் புள்ளிகள் வரிசைப்படி எடுத்துக்கொள்ளப்பட்டால், அது ஒரு சாய்சதுரத்தை அமைக்குமா என ஆராய்க.\n(i) ",
         {
           "latex": "A \\left(3, - 2\\right), B \\left(7, 6\\right), C \\left(- 1, 2\\right), D \\left(- 5, - 6\\right)",
-          "fallback": "A(3,–2), B (7,6),C (–1,2), D (–5, –6)"
+          "fallback": "A(3,–2), B(7,6), C(–1,2), D(–5, –6)"
         },
-        " (ii) ",
+        "   (ii) ",
         {
           "latex": "A \\left(1, 1\\right), B \\left(2, 1\\right), C \\left(2, 2\\right), D \\left(1, 2\\right)",
-          "fallback": "A (1,1), B(2,1),C (2,2), D(1,2)"
+          "fallback": "A(1,1), B(2,1), C(2,2), D(1,2)"
         }
       ]
     },
-    "answerMath": [
-      "(i) Rhombus, side ",
-      {
-        "latex": "4\\,\\sqrt{5}",
-        "fallback": "4√5"
-      },
-      "; (ii) Rhombus (a square), side ",
-      {
-        "latex": "1",
-        "fallback": "1"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        "(i) Rhombus, side ",
+        {
+          "latex": "4\\,\\sqrt{5}",
+          "fallback": "4√5"
+        },
+        "; (ii) Rhombus (a square), side ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        }
+      ],
+      "ta": [
+        "(i) சாய்சதுரம், பக்கம் ",
+        {
+          "latex": "4\\,\\sqrt{5}",
+          "fallback": "4√5"
+        },
+        "; (ii) சாய்சதுரம் (ஒரு சதுரம்), பக்கம் ",
+        {
+          "latex": "1",
+          "fallback": "1"
+        }
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -22691,14 +22739,7 @@ const records=[
             },
             " distance formula to check each pair of neighboring vertices."
           ],
-          "ta": [
-            "English explanation (Tamil unchanged): A rhombus has four equal side lengths. Use the Class ",
-            {
-              "latex": "9",
-              "fallback": "9"
-            },
-            " distance formula to check each pair of neighboring vertices."
-          ]
+          "ta": "சாய்சதுரத்திற்கு நான்கு பக்க நீளங்களும் சமமாக இருக்கும். அடுத்தடுத்த உச்சிகளின் தொலைவுகளைச் சரிபார்க்கத் தொலைவு வாய்ப்பாட்டைப் பயன்படுத்துக."
         }
       },
       {
@@ -22709,7 +22750,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Part (i): find the first two squared side lengths.",
-          "ta": "English explanation (Tamil unchanged): Part (i): find the first two squared side lengths."
+          "ta": "பகுதி (i): முதல் இரண்டு பக்கங்களின் வர்க்க நீளங்களைக் காண்க."
         }
       },
       {
@@ -22720,7 +22761,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Find the remaining two squared side lengths.",
-          "ta": "English explanation (Tamil unchanged): Find the remaining two squared side lengths."
+          "ta": "மீதமுள்ள இரண்டு பக்கங்களின் வர்க்க நீளங்களைக் காண்க."
         }
       },
       {
@@ -22739,12 +22780,12 @@ const records=[
             ", so the first quadrilateral is a rhombus."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): All four sides measure ",
+            "நான்கு பக்கங்களின் நீளமும் ",
             {
               "latex": "\\sqrt{80} = 4\\,\\sqrt{5}",
               "fallback": "√80 = 4√5"
             },
-            ", so the first quadrilateral is a rhombus."
+            " என்பதால் முதல் நாற்கரம் ஒரு சாய்சதுரம் ஆகும்."
           ]
         }
       },
@@ -22764,12 +22805,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): To check whether this rhombus is also a square, measure diagonal ",
+            "இச்சாய்சதுரம் ஒரு சதுரமாகவும் உள்ளதா எனச் சரிபார்க்க, மூலைவிட்டம் ",
             {
               "latex": "AC",
               "fallback": "AC"
             },
-            "."
+            "-ஐ அளவிடுக."
           ]
         }
       },
@@ -22789,12 +22830,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Measure the other diagonal ",
+            "மற்றொரு மூலைவிட்டம் ",
             {
               "latex": "BD",
               "fallback": "BD"
             },
-            "."
+            "-ஐ அளவிடுக."
           ]
         }
       },
@@ -22816,7 +22857,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "The diagonals have different lengths. Therefore, part (i) is a rhombus but not a square.",
-          "ta": "English explanation (Tamil unchanged): The diagonals have different lengths. Therefore, part (i) is a rhombus but not a square."
+          "ta": "மூலைவிட்டங்களின் நீளங்கள் சமமல்ல. எனவே பகுதி (i) சாய்சதுரம் ஆனால் சதுரமல்ல."
         }
       },
       {
@@ -22835,12 +22876,12 @@ const records=[
             " unit apart."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Part (ii): the four neighboring point pairs are each exactly ",
+            "பகுதி (ii): நான்கு அடுத்தடுத்த பக்கங்களும் சரியாக ",
             {
               "latex": "1",
               "fallback": "1"
             },
-            " unit apart."
+            " அலகு நீளம் கொண்டவை."
           ]
         }
       },
@@ -22852,7 +22893,7 @@ const records=[
         },
         "reasonMath": {
           "en": "The diagonals are equal in this case.",
-          "ta": "English explanation (Tamil unchanged): The diagonals are equal in this case."
+          "ta": "இந்நிலையில் மூலைவிட்டங்களும் சமமாக உள்ளன."
         }
       },
       {
@@ -22891,22 +22932,22 @@ const records=[
             ". Thus this rhombus is a square."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Also, ",
+            "மேலும் ",
             {
               "latex": "AB",
               "fallback": "AB"
             },
-            " is horizontal and ",
+            " கிடைமட்டமாகவும் ",
             {
               "latex": "BC",
               "fallback": "BC"
             },
-            " is vertical, so they meet at ",
+            " செங்குத்தாகவும் உள்ளதால் அவை ",
             {
               "latex": "90^{\\circ}",
               "fallback": "90°"
             },
-            ". Thus this rhombus is a square."
+            "-இல் சந்திக்கின்றன. எனவே இச்சாய்சதுரம் ஒரு சதுரம் ஆகும்."
           ]
         }
       }
@@ -22933,35 +22974,52 @@ const records=[
         ", then find ‘a’. "
       ],
       "ta": [
-        "English-language question; Tamil version not changed. ",
+        {
+          "latex": "7",
+          "fallback": "7"
+        },
+        ". புள்ளிகள் ",
         {
           "latex": "A \\left(- 1, 1\\right), B \\left(1, 3\\right)",
-          "fallback": "A (–1, 1), B (1, 3)"
+          "fallback": "A(–1, 1), B(1, 3)"
         },
-        " and ",
+        " மற்றும் ",
         {
           "latex": "C \\left(3, a\\right)",
-          "fallback": "C (3, a)"
+          "fallback": "C(3, a)"
         },
-        " are points and if ",
+        ", மேலும் ",
         {
           "latex": "AB = BC",
           "fallback": "AB = BC"
         },
-        ", then find ‘a’. "
+        " எனில் ‘a’ இன் மதிப்பைக் காண்க."
       ]
     },
-    "answerMath": [
-      {
-        "latex": "a = 1",
-        "fallback": "a=1"
-      },
-      " or ",
-      {
-        "latex": "a = 5",
-        "fallback": "a=5"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        {
+          "latex": "a = 1",
+          "fallback": "a=1"
+        },
+        " or ",
+        {
+          "latex": "a = 5",
+          "fallback": "a=5"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "a = 1",
+          "fallback": "a = 1"
+        },
+        " அல்லது ",
+        {
+          "latex": "a = 5",
+          "fallback": "a = 5"
+        }
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -22983,17 +23041,16 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Equate the squares of the lengths ",
             {
               "latex": "AB",
               "fallback": "AB"
             },
-            " and ",
+            " மற்றும் ",
             {
               "latex": "BC",
               "fallback": "BC"
             },
-            "."
+            " நீளங்களின் வர்க்கங்களைச் சமப்படுத்துக."
           ]
         }
       },
@@ -23005,7 +23062,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Calculate from the coordinates.",
-          "ta": "English explanation (Tamil unchanged): Calculate from the coordinates."
+          "ta": "ஆயத்தொலைவுகளிலிருந்து மதிப்புகளைக் கணக்கிடுக."
         }
       },
       {
@@ -23016,7 +23073,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Simplify to obtain a quadratic condition.",
-          "ta": "English explanation (Tamil unchanged): Simplify to obtain a quadratic condition."
+          "ta": "சுருக்கி இருபடிச் சமன்பாட்டைப் பெறுக."
         }
       },
       {
@@ -23033,7 +23090,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Take both positive and negative square roots.",
-          "ta": "English explanation (Tamil unchanged): Take both positive and negative square roots."
+          "ta": "நேர்ம மற்றும் எதிர்ம வர்க்கமூலங்கள் இரண்டையும் எடுக்கவும்."
         }
       }
     ]
@@ -23055,30 +23112,57 @@ const records=[
         " units, What are the coordinates of A?"
       ],
       "ta": [
-        "English-language question; Tamil version not changed. The abscissa of a point A is equal to its ordinate, and its distance from the point ",
+        {
+          "latex": "8",
+          "fallback": "8"
+        },
+        ". புள்ளி A இன் ",
+        {
+          "latex": "x",
+          "fallback": "x"
+        },
+        " அச்சுத் தொலைவு அதன் ",
+        {
+          "latex": "y",
+          "fallback": "y"
+        },
+        " அச்சுத் தொலைவிற்குச் சமம். மேலும், ",
         {
           "latex": "B \\left(1, 3\\right)",
           "fallback": "B(1, 3)"
         },
-        " is ",
+        " என்ற புள்ளியிலிருந்து அப்புள்ளி A ஆனது ",
         {
           "latex": "10",
           "fallback": "10"
         },
-        " units, What are the coordinates of A?"
+        " அலகு தொலைவில் இருக்கிறது. எனில் A இன் அச்சுத் தொலைவுகளைக் காண்க."
       ]
     },
-    "answerMath": [
-      {
-        "latex": "\\left(9, 9\\right)",
-        "fallback": "(9,9)"
-      },
-      " or ",
-      {
-        "latex": "\\left(- 5, - 5\\right)",
-        "fallback": "(−5,−5)"
-      }
-    ],
+    "answerMath": {
+      "en": [
+        {
+          "latex": "\\left(9, 9\\right)",
+          "fallback": "(9,9)"
+        },
+        " or ",
+        {
+          "latex": "\\left(- 5, - 5\\right)",
+          "fallback": "(−5,−5)"
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\left(9, 9\\right)",
+          "fallback": "(9, 9)"
+        },
+        " அல்லது ",
+        {
+          "latex": "\\left(- 5, - 5\\right)",
+          "fallback": "(−5, −5)"
+        }
+      ]
+    },
     "steps": [
       {
         "math": {
@@ -23095,12 +23179,21 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Equal abscissa and ordinate means ",
+            {
+              "latex": "x",
+              "fallback": "x"
+            },
+            " மற்றும் ",
+            {
+              "latex": "y",
+              "fallback": "y"
+            },
+            " அச்சுத் தொலைவுகள் சமம் என்பதால் ",
             {
               "latex": "A = \\left(t, t\\right)",
-              "fallback": "A=(t,t)"
+              "fallback": "A = (t, t)"
             },
-            "."
+            " என்க."
           ]
         }
       },
@@ -23120,12 +23213,11 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Apply the distance formula to ",
             {
               "latex": "B \\left(1, 3\\right)",
-              "fallback": "B(1,3)"
+              "fallback": "B(1, 3)"
             },
-            "."
+            " என்ற புள்ளிக்குத் தொலைவு வாய்ப்பாட்டைப் பயன்படுத்துக."
           ]
         }
       },
@@ -23137,7 +23229,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Expand and factor the quadratic.",
-          "ta": "English explanation (Tamil unchanged): Expand and factor the quadratic."
+          "ta": "விரித்து இருபடிச் சமன்பாட்டைக் காரணிப்படுத்துக."
         }
       },
       {
@@ -23155,7 +23247,7 @@ const records=[
         ],
         "reasonMath": {
           "en": "Solve for both possible coordinates.",
-          "ta": "English explanation (Tamil unchanged): Solve for both possible coordinates."
+          "ta": "இரு சாத்தியமான மதிப்புகளுக்கும் தீர்வு காண்க."
         }
       },
       {
@@ -23180,12 +23272,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Write both ordered pairs and verify their distance is ",
+            "இரு வரிசைச் சோடிகளையும் எழுதி, அவற்றின் தொலைவு ",
             {
               "latex": "10",
               "fallback": "10"
             },
-            "."
+            " அலகுகளா எனச் சரிபார்க்கவும்."
           ]
         }
       }
@@ -23223,32 +23315,36 @@ const records=[
         "."
       ],
       "ta": [
-        "English-language question; Tamil version not changed. The point ",
+        {
+          "latex": "9",
+          "fallback": "9"
+        },
+        ". புள்ளி ",
         {
           "latex": "\\left(x, y\\right)",
           "fallback": "(x, y)"
         },
-        " is equidistant from the points ",
+        " ஆனது புள்ளிகள் ",
         {
           "latex": "\\left(3, 4\\right)",
-          "fallback": "(3,4)"
+          "fallback": "(3, 4)"
         },
-        "and",
+        " மற்றும் ",
         {
           "latex": "\\left(- 5, 6\\right)",
-          "fallback": "(–5,6)"
+          "fallback": "(–5, 6)"
         },
-        ". Find a relation between ",
+        " என்ற புள்ளிகளிலிருந்து சம தொலைவில் இருக்கிறது. ",
         {
           "latex": "x",
           "fallback": "x"
         },
-        " and ",
+        " மற்றும் ",
         {
           "latex": "y",
           "fallback": "y"
         },
-        "."
+        " க்கு இடையே உள்ள உறவைக் காண்க."
       ]
     },
     "answerMath": {
@@ -23264,7 +23360,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Equal distances imply equal squared distances.",
-          "ta": "English explanation (Tamil unchanged): Equal distances imply equal squared distances."
+          "ta": "தொலைவுகள் சமம் எனில் அவற்றின் வர்க்கங்களும் சமம் ஆகும்."
         }
       },
       {
@@ -23288,17 +23384,17 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Expand the brackets and cancel ",
+            "அடைப்புக்குறிகளை விரித்து ",
             {
               "latex": "x^{2}",
               "fallback": "x²"
             },
-            " and ",
+            " மற்றும் ",
             {
               "latex": "y^{2}",
               "fallback": "y²"
             },
-            "."
+            " உறுப்புகளை நீக்குக."
           ]
         }
       },
@@ -23317,12 +23413,12 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Collect terms and solve for ",
+            "ஒத்த உறுப்புகளைச் சேர்த்து ",
             {
               "latex": "y",
               "fallback": "y"
             },
-            "."
+            "-க்கான தொடர்பை எழுதுக."
           ]
         }
       },
@@ -23333,7 +23429,7 @@ const records=[
         },
         "reasonMath": {
           "en": "Divide by four to obtain a linear relation.",
-          "ta": "English explanation (Tamil unchanged): Divide by four to obtain a linear relation."
+          "ta": "நான்கால் வகுத்து நேரியல் தொடர்பைப் பெறுக."
         }
       }
     ]
@@ -23359,36 +23455,56 @@ const records=[
         }
       ],
       "ta": [
-        "English-language question; Tamil version not changed. Show that the point ",
+        {
+          "latex": "11",
+          "fallback": "11"
+        },
+        ". புள்ளிகள் ",
+        {
+          "latex": "\\left(1, 2\\right), \\left(3, - 4\\right)",
+          "fallback": "(1, 2), (3, –4)"
+        },
+        " மற்றும் ",
+        {
+          "latex": "\\left(5, - 6\\right)",
+          "fallback": "(5, –6)"
+        },
+        " இன் வழிச் செல்லும் வட்டத்தின் மையம் ",
+        {
+          "latex": "\\left(11, 2\\right)",
+          "fallback": "(11, 2)"
+        },
+        " என நிறுவுக."
+      ]
+    },
+    "answerMath": {
+      "en": [
+        "Yes. Centre ",
         {
           "latex": "\\left(11, 2\\right)",
           "fallback": "(11,2)"
         },
-        " is the centre of the circle passing through the points ",
+        ", radius ",
         {
-          "latex": "\\left(1, 2\\right), \\left(3, - 4\\right)",
-          "fallback": "(1,2), (3,–4)"
+          "latex": "10",
+          "fallback": "10"
         },
-        " and ",
+        " units"
+      ],
+      "ta": [
+        "ஆம். மையம் ",
         {
-          "latex": "\\left(5, - 6\\right)",
-          "fallback": "(5,–6)"
-        }
+          "latex": "\\left(11, 2\\right)",
+          "fallback": "(11, 2)"
+        },
+        ", ஆரம் ",
+        {
+          "latex": "10",
+          "fallback": "10"
+        },
+        " அலகுகள்"
       ]
     },
-    "answerMath": [
-      "Yes. Centre ",
-      {
-        "latex": "\\left(11, 2\\right)",
-        "fallback": "(11,2)"
-      },
-      ", radius ",
-      {
-        "latex": "10",
-        "fallback": "10"
-      },
-      " units"
-    ],
     "steps": [
       {
         "math": {
@@ -23397,7 +23513,7 @@ const records=[
         },
         "reasonMath": {
           "en": "A point is a circle centre for these three points if its distance to all three is equal.",
-          "ta": "English explanation (Tamil unchanged): A point is a circle centre for these three points if its distance to all three is equal."
+          "ta": "ஒரு புள்ளி இம்மூன்று புள்ளிகளிலிருந்தும் சம தொலைவில் இருந்தால் அது வட்டத்தின் மையமாகும்."
         }
       },
       {
@@ -23416,12 +23532,11 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Compute the squared distance to ",
             {
               "latex": "\\left(1, 2\\right)",
-              "fallback": "(1,2)"
+              "fallback": "(1, 2)"
             },
-            "."
+            " புள்ளிக்கு வர்க்கத் தொலைவைக் கணக்கிடுக."
           ]
         }
       },
@@ -23441,12 +23556,11 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Repeat for ",
             {
               "latex": "\\left(3, - 4\\right)",
-              "fallback": "(3,−4)"
+              "fallback": "(3, −4)"
             },
-            "."
+            " புள்ளிக்கு மீண்டும் கணக்கிடுக."
           ]
         }
       },
@@ -23466,12 +23580,11 @@ const records=[
             "."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): Repeat for ",
             {
               "latex": "\\left(5, - 6\\right)",
-              "fallback": "(5,−6)"
+              "fallback": "(5, −6)"
             },
-            "."
+            " புள்ளிக்கு மீண்டும் கணக்கிடுக."
           ]
         }
       },
@@ -23490,12 +23603,17 @@ const records=[
             ", so the proposed centre is valid."
           ],
           "ta": [
-            "English explanation (Tamil unchanged): All three points are at radius ",
+            "மூன்று புள்ளிகளும் ",
             {
               "latex": "\\sqrt{100} = 10",
-              "fallback": "√100=10"
+              "fallback": "√100 = 10"
             },
-            ", so the proposed centre is valid."
+            " அலகு ஆரத்தில் உள்ளதால் ",
+            {
+              "latex": "\\left(11, 2\\right)",
+              "fallback": "(11, 2)"
+            },
+            " வட்ட மையமாகும்."
           ]
         }
       }
@@ -59443,14 +59561,14 @@ const records=[
       "en": [
         {
           "latex": "\\text{(2) } 30^{\\circ}",
-          "fallback": "(2) 30°",
+          "fallback": "(2) 30° (under Grade 9 acute-angle scope 0° < 2θ < 90°; without it, θ = 60° also satisfies 2 sin 2θ = √3)",
           "display": false
         }
       ],
       "ta": [
         {
           "latex": "\\text{(2) } 30^{\\circ}",
-          "fallback": "(2) 30°",
+          "fallback": "(2) 30° (குறுங்கோண வரம்பில் 0° < 2θ < 90°; வரம்பின்றி θ = 60° என்பதும் சமன்பாட்டை நிறைவு செய்யும்)",
           "display": false
         }
       ]
@@ -59518,26 +59636,115 @@ const records=[
       },
       {
         "math": {
-          "latex": "2\\theta = 60^{\\circ} \\implies \\theta = \\dfrac{60^{\\circ}}{2} = 30^{\\circ}",
-          "fallback": "2θ = 60° ⇒ θ = 30°",
+          "latex": "0^{\\circ} < 2\\theta < 90^{\\circ} \\implies 2\\theta = 60^{\\circ} \\implies \\theta = \\dfrac{60^{\\circ}}{2} = 30^{\\circ}",
+          "fallback": "0° < 2θ < 90° ⇒ 2θ = 60° ⇒ θ = 30° (if 2θ ≤ 180°, θ = 60° also satisfies sin 120° = √3/2)",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "Equate the acute angles and divide by ",
+            "In Grade ",
+            {
+              "latex": "9",
+              "fallback": "9"
+            },
+            " right-triangle trigonometry, the angle ",
+            {
+              "latex": "2 \\theta",
+              "fallback": "2θ"
+            },
+            " is acute ",
+            {
+              "latex": "\\left(0^{\\circ} < 2 \\theta < 90^{\\circ}\\right)",
+              "fallback": "(0° < 2θ < 90°)"
+            },
+            ", so ",
+            {
+              "latex": "2 \\theta = 60^{\\circ}",
+              "fallback": "2θ = 60°"
+            },
+            " gives ",
+            {
+              "latex": "\\theta = 30^{\\circ}",
+              "fallback": "θ = 30°"
+            },
+            " (Option ",
             {
               "latex": "2",
               "fallback": "2"
+            },
+            ", the textbook answer). Note: without restricting ",
+            {
+              "latex": "2 \\theta",
+              "fallback": "2θ"
+            },
+            " to be acute, ",
+            {
+              "latex": "2 \\theta = 120^{\\circ}",
+              "fallback": "2θ = 120°"
+            },
+            " (",
+            {
+              "latex": "\\theta = 60^{\\circ}",
+              "fallback": "θ = 60°"
+            },
+            ", Option ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            ") also satisfies ",
+            {
+              "latex": "\\sin 2 \\theta = \\dfrac{\\sqrt{3}}{2}",
+              "fallback": "sin 2θ = √3 / 2"
             },
             "."
           ],
           "ta": [
-            "குறுங்கோணங்களைச் சமப்படுத்தி ",
             {
-              "latex": "2",
-              "fallback": "2"
+              "latex": "9",
+              "fallback": "9"
             },
-            "-ஆல் வகுக்கவும்."
+            "-ஆம் வகுப்பு செங்கோண முக்கோணவியலில் ",
+            {
+              "latex": "2 \\theta",
+              "fallback": "2θ"
+            },
+            " ஒரு குறுங்கோணமாக ",
+            {
+              "latex": "\\left(0^{\\circ} < 2 \\theta < 90^{\\circ}\\right)",
+              "fallback": "(0° < 2θ < 90°)"
+            },
+            " கருதப்படுவதால் ",
+            {
+              "latex": "2 \\theta = 60^{\\circ} \\Rightarrow \\theta = 30^{\\circ}",
+              "fallback": "2θ = 60° ⇒ θ = 30°"
+            },
+            " (பாடநூல் விடை (2)) கிடைக்கிறது. குறிப்பு: ",
+            {
+              "latex": "2 \\theta",
+              "fallback": "2θ"
+            },
+            " குறுங்கோணம் என்ற நிபந்தனை இல்லையெனில் ",
+            {
+              "latex": "2 \\theta = 120^{\\circ}",
+              "fallback": "2θ = 120°"
+            },
+            " (",
+            {
+              "latex": "\\theta = 60^{\\circ}",
+              "fallback": "θ = 60°"
+            },
+            ", விருப்பம் ",
+            {
+              "latex": "4",
+              "fallback": "4"
+            },
+            ") என்பதும் ",
+            {
+              "latex": "\\sin 2 \\theta = \\dfrac{\\sqrt{3}}{2}",
+              "fallback": "sin 2θ = √3 / 2"
+            },
+            " ஐ நிறைவு செய்யும்."
           ]
         }
       }
@@ -59566,14 +59773,14 @@ const records=[
       "en": [
         {
           "latex": "\\text{(3) } 5",
-          "fallback": "(3) 5",
+          "fallback": "(3) 5 (textbook key assumes complementary 49° and 41°; literal 3 sin 70° sec 20° + 2 sin 49° sec 51° ≈ 5.3985)",
           "display": false
         }
       ],
       "ta": [
         {
           "latex": "\\text{(3) } 5",
-          "fallback": "(3) 5",
+          "fallback": "(3) 5 (49° மற்றும் 41° நிரப்புக்கோண இணை அடிப்படையில்; நேரடி மதிப்பு ≈ 5.3985)",
           "display": false
         }
       ]
@@ -59581,34 +59788,34 @@ const records=[
     "steps": [
       {
         "math": {
-          "latex": "\\begin{aligned}\\sec 20^{\\circ} &= \\operatorname{cosec}(90^{\\circ} - 20^{\\circ}) = \\operatorname{cosec} 70^{\\circ} \\\\ \\sec 51^{\\circ} &= \\operatorname{cosec}(90^{\\circ} - 51^{\\circ}) = \\operatorname{cosec} 49^{\\circ}\\end{aligned}",
-          "fallback": "sec 20° = cosec 70°, sec 51° = cosec 49°",
+          "latex": "\\sec 20^{\\circ} = \\operatorname{cosec}(90^{\\circ} - 20^{\\circ}) = \\operatorname{cosec} 70^{\\circ} \\implies 3\\sin 70^{\\circ}\\sec 20^{\\circ} = 3",
+          "fallback": "sec 20° = cosec 70° ⇒ 3 sin 70° sec 20° = 3",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "Use complementary-angle identities: ",
+            "Use the complementary-angle identity on the first term: ",
             {
               "latex": "\\sec 20^{\\circ} = \\operatorname{cosec} \\left(90^{\\circ} - 20^{\\circ}\\right) = \\operatorname{cosec} 70^{\\circ}",
               "fallback": "sec 20° = cosec(90° − 20°) = cosec 70°"
             },
-            ", and ",
+            ", so ",
             {
-              "latex": "\\sec 51^{\\circ} = \\operatorname{cosec} \\left(90^{\\circ} - 51^{\\circ}\\right) = \\operatorname{cosec} 49^{\\circ}",
-              "fallback": "sec 51° = cosec(90° − 51°) = cosec 49°"
+              "latex": "3 \\sin 70^{\\circ} \\sec 20^{\\circ} = 3 \\left(\\sin 70^{\\circ} \\operatorname{cosec} 70^{\\circ}\\right) = 3",
+              "fallback": "3 sin 70° sec 20° = 3(sin 70° cosec 70°) = 3"
             },
             "."
           ],
           "ta": [
-            "நிரப்புக்கோண முற்றொருமைகளின்படி, ",
+            "முதல் உறுப்பில் நிரப்புக்கோண முற்றொருமையைப் பயன்படுத்துக: ",
             {
-              "latex": "\\sec 20^{\\circ} = \\operatorname{cosec} 70^{\\circ}",
-              "fallback": "sec 20° = cosec 70°"
+              "latex": "\\sec 20^{\\circ} = \\operatorname{cosec} \\left(90^{\\circ} - 20^{\\circ}\\right) = \\operatorname{cosec} 70^{\\circ}",
+              "fallback": "sec 20° = cosec(90° − 20°) = cosec 70°"
             },
-            " மற்றும் ",
+            ", எனவே ",
             {
-              "latex": "\\sec 51^{\\circ} = \\operatorname{cosec} 49^{\\circ}",
-              "fallback": "sec 51° = cosec 49°"
+              "latex": "3 \\sin 70^{\\circ} \\sec 20^{\\circ} = 3",
+              "fallback": "3 sin 70° sec 20° = 3"
             },
             "."
           ]
@@ -59616,48 +59823,112 @@ const records=[
       },
       {
         "math": {
-          "latex": "3(\\sin 70^{\\circ}\\operatorname{cosec} 70^{\\circ}) + 2(\\sin 49^{\\circ}\\operatorname{cosec} 49^{\\circ}) = 3(1) + 2(1)",
-          "fallback": "3(sin 70° cosec 70°) + 2(sin 49° cosec 49°) = 3(1) + 2(1)",
+          "latex": "\\sec 51^{\\circ} = \\operatorname{cosec} 39^{\\circ} \\implies 3 + \\dfrac{2\\sin 49^{\\circ}}{\\sin 39^{\\circ}} \\approx 5.3985",
+          "fallback": "sec 51° = cosec 39° ⇒ 3 + 2 sin 49° / sin 39° ≈ 5.3985",
           "display": true
         },
         "reasonMath": {
           "en": [
-            "Apply the reciprocal identity ",
+            "Check the second term: ",
             {
-              "latex": "\\sin \\theta",
-              "fallback": "sin θ"
+              "latex": "90^{\\circ} - 51^{\\circ} = 39^{\\circ} \\ne 49^{\\circ}",
+              "fallback": "90° − 51° = 39° ≠ 49°"
             },
-            " · ",
+            ", so ",
             {
-              "latex": "\\operatorname{cosec} \\theta = 1",
-              "fallback": "cosec θ = 1"
+              "latex": "\\sec 51^{\\circ} = \\operatorname{cosec} 39^{\\circ}",
+              "fallback": "sec 51° = cosec 39°"
             },
-            " to each term."
+            " (not ",
+            {
+              "latex": "\\operatorname{cosec} 49^{\\circ}",
+              "fallback": "cosec 49°"
+            },
+            "). Literally, ",
+            {
+              "latex": "3 \\sin 70^{\\circ} \\sec 20^{\\circ} + 2 \\sin 49^{\\circ} \\sec 51^{\\circ} \\approx 3 + 2.3985 = 5.3985",
+              "fallback": "3 sin 70° sec 20° + 2 sin 49° sec 51° ≈ 3 + 2.3985 = 5.3985"
+            },
+            "."
           ],
           "ta": [
-            "ஒவ்வொரு உறுப்பிலும் ",
+            "இரண்டாம் உறுப்பைச் சரிபார்க்க: ",
             {
-              "latex": "\\sin \\theta",
-              "fallback": "sin θ"
+              "latex": "90^{\\circ} - 51^{\\circ} = 39^{\\circ} \\ne 49^{\\circ}",
+              "fallback": "90° − 51° = 39° ≠ 49°"
             },
-            " · ",
+            ", எனவே ",
             {
-              "latex": "\\operatorname{cosec} \\theta = 1",
-              "fallback": "cosec θ = 1"
+              "latex": "\\sec 51^{\\circ} = \\operatorname{cosec} 39^{\\circ}",
+              "fallback": "sec 51° = cosec 39°"
             },
-            " என்ற தலைகீழி முற்றொருமையைப் பயன்படுத்துக."
+            " ஆகும் (",
+            {
+              "latex": "\\operatorname{cosec} 49^{\\circ}",
+              "fallback": "cosec 49°"
+            },
+            " அல்ல). நேரடிக் கணக்கீட்டில் ",
+            {
+              "latex": "3 + 2.3985 \\approx 5.3985",
+              "fallback": "3 + 2.3985 ≈ 5.3985"
+            },
+            " கிடைக்கும்."
           ]
         }
       },
       {
         "math": {
-          "latex": "3 + 2 = 5",
-          "fallback": "3 + 2 = 5",
+          "latex": "\\text{Intended complementary pair: } 3 + 2 = 5",
+          "fallback": "If 2 sin 49° sec 41°: 3 + 2 = 5",
           "display": true
         },
         "reasonMath": {
-          "en": "Add the two values to obtain the final answer.",
-          "ta": "இரு மதிப்புகளையும் கூட்டவும்."
+          "en": [
+            "Textbook key note: the printed answer key (3) ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " assumes the complementary pair ",
+            {
+              "latex": "2 \\sin 49^{\\circ} \\sec 41^{\\circ}",
+              "fallback": "2 sin 49° sec 41°"
+            },
+            " (or ",
+            {
+              "latex": "2 \\sin 39^{\\circ} \\sec 51^{\\circ}",
+              "fallback": "2 sin 39° sec 51°"
+            },
+            "), which gives ",
+            {
+              "latex": "3 + 2 = 5",
+              "fallback": "3 + 2 = 5"
+            },
+            "."
+          ],
+          "ta": [
+            "பாடநூல் விடைக் குறிப்பு: விடை (3) ",
+            {
+              "latex": "5",
+              "fallback": "5"
+            },
+            " என்பது ",
+            {
+              "latex": "2 \\sin 49^{\\circ} \\sec 41^{\\circ}",
+              "fallback": "2 sin 49° sec 41°"
+            },
+            " (அல்லது ",
+            {
+              "latex": "2 \\sin 39^{\\circ} \\sec 51^{\\circ}",
+              "fallback": "2 sin 39° sec 51°"
+            },
+            ") என்ற நிரப்புக்கோண இணையைக் கருதி ",
+            {
+              "latex": "3 + 2 = 5",
+              "fallback": "3 + 2 = 5"
+            },
+            " எனத் தரப்பட்டுள்ளது."
+          ]
         }
       }
     ]

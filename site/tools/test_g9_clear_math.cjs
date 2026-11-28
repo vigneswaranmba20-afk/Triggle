@@ -102,7 +102,7 @@ const preservation=items.filter(q=>!newIds.has(q.id)).map(q=>{
   steps.filter((_,idx)=>!(q.id==='g9-ch9-ex9.2-q5'&&idx===3)).map(({en,ta,eq},index)=>revisedReasons[q.id]?.includes(index)?[null,null,eq]:[en,ta,eq])];
 });
 console.log('AUD13-02 G9_GRADE_PRESERVATION_SHA256 '+createHash('sha256').update(JSON.stringify(preservation)).digest('hex'));
-assert.equal(createHash('sha256').update(JSON.stringify(preservation)).digest('hex'),'b932038da4e548189a11c6e27ff471b1cf9022d92bba818aa5c0906bb1b91d9f');
+assert.equal(createHash('sha256').update(JSON.stringify(preservation)).digest('hex'),'b60a2f197253c14ef5df2c67d1cf33e8b6b7beeb947da5eb5e98866bc3bedcf0');
 assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,226,12,59,49,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
 assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,224);

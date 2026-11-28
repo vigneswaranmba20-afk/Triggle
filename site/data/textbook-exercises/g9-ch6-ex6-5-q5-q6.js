@@ -52,17 +52,17 @@
           math: { latex: String.raw`\sin 2\theta = \sin 60^{\circ}`, fallback: 'sin 2θ = sin 60°', display: true }
         },
         {
-          en: 'Equate the acute angles and divide by 2.',
-          ta: 'குறுங்கோணங்களைச் சமப்படுத்தி 2-ஆல் வகுக்கவும்.',
-          eq: '2θ = 60° ⇒ θ = 30°',
-          math: { latex: String.raw`2\theta = 60^{\circ} \implies \theta = \dfrac{60^{\circ}}{2} = 30^{\circ}`, fallback: '2θ = 60° ⇒ θ = 30°', display: true }
+          en: 'In Grade 9 right-triangle trigonometry, the angle 2θ is acute (0° < 2θ < 90°), so 2θ = 60° gives θ = 30° (Option 2, the textbook answer). Note: without restricting 2θ to be acute, 2θ = 120° (θ = 60°, Option 4) also satisfies sin 2θ = √3 / 2.',
+          ta: '9-ஆம் வகுப்பு செங்கோண முக்கோணவியலில் 2θ ஒரு குறுங்கோணமாக (0° < 2θ < 90°) கருதப்படுவதால் 2θ = 60° ⇒ θ = 30° (பாடநூல் விடை (2)) கிடைக்கிறது. குறிப்பு: 2θ குறுங்கோணம் என்ற நிபந்தனை இல்லையெனில் 2θ = 120° (θ = 60°, விருப்பம் 4) என்பதும் sin 2θ = √3 / 2 ஐ நிறைவு செய்யும்.',
+          eq: '0° < 2θ < 90° ⇒ 2θ = 60° ⇒ θ = 30° (if 2θ ≤ 180°, θ = 60° also satisfies sin 120° = √3/2)',
+          math: { latex: String.raw`0^{\circ} < 2\theta < 90^{\circ} \implies 2\theta = 60^{\circ} \implies \theta = \dfrac{60^{\circ}}{2} = 30^{\circ}`, fallback: '0° < 2θ < 90° ⇒ 2θ = 60° ⇒ θ = 30° (if 2θ ≤ 180°, θ = 60° also satisfies sin 120° = √3/2)', display: true }
         }
       ],
-      answer: '(2) 30°',
-      answerTa: '(2) 30°',
+      answer: '(2) 30° (under Grade 9 acute-angle scope 0° < 2θ < 90°; without it, θ = 60° also satisfies 2 sin 2θ = √3)',
+      answerTa: '(2) 30° (குறுங்கோண வரம்பில் 0° < 2θ < 90°; வரம்பின்றி θ = 60° என்பதும் சமன்பாட்டை நிறைவு செய்யும்)',
       answerMath: {
-        en: [{ latex: '\\text{(2) } 30^{\\circ}', fallback: '(2) 30°', display: false }],
-        ta: [{ latex: '\\text{(2) } 30^{\\circ}', fallback: '(2) 30°', display: false }]
+        en: [{ latex: '\\text{(2) } 30^{\\circ}', fallback: '(2) 30° (under Grade 9 acute-angle scope 0° < 2θ < 90°; without it, θ = 60° also satisfies 2 sin 2θ = √3)', display: false }],
+        ta: [{ latex: '\\text{(2) } 30^{\\circ}', fallback: '(2) 30° (குறுங்கோண வரம்பில் 0° < 2θ < 90°; வரம்பின்றி θ = 60° என்பதும் சமன்பாட்டை நிறைவு செய்யும்)', display: false }]
       },
       kind: 'reference',
       reference: 'TN SCERT Grade 9 Mathematics, revised 2025. Exercise 6.5 Q5. English PDF p.246 (printed p.240), Tamil PDF p.260 (printed p.254).',
@@ -98,37 +98,37 @@
       },
       steps: [
         {
-          en: 'Use complementary-angle identities: sec 20° = cosec(90° − 20°) = cosec 70°, and sec 51° = cosec(90° − 51°) = cosec 49°.',
-          ta: 'நிரப்புக்கோண முற்றொருமைகளின்படி, sec 20° = cosec 70° மற்றும் sec 51° = cosec 49°.',
-          eq: 'sec 20° = cosec 70°, sec 51° = cosec 49°',
+          en: 'Use the complementary-angle identity on the first term: sec 20° = cosec(90° − 20°) = cosec 70°, so 3 sin 70° sec 20° = 3(sin 70° cosec 70°) = 3.',
+          ta: 'முதல் உறுப்பில் நிரப்புக்கோண முற்றொருமையைப் பயன்படுத்துக: sec 20° = cosec(90° − 20°) = cosec 70°, எனவே 3 sin 70° sec 20° = 3.',
+          eq: 'sec 20° = cosec 70° ⇒ 3 sin 70° sec 20° = 3',
           math: {
-            latex: String.raw`\begin{aligned}\sec 20^{\circ} &= \operatorname{cosec}(90^{\circ} - 20^{\circ}) = \operatorname{cosec} 70^{\circ} \\ \sec 51^{\circ} &= \operatorname{cosec}(90^{\circ} - 51^{\circ}) = \operatorname{cosec} 49^{\circ}\end{aligned}`,
-            fallback: 'sec 20° = cosec 70°, sec 51° = cosec 49°',
+            latex: String.raw`\sec 20^{\circ} = \operatorname{cosec}(90^{\circ} - 20^{\circ}) = \operatorname{cosec} 70^{\circ} \implies 3\sin 70^{\circ}\sec 20^{\circ} = 3`,
+            fallback: 'sec 20° = cosec 70° ⇒ 3 sin 70° sec 20° = 3',
             display: true
           }
         },
         {
-          en: 'Apply the reciprocal identity sin θ · cosec θ = 1 to each term.',
-          ta: 'ஒவ்வொரு உறுப்பிலும் sin θ · cosec θ = 1 என்ற தலைகீழி முற்றொருமையைப் பயன்படுத்துக.',
-          eq: '3(sin 70° cosec 70°) + 2(sin 49° cosec 49°) = 3(1) + 2(1)',
+          en: 'Check the second term: 90° − 51° = 39° ≠ 49°, so sec 51° = cosec 39° (not cosec 49°). Literally, 3 sin 70° sec 20° + 2 sin 49° sec 51° ≈ 3 + 2.3985 = 5.3985.',
+          ta: 'இரண்டாம் உறுப்பைச் சரிபார்க்க: 90° − 51° = 39° ≠ 49°, எனவே sec 51° = cosec 39° ஆகும் (cosec 49° அல்ல). நேரடிக் கணக்கீட்டில் 3 + 2.3985 ≈ 5.3985 கிடைக்கும்.',
+          eq: 'sec 51° = cosec 39° ⇒ 3 + 2 sin 49° / sin 39° ≈ 5.3985',
           math: {
-            latex: String.raw`3(\sin 70^{\circ}\operatorname{cosec} 70^{\circ}) + 2(\sin 49^{\circ}\operatorname{cosec} 49^{\circ}) = 3(1) + 2(1)`,
-            fallback: '3(sin 70° cosec 70°) + 2(sin 49° cosec 49°) = 3(1) + 2(1)',
+            latex: String.raw`\sec 51^{\circ} = \operatorname{cosec} 39^{\circ} \implies 3 + \dfrac{2\sin 49^{\circ}}{\sin 39^{\circ}} \approx 5.3985`,
+            fallback: 'sec 51° = cosec 39° ⇒ 3 + 2 sin 49° / sin 39° ≈ 5.3985',
             display: true
           }
         },
         {
-          en: 'Add the two values to obtain the final answer.',
-          ta: 'இரு மதிப்புகளையும் கூட்டவும்.',
-          eq: '3 + 2 = 5',
-          math: { latex: String.raw`3 + 2 = 5`, fallback: '3 + 2 = 5', display: true }
+          en: 'Textbook key note: the printed answer key (3) 5 assumes the complementary pair 2 sin 49° sec 41° (or 2 sin 39° sec 51°), which gives 3 + 2 = 5.',
+          ta: 'பாடநூல் விடைக் குறிப்பு: விடை (3) 5 என்பது 2 sin 49° sec 41° (அல்லது 2 sin 39° sec 51°) என்ற நிரப்புக்கோண இணையைக் கருதி 3 + 2 = 5 எனத் தரப்பட்டுள்ளது.',
+          eq: 'If 2 sin 49° sec 41°: 3 + 2 = 5',
+          math: { latex: String.raw`\text{Intended complementary pair: } 3 + 2 = 5`, fallback: 'If 2 sin 49° sec 41°: 3 + 2 = 5', display: true }
         }
       ],
-      answer: '(3) 5',
-      answerTa: '(3) 5',
+      answer: '(3) 5 (textbook key assumes complementary 49° and 41°; literal 3 sin 70° sec 20° + 2 sin 49° sec 51° ≈ 5.3985)',
+      answerTa: '(3) 5 (49° மற்றும் 41° நிரப்புக்கோண இணை அடிப்படையில்; நேரடி மதிப்பு ≈ 5.3985)',
       answerMath: {
-        en: [{ latex: '\\text{(3) } 5', fallback: '(3) 5', display: false }],
-        ta: [{ latex: '\\text{(3) } 5', fallback: '(3) 5', display: false }]
+        en: [{ latex: '\\text{(3) } 5', fallback: '(3) 5 (textbook key assumes complementary 49° and 41°; literal 3 sin 70° sec 20° + 2 sin 49° sec 51° ≈ 5.3985)', display: false }],
+        ta: [{ latex: '\\text{(3) } 5', fallback: '(3) 5 (49° மற்றும் 41° நிரப்புக்கோண இணை அடிப்படையில்; நேரடி மதிப்பு ≈ 5.3985)', display: false }]
       },
       kind: 'reference',
       reference: 'TN SCERT Grade 9 Mathematics, revised 2025. Exercise 6.5 Q6. English PDF p.246 (printed p.240), Tamil PDF p.260 (printed p.254).',

@@ -32,8 +32,11 @@ for (const fid of fidelity.items) {
   assert.equal(item.exercise, '6.5');
   assert.equal(item.q.en, fid.textbookPrompt.en);
   assert.equal(item.q.ta, fid.textbookPrompt.ta);
-  assert.equal(item.answer, fid.verifiedAnswer);
-  assert.equal(item.answerTa, fid.verifiedAnswer);
+  assert.ok(item.answer.startsWith(fid.verifiedAnswer), 'Answer mismatch ' + fid.id);
+  assert.ok(item.answerTa.startsWith(fid.verifiedAnswer), 'Tamil answer mismatch ' + fid.id);
+  if (fid.id === 'c9-exercise-6-5-q5') {
+    assert.ok(item.steps[2].en.includes('60°') && item.steps[2].en.includes('0° < 2θ < 90°'), 'Q5 must explain acute-angle restriction and note 60°');
+  }
   assert.ok(Array.isArray(item.steps) && item.steps.length === 3);
   assert.ok(item.steps.every(s => s.en && s.ta && s.math && s.math.latex));
   assert.ok(item.questionMath && item.answerMath);
