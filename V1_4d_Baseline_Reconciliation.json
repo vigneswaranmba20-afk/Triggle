@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "engine": "TRACE MathGuard V1.5a",
+  "gitCommit": "f026a79",
+  "gitAncestryInvestigation": {
+    "reportedV1_4dBranch": "trace/mathguard-v1-4d",
+    "reportedV1_4dCommit": "2541d7f",
+    "presentOnOrigin": false,
+    "v1_5BaseCommit": "add170c (origin/trace/mathguard-v1-4c)",
+    "explanation": "V1.4d (2541d7f) and its 112-case disclosed / 220-case holdout files were not pushed to origin; V1.5 branched from V1.4c (add170c) merged with origin/main (9bb35b5)."
+  },
+  "frozenBenchmark": {
+    "reportedV1_4d": {
+      "workingPass": 258,
+      "total": 334,
+      "verifiedClaims": 1606,
+      "totalClaims": 1716,
+      "regressions": 0
+    },
+    "currentV1_5a": {
+      "workingPass": 256,
+      "total": 334,
+      "statuses": {
+        "PARTIAL": 74,
+        "PASS": 256,
+        "UNVERIFIABLE": 4
+      },
+      "claims": {
+        "total": 1708,
+        "verified": 1595,
+        "failed": 0,
+        "unsupported": 113,
+        "verifiedRatePct": 93.38
+      },
+      "answerStatuses": {
+        "PASS": 328,
+        "UNVERIFIABLE": 6
+      },
+      "runtimeSec": 80.04,
+      "peakMemoryMB": 94.98
+    }
+  },
+  "expandedBenchmark": {
+    "total": 765,
+    "workingStatusCounts": {
+      "PARTIAL": 240,
+      "PASS": 406,
+      "UNVERIFIABLE": 119
+    },
+    "answerStatusCounts": {
+      "UNVERIFIABLE": 266,
+      "PASS": 499
+    },
+    "tamilStatusCounts": {
+      "PASS": 677,
+      "FAIL": 34,
+      "PARTIAL": 19,
+      "UNVERIFIABLE": 35
+    },
+    "claims": {
+      "total": 3119,
+      "verified": 2536,
+      "verifiedRatePct": 81.31
+    },
+    "runtimeSec": 116.72
+  },
+  "omittedV1_4dSuitesStatus": {
+    "disclosed112Benchmark": "NOT_IN_ORIGIN_REPO (unpushed V1.4d local artifact)",
+    "holdout220Benchmark": "NOT_IN_ORIGIN_REPO (unpushed V1.4d local artifact)"
+  }
+}
