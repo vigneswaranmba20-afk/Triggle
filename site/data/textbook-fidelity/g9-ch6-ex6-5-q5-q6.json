@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "grade": 9,
+  "chapter": 6,
+  "exercise": "6.5",
+  "edition": "2025 revised",
+  "source": {
+    "en": {
+      "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J",
+      "fileName": "Class_9_Mathematics_English_2025_Edition-www.tntextbooks.in.pdf",
+      "printedPage": 240,
+      "pdfPage": 246
+    },
+    "ta": {
+      "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj",
+      "fileName": "Class_9_Mathematics_Tamil_2025_Edition-www.tntextbooks.in (2).pdf",
+      "printedPage": 254,
+      "pdfPage": 260
+    }
+  },
+  "items": [
+    {
+      "id": "c9-exercise-6-5-q5",
+      "questionNumber": 5,
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "sourcePages": {
+        "en": { "printed": 240, "pdf": 246 },
+        "ta": { "printed": 254, "pdf": 260 }
+      },
+      "textbookPrompt": {
+        "en": "If 2 sin 2θ = √3, then the value of θ is\n(1) 90°   (2) 30°\n(3) 45°   (4) 60°",
+        "ta": "2 sin 2θ = √3 எனில், θ இன் மதிப்பு\n(1) 90°   (2) 30°\n(3) 45°   (4) 60°"
+      },
+      "verifiedAnswer": "(2) 30°"
+    },
+    {
+      "id": "c9-exercise-6-5-q6",
+      "questionNumber": 6,
+      "visualStatus": { "en": "page-checked", "ta": "page-checked" },
+      "sourcePages": {
+        "en": { "printed": 240, "pdf": 246 },
+        "ta": { "printed": 254, "pdf": 260 }
+      },
+      "textbookPrompt": {
+        "en": "The value of 3 sin 70° sec 20° + 2 sin 49° sec 51° is\n(1) 2   (2) 3\n(3) 5   (4) 6",
+        "ta": "3 sin 70° sec 20° + 2 sin 49° sec 51° இன் மதிப்பு\n(1) 2   (2) 3\n(3) 5   (4) 6"
+      },
+      "verifiedAnswer": "(3) 5"
+    }
+  ]
+}

@@ -32,9 +32,9 @@ function check(value,original,id){
 const authored=load().filter(q=>q.notationSource==='authored');
 assert.equal(authored.length,131);
 for(const item of authored) assert.equal(get(item),undefined,item.id+' uses source-authored notation');
-const items=load({legacyNotationOnly:true});assert.equal(items.length,624);
-assert.equal(new Set(items.map(q=>q.id)).size,624,'Student-facing IDs must be unique');
-assert.equal(items.filter(q=>q.kind!=='practice').length,615);
+const items=load({legacyNotationOnly:true});assert.equal(items.length,626);
+assert.equal(new Set(items.map(q=>q.id)).size,626,'Student-facing IDs must be unique');
+assert.equal(items.filter(q=>q.kind!=='practice').length,617);
 // Pin order, question wording, answers, equations and all other reasons to
 // main at 31f4a4e, including the Algebra coefficient pilot. Approved changes:
 // the edited Statistics reasons, and AUD13-02's three independently checked
@@ -57,8 +57,8 @@ assert.match(q5.steps[3].eq,/37\|50/);
 // test_standard_solutions and test_g9_ch6_aud14_02; no check is weakened.
 const ch5NewIds=items.slice(-50).map(q=>q.id);
 assert.equal(ch5NewIds.filter(id=>/^g9-ch5-ex5\.[1-6]-q\d+$/.test(id)).length,50,'50 new Grade 9 Ch5 IDs appended');
-const newIds=new Set(['q2-i','q2-ii','q2-iii','q2-iv','q2-v','q3-i','q3-ii'].map(p=>'c9-exercise-6-4-'+p).concat(ch5NewIds));
-assert.equal(JSON.stringify(items.slice(-57).map(q=>q.id)),JSON.stringify([...newIds]),'Only approved Ch6 and Ch5 IDs appended');
+const newIds=new Set(['q2-i','q2-ii','q2-iii','q2-iv','q2-v','q3-i','q3-ii'].map(p=>'c9-exercise-6-4-'+p).concat(['c9-exercise-6-5-q5','c9-exercise-6-5-q6'],ch5NewIds));
+assert.equal(JSON.stringify(items.slice(-59).map(q=>q.id)),JSON.stringify([...newIds]),'Only approved Ch6 and Ch5 IDs appended');
 const preservation=items.filter(q=>!newIds.has(q.id)).map(q=>{
  const legacy=tableAudit.records[q.id]||tableFollowup.records[q.id];
  const questionOriginal=sourceChoices.records[q.id];
@@ -103,7 +103,7 @@ const preservation=items.filter(q=>!newIds.has(q.id)).map(q=>{
 });
 console.log('AUD13-02 G9_GRADE_PRESERVATION_SHA256 '+createHash('sha256').update(JSON.stringify(preservation)).digest('hex'));
 assert.equal(createHash('sha256').update(JSON.stringify(preservation)).digest('hex'),'b932038da4e548189a11c6e27ff471b1cf9022d92bba818aa5c0906bb1b91d9f');
-assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,226,12,59,47,37,31,26]);
+assert.deepEqual(Array.from({length:9},(_,i)=>items.filter(q=>+q.chapter===i+1).length),[65,121,226,12,59,49,37,31,26]);
 assert.equal(items.filter(q=>q.chapter==='2'&&q.kind==='textbook-exercise').length,120);
 assert.equal(items.filter(q=>q.chapter==='3'&&q.kind!=='practice').length,224);
 let optionRecords=0;

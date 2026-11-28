@@ -2,15 +2,15 @@
   "generatedAt": "2026-11-17",
   "grade": 9,
   "source": "existing authored student-facing content",
-  "totalAuthored": 680,
-  "eligible": 605,
+  "totalAuthored": 682,
+  "eligible": 607,
   "byChapter": {
     "1": 65,
     "2": 121,
     "3": 207,
     "4": 12,
     "5": 59,
-    "6": 47,
+    "6": 49,
     "7": 37,
     "8": 31,
     "9": 26

@@ -349,8 +349,10 @@ const g9SetEvidence = new Map([
   ...require('../data/textbook-fidelity/g9-ch1-ex1-6.json').items,
   ...require('../data/textbook-fidelity/g9-ch1-ex1-7.json').items
 ].map(row=>[row.id,row]));
-const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ch3CompleteNewIds,...g9Ex64NewIds,...g9Ch5CompleteNewIds,...g9GeometryNewIds,...g9SetEvidence.keys()];
-assert.equal(approvedG9Ids.length,442);
+const g9Ex65Fidelity=require('../data/textbook-fidelity/g9-ch6-ex6-5-q5-q6.json');
+const g9Ex65NewIds=g9Ex65Fidelity.items.map(i=>i.id);
+const approvedG9Ids=[...g9AlgebraRows.map(p=>p.id),...g9Fidelity.partIds,...g9Q2Fidelity.parts.map(p=>p.id),...g9Q5Q6Fidelity.parts.map(p=>p.id),...g9Batch1Fidelity.parts.map(p=>p.id),...g9Q7Q10Fidelity.parts.map(p=>p.id),...g9Ex32NewIds,...g9Ch3CompleteNewIds,...g9Ex64NewIds,...g9Ex65NewIds,...g9Ch5CompleteNewIds,...g9GeometryNewIds,...g9SetEvidence.keys()];
+assert.equal(approvedG9Ids.length,444);
 assert(!approvedG9Ids.some(id=>Object.hasOwn(preserved.sha256,id)));
 
 assert.deepEqual(approvedBatch.records.map(r=>r.id),approvedEx22);
@@ -713,6 +715,13 @@ for(const [grade,data] of Object.entries(classes)){
        assert.ok(item.q?.en&&item.q?.ta,'G9 bilingual prompt '+item.id);
        assert.ok(item.steps.length>=1&&item.steps.every(s=>s.en&&s.ta&&s.math?.latex),'G9 bilingual steps '+item.id);
        assert.equal(item.releaseStatus,'bilingual-2025-source-checked');
+     }else if(g9Ex65NewIds.includes(item.id)){
+       const fid=g9Ex65Fidelity.items.find(x=>x.id===item.id);
+       assert.equal(item.q.en,fid.textbookPrompt.en,'G9 Ex6.5 EN fidelity '+item.id);
+       assert.equal(item.q.ta,fid.textbookPrompt.ta,'G9 Ex6.5 TA fidelity '+item.id);
+       assert.equal(item.answer,fid.verifiedAnswer,'G9 Ex6.5 answer '+item.id);
+       assert.equal(item.translationReview,'pending');
+       assert.ok(item.steps.length===3&&item.steps.every(s=>s.en&&s.ta&&s.math?.latex),'G9 Ex6.5 bilingual steps '+item.id);
      }else{
        const source=g9Q2Fidelity.parts.find(p=>p.id===item.id)||g9Q5Q6Fidelity.parts.find(p=>p.id===item.id)||g9Q7Q10Fidelity.parts.find(p=>p.id===item.id);
        assert.ok(source,'Missing Grade 9 Exercise 1.2 source '+item.id);

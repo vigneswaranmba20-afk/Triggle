@@ -352,6 +352,20 @@
       "ta": "சைன் எதிர்ப்பக்கம்/கர்ணம்; கோசைன் அடுத்த பக்கம்/கர்ணம்; டேன்ஜென்ட் எதிர்ப்பக்கம்/அடுத்த பக்கம். குறிக்கப்பட்ட கோணமே பக்கப் பெயரை நிர்ணயிக்கிறது.",
       "concept": "trigRatio"
     },
+    "c9-exercise-6-5-q5": {
+      "step": 0,
+      "expected": "Divide both sides of the equation by 2 to isolate sin 2θ.",
+      "en": "Isolating the trigonometric ratio first lets you match it to a standard angle value such as sin 60° = √3/2.",
+      "ta": "முதலில் முக்கோணவியல் விகிதத்தைத் தனியாகப் பிரித்தெடுத்தால், sin 60° = √3/2 போன்ற அடிப்படைக் கோண மதிப்புடன் ஒப்பிடலாம்.",
+      "concept": "trigRatio"
+    },
+    "c9-exercise-6-5-q6": {
+      "step": 0,
+      "expected": "Use complementary-angle identities: sec 20° = cosec(90° − 20°) = cosec 70°, and sec 51° = cosec(90° − 51°) = cosec 49°.",
+      "en": "When two angles add to 90°, secant of one equals cosecant of the other, pairing each factor with its reciprocal sine.",
+      "ta": "இரு கோணங்களின் கூடுதல் 90° எனில், ஒன்றின் sec மதிப்பு மற்றொன்றின் cosec மதிப்புக்குச் சமமாகும்; இதனால் sin உடன் தலைகீழியாக எளிமைப்படுத்தலாம்.",
+      "concept": "trigComplementary"
+    },
     "c9-exercise-6-5-q7": {
       "step": 0,
       "expected": "At 45°, tangent equals one.",

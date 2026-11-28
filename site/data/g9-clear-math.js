@@ -59411,6 +59411,258 @@ const records=[
     ]
   },
   {
+    "id": "c9-exercise-6-5-q5",
+    "questionMath": {
+      "en": [
+        "If ",
+        {
+          "latex": "2\\sin 2\\theta = \\sqrt{3}",
+          "fallback": "2 sin 2θ = √3"
+        },
+        ", then the value of ",
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " is\n(1) 90°   (2) 30°\n(3) 45°   (4) 60°"
+      ],
+      "ta": [
+        {
+          "latex": "2\\sin 2\\theta = \\sqrt{3}",
+          "fallback": "2 sin 2θ = √3"
+        },
+        " எனில், ",
+        {
+          "latex": "\\theta",
+          "fallback": "θ"
+        },
+        " இன் மதிப்பு\n(1) 90°   (2) 30°\n(3) 45°   (4) 60°"
+      ]
+    },
+    "answerMath": {
+      "en": [
+        {
+          "latex": "\\text{(2) } 30^{\\circ}",
+          "fallback": "(2) 30°",
+          "display": false
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\text{(2) } 30^{\\circ}",
+          "fallback": "(2) 30°",
+          "display": false
+        }
+      ]
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\sin 2\\theta = \\dfrac{\\sqrt{3}}{2}",
+          "fallback": "sin 2θ = √3 / 2",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Divide both sides of the equation by ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            " to isolate ",
+            {
+              "latex": "\\sin 2 \\theta",
+              "fallback": "sin 2θ"
+            },
+            "."
+          ],
+          "ta": [
+            "சமன்பாட்டின் இருபுறமும் ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "-ஆல் வகுத்து ",
+            {
+              "latex": "\\sin 2 \\theta",
+              "fallback": "sin 2θ"
+            },
+            " மதிப்பைப் பெறுக."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "\\sin 2\\theta = \\sin 60^{\\circ}",
+          "fallback": "sin 2θ = sin 60°",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Recall the standard trigonometric value: ",
+            {
+              "latex": "\\sin 60^{\\circ} = \\dfrac{\\sqrt{3}}{2}",
+              "fallback": "sin 60° = √3 / 2"
+            },
+            "."
+          ],
+          "ta": [
+            "அடிப்படை முக்கோணவியல் மதிப்பின்படி, ",
+            {
+              "latex": "\\sin 60^{\\circ} = \\dfrac{\\sqrt{3}}{2}",
+              "fallback": "sin 60° = √3 / 2"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "2\\theta = 60^{\\circ} \\implies \\theta = \\dfrac{60^{\\circ}}{2} = 30^{\\circ}",
+          "fallback": "2θ = 60° ⇒ θ = 30°",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Equate the acute angles and divide by ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "."
+          ],
+          "ta": [
+            "குறுங்கோணங்களைச் சமப்படுத்தி ",
+            {
+              "latex": "2",
+              "fallback": "2"
+            },
+            "-ஆல் வகுக்கவும்."
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "c9-exercise-6-5-q6",
+    "questionMath": {
+      "en": [
+        "The value of ",
+        {
+          "latex": "3\\sin 70^{\\circ}\\sec 20^{\\circ} + 2\\sin 49^{\\circ}\\sec 51^{\\circ}",
+          "fallback": "3 sin 70° sec 20° + 2 sin 49° sec 51°"
+        },
+        " is\n(1) 2   (2) 3\n(3) 5   (4) 6"
+      ],
+      "ta": [
+        {
+          "latex": "3\\sin 70^{\\circ}\\sec 20^{\\circ} + 2\\sin 49^{\\circ}\\sec 51^{\\circ}",
+          "fallback": "3 sin 70° sec 20° + 2 sin 49° sec 51°"
+        },
+        " இன் மதிப்பு\n(1) 2   (2) 3\n(3) 5   (4) 6"
+      ]
+    },
+    "answerMath": {
+      "en": [
+        {
+          "latex": "\\text{(3) } 5",
+          "fallback": "(3) 5",
+          "display": false
+        }
+      ],
+      "ta": [
+        {
+          "latex": "\\text{(3) } 5",
+          "fallback": "(3) 5",
+          "display": false
+        }
+      ]
+    },
+    "steps": [
+      {
+        "math": {
+          "latex": "\\begin{aligned}\\sec 20^{\\circ} &= \\operatorname{cosec}(90^{\\circ} - 20^{\\circ}) = \\operatorname{cosec} 70^{\\circ} \\\\ \\sec 51^{\\circ} &= \\operatorname{cosec}(90^{\\circ} - 51^{\\circ}) = \\operatorname{cosec} 49^{\\circ}\\end{aligned}",
+          "fallback": "sec 20° = cosec 70°, sec 51° = cosec 49°",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Use complementary-angle identities: ",
+            {
+              "latex": "\\sec 20^{\\circ} = \\operatorname{cosec} \\left(90^{\\circ} - 20^{\\circ}\\right) = \\operatorname{cosec} 70^{\\circ}",
+              "fallback": "sec 20° = cosec(90° − 20°) = cosec 70°"
+            },
+            ", and ",
+            {
+              "latex": "\\sec 51^{\\circ} = \\operatorname{cosec} \\left(90^{\\circ} - 51^{\\circ}\\right) = \\operatorname{cosec} 49^{\\circ}",
+              "fallback": "sec 51° = cosec(90° − 51°) = cosec 49°"
+            },
+            "."
+          ],
+          "ta": [
+            "நிரப்புக்கோண முற்றொருமைகளின்படி, ",
+            {
+              "latex": "\\sec 20^{\\circ} = \\operatorname{cosec} 70^{\\circ}",
+              "fallback": "sec 20° = cosec 70°"
+            },
+            " மற்றும் ",
+            {
+              "latex": "\\sec 51^{\\circ} = \\operatorname{cosec} 49^{\\circ}",
+              "fallback": "sec 51° = cosec 49°"
+            },
+            "."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3(\\sin 70^{\\circ}\\operatorname{cosec} 70^{\\circ}) + 2(\\sin 49^{\\circ}\\operatorname{cosec} 49^{\\circ}) = 3(1) + 2(1)",
+          "fallback": "3(sin 70° cosec 70°) + 2(sin 49° cosec 49°) = 3(1) + 2(1)",
+          "display": true
+        },
+        "reasonMath": {
+          "en": [
+            "Apply the reciprocal identity ",
+            {
+              "latex": "\\sin \\theta",
+              "fallback": "sin θ"
+            },
+            " · ",
+            {
+              "latex": "\\operatorname{cosec} \\theta = 1",
+              "fallback": "cosec θ = 1"
+            },
+            " to each term."
+          ],
+          "ta": [
+            "ஒவ்வொரு உறுப்பிலும் ",
+            {
+              "latex": "\\sin \\theta",
+              "fallback": "sin θ"
+            },
+            " · ",
+            {
+              "latex": "\\operatorname{cosec} \\theta = 1",
+              "fallback": "cosec θ = 1"
+            },
+            " என்ற தலைகீழி முற்றொருமையைப் பயன்படுத்துக."
+          ]
+        }
+      },
+      {
+        "math": {
+          "latex": "3 + 2 = 5",
+          "fallback": "3 + 2 = 5",
+          "display": true
+        },
+        "reasonMath": {
+          "en": "Add the two values to obtain the final answer.",
+          "ta": "இரு மதிப்புகளையும் கூட்டவும்."
+        }
+      }
+    ]
+  },
+  {
     "id": "g9-ch5-ex5.1-q1",
     "questionMath": {
       "en": [
@@ -75312,6 +75564,64 @@ const texts={
       "fallback": "1/√3"
     },
     "."
+  ],
+  "Divide both sides of the equation by 2 to isolate sin 2θ.": [
+    "Divide both sides of the equation by ",
+    {
+      "latex": "2",
+      "fallback": "2"
+    },
+    " to isolate ",
+    {
+      "latex": "\\sin 2 \\theta",
+      "fallback": "sin 2θ"
+    },
+    "."
+  ],
+  "Isolating the trigonometric ratio first lets you match it to a standard angle value such as sin 60° = √3/2.": [
+    "Isolating the trigonometric ratio first lets you match it to a standard angle value such as ",
+    {
+      "latex": "\\sin 60^{\\circ} = \\dfrac{\\sqrt{3}}{2}",
+      "fallback": "sin 60° = √3/2"
+    },
+    "."
+  ],
+  "முதலில் முக்கோணவியல் விகிதத்தைத் தனியாகப் பிரித்தெடுத்தால், sin 60° = √3/2 போன்ற அடிப்படைக் கோண மதிப்புடன் ஒப்பிடலாம்.": [
+    "முதலில் முக்கோணவியல் விகிதத்தைத் தனியாகப் பிரித்தெடுத்தால், ",
+    {
+      "latex": "\\sin 60^{\\circ} = \\dfrac{\\sqrt{3}}{2}",
+      "fallback": "sin 60° = √3/2"
+    },
+    " போன்ற அடிப்படைக் கோண மதிப்புடன் ஒப்பிடலாம்."
+  ],
+  "Use complementary-angle identities: sec 20° = cosec(90° − 20°) = cosec 70°, and sec 51° = cosec(90° − 51°) = cosec 49°.": [
+    "Use complementary-angle identities: ",
+    {
+      "latex": "\\sec 20^{\\circ} = \\operatorname{cosec} \\left(90^{\\circ} - 20^{\\circ}\\right) = \\operatorname{cosec} 70^{\\circ}",
+      "fallback": "sec 20° = cosec(90° − 20°) = cosec 70°"
+    },
+    ", and ",
+    {
+      "latex": "\\sec 51^{\\circ} = \\operatorname{cosec} \\left(90^{\\circ} - 51^{\\circ}\\right) = \\operatorname{cosec} 49^{\\circ}",
+      "fallback": "sec 51° = cosec(90° − 51°) = cosec 49°"
+    },
+    "."
+  ],
+  "When two angles add to 90°, secant of one equals cosecant of the other, pairing each factor with its reciprocal sine.": [
+    "When two angles add to ",
+    {
+      "latex": "90^{\\circ}",
+      "fallback": "90°"
+    },
+    ", secant of one equals cosecant of the other, pairing each factor with its reciprocal sine."
+  ],
+  "இரு கோணங்களின் கூடுதல் 90° எனில், ஒன்றின் sec மதிப்பு மற்றொன்றின் cosec மதிப்புக்குச் சமமாகும்; இதனால் sin உடன் தலைகீழியாக எளிமைப்படுத்தலாம்.": [
+    "இரு கோணங்களின் கூடுதல் ",
+    {
+      "latex": "90^{\\circ}",
+      "fallback": "90°"
+    },
+    " எனில், ஒன்றின் sec மதிப்பு மற்றொன்றின் cosec மதிப்புக்குச் சமமாகும்; இதனால் sin உடன் தலைகீழியாக எளிமைப்படுத்தலாம்."
   ],
   "At 45°, tangent equals one.": [
     "At ",

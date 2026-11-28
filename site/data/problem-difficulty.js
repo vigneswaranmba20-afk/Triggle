@@ -5917,7 +5917,9 @@ const metadata={
     "g9-ch1-ex1.7-q17": {"grade":9,"level":"medium","basis":"Check incompatible membership conditions","review":"2025-textbook-set-language-source-audit"},
     "g9-ch1-ex1.7-q18": {"grade":9,"level":"easy","basis":"Combine triangle properties","review":"2025-textbook-set-language-source-audit"},
     "g9-ch1-ex1.7-q19": {"grade":9,"level":"medium","basis":"Read the shaded part of three sets","review":"2025-textbook-set-language-source-audit"},
-    "g9-ch1-ex1.7-q20": {"grade":9,"level":"medium","basis":"Subtract the disjoint group percentages","review":"2025-textbook-set-language-source-audit"}
+    "g9-ch1-ex1.7-q20": {"grade":9,"level":"medium","basis":"Subtract the disjoint group percentages","review":"2025-textbook-set-language-source-audit"},
+    "c9-exercise-6-5-q5": {"grade":9,"level":"easy","basis":"Solve 2 sin 2θ = √3 using standard trigonometric values.","review":"implementation-audit"},
+    "c9-exercise-6-5-q6": {"grade":9,"level":"medium","basis":"Apply complementary-angle and reciprocal trigonometric identities.","review":"implementation-audit"}
   },
   "solutionReviews": {
     "g12-ch1-ex1.1-q8": "Canonical answer and both-sign verification are correct. Retired pilot contains the intermediate cofactor matrix and transpose absent from canonical working. Mathematical editor should assess exam-mark completeness before supplementing; no content replaced."
