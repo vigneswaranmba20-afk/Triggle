@@ -13,8 +13,9 @@
  // An actual table is much easier to compare than six numbers inside each
  // sentence. Extract only rows already written in the reviewed answer string.
  function cardinalityTable(answer,worked,language){
-  const matches=[...answer.matchAll(/\b[Rr]ow\s*(\d+)\s*\[([\d\s,]+)\]/g)];
-  if(matches.length<3||matches.some(m=>m[2].split(',').length!==6))return false;
+  const rowStart=/(?:\b[Rr]ow|வரி)\s*\d+\s*\[/g;
+  const matches=[...answer.matchAll(/(?:\b[Rr]ow|வரி)\s*(\d+)\s*\[([\d\s,]+)\]/g)];
+  if(matches.length<3||matches.length!==[...answer.matchAll(rowStart)].length||matches.some((m,i)=>Number(m[1])!==i+1||m[2].split(',').length!==6||m[2].split(',').some(v=>!/^\d+$/.test(v.trim()))))return false;
   const table=document.createElement('table');table.className='activity-cardinality-table';
   const caption=document.createElement('caption');caption.textContent=language==='ta'?'கணங்களின் உறுப்புகள் அட்டவணை':'Completed cardinality table';table.append(caption);
   const thead=document.createElement('thead'),hrow=document.createElement('tr');
@@ -29,11 +30,16 @@
    tbody.append(tr);
   }
   table.append(tbody);
-  paragraph(worked,answer.slice(0,matches[0].index).replace(/Completed table\s*\[[^\]]+\]\s*:?/i,''),'task-answer-lead');
+  paragraph(worked,answer.slice(0,matches[0].index).replace(/(?:Completed table|முழு அட்டவணை)\s*\[n\(A\),\s*n\(B\),\s*n\(A∪B\),\s*n\(A∩B\),\s*n\(A−B\),\s*n\(B−A\)\]\s*:\s*$/i,''),'task-answer-lead');
   const viewport=document.createElement('div');viewport.className='activity-table-scroll';viewport.tabIndex=0;viewport.setAttribute('role','region');viewport.setAttribute('aria-label',caption.textContent);
   viewport.append(table);worked.append(viewport);
-  const end=answer.lastIndexOf('Verify each row');
-  if(end>=0)paragraph(worked,answer.slice(end),'task-answer-check');
+  for(let i=0;i<matches.length;i++){
+   const m=matches[i];
+   const remainder=answer.slice(m.index+m[0].length,matches[i+1]?.index??answer.length).trim().replace(/;\s*$/,'').trim();
+   if(!remainder||/^[.;]$/.test(remainder))continue;
+   const rowLabel=m[0].slice(0,m[0].indexOf('[')).trim();
+   paragraph(worked,remainder.startsWith('(')?rowLabel+' '+remainder:remainder,'task-answer-check');
+  }
   return true;
  }
  function mount(container,chapter,language){
