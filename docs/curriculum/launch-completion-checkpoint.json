@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "branch": "antigravity/launch-curriculum-completion",
+  "startingMainCommit": "810a437623561c8765f109c0a6b608ee4826300d",
+  "updatedAt": "2026-11-28T13:53:00Z",
+  "mathguard": {
+    "sourceBranch": "trace/mathguard-v1-5a",
+    "sourceCommit": "985a9bbf6c34a9cd069a3cba3c04c078a0f3c0a1",
+    "pytestSuiteReproduced": "59 passed in 263.55s (0 failed, 0 false acceptances)",
+    "expandedBaselineOnV15a": {
+      "total": 765,
+      "workingStatusCounts": { "PASS": 406, "PARTIAL": 240, "UNVERIFIABLE": 119 },
+      "answerStatusCounts": { "PASS": 499, "UNVERIFIABLE": 266 },
+      "tamilStatusCounts": { "PASS": 677, "FAIL": 34, "PARTIAL": 19, "UNVERIFIABLE": 35 },
+      "mathFails": 0
+    },
+    "currentBranchAudit": {
+      "g9Ch1": { "total": 127, "PASS": 44, "PARTIAL": 7, "UNVERIFIABLE": 76, "FAIL": 0 },
+      "g10Ch1": { "total": 74, "PASS": 21, "PARTIAL": 17, "UNVERIFIABLE": 36, "FAIL": 0 },
+      "expandedCh3Ch5Ch7": {
+        "total": 712,
+        "workingStatusCounts": { "PASS": 380, "PARTIAL": 230, "UNVERIFIABLE": 102, "FAIL": 0 },
+        "answerStatusCounts": { "PASS": 462, "UNVERIFIABLE": 250, "FAIL": 0 },
+        "tamilStatusCounts": { "PASS": 646, "PARTIAL": 23, "UNVERIFIABLE": 9, "FAIL": 34 }
+      }
+    }
+  },
+  "completedBatches": [
+    {
+      "batchId": "batch-1-g9-ex6-5-q5-q6",
+      "priority": "P2",
+      "grade": 9,
+      "chapter": 6,
+      "exercise": "6.5",
+      "questionIds": ["c9-exercise-6-5-q5", "c9-exercise-6-5-q6"],
+      "sourceEvidence": {
+        "en": { "driveId": "1WxLnjLPhAGkTylUHNFvh8UL34Z8eqC4J", "printedPage": 240, "pdfPage": 246 },
+        "ta": { "driveId": "1gp6z1UOuqoH6MCuZt_qNi492R3vZUWaj", "printedPage": 254, "pdfPage": 260 }
+      },
+      "previousStatus": "missing",
+      "currentStatus": "implemented-and-tested",
+      "mathVerification": "PASS (independent trigonometric identity and standard angle check)",
+      "tamilVerification": "2025 Tamil PDF visually checked; translationReview=pending",
+      "testResults": "PASS: test_g9_ex6_5_q5_q6, npm run validate, test_g9_clear_math (626), test_why_step_g9 (612), test_standard_solutions (1786), test_g9_ch6_aud14_02, test_g9_aud14_03_source_options, test_exact_textbook_fidelity",
+      "commit": "474fdc6"
+    },
+    {
+      "batchId": "batch-2-g10-ex7-1-tamil",
+      "priority": "P3",
+      "grade": 10,
+      "chapter": 7,
+      "exercise": "7.1",
+      "questionIds": [
+        "c10-7-ex7-1-q1", "c10-7-ex7-1-q2", "c10-7-ex7-1-q3", "c10-7-ex7-1-q4", "c10-7-ex7-1-q5",
+        "c10-7-ex7-1-q6", "c10-7-ex7-1-q7", "c10-7-ex7-1-q8", "c10-7-ex7-1-q9", "c10-7-ex7-1-q10"
+      ],
+      "sourceEvidence": {
+        "en": { "driveId": "13XJXdPhuGqU3BG3BPrsmzZwUUFOuH6Of", "printedPage": 282, "pdfPage": 288 },
+        "ta": { "driveId": "1BLAJHjMzbBuYesS2qL6NDEl7Tf3xmNBC", "printedPage": 290, "pdfPage": 296 }
+      },
+      "previousStatus": "english-only-q-steps-answer",
+      "currentStatus": "bilingual-implemented-and-tested",
+      "mathVerification": "PASS (preserved verified English equations and answers)",
+      "tamilVerification": "2025 Tamil PDF p.290 (PDF p.296) visually checked; translationReview=pending",
+      "testResults": "PASS: test_g10_ch7_ex71_ta, test_g10_ch7_ex71_pilot, test_g10_ch7_ex71_q6_q10_draft, npm run validate, test_standard_solutions, test_why_step_g10, test_chatgpt_math_g10",
+      "commit": "39c9687"
+    }
+  ],
+  "remainingBlockers": [
+    "Grade 9 and Grade 10 Tamil editorial sign-off (translationReview='pending') requires human Tamil subject-matter review.",
+    "Browser E2E tests (npm run test:browser) require npm ci / Playwright installation in this environment.",
+    "17 legacy Grade 10 Ch 6 IDs (c10-6-6-*) coexist with new c10-6-ex6-* / c10-6-unit-* IDs to preserve student progress (PR #392 covers redirect).",
+    "Subpart-level 2025 textbook denominator reconciliation across all 60 G9 and 69 G10 exercise sections."
+  ]
+}
