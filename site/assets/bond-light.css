@@ -129,8 +129,7 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
 .discover-hero .discover-secondary {
   background: transparent; color: #FFFFFF; border-color: #D6C5AB;
 }
-.discover-grade, .discover-chapter, .discover-recent, .discover-feature,
-.discover-no-recent, .discover-resume-card, .hub-section-card,
+.discover-grade, .discover-chapter, .discover-feature, .hub-section-card,
 .hub-question, .hub-quiz-question {
   background: #FFFFFF; color: var(--bond-graphite);
   border-color: var(--bond-border);
@@ -142,7 +141,7 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
 .hub-section-card[data-hub-section=examples] .hub-section-icon {
   background: var(--bond-graphite); color: #E0BE84;
 }
-.discover-grade-arrow, .discover-card-arrow, .discover-resume-action,
+.discover-grade-arrow, .discover-card-arrow,
 .hub-question-arrow { color: var(--bond-burgundy); }
 .discover-grade:hover, .discover-chapter:hover, .hub-section-card:hover,
 .hub-question:hover {
@@ -173,8 +172,7 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
 .chapter-overview h2, .chapter-overview h3,
 .welcome h1 { color: var(--bond-graphite); }
 .discover-class-switch, .discover-class-switch span,
-.discover-grade-copy b, .discover-chapter strong,
-.discover-resume-name { color: var(--bond-graphite); }
+.discover-grade-copy b, .discover-chapter strong { color: var(--bond-graphite); }
 .discover-class-count, .discover-class-options {
   background: var(--bond-tint); border-color: var(--bond-border);
   color: var(--bond-muted);
@@ -187,7 +185,6 @@ body { background: var(--bond-ivory); color: var(--bond-graphite); }
   background: var(--bond-graphite); border-color: var(--bond-graphite);
   color: var(--bond-white);
 }
-.discover-resume-card:hover { background: #FCFBF8; border-color: var(--bond-burgundy); }
 .hub-section-menu h3, .hub-question-group h4,
 .chapter-hub .hub-question-label { color: var(--bond-graphite); }
 .hub-section-description { color: var(--text-explanation); }

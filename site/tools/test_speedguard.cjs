@@ -42,6 +42,12 @@ async function checkBuild(root) {
     if (purpose==='maskable') assert.equal(png[25],2,'Maskable icon must be opaque RGB');
   }
   assert(html.includes('data-student-release="'+release.version+'"'));
+  for (const language of ['en','ta']) {
+    const home = html.match(new RegExp('<template id="startup-'+language+'">([\\s\\S]*?)</template>'))?.[1];
+    assert(home, 'Missing prepainted home for '+language);
+    assert.equal((home.match(/<section\b/g)||[]).length,1);
+    assert.doesNotMatch(home,/discover-home-recent|discover-resume-card|discover-no-recent/);
+  }
   assert.equal(Object.keys(release.chapters).length,17);
   assert.equal((sitemap.match(/<loc>/g)||[]).length,40);
   for (const inputs of Object.values(release.chapters)) {

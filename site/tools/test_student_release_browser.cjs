@@ -206,8 +206,14 @@ async function navigateOffline(browser, base) {
     const image = page.locator('#inlineFigureVisual img');
     await image.evaluate(img=>img.decode());
     await page.locator('#homeBtn').click();
-    await page.locator('.discover-resume-card').click();
+    assert.equal(await page.locator('.discover-home-minimal > section').count(),1);
+    assert.equal(await page.locator('.discover-home-recent,.discover-resume-card').count(),0);
+    assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('triggle.lastOpened.v1'))),
+      {grade:10,questionId:geometry});
+    await page.goBack();
     await page.waitForURL(matches('question',geometry));
+    await ready(page);
+    await image.evaluate(img=>img.decode());
     await page.goto(base+link(9,'question',algebra));
     await ready(page);
     await page.locator('#langEn').click();
@@ -227,7 +233,7 @@ async function navigateOffline(browser, base) {
     assert.notEqual(new URL(page.url()).searchParams.get('question'),algebra);
     await page.locator('#previous').click();
     assert.equal(new URL(page.url()).searchParams.get('question'),algebra);
-    console.log('PASS staged product reopens visited offline cross-grade and cross-chapter routes, localized figure, resume, search, Back and question navigation.');
+    console.log('PASS staged product reopens visited offline cross-grade and cross-chapter routes, localized figure, saved history, search, Back and question navigation.');
   } finally { await context.close(); }
 }
 

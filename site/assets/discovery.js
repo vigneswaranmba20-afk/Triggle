@@ -7,7 +7,7 @@
     en:{
       eyebrow:'WELCOME TO TRIGGLE',heading:'Maths should make sense.',
       desc:'Explore one idea, see why it works, and solve the next problem yourself. Mathematics for Classes 9–10, in English and Tamil.',
-      start:'Start learning',continue:'Continue your question',discover:'Find a chapter',
+      start:'Start learning',discover:'Find a chapter',
       find:'Search by chapter or topic',findPlaceholder:'Try algebra, sets, கண மொழி...',
       quick:'Jump straight to a chapter',choose:'Choose a chapter…',
       classes:'Choose your class',class:'Class',chapter:'Chapter',
@@ -26,13 +26,12 @@
       back:'All classes',chooseClass:'Change class',allChapters:'All chapters in this class',
       tip:'You can always use the Chapters menu or the class numbers below.',
       status:'Curriculum mapped, full lessons being developed',
-      continueLabel:'Your last opened question',noRecent:'No question opened yet. Choose your class to begin.',
       startHere:'A good place to start'
     },
     ta:{
       eyebrow:'டிரிகிளுக்கு நல்வரவு',heading:'கணிதம் எளிதாகப் புரியட்டும்.',
       desc:'ஒரு கருத்தை ஆராய்ந்து, அது ஏன் சரி என்பதைப் புரிந்து, அடுத்த கணக்கை நீங்களே செய்யுங்கள். 9–10 வகுப்புகளுக்கான ஆங்கில, தமிழ்வழிக் கணிதம்.',
-      start:'கற்கத் தொடங்கு',continue:'முந்தைய வினாவைத் தொடர்க',discover:'அத்தியாயத்தைத் தேடுக',
+      start:'கற்கத் தொடங்கு',discover:'அத்தியாயத்தைத் தேடுக',
       find:'அத்தியாயம் அல்லது தலைப்பைத் தேடுக',findPlaceholder:'இயற்கணிதம், கண மொழி, trigonometry...',
       quick:'நேராக அத்தியாயத்திற்குச் செல்ல',choose:'அத்தியாயத்தைத் தேர்ந்தெடுக்கவும்…',
       classes:'உங்கள் வகுப்பைத் தேர்ந்தெடுக்கவும்',class:'வகுப்பு',chapter:'அத்தியாயம்',
@@ -51,13 +50,12 @@
       back:'அனைத்து வகுப்புகள்',chooseClass:'வகுப்பை மாற்றுக',allChapters:'இந்த வகுப்பின் எல்லா அத்தியாயங்களும்',
       tip:'மேலுள்ள அத்தியாயப் பட்டியலையோ கீழுள்ள வகுப்பு எண்களையோ எப்போதும் பயன்படுத்தலாம்.',
       status:'அத்தியாயப் பட்டியல் தயார்; முழுப் பாடங்கள் உருவாக்கப்படுகின்றன',
-      continueLabel:'கடைசியாகத் திறந்த வினா',noRecent:'இதுவரை எந்த வினாவும் திறக்கப்படவில்லை. தொடங்க உங்கள் வகுப்பைத் தேர்ந்தெடுக்கவும்.',
       startHere:'இங்கே தொடங்கலாம்'
     }
   };
   function mount(root,opts){
     if(!root)return;
-    const {mode,grade,lang,curriculum,classes,lastByGrade,lastOpened,openGrade,openChapter,openQuestion,goHome}=opts;
+    const {mode,grade,lang,curriculum,openGrade,openChapter,goHome}=opts;
     const t=words[lang==='ta'?'ta':'en'];
     const tr=x=>typeof x==='string'?x:(x?.[lang]||x?.en||'');
     const grades=curriculum.grades;
@@ -106,21 +104,6 @@
     }
     let body='';
     if(mode==='home'){
-      // Resume the most recently opened question, not the lowest class number.
-      // For existing students, fall back to their previous per-class saved ID.
-      const lastGrade=lastOpened&&Number(lastOpened.grade);
-      const lastItem=visibleGrades.some(g=>g.grade===lastGrade)&&classes[lastGrade]?.items.find(x=>x.id===lastOpened.questionId);
-      const legacy=Object.entries(lastByGrade||{})
-        .map(([g,id])=>({grade:Number(g),item:classes[g]?.items.find(x=>x.id===id)}))
-        .find(x=>x.item&&visibleGrades.some(g=>g.grade===x.grade));
-      const recent=lastItem?{grade:lastGrade,item:lastItem}:legacy;
-      const recentCard=recent
-        ?'<button type="button" class="discover-resume-card" data-question="'+escapeHtml(recent.item.id)+
-          '" data-question-grade="'+recent.grade+'">'+
-          '<span class="discover-resume-name">'+escapeHtml(t.class)+' '+recent.grade+' · '+
-          escapeHtml(tr(recent.item.label))+'</span>'+
-          '<span class="discover-resume-action">'+escapeHtml(t.continue)+' <span aria-hidden="true">→</span></span></button>'
-        :'<p class="discover-no-recent">'+escapeHtml(t.noRecent)+'</p>';
       body=`<div class="discover-home-minimal">
         <header class="home-studio-cover">
           <div class="home-cover-type">
@@ -132,10 +115,6 @@
         <section class="discover-home-classes" aria-labelledby="discover-classes-title">
           <h2 id="discover-classes-title">${escapeHtml(t.classes)}</h2>
           <div class="discover-grade-grid">${visibleGrades.map(gradeCard).join('')}</div>
-        </section>
-        <section class="discover-home-recent" aria-labelledby="discover-recent-title" ${recent?'':'hidden'}>
-          <h2 id="discover-recent-title">${escapeHtml(t.continueLabel)}</h2>
-          ${recentCard}
         </section>
         <div class="home-app-info"><button type="button" class="triggle-app-info" data-triggle-install>${escapeHtml(t.install)}</button></div>
         <footer class="home-copyright"><small>© 2026 VER labs</small></footer>
@@ -191,10 +170,6 @@
       const id=btn.dataset.chapter;
       const entry=chapters.find(x=>x.chapter.id===id);
       if(entry)openChapter(entry.grade,entry.chapter);
-    }));
-    root.querySelectorAll('[data-question]').forEach(btn=>btn.addEventListener('click',()=>{
-      const g=Number(btn.dataset.questionGrade),item=classes[g]?.items.find(x=>x.id===btn.dataset.question);
-      if(item)openQuestion(g,item);
     }));
     root.querySelector('[data-jump]')?.addEventListener('change',e=>{
       const entry=chapters.find(x=>x.chapter.id===e.target.value);

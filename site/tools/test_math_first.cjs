@@ -68,15 +68,13 @@ assert(venn.includes('<ellipse cx='),'Venn masks must use matching ellipse geome
 assert(!venn.includes('<circle cx='),'Old circle clipping must not mismatch ellipse shading');
 assert(!venn.includes('g9-venn-text-alternative'),'No redundant visual region commentary');
 assert(css.includes('.figure-dialog .diagram-content .g9-venn-svg{'),'Figure viewer must use full available width');
-const home=read('assets/discovery.js'),homeCss=read('assets/discovery.css');
+const home=read('assets/discovery.js');
 new vm.Script(home,{filename:'discovery.js'});
 assert(html.includes('assets/discovery.js?v=g12-concepts-1'),'Load current minimal home renderer with matrix concept coverage');
 assert(html.includes('assets/discovery.css?v=minimal-home-1'),'Load minimal home styling');
-assert(home.includes('discover-home-minimal'),'Home must have only two compact study sections');
+assert(home.includes('discover-home-minimal'),'Keep the compact student home');
 assert(!home.includes('const heroSvg='),'Remove obsolete promotional hero SVG');
 assert(!home.includes('discover-method-grid'),'No extra home marketing section');
 assert(!home.includes('discover-feature'),'No featured promo on home');
-assert(app.includes("lastOpened={grade,questionId:current.id}"),'Track actual most recent question across all grades');
-assert(home.includes("lastOpened.questionId"),'Resume must select most recently opened item');
-assert(homeCss.includes('.discover-resume-card'),'Resume row should be styled as an accessible action');
+assert(!/discover-home-recent|discover-resume-card|discover-no-recent/.test(home),'Keep learning history out of the home UI');
 console.log('PASS: chapter → section → list → question navigation, truthful fallbacks, quiz/activity first content, accessible figure comparison, mobile layout and offline cache');

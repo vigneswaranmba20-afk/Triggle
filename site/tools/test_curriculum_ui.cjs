@@ -96,6 +96,15 @@ async function main() {
     const size = await page.evaluate(() => ({ width: innerWidth, scroll: document.documentElement.scrollWidth }));
     assert.ok(size.scroll <= size.width + 1, `${label}: document width ${size.scroll} exceeds viewport ${size.width}`);
   }
+  async function checkMinimalHome(page) {
+    const home = page.locator('.discover-home-minimal');
+    assert.deepEqual(await home.locator(':scope > *').evaluateAll(nodes=>nodes.map(node=>node.className)),
+      ['home-studio-cover','discover-home-classes','home-app-info','home-copyright']);
+    assert.equal(await home.locator('.discover-home-recent,#discover-recent-title,.discover-resume-card,.discover-no-recent').count(),0);
+    const gap = await home.locator('.home-app-info').evaluate(info=>
+      info.getBoundingClientRect().top-info.previousElementSibling.getBoundingClientRect().bottom);
+    assert.ok(gap>=0 && gap<=16, `Only install spacing should follow the grade chooser, found ${gap}px`);
+  }
   async function openSidebar(page) {
     if (await page.locator('#sidebar').evaluate(el => el.inert)) await page.locator('#browseBtn').click();
   }
@@ -197,8 +206,7 @@ async function main() {
          assert.deepEqual(await page.locator('#classDock button strong').allTextContents(),['9','10'],'Grade dock contains only active grades');
         assert.deepEqual(await page.locator('.discover-grade-grid [data-grade]').evaluateAll(nodes=>nodes.map(n=>Number(n.dataset.grade))),[9,10]);
         assert.equal(await page.locator('a[href="./playground.html"]').count(),0,'Retire all Trigonometry Basics shortcuts');
-        assert.equal(await page.locator('.discover-home-minimal > section').count(),2,
-          'Student home must contain only recent question and class chooser');
+        await checkMinimalHome(page);
         assert.match(await page.locator('#discover-classes-title').innerText(),/Choose your class/);
         assert.deepEqual(await page.locator('.discover-grade-grid [data-grade]').evaluateAll(nodes=>nodes.map(n=>Number(n.dataset.grade))),[9,10]);
         assert.equal(await page.locator('.discover-hero,.discover-access,.discover-feature,.discover-method,.discover-find,.discover-actions').count(),0,
@@ -229,7 +237,7 @@ async function main() {
         await page.locator('#langTa').click();
         assert.equal(await page.locator('html').getAttribute('lang'),'ta');
         assert.match(await page.locator('#discover-classes-title').innerText(),/வகுப்பை/);
-        assert.equal(await page.locator('.discover-home-minimal > section').count(),2);
+        await checkMinimalHome(page);
         await noOverflow(page,'Tamil Home '+width+'px');
       });
     }
@@ -274,41 +282,40 @@ async function main() {
       assert.equal(await menu.evaluate(el=>el.inert),false);
     });
     for(const width of [320,390,1280]){
-      await check('Minimal home remembers last question across classes at '+width+'px',async()=>{
+      await check('Minimal bilingual home hides saved history and preserves learned progress at '+width+'px',async()=>{
         const page=await visit(await context(width),'/index.html');
-        assert.equal(await page.locator('.discover-home-minimal > section').count(),2);
-        assert.equal(await page.locator('.discover-resume-card').count(),0,
-          'Never invent a previously opened question for a new visitor');
-        assert.equal(await page.locator('.discover-home-recent').isVisible(),false,
-          'A first-time learner sees the class choices without a blank history panel');
-        assert.match(await page.locator('.discover-no-recent').innerText(),/No question opened yet/);
         // Use real bundled IDs so the test does not depend on textbook counts.
         const ids=await page.evaluate(()=>({
           g10:window.TRIGGLE_CLASSES[10].items[0].id,
           g9:window.TRIGGLE_CLASSES[9].items[0].id
         }));
+        const history=()=>page.evaluate(()=>({
+          latest:JSON.parse(localStorage.getItem('triggle.lastOpened.v1')),
+          byGrade:JSON.parse(localStorage.getItem('triggle.lastByGrade.v119')),
+          learned:JSON.parse(localStorage.getItem('triggle.learned.v119'))
+        }));
         await gotoWithControls(page,url+'/index.html?class=10&question='+encodeURIComponent(ids.g10));
         await page.locator('#lessonCard').waitFor({state:'visible'});
         await page.locator('#homeBtn').click();
-        assert.equal(await page.locator('.discover-home-recent').isVisible(),true);
-        assert.match(await page.locator('#discover-recent-title').innerText(),/Your last opened question/);
-        assert.match(await page.locator('.discover-resume-card').innerText(),/Class 10/);
-        assert.equal(await page.locator('.discover-home-minimal > section').count(),2);
-        await page.locator('.discover-resume-card').click();
+        await checkMinimalHome(page);
+        assert.deepEqual((await history()).latest,{grade:10,questionId:ids.g10});
+        await page.goBack();
         assert.equal(new URL(page.url()).searchParams.get('question'),ids.g10);
-        await gotoWithControls(page,url+'/index.html?class=9&question='+encodeURIComponent(ids.g9));
+        const grade9=url+'/index.html?class=9&question='+encodeURIComponent(ids.g9);
+        await gotoWithControls(page,grade9);
+        await page.locator('#markDone').evaluate(el=>el.click());
         await page.locator('#homeBtn').click();
-        assert.match(await page.locator('.discover-resume-card').innerText(),/Class 9/,
-          'Most recently opened question must beat a saved Class 10 question');
-        assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem('triggle.lastOpened.v1')).questionId),ids.g9);
-        await page.reload();
-        await page.locator('.discover-resume-card').waitFor({state:'visible'});
-        assert.match(await page.locator('.discover-resume-card').innerText(),/Class 9/,
-          'Resume must survive a page reload');
+        await checkMinimalHome(page);
         await page.locator('#langTa').click();
-        assert.match(await page.locator('#discover-recent-title').innerText(),/கடைசியாக/);
-        assert.match(await page.locator('.discover-resume-card').innerText(),/வகுப்பு 9/);
+        await page.reload();
+        assert.equal(await page.locator('html').getAttribute('lang'),'ta');
+        await checkMinimalHome(page);
+        assert.deepEqual(await history(),{
+          latest:{grade:9,questionId:ids.g9},byGrade:{9:ids.g9,10:ids.g10},learned:[ids.g9]
+        });
         await noOverflow(page,'minimal Tamil home '+width+'px');
+        await gotoWithControls(page,grade9);
+        assert.equal(await page.locator('#markDone').getAttribute('aria-pressed'),'true');
       });
     }
     for(const width of [320,390,768,1280]){
@@ -832,7 +839,7 @@ async function main() {
       await ctx.setOffline(true);
       await page.reload();
       await page.locator('.discover-home-minimal').waitFor({state:'visible'});
-       assert.equal(await page.locator('.discover-home-minimal > section').count(),2,'Offline home remains minimal');
+      await checkMinimalHome(page);
       await page.locator('.discover-grade-grid [data-grade="9"]').click();
       assert.equal(await page.locator('.discover-chapter-grid [data-chapter]').count(),9);
       await ctx.setOffline(false);

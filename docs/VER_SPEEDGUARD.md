@@ -37,5 +37,5 @@ To roll back, revert the offending release commit on `main` and let the existing
 1. In Chrome, open Triggle and tap **Install Triggle** on the home page. Follow Chrome’s install prompt, or use the menu instructions if offered. [Open Triggle](https://vigneswaranmba20-afk.github.io/Triggle/site/index.html)
 2. Find the gold triangle named **Triggle** on the home screen or app drawer. Open it and check that it launches in its own window.
 3. While online, open a Grade 9 question and a Grade 10 concept. Switch to Tamil and complete a concept check. Use Android Back to return to the previous view.
-4. Turn on Airplane mode. Open Triggle from the launcher and revisit those lessons. Check that the equations, figures, Tamil selection and last opened lesson are retained. Try an unopened chapter to see the explanation.
+4. Turn on Airplane mode. Open Triggle from the launcher and revisit those lessons through the chapter directory. Check that the equations, figures, Tamil selection and learned progress are retained. Try an unopened chapter to see the explanation.
 5. Turn Airplane mode off and reopen that chapter. If practical, dismiss an install attempt in a fresh session and confirm lessons remain available.
